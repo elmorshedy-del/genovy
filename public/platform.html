@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Genovy Platform</title>
+    <meta
+      name="description"
+      content="Explore the Genovy platform architecture, knowledge graph schema, sync pipeline, and live rare-disease source network."
+    />
+    <meta name="theme-color" content="#f6f3ee" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class="platform-page">
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="/" aria-label="Genovy home">
+          <span class="brand-mark">G</span>
+          <span class="brand-word">Genovy</span>
+        </a>
+        <nav class="site-nav" aria-label="Primary">
+          <a href="/">Home</a>
+          <a href="#architecture">Architecture</a>
+          <a href="#schema">Schema</a>
+          <a href="#pipeline">Pipeline</a>
+          <a href="#live-network">Live network</a>
+        </nav>
+        <a class="button button-ghost" href="mailto:founders@genovy.com?subject=Genovy%20platform%20access">
+          Founding access
+        </a>
+      </header>
+
+      <main>
+        <section class="platform-hero">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">Inside Genovy</p>
+            <h1>
+              The platform behind the
+              <span class="headline-emphasis">rare-disease workup.</span>
+            </h1>
+            <p class="hero-text">
+              Genovy is built as a case-to-knowledge system. We ingest structured rare-disease
+              sources, normalize them into one graph, and use that graph to turn fragmented patient
+              records into a clearer next step.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-solid" href="#live-network">See live network state</a>
+              <a class="button button-subtle" href="/">Back to landing page</a>
+            </div>
+          </div>
+
+          <aside class="platform-status-panel reveal" data-delay="120" data-platform-overview>
+            <div class="status-chip">
+              <span class="status-dot" id="platform-health-dot"></span>
+              <span id="platform-health-label">Loading platform overview</span>
+            </div>
+            <div class="stat-grid">
+              <article class="stat-card">
+                <p class="stat-label">Runtime mode</p>
+                <strong class="stat-value" id="platform-runtime-mode">...</strong>
+                <p class="stat-detail">Public site, knowledge graph, and admin state.</p>
+              </article>
+              <article class="stat-card">
+                <p class="stat-label">Entity rows</p>
+                <strong class="stat-value" id="platform-entity-total">0</strong>
+                <p class="stat-detail">Diseases, phenotypes, genes, variants, trials, and more.</p>
+              </article>
+              <article class="stat-card">
+                <p class="stat-label">Relationship rows</p>
+                <strong class="stat-value" id="platform-relationship-total">0</strong>
+                <p class="stat-detail">Evidence-backed links between canonical entities.</p>
+              </article>
+              <article class="stat-card">
+                <p class="stat-label">Source connectors</p>
+                <strong class="stat-value" id="platform-source-total">0</strong>
+                <p class="stat-detail">Refreshable upstream feeds feeding the network.</p>
+              </article>
+            </div>
+            <p class="platform-note" id="platform-runtime-note">
+              Public page is available even while the knowledge layer is still syncing.
+            </p>
+          </aside>
+        </section>
+
+        <section id="architecture" class="section">
+          <div class="section-copy reveal">
+            <p class="eyebrow">Architecture</p>
+            <h2>One backbone, three operating layers.</h2>
+            <p>
+              The website is only the surface. Underneath it, Genovy maintains a normalized
+              knowledge layer, a patient-specific case layer, and a product layer that turns both
+              into summaries, guidance, and future clinic workflows.
+            </p>
+          </div>
+          <div class="architecture-grid">
+            <article class="layer-card reveal">
+              <p class="layer-label">Knowledge layer</p>
+              <h3>Canonical rare-disease network</h3>
+              <p>Diseases, phenotypes, genes, variants, trials, and evidence sources are mapped into a shared graph.</p>
+              <ul class="bullet-list">
+                <li>Canonical IDs and aliases</li>
+                <li>Evidence-backed relationships</li>
+                <li>Versioned sync history per source</li>
+              </ul>
+            </article>
+            <article class="layer-card reveal" data-delay="80">
+              <p class="layer-label">Case layer</p>
+              <h3>Structured patient workup</h3>
+              <p>Uploaded reports become a timeline of symptoms, tests, findings, and unresolved questions.</p>
+              <ul class="bullet-list">
+                <li>Timeline stitching across many documents</li>
+                <li>Normalized phenotype and workup extraction</li>
+                <li>Traceability back to source files</li>
+              </ul>
+            </article>
+            <article class="layer-card reveal" data-delay="160">
+              <p class="layer-label">Product layer</p>
+              <h3>Readable outputs for real decisions</h3>
+              <p>The graph turns into doctor briefs, next-step guidance, trial matching, and future clinic workflows.</p>
+              <ul class="bullet-list">
+                <li>Doctor-ready summaries</li>
+                <li>Workup and referral guidance</li>
+                <li>Future eligibility and trial modules</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section id="schema" class="section">
+          <div class="section-copy reveal">
+            <p class="eyebrow">Schema</p>
+            <h2>The graph stores entities, relationships, and evidence separately.</h2>
+            <p>
+              Rare-disease logic breaks if you flatten everything into a spreadsheet. Genovy keeps
+              canonical entities, the links between them, and the source evidence for those links in
+              separate layers so the reasoning stays inspectable.
+            </p>
+          </div>
+          <div class="schema-shell">
+            <article class="panel-card reveal">
+              <div class="panel-head">
+                <div>
+                  <p class="panel-kicker">Entity families</p>
+                  <h3>Nodes in the network</h3>
+                </div>
+              </div>
+              <div class="schema-grid">
+                <div class="schema-card">
+                  <h4>Disease</h4>
+                  <p>Canonical disease families and specific conditions anchored to ontology IDs.</p>
+                </div>
+                <div class="schema-card">
+                  <h4>Phenotype</h4>
+                  <p>Symptoms, findings, and clinically meaningful negatives mapped to HPO-style concepts.</p>
+                </div>
+                <div class="schema-card">
+                  <h4>Gene</h4>
+                  <p>Gene-level associations stay separate from disease and variant-level evidence.</p>
+                </div>
+                <div class="schema-card">
+                  <h4>Variant</h4>
+                  <p>Variant-specific evidence can diverge from the broader gene signal and must stay first-class.</p>
+                </div>
+                <div class="schema-card">
+                  <h4>Trial</h4>
+                  <p>ClinicalTrials condition and recruitment links connect cases to research opportunities.</p>
+                </div>
+                <div class="schema-card">
+                  <h4>Source record</h4>
+                  <p>Original upstream payloads remain preserved for provenance, reprocessing, and audits.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="panel-card reveal" data-delay="80">
+              <div class="panel-head">
+                <div>
+                  <p class="panel-kicker">Relationship model</p>
+                  <h3>Edges carry context, not just links</h3>
+                </div>
+              </div>
+              <div class="schema-chip-grid">
+                <span class="schema-chip">disease → has phenotype</span>
+                <span class="schema-chip">gene → associated with disease</span>
+                <span class="schema-chip">gene → associated with phenotype</span>
+                <span class="schema-chip">variant → pathogenic for disease</span>
+                <span class="schema-chip">trial → recruits for disease</span>
+                <span class="schema-chip">case → has phenotype</span>
+                <span class="schema-chip">case → lacks phenotype</span>
+                <span class="schema-chip">case → has finding</span>
+              </div>
+              <div class="principle-list">
+                <div class="principle-item">
+                  <h4>Evidence first</h4>
+                  <p>Every relationship can point back to a source, record key, sync run, and evidence type.</p>
+                </div>
+                <div class="principle-item">
+                  <h4>Many-to-many by default</h4>
+                  <p>One gene can connect to many diseases, and overlapping phenotypes can remain unresolved until more evidence arrives.</p>
+                </div>
+                <div class="principle-item">
+                  <h4>Versioned freshness</h4>
+                  <p>Source state records the last successful sync, version string, and summary so the graph can be refreshed safely.</p>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <article class="panel-card panel-card-wide reveal" data-delay="160">
+            <div class="panel-head">
+              <div>
+                <p class="panel-kicker">Current live summary</p>
+                <h3>Entity and relationship families now loaded</h3>
+              </div>
+            </div>
+            <div class="live-summary-grid">
+              <div>
+                <p class="mini-heading">Entity counts</p>
+                <div class="summary-chip-grid" id="entity-summary-grid">
+                  <p class="empty-state">Waiting for live graph data.</p>
+                </div>
+              </div>
+              <div>
+                <p class="mini-heading">Relationship counts</p>
+                <div class="summary-chip-grid" id="relationship-summary-grid">
+                  <p class="empty-state">Waiting for live graph data.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <section id="pipeline" class="section">
+          <div class="section-copy reveal">
+            <p class="eyebrow">Pipeline</p>
+            <h2>How the backbone fills itself.</h2>
+            <p>
+              Source syncs are designed as refreshable stages, not one-off imports. Each run records
+              version, summary, and provenance so the network can stay current and auditable.
+            </p>
+          </div>
+          <div class="pipeline-grid">
+            <article class="pipeline-card reveal">
+              <span class="pipeline-index">01</span>
+              <h3>Fetch source payloads</h3>
+              <p>Pull ontology releases and public APIs from MONDO, HPO, ClinVar, and ClinicalTrials.gov.</p>
+            </article>
+            <article class="pipeline-card reveal" data-delay="70">
+              <span class="pipeline-index">02</span>
+              <h3>Normalize canonical objects</h3>
+              <p>Upsert entities, aliases, and cross-references so multiple identifiers resolve to one concept.</p>
+            </article>
+            <article class="pipeline-card reveal" data-delay="140">
+              <span class="pipeline-index">03</span>
+              <h3>Write evidence-backed edges</h3>
+              <p>Persist graph relationships separately from the evidence that justifies each link.</p>
+            </article>
+            <article class="pipeline-card reveal" data-delay="210">
+              <span class="pipeline-index">04</span>
+              <h3>Track sync freshness</h3>
+              <p>Store last successful run, version, and source-level summaries so stale connectors are visible.</p>
+            </article>
+            <article class="pipeline-card reveal" data-delay="280">
+              <span class="pipeline-index">05</span>
+              <h3>Power case workflows</h3>
+              <p>Feed the future patient case layer, specialist summaries, and next-step workup guidance.</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="live-network" class="section">
+          <div class="section-copy reveal">
+            <p class="eyebrow">Live network</p>
+            <h2>What the public platform can see right now.</h2>
+            <p>
+              This section reflects the current service mode and the safe read-only status of the
+              backbone. It does not expose admin controls or private tokens.
+            </p>
+          </div>
+          <div class="live-grid">
+            <article class="panel-card reveal">
+              <div class="panel-head">
+                <div>
+                  <p class="panel-kicker">Source status</p>
+                  <h3>Connectors and freshness</h3>
+                </div>
+              </div>
+              <div class="source-status-grid" id="source-status-grid">
+                <p class="empty-state">Loading source catalog.</p>
+              </div>
+            </article>
+
+            <article class="panel-card reveal" data-delay="120">
+              <div class="panel-head">
+                <div>
+                  <p class="panel-kicker">Operational state</p>
+                  <h3>Active and recent syncs</h3>
+                </div>
+              </div>
+              <div class="activity-group">
+                <p class="mini-heading">Active syncs</p>
+                <div class="activity-list" id="active-sync-list">
+                  <p class="empty-state">No active syncs reported.</p>
+                </div>
+              </div>
+              <div class="activity-group">
+                <p class="mini-heading">Recent sync runs</p>
+                <div class="activity-list" id="recent-sync-list">
+                  <p class="empty-state">No sync runs available yet.</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-copy reveal">
+            <p class="eyebrow">Strategy</p>
+            <h2>Why this page exists now.</h2>
+            <p>
+              The landing page explains the vision. This page shows the actual product direction:
+              the schema, the pipeline, the operating model, and the current live state of the
+              backbone that everything else depends on.
+            </p>
+          </div>
+          <div class="strategy-grid">
+            <article class="strategy-card reveal">
+              <p class="roadmap-badge">Now</p>
+              <h3>Knowledge backbone</h3>
+              <p>Canonical entities, source syncs, evidence relationships, and a public platform overview.</p>
+            </article>
+            <article class="strategy-card reveal" data-delay="80">
+              <p class="roadmap-badge">Next</p>
+              <h3>Case intelligence</h3>
+              <p>Patient document upload, normalized timelines, phenotype extraction, and doctor-ready summaries.</p>
+            </article>
+            <article class="strategy-card reveal" data-delay="160">
+              <p class="roadmap-badge">Later</p>
+              <h3>Workflow products</h3>
+              <p>Trial matching, workup copilots, therapy eligibility, and clinic-facing operational tools.</p>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p>Genovy</p>
+        <p>Case intelligence for rare-disease journeys.</p>
+      </footer>
+    </div>
+
+    <script src="/site.js" defer></script>
+    <script src="/platform.js" defer></script>
+  </body>
+</html>

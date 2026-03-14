@@ -416,6 +416,11 @@ a {
   box-shadow: 0 18px 48px rgba(15, 23, 32, 0.05);
 }
 
+.feature-card-link {
+  display: block;
+  color: inherit;
+}
+
 .feature-card h3,
 .value-card h3,
 .path-panel h3 {
@@ -449,6 +454,322 @@ a {
   box-shadow: var(--shadow-soft);
 }
 
+.platform-page .site-header {
+  margin-bottom: 12px;
+}
+
+.platform-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 520px);
+  gap: 28px;
+  align-items: start;
+  padding: 64px 0 40px;
+}
+
+.platform-status-panel,
+.panel-card,
+.layer-card,
+.pipeline-card,
+.strategy-card,
+.stat-card,
+.source-card {
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: var(--radius-card);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.82), rgba(248, 244, 239, 0.86));
+  backdrop-filter: blur(18px);
+  box-shadow: var(--shadow-soft);
+}
+
+.platform-status-panel {
+  padding: 22px;
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.stat-card {
+  padding: 18px;
+  background: rgba(255, 255, 255, 0.58);
+  box-shadow: none;
+}
+
+.stat-label,
+.source-eyebrow,
+.mini-heading,
+.panel-kicker,
+.layer-label,
+.roadmap-badge {
+  margin: 0 0 10px;
+  color: rgba(17, 17, 17, 0.52);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.stat-value {
+  display: block;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 0.92;
+  letter-spacing: -0.06em;
+  overflow-wrap: anywhere;
+}
+
+.stat-detail,
+.platform-note,
+.schema-card p,
+.principle-item p,
+.activity-meta,
+.source-description,
+.source-meta,
+.strategy-card p,
+.summary-chip-card p {
+  margin: 0;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.platform-note {
+  margin-top: 16px;
+}
+
+.architecture-grid,
+.pipeline-grid,
+.strategy-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.architecture-grid,
+.strategy-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.layer-card,
+.pipeline-card,
+.strategy-card {
+  padding: 22px;
+}
+
+.layer-card h3,
+.pipeline-card h3,
+.strategy-card h3,
+.panel-card h3 {
+  margin: 0 0 10px;
+  font-size: 1.35rem;
+  letter-spacing: -0.05em;
+}
+
+.schema-shell,
+.live-grid,
+.live-summary-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.schema-shell,
+.live-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.panel-card {
+  padding: 24px;
+}
+
+.panel-card-wide {
+  margin-top: 16px;
+}
+
+.panel-head {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.schema-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.schema-card,
+.summary-chip-card {
+  padding: 18px;
+  border: 1px solid var(--line-soft);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.56);
+}
+
+.schema-card h4,
+.principle-item h4,
+.source-card h4,
+.activity-title {
+  margin: 0 0 8px;
+  font-size: 1.02rem;
+  letter-spacing: -0.03em;
+}
+
+.schema-chip-grid,
+.summary-chip-grid,
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.schema-chip,
+.tag-pill,
+.state-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+}
+
+.schema-chip,
+.tag-pill {
+  border: 1px solid var(--line-soft);
+  background: rgba(255, 255, 255, 0.58);
+  color: rgba(17, 17, 17, 0.72);
+}
+
+.tag-pill-soft {
+  background: rgba(92, 124, 255, 0.1);
+}
+
+.principle-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.principle-item {
+  padding: 16px 18px;
+  border-radius: 20px;
+  background: rgba(17, 17, 17, 0.03);
+}
+
+.live-summary-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.summary-chip-grid {
+  margin-top: 14px;
+}
+
+.summary-chip-card {
+  min-width: 180px;
+}
+
+.summary-chip-card strong {
+  display: block;
+  margin-top: 8px;
+  font-size: 1.35rem;
+  letter-spacing: -0.05em;
+}
+
+.pipeline-grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.pipeline-index {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 18px;
+  border-radius: 14px;
+  background: var(--surface-contrast);
+  color: var(--text-inverse);
+  font-weight: 700;
+}
+
+.source-status-grid {
+  display: grid;
+  gap: 14px;
+}
+
+.source-card {
+  padding: 18px;
+}
+
+.source-card-head,
+.activity-item {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.state-pill {
+  border: 1px solid transparent;
+  background: rgba(17, 17, 17, 0.06);
+  color: rgba(17, 17, 17, 0.68);
+}
+
+.state-pill.is-live {
+  background: rgba(41, 193, 108, 0.14);
+  color: #1b8e51;
+}
+
+.state-pill.is-muted {
+  background: rgba(17, 17, 17, 0.06);
+  color: rgba(17, 17, 17, 0.62);
+}
+
+.source-meta {
+  display: grid;
+  gap: 6px;
+  margin-top: 14px;
+}
+
+.tag-row-spaced {
+  margin-top: 14px;
+}
+
+.activity-group + .activity-group {
+  margin-top: 20px;
+}
+
+.activity-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.activity-item {
+  padding: 16px 18px;
+  border: 1px solid var(--line-soft);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.56);
+}
+
+.activity-title {
+  text-transform: capitalize;
+}
+
+.empty-state {
+  margin: 0;
+  color: rgba(17, 17, 17, 0.54);
+}
+
+.roadmap-badge {
+  display: inline-block;
+  margin-bottom: 14px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(92, 124, 255, 0.12);
+  color: #3752c2;
+}
+
 .site-footer {
   display: flex;
   align-items: center;
@@ -473,10 +794,19 @@ a {
 
 @media (max-width: 1024px) {
   .hero,
+  .platform-hero,
   .split-section,
   .value-grid,
   .path-columns,
-  .showcase-grid {
+  .showcase-grid,
+  .architecture-grid,
+  .schema-shell,
+  .live-grid,
+  .live-summary-grid,
+  .pipeline-grid,
+  .strategy-grid,
+  .schema-grid,
+  .stat-grid {
     grid-template-columns: 1fr;
   }
 
@@ -508,11 +838,20 @@ a {
     padding-top: 48px;
   }
 
+  .platform-hero {
+    padding-top: 44px;
+  }
+
   .showcase-card,
   .feature-card,
   .value-card,
   .path-panel,
-  .callout-card {
+  .callout-card,
+  .panel-card,
+  .layer-card,
+  .pipeline-card,
+  .strategy-card,
+  .platform-status-panel {
     padding: 20px;
   }
 
