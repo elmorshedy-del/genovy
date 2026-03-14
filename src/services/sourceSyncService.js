@@ -12,8 +12,8 @@ import {
   upsertEntity,
   upsertEntityAlias,
   upsertEntityXref,
-  upsertResolvedRelationship,
-  upsertRelationshipEvidence,
+  upsertRelationshipEvidenceBatch,
+  upsertResolvedRelationships,
   upsertSourceRecord
 } from '../repositories/knowledgeRepository.js';
 import { fetchMondoDataset } from './sources/mondoSource.js';
@@ -23,7 +23,8 @@ import { fetchHpoGeneDiseaseDataset } from './sources/hpoGeneDiseaseSource.js';
 import { fetchHpoGenePhenotypeDataset } from './sources/hpoGenePhenotypeSource.js';
 import { fetchClinvarGeneDiseaseDataset } from './sources/clinvarGeneDiseaseSource.js';
 import { fetchClinicalTrialsDataset } from './sources/clinicalTrialsSource.js';
-import { normalizeCurie, normalizeLabel } from '../lib/curies.js';
+import { normalizeCurie, normalizeLabel, stableHash } from '../lib/curies.js';
+import { stableJson } from '../lib/json.js';
 
 const SYNC_HANDLERS = Object.freeze({
   [SOURCE_KEYS.MONDO_ONTOLOGY]: fetchMondoDataset,
@@ -40,6 +41,7 @@ const CLINICAL_TRIALS_DEFAULTS = Object.freeze({
   pageSize: 100
 });
 
+const RELATIONSHIP_BATCH_SIZE = 500;
 const ACTIVE_SOURCE_SYNCS = new Map();
 
 function resolveSourceOrThrow(sourceKey) {
@@ -125,6 +127,9 @@ async function applyDataset(client, source, syncRunId, dataset) {
     counters.sourceRecords += 1;
   }
 
+  const pendingRelationships = [];
+  const pendingEvidence = [];
+
   for (const relationship of dataset.relationships || []) {
     const subject = await resolveRelationshipEntity(
       client,
@@ -140,30 +145,77 @@ async function applyDataset(client, source, syncRunId, dataset) {
       entityIdByCurie,
       entityIdByLabel
     );
-    const persisted = await upsertResolvedRelationship(
-      client,
-      {
-        subjectEntityId: subject.entity_id,
-        predicateKey: relationship.predicateKey,
-        objectEntityId: object.entity_id,
-        qualifiers: relationship.qualifiers || {}
-      },
-      source.sourceKey
+    const qualifiers = relationship.qualifiers || {};
+    const relationshipKey = buildResolvedRelationshipKey(
+      subject.entity_id,
+      relationship.predicateKey,
+      object.entity_id,
+      qualifiers
     );
-    await upsertRelationshipEvidence(client, {
-      relationshipId: persisted.relationship_id,
+
+    pendingRelationships.push({
+      relationshipKey,
+      subjectEntityId: subject.entity_id,
+      predicateKey: relationship.predicateKey,
+      objectEntityId: object.entity_id,
+      qualifiers
+    });
+    pendingEvidence.push({
+      relationshipKey,
       sourceKey: source.sourceKey,
       syncRunId,
       sourceRecordKey: relationship.evidence?.sourceRecordKey || null,
       evidenceType: relationship.evidence?.evidenceType || 'source_record',
       evidenceCode: relationship.evidence?.evidenceCode || null,
+      confidenceScore: relationship.evidence?.confidenceScore || null,
       provenanceUrl: relationship.evidence?.provenanceUrl || source.homepageUrl,
-      payload: relationship.evidence?.payload || relationship.qualifiers || {}
+      payload: relationship.evidence?.payload || qualifiers
     });
-    counters.relationships += 1;
+
+    if (pendingRelationships.length >= RELATIONSHIP_BATCH_SIZE) {
+      await flushRelationshipBatch(
+        client,
+        pendingRelationships,
+        pendingEvidence,
+        source.sourceKey,
+        counters
+      );
+    }
+  }
+
+  if (pendingRelationships.length) {
+    await flushRelationshipBatch(client, pendingRelationships, pendingEvidence, source.sourceKey, counters);
   }
 
   return counters;
+}
+
+function buildResolvedRelationshipKey(subjectEntityId, predicateKey, objectEntityId, qualifiers) {
+  return stableHash(`${subjectEntityId}|${predicateKey}|${objectEntityId}|${stableJson(qualifiers)}`);
+}
+
+async function flushRelationshipBatch(client, pendingRelationships, pendingEvidence, sourceKey, counters) {
+  const persistedRelationships = await upsertResolvedRelationships(client, pendingRelationships, sourceKey);
+  const relationshipIdByKey = new Map(
+    persistedRelationships.map((relationship) => [relationship.relationship_key, relationship.relationship_id])
+  );
+
+  const evidenceRows = pendingEvidence.map((evidence) => ({
+    relationshipId: relationshipIdByKey.get(evidence.relationshipKey),
+    sourceKey: evidence.sourceKey,
+    syncRunId: evidence.syncRunId,
+    sourceRecordKey: evidence.sourceRecordKey,
+    evidenceType: evidence.evidenceType,
+    evidenceCode: evidence.evidenceCode,
+    confidenceScore: evidence.confidenceScore,
+    provenanceUrl: evidence.provenanceUrl,
+    payload: evidence.payload
+  }));
+
+  await upsertRelationshipEvidenceBatch(client, evidenceRows);
+  counters.relationships += pendingRelationships.length;
+  pendingRelationships.length = 0;
+  pendingEvidence.length = 0;
 }
 
 function buildEntityLabelCacheKey(ref) {
