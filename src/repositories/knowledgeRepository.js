@@ -223,9 +223,22 @@ export async function resolveOrCreateEntity(client, ref, sourceKey) {
 export async function upsertRelationship(client, relationship, sourceKey) {
   const subject = await resolveOrCreateEntity(client, relationship.subjectRef, sourceKey);
   const object = await resolveOrCreateEntity(client, relationship.objectRef, sourceKey);
+  return upsertResolvedRelationship(
+    client,
+    {
+      subjectEntityId: subject.entity_id,
+      predicateKey: relationship.predicateKey,
+      objectEntityId: object.entity_id,
+      qualifiers: relationship.qualifiers || {}
+    },
+    sourceKey
+  );
+}
+
+export async function upsertResolvedRelationship(client, relationship, sourceKey) {
   const qualifiersJson = relationship.qualifiers || {};
   const relationshipKey = stableHash(
-    `${subject.entity_id}|${relationship.predicateKey}|${object.entity_id}|${stableJson(qualifiersJson)}`
+    `${relationship.subjectEntityId}|${relationship.predicateKey}|${relationship.objectEntityId}|${stableJson(qualifiersJson)}`
   );
 
   const result = await client.query(
@@ -248,9 +261,9 @@ export async function upsertRelationship(client, relationship, sourceKey) {
     `,
     [
       relationshipKey,
-      subject.entity_id,
+      relationship.subjectEntityId,
       relationship.predicateKey,
-      object.entity_id,
+      relationship.objectEntityId,
       JSON.stringify(qualifiersJson),
       sourceKey
     ]

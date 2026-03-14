@@ -8,10 +8,11 @@ import {
   supersedeRunningSyncRunsForSource
 } from '../repositories/sourceRepository.js';
 import {
+  resolveOrCreateEntity,
   upsertEntity,
   upsertEntityAlias,
   upsertEntityXref,
-  upsertRelationship,
+  upsertResolvedRelationship,
   upsertRelationshipEvidence,
   upsertSourceRecord
 } from '../repositories/knowledgeRepository.js';
@@ -22,7 +23,7 @@ import { fetchHpoGeneDiseaseDataset } from './sources/hpoGeneDiseaseSource.js';
 import { fetchHpoGenePhenotypeDataset } from './sources/hpoGenePhenotypeSource.js';
 import { fetchClinvarGeneDiseaseDataset } from './sources/clinvarGeneDiseaseSource.js';
 import { fetchClinicalTrialsDataset } from './sources/clinicalTrialsSource.js';
-import { normalizeCurie } from '../lib/curies.js';
+import { normalizeCurie, normalizeLabel } from '../lib/curies.js';
 
 const SYNC_HANDLERS = Object.freeze({
   [SOURCE_KEYS.MONDO_ONTOLOGY]: fetchMondoDataset,
@@ -52,6 +53,7 @@ function resolveSourceOrThrow(sourceKey) {
 
 async function applyDataset(client, source, syncRunId, dataset) {
   const entityIdByCurie = new Map();
+  const entityIdByLabel = new Map();
   const counters = {
     entities: 0,
     aliases: 0,
@@ -62,7 +64,9 @@ async function applyDataset(client, source, syncRunId, dataset) {
 
   for (const entity of dataset.entities || []) {
     const persisted = await upsertEntity(client, entity);
-    entityIdByCurie.set(normalizeCurie(entity.canonicalCurie), persisted.entity_id);
+    const canonicalCurie = normalizeCurie(entity.canonicalCurie);
+    entityIdByCurie.set(canonicalCurie, persisted.entity_id);
+    entityIdByLabel.set(`${entity.entityType}|${normalizeLabel(entity.canonicalLabel || canonicalCurie)}`, persisted.entity_id);
     counters.entities += 1;
   }
 
@@ -122,7 +126,30 @@ async function applyDataset(client, source, syncRunId, dataset) {
   }
 
   for (const relationship of dataset.relationships || []) {
-    const persisted = await upsertRelationship(client, relationship, source.sourceKey);
+    const subject = await resolveRelationshipEntity(
+      client,
+      relationship.subjectRef,
+      source.sourceKey,
+      entityIdByCurie,
+      entityIdByLabel
+    );
+    const object = await resolveRelationshipEntity(
+      client,
+      relationship.objectRef,
+      source.sourceKey,
+      entityIdByCurie,
+      entityIdByLabel
+    );
+    const persisted = await upsertResolvedRelationship(
+      client,
+      {
+        subjectEntityId: subject.entity_id,
+        predicateKey: relationship.predicateKey,
+        objectEntityId: object.entity_id,
+        qualifiers: relationship.qualifiers || {}
+      },
+      source.sourceKey
+    );
     await upsertRelationshipEvidence(client, {
       relationshipId: persisted.relationship_id,
       sourceKey: source.sourceKey,
@@ -137,6 +164,38 @@ async function applyDataset(client, source, syncRunId, dataset) {
   }
 
   return counters;
+}
+
+function buildEntityLabelCacheKey(ref) {
+  if (!ref?.label) return '';
+  return `${ref.entityType}|${normalizeLabel(ref.label)}`;
+}
+
+async function resolveRelationshipEntity(client, ref, sourceKey, entityIdByCurie, entityIdByLabel) {
+  const normalizedCurie = normalizeCurie(ref?.curie || '');
+  if (normalizedCurie && entityIdByCurie.has(normalizedCurie)) {
+    return {
+      entity_id: entityIdByCurie.get(normalizedCurie),
+      canonical_curie: normalizedCurie
+    };
+  }
+
+  const labelKey = buildEntityLabelCacheKey(ref);
+  if (labelKey && entityIdByLabel.has(labelKey)) {
+    return {
+      entity_id: entityIdByLabel.get(labelKey),
+      canonical_curie: normalizedCurie
+    };
+  }
+
+  const resolved = await resolveOrCreateEntity(client, ref, sourceKey);
+  if (resolved.canonical_curie) {
+    entityIdByCurie.set(normalizeCurie(resolved.canonical_curie), resolved.entity_id);
+  }
+  if (labelKey) {
+    entityIdByLabel.set(labelKey, resolved.entity_id);
+  }
+  return resolved;
 }
 
 async function createSourceSyncRun(sourceKey, options, requestedBy) {
