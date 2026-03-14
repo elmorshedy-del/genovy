@@ -1,0 +1,387 @@
+import { normalizeCurie, normalizeLabel, buildPlaceholderCurie, stableHash } from '../lib/curies.js';
+import { stableJson } from '../lib/json.js';
+
+function confidenceOrNull(rawValue) {
+  if (rawValue == null || rawValue === '') return null;
+  const parsed = Number(rawValue);
+  return Number.isFinite(parsed) ? parsed : null;
+}
+
+export async function upsertEntity(client, entity) {
+  const canonicalCurie = normalizeCurie(entity.canonicalCurie);
+  const canonicalLabel = String(entity.canonicalLabel || canonicalCurie);
+  const normalizedLabel = normalizeLabel(canonicalLabel);
+  const result = await client.query(
+    `
+      INSERT INTO entities (
+        entity_type,
+        canonical_curie,
+        canonical_label,
+        normalized_label,
+        description,
+        primary_source_key,
+        metadata_json,
+        is_placeholder
+      )
+      VALUES ($1, $2, $3, $4, $5, $6, $7::jsonb, $8)
+      ON CONFLICT (canonical_curie)
+      DO UPDATE SET
+        entity_type = EXCLUDED.entity_type,
+        canonical_label = EXCLUDED.canonical_label,
+        normalized_label = EXCLUDED.normalized_label,
+        description = COALESCE(EXCLUDED.description, entities.description),
+        primary_source_key = COALESCE(entities.primary_source_key, EXCLUDED.primary_source_key),
+        metadata_json = entities.metadata_json || EXCLUDED.metadata_json,
+        is_placeholder = CASE
+          WHEN entities.is_placeholder = FALSE THEN FALSE
+          ELSE EXCLUDED.is_placeholder
+        END,
+        updated_at = NOW()
+      RETURNING entity_id, canonical_curie
+    `,
+    [
+      entity.entityType,
+      canonicalCurie,
+      canonicalLabel,
+      normalizedLabel,
+      entity.description || null,
+      entity.primarySourceKey || null,
+      JSON.stringify(entity.metadata || {}),
+      Boolean(entity.isPlaceholder)
+    ]
+  );
+  return result.rows[0];
+}
+
+export async function upsertEntityAlias(client, alias) {
+  await client.query(
+    `
+      INSERT INTO entity_aliases (
+        entity_id,
+        alias_label,
+        normalized_alias,
+        alias_type,
+        source_key
+      )
+      VALUES ($1, $2, $3, $4, $5)
+      ON CONFLICT (entity_id, normalized_alias, alias_type)
+      DO NOTHING
+    `,
+    [
+      alias.entityId,
+      alias.aliasLabel,
+      normalizeLabel(alias.aliasLabel),
+      alias.aliasType || 'synonym',
+      alias.sourceKey || null
+    ]
+  );
+}
+
+export async function upsertEntityXref(client, xref) {
+  await client.query(
+    `
+      INSERT INTO entity_xrefs (
+        entity_id,
+        xref_curie,
+        source_key,
+        xref_type
+      )
+      VALUES ($1, $2, $3, $4)
+      ON CONFLICT (entity_id, xref_curie)
+      DO NOTHING
+    `,
+    [
+      xref.entityId,
+      normalizeCurie(xref.xrefCurie),
+      xref.sourceKey || null,
+      xref.xrefType || 'cross_reference'
+    ]
+  );
+}
+
+export async function upsertSourceRecord(client, sourceRecord) {
+  const payloadJson = JSON.stringify(sourceRecord.payload || {});
+  const payloadHash = stableHash(payloadJson);
+  await client.query(
+    `
+      INSERT INTO source_records (
+        source_key,
+        sync_run_id,
+        record_type,
+        source_record_key,
+        canonical_curie,
+        payload_json,
+        payload_hash
+      )
+      VALUES ($1, $2, $3, $4, $5, $6::jsonb, $7)
+      ON CONFLICT (source_key, source_record_key)
+      DO UPDATE SET
+        sync_run_id = EXCLUDED.sync_run_id,
+        canonical_curie = EXCLUDED.canonical_curie,
+        payload_json = EXCLUDED.payload_json,
+        payload_hash = EXCLUDED.payload_hash,
+        updated_at = NOW()
+    `,
+    [
+      sourceRecord.sourceKey,
+      sourceRecord.syncRunId,
+      sourceRecord.recordType,
+      sourceRecord.sourceRecordKey,
+      sourceRecord.canonicalCurie ? normalizeCurie(sourceRecord.canonicalCurie) : null,
+      payloadJson,
+      payloadHash
+    ]
+  );
+}
+
+export async function resolveEntityByCurie(client, curie) {
+  const normalizedCurie = normalizeCurie(curie);
+  if (!normalizedCurie) return null;
+
+  const canonicalMatch = await client.query(
+    `
+      SELECT entity_id, canonical_curie
+      FROM entities
+      WHERE canonical_curie = $1
+      LIMIT 1
+    `,
+    [normalizedCurie]
+  );
+  if (canonicalMatch.rowCount) {
+    return canonicalMatch.rows[0];
+  }
+
+  const xrefMatch = await client.query(
+    `
+      SELECT e.entity_id, e.canonical_curie
+      FROM entity_xrefs x
+      INNER JOIN entities e ON e.entity_id = x.entity_id
+      WHERE x.xref_curie = $1
+      ORDER BY e.is_placeholder ASC, e.entity_id ASC
+      LIMIT 1
+    `,
+    [normalizedCurie]
+  );
+  if (xrefMatch.rowCount) {
+    return xrefMatch.rows[0];
+  }
+  return null;
+}
+
+export async function resolveEntityByLabel(client, label, entityType = '') {
+  const normalized = normalizeLabel(label);
+  if (!normalized) return null;
+
+  const result = await client.query(
+    `
+      SELECT e.entity_id, e.canonical_curie
+      FROM entities e
+      LEFT JOIN entity_aliases a ON a.entity_id = e.entity_id
+      WHERE ($1 = '' OR e.entity_type = $1)
+        AND (e.normalized_label = $2 OR a.normalized_alias = $2)
+      ORDER BY e.is_placeholder ASC, e.entity_id ASC
+      LIMIT 1
+    `,
+    [entityType, normalized]
+  );
+  return result.rowCount ? result.rows[0] : null;
+}
+
+export async function resolveOrCreateEntity(client, ref, sourceKey) {
+  if (ref.curie) {
+    const resolved = await resolveEntityByCurie(client, ref.curie);
+    if (resolved) return resolved;
+
+    return upsertEntity(client, {
+      entityType: ref.entityType,
+      canonicalCurie: ref.curie,
+      canonicalLabel: ref.label || ref.curie,
+      description: ref.description || null,
+      metadata: ref.metadata || {},
+      primarySourceKey: sourceKey,
+      isPlaceholder: Boolean(ref.isPlaceholder ?? true)
+    });
+  }
+
+  if (ref.label) {
+    const resolved = await resolveEntityByLabel(client, ref.label, ref.entityType);
+    if (resolved) return resolved;
+  }
+
+  const placeholderCurie = buildPlaceholderCurie(ref.entityType, ref.label || `${sourceKey}-placeholder`);
+  return upsertEntity(client, {
+    entityType: ref.entityType,
+    canonicalCurie: placeholderCurie,
+    canonicalLabel: ref.label || placeholderCurie,
+    description: ref.description || null,
+    metadata: ref.metadata || {},
+    primarySourceKey: sourceKey,
+    isPlaceholder: true
+  });
+}
+
+export async function upsertRelationship(client, relationship, sourceKey) {
+  const subject = await resolveOrCreateEntity(client, relationship.subjectRef, sourceKey);
+  const object = await resolveOrCreateEntity(client, relationship.objectRef, sourceKey);
+  const qualifiersJson = relationship.qualifiers || {};
+  const relationshipKey = stableHash(
+    `${subject.entity_id}|${relationship.predicateKey}|${object.entity_id}|${stableJson(qualifiersJson)}`
+  );
+
+  const result = await client.query(
+    `
+      INSERT INTO relationships (
+        relationship_key,
+        subject_entity_id,
+        predicate_key,
+        object_entity_id,
+        qualifiers_json,
+        primary_source_key
+      )
+      VALUES ($1, $2, $3, $4, $5::jsonb, $6)
+      ON CONFLICT (relationship_key)
+      DO UPDATE SET
+        qualifiers_json = EXCLUDED.qualifiers_json,
+        last_seen_at = NOW(),
+        updated_at = NOW()
+      RETURNING relationship_id
+    `,
+    [
+      relationshipKey,
+      subject.entity_id,
+      relationship.predicateKey,
+      object.entity_id,
+      JSON.stringify(qualifiersJson),
+      sourceKey
+    ]
+  );
+
+  return result.rows[0];
+}
+
+export async function upsertRelationshipEvidence(client, evidence) {
+  await client.query(
+    `
+      INSERT INTO relationship_evidence (
+        relationship_id,
+        source_key,
+        sync_run_id,
+        source_record_key,
+        evidence_type,
+        evidence_code,
+        confidence_score,
+        provenance_url,
+        payload_json
+      )
+      VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9::jsonb)
+      ON CONFLICT (relationship_id, source_key, source_record_key, evidence_type, evidence_code)
+      DO UPDATE SET
+        sync_run_id = EXCLUDED.sync_run_id,
+        confidence_score = COALESCE(EXCLUDED.confidence_score, relationship_evidence.confidence_score),
+        provenance_url = COALESCE(EXCLUDED.provenance_url, relationship_evidence.provenance_url),
+        payload_json = relationship_evidence.payload_json || EXCLUDED.payload_json,
+        observed_at = NOW()
+    `,
+    [
+      evidence.relationshipId,
+      evidence.sourceKey,
+      evidence.syncRunId,
+      evidence.sourceRecordKey || null,
+      evidence.evidenceType,
+      evidence.evidenceCode || null,
+      confidenceOrNull(evidence.confidenceScore),
+      evidence.provenanceUrl || null,
+      JSON.stringify(evidence.payload || {})
+    ]
+  );
+}
+
+export async function listKnowledgeSummary(client) {
+  const entities = await client.query(`
+    SELECT entity_type, COUNT(*)::INTEGER AS count
+    FROM entities
+    GROUP BY entity_type
+    ORDER BY entity_type ASC
+  `);
+  const relationships = await client.query(`
+    SELECT predicate_key, COUNT(*)::INTEGER AS count
+    FROM relationships
+    GROUP BY predicate_key
+    ORDER BY predicate_key ASC
+  `);
+  return {
+    entities: entities.rows,
+    relationships: relationships.rows
+  };
+}
+
+export async function getEntityDetail(client, curie) {
+  const resolved = await resolveEntityByCurie(client, curie);
+  if (!resolved) return null;
+
+  const entity = await client.query(
+    `
+      SELECT *
+      FROM entities
+      WHERE entity_id = $1
+      LIMIT 1
+    `,
+    [resolved.entity_id]
+  );
+  const aliases = await client.query(
+    `
+      SELECT alias_label, alias_type, source_key
+      FROM entity_aliases
+      WHERE entity_id = $1
+      ORDER BY alias_label ASC
+    `,
+    [resolved.entity_id]
+  );
+  const xrefs = await client.query(
+    `
+      SELECT xref_curie, xref_type, source_key
+      FROM entity_xrefs
+      WHERE entity_id = $1
+      ORDER BY xref_curie ASC
+    `,
+    [resolved.entity_id]
+  );
+  const outbound = await client.query(
+    `
+      SELECT
+        r.predicate_key,
+        o.canonical_curie AS object_curie,
+        o.canonical_label AS object_label,
+        r.qualifiers_json
+      FROM relationships r
+      INNER JOIN entities o ON o.entity_id = r.object_entity_id
+      WHERE r.subject_entity_id = $1
+      ORDER BY r.predicate_key, o.canonical_label
+      LIMIT 100
+    `,
+    [resolved.entity_id]
+  );
+  const inbound = await client.query(
+    `
+      SELECT
+        r.predicate_key,
+        s.canonical_curie AS subject_curie,
+        s.canonical_label AS subject_label,
+        r.qualifiers_json
+      FROM relationships r
+      INNER JOIN entities s ON s.entity_id = r.subject_entity_id
+      WHERE r.object_entity_id = $1
+      ORDER BY r.predicate_key, s.canonical_label
+      LIMIT 100
+    `,
+    [resolved.entity_id]
+  );
+
+  return {
+    entity: entity.rows[0],
+    aliases: aliases.rows,
+    xrefs: xrefs.rows,
+    outboundRelationships: outbound.rows,
+    inboundRelationships: inbound.rows
+  };
+}

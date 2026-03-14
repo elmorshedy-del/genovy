@@ -1,0 +1,52 @@
+import express from 'express';
+import { requireAdminToken } from '../middleware/adminAuth.js';
+import { withClient } from '../db/pool.js';
+import { listSourcesWithState, listSyncRuns } from '../repositories/sourceRepository.js';
+import { bootstrapKnowledgeNetwork, syncSource } from '../services/sourceSyncService.js';
+
+const router = express.Router();
+
+router.use(requireAdminToken);
+
+router.get('/sources', async (_req, res) => {
+  try {
+    const sources = await withClient((client) => listSourcesWithState(client));
+    res.json({ success: true, sources });
+  } catch (error) {
+    res.status(500).json({ success: false, error: error.message || 'Failed to list sources.' });
+  }
+});
+
+router.get('/sync-runs', async (req, res) => {
+  try {
+    const runs = await withClient((client) =>
+      listSyncRuns(client, {
+        sourceKey: String(req.query.sourceKey || ''),
+        limit: Number.parseInt(String(req.query.limit || '20'), 10)
+      })
+    );
+    res.json({ success: true, runs });
+  } catch (error) {
+    res.status(500).json({ success: false, error: error.message || 'Failed to list sync runs.' });
+  }
+});
+
+router.post('/sources/:sourceKey/sync', async (req, res) => {
+  try {
+    const result = await syncSource(req.params.sourceKey, req.body || {}, 'admin_api');
+    res.json({ success: true, result });
+  } catch (error) {
+    res.status(400).json({ success: false, error: error.message || 'Sync failed.' });
+  }
+});
+
+router.post('/bootstrap', async (req, res) => {
+  try {
+    const results = await bootstrapKnowledgeNetwork(req.body || {}, 'admin_api');
+    res.json({ success: true, results });
+  } catch (error) {
+    res.status(400).json({ success: false, error: error.message || 'Bootstrap failed.' });
+  }
+});
+
+export default router;
