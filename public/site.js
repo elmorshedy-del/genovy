@@ -30,8 +30,13 @@ async function hydrateHealth() {
     const response = await fetch(HEALTH_ENDPOINT, { headers: { accept: 'application/json' } });
     if (!response.ok) throw new Error(`Health check failed: ${response.status}`);
     const payload = await response.json();
-    dot.classList.add('is-live');
-    label.textContent = payload.status === 'ok' ? 'Knowledge service live' : 'Service status unknown';
+    if (payload.runtime?.knowledgeApiReady) {
+      dot.classList.add('is-live');
+      label.textContent = 'Knowledge service live';
+      return;
+    }
+    dot.classList.add('is-warn');
+    label.textContent = 'Public site live, knowledge layer pending';
   } catch (_error) {
     dot.classList.add('is-warn');
     label.textContent = 'Public site live, backend setup pending';

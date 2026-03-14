@@ -12,6 +12,30 @@ export const ENV = Object.freeze({
   adminToken: process.env.RARE_DISEASE_ADMIN_TOKEN || ''
 });
 
+export const SERVICE_FLAGS = Object.freeze({
+  hasDatabase: Boolean(ENV.databaseUrl),
+  hasAdminToken: Boolean(ENV.adminToken)
+});
+
+export function getServiceMode() {
+  if (SERVICE_FLAGS.hasDatabase && SERVICE_FLAGS.hasAdminToken) {
+    return 'full';
+  }
+  if (SERVICE_FLAGS.hasDatabase) {
+    return 'knowledge_only';
+  }
+  return 'website_only';
+}
+
+export function getRuntimeStatus() {
+  return {
+    mode: getServiceMode(),
+    publicSiteReady: true,
+    knowledgeApiReady: SERVICE_FLAGS.hasDatabase,
+    adminApiReady: SERVICE_FLAGS.hasDatabase && SERVICE_FLAGS.hasAdminToken
+  };
+}
+
 export function assertRequiredEnv(options = {}) {
   const { requireAdminToken = true } = options;
   const missing = [];
