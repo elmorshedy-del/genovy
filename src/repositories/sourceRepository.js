@@ -141,6 +141,25 @@ export async function listSyncRuns(client, { sourceKey = '', limit = 20 } = {}) 
   return result.rows;
 }
 
+export async function listSuccessfulSourceKeys(client, sourceKeys = []) {
+  if (!sourceKeys.length) {
+    return [];
+  }
+
+  const result = await client.query(
+    `
+      SELECT source_key
+      FROM source_sync_state
+      WHERE source_key = ANY($1::TEXT[])
+        AND last_successful_at IS NOT NULL
+      ORDER BY source_key ASC
+    `,
+    [sourceKeys]
+  );
+
+  return result.rows.map((row) => row.source_key);
+}
+
 export async function getSyncRunById(client, syncRunId) {
   const result = await client.query(
     `

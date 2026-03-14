@@ -65,6 +65,9 @@ Useful commands:
 - `sync-run <syncRunId>`
 - `bootstrap --wait`
 
+By default, `bootstrap` skips sources that already have a successful sync recorded. Add
+`--include-completed` if you want to force a full bootstrap rerun.
+
 ## Routes
 
 - `GET /` public website
