@@ -4,6 +4,7 @@ import {
   ensureSourceCatalog,
   createSyncRun,
   finalizeSyncRun,
+  listSuccessfulSourceKeys,
   markSourceSyncState,
   supersedeRunningSyncRunsForSource
 } from '../repositories/sourceRepository.js';
@@ -24,6 +25,7 @@ import { fetchHpoGenePhenotypeDataset } from './sources/hpoGenePhenotypeSource.j
 import { fetchClinvarGeneDiseaseDataset } from './sources/clinvarGeneDiseaseSource.js';
 import { fetchClinicalTrialsDataset } from './sources/clinicalTrialsSource.js';
 import { normalizeCurie, normalizeLabel, stableHash } from '../lib/curies.js';
+import { filterBootstrapSourceKeys, shouldSkipCompletedSources } from '../lib/bootstrapSources.js';
 import { stableJson } from '../lib/json.js';
 
 const SYNC_HANDLERS = Object.freeze({
@@ -39,6 +41,10 @@ const SYNC_HANDLERS = Object.freeze({
 const CLINICAL_TRIALS_DEFAULTS = Object.freeze({
   maxPages: 5,
   pageSize: 100
+});
+
+const BOOTSTRAP_DEFAULTS = Object.freeze({
+  skipCompletedSources: true
 });
 
 const RELATIONSHIP_BATCH_SIZE = 500;
@@ -403,9 +409,28 @@ function buildClinicalTrialsOptions(options, conditionQuery) {
   };
 }
 
+async function resolveBootstrapSourceOrder(options = {}) {
+  const effectiveOptions = {
+    ...BOOTSTRAP_DEFAULTS,
+    ...options
+  };
+
+  if (!shouldSkipCompletedSources(effectiveOptions)) {
+    return [...BOOTSTRAP_SOURCE_ORDER];
+  }
+
+  const successfulSourceKeys = await withClient(async (client) => {
+    await ensureSourceCatalog(client);
+    return listSuccessfulSourceKeys(client, BOOTSTRAP_SOURCE_ORDER);
+  });
+
+  return filterBootstrapSourceKeys(BOOTSTRAP_SOURCE_ORDER, successfulSourceKeys, effectiveOptions);
+}
+
 export async function bootstrapKnowledgeNetwork(options = {}, requestedBy = 'api') {
   const results = [];
-  for (const sourceKey of BOOTSTRAP_SOURCE_ORDER) {
+  const sourceOrder = await resolveBootstrapSourceOrder(options);
+  for (const sourceKey of sourceOrder) {
     const sourceOptions = options[sourceKey] || {};
     const result = await syncSource(sourceKey, sourceOptions, requestedBy);
     results.push(result);
@@ -427,7 +452,8 @@ export async function bootstrapKnowledgeNetwork(options = {}, requestedBy = 'api
 
 export async function queueBootstrapKnowledgeNetwork(options = {}, requestedBy = 'api') {
   const results = [];
-  for (const sourceKey of BOOTSTRAP_SOURCE_ORDER) {
+  const sourceOrder = await resolveBootstrapSourceOrder(options);
+  for (const sourceKey of sourceOrder) {
     const sourceOptions = options[sourceKey] || {};
     const result = await queueSourceSync(sourceKey, sourceOptions, requestedBy);
     results.push(result);

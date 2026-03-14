@@ -1,4 +1,5 @@
 import { BOOTSTRAP_SOURCE_ORDER, SOURCE_CATALOG, SOURCE_KEYS } from '../constants/sourceCatalog.js';
+import { filterBootstrapSourceKeys, shouldSkipCompletedSources } from '../lib/bootstrapSources.js';
 
 const CLI_DEFAULTS = Object.freeze({
   baseUrl: process.env.GENOVY_BASE_URL || `http://127.0.0.1:${process.env.PORT || '3100'}`,
@@ -15,7 +16,7 @@ Usage:
   npm run ops:admin -- summary
   npm run ops:admin -- sync-source <sourceKey> [--wait] [--body '{"conditionQuery":"rare disease"}']
   npm run ops:admin -- sync-run <syncRunId>
-  npm run ops:admin -- bootstrap [--wait] [--trials-query "rare disease"] [--trials-query "genetic disease"]
+  npm run ops:admin -- bootstrap [--wait] [--include-completed] [--trials-query "rare disease"] [--trials-query "genetic disease"]
 
 Environment:
   GENOVY_BASE_URL       Base URL of the Genovy app
@@ -169,7 +170,21 @@ function buildClinicalTrialsBody(flags, conditionQuery) {
 
 async function runBootstrap(flags) {
   const results = [];
+  const queuedSources = await requestJson('/api/admin/sources', { authRequired: true });
+  const successfulSourceKeys = (queuedSources.sources || [])
+    .filter((source) => source.last_successful_at)
+    .map((source) => source.source_key);
+  const sourceOrder = filterBootstrapSourceKeys(BOOTSTRAP_SOURCE_ORDER, successfulSourceKeys, {
+    skipCompletedSources: shouldSkipCompletedSources(flags),
+    includeCompletedSources: Boolean(flags['include-completed'])
+  });
+  const sourceOrderSet = new Set(sourceOrder);
+
   for (const sourceKey of BOOTSTRAP_SOURCE_ORDER) {
+    if (!sourceOrderSet.has(sourceKey)) {
+      console.log(`[ops] skipping ${sourceKey} because it already has a successful sync`);
+      continue;
+    }
     console.log(`[ops] queueing ${sourceKey}`);
     const result = await runSyncSource(sourceKey, { ...flags, body: '{}' });
     results.push(result);
