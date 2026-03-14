@@ -40,6 +40,9 @@ PATH=/opt/homebrew/bin:$PATH /opt/homebrew/bin/npm run migrate
 PATH=/opt/homebrew/bin:$PATH /opt/homebrew/bin/npm run dev
 ```
 
+If `DATABASE_URL` is missing, Genovy still boots the public website in `website_only` mode.
+If `DATABASE_URL` exists but `RARE_DISEASE_ADMIN_TOKEN` is missing, the public site and knowledge API can run while admin sync routes stay disabled.
+
 ## Routes
 
 - `GET /` public website
