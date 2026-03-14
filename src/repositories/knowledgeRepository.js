@@ -1,6 +1,9 @@
 import { normalizeCurie, normalizeLabel, buildPlaceholderCurie, stableHash } from '../lib/curies.js';
 import { stableJson } from '../lib/json.js';
 
+const SEARCH_RESULT_LIMIT_DEFAULT = 8;
+const SEARCH_RESULT_LIMIT_MAX = 12;
+
 function confidenceOrNull(rawValue) {
   if (rawValue == null || rawValue === '') return null;
   const parsed = Number(rawValue);
@@ -428,6 +431,99 @@ export async function listKnowledgeSummary(client) {
   };
 }
 
+export async function searchKnowledgeEntities(client, { query, entityType = '', limit = SEARCH_RESULT_LIMIT_DEFAULT }) {
+  const rawQuery = String(query || '').trim();
+  const normalizedQuery = normalizeLabel(rawQuery);
+  if (!rawQuery || (!normalizedQuery && !rawQuery.includes(':'))) {
+    return [];
+  }
+
+  const normalizedEntityType = String(entityType || '').trim();
+  const resolvedCurie = normalizeCurie(rawQuery) || rawQuery.toUpperCase();
+  const cappedLimit = Math.max(1, Math.min(SEARCH_RESULT_LIMIT_MAX, Number(limit) || SEARCH_RESULT_LIMIT_DEFAULT));
+  const normalizedPrefix = `${normalizedQuery}%`;
+  const normalizedContains = `%${normalizedQuery}%`;
+  const curiePrefix = `${resolvedCurie}%`;
+
+  const result = await client.query(
+    `
+      WITH candidate_matches AS (
+        SELECT
+          e.entity_id,
+          CASE
+            WHEN e.canonical_curie = $2 THEN 140
+            WHEN e.canonical_curie ILIKE $3 THEN 120
+            WHEN e.normalized_label = $4 THEN 110
+            WHEN e.normalized_label LIKE $5 THEN 100
+            WHEN e.normalized_label LIKE $6 THEN 80
+            ELSE 0
+          END AS match_rank
+        FROM entities e
+        WHERE ($1 = '' OR e.entity_type = $1)
+          AND (
+            e.canonical_curie ILIKE $3
+            OR e.normalized_label = $4
+            OR e.normalized_label LIKE $5
+            OR e.normalized_label LIKE $6
+          )
+
+        UNION ALL
+
+        SELECT
+          e.entity_id,
+          CASE
+            WHEN a.normalized_alias = $4 THEN 105
+            WHEN a.normalized_alias LIKE $5 THEN 95
+            WHEN a.normalized_alias LIKE $6 THEN 75
+            ELSE 0
+          END AS match_rank
+        FROM entity_aliases a
+        INNER JOIN entities e ON e.entity_id = a.entity_id
+        WHERE ($1 = '' OR e.entity_type = $1)
+          AND (
+            a.normalized_alias = $4
+            OR a.normalized_alias LIKE $5
+            OR a.normalized_alias LIKE $6
+          )
+      ),
+      ranked AS (
+        SELECT
+          entity_id,
+          MAX(match_rank)::INTEGER AS match_rank
+        FROM candidate_matches
+        GROUP BY entity_id
+      )
+      SELECT
+        e.entity_type,
+        e.canonical_curie,
+        e.canonical_label,
+        e.description,
+        e.is_placeholder,
+        r.match_rank,
+        (
+          SELECT COUNT(*)::INTEGER
+          FROM relationships rel
+          WHERE rel.subject_entity_id = e.entity_id
+        ) AS outbound_count,
+        (
+          SELECT COUNT(*)::INTEGER
+          FROM relationships rel
+          WHERE rel.object_entity_id = e.entity_id
+        ) AS inbound_count
+      FROM ranked r
+      INNER JOIN entities e ON e.entity_id = r.entity_id
+      ORDER BY
+        r.match_rank DESC,
+        e.is_placeholder ASC,
+        e.canonical_label ASC
+      LIMIT $7
+    `,
+    [normalizedEntityType, resolvedCurie, curiePrefix, normalizedQuery, normalizedPrefix, normalizedContains, cappedLimit]
+  );
+
+  return result.rows;
+}
+
 export async function getEntityDetail(client, curie) {
   const resolved = await resolveEntityByCurie(client, curie);
   if (!resolved) return null;
@@ -456,6 +552,22 @@ export async function getEntityDetail(client, curie) {
       FROM entity_xrefs
       WHERE entity_id = $1
       ORDER BY xref_curie ASC
+    `,
+    [resolved.entity_id]
+  );
+  const counts = await client.query(
+    `
+      SELECT
+        (
+          SELECT COUNT(*)::INTEGER
+          FROM relationships
+          WHERE subject_entity_id = $1
+        ) AS outbound_count,
+        (
+          SELECT COUNT(*)::INTEGER
+          FROM relationships
+          WHERE object_entity_id = $1
+        ) AS inbound_count
     `,
     [resolved.entity_id]
   );
@@ -494,6 +606,8 @@ export async function getEntityDetail(client, curie) {
     entity: entity.rows[0],
     aliases: aliases.rows,
     xrefs: xrefs.rows,
+    outboundCount: counts.rows[0]?.outbound_count || 0,
+    inboundCount: counts.rows[0]?.inbound_count || 0,
     outboundRelationships: outbound.rows,
     inboundRelationships: inbound.rows
   };

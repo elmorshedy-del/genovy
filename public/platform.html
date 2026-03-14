@@ -27,6 +27,7 @@
         </a>
         <nav class="site-nav" aria-label="Primary">
           <a href="/">Home</a>
+          <a href="#explorer">Explorer</a>
           <a href="#architecture">Architecture</a>
           <a href="#schema">Schema</a>
           <a href="#pipeline">Pipeline</a>
@@ -51,7 +52,7 @@
               records into a clearer next step.
             </p>
             <div class="hero-actions">
-              <a class="button button-solid" href="#live-network">See live network state</a>
+              <a class="button button-solid" href="#explorer">Touch the graph</a>
               <a class="button button-subtle" href="/">Back to landing page</a>
             </div>
           </div>
@@ -87,6 +88,60 @@
               Public page is available even while the knowledge layer is still syncing.
             </p>
           </aside>
+        </section>
+
+        <section id="explorer" class="section">
+          <div class="section-copy reveal">
+            <p class="eyebrow">Touch the graph</p>
+            <h2>Search the live knowledge network.</h2>
+            <p>
+              Type a disease, phenotype, gene, or trial term and Genovy will pull a live result
+              from the graph, then open the linked evidence around it.
+            </p>
+          </div>
+          <div class="explorer-shell reveal" data-delay="80">
+            <article class="panel-card explorer-card">
+              <div class="panel-head">
+                <div>
+                  <p class="panel-kicker">Live graph explorer</p>
+                  <h3>Probe the network directly</h3>
+                </div>
+              </div>
+              <form class="explorer-form" id="graph-search-form">
+                <label class="sr-only" for="graph-search-input">Search the live graph</label>
+                <input
+                  id="graph-search-input"
+                  class="explorer-input"
+                  type="search"
+                  name="q"
+                  placeholder="Try muscle weakness, ataxia, DMD, or NCT:..."
+                  autocomplete="off"
+                />
+                <button class="button button-solid explorer-submit" type="submit">Search</button>
+              </form>
+              <div class="tag-row explorer-pills">
+                <button class="query-pill" type="button" data-query="muscle weakness">muscle weakness</button>
+                <button class="query-pill" type="button" data-query="ataxia">ataxia</button>
+                <button class="query-pill" type="button" data-query="DMD">DMD</button>
+                <button class="query-pill" type="button" data-query="rare disease">rare disease</button>
+              </div>
+              <div class="explorer-results" id="graph-search-results">
+                <p class="empty-state">Search the graph to surface a live entity.</p>
+              </div>
+            </article>
+
+            <article class="panel-card explorer-card explorer-card-detail">
+              <div class="panel-head">
+                <div>
+                  <p class="panel-kicker">Entity spotlight</p>
+                  <h3>What the graph knows about it</h3>
+                </div>
+              </div>
+              <div id="graph-entity-detail">
+                <p class="empty-state">Choose a search result to open its connected evidence.</p>
+              </div>
+            </article>
+          </div>
         </section>
 
         <section id="architecture" class="section">
@@ -358,5 +413,6 @@
 
     <script src="/site.js" defer></script>
     <script src="/platform.js" defer></script>
+    <script src="/platformExplorer.js" defer></script>
   </body>
 </html>
