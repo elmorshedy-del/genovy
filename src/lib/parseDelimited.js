@@ -11,12 +11,15 @@ export function parseDelimitedText(text, delimiter = '\t') {
     if (line.startsWith('#')) {
       const body = line.slice(1).trim();
       const separatorIndex = body.indexOf(':');
-      if (separatorIndex > 0) {
+      const delimiterIndex = body.indexOf(delimiter);
+      const isMetadataLine = separatorIndex > 0 && (delimiterIndex < 0 || separatorIndex < delimiterIndex);
+
+      if (isMetadataLine) {
         const key = body.slice(0, separatorIndex).trim();
         const value = body.slice(separatorIndex + 1).trim();
         metadata[key] = value.replace(/^"|"$/g, '');
+        continue;
       }
-      continue;
     }
     headerLine = line;
     break;

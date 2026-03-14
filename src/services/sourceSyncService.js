@@ -2,6 +2,7 @@ import { BOOTSTRAP_SOURCE_ORDER, SOURCE_CATALOG, SOURCE_KEYS } from '../constant
 import { withClient } from '../db/pool.js';
 import {
   ensureSourceCatalog,
+  abandonRunningSyncRuns,
   createSyncRun,
   finalizeSyncRun,
   listSuccessfulSourceKeys,
@@ -27,6 +28,7 @@ import { fetchClinicalTrialsDataset } from './sources/clinicalTrialsSource.js';
 import { normalizeCurie, normalizeLabel, stableHash } from '../lib/curies.js';
 import { filterBootstrapSourceKeys, shouldSkipCompletedSources } from '../lib/bootstrapSources.js';
 import { stableJson } from '../lib/json.js';
+import { dedupeEvidenceRows, dedupeRelationshipsByKey } from '../lib/syncBatchDedup.js';
 
 const SYNC_HANDLERS = Object.freeze({
   [SOURCE_KEYS.MONDO_ONTOLOGY]: fetchMondoDataset,
@@ -201,25 +203,34 @@ function buildResolvedRelationshipKey(subjectEntityId, predicateKey, objectEntit
 }
 
 async function flushRelationshipBatch(client, pendingRelationships, pendingEvidence, sourceKey, counters) {
-  const persistedRelationships = await upsertResolvedRelationships(client, pendingRelationships, sourceKey);
+  const dedupedRelationships = dedupeRelationshipsByKey(pendingRelationships);
+  const persistedRelationships = await upsertResolvedRelationships(client, dedupedRelationships, sourceKey);
   const relationshipIdByKey = new Map(
     persistedRelationships.map((relationship) => [relationship.relationship_key, relationship.relationship_id])
   );
 
-  const evidenceRows = pendingEvidence.map((evidence) => ({
-    relationshipId: relationshipIdByKey.get(evidence.relationshipKey),
-    sourceKey: evidence.sourceKey,
-    syncRunId: evidence.syncRunId,
-    sourceRecordKey: evidence.sourceRecordKey,
-    evidenceType: evidence.evidenceType,
-    evidenceCode: evidence.evidenceCode,
-    confidenceScore: evidence.confidenceScore,
-    provenanceUrl: evidence.provenanceUrl,
-    payload: evidence.payload
-  }));
+  const evidenceRows = [];
+  for (const evidence of pendingEvidence) {
+    const relationshipId = relationshipIdByKey.get(evidence.relationshipKey);
+    if (!relationshipId) {
+      throw new Error(`Failed to resolve relationship id for key ${evidence.relationshipKey}`);
+    }
 
-  await upsertRelationshipEvidenceBatch(client, evidenceRows);
-  counters.relationships += pendingRelationships.length;
+    evidenceRows.push({
+      relationshipId,
+      sourceKey: evidence.sourceKey,
+      syncRunId: evidence.syncRunId,
+      sourceRecordKey: evidence.sourceRecordKey,
+      evidenceType: evidence.evidenceType,
+      evidenceCode: evidence.evidenceCode,
+      confidenceScore: evidence.confidenceScore,
+      provenanceUrl: evidence.provenanceUrl,
+      payload: evidence.payload
+    });
+  }
+
+  await upsertRelationshipEvidenceBatch(client, dedupeEvidenceRows(evidenceRows));
+  counters.relationships += dedupedRelationships.length;
   pendingRelationships.length = 0;
   pendingEvidence.length = 0;
 }
@@ -472,4 +483,12 @@ export async function queueBootstrapKnowledgeNetwork(options = {}, requestedBy =
 
   return results;
 }
+
+export async function abandonInterruptedSourceSyncs() {
+  return withClient(async (client) => {
+    await ensureSourceCatalog(client);
+    return abandonRunningSyncRuns(client, 'Abandoned after service restart before sync completed.');
+  });
+}
+
 const SUPERSEDED_SYNC_MESSAGE = 'Superseded by a newer sync request.';

@@ -3,13 +3,18 @@ import { ENV, SERVICE_FLAGS, getRuntimeStatus } from './config/env.js';
 import { runMigrations } from './db/migrate.js';
 import { withClient } from './db/pool.js';
 import { ensureSourceCatalog } from './repositories/sourceRepository.js';
+import { abandonInterruptedSourceSyncs } from './services/sourceSyncService.js';
 
 async function start() {
   const runtimeStatus = getRuntimeStatus();
 
   if (SERVICE_FLAGS.hasDatabase) {
     await runMigrations();
+    const abandonedRuns = await abandonInterruptedSourceSyncs();
     await withClient((client) => ensureSourceCatalog(client));
+    if (abandonedRuns.length) {
+      console.warn(`[genovy] marked ${abandonedRuns.length} interrupted sync runs as abandoned on startup`);
+    }
   } else {
     console.warn(
       '[genovy] starting without DATABASE_URL; serving public website only until database configuration is added.'
