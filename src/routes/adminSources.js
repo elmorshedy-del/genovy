@@ -1,8 +1,14 @@
 import express from 'express';
 import { requireAdminToken } from '../middleware/adminAuth.js';
 import { withClient } from '../db/pool.js';
-import { listSourcesWithState, listSyncRuns } from '../repositories/sourceRepository.js';
-import { bootstrapKnowledgeNetwork, syncSource } from '../services/sourceSyncService.js';
+import { getSyncRunById, listSourcesWithState, listSyncRuns } from '../repositories/sourceRepository.js';
+import {
+  bootstrapKnowledgeNetwork,
+  listActiveSourceSyncs,
+  queueBootstrapKnowledgeNetwork,
+  queueSourceSync,
+  syncSource
+} from '../services/sourceSyncService.js';
 
 const router = express.Router();
 
@@ -31,6 +37,25 @@ router.get('/sync-runs', async (req, res) => {
   }
 });
 
+router.get('/sync-runs/:syncRunId', async (req, res) => {
+  try {
+    const run = await withClient((client) => getSyncRunById(client, req.params.syncRunId));
+    if (!run) {
+      return res.status(404).json({ success: false, error: 'Sync run not found.' });
+    }
+    return res.json({ success: true, run });
+  } catch (error) {
+    return res.status(500).json({ success: false, error: error.message || 'Failed to load sync run.' });
+  }
+});
+
+router.get('/active-syncs', (_req, res) => {
+  res.json({
+    success: true,
+    activeSyncs: listActiveSourceSyncs()
+  });
+});
+
 router.post('/sources/:sourceKey/sync', async (req, res) => {
   try {
     const result = await syncSource(req.params.sourceKey, req.body || {}, 'admin_api');
@@ -40,12 +65,30 @@ router.post('/sources/:sourceKey/sync', async (req, res) => {
   }
 });
 
+router.post('/sources/:sourceKey/sync/async', async (req, res) => {
+  try {
+    const result = await queueSourceSync(req.params.sourceKey, req.body || {}, 'admin_api');
+    res.status(202).json({ success: true, result });
+  } catch (error) {
+    res.status(400).json({ success: false, error: error.message || 'Sync queue failed.' });
+  }
+});
+
 router.post('/bootstrap', async (req, res) => {
   try {
     const results = await bootstrapKnowledgeNetwork(req.body || {}, 'admin_api');
     res.json({ success: true, results });
   } catch (error) {
     res.status(400).json({ success: false, error: error.message || 'Bootstrap failed.' });
+  }
+});
+
+router.post('/bootstrap/async', async (req, res) => {
+  try {
+    const results = await queueBootstrapKnowledgeNetwork(req.body || {}, 'admin_api');
+    res.status(202).json({ success: true, results });
+  } catch (error) {
+    res.status(400).json({ success: false, error: error.message || 'Bootstrap queue failed.' });
   }
 });
 

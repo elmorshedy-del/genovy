@@ -140,3 +140,33 @@ export async function listSyncRuns(client, { sourceKey = '', limit = 20 } = {}) 
   );
   return result.rows;
 }
+
+export async function getSyncRunById(client, syncRunId) {
+  const result = await client.query(
+    `
+      SELECT *
+      FROM sync_runs
+      WHERE sync_run_id = $1
+      LIMIT 1
+    `,
+    [syncRunId]
+  );
+  return result.rowCount ? result.rows[0] : null;
+}
+
+export async function supersedeRunningSyncRunsForSource(client, sourceKey, errorMessage) {
+  const result = await client.query(
+    `
+      UPDATE sync_runs
+      SET
+        status = 'superseded',
+        error_message = $2,
+        completed_at = NOW()
+      WHERE source_key = $1
+        AND status = 'running'
+      RETURNING sync_run_id
+    `,
+    [sourceKey, errorMessage]
+  );
+  return result.rows;
+}
