@@ -43,6 +43,28 @@ PATH=/opt/homebrew/bin:$PATH /opt/homebrew/bin/npm run dev
 If `DATABASE_URL` is missing, Genovy still boots the public website in `website_only` mode.
 If `DATABASE_URL` exists but `RARE_DISEASE_ADMIN_TOKEN` is missing, the public site and knowledge API can run while admin sync routes stay disabled.
 
+## Ingestion operator
+
+Queue and monitor source syncs against a running Genovy instance:
+
+```bash
+GENOVY_BASE_URL=https://genovy-production.up.railway.app \
+GENOVY_ADMIN_TOKEN=... \
+PATH=/opt/homebrew/bin:$PATH /opt/homebrew/bin/npm run ops:admin -- sources
+
+GENOVY_BASE_URL=https://genovy-production.up.railway.app \
+GENOVY_ADMIN_TOKEN=... \
+PATH=/opt/homebrew/bin:$PATH /opt/homebrew/bin/npm run ops:admin -- bootstrap --wait
+```
+
+Useful commands:
+
+- `sources`
+- `summary`
+- `sync-source <sourceKey> --wait`
+- `sync-run <syncRunId>`
+- `bootstrap --wait`
+
 ## Routes
 
 - `GET /` public website

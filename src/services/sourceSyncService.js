@@ -4,7 +4,8 @@ import {
   ensureSourceCatalog,
   createSyncRun,
   finalizeSyncRun,
-  markSourceSyncState
+  markSourceSyncState,
+  supersedeRunningSyncRunsForSource
 } from '../repositories/sourceRepository.js';
 import {
   upsertEntity,
@@ -32,6 +33,22 @@ const SYNC_HANDLERS = Object.freeze({
   [SOURCE_KEYS.CLINVAR_GENE_DISEASE]: fetchClinvarGeneDiseaseDataset,
   [SOURCE_KEYS.CLINICAL_TRIALS]: fetchClinicalTrialsDataset
 });
+
+const CLINICAL_TRIALS_DEFAULTS = Object.freeze({
+  maxPages: 5,
+  pageSize: 100
+});
+
+const ACTIVE_SOURCE_SYNCS = new Map();
+
+function resolveSourceOrThrow(sourceKey) {
+  const source = SOURCE_CATALOG[sourceKey];
+  const handler = SYNC_HANDLERS[sourceKey];
+  if (!source || !handler) {
+    throw new Error(`Unsupported source key: ${sourceKey}`);
+  }
+  return { source, handler };
+}
 
 async function applyDataset(client, source, syncRunId, dataset) {
   const entityIdByCurie = new Map();
@@ -122,46 +139,51 @@ async function applyDataset(client, source, syncRunId, dataset) {
   return counters;
 }
 
-export async function syncSource(sourceKey, options = {}, requestedBy = 'api') {
-  const source = SOURCE_CATALOG[sourceKey];
-  const handler = SYNC_HANDLERS[sourceKey];
-  if (!source || !handler) {
-    throw new Error(`Unsupported source key: ${sourceKey}`);
-  }
-
+async function createSourceSyncRun(sourceKey, options, requestedBy) {
   return withClient(async (client) => {
     await ensureSourceCatalog(client);
-    const syncRun = await createSyncRun(client, sourceKey, {
+    await supersedeRunningSyncRunsForSource(client, sourceKey, SUPERSEDED_SYNC_MESSAGE);
+    return createSyncRun(client, sourceKey, {
       triggerMode: options.triggerMode || 'manual',
       requestedBy,
       options
     });
+  });
+}
 
+async function markSyncRunFailed(syncRunId, error) {
+  return withClient((client) =>
+    finalizeSyncRun(client, syncRunId, {
+      status: 'failed',
+      errorMessage: error.message || String(error),
+      summary: {}
+    })
+  );
+}
+
+async function executeSourceSync(sourceKey, options, syncRunId) {
+  const { source, handler } = resolveSourceOrThrow(sourceKey);
+  const dataset = await handler(source, options);
+
+  return withClient(async (client) => {
+    await client.query('BEGIN');
     try {
-      const dataset = await handler(source, options);
-      await client.query('BEGIN');
-      const counters = await applyDataset(client, source, syncRun.sync_run_id, dataset);
+      const counters = await applyDataset(client, source, syncRunId, dataset);
       await client.query('COMMIT');
 
       const summary = {
         ...counters,
         ...(dataset.summary || {})
       };
-      await finalizeSyncRun(client, syncRun.sync_run_id, {
+      await finalizeSyncRun(client, syncRunId, {
         status: 'completed',
         sourceVersion: dataset.sourceVersion || '',
         summary
       });
-      await markSourceSyncState(
-        client,
-        sourceKey,
-        syncRun.sync_run_id,
-        dataset.sourceVersion || '',
-        summary
-      );
+      await markSourceSyncState(client, sourceKey, syncRunId, dataset.sourceVersion || '', summary);
 
       return {
-        syncRunId: syncRun.sync_run_id,
+        syncRunId: syncRunId,
         sourceKey,
         sourceVersion: dataset.sourceVersion || '',
         summary
@@ -169,10 +191,14 @@ export async function syncSource(sourceKey, options = {}, requestedBy = 'api') {
     } catch (error) {
       try {
         await client.query('ROLLBACK');
-      } catch {
-        // no-op
+      } catch (rollbackError) {
+        console.error('[genovy] source sync rollback failed', {
+          sourceKey,
+          syncRunId,
+          error: rollbackError.message || String(rollbackError)
+        });
       }
-      await finalizeSyncRun(client, syncRun.sync_run_id, {
+      await finalizeSyncRun(client, syncRunId, {
         status: 'failed',
         errorMessage: error.message || String(error),
         summary: {}
@@ -180,6 +206,90 @@ export async function syncSource(sourceKey, options = {}, requestedBy = 'api') {
       throw error;
     }
   });
+}
+
+async function runRegisteredSourceSync(sourceKey, options, syncRunId) {
+  try {
+    return await executeSourceSync(sourceKey, options, syncRunId);
+  } catch (error) {
+    try {
+      await markSyncRunFailed(syncRunId, error);
+    } catch (finalizeError) {
+      console.error('[genovy] source sync finalize failed', {
+        sourceKey,
+        syncRunId,
+        error: finalizeError.message || String(finalizeError)
+      });
+    }
+    throw error;
+  } finally {
+    ACTIVE_SOURCE_SYNCS.delete(sourceKey);
+  }
+}
+
+export function listActiveSourceSyncs() {
+  return Array.from(ACTIVE_SOURCE_SYNCS.values()).map((entry) => ({
+    sourceKey: entry.sourceKey,
+    syncRunId: entry.syncRunId,
+    requestedBy: entry.requestedBy,
+    startedAt: entry.startedAt
+  }));
+}
+
+export async function queueSourceSync(sourceKey, options = {}, requestedBy = 'api') {
+  resolveSourceOrThrow(sourceKey);
+  const existing = ACTIVE_SOURCE_SYNCS.get(sourceKey);
+  if (existing) {
+    return {
+      sourceKey,
+      syncRunId: existing.syncRunId,
+      status: 'already_running'
+    };
+  }
+
+  const syncRun = await createSourceSyncRun(sourceKey, options, requestedBy);
+  const entry = {
+    sourceKey,
+    syncRunId: syncRun.sync_run_id,
+    requestedBy,
+    startedAt: syncRun.started_at,
+    promise: null
+  };
+
+  const promise = runRegisteredSourceSync(sourceKey, options, syncRun.sync_run_id);
+  entry.promise = promise;
+  ACTIVE_SOURCE_SYNCS.set(sourceKey, entry);
+
+  promise.catch((error) => {
+    console.error('[genovy] queued source sync failed', {
+      sourceKey,
+      syncRunId: syncRun.sync_run_id,
+      error: error.message || String(error)
+    });
+  });
+
+  return {
+    sourceKey,
+    syncRunId: syncRun.sync_run_id,
+    status: 'running'
+  };
+}
+
+export async function syncSource(sourceKey, options = {}, requestedBy = 'api') {
+  const queued = await queueSourceSync(sourceKey, options, requestedBy);
+  if (queued.status === 'already_running') {
+    return queued;
+  }
+  const active = ACTIVE_SOURCE_SYNCS.get(sourceKey);
+  return active.promise;
+}
+
+function buildClinicalTrialsOptions(options, conditionQuery) {
+  return {
+    conditionQuery,
+    maxPages: options.clinicalTrialsMaxPages || CLINICAL_TRIALS_DEFAULTS.maxPages,
+    pageSize: options.clinicalTrialsPageSize || CLINICAL_TRIALS_DEFAULTS.pageSize
+  };
 }
 
 export async function bootstrapKnowledgeNetwork(options = {}, requestedBy = 'api') {
@@ -194,11 +304,7 @@ export async function bootstrapKnowledgeNetwork(options = {}, requestedBy = 'api
     for (const conditionQuery of options.clinicalTrialsQueries) {
       const result = await syncSource(
         SOURCE_KEYS.CLINICAL_TRIALS,
-        {
-          conditionQuery,
-          maxPages: options.clinicalTrialsMaxPages || 5,
-          pageSize: options.clinicalTrialsPageSize || 100
-        },
+        buildClinicalTrialsOptions(options, conditionQuery),
         requestedBy
       );
       results.push(result);
@@ -207,3 +313,26 @@ export async function bootstrapKnowledgeNetwork(options = {}, requestedBy = 'api
 
   return results;
 }
+
+export async function queueBootstrapKnowledgeNetwork(options = {}, requestedBy = 'api') {
+  const results = [];
+  for (const sourceKey of BOOTSTRAP_SOURCE_ORDER) {
+    const sourceOptions = options[sourceKey] || {};
+    const result = await queueSourceSync(sourceKey, sourceOptions, requestedBy);
+    results.push(result);
+  }
+
+  if (Array.isArray(options.clinicalTrialsQueries)) {
+    for (const conditionQuery of options.clinicalTrialsQueries) {
+      const result = await queueSourceSync(
+        SOURCE_KEYS.CLINICAL_TRIALS,
+        buildClinicalTrialsOptions(options, conditionQuery),
+        requestedBy
+      );
+      results.push(result);
+    }
+  }
+
+  return results;
+}
+const SUPERSEDED_SYNC_MESSAGE = 'Superseded by a newer sync request.';
