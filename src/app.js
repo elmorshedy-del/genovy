@@ -4,6 +4,7 @@ import { fileURLToPath } from 'url';
 import healthRouter from './routes/health.js';
 import adminSourcesRouter from './routes/adminSources.js';
 import knowledgeRouter from './routes/knowledge.js';
+import platformRouter from './routes/platform.js';
 import { requireFeature } from './middleware/featureGate.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -14,6 +15,7 @@ export function createApp(runtimeStatus) {
   app.use(express.json({ limit: '2mb' }));
 
   app.use('/health', healthRouter);
+  app.use('/api/platform', platformRouter);
   app.use(
     '/api/admin',
     requireFeature(
@@ -30,6 +32,9 @@ export function createApp(runtimeStatus) {
     ),
     knowledgeRouter
   );
+  app.get('/platform', (_req, res) => {
+    res.sendFile(path.join(publicDir, 'platform.html'));
+  });
   app.use(express.static(publicDir));
 
   app.use((error, _req, res, _next) => {
