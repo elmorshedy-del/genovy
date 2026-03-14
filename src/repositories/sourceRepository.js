@@ -64,6 +64,23 @@ export async function createSyncRun(client, sourceKey, { triggerMode = 'manual',
   return result.rows[0];
 }
 
+export async function abandonRunningSyncRuns(client, errorMessage) {
+  const result = await client.query(
+    `
+      UPDATE sync_runs
+      SET
+        status = 'abandoned',
+        error_message = COALESCE(NULLIF(error_message, ''), $1),
+        completed_at = NOW()
+      WHERE status = 'running'
+      RETURNING sync_run_id, source_key
+    `,
+    [errorMessage]
+  );
+
+  return result.rows;
+}
+
 export async function finalizeSyncRun(client, syncRunId, { status, sourceVersion = '', summary = {}, errorMessage = '' }) {
   const result = await client.query(
     `
