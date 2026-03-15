@@ -11,6 +11,8 @@ test('normalizeCurie compacts OBO URLs', () => {
     normalizeCurie('https://purl.obolibrary.org/obo/HP_0001250'),
     'HP:0001250'
   );
+  assert.equal(normalizeCurie('NCBIGene:NCBIGene:1134'), 'NCBIGene:1134');
+  assert.equal(normalizeCurie('OMIM:OMIM:114480'), 'OMIM:114480');
 });
 
 test('normalizeLabel collapses whitespace and case', () => {
