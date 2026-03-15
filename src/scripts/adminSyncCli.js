@@ -14,6 +14,8 @@ Genovy admin sync operator
 Usage:
   npm run ops:admin -- sources
   npm run ops:admin -- summary
+  npm run ops:admin -- canonical-summary
+  npm run ops:admin -- canonicalize
   npm run ops:admin -- sync-source <sourceKey> [--wait] [--body '{"conditionQuery":"rare disease"}']
   npm run ops:admin -- sync-run <syncRunId>
   npm run ops:admin -- bootstrap [--wait] [--include-completed] [--trials-query "rare disease"] [--trials-query "genetic disease"]
@@ -214,6 +216,16 @@ async function runBootstrap(flags) {
   return results;
 }
 
+async function runCanonicalize(flags) {
+  const payload = await requestJson('/api/admin/canonical/rebuild', {
+    method: 'POST',
+    body: parseJsonBody(flags.body || ''),
+    authRequired: true
+  });
+  console.log(JSON.stringify(payload.result, null, 2));
+  return payload.result;
+}
+
 async function main() {
   const { command, args, flags } = parseArgs(process.argv.slice(2));
 
@@ -230,6 +242,12 @@ async function main() {
 
   if (command === 'summary') {
     const payload = await requestJson('/api/knowledge/summary');
+    console.log(JSON.stringify(payload.summary, null, 2));
+    return;
+  }
+
+  if (command === 'canonical-summary') {
+    const payload = await requestJson('/api/knowledge/canonical/summary');
     console.log(JSON.stringify(payload.summary, null, 2));
     return;
   }
@@ -255,6 +273,11 @@ async function main() {
 
   if (command === 'bootstrap') {
     await runBootstrap(flags);
+    return;
+  }
+
+  if (command === 'canonicalize') {
+    await runCanonicalize(flags);
     return;
   }
 

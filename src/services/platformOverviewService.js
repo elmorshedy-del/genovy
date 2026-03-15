@@ -2,6 +2,7 @@ import { SOURCE_CATALOG } from '../constants/sourceCatalog.js';
 import { getRuntimeStatus } from '../config/env.js';
 import { withClient } from '../db/pool.js';
 import { listKnowledgeSummary } from '../repositories/knowledgeRepository.js';
+import { listCanonicalSummary } from '../repositories/canonicalRepository.js';
 import { listSourcesWithState, listSyncRuns } from '../repositories/sourceRepository.js';
 import { listActiveSourceSyncs } from './sourceSyncService.js';
 
@@ -68,7 +69,12 @@ function buildFallbackOverview(runtime) {
     runtime,
     summary: {
       entities: [],
-      relationships: []
+      relationships: [],
+      canonical: {
+        concepts: [],
+        relationships: [],
+        latestRun: null
+      }
     },
     sources: buildFallbackSources(),
     activeSyncs: listActiveSourceSyncs(),
@@ -87,14 +93,22 @@ export async function loadPlatformOverview() {
 
   try {
     const data = await withClient(async (client) => {
-      const [summary, sources, recentSyncRuns] = await Promise.all([
+      const [summary, canonicalSummary, sources, recentSyncRuns] = await Promise.all([
         listKnowledgeSummary(client),
+        listCanonicalSummary(client).catch(() => ({
+          concepts: [],
+          relationships: [],
+          latestRun: null
+        })),
         listSourcesWithState(client),
         listSyncRuns(client, { limit: RECENT_SYNC_RUN_LIMIT })
       ]);
 
       return {
-        summary,
+        summary: {
+          ...summary,
+          canonical: canonicalSummary
+        },
         sources: sources.map((source) => mapSourceRow(source)),
         recentSyncRuns: recentSyncRuns.map((run) => mapSyncRunRow(run))
       };

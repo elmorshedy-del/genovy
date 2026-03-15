@@ -6,6 +6,7 @@ Genovy is a rare-disease case-intelligence platform. It turns fragmented records
 
 - A polished public website served from the same Express app
 - A Postgres-backed knowledge-network schema for diseases, phenotypes, genes, variants, relationships, evidence, and source sync state
+- A canonical entity layer that resolves noisy source entities into auditable concepts, aliases, memberships, and concept-level relationships
 - Admin sync endpoints for loading MONDO, HPO, ClinVar, and ClinicalTrials.gov data
 
 ## Current product direction
@@ -61,6 +62,8 @@ Useful commands:
 
 - `sources`
 - `summary`
+- `canonical-summary`
+- `canonicalize`
 - `sync-source <sourceKey> --wait`
 - `sync-run <syncRunId>`
 - `bootstrap --wait`
@@ -76,7 +79,11 @@ By default, `bootstrap` skips sources that already have a successful sync record
 - `GET /api/admin/sync-runs`
 - `POST /api/admin/sources/:sourceKey/sync`
 - `POST /api/admin/bootstrap`
+- `POST /api/admin/canonical/rebuild`
 - `GET /api/knowledge/summary`
+- `GET /api/knowledge/canonical/summary`
+- `GET /api/knowledge/canonical/search`
+- `GET /api/knowledge/canonical/concepts/:conceptId`
 - `GET /api/knowledge/entities/:curie`
 
 Admin routes require `x-admin-token` to match `RARE_DISEASE_ADMIN_TOKEN`.

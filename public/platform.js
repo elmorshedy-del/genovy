@@ -26,6 +26,10 @@ function sumCounts(rows) {
   return rows.reduce((total, row) => total + (Number(row.count) || 0), 0);
 }
 
+function sumCountsByKey(rows, key) {
+  return rows.reduce((total, row) => total + (Number(row[key]) || 0), 0);
+}
+
 function setTextContent(id, text) {
   const node = document.getElementById(id);
   if (!node) return;
@@ -168,7 +172,8 @@ async function hydratePlatformOverview() {
 
     const payload = await response.json();
     const overview = payload.overview || {};
-    const summary = overview.summary || { entities: [], relationships: [] };
+    const summary = overview.summary || { entities: [], relationships: [], canonical: {} };
+    const canonicalSummary = summary.canonical || { concepts: [], relationships: [] };
     const sources = overview.sources || [];
     const activeSyncs = overview.activeSyncs || [];
     const recentSyncRuns = overview.recentSyncRuns || [];
@@ -176,6 +181,14 @@ async function hydratePlatformOverview() {
     setTextContent('platform-runtime-mode', formatModeLabel(overview.runtime?.mode));
     setTextContent('platform-entity-total', formatCount(sumCounts(summary.entities)));
     setTextContent('platform-relationship-total', formatCount(sumCounts(summary.relationships)));
+    setTextContent(
+      'platform-canonical-concept-total',
+      formatCount(sumCountsByKey(canonicalSummary.concepts, 'concept_count'))
+    );
+    setTextContent(
+      'platform-canonical-relationship-total',
+      formatCount(sumCounts(canonicalSummary.relationships))
+    );
     setTextContent('platform-source-total', formatCount(sources.length));
 
     renderSummaryGrid(
@@ -196,6 +209,8 @@ async function hydratePlatformOverview() {
     setPlatformStatus(overview);
   } catch (_error) {
     setTextContent('platform-runtime-mode', 'degraded');
+    setTextContent('platform-canonical-concept-total', '0');
+    setTextContent('platform-canonical-relationship-total', '0');
     setTextContent('platform-runtime-note', 'The platform page loaded, but live overview data could not be fetched.');
     renderSummaryGrid('entity-summary-grid', [], 'entity_type', 'Live platform data is temporarily unavailable.');
     renderSummaryGrid(
