@@ -9,6 +9,7 @@ import {
   queueSourceSync,
   syncSource
 } from '../services/sourceSyncService.js';
+import { rebuildCanonicalLayer } from '../services/canonicalResolutionService.js';
 
 const router = express.Router();
 
@@ -89,6 +90,19 @@ router.post('/bootstrap/async', async (req, res) => {
     res.status(202).json({ success: true, results });
   } catch (error) {
     res.status(400).json({ success: false, error: error.message || 'Bootstrap queue failed.' });
+  }
+});
+
+router.post('/canonical/rebuild', async (req, res) => {
+  try {
+    const result = await rebuildCanonicalLayer({
+      triggerMode: 'admin_api',
+      requestedBy: 'admin_api',
+      options: req.body || {}
+    });
+    res.json({ success: true, result });
+  } catch (error) {
+    res.status(400).json({ success: false, error: error.message || 'Canonical rebuild failed.' });
   }
 });
 
