@@ -18,6 +18,18 @@ function compactOboIdentifier(rawValue) {
   return rawValue;
 }
 
+function collapseRepeatedPrefix(rawValue) {
+  let value = rawValue;
+  let match = value.match(/^([A-Za-z][A-Za-z0-9_]+):\1:(.+)$/);
+
+  while (match) {
+    value = `${match[1]}:${match[2]}`;
+    match = value.match(/^([A-Za-z][A-Za-z0-9_]+):\1:(.+)$/);
+  }
+
+  return value;
+}
+
 export function normalizeCurie(rawValue) {
   if (!rawValue) return '';
   const trimmed = String(rawValue).trim();
@@ -31,8 +43,8 @@ export function normalizeCurie(rawValue) {
   if (trimmed.startsWith('http://identifiers.org/hgnc/')) {
     return `HGNC:${trimmed.split('/').pop()}`;
   }
-  if (/^[A-Z][A-Z0-9_]+:\S+$/.test(trimmed)) {
-    return trimmed;
+  if (/^[A-Za-z][A-Za-z0-9_]+:\S+$/.test(trimmed)) {
+    return collapseRepeatedPrefix(trimmed);
   }
   return trimmed;
 }
