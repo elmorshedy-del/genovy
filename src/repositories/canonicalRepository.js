@@ -229,7 +229,7 @@ export async function rebuildCanonicalRelationships(client) {
             sm.concept_id::TEXT
             || '|' || r.predicate_key
             || '|' || om.concept_id::TEXT
-            || '|' || COALESCE(r.qualifiers_json::TEXT, '{}'::TEXT)
+            || '|' || COALESCE(COALESCE(r.qualifiers_json, '{}'::jsonb)::TEXT, '{}'::TEXT)
           ) AS canonical_relationship_key,
           sm.concept_id AS subject_concept_id,
           r.predicate_key,
@@ -290,7 +290,7 @@ export async function rebuildCanonicalRelationships(client) {
           sm.concept_id::TEXT
           || '|' || r.predicate_key
           || '|' || om.concept_id::TEXT
-          || '|' || COALESCE(r.qualifiers_json::TEXT, '{}'::TEXT)
+          || '|' || COALESCE(COALESCE(r.qualifiers_json, '{}'::jsonb)::TEXT, '{}'::TEXT)
         )
     `
   );
