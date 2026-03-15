@@ -300,7 +300,7 @@ export async function listCanonicalSummary(client) {
   const concepts = await client.query(`
     SELECT
       c.concept_type,
-      COUNT(*)::INTEGER AS concept_count,
+      COUNT(DISTINCT c.concept_id)::INTEGER AS concept_count,
       COUNT(m.entity_id)::INTEGER AS member_count
     FROM canonical_concepts c
     LEFT JOIN canonical_concept_memberships m ON m.concept_id = c.concept_id
