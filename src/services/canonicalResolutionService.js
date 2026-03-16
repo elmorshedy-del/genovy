@@ -18,7 +18,7 @@ import {
 } from '../repositories/canonicalRepository.js';
 
 const INSERT_BATCH_SIZE = 1000;
-const CANONICAL_STRATEGY_KEY = 'exact_identifier_v1';
+const CANONICAL_STRATEGY_KEY = 'identifier_and_gene_symbol_v2';
 
 function chunkArray(values, size = INSERT_BATCH_SIZE) {
   const chunks = [];

@@ -405,13 +405,15 @@ a {
 
 .feature-stack,
 .value-grid,
-.path-columns {
+.path-columns,
+.audience-grid {
   display: grid;
   gap: 16px;
 }
 
 .feature-card,
-.value-card {
+.value-card,
+.audience-card {
   padding: 22px;
   box-shadow: 0 18px 48px rgba(15, 23, 32, 0.05);
 }
@@ -423,6 +425,7 @@ a {
 
 .feature-card h3,
 .value-card h3,
+.audience-card h3,
 .path-panel h3 {
   margin: 0 0 10px;
   font-size: 1.28rem;
@@ -432,6 +435,44 @@ a {
 .value-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   margin-top: 24px;
+}
+
+.dual-audience-section {
+  padding-top: 20px;
+}
+
+.audience-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 24px;
+}
+
+.audience-card {
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-card);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.82), rgba(247, 243, 238, 0.9));
+  backdrop-filter: blur(20px);
+}
+
+.audience-card-clinician {
+  color: var(--text-inverse);
+  border-color: rgba(255, 255, 255, 0.08);
+  background:
+    radial-gradient(circle at top right, rgba(92, 124, 255, 0.24), transparent 34%),
+    linear-gradient(155deg, #101821, #18232c 58%, #1b2934 100%);
+  box-shadow: 0 24px 56px rgba(15, 23, 32, 0.16);
+}
+
+.audience-card-clinician .card-step,
+.audience-card-clinician h3 {
+  color: var(--text-inverse);
+}
+
+.bullet-list-contrast {
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.bullet-list-contrast li::before {
+  background: rgba(255, 255, 255, 0.78);
 }
 
 .path-panel {
@@ -984,6 +1025,7 @@ a {
   .hero,
   .platform-hero,
   .split-section,
+  .audience-grid,
   .value-grid,
   .path-columns,
   .showcase-grid,
@@ -1039,6 +1081,7 @@ a {
   .showcase-card,
   .feature-card,
   .value-card,
+  .audience-card,
   .path-panel,
   .callout-card,
   .panel-card,

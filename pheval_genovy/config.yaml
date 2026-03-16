@@ -1,0 +1,12 @@
+tool: Genovy DX
+tool_version: 0.1.0
+disease_analysis: false
+gene_analysis: true
+variant_analysis: false
+tool_specific_configuration_options:
+  base_url: https://genovy-production.up.railway.app
+  request_timeout_seconds: 60
+  top_k: 100
+  score_field: normalizedScore
+  sort_order: descending
+  analysis_type: gene

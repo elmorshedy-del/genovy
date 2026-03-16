@@ -1,5 +1,11 @@
 import { normalizeCurie, normalizeLabel, buildPlaceholderCurie, stableHash } from '../lib/curies.js';
 import { stableJson } from '../lib/json.js';
+import { collectQualifierCuries, CLINICAL_PROFILE_CONSTANTS, summarizeProfileRows } from '../lib/clinicalProfiles.js';
+import {
+  listGeneDiseaseValidityByEntity,
+  listNaturalHistoryByEntity,
+  listVariantDiseaseAssertionsByEntity
+} from './clinicalEvidenceRepository.js';
 
 const SEARCH_RESULT_LIMIT_DEFAULT = 8;
 const SEARCH_RESULT_LIMIT_MAX = 12;
@@ -191,9 +197,15 @@ export async function resolveEntityByLabel(client, label, entityType = '') {
 }
 
 export async function resolveOrCreateEntity(client, ref, sourceKey) {
+  const shouldCreateIfMissing = ref.createIfMissing !== false;
+
   if (ref.curie) {
     const resolved = await resolveEntityByCurie(client, ref.curie);
     if (resolved) return resolved;
+
+    if (!shouldCreateIfMissing) {
+      return null;
+    }
 
     return upsertEntity(client, {
       entityType: ref.entityType,
@@ -209,6 +221,13 @@ export async function resolveOrCreateEntity(client, ref, sourceKey) {
   if (ref.label) {
     const resolved = await resolveEntityByLabel(client, ref.label, ref.entityType);
     if (resolved) return resolved;
+    if (!shouldCreateIfMissing) {
+      return null;
+    }
+  }
+
+  if (!shouldCreateIfMissing) {
+    return null;
   }
 
   const placeholderCurie = buildPlaceholderCurie(ref.entityType, ref.label || `${sourceKey}-placeholder`);
@@ -425,9 +444,35 @@ export async function listKnowledgeSummary(client) {
     GROUP BY predicate_key
     ORDER BY predicate_key ASC
   `);
+  let clinicalEvidence = [];
+  try {
+    const clinicalEvidenceResult = await client.query(`
+      SELECT 'clinical_phenotype_assertions' AS table_name, COUNT(*)::INTEGER AS count
+      FROM clinical_phenotype_assertions
+      UNION ALL
+      SELECT 'clinical_natural_history_assertions' AS table_name, COUNT(*)::INTEGER AS count
+      FROM clinical_natural_history_assertions
+      UNION ALL
+      SELECT 'clinical_gene_disease_validity_assertions' AS table_name, COUNT(*)::INTEGER AS count
+      FROM clinical_gene_disease_validity_assertions
+      UNION ALL
+      SELECT 'clinical_variant_disease_assertions' AS table_name, COUNT(*)::INTEGER AS count
+      FROM clinical_variant_disease_assertions
+      ORDER BY table_name ASC
+    `);
+    clinicalEvidence = clinicalEvidenceResult.rows;
+  } catch (error) {
+    if (error?.code !== '42P01') {
+      throw error;
+    }
+    console.warn('[genovy] clinical evidence summary unavailable before migration', {
+      error: error.message || String(error)
+    });
+  }
   return {
     entities: entities.rows,
-    relationships: relationships.rows
+    relationships: relationships.rows,
+    clinicalEvidence
   };
 }
 
@@ -610,5 +655,159 @@ export async function getEntityDetail(client, curie) {
     inboundCount: counts.rows[0]?.inbound_count || 0,
     outboundRelationships: outbound.rows,
     inboundRelationships: inbound.rows
+  };
+}
+
+async function loadStructuredClinicalPhenotypeRows(client, entityId, limit) {
+  try {
+    const result = await client.query(
+      `
+        SELECT
+          clinical_phenotype_assertions.source_record_key,
+          clinical_phenotype_assertions.evidence_code,
+          clinical_phenotype_assertions.confidence_score,
+          clinical_phenotype_assertions.provenance_url,
+          clinical_phenotype_assertions.reference_text AS reference,
+          CASE clinical_phenotype_assertions.presence_status
+            WHEN 'absent' THEN 'lacks_phenotype'
+            ELSE 'has_phenotype'
+          END AS predicate_key,
+          jsonb_strip_nulls(
+            jsonb_build_object(
+              'onset', onset.canonical_curie,
+              'frequency', frequency.canonical_curie,
+              'modifier', modifier.canonical_curie,
+              'sex', clinical_phenotype_assertions.sex,
+              'aspect', clinical_phenotype_assertions.aspect,
+              'reference', clinical_phenotype_assertions.reference_text
+            )
+          ) AS qualifiers_json,
+          phenotype.canonical_curie AS phenotype_curie,
+          phenotype.canonical_label AS phenotype_label
+        FROM clinical_phenotype_assertions
+        INNER JOIN entities phenotype
+          ON phenotype.entity_id = clinical_phenotype_assertions.phenotype_entity_id
+        LEFT JOIN entities onset
+          ON onset.entity_id = clinical_phenotype_assertions.onset_entity_id
+        LEFT JOIN entities frequency
+          ON frequency.entity_id = clinical_phenotype_assertions.frequency_entity_id
+        LEFT JOIN entities modifier
+          ON modifier.entity_id = clinical_phenotype_assertions.modifier_entity_id
+        WHERE clinical_phenotype_assertions.subject_entity_id = $1
+        ORDER BY phenotype.canonical_label ASC
+        LIMIT $2
+      `,
+      [entityId, limit]
+    );
+
+    return result.rows;
+  } catch (error) {
+    if (error?.code === '42P01') {
+      console.warn('[genovy] structured clinical phenotype table unavailable, falling back to relationships', {
+        error: error.message || String(error)
+      });
+      return [];
+    }
+    throw error;
+  }
+}
+
+export async function getClinicalProfile(client, { curie, limit = CLINICAL_PROFILE_CONSTANTS.defaultLimit }) {
+  const resolved = await resolveEntityByCurie(client, curie);
+  if (!resolved) {
+    return null;
+  }
+
+  const entityResult = await client.query(
+    `
+      SELECT entity_id, entity_type, canonical_curie, canonical_label, description
+      FROM entities
+      WHERE entity_id = $1
+      LIMIT 1
+    `,
+    [resolved.entity_id]
+  );
+  const entity = entityResult.rows[0];
+  if (!entity) {
+    return null;
+  }
+
+  const cappedLimit = Math.max(
+    1,
+    Math.min(CLINICAL_PROFILE_CONSTANTS.maxLimit, Number(limit) || CLINICAL_PROFILE_CONSTANTS.defaultLimit)
+  );
+  let profileRows = await loadStructuredClinicalPhenotypeRows(client, resolved.entity_id, cappedLimit);
+  if (!profileRows.length) {
+    const profileRowsResult = await client.query(
+      `
+        SELECT
+          rel.relationship_id,
+          rel.predicate_key,
+          rel.qualifiers_json,
+          phenotype.canonical_curie AS phenotype_curie,
+          phenotype.canonical_label AS phenotype_label,
+          evidence.evidence_code,
+          evidence.confidence_score,
+          evidence.provenance_url,
+          evidence.source_record_key,
+          COALESCE(evidence.payload_json->>'reference', '') AS reference
+        FROM relationships rel
+        INNER JOIN entities phenotype
+          ON phenotype.entity_id = rel.object_entity_id
+        LEFT JOIN LATERAL (
+          SELECT
+            relationship_evidence.evidence_code,
+            relationship_evidence.confidence_score,
+            relationship_evidence.provenance_url,
+            relationship_evidence.source_record_key,
+            relationship_evidence.payload_json
+          FROM relationship_evidence
+          WHERE relationship_evidence.relationship_id = rel.relationship_id
+          ORDER BY relationship_evidence.confidence_score DESC NULLS LAST, relationship_evidence.observed_at DESC
+          LIMIT 1
+        ) AS evidence
+          ON TRUE
+        WHERE rel.subject_entity_id = $1
+          AND rel.predicate_key = ANY($2::TEXT[])
+        ORDER BY phenotype.canonical_label ASC
+        LIMIT $3
+      `,
+      [
+        resolved.entity_id,
+        CLINICAL_PROFILE_CONSTANTS.profileRelationshipPredicates,
+        cappedLimit
+      ]
+    );
+    profileRows = profileRowsResult.rows;
+  }
+
+  const qualifierCuries = collectQualifierCuries(profileRows);
+  let qualifierLabelByCurie = new Map();
+  if (qualifierCuries.length) {
+    const qualifierRows = await client.query(
+      `
+        SELECT canonical_curie, canonical_label
+        FROM entities
+        WHERE canonical_curie = ANY($1::TEXT[])
+      `,
+      [qualifierCuries]
+    );
+    qualifierLabelByCurie = new Map(
+      qualifierRows.rows.map((row) => [row.canonical_curie, row.canonical_label])
+    );
+  }
+
+  const [naturalHistory, geneDiseaseValidity, variantAssertions] = await Promise.all([
+    listNaturalHistoryByEntity(client, resolved.entity_id, CLINICAL_PROFILE_CONSTANTS.naturalHistoryLimit),
+    listGeneDiseaseValidityByEntity(client, resolved.entity_id, CLINICAL_PROFILE_CONSTANTS.geneDiseaseValidityLimit),
+    listVariantDiseaseAssertionsByEntity(client, resolved.entity_id, CLINICAL_PROFILE_CONSTANTS.variantAssertionLimit)
+  ]);
+
+  return {
+    entity,
+    ...summarizeProfileRows(profileRows, qualifierLabelByCurie),
+    naturalHistory,
+    geneDiseaseValidity,
+    variantAssertions
   };
 }

@@ -1,5 +1,6 @@
 import { parseDelimitedText } from '../../lib/parseDelimited.js';
 import { HTTP_CONSTANTS } from '../../constants/http.js';
+import { normalizeNcbiGeneCurie } from '../../lib/curies.js';
 
 export async function fetchHpoGeneDiseaseDataset(source) {
   const response = await fetch(source.accessUrl, {
@@ -17,8 +18,8 @@ export async function fetchHpoGeneDiseaseDataset(source) {
   const seenGenes = new Set();
 
   for (const row of parsed.rows) {
-    if (!row.ncbi_gene_id || !row.disease_id) continue;
-    const geneCurie = `NCBIGene:${row.ncbi_gene_id}`;
+    const geneCurie = normalizeNcbiGeneCurie(row.ncbi_gene_id);
+    if (!geneCurie || !row.disease_id) continue;
     const sourceRecordKey = `gene-disease:${geneCurie}:${row.disease_id}:${row.association_type || 'na'}`;
     if (!seenGenes.has(geneCurie)) {
       seenGenes.add(geneCurie);

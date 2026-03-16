@@ -27,6 +27,12 @@ async function start() {
     );
   }
 
+  if (SERVICE_FLAGS.hasDatabase && !SERVICE_FLAGS.hasReadOnlyApiToken) {
+    console.warn(
+      '[genovy] GENOVY_READONLY_API_TOKEN is missing; the versioned read-only API will stay disabled until it is configured.'
+    );
+  }
+
   const app = createApp(runtimeStatus);
   app.listen(ENV.port, () => {
     console.log(`[genovy] listening on port ${ENV.port} in ${runtimeStatus.mode} mode`);

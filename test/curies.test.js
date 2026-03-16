@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { buildPlaceholderCurie, normalizeCurie, normalizeLabel } from '../src/lib/curies.js';
+import { buildPlaceholderCurie, normalizeCurie, normalizeLabel, normalizeNcbiGeneCurie } from '../src/lib/curies.js';
 
 test('normalizeCurie compacts OBO URLs', () => {
   assert.equal(
@@ -13,6 +13,13 @@ test('normalizeCurie compacts OBO URLs', () => {
   );
   assert.equal(normalizeCurie('NCBIGene:NCBIGene:1134'), 'NCBIGene:1134');
   assert.equal(normalizeCurie('OMIM:OMIM:114480'), 'OMIM:114480');
+  assert.equal(normalizeCurie('Orphanet:306511'), 'ORPHA:306511');
+});
+
+test('normalizeNcbiGeneCurie handles bare ids and already-prefixed ids', () => {
+  assert.equal(normalizeNcbiGeneCurie('6812'), 'NCBIGene:6812');
+  assert.equal(normalizeNcbiGeneCurie('NCBIGene:6812'), 'NCBIGene:6812');
+  assert.equal(normalizeNcbiGeneCurie('NCBIGene:NCBIGene:6812'), 'NCBIGene:6812');
 });
 
 test('normalizeLabel collapses whitespace and case', () => {

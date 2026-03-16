@@ -87,3 +87,31 @@ test('groupEntitiesIntoCanonicalConcepts merges exact identifier matches into on
   assert.equal(groups[0].canonicalCurie, 'HGNC:1100');
   assert.deepEqual(groups[0].memberEntityIds, [1, 2]);
 });
+
+test('groupEntitiesIntoCanonicalConcepts bridges HGNC and NCBIGene genes by exact symbol', () => {
+  const groups = groupEntitiesIntoCanonicalConcepts([
+    {
+      entityId: 10,
+      entityType: 'gene',
+      canonicalCurie: 'NCBIGene:6812',
+      canonicalLabel: 'STXBP1',
+      description: '',
+      isPlaceholder: false,
+      xrefCuries: []
+    },
+    {
+      entityId: 11,
+      entityType: 'gene',
+      canonicalCurie: 'HGNC:11444',
+      canonicalLabel: 'STXBP1',
+      description: '',
+      isPlaceholder: false,
+      xrefCuries: []
+    }
+  ]);
+
+  assert.equal(groups.length, 1);
+  assert.equal(groups[0].canonicalCurie, 'HGNC:11444');
+  assert.equal(groups[0].resolutionStrategy, CANONICAL_RESOLUTION_STRATEGY.GENE_SYMBOL_BRIDGE);
+  assert.deepEqual(groups[0].memberEntityIds, [10, 11]);
+});

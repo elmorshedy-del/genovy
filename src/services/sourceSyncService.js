@@ -18,12 +18,22 @@ import {
   upsertResolvedRelationships,
   upsertSourceRecord
 } from '../repositories/knowledgeRepository.js';
+import {
+  replaceClinicalNaturalHistoryTerms,
+  upsertClinicalNaturalHistoryAssertion,
+  upsertClinicalPhenotypeAssertionsBatch,
+  upsertGeneDiseaseValidityAssertionsBatch,
+  upsertVariantDiseaseAssertionsBatch
+} from '../repositories/clinicalEvidenceRepository.js';
 import { fetchMondoDataset } from './sources/mondoSource.js';
 import { fetchHpoOntologyDataset } from './sources/hpoOntologySource.js';
 import { fetchHpoDiseasePhenotypeDataset } from './sources/hpoAnnotationSource.js';
+import { fetchOrphadataNaturalHistoryDataset } from './sources/orphadataNaturalHistorySource.js';
 import { fetchHpoGeneDiseaseDataset } from './sources/hpoGeneDiseaseSource.js';
 import { fetchHpoGenePhenotypeDataset } from './sources/hpoGenePhenotypeSource.js';
+import { fetchClinGenGeneDiseaseValidityDataset } from './sources/clingenGeneDiseaseValiditySource.js';
 import { fetchClinvarGeneDiseaseDataset } from './sources/clinvarGeneDiseaseSource.js';
+import { fetchClinVarVariantSummaryDataset } from './sources/clinvarVariantSummarySource.js';
 import { fetchClinicalTrialsDataset } from './sources/clinicalTrialsSource.js';
 import { normalizeCurie, normalizeLabel, stableHash } from '../lib/curies.js';
 import { filterBootstrapSourceKeys, shouldSkipCompletedSources } from '../lib/bootstrapSources.js';
@@ -34,9 +44,12 @@ const SYNC_HANDLERS = Object.freeze({
   [SOURCE_KEYS.MONDO_ONTOLOGY]: fetchMondoDataset,
   [SOURCE_KEYS.HPO_ONTOLOGY]: fetchHpoOntologyDataset,
   [SOURCE_KEYS.HPO_DISEASE_PHENOTYPE]: fetchHpoDiseasePhenotypeDataset,
+  [SOURCE_KEYS.ORPHADATA_NATURAL_HISTORY]: fetchOrphadataNaturalHistoryDataset,
   [SOURCE_KEYS.HPO_GENE_DISEASE]: fetchHpoGeneDiseaseDataset,
   [SOURCE_KEYS.HPO_GENE_PHENOTYPE]: fetchHpoGenePhenotypeDataset,
+  [SOURCE_KEYS.CLINGEN_GENE_DISEASE_VALIDITY]: fetchClinGenGeneDiseaseValidityDataset,
   [SOURCE_KEYS.CLINVAR_GENE_DISEASE]: fetchClinvarGeneDiseaseDataset,
+  [SOURCE_KEYS.CLINVAR_VARIANT_SUMMARY]: fetchClinVarVariantSummaryDataset,
   [SOURCE_KEYS.CLINICAL_TRIALS]: fetchClinicalTrialsDataset
 });
 
@@ -50,7 +63,16 @@ const BOOTSTRAP_DEFAULTS = Object.freeze({
 });
 
 const RELATIONSHIP_BATCH_SIZE = 500;
+const CLINICAL_ASSERTION_BATCH_SIZE = 500;
 const ACTIVE_SOURCE_SYNCS = new Map();
+
+function dedupeRowsByKey(rows, buildKey) {
+  const deduped = new Map();
+  for (const row of rows) {
+    deduped.set(buildKey(row), row);
+  }
+  return [...deduped.values()];
+}
 
 function resolveSourceOrThrow(sourceKey) {
   const source = SOURCE_CATALOG[sourceKey];
@@ -69,7 +91,11 @@ async function applyDataset(client, source, syncRunId, dataset) {
     aliases: 0,
     xrefs: 0,
     relationships: 0,
-    sourceRecords: 0
+    sourceRecords: 0,
+    clinicalPhenotypeAssertions: 0,
+    clinicalNaturalHistoryAssertions: 0,
+    clinicalGeneDiseaseValidityAssertions: 0,
+    clinicalVariantDiseaseAssertions: 0
   };
 
   for (const entity of dataset.entities || []) {
@@ -153,6 +179,9 @@ async function applyDataset(client, source, syncRunId, dataset) {
       entityIdByCurie,
       entityIdByLabel
     );
+    if (!subject || !object) {
+      continue;
+    }
     const qualifiers = relationship.qualifiers || {};
     const relationshipKey = buildResolvedRelationshipKey(
       subject.entity_id,
@@ -195,6 +224,50 @@ async function applyDataset(client, source, syncRunId, dataset) {
     await flushRelationshipBatch(client, pendingRelationships, pendingEvidence, source.sourceKey, counters);
   }
 
+  if (dataset.clinicalPhenotypeAssertions?.length) {
+    counters.clinicalPhenotypeAssertions += await persistClinicalPhenotypeAssertions(
+      client,
+      dataset.clinicalPhenotypeAssertions,
+      source.sourceKey,
+      syncRunId,
+      entityIdByCurie,
+      entityIdByLabel
+    );
+  }
+
+  if (dataset.clinicalNaturalHistoryAssertions?.length) {
+    counters.clinicalNaturalHistoryAssertions += await persistClinicalNaturalHistoryAssertions(
+      client,
+      dataset.clinicalNaturalHistoryAssertions,
+      source.sourceKey,
+      syncRunId,
+      entityIdByCurie,
+      entityIdByLabel
+    );
+  }
+
+  if (dataset.geneDiseaseValidityAssertions?.length) {
+    counters.clinicalGeneDiseaseValidityAssertions += await persistGeneDiseaseValidityAssertions(
+      client,
+      dataset.geneDiseaseValidityAssertions,
+      source.sourceKey,
+      syncRunId,
+      entityIdByCurie,
+      entityIdByLabel
+    );
+  }
+
+  if (dataset.clinicalVariantDiseaseAssertions?.length) {
+    counters.clinicalVariantDiseaseAssertions += await persistVariantDiseaseAssertions(
+      client,
+      dataset.clinicalVariantDiseaseAssertions,
+      source.sourceKey,
+      syncRunId,
+      entityIdByCurie,
+      entityIdByLabel
+    );
+  }
+
   return counters;
 }
 
@@ -235,6 +308,295 @@ async function flushRelationshipBatch(client, pendingRelationships, pendingEvide
   pendingEvidence.length = 0;
 }
 
+function cacheResolvedEntity(ref, resolved, entityIdByCurie, entityIdByLabel) {
+  if (!resolved) {
+    return;
+  }
+
+  const normalizedCurie = normalizeCurie(resolved.canonical_curie || ref?.curie || '');
+  if (normalizedCurie) {
+    entityIdByCurie.set(normalizedCurie, resolved.entity_id);
+  }
+
+  const labelKey = buildEntityLabelCacheKey(ref);
+  if (labelKey) {
+    entityIdByLabel.set(labelKey, resolved.entity_id);
+  }
+}
+
+async function resolveOptionalClinicalEntity(client, ref, sourceKey, entityIdByCurie, entityIdByLabel) {
+  if (!ref) {
+    return null;
+  }
+
+  const resolved = await resolveRelationshipEntity(client, ref, sourceKey, entityIdByCurie, entityIdByLabel);
+  if (!resolved) {
+    return null;
+  }
+
+  cacheResolvedEntity(ref, resolved, entityIdByCurie, entityIdByLabel);
+  return resolved;
+}
+
+async function persistClinicalPhenotypeAssertions(
+  client,
+  assertions,
+  sourceKey,
+  syncRunId,
+  entityIdByCurie,
+  entityIdByLabel
+) {
+  const pendingRows = [];
+  let persistedCount = 0;
+
+  for (const assertion of assertions) {
+    const subject = await resolveRelationshipEntity(client, assertion.subjectRef, sourceKey, entityIdByCurie, entityIdByLabel);
+    const phenotype = await resolveRelationshipEntity(
+      client,
+      assertion.phenotypeRef,
+      sourceKey,
+      entityIdByCurie,
+      entityIdByLabel
+    );
+    if (!subject || !phenotype) {
+      continue;
+    }
+
+    const onset = await resolveOptionalClinicalEntity(
+      client,
+      assertion.onsetRef,
+      sourceKey,
+      entityIdByCurie,
+      entityIdByLabel
+    );
+    const frequency = await resolveOptionalClinicalEntity(
+      client,
+      assertion.frequencyRef,
+      sourceKey,
+      entityIdByCurie,
+      entityIdByLabel
+    );
+    const modifier = await resolveOptionalClinicalEntity(
+      client,
+      assertion.modifierRef,
+      sourceKey,
+      entityIdByCurie,
+      entityIdByLabel
+    );
+
+    pendingRows.push({
+      subjectEntityId: subject.entity_id,
+      phenotypeEntityId: phenotype.entity_id,
+      presenceStatus: assertion.presenceStatus,
+      sourceKey,
+      syncRunId,
+      sourceRecordKey: assertion.sourceRecordKey,
+      evidenceCode: assertion.evidenceCode || '',
+      confidenceScore: assertion.confidenceScore ?? '',
+      onsetEntityId: onset?.entity_id || '',
+      frequencyEntityId: frequency?.entity_id || '',
+      modifierEntityId: modifier?.entity_id || '',
+      sex: assertion.sex || '',
+      aspect: assertion.aspect || '',
+      referenceText: assertion.referenceText || '',
+      provenanceUrl: assertion.provenanceUrl || '',
+      payload: assertion.payload || {}
+    });
+
+    if (pendingRows.length >= CLINICAL_ASSERTION_BATCH_SIZE) {
+      await upsertClinicalPhenotypeAssertionsBatch(client, pendingRows);
+      persistedCount += pendingRows.length;
+      pendingRows.length = 0;
+    }
+  }
+
+  if (pendingRows.length) {
+    await upsertClinicalPhenotypeAssertionsBatch(client, pendingRows);
+    persistedCount += pendingRows.length;
+  }
+
+  return persistedCount;
+}
+
+async function persistClinicalNaturalHistoryAssertions(
+  client,
+  assertions,
+  sourceKey,
+  syncRunId,
+  entityIdByCurie,
+  entityIdByLabel
+) {
+  let persistedCount = 0;
+
+  for (const assertion of assertions) {
+    const disease = await resolveRelationshipEntity(client, assertion.diseaseRef, sourceKey, entityIdByCurie, entityIdByLabel);
+    if (!disease) {
+      continue;
+    }
+
+    const naturalHistoryAssertionId = await upsertClinicalNaturalHistoryAssertion(client, {
+      diseaseEntityId: disease.entity_id,
+      sourceKey,
+      syncRunId,
+      sourceRecordKey: assertion.sourceRecordKey,
+      validationStatus: assertion.validationStatus || '',
+      expertLink: assertion.expertLink || '',
+      sourceText: assertion.sourceText || '',
+      provenanceUrl: assertion.provenanceUrl || '',
+      payload: assertion.payload || {}
+    });
+
+    const terms = [];
+    for (const termEntry of assertion.termRefs || []) {
+      const term = await resolveOptionalClinicalEntity(
+        client,
+        termEntry.termRef,
+        sourceKey,
+        entityIdByCurie,
+        entityIdByLabel
+      );
+      terms.push({
+        termRole: termEntry.termRole,
+        termEntityId: term?.entity_id || '',
+        termLabel: termEntry.termRef?.label || term?.canonical_curie || '',
+        sortOrder: termEntry.sortOrder ?? 0
+      });
+    }
+
+    await replaceClinicalNaturalHistoryTerms(client, naturalHistoryAssertionId, terms);
+    persistedCount += 1;
+  }
+
+  return persistedCount;
+}
+
+async function persistGeneDiseaseValidityAssertions(
+  client,
+  assertions,
+  sourceKey,
+  syncRunId,
+  entityIdByCurie,
+  entityIdByLabel
+) {
+  const pendingRows = [];
+  let persistedCount = 0;
+
+  for (const assertion of assertions) {
+    const gene = await resolveRelationshipEntity(client, assertion.geneRef, sourceKey, entityIdByCurie, entityIdByLabel);
+    const disease = await resolveRelationshipEntity(client, assertion.diseaseRef, sourceKey, entityIdByCurie, entityIdByLabel);
+    if (!gene || !disease) {
+      continue;
+    }
+
+    pendingRows.push({
+      geneEntityId: gene.entity_id,
+      diseaseEntityId: disease.entity_id,
+      sourceKey,
+      syncRunId,
+      sourceRecordKey: assertion.sourceRecordKey,
+      classification: assertion.classification || '',
+      modeOfInheritance: assertion.modeOfInheritance || '',
+      curationSop: assertion.curationSop || '',
+      classificationDate: assertion.classificationDate || '',
+      gcep: assertion.gcep || '',
+      onlineReportUrl: assertion.onlineReportUrl || '',
+      provenanceUrl: assertion.provenanceUrl || '',
+      payload: assertion.payload || {}
+    });
+
+    if (pendingRows.length >= CLINICAL_ASSERTION_BATCH_SIZE) {
+      const dedupedRows = dedupeRowsByKey(
+        pendingRows,
+        (row) =>
+          `${row.sourceKey}|${row.sourceRecordKey}|${row.geneEntityId}|${row.diseaseEntityId}|${row.classification}`
+      );
+      await upsertGeneDiseaseValidityAssertionsBatch(client, dedupedRows);
+      persistedCount += dedupedRows.length;
+      pendingRows.length = 0;
+    }
+  }
+
+  if (pendingRows.length) {
+    const dedupedRows = dedupeRowsByKey(
+      pendingRows,
+      (row) => `${row.sourceKey}|${row.sourceRecordKey}|${row.geneEntityId}|${row.diseaseEntityId}|${row.classification}`
+    );
+    await upsertGeneDiseaseValidityAssertionsBatch(client, dedupedRows);
+    persistedCount += dedupedRows.length;
+  }
+
+  return persistedCount;
+}
+
+async function persistVariantDiseaseAssertions(
+  client,
+  assertions,
+  sourceKey,
+  syncRunId,
+  entityIdByCurie,
+  entityIdByLabel
+) {
+  const pendingRows = [];
+  let persistedCount = 0;
+
+  for (const assertion of assertions) {
+    const variant = await resolveRelationshipEntity(client, assertion.variantRef, sourceKey, entityIdByCurie, entityIdByLabel);
+    const disease = await resolveRelationshipEntity(client, assertion.diseaseRef, sourceKey, entityIdByCurie, entityIdByLabel);
+    const gene = await resolveOptionalClinicalEntity(client, assertion.geneRef, sourceKey, entityIdByCurie, entityIdByLabel);
+    if (!variant || !disease) {
+      continue;
+    }
+
+    pendingRows.push({
+      variantEntityId: variant.entity_id,
+      diseaseEntityId: disease.entity_id,
+      geneEntityId: gene?.entity_id || '',
+      sourceKey,
+      syncRunId,
+      sourceRecordKey: assertion.sourceRecordKey,
+      alleleId: assertion.alleleId || '',
+      variationId: assertion.variationId || '',
+      variantName: assertion.variantName || '',
+      variationType: assertion.variationType || '',
+      clinicalSignificance: assertion.clinicalSignificance || '',
+      clinicalSignificanceSimple: assertion.clinicalSignificanceSimple || '',
+      reviewStatus: assertion.reviewStatus || '',
+      numberSubmitters: assertion.numberSubmitters || '',
+      origin: assertion.origin || '',
+      originSimple: assertion.originSimple || '',
+      assembly: assertion.assembly || '',
+      lastEvaluated: assertion.lastEvaluated || '',
+      rcvAccession: assertion.rcvAccession || '',
+      phenotypeIds: assertion.phenotypeIds || '',
+      phenotypeList: assertion.phenotypeList || '',
+      provenanceUrl: assertion.provenanceUrl || '',
+      payload: assertion.payload || {}
+    });
+
+    if (pendingRows.length >= CLINICAL_ASSERTION_BATCH_SIZE) {
+      const dedupedRows = dedupeRowsByKey(
+        pendingRows,
+        (row) =>
+          `${row.sourceKey}|${row.sourceRecordKey}|${row.variantEntityId}|${row.diseaseEntityId}|${row.assembly}`
+      );
+      await upsertVariantDiseaseAssertionsBatch(client, dedupedRows);
+      persistedCount += dedupedRows.length;
+      pendingRows.length = 0;
+    }
+  }
+
+  if (pendingRows.length) {
+    const dedupedRows = dedupeRowsByKey(
+      pendingRows,
+      (row) => `${row.sourceKey}|${row.sourceRecordKey}|${row.variantEntityId}|${row.diseaseEntityId}|${row.assembly}`
+    );
+    await upsertVariantDiseaseAssertionsBatch(client, dedupedRows);
+    persistedCount += dedupedRows.length;
+  }
+
+  return persistedCount;
+}
+
 function buildEntityLabelCacheKey(ref) {
   if (!ref?.label) return '';
   return `${ref.entityType}|${normalizeLabel(ref.label)}`;
@@ -258,6 +620,9 @@ async function resolveRelationshipEntity(client, ref, sourceKey, entityIdByCurie
   }
 
   const resolved = await resolveOrCreateEntity(client, ref, sourceKey);
+  if (!resolved) {
+    return null;
+  }
   if (resolved.canonical_curie) {
     entityIdByCurie.set(normalizeCurie(resolved.canonical_curie), resolved.entity_id);
   }

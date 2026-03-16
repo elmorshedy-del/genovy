@@ -1,6 +1,12 @@
 import express from 'express';
 import { withClient } from '../db/pool.js';
-import { getEntityDetail, listKnowledgeSummary, searchKnowledgeEntities } from '../repositories/knowledgeRepository.js';
+import {
+  getClinicalProfile,
+  getEntityDetail,
+  listKnowledgeSummary,
+  searchKnowledgeEntities
+} from '../repositories/knowledgeRepository.js';
+import { parseProfileLimit } from '../lib/clinicalProfiles.js';
 import {
   loadCanonicalConceptDetail,
   loadCanonicalSummary,
@@ -123,6 +129,24 @@ router.get('/canonical/concepts/:conceptId', async (req, res) => {
     return res.json({ success: true, detail });
   } catch (error) {
     return res.status(500).json({ success: false, error: error.message || 'Failed to load canonical concept.' });
+  }
+});
+
+router.get('/profiles/:curie', async (req, res) => {
+  try {
+    const detail = await withClient((client) =>
+      getClinicalProfile(client, {
+        curie: req.params.curie,
+        limit: parseProfileLimit(req.query.limit)
+      })
+    );
+    if (!detail) {
+      return res.status(404).json({ success: false, error: 'Clinical profile not found.' });
+    }
+
+    return res.json({ success: true, detail });
+  } catch (error) {
+    return res.status(500).json({ success: false, error: error.message || 'Failed to load clinical profile.' });
   }
 });
 

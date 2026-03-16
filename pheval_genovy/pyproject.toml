@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "pheval_genovy"
+version = "0.1.0"
+description = "PhEval plugin for running Genovy DX disease ranking against benchmark phenopackets"
+authors = ["Ahmed Elmorshedy"]
+readme = "README.md"
+packages = [{ include = "pheval_genovy", from = "src" }]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<4.0.0"
+click = "^8.1.8"
+polars = ">=1.27,<2"
+pheval = "^0.7.0"
+requests = "^2.32.3"
+
+[tool.poetry.scripts]
+pheval-genovy = "pheval_genovy.cli:main"
+
+[tool.poetry.plugins."pheval.plugins"]
+genovy = "pheval_genovy.runner:GenovyPhEvalRunner"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

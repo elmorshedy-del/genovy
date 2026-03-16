@@ -2,9 +2,12 @@ export const SOURCE_KEYS = Object.freeze({
   MONDO_ONTOLOGY: 'mondo_ontology',
   HPO_ONTOLOGY: 'hpo_ontology',
   HPO_DISEASE_PHENOTYPE: 'hpo_disease_phenotype',
+  ORPHADATA_NATURAL_HISTORY: 'orphadata_natural_history',
   HPO_GENE_DISEASE: 'hpo_gene_disease',
   HPO_GENE_PHENOTYPE: 'hpo_gene_phenotype',
+  CLINGEN_GENE_DISEASE_VALIDITY: 'clingen_gene_disease_validity',
   CLINVAR_GENE_DISEASE: 'clinvar_gene_disease',
+  CLINVAR_VARIANT_SUMMARY: 'clinvar_variant_summary',
   CLINICAL_TRIALS: 'clinical_trials'
 });
 
@@ -12,8 +15,10 @@ export const BOOTSTRAP_SOURCE_ORDER = Object.freeze([
   SOURCE_KEYS.MONDO_ONTOLOGY,
   SOURCE_KEYS.HPO_ONTOLOGY,
   SOURCE_KEYS.HPO_DISEASE_PHENOTYPE,
+  SOURCE_KEYS.ORPHADATA_NATURAL_HISTORY,
   SOURCE_KEYS.HPO_GENE_DISEASE,
   SOURCE_KEYS.HPO_GENE_PHENOTYPE,
+  SOURCE_KEYS.CLINGEN_GENE_DISEASE_VALIDITY,
   SOURCE_KEYS.CLINVAR_GENE_DISEASE
 ]);
 
@@ -45,6 +50,15 @@ export const SOURCE_CATALOG = Object.freeze({
     updateFrequency: 'release-based',
     entityScope: 'disease,phenotype'
   },
+  [SOURCE_KEYS.ORPHADATA_NATURAL_HISTORY]: {
+    sourceKey: SOURCE_KEYS.ORPHADATA_NATURAL_HISTORY,
+    displayName: 'Orphadata Natural History',
+    description: 'Orphadata rare-disease onset and inheritance natural history terms.',
+    homepageUrl: 'https://sciences.orphadata.com/orphanet-scientific-knowledge-files/',
+    accessUrl: 'https://www.orphadata.com/data/xml/en_product9_ages.xml',
+    updateFrequency: 'bi-annual',
+    entityScope: 'disease,onset,inheritance'
+  },
   [SOURCE_KEYS.HPO_GENE_DISEASE]: {
     sourceKey: SOURCE_KEYS.HPO_GENE_DISEASE,
     displayName: 'HPO Gene Disease Links',
@@ -63,6 +77,15 @@ export const SOURCE_CATALOG = Object.freeze({
     updateFrequency: 'release-based',
     entityScope: 'gene,phenotype'
   },
+  [SOURCE_KEYS.CLINGEN_GENE_DISEASE_VALIDITY]: {
+    sourceKey: SOURCE_KEYS.CLINGEN_GENE_DISEASE_VALIDITY,
+    displayName: 'ClinGen Gene-Disease Validity',
+    description: 'ClinGen curated gene-disease validity assertions with MONDO and HGNC identifiers.',
+    homepageUrl: 'https://www.clinicalgenome.org/curation-activities/gene-disease-validity/',
+    accessUrl: 'https://search.clinicalgenome.org/kb/gene-validity/download',
+    updateFrequency: 'real-time csv',
+    entityScope: 'gene,disease'
+  },
   [SOURCE_KEYS.CLINVAR_GENE_DISEASE]: {
     sourceKey: SOURCE_KEYS.CLINVAR_GENE_DISEASE,
     displayName: 'ClinVar Gene Condition Links',
@@ -71,6 +94,15 @@ export const SOURCE_CATALOG = Object.freeze({
     accessUrl: 'https://ftp.ncbi.nlm.nih.gov/pub/clinvar/gene_condition_source_id',
     updateFrequency: 'daily',
     entityScope: 'gene,disease'
+  },
+  [SOURCE_KEYS.CLINVAR_VARIANT_SUMMARY]: {
+    sourceKey: SOURCE_KEYS.CLINVAR_VARIANT_SUMMARY,
+    displayName: 'ClinVar Variant Summary',
+    description: 'ClinVar variant-to-condition assertions and review metadata.',
+    homepageUrl: 'https://www.ncbi.nlm.nih.gov/clinvar/docs/maintenance_use/',
+    accessUrl: 'https://ftp.ncbi.nlm.nih.gov/pub/clinvar/tab_delimited/variant_summary.txt.gz',
+    updateFrequency: 'weekly',
+    entityScope: 'variant,gene,disease'
   },
   [SOURCE_KEYS.CLINICAL_TRIALS]: {
     sourceKey: SOURCE_KEYS.CLINICAL_TRIALS,

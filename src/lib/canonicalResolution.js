@@ -1,13 +1,15 @@
-import { normalizeCurie, normalizeLabel, splitCuriePrefix } from './curies.js';
+import { isLikelyGeneSymbol, normalizeCurie, normalizeLabel, splitCuriePrefix } from './curies.js';
 
 export const CANONICAL_RESOLUTION_STRATEGY = Object.freeze({
   EXACT_IDENTIFIER: 'exact_identifier',
-  EXACT_LABEL: 'exact_label'
+  EXACT_LABEL: 'exact_label',
+  GENE_SYMBOL_BRIDGE: 'gene_symbol_bridge'
 });
 
 export const CANONICAL_CONFIDENCE = Object.freeze({
   [CANONICAL_RESOLUTION_STRATEGY.EXACT_IDENTIFIER]: 1,
-  [CANONICAL_RESOLUTION_STRATEGY.EXACT_LABEL]: 0.82
+  [CANONICAL_RESOLUTION_STRATEGY.EXACT_LABEL]: 0.82,
+  [CANONICAL_RESOLUTION_STRATEGY.GENE_SYMBOL_BRIDGE]: 0.91
 });
 
 const IDENTIFIER_PRIORITY_BY_TYPE = Object.freeze({
@@ -70,8 +72,73 @@ function choosePreferredIdentifier(entityType, identifiers) {
     })[0];
 }
 
+function collectEntityIdentifiers(entity) {
+  return uniqueNormalizedValues([entity.canonicalCurie, ...(entity.xrefCuries || [])]);
+}
+
+function buildGeneSymbolBridgeKey(entity, identifiers) {
+  if (entity.entityType !== 'gene') {
+    return '';
+  }
+
+  const prefixes = new Set(identifiers.map((identifier) => splitCuriePrefix(identifier).prefix));
+  const canBridgeByIdentifier = prefixes.has('HGNC') || prefixes.has('NCBIGene') || prefixes.has('ENSEMBL');
+  const normalizedLabel = normalizeLabel(entity.canonicalLabel || entity.normalizedLabel || '');
+  if (!canBridgeByIdentifier || !normalizedLabel || !isLikelyGeneSymbol(entity.canonicalLabel || entity.normalizedLabel)) {
+    return '';
+  }
+
+  return `gene_symbol:${normalizedLabel}`;
+}
+
+function buildEntityMatchKeys(entity, identifiers) {
+  const keys = identifiers.map((identifier) => `identifier:${identifier}`);
+  const geneBridgeKey = buildGeneSymbolBridgeKey(entity, identifiers);
+  if (geneBridgeKey) {
+    keys.push(geneBridgeKey);
+  }
+  return keys;
+}
+
+function createDisjointSet(size) {
+  const parents = Array.from({ length: size }, (_, index) => index);
+  const ranks = Array.from({ length: size }, () => 0);
+
+  function find(index) {
+    if (parents[index] !== index) {
+      parents[index] = find(parents[index]);
+    }
+    return parents[index];
+  }
+
+  function union(left, right) {
+    const leftRoot = find(left);
+    const rightRoot = find(right);
+    if (leftRoot === rightRoot) {
+      return;
+    }
+
+    if (ranks[leftRoot] < ranks[rightRoot]) {
+      parents[leftRoot] = rightRoot;
+      return;
+    }
+    if (ranks[leftRoot] > ranks[rightRoot]) {
+      parents[rightRoot] = leftRoot;
+      return;
+    }
+
+    parents[rightRoot] = leftRoot;
+    ranks[leftRoot] += 1;
+  }
+
+  return {
+    find,
+    union
+  };
+}
+
 export function buildCanonicalSeed(entity) {
-  const candidateIdentifiers = [entity.canonicalCurie, ...(entity.xrefCuries || [])];
+  const candidateIdentifiers = collectEntityIdentifiers(entity);
   const preferredIdentifier = choosePreferredIdentifier(entity.entityType, candidateIdentifiers);
 
   if (preferredIdentifier) {
@@ -133,41 +200,76 @@ export function selectPreferredEntity(groupMembers) {
 }
 
 export function groupEntitiesIntoCanonicalConcepts(entityRows) {
+  const entries = entityRows.map((entity) => {
+    const identifiers = collectEntityIdentifiers(entity);
+    return {
+      ...entity,
+      identifiers,
+      matchKeys: buildEntityMatchKeys(entity, identifiers),
+      seed: buildCanonicalSeed(entity)
+    };
+  });
+
+  const disjointSet = createDisjointSet(entries.length);
+  const indicesByMatchKey = new Map();
+
+  entries.forEach((entry, index) => {
+    for (const matchKey of entry.matchKeys) {
+      const existingIndices = indicesByMatchKey.get(matchKey) || [];
+      for (const existingIndex of existingIndices) {
+        disjointSet.union(index, existingIndex);
+      }
+      existingIndices.push(index);
+      indicesByMatchKey.set(matchKey, existingIndices);
+    }
+  });
+
   const grouped = new Map();
 
-  for (const entity of entityRows) {
-    const seed = buildCanonicalSeed(entity);
-    const entry = {
-      ...entity,
-      seed
-    };
-    const existing = grouped.get(seed.canonicalKey);
+  entries.forEach((entry, index) => {
+    const rootIndex = disjointSet.find(index);
+    const existing = grouped.get(rootIndex);
     if (existing) {
       existing.members.push(entry);
       existing.memberEntityIds.push(entry.entityId);
-      if (seed.matchedOn.identifierCurie) {
-        existing.identifierCuries.add(seed.matchedOn.identifierCurie);
+      for (const identifier of entry.identifiers) {
+        existing.identifierCuries.add(identifier);
       }
-      continue;
+      if (entry.matchKeys.some((matchKey) => matchKey.startsWith('gene_symbol:'))) {
+        existing.hasGeneSymbolBridge = true;
+      }
+      return;
     }
 
-    grouped.set(seed.canonicalKey, {
-      canonicalKey: seed.canonicalKey,
-      conceptType: entity.entityType,
-      resolutionStrategy: seed.resolutionStrategy,
-      confidenceScore: seed.confidenceScore,
+    grouped.set(rootIndex, {
+      conceptType: entry.entityType,
       members: [entry],
       memberEntityIds: [entry.entityId],
-      identifierCuries: new Set(seed.matchedOn.identifierCurie ? [seed.matchedOn.identifierCurie] : [])
+      identifierCuries: new Set(entry.identifiers),
+      hasGeneSymbolBridge: entry.matchKeys.some((matchKey) => matchKey.startsWith('gene_symbol:'))
     });
-  }
+  });
 
   return Array.from(grouped.values()).map((group) => {
     const preferredEntity = selectPreferredEntity(group.members);
+    const preferredIdentifier = choosePreferredIdentifier(group.conceptType, Array.from(group.identifierCuries));
+    const resolutionStrategy = preferredIdentifier
+      ? group.hasGeneSymbolBridge
+        ? CANONICAL_RESOLUTION_STRATEGY.GENE_SYMBOL_BRIDGE
+        : CANONICAL_RESOLUTION_STRATEGY.EXACT_IDENTIFIER
+      : CANONICAL_RESOLUTION_STRATEGY.EXACT_LABEL;
+    const confidenceScore = CANONICAL_CONFIDENCE[resolutionStrategy];
+    const canonicalKey = preferredIdentifier
+      ? `identifier:${preferredIdentifier}`
+      : `label:${group.conceptType}:${normalizeLabel(preferredEntity.canonicalLabel)}`;
+
     return {
       ...group,
+      canonicalKey,
       preferredEntity,
-      canonicalCurie: preferredEntity.seed.canonicalCurie || null,
+      resolutionStrategy,
+      confidenceScore,
+      canonicalCurie: preferredIdentifier || null,
       canonicalLabel: preferredEntity.canonicalLabel,
       normalizedLabel: normalizeLabel(preferredEntity.canonicalLabel),
       identifierCuries: Array.from(group.identifierCuries).sort()

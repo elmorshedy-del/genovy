@@ -8,10 +8,16 @@
     "start": "node src/server.js",
     "migrate": "node src/db/migrate.js",
     "ops:admin": "node src/scripts/adminSyncCli.js",
+    "dx:benchmark-sim": "node src/scripts/benchmarkDxSim.js",
+    "dx:benchmark-phenopackets": "node src/scripts/benchmarkDxPhenopackets.js",
+    "dx:run-pheval": "node src/scripts/runDxPheval.js",
+    "ml:export-gene-disease": "node src/scripts/exportGeneDiseaseLinkDataset.js",
+    "ml:analyze-gene-disease-novelty": "node src/scripts/analyzeGeneDiseaseNovelty.js",
     "test": "node --test"
   },
   "dependencies": {
     "express": "^4.21.2",
+    "fast-xml-parser": "^5.5.5",
     "pg": "^8.16.3"
   }
 }

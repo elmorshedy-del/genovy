@@ -25,11 +25,13 @@ export async function fetchHpoDiseasePhenotypeDataset(source) {
 
   const relationships = [];
   const sourceRecords = [];
+  const clinicalPhenotypeAssertions = [];
   for (const row of parsed.rows) {
     const diseaseId = row.database_id;
     const phenotypeId = row.hpo_id;
     if (!diseaseId || !phenotypeId) continue;
     const predicateKey = row.qualifier === 'NOT' ? 'lacks_phenotype' : 'has_phenotype';
+    const presenceStatus = row.qualifier === 'NOT' ? 'absent' : 'present';
     const sourceRecordKey = `annotation:${diseaseId}:${phenotypeId}:${row.reference || 'na'}`;
 
     relationships.push({
@@ -65,6 +67,47 @@ export async function fetchHpoDiseasePhenotypeDataset(source) {
       canonicalCurie: diseaseId,
       payload: row
     });
+
+    clinicalPhenotypeAssertions.push({
+      subjectRef: diseaseRefFromRow(row),
+      phenotypeRef: {
+        curie: phenotypeId,
+        entityType: 'phenotype',
+        label: row.hpo_id
+      },
+      sourceRecordKey,
+      presenceStatus,
+      evidenceCode: row.evidence || '',
+      provenanceUrl: source.homepageUrl,
+      onsetRef: row.onset
+        ? {
+            curie: row.onset,
+            entityType: 'phenotype',
+            label: row.onset,
+            createIfMissing: false
+          }
+        : null,
+      frequencyRef: row.frequency
+        ? {
+            curie: row.frequency,
+            entityType: 'phenotype',
+            label: row.frequency,
+            createIfMissing: false
+          }
+        : null,
+      modifierRef: row.modifier
+        ? {
+            curie: row.modifier,
+            entityType: 'phenotype',
+            label: row.modifier,
+            createIfMissing: false
+          }
+        : null,
+      sex: row.sex || '',
+      aspect: row.aspect || '',
+      referenceText: row.reference || '',
+      payload: row
+    });
   }
 
   return {
@@ -73,6 +116,7 @@ export async function fetchHpoDiseasePhenotypeDataset(source) {
     aliases: [],
     xrefs: [],
     relationships,
-    sourceRecords
+    sourceRecords,
+    clinicalPhenotypeAssertions
   };
 }

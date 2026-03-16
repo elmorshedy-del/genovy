@@ -34,6 +34,9 @@ export function normalizeCurie(rawValue) {
   if (!rawValue) return '';
   const trimmed = String(rawValue).trim();
   if (!trimmed) return '';
+  if (/^Orphanet:/i.test(trimmed)) {
+    return `ORPHA:${trimmed.split(':').slice(1).join(':')}`;
+  }
   if (trimmed.startsWith('http://purl.obolibrary.org/obo/')) {
     return compactOboIdentifier(trimmed);
   }
@@ -47,6 +50,29 @@ export function normalizeCurie(rawValue) {
     return collapseRepeatedPrefix(trimmed);
   }
   return trimmed;
+}
+
+export function normalizeNcbiGeneCurie(rawValue) {
+  const normalized = normalizeCurie(rawValue);
+  if (normalized.startsWith('NCBIGene:')) {
+    return normalized;
+  }
+
+  const trimmed = String(rawValue || '').trim();
+  if (/^\d+$/.test(trimmed)) {
+    return `NCBIGene:${trimmed}`;
+  }
+
+  return '';
+}
+
+export function isLikelyGeneSymbol(rawValue) {
+  const trimmed = String(rawValue || '').trim();
+  if (!trimmed || /\s/.test(trimmed) || trimmed.includes(':')) {
+    return false;
+  }
+
+  return /^[A-Za-z0-9][A-Za-z0-9-]*$/.test(trimmed);
 }
 
 export function normalizeLabel(rawValue) {

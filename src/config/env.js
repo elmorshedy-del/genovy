@@ -9,12 +9,14 @@ export const ENV = Object.freeze({
   nodeEnv: process.env.NODE_ENV || 'development',
   port: parsePort(process.env.PORT),
   databaseUrl: process.env.DATABASE_URL || '',
-  adminToken: process.env.RARE_DISEASE_ADMIN_TOKEN || ''
+  adminToken: process.env.RARE_DISEASE_ADMIN_TOKEN || '',
+  readOnlyApiToken: process.env.GENOVY_READONLY_API_TOKEN || ''
 });
 
 export const SERVICE_FLAGS = Object.freeze({
   hasDatabase: Boolean(ENV.databaseUrl),
-  hasAdminToken: Boolean(ENV.adminToken)
+  hasAdminToken: Boolean(ENV.adminToken),
+  hasReadOnlyApiToken: Boolean(ENV.readOnlyApiToken)
 });
 
 export function getServiceMode() {
@@ -32,7 +34,8 @@ export function getRuntimeStatus() {
     mode: getServiceMode(),
     publicSiteReady: true,
     knowledgeApiReady: SERVICE_FLAGS.hasDatabase,
-    adminApiReady: SERVICE_FLAGS.hasDatabase && SERVICE_FLAGS.hasAdminToken
+    adminApiReady: SERVICE_FLAGS.hasDatabase && SERVICE_FLAGS.hasAdminToken,
+    readOnlyApiReady: SERVICE_FLAGS.hasDatabase && SERVICE_FLAGS.hasReadOnlyApiToken
   };
 }
 
