@@ -1,7 +1,7 @@
 import express from 'express';
 import { requireAdminToken } from '../middleware/adminAuth.js';
 import { withClient } from '../db/pool.js';
-import { getSyncRunById, listSourcesWithState, listSyncRuns } from '../repositories/sourceRepository.js';
+import { getSyncRunById, listSourcesWithState, listSyncRuns, updateSourceActivation } from '../repositories/sourceRepository.js';
 import {
   bootstrapKnowledgeNetwork,
   listActiveSourceSyncs,
@@ -14,6 +14,18 @@ import { rebuildCanonicalLayer } from '../services/canonicalResolutionService.js
 const router = express.Router();
 
 router.use(requireAdminToken);
+
+async function setSourceActivation(req, res, isActive) {
+  try {
+    const source = await withClient((client) => updateSourceActivation(client, req.params.sourceKey, isActive));
+    if (!source) {
+      return res.status(404).json({ success: false, error: 'Source not found.' });
+    }
+    return res.json({ success: true, source });
+  } catch (error) {
+    return res.status(500).json({ success: false, error: error.message || 'Failed to update source state.' });
+  }
+}
 
 router.get('/sources', async (_req, res) => {
   try {
@@ -56,6 +68,18 @@ router.get('/active-syncs', (_req, res) => {
     activeSyncs: listActiveSourceSyncs()
   });
 });
+
+router.patch('/sources/:sourceKey', async (req, res) => {
+  const { isActive } = req.body || {};
+  if (typeof isActive !== 'boolean') {
+    return res.status(400).json({ success: false, error: 'Request body must include boolean isActive.' });
+  }
+  return setSourceActivation(req, res, isActive);
+});
+
+router.post('/sources/:sourceKey/enable', async (req, res) => setSourceActivation(req, res, true));
+
+router.post('/sources/:sourceKey/disable', async (req, res) => setSourceActivation(req, res, false));
 
 router.post('/sources/:sourceKey/sync', async (req, res) => {
   try {

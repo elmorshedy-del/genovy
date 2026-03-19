@@ -5,6 +5,8 @@ export const SOURCE_KEYS = Object.freeze({
   ORPHADATA_NATURAL_HISTORY: 'orphadata_natural_history',
   HPO_GENE_DISEASE: 'hpo_gene_disease',
   HPO_GENE_PHENOTYPE: 'hpo_gene_phenotype',
+  PHENOTYPE_PROPAGATION: 'phenotype_propagation',
+  GENE_IDENTITY_REPAIR: 'gene_identity_repair',
   CLINGEN_GENE_DISEASE_VALIDITY: 'clingen_gene_disease_validity',
   CLINVAR_GENE_DISEASE: 'clinvar_gene_disease',
   CLINVAR_VARIANT_SUMMARY: 'clinvar_variant_summary',
@@ -76,6 +78,24 @@ export const SOURCE_CATALOG = Object.freeze({
     accessUrl: 'https://github.com/obophenotype/human-phenotype-ontology/releases/latest/download/genes_to_phenotype.txt',
     updateFrequency: 'release-based',
     entityScope: 'gene,phenotype'
+  },
+  [SOURCE_KEYS.PHENOTYPE_PROPAGATION]: {
+    sourceKey: SOURCE_KEYS.PHENOTYPE_PROPAGATION,
+    displayName: 'Phenotype Propagation Maintenance',
+    description: 'Derived disease phenotype assertions propagated from xrefs, disease hierarchy, or linked genes.',
+    homepageUrl: 'https://genovy.railway.app/',
+    accessUrl: '',
+    updateFrequency: 'manual',
+    entityScope: 'disease,phenotype,gene'
+  },
+  [SOURCE_KEYS.GENE_IDENTITY_REPAIR]: {
+    sourceKey: SOURCE_KEYS.GENE_IDENTITY_REPAIR,
+    displayName: 'Gene Identity Repair Maintenance',
+    description: 'Manual repair workflow for missing or canonically-broken gene identities.',
+    homepageUrl: 'https://genovy.railway.app/',
+    accessUrl: '',
+    updateFrequency: 'manual',
+    entityScope: 'gene'
   },
   [SOURCE_KEYS.CLINGEN_GENE_DISEASE_VALIDITY]: {
     sourceKey: SOURCE_KEYS.CLINGEN_GENE_DISEASE_VALIDITY,

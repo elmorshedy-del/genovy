@@ -13,6 +13,8 @@ Genovy admin sync operator
 
 Usage:
   npm run ops:admin -- sources
+  npm run ops:admin -- enable-source <sourceKey>
+  npm run ops:admin -- disable-source <sourceKey>
   npm run ops:admin -- summary
   npm run ops:admin -- canonical-summary
   npm run ops:admin -- canonicalize
@@ -226,6 +228,20 @@ async function runCanonicalize(flags) {
   return payload.result;
 }
 
+async function setSourceActivation(sourceKey, isActive) {
+  if (!SOURCE_CATALOG[sourceKey]) {
+    throw new Error(`Unknown source key: ${sourceKey}`);
+  }
+
+  const payload = await requestJson(`/api/admin/sources/${sourceKey}`, {
+    method: 'PATCH',
+    body: { isActive },
+    authRequired: true
+  });
+  console.log(JSON.stringify(payload.source, null, 2));
+  return payload.source;
+}
+
 async function main() {
   const { command, args, flags } = parseArgs(process.argv.slice(2));
 
@@ -278,6 +294,24 @@ async function main() {
 
   if (command === 'canonicalize') {
     await runCanonicalize(flags);
+    return;
+  }
+
+  if (command === 'enable-source') {
+    const sourceKey = args[0];
+    if (!sourceKey) {
+      throw new Error('enable-source requires a sourceKey argument.');
+    }
+    await setSourceActivation(sourceKey, true);
+    return;
+  }
+
+  if (command === 'disable-source') {
+    const sourceKey = args[0];
+    if (!sourceKey) {
+      throw new Error('disable-source requires a sourceKey argument.');
+    }
+    await setSourceActivation(sourceKey, false);
     return;
   }
 

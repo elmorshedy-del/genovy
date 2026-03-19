@@ -118,6 +118,7 @@ export async function markSourceSyncState(client, sourceKey, syncRunId, sourceVe
 export async function listSourcesWithState(client) {
   const result = await client.query(`
     SELECT
+      s.source_key AS source_id,
       s.*,
       st.last_successful_sync_run_id,
       st.last_successful_at,
@@ -128,6 +129,67 @@ export async function listSourcesWithState(client) {
     ORDER BY s.source_key ASC
   `);
   return result.rows;
+}
+
+export async function getSourceByKey(client, sourceKey) {
+  const result = await client.query(
+    `
+      SELECT
+        s.source_key AS source_id,
+        s.*
+      FROM sources s
+      WHERE s.source_key = $1
+      LIMIT 1
+    `,
+    [sourceKey]
+  );
+
+  return result.rowCount ? result.rows[0] : null;
+}
+
+export async function updateSourceActivation(client, sourceKey, isActive) {
+  const result = await client.query(
+    `
+      UPDATE sources
+      SET
+        is_active = $2,
+        updated_at = NOW()
+      WHERE source_key = $1
+      RETURNING
+        source_key AS source_id,
+        *
+    `,
+    [sourceKey, isActive]
+  );
+
+  return result.rowCount ? result.rows[0] : null;
+}
+
+export async function listActiveSourceKeys(client, sourceKeys = []) {
+  if (!sourceKeys.length) {
+    const result = await client.query(
+      `
+        SELECT source_key
+        FROM sources
+        WHERE is_active = TRUE
+        ORDER BY source_key ASC
+      `
+    );
+    return result.rows.map((row) => row.source_key);
+  }
+
+  const result = await client.query(
+    `
+      SELECT source_key
+      FROM sources
+      WHERE source_key = ANY($1::TEXT[])
+        AND is_active = TRUE
+      ORDER BY source_key ASC
+    `,
+    [sourceKeys]
+  );
+
+  return result.rows.map((row) => row.source_key);
 }
 
 export async function listSyncRuns(client, { sourceKey = '', limit = 20 } = {}) {

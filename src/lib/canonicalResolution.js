@@ -217,7 +217,9 @@ export function groupEntitiesIntoCanonicalConcepts(entityRows) {
     for (const matchKey of entry.matchKeys) {
       const existingIndices = indicesByMatchKey.get(matchKey) || [];
       for (const existingIndex of existingIndices) {
-        disjointSet.union(index, existingIndex);
+        if (entries[existingIndex].entityType === entry.entityType) {
+          disjointSet.union(index, existingIndex);
+        }
       }
       existingIndices.push(index);
       indicesByMatchKey.set(matchKey, existingIndices);
