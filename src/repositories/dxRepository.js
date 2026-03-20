@@ -1,28 +1,100 @@
+import { SOURCE_KEYS } from '../constants/sourceCatalog.js';
+
+const DX_DISEASE_EDGE_ORIGIN = Object.freeze({
+  DIRECT: 'direct',
+  PROPAGATED: 'propagated'
+});
+
+function diseasePhenotypeRowPriority(row) {
+  const isPropagated = row.phenotype_edge_origin === DX_DISEASE_EDGE_ORIGIN.PROPAGATED;
+  const isTyped = row.row_source_mode === 'typed_assertions';
+  if (!isPropagated && isTyped) return 0;
+  if (!isPropagated) return 1;
+  if (isTyped) return 2;
+  return 3;
+}
+
+function mergeDiseasePhenotypeRows(...rowGroups) {
+  const mergedByPair = new Map();
+
+  for (const rows of rowGroups) {
+    for (const row of rows) {
+      const key = `${row.disease_entity_id}|${row.phenotype_entity_id}|${row.presence_status || 'present'}`;
+      const existing = mergedByPair.get(key);
+      if (!existing) {
+        mergedByPair.set(key, row);
+        continue;
+      }
+
+      const existingPriority = diseasePhenotypeRowPriority(existing);
+      const nextPriority = diseasePhenotypeRowPriority(row);
+      if (nextPriority < existingPriority) {
+        mergedByPair.set(key, row);
+      }
+    }
+  }
+
+  return [...mergedByPair.values()];
+}
+
 async function loadTypedPhenotypeRows(client) {
   const result = await client.query(
     `
-      SELECT DISTINCT ON (disease.entity_id, phenotype.entity_id)
+      SELECT DISTINCT ON (disease.entity_id, phenotype.entity_id, clinical_phenotype_assertions.presence_status)
         disease.entity_id AS disease_entity_id,
         disease.canonical_curie AS disease_curie,
         disease.canonical_label AS disease_label,
         phenotype.entity_id AS phenotype_entity_id,
         phenotype.canonical_curie AS phenotype_curie,
         phenotype.canonical_label AS phenotype_label,
+        clinical_phenotype_assertions.presence_status AS presence_status,
+        clinical_phenotype_assertions.source_key AS source_key,
+        clinical_phenotype_assertions.source_record_key AS source_record_key,
+        CASE
+          WHEN clinical_phenotype_assertions.source_key = $1
+            OR clinical_phenotype_assertions.source_record_key LIKE 'phenotype-propagation:%'
+          THEN '${DX_DISEASE_EDGE_ORIGIN.PROPAGATED}'
+          ELSE '${DX_DISEASE_EDGE_ORIGIN.DIRECT}'
+        END AS phenotype_edge_origin,
         clinical_phenotype_assertions.reference_text AS reference_text,
-        clinical_phenotype_assertions.evidence_code AS evidence_code
+        clinical_phenotype_assertions.evidence_code AS evidence_code,
+        onset.canonical_curie AS onset_curie,
+        onset.canonical_label AS onset_label,
+        COALESCE(frequency.canonical_curie, NULLIF(clinical_phenotype_assertions.payload_json->>'frequency', '')) AS frequency_curie,
+        COALESCE(frequency.canonical_label, NULLIF(clinical_phenotype_assertions.payload_json->>'frequency', '')) AS frequency_label,
+        modifier.canonical_curie AS modifier_curie,
+        modifier.canonical_label AS modifier_label,
+        COALESCE(clinical_phenotype_assertions.sex, '') AS sex,
+        COALESCE(clinical_phenotype_assertions.aspect, '') AS aspect
       FROM clinical_phenotype_assertions
       INNER JOIN entities disease
         ON disease.entity_id = clinical_phenotype_assertions.subject_entity_id
       INNER JOIN entities phenotype
         ON phenotype.entity_id = clinical_phenotype_assertions.phenotype_entity_id
+      LEFT JOIN entities onset
+        ON onset.entity_id = clinical_phenotype_assertions.onset_entity_id
+      LEFT JOIN entities frequency
+        ON frequency.entity_id = clinical_phenotype_assertions.frequency_entity_id
+      LEFT JOIN entities modifier
+        ON modifier.entity_id = clinical_phenotype_assertions.modifier_entity_id
       WHERE disease.entity_type = 'disease'
         AND disease.is_placeholder = FALSE
-        AND clinical_phenotype_assertions.presence_status = 'present'
-      ORDER BY disease.entity_id, phenotype.entity_id, clinical_phenotype_assertions.observed_at DESC
-    `
+      ORDER BY disease.entity_id, phenotype.entity_id, clinical_phenotype_assertions.presence_status,
+        CASE
+          WHEN clinical_phenotype_assertions.source_key = $1
+            OR clinical_phenotype_assertions.source_record_key LIKE 'phenotype-propagation:%'
+          THEN 1
+          ELSE 0
+        END ASC,
+        clinical_phenotype_assertions.observed_at DESC
+    `,
+    [SOURCE_KEYS.PHENOTYPE_PROPAGATION]
   );
 
-  return result.rows;
+  return result.rows.map((row) => ({
+    ...row,
+    row_source_mode: 'typed_assertions'
+  }));
 }
 
 async function loadCanonicalGenePhenotypeRows(client) {
@@ -139,15 +211,35 @@ async function loadCanonicalGeneDiseaseSupportRows(client) {
 async function loadFallbackPhenotypeRows(client) {
   const result = await client.query(
     `
-      SELECT DISTINCT ON (disease.entity_id, phenotype.entity_id)
+      SELECT DISTINCT ON (disease.entity_id, phenotype.entity_id, rel.predicate_key)
         disease.entity_id AS disease_entity_id,
         disease.canonical_curie AS disease_curie,
         disease.canonical_label AS disease_label,
         phenotype.entity_id AS phenotype_entity_id,
         phenotype.canonical_curie AS phenotype_curie,
         phenotype.canonical_label AS phenotype_label,
+        CASE
+          WHEN rel.predicate_key = 'lacks_phenotype' THEN 'absent'
+          ELSE 'present'
+        END AS presence_status,
+        COALESCE(evidence.source_key, rel.primary_source_key, '') AS source_key,
+        COALESCE(evidence.source_record_key, '') AS source_record_key,
+        CASE
+          WHEN COALESCE(evidence.source_key, rel.primary_source_key, '') = $1
+            OR COALESCE(evidence.source_record_key, '') LIKE 'phenotype-propagation:%'
+          THEN '${DX_DISEASE_EDGE_ORIGIN.PROPAGATED}'
+          ELSE '${DX_DISEASE_EDGE_ORIGIN.DIRECT}'
+        END AS phenotype_edge_origin,
         COALESCE(evidence.payload_json->>'reference', '') AS reference_text,
-        COALESCE(evidence.evidence_code, '') AS evidence_code
+        COALESCE(evidence.evidence_code, '') AS evidence_code,
+        NULLIF(evidence.payload_json->>'onset', '') AS onset_curie,
+        NULLIF(evidence.payload_json->>'onset', '') AS onset_label,
+        NULLIF(evidence.payload_json->>'frequency', '') AS frequency_curie,
+        NULLIF(evidence.payload_json->>'frequency', '') AS frequency_label,
+        NULLIF(evidence.payload_json->>'modifier', '') AS modifier_curie,
+        NULLIF(evidence.payload_json->>'modifier', '') AS modifier_label,
+        COALESCE(evidence.payload_json->>'sex', '') AS sex,
+        COALESCE(evidence.payload_json->>'aspect', '') AS aspect
       FROM relationships rel
       INNER JOIN entities disease
         ON disease.entity_id = rel.subject_entity_id
@@ -155,6 +247,8 @@ async function loadFallbackPhenotypeRows(client) {
         ON phenotype.entity_id = rel.object_entity_id
       LEFT JOIN LATERAL (
         SELECT
+          relationship_evidence.source_key,
+          relationship_evidence.source_record_key,
           relationship_evidence.evidence_code,
           relationship_evidence.payload_json,
           relationship_evidence.observed_at
@@ -164,35 +258,37 @@ async function loadFallbackPhenotypeRows(client) {
         LIMIT 1
       ) AS evidence
         ON TRUE
-      WHERE rel.predicate_key = 'has_phenotype'
+      WHERE rel.predicate_key IN ('has_phenotype', 'lacks_phenotype')
         AND disease.entity_type = 'disease'
         AND disease.is_placeholder = FALSE
         AND phenotype.entity_type = 'phenotype'
-      ORDER BY disease.entity_id, phenotype.entity_id, evidence.observed_at DESC NULLS LAST
-    `
+      ORDER BY disease.entity_id, phenotype.entity_id, rel.predicate_key, evidence.observed_at DESC NULLS LAST
+    `,
+    [SOURCE_KEYS.PHENOTYPE_PROPAGATION]
   );
 
-  return result.rows;
+  return result.rows.map((row) => ({
+    ...row,
+    row_source_mode: 'relationship_fallback'
+  }));
 }
 
 export async function loadDxDiseasePhenotypeRows(client) {
+  let typedRows = [];
   try {
-    const typedRows = await loadTypedPhenotypeRows(client);
-    if (typedRows.length) {
-      return {
-        sourceMode: 'typed_assertions',
-        rows: typedRows
-      };
-    }
+    typedRows = await loadTypedPhenotypeRows(client);
   } catch (error) {
     if (!['42P01', '42703'].includes(error?.code)) {
       throw error;
     }
   }
 
+  const fallbackRows = await loadFallbackPhenotypeRows(client);
+  const rows = mergeDiseasePhenotypeRows(typedRows, fallbackRows);
+
   return {
-    sourceMode: 'relationship_fallback',
-    rows: await loadFallbackPhenotypeRows(client)
+    sourceMode: typedRows.length ? 'typed_plus_relationships' : 'relationship_fallback',
+    rows
   };
 }
 

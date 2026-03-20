@@ -82,6 +82,7 @@ export function runDxPhevalCases(index, cases, options = {}) {
   const caseReports = cases.map((dxCase) => {
     const ranking = rankDiseasesByPhenotypeSimilarity(index, {
       phenotypeCuries: dxCase.input.presentPhenotypeCuries,
+      excludedPhenotypeCuries: dxCase.input.excludedPhenotypeCuries,
       limit: resultLimit
     });
 

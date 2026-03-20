@@ -5,6 +5,8 @@ import {
   abandonRunningSyncRuns,
   createSyncRun,
   finalizeSyncRun,
+  getSourceByKey,
+  listActiveSourceKeys,
   listSuccessfulSourceKeys,
   markSourceSyncState,
   supersedeRunningSyncRunsForSource
@@ -81,6 +83,13 @@ function resolveSourceOrThrow(sourceKey) {
     throw new Error(`Unsupported source key: ${sourceKey}`);
   }
   return { source, handler };
+}
+
+function buildDisabledSourceResult(sourceKey) {
+  return {
+    sourceKey,
+    status: 'disabled'
+  };
 }
 
 async function applyDataset(client, source, syncRunId, dataset) {
@@ -635,6 +644,13 @@ async function resolveRelationshipEntity(client, ref, sourceKey, entityIdByCurie
 async function createSourceSyncRun(sourceKey, options, requestedBy) {
   return withClient(async (client) => {
     await ensureSourceCatalog(client);
+    const sourceState = await getSourceByKey(client, sourceKey);
+    if (!sourceState) {
+      throw new Error(`Unknown source key: ${sourceKey}`);
+    }
+    if (!sourceState.is_active) {
+      throw new Error(`Source ${sourceKey} is disabled. Re-enable it before syncing.`);
+    }
     await supersedeRunningSyncRunsForSource(client, sourceKey, SUPERSEDED_SYNC_MESSAGE);
     return createSyncRun(client, sourceKey, {
       triggerMode: options.triggerMode || 'manual',
@@ -791,21 +807,35 @@ async function resolveBootstrapSourceOrder(options = {}) {
     ...options
   };
 
+  const activeSourceKeys = await withClient(async (client) => {
+    await ensureSourceCatalog(client);
+    return listActiveSourceKeys(client, BOOTSTRAP_SOURCE_ORDER);
+  });
+
+  const activeSourceSet = new Set(activeSourceKeys);
+  const activeBootstrapSources = BOOTSTRAP_SOURCE_ORDER.filter((sourceKey) => activeSourceSet.has(sourceKey));
+
   if (!shouldSkipCompletedSources(effectiveOptions)) {
-    return [...BOOTSTRAP_SOURCE_ORDER];
+    return activeBootstrapSources;
   }
 
   const successfulSourceKeys = await withClient(async (client) => {
     await ensureSourceCatalog(client);
-    return listSuccessfulSourceKeys(client, BOOTSTRAP_SOURCE_ORDER);
+    return listSuccessfulSourceKeys(client, activeBootstrapSources);
   });
 
-  return filterBootstrapSourceKeys(BOOTSTRAP_SOURCE_ORDER, successfulSourceKeys, effectiveOptions);
+  return filterBootstrapSourceKeys(activeBootstrapSources, successfulSourceKeys, effectiveOptions);
 }
 
 export async function bootstrapKnowledgeNetwork(options = {}, requestedBy = 'api') {
   const results = [];
   const sourceOrder = await resolveBootstrapSourceOrder(options);
+  const activeSourceKeys = new Set(
+    await withClient(async (client) => {
+      await ensureSourceCatalog(client);
+      return listActiveSourceKeys(client, [SOURCE_KEYS.CLINICAL_TRIALS]);
+    })
+  );
   for (const sourceKey of sourceOrder) {
     const sourceOptions = options[sourceKey] || {};
     const result = await syncSource(sourceKey, sourceOptions, requestedBy);
@@ -813,6 +843,10 @@ export async function bootstrapKnowledgeNetwork(options = {}, requestedBy = 'api
   }
 
   if (Array.isArray(options.clinicalTrialsQueries)) {
+    if (!activeSourceKeys.has(SOURCE_KEYS.CLINICAL_TRIALS)) {
+      results.push(buildDisabledSourceResult(SOURCE_KEYS.CLINICAL_TRIALS));
+      return results;
+    }
     for (const conditionQuery of options.clinicalTrialsQueries) {
       const result = await syncSource(
         SOURCE_KEYS.CLINICAL_TRIALS,
@@ -829,6 +863,12 @@ export async function bootstrapKnowledgeNetwork(options = {}, requestedBy = 'api
 export async function queueBootstrapKnowledgeNetwork(options = {}, requestedBy = 'api') {
   const results = [];
   const sourceOrder = await resolveBootstrapSourceOrder(options);
+  const activeSourceKeys = new Set(
+    await withClient(async (client) => {
+      await ensureSourceCatalog(client);
+      return listActiveSourceKeys(client, [SOURCE_KEYS.CLINICAL_TRIALS]);
+    })
+  );
   for (const sourceKey of sourceOrder) {
     const sourceOptions = options[sourceKey] || {};
     const result = await queueSourceSync(sourceKey, sourceOptions, requestedBy);
@@ -836,6 +876,10 @@ export async function queueBootstrapKnowledgeNetwork(options = {}, requestedBy =
   }
 
   if (Array.isArray(options.clinicalTrialsQueries)) {
+    if (!activeSourceKeys.has(SOURCE_KEYS.CLINICAL_TRIALS)) {
+      results.push(buildDisabledSourceResult(SOURCE_KEYS.CLINICAL_TRIALS));
+      return results;
+    }
     for (const conditionQuery of options.clinicalTrialsQueries) {
       const result = await queueSourceSync(
         SOURCE_KEYS.CLINICAL_TRIALS,

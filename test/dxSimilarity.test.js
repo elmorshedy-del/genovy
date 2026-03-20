@@ -24,7 +24,10 @@ function buildToyIndex() {
         phenotype_curie: 'HP:0001',
         phenotype_label: 'Seizures',
         evidence_code: 'TAS',
-        reference_text: 'PMID:1'
+        reference_text: 'PMID:1',
+        frequency_curie: 'HP:0040280',
+        frequency_label: 'Obligate',
+        presence_status: 'present'
       },
       {
         disease_entity_id: 1,
@@ -34,7 +37,10 @@ function buildToyIndex() {
         phenotype_curie: 'HP:0002',
         phenotype_label: 'Macrocephaly',
         evidence_code: 'TAS',
-        reference_text: 'PMID:1'
+        reference_text: 'PMID:1',
+        frequency_curie: 'HP:0040283',
+        frequency_label: 'Occasional',
+        presence_status: 'present'
       },
       {
         disease_entity_id: 2,
@@ -44,7 +50,10 @@ function buildToyIndex() {
         phenotype_curie: 'HP:0003',
         phenotype_label: 'Ataxia',
         evidence_code: 'TAS',
-        reference_text: 'PMID:2'
+        reference_text: 'PMID:2',
+        frequency_curie: 'HP:0040282',
+        frequency_label: 'Frequent',
+        presence_status: 'present'
       },
       {
         disease_entity_id: 2,
@@ -54,7 +63,21 @@ function buildToyIndex() {
         phenotype_curie: 'HP:0004',
         phenotype_label: 'Hypotonia',
         evidence_code: 'TAS',
-        reference_text: 'PMID:2'
+        reference_text: 'PMID:2',
+        frequency_curie: 'HP:0040282',
+        frequency_label: 'Frequent',
+        presence_status: 'present'
+      },
+      {
+        disease_entity_id: 1,
+        disease_curie: 'MONDO:1',
+        disease_label: 'Disease A',
+        phenotype_entity_id: 13,
+        phenotype_curie: 'HP:0003',
+        phenotype_label: 'Ataxia',
+        evidence_code: 'TAS',
+        reference_text: 'PMID:1',
+        presence_status: 'absent'
       }
     ],
     genePhenotypeRows: [
@@ -154,4 +177,33 @@ test('benchmarkDxSimilarityIndex reports recall metrics on synthetic subsets', (
   assert.equal(benchmark.caseCount, 2);
   assert.equal(benchmark.recallAt.top1 > 0, true);
   assert.equal(Array.isArray(benchmark.rankResults), true);
+});
+
+test('rankDiseasesByPhenotypeSimilarity downweights occasional phenotypes against obligate matches', () => {
+  const index = buildToyIndex();
+  const result = rankDiseasesByPhenotypeSimilarity(index, {
+    phenotypeCuries: ['HP:0001'],
+    limit: 2
+  });
+
+  assert.equal(result.results[0].diseaseCurie, 'MONDO:1');
+  assert.equal(result.results[0].trace[0].frequencyCurie, 'HP:0040280');
+});
+
+test('rankDiseasesByPhenotypeSimilarity surfaces contradictions from excluded patient phenotypes without applying a penalty', () => {
+  const index = buildToyIndex();
+  const withoutExclusion = rankDiseasesByPhenotypeSimilarity(index, {
+    phenotypeCuries: ['HP:0002'],
+    limit: 2
+  });
+  const withExclusion = rankDiseasesByPhenotypeSimilarity(index, {
+    phenotypeCuries: ['HP:0002'],
+    excludedPhenotypeCuries: ['HP:0001'],
+    limit: 2
+  });
+
+  assert.equal(withoutExclusion.results[0].diseaseCurie, 'MONDO:1');
+  assert.equal(withExclusion.results[0].diseaseCurie, 'MONDO:1');
+  assert.equal(withExclusion.results[0].contradictionPenalty > 0, true);
+  assert.equal(withExclusion.results[0].normalizedScore, withoutExclusion.results[0].normalizedScore);
 });

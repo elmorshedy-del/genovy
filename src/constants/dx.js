@@ -9,7 +9,26 @@ export const DX_QUERY_DEFAULTS = Object.freeze({
 
 export const DX_SIMILARITY_DEFAULTS = Object.freeze({
   rootSimilarityFloor: 0,
-  normalizedScorePrecision: 6
+  normalizedScorePrecision: 6,
+  defaultPhenotypeWeight: 1,
+  patientExcludedContradictionPenaltyWeight: 0.3,
+  diseaseExcludedContradictionPenaltyWeight: 0.2,
+  frequencyWeights: Object.freeze({
+    obligate: 1,
+    veryFrequent: 0.95,
+    frequent: 0.85,
+    occasional: 0.65,
+    veryRare: 0.45,
+    excluded: 0
+  }),
+  hpoFrequencyCuries: Object.freeze({
+    obligate: 'HP:0040280',
+    veryFrequent: 'HP:0040281',
+    frequent: 'HP:0040282',
+    occasional: 'HP:0040283',
+    veryRare: 'HP:0040284',
+    excluded: 'HP:0040285'
+  })
 });
 
 export const DX_BENCHMARK_DEFAULTS = Object.freeze({

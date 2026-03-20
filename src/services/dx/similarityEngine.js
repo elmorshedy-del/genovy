@@ -39,6 +39,22 @@ function clamp(value, minValue, maxValue) {
   return Math.max(minValue, Math.min(maxValue, value));
 }
 
+const DISEASE_SUPPORT_HEURISTICS = Object.freeze({
+  directEvidenceWeight: 1,
+  propagatedEvidenceMinWeight: 0.25,
+  propagatedEvidenceMaxWeight: 0.85,
+  propagatedMatchedDensityWeight: 0.45,
+  propagatedCompactnessWeight: 0.35,
+  propagatedSimilarityWeight: 0.2
+});
+
+function safeRatio(numerator, denominator) {
+  if (!denominator) {
+    return 0;
+  }
+  return numerator / denominator;
+}
+
 function sampleWithoutReplacement(values, count, random) {
   const pool = [...values];
   const selected = [];
@@ -66,6 +82,69 @@ function buildParentMap(ontologyRows) {
   return { parentMap, labelByCurie };
 }
 
+function normalizePresenceStatus(value) {
+  return String(value || '').trim().toLowerCase() === 'absent' ? 'absent' : 'present';
+}
+
+function weightedAverage(entries) {
+  if (!entries.length) {
+    return 0;
+  }
+
+  const totalWeight = entries.reduce((sum, entry) => sum + Math.max(0, entry.weight || 0), 0);
+  if (totalWeight <= 0) {
+    return 0;
+  }
+
+  return entries.reduce((sum, entry) => sum + (entry.value || 0) * Math.max(0, entry.weight || 0), 0) / totalWeight;
+}
+
+function resolveFrequencyWeight(row) {
+  if (normalizePresenceStatus(row.presence_status) === 'absent') {
+    return DX_SIMILARITY_DEFAULTS.frequencyWeights.excluded;
+  }
+
+  const normalizedCandidates = [row.frequency_curie, row.frequency_label]
+    .map((value) => String(value || '').trim().toLowerCase())
+    .filter(Boolean);
+  const { hpoFrequencyCuries, frequencyWeights } = DX_SIMILARITY_DEFAULTS;
+
+  for (const value of normalizedCandidates) {
+    if (value === hpoFrequencyCuries.obligate.toLowerCase() || value.includes('obligate') || value.includes('100%')) {
+      return frequencyWeights.obligate;
+    }
+    if (
+      value === hpoFrequencyCuries.veryFrequent.toLowerCase() ||
+      value.includes('very frequent') ||
+      value.includes('80-99%')
+    ) {
+      return frequencyWeights.veryFrequent;
+    }
+    if (value === hpoFrequencyCuries.frequent.toLowerCase() || value.includes('frequent') || value.includes('30-79%')) {
+      return frequencyWeights.frequent;
+    }
+    if (
+      value === hpoFrequencyCuries.occasional.toLowerCase() ||
+      value.includes('occasional') ||
+      value.includes('5-29%')
+    ) {
+      return frequencyWeights.occasional;
+    }
+    if (
+      value === hpoFrequencyCuries.veryRare.toLowerCase() ||
+      value.includes('very rare') ||
+      value.includes('1-4%')
+    ) {
+      return frequencyWeights.veryRare;
+    }
+    if (value === hpoFrequencyCuries.excluded.toLowerCase() || value.includes('excluded') || value === '0%') {
+      return frequencyWeights.excluded;
+    }
+  }
+
+  return DX_SIMILARITY_DEFAULTS.defaultPhenotypeWeight;
+}
+
 function buildEntityProfiles(
   rows,
   { entityIdKey, entityCurieKey, entityLabelKey, referenceTextKey = 'reference_text' }
@@ -83,17 +162,53 @@ function buildEntityProfiles(
         entityId: Number(row[entityIdKey]),
         entityCurie,
         entityLabel: row[entityLabelKey] || entityCurie,
-        phenotypes: []
+        phenotypes: [],
+        absentPhenotypes: [],
+        directPhenotypeEdgeCount: 0,
+        propagatedPhenotypeEdgeCount: 0,
+        directAbsentPhenotypeEdgeCount: 0,
+        propagatedAbsentPhenotypeEdgeCount: 0
       });
     }
 
-    profilesByCurie.get(entityCurie).phenotypes.push({
+    const profile = profilesByCurie.get(entityCurie);
+    const phenotypeEdgeOrigin = row.phenotype_edge_origin || 'direct';
+    const presenceStatus = normalizePresenceStatus(row.presence_status);
+    const phenotypeWeight = resolveFrequencyWeight(row);
+    const phenotypeRecord = {
       phenotypeEntityId: Number(row.phenotype_entity_id),
       phenotypeCurie: row.phenotype_curie,
       phenotypeLabel: row.phenotype_label,
       evidenceCode: row.evidence_code || '',
-      referenceText: row[referenceTextKey] || ''
-    });
+      referenceText: row[referenceTextKey] || '',
+      edgeOrigin: phenotypeEdgeOrigin,
+      presenceStatus,
+      onsetCurie: row.onset_curie || '',
+      onsetLabel: row.onset_label || row.onset_curie || '',
+      frequencyCurie: row.frequency_curie || '',
+      frequencyLabel: row.frequency_label || row.frequency_curie || '',
+      modifierCurie: row.modifier_curie || '',
+      modifierLabel: row.modifier_label || row.modifier_curie || '',
+      sex: row.sex || '',
+      aspect: row.aspect || '',
+      phenotypeWeight
+    };
+
+    if (presenceStatus === 'absent') {
+      profile.absentPhenotypes.push(phenotypeRecord);
+      if (phenotypeEdgeOrigin === 'propagated') {
+        profile.propagatedAbsentPhenotypeEdgeCount += 1;
+      } else {
+        profile.directAbsentPhenotypeEdgeCount += 1;
+      }
+    } else {
+      profile.phenotypes.push(phenotypeRecord);
+      if (phenotypeEdgeOrigin === 'propagated') {
+        profile.propagatedPhenotypeEdgeCount += 1;
+      } else {
+        profile.directPhenotypeEdgeCount += 1;
+      }
+    }
   }
 
   return [...profilesByCurie.values()];
@@ -310,6 +425,13 @@ function buildPatientPhenotypeTerms(index, phenotypeCuries) {
     }));
 }
 
+function normalizeSimilarityScore(index, rawScore) {
+  if (index.maxInfoContent <= 0) {
+    return 0;
+  }
+  return rawScore / index.maxInfoContent;
+}
+
 function buildBestTermMatch(index, queryTerm, diseasePhenotypes) {
   let bestMatch = {
     patientPhenotypeCurie: queryTerm.phenotypeCurie,
@@ -319,13 +441,19 @@ function buildBestTermMatch(index, queryTerm, diseasePhenotypes) {
     micaCurie: '',
     micaLabel: '',
     score: DX_SIMILARITY_DEFAULTS.rootSimilarityFloor,
+    weightedScore: DX_SIMILARITY_DEFAULTS.rootSimilarityFloor,
+    phenotypeWeight: 0,
     evidenceCode: '',
-    referenceText: ''
+    referenceText: '',
+    presenceStatus: 'present',
+    frequencyCurie: '',
+    frequencyLabel: ''
   };
 
   for (const diseasePhenotype of diseasePhenotypes) {
     const similarity = index.resolveSimilarity(queryTerm.phenotypeCurie, diseasePhenotype.phenotypeCurie);
-    if (similarity.score < bestMatch.score) {
+    const weightedScore = similarity.score * (diseasePhenotype.phenotypeWeight || DX_SIMILARITY_DEFAULTS.defaultPhenotypeWeight);
+    if (weightedScore < bestMatch.weightedScore) {
       continue;
     }
 
@@ -337,8 +465,13 @@ function buildBestTermMatch(index, queryTerm, diseasePhenotypes) {
       micaCurie: similarity.micaCurie,
       micaLabel: index.labelByCurie.get(similarity.micaCurie) || similarity.micaCurie,
       score: similarity.score,
+      weightedScore,
+      phenotypeWeight: diseasePhenotype.phenotypeWeight || DX_SIMILARITY_DEFAULTS.defaultPhenotypeWeight,
       evidenceCode: diseasePhenotype.evidenceCode,
-      referenceText: diseasePhenotype.referenceText
+      referenceText: diseasePhenotype.referenceText,
+      presenceStatus: diseasePhenotype.presenceStatus || 'present',
+      frequencyCurie: diseasePhenotype.frequencyCurie || '',
+      frequencyLabel: diseasePhenotype.frequencyLabel || ''
     };
   }
 
@@ -353,14 +486,86 @@ function buildSymmetricDiseaseMatch(index, diseasePhenotype, queryPhenotypes) {
       bestScore = similarity.score;
     }
   }
-  return bestScore;
+  return {
+    score: bestScore,
+    weightedScore: bestScore * (diseasePhenotype.phenotypeWeight || DX_SIMILARITY_DEFAULTS.defaultPhenotypeWeight),
+    phenotypeWeight: diseasePhenotype.phenotypeWeight || DX_SIMILARITY_DEFAULTS.defaultPhenotypeWeight
+  };
 }
 
-function buildRankedResults(index, profiles, { phenotypeCuries, limit }) {
+function buildContradictionScore(index, queryPhenotypes, diseasePhenotypes) {
+  if (!queryPhenotypes.length || !diseasePhenotypes.length) {
+    return 0;
+  }
+
+  const matches = queryPhenotypes.map((queryPhenotype) => buildBestTermMatch(index, queryPhenotype, diseasePhenotypes));
+  return weightedAverage(matches.map((match) => ({ value: match.score, weight: match.phenotypeWeight || 0 })));
+}
+
+function computeDiseaseSupportEvidenceWeight(diseaseResult) {
+  const directCount = diseaseResult.directPhenotypeEdgeCount || 0;
+  const propagatedCount = diseaseResult.propagatedPhenotypeEdgeCount || 0;
+  const phenotypeCount = diseaseResult.phenotypeCount || directCount + propagatedCount;
+  const totalCount = phenotypeCount || directCount + propagatedCount;
+
+  if (totalCount <= 0) {
+    return DISEASE_SUPPORT_HEURISTICS.propagatedEvidenceMinWeight;
+  }
+
+  const directRatio = safeRatio(directCount, totalCount);
+  if (directRatio >= 1) {
+    return DISEASE_SUPPORT_HEURISTICS.directEvidenceWeight;
+  }
+
+  const matchedDensity = safeRatio(diseaseResult.matchedPhenotypeCount || 0, totalCount);
+  const compactness = 1 / Math.log2(totalCount + 1);
+  const similarityStrength = clamp(diseaseResult.normalizedScore || 0, 0, 1);
+
+  const propagatedEvidenceWeight = clamp(
+    DISEASE_SUPPORT_HEURISTICS.propagatedEvidenceMinWeight +
+      matchedDensity * DISEASE_SUPPORT_HEURISTICS.propagatedMatchedDensityWeight +
+      compactness * DISEASE_SUPPORT_HEURISTICS.propagatedCompactnessWeight +
+      similarityStrength * DISEASE_SUPPORT_HEURISTICS.propagatedSimilarityWeight,
+    DISEASE_SUPPORT_HEURISTICS.propagatedEvidenceMinWeight,
+    DISEASE_SUPPORT_HEURISTICS.propagatedEvidenceMaxWeight
+  );
+
+  return Number(
+    (
+      directRatio * DISEASE_SUPPORT_HEURISTICS.directEvidenceWeight +
+      (1 - directRatio) * propagatedEvidenceWeight
+    ).toFixed(DX_SIMILARITY_DEFAULTS.normalizedScorePrecision)
+  );
+}
+
+function shouldReplaceSupportingDisease(currentResult, candidateResult) {
+  if ((candidateResult.diseaseSupportScore || 0) !== (currentResult.diseaseSupportScore || 0)) {
+    return (candidateResult.diseaseSupportScore || 0) > (currentResult.diseaseSupportScore || 0);
+  }
+  if ((candidateResult.evidenceWeight || 0) !== (currentResult.evidenceWeight || 0)) {
+    return (candidateResult.evidenceWeight || 0) > (currentResult.evidenceWeight || 0);
+  }
+  if ((candidateResult.directPhenotypeEdgeCount || 0) !== (currentResult.directPhenotypeEdgeCount || 0)) {
+    return (candidateResult.directPhenotypeEdgeCount || 0) > (currentResult.directPhenotypeEdgeCount || 0);
+  }
+  if ((candidateResult.propagatedPhenotypeEdgeCount || 0) !== (currentResult.propagatedPhenotypeEdgeCount || 0)) {
+    return (candidateResult.propagatedPhenotypeEdgeCount || 0) < (currentResult.propagatedPhenotypeEdgeCount || 0);
+  }
+  if ((candidateResult.normalizedScore || 0) !== (currentResult.normalizedScore || 0)) {
+    return (candidateResult.normalizedScore || 0) > (currentResult.normalizedScore || 0);
+  }
+  return String(candidateResult.supportingDiseaseLabel || '').localeCompare(
+    String(currentResult.supportingDiseaseLabel || '')
+  ) < 0;
+}
+
+function buildRankedResults(index, profiles, { phenotypeCuries, excludedPhenotypeCuries = [], limit }) {
   const queryPhenotypes = buildPatientPhenotypeTerms(index, phenotypeCuries);
+  const excludedQueryPhenotypes = buildPatientPhenotypeTerms(index, excludedPhenotypeCuries);
   if (!queryPhenotypes.length) {
     return {
       queryPhenotypes: [],
+      excludedQueryPhenotypes: [],
       results: []
     };
   }
@@ -371,14 +576,25 @@ function buildRankedResults(index, profiles, { phenotypeCuries, limit }) {
     const patientToDiseaseMatches = queryPhenotypes.map((queryPhenotype) =>
       buildBestTermMatch(index, queryPhenotype, profile.phenotypes)
     );
-    const diseaseToPatientScores = profile.phenotypes.map((diseasePhenotype) =>
+    const diseaseToPatientMatches = profile.phenotypes.map((diseasePhenotype) =>
       buildSymmetricDiseaseMatch(index, diseasePhenotype, queryPhenotypes)
     );
 
-    const patientAverageScore = average(patientToDiseaseMatches.map((match) => match.score));
-    const diseaseAverageScore = average(diseaseToPatientScores);
+    const patientAverageScore = average(patientToDiseaseMatches.map((match) => match.weightedScore));
+    const diseaseAverageScore = weightedAverage(
+      diseaseToPatientMatches.map((match) => ({ value: match.score, weight: match.phenotypeWeight }))
+    );
     const bmaScore = (patientAverageScore + diseaseAverageScore) / 2;
-    const normalizedScore = index.maxInfoContent > 0 ? bmaScore / index.maxInfoContent : 0;
+    const patientPresentVsDiseaseAbsentPenalty = buildContradictionScore(index, queryPhenotypes, profile.absentPhenotypes);
+    const patientExcludedVsDiseasePresentPenalty = buildContradictionScore(
+      index,
+      excludedQueryPhenotypes,
+      profile.phenotypes
+    );
+    const contradictionPenalty =
+      patientPresentVsDiseaseAbsentPenalty * DX_SIMILARITY_DEFAULTS.diseaseExcludedContradictionPenaltyWeight +
+      patientExcludedVsDiseasePresentPenalty * DX_SIMILARITY_DEFAULTS.patientExcludedContradictionPenaltyWeight;
+    const normalizedScore = clamp(normalizeSimilarityScore(index, bmaScore), 0, 1);
 
     results.push({
       entityCurie: profile.entityCurie,
@@ -388,15 +604,29 @@ function buildRankedResults(index, profiles, { phenotypeCuries, limit }) {
       normalizedScore: Number(normalizedScore.toFixed(DX_SIMILARITY_DEFAULTS.normalizedScorePrecision)),
       patientAverageScore,
       diseaseAverageScore,
+      phenotypeCount: profile.phenotypes.length,
+      absentPhenotypeCount: profile.absentPhenotypes.length,
+      directPhenotypeEdgeCount: profile.directPhenotypeEdgeCount,
+      propagatedPhenotypeEdgeCount: profile.propagatedPhenotypeEdgeCount,
       directPhenotypeCount: profile.phenotypes.length,
       matchedPhenotypeCount: patientToDiseaseMatches.filter((match) => match.score > 0).length,
+      contradictionPenalty: Number(contradictionPenalty.toFixed(DX_SIMILARITY_DEFAULTS.normalizedScorePrecision)),
+      patientPresentVsDiseaseAbsentPenalty: Number(
+        patientPresentVsDiseaseAbsentPenalty.toFixed(DX_SIMILARITY_DEFAULTS.normalizedScorePrecision)
+      ),
+      patientExcludedVsDiseasePresentPenalty: Number(
+        patientExcludedVsDiseasePresentPenalty.toFixed(DX_SIMILARITY_DEFAULTS.normalizedScorePrecision)
+      ),
       trace: patientToDiseaseMatches
-        .sort((left, right) => right.score - left.score)
+        .sort((left, right) => right.weightedScore - left.weightedScore)
         .slice(0, DX_QUERY_DEFAULTS.traceTermsPerDisease)
     });
   }
 
   results.sort((left, right) => {
+    if (right.normalizedScore !== left.normalizedScore) {
+      return right.normalizedScore - left.normalizedScore;
+    }
     if (right.bmaScore !== left.bmaScore) {
       return right.bmaScore - left.bmaScore;
     }
@@ -414,6 +644,7 @@ function buildRankedResults(index, profiles, { phenotypeCuries, limit }) {
 
   return {
     queryPhenotypes,
+    excludedQueryPhenotypes,
     results: rankedResults
   };
 }
@@ -428,8 +659,15 @@ function buildEngineSummary(index) {
   };
 }
 
-export function rankDiseasesByPhenotypeSimilarity(index, { phenotypeCuries, limit = DX_QUERY_DEFAULTS.defaultLimit }) {
-  const ranking = buildRankedResults(index, index.diseaseProfiles, { phenotypeCuries, limit });
+export function rankDiseasesByPhenotypeSimilarity(
+  index,
+  { phenotypeCuries, excludedPhenotypeCuries = [], limit = DX_QUERY_DEFAULTS.defaultLimit }
+) {
+  const ranking = buildRankedResults(index, index.diseaseProfiles, {
+    phenotypeCuries,
+    excludedPhenotypeCuries,
+    limit
+  });
   return {
     ...ranking,
     results: ranking.results.map((result) => ({
@@ -441,8 +679,15 @@ export function rankDiseasesByPhenotypeSimilarity(index, { phenotypeCuries, limi
       normalizedScore: result.normalizedScore,
       patientAverageScore: result.patientAverageScore,
       diseaseAverageScore: result.diseaseAverageScore,
+      phenotypeCount: result.phenotypeCount,
+      absentPhenotypeCount: result.absentPhenotypeCount,
       directPhenotypeCount: result.directPhenotypeCount,
+      profileDirectPhenotypeCount: result.directPhenotypeEdgeCount,
+      profilePropagatedPhenotypeCount: result.propagatedPhenotypeEdgeCount,
       matchedPhenotypeCount: result.matchedPhenotypeCount,
+      contradictionPenalty: result.contradictionPenalty,
+      patientPresentVsDiseaseAbsentPenalty: result.patientPresentVsDiseaseAbsentPenalty,
+      patientExcludedVsDiseasePresentPenalty: result.patientExcludedVsDiseasePresentPenalty,
       trace: result.trace
     })),
     engineSummary: {
@@ -451,13 +696,18 @@ export function rankDiseasesByPhenotypeSimilarity(index, { phenotypeCuries, limi
   };
 }
 
-export function rankGenesByPhenotypeSimilarity(index, { phenotypeCuries, limit = DX_QUERY_DEFAULTS.defaultLimit }) {
+export function rankGenesByPhenotypeSimilarity(
+  index,
+  { phenotypeCuries, excludedPhenotypeCuries = [], limit = DX_QUERY_DEFAULTS.defaultLimit }
+) {
   const directRanking = buildRankedResults(index, index.geneProfiles, {
     phenotypeCuries,
+    excludedPhenotypeCuries,
     limit: index.totalGenes || limit
   });
   const diseaseRanking = buildRankedResults(index, index.diseaseProfiles, {
     phenotypeCuries,
+    excludedPhenotypeCuries,
     limit: index.totalDiseases || limit
   });
   const combinedByGeneKey = new Map();
@@ -484,9 +734,12 @@ export function rankGenesByPhenotypeSimilarity(index, { phenotypeCuries, limit =
         trace: result.trace,
         directNormalizedScore: result.normalizedScore,
         diseaseSupportScore: existing?.diseaseSupportScore || 0,
+        supportingDiseaseEvidenceWeight: existing?.supportingDiseaseEvidenceWeight || 0,
         supportingDiseaseCurie: existing?.supportingDiseaseCurie || '',
         supportingDiseaseLabel: existing?.supportingDiseaseLabel || '',
-        supportingDiseaseClassification: existing?.supportingDiseaseClassification || ''
+        supportingDiseaseClassification: existing?.supportingDiseaseClassification || '',
+        supportingDiseaseDirectPhenotypeCount: existing?.supportingDiseaseDirectPhenotypeCount || 0,
+        supportingDiseasePropagatedPhenotypeCount: existing?.supportingDiseasePropagatedPhenotypeCount || 0
       });
     }
   }
@@ -494,8 +747,11 @@ export function rankGenesByPhenotypeSimilarity(index, { phenotypeCuries, limit =
   for (const diseaseResult of diseaseRanking.results) {
     const links = index.geneDiseaseSupportIndex.get(diseaseResult.entityCurie) || [];
     for (const link of links) {
+      const supportingDiseaseEvidenceWeight = computeDiseaseSupportEvidenceWeight(diseaseResult);
       const diseaseSupportScore = Number(
-        (diseaseResult.normalizedScore * link.supportWeight).toFixed(DX_SIMILARITY_DEFAULTS.normalizedScorePrecision)
+        (diseaseResult.normalizedScore * link.supportWeight * supportingDiseaseEvidenceWeight).toFixed(
+          DX_SIMILARITY_DEFAULTS.normalizedScorePrecision
+        )
       );
       const geneKey = normalizeGeneKey(link.geneLabel, link.geneCurie);
       const existing =
@@ -515,9 +771,12 @@ export function rankGenesByPhenotypeSimilarity(index, { phenotypeCuries, limit =
           trace: [],
           directNormalizedScore: 0,
           diseaseSupportScore: 0,
+          supportingDiseaseEvidenceWeight: 0,
           supportingDiseaseCurie: '',
           supportingDiseaseLabel: '',
-          supportingDiseaseClassification: ''
+          supportingDiseaseClassification: '',
+          supportingDiseaseDirectPhenotypeCount: 0,
+          supportingDiseasePropagatedPhenotypeCount: 0
         };
 
       if (geneCuriePriority(link.geneCurie) > geneCuriePriority(existing.geneCurie)) {
@@ -528,11 +787,31 @@ export function rankGenesByPhenotypeSimilarity(index, { phenotypeCuries, limit =
         existing.geneSymbol = link.geneLabel;
       }
 
-      if (diseaseSupportScore > existing.diseaseSupportScore) {
+      const candidateSupport = {
+        diseaseSupportScore,
+        evidenceWeight: supportingDiseaseEvidenceWeight,
+        directPhenotypeEdgeCount: diseaseResult.directPhenotypeEdgeCount || 0,
+        propagatedPhenotypeEdgeCount: diseaseResult.propagatedPhenotypeEdgeCount || 0,
+        normalizedScore: diseaseResult.normalizedScore,
+        supportingDiseaseLabel: link.diseaseLabel
+      };
+      const currentSupport = {
+        diseaseSupportScore: existing.diseaseSupportScore || 0,
+        evidenceWeight: existing.supportingDiseaseEvidenceWeight || 0,
+        directPhenotypeEdgeCount: existing.supportingDiseaseDirectPhenotypeCount || 0,
+        propagatedPhenotypeEdgeCount: existing.supportingDiseasePropagatedPhenotypeCount || 0,
+        normalizedScore: existing.normalizedScore || 0,
+        supportingDiseaseLabel: existing.supportingDiseaseLabel || ''
+      };
+
+      if (shouldReplaceSupportingDisease(currentSupport, candidateSupport)) {
         existing.diseaseSupportScore = diseaseSupportScore;
+        existing.supportingDiseaseEvidenceWeight = supportingDiseaseEvidenceWeight;
         existing.supportingDiseaseCurie = link.diseaseCurie;
         existing.supportingDiseaseLabel = link.diseaseLabel;
         existing.supportingDiseaseClassification = link.classification;
+        existing.supportingDiseaseDirectPhenotypeCount = diseaseResult.directPhenotypeEdgeCount || 0;
+        existing.supportingDiseasePropagatedPhenotypeCount = diseaseResult.propagatedPhenotypeEdgeCount || 0;
       }
 
       existing.normalizedScore = Number(

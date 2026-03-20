@@ -21,6 +21,7 @@ router.post('/rank', async (req, res) => {
       const index = await loadDxSimilarityIndex(client);
       return rankDiseasesByPhenotypeSimilarity(index, {
         phenotypeCuries: input.presentPhenotypeCuries,
+        excludedPhenotypeCuries: input.excludedPhenotypeCuries,
         limit: parseDxLimit(req.body?.limit)
       });
     });
@@ -51,6 +52,7 @@ router.post('/rank-genes', async (req, res) => {
       const index = await loadDxSimilarityIndex(client);
       return rankGenesByPhenotypeSimilarity(index, {
         phenotypeCuries: input.presentPhenotypeCuries,
+        excludedPhenotypeCuries: input.excludedPhenotypeCuries,
         limit: parseDxLimit(req.body?.limit)
       });
     });
