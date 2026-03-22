@@ -87,6 +87,117 @@ Status:
 
 ---
 
+### Entry 18: `U2AF2` is missing the gene→disease edge, not the disease phenotype profile
+Date:
+- 2026-03-22
+
+Question:
+- After the Phase 0 refresh, is `U2AF2` empty because the syndrome-side phenotype evidence is absent, or because the gene never gets attached to the disease that already exists?
+
+Evidence surface:
+- isolated Railway working DB only
+- narrow queries against:
+  - `source_records`
+  - `entities`
+  - `entity_xrefs`
+  - `relationships`
+  - `canonical_concepts`
+
+Intentionally not inspected:
+- raw official source files on disk
+- non-official/manual enrichment sources
+- broad graph crawls unrelated to `U2AF2`
+
+Result:
+- the disease phenotype surface is already there
+- the gene→disease attachment is not
+
+More precisely:
+- `hpo_disease_phenotype` contains `26` source records for `OMIM:620535`
+- `OMIM:620535` is mapped in the graph as xref to:
+  - `MONDO:0957810`
+  - `developmental delay, dysmorphic facies, and brain anomalies`
+- that disease entity already has `26` `has_phenotype` relationships
+- but `U2AF2` still has:
+  - `0` `associated_with_disease`
+  - `0` `associated_with_phenotype`
+- and none of the refreshed official gene-oriented source records currently mention `U2AF2`
+
+Decision:
+- Stop framing `U2AF2` as “missing syndrome profile.”
+- Frame it as “syndrome profile exists; official-source gene attachment is absent.”
+- The next Phase 1 proof step should focus on whether current official sources expose a usable `U2AF2 -> DEVDFB / OMIM:620535 / MONDO:0957810` mapping at all.
+
+Own commentary / alternatives:
+- This is a better result than another vague “still empty” statement because it isolates the seam. We now know where the graph is healthy and where it is not.
+- It also weakens the earlier assumption that a simple HPO gene-disease refresh should have rescued `U2AF2`. The disease phenotype side was already present; the missing piece is the gene attachment surface.
+- If current official gene-oriented sources really do not expose `U2AF2`, then Phase 1 cannot solve this purely by refresh/re-ingestion. That would force `U2AF2` into a later enrichment/manual-attachment class.
+
+Rollback plan:
+- docs-only; no new graph mutation beyond the completed Phase 0 refresh
+
+Status:
+- kept
+
+---
+
+### Entry 17: The current identity-repair population is smaller than feared
+Date:
+- 2026-03-22
+
+Question:
+- After the Phase 0 refresh, is `U2AF2` one of many repaired-but-empty genes, or is it a narrower outlier inside the current repair workflow?
+
+Evidence surface:
+- isolated Railway working DB only
+- narrow queries against:
+  - `source_records`
+  - `sync_runs`
+  - `entities`
+  - `relationships`
+- repair workflow code:
+  - `src/scripts/repairGeneIdentityHoles.js`
+
+Intentionally not inspected:
+- any raw source dumps
+- broader graph scans outside repaired-gene candidates
+- any other hypothetical repair pathway not evidenced by current artifacts
+
+Result:
+- The currently evidenced repair population is only `2` genes:
+  - `U2AF2`
+  - `RPGRIP1`
+- Of those two:
+  - `U2AF2` is still empty
+  - `RPGRIP1` is healthy and connected
+- So the feared “many repaired empty-shell genes” pattern is not currently proven.
+
+Important numbers:
+- logical repaired genes identified: `2`
+- empty shells among them: `1`
+- fully connected among them: `1`
+- post-refresh live counts:
+  - `U2AF2`: `0` disease links, `0` phenotype links
+  - `RPGRIP1`: `10` disease links, `165` phenotype links
+
+Decision:
+- Do not over-generalize the `U2AF2` pattern.
+- Narrow Phase 1 to a `U2AF2`-first diagnosis instead of assuming a large repair-population cleanup.
+- Keep open the possibility of another repair pathway elsewhere, but do not invent it without artifacts.
+
+Own commentary / alternatives:
+- This is a useful correction to the earlier emotional model of the problem. `U2AF2` felt like the first discovered member of a large hidden class; the current evidence says it may just be a narrow outlier.
+- The counterexample matters: `RPGRIP1` proves the repair workflow can coexist with healthy later attachment. That shifts suspicion away from “repair broke everything” and toward “this one gene never got usable official-source evidence attached.”
+- `RPGRIP1L` appeared in a repair sync verification blob, but until it shows up in durable repair artifacts or live repair metadata I do not want to count it as part of the confirmed repair population. That is exactly the kind of overclaim we need to avoid now.
+
+Rollback plan:
+- docs-only; no graph mutation beyond the already-completed Phase 0 refresh
+
+Status:
+- kept
+
+---
+
 ### Entry 16: Phase 0 freshness refresh completed on the working graph
 Date:
 - 2026-03-22

@@ -352,3 +352,61 @@ Official 100-case phenotype-only gene benchmark vs Exomiser.
     - full identity-repair sweep
     - `U2AF2` source/attachment diagnosis
     - refreshed-graph benchmark rerun before enrichment
+
+## 2026-03-22 Phase 1 Initial Identity-Repair Sweep
+- Evidence surfaces used:
+  - `source_records` for `source_key = gene_identity_repair`
+  - `sync_runs` for `source_key = gene_identity_repair`
+  - live `entities.metadata_json.repairSource`
+  - narrow `relationships` link counts
+- Current confirmed repair-population result:
+  - `2` logical repaired genes identified:
+    - `U2AF2`
+    - `RPGRIP1`
+  - `1` empty shell:
+    - `U2AF2`
+  - `1` fully connected repaired gene:
+    - `RPGRIP1`
+- Live repaired-gene counts:
+  - `U2AF2`:
+    - `0` disease links
+    - `0` phenotype links
+    - still sourced only by `gene_identity_repair`
+  - `RPGRIP1`:
+    - `10` disease links
+    - `165` phenotype links
+    - later attached by real source ingestion
+- Important caveat:
+  - `sync_run 32` verification also mentioned `RPGRIP1L`
+  - but `RPGRIP1L` does not currently appear in durable repair artifacts (`source_records`) or live `repairSource` metadata
+  - so it is not counted in the confirmed repair population yet
+- Interpretation:
+  - the current repair-population problem is smaller than feared
+  - there is not yet evidence of a broad class of repaired-but-empty genes
+  - Phase 1 should narrow to:
+    - `U2AF2` source/attachment diagnosis first
+    - only broaden the sweep if another repair pathway or artifact set appears
+
+## 2026-03-22 `U2AF2` Attachment Diagnosis
+- Narrow official-source checks on the refreshed working graph:
+  - no `source_records` hits for `U2AF2` or its main gene identifiers in:
+    - `hpo_gene_disease`
+    - `hpo_gene_phenotype`
+    - `clingen_gene_disease_validity`
+    - `clinvar_gene_disease`
+    - `clinvar_variant_summary`
+- But syndrome-side disease evidence does exist:
+  - `hpo_disease_phenotype` contains `26` source records for `OMIM:620535`
+  - `OMIM:620535` exists as xref on disease entity:
+    - `MONDO:0957810`
+    - `developmental delay, dysmorphic facies, and brain anomalies`
+  - that disease entity already has:
+    - `26` `has_phenotype` relationships
+- Missing seam:
+  - there are still no `associated_with_disease` links from `U2AF2` to `MONDO:0957810`
+  - `U2AF2` remains at `0` disease links and `0` phenotype links overall
+- Interpretation:
+  - the graph already contains the syndrome phenotype profile
+  - the failure is specifically the absence of a gene→disease attachment for `U2AF2`
+  - Phase 1 should now answer one exact question:
+    - do current official gene-oriented sources actually expose a usable `U2AF2 -> DEVDFB / OMIM:620535 / MONDO:0957810` mapping?
