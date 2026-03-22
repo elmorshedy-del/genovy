@@ -252,3 +252,48 @@ Official 100-case phenotype-only gene benchmark vs Exomiser.
   - the collapse came from the contradiction penalties, not from carrying richer HPO fields themselves
   - without penalties, the scorer returns almost exactly to the propagation-weight heuristic baseline
   - frequency weighting alone is nearly neutral on this benchmark
+
+## 2026-03-22 v0 Freeze and Phase 0 Start
+- GitHub:
+  - merged the freeze bundle into `main`
+  - preserved the current code/docs/audit/walkback state as the `v0` file baseline
+- Railway:
+  - created frozen environment `genovy-v0-freeze-20260322`
+  - created working environment `genovy-v1-working-20260322`
+  - cloned the frozen DB into the working DB and repointed the working app service to its own Postgres
+  - verified working clone counts:
+    - `21` public tables
+    - `81,870` entities
+    - `967,198` relationships
+    - `987,252` source records
+- Phase 0 source freshness audit started and recorded in:
+  - `docs/source-freshness-audit-phase0-20260322.md`
+- Phase 0 provenance patch added on working branch:
+  - source-version fallback now captured for:
+    - `hpo_gene_disease`
+    - `hpo_gene_phenotype`
+    - `clingen_gene_disease_validity`
+    - `clinvar_gene_disease`
+  - targeted tests:
+    - `node --test test/sourceFetch.test.js test/sourceParsers.test.js test/sourceVersion.test.js`
+    - `6` passed, `0` failed
+- Initial freshness findings:
+  - current:
+    - `mondo_ontology`
+    - `hpo_ontology`
+    - `hpo_disease_phenotype`
+    - `orphadata_natural_history`
+  - provably stale:
+    - `clingen_gene_disease_validity`
+    - `clinvar_gene_disease`
+    - `clinvar_variant_summary`
+  - provenance gap:
+    - `hpo_gene_disease`
+    - `hpo_gene_phenotype`
+    - `clingen_gene_disease_validity`
+    - `clinvar_gene_disease`
+    do not currently persist a reliable source-version string in the graph
+- Interpretation:
+  - the first non-negotiable target is no longer vague
+  - stale-source re-ingestion is warranted
+  - provenance capture also needs fixing so future audits stop depending on inference

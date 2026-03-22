@@ -1,5 +1,6 @@
 import zlib from 'zlib';
 import { HTTP_CONSTANTS } from '../constants/http.js';
+import { extractHeaderSourceVersion } from './sourceVersion.js';
 
 const SOURCE_FETCH_DEFAULTS = Object.freeze({
   compression: 'auto'
@@ -22,7 +23,7 @@ export function isGzipBuffer(buffer) {
   return buffer.length >= 2 && buffer[0] === 0x1f && buffer[1] === 0x8b;
 }
 
-export async function fetchSourceText(url, { compression = SOURCE_FETCH_DEFAULTS.compression } = {}) {
+export async function fetchSourceTextWithMetadata(url, { compression = SOURCE_FETCH_DEFAULTS.compression } = {}) {
   const response = await fetch(url, {
     headers: { 'user-agent': HTTP_CONSTANTS.userAgent }
   });
@@ -35,5 +36,14 @@ export async function fetchSourceText(url, { compression = SOURCE_FETCH_DEFAULTS
     buffer = zlib.gunzipSync(buffer);
   }
 
-  return buffer.toString('utf8');
+  return {
+    text: buffer.toString('utf8'),
+    sourceVersion: extractHeaderSourceVersion(response.headers),
+    finalUrl: response.url
+  };
+}
+
+export async function fetchSourceText(url, options = {}) {
+  const { text } = await fetchSourceTextWithMetadata(url, options);
+  return text;
 }

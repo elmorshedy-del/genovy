@@ -871,3 +871,66 @@ Rollback plan:
 
 Status:
 - kept / parked / dismissed / open
+
+### Entry 18: v0 freeze completed and Phase 0 freshness audit started
+Date:
+- 2026-03-22
+
+Question:
+- Can we freeze the benchmark-competitive system cleanly, then begin the non-negotiable source freshness work without risking the rare strong baseline?
+
+Evidence surface:
+- Git/GitHub freeze state already merged to `main`
+- Railway environment duplication and DB clone verification
+- frozen DB metadata tables:
+  - `sources`
+  - `source_sync_state`
+  - `sync_runs`
+- source fetcher code and official upstream source headers
+
+Intentionally not inspected:
+- raw historical download files
+- broad source dumps
+- Exomiser internal source bundle files
+
+Result:
+- `v0` is now operationally frozen:
+  - GitHub freeze merged
+  - Railway frozen env preserved
+  - Railway working env separated and pointed at its own DB
+- Initial Phase 0 finding is sharper than expected:
+  - HPO/MONDO are not the first freshness problem
+  - ClinGen and ClinVar are provably stale relative to upstream today
+  - four source ingesters do not persist enough provenance to answer “what exact version did we ingest?” without inference
+
+Important numbers:
+- working clone verification:
+  - `21` public tables
+  - `81,870` entities
+  - `967,198` relationships
+  - `987,252` source records
+- targeted provenance tests:
+  - `6` passed
+  - `0` failed
+- source-state takeaways:
+  - clear stale surfaces: `clingen_gene_disease_validity`, `clinvar_gene_disease`, `clinvar_variant_summary`
+  - current surfaces: `mondo_ontology`, `hpo_ontology`, `hpo_disease_phenotype`, `orphadata_natural_history`
+
+Decision:
+- Keep Phase 0 narrow and evidence-based.
+- Do not jump to ranking analysis or semantic similarity yet.
+- First fix provenance capture and stale-source re-ingestion on the working environment.
+- Provenance-capture patch is now on the working branch, so the next sync can actually prove what version was ingested instead of leaving blanks.
+
+Own commentary / alternatives:
+- The provenance gap is more important than it first sounds. Without fixing it, future “freshness” discussions will keep collapsing into guesswork, especially for HPO gene-disease / gene-phenotype.
+- HPO gene-disease and gene-phenotype are probably current, but “probably” is not a good enough standard for the new plan. That uncertainty should be engineered away now.
+- The freeze/working split was the right call. If we had started re-ingestion against the only good DB, we would have repeated the exact operational mistake we were trying to stop making.
+- This was a good first code move because it improves auditability without perturbing scorer behavior or graph semantics.
+
+Rollback plan:
+- docs-only notes plus Railway working-environment setup
+- if later evidence changes the freshness assessment, revise the Phase 0 audit rather than the freeze itself
+
+Status:
+- kept

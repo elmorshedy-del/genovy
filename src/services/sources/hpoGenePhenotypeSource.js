@@ -1,6 +1,7 @@
 import { parseDelimitedText } from '../../lib/parseDelimited.js';
 import { HTTP_CONSTANTS } from '../../constants/http.js';
 import { normalizeNcbiGeneCurie } from '../../lib/curies.js';
+import { extractHeaderSourceVersion, pickSourceVersion } from '../../lib/sourceVersion.js';
 
 export async function fetchHpoGenePhenotypeDataset(source) {
   const response = await fetch(source.accessUrl, {
@@ -70,7 +71,7 @@ export async function fetchHpoGenePhenotypeDataset(source) {
   }
 
   return {
-    sourceVersion: parsed.metadata.version || '',
+    sourceVersion: pickSourceVersion(parsed.metadata.version, extractHeaderSourceVersion(response.headers)),
     entities,
     aliases: [],
     xrefs: [],
