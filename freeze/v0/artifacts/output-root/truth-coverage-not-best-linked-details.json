@@ -1,0 +1,4157 @@
+{
+  "created_at": "2026-03-21T03:11:08.336Z",
+  "source_audit_json": "/Users/ahmedelmorshedy/Genovy/output/truth-coverage-pass-1.json",
+  "case_count": 36,
+  "cases": [
+    {
+      "case_id": "PMID_36446582_Miyatake2017_P1",
+      "file_name": "PMID_36446582_Miyatake2017_P1.json",
+      "truth_gene": "symbol:ANKRD11",
+      "truth_gene_rank": null,
+      "patient_term_count": 8,
+      "patient_terms": [
+        {
+          "curie": "HP:0001249",
+          "label": "Intellectual disability"
+        },
+        {
+          "curie": "HP:0001263",
+          "label": "Global developmental delay"
+        },
+        {
+          "curie": "HP:0001155",
+          "label": "Abnormality of the hand"
+        },
+        {
+          "curie": "HP:0004322",
+          "label": "Short stature"
+        },
+        {
+          "curie": "HP:0002750",
+          "label": "Delayed skeletal maturation"
+        },
+        {
+          "curie": "HP:0000750",
+          "label": "Delayed speech and language development"
+        },
+        {
+          "curie": "HP:0007359",
+          "label": "Focal-onset seizure"
+        },
+        {
+          "curie": "HP:0000316",
+          "label": "Hypertelorism"
+        }
+      ],
+      "supporting_disease": null,
+      "best_linked_disease": {
+        "curie": "MONDO:0007846",
+        "label": "KBG syndrome",
+        "direct_count": 66,
+        "propagated_count": 0,
+        "exact_direct_overlap": 5,
+        "normalized_score": 0.10822,
+        "exact_overlap_terms": [
+          {
+            "curie": "HP:0000316",
+            "patientLabel": "Hypertelorism",
+            "diseaseLabel": "Hypertelorism"
+          },
+          {
+            "curie": "HP:0001249",
+            "patientLabel": "Intellectual disability",
+            "diseaseLabel": "Intellectual disability"
+          },
+          {
+            "curie": "HP:0001263",
+            "patientLabel": "Global developmental delay",
+            "diseaseLabel": "Global developmental delay"
+          },
+          {
+            "curie": "HP:0002750",
+            "patientLabel": "Delayed skeletal maturation",
+            "diseaseLabel": "Delayed skeletal maturation"
+          },
+          {
+            "curie": "HP:0004322",
+            "patientLabel": "Short stature",
+            "diseaseLabel": "Short stature"
+          }
+        ]
+      },
+      "overlap_gain_terms": [
+        {
+          "curie": "HP:0000316",
+          "patientLabel": "Hypertelorism",
+          "diseaseLabel": "Hypertelorism"
+        },
+        {
+          "curie": "HP:0001249",
+          "patientLabel": "Intellectual disability",
+          "diseaseLabel": "Intellectual disability"
+        },
+        {
+          "curie": "HP:0001263",
+          "patientLabel": "Global developmental delay",
+          "diseaseLabel": "Global developmental delay"
+        },
+        {
+          "curie": "HP:0002750",
+          "patientLabel": "Delayed skeletal maturation",
+          "diseaseLabel": "Delayed skeletal maturation"
+        },
+        {
+          "curie": "HP:0004322",
+          "patientLabel": "Short stature",
+          "diseaseLabel": "Short stature"
+        }
+      ],
+      "overlap_lost_terms": [],
+      "top_linked_diseases": [
+        {
+          "curie": "MONDO:0007846",
+          "label": "KBG syndrome",
+          "direct_count": 66,
+          "propagated_count": 0,
+          "exact_direct_overlap": 5,
+          "normalized_score": 0.10822
+        }
+      ],
+      "audit_flags": [
+        "truth_gene_missed",
+        "supporting_disease_no_direct_terms",
+        "supporting_disease_not_best_linked_disease",
+        "supporting_disease_has_zero_exact_direct_patient_overlap"
+      ]
+    },
+    {
+      "case_id": "PMID_28940506_Family14Individual18",
+      "file_name": "PMID_28940506_Family14Individual18.json",
+      "truth_gene": "symbol:FBXL4",
+      "truth_gene_rank": 1,
+      "patient_term_count": 9,
+      "patient_terms": [
+        {
+          "curie": "HP:0030059",
+          "label": "Mitochondrial depletion"
+        },
+        {
+          "curie": "HP:0011924",
+          "label": "Decreased activity of mitochondrial complex III"
+        },
+        {
+          "curie": "HP:0001263",
+          "label": "Global developmental delay"
+        },
+        {
+          "curie": "HP:0011220",
+          "label": "Prominent forehead"
+        },
+        {
+          "curie": "HP:0001252",
+          "label": "Hypotonia"
+        },
+        {
+          "curie": "HP:0000316",
+          "label": "Hypertelorism"
+        },
+        {
+          "curie": "HP:0002151",
+          "label": "Increased circulating lactate concentration"
+        },
+        {
+          "curie": "HP:0001987",
+          "label": "Hyperammonemia"
+        },
+        {
+          "curie": "HP:0012707",
+          "label": "Elevated brain lactate level by MRS"
+        }
+      ],
+      "supporting_disease": {
+        "curie": "MONDO:0009723",
+        "label": "Leigh syndrome",
+        "direct_count": 115,
+        "propagated_count": 0,
+        "exact_direct_overlap": 5,
+        "exact_overlap_terms": [
+          {
+            "curie": "HP:0001252",
+            "patientLabel": "Hypotonia",
+            "diseaseLabel": "Hypotonia"
+          },
+          {
+            "curie": "HP:0001263",
+            "patientLabel": "Global developmental delay",
+            "diseaseLabel": "Global developmental delay"
+          },
+          {
+            "curie": "HP:0002151",
+            "patientLabel": "Increased circulating lactate concentration",
+            "diseaseLabel": "Increased circulating lactate concentration"
+          },
+          {
+            "curie": "HP:0011924",
+            "patientLabel": "Decreased activity of mitochondrial complex III",
+            "diseaseLabel": "Decreased activity of mitochondrial complex III"
+          },
+          {
+            "curie": "HP:0012707",
+            "patientLabel": "Elevated brain lactate level by MRS",
+            "diseaseLabel": "Elevated brain lactate level by MRS"
+          }
+        ]
+      },
+      "best_linked_disease": {
+        "curie": "MONDO:0014198",
+        "label": "mitochondrial DNA depletion syndrome 13",
+        "direct_count": 119,
+        "propagated_count": 0,
+        "exact_direct_overlap": 9,
+        "normalized_score": 0.247619,
+        "exact_overlap_terms": [
+          {
+            "curie": "HP:0000316",
+            "patientLabel": "Hypertelorism",
+            "diseaseLabel": "Hypertelorism"
+          },
+          {
+            "curie": "HP:0001252",
+            "patientLabel": "Hypotonia",
+            "diseaseLabel": "Hypotonia"
+          },
+          {
+            "curie": "HP:0001263",
+            "patientLabel": "Global developmental delay",
+            "diseaseLabel": "Global developmental delay"
+          },
+          {
+            "curie": "HP:0001987",
+            "patientLabel": "Hyperammonemia",
+            "diseaseLabel": "Hyperammonemia"
+          },
+          {
+            "curie": "HP:0002151",
+            "patientLabel": "Increased circulating lactate concentration",
+            "diseaseLabel": "Increased circulating lactate concentration"
+          },
+          {
+            "curie": "HP:0011220",
+            "patientLabel": "Prominent forehead",
+            "diseaseLabel": "Prominent forehead"
+          },
+          {
+            "curie": "HP:0011924",
+            "patientLabel": "Decreased activity of mitochondrial complex III",
+            "diseaseLabel": "Decreased activity of mitochondrial complex III"
+          },
+          {
+            "curie": "HP:0012707",
+            "patientLabel": "Elevated brain lactate level by MRS",
+            "diseaseLabel": "Elevated brain lactate level by MRS"
+          },
+          {
+            "curie": "HP:0030059",
+            "patientLabel": "Mitochondrial depletion",
+            "diseaseLabel": "Mitochondrial depletion"
+          }
+        ]
+      },
+      "overlap_gain_terms": [
+        {
+          "curie": "HP:0000316",
+          "patientLabel": "Hypertelorism",
+          "diseaseLabel": "Hypertelorism"
+        },
+        {
+          "curie": "HP:0001987",
+          "patientLabel": "Hyperammonemia",
+          "diseaseLabel": "Hyperammonemia"
+        },
+        {
+          "curie": "HP:0011220",
+          "patientLabel": "Prominent forehead",
+          "diseaseLabel": "Prominent forehead"
+        },
+        {
+          "curie": "HP:0030059",
+          "patientLabel": "Mitochondrial depletion",
+          "diseaseLabel": "Mitochondrial depletion"
+        }
+      ],
+      "overlap_lost_terms": [],
+      "top_linked_diseases": [
+        {
+          "curie": "MONDO:0014198",
+          "label": "mitochondrial DNA depletion syndrome 13",
+          "direct_count": 119,
+          "propagated_count": 0,
+          "exact_direct_overlap": 9,
+          "normalized_score": 0.247619
+        },
+        {
+          "curie": "MONDO:0016796",
+          "label": "mitochondrial DNA depletion syndrome, encephalomyopathic form",
+          "direct_count": 0,
+          "propagated_count": 344,
+          "exact_direct_overlap": 0,
+          "normalized_score": 0.23985
+        },
+        {
+          "curie": "MONDO:0044970",
+          "label": "mitochondrial disease",
+          "direct_count": 0,
+          "propagated_count": 1732,
+          "exact_direct_overlap": 0,
+          "normalized_score": 0.232036
+        },
+        {
+          "curie": "MONDO:0009723",
+          "label": "Leigh syndrome",
+          "direct_count": 115,
+          "propagated_count": 0,
+          "exact_direct_overlap": 5,
+          "normalized_score": 0.177845
+        }
+      ],
+      "audit_flags": [
+        "supporting_disease_not_best_linked_disease"
+      ]
+    },
+    {
+      "case_id": "PMID_33766796_16",
+      "file_name": "PMID_33766796_16.json",
+      "truth_gene": "symbol:SETD2",
+      "truth_gene_rank": null,
+      "patient_term_count": 6,
+      "patient_terms": [
+        {
+          "curie": "HP:0000750",
+          "label": "Delayed speech and language development"
+        },
+        {
+          "curie": "HP:0001270",
+          "label": "Motor delay"
+        },
+        {
+          "curie": "HP:0000256",
+          "label": "Macrocephaly"
+        },
+        {
+          "curie": "HP:0001999",
+          "label": "Abnormal facial shape"
+        },
+        {
+          "curie": "HP:0005616",
+          "label": "Accelerated skeletal maturation"
+        },
+        {
+          "curie": "HP:0000718",
+          "label": "Aggressive behavior"
+        }
+      ],
+      "supporting_disease": null,
+      "best_linked_disease": {
+        "curie": "MONDO:0014791",
+        "label": "Luscan-Lumish syndrome",
+        "direct_count": 34,
+        "propagated_count": 0,
+        "exact_direct_overlap": 3,
+        "normalized_score": 0.151844,
+        "exact_overlap_terms": [
+          {
+            "curie": "HP:0000256",
+            "patientLabel": "Macrocephaly",
+            "diseaseLabel": "Macrocephaly"
+          },
+          {
+            "curie": "HP:0000718",
+            "patientLabel": "Aggressive behavior",
+            "diseaseLabel": "Aggressive behavior"
+          },
+          {
+            "curie": "HP:0000750",
+            "patientLabel": "Delayed speech and language development",
+            "diseaseLabel": "Delayed speech and language development"
+          }
+        ]
+      },
+      "overlap_gain_terms": [
+        {
+          "curie": "HP:0000256",
+          "patientLabel": "Macrocephaly",
+          "diseaseLabel": "Macrocephaly"
+        },
+        {
+          "curie": "HP:0000718",
+          "patientLabel": "Aggressive behavior",
+          "diseaseLabel": "Aggressive behavior"
+        },
+        {
+          "curie": "HP:0000750",
+          "patientLabel": "Delayed speech and language development",
+          "diseaseLabel": "Delayed speech and language development"
+        }
+      ],
+      "overlap_lost_terms": [],
+      "top_linked_diseases": [
+        {
+          "curie": "MONDO:0014791",
+          "label": "Luscan-Lumish syndrome",
+          "direct_count": 34,
+          "propagated_count": 0,
+          "exact_direct_overlap": 3,
+          "normalized_score": 0.151844
+        },
+        {
+          "curie": "MONDO:0035706",
+          "label": "SETD2-related microcephaly-severe intellectual disability-multiple congenital anomalies syndrome",
+          "direct_count": 0,
+          "propagated_count": 67,
+          "exact_direct_overlap": 0,
+          "normalized_score": 0.143597
+        },
+        {
+          "curie": "MONDO:0800477",
+          "label": "SETD2-related neurodevelopmental disorder without or with macrocephaly/overgrowth",
+          "direct_count": 0,
+          "propagated_count": 67,
+          "exact_direct_overlap": 0,
+          "normalized_score": 0.143597
+        },
+        {
+          "curie": "MONDO:0859331",
+          "label": "Rabin-Pappas syndrome",
+          "direct_count": 41,
+          "propagated_count": 0,
+          "exact_direct_overlap": 0,
+          "normalized_score": 0.117156
+        },
+        {
+          "curie": "MONDO:0859333",
+          "label": "intellectual developmental disorder, autosomal dominant 70",
+          "direct_count": 34,
+          "propagated_count": 0,
+          "exact_direct_overlap": 0,
+          "normalized_score": 0.112595
+        }
+      ],
+      "audit_flags": [
+        "truth_gene_missed",
+        "supporting_disease_no_direct_terms",
+        "supporting_disease_not_best_linked_disease",
+        "supporting_disease_has_zero_exact_direct_patient_overlap"
+      ]
+    },
+    {
+      "case_id": "PMID_36331550_Family16Patient21",
+      "file_name": "PMID_36331550_Family16Patient21.json",
+      "truth_gene": "symbol:SPTAN1",
+      "truth_gene_rank": null,
+      "patient_term_count": 2,
+      "patient_terms": [
+        {
+          "curie": "HP:0000750",
+          "label": "Delayed speech and language development"
+        },
+        {
+          "curie": "HP:0000252",
+          "label": "Microcephaly"
+        }
+      ],
+      "supporting_disease": null,
+      "best_linked_disease": {
+        "curie": "MONDO:0957815",
+        "label": "developmental delay with or without epilepsy",
+        "direct_count": 32,
+        "propagated_count": 0,
+        "exact_direct_overlap": 2,
+        "normalized_score": 0.135008,
+        "exact_overlap_terms": [
+          {
+            "curie": "HP:0000252",
+            "patientLabel": "Microcephaly",
+            "diseaseLabel": "Microcephaly"
+          },
+          {
+            "curie": "HP:0000750",
+            "patientLabel": "Delayed speech and language development",
+            "diseaseLabel": "Delayed speech and language development"
+          }
+        ]
+      },
+      "overlap_gain_terms": [
+        {
+          "curie": "HP:0000252",
+          "patientLabel": "Microcephaly",
+          "diseaseLabel": "Microcephaly"
+        },
+        {
+          "curie": "HP:0000750",
+          "patientLabel": "Delayed speech and language development",
+          "diseaseLabel": "Delayed speech and language development"
+        }
+      ],
+      "overlap_lost_terms": [],
+      "top_linked_diseases": [
+        {
+          "curie": "MONDO:0957815",
+          "label": "developmental delay with or without epilepsy",
+          "direct_count": 32,
+          "propagated_count": 0,
+          "exact_direct_overlap": 2,
+          "normalized_score": 0.135008
+        },
+        {
+          "curie": "MONDO:0100062",
+          "label": "genetic developmental and epileptic encephalopathy",
+          "direct_count": 0,
+          "propagated_count": 786,
+          "exact_direct_overlap": 0,
+          "normalized_score": 0.130314
+        },
+        {
+          "curie": "MONDO:0013277",
+          "label": "developmental and epileptic encephalopathy, 5",
+          "direct_count": 21,
+          "propagated_count": 0,
+          "exact_direct_overlap": 1,
+          "normalized_score": 0.1205
+        },
+        {
+          "curie": "MONDO:0957813",
+          "label": "spastic paraplegia 91, autosomal dominant, with or without cerebellar ataxia",
+          "direct_count": 31,
+          "propagated_count": 0,
+          "exact_direct_overlap": 1,
+          "normalized_score": 0.119504
+        },
+        {
+          "curie": "MONDO:0957875",
+          "label": "neuronopathy, distal hereditary motor, autosomal dominant 11",
+          "direct_count": 49,
+          "propagated_count": 0,
+          "exact_direct_overlap": 1,
+          "normalized_score": 0.107493
+        }
+      ],
+      "audit_flags": [
+        "truth_gene_missed",
+        "supporting_disease_no_direct_terms",
+        "supporting_disease_not_best_linked_disease",
+        "supporting_disease_has_zero_exact_direct_patient_overlap"
+      ]
+    },
+    {
+      "case_id": "PMID_33731876_fam421",
+      "file_name": "PMID_33731876_fam421.json",
+      "truth_gene": "symbol:SCN2A",
+      "truth_gene_rank": null,
+      "patient_term_count": 1,
+      "patient_terms": [
+        {
+          "curie": "HP:0001250",
+          "label": "Seizure"
+        }
+      ],
+      "supporting_disease": null,
+      "best_linked_disease": {
+        "curie": "MONDO:0030064",
+        "label": "episodic ataxia, type 9",
+        "direct_count": 16,
+        "propagated_count": 0,
+        "exact_direct_overlap": 1,
+        "normalized_score": 0.107288,
+        "exact_overlap_terms": [
+          {
+            "curie": "HP:0001250",
+            "patientLabel": "Seizure",
+            "diseaseLabel": "Seizure"
+          }
+        ]
+      },
+      "overlap_gain_terms": [
+        {
+          "curie": "HP:0001250",
+          "patientLabel": "Seizure",
+          "diseaseLabel": "Seizure"
+        }
+      ],
+      "overlap_lost_terms": [],
+      "top_linked_diseases": [
+        {
+          "curie": "MONDO:0030064",
+          "label": "episodic ataxia, type 9",
+          "direct_count": 16,
+          "propagated_count": 0,
+          "exact_direct_overlap": 1,
+          "normalized_score": 0.107288
+        },
+        {
+          "curie": "MONDO:0013388",
+          "label": "developmental and epileptic encephalopathy, 11",
+          "direct_count": 14,
+          "propagated_count": 0,
+          "exact_direct_overlap": 0,
+          "normalized_score": 0.106096
+        },
+        {
+          "curie": "MONDO:0011904",
+          "label": "seizures, benign familial infantile, 3",
+          "direct_count": 9,
+          "propagated_count": 0,
+          "exact_direct_overlap": 0,
+          "normalized_score": 0.104977
+        },
+        {
+          "curie": "MONDO:0017615",
+          "label": "benign familial infantile epilepsy",
+          "direct_count": 0,
+          "propagated_count": 327,
+          "exact_direct_overlap": 0,
+          "normalized_score": 0.097837
+        },
+        {
+          "curie": "MONDO:0100038",
+          "label": "complex neurodevelopmental disorder",
+          "direct_count": 0,
+          "propagated_count": 1249,
+          "exact_direct_overlap": 0,
+          "normalized_score": 0.086144
+        }
+      ],
+      "audit_flags": [
+        "truth_gene_missed",
+        "supporting_disease_no_direct_terms",
+        "supporting_disease_not_best_linked_disease",
+        "supporting_disease_has_zero_exact_direct_patient_overlap"
+      ]
+    },
+    {
+      "case_id": "PMID_35190816_STX_27159321_LD_0358",
+      "file_name": "PMID_35190816_STX_27159321_LD_0358.json",
+      "truth_gene": "symbol:STXBP1",
+      "truth_gene_rank": null,
+      "patient_term_count": 5,
+      "patient_terms": [
+        {
+          "curie": "HP:0001250",
+          "label": "Seizure"
+        },
+        {
+          "curie": "HP:0001263",
+          "label": "Global developmental delay"
+        },
+        {
+          "curie": "HP:0000639",
+          "label": "Nystagmus"
+        },
+        {
+          "curie": "HP:0002188",
+          "label": "Delayed CNS myelination"
+        },
+        {
+          "curie": "HP:0030890",
+          "label": "Hyperintensity of cerebral white matter on MRI"
+        }
+      ],
+      "supporting_disease": null,
+      "best_linked_disease": {
+        "curie": "MONDO:0012812",
+        "label": "developmental and epileptic encephalopathy, 4",
+        "direct_count": 27,
+        "propagated_count": 0,
+        "exact_direct_overlap": 1,
+        "normalized_score": 0.163499,
+        "exact_overlap_terms": [
+          {
+            "curie": "HP:0002188",
+            "patientLabel": "Delayed CNS myelination",
+            "diseaseLabel": "Delayed CNS myelination"
+          }
+        ]
+      },
+      "overlap_gain_terms": [
+        {
+          "curie": "HP:0002188",
+          "patientLabel": "Delayed CNS myelination",
+          "diseaseLabel": "Delayed CNS myelination"
+        }
+      ],
+      "overlap_lost_terms": [],
+      "top_linked_diseases": [
+        {
+          "curie": "MONDO:0012812",
+          "label": "developmental and epileptic encephalopathy, 4",
+          "direct_count": 27,
+          "propagated_count": 0,
+          "exact_direct_overlap": 1,
+          "normalized_score": 0.163499
+        },
+        {
+          "curie": "MONDO:0100062",
+          "label": "genetic developmental and epileptic encephalopathy",
+          "direct_count": 0,
+          "propagated_count": 786,
+          "exact_direct_overlap": 0,
+          "normalized_score": 0.137906
+        }
+      ],
+      "audit_flags": [
+        "truth_gene_missed",
+        "supporting_disease_no_direct_terms",
+        "supporting_disease_not_best_linked_disease",
+        "supporting_disease_has_zero_exact_direct_patient_overlap"
+      ]
+    },
+    {
+      "case_id": "PMID_36446582_Goldenberg2016_P13",
+      "file_name": "PMID_36446582_Goldenberg2016_P13.json",
+      "truth_gene": "symbol:ANKRD11",
+      "truth_gene_rank": null,
+      "patient_term_count": 2,
+      "patient_terms": [
+        {
+          "curie": "HP:0001155",
+          "label": "Abnormality of the hand"
+        },
+        {
+          "curie": "HP:0004322",
+          "label": "Short stature"
+        }
+      ],
+      "supporting_disease": null,
+      "best_linked_disease": {
+        "curie": "MONDO:0007846",
+        "label": "KBG syndrome",
+        "direct_count": 66,
+        "propagated_count": 0,
+        "exact_direct_overlap": 1,
+        "normalized_score": 0.096918,
+        "exact_overlap_terms": [
+          {
+            "curie": "HP:0004322",
+            "patientLabel": "Short stature",
+            "diseaseLabel": "Short stature"
+          }
+        ]
+      },
+      "overlap_gain_terms": [
+        {
+          "curie": "HP:0004322",
+          "patientLabel": "Short stature",
+          "diseaseLabel": "Short stature"
+        }
+      ],
+      "overlap_lost_terms": [],
+      "top_linked_diseases": [
+        {
+          "curie": "MONDO:0007846",
+          "label": "KBG syndrome",
+          "direct_count": 66,
+          "propagated_count": 0,
+          "exact_direct_overlap": 1,
+          "normalized_score": 0.096918
+        }
+      ],
+      "audit_flags": [
+        "truth_gene_missed",
+        "supporting_disease_no_direct_terms",
+        "supporting_disease_not_best_linked_disease",
+        "supporting_disease_has_zero_exact_direct_patient_overlap"
+      ]
+    },
+    {
+      "case_id": "PMID_27495153_Patient1",
+      "file_name": "PMID_27495153_Patient1.json",
+      "truth_gene": "symbol:WWOX",
+      "truth_gene_rank": null,
+      "patient_term_count": 17,
+      "patient_terms": [
+        {
+          "curie": "HP:0002059",
+          "label": "Cerebral atrophy"
+        },
+        {
+          "curie": "HP:0001250",
+          "label": "Seizure"
+        },
+        {
+          "curie": "HP:0200134",
+          "label": "Epileptic encephalopathy"
+        },
+        {
+          "curie": "HP:0031358",
+          "label": "Vegetative state"
+        },
+        {
+          "curie": "HP:0007305",
+          "label": "CNS demyelination"
+        },
+        {
+          "curie": "HP:0002353",
+          "label": "EEG abnormality"
+        },
+        {
+          "curie": "HP:0003323",
+          "label": "Progressive muscle weakness"
+        },
+        {
+          "curie": "HP:0001276",
+          "label": "Hypertonia"
+        },
+        {
+          "curie": "HP:0001263",
+          "label": "Global developmental delay"
+        },
+        {
+          "curie": "HP:0001290",
+          "label": "Generalized hypotonia"
+        },
+        {
+          "curie": "HP:0000543",
+          "label": "Optic disc pallor"
+        },
+        {
+          "curie": "HP:0100952",
+          "label": "Enlarged sylvian cistern"
+        },
+        {
+          "curie": "HP:0001336",
+          "label": "Myoclonus"
+        },
+        {
+          "curie": "HP:0002421",
+          "label": "Poor head control"
+        },
+        {
+          "curie": "HP:0001347",
+          "label": "Hyperreflexia"
+        },
+        {
+          "curie": "HP:0011968",
+          "label": "Feeding difficulties"
+        },
+        {
+          "curie": "HP:0002093",
+          "label": "Respiratory insufficiency"
+        }
+      ],
+      "supporting_disease": null,
+      "best_linked_disease": {
+        "curie": "MONDO:0100062",
+        "label": "genetic developmental and epileptic encephalopathy",
+        "direct_count": 0,
+        "propagated_count": 786,
+        "exact_direct_overlap": 0,
+        "normalized_score": 0.191783,
+        "exact_overlap_terms": []
+      },
+      "overlap_gain_terms": [],
+      "overlap_lost_terms": [],
+      "top_linked_diseases": [
+        {
+          "curie": "MONDO:0100062",
+          "label": "genetic developmental and epileptic encephalopathy",
+          "direct_count": 0,
+          "propagated_count": 786,
+          "exact_direct_overlap": 0,
+          "normalized_score": 0.191783
+        },
+        {
+          "curie": "MONDO:0014533",
+          "label": "developmental and epileptic encephalopathy, 28",
+          "direct_count": 50,
+          "propagated_count": 0,
+          "exact_direct_overlap": 6,
+          "normalized_score": 0.150649
+        },
+        {
+          "curie": "MONDO:0013687",
+          "label": "autosomal recessive spinocerebellar ataxia 12",
+          "direct_count": 22,
+          "propagated_count": 0,
+          "exact_direct_overlap": 2,
+          "normalized_score": 0.131967
+        },
+        {
+          "curie": "MONDO:0007576",
+          "label": "esophageal cancer",
+          "direct_count": 2,
+          "propagated_count": 0,
+          "exact_direct_overlap": 0,
+          "normalized_score": 0.027432
+        }
+      ],
+      "audit_flags": [
+        "truth_gene_missed",
+        "supporting_disease_no_direct_terms",
+        "supporting_disease_not_best_linked_disease",
+        "supporting_disease_has_zero_exact_direct_patient_overlap"
+      ]
+    },
+    {
+      "case_id": "PMID_29330883_Subject9",
+      "file_name": "PMID_29330883_Subject9.json",
+      "truth_gene": "symbol:RERE",
+      "truth_gene_rank": null,
+      "patient_term_count": 9,
+      "patient_terms": [
+        {
+          "curie": "HP:0000463",
+          "label": "Anteverted nares"
+        },
+        {
+          "curie": "HP:0000154",
+          "label": "Wide mouth"
+        },
+        {
+          "curie": "HP:0000664",
+          "label": "Synophrys"
+        },
+        {
+          "curie": "HP:0000316",
+          "label": "Hypertelorism"
+        },
+        {
+          "curie": "HP:0000729",
+          "label": "Autistic behavior"
+        },
+        {
+          "curie": "HP:0000722",
+          "label": "Compulsive behaviors"
+        },
+        {
+          "curie": "HP:0001252",
+          "label": "Hypotonia"
+        },
+        {
+          "curie": "HP:0001263",
+          "label": "Global developmental delay"
+        },
+        {
+          "curie": "HP:0001249",
+          "label": "Intellectual disability"
+        }
+      ],
+      "supporting_disease": null,
+      "best_linked_disease": {
+        "curie": "MONDO:0100465",
+        "label": "complex neurodevelopmental disorder with or without congenital anomalies",
+        "direct_count": 0,
+        "propagated_count": 221,
+        "exact_direct_overlap": 0,
+        "normalized_score": 0.173169,
+        "exact_overlap_terms": []
+      },
+      "overlap_gain_terms": [],
+      "overlap_lost_terms": [],
+      "top_linked_diseases": [
+        {
+          "curie": "MONDO:0100465",
+          "label": "complex neurodevelopmental disorder with or without congenital anomalies",
+          "direct_count": 0,
+          "propagated_count": 221,
+          "exact_direct_overlap": 0,
+          "normalized_score": 0.173169
+        },
+        {
+          "curie": "MONDO:0014857",
+          "label": "neurodevelopmental disorder with or without anomalies of the brain, eye, or heart",
+          "direct_count": 90,
+          "propagated_count": 0,
+          "exact_direct_overlap": 5,
+          "normalized_score": 0.145472
+        }
+      ],
+      "audit_flags": [
+        "truth_gene_missed",
+        "supporting_disease_no_direct_terms",
+        "supporting_disease_not_best_linked_disease",
+        "supporting_disease_has_zero_exact_direct_patient_overlap"
+      ]
+    },
+    {
+      "case_id": "PMID_30580808_Lo_twin_2-Fam-52",
+      "file_name": "PMID_30580808_Lo_twin_2-Fam-52.json",
+      "truth_gene": "symbol:SMARCC2",
+      "truth_gene_rank": null,
+      "patient_term_count": 1,
+      "patient_terms": [
+        {
+          "curie": "HP:0000729",
+          "label": "Autistic behavior"
+        }
+      ],
+      "supporting_disease": null,
+      "best_linked_disease": {
+        "curie": "MONDO:0015452",
+        "label": "Coffin-Siris syndrome",
+        "direct_count": 0,
+        "propagated_count": 371,
+        "exact_direct_overlap": 0,
+        "normalized_score": 0.1624,
+        "exact_overlap_terms": []
+      },
+      "overlap_gain_terms": [],
+      "overlap_lost_terms": [],
+      "top_linked_diseases": [
+        {
+          "curie": "MONDO:0015452",
+          "label": "Coffin-Siris syndrome",
+          "direct_count": 0,
+          "propagated_count": 371,
+          "exact_direct_overlap": 0,
+          "normalized_score": 0.1624
+        },
+        {
+          "curie": "MONDO:0032702",
+          "label": "Coffin-Siris syndrome 8",
+          "direct_count": 29,
+          "propagated_count": 0,
+          "exact_direct_overlap": 0,
+          "normalized_score": 0.112675
+        }
+      ],
+      "audit_flags": [
+        "truth_gene_missed",
+        "supporting_disease_no_direct_terms",
+        "supporting_disease_not_best_linked_disease",
+        "supporting_disease_has_zero_exact_direct_patient_overlap"
+      ]
+    },
+    {
+      "case_id": "PMID_32376980_11",
+      "file_name": "PMID_32376980_11.json",
+      "truth_gene": "symbol:TRAF7",
+      "truth_gene_rank": null,
+      "patient_term_count": 26,
+      "patient_terms": [
+        {
+          "curie": "HP:0001643",
+          "label": "Patent ductus arteriosus"
+        },
+        {
+          "curie": "HP:0001320",
+          "label": "Cerebellar vermis hypoplasia"
+        },
+        {
+          "curie": "HP:0000298",
+          "label": "Mask-like facies"
+        },
+        {
+          "curie": "HP:0000268",
+          "label": "Dolichocephaly"
+        },
+        {
+          "curie": "HP:0000341",
+          "label": "Narrow forehead"
+        },
+        {
+          "curie": "HP:0000411",
+          "label": "Protruding ear"
+        },
+        {
+          "curie": "HP:0045025",
+          "label": "Narrow palpebral fissure"
+        },
+        {
+          "curie": "HP:0001763",
+          "label": "Pes planus"
+        },
+        {
+          "curie": "HP:0000470",
+          "label": "Short neck"
+        },
+        {
+          "curie": "HP:0001508",
+          "label": "Failure to thrive"
+        },
+        {
+          "curie": "HP:0002033",
+          "label": "Poor suck"
+        },
+        {
+          "curie": "HP:0000506",
+          "label": "Telecanthus"
+        },
+        {
+          "curie": "HP:0000218",
+          "label": "High palate"
+        },
+        {
+          "curie": "HP:0000646",
+          "label": "Amblyopia"
+        },
+        {
+          "curie": "HP:0004322",
+          "label": "Short stature"
+        },
+        {
+          "curie": "HP:0000508",
+          "label": "Ptosis"
+        },
+        {
+          "curie": "HP:0000486",
+          "label": "Strabismus"
+        },
+        {
+          "curie": "HP:0001263",
+          "label": "Global developmental delay"
+        },
+        {
+          "curie": "HP:0000405",
+          "label": "Conductive hearing impairment"
+        },
+        {
+          "curie": "HP:0000064",
+          "label": "Hypoplastic labia minora"
+        },
+        {
+          "curie": "HP:0011003",
+          "label": "High myopia"
+        },
+        {
+          "curie": "HP:0001270",
+          "label": "Motor delay"
+        },
+        {
+          "curie": "HP:0000316",
+          "label": "Hypertelorism"
+        },
+        {
+          "curie": "HP:0000278",
+          "label": "Retrognathia"
+        },
+        {
+          "curie": "HP:0001252",
+          "label": "Hypotonia"
+        },
+        {
+          "curie": "HP:0001845",
+          "label": "Overlapping toe"
+        }
+      ],
+      "supporting_disease": null,
+      "best_linked_disease": {
+        "curie": "MONDO:0800439",
+        "label": "syndromic complex neurodevelopmental disorder",
+        "direct_count": 0,
+        "propagated_count": 451,
+        "exact_direct_overlap": 0,
+        "normalized_score": 0.207891,
+        "exact_overlap_terms": []
+      },
+      "overlap_gain_terms": [],
+      "overlap_lost_terms": [],
+      "top_linked_diseases": [
+        {
+          "curie": "MONDO:0800439",
+          "label": "syndromic complex neurodevelopmental disorder",
+          "direct_count": 0,
+          "propagated_count": 451,
+          "exact_direct_overlap": 0,
+          "normalized_score": 0.207891
+        },
+        {
+          "curie": "MONDO:0032572",
+          "label": "cardiac, facial, and digital anomalies with developmental delay",
+          "direct_count": 74,
+          "propagated_count": 0,
+          "exact_direct_overlap": 12,
+          "normalized_score": 0.182754
+        }
+      ],
+      "audit_flags": [
+        "truth_gene_missed",
+        "supporting_disease_no_direct_terms",
+        "supporting_disease_not_best_linked_disease",
+        "supporting_disease_has_zero_exact_direct_patient_overlap"
+      ]
+    },
+    {
+      "case_id": "PMID_33731876_fam115",
+      "file_name": "PMID_33731876_fam115.json",
+      "truth_gene": "symbol:SCN2A",
+      "truth_gene_rank": 6,
+      "patient_term_count": 9,
+      "patient_terms": [
+        {
+          "curie": "HP:0002500",
+          "label": "Abnormal cerebral white matter morphology"
+        },
+        {
+          "curie": "HP:0010819",
+          "label": "Atonic seizure"
+        },
+        {
+          "curie": "HP:0025101",
+          "label": "Dysgenesis of the hippocampus"
+        },
+        {
+          "curie": "HP:0100660",
+          "label": "Dyskinesia"
+        },
+        {
+          "curie": "HP:0002353",
+          "label": "EEG abnormality"
+        },
+        {
+          "curie": "HP:0200134",
+          "label": "Epileptic encephalopathy"
+        },
+        {
+          "curie": "HP:0010818",
+          "label": "Generalized tonic seizure"
+        },
+        {
+          "curie": "HP:0002187",
+          "label": "Intellectual disability, profound"
+        },
+        {
+          "curie": "HP:0000252",
+          "label": "Microcephaly"
+        }
+      ],
+      "supporting_disease": {
+        "curie": "MONDO:0030064",
+        "label": "episodic ataxia, type 9",
+        "direct_count": 16,
+        "propagated_count": 0,
+        "exact_direct_overlap": 0,
+        "exact_overlap_terms": []
+      },
+      "best_linked_disease": {
+        "curie": "MONDO:0017615",
+        "label": "benign familial infantile epilepsy",
+        "direct_count": 0,
+        "propagated_count": 327,
+        "exact_direct_overlap": 0,
+        "normalized_score": 0.266231,
+        "exact_overlap_terms": []
+      },
+      "overlap_gain_terms": [],
+      "overlap_lost_terms": [],
+      "top_linked_diseases": [
+        {
+          "curie": "MONDO:0017615",
+          "label": "benign familial infantile epilepsy",
+          "direct_count": 0,
+          "propagated_count": 327,
+          "exact_direct_overlap": 0,
+          "normalized_score": 0.266231
+        },
+        {
+          "curie": "MONDO:0100038",
+          "label": "complex neurodevelopmental disorder",
+          "direct_count": 0,
+          "propagated_count": 1249,
+          "exact_direct_overlap": 0,
+          "normalized_score": 0.247007
+        },
+        {
+          "curie": "MONDO:0030064",
+          "label": "episodic ataxia, type 9",
+          "direct_count": 16,
+          "propagated_count": 0,
+          "exact_direct_overlap": 0,
+          "normalized_score": 0.160869
+        },
+        {
+          "curie": "MONDO:0013388",
+          "label": "developmental and epileptic encephalopathy, 11",
+          "direct_count": 14,
+          "propagated_count": 0,
+          "exact_direct_overlap": 1,
+          "normalized_score": 0.144914
+        },
+        {
+          "curie": "MONDO:0011904",
+          "label": "seizures, benign familial infantile, 3",
+          "direct_count": 9,
+          "propagated_count": 0,
+          "exact_direct_overlap": 0,
+          "normalized_score": 0.100437
+        }
+      ],
+      "audit_flags": [
+        "supporting_disease_not_best_linked_disease",
+        "supporting_disease_has_zero_exact_direct_patient_overlap"
+      ]
+    },
+    {
+      "case_id": "PMID_33731876_fam175",
+      "file_name": "PMID_33731876_fam175.json",
+      "truth_gene": "symbol:SCN2A",
+      "truth_gene_rank": 11,
+      "patient_term_count": 12,
+      "patient_terms": [
+        {
+          "curie": "HP:0002059",
+          "label": "Cerebral atrophy"
+        },
+        {
+          "curie": "HP:0010851",
+          "label": "EEG with burst suppression"
+        },
+        {
+          "curie": "HP:0011199",
+          "label": "EEG with generalized sharp slow waves"
+        },
+        {
+          "curie": "HP:0200134",
+          "label": "Epileptic encephalopathy"
+        },
+        {
+          "curie": "HP:0011167",
+          "label": "Focal tonic seizure"
+        },
+        {
+          "curie": "HP:0010818",
+          "label": "Generalized tonic seizure"
+        },
+        {
+          "curie": "HP:0002079",
+          "label": "Hypoplasia of the corpus callosum"
+        },
+        {
+          "curie": "HP:0002521",
+          "label": "Hypsarrhythmia"
+        },
+        {
+          "curie": "HP:0012469",
+          "label": "Infantile spasms"
+        },
+        {
+          "curie": "HP:0010864",
+          "label": "Intellectual disability, severe"
+        },
+        {
+          "curie": "HP:0000252",
+          "label": "Microcephaly"
+        },
+        {
+          "curie": "HP:0010841",
+          "label": "Multifocal epileptiform discharges"
+        }
+      ],
+      "supporting_disease": {
+        "curie": "MONDO:0011904",
+        "label": "seizures, benign familial infantile, 3",
+        "direct_count": 9,
+        "propagated_count": 0,
+        "exact_direct_overlap": 0,
+        "exact_overlap_terms": []
+      },
+      "best_linked_disease": {
+        "curie": "MONDO:0017615",
+        "label": "benign familial infantile epilepsy",
+        "direct_count": 0,
+        "propagated_count": 327,
+        "exact_direct_overlap": 0,
+        "normalized_score": 0.284236,
+        "exact_overlap_terms": []
+      },
+      "overlap_gain_terms": [],
+      "overlap_lost_terms": [],
+      "top_linked_diseases": [
+        {
+          "curie": "MONDO:0017615",
+          "label": "benign familial infantile epilepsy",
+          "direct_count": 0,
+          "propagated_count": 327,
+          "exact_direct_overlap": 0,
+          "normalized_score": 0.284236
+        },
+        {
+          "curie": "MONDO:0100038",
+          "label": "complex neurodevelopmental disorder",
+          "direct_count": 0,
+          "propagated_count": 1249,
+          "exact_direct_overlap": 0,
+          "normalized_score": 0.24878
+        },
+        {
+          "curie": "MONDO:0011904",
+          "label": "seizures, benign familial infantile, 3",
+          "direct_count": 9,
+          "propagated_count": 0,
+          "exact_direct_overlap": 0,
+          "normalized_score": 0.170968
+        },
+        {
+          "curie": "MONDO:0013388",
+          "label": "developmental and epileptic encephalopathy, 11",
+          "direct_count": 14,
+          "propagated_count": 0,
+          "exact_direct_overlap": 2,
+          "normalized_score": 0.168184
+        },
+        {
+          "curie": "MONDO:0030064",
+          "label": "episodic ataxia, type 9",
+          "direct_count": 16,
+          "propagated_count": 0,
+          "exact_direct_overlap": 0,
+          "normalized_score": 0.153741
+        }
+      ],
+      "audit_flags": [
+        "supporting_disease_not_best_linked_disease",
+        "supporting_disease_has_zero_exact_direct_patient_overlap"
+      ]
+    },
+    {
+      "case_id": "PMID_33731876_fam9",
+      "file_name": "PMID_33731876_fam9.json",
+      "truth_gene": "symbol:SCN2A",
+      "truth_gene_rank": 57,
+      "patient_term_count": 2,
+      "patient_terms": [
+        {
+          "curie": "HP:0011203",
+          "label": "EEG with abnormally slow frequencies"
+        },
+        {
+          "curie": "HP:0002266",
+          "label": "Focal clonic seizure"
+        }
+      ],
+      "supporting_disease": {
+        "curie": "MONDO:0011904",
+        "label": "seizures, benign familial infantile, 3",
+        "direct_count": 9,
+        "propagated_count": 0,
+        "exact_direct_overlap": 0,
+        "exact_overlap_terms": []
+      },
+      "best_linked_disease": {
+        "curie": "MONDO:0017615",
+        "label": "benign familial infantile epilepsy",
+        "direct_count": 0,
+        "propagated_count": 327,
+        "exact_direct_overlap": 0,
+        "normalized_score": 0.313029,
+        "exact_overlap_terms": []
+      },
+      "overlap_gain_terms": [],
+      "overlap_lost_terms": [],
+      "top_linked_diseases": [
+        {
+          "curie": "MONDO:0017615",
+          "label": "benign familial infantile epilepsy",
+          "direct_count": 0,
+          "propagated_count": 327,
+          "exact_direct_overlap": 0,
+          "normalized_score": 0.313029
+        },
+        {
+          "curie": "MONDO:0100038",
+          "label": "complex neurodevelopmental disorder",
+          "direct_count": 0,
+          "propagated_count": 1249,
+          "exact_direct_overlap": 0,
+          "normalized_score": 0.290955
+        },
+        {
+          "curie": "MONDO:0011904",
+          "label": "seizures, benign familial infantile, 3",
+          "direct_count": 9,
+          "propagated_count": 0,
+          "exact_direct_overlap": 0,
+          "normalized_score": 0.227677
+        },
+        {
+          "curie": "MONDO:0030064",
+          "label": "episodic ataxia, type 9",
+          "direct_count": 16,
+          "propagated_count": 0,
+          "exact_direct_overlap": 0,
+          "normalized_score": 0.185919
+        },
+        {
+          "curie": "MONDO:0013388",
+          "label": "developmental and epileptic encephalopathy, 11",
+          "direct_count": 14,
+          "propagated_count": 0,
+          "exact_direct_overlap": 0,
+          "normalized_score": 0.139849
+        }
+      ],
+      "audit_flags": [
+        "supporting_disease_not_best_linked_disease",
+        "supporting_disease_has_zero_exact_direct_patient_overlap"
+      ]
+    },
+    {
+      "case_id": "PMID_35190816_STX_26865513_Patient_45",
+      "file_name": "PMID_35190816_STX_26865513_Patient_45.json",
+      "truth_gene": "symbol:STXBP1",
+      "truth_gene_rank": null,
+      "patient_term_count": 11,
+      "patient_terms": [
+        {
+          "curie": "HP:0001263",
+          "label": "Global developmental delay"
+        },
+        {
+          "curie": "HP:0010864",
+          "label": "Intellectual disability, severe"
+        },
+        {
+          "curie": "HP:0001290",
+          "label": "Generalized hypotonia"
+        },
+        {
+          "curie": "HP:0002066",
+          "label": "Gait ataxia"
+        },
+        {
+          "curie": "HP:0002078",
+          "label": "Truncal ataxia"
+        },
+        {
+          "curie": "HP:0002346",
+          "label": "Head tremor"
+        },
+        {
+          "curie": "HP:0002345",
+          "label": "Action tremor"
+        },
+        {
+          "curie": "HP:0011203",
+          "label": "EEG with abnormally slow frequencies"
+        },
+        {
+          "curie": "HP:0000712",
+          "label": "Emotional lability"
+        },
+        {
+          "curie": "HP:0000718",
+          "label": "Aggressive behavior"
+        },
+        {
+          "curie": "HP:0001344",
+          "label": "Absent speech"
+        }
+      ],
+      "supporting_disease": null,
+      "best_linked_disease": {
+        "curie": "MONDO:0100062",
+        "label": "genetic developmental and epileptic encephalopathy",
+        "direct_count": 0,
+        "propagated_count": 786,
+        "exact_direct_overlap": 0,
+        "normalized_score": 0.210421,
+        "exact_overlap_terms": []
+      },
+      "overlap_gain_terms": [],
+      "overlap_lost_terms": [],
+      "top_linked_diseases": [
+        {
+          "curie": "MONDO:0100062",
+          "label": "genetic developmental and epileptic encephalopathy",
+          "direct_count": 0,
+          "propagated_count": 786,
+          "exact_direct_overlap": 0,
+          "normalized_score": 0.210421
+        },
+        {
+          "curie": "MONDO:0012812",
+          "label": "developmental and epileptic encephalopathy, 4",
+          "direct_count": 27,
+          "propagated_count": 0,
+          "exact_direct_overlap": 2,
+          "normalized_score": 0.165072
+        }
+      ],
+      "audit_flags": [
+        "truth_gene_missed",
+        "supporting_disease_no_direct_terms",
+        "supporting_disease_not_best_linked_disease",
+        "supporting_disease_has_zero_exact_direct_patient_overlap"
+      ]
+    },
+    {
+      "case_id": "PMID_35190816_STX_28944233_270001",
+      "file_name": "PMID_35190816_STX_28944233_270001.json",
+      "truth_gene": "symbol:STXBP1",
+      "truth_gene_rank": null,
+      "patient_term_count": 18,
+      "patient_terms": [
+        {
+          "curie": "HP:0001263",
+          "label": "Global developmental delay"
+        },
+        {
+          "curie": "HP:0001344",
+          "label": "Absent speech"
+        },
+        {
+          "curie": "HP:0000718",
+          "label": "Aggressive behavior"
+        },
+        {
+          "curie": "HP:0100710",
+          "label": "Impulsivity"
+        },
+        {
+          "curie": "HP:0003763",
+          "label": "Bruxism"
+        },
+        {
+          "curie": "HP:0002007",
+          "label": "Frontal bossing"
+        },
+        {
+          "curie": "HP:0000283",
+          "label": "Broad face"
+        },
+        {
+          "curie": "HP:0003196",
+          "label": "Short nose"
+        },
+        {
+          "curie": "HP:0005280",
+          "label": "Depressed nasal bridge"
+        },
+        {
+          "curie": "HP:0000160",
+          "label": "Narrow mouth"
+        },
+        {
+          "curie": "HP:0008947",
+          "label": "Infantile muscular hypotonia"
+        },
+        {
+          "curie": "HP:0007021",
+          "label": "Pain insensitivity"
+        },
+        {
+          "curie": "HP:0002020",
+          "label": "Gastroesophageal reflux"
+        },
+        {
+          "curie": "HP:0002019",
+          "label": "Constipation"
+        },
+        {
+          "curie": "HP:0001169",
+          "label": "Broad palm"
+        },
+        {
+          "curie": "HP:0001182",
+          "label": "Tapered finger"
+        },
+        {
+          "curie": "HP:0010055",
+          "label": "Broad hallux"
+        },
+        {
+          "curie": "HP:0000486",
+          "label": "Strabismus"
+        }
+      ],
+      "supporting_disease": null,
+      "best_linked_disease": {
+        "curie": "MONDO:0100062",
+        "label": "genetic developmental and epileptic encephalopathy",
+        "direct_count": 0,
+        "propagated_count": 786,
+        "exact_direct_overlap": 0,
+        "normalized_score": 0.227175,
+        "exact_overlap_terms": []
+      },
+      "overlap_gain_terms": [],
+      "overlap_lost_terms": [],
+      "top_linked_diseases": [
+        {
+          "curie": "MONDO:0100062",
+          "label": "genetic developmental and epileptic encephalopathy",
+          "direct_count": 0,
+          "propagated_count": 786,
+          "exact_direct_overlap": 0,
+          "normalized_score": 0.227175
+        },
+        {
+          "curie": "MONDO:0012812",
+          "label": "developmental and epileptic encephalopathy, 4",
+          "direct_count": 27,
+          "propagated_count": 0,
+          "exact_direct_overlap": 1,
+          "normalized_score": 0.076491
+        }
+      ],
+      "audit_flags": [
+        "truth_gene_missed",
+        "supporting_disease_no_direct_terms",
+        "supporting_disease_not_best_linked_disease",
+        "supporting_disease_has_zero_exact_direct_patient_overlap"
+      ]
+    },
+    {
+      "case_id": "PMID_35190816_STX_Syrbe_6",
+      "file_name": "PMID_35190816_STX_Syrbe_6.json",
+      "truth_gene": "symbol:STXBP1",
+      "truth_gene_rank": null,
+      "patient_term_count": 5,
+      "patient_terms": [
+        {
+          "curie": "HP:0001263",
+          "label": "Global developmental delay"
+        },
+        {
+          "curie": "HP:0008947",
+          "label": "Infantile muscular hypotonia"
+        },
+        {
+          "curie": "HP:0001251",
+          "label": "Ataxia"
+        },
+        {
+          "curie": "HP:0001337",
+          "label": "Tremor"
+        },
+        {
+          "curie": "HP:0001344",
+          "label": "Absent speech"
+        }
+      ],
+      "supporting_disease": null,
+      "best_linked_disease": {
+        "curie": "MONDO:0100062",
+        "label": "genetic developmental and epileptic encephalopathy",
+        "direct_count": 0,
+        "propagated_count": 786,
+        "exact_direct_overlap": 0,
+        "normalized_score": 0.16976,
+        "exact_overlap_terms": []
+      },
+      "overlap_gain_terms": [],
+      "overlap_lost_terms": [],
+      "top_linked_diseases": [
+        {
+          "curie": "MONDO:0100062",
+          "label": "genetic developmental and epileptic encephalopathy",
+          "direct_count": 0,
+          "propagated_count": 786,
+          "exact_direct_overlap": 0,
+          "normalized_score": 0.16976
+        },
+        {
+          "curie": "MONDO:0012812",
+          "label": "developmental and epileptic encephalopathy, 4",
+          "direct_count": 27,
+          "propagated_count": 0,
+          "exact_direct_overlap": 2,
+          "normalized_score": 0.152474
+        }
+      ],
+      "audit_flags": [
+        "truth_gene_missed",
+        "supporting_disease_no_direct_terms",
+        "supporting_disease_not_best_linked_disease",
+        "supporting_disease_has_zero_exact_direct_patient_overlap"
+      ]
+    },
+    {
+      "case_id": "PMID_37156989_P1",
+      "file_name": "PMID_37156989_P1.json",
+      "truth_gene": "symbol:SOCS1",
+      "truth_gene_rank": null,
+      "patient_term_count": 6,
+      "patient_terms": [
+        {
+          "curie": "HP:0002960",
+          "label": "Autoimmunity"
+        },
+        {
+          "curie": "HP:0003765",
+          "label": "Psoriasiform dermatitis"
+        },
+        {
+          "curie": "HP:0000388",
+          "label": "Otitis media"
+        },
+        {
+          "curie": "HP:0000246",
+          "label": "Sinusitis"
+        },
+        {
+          "curie": "HP:0025452",
+          "label": "Pyoderma gangrenosum"
+        },
+        {
+          "curie": "HP:0100280",
+          "label": "Crohn's disease"
+        }
+      ],
+      "supporting_disease": null,
+      "best_linked_disease": {
+        "curie": "MONDO:0800130",
+        "label": "autoinflammatory syndrome with immunodeficiency",
+        "direct_count": 22,
+        "propagated_count": 0,
+        "exact_direct_overlap": 0,
+        "normalized_score": 0.161856,
+        "exact_overlap_terms": []
+      },
+      "overlap_gain_terms": [],
+      "overlap_lost_terms": [],
+      "top_linked_diseases": [
+        {
+          "curie": "MONDO:0800130",
+          "label": "autoinflammatory syndrome with immunodeficiency",
+          "direct_count": 22,
+          "propagated_count": 0,
+          "exact_direct_overlap": 0,
+          "normalized_score": 0.161856
+        }
+      ],
+      "audit_flags": [
+        "truth_gene_missed",
+        "supporting_disease_no_direct_terms",
+        "supporting_disease_not_best_linked_disease",
+        "supporting_disease_has_zero_exact_direct_patient_overlap"
+      ]
+    },
+    {
+      "case_id": "PMID_37761890_41",
+      "file_name": "PMID_37761890_41.json",
+      "truth_gene": "symbol:PPP2R1A",
+      "truth_gene_rank": null,
+      "patient_term_count": 9,
+      "patient_terms": [
+        {
+          "curie": "HP:0001511",
+          "label": "Intrauterine growth retardation"
+        },
+        {
+          "curie": "HP:0000252",
+          "label": "Microcephaly"
+        },
+        {
+          "curie": "HP:0002342",
+          "label": "Intellectual disability, moderate"
+        },
+        {
+          "curie": "HP:0000750",
+          "label": "Delayed speech and language development"
+        },
+        {
+          "curie": "HP:0001270",
+          "label": "Motor delay"
+        },
+        {
+          "curie": "HP:0001250",
+          "label": "Seizure"
+        },
+        {
+          "curie": "HP:0002079",
+          "label": "Hypoplasia of the corpus callosum"
+        },
+        {
+          "curie": "HP:0007018",
+          "label": "Attention deficit hyperactivity disorder"
+        },
+        {
+          "curie": "HP:0011968",
+          "label": "Feeding difficulties"
+        }
+      ],
+      "supporting_disease": null,
+      "best_linked_disease": {
+        "curie": "MONDO:0957553",
+        "label": "Houge-Janssens syndrome",
+        "direct_count": 0,
+        "propagated_count": 215,
+        "exact_direct_overlap": 0,
+        "normalized_score": 0.175603,
+        "exact_overlap_terms": []
+      },
+      "overlap_gain_terms": [],
+      "overlap_lost_terms": [],
+      "top_linked_diseases": [
+        {
+          "curie": "MONDO:0957553",
+          "label": "Houge-Janssens syndrome",
+          "direct_count": 0,
+          "propagated_count": 215,
+          "exact_direct_overlap": 0,
+          "normalized_score": 0.175603
+        },
+        {
+          "curie": "MONDO:0100038",
+          "label": "complex neurodevelopmental disorder",
+          "direct_count": 0,
+          "propagated_count": 1249,
+          "exact_direct_overlap": 0,
+          "normalized_score": 0.169719
+        },
+        {
+          "curie": "MONDO:0014605",
+          "label": "Houge-Janssens syndrome 2",
+          "direct_count": 37,
+          "propagated_count": 0,
+          "exact_direct_overlap": 3,
+          "normalized_score": 0.132271
+        }
+      ],
+      "audit_flags": [
+        "truth_gene_missed",
+        "supporting_disease_no_direct_terms",
+        "supporting_disease_not_best_linked_disease",
+        "supporting_disease_has_zero_exact_direct_patient_overlap"
+      ]
+    },
+    {
+      "case_id": "PMID_37761890_43",
+      "file_name": "PMID_37761890_43.json",
+      "truth_gene": "symbol:PPP2R1A",
+      "truth_gene_rank": null,
+      "patient_term_count": 9,
+      "patient_terms": [
+        {
+          "curie": "HP:0004322",
+          "label": "Short stature"
+        },
+        {
+          "curie": "HP:0000252",
+          "label": "Microcephaly"
+        },
+        {
+          "curie": "HP:0001263",
+          "label": "Global developmental delay"
+        },
+        {
+          "curie": "HP:0000750",
+          "label": "Delayed speech and language development"
+        },
+        {
+          "curie": "HP:0001270",
+          "label": "Motor delay"
+        },
+        {
+          "curie": "HP:0001250",
+          "label": "Seizure"
+        },
+        {
+          "curie": "HP:0001274",
+          "label": "Agenesis of corpus callosum"
+        },
+        {
+          "curie": "HP:0001252",
+          "label": "Hypotonia"
+        },
+        {
+          "curie": "HP:0011968",
+          "label": "Feeding difficulties"
+        }
+      ],
+      "supporting_disease": null,
+      "best_linked_disease": {
+        "curie": "MONDO:0957553",
+        "label": "Houge-Janssens syndrome",
+        "direct_count": 0,
+        "propagated_count": 215,
+        "exact_direct_overlap": 0,
+        "normalized_score": 0.141178,
+        "exact_overlap_terms": []
+      },
+      "overlap_gain_terms": [],
+      "overlap_lost_terms": [],
+      "top_linked_diseases": [
+        {
+          "curie": "MONDO:0957553",
+          "label": "Houge-Janssens syndrome",
+          "direct_count": 0,
+          "propagated_count": 215,
+          "exact_direct_overlap": 0,
+          "normalized_score": 0.141178
+        },
+        {
+          "curie": "MONDO:0014605",
+          "label": "Houge-Janssens syndrome 2",
+          "direct_count": 37,
+          "propagated_count": 0,
+          "exact_direct_overlap": 5,
+          "normalized_score": 0.14091
+        },
+        {
+          "curie": "MONDO:0100038",
+          "label": "complex neurodevelopmental disorder",
+          "direct_count": 0,
+          "propagated_count": 1249,
+          "exact_direct_overlap": 0,
+          "normalized_score": 0.138984
+        }
+      ],
+      "audit_flags": [
+        "truth_gene_missed",
+        "supporting_disease_no_direct_terms",
+        "supporting_disease_not_best_linked_disease",
+        "supporting_disease_has_zero_exact_direct_patient_overlap"
+      ]
+    },
+    {
+      "case_id": "PMID_33731876_fam220",
+      "file_name": "PMID_33731876_fam220.json",
+      "truth_gene": "symbol:SCN2A",
+      "truth_gene_rank": 13,
+      "patient_term_count": 8,
+      "patient_terms": [
+        {
+          "curie": "HP:0002059",
+          "label": "Cerebral atrophy"
+        },
+        {
+          "curie": "HP:0002072",
+          "label": "Chorea"
+        },
+        {
+          "curie": "HP:0100660",
+          "label": "Dyskinesia"
+        },
+        {
+          "curie": "HP:0001263",
+          "label": "Global developmental delay"
+        },
+        {
+          "curie": "HP:0002079",
+          "label": "Hypoplasia of the corpus callosum"
+        },
+        {
+          "curie": "HP:0002521",
+          "label": "Hypsarrhythmia"
+        },
+        {
+          "curie": "HP:0012469",
+          "label": "Infantile spasms"
+        },
+        {
+          "curie": "HP:0001249",
+          "label": "Intellectual disability"
+        }
+      ],
+      "supporting_disease": {
+        "curie": "MONDO:0013388",
+        "label": "developmental and epileptic encephalopathy, 11",
+        "direct_count": 14,
+        "propagated_count": 0,
+        "exact_direct_overlap": 1,
+        "exact_overlap_terms": [
+          {
+            "curie": "HP:0001263",
+            "patientLabel": "Global developmental delay",
+            "diseaseLabel": "Global developmental delay"
+          }
+        ]
+      },
+      "best_linked_disease": {
+        "curie": "MONDO:0017615",
+        "label": "benign familial infantile epilepsy",
+        "direct_count": 0,
+        "propagated_count": 327,
+        "exact_direct_overlap": 0,
+        "normalized_score": 0.216437,
+        "exact_overlap_terms": []
+      },
+      "overlap_gain_terms": [],
+      "overlap_lost_terms": [
+        {
+          "curie": "HP:0001263",
+          "patientLabel": "Global developmental delay",
+          "diseaseLabel": "Global developmental delay"
+        }
+      ],
+      "top_linked_diseases": [
+        {
+          "curie": "MONDO:0017615",
+          "label": "benign familial infantile epilepsy",
+          "direct_count": 0,
+          "propagated_count": 327,
+          "exact_direct_overlap": 0,
+          "normalized_score": 0.216437
+        },
+        {
+          "curie": "MONDO:0100038",
+          "label": "complex neurodevelopmental disorder",
+          "direct_count": 0,
+          "propagated_count": 1249,
+          "exact_direct_overlap": 0,
+          "normalized_score": 0.188458
+        },
+        {
+          "curie": "MONDO:0013388",
+          "label": "developmental and epileptic encephalopathy, 11",
+          "direct_count": 14,
+          "propagated_count": 0,
+          "exact_direct_overlap": 1,
+          "normalized_score": 0.132098
+        },
+        {
+          "curie": "MONDO:0030064",
+          "label": "episodic ataxia, type 9",
+          "direct_count": 16,
+          "propagated_count": 0,
+          "exact_direct_overlap": 0,
+          "normalized_score": 0.124175
+        },
+        {
+          "curie": "MONDO:0011904",
+          "label": "seizures, benign familial infantile, 3",
+          "direct_count": 9,
+          "propagated_count": 0,
+          "exact_direct_overlap": 0,
+          "normalized_score": 0.107872
+        }
+      ],
+      "audit_flags": [
+        "supporting_disease_not_best_linked_disease"
+      ]
+    },
+    {
+      "case_id": "PMID_35190816_STX_25818041_Patient_20",
+      "file_name": "PMID_35190816_STX_25818041_Patient_20.json",
+      "truth_gene": "symbol:STXBP1",
+      "truth_gene_rank": 66,
+      "patient_term_count": 7,
+      "patient_terms": [
+        {
+          "curie": "HP:0002373",
+          "label": "Febrile seizure (within the age range of 3 months to 6 years)"
+        },
+        {
+          "curie": "HP:0002069",
+          "label": "Bilateral tonic-clonic seizure"
+        },
+        {
+          "curie": "HP:0001263",
+          "label": "Global developmental delay"
+        },
+        {
+          "curie": "HP:0008936",
+          "label": "Axial hypotonia"
+        },
+        {
+          "curie": "HP:0010847",
+          "label": "EEG with spike-wave complexes (<2.5 Hz)"
+        },
+        {
+          "curie": "HP:0011203",
+          "label": "EEG with abnormally slow frequencies"
+        },
+        {
+          "curie": "HP:0001251",
+          "label": "Ataxia"
+        }
+      ],
+      "supporting_disease": {
+        "curie": "MONDO:0012812",
+        "label": "developmental and epileptic encephalopathy, 4",
+        "direct_count": 27,
+        "propagated_count": 0,
+        "exact_direct_overlap": 1,
+        "exact_overlap_terms": [
+          {
+            "curie": "HP:0002069",
+            "patientLabel": "Bilateral tonic-clonic seizure",
+            "diseaseLabel": "Bilateral tonic-clonic seizure"
+          }
+        ]
+      },
+      "best_linked_disease": {
+        "curie": "MONDO:0100062",
+        "label": "genetic developmental and epileptic encephalopathy",
+        "direct_count": 0,
+        "propagated_count": 786,
+        "exact_direct_overlap": 0,
+        "normalized_score": 0.215363,
+        "exact_overlap_terms": []
+      },
+      "overlap_gain_terms": [],
+      "overlap_lost_terms": [
+        {
+          "curie": "HP:0002069",
+          "patientLabel": "Bilateral tonic-clonic seizure",
+          "diseaseLabel": "Bilateral tonic-clonic seizure"
+        }
+      ],
+      "top_linked_diseases": [
+        {
+          "curie": "MONDO:0100062",
+          "label": "genetic developmental and epileptic encephalopathy",
+          "direct_count": 0,
+          "propagated_count": 786,
+          "exact_direct_overlap": 0,
+          "normalized_score": 0.215363
+        },
+        {
+          "curie": "MONDO:0012812",
+          "label": "developmental and epileptic encephalopathy, 4",
+          "direct_count": 27,
+          "propagated_count": 0,
+          "exact_direct_overlap": 1,
+          "normalized_score": 0.177473
+        }
+      ],
+      "audit_flags": [
+        "supporting_disease_not_best_linked_disease"
+      ]
+    },
+    {
+      "case_id": "PMID_35190816_STX_EG0598P",
+      "file_name": "PMID_35190816_STX_EG0598P.json",
+      "truth_gene": "symbol:STXBP1",
+      "truth_gene_rank": 26,
+      "patient_term_count": 12,
+      "patient_terms": [
+        {
+          "curie": "HP:0008947",
+          "label": "Infantile muscular hypotonia"
+        },
+        {
+          "curie": "HP:0002019",
+          "label": "Constipation"
+        },
+        {
+          "curie": "HP:0012469",
+          "label": "Infantile spasms"
+        },
+        {
+          "curie": "HP:0001263",
+          "label": "Global developmental delay"
+        },
+        {
+          "curie": "HP:0011199",
+          "label": "EEG with generalized sharp slow waves"
+        },
+        {
+          "curie": "HP:0010841",
+          "label": "Multifocal epileptiform discharges"
+        },
+        {
+          "curie": "HP:0001357",
+          "label": "Plagiocephaly"
+        },
+        {
+          "curie": "HP:0001344",
+          "label": "Absent speech"
+        },
+        {
+          "curie": "HP:0000297",
+          "label": "Facial hypotonia"
+        },
+        {
+          "curie": "HP:0008936",
+          "label": "Axial hypotonia"
+        },
+        {
+          "curie": "HP:0011169",
+          "label": "Generalized clonic seizure"
+        },
+        {
+          "curie": "HP:0011167",
+          "label": "Focal tonic seizure"
+        }
+      ],
+      "supporting_disease": {
+        "curie": "MONDO:0012812",
+        "label": "developmental and epileptic encephalopathy, 4",
+        "direct_count": 27,
+        "propagated_count": 0,
+        "exact_direct_overlap": 1,
+        "exact_overlap_terms": [
+          {
+            "curie": "HP:0001344",
+            "patientLabel": "Absent speech",
+            "diseaseLabel": "Absent speech"
+          }
+        ]
+      },
+      "best_linked_disease": {
+        "curie": "MONDO:0100062",
+        "label": "genetic developmental and epileptic encephalopathy",
+        "direct_count": 0,
+        "propagated_count": 786,
+        "exact_direct_overlap": 0,
+        "normalized_score": 0.265442,
+        "exact_overlap_terms": []
+      },
+      "overlap_gain_terms": [],
+      "overlap_lost_terms": [
+        {
+          "curie": "HP:0001344",
+          "patientLabel": "Absent speech",
+          "diseaseLabel": "Absent speech"
+        }
+      ],
+      "top_linked_diseases": [
+        {
+          "curie": "MONDO:0100062",
+          "label": "genetic developmental and epileptic encephalopathy",
+          "direct_count": 0,
+          "propagated_count": 786,
+          "exact_direct_overlap": 0,
+          "normalized_score": 0.265442
+        },
+        {
+          "curie": "MONDO:0012812",
+          "label": "developmental and epileptic encephalopathy, 4",
+          "direct_count": 27,
+          "propagated_count": 0,
+          "exact_direct_overlap": 1,
+          "normalized_score": 0.198026
+        }
+      ],
+      "audit_flags": [
+        "supporting_disease_not_best_linked_disease"
+      ]
+    },
+    {
+      "case_id": "PMID_33731876_fam163",
+      "file_name": "PMID_33731876_fam163.json",
+      "truth_gene": "symbol:SCN2A",
+      "truth_gene_rank": 92,
+      "patient_term_count": 3,
+      "patient_terms": [
+        {
+          "curie": "HP:0000717",
+          "label": "Autism"
+        },
+        {
+          "curie": "HP:0002069",
+          "label": "Bilateral tonic-clonic seizure"
+        },
+        {
+          "curie": "HP:0002342",
+          "label": "Intellectual disability, moderate"
+        }
+      ],
+      "supporting_disease": {
+        "curie": "MONDO:0013388",
+        "label": "developmental and epileptic encephalopathy, 11",
+        "direct_count": 14,
+        "propagated_count": 0,
+        "exact_direct_overlap": 2,
+        "exact_overlap_terms": [
+          {
+            "curie": "HP:0000717",
+            "patientLabel": "Autism",
+            "diseaseLabel": "Autism"
+          },
+          {
+            "curie": "HP:0002069",
+            "patientLabel": "Bilateral tonic-clonic seizure",
+            "diseaseLabel": "Bilateral tonic-clonic seizure"
+          }
+        ]
+      },
+      "best_linked_disease": {
+        "curie": "MONDO:0017615",
+        "label": "benign familial infantile epilepsy",
+        "direct_count": 0,
+        "propagated_count": 327,
+        "exact_direct_overlap": 0,
+        "normalized_score": 0.219651,
+        "exact_overlap_terms": []
+      },
+      "overlap_gain_terms": [],
+      "overlap_lost_terms": [
+        {
+          "curie": "HP:0000717",
+          "patientLabel": "Autism",
+          "diseaseLabel": "Autism"
+        },
+        {
+          "curie": "HP:0002069",
+          "patientLabel": "Bilateral tonic-clonic seizure",
+          "diseaseLabel": "Bilateral tonic-clonic seizure"
+        }
+      ],
+      "top_linked_diseases": [
+        {
+          "curie": "MONDO:0017615",
+          "label": "benign familial infantile epilepsy",
+          "direct_count": 0,
+          "propagated_count": 327,
+          "exact_direct_overlap": 0,
+          "normalized_score": 0.219651
+        },
+        {
+          "curie": "MONDO:0013388",
+          "label": "developmental and epileptic encephalopathy, 11",
+          "direct_count": 14,
+          "propagated_count": 0,
+          "exact_direct_overlap": 2,
+          "normalized_score": 0.208339
+        },
+        {
+          "curie": "MONDO:0100038",
+          "label": "complex neurodevelopmental disorder",
+          "direct_count": 0,
+          "propagated_count": 1249,
+          "exact_direct_overlap": 0,
+          "normalized_score": 0.205404
+        },
+        {
+          "curie": "MONDO:0011904",
+          "label": "seizures, benign familial infantile, 3",
+          "direct_count": 9,
+          "propagated_count": 0,
+          "exact_direct_overlap": 1,
+          "normalized_score": 0.134848
+        },
+        {
+          "curie": "MONDO:0030064",
+          "label": "episodic ataxia, type 9",
+          "direct_count": 16,
+          "propagated_count": 0,
+          "exact_direct_overlap": 1,
+          "normalized_score": 0.121754
+        }
+      ],
+      "audit_flags": [
+        "supporting_disease_not_best_linked_disease"
+      ]
+    },
+    {
+      "case_id": "PMID_33731876_fam341",
+      "file_name": "PMID_33731876_fam341.json",
+      "truth_gene": "symbol:SCN2A",
+      "truth_gene_rank": 5,
+      "patient_term_count": 8,
+      "patient_terms": [
+        {
+          "curie": "HP:0002104",
+          "label": "Apnea"
+        },
+        {
+          "curie": "HP:0007371",
+          "label": "Corpus callosum atrophy"
+        },
+        {
+          "curie": "HP:0200134",
+          "label": "Epileptic encephalopathy"
+        },
+        {
+          "curie": "HP:0002123",
+          "label": "Generalized myoclonic seizure"
+        },
+        {
+          "curie": "HP:0010818",
+          "label": "Generalized tonic seizure"
+        },
+        {
+          "curie": "HP:0010864",
+          "label": "Intellectual disability, severe"
+        },
+        {
+          "curie": "HP:0001252",
+          "label": "Hypotonia"
+        },
+        {
+          "curie": "HP:0001257",
+          "label": "Spasticity"
+        }
+      ],
+      "supporting_disease": {
+        "curie": "MONDO:0013388",
+        "label": "developmental and epileptic encephalopathy, 11",
+        "direct_count": 14,
+        "propagated_count": 0,
+        "exact_direct_overlap": 2,
+        "exact_overlap_terms": [
+          {
+            "curie": "HP:0010864",
+            "patientLabel": "Intellectual disability, severe",
+            "diseaseLabel": "Severe intellectual disability"
+          },
+          {
+            "curie": "HP:0200134",
+            "patientLabel": "Epileptic encephalopathy",
+            "diseaseLabel": "Epileptic encephalopathy"
+          }
+        ]
+      },
+      "best_linked_disease": {
+        "curie": "MONDO:0017615",
+        "label": "benign familial infantile epilepsy",
+        "direct_count": 0,
+        "propagated_count": 327,
+        "exact_direct_overlap": 0,
+        "normalized_score": 0.230705,
+        "exact_overlap_terms": []
+      },
+      "overlap_gain_terms": [],
+      "overlap_lost_terms": [
+        {
+          "curie": "HP:0010864",
+          "patientLabel": "Intellectual disability, severe",
+          "diseaseLabel": "Severe intellectual disability"
+        },
+        {
+          "curie": "HP:0200134",
+          "patientLabel": "Epileptic encephalopathy",
+          "diseaseLabel": "Epileptic encephalopathy"
+        }
+      ],
+      "top_linked_diseases": [
+        {
+          "curie": "MONDO:0017615",
+          "label": "benign familial infantile epilepsy",
+          "direct_count": 0,
+          "propagated_count": 327,
+          "exact_direct_overlap": 0,
+          "normalized_score": 0.230705
+        },
+        {
+          "curie": "MONDO:0100038",
+          "label": "complex neurodevelopmental disorder",
+          "direct_count": 0,
+          "propagated_count": 1249,
+          "exact_direct_overlap": 0,
+          "normalized_score": 0.209797
+        },
+        {
+          "curie": "MONDO:0013388",
+          "label": "developmental and epileptic encephalopathy, 11",
+          "direct_count": 14,
+          "propagated_count": 0,
+          "exact_direct_overlap": 2,
+          "normalized_score": 0.18204
+        },
+        {
+          "curie": "MONDO:0030064",
+          "label": "episodic ataxia, type 9",
+          "direct_count": 16,
+          "propagated_count": 0,
+          "exact_direct_overlap": 0,
+          "normalized_score": 0.155666
+        },
+        {
+          "curie": "MONDO:0011904",
+          "label": "seizures, benign familial infantile, 3",
+          "direct_count": 9,
+          "propagated_count": 0,
+          "exact_direct_overlap": 1,
+          "normalized_score": 0.11499
+        }
+      ],
+      "audit_flags": [
+        "supporting_disease_not_best_linked_disease"
+      ]
+    },
+    {
+      "case_id": "PMID_29122497_29122497_P1",
+      "file_name": "PMID_29122497_29122497_P1.json",
+      "truth_gene": "symbol:ISCA2",
+      "truth_gene_rank": 75,
+      "patient_term_count": 7,
+      "patient_terms": [
+        {
+          "curie": "HP:0000648",
+          "label": "Optic atrophy"
+        },
+        {
+          "curie": "HP:0002061",
+          "label": "Lower limb spasticity"
+        },
+        {
+          "curie": "HP:0008936",
+          "label": "Axial hypotonia"
+        },
+        {
+          "curie": "HP:0040330",
+          "label": "Confluent hyperintensity of cerebral white matter on MRI"
+        },
+        {
+          "curie": "HP:0000639",
+          "label": "Nystagmus"
+        },
+        {
+          "curie": "HP:0002376",
+          "label": "Developmental regression"
+        },
+        {
+          "curie": "HP:0006986",
+          "label": "Upper limb spasticity"
+        }
+      ],
+      "supporting_disease": {
+        "curie": "MONDO:0014611",
+        "label": "multiple mitochondrial dysfunctions syndrome 4",
+        "direct_count": 16,
+        "propagated_count": 0,
+        "exact_direct_overlap": 3,
+        "exact_overlap_terms": [
+          {
+            "curie": "HP:0000639",
+            "patientLabel": "Nystagmus",
+            "diseaseLabel": "Nystagmus"
+          },
+          {
+            "curie": "HP:0000648",
+            "patientLabel": "Optic atrophy",
+            "diseaseLabel": "Optic atrophy"
+          },
+          {
+            "curie": "HP:0002376",
+            "patientLabel": "Developmental regression",
+            "diseaseLabel": "Developmental regression"
+          }
+        ]
+      },
+      "best_linked_disease": {
+        "curie": "MONDO:0044970",
+        "label": "mitochondrial disease",
+        "direct_count": 0,
+        "propagated_count": 1732,
+        "exact_direct_overlap": 0,
+        "normalized_score": 0.218964,
+        "exact_overlap_terms": []
+      },
+      "overlap_gain_terms": [],
+      "overlap_lost_terms": [
+        {
+          "curie": "HP:0000639",
+          "patientLabel": "Nystagmus",
+          "diseaseLabel": "Nystagmus"
+        },
+        {
+          "curie": "HP:0000648",
+          "patientLabel": "Optic atrophy",
+          "diseaseLabel": "Optic atrophy"
+        },
+        {
+          "curie": "HP:0002376",
+          "patientLabel": "Developmental regression",
+          "diseaseLabel": "Developmental regression"
+        }
+      ],
+      "top_linked_diseases": [
+        {
+          "curie": "MONDO:0044970",
+          "label": "mitochondrial disease",
+          "direct_count": 0,
+          "propagated_count": 1732,
+          "exact_direct_overlap": 0,
+          "normalized_score": 0.218964
+        },
+        {
+          "curie": "MONDO:0014611",
+          "label": "multiple mitochondrial dysfunctions syndrome 4",
+          "direct_count": 16,
+          "propagated_count": 0,
+          "exact_direct_overlap": 3,
+          "normalized_score": 0.185476
+        }
+      ],
+      "audit_flags": [
+        "supporting_disease_not_best_linked_disease"
+      ]
+    },
+    {
+      "case_id": "PMID_33731876_fam415",
+      "file_name": "PMID_33731876_fam415.json",
+      "truth_gene": "symbol:SCN2A",
+      "truth_gene_rank": 6,
+      "patient_term_count": 18,
+      "patient_terms": [
+        {
+          "curie": "HP:0007270",
+          "label": "Atypical absence seizure"
+        },
+        {
+          "curie": "HP:0002019",
+          "label": "Constipation"
+        },
+        {
+          "curie": "HP:0031491",
+          "label": "Continuous spike and waves during slow sleep"
+        },
+        {
+          "curie": "HP:0002015",
+          "label": "Dysphagia"
+        },
+        {
+          "curie": "HP:0011203",
+          "label": "EEG with abnormally slow frequencies"
+        },
+        {
+          "curie": "HP:0010851",
+          "label": "EEG with burst suppression"
+        },
+        {
+          "curie": "HP:0011290",
+          "label": "EEG with frontal sharp slow waves"
+        },
+        {
+          "curie": "HP:0200134",
+          "label": "Epileptic encephalopathy"
+        },
+        {
+          "curie": "HP:0011097",
+          "label": "Epileptic spasm"
+        },
+        {
+          "curie": "HP:0011167",
+          "label": "Focal tonic seizure"
+        },
+        {
+          "curie": "HP:0002020",
+          "label": "Gastroesophageal reflux"
+        },
+        {
+          "curie": "HP:0011471",
+          "label": "Gastrostomy tube feeding in infancy"
+        },
+        {
+          "curie": "HP:0002069",
+          "label": "Bilateral tonic-clonic seizure"
+        },
+        {
+          "curie": "HP:0002487",
+          "label": "Hyperkinetic movements"
+        },
+        {
+          "curie": "HP:0002187",
+          "label": "Intellectual disability, profound"
+        },
+        {
+          "curie": "HP:0002509",
+          "label": "Limb hypertonia"
+        },
+        {
+          "curie": "HP:0008936",
+          "label": "Axial hypotonia"
+        },
+        {
+          "curie": "HP:0000505",
+          "label": "Visual impairment"
+        }
+      ],
+      "supporting_disease": {
+        "curie": "MONDO:0013388",
+        "label": "developmental and epileptic encephalopathy, 11",
+        "direct_count": 14,
+        "propagated_count": 0,
+        "exact_direct_overlap": 3,
+        "exact_overlap_terms": [
+          {
+            "curie": "HP:0002069",
+            "patientLabel": "Bilateral tonic-clonic seizure",
+            "diseaseLabel": "Bilateral tonic-clonic seizure"
+          },
+          {
+            "curie": "HP:0002487",
+            "patientLabel": "Hyperkinetic movements",
+            "diseaseLabel": "Hyperkinetic movements"
+          },
+          {
+            "curie": "HP:0200134",
+            "patientLabel": "Epileptic encephalopathy",
+            "diseaseLabel": "Epileptic encephalopathy"
+          }
+        ]
+      },
+      "best_linked_disease": {
+        "curie": "MONDO:0017615",
+        "label": "benign familial infantile epilepsy",
+        "direct_count": 0,
+        "propagated_count": 327,
+        "exact_direct_overlap": 0,
+        "normalized_score": 0.283903,
+        "exact_overlap_terms": []
+      },
+      "overlap_gain_terms": [],
+      "overlap_lost_terms": [
+        {
+          "curie": "HP:0002069",
+          "patientLabel": "Bilateral tonic-clonic seizure",
+          "diseaseLabel": "Bilateral tonic-clonic seizure"
+        },
+        {
+          "curie": "HP:0002487",
+          "patientLabel": "Hyperkinetic movements",
+          "diseaseLabel": "Hyperkinetic movements"
+        },
+        {
+          "curie": "HP:0200134",
+          "patientLabel": "Epileptic encephalopathy",
+          "diseaseLabel": "Epileptic encephalopathy"
+        }
+      ],
+      "top_linked_diseases": [
+        {
+          "curie": "MONDO:0017615",
+          "label": "benign familial infantile epilepsy",
+          "direct_count": 0,
+          "propagated_count": 327,
+          "exact_direct_overlap": 0,
+          "normalized_score": 0.283903
+        },
+        {
+          "curie": "MONDO:0100038",
+          "label": "complex neurodevelopmental disorder",
+          "direct_count": 0,
+          "propagated_count": 1249,
+          "exact_direct_overlap": 0,
+          "normalized_score": 0.270806
+        },
+        {
+          "curie": "MONDO:0013388",
+          "label": "developmental and epileptic encephalopathy, 11",
+          "direct_count": 14,
+          "propagated_count": 0,
+          "exact_direct_overlap": 3,
+          "normalized_score": 0.165274
+        },
+        {
+          "curie": "MONDO:0011904",
+          "label": "seizures, benign familial infantile, 3",
+          "direct_count": 9,
+          "propagated_count": 0,
+          "exact_direct_overlap": 1,
+          "normalized_score": 0.162487
+        },
+        {
+          "curie": "MONDO:0030064",
+          "label": "episodic ataxia, type 9",
+          "direct_count": 16,
+          "propagated_count": 0,
+          "exact_direct_overlap": 1,
+          "normalized_score": 0.151245
+        }
+      ],
+      "audit_flags": [
+        "supporting_disease_not_best_linked_disease"
+      ]
+    },
+    {
+      "case_id": "PMID_35190816_STX_23934111_dl",
+      "file_name": "PMID_35190816_STX_23934111_dl.json",
+      "truth_gene": "symbol:STXBP1",
+      "truth_gene_rank": 10,
+      "patient_term_count": 9,
+      "patient_terms": [
+        {
+          "curie": "HP:0012469",
+          "label": "Infantile spasms"
+        },
+        {
+          "curie": "HP:0002521",
+          "label": "Hypsarrhythmia"
+        },
+        {
+          "curie": "HP:0002280",
+          "label": "Enlarged cisterna magna"
+        },
+        {
+          "curie": "HP:0010844",
+          "label": "EEG with multifocal slow activity"
+        },
+        {
+          "curie": "HP:0011185",
+          "label": "EEG with focal epileptiform discharges"
+        },
+        {
+          "curie": "HP:0011344",
+          "label": "Severe global developmental delay"
+        },
+        {
+          "curie": "HP:0002540",
+          "label": "Inability to walk"
+        },
+        {
+          "curie": "HP:0001344",
+          "label": "Absent speech"
+        },
+        {
+          "curie": "HP:0007359",
+          "label": "Focal-onset seizure"
+        }
+      ],
+      "supporting_disease": {
+        "curie": "MONDO:0012812",
+        "label": "developmental and epileptic encephalopathy, 4",
+        "direct_count": 27,
+        "propagated_count": 0,
+        "exact_direct_overlap": 3,
+        "exact_overlap_terms": [
+          {
+            "curie": "HP:0001344",
+            "patientLabel": "Absent speech",
+            "diseaseLabel": "Absent speech"
+          },
+          {
+            "curie": "HP:0002521",
+            "patientLabel": "Hypsarrhythmia",
+            "diseaseLabel": "Hypsarrhythmia"
+          },
+          {
+            "curie": "HP:0011344",
+            "patientLabel": "Severe global developmental delay",
+            "diseaseLabel": "Severe global developmental delay"
+          }
+        ]
+      },
+      "best_linked_disease": {
+        "curie": "MONDO:0100062",
+        "label": "genetic developmental and epileptic encephalopathy",
+        "direct_count": 0,
+        "propagated_count": 786,
+        "exact_direct_overlap": 0,
+        "normalized_score": 0.257669,
+        "exact_overlap_terms": []
+      },
+      "overlap_gain_terms": [],
+      "overlap_lost_terms": [
+        {
+          "curie": "HP:0001344",
+          "patientLabel": "Absent speech",
+          "diseaseLabel": "Absent speech"
+        },
+        {
+          "curie": "HP:0002521",
+          "patientLabel": "Hypsarrhythmia",
+          "diseaseLabel": "Hypsarrhythmia"
+        },
+        {
+          "curie": "HP:0011344",
+          "patientLabel": "Severe global developmental delay",
+          "diseaseLabel": "Severe global developmental delay"
+        }
+      ],
+      "top_linked_diseases": [
+        {
+          "curie": "MONDO:0100062",
+          "label": "genetic developmental and epileptic encephalopathy",
+          "direct_count": 0,
+          "propagated_count": 786,
+          "exact_direct_overlap": 0,
+          "normalized_score": 0.257669
+        },
+        {
+          "curie": "MONDO:0012812",
+          "label": "developmental and epileptic encephalopathy, 4",
+          "direct_count": 27,
+          "propagated_count": 0,
+          "exact_direct_overlap": 3,
+          "normalized_score": 0.216019
+        }
+      ],
+      "audit_flags": [
+        "supporting_disease_not_best_linked_disease"
+      ]
+    },
+    {
+      "case_id": "PMID_25835445_1-III13",
+      "file_name": "PMID_25835445_1-III13.json",
+      "truth_gene": "symbol:TGFB3",
+      "truth_gene_rank": 7,
+      "patient_term_count": 6,
+      "patient_terms": [
+        {
+          "curie": "HP:4000067",
+          "label": "Iliac artery aneurysm"
+        },
+        {
+          "curie": "HP:0002616",
+          "label": "Aortic root aneurysm"
+        },
+        {
+          "curie": "HP:0001634",
+          "label": "Mitral valve prolapse"
+        },
+        {
+          "curie": "HP:0000278",
+          "label": "Retrognathia"
+        },
+        {
+          "curie": "HP:0000276",
+          "label": "Long face"
+        },
+        {
+          "curie": "HP:0000098",
+          "label": "Tall stature"
+        }
+      ],
+      "supporting_disease": {
+        "curie": "MONDO:0014262",
+        "label": "Rienhoff syndrome",
+        "direct_count": 58,
+        "propagated_count": 0,
+        "exact_direct_overlap": 4,
+        "exact_overlap_terms": [
+          {
+            "curie": "HP:0000098",
+            "patientLabel": "Tall stature",
+            "diseaseLabel": "Tall stature"
+          },
+          {
+            "curie": "HP:0000276",
+            "patientLabel": "Long face",
+            "diseaseLabel": "Long face"
+          },
+          {
+            "curie": "HP:0000278",
+            "patientLabel": "Retrognathia",
+            "diseaseLabel": "Retrognathia"
+          },
+          {
+            "curie": "HP:0002616",
+            "patientLabel": "Aortic root aneurysm",
+            "diseaseLabel": "Aortic root aneurysm"
+          }
+        ]
+      },
+      "best_linked_disease": {
+        "curie": "MONDO:0019625",
+        "label": "familial thoracic aortic aneurysm and aortic dissection",
+        "direct_count": 0,
+        "propagated_count": 821,
+        "exact_direct_overlap": 0,
+        "normalized_score": 0.23309,
+        "exact_overlap_terms": []
+      },
+      "overlap_gain_terms": [],
+      "overlap_lost_terms": [
+        {
+          "curie": "HP:0000098",
+          "patientLabel": "Tall stature",
+          "diseaseLabel": "Tall stature"
+        },
+        {
+          "curie": "HP:0000276",
+          "patientLabel": "Long face",
+          "diseaseLabel": "Long face"
+        },
+        {
+          "curie": "HP:0000278",
+          "patientLabel": "Retrognathia",
+          "diseaseLabel": "Retrognathia"
+        },
+        {
+          "curie": "HP:0002616",
+          "patientLabel": "Aortic root aneurysm",
+          "diseaseLabel": "Aortic root aneurysm"
+        }
+      ],
+      "top_linked_diseases": [
+        {
+          "curie": "MONDO:0019625",
+          "label": "familial thoracic aortic aneurysm and aortic dissection",
+          "direct_count": 0,
+          "propagated_count": 821,
+          "exact_direct_overlap": 0,
+          "normalized_score": 0.23309
+        },
+        {
+          "curie": "MONDO:0014262",
+          "label": "Rienhoff syndrome",
+          "direct_count": 58,
+          "propagated_count": 0,
+          "exact_direct_overlap": 4,
+          "normalized_score": 0.22932
+        },
+        {
+          "curie": "MONDO:0016587",
+          "label": "arrhythmogenic right ventricular cardiomyopathy",
+          "direct_count": 0,
+          "propagated_count": 960,
+          "exact_direct_overlap": 0,
+          "normalized_score": 0.229199
+        },
+        {
+          "curie": "MONDO:0004994",
+          "label": "cardiomyopathy",
+          "direct_count": 0,
+          "propagated_count": 1348,
+          "exact_direct_overlap": 0,
+          "normalized_score": 0.223237
+        },
+        {
+          "curie": "MONDO:0007152",
+          "label": "arrhythmogenic right ventricular dysplasia 1",
+          "direct_count": 12,
+          "propagated_count": 0,
+          "exact_direct_overlap": 0,
+          "normalized_score": 0.086964
+        }
+      ],
+      "audit_flags": [
+        "supporting_disease_not_best_linked_disease"
+      ]
+    },
+    {
+      "case_id": "PMID_32154675_Family4Patient11",
+      "file_name": "PMID_32154675_Family4Patient11.json",
+      "truth_gene": "symbol:SMAD3",
+      "truth_gene_rank": 33,
+      "patient_term_count": 4,
+      "patient_terms": [
+        {
+          "curie": "HP:0001166",
+          "label": "Arachnodactyly"
+        },
+        {
+          "curie": "HP:0002650",
+          "label": "Scoliosis"
+        },
+        {
+          "curie": "HP:0000218",
+          "label": "High palate"
+        },
+        {
+          "curie": "HP:0000316",
+          "label": "Hypertelorism"
+        }
+      ],
+      "supporting_disease": {
+        "curie": "MONDO:0013426",
+        "label": "aneurysm-osteoarthritis syndrome",
+        "direct_count": 75,
+        "propagated_count": 0,
+        "exact_direct_overlap": 4,
+        "exact_overlap_terms": [
+          {
+            "curie": "HP:0000218",
+            "patientLabel": "High palate",
+            "diseaseLabel": "High palate"
+          },
+          {
+            "curie": "HP:0000316",
+            "patientLabel": "Hypertelorism",
+            "diseaseLabel": "Hypertelorism"
+          },
+          {
+            "curie": "HP:0001166",
+            "patientLabel": "Arachnodactyly",
+            "diseaseLabel": "Arachnodactyly"
+          },
+          {
+            "curie": "HP:0002650",
+            "patientLabel": "Scoliosis",
+            "diseaseLabel": "Scoliosis"
+          }
+        ]
+      },
+      "best_linked_disease": {
+        "curie": "MONDO:0019625",
+        "label": "familial thoracic aortic aneurysm and aortic dissection",
+        "direct_count": 0,
+        "propagated_count": 821,
+        "exact_direct_overlap": 0,
+        "normalized_score": 0.176059,
+        "exact_overlap_terms": []
+      },
+      "overlap_gain_terms": [],
+      "overlap_lost_terms": [
+        {
+          "curie": "HP:0000218",
+          "patientLabel": "High palate",
+          "diseaseLabel": "High palate"
+        },
+        {
+          "curie": "HP:0000316",
+          "patientLabel": "Hypertelorism",
+          "diseaseLabel": "Hypertelorism"
+        },
+        {
+          "curie": "HP:0001166",
+          "patientLabel": "Arachnodactyly",
+          "diseaseLabel": "Arachnodactyly"
+        },
+        {
+          "curie": "HP:0002650",
+          "patientLabel": "Scoliosis",
+          "diseaseLabel": "Scoliosis"
+        }
+      ],
+      "top_linked_diseases": [
+        {
+          "curie": "MONDO:0019625",
+          "label": "familial thoracic aortic aneurysm and aortic dissection",
+          "direct_count": 0,
+          "propagated_count": 821,
+          "exact_direct_overlap": 0,
+          "normalized_score": 0.176059
+        },
+        {
+          "curie": "MONDO:0013426",
+          "label": "aneurysm-osteoarthritis syndrome",
+          "direct_count": 75,
+          "propagated_count": 0,
+          "exact_direct_overlap": 4,
+          "normalized_score": 0.175187
+        }
+      ],
+      "audit_flags": [
+        "supporting_disease_not_best_linked_disease"
+      ]
+    },
+    {
+      "case_id": "PMID_35190816_STX_20887364_Subject_2103",
+      "file_name": "PMID_35190816_STX_20887364_Subject_2103.json",
+      "truth_gene": "symbol:STXBP1",
+      "truth_gene_rank": 34,
+      "patient_term_count": 11,
+      "patient_terms": [
+        {
+          "curie": "HP:0002266",
+          "label": "Focal clonic seizure"
+        },
+        {
+          "curie": "HP:0012017",
+          "label": "EEG with parietal focal spikes"
+        },
+        {
+          "curie": "HP:0012469",
+          "label": "Infantile spasms"
+        },
+        {
+          "curie": "HP:0010851",
+          "label": "EEG with burst suppression"
+        },
+        {
+          "curie": "HP:0002521",
+          "label": "Hypsarrhythmia"
+        },
+        {
+          "curie": "HP:0002123",
+          "label": "Generalized myoclonic seizure"
+        },
+        {
+          "curie": "HP:0010841",
+          "label": "Multifocal epileptiform discharges"
+        },
+        {
+          "curie": "HP:0012736",
+          "label": "Profound global developmental delay"
+        },
+        {
+          "curie": "HP:0002510",
+          "label": "Spastic tetraplegia"
+        },
+        {
+          "curie": "HP:0006829",
+          "label": "Severe muscular hypotonia"
+        },
+        {
+          "curie": "HP:0012444",
+          "label": "Brain atrophy"
+        }
+      ],
+      "supporting_disease": {
+        "curie": "MONDO:0012812",
+        "label": "developmental and epileptic encephalopathy, 4",
+        "direct_count": 27,
+        "propagated_count": 0,
+        "exact_direct_overlap": 4,
+        "exact_overlap_terms": [
+          {
+            "curie": "HP:0002123",
+            "patientLabel": "Generalized myoclonic seizure",
+            "diseaseLabel": "Generalized myoclonic seizure"
+          },
+          {
+            "curie": "HP:0002510",
+            "patientLabel": "Spastic tetraplegia",
+            "diseaseLabel": "Spastic tetraplegia"
+          },
+          {
+            "curie": "HP:0002521",
+            "patientLabel": "Hypsarrhythmia",
+            "diseaseLabel": "Hypsarrhythmia"
+          },
+          {
+            "curie": "HP:0010851",
+            "patientLabel": "EEG with burst suppression",
+            "diseaseLabel": "EEG with burst suppression"
+          }
+        ]
+      },
+      "best_linked_disease": {
+        "curie": "MONDO:0100062",
+        "label": "genetic developmental and epileptic encephalopathy",
+        "direct_count": 0,
+        "propagated_count": 786,
+        "exact_direct_overlap": 0,
+        "normalized_score": 0.28441,
+        "exact_overlap_terms": []
+      },
+      "overlap_gain_terms": [],
+      "overlap_lost_terms": [
+        {
+          "curie": "HP:0002123",
+          "patientLabel": "Generalized myoclonic seizure",
+          "diseaseLabel": "Generalized myoclonic seizure"
+        },
+        {
+          "curie": "HP:0002510",
+          "patientLabel": "Spastic tetraplegia",
+          "diseaseLabel": "Spastic tetraplegia"
+        },
+        {
+          "curie": "HP:0002521",
+          "patientLabel": "Hypsarrhythmia",
+          "diseaseLabel": "Hypsarrhythmia"
+        },
+        {
+          "curie": "HP:0010851",
+          "patientLabel": "EEG with burst suppression",
+          "diseaseLabel": "EEG with burst suppression"
+        }
+      ],
+      "top_linked_diseases": [
+        {
+          "curie": "MONDO:0100062",
+          "label": "genetic developmental and epileptic encephalopathy",
+          "direct_count": 0,
+          "propagated_count": 786,
+          "exact_direct_overlap": 0,
+          "normalized_score": 0.28441
+        },
+        {
+          "curie": "MONDO:0012812",
+          "label": "developmental and epileptic encephalopathy, 4",
+          "direct_count": 27,
+          "propagated_count": 0,
+          "exact_direct_overlap": 4,
+          "normalized_score": 0.268709
+        }
+      ],
+      "audit_flags": [
+        "supporting_disease_not_best_linked_disease"
+      ]
+    },
+    {
+      "case_id": "PMID_35190816_STX_23934111_fh",
+      "file_name": "PMID_35190816_STX_23934111_fh.json",
+      "truth_gene": "symbol:STXBP1",
+      "truth_gene_rank": 28,
+      "patient_term_count": 9,
+      "patient_terms": [
+        {
+          "curie": "HP:0012469",
+          "label": "Infantile spasms"
+        },
+        {
+          "curie": "HP:0002521",
+          "label": "Hypsarrhythmia"
+        },
+        {
+          "curie": "HP:0007359",
+          "label": "Focal-onset seizure"
+        },
+        {
+          "curie": "HP:0002267",
+          "label": "Exaggerated startle response"
+        },
+        {
+          "curie": "HP:0011191",
+          "label": "Unilateral multifocal epileptiform discharges"
+        },
+        {
+          "curie": "HP:0002376",
+          "label": "Developmental regression"
+        },
+        {
+          "curie": "HP:0011344",
+          "label": "Severe global developmental delay"
+        },
+        {
+          "curie": "HP:0001344",
+          "label": "Absent speech"
+        },
+        {
+          "curie": "HP:0000733",
+          "label": "Motor stereotypy"
+        }
+      ],
+      "supporting_disease": {
+        "curie": "MONDO:0012812",
+        "label": "developmental and epileptic encephalopathy, 4",
+        "direct_count": 27,
+        "propagated_count": 0,
+        "exact_direct_overlap": 4,
+        "exact_overlap_terms": [
+          {
+            "curie": "HP:0001344",
+            "patientLabel": "Absent speech",
+            "diseaseLabel": "Absent speech"
+          },
+          {
+            "curie": "HP:0002376",
+            "patientLabel": "Developmental regression",
+            "diseaseLabel": "Developmental regression"
+          },
+          {
+            "curie": "HP:0002521",
+            "patientLabel": "Hypsarrhythmia",
+            "diseaseLabel": "Hypsarrhythmia"
+          },
+          {
+            "curie": "HP:0011344",
+            "patientLabel": "Severe global developmental delay",
+            "diseaseLabel": "Severe global developmental delay"
+          }
+        ]
+      },
+      "best_linked_disease": {
+        "curie": "MONDO:0100062",
+        "label": "genetic developmental and epileptic encephalopathy",
+        "direct_count": 0,
+        "propagated_count": 786,
+        "exact_direct_overlap": 0,
+        "normalized_score": 0.229613,
+        "exact_overlap_terms": []
+      },
+      "overlap_gain_terms": [],
+      "overlap_lost_terms": [
+        {
+          "curie": "HP:0001344",
+          "patientLabel": "Absent speech",
+          "diseaseLabel": "Absent speech"
+        },
+        {
+          "curie": "HP:0002376",
+          "patientLabel": "Developmental regression",
+          "diseaseLabel": "Developmental regression"
+        },
+        {
+          "curie": "HP:0002521",
+          "patientLabel": "Hypsarrhythmia",
+          "diseaseLabel": "Hypsarrhythmia"
+        },
+        {
+          "curie": "HP:0011344",
+          "patientLabel": "Severe global developmental delay",
+          "diseaseLabel": "Severe global developmental delay"
+        }
+      ],
+      "top_linked_diseases": [
+        {
+          "curie": "MONDO:0100062",
+          "label": "genetic developmental and epileptic encephalopathy",
+          "direct_count": 0,
+          "propagated_count": 786,
+          "exact_direct_overlap": 0,
+          "normalized_score": 0.229613
+        },
+        {
+          "curie": "MONDO:0012812",
+          "label": "developmental and epileptic encephalopathy, 4",
+          "direct_count": 27,
+          "propagated_count": 0,
+          "exact_direct_overlap": 4,
+          "normalized_score": 0.22539
+        }
+      ],
+      "audit_flags": [
+        "supporting_disease_not_best_linked_disease"
+      ]
+    },
+    {
+      "case_id": "PMID_35190816_STX_P_20",
+      "file_name": "PMID_35190816_STX_P_20.json",
+      "truth_gene": "symbol:STXBP1",
+      "truth_gene_rank": 39,
+      "patient_term_count": 13,
+      "patient_terms": [
+        {
+          "curie": "HP:0001263",
+          "label": "Global developmental delay"
+        },
+        {
+          "curie": "HP:0011097",
+          "label": "Epileptic spasm"
+        },
+        {
+          "curie": "HP:0011167",
+          "label": "Focal tonic seizure"
+        },
+        {
+          "curie": "HP:0010851",
+          "label": "EEG with burst suppression"
+        },
+        {
+          "curie": "HP:0010841",
+          "label": "Multifocal epileptiform discharges"
+        },
+        {
+          "curie": "HP:0010864",
+          "label": "Intellectual disability, severe"
+        },
+        {
+          "curie": "HP:0002421",
+          "label": "Poor head control"
+        },
+        {
+          "curie": "HP:0000817",
+          "label": "Reduced eye contact"
+        },
+        {
+          "curie": "HP:0002540",
+          "label": "Inability to walk"
+        },
+        {
+          "curie": "HP:0001344",
+          "label": "Absent speech"
+        },
+        {
+          "curie": "HP:0002273",
+          "label": "Tetraparesis"
+        },
+        {
+          "curie": "HP:0002360",
+          "label": "Sleep abnormality"
+        },
+        {
+          "curie": "HP:0000639",
+          "label": "Nystagmus"
+        }
+      ],
+      "supporting_disease": {
+        "curie": "MONDO:0012812",
+        "label": "developmental and epileptic encephalopathy, 4",
+        "direct_count": 27,
+        "propagated_count": 0,
+        "exact_direct_overlap": 4,
+        "exact_overlap_terms": [
+          {
+            "curie": "HP:0001344",
+            "patientLabel": "Absent speech",
+            "diseaseLabel": "Absent speech"
+          },
+          {
+            "curie": "HP:0010851",
+            "patientLabel": "EEG with burst suppression",
+            "diseaseLabel": "EEG with burst suppression"
+          },
+          {
+            "curie": "HP:0010864",
+            "patientLabel": "Intellectual disability, severe",
+            "diseaseLabel": "Severe intellectual disability"
+          },
+          {
+            "curie": "HP:0011097",
+            "patientLabel": "Epileptic spasm",
+            "diseaseLabel": "Epileptic spasm"
+          }
+        ]
+      },
+      "best_linked_disease": {
+        "curie": "MONDO:0100062",
+        "label": "genetic developmental and epileptic encephalopathy",
+        "direct_count": 0,
+        "propagated_count": 786,
+        "exact_direct_overlap": 0,
+        "normalized_score": 0.240835,
+        "exact_overlap_terms": []
+      },
+      "overlap_gain_terms": [],
+      "overlap_lost_terms": [
+        {
+          "curie": "HP:0001344",
+          "patientLabel": "Absent speech",
+          "diseaseLabel": "Absent speech"
+        },
+        {
+          "curie": "HP:0010851",
+          "patientLabel": "EEG with burst suppression",
+          "diseaseLabel": "EEG with burst suppression"
+        },
+        {
+          "curie": "HP:0010864",
+          "patientLabel": "Intellectual disability, severe",
+          "diseaseLabel": "Severe intellectual disability"
+        },
+        {
+          "curie": "HP:0011097",
+          "patientLabel": "Epileptic spasm",
+          "diseaseLabel": "Epileptic spasm"
+        }
+      ],
+      "top_linked_diseases": [
+        {
+          "curie": "MONDO:0100062",
+          "label": "genetic developmental and epileptic encephalopathy",
+          "direct_count": 0,
+          "propagated_count": 786,
+          "exact_direct_overlap": 0,
+          "normalized_score": 0.240835
+        },
+        {
+          "curie": "MONDO:0012812",
+          "label": "developmental and epileptic encephalopathy, 4",
+          "direct_count": 27,
+          "propagated_count": 0,
+          "exact_direct_overlap": 4,
+          "normalized_score": 0.223451
+        }
+      ],
+      "audit_flags": [
+        "supporting_disease_not_best_linked_disease"
+      ]
+    },
+    {
+      "case_id": "PMID_37761890_22",
+      "file_name": "PMID_37761890_22.json",
+      "truth_gene": "symbol:PPP2R1A",
+      "truth_gene_rank": 79,
+      "patient_term_count": 10,
+      "patient_terms": [
+        {
+          "curie": "HP:0001249",
+          "label": "Intellectual disability"
+        },
+        {
+          "curie": "HP:0001263",
+          "label": "Global developmental delay"
+        },
+        {
+          "curie": "HP:0000750",
+          "label": "Delayed speech and language development"
+        },
+        {
+          "curie": "HP:0001270",
+          "label": "Motor delay"
+        },
+        {
+          "curie": "HP:0001250",
+          "label": "Seizure"
+        },
+        {
+          "curie": "HP:0001274",
+          "label": "Agenesis of corpus callosum"
+        },
+        {
+          "curie": "HP:0002365",
+          "label": "Hypoplasia of the brainstem"
+        },
+        {
+          "curie": "HP:0011968",
+          "label": "Feeding difficulties"
+        },
+        {
+          "curie": "HP:0001642",
+          "label": "Pulmonic stenosis"
+        },
+        {
+          "curie": "HP:0001655",
+          "label": "Patent foramen ovale"
+        }
+      ],
+      "supporting_disease": {
+        "curie": "MONDO:0014605",
+        "label": "Houge-Janssens syndrome 2",
+        "direct_count": 37,
+        "propagated_count": 0,
+        "exact_direct_overlap": 4,
+        "exact_overlap_terms": [
+          {
+            "curie": "HP:0001249",
+            "patientLabel": "Intellectual disability",
+            "diseaseLabel": "Intellectual disability"
+          },
+          {
+            "curie": "HP:0001250",
+            "patientLabel": "Seizure",
+            "diseaseLabel": "Seizure"
+          },
+          {
+            "curie": "HP:0001263",
+            "patientLabel": "Global developmental delay",
+            "diseaseLabel": "Global developmental delay"
+          },
+          {
+            "curie": "HP:0001274",
+            "patientLabel": "Agenesis of corpus callosum",
+            "diseaseLabel": "Agenesis of corpus callosum"
+          }
+        ]
+      },
+      "best_linked_disease": {
+        "curie": "MONDO:0100038",
+        "label": "complex neurodevelopmental disorder",
+        "direct_count": 0,
+        "propagated_count": 1249,
+        "exact_direct_overlap": 0,
+        "normalized_score": 0.166237,
+        "exact_overlap_terms": []
+      },
+      "overlap_gain_terms": [],
+      "overlap_lost_terms": [
+        {
+          "curie": "HP:0001249",
+          "patientLabel": "Intellectual disability",
+          "diseaseLabel": "Intellectual disability"
+        },
+        {
+          "curie": "HP:0001250",
+          "patientLabel": "Seizure",
+          "diseaseLabel": "Seizure"
+        },
+        {
+          "curie": "HP:0001263",
+          "patientLabel": "Global developmental delay",
+          "diseaseLabel": "Global developmental delay"
+        },
+        {
+          "curie": "HP:0001274",
+          "patientLabel": "Agenesis of corpus callosum",
+          "diseaseLabel": "Agenesis of corpus callosum"
+        }
+      ],
+      "top_linked_diseases": [
+        {
+          "curie": "MONDO:0100038",
+          "label": "complex neurodevelopmental disorder",
+          "direct_count": 0,
+          "propagated_count": 1249,
+          "exact_direct_overlap": 0,
+          "normalized_score": 0.166237
+        },
+        {
+          "curie": "MONDO:0957553",
+          "label": "Houge-Janssens syndrome",
+          "direct_count": 0,
+          "propagated_count": 215,
+          "exact_direct_overlap": 0,
+          "normalized_score": 0.15582
+        },
+        {
+          "curie": "MONDO:0014605",
+          "label": "Houge-Janssens syndrome 2",
+          "direct_count": 37,
+          "propagated_count": 0,
+          "exact_direct_overlap": 4,
+          "normalized_score": 0.10973
+        }
+      ],
+      "audit_flags": [
+        "supporting_disease_not_best_linked_disease"
+      ]
+    },
+    {
+      "case_id": "PMID_28074573_MA1",
+      "file_name": "PMID_28074573_MA1.json",
+      "truth_gene": "symbol:PTPN11",
+      "truth_gene_rank": 15,
+      "patient_term_count": 14,
+      "patient_terms": [
+        {
+          "curie": "HP:0045075",
+          "label": "Sparse eyebrow"
+        },
+        {
+          "curie": "HP:0000325",
+          "label": "Triangular face"
+        },
+        {
+          "curie": "HP:0000494",
+          "label": "Downslanted palpebral fissures"
+        },
+        {
+          "curie": "HP:0011220",
+          "label": "Prominent forehead"
+        },
+        {
+          "curie": "HP:0001263",
+          "label": "Global developmental delay"
+        },
+        {
+          "curie": "HP:0000465",
+          "label": "Webbed neck"
+        },
+        {
+          "curie": "HP:0005280",
+          "label": "Depressed nasal bridge"
+        },
+        {
+          "curie": "HP:0001631",
+          "label": "Atrial septal defect"
+        },
+        {
+          "curie": "HP:0001382",
+          "label": "Joint hypermobility"
+        },
+        {
+          "curie": "HP:0005164",
+          "label": "Dysplastic pulmonary valve"
+        },
+        {
+          "curie": "HP:0000286",
+          "label": "Epicanthus"
+        },
+        {
+          "curie": "HP:0000508",
+          "label": "Ptosis"
+        },
+        {
+          "curie": "HP:0000316",
+          "label": "Hypertelorism"
+        },
+        {
+          "curie": "HP:0001642",
+          "label": "Pulmonic stenosis"
+        }
+      ],
+      "supporting_disease": {
+        "curie": "MONDO:0100082",
+        "label": "LEOPARD syndrome 1",
+        "direct_count": 45,
+        "propagated_count": 0,
+        "exact_direct_overlap": 6,
+        "exact_overlap_terms": [
+          {
+            "curie": "HP:0000286",
+            "patientLabel": "Epicanthus",
+            "diseaseLabel": "Epicanthus"
+          },
+          {
+            "curie": "HP:0000316",
+            "patientLabel": "Hypertelorism",
+            "diseaseLabel": "Hypertelorism"
+          },
+          {
+            "curie": "HP:0000325",
+            "patientLabel": "Triangular face",
+            "diseaseLabel": "Triangular face"
+          },
+          {
+            "curie": "HP:0000465",
+            "patientLabel": "Webbed neck",
+            "diseaseLabel": "Webbed neck"
+          },
+          {
+            "curie": "HP:0000508",
+            "patientLabel": "Ptosis",
+            "diseaseLabel": "Ptosis"
+          },
+          {
+            "curie": "HP:0001642",
+            "patientLabel": "Pulmonic stenosis",
+            "diseaseLabel": "Pulmonic stenosis"
+          }
+        ]
+      },
+      "best_linked_disease": {
+        "curie": "MONDO:0007893",
+        "label": "Noonan syndrome with multiple lentigines",
+        "direct_count": 0,
+        "propagated_count": 521,
+        "exact_direct_overlap": 0,
+        "normalized_score": 0.209815,
+        "exact_overlap_terms": []
+      },
+      "overlap_gain_terms": [],
+      "overlap_lost_terms": [
+        {
+          "curie": "HP:0000286",
+          "patientLabel": "Epicanthus",
+          "diseaseLabel": "Epicanthus"
+        },
+        {
+          "curie": "HP:0000316",
+          "patientLabel": "Hypertelorism",
+          "diseaseLabel": "Hypertelorism"
+        },
+        {
+          "curie": "HP:0000325",
+          "patientLabel": "Triangular face",
+          "diseaseLabel": "Triangular face"
+        },
+        {
+          "curie": "HP:0000465",
+          "patientLabel": "Webbed neck",
+          "diseaseLabel": "Webbed neck"
+        },
+        {
+          "curie": "HP:0000508",
+          "patientLabel": "Ptosis",
+          "diseaseLabel": "Ptosis"
+        },
+        {
+          "curie": "HP:0001642",
+          "patientLabel": "Pulmonic stenosis",
+          "diseaseLabel": "Pulmonic stenosis"
+        }
+      ],
+      "top_linked_diseases": [
+        {
+          "curie": "MONDO:0007893",
+          "label": "Noonan syndrome with multiple lentigines",
+          "direct_count": 0,
+          "propagated_count": 521,
+          "exact_direct_overlap": 0,
+          "normalized_score": 0.209815
+        },
+        {
+          "curie": "MONDO:0015280",
+          "label": "cardiofaciocutaneous syndrome",
+          "direct_count": 0,
+          "propagated_count": 692,
+          "exact_direct_overlap": 0,
+          "normalized_score": 0.208202
+        },
+        {
+          "curie": "MONDO:0018997",
+          "label": "Noonan syndrome",
+          "direct_count": 0,
+          "propagated_count": 780,
+          "exact_direct_overlap": 0,
+          "normalized_score": 0.208016
+        },
+        {
+          "curie": "MONDO:0021060",
+          "label": "RASopathy",
+          "direct_count": 0,
+          "propagated_count": 1028,
+          "exact_direct_overlap": 0,
+          "normalized_score": 0.207079
+        },
+        {
+          "curie": "MONDO:0009026",
+          "label": "Costello syndrome",
+          "direct_count": 107,
+          "propagated_count": 0,
+          "exact_direct_overlap": 10,
+          "normalized_score": 0.188978
+        }
+      ],
+      "audit_flags": [
+        "supporting_disease_not_best_linked_disease"
+      ]
+    },
+    {
+      "case_id": "PMID_20082460_case8",
+      "file_name": "PMID_20082460_case8.json",
+      "truth_gene": "symbol:FGD1",
+      "truth_gene_rank": 1,
+      "patient_term_count": 12,
+      "patient_terms": [
+        {
+          "curie": "HP:0000316",
+          "label": "Hypertelorism"
+        },
+        {
+          "curie": "HP:0001169",
+          "label": "Broad palm"
+        },
+        {
+          "curie": "HP:0001769",
+          "label": "Broad foot"
+        },
+        {
+          "curie": "HP:0012385",
+          "label": "Camptodactyly"
+        },
+        {
+          "curie": "HP:0004209",
+          "label": "Clinodactyly of the 5th finger"
+        },
+        {
+          "curie": "HP:0004322",
+          "label": "Short stature"
+        },
+        {
+          "curie": "HP:0000463",
+          "label": "Anteverted nares"
+        },
+        {
+          "curie": "HP:0000343",
+          "label": "Long philtrum"
+        },
+        {
+          "curie": "HP:0003196",
+          "label": "Short nose"
+        },
+        {
+          "curie": "HP:0000028",
+          "label": "Cryptorchidism"
+        },
+        {
+          "curie": "HP:0000049",
+          "label": "Shawl scrotum"
+        },
+        {
+          "curie": "HP:0001513",
+          "label": "Obesity"
+        }
+      ],
+      "supporting_disease": {
+        "curie": "MONDO:0010589",
+        "label": "Aarskog-Scott syndrome, X-linked",
+        "direct_count": 94,
+        "propagated_count": 0,
+        "exact_direct_overlap": 12,
+        "exact_overlap_terms": [
+          {
+            "curie": "HP:0000028",
+            "patientLabel": "Cryptorchidism",
+            "diseaseLabel": "Cryptorchidism"
+          },
+          {
+            "curie": "HP:0000049",
+            "patientLabel": "Shawl scrotum",
+            "diseaseLabel": "Shawl scrotum"
+          },
+          {
+            "curie": "HP:0000316",
+            "patientLabel": "Hypertelorism",
+            "diseaseLabel": "Hypertelorism"
+          },
+          {
+            "curie": "HP:0000343",
+            "patientLabel": "Long philtrum",
+            "diseaseLabel": "Long philtrum"
+          },
+          {
+            "curie": "HP:0000463",
+            "patientLabel": "Anteverted nares",
+            "diseaseLabel": "Anteverted nares"
+          },
+          {
+            "curie": "HP:0001169",
+            "patientLabel": "Broad palm",
+            "diseaseLabel": "Broad palm"
+          },
+          {
+            "curie": "HP:0001513",
+            "patientLabel": "Obesity",
+            "diseaseLabel": "Obesity"
+          },
+          {
+            "curie": "HP:0001769",
+            "patientLabel": "Broad foot",
+            "diseaseLabel": "Broad foot"
+          },
+          {
+            "curie": "HP:0003196",
+            "patientLabel": "Short nose",
+            "diseaseLabel": "Short nose"
+          },
+          {
+            "curie": "HP:0004209",
+            "patientLabel": "Clinodactyly of the 5th finger",
+            "diseaseLabel": "Clinodactyly of the 5th finger"
+          },
+          {
+            "curie": "HP:0004322",
+            "patientLabel": "Short stature",
+            "diseaseLabel": "Short stature"
+          },
+          {
+            "curie": "HP:0012385",
+            "patientLabel": "Camptodactyly",
+            "diseaseLabel": "Camptodactyly"
+          }
+        ]
+      },
+      "best_linked_disease": {
+        "curie": "MONDO:0021005",
+        "label": "faciodigitogenital syndrome",
+        "direct_count": 0,
+        "propagated_count": 94,
+        "exact_direct_overlap": 0,
+        "normalized_score": 0.255015,
+        "exact_overlap_terms": []
+      },
+      "overlap_gain_terms": [],
+      "overlap_lost_terms": [
+        {
+          "curie": "HP:0000028",
+          "patientLabel": "Cryptorchidism",
+          "diseaseLabel": "Cryptorchidism"
+        },
+        {
+          "curie": "HP:0000049",
+          "patientLabel": "Shawl scrotum",
+          "diseaseLabel": "Shawl scrotum"
+        },
+        {
+          "curie": "HP:0000316",
+          "patientLabel": "Hypertelorism",
+          "diseaseLabel": "Hypertelorism"
+        },
+        {
+          "curie": "HP:0000343",
+          "patientLabel": "Long philtrum",
+          "diseaseLabel": "Long philtrum"
+        },
+        {
+          "curie": "HP:0000463",
+          "patientLabel": "Anteverted nares",
+          "diseaseLabel": "Anteverted nares"
+        },
+        {
+          "curie": "HP:0001169",
+          "patientLabel": "Broad palm",
+          "diseaseLabel": "Broad palm"
+        },
+        {
+          "curie": "HP:0001513",
+          "patientLabel": "Obesity",
+          "diseaseLabel": "Obesity"
+        },
+        {
+          "curie": "HP:0001769",
+          "patientLabel": "Broad foot",
+          "diseaseLabel": "Broad foot"
+        },
+        {
+          "curie": "HP:0003196",
+          "patientLabel": "Short nose",
+          "diseaseLabel": "Short nose"
+        },
+        {
+          "curie": "HP:0004209",
+          "patientLabel": "Clinodactyly of the 5th finger",
+          "diseaseLabel": "Clinodactyly of the 5th finger"
+        },
+        {
+          "curie": "HP:0004322",
+          "patientLabel": "Short stature",
+          "diseaseLabel": "Short stature"
+        },
+        {
+          "curie": "HP:0012385",
+          "patientLabel": "Camptodactyly",
+          "diseaseLabel": "Camptodactyly"
+        }
+      ],
+      "top_linked_diseases": [
+        {
+          "curie": "MONDO:0021005",
+          "label": "faciodigitogenital syndrome",
+          "direct_count": 0,
+          "propagated_count": 94,
+          "exact_direct_overlap": 0,
+          "normalized_score": 0.255015
+        },
+        {
+          "curie": "MONDO:0010589",
+          "label": "Aarskog-Scott syndrome, X-linked",
+          "direct_count": 94,
+          "propagated_count": 0,
+          "exact_direct_overlap": 12,
+          "normalized_score": 0.252837
+        },
+        {
+          "curie": "MONDO:0002010",
+          "label": "FG syndrome",
+          "direct_count": 0,
+          "propagated_count": 651,
+          "exact_direct_overlap": 0,
+          "normalized_score": 0.226854
+        }
+      ],
+      "audit_flags": [
+        "supporting_disease_not_best_linked_disease"
+      ]
+    }
+  ]
+}

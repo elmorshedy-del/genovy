@@ -214,7 +214,7 @@ function buildEntityProfiles(
   return [...profilesByCurie.values()];
 }
 
-function classificationWeight(classification, evidenceCode) {
+export function classificationWeight(classification, evidenceCode) {
   const normalizedClassification = String(classification || '').trim().toLowerCase();
   if (normalizedClassification === 'definitive') return 1;
   if (normalizedClassification === 'strong') return 0.92;
@@ -502,7 +502,7 @@ function buildContradictionScore(index, queryPhenotypes, diseasePhenotypes) {
   return weightedAverage(matches.map((match) => ({ value: match.score, weight: match.phenotypeWeight || 0 })));
 }
 
-function computeDiseaseSupportEvidenceWeight(diseaseResult) {
+export function computeDiseaseSupportEvidenceWeight(diseaseResult) {
   const directCount = diseaseResult.directPhenotypeEdgeCount || 0;
   const propagatedCount = diseaseResult.propagatedPhenotypeEdgeCount || 0;
   const phenotypeCount = diseaseResult.phenotypeCount || directCount + propagatedCount;
@@ -538,7 +538,7 @@ function computeDiseaseSupportEvidenceWeight(diseaseResult) {
   );
 }
 
-function shouldReplaceSupportingDisease(currentResult, candidateResult) {
+export function shouldReplaceSupportingDisease(currentResult, candidateResult) {
   if ((candidateResult.diseaseSupportScore || 0) !== (currentResult.diseaseSupportScore || 0)) {
     return (candidateResult.diseaseSupportScore || 0) > (currentResult.diseaseSupportScore || 0);
   }

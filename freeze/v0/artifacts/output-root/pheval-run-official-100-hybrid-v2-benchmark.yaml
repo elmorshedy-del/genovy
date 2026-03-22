@@ -1,0 +1,26 @@
+benchmark_name: genovy_official_phenotype_gene_100_hybrid_v2
+runs:
+  - run_identifier: GenovyHybridV2
+    results_dir: output/pheval-run-official-100-hybrid-v2
+    phenopacket_dir: output/pheval-official-sample-100/phenopackets
+    gene_analysis: True
+    variant_analysis: False
+    disease_analysis: False
+    threshold:
+    score_order: descending
+plot_customisation:
+  gene_plots:
+    plot_type: bar_cumulative
+    rank_plot_title:
+    roc_curve_title:
+    precision_recall_title:
+  disease_plots:
+    plot_type: bar_cumulative
+    rank_plot_title:
+    roc_curve_title:
+    precision_recall_title:
+  variant_plots:
+    plot_type: bar_cumulative
+    rank_plot_title:
+    roc_curve_title:
+    precision_recall_title:

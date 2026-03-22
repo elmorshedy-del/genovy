@@ -1,0 +1,87 @@
+{
+  "experiment": "child-direct-shadow-profile-borrow",
+  "created_at": "2026-03-20T21:08:22.305Z",
+  "shard_count": 2,
+  "borrowed_parent_disease_count": 255,
+  "borrowed_child_disease_count": 1573,
+  "borrowed_phenotype_rows": 16013,
+  "skipped_duplicate_borrow_rows": 60516,
+  "baseline_summary": {
+    "case_count": 1,
+    "found_count": 1,
+    "found_pct": 100,
+    "top1_count": 1,
+    "top1_pct": 100,
+    "top3_count": 1,
+    "top3_pct": 100,
+    "top5_count": 1,
+    "top5_pct": 100,
+    "top10_count": 1,
+    "top10_pct": 100,
+    "median_rank": 1,
+    "mrr": 1
+  },
+  "shadow_summary": {
+    "case_count": 1,
+    "found_count": 1,
+    "found_pct": 100,
+    "top1_count": 1,
+    "top1_pct": 100,
+    "top3_count": 1,
+    "top3_pct": 100,
+    "top5_count": 1,
+    "top5_pct": 100,
+    "top10_count": 1,
+    "top10_pct": 100,
+    "median_rank": 1,
+    "mrr": 1
+  },
+  "delta_vs_baseline": {
+    "improved": 0,
+    "worsened": 0,
+    "unchanged": 1,
+    "recovered_from_miss": 0,
+    "regressed_to_miss": 0
+  },
+  "top_improvements": [
+    {
+      "case_id": "PMID_34521999_43",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000159140",
+        "hgnc:11183",
+        "ncbigene:6651",
+        "symbol:SON"
+      ],
+      "baseline_rank": 1,
+      "shadow_rank": 1,
+      "movement": 0
+    }
+  ],
+  "top_regressions": [
+    {
+      "case_id": "PMID_34521999_43",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000159140",
+        "hgnc:11183",
+        "ncbigene:6651",
+        "symbol:SON"
+      ],
+      "baseline_rank": 1,
+      "shadow_rank": 1,
+      "movement": 0
+    }
+  ],
+  "per_case": [
+    {
+      "case_id": "PMID_34521999_43",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000159140",
+        "hgnc:11183",
+        "ncbigene:6651",
+        "symbol:SON"
+      ],
+      "baseline_rank": 1,
+      "shadow_rank": 1
+    }
+  ]
+}
