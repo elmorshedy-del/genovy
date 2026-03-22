@@ -87,6 +87,78 @@ Status:
 
 ---
 
+### Entry 16: Phase 0 freshness refresh completed on the working graph
+Date:
+- 2026-03-22
+
+Question:
+- After freezing `v0`, can we refresh the stale/provenance-gap sources on the isolated working graph, prove the exact ingested versions, and learn whether the refresh changes key empty-shell genes like `U2AF2`?
+
+Evidence surface:
+- isolated Railway working DB:
+  - `source_sync_state`
+  - `sync_runs`
+  - narrow gene-level relationship checks for `U2AF2` and `RPGRIP1`
+- working-branch ingestion code
+- targeted migration repairs applied only to the working DB
+
+Intentionally not inspected:
+- raw source dumps
+- broad data crawls
+- Exomiser bundle internals
+- ranking output deltas
+
+Result:
+- Phase 0 completed cleanly on the working graph.
+- The five target sources were refreshed successfully:
+  - `hpo_gene_disease`
+  - `hpo_gene_phenotype`
+  - `clingen_gene_disease_validity`
+  - `clinvar_gene_disease`
+  - `clinvar_variant_summary`
+- The provenance patch worked:
+  - the four previously blank-source-version surfaces now persist usable versions after sync
+- `U2AF2` did not change:
+  - it is still an identity-only shell with zero disease links and zero phenotype links
+- `RPGRIP1` remained healthy and connected after the refresh, so the refresh did not destabilize a normal phenotype carrier
+
+Important numbers:
+- completed sync runs:
+  - `hpo_gene_disease`: run `37`, version `Mon, 16 Feb 2026 17:29:41 GMT`
+  - `hpo_gene_phenotype`: run `38`, version `Mon, 16 Feb 2026 17:29:44 GMT`
+  - `clingen_gene_disease_validity`: run `40`, version `2026-03-22`
+  - `clinvar_gene_disease`: run `41`, version `Sun, 22 Mar 2026 14:17:20 GMT`
+  - `clinvar_variant_summary`: run `45`, version `Sun, 15 Mar 2026 18:11:04 GMT`
+- selected refresh summaries:
+  - `hpo_gene_phenotype`: `5256` entities, `329339` relationships
+  - `clingen_gene_disease_validity`: `3484` relationships, `3463` clinical validity assertions
+  - `clinvar_variant_summary`: `27831` entities, `113014` relationships, `56494` clinical variant-disease assertions
+- post-refresh narrow gene checks:
+  - `U2AF2`: `0` disease links, `0` phenotype links
+  - `RPGRIP1`: `10` disease links, `165` phenotype links
+
+Decision:
+- Mark Phase 0 complete on `v1-working`.
+- Do not keep debating freshness in the abstract; the working graph now reflects the latest targeted source state.
+- Move to Phase 1:
+  - full identity-repair sweep
+  - `U2AF2` specific source/attachment diagnosis
+  - refreshed-graph benchmark rerun before manual enrichment
+
+Own commentary / alternatives:
+- This was an important falsification step. If `U2AF2` had filled in after the refresh, the story would have been “simple staleness.” It did not, so the next step must separate true upstream absence from attachment failure.
+- The schema-repair work turned out to be part of Phase 0 in practice. The Railway working clone looked healthy at the table-count level but still had enough historical drift to break modern sync paths. That is worth remembering for future environment clones.
+- The provenance patch paid for itself immediately. The earlier “likely current” language around HPO gene-disease and gene-phenotype can now be retired on the working graph.
+
+Rollback plan:
+- `v0` remains frozen on GitHub + Railway
+- all schema repairs and source refreshes happened only on `v1-working`
+
+Status:
+- kept
+
+---
+
 ### Entry 2: Direct curated phenotype evidence existed, but the scorer was bypassing it
 Date:
 - 2026-03-17

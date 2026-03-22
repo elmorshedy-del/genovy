@@ -7,20 +7,41 @@ import { withClient } from './pool.js';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const migrationsDir = path.join(__dirname, 'migrations');
 
-async function applyMigration(client, migrationName, sql) {
+async function resolveMigrationNameColumn(client) {
+  const result = await client.query(
+    `
+      SELECT column_name
+      FROM information_schema.columns
+      WHERE table_schema = 'public'
+        AND table_name = 'schema_migrations'
+      ORDER BY ordinal_position ASC
+    `
+  );
+
+  const columnNames = new Set(result.rows.map((row) => row.column_name));
+  if (columnNames.has('migration_name')) {
+    return 'migration_name';
+  }
+  if (columnNames.has('version')) {
+    return 'version';
+  }
+  return 'migration_name';
+}
+
+async function applyMigration(client, migrationName, sql, migrationNameColumn) {
   const existing = await client.query(
-    'SELECT 1 FROM schema_migrations WHERE migration_name = $1 LIMIT 1',
+    `SELECT 1 FROM schema_migrations WHERE ${migrationNameColumn} = $1 LIMIT 1`,
     [migrationName]
   );
   if (existing.rowCount) {
     return false;
   }
 
-  await client.query('BEGIN');
+    await client.query('BEGIN');
   try {
     await client.query(sql);
     await client.query(
-      'INSERT INTO schema_migrations (migration_name) VALUES ($1)',
+      `INSERT INTO schema_migrations (${migrationNameColumn}) VALUES ($1)`,
       [migrationName]
     );
     await client.query('COMMIT');
@@ -42,11 +63,12 @@ export async function runMigrations() {
         applied_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
       )
     `);
+    const migrationNameColumn = await resolveMigrationNameColumn(client);
 
     const applied = [];
     for (const file of files) {
       const sql = fs.readFileSync(path.join(migrationsDir, file), 'utf8');
-      if (await applyMigration(client, file, sql)) {
+      if (await applyMigration(client, file, sql, migrationNameColumn)) {
         applied.push(file);
       }
     }

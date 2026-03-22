@@ -22,7 +22,7 @@ Intentionally not inspected:
 - Exomiser internal source bundle files
 
 Status:
-- active
+- completed on the working environment `genovy-v1-working-20260322`
 
 ## Environment split completed before Phase 0
 
@@ -119,21 +119,95 @@ Code inspection shows three distinct causes:
 
 This is not just a data issue. It is also a provenance-capture issue in the ingestion code.
 
+## Phase 0 completion on the working environment
+
+Using the isolated Railway working DB only, we completed the targeted refresh pass for the five Phase 0 sources that were either stale or missing usable provenance:
+
+| Source | Working env sync run | Completed at (UTC) | Recorded source version after refresh | Outcome |
+| --- | ---: | --- | --- | --- |
+| `hpo_gene_disease` | `37` | `2026-03-22 21:40:29` | `Mon, 16 Feb 2026 17:29:41 GMT` | completed |
+| `hpo_gene_phenotype` | `38` | `2026-03-22 21:46:31` | `Mon, 16 Feb 2026 17:29:44 GMT` | completed |
+| `clingen_gene_disease_validity` | `40` | `2026-03-22 21:50:49` | `2026-03-22` | completed |
+| `clinvar_gene_disease` | `41` | `2026-03-22 21:51:31` | `Sun, 22 Mar 2026 14:17:20 GMT` | completed |
+| `clinvar_variant_summary` | `45` | `2026-03-22 22:05:49` | `Sun, 15 Mar 2026 18:11:04 GMT` | completed |
+
+Important run summaries from the completed refreshes:
+- `hpo_gene_disease` (`37`):
+  - `entities: 5510`
+  - `relationships: 15913`
+  - `sourceRecords: 15914`
+- `hpo_gene_phenotype` (`38`):
+  - `entities: 5256`
+  - `relationships: 329339`
+  - `sourceRecords: 329339`
+- `clingen_gene_disease_validity` (`40`):
+  - `entities: 2868`
+  - `relationships: 3484`
+  - `sourceRecords: 3426`
+  - `clinicalGeneDiseaseValidityAssertions: 3463`
+- `clinvar_gene_disease` (`41`):
+  - `entities: 5123`
+  - `relationships: 12818`
+  - `sourceRecords: 11160`
+- `clinvar_variant_summary` (`45`):
+  - `entities: 27831`
+  - `xrefs: 104497`
+  - `relationships: 113014`
+  - `sourceRecords: 56490`
+  - `clinicalVariantDiseaseAssertions: 56494`
+
+### What Phase 0 proved
+
+1. The stale-source refresh is now complete on `v1-working`
+- The five target sources now have recorded source versions in `source_sync_state`.
+- The two HPO gene surfaces are no longer inferential in the working graph; they now persist exact upstream timestamps.
+
+2. Provenance capture was a real engineering defect
+- Before this patch, `hpo_gene_disease`, `hpo_gene_phenotype`, `clingen_gene_disease_validity`, and `clinvar_gene_disease` left version provenance blank.
+- After the patch and refresh, all four now persist usable source versions.
+- This closes the biggest auditability gap from the initial Phase 0 findings.
+
+3. Global freshness refresh did not solve the `U2AF2` problem
+- Narrow post-refresh verification on the working graph still shows:
+  - canonical `U2AF2` entities exist only as `gene_identity_repair` nodes
+  - `associated_with_disease = 0`
+  - `associated_with_phenotype = 0`
+- This means `U2AF2` remains an identity-only shell even after the current-source refresh.
+- So the `U2AF2` problem is not explained away by simple source staleness alone.
+
+4. Healthy comparator genes remain connected after the refresh
+- Narrow post-refresh verification on `RPGRIP1` shows:
+  - one connected canonical gene node with:
+    - `associated_with_disease = 10`
+    - `associated_with_phenotype = 165`
+  - linked direct disease profiles including:
+    - `cone-rod dystrophy 13`
+    - `Leber congenital amaurosis 6`
+- This confirms the working graph refresh did not break a healthy disease/phenotype carrier gene while fixing the stale-source and provenance surfaces.
+
+### Operational issues encountered and repaired during Phase 0
+
+Refreshing the working graph exposed historical schema drift in the Railway clone. These were repaired in the working environment through targeted migrations before the refreshes could complete reliably:
+- missing constraints and indexes on `relationships`
+- sequence drift on sync-path tables
+- missing conflict targets on `clinical_variant_disease_assertions`
+- missing keys and lookup indexes on `entity_xrefs`
+
+This matters because the Phase 0 refresh result is not just “sources are newer now.” It also proves the working clone can now execute the current ingestion path without tripping over legacy schema damage.
+
 ## Immediate implications for the non-negotiable plan
 
 ### Confirmed for Phase 1
 - `U2AF2` and the full identity-repair sweep remain high priority
-- stale-source re-ingestion is now justified by evidence, not guesswork
+- stale-source re-ingestion is now complete on the working graph
+- Phase 1 should now shift from freshness auditing to:
+  - `U2AF2`-specific re-ingestion and support-path diagnosis
+  - full identity-repaired gene sweep
+  - before/after benchmark delta on the refreshed graph
 
 ### Confirmed for engineering work
-- source-version capture should be fixed before or together with the next ingestion pass
-- otherwise the next freshness audit will still be partly inferential
-- working-branch patch now prepared:
-  - `hpo_gene_disease`
-  - `hpo_gene_phenotype`
-  - `clingen_gene_disease_validity`
-  - `clinvar_gene_disease`
-  will persist usable source versions on the next sync instead of writing blanks
+- source-version capture patch is no longer just prepared; it has now been exercised successfully on the working graph
+- future freshness audits for these five sources can rely on stored working-graph provenance instead of partial inference
 
 ### Not yet completed
 - delta counts of new assertions versus latest upstream
@@ -143,21 +217,22 @@ This is not just a data issue. It is also a provenance-capture issue in the inge
 ## Recommended next commands
 
 1. Pull the full identity-repaired gene list from the repair workflow artifacts or canonical repair script outputs.
-2. Re-ingest stale sources on the working environment only:
-   - ClinGen gene-disease validity
-   - ClinVar gene-disease
-   - ClinVar variant summary
-3. Run the next sync with the new provenance patch so the four provenance-gap sources persist usable source versions.
-4. Re-run the full benchmark after the working graph is refreshed.
+2. Run the `U2AF2`-specific Phase 1 check on the refreshed graph:
+   - confirm whether the current HPO/ClinGen/ClinVar sources now contain any usable `U2AF2` assertions
+   - if yes, diagnose why they still do not attach
+   - if no, document that the gap survives the freshness refresh
+3. Re-run the full benchmark on the refreshed working graph so the post-refresh baseline is recorded before any manual enrichment.
+4. Only after that, proceed to the identity-repair sweep and Phase 2 enrichment tests.
 
 ## Confidence
 
 High confidence:
 - Railway `v0` / `v1-working` isolation is real
-- current stale sources include ClinGen and at least two ClinVar surfaces
-- MONDO/HPO ontology/HPO disease phenotype are current
-- provenance capture is incomplete in code for four ingestion surfaces
+- the five Phase 0 target sources are now refreshed on the working graph
+- MONDO/HPO ontology/HPO disease phenotype were already current
+- provenance capture is now fixed for the four previously blank surfaces on the working graph
+- `U2AF2` still has no disease or phenotype links after the refresh
 
 Medium confidence:
-- `hpo_gene_disease` and `hpo_gene_phenotype` are likely current because they share the same HPO release family as `phenotype.hpoa`
-- but that remains an inference until source version capture is fixed
+- the Phase 1 diagnosis for `U2AF2` will still need one more narrow proof step:
+  - whether refreshed upstream sources currently contain attachable assertions for `U2AF2`, or whether the gap survives upstream freshness entirely

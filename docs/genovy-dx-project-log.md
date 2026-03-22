@@ -297,3 +297,58 @@ Official 100-case phenotype-only gene benchmark vs Exomiser.
   - the first non-negotiable target is no longer vague
   - stale-source re-ingestion is warranted
   - provenance capture also needs fixing so future audits stop depending on inference
+
+## 2026-03-22 Phase 0 Refresh Completion on `v1-working`
+- Working DB only:
+  - completed refreshes for:
+    - `hpo_gene_disease` (`run 37`)
+    - `hpo_gene_phenotype` (`run 38`)
+    - `clingen_gene_disease_validity` (`run 40`)
+    - `clinvar_gene_disease` (`run 41`)
+    - `clinvar_variant_summary` (`run 45`)
+- Recorded source versions now visible in `source_sync_state`:
+  - `hpo_gene_disease`: `Mon, 16 Feb 2026 17:29:41 GMT`
+  - `hpo_gene_phenotype`: `Mon, 16 Feb 2026 17:29:44 GMT`
+  - `clingen_gene_disease_validity`: `2026-03-22`
+  - `clinvar_gene_disease`: `Sun, 22 Mar 2026 14:17:20 GMT`
+  - `clinvar_variant_summary`: `Sun, 15 Mar 2026 18:11:04 GMT`
+- Selected completed refresh summaries:
+  - `hpo_gene_disease`:
+    - `5510` entities
+    - `15913` relationships
+    - `15914` source records
+  - `hpo_gene_phenotype`:
+    - `5256` entities
+    - `329339` relationships
+    - `329339` source records
+  - `clingen_gene_disease_validity`:
+    - `3484` relationships
+    - `3463` clinical validity assertions
+  - `clinvar_gene_disease`:
+    - `5123` entities
+    - `12818` relationships
+  - `clinvar_variant_summary`:
+    - `27831` entities
+    - `104497` xrefs
+    - `113014` relationships
+    - `56494` clinical variant-disease assertions
+- Working-clone schema repairs required before the refresh could complete:
+  - repaired missing constraints on `relationships`
+  - realigned sync-path sequences
+  - repaired missing conflict targets on `clinical_variant_disease_assertions`
+  - repaired missing keys/indexes on `entity_xrefs`
+- Post-refresh narrow verification:
+  - `U2AF2` remains an empty identity shell:
+    - `0` disease links
+    - `0` phenotype links
+  - `RPGRIP1` remains a connected healthy comparator:
+    - `10` disease links
+    - `165` phenotype links
+- Interpretation:
+  - Phase 0 is complete on the working graph
+  - provenance is now recorded cleanly for the previously blank surfaces
+  - the `U2AF2` miss is not explained away by freshness alone
+  - the next move is Phase 1:
+    - full identity-repair sweep
+    - `U2AF2` source/attachment diagnosis
+    - refreshed-graph benchmark rerun before enrichment
