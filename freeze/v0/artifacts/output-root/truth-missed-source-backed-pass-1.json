@@ -1,0 +1,4434 @@
+{
+  "created_at": "2026-03-21T18:56:26.178Z",
+  "source_gap_json": "/Users/ahmedelmorshedy/Genovy/output/truth-missed-term-gaps-pass-1.json",
+  "summary": {
+    "case_count": 18,
+    "any_profile_gap_term_count": 67,
+    "direct_profile_gap_term_count": 118,
+    "any_profile_gap_classification_counts": {
+      "not_found_in_imported_human_direct_sources": 67
+    },
+    "direct_profile_gap_classification_counts": {
+      "not_found_in_imported_human_direct_sources": 118
+    }
+  },
+  "highest_confidence_global_gaps": [
+    {
+      "curie": "HP:0000750",
+      "label": "Delayed speech and language development",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_36446582_Miyatake2017_P1",
+        "PMID_37962958_43"
+      ],
+      "truth_gene_symbols": [
+        "ANKRD11",
+        "U2AF2"
+      ],
+      "case_count": 2,
+      "gene_count": 2
+    },
+    {
+      "curie": "HP:0001155",
+      "label": "Abnormality of the hand",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_36446582_Goldenberg2016_P13",
+        "PMID_36446582_Miyatake2017_P1"
+      ],
+      "truth_gene_symbols": [
+        "ANKRD11"
+      ],
+      "case_count": 2,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0001263",
+      "label": "Global developmental delay",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_36747105_proband",
+        "PMID_37962958_43"
+      ],
+      "truth_gene_symbols": [
+        "U2AF2"
+      ],
+      "case_count": 2,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0000369",
+      "label": "Low-set ears",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_36747105_proband",
+        "PMID_37962958_43"
+      ],
+      "truth_gene_symbols": [
+        "U2AF2"
+      ],
+      "case_count": 2,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0001999",
+      "label": "Abnormal facial shape",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_33766796_16"
+      ],
+      "truth_gene_symbols": [
+        "SETD2"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0005616",
+      "label": "Accelerated skeletal maturation",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_33766796_16"
+      ],
+      "truth_gene_symbols": [
+        "SETD2"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0000646",
+      "label": "Amblyopia",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_32376980_11"
+      ],
+      "truth_gene_symbols": [
+        "TRAF7"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0000739",
+      "label": "Anxiety",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_37962958_43"
+      ],
+      "truth_gene_symbols": [
+        "U2AF2"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0002960",
+      "label": "Autoimmunity",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_37156989_P1"
+      ],
+      "truth_gene_symbols": [
+        "SOCS1"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0001488",
+      "label": "Bilateral ptosis",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_37962958_43"
+      ],
+      "truth_gene_symbols": [
+        "U2AF2"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0002069",
+      "label": "Bilateral tonic-clonic seizure",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_37962958_43"
+      ],
+      "truth_gene_symbols": [
+        "U2AF2"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0010055",
+      "label": "Broad hallux",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_35190816_STX_28944233_270001"
+      ],
+      "truth_gene_symbols": [
+        "STXBP1"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0001169",
+      "label": "Broad palm",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_35190816_STX_28944233_270001"
+      ],
+      "truth_gene_symbols": [
+        "STXBP1"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0003763",
+      "label": "Bruxism",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_35190816_STX_28944233_270001"
+      ],
+      "truth_gene_symbols": [
+        "STXBP1"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0030084",
+      "label": "Clinodactyly",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_37962958_43"
+      ],
+      "truth_gene_symbols": [
+        "U2AF2"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0007305",
+      "label": "CNS demyelination",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_27495153_Patient1"
+      ],
+      "truth_gene_symbols": [
+        "WWOX"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0000405",
+      "label": "Conductive hearing impairment",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_32376980_11"
+      ],
+      "truth_gene_symbols": [
+        "TRAF7"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0002019",
+      "label": "Constipation",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_37962958_43"
+      ],
+      "truth_gene_symbols": [
+        "U2AF2"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0100280",
+      "label": "Crohn's disease",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_37156989_P1"
+      ],
+      "truth_gene_symbols": [
+        "SOCS1"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0031936",
+      "label": "Delayed ability to walk",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_37962958_43"
+      ],
+      "truth_gene_symbols": [
+        "U2AF2"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0010862",
+      "label": "Delayed fine motor development",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_37962958_43"
+      ],
+      "truth_gene_symbols": [
+        "U2AF2"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0001332",
+      "label": "Dystonia",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_37962958_43"
+      ],
+      "truth_gene_symbols": [
+        "U2AF2"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0000712",
+      "label": "Emotional lability",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_35190816_STX_26865513_Patient_45"
+      ],
+      "truth_gene_symbols": [
+        "STXBP1"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0100952",
+      "label": "Enlarged sylvian cistern",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_27495153_Patient1"
+      ],
+      "truth_gene_symbols": [
+        "WWOX"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0002373",
+      "label": "Febrile seizure (within the age range of 3 months to 6 years)",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_36747105_proband"
+      ],
+      "truth_gene_symbols": [
+        "U2AF2"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0007359",
+      "label": "Focal-onset seizure",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_36446582_Miyatake2017_P1"
+      ],
+      "truth_gene_symbols": [
+        "ANKRD11"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0002020",
+      "label": "Gastroesophageal reflux",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_37962958_43"
+      ],
+      "truth_gene_symbols": [
+        "U2AF2"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0002346",
+      "label": "Head tremor",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_35190816_STX_26865513_Patient_45"
+      ],
+      "truth_gene_symbols": [
+        "STXBP1"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0011003",
+      "label": "High myopia",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_32376980_11"
+      ],
+      "truth_gene_symbols": [
+        "TRAF7"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0030890",
+      "label": "Hyperintensity of cerebral white matter on MRI",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_35190816_STX_27159321_LD_0358"
+      ],
+      "truth_gene_symbols": [
+        "STXBP1"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0000540",
+      "label": "Hypermetropia",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_37962958_43"
+      ],
+      "truth_gene_symbols": [
+        "U2AF2"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0000316",
+      "label": "Hypertelorism",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_37962958_43"
+      ],
+      "truth_gene_symbols": [
+        "U2AF2"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0002079",
+      "label": "Hypoplasia of the corpus callosum",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_36747105_proband"
+      ],
+      "truth_gene_symbols": [
+        "U2AF2"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0000064",
+      "label": "Hypoplastic labia minora",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_32376980_11"
+      ],
+      "truth_gene_symbols": [
+        "TRAF7"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0001249",
+      "label": "Intellectual disability",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_37962958_43"
+      ],
+      "truth_gene_symbols": [
+        "U2AF2"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0001511",
+      "label": "Intrauterine growth retardation",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_37962958_43"
+      ],
+      "truth_gene_symbols": [
+        "U2AF2"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0002505",
+      "label": "Loss of ambulation",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_37962958_43"
+      ],
+      "truth_gene_symbols": [
+        "U2AF2"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0000303",
+      "label": "Mandibular prognathia",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_36747105_proband"
+      ],
+      "truth_gene_symbols": [
+        "U2AF2"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0000298",
+      "label": "Mask-like facies",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_32376980_11"
+      ],
+      "truth_gene_symbols": [
+        "TRAF7"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0000252",
+      "label": "Microcephaly",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_36747105_proband"
+      ],
+      "truth_gene_symbols": [
+        "U2AF2"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0008551",
+      "label": "Microtia",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_36747105_proband"
+      ],
+      "truth_gene_symbols": [
+        "U2AF2"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0001270",
+      "label": "Motor delay",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_33766796_16"
+      ],
+      "truth_gene_symbols": [
+        "SETD2"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0045025",
+      "label": "Narrow palpebral fissure",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_32376980_11"
+      ],
+      "truth_gene_symbols": [
+        "TRAF7"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0008770",
+      "label": "Obsessive-compulsive trait",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_37962958_43"
+      ],
+      "truth_gene_symbols": [
+        "U2AF2"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0000388",
+      "label": "Otitis media",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_37156989_P1"
+      ],
+      "truth_gene_symbols": [
+        "SOCS1"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0007021",
+      "label": "Pain insensitivity",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_35190816_STX_28944233_270001"
+      ],
+      "truth_gene_symbols": [
+        "STXBP1"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0001561",
+      "label": "Polyhydramnios",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_37962958_43"
+      ],
+      "truth_gene_symbols": [
+        "U2AF2"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0002033",
+      "label": "Poor suck",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_32376980_11"
+      ],
+      "truth_gene_symbols": [
+        "TRAF7"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0003323",
+      "label": "Progressive muscle weakness",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_27495153_Patient1"
+      ],
+      "truth_gene_symbols": [
+        "WWOX"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0000411",
+      "label": "Protruding ear",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_32376980_11"
+      ],
+      "truth_gene_symbols": [
+        "TRAF7"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0003765",
+      "label": "Psoriasiform dermatitis",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_37156989_P1"
+      ],
+      "truth_gene_symbols": [
+        "SOCS1"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0025452",
+      "label": "Pyoderma gangrenosum",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_37156989_P1"
+      ],
+      "truth_gene_symbols": [
+        "SOCS1"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0002093",
+      "label": "Respiratory insufficiency",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_27495153_Patient1"
+      ],
+      "truth_gene_symbols": [
+        "WWOX"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0000278",
+      "label": "Retrognathia",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_37962958_43"
+      ],
+      "truth_gene_symbols": [
+        "U2AF2"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0001852",
+      "label": "Sandal gap",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_37962958_43"
+      ],
+      "truth_gene_symbols": [
+        "U2AF2"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0012745",
+      "label": "Short palpebral fissure",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_37962958_43"
+      ],
+      "truth_gene_symbols": [
+        "U2AF2"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0000246",
+      "label": "Sinusitis",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_37156989_P1"
+      ],
+      "truth_gene_symbols": [
+        "SOCS1"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0000664",
+      "label": "Synophrys",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_29330883_Subject9"
+      ],
+      "truth_gene_symbols": [
+        "RERE"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0003396",
+      "label": "Syringomyelia",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_37962958_43"
+      ],
+      "truth_gene_symbols": [
+        "U2AF2"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0002078",
+      "label": "Truncal ataxia",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_35190816_STX_26865513_Patient_45"
+      ],
+      "truth_gene_symbols": [
+        "STXBP1"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0007687",
+      "label": "Unilateral ptosis",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_37962958_43"
+      ],
+      "truth_gene_symbols": [
+        "U2AF2"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0031358",
+      "label": "Vegetative state",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_27495153_Patient1"
+      ],
+      "truth_gene_symbols": [
+        "WWOX"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0000431",
+      "label": "Wide nasal bridge",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_37962958_43"
+      ],
+      "truth_gene_symbols": [
+        "U2AF2"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    }
+  ],
+  "direct_profile_gap_classification_summary": [
+    {
+      "curie": "HP:0001263",
+      "label": "Global developmental delay",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_35190816_STX_26865513_Patient_45",
+        "PMID_35190816_STX_27159321_LD_0358",
+        "PMID_35190816_STX_28944233_270001",
+        "PMID_35190816_STX_Syrbe_6",
+        "PMID_36747105_proband",
+        "PMID_37962958_43"
+      ],
+      "truth_gene_symbols": [
+        "STXBP1",
+        "U2AF2"
+      ],
+      "case_count": 6,
+      "gene_count": 2
+    },
+    {
+      "curie": "HP:0000750",
+      "label": "Delayed speech and language development",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_36446582_Miyatake2017_P1",
+        "PMID_37761890_41",
+        "PMID_37761890_43",
+        "PMID_37962958_43"
+      ],
+      "truth_gene_symbols": [
+        "ANKRD11",
+        "PPP2R1A",
+        "U2AF2"
+      ],
+      "case_count": 4,
+      "gene_count": 3
+    },
+    {
+      "curie": "HP:0011968",
+      "label": "Feeding difficulties",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_27495153_Patient1",
+        "PMID_37761890_41",
+        "PMID_37761890_43"
+      ],
+      "truth_gene_symbols": [
+        "PPP2R1A",
+        "WWOX"
+      ],
+      "case_count": 3,
+      "gene_count": 2
+    },
+    {
+      "curie": "HP:0001270",
+      "label": "Motor delay",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_33766796_16",
+        "PMID_37761890_41",
+        "PMID_37761890_43"
+      ],
+      "truth_gene_symbols": [
+        "PPP2R1A",
+        "SETD2"
+      ],
+      "case_count": 3,
+      "gene_count": 2
+    },
+    {
+      "curie": "HP:0002019",
+      "label": "Constipation",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_35190816_STX_28944233_270001",
+        "PMID_37962958_43"
+      ],
+      "truth_gene_symbols": [
+        "STXBP1",
+        "U2AF2"
+      ],
+      "case_count": 2,
+      "gene_count": 2
+    },
+    {
+      "curie": "HP:0002020",
+      "label": "Gastroesophageal reflux",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_35190816_STX_28944233_270001",
+        "PMID_37962958_43"
+      ],
+      "truth_gene_symbols": [
+        "STXBP1",
+        "U2AF2"
+      ],
+      "case_count": 2,
+      "gene_count": 2
+    },
+    {
+      "curie": "HP:0001290",
+      "label": "Generalized hypotonia",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_27495153_Patient1",
+        "PMID_35190816_STX_26865513_Patient_45"
+      ],
+      "truth_gene_symbols": [
+        "STXBP1",
+        "WWOX"
+      ],
+      "case_count": 2,
+      "gene_count": 2
+    },
+    {
+      "curie": "HP:0001249",
+      "label": "Intellectual disability",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_29330883_Subject9",
+        "PMID_37962958_43"
+      ],
+      "truth_gene_symbols": [
+        "RERE",
+        "U2AF2"
+      ],
+      "case_count": 2,
+      "gene_count": 2
+    },
+    {
+      "curie": "HP:0001511",
+      "label": "Intrauterine growth retardation",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_37761890_41",
+        "PMID_37962958_43"
+      ],
+      "truth_gene_symbols": [
+        "PPP2R1A",
+        "U2AF2"
+      ],
+      "case_count": 2,
+      "gene_count": 2
+    },
+    {
+      "curie": "HP:0000278",
+      "label": "Retrognathia",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_32376980_11",
+        "PMID_37962958_43"
+      ],
+      "truth_gene_symbols": [
+        "TRAF7",
+        "U2AF2"
+      ],
+      "case_count": 2,
+      "gene_count": 2
+    },
+    {
+      "curie": "HP:0001155",
+      "label": "Abnormality of the hand",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_36446582_Goldenberg2016_P13",
+        "PMID_36446582_Miyatake2017_P1"
+      ],
+      "truth_gene_symbols": [
+        "ANKRD11"
+      ],
+      "case_count": 2,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0000718",
+      "label": "Aggressive behavior",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_35190816_STX_26865513_Patient_45",
+        "PMID_35190816_STX_28944233_270001"
+      ],
+      "truth_gene_symbols": [
+        "STXBP1"
+      ],
+      "case_count": 2,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0008947",
+      "label": "Floppy infant",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_35190816_STX_28944233_270001",
+        "PMID_35190816_STX_Syrbe_6"
+      ],
+      "truth_gene_symbols": [
+        "STXBP1"
+      ],
+      "case_count": 2,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0000369",
+      "label": "Low-set ears",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_36747105_proband",
+        "PMID_37962958_43"
+      ],
+      "truth_gene_symbols": [
+        "U2AF2"
+      ],
+      "case_count": 2,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0001999",
+      "label": "Abnormal facial shape",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_33766796_16"
+      ],
+      "truth_gene_symbols": [
+        "SETD2"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0005616",
+      "label": "Accelerated skeletal maturation",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_33766796_16"
+      ],
+      "truth_gene_symbols": [
+        "SETD2"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0002345",
+      "label": "Action tremor",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_35190816_STX_26865513_Patient_45"
+      ],
+      "truth_gene_symbols": [
+        "STXBP1"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0000646",
+      "label": "Amblyopia",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_32376980_11"
+      ],
+      "truth_gene_symbols": [
+        "TRAF7"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0000739",
+      "label": "Anxiety",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_37962958_43"
+      ],
+      "truth_gene_symbols": [
+        "U2AF2"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0001251",
+      "label": "Ataxia",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_35190816_STX_Syrbe_6"
+      ],
+      "truth_gene_symbols": [
+        "STXBP1"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0007018",
+      "label": "Attention deficit hyperactivity disorder",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_37761890_41"
+      ],
+      "truth_gene_symbols": [
+        "PPP2R1A"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0000729",
+      "label": "Autistic behavior",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_30580808_Lo_twin_2-Fam-52"
+      ],
+      "truth_gene_symbols": [
+        "SMARCC2"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0002960",
+      "label": "Autoimmunity",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_37156989_P1"
+      ],
+      "truth_gene_symbols": [
+        "SOCS1"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0001488",
+      "label": "Bilateral ptosis",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_37962958_43"
+      ],
+      "truth_gene_symbols": [
+        "U2AF2"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0002069",
+      "label": "Bilateral tonic-clonic seizure",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_37962958_43"
+      ],
+      "truth_gene_symbols": [
+        "U2AF2"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0000283",
+      "label": "Broad face",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_35190816_STX_28944233_270001"
+      ],
+      "truth_gene_symbols": [
+        "STXBP1"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0010055",
+      "label": "Broad hallux",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_35190816_STX_28944233_270001"
+      ],
+      "truth_gene_symbols": [
+        "STXBP1"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0001169",
+      "label": "Broad palm",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_35190816_STX_28944233_270001"
+      ],
+      "truth_gene_symbols": [
+        "STXBP1"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0003763",
+      "label": "Bruxism",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_35190816_STX_28944233_270001"
+      ],
+      "truth_gene_symbols": [
+        "STXBP1"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0001320",
+      "label": "Cerebellar vermis hypoplasia",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_32376980_11"
+      ],
+      "truth_gene_symbols": [
+        "TRAF7"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0030084",
+      "label": "Clinodactyly",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_37962958_43"
+      ],
+      "truth_gene_symbols": [
+        "U2AF2"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0007305",
+      "label": "CNS demyelination",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_27495153_Patient1"
+      ],
+      "truth_gene_symbols": [
+        "WWOX"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0000722",
+      "label": "Compulsive behaviors",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_29330883_Subject9"
+      ],
+      "truth_gene_symbols": [
+        "RERE"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0000405",
+      "label": "Conductive hearing impairment",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_32376980_11"
+      ],
+      "truth_gene_symbols": [
+        "TRAF7"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0100280",
+      "label": "Crohn's disease",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_37156989_P1"
+      ],
+      "truth_gene_symbols": [
+        "SOCS1"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0031936",
+      "label": "Delayed ability to walk",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_37962958_43"
+      ],
+      "truth_gene_symbols": [
+        "U2AF2"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0010862",
+      "label": "Delayed fine motor development",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_37962958_43"
+      ],
+      "truth_gene_symbols": [
+        "U2AF2"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0005280",
+      "label": "Depressed nasal bridge",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_35190816_STX_28944233_270001"
+      ],
+      "truth_gene_symbols": [
+        "STXBP1"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0000268",
+      "label": "Dolichocephaly",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_32376980_11"
+      ],
+      "truth_gene_symbols": [
+        "TRAF7"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0001332",
+      "label": "Dystonia",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_37962958_43"
+      ],
+      "truth_gene_symbols": [
+        "U2AF2"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0011203",
+      "label": "EEG with abnormally slow frequencies",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_35190816_STX_26865513_Patient_45"
+      ],
+      "truth_gene_symbols": [
+        "STXBP1"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0000712",
+      "label": "Emotional lability",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_35190816_STX_26865513_Patient_45"
+      ],
+      "truth_gene_symbols": [
+        "STXBP1"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0100952",
+      "label": "Enlarged sylvian cistern",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_27495153_Patient1"
+      ],
+      "truth_gene_symbols": [
+        "WWOX"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0001508",
+      "label": "Failure to thrive",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_32376980_11"
+      ],
+      "truth_gene_symbols": [
+        "TRAF7"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0002373",
+      "label": "Febrile seizure (within the age range of 3 months to 6 years)",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_36747105_proband"
+      ],
+      "truth_gene_symbols": [
+        "U2AF2"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0007359",
+      "label": "Focal-onset seizure",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_36446582_Miyatake2017_P1"
+      ],
+      "truth_gene_symbols": [
+        "ANKRD11"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0002007",
+      "label": "Frontal bossing",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_35190816_STX_28944233_270001"
+      ],
+      "truth_gene_symbols": [
+        "STXBP1"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0002066",
+      "label": "Gait ataxia",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_35190816_STX_26865513_Patient_45"
+      ],
+      "truth_gene_symbols": [
+        "STXBP1"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0002346",
+      "label": "Head tremor",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_35190816_STX_26865513_Patient_45"
+      ],
+      "truth_gene_symbols": [
+        "STXBP1"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0011003",
+      "label": "High myopia",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_32376980_11"
+      ],
+      "truth_gene_symbols": [
+        "TRAF7"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0000218",
+      "label": "High palate",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_32376980_11"
+      ],
+      "truth_gene_symbols": [
+        "TRAF7"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0030890",
+      "label": "Hyperintensity of cerebral white matter on MRI",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_35190816_STX_27159321_LD_0358"
+      ],
+      "truth_gene_symbols": [
+        "STXBP1"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0000540",
+      "label": "Hypermetropia",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_37962958_43"
+      ],
+      "truth_gene_symbols": [
+        "U2AF2"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0000316",
+      "label": "Hypertelorism",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_37962958_43"
+      ],
+      "truth_gene_symbols": [
+        "U2AF2"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0001276",
+      "label": "Hypertonia",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_27495153_Patient1"
+      ],
+      "truth_gene_symbols": [
+        "WWOX"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0002079",
+      "label": "Hypoplasia of the corpus callosum",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_36747105_proband"
+      ],
+      "truth_gene_symbols": [
+        "U2AF2"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0000064",
+      "label": "Hypoplastic labia minora",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_32376980_11"
+      ],
+      "truth_gene_symbols": [
+        "TRAF7"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0100710",
+      "label": "Impulsivity",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_35190816_STX_28944233_270001"
+      ],
+      "truth_gene_symbols": [
+        "STXBP1"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0002505",
+      "label": "Loss of ambulation",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_37962958_43"
+      ],
+      "truth_gene_symbols": [
+        "U2AF2"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0000303",
+      "label": "Mandibular prognathia",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_36747105_proband"
+      ],
+      "truth_gene_symbols": [
+        "U2AF2"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0000298",
+      "label": "Mask-like facies",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_32376980_11"
+      ],
+      "truth_gene_symbols": [
+        "TRAF7"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0000252",
+      "label": "Microcephaly",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_36747105_proband"
+      ],
+      "truth_gene_symbols": [
+        "U2AF2"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0008551",
+      "label": "Microtia",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_36747105_proband"
+      ],
+      "truth_gene_symbols": [
+        "U2AF2"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0002342",
+      "label": "Moderate intellectual disability",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_37761890_41"
+      ],
+      "truth_gene_symbols": [
+        "PPP2R1A"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0001336",
+      "label": "Myoclonus",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_27495153_Patient1"
+      ],
+      "truth_gene_symbols": [
+        "WWOX"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0000341",
+      "label": "Narrow forehead",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_32376980_11"
+      ],
+      "truth_gene_symbols": [
+        "TRAF7"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0000160",
+      "label": "Narrow mouth",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_35190816_STX_28944233_270001"
+      ],
+      "truth_gene_symbols": [
+        "STXBP1"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0045025",
+      "label": "Narrow palpebral fissure",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_32376980_11"
+      ],
+      "truth_gene_symbols": [
+        "TRAF7"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0000639",
+      "label": "Nystagmus",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_35190816_STX_27159321_LD_0358"
+      ],
+      "truth_gene_symbols": [
+        "STXBP1"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0008770",
+      "label": "Obsessive-compulsive trait",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_37962958_43"
+      ],
+      "truth_gene_symbols": [
+        "U2AF2"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0000543",
+      "label": "Optic disc pallor",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_27495153_Patient1"
+      ],
+      "truth_gene_symbols": [
+        "WWOX"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0000388",
+      "label": "Otitis media",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_37156989_P1"
+      ],
+      "truth_gene_symbols": [
+        "SOCS1"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0007021",
+      "label": "Pain insensitivity",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_35190816_STX_28944233_270001"
+      ],
+      "truth_gene_symbols": [
+        "STXBP1"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0001561",
+      "label": "Polyhydramnios",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_37962958_43"
+      ],
+      "truth_gene_symbols": [
+        "U2AF2"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0002421",
+      "label": "Poor head control",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_27495153_Patient1"
+      ],
+      "truth_gene_symbols": [
+        "WWOX"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0002033",
+      "label": "Poor suck",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_32376980_11"
+      ],
+      "truth_gene_symbols": [
+        "TRAF7"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0003323",
+      "label": "Progressive muscle weakness",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_27495153_Patient1"
+      ],
+      "truth_gene_symbols": [
+        "WWOX"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0000411",
+      "label": "Protruding ear",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_32376980_11"
+      ],
+      "truth_gene_symbols": [
+        "TRAF7"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0003765",
+      "label": "Psoriasiform dermatitis",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_37156989_P1"
+      ],
+      "truth_gene_symbols": [
+        "SOCS1"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0025452",
+      "label": "Pyoderma gangrenosum",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_37156989_P1"
+      ],
+      "truth_gene_symbols": [
+        "SOCS1"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0002093",
+      "label": "Respiratory insufficiency",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_27495153_Patient1"
+      ],
+      "truth_gene_symbols": [
+        "WWOX"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0001852",
+      "label": "Sandal gap",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_37962958_43"
+      ],
+      "truth_gene_symbols": [
+        "U2AF2"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0001250",
+      "label": "Seizure",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_35190816_STX_27159321_LD_0358"
+      ],
+      "truth_gene_symbols": [
+        "STXBP1"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0003196",
+      "label": "Short nose",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_35190816_STX_28944233_270001"
+      ],
+      "truth_gene_symbols": [
+        "STXBP1"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0012745",
+      "label": "Short palpebral fissure",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_37962958_43"
+      ],
+      "truth_gene_symbols": [
+        "U2AF2"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0004322",
+      "label": "Short stature",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_37761890_43"
+      ],
+      "truth_gene_symbols": [
+        "PPP2R1A"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0000246",
+      "label": "Sinusitis",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_37156989_P1"
+      ],
+      "truth_gene_symbols": [
+        "SOCS1"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0000486",
+      "label": "Strabismus",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_35190816_STX_28944233_270001"
+      ],
+      "truth_gene_symbols": [
+        "STXBP1"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0000664",
+      "label": "Synophrys",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_29330883_Subject9"
+      ],
+      "truth_gene_symbols": [
+        "RERE"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0003396",
+      "label": "Syringomyelia",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_37962958_43"
+      ],
+      "truth_gene_symbols": [
+        "U2AF2"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0001182",
+      "label": "Tapered finger",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_35190816_STX_28944233_270001"
+      ],
+      "truth_gene_symbols": [
+        "STXBP1"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0002078",
+      "label": "Truncal ataxia",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_35190816_STX_26865513_Patient_45"
+      ],
+      "truth_gene_symbols": [
+        "STXBP1"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0007687",
+      "label": "Unilateral ptosis",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_37962958_43"
+      ],
+      "truth_gene_symbols": [
+        "U2AF2"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0031358",
+      "label": "Vegetative state",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_27495153_Patient1"
+      ],
+      "truth_gene_symbols": [
+        "WWOX"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0000154",
+      "label": "Wide mouth",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_29330883_Subject9"
+      ],
+      "truth_gene_symbols": [
+        "RERE"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    },
+    {
+      "curie": "HP:0000431",
+      "label": "Wide nasal bridge",
+      "classification": "not_found_in_imported_human_direct_sources",
+      "case_ids": [
+        "PMID_37962958_43"
+      ],
+      "truth_gene_symbols": [
+        "U2AF2"
+      ],
+      "case_count": 1,
+      "gene_count": 1
+    }
+  ],
+  "cases": [
+    {
+      "case_id": "PMID_27495153_Patient1",
+      "truth_gene_symbols": [
+        "WWOX"
+      ],
+      "linked_disease_curies": [
+        "MONDO:0014533",
+        "MONDO:0013687",
+        "MONDO:0100062",
+        "MONDO:0007576"
+      ],
+      "best_support_candidate": {
+        "diseaseCurie": "MONDO:0014533",
+        "diseaseLabel": "developmental and epileptic encephalopathy, 28",
+        "normalizedScore": 0.150649,
+        "diseaseSupportScore": 0.102441,
+        "evidenceWeight": 1,
+        "supportWeight": 0.68,
+        "matchedPhenotypeCount": 17,
+        "directPhenotypeCount": 50,
+        "propagatedPhenotypeCount": 0,
+        "exactPatientOverlap": 6,
+        "exactDirectPatientOverlap": 6
+      },
+      "missing_from_all_linked_any_profiles_classified": [
+        {
+          "term": {
+            "curie": "HP:0007305",
+            "label": "CNS demyelination"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0100952",
+            "label": "Enlarged sylvian cistern"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0003323",
+            "label": "Progressive muscle weakness"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0002093",
+            "label": "Respiratory insufficiency"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0031358",
+            "label": "Vegetative state"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        }
+      ],
+      "missing_from_all_linked_direct_profiles_classified": [
+        {
+          "term": {
+            "curie": "HP:0007305",
+            "label": "CNS demyelination"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0100952",
+            "label": "Enlarged sylvian cistern"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0011968",
+            "label": "Feeding difficulties"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0001290",
+            "label": "Generalized hypotonia"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0001276",
+            "label": "Hypertonia"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0001336",
+            "label": "Myoclonus"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0000543",
+            "label": "Optic disc pallor"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0002421",
+            "label": "Poor head control"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0003323",
+            "label": "Progressive muscle weakness"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0002093",
+            "label": "Respiratory insufficiency"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0031358",
+            "label": "Vegetative state"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        }
+      ]
+    },
+    {
+      "case_id": "PMID_29330883_Subject9",
+      "truth_gene_symbols": [
+        "RERE"
+      ],
+      "linked_disease_curies": [
+        "MONDO:0014857",
+        "MONDO:0100465"
+      ],
+      "best_support_candidate": {
+        "diseaseCurie": "MONDO:0014857",
+        "diseaseLabel": "neurodevelopmental disorder with or without anomalies of the brain, eye, or heart",
+        "normalizedScore": 0.145472,
+        "diseaseSupportScore": 0.098921,
+        "evidenceWeight": 1,
+        "supportWeight": 0.68,
+        "matchedPhenotypeCount": 9,
+        "directPhenotypeCount": 90,
+        "propagatedPhenotypeCount": 0,
+        "exactPatientOverlap": 5,
+        "exactDirectPatientOverlap": 5
+      },
+      "missing_from_all_linked_any_profiles_classified": [
+        {
+          "term": {
+            "curie": "HP:0000664",
+            "label": "Synophrys"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        }
+      ],
+      "missing_from_all_linked_direct_profiles_classified": [
+        {
+          "term": {
+            "curie": "HP:0000722",
+            "label": "Compulsive behaviors"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0001249",
+            "label": "Intellectual disability"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0000664",
+            "label": "Synophrys"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0000154",
+            "label": "Wide mouth"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        }
+      ]
+    },
+    {
+      "case_id": "PMID_30580808_Lo_twin_2-Fam-52",
+      "truth_gene_symbols": [
+        "SMARCC2"
+      ],
+      "linked_disease_curies": [
+        "MONDO:0015452",
+        "MONDO:0032702"
+      ],
+      "best_support_candidate": {
+        "diseaseCurie": "MONDO:0032702",
+        "diseaseLabel": "Coffin-Siris syndrome 8",
+        "normalizedScore": 0.112675,
+        "diseaseSupportScore": 0.076619,
+        "evidenceWeight": 1,
+        "supportWeight": 0.68,
+        "matchedPhenotypeCount": 1,
+        "directPhenotypeCount": 29,
+        "propagatedPhenotypeCount": 0,
+        "exactPatientOverlap": 0,
+        "exactDirectPatientOverlap": 0
+      },
+      "missing_from_all_linked_any_profiles_classified": [],
+      "missing_from_all_linked_direct_profiles_classified": [
+        {
+          "term": {
+            "curie": "HP:0000729",
+            "label": "Autistic behavior"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        }
+      ]
+    },
+    {
+      "case_id": "PMID_32376980_11",
+      "truth_gene_symbols": [
+        "TRAF7"
+      ],
+      "linked_disease_curies": [
+        "MONDO:0032572",
+        "MONDO:0800439"
+      ],
+      "best_support_candidate": {
+        "diseaseCurie": "MONDO:0032572",
+        "diseaseLabel": "cardiac, facial, and digital anomalies with developmental delay",
+        "normalizedScore": 0.182754,
+        "diseaseSupportScore": 0.124273,
+        "evidenceWeight": 1,
+        "supportWeight": 0.68,
+        "matchedPhenotypeCount": 26,
+        "directPhenotypeCount": 74,
+        "propagatedPhenotypeCount": 0,
+        "exactPatientOverlap": 12,
+        "exactDirectPatientOverlap": 12
+      },
+      "missing_from_all_linked_any_profiles_classified": [
+        {
+          "term": {
+            "curie": "HP:0000646",
+            "label": "Amblyopia"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0000405",
+            "label": "Conductive hearing impairment"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0011003",
+            "label": "High myopia"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0000064",
+            "label": "Hypoplastic labia minora"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0000298",
+            "label": "Mask-like facies"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0045025",
+            "label": "Narrow palpebral fissure"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0002033",
+            "label": "Poor suck"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0000411",
+            "label": "Protruding ear"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        }
+      ],
+      "missing_from_all_linked_direct_profiles_classified": [
+        {
+          "term": {
+            "curie": "HP:0000646",
+            "label": "Amblyopia"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0001320",
+            "label": "Cerebellar vermis hypoplasia"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0000405",
+            "label": "Conductive hearing impairment"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0000268",
+            "label": "Dolichocephaly"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0001508",
+            "label": "Failure to thrive"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0011003",
+            "label": "High myopia"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0000218",
+            "label": "High palate"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0000064",
+            "label": "Hypoplastic labia minora"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0000298",
+            "label": "Mask-like facies"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0000341",
+            "label": "Narrow forehead"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0045025",
+            "label": "Narrow palpebral fissure"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0002033",
+            "label": "Poor suck"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0000411",
+            "label": "Protruding ear"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0000278",
+            "label": "Retrognathia"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        }
+      ]
+    },
+    {
+      "case_id": "PMID_33731876_fam421",
+      "truth_gene_symbols": [
+        "SCN2A"
+      ],
+      "linked_disease_curies": [
+        "MONDO:0030064",
+        "MONDO:0017615",
+        "MONDO:0100038",
+        "MONDO:0013388",
+        "MONDO:0011904"
+      ],
+      "best_support_candidate": {
+        "diseaseCurie": "MONDO:0030064",
+        "diseaseLabel": "episodic ataxia, type 9",
+        "normalizedScore": 0.107288,
+        "diseaseSupportScore": 0.072956,
+        "evidenceWeight": 1,
+        "supportWeight": 0.68,
+        "matchedPhenotypeCount": 1,
+        "directPhenotypeCount": 16,
+        "propagatedPhenotypeCount": 0,
+        "exactPatientOverlap": 1,
+        "exactDirectPatientOverlap": 1
+      },
+      "missing_from_all_linked_any_profiles_classified": [],
+      "missing_from_all_linked_direct_profiles_classified": []
+    },
+    {
+      "case_id": "PMID_33766796_16",
+      "truth_gene_symbols": [
+        "SETD2"
+      ],
+      "linked_disease_curies": [
+        "MONDO:0014791",
+        "MONDO:0035706",
+        "MONDO:0800477",
+        "MONDO:0859331",
+        "MONDO:0859333"
+      ],
+      "best_support_candidate": {
+        "diseaseCurie": "MONDO:0014791",
+        "diseaseLabel": "Luscan-Lumish syndrome",
+        "normalizedScore": 0.151844,
+        "diseaseSupportScore": 0.103254,
+        "evidenceWeight": 1,
+        "supportWeight": 0.68,
+        "matchedPhenotypeCount": 6,
+        "directPhenotypeCount": 34,
+        "propagatedPhenotypeCount": 0,
+        "exactPatientOverlap": 3,
+        "exactDirectPatientOverlap": 3
+      },
+      "missing_from_all_linked_any_profiles_classified": [
+        {
+          "term": {
+            "curie": "HP:0001999",
+            "label": "Abnormal facial shape"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0005616",
+            "label": "Accelerated skeletal maturation"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0001270",
+            "label": "Motor delay"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        }
+      ],
+      "missing_from_all_linked_direct_profiles_classified": [
+        {
+          "term": {
+            "curie": "HP:0001999",
+            "label": "Abnormal facial shape"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0005616",
+            "label": "Accelerated skeletal maturation"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0001270",
+            "label": "Motor delay"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        }
+      ]
+    },
+    {
+      "case_id": "PMID_35190816_STX_26865513_Patient_45",
+      "truth_gene_symbols": [
+        "STXBP1"
+      ],
+      "linked_disease_curies": [
+        "MONDO:0012812",
+        "MONDO:0100062"
+      ],
+      "best_support_candidate": {
+        "diseaseCurie": "MONDO:0012812",
+        "diseaseLabel": "developmental and epileptic encephalopathy, 4",
+        "normalizedScore": 0.165072,
+        "diseaseSupportScore": 0.112249,
+        "evidenceWeight": 1,
+        "supportWeight": 0.68,
+        "matchedPhenotypeCount": 11,
+        "directPhenotypeCount": 27,
+        "propagatedPhenotypeCount": 0,
+        "exactPatientOverlap": 2,
+        "exactDirectPatientOverlap": 2
+      },
+      "missing_from_all_linked_any_profiles_classified": [
+        {
+          "term": {
+            "curie": "HP:0000712",
+            "label": "Emotional lability"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0002346",
+            "label": "Head tremor"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0002078",
+            "label": "Truncal ataxia"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        }
+      ],
+      "missing_from_all_linked_direct_profiles_classified": [
+        {
+          "term": {
+            "curie": "HP:0002345",
+            "label": "Action tremor"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0000718",
+            "label": "Aggressive behavior"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0011203",
+            "label": "EEG with abnormally slow frequencies"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0000712",
+            "label": "Emotional lability"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0002066",
+            "label": "Gait ataxia"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0001290",
+            "label": "Generalized hypotonia"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0001263",
+            "label": "Global developmental delay"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0002346",
+            "label": "Head tremor"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0002078",
+            "label": "Truncal ataxia"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        }
+      ]
+    },
+    {
+      "case_id": "PMID_35190816_STX_27159321_LD_0358",
+      "truth_gene_symbols": [
+        "STXBP1"
+      ],
+      "linked_disease_curies": [
+        "MONDO:0012812",
+        "MONDO:0100062"
+      ],
+      "best_support_candidate": {
+        "diseaseCurie": "MONDO:0012812",
+        "diseaseLabel": "developmental and epileptic encephalopathy, 4",
+        "normalizedScore": 0.163499,
+        "diseaseSupportScore": 0.111179,
+        "evidenceWeight": 1,
+        "supportWeight": 0.68,
+        "matchedPhenotypeCount": 5,
+        "directPhenotypeCount": 27,
+        "propagatedPhenotypeCount": 0,
+        "exactPatientOverlap": 1,
+        "exactDirectPatientOverlap": 1
+      },
+      "missing_from_all_linked_any_profiles_classified": [
+        {
+          "term": {
+            "curie": "HP:0030890",
+            "label": "Hyperintensity of cerebral white matter on MRI"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        }
+      ],
+      "missing_from_all_linked_direct_profiles_classified": [
+        {
+          "term": {
+            "curie": "HP:0001263",
+            "label": "Global developmental delay"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0030890",
+            "label": "Hyperintensity of cerebral white matter on MRI"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0000639",
+            "label": "Nystagmus"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0001250",
+            "label": "Seizure"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        }
+      ]
+    },
+    {
+      "case_id": "PMID_35190816_STX_28944233_270001",
+      "truth_gene_symbols": [
+        "STXBP1"
+      ],
+      "linked_disease_curies": [
+        "MONDO:0012812",
+        "MONDO:0100062"
+      ],
+      "best_support_candidate": {
+        "diseaseCurie": "MONDO:0100062",
+        "diseaseLabel": "genetic developmental and epileptic encephalopathy",
+        "normalizedScore": 0.227175,
+        "diseaseSupportScore": 0.077722,
+        "evidenceWeight": 0.342122,
+        "supportWeight": 1,
+        "matchedPhenotypeCount": 18,
+        "directPhenotypeCount": 0,
+        "propagatedPhenotypeCount": 786,
+        "exactPatientOverlap": 14,
+        "exactDirectPatientOverlap": 0
+      },
+      "missing_from_all_linked_any_profiles_classified": [
+        {
+          "term": {
+            "curie": "HP:0010055",
+            "label": "Broad hallux"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0001169",
+            "label": "Broad palm"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0003763",
+            "label": "Bruxism"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0007021",
+            "label": "Pain insensitivity"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        }
+      ],
+      "missing_from_all_linked_direct_profiles_classified": [
+        {
+          "term": {
+            "curie": "HP:0000718",
+            "label": "Aggressive behavior"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0000283",
+            "label": "Broad face"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0010055",
+            "label": "Broad hallux"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0001169",
+            "label": "Broad palm"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0003763",
+            "label": "Bruxism"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0002019",
+            "label": "Constipation"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0005280",
+            "label": "Depressed nasal bridge"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0008947",
+            "label": "Floppy infant"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0002007",
+            "label": "Frontal bossing"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0002020",
+            "label": "Gastroesophageal reflux"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0001263",
+            "label": "Global developmental delay"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0100710",
+            "label": "Impulsivity"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0000160",
+            "label": "Narrow mouth"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0007021",
+            "label": "Pain insensitivity"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0003196",
+            "label": "Short nose"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0000486",
+            "label": "Strabismus"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0001182",
+            "label": "Tapered finger"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        }
+      ]
+    },
+    {
+      "case_id": "PMID_35190816_STX_Syrbe_6",
+      "truth_gene_symbols": [
+        "STXBP1"
+      ],
+      "linked_disease_curies": [
+        "MONDO:0012812",
+        "MONDO:0100062"
+      ],
+      "best_support_candidate": {
+        "diseaseCurie": "MONDO:0012812",
+        "diseaseLabel": "developmental and epileptic encephalopathy, 4",
+        "normalizedScore": 0.152474,
+        "diseaseSupportScore": 0.103682,
+        "evidenceWeight": 1,
+        "supportWeight": 0.68,
+        "matchedPhenotypeCount": 5,
+        "directPhenotypeCount": 27,
+        "propagatedPhenotypeCount": 0,
+        "exactPatientOverlap": 2,
+        "exactDirectPatientOverlap": 2
+      },
+      "missing_from_all_linked_any_profiles_classified": [],
+      "missing_from_all_linked_direct_profiles_classified": [
+        {
+          "term": {
+            "curie": "HP:0001251",
+            "label": "Ataxia"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0008947",
+            "label": "Floppy infant"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0001263",
+            "label": "Global developmental delay"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        }
+      ]
+    },
+    {
+      "case_id": "PMID_36331550_Family16Patient21",
+      "truth_gene_symbols": [
+        "SPTAN1"
+      ],
+      "linked_disease_curies": [
+        "MONDO:0957815",
+        "MONDO:0957875",
+        "MONDO:0957813",
+        "MONDO:0013277",
+        "MONDO:0100062"
+      ],
+      "best_support_candidate": {
+        "diseaseCurie": "MONDO:0957815",
+        "diseaseLabel": "developmental delay with or without epilepsy",
+        "normalizedScore": 0.135008,
+        "diseaseSupportScore": 0.091805,
+        "evidenceWeight": 1,
+        "supportWeight": 0.68,
+        "matchedPhenotypeCount": 2,
+        "directPhenotypeCount": 32,
+        "propagatedPhenotypeCount": 0,
+        "exactPatientOverlap": 2,
+        "exactDirectPatientOverlap": 2
+      },
+      "missing_from_all_linked_any_profiles_classified": [],
+      "missing_from_all_linked_direct_profiles_classified": []
+    },
+    {
+      "case_id": "PMID_36446582_Goldenberg2016_P13",
+      "truth_gene_symbols": [
+        "ANKRD11"
+      ],
+      "linked_disease_curies": [
+        "MONDO:0007846"
+      ],
+      "best_support_candidate": {
+        "diseaseCurie": "MONDO:0007846",
+        "diseaseLabel": "KBG syndrome",
+        "normalizedScore": 0.096918,
+        "diseaseSupportScore": 0.096918,
+        "evidenceWeight": 1,
+        "supportWeight": 1,
+        "matchedPhenotypeCount": 2,
+        "directPhenotypeCount": 66,
+        "propagatedPhenotypeCount": 0,
+        "exactPatientOverlap": 1,
+        "exactDirectPatientOverlap": 1
+      },
+      "missing_from_all_linked_any_profiles_classified": [
+        {
+          "term": {
+            "curie": "HP:0001155",
+            "label": "Abnormality of the hand"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        }
+      ],
+      "missing_from_all_linked_direct_profiles_classified": [
+        {
+          "term": {
+            "curie": "HP:0001155",
+            "label": "Abnormality of the hand"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        }
+      ]
+    },
+    {
+      "case_id": "PMID_36446582_Miyatake2017_P1",
+      "truth_gene_symbols": [
+        "ANKRD11"
+      ],
+      "linked_disease_curies": [
+        "MONDO:0007846"
+      ],
+      "best_support_candidate": {
+        "diseaseCurie": "MONDO:0007846",
+        "diseaseLabel": "KBG syndrome",
+        "normalizedScore": 0.10822,
+        "diseaseSupportScore": 0.10822,
+        "evidenceWeight": 1,
+        "supportWeight": 1,
+        "matchedPhenotypeCount": 8,
+        "directPhenotypeCount": 66,
+        "propagatedPhenotypeCount": 0,
+        "exactPatientOverlap": 5,
+        "exactDirectPatientOverlap": 5
+      },
+      "missing_from_all_linked_any_profiles_classified": [
+        {
+          "term": {
+            "curie": "HP:0001155",
+            "label": "Abnormality of the hand"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0000750",
+            "label": "Delayed speech and language development"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0007359",
+            "label": "Focal-onset seizure"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        }
+      ],
+      "missing_from_all_linked_direct_profiles_classified": [
+        {
+          "term": {
+            "curie": "HP:0001155",
+            "label": "Abnormality of the hand"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0000750",
+            "label": "Delayed speech and language development"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0007359",
+            "label": "Focal-onset seizure"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        }
+      ]
+    },
+    {
+      "case_id": "PMID_36747105_proband",
+      "truth_gene_symbols": [
+        "U2AF2"
+      ],
+      "linked_disease_curies": [],
+      "best_support_candidate": null,
+      "missing_from_all_linked_any_profiles_classified": [
+        {
+          "term": {
+            "curie": "HP:0002373",
+            "label": "Febrile seizure (within the age range of 3 months to 6 years)"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0001263",
+            "label": "Global developmental delay"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0002079",
+            "label": "Hypoplasia of the corpus callosum"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0000369",
+            "label": "Low-set ears"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0000303",
+            "label": "Mandibular prognathia"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0000252",
+            "label": "Microcephaly"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0008551",
+            "label": "Microtia"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        }
+      ],
+      "missing_from_all_linked_direct_profiles_classified": [
+        {
+          "term": {
+            "curie": "HP:0002373",
+            "label": "Febrile seizure (within the age range of 3 months to 6 years)"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0001263",
+            "label": "Global developmental delay"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0002079",
+            "label": "Hypoplasia of the corpus callosum"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0000369",
+            "label": "Low-set ears"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0000303",
+            "label": "Mandibular prognathia"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0000252",
+            "label": "Microcephaly"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0008551",
+            "label": "Microtia"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        }
+      ]
+    },
+    {
+      "case_id": "PMID_37156989_P1",
+      "truth_gene_symbols": [
+        "SOCS1"
+      ],
+      "linked_disease_curies": [
+        "MONDO:0800130"
+      ],
+      "best_support_candidate": {
+        "diseaseCurie": "MONDO:0800130",
+        "diseaseLabel": "autoinflammatory syndrome with immunodeficiency",
+        "normalizedScore": 0.161856,
+        "diseaseSupportScore": 0.161856,
+        "evidenceWeight": 1,
+        "supportWeight": 1,
+        "matchedPhenotypeCount": 6,
+        "directPhenotypeCount": 22,
+        "propagatedPhenotypeCount": 0,
+        "exactPatientOverlap": 0,
+        "exactDirectPatientOverlap": 0
+      },
+      "missing_from_all_linked_any_profiles_classified": [
+        {
+          "term": {
+            "curie": "HP:0002960",
+            "label": "Autoimmunity"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0100280",
+            "label": "Crohn's disease"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0000388",
+            "label": "Otitis media"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0003765",
+            "label": "Psoriasiform dermatitis"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0025452",
+            "label": "Pyoderma gangrenosum"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0000246",
+            "label": "Sinusitis"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        }
+      ],
+      "missing_from_all_linked_direct_profiles_classified": [
+        {
+          "term": {
+            "curie": "HP:0002960",
+            "label": "Autoimmunity"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0100280",
+            "label": "Crohn's disease"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0000388",
+            "label": "Otitis media"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0003765",
+            "label": "Psoriasiform dermatitis"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0025452",
+            "label": "Pyoderma gangrenosum"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0000246",
+            "label": "Sinusitis"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        }
+      ]
+    },
+    {
+      "case_id": "PMID_37761890_41",
+      "truth_gene_symbols": [
+        "PPP2R1A"
+      ],
+      "linked_disease_curies": [
+        "MONDO:0014605",
+        "MONDO:0100038",
+        "MONDO:0957553"
+      ],
+      "best_support_candidate": {
+        "diseaseCurie": "MONDO:0014605",
+        "diseaseLabel": "Houge-Janssens syndrome 2",
+        "normalizedScore": 0.132271,
+        "diseaseSupportScore": 0.089944,
+        "evidenceWeight": 1,
+        "supportWeight": 0.68,
+        "matchedPhenotypeCount": 9,
+        "directPhenotypeCount": 37,
+        "propagatedPhenotypeCount": 0,
+        "exactPatientOverlap": 3,
+        "exactDirectPatientOverlap": 3
+      },
+      "missing_from_all_linked_any_profiles_classified": [],
+      "missing_from_all_linked_direct_profiles_classified": [
+        {
+          "term": {
+            "curie": "HP:0007018",
+            "label": "Attention deficit hyperactivity disorder"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0000750",
+            "label": "Delayed speech and language development"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0011968",
+            "label": "Feeding difficulties"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0001511",
+            "label": "Intrauterine growth retardation"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0002342",
+            "label": "Moderate intellectual disability"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0001270",
+            "label": "Motor delay"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        }
+      ]
+    },
+    {
+      "case_id": "PMID_37761890_43",
+      "truth_gene_symbols": [
+        "PPP2R1A"
+      ],
+      "linked_disease_curies": [
+        "MONDO:0014605",
+        "MONDO:0100038",
+        "MONDO:0957553"
+      ],
+      "best_support_candidate": {
+        "diseaseCurie": "MONDO:0014605",
+        "diseaseLabel": "Houge-Janssens syndrome 2",
+        "normalizedScore": 0.14091,
+        "diseaseSupportScore": 0.095819,
+        "evidenceWeight": 1,
+        "supportWeight": 0.68,
+        "matchedPhenotypeCount": 9,
+        "directPhenotypeCount": 37,
+        "propagatedPhenotypeCount": 0,
+        "exactPatientOverlap": 5,
+        "exactDirectPatientOverlap": 5
+      },
+      "missing_from_all_linked_any_profiles_classified": [],
+      "missing_from_all_linked_direct_profiles_classified": [
+        {
+          "term": {
+            "curie": "HP:0000750",
+            "label": "Delayed speech and language development"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0011968",
+            "label": "Feeding difficulties"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0001270",
+            "label": "Motor delay"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0004322",
+            "label": "Short stature"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        }
+      ]
+    },
+    {
+      "case_id": "PMID_37962958_43",
+      "truth_gene_symbols": [
+        "U2AF2"
+      ],
+      "linked_disease_curies": [],
+      "best_support_candidate": null,
+      "missing_from_all_linked_any_profiles_classified": [
+        {
+          "term": {
+            "curie": "HP:0000739",
+            "label": "Anxiety"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0001488",
+            "label": "Bilateral ptosis"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0002069",
+            "label": "Bilateral tonic-clonic seizure"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0030084",
+            "label": "Clinodactyly"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0002019",
+            "label": "Constipation"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0031936",
+            "label": "Delayed ability to walk"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0010862",
+            "label": "Delayed fine motor development"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0000750",
+            "label": "Delayed speech and language development"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0001332",
+            "label": "Dystonia"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0002020",
+            "label": "Gastroesophageal reflux"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0001263",
+            "label": "Global developmental delay"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0000540",
+            "label": "Hypermetropia"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0000316",
+            "label": "Hypertelorism"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0001249",
+            "label": "Intellectual disability"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0001511",
+            "label": "Intrauterine growth retardation"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0002505",
+            "label": "Loss of ambulation"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0000369",
+            "label": "Low-set ears"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0008770",
+            "label": "Obsessive-compulsive trait"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0001561",
+            "label": "Polyhydramnios"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0000278",
+            "label": "Retrognathia"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0001852",
+            "label": "Sandal gap"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0012745",
+            "label": "Short palpebral fissure"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0003396",
+            "label": "Syringomyelia"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0007687",
+            "label": "Unilateral ptosis"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0000431",
+            "label": "Wide nasal bridge"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        }
+      ],
+      "missing_from_all_linked_direct_profiles_classified": [
+        {
+          "term": {
+            "curie": "HP:0000739",
+            "label": "Anxiety"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0001488",
+            "label": "Bilateral ptosis"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0002069",
+            "label": "Bilateral tonic-clonic seizure"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0030084",
+            "label": "Clinodactyly"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0002019",
+            "label": "Constipation"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0031936",
+            "label": "Delayed ability to walk"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0010862",
+            "label": "Delayed fine motor development"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0000750",
+            "label": "Delayed speech and language development"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0001332",
+            "label": "Dystonia"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0002020",
+            "label": "Gastroesophageal reflux"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0001263",
+            "label": "Global developmental delay"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0000540",
+            "label": "Hypermetropia"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0000316",
+            "label": "Hypertelorism"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0001249",
+            "label": "Intellectual disability"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0001511",
+            "label": "Intrauterine growth retardation"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0002505",
+            "label": "Loss of ambulation"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0000369",
+            "label": "Low-set ears"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0008770",
+            "label": "Obsessive-compulsive trait"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0001561",
+            "label": "Polyhydramnios"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0000278",
+            "label": "Retrognathia"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0001852",
+            "label": "Sandal gap"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0012745",
+            "label": "Short palpebral fissure"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0003396",
+            "label": "Syringomyelia"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0007687",
+            "label": "Unilateral ptosis"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        },
+        {
+          "term": {
+            "curie": "HP:0000431",
+            "label": "Wide nasal bridge"
+          },
+          "classification": "not_found_in_imported_human_direct_sources",
+          "branch_hits": [],
+          "global_direct_hit_count": 0,
+          "global_direct_hit_diseases": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,9 +1,12 @@
 # Genovy DX Project Log
 
-Last updated: 2026-03-17
+Last updated: 2026-03-22
 
 ## Purpose
 This file is the running memory for Genovy DX. It records concrete changes, benchmark results, hypotheses, failed ideas, and next-step logic so progress is not lost between sessions.
+
+Canonical detailed diary:
+- [genovy-dx-diary.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/genovy-dx-diary.md)
 
 ## Benchmark Snapshots
 Official 100-case phenotype-only gene benchmark vs Exomiser.
@@ -20,6 +23,11 @@ Official 100-case phenotype-only gene benchmark vs Exomiser.
 - The main problem is no longer missing genes. It is ranking pressure caused by weak, generic, or poorly connected phenotype profiles for the true gene.
 - The most effective fixes so far have been evidence-surface fixes, not ML.
 - The propagation-weight heuristic is the current best rule-based result because it improved recall and top-10 without introducing broad regressions.
+- The March 20-22 audits sharpened that further:
+  - the `18` misses collapse to `12` unique truth genes
+  - only `U2AF2` is a true empty shell
+  - most remaining misses are undercovered truth branches, not disconnected genes
+  - a smaller set is real ranking/support-selection failure
 
 ## Major Findings
 
@@ -130,6 +138,53 @@ Official 100-case phenotype-only gene benchmark vs Exomiser.
 - Keep direct curated assertions strongest, but let the eventual ranker learn the final blend across direct, extracted, propagated, and embedding-based matches.
 - Use semantic retrieval to map vague patient language to specific clinical assertions.
 - Revisit ML ranking only after the new phenotype layer is stable.
+
+## 2026-03-22 Strategic Synthesis
+- New planning anchor:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/OpusAudit1.md`
+- Main take:
+  - scoring-only experimentation has reached its ceiling on current evidence
+  - the next leverage is pipeline completeness plus truth-branch enrichment
+- Current miss-set split:
+  - empty shell:
+    - `U2AF2`
+  - undercovered linked disease branches:
+    - `WWOX`
+    - `TRAF7`
+    - `SOCS1`
+    - `SETD2`
+    - `ANKRD11`
+    - `RERE`
+  - mixed / unstable support surface:
+    - `STXBP1`
+  - ranking problem with usable evidence:
+    - `SCN2A`
+    - `SPTAN1`
+    - `PPP2R1A`
+    - `SMARCC2`
+- Whole-graph structural spectrum over `5705` logical genes:
+  - hollow shells: `23`
+  - sparse one-sided: `426`
+  - poorly enriched two-sided: `777`
+  - better covered: `4479`
+- Critical caution:
+  - the `777` number is structural graph thinness, not a direct clinical-failure count
+  - do not over-generalize the `U2AF2` pattern
+- Current priority order:
+  1. identity-repair-aware re-ingestion
+  2. source freshness audit
+  3. enrich the six undercovered truth branches
+  4. inspect competitors for the four ranking cases
+  5. test semantic similarity surgically
+  6. train a ranker only after the evidence layer is cleaner
+- Expanded same-day additions now preserved in `OpusAudit1.md`:
+  - covered vs partially covered vs not-covered question inventory
+  - semantic-similarity gate test
+  - ML feature-shape proposal
+  - model-organism channel proposal
+  - STXBP1 and SPTAN1 concrete settlement tests
+  - explicit caution that the database spectrum may become a confidence/product feature
+  - explicit open-info list for what the audit still needs
 
 ## 2026-03-17 Deep HPO Usage Pass
 - Goal: improve scoring without a new source ingest by using richer HPO fields already stored in `clinical_phenotype_assertions`.
