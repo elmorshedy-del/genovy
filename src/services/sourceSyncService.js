@@ -824,81 +824,89 @@ async function markSyncRunFailed(syncRunId, error, { sourceVersion = '', summary
 async function executeSourceSync(sourceKey, options, syncRunId) {
   const { source, handler } = resolveSourceOrThrow(sourceKey);
   if (sourceKey === SOURCE_KEYS.CLINVAR_VARIANT_SUMMARY) {
-    return withClient(async (client) => {
-      const counters = createEmptySyncCounters();
-      let latestSourceVersion = '';
-      let latestSummary = buildClinVarProgressSummary(counters);
-      let batchesApplied = 0;
-      const resumeSkippedRows = resolveResumeSkippedRows(options);
+    const counters = createEmptySyncCounters();
+    let latestSourceVersion = '';
+    let latestSummary = buildClinVarProgressSummary(counters);
+    let batchesApplied = 0;
+    const resumeSkippedRows = resolveResumeSkippedRows(options);
 
-      try {
-        if (resumeSkippedRows > 0) {
-          latestSummary = buildClinVarProgressSummary(counters, {
-            acceptedRowsSeen: resumeSkippedRows,
-            resumeSkippedRows,
-            variantRowsProcessed: 0,
-            variantDiseaseAssertions: 0
-          }, {
-            batchesApplied,
-            progressStatus: CLINVAR_STREAM_PROGRESS_STATUS
-          });
-          await updateSyncRunProgress(client, syncRunId, {
-            sourceVersion: latestSourceVersion,
-            summary: latestSummary
-          });
-        }
-
-        const streamResult = await streamClinVarVariantSummaryBatches(source, options, async (dataset, progress) => {
-          const batchCounters = await applyDatasetInTransaction(client, source, syncRunId, dataset);
-          mergeSyncCounters(counters, batchCounters);
-          batchesApplied += 1;
-          latestSourceVersion = progress?.sourceVersion || latestSourceVersion;
-          latestSummary = buildClinVarProgressSummary(counters, progress, {
-            batchesApplied,
-            progressStatus: CLINVAR_STREAM_PROGRESS_STATUS
-          });
-          await updateSyncRunProgress(client, syncRunId, {
-            sourceVersion: latestSourceVersion,
-            summary: latestSummary
-          });
-        });
-
-        latestSourceVersion = streamResult.sourceVersion || latestSourceVersion;
-        const summary = buildClinVarProgressSummary(counters, streamResult.summary, {
+    try {
+      if (resumeSkippedRows > 0) {
+        latestSummary = buildClinVarProgressSummary(counters, {
+          acceptedRowsSeen: resumeSkippedRows,
+          resumeSkippedRows,
+          variantRowsProcessed: 0,
+          variantDiseaseAssertions: 0
+        }, {
           batchesApplied,
-          progressStatus: 'completed'
+          progressStatus: CLINVAR_STREAM_PROGRESS_STATUS
         });
+        await withClient((client) =>
+          updateSyncRunProgress(client, syncRunId, {
+            sourceVersion: latestSourceVersion,
+            summary: latestSummary
+          })
+        );
+      }
 
+      const streamResult = await streamClinVarVariantSummaryBatches(source, options, async (dataset, progress) => {
+        const batchCounters = await withClient((client) =>
+          applyDatasetInTransaction(client, source, syncRunId, dataset)
+        );
+        mergeSyncCounters(counters, batchCounters);
+        batchesApplied += 1;
+        latestSourceVersion = progress?.sourceVersion || latestSourceVersion;
+        latestSummary = buildClinVarProgressSummary(counters, progress, {
+          batchesApplied,
+          progressStatus: CLINVAR_STREAM_PROGRESS_STATUS
+        });
+        await withClient((client) =>
+          updateSyncRunProgress(client, syncRunId, {
+            sourceVersion: latestSourceVersion,
+            summary: latestSummary
+          })
+        );
+      });
+
+      latestSourceVersion = streamResult.sourceVersion || latestSourceVersion;
+      const summary = buildClinVarProgressSummary(counters, streamResult.summary, {
+        batchesApplied,
+        progressStatus: 'completed'
+      });
+
+      await withClient(async (client) => {
         await finalizeSyncRun(client, syncRunId, {
           status: 'completed',
           sourceVersion: latestSourceVersion,
           summary
         });
         await markSourceSyncState(client, sourceKey, syncRunId, latestSourceVersion, summary);
+      });
 
-        return {
-          syncRunId,
-          sourceKey,
-          sourceVersion: latestSourceVersion,
-          summary
-        };
-      } catch (error) {
-        latestSummary = buildClinVarProgressSummary(latestSummary, null, {
-          batchesApplied,
-          progressStatus: 'failed'
-        });
-        await finalizeSyncRun(client, syncRunId, {
+      return {
+        syncRunId,
+        sourceKey,
+        sourceVersion: latestSourceVersion,
+        summary
+      };
+    } catch (error) {
+      latestSummary = buildClinVarProgressSummary(latestSummary, null, {
+        batchesApplied,
+        progressStatus: 'failed'
+      });
+      await withClient((client) =>
+        finalizeSyncRun(client, syncRunId, {
           status: 'failed',
           sourceVersion: latestSourceVersion,
           errorMessage: error.message || String(error),
           summary: latestSummary
-        });
-        error.syncRunAlreadyFinalized = true;
-        error.syncRunFailureSummary = latestSummary;
-        error.syncRunSourceVersion = latestSourceVersion;
-        throw error;
-      }
-    });
+        })
+      );
+      error.syncRunAlreadyFinalized = true;
+      error.syncRunFailureSummary = latestSummary;
+      error.syncRunSourceVersion = latestSourceVersion;
+      throw error;
+    }
   }
 
   const dataset = await handler(source, options);
