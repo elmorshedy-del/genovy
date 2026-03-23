@@ -12,6 +12,7 @@ const CLINVAR_VARIANT_SUMMARY_DEFAULTS = Object.freeze({
   preferredAssembly: 'GRCh38',
   allowedOriginSimple: 'germline',
   maxRowsPerSync: 0,
+  skipRows: 0,
   batchSize: 5000,
   downloadRetries: 3,
   preferredDiseasePrefixes: Object.freeze(['MONDO', 'ORPHA', 'OMIM', 'MEDGEN'])
@@ -75,6 +76,7 @@ export function resolveClinVarVariantSummaryOptions(options = {}) {
       options.maxRowsPerSync,
       CLINVAR_VARIANT_SUMMARY_DEFAULTS.maxRowsPerSync
     ),
+    skipRows: parseOptionalNonNegativeInteger(options.skipRows, CLINVAR_VARIANT_SUMMARY_DEFAULTS.skipRows),
     batchSize: parsePositiveInteger(options.batchSize, CLINVAR_VARIANT_SUMMARY_DEFAULTS.batchSize),
     downloadRetries: parsePositiveInteger(options.downloadRetries, CLINVAR_VARIANT_SUMMARY_DEFAULTS.downloadRetries)
   };
@@ -620,6 +622,7 @@ function shouldKeepClinVarVariantSummaryRow(row, effectiveOptions) {
 export async function streamClinVarVariantSummaryBatches(source, options = {}, onBatch) {
   const effectiveOptions = resolveClinVarVariantSummaryOptions(options);
   let keptRows = 0;
+  let acceptedRowsSeen = 0;
   let variantDiseaseAssertions = 0;
   let batchBuilder = createClinVarVariantSummaryBatch(source);
   let sourceVersion = '';
@@ -632,6 +635,8 @@ export async function streamClinVarVariantSummaryBatches(source, options = {}, o
       variantRowsProcessed: batchBuilder.acceptedRowCount
     }), {
       sourceVersion,
+      acceptedRowsSeen,
+      resumeSkippedRows: effectiveOptions.skipRows,
       variantRowsProcessed: keptRows,
       variantDiseaseAssertions
     });
@@ -640,6 +645,11 @@ export async function streamClinVarVariantSummaryBatches(source, options = {}, o
 
   sourceVersion = await streamClinVarVariantSummary(source, async (row) => {
     if (!shouldKeepClinVarVariantSummaryRow(row, effectiveOptions)) {
+      return false;
+    }
+
+    acceptedRowsSeen += 1;
+    if (acceptedRowsSeen <= effectiveOptions.skipRows) {
       return false;
     }
 
@@ -658,6 +668,8 @@ export async function streamClinVarVariantSummaryBatches(source, options = {}, o
   return {
     sourceVersion,
     summary: {
+      acceptedRowsSeen,
+      resumeSkippedRows: effectiveOptions.skipRows,
       variantRowsProcessed: keptRows,
       variantDiseaseAssertions
     }
@@ -668,10 +680,16 @@ export async function fetchClinVarVariantSummaryDataset(source, options = {}) {
   const effectiveOptions = resolveClinVarVariantSummaryOptions(options);
   const batchBuilder = createClinVarVariantSummaryBatch(source);
   let keptRows = 0;
+  let acceptedRowsSeen = 0;
   let variantDiseaseAssertions = 0;
 
   const sourceVersion = await streamClinVarVariantSummary(source, async (row) => {
     if (!shouldKeepClinVarVariantSummaryRow(row, effectiveOptions)) {
+      return false;
+    }
+
+    acceptedRowsSeen += 1;
+    if (acceptedRowsSeen <= effectiveOptions.skipRows) {
       return false;
     }
 
@@ -687,6 +705,8 @@ export async function fetchClinVarVariantSummaryDataset(source, options = {}) {
     ...dataset,
     aliases: [],
     summary: {
+      acceptedRowsSeen,
+      resumeSkippedRows: effectiveOptions.skipRows,
       variantRowsProcessed: keptRows,
       variantDiseaseAssertions
     }

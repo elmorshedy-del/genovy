@@ -99,6 +99,14 @@ function buildClinVarProgressSummary(counters, streamSummary = {}, extra = {}) {
   };
 }
 
+function resolveResumeSkippedRows(options = {}) {
+  const parsed = Number(options.skipRows || 0);
+  if (!Number.isFinite(parsed) || parsed < 0) {
+    return 0;
+  }
+  return Math.floor(parsed);
+}
+
 function mergeSyncCounters(target, delta) {
   for (const key of Object.keys(target)) {
     target[key] += Number(delta?.[key] || 0);
@@ -821,8 +829,25 @@ async function executeSourceSync(sourceKey, options, syncRunId) {
       let latestSourceVersion = '';
       let latestSummary = buildClinVarProgressSummary(counters);
       let batchesApplied = 0;
+      const resumeSkippedRows = resolveResumeSkippedRows(options);
 
       try {
+        if (resumeSkippedRows > 0) {
+          latestSummary = buildClinVarProgressSummary(counters, {
+            acceptedRowsSeen: resumeSkippedRows,
+            resumeSkippedRows,
+            variantRowsProcessed: 0,
+            variantDiseaseAssertions: 0
+          }, {
+            batchesApplied,
+            progressStatus: CLINVAR_STREAM_PROGRESS_STATUS
+          });
+          await updateSyncRunProgress(client, syncRunId, {
+            sourceVersion: latestSourceVersion,
+            summary: latestSummary
+          });
+        }
+
         const streamResult = await streamClinVarVariantSummaryBatches(source, options, async (dataset, progress) => {
           const batchCounters = await applyDatasetInTransaction(client, source, syncRunId, dataset);
           mergeSyncCounters(counters, batchCounters);

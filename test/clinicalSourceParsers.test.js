@@ -109,6 +109,7 @@ test('resolveClinVarVariantSummaryOptions defaults to uncapped full-file sync wi
     allowedOriginSimple: 'germline',
     localPath: '',
     maxRowsPerSync: 0,
+    skipRows: 0,
     batchSize: 5000,
     downloadRetries: 3
   });
@@ -116,6 +117,7 @@ test('resolveClinVarVariantSummaryOptions defaults to uncapped full-file sync wi
   assert.deepEqual(
     resolveClinVarVariantSummaryOptions({
       maxRowsPerSync: '250',
+      skipRows: '125',
       batchSize: '750',
       localPath: ' /tmp/clinvar_variant_summary.txt.gz '
     }),
@@ -124,6 +126,7 @@ test('resolveClinVarVariantSummaryOptions defaults to uncapped full-file sync wi
       allowedOriginSimple: 'germline',
       localPath: '/tmp/clinvar_variant_summary.txt.gz',
       maxRowsPerSync: 250,
+      skipRows: 125,
       batchSize: 750,
       downloadRetries: 3
     }

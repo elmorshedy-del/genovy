@@ -94,6 +94,8 @@ function buildSnapshot(run, processInfo, previousState) {
   const summary = run?.summary_json || {};
   const checkedAt = new Date().toISOString();
   const variantRowsProcessed = toNumber(summary.variantRowsProcessed);
+  const acceptedRowsSeen = toNumber(summary.acceptedRowsSeen || summary.variantRowsProcessed);
+  const resumeSkippedRows = toNumber(summary.resumeSkippedRows);
   const batchesApplied = toNumber(summary.batchesApplied);
   const relationships = toNumber(summary.relationships);
   const clinicalVariantDiseaseAssertions = toNumber(summary.clinicalVariantDiseaseAssertions);
@@ -106,13 +108,14 @@ function buildSnapshot(run, processInfo, previousState) {
 
   const sameRun = previousState?.syncRunId === run?.sync_run_id;
   const deltaVariantRows = sameRun ? variantRowsProcessed - toNumber(previousState?.variantRowsProcessed) : null;
+  const deltaAcceptedRowsSeen = sameRun ? acceptedRowsSeen - toNumber(previousState?.acceptedRowsSeen) : null;
   const deltaBatches = sameRun ? batchesApplied - toNumber(previousState?.batchesApplied) : null;
   const advancedSincePrevious = sameRun
-    ? deltaVariantRows > 0 || deltaBatches > 0 || relationships > toNumber(previousState?.relationships)
+    ? deltaAcceptedRowsSeen > 0 || deltaVariantRows > 0 || deltaBatches > 0 || relationships > toNumber(previousState?.relationships)
     : Boolean(run);
 
-  const roughPercentCompleteLowerBound = variantRowsProcessed
-    ? Math.min(100, (variantRowsProcessed / U2AF2_ACCEPTED_ROW_LOWER_BOUND) * 100)
+  const roughPercentCompleteLowerBound = acceptedRowsSeen
+    ? Math.min(100, (acceptedRowsSeen / U2AF2_ACCEPTED_ROW_LOWER_BOUND) * 100)
     : 0;
   const roughPercentLeftLowerBound = Math.max(0, 100 - roughPercentCompleteLowerBound);
 
@@ -141,12 +144,15 @@ function buildSnapshot(run, processInfo, previousState) {
     processMatches: processInfo.matches,
     processError: processInfo.error || '',
     batchesApplied,
+    acceptedRowsSeen,
+    resumeSkippedRows,
     variantRowsProcessed,
     relationships,
     clinicalVariantDiseaseAssertions,
     roughPercentCompleteLowerBound: Number(roughPercentCompleteLowerBound.toFixed(1)),
     roughPercentLeftLowerBound: Number(roughPercentLeftLowerBound.toFixed(1)),
     advancedSincePrevious,
+    deltaAcceptedRowsSeen,
     deltaVariantRows,
     deltaBatches,
     minutesSincePrevious,
@@ -167,6 +173,7 @@ function buildHumanSummary(snapshot, previousRun) {
     `progress=${snapshot.progressStatus}`,
     `runner=${snapshot.runnerSignal}`,
     `batches=${snapshot.batchesApplied}`,
+    `accepted_seen=${snapshot.acceptedRowsSeen}`,
     `rows=${snapshot.variantRowsProcessed}`,
     `relationships=${snapshot.relationships}`,
     `clinicalVariantDiseaseAssertions=${snapshot.clinicalVariantDiseaseAssertions}`,
@@ -176,6 +183,12 @@ function buildHumanSummary(snapshot, previousRun) {
 
   if (snapshot.errorMessage) {
     parts.push(`error=${snapshot.errorMessage}`);
+  }
+  if (snapshot.resumeSkippedRows > 0) {
+    parts.push(`resume_skipped=${snapshot.resumeSkippedRows}`);
+  }
+  if (snapshot.advancedSincePrevious === true && snapshot.deltaAcceptedRowsSeen != null) {
+    parts.push(`delta_seen=${snapshot.deltaAcceptedRowsSeen}`);
   }
   if (snapshot.advancedSincePrevious === true && snapshot.deltaVariantRows != null) {
     parts.push(`delta_rows=${snapshot.deltaVariantRows}`);
