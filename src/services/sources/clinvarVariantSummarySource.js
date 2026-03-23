@@ -1,6 +1,9 @@
-import { createReadStream, promises as fs } from 'node:fs';
+import { createReadStream, createWriteStream, promises as fs } from 'node:fs';
+import os from 'node:os';
+import path from 'node:path';
 import readline from 'readline';
-import { Readable } from 'stream';
+import { Readable, Writable } from 'stream';
+import { pipeline } from 'stream/promises';
 import zlib from 'zlib';
 import { HTTP_CONSTANTS } from '../../constants/http.js';
 import { normalizeCurie, normalizeNcbiGeneCurie } from '../../lib/curies.js';
@@ -10,8 +13,11 @@ const CLINVAR_VARIANT_SUMMARY_DEFAULTS = Object.freeze({
   allowedOriginSimple: 'germline',
   maxRowsPerSync: 0,
   batchSize: 5000,
+  downloadRetries: 3,
   preferredDiseasePrefixes: Object.freeze(['MONDO', 'ORPHA', 'OMIM', 'MEDGEN'])
 });
+
+const CLINVAR_VARIANT_SUMMARY_STAGE_PREFIX = 'genovy-clinvar-';
 
 const CLINVAR_DERIVED_GENE_DISEASE_QUALIFIERS = Object.freeze({
   derivation: 'clinvar_variant_summary'
@@ -69,7 +75,8 @@ export function resolveClinVarVariantSummaryOptions(options = {}) {
       options.maxRowsPerSync,
       CLINVAR_VARIANT_SUMMARY_DEFAULTS.maxRowsPerSync
     ),
-    batchSize: parsePositiveInteger(options.batchSize, CLINVAR_VARIANT_SUMMARY_DEFAULTS.batchSize)
+    batchSize: parsePositiveInteger(options.batchSize, CLINVAR_VARIANT_SUMMARY_DEFAULTS.batchSize),
+    downloadRetries: parsePositiveInteger(options.downloadRetries, CLINVAR_VARIANT_SUMMARY_DEFAULTS.downloadRetries)
   };
 }
 
@@ -278,6 +285,7 @@ async function streamClinVarVariantSummary(source, onRow, options = {}) {
   let sourceVersion = '';
   let sourceStream = null;
   let inputStream = null;
+  let cleanup = async () => {};
 
   if (effectiveOptions.localPath) {
     const fileStats = await fs.stat(effectiveOptions.localPath);
@@ -285,14 +293,10 @@ async function streamClinVarVariantSummary(source, onRow, options = {}) {
     sourceStream = createReadStream(effectiveOptions.localPath);
     inputStream = sourceStream.pipe(zlib.createGunzip());
   } else {
-    const response = await fetch(source.accessUrl, {
-      headers: { 'user-agent': HTTP_CONSTANTS.userAgent }
-    });
-    if (!response.ok || !response.body) {
-      throw new Error(`ClinVar variant summary fetch failed: ${response.status}`);
-    }
-    sourceVersion = response.headers.get('last-modified') || '';
-    sourceStream = Readable.fromWeb(response.body);
+    const stagedFile = await stageClinVarVariantSummaryFile(source, effectiveOptions);
+    sourceVersion = stagedFile.sourceVersion;
+    cleanup = stagedFile.cleanup;
+    sourceStream = createReadStream(stagedFile.localPath);
     inputStream = sourceStream.pipe(zlib.createGunzip());
   }
   const lineReader = readline.createInterface({
@@ -332,6 +336,7 @@ async function streamClinVarVariantSummary(source, onRow, options = {}) {
     }
   } finally {
     lineReader.close();
+    await cleanup();
   }
 
   if (streamError) {
@@ -339,6 +344,66 @@ async function streamClinVarVariantSummary(source, onRow, options = {}) {
   }
 
   return sourceVersion;
+}
+
+async function removePathQuietly(targetPath) {
+  if (!targetPath) {
+    return;
+  }
+  try {
+    await fs.rm(targetPath, { recursive: true, force: true });
+  } catch {
+    // Best-effort temp cleanup only.
+  }
+}
+
+async function verifyClinVarVariantSummaryArchive(localPath) {
+  await pipeline(
+    createReadStream(localPath),
+    zlib.createGunzip(),
+    new Writable({
+      write(_chunk, _encoding, callback) {
+        callback();
+      }
+    })
+  );
+}
+
+async function downloadClinVarVariantSummaryArchive(source, destinationPath) {
+  const response = await fetch(source.accessUrl, {
+    headers: { 'user-agent': HTTP_CONSTANTS.userAgent }
+  });
+  if (!response.ok || !response.body) {
+    throw new Error(`ClinVar variant summary fetch failed: ${response.status}`);
+  }
+
+  await pipeline(Readable.fromWeb(response.body), createWriteStream(destinationPath));
+  return response.headers.get('last-modified') || '';
+}
+
+async function stageClinVarVariantSummaryFile(source, effectiveOptions) {
+  const stageDir = await fs.mkdtemp(path.join(os.tmpdir(), CLINVAR_VARIANT_SUMMARY_STAGE_PREFIX));
+  const localPath = path.join(stageDir, 'variant_summary.txt.gz');
+  let sourceVersion = '';
+  let lastError = null;
+
+  for (let attempt = 1; attempt <= effectiveOptions.downloadRetries; attempt += 1) {
+    try {
+      sourceVersion = await downloadClinVarVariantSummaryArchive(source, localPath);
+      await verifyClinVarVariantSummaryArchive(localPath);
+      return {
+        localPath,
+        sourceVersion,
+        cleanup: async () => removePathQuietly(stageDir)
+      };
+    } catch (error) {
+      lastError = error;
+      await removePathQuietly(localPath);
+    }
+  }
+
+  await removePathQuietly(stageDir);
+  throw lastError || new Error('ClinVar variant summary staging failed.');
 }
 
 function createClinVarVariantSummaryBatch(source) {
@@ -557,20 +622,23 @@ export async function streamClinVarVariantSummaryBatches(source, options = {}, o
   let keptRows = 0;
   let variantDiseaseAssertions = 0;
   let batchBuilder = createClinVarVariantSummaryBatch(source);
+  let sourceVersion = '';
 
   async function flushCurrentBatch() {
     if (!batchBuilder.acceptedRowCount) {
       return;
     }
-    await onBatch(
-      batchBuilder.flushDataset({
-        variantRowsProcessed: batchBuilder.acceptedRowCount
-      })
-    );
+    await onBatch(batchBuilder.flushDataset({
+      variantRowsProcessed: batchBuilder.acceptedRowCount
+    }), {
+      sourceVersion,
+      variantRowsProcessed: keptRows,
+      variantDiseaseAssertions
+    });
     batchBuilder = createClinVarVariantSummaryBatch(source);
   }
 
-  const sourceVersion = await streamClinVarVariantSummary(source, async (row) => {
+  sourceVersion = await streamClinVarVariantSummary(source, async (row) => {
     if (!shouldKeepClinVarVariantSummaryRow(row, effectiveOptions)) {
       return false;
     }

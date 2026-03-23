@@ -9,6 +9,7 @@ import {
   listActiveSourceKeys,
   listSuccessfulSourceKeys,
   markSourceSyncState,
+  updateSyncRunProgress,
   supersedeRunningSyncRunsForSource
 } from '../repositories/sourceRepository.js';
 import {
@@ -74,6 +75,7 @@ const BOOTSTRAP_DEFAULTS = Object.freeze({
 const RELATIONSHIP_BATCH_SIZE = 500;
 const CLINICAL_ASSERTION_BATCH_SIZE = 500;
 const ACTIVE_SOURCE_SYNCS = new Map();
+const CLINVAR_STREAM_PROGRESS_STATUS = 'running';
 
 function createEmptySyncCounters() {
   return {
@@ -86,6 +88,14 @@ function createEmptySyncCounters() {
     clinicalNaturalHistoryAssertions: 0,
     clinicalGeneDiseaseValidityAssertions: 0,
     clinicalVariantDiseaseAssertions: 0
+  };
+}
+
+function buildClinVarProgressSummary(counters, streamSummary = {}, extra = {}) {
+  return {
+    ...counters,
+    ...(streamSummary || {}),
+    ...extra
   };
 }
 
@@ -792,12 +802,13 @@ async function createSourceSyncRun(sourceKey, options, requestedBy) {
   });
 }
 
-async function markSyncRunFailed(syncRunId, error) {
+async function markSyncRunFailed(syncRunId, error, { sourceVersion = '', summary = {} } = {}) {
   return withClient((client) =>
     finalizeSyncRun(client, syncRunId, {
       status: 'failed',
+      sourceVersion,
       errorMessage: error.message || String(error),
-      summary: {}
+      summary
     })
   );
 }
@@ -807,37 +818,59 @@ async function executeSourceSync(sourceKey, options, syncRunId) {
   if (sourceKey === SOURCE_KEYS.CLINVAR_VARIANT_SUMMARY) {
     return withClient(async (client) => {
       const counters = createEmptySyncCounters();
+      let latestSourceVersion = '';
+      let latestSummary = buildClinVarProgressSummary(counters);
+      let batchesApplied = 0;
 
       try {
-        const streamResult = await streamClinVarVariantSummaryBatches(source, options, async (dataset) => {
+        const streamResult = await streamClinVarVariantSummaryBatches(source, options, async (dataset, progress) => {
           const batchCounters = await applyDatasetInTransaction(client, source, syncRunId, dataset);
           mergeSyncCounters(counters, batchCounters);
+          batchesApplied += 1;
+          latestSourceVersion = progress?.sourceVersion || latestSourceVersion;
+          latestSummary = buildClinVarProgressSummary(counters, progress, {
+            batchesApplied,
+            progressStatus: CLINVAR_STREAM_PROGRESS_STATUS
+          });
+          await updateSyncRunProgress(client, syncRunId, {
+            sourceVersion: latestSourceVersion,
+            summary: latestSummary
+          });
         });
 
-        const summary = {
-          ...counters,
-          ...(streamResult.summary || {})
-        };
+        latestSourceVersion = streamResult.sourceVersion || latestSourceVersion;
+        const summary = buildClinVarProgressSummary(counters, streamResult.summary, {
+          batchesApplied,
+          progressStatus: 'completed'
+        });
 
         await finalizeSyncRun(client, syncRunId, {
           status: 'completed',
-          sourceVersion: streamResult.sourceVersion || '',
+          sourceVersion: latestSourceVersion,
           summary
         });
-        await markSourceSyncState(client, sourceKey, syncRunId, streamResult.sourceVersion || '', summary);
+        await markSourceSyncState(client, sourceKey, syncRunId, latestSourceVersion, summary);
 
         return {
           syncRunId,
           sourceKey,
-          sourceVersion: streamResult.sourceVersion || '',
+          sourceVersion: latestSourceVersion,
           summary
         };
       } catch (error) {
+        latestSummary = buildClinVarProgressSummary(latestSummary, null, {
+          batchesApplied,
+          progressStatus: 'failed'
+        });
         await finalizeSyncRun(client, syncRunId, {
           status: 'failed',
+          sourceVersion: latestSourceVersion,
           errorMessage: error.message || String(error),
-          summary: {}
+          summary: latestSummary
         });
+        error.syncRunAlreadyFinalized = true;
+        error.syncRunFailureSummary = latestSummary;
+        error.syncRunSourceVersion = latestSourceVersion;
         throw error;
       }
     });
@@ -892,14 +925,19 @@ async function runRegisteredSourceSync(sourceKey, options, syncRunId) {
   try {
     return await executeSourceSync(sourceKey, options, syncRunId);
   } catch (error) {
-    try {
-      await markSyncRunFailed(syncRunId, error);
-    } catch (finalizeError) {
-      console.error('[genovy] source sync finalize failed', {
-        sourceKey,
-        syncRunId,
-        error: finalizeError.message || String(finalizeError)
-      });
+    if (!error.syncRunAlreadyFinalized) {
+      try {
+        await markSyncRunFailed(syncRunId, error, {
+          sourceVersion: error.syncRunSourceVersion || '',
+          summary: error.syncRunFailureSummary || {}
+        });
+      } catch (finalizeError) {
+        console.error('[genovy] source sync finalize failed', {
+          sourceKey,
+          syncRunId,
+          error: finalizeError.message || String(finalizeError)
+        });
+      }
     }
     throw error;
   } finally {

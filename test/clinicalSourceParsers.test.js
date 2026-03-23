@@ -109,7 +109,8 @@ test('resolveClinVarVariantSummaryOptions defaults to uncapped full-file sync wi
     allowedOriginSimple: 'germline',
     localPath: '',
     maxRowsPerSync: 0,
-    batchSize: 5000
+    batchSize: 5000,
+    downloadRetries: 3
   });
 
   assert.deepEqual(
@@ -123,7 +124,8 @@ test('resolveClinVarVariantSummaryOptions defaults to uncapped full-file sync wi
       allowedOriginSimple: 'germline',
       localPath: '/tmp/clinvar_variant_summary.txt.gz',
       maxRowsPerSync: 250,
-      batchSize: 750
+      batchSize: 750,
+      downloadRetries: 3
     }
   );
 });
