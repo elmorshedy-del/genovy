@@ -39,7 +39,10 @@ import { fetchHpoGeneDiseaseDataset } from './sources/hpoGeneDiseaseSource.js';
 import { fetchHpoGenePhenotypeDataset } from './sources/hpoGenePhenotypeSource.js';
 import { fetchClinGenGeneDiseaseValidityDataset } from './sources/clingenGeneDiseaseValiditySource.js';
 import { fetchClinvarGeneDiseaseDataset } from './sources/clinvarGeneDiseaseSource.js';
-import { fetchClinVarVariantSummaryDataset } from './sources/clinvarVariantSummarySource.js';
+import {
+  fetchClinVarVariantSummaryDataset,
+  streamClinVarVariantSummaryBatches
+} from './sources/clinvarVariantSummarySource.js';
 import { fetchClinicalTrialsDataset } from './sources/clinicalTrialsSource.js';
 import { normalizeCurie, normalizeLabel, stableHash } from '../lib/curies.js';
 import { filterBootstrapSourceKeys, shouldSkipCompletedSources } from '../lib/bootstrapSources.js';
@@ -71,6 +74,26 @@ const BOOTSTRAP_DEFAULTS = Object.freeze({
 const RELATIONSHIP_BATCH_SIZE = 500;
 const CLINICAL_ASSERTION_BATCH_SIZE = 500;
 const ACTIVE_SOURCE_SYNCS = new Map();
+
+function createEmptySyncCounters() {
+  return {
+    entities: 0,
+    aliases: 0,
+    xrefs: 0,
+    relationships: 0,
+    sourceRecords: 0,
+    clinicalPhenotypeAssertions: 0,
+    clinicalNaturalHistoryAssertions: 0,
+    clinicalGeneDiseaseValidityAssertions: 0,
+    clinicalVariantDiseaseAssertions: 0
+  };
+}
+
+function mergeSyncCounters(target, delta) {
+  for (const key of Object.keys(target)) {
+    target[key] += Number(delta?.[key] || 0);
+  }
+}
 
 function dedupeRowsByKey(rows, buildKey) {
   const deduped = new Map();
@@ -162,17 +185,7 @@ function buildDisabledSourceResult(sourceKey) {
 async function applyDataset(client, source, syncRunId, dataset) {
   const entityIdByCurie = new Map();
   const entityIdByLabel = new Map();
-  const counters = {
-    entities: 0,
-    aliases: 0,
-    xrefs: 0,
-    relationships: 0,
-    sourceRecords: 0,
-    clinicalPhenotypeAssertions: 0,
-    clinicalNaturalHistoryAssertions: 0,
-    clinicalGeneDiseaseValidityAssertions: 0,
-    clinicalVariantDiseaseAssertions: 0
-  };
+  const counters = createEmptySyncCounters();
 
   const dedupedEntities = dedupeRowsByKey(
     (dataset.entities || []).filter((entity) => normalizeCurie(entity.canonicalCurie)),
@@ -377,6 +390,26 @@ async function applyDataset(client, source, syncRunId, dataset) {
   }
 
   return counters;
+}
+
+async function applyDatasetInTransaction(client, source, syncRunId, dataset) {
+  await client.query('BEGIN');
+  try {
+    const counters = await applyDataset(client, source, syncRunId, dataset);
+    await client.query('COMMIT');
+    return counters;
+  } catch (error) {
+    try {
+      await client.query('ROLLBACK');
+    } catch (rollbackError) {
+      console.error('[genovy] streamed source sync rollback failed', {
+        sourceKey: source.sourceKey,
+        syncRunId,
+        error: rollbackError.message || String(rollbackError)
+      });
+    }
+    throw error;
+  }
 }
 
 function buildResolvedRelationshipKey(subjectEntityId, predicateKey, objectEntityId, qualifiers) {
@@ -771,6 +804,45 @@ async function markSyncRunFailed(syncRunId, error) {
 
 async function executeSourceSync(sourceKey, options, syncRunId) {
   const { source, handler } = resolveSourceOrThrow(sourceKey);
+  if (sourceKey === SOURCE_KEYS.CLINVAR_VARIANT_SUMMARY) {
+    return withClient(async (client) => {
+      const counters = createEmptySyncCounters();
+
+      try {
+        const streamResult = await streamClinVarVariantSummaryBatches(source, options, async (dataset) => {
+          const batchCounters = await applyDatasetInTransaction(client, source, syncRunId, dataset);
+          mergeSyncCounters(counters, batchCounters);
+        });
+
+        const summary = {
+          ...counters,
+          ...(streamResult.summary || {})
+        };
+
+        await finalizeSyncRun(client, syncRunId, {
+          status: 'completed',
+          sourceVersion: streamResult.sourceVersion || '',
+          summary
+        });
+        await markSourceSyncState(client, sourceKey, syncRunId, streamResult.sourceVersion || '', summary);
+
+        return {
+          syncRunId,
+          sourceKey,
+          sourceVersion: streamResult.sourceVersion || '',
+          summary
+        };
+      } catch (error) {
+        await finalizeSyncRun(client, syncRunId, {
+          status: 'failed',
+          errorMessage: error.message || String(error),
+          summary: {}
+        });
+        throw error;
+      }
+    });
+  }
+
   const dataset = await handler(source, options);
 
   return withClient(async (client) => {

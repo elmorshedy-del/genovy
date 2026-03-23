@@ -6,9 +6,12 @@ import {
   stripClinGenCsvPreamble
 } from '../src/services/sources/clingenGeneDiseaseValiditySource.js';
 import {
+  buildDerivedGeneDiseaseRelationship,
   buildGeneEntityXrefs,
   buildDiseaseRefs,
-  parseClinVarDate
+  parseClinVarDate,
+  resolveClinVarVariantSummaryOptions,
+  supportsDerivedClinVarGeneDiseaseBridge
 } from '../src/services/sources/clinvarVariantSummarySource.js';
 
 test('buildNaturalHistoryTermEntries extracts onset and inheritance terms from Orphadata disorder nodes', () => {
@@ -98,4 +101,120 @@ test('buildGeneEntityXrefs bridges HGNC and NCBIGene identifiers for ClinVar gen
       xrefType: 'cross_reference'
     }
   ]);
+});
+
+test('resolveClinVarVariantSummaryOptions defaults to uncapped full-file sync with bounded batch size', () => {
+  assert.deepEqual(resolveClinVarVariantSummaryOptions({}), {
+    preferredAssembly: 'GRCh38',
+    allowedOriginSimple: 'germline',
+    localPath: '',
+    maxRowsPerSync: 0,
+    batchSize: 5000
+  });
+
+  assert.deepEqual(
+    resolveClinVarVariantSummaryOptions({
+      maxRowsPerSync: '250',
+      batchSize: '750',
+      localPath: ' /tmp/clinvar_variant_summary.txt.gz '
+    }),
+    {
+      preferredAssembly: 'GRCh38',
+      allowedOriginSimple: 'germline',
+      localPath: '/tmp/clinvar_variant_summary.txt.gz',
+      maxRowsPerSync: 250,
+      batchSize: 750
+    }
+  );
+});
+
+test('buildDerivedGeneDiseaseRelationship emits a typed ClinVar-backed gene-disease support edge', () => {
+  const relationship = buildDerivedGeneDiseaseRelationship({
+    source: {
+      homepageUrl: 'https://www.ncbi.nlm.nih.gov/clinvar/docs/maintenance_use/'
+    },
+    sourceRecordKey: 'clinvar-variant:1495164:MONDO:0957810:GRCh38',
+    geneRef: {
+      curie: 'HGNC:23156',
+      entityType: 'gene',
+      label: 'U2AF2'
+    },
+    diseaseRef: {
+      curie: 'MONDO:0957810',
+      entityType: 'disease',
+      label: 'Developmental delay, dysmorphic facies, and brain anomalies'
+    },
+    variantCurie: 'CLINVAR:1495164',
+    variantLabel: 'NM_007279.3(U2AF2):c.446C>T (p.Arg149Trp)',
+    row: {
+      VariationID: '1495164',
+      AlleleID: '1433188',
+      Type: 'single nucleotide variant',
+      ClinicalSignificance: 'Pathogenic',
+      ClinSigSimple: '1',
+      ReviewStatus: 'criteria provided, single submitter',
+      NumberSubmitters: '1',
+      LastEvaluated: 'Sep 19, 2023',
+      PhenotypeIDS: 'MONDO:MONDO:0957810,MedGen:C5882698,OMIM:620535',
+      PhenotypeList: 'Developmental delay, dysmorphic facies, and brain anomalies',
+      Assembly: 'GRCh38',
+      OriginSimple: 'germline'
+    }
+  });
+
+  assert.deepEqual(relationship, {
+    predicateKey: 'associated_with_disease',
+    subjectRef: {
+      curie: 'HGNC:23156',
+      entityType: 'gene',
+      label: 'U2AF2'
+    },
+    objectRef: {
+      curie: 'MONDO:0957810',
+      entityType: 'disease',
+      label: 'Developmental delay, dysmorphic facies, and brain anomalies'
+    },
+    qualifiers: {
+      derivation: 'clinvar_variant_summary'
+    },
+    evidence: {
+      sourceRecordKey: 'clinvar-variant:1495164:MONDO:0957810:GRCh38',
+      evidenceType: 'clinvar_variant_derived',
+      evidenceCode: 'Pathogenic',
+      provenanceUrl: 'https://www.ncbi.nlm.nih.gov/clinvar/docs/maintenance_use/',
+      payload: {
+        variationId: '1495164',
+        alleleId: '1433188',
+        variantCurie: 'CLINVAR:1495164',
+        variantName: 'NM_007279.3(U2AF2):c.446C>T (p.Arg149Trp)',
+        variationType: 'single nucleotide variant',
+        clinicalSignificance: 'Pathogenic',
+        clinicalSignificanceSimple: '1',
+        reviewStatus: 'criteria provided, single submitter',
+        numberSubmitters: '1',
+        lastEvaluated: '2023-09-19',
+        phenotypeIds: 'MONDO:MONDO:0957810,MedGen:C5882698,OMIM:620535',
+        phenotypeList: 'Developmental delay, dysmorphic facies, and brain anomalies',
+        assembly: 'GRCh38',
+        originSimple: 'germline'
+      }
+    }
+  });
+});
+
+test('supportsDerivedClinVarGeneDiseaseBridge keeps pathogenic assertions but excludes noisy categories', () => {
+  assert.equal(supportsDerivedClinVarGeneDiseaseBridge({ ClinicalSignificance: 'Pathogenic' }), true);
+  assert.equal(supportsDerivedClinVarGeneDiseaseBridge({ ClinicalSignificance: 'Likely pathogenic' }), true);
+  assert.equal(
+    supportsDerivedClinVarGeneDiseaseBridge({ ClinicalSignificance: 'Pathogenic/Likely pathogenic' }),
+    true
+  );
+  assert.equal(
+    supportsDerivedClinVarGeneDiseaseBridge({
+      ClinicalSignificance: 'Conflicting classifications of pathogenicity'
+    }),
+    false
+  );
+  assert.equal(supportsDerivedClinVarGeneDiseaseBridge({ ClinicalSignificance: 'Uncertain significance' }), false);
+  assert.equal(supportsDerivedClinVarGeneDiseaseBridge({ ClinicalSignificance: 'Benign/Likely benign' }), false);
 });
