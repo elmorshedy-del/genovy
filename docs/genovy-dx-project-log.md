@@ -438,3 +438,30 @@ Official 100-case phenotype-only gene benchmark vs Exomiser.
 - Still-missed tail remains `17` cases, so the next phase should move to leftover-case fixing rather than more ClinVar transport work
 - Detailed read preserved in:
   - [post-clinvar-run54-audit-and-benchmark.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/post-clinvar-run54-audit-and-benchmark.md)
+
+## 2026-03-24 STXBP1 Direct Enrichment Shadow Test
+- Shadow-only benchmark on current working graph:
+  - target disease: `MONDO:0012812`
+  - current direct disease profile: `27` terms
+  - added GeneReviews-informed direct terms: `19`
+- Current STXBP1 benchmark slice contains `10` truth-gene cases, so the test ran all `10`, not the older `8`-case subset.
+- Final result:
+  - found: `6 / 10 -> 6 / 10`
+  - top-10: `1 -> 1`
+  - median rank: `31 -> 31`
+  - MRR: `0.024438 -> 0.024438`
+  - improved: `0`
+  - worsened: `0`
+  - recovered from miss: `0`
+- Important sanity check:
+  - some patient packets do contain exact matches to the added terms:
+    - `PMID_35190816_STX_26865513_Patient_45`: `4`
+    - `PMID_35190816_STX_28944233_270001`: `7`
+    - `PMID_35190816_STX_EG0598P`: `1`
+  - despite that, ranks did not move
+- Interpretation:
+  - direct DEE4 enrichment alone does not rescue STXBP1 under the current scorer
+  - this makes ranked-output auditing more urgent than broad manual enrichment
+- Artifacts:
+  - [stxbp1-direct-enrichment-shadow-test-20260324.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/stxbp1-direct-enrichment-shadow-test-20260324.md)
+  - [stxbp1-direct-enrichment-test.json](/Users/ahmedelmorshedy/Genovy/output/stxbp1-direct-enrichment-test.json)

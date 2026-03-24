@@ -85,6 +85,59 @@ Decision:
 Status:
 - kept
 
+### Entry 19: STXBP1 direct enrichment theory failed cleanly
+Date:
+- 2026-03-24
+
+Question:
+- If DEE4 (`MONDO:0012812`) gets a focused GeneReviews-informed direct-term enrichment, does STXBP1 improve enough to justify doing the same style of work across the undercovered-gene set?
+
+Evidence surface:
+- live working-graph scorer inputs loaded through the normal DX similarity index path
+- narrow disease-row inspection for `MONDO:0012812`
+- current official benchmark slice for STXBP1 truth-gene cases
+- shadow-only benchmark artifacts:
+  - [stxbp1-direct-enrichment-test.json](/Users/ahmedelmorshedy/Genovy/output/stxbp1-direct-enrichment-test.json)
+  - [stxbp1-direct-enrichment-test.md](/Users/ahmedelmorshedy/Genovy/output/stxbp1-direct-enrichment-test.md)
+
+Intentionally not inspected:
+- automated bulk GeneReviews extraction
+- OMIM ingestion
+- ranked competitors for non-STXBP1 genes
+
+Result:
+- Added `19` new direct DEE4 terms on top of the existing `27` direct profile terms.
+- Ran all current STXBP1 benchmark cases (`10`, not `8`).
+- Outcome was perfectly flat:
+  - `6 / 10` found before and after
+  - `0` improved
+  - `0` worsened
+  - MRR unchanged at `0.024438`
+
+Important numbers:
+- exact overlap with added terms still existed in some patient packets:
+  - `PMID_35190816_STX_26865513_Patient_45`: `4`
+  - `PMID_35190816_STX_28944233_270001`: `7`
+  - `PMID_35190816_STX_EG0598P`: `1`
+- despite that:
+  - no rank moved at all
+
+Decision:
+- Do not assume “more direct syndrome terms” is the right generic next move.
+- Move next to ranked-output audit on the leftover ranking-problem genes.
+- Keep STXBP1 as a leftover problem, but stop treating DEE4 thinness alone as the main explanation.
+
+Own commentary / alternatives:
+- This was a high-value negative result. It killed a plausible story cheaply.
+- The important part is that the test had exact patient-term hits and still did nothing. That pushes the blame away from mere missing profile terms and toward how the scorer aggregates and compares gene support.
+- If STXBP1 is revisited next, the smarter experiment is not “add more terms again.” It is “open the winning competitor genes and inspect why they still outrank STXBP1 even after exact new support was added.”
+
+Rollback plan:
+- shadow-only experiment; no graph mutation occurred
+
+Status:
+- kept
+
 - 2026-03-23
 
 Question:
