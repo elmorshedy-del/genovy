@@ -138,6 +138,71 @@ Rollback plan:
 Status:
 - kept
 
+### Entry 20: propagation is mostly innocent in the ranking-problem set
+Date:
+- 2026-03-24
+
+Question:
+- Are the leftover ranking-problem cases still losing because propagated umbrella diseases are outranking better truth support?
+
+Evidence surface:
+- live top-20 ranked outputs per case from the working graph
+- support disease details per competitor:
+  - support disease label
+  - direct vs propagated mode
+  - leaf vs umbrella
+  - exact direct overlap count
+  - exact propagated-only overlap count
+- audit artifacts:
+  - [ranked-output-audit-ranking-problem-cases-20260324.json](/Users/ahmedelmorshedy/Genovy/output/ranked-output-audit-ranking-problem-cases-20260324.json)
+  - [ranked-output-audit-ranking-problem-cases-20260324.md](/Users/ahmedelmorshedy/Genovy/output/ranked-output-audit-ranking-problem-cases-20260324.md)
+
+Intentionally not inspected:
+- semantic nearest-neighbor term analysis
+- unofficial enrichment sources
+- broad miss-set re-bucketing outside the target cases
+
+Result:
+- The propagation theory mostly failed.
+- Across `100` inspected competitor slots above the truth genes:
+  - only `1` fit the “broad propagated zero-direct” pattern
+  - `66` were specific direct-match competitors
+- So this leftover set is mostly not being beaten by bad propagated umbrellas.
+
+Important numbers:
+- `SPTAN1`
+  - truth rank `322`
+  - truth support had `2` exact direct overlaps
+  - many winners had only `1-2` overlaps too
+- `PPP2R1A` case `41`
+  - truth rank `256`
+  - truth support had `3` exact direct overlaps
+  - winners often had `4-8`
+- `PPP2R1A` case `43`
+  - truth rank `109`
+  - truth support had `5` exact direct overlaps
+  - winners often had `6-9`
+- `SCN2A` fam421 and `SMARCC2`
+  - both are effectively low-information sparse-packet cases
+  - Exomiser is also bad on both
+
+Decision:
+- Do not spend the next cycle on propagation-penalty tuning.
+- Focus next scoring analysis on `SPTAN1`.
+- Reclassify `PPP2R1A` as mixed, not clean pure ranking.
+- Deprioritize `SCN2A` fam421 and `SMARCC2` as immediate scorer targets.
+
+Own commentary / alternatives:
+- This was the most useful ranking audit outcome because it removes a tempting but probably wrong next experiment.
+- `SPTAN1` now deserves concentrated attention. It still looks like the best candidate for a real normalization / specificity bug.
+- `PPP2R1A` is more annoying: it was grouped as ranking, but the live evidence says the truthful profile is also just weaker than many competitors. That makes it a mixed case, not a clean algorithm demo.
+
+Rollback plan:
+- audit-only; no graph mutation
+
+Status:
+- kept
+
 - 2026-03-23
 
 Question:

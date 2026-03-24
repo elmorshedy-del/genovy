@@ -465,3 +465,24 @@ Official 100-case phenotype-only gene benchmark vs Exomiser.
 - Artifacts:
   - [stxbp1-direct-enrichment-shadow-test-20260324.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/stxbp1-direct-enrichment-shadow-test-20260324.md)
   - [stxbp1-direct-enrichment-test.json](/Users/ahmedelmorshedy/Genovy/output/stxbp1-direct-enrichment-test.json)
+
+## 2026-03-24 Ranked Output Audit For Ranking-Problem Cases
+- Added repeatable script:
+  - [auditRankingProblemCases.js](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/auditRankingProblemCases.js)
+- Audited live top-20 ranked competitors for:
+  - `PMID_33731876_fam421` (`SCN2A`)
+  - `PMID_36331550_Family16Patient21` (`SPTAN1`)
+  - `PMID_37761890_41` (`PPP2R1A`)
+  - `PMID_37761890_43` (`PPP2R1A`)
+  - `PMID_30580808_Lo_twin_2-Fam-52` (`SMARCC2`)
+- Aggregate finding across `100` top-competitor slots above truth:
+  - broad propagated zero-direct competitors: `1`
+  - specific direct-match competitors: `66`
+  - no-support competitors: `2`
+- Interpretation:
+  - propagation penalty is not the main issue in this leftover set
+  - `SPTAN1` remains the cleanest pure ranking problem
+  - `PPP2R1A` now looks mixed: ranking plus truth-profile weakness
+  - `SCN2A` and `SMARCC2` are sparse-packet cases with weak discriminative signal
+- Detailed read:
+  - [ranked-output-audit-ranking-problem-cases-20260324.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/ranked-output-audit-ranking-problem-cases-20260324.md)
