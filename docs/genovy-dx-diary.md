@@ -85,6 +85,71 @@ Decision:
 Status:
 - kept
 
+- 2026-03-23
+
+Question:
+- After the full official ClinVar bridge is finally working end to end, does the graph materially improve, and does the official benchmark move enough to change the plan?
+
+Evidence surface:
+- completed ClinVar backfill:
+  - `sync_run_id = 54`
+- repeatable structural audit script and post-sync output:
+  - [auditGraphStructuralSpectrum.js](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/auditGraphStructuralSpectrum.js)
+  - [post-clinvar-run54.summary.json](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/ops/post-clinvar-run54.summary.json)
+- official benchmark rerun:
+  - [official-benchmark-post-clinvar-run54.json](/Users/ahmedelmorshedy/Genovy/output/official-benchmark-post-clinvar-run54.json)
+
+Intentionally not inspected:
+- raw ClinVar row-by-row content after the successful completion
+- new unofficial enrichment sources
+- deep case-by-case reclassification of the remaining miss tail
+
+Result:
+- the official ClinVar bridge is real and useful
+- `U2AF2` is no longer a pure empty-shell miss; one `U2AF2` benchmark case is now recovered at rank `30`
+- but the benchmark effect is modest:
+  - frozen `v0`: `82 found`, `58 top-10`, `MRR 0.409669`
+  - post-ClinVar: `83 found`, `57 top-10`, `MRR 0.410153`
+- so the pipeline repair mattered, but it did not dissolve the remaining miss tail
+
+Important numbers:
+- ClinVar completion:
+  - accepted rows covered: `3,163,504`
+  - resumed rows after the checkpoint: `1,178,504`
+- structural spectrum after the repair:
+  - hollow shells: `148`
+  - sparse one-sided: `504`
+  - poorly enriched two-sided: `1207`
+  - better covered: `3846`
+- ClinVar-derived support:
+  - genes with ClinVar-derived disease support: `4671`
+  - genes whose only disease support is ClinVar-derived: `2759`
+- benchmark:
+  - found: `83`
+  - top-1: `34`
+  - top-10: `57`
+  - MRR: `0.410153`
+
+Decision:
+- keep the ClinVar bridge
+- stop treating pipeline repair as the main remaining lever
+- move to leftover-case fixing:
+  - truth-branch enrichment
+  - branch/support quality
+  - ranking fixes only after case-level residuals are rechecked
+
+Own commentary / alternatives:
+- This is a genuine success, but not the kind that justifies a victory lap. The graph gained a large amount of official disease support, yet the benchmark only moved by one found case versus frozen `v0`. That means the next bottleneck is not “we forgot to pull ClinVar.”
+- The new structural spectrum is much harsher than the older `23 / 426 / 777 / 4479` snapshot. The query is sanity-checked, but this discrepancy itself is now a real piece of evidence: our older structural picture should not be treated as live truth anymore.
+- The most important thing the ClinVar work bought us is clarity. We can now stop hypothesizing about whether `U2AF2` was merely a stale-source artifact. It was partially recoverable from official deeper evidence, and we proved it.
+
+Rollback plan:
+- keep the frozen `v0` benchmark as the comparator
+- keep the post-ClinVar benchmark as the new working-state checkpoint
+
+Status:
+- kept
+
 ---
 
 ### Entry 18: `U2AF2` is missing the gene→disease edge, not the disease phenotype profile

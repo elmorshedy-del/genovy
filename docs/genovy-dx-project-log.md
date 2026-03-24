@@ -410,3 +410,31 @@ Official 100-case phenotype-only gene benchmark vs Exomiser.
   - the failure is specifically the absence of a gene→disease attachment for `U2AF2`
   - Phase 1 should now answer one exact question:
     - do current official gene-oriented sources actually expose a usable `U2AF2 -> DEVDFB / OMIM:620535 / MONDO:0957810` mapping?
+
+## 2026-03-23 Post-ClinVar Run `54` Audit And Benchmark
+- Full official `clinvar_variant_summary` backfill completed successfully on `sync_run_id = 54`
+  - source version: `Sun, 22 Mar 2026 06:46:45 GMT`
+  - total accepted rows covered across the landed path: `3,163,504`
+- Structural audit rerun is now scripted and repeatable:
+  - [auditGraphStructuralSpectrum.js](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/auditGraphStructuralSpectrum.js)
+  - output:
+    - [post-clinvar-run54.summary.json](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/ops/post-clinvar-run54.summary.json)
+- Baseline-aligned structural spectrum now reads:
+  - hollow shells: `148`
+  - sparse one-sided: `504`
+  - poorly enriched two-sided: `1207`
+  - better covered: `3846`
+- Official 100-case benchmark rerun:
+  - [official-benchmark-post-clinvar-run54.json](/Users/ahmedelmorshedy/Genovy/output/official-benchmark-post-clinvar-run54.json)
+  - found: `83 / 100`
+  - top-10: `57`
+  - MRR: `0.410153`
+- Versus frozen `v0` propagation-weight baseline:
+  - found: `82 -> 83`
+  - top-10: `58 -> 57`
+  - MRR: `0.409669 -> 0.410153`
+- Clean recovered miss versus frozen `v0`:
+  - `PMID_36747105_proband` (`U2AF2`) now found at rank `30`
+- Still-missed tail remains `17` cases, so the next phase should move to leftover-case fixing rather than more ClinVar transport work
+- Detailed read preserved in:
+  - [post-clinvar-run54-audit-and-benchmark.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/post-clinvar-run54-audit-and-benchmark.md)
