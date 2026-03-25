@@ -544,3 +544,24 @@ Official 100-case phenotype-only gene benchmark vs Exomiser.
   - strongest next STXBP1 question is support-disease selection / truth-branch quality, not generic enrichment
 - Detailed writeup:
   - [stxbp1-single-case-audit-20260325.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/stxbp1-single-case-audit-20260325.md)
+
+## 2026-03-25 STXBP1 Disease-Branch Audit
+- Added targeted branch-selection script:
+  - [auditStxbp1DiseaseBranchSelection.js](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/auditStxbp1DiseaseBranchSelection.js)
+- Target case:
+  - `PMID_35190816_STX_28944233_270001`
+- Check 1 result:
+  - across all STXBP1-linked diseases, none of the four tested discriminating terms appear as direct terms
+  - `DEE4` has none of the four terms, direct or propagated
+  - only propagated appearances found were:
+    - umbrella `MONDO:0100062`: `Broad face`, `Impulsivity`
+    - `autism spectrum disorder`: `Pain insensitivity`, `Impulsivity`
+- Check 2 result:
+  - `DEE4` rank `5247`, normalized score `0.076491`, exact direct overlaps `1`
+  - umbrella rank `7`, normalized score `0.227175`, direct overlaps `0`, propagated phenotype count `786`
+- Interpretation:
+  - this is not “specific branch already has the right features and still loses”
+  - the specific STXBP1 branch is still too thin for this patient
+  - umbrella support is compensating through a very large propagated phenotype surface
+- Detailed writeup:
+  - [stxbp1-disease-branch-audit-20260325.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/stxbp1-disease-branch-audit-20260325.md)

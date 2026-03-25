@@ -128,6 +128,47 @@ Own commentary:
   - choose a more specific STXBP1 support disease/profile if one already exists
   - or improve the specific STXBP1 phenotype surface that the scorer can actually select
 
+## 2026-03-25 STXBP1 Disease-Branch Audit
+
+What I did:
+- Added a second targeted STXBP1 script:
+  - [auditStxbp1DiseaseBranchSelection.js](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/auditStxbp1DiseaseBranchSelection.js)
+- Ran two checks for `PMID_35190816_STX_28944233_270001`:
+  - inventory the four discriminating terms across all STXBP1-linked diseases
+  - compare disease-only score for `DEE4` vs the umbrella
+
+Artifact:
+- [audit-stxbp1-disease-branch-selection-20260325.json](/Users/ahmedelmorshedy/Genovy/output/audit-stxbp1-disease-branch-selection-20260325.json)
+
+What came out:
+- No STXBP1-linked disease currently has any of the four tested terms as direct terms:
+  - `Broad face`
+  - `Pain insensitivity`
+  - `Broad palm`
+  - `Impulsivity`
+- `DEE4` has none of those four terms, direct or propagated
+- The umbrella `MONDO:0100062` has propagated:
+  - `Broad face`
+  - `Impulsivity`
+- `DEE4` score for this patient:
+  - rank `5247`
+  - normalized score `0.076491`
+  - exact direct overlaps `1`
+- Umbrella score for this patient:
+  - rank `7`
+  - normalized score `0.227175`
+  - direct overlaps `0`
+  - propagated phenotype count `786`
+  - many propagated exact matches
+
+Important interpretation:
+- This is not a clean support-selection leak where the specific STXBP1 branch already has the right terms and still loses.
+- The specific branch is simply too thin for this patient right now.
+- The umbrella wins because it has a huge propagated phenotype surface while `DEE4` is almost empty on the discriminating features that matter here.
+
+Own commentary:
+- This sharpens the earlier STXBP1 story again. The first enrichment shadow test said “adding 19 terms to DEE4 did not move the benchmark.” The first single-case audit said “RAI1 matches rare specific terms better than the current STXBP1 truth branch.” This second branch audit now says the tested discriminating terms do not currently live on DEE4 at all. So for this case, the most grounded read is still specific-branch phenotype surface weakness, not just scorer tuning.
+
 ### Entry 19: SPTAN1 top-k scorer softening helps but does not rescue; PPP2R1A is mixed
 Date:
 - 2026-03-25
