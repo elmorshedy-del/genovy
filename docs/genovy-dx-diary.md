@@ -85,6 +85,49 @@ Decision:
 Status:
 - kept
 
+## 2026-03-25 STXBP1 Single-Case Audit
+
+What I did:
+- Added a single-case live audit script:
+  - [auditStxbp1MissCase.js](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/auditStxbp1MissCase.js)
+- Ran it on the current working graph for:
+  - `PMID_35190816_STX_28944233_270001`
+- Saved the artifact:
+  - [audit-stxbp1-missed-case-28944233-270001.json](/Users/ahmedelmorshedy/Genovy/output/audit-stxbp1-missed-case-28944233-270001.json)
+
+What came out:
+- Winner:
+  - `RAI1`
+  - `Smith-Magenis syndrome`
+  - normalized score `0.240032`
+- Truth:
+  - `STXBP1`
+  - `genetic developmental and epileptic encephalopathy`
+  - normalized score `0.163948`
+- Winner support disease exact overlaps:
+  - `11`
+- Truth support disease exact overlaps:
+  - `0`
+
+Important interpretation:
+- This case is not mainly “common terms drown rare terms.”
+- The winning `RAI1` disease matches several rare or fairly specific patient terms exactly:
+  - `Broad face`
+  - `Pain insensitivity`
+  - `Broad palm`
+  - `Impulsivity`
+- The truth `STXBP1` support disease for this case is broad and phenotypically unhelpful.
+- So this case points more toward:
+  - truth support-disease selection / branch fit
+  - and phenotype-surface quality
+  - than a pure information-content weighting bug
+
+Own commentary:
+- This is a sharper result than the earlier STXBP1 enrichment shadow test. The enrichment test told us more DEE4 terms did not move rank. This single-case audit now shows why at least one hard miss can stay hard: the winning non-truth syndrome is actually a stronger rare-feature match than the current STXBP1 truth branch.
+- If this pattern repeats on another STXBP1 miss, the next useful work is not “more generic enrichment.” It is either:
+  - choose a more specific STXBP1 support disease/profile if one already exists
+  - or improve the specific STXBP1 phenotype surface that the scorer can actually select
+
 ### Entry 19: SPTAN1 top-k scorer softening helps but does not rescue; PPP2R1A is mixed
 Date:
 - 2026-03-25

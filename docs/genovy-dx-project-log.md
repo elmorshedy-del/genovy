@@ -519,3 +519,28 @@ Official 100-case phenotype-only gene benchmark vs Exomiser.
     - truth-profile weakness is part of the problem
 - Detailed writeup:
   - [sptan1-topk-shadow-and-ppp2r1a-reassessment-20260325.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/sptan1-topk-shadow-and-ppp2r1a-reassessment-20260325.md)
+
+## 2026-03-25 STXBP1 Single-Case Audit
+- Added targeted live audit script:
+  - [auditStxbp1MissCase.js](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/auditStxbp1MissCase.js)
+- Target case:
+  - `PMID_35190816_STX_28944233_270001`
+  - `18` present patient terms
+- Live comparison:
+  - winner `RAI1` / `Smith-Magenis syndrome`
+  - truth `STXBP1` / `genetic developmental and epileptic encephalopathy`
+- Score comparison:
+  - winner normalized score `0.240032`
+  - truth normalized score `0.163948`
+  - winner disease support score `0.222258`
+  - truth disease support score `0.077722`
+- Exact direct support overlap:
+  - winner: `11`
+  - truth: `0`
+- Interpretation:
+  - this case does not support the simple “common terms are overweighted” theory
+  - the winner owns multiple rare/fairly specific exact matches
+  - the current truth support disease is broad and phenotypically weak for this patient
+  - strongest next STXBP1 question is support-disease selection / truth-branch quality, not generic enrichment
+- Detailed writeup:
+  - [stxbp1-single-case-audit-20260325.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/stxbp1-single-case-audit-20260325.md)
