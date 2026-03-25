@@ -85,6 +85,63 @@ Decision:
 Status:
 - kept
 
+### Entry 19: SPTAN1 top-k scorer softening helps but does not rescue; PPP2R1A is mixed
+Date:
+- 2026-03-25
+
+Question:
+- Is `SPTAN1` mainly a broad-profile normalization bug, and should `PPP2R1A` stay in the same leftover bucket?
+
+Evidence surface:
+- live working-graph similarity index
+- single-case shadow scorer for `PMID_36331550_Family16Patient21`
+- ranked-output audit artifact for the two `PPP2R1A` cases
+- new shadow artifacts:
+  - [shadow-sptan1-topk-gene-profile.json](/Users/ahmedelmorshedy/Genovy/output/shadow-sptan1-topk-gene-profile.json)
+  - [shadow-sptan1-topk-gene-profile.md](/Users/ahmedelmorshedy/Genovy/output/shadow-sptan1-topk-gene-profile.md)
+
+Intentionally not inspected:
+- broad benchmark reruns
+- new enrichment sources
+- mounted raw data
+
+Result:
+- `SPTAN1` baseline rank is `322`
+- best tested top-k setting only improves it to `182`
+- top-k softening helps, so the broad-profile penalty is real
+- but it is far too weak to explain or fix the case by itself
+- `PPP2R1A` no longer belongs in the pure-ranking bucket:
+  - case `41` truth direct overlap `3` while many competitors show `4-8`
+  - case `43` truth direct overlap `5` while many competitors show `6-9`
+
+Important numbers:
+- `SPTAN1` shadow ranks:
+  - top-k `4`: `242`
+  - top-k `8`: `182`
+  - top-k `12`: `260`
+  - top-k `16`: `268`
+  - top-k `24`: `260`
+  - top-k `32`: `279`
+  - top-k `48`: `318`
+  - top-k `64`: `291`
+
+Decision:
+- Do not patch the main scorer with top-k-only broad-profile softening.
+- Keep `SPTAN1` as a real leftover ranking/specificity problem.
+- Reclassify `PPP2R1A` as mixed: ranking plus truth-profile weakness.
+
+Own commentary / alternatives:
+- This was a good negative test. It closes the obvious “maybe just cap the broad gene profile” theory without another expensive benchmark pass.
+- The interesting part is that very broad competitors like `EHMT1`, `GRIN2A`, `ZEB2`, and `MECP2` still outrank `SPTAN1` under aggressive top-k scoring. That means raw profile size is not the only thing suppressing `SPTAN1`.
+- If `SPTAN1` gets revisited, the next lever should be more specific than profile softening: disease-support aggregation, semantic matching, or explicit specificity features.
+
+Rollback plan:
+- shadow-only script and docs
+- no production scorer changes
+
+Status:
+- kept
+
 ### Entry 19: STXBP1 direct enrichment theory failed cleanly
 Date:
 - 2026-03-24

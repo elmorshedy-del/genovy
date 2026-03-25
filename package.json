@@ -21,6 +21,7 @@
     "dx:benchmark:shadow-child-borrow": "bash ./scripts/run-shadow-child-profile-borrow.sh",
     "dx:benchmark:shadow-support-direct": "bash ./scripts/run-shadow-support-direct.sh",
     "dx:benchmark:shadow-stxbp1": "bash ./scripts/run-shadow-stxbp1-direct-enrichment.sh",
+    "dx:shadow:sptan1-topk": "node src/scripts/shadowSptan1TopKGeneProfile.js",
     "dx:benchmark:latest": "bash ./scripts/show-latest-benchmark.sh",
     "dx:audit:truth-coverage": "bash ./scripts/run-audit-truth-coverage.sh",
     "dx:audit:truth-missed-gaps": "bash ./scripts/run-audit-truth-missed-gaps.sh",

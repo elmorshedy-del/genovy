@@ -486,3 +486,36 @@ Official 100-case phenotype-only gene benchmark vs Exomiser.
   - `SCN2A` and `SMARCC2` are sparse-packet cases with weak discriminative signal
 - Detailed read:
   - [ranked-output-audit-ranking-problem-cases-20260324.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/ranked-output-audit-ranking-problem-cases-20260324.md)
+
+## 2026-03-25 SPTAN1 Top-K Shadow And PPP2R1A Reassessment
+- Added targeted shadow scorer:
+  - [shadowSptan1TopKGeneProfile.js](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/shadowSptan1TopKGeneProfile.js)
+- Added package runner:
+  - `npm run dx:shadow:sptan1-topk`
+- `SPTAN1` test setup:
+  - keep disease-support path unchanged
+  - change only the direct gene-profile scorer
+  - replace full phenotype-side averaging with top-k averaging
+- `SPTAN1` result:
+  - baseline rank `322`
+  - best tested top-k rank: `182` at top-k `8`
+  - other tested settings:
+    - top-k `4`: `242`
+    - top-k `12`: `260`
+    - top-k `16`: `268`
+    - top-k `24`: `260`
+    - top-k `32`: `279`
+    - top-k `48`: `318`
+    - top-k `64`: `291`
+- Interpretation:
+  - broad gene-profile penalty is real
+  - but top-k softening alone is far too weak to rescue `SPTAN1`
+  - this should stay a leftover problem, not a ready-to-ship scorer patch
+- `PPP2R1A` reassessment:
+  - case `41` truth overlap `3` while many competitors have `4-8`
+  - case `43` truth overlap `5` while many competitors have `6-9`
+  - reclassify as mixed:
+    - not pure ranking
+    - truth-profile weakness is part of the problem
+- Detailed writeup:
+  - [sptan1-topk-shadow-and-ppp2r1a-reassessment-20260325.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/sptan1-topk-shadow-and-ppp2r1a-reassessment-20260325.md)
