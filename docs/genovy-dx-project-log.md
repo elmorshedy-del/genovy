@@ -565,3 +565,26 @@ Official 100-case phenotype-only gene benchmark vs Exomiser.
   - umbrella support is compensating through a very large propagated phenotype surface
 - Detailed writeup:
   - [stxbp1-disease-branch-audit-20260325.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/stxbp1-disease-branch-audit-20260325.md)
+
+## 2026-03-25 STXBP1 Discriminating-Term Shadow Test
+- Added targeted shadow script:
+  - [shadowStxbp1DiscriminatingCase.js](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/shadowStxbp1DiscriminatingCase.js)
+- Target case:
+  - `PMID_35190816_STX_28944233_270001`
+- Added only four discriminating terms to `DEE4` in shadow:
+  - `Broad face`
+  - `Pain insensitivity`
+  - `Broad palm`
+  - `Impulsivity`
+- Disease-level result:
+  - `DEE4` rank `5253 -> 95`
+  - `DEE4` normalized score `0.076491 -> 0.186806`
+- Gene-level consequence:
+  - baseline STXBP1 gene score `0.163948`
+  - shadow-derived DEE4 support score `0.127028`
+  - inferred STXBP1 gene score unchanged at `0.163948`
+- Interpretation:
+  - targeted discriminating enrichment does help the disease branch
+  - but support aggregation/weighting still prevents that gain from changing the final STXBP1 gene score
+- Detailed writeup:
+  - [stxbp1-discriminating-term-shadow-test-20260325.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/stxbp1-discriminating-term-shadow-test-20260325.md)

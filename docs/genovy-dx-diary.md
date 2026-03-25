@@ -169,6 +169,41 @@ Important interpretation:
 Own commentary:
 - This sharpens the earlier STXBP1 story again. The first enrichment shadow test said “adding 19 terms to DEE4 did not move the benchmark.” The first single-case audit said “RAI1 matches rare specific terms better than the current STXBP1 truth branch.” This second branch audit now says the tested discriminating terms do not currently live on DEE4 at all. So for this case, the most grounded read is still specific-branch phenotype surface weakness, not just scorer tuning.
 
+## 2026-03-25 STXBP1 Discriminating-Term Shadow Test
+
+What I did:
+- Added a narrow shadow script:
+  - [shadowStxbp1DiscriminatingCase.js](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/shadowStxbp1DiscriminatingCase.js)
+- Shadow-added only `4` discriminating terms to `DEE4` for one patient:
+  - `Broad face`
+  - `Pain insensitivity`
+  - `Broad palm`
+  - `Impulsivity`
+- Compared baseline `DEE4` disease score to shadow `DEE4` disease score for:
+  - `PMID_35190816_STX_28944233_270001`
+
+Artifact:
+- [shadow-stxbp1-discriminating-case-20260325.json](/Users/ahmedelmorshedy/Genovy/output/shadow-stxbp1-discriminating-case-20260325.json)
+
+What came out:
+- `DEE4` improved dramatically:
+  - rank `5253 -> 95`
+  - normalized score `0.076491 -> 0.186806`
+- But inferred `STXBP1` gene score did not move:
+  - baseline gene score `0.163948`
+  - shadow-derived DEE4 support score `0.127028`
+  - inferred shadow gene score still `0.163948`
+
+Important interpretation:
+- The consultant correction was partly right: targeted discriminating enrichment does help the specific disease branch.
+- But the disease-level gain still does not reach the final gene score.
+- So the bottleneck is now clearly mixed:
+  - targeted enrichment matters
+  - and gene-level support aggregation / weighting still blocks the benefit from surfacing
+
+Own commentary:
+- This is the cleanest STXBP1 result so far. Generic enrichment was too weak. The 4 rare terms were the right terms and they materially improved DEE4. But even that improvement still cannot move STXBP1 because the gene-level scoring path is bottlenecked elsewhere.
+
 ### Entry 19: SPTAN1 top-k scorer softening helps but does not rescue; PPP2R1A is mixed
 Date:
 - 2026-03-25
