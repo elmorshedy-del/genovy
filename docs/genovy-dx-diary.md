@@ -92,6 +92,51 @@ Decision:
 Status:
 - kept
 
+### Entry 19: RERE strict OMIM symmetry was a null result
+Date:
+- 2026-03-26
+
+Question:
+- If we stop cherry-picking and do the strict symmetric thing for `RERE` and its real outranker `MED13`, does OMIM-backed augmentation let the current scorer pick the truth?
+
+Evidence surface:
+- saved single-case audit:
+  - [audit-rere-subject9-20260326.json](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/audit-rere-subject9-20260326.json)
+- manual OMIM browser pass:
+  - `OMIM 616975`
+  - `OMIM 618009`
+- strict symmetric shadow rerun:
+  - [shadow-rere-symmetric-omim-terms-20260326.json](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/shadow-rere-symmetric-omim-terms-20260326.json)
+
+Intentionally not inspected:
+- GeneReviews
+- raw full-text case series
+- any live graph mutation
+
+Result:
+- `RERE` stayed `237 -> 237`
+- `MED13` stayed top1
+- OMIM-backed symmetry added only `3` genuinely new terms, all on the `MED13` branch
+- every candidate truth-side `RERE` OMIM term was already present and therefore skipped
+
+Important numbers:
+- truth exact overlaps already in the saved audit: `5`
+- outranker exact overlaps already in the saved audit: `6`
+- new OMIM-backed truth additions: `0`
+- new OMIM-backed outranker additions: `3`
+
+Decision:
+- Do not tell ourselves that `RERE` is an OMIM-hidden rescue.
+- The strict OMIM experiment says no.
+- If `RERE` is going to improve from source-backed repair, the next source layer has to be beyond OMIM alone.
+
+Rollback plan:
+- shadow-only script and docs
+- no graph changes
+
+Status:
+- kept
+
 ## 2026-03-26 ANKRD11 OMIM correction
 
 - Manual OMIM pass completed for:
@@ -2224,3 +2269,11 @@ Rollback plan:
 
 Status:
 - kept
+
+## 2026-03-26 RERE Symmetric Case-Series Shadow
+- Case: `PMID_29330883_Subject9`
+- Strict symmetric richer-source additions moved `RERE` from `238 -> 82` when treated as plain present terms.
+- Added to `RERE`: `Synophrys`, `Wide mouth`, `Intellectual disability`.
+- Added to `MED13`: `Intellectual disability`, `Expressive language delay`, `Strabismus`, `Nystagmus`.
+- Adding frequency buckets largely erased the gain: `238 -> 230`.
+- Read: exact truth-side recovery matters a lot, but the current scorer still keeps `MED13` at `1`, and frequency weighting hurts `RERE` because the recovered facial terms are only source-backed as occasional.

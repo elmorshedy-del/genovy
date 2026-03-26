@@ -949,3 +949,38 @@ Official 100-case phenotype-only gene benchmark vs Exomiser.
   - literal new OMIM structural terms do essentially nothing
   - cumulative OMIM-backed truth/outranker additions materially improve the second case
   - but `ANKRD11` still does not flip, reinforcing that this is a hybrid source-plus-scoring miss rather than a simple hidden-term miss
+
+## 2026-03-26 RERE Manual OMIM Pass And Symmetric Shadow
+- Added:
+  - [rere-manual-omim-extract-20260326.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/rere-manual-omim-extract-20260326.md)
+  - [shadowRereSymmetricOmimTerms.js](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/shadowRereSymmetricOmimTerms.js)
+  - [rere-symmetric-omim-shadow-20260326.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/rere-symmetric-omim-shadow-20260326.md)
+- OMIM truth/outranker read:
+  - `RERE` `OMIM 616975` supports broad dysmorphology and neurodevelopmental features
+  - `MED13` `OMIM 618009` explicitly supports the outranking facial terms `Synophrys` and `Wide mouth`
+  - strict OMIM does **not** expose those same exact discriminators on the `RERE` truth branch
+- Symmetric shadow result:
+  - truth rank stayed `237 -> 237`
+  - top1 stayed `MED13 -> MED13`
+  - only `3` genuinely new OMIM terms were added, all on the `MED13` branch
+  - all candidate `RERE` OMIM terms were already present in the live direct profile and therefore skipped
+- Interpretation:
+  - this is a strong negative result for an OMIM-only `RERE` rescue
+  - the asymmetry is real, not a reading artifact
+  - if `RERE` improves via source-backed enrichment, the next honest source layer is likely `GeneReviews` or the core case series rather than OMIM alone
+
+## 2026-03-26 RERE Symmetric Case-Series Shadow
+- Added:
+  - [shadowRereSymmetricCaseSeriesTerms.js](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/shadowRereSymmetricCaseSeriesTerms.js)
+  - [shadow-rere-symmetric-case-series-terms-20260326.json](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/shadow-rere-symmetric-case-series-terms-20260326.json)
+  - [shadow-rere-symmetric-case-series-terms-20260326.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/shadow-rere-symmetric-case-series-terms-20260326.md)
+  - [rere-symmetric-case-series-shadow-20260326.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/rere-symmetric-case-series-shadow-20260326.md)
+- Result:
+  - baseline `RERE` rank: `238`
+  - symmetric case-series presence shadow: `82`
+  - symmetric case-series + frequency shadow: `230`
+  - `MED13` stayed `1` in both scenarios
+- Interpretation:
+  - broader source-backed symmetric enrichment proved the truth branch can move strongly once it gets the exact discriminators `Synophrys` and `Wide mouth`
+  - but the current scorer still does not choose the truth
+  - frequency handling is now a confirmed part of the remaining `RERE` failure mode, not just a theory
