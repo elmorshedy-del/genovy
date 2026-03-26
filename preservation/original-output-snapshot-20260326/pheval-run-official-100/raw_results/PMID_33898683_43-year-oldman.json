@@ -1,0 +1,2371 @@
+{
+  "success": true,
+  "engine": "genovy-dx-sim",
+  "analysisType": "gene",
+  "input": {
+    "presentPhenotypeCuries": [
+      "HP:0000316",
+      "HP:0000431",
+      "HP:0000767",
+      "HP:0000369",
+      "HP:0000358",
+      "HP:0000407",
+      "HP:0011707"
+    ],
+    "excludedPhenotypeCuries": [
+      "HP:0004322",
+      "HP:0001263",
+      "HP:0000768",
+      "HP:0000508",
+      "HP:0007429",
+      "HP:0002162",
+      "HP:0001629",
+      "HP:0000325"
+    ],
+    "sourceFormat": "phenopacket"
+  },
+  "ranking": {
+    "queryPhenotypes": [
+      {
+        "phenotypeCurie": "HP:0000316",
+        "phenotypeLabel": "Hypertelorism"
+      },
+      {
+        "phenotypeCurie": "HP:0000431",
+        "phenotypeLabel": "Wide nasal bridge"
+      },
+      {
+        "phenotypeCurie": "HP:0000767",
+        "phenotypeLabel": "Pectus excavatum"
+      },
+      {
+        "phenotypeCurie": "HP:0000369",
+        "phenotypeLabel": "Low-set ears"
+      },
+      {
+        "phenotypeCurie": "HP:0000358",
+        "phenotypeLabel": "Posteriorly rotated ears"
+      },
+      {
+        "phenotypeCurie": "HP:0000407",
+        "phenotypeLabel": "Sensorineural hearing impairment"
+      },
+      {
+        "phenotypeCurie": "HP:0011707",
+        "phenotypeLabel": "Mobitz I atrioventricular block"
+      }
+    ],
+    "results": [
+      {
+        "rank": 1,
+        "geneCurie": "NCBIGene:29098",
+        "geneLabel": "RANGRF",
+        "geneSymbol": "RANGRF",
+        "geneEntityId": 151597,
+        "bmaScore": 2.080769805801692,
+        "normalizedScore": 0.22974,
+        "patientAverageScore": 0.7160051137080012,
+        "phenotypeAverageScore": 3.4455344978953826,
+        "directPhenotypeCount": 12,
+        "matchedPhenotypeCount": 7,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011707",
+            "patientPhenotypeLabel": "Mobitz I atrioventricular block",
+            "diseasePhenotypeCurie": "HP:0011705",
+            "diseasePhenotypeLabel": "First degree atrioventricular block",
+            "micaCurie": "HP:0001678",
+            "micaLabel": "Atrioventricular block",
+            "score": 4.996629625026546,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:130"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0012251",
+            "diseasePhenotypeLabel": "ST segment elevation",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:130"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000431",
+            "patientPhenotypeLabel": "Wide nasal bridge",
+            "diseasePhenotypeCurie": "HP:0012251",
+            "diseasePhenotypeLabel": "ST segment elevation",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:130"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000767",
+            "patientPhenotypeLabel": "Pectus excavatum",
+            "diseasePhenotypeCurie": "HP:0012251",
+            "diseasePhenotypeLabel": "ST segment elevation",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:130"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000369",
+            "patientPhenotypeLabel": "Low-set ears",
+            "diseasePhenotypeCurie": "HP:0012251",
+            "diseasePhenotypeLabel": "ST segment elevation",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:130"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000358",
+            "patientPhenotypeLabel": "Posteriorly rotated ears",
+            "diseasePhenotypeCurie": "HP:0012251",
+            "diseasePhenotypeLabel": "ST segment elevation",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:130"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000407",
+            "patientPhenotypeLabel": "Sensorineural hearing impairment",
+            "diseasePhenotypeCurie": "HP:0012251",
+            "diseasePhenotypeLabel": "ST segment elevation",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:130"
+          }
+        ]
+      },
+      {
+        "rank": 2,
+        "geneCurie": "NCBIGene:7871",
+        "geneLabel": "SLMAP",
+        "geneSymbol": "SLMAP",
+        "geneEntityId": 150490,
+        "bmaScore": 2.080769805801692,
+        "normalizedScore": 0.22974,
+        "patientAverageScore": 0.7160051137080012,
+        "phenotypeAverageScore": 3.4455344978953826,
+        "directPhenotypeCount": 12,
+        "matchedPhenotypeCount": 7,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011707",
+            "patientPhenotypeLabel": "Mobitz I atrioventricular block",
+            "diseasePhenotypeCurie": "HP:0011705",
+            "diseasePhenotypeLabel": "First degree atrioventricular block",
+            "micaCurie": "HP:0001678",
+            "micaLabel": "Atrioventricular block",
+            "score": 4.996629625026546,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:130"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0012251",
+            "diseasePhenotypeLabel": "ST segment elevation",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:130"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000431",
+            "patientPhenotypeLabel": "Wide nasal bridge",
+            "diseasePhenotypeCurie": "HP:0012251",
+            "diseasePhenotypeLabel": "ST segment elevation",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:130"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000767",
+            "patientPhenotypeLabel": "Pectus excavatum",
+            "diseasePhenotypeCurie": "HP:0012251",
+            "diseasePhenotypeLabel": "ST segment elevation",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:130"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000369",
+            "patientPhenotypeLabel": "Low-set ears",
+            "diseasePhenotypeCurie": "HP:0012251",
+            "diseasePhenotypeLabel": "ST segment elevation",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:130"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000358",
+            "patientPhenotypeLabel": "Posteriorly rotated ears",
+            "diseasePhenotypeCurie": "HP:0012251",
+            "diseasePhenotypeLabel": "ST segment elevation",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:130"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000407",
+            "patientPhenotypeLabel": "Sensorineural hearing impairment",
+            "diseasePhenotypeCurie": "HP:0012251",
+            "diseasePhenotypeLabel": "ST segment elevation",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:130"
+          }
+        ]
+      },
+      {
+        "rank": 3,
+        "geneCurie": "NCBIGene:3759",
+        "geneLabel": "KCNJ2",
+        "geneSymbol": "KCNJ2",
+        "geneEntityId": 149258,
+        "bmaScore": 2.016886343074397,
+        "normalizedScore": 0.222686,
+        "patientAverageScore": 2.8223113264971973,
+        "phenotypeAverageScore": 1.2114613596515968,
+        "directPhenotypeCount": 98,
+        "matchedPhenotypeCount": 7,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011707",
+            "patientPhenotypeLabel": "Mobitz I atrioventricular block",
+            "diseasePhenotypeCurie": "HP:0001678",
+            "diseasePhenotypeLabel": "Atrioventricular block",
+            "micaCurie": "HP:0001678",
+            "micaLabel": "Atrioventricular block",
+            "score": 4.996629625026546,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:51083"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000431",
+            "patientPhenotypeLabel": "Wide nasal bridge",
+            "diseasePhenotypeCurie": "HP:0000431",
+            "diseasePhenotypeLabel": "Wide nasal bridge",
+            "micaCurie": "HP:0000431",
+            "micaLabel": "Wide nasal bridge",
+            "score": 2.9840281014725605,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:37553"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000407",
+            "patientPhenotypeLabel": "Sensorineural hearing impairment",
+            "diseasePhenotypeCurie": "HP:0002321",
+            "diseasePhenotypeLabel": "Vertigo",
+            "micaCurie": "HP:0011389",
+            "micaLabel": "Functional abnormality of the inner ear",
+            "score": 2.413282902425293,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:334"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000369",
+            "patientPhenotypeLabel": "Low-set ears",
+            "diseasePhenotypeCurie": "HP:0000369",
+            "diseasePhenotypeLabel": "Low-set ears",
+            "micaCurie": "HP:0000369",
+            "micaLabel": "Low-set ears",
+            "score": 2.4067935869855432,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:170390"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0000316",
+            "diseasePhenotypeLabel": "Hypertelorism",
+            "micaCurie": "HP:0000316",
+            "micaLabel": "Hypertelorism",
+            "score": 2.385039690111898,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:37553"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000358",
+            "patientPhenotypeLabel": "Posteriorly rotated ears",
+            "diseasePhenotypeCurie": "HP:0000369",
+            "diseasePhenotypeLabel": "Low-set ears",
+            "micaCurie": "HP:0000357",
+            "micaLabel": "Abnormal location of ears",
+            "score": 2.2966579444895374,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:170390"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000767",
+            "patientPhenotypeLabel": "Pectus excavatum",
+            "diseasePhenotypeCurie": "HP:0003691",
+            "diseasePhenotypeLabel": "Scapular winging",
+            "micaCurie": "HP:0000765",
+            "micaLabel": "Abnormal thorax morphology",
+            "score": 2.273747434969005,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:170390"
+          }
+        ]
+      },
+      {
+        "rank": 4,
+        "geneCurie": "NCBIGene:64091",
+        "geneLabel": "POPDC2",
+        "geneSymbol": "POPDC2",
+        "geneEntityId": 152253,
+        "bmaScore": 2.011001444344539,
+        "normalizedScore": 0.222037,
+        "patientAverageScore": 1.3691604012508096,
+        "phenotypeAverageScore": 2.6528424874382686,
+        "directPhenotypeCount": 24,
+        "matchedPhenotypeCount": 7,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011707",
+            "patientPhenotypeLabel": "Mobitz I atrioventricular block",
+            "diseasePhenotypeCurie": "HP:0011707",
+            "diseasePhenotypeLabel": "Mobitz I atrioventricular block",
+            "micaCurie": "HP:0011707",
+            "micaLabel": "Mobitz I atrioventricular block",
+            "score": 9.057072635572965,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:621367"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000767",
+            "patientPhenotypeLabel": "Pectus excavatum",
+            "diseasePhenotypeCurie": "HP:0003560",
+            "diseasePhenotypeLabel": "Muscular dystrophy",
+            "micaCurie": "HP:0033127",
+            "micaLabel": "Abnormality of the musculoskeletal system",
+            "score": 0.51421169740815,
+            "evidenceCode": "0/6",
+            "referenceText": "OMIM:621367"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0100749",
+            "diseasePhenotypeLabel": "Chest pain",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:621367"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000431",
+            "patientPhenotypeLabel": "Wide nasal bridge",
+            "diseasePhenotypeCurie": "HP:0100749",
+            "diseasePhenotypeLabel": "Chest pain",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:621367"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000369",
+            "patientPhenotypeLabel": "Low-set ears",
+            "diseasePhenotypeCurie": "HP:0100749",
+            "diseasePhenotypeLabel": "Chest pain",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:621367"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000358",
+            "patientPhenotypeLabel": "Posteriorly rotated ears",
+            "diseasePhenotypeCurie": "HP:0100749",
+            "diseasePhenotypeLabel": "Chest pain",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:621367"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000407",
+            "patientPhenotypeLabel": "Sensorineural hearing impairment",
+            "diseasePhenotypeCurie": "HP:0100749",
+            "diseasePhenotypeLabel": "Chest pain",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:621367"
+          }
+        ]
+      },
+      {
+        "rank": 5,
+        "geneCurie": "NCBIGene:5781",
+        "geneLabel": "PTPN11",
+        "geneSymbol": "PTPN11",
+        "geneEntityId": 149898,
+        "bmaScore": 1.9903150732797463,
+        "normalizedScore": 0.219753,
+        "patientAverageScore": 3.1153975041062174,
+        "phenotypeAverageScore": 0.8652326424532754,
+        "directPhenotypeCount": 161,
+        "matchedPhenotypeCount": 7,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011707",
+            "patientPhenotypeLabel": "Mobitz I atrioventricular block",
+            "diseasePhenotypeCurie": "HP:0001709",
+            "diseasePhenotypeLabel": "Third degree atrioventricular block",
+            "micaCurie": "HP:0001678",
+            "micaLabel": "Atrioventricular block",
+            "score": 4.996629625026546,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:151100"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000767",
+            "patientPhenotypeLabel": "Pectus excavatum",
+            "diseasePhenotypeCurie": "HP:0000915",
+            "diseasePhenotypeLabel": "Pectus excavatum of inferior sternum",
+            "micaCurie": "HP:0000767",
+            "micaLabel": "Pectus excavatum",
+            "score": 3.3499623708240898,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:163950"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000358",
+            "patientPhenotypeLabel": "Posteriorly rotated ears",
+            "diseasePhenotypeCurie": "HP:0000358",
+            "diseasePhenotypeLabel": "Posteriorly rotated ears",
+            "micaCurie": "HP:0000358",
+            "micaLabel": "Posteriorly rotated ears",
+            "score": 3.1991394810895057,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:648"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000431",
+            "patientPhenotypeLabel": "Wide nasal bridge",
+            "diseasePhenotypeCurie": "HP:0000431",
+            "diseasePhenotypeLabel": "Wide nasal bridge",
+            "micaCurie": "HP:0000431",
+            "micaLabel": "Wide nasal bridge",
+            "score": 2.9840281014725605,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:500"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000407",
+            "patientPhenotypeLabel": "Sensorineural hearing impairment",
+            "diseasePhenotypeCurie": "HP:0008625",
+            "diseasePhenotypeLabel": "Severe sensorineural hearing impairment",
+            "micaCurie": "HP:0000407",
+            "micaLabel": "Sensorineural hearing impairment",
+            "score": 2.486189673233381,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:500"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000369",
+            "patientPhenotypeLabel": "Low-set ears",
+            "diseasePhenotypeCurie": "HP:0000369",
+            "diseasePhenotypeLabel": "Low-set ears",
+            "micaCurie": "HP:0000369",
+            "micaLabel": "Low-set ears",
+            "score": 2.4067935869855432,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:151100"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0000316",
+            "diseasePhenotypeLabel": "Hypertelorism",
+            "micaCurie": "HP:0000316",
+            "micaLabel": "Hypertelorism",
+            "score": 2.385039690111898,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:500"
+          }
+        ]
+      },
+      {
+        "rank": 6,
+        "geneCurie": "NCBIGene:6331",
+        "geneLabel": "SCN5A",
+        "geneSymbol": "SCN5A",
+        "geneEntityId": 150052,
+        "bmaScore": 1.9747395935692083,
+        "normalizedScore": 0.218033,
+        "patientAverageScore": 2.130560707745398,
+        "phenotypeAverageScore": 1.8189184793930187,
+        "directPhenotypeCount": 105,
+        "matchedPhenotypeCount": 7,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011707",
+            "patientPhenotypeLabel": "Mobitz I atrioventricular block",
+            "diseasePhenotypeCurie": "HP:0011707",
+            "diseasePhenotypeLabel": "Mobitz I atrioventricular block",
+            "micaCurie": "HP:0011707",
+            "micaLabel": "Mobitz I atrioventricular block",
+            "score": 9.057072635572965,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1344"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000407",
+            "patientPhenotypeLabel": "Sensorineural hearing impairment",
+            "diseasePhenotypeCurie": "HP:0000407",
+            "diseasePhenotypeLabel": "Sensorineural hearing impairment",
+            "micaCurie": "HP:0000407",
+            "micaLabel": "Sensorineural hearing impairment",
+            "score": 2.486189673233381,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:154"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000369",
+            "patientPhenotypeLabel": "Low-set ears",
+            "diseasePhenotypeCurie": "HP:0002321",
+            "diseasePhenotypeLabel": "Vertigo",
+            "micaCurie": "HP:0000598",
+            "micaLabel": "Abnormality of the ear",
+            "score": 1.2966056063595444,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:334"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000358",
+            "patientPhenotypeLabel": "Posteriorly rotated ears",
+            "diseasePhenotypeCurie": "HP:0002321",
+            "diseasePhenotypeLabel": "Vertigo",
+            "micaCurie": "HP:0000598",
+            "micaLabel": "Abnormality of the ear",
+            "score": 1.2966056063595444,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:334"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000767",
+            "patientPhenotypeLabel": "Pectus excavatum",
+            "diseasePhenotypeCurie": "HP:0001371",
+            "diseasePhenotypeLabel": "Flexion contracture",
+            "micaCurie": "HP:0011842",
+            "micaLabel": "Abnormal skeletal morphology",
+            "score": 0.7723160423825302,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1344"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0500018",
+            "diseasePhenotypeLabel": "Abnormal cardiac exercise stress test",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:101016"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000431",
+            "patientPhenotypeLabel": "Wide nasal bridge",
+            "diseasePhenotypeCurie": "HP:0500018",
+            "diseasePhenotypeLabel": "Abnormal cardiac exercise stress test",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:101016"
+          }
+        ]
+      },
+      {
+        "rank": 7,
+        "geneCurie": "NCBIGene:2702",
+        "geneLabel": "GJA5",
+        "geneSymbol": "GJA5",
+        "geneEntityId": 148955,
+        "bmaScore": 1.97018305833639,
+        "normalizedScore": 0.21753,
+        "patientAverageScore": 2.875611320515786,
+        "phenotypeAverageScore": 1.0647547961569936,
+        "directPhenotypeCount": 129,
+        "matchedPhenotypeCount": 7,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011707",
+            "patientPhenotypeLabel": "Mobitz I atrioventricular block",
+            "diseasePhenotypeCurie": "HP:0011705",
+            "diseasePhenotypeLabel": "First degree atrioventricular block",
+            "micaCurie": "HP:0001678",
+            "micaLabel": "Atrioventricular block",
+            "score": 4.996629625026546,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:108770"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000767",
+            "patientPhenotypeLabel": "Pectus excavatum",
+            "diseasePhenotypeCurie": "HP:0000767",
+            "diseasePhenotypeLabel": "Pectus excavatum",
+            "micaCurie": "HP:0000767",
+            "micaLabel": "Pectus excavatum",
+            "score": 3.3499623708240898,
+            "evidenceCode": "1/21",
+            "referenceText": "OMIM:612474"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000407",
+            "patientPhenotypeLabel": "Sensorineural hearing impairment",
+            "diseasePhenotypeCurie": "HP:0000407",
+            "diseasePhenotypeLabel": "Sensorineural hearing impairment",
+            "micaCurie": "HP:0000407",
+            "micaLabel": "Sensorineural hearing impairment",
+            "score": 2.486189673233381,
+            "evidenceCode": "1/21",
+            "referenceText": "OMIM:612474"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000369",
+            "patientPhenotypeLabel": "Low-set ears",
+            "diseasePhenotypeCurie": "HP:0000369",
+            "diseasePhenotypeLabel": "Low-set ears",
+            "micaCurie": "HP:0000369",
+            "micaLabel": "Low-set ears",
+            "score": 2.4067935869855432,
+            "evidenceCode": "1/21",
+            "referenceText": "OMIM:612474"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0000316",
+            "diseasePhenotypeLabel": "Hypertelorism",
+            "micaCurie": "HP:0000316",
+            "micaLabel": "Hypertelorism",
+            "score": 2.385039690111898,
+            "evidenceCode": "1/21",
+            "referenceText": "OMIM:612474"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000358",
+            "patientPhenotypeLabel": "Posteriorly rotated ears",
+            "diseasePhenotypeCurie": "HP:0000369",
+            "diseasePhenotypeLabel": "Low-set ears",
+            "micaCurie": "HP:0000357",
+            "micaLabel": "Abnormal location of ears",
+            "score": 2.2966579444895374,
+            "evidenceCode": "1/21",
+            "referenceText": "OMIM:612474"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000431",
+            "patientPhenotypeLabel": "Wide nasal bridge",
+            "diseasePhenotypeCurie": "HP:0005280",
+            "diseasePhenotypeLabel": "Depressed nasal bridge",
+            "micaCurie": "HP:0000422",
+            "micaLabel": "Abnormal nasal bridge morphology",
+            "score": 2.2080063529395075,
+            "evidenceCode": "5/21",
+            "referenceText": "OMIM:612474"
+          }
+        ]
+      },
+      {
+        "rank": 8,
+        "geneCurie": "NCBIGene:4000",
+        "geneLabel": "LMNA",
+        "geneSymbol": "LMNA",
+        "geneEntityId": 149345,
+        "bmaScore": 1.9633857962285717,
+        "normalizedScore": 0.216779,
+        "patientAverageScore": 3.2115481932717107,
+        "phenotypeAverageScore": 0.7152233991854328,
+        "directPhenotypeCount": 520,
+        "matchedPhenotypeCount": 7,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011707",
+            "patientPhenotypeLabel": "Mobitz I atrioventricular block",
+            "diseasePhenotypeCurie": "HP:0011706",
+            "diseasePhenotypeLabel": "Second degree atrioventricular block",
+            "micaCurie": "HP:0011706",
+            "micaLabel": "Second degree atrioventricular block",
+            "score": 6.572165985784965,
+            "evidenceCode": "3/40",
+            "referenceText": "OMIM:115200"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000767",
+            "patientPhenotypeLabel": "Pectus excavatum",
+            "diseasePhenotypeCurie": "HP:0000767",
+            "diseasePhenotypeLabel": "Pectus excavatum",
+            "micaCurie": "HP:0000767",
+            "micaLabel": "Pectus excavatum",
+            "score": 3.3499623708240898,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:98855"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000431",
+            "patientPhenotypeLabel": "Wide nasal bridge",
+            "diseasePhenotypeCurie": "HP:0000431",
+            "diseasePhenotypeLabel": "Wide nasal bridge",
+            "micaCurie": "HP:0000431",
+            "micaLabel": "Wide nasal bridge",
+            "score": 2.9840281014725605,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:2229"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000407",
+            "patientPhenotypeLabel": "Sensorineural hearing impairment",
+            "diseasePhenotypeCurie": "HP:0008573",
+            "diseasePhenotypeLabel": "Low-frequency sensorineural hearing impairment",
+            "micaCurie": "HP:0000407",
+            "micaLabel": "Sensorineural hearing impairment",
+            "score": 2.486189673233381,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:740"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000369",
+            "patientPhenotypeLabel": "Low-set ears",
+            "diseasePhenotypeCurie": "HP:0000369",
+            "diseasePhenotypeLabel": "Low-set ears",
+            "micaCurie": "HP:0000369",
+            "micaLabel": "Low-set ears",
+            "score": 2.4067935869855432,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:1662"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0000316",
+            "diseasePhenotypeLabel": "Hypertelorism",
+            "micaCurie": "HP:0000316",
+            "micaLabel": "Hypertelorism",
+            "score": 2.385039690111898,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:1662"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000358",
+            "patientPhenotypeLabel": "Posteriorly rotated ears",
+            "diseasePhenotypeCurie": "HP:0000369",
+            "diseasePhenotypeLabel": "Low-set ears",
+            "micaCurie": "HP:0000357",
+            "micaLabel": "Abnormal location of ears",
+            "score": 2.2966579444895374,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:1662"
+          }
+        ]
+      },
+      {
+        "rank": 9,
+        "geneCurie": "NCBIGene:783",
+        "geneLabel": "CACNB2",
+        "geneSymbol": "CACNB2",
+        "geneEntityId": 148345,
+        "bmaScore": 1.9368630531139328,
+        "normalizedScore": 0.213851,
+        "patientAverageScore": 0.7160051137080012,
+        "phenotypeAverageScore": 3.1577209925198644,
+        "directPhenotypeCount": 15,
+        "matchedPhenotypeCount": 7,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011707",
+            "patientPhenotypeLabel": "Mobitz I atrioventricular block",
+            "diseasePhenotypeCurie": "HP:0011705",
+            "diseasePhenotypeLabel": "First degree atrioventricular block",
+            "micaCurie": "HP:0001678",
+            "micaLabel": "Atrioventricular block",
+            "score": 4.996629625026546,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:130"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0012251",
+            "diseasePhenotypeLabel": "ST segment elevation",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:130"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000431",
+            "patientPhenotypeLabel": "Wide nasal bridge",
+            "diseasePhenotypeCurie": "HP:0012251",
+            "diseasePhenotypeLabel": "ST segment elevation",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:130"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000767",
+            "patientPhenotypeLabel": "Pectus excavatum",
+            "diseasePhenotypeCurie": "HP:0012251",
+            "diseasePhenotypeLabel": "ST segment elevation",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:130"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000369",
+            "patientPhenotypeLabel": "Low-set ears",
+            "diseasePhenotypeCurie": "HP:0012251",
+            "diseasePhenotypeLabel": "ST segment elevation",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:130"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000358",
+            "patientPhenotypeLabel": "Posteriorly rotated ears",
+            "diseasePhenotypeCurie": "HP:0012251",
+            "diseasePhenotypeLabel": "ST segment elevation",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:130"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000407",
+            "patientPhenotypeLabel": "Sensorineural hearing impairment",
+            "diseasePhenotypeCurie": "HP:0012251",
+            "diseasePhenotypeLabel": "ST segment elevation",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:130"
+          }
+        ]
+      },
+      {
+        "rank": 10,
+        "geneCurie": "NCBIGene:23171",
+        "geneLabel": "GPD1L",
+        "geneSymbol": "GPD1L",
+        "geneEntityId": 151307,
+        "bmaScore": 1.9368630531139328,
+        "normalizedScore": 0.213851,
+        "patientAverageScore": 0.7160051137080012,
+        "phenotypeAverageScore": 3.1577209925198644,
+        "directPhenotypeCount": 15,
+        "matchedPhenotypeCount": 7,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011707",
+            "patientPhenotypeLabel": "Mobitz I atrioventricular block",
+            "diseasePhenotypeCurie": "HP:0011705",
+            "diseasePhenotypeLabel": "First degree atrioventricular block",
+            "micaCurie": "HP:0001678",
+            "micaLabel": "Atrioventricular block",
+            "score": 4.996629625026546,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:130"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0012251",
+            "diseasePhenotypeLabel": "ST segment elevation",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:130"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000431",
+            "patientPhenotypeLabel": "Wide nasal bridge",
+            "diseasePhenotypeCurie": "HP:0012251",
+            "diseasePhenotypeLabel": "ST segment elevation",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:130"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000767",
+            "patientPhenotypeLabel": "Pectus excavatum",
+            "diseasePhenotypeCurie": "HP:0012251",
+            "diseasePhenotypeLabel": "ST segment elevation",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:130"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000369",
+            "patientPhenotypeLabel": "Low-set ears",
+            "diseasePhenotypeCurie": "HP:0012251",
+            "diseasePhenotypeLabel": "ST segment elevation",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:130"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000358",
+            "patientPhenotypeLabel": "Posteriorly rotated ears",
+            "diseasePhenotypeCurie": "HP:0012251",
+            "diseasePhenotypeLabel": "ST segment elevation",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:130"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000407",
+            "patientPhenotypeLabel": "Sensorineural hearing impairment",
+            "diseasePhenotypeCurie": "HP:0012251",
+            "diseasePhenotypeLabel": "ST segment elevation",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:130"
+          }
+        ]
+      },
+      {
+        "rank": 11,
+        "geneCurie": "NCBIGene:808",
+        "geneLabel": "CALM3",
+        "geneSymbol": "CALM3",
+        "geneEntityId": 148352,
+        "bmaScore": 1.9214420039083255,
+        "normalizedScore": 0.212148,
+        "patientAverageScore": 1.6551947409134395,
+        "phenotypeAverageScore": 2.1876892669032113,
+        "directPhenotypeCount": 28,
+        "matchedPhenotypeCount": 7,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011707",
+            "patientPhenotypeLabel": "Mobitz I atrioventricular block",
+            "diseasePhenotypeCurie": "HP:0011706",
+            "diseasePhenotypeLabel": "Second degree atrioventricular block",
+            "micaCurie": "HP:0011706",
+            "micaLabel": "Second degree atrioventricular block",
+            "score": 6.572165985784965,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:618782"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000407",
+            "patientPhenotypeLabel": "Sensorineural hearing impairment",
+            "diseasePhenotypeCurie": "HP:0002321",
+            "diseasePhenotypeLabel": "Vertigo",
+            "micaCurie": "HP:0011389",
+            "micaLabel": "Functional abnormality of the inner ear",
+            "score": 2.413282902425293,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:3286"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000369",
+            "patientPhenotypeLabel": "Low-set ears",
+            "diseasePhenotypeCurie": "HP:0002321",
+            "diseasePhenotypeLabel": "Vertigo",
+            "micaCurie": "HP:0000598",
+            "micaLabel": "Abnormality of the ear",
+            "score": 1.2966056063595444,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:3286"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000358",
+            "patientPhenotypeLabel": "Posteriorly rotated ears",
+            "diseasePhenotypeCurie": "HP:0002321",
+            "diseasePhenotypeLabel": "Vertigo",
+            "micaCurie": "HP:0000598",
+            "micaLabel": "Abnormality of the ear",
+            "score": 1.2966056063595444,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:3286"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0500018",
+            "diseasePhenotypeLabel": "Abnormal cardiac exercise stress test",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:101016"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000431",
+            "patientPhenotypeLabel": "Wide nasal bridge",
+            "diseasePhenotypeCurie": "HP:0500018",
+            "diseasePhenotypeLabel": "Abnormal cardiac exercise stress test",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:101016"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000767",
+            "patientPhenotypeLabel": "Pectus excavatum",
+            "diseasePhenotypeCurie": "HP:0500018",
+            "diseasePhenotypeLabel": "Abnormal cardiac exercise stress test",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:101016"
+          }
+        ]
+      },
+      {
+        "rank": 12,
+        "geneCurie": "NCBIGene:2239",
+        "geneLabel": "GPC4",
+        "geneSymbol": "GPC4",
+        "geneEntityId": 148823,
+        "bmaScore": 1.9194456476102306,
+        "normalizedScore": 0.211928,
+        "patientAverageScore": 3.0375793361859786,
+        "phenotypeAverageScore": 0.8013119590344826,
+        "directPhenotypeCount": 169,
+        "matchedPhenotypeCount": 7,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011707",
+            "patientPhenotypeLabel": "Mobitz I atrioventricular block",
+            "diseasePhenotypeCurie": "HP:0011710",
+            "diseasePhenotypeLabel": "Bundle branch block",
+            "micaCurie": "HP:0012722",
+            "micaLabel": "Heart block",
+            "score": 4.451902449584874,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:373"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000767",
+            "patientPhenotypeLabel": "Pectus excavatum",
+            "diseasePhenotypeCurie": "HP:0000767",
+            "diseasePhenotypeLabel": "Pectus excavatum",
+            "micaCurie": "HP:0000767",
+            "micaLabel": "Pectus excavatum",
+            "score": 3.3499623708240898,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:373"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000358",
+            "patientPhenotypeLabel": "Posteriorly rotated ears",
+            "diseasePhenotypeCurie": "HP:0000358",
+            "diseasePhenotypeLabel": "Posteriorly rotated ears",
+            "micaCurie": "HP:0000358",
+            "micaLabel": "Posteriorly rotated ears",
+            "score": 3.1991394810895057,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:373"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000431",
+            "patientPhenotypeLabel": "Wide nasal bridge",
+            "diseasePhenotypeCurie": "HP:0000431",
+            "diseasePhenotypeLabel": "Wide nasal bridge",
+            "micaCurie": "HP:0000431",
+            "micaLabel": "Wide nasal bridge",
+            "score": 2.9840281014725605,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:373"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000407",
+            "patientPhenotypeLabel": "Sensorineural hearing impairment",
+            "diseasePhenotypeCurie": "HP:0000407",
+            "diseasePhenotypeLabel": "Sensorineural hearing impairment",
+            "micaCurie": "HP:0000407",
+            "micaLabel": "Sensorineural hearing impairment",
+            "score": 2.486189673233381,
+            "evidenceCode": "3/9",
+            "referenceText": "OMIM:301026"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000369",
+            "patientPhenotypeLabel": "Low-set ears",
+            "diseasePhenotypeCurie": "HP:0000369",
+            "diseasePhenotypeLabel": "Low-set ears",
+            "micaCurie": "HP:0000369",
+            "micaLabel": "Low-set ears",
+            "score": 2.4067935869855432,
+            "evidenceCode": "5/9",
+            "referenceText": "OMIM:301026"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0000316",
+            "diseasePhenotypeLabel": "Hypertelorism",
+            "micaCurie": "HP:0000316",
+            "micaLabel": "Hypertelorism",
+            "score": 2.385039690111898,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:2662"
+          }
+        ]
+      },
+      {
+        "rank": 13,
+        "geneCurie": "NCBIGene:8318",
+        "geneLabel": "CDC45",
+        "geneSymbol": "CDC45",
+        "geneEntityId": 150553,
+        "bmaScore": 1.8997304850336254,
+        "normalizedScore": 0.209751,
+        "patientAverageScore": 2.9637992924566667,
+        "phenotypeAverageScore": 0.835661677610584,
+        "directPhenotypeCount": 89,
+        "matchedPhenotypeCount": 7,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011707",
+            "patientPhenotypeLabel": "Mobitz I atrioventricular block",
+            "diseasePhenotypeCurie": "HP:0011706",
+            "diseasePhenotypeLabel": "Second degree atrioventricular block",
+            "micaCurie": "HP:0011706",
+            "micaLabel": "Second degree atrioventricular block",
+            "score": 6.572165985784965,
+            "evidenceCode": "1/15",
+            "referenceText": "OMIM:617063"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000358",
+            "patientPhenotypeLabel": "Posteriorly rotated ears",
+            "diseasePhenotypeCurie": "HP:0000358",
+            "diseasePhenotypeLabel": "Posteriorly rotated ears",
+            "micaCurie": "HP:0000358",
+            "micaLabel": "Posteriorly rotated ears",
+            "score": 3.1991394810895057,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:2554"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000407",
+            "patientPhenotypeLabel": "Sensorineural hearing impairment",
+            "diseasePhenotypeCurie": "HP:0000407",
+            "diseasePhenotypeLabel": "Sensorineural hearing impairment",
+            "micaCurie": "HP:0000407",
+            "micaLabel": "Sensorineural hearing impairment",
+            "score": 2.486189673233381,
+            "evidenceCode": "1/15",
+            "referenceText": "OMIM:617063"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000369",
+            "patientPhenotypeLabel": "Low-set ears",
+            "diseasePhenotypeCurie": "HP:0000369",
+            "diseasePhenotypeLabel": "Low-set ears",
+            "micaCurie": "HP:0000369",
+            "micaLabel": "Low-set ears",
+            "score": 2.4067935869855432,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:2554"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000767",
+            "patientPhenotypeLabel": "Pectus excavatum",
+            "diseasePhenotypeCurie": "HP:0006660",
+            "diseasePhenotypeLabel": "Aplastic clavicle",
+            "micaCurie": "HP:0000765",
+            "micaLabel": "Abnormal thorax morphology",
+            "score": 2.273747434969005,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:2554"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0000520",
+            "diseasePhenotypeLabel": "Proptosis",
+            "micaCurie": "HP:0100886",
+            "micaLabel": "Abnormality of globe location",
+            "score": 2.0512836163194628,
+            "evidenceCode": "1/15",
+            "referenceText": "OMIM:617063"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000431",
+            "patientPhenotypeLabel": "Wide nasal bridge",
+            "diseasePhenotypeCurie": "HP:0000453",
+            "diseasePhenotypeLabel": "Choanal atresia",
+            "micaCurie": "HP:0005105",
+            "micaLabel": "Abnormal nasal morphology",
+            "score": 1.7572752688148046,
+            "evidenceCode": "1/15",
+            "referenceText": "OMIM:617063"
+          }
+        ]
+      },
+      {
+        "rank": 14,
+        "geneCurie": "NCBIGene:5894",
+        "geneLabel": "RAF1",
+        "geneSymbol": "RAF1",
+        "geneEntityId": 149928,
+        "bmaScore": 1.8962447888545046,
+        "normalizedScore": 0.209366,
+        "patientAverageScore": 3.0375793361859786,
+        "phenotypeAverageScore": 0.7549102415230305,
+        "directPhenotypeCount": 163,
+        "matchedPhenotypeCount": 7,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011707",
+            "patientPhenotypeLabel": "Mobitz I atrioventricular block",
+            "diseasePhenotypeCurie": "HP:0011710",
+            "diseasePhenotypeLabel": "Bundle branch block",
+            "micaCurie": "HP:0012722",
+            "micaLabel": "Heart block",
+            "score": 4.451902449584874,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:500"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000767",
+            "patientPhenotypeLabel": "Pectus excavatum",
+            "diseasePhenotypeCurie": "HP:0000767",
+            "diseasePhenotypeLabel": "Pectus excavatum",
+            "micaCurie": "HP:0000767",
+            "micaLabel": "Pectus excavatum",
+            "score": 3.3499623708240898,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:500"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000358",
+            "patientPhenotypeLabel": "Posteriorly rotated ears",
+            "diseasePhenotypeCurie": "HP:0000358",
+            "diseasePhenotypeLabel": "Posteriorly rotated ears",
+            "micaCurie": "HP:0000358",
+            "micaLabel": "Posteriorly rotated ears",
+            "score": 3.1991394810895057,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:500"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000431",
+            "patientPhenotypeLabel": "Wide nasal bridge",
+            "diseasePhenotypeCurie": "HP:0000431",
+            "diseasePhenotypeLabel": "Wide nasal bridge",
+            "micaCurie": "HP:0000431",
+            "micaLabel": "Wide nasal bridge",
+            "score": 2.9840281014725605,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:500"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000407",
+            "patientPhenotypeLabel": "Sensorineural hearing impairment",
+            "diseasePhenotypeCurie": "HP:0008625",
+            "diseasePhenotypeLabel": "Severe sensorineural hearing impairment",
+            "micaCurie": "HP:0000407",
+            "micaLabel": "Sensorineural hearing impairment",
+            "score": 2.486189673233381,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:500"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000369",
+            "patientPhenotypeLabel": "Low-set ears",
+            "diseasePhenotypeCurie": "HP:0000369",
+            "diseasePhenotypeLabel": "Low-set ears",
+            "micaCurie": "HP:0000369",
+            "micaLabel": "Low-set ears",
+            "score": 2.4067935869855432,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:611554"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0000316",
+            "diseasePhenotypeLabel": "Hypertelorism",
+            "micaCurie": "HP:0000316",
+            "micaLabel": "Hypertelorism",
+            "score": 2.385039690111898,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:611554"
+          }
+        ]
+      },
+      {
+        "rank": 15,
+        "geneCurie": "NCBIGene:54795",
+        "geneLabel": "TRPM4",
+        "geneSymbol": "TRPM4",
+        "geneEntityId": 151855,
+        "bmaScore": 1.8954864595928258,
+        "normalizedScore": 0.209282,
+        "patientAverageScore": 1.5593487459501847,
+        "phenotypeAverageScore": 2.231624173235467,
+        "directPhenotypeCount": 35,
+        "matchedPhenotypeCount": 7,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011707",
+            "patientPhenotypeLabel": "Mobitz I atrioventricular block",
+            "diseasePhenotypeCurie": "HP:0011705",
+            "diseasePhenotypeLabel": "First degree atrioventricular block",
+            "micaCurie": "HP:0001678",
+            "micaLabel": "Atrioventricular block",
+            "score": 4.996629625026546,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:130"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000407",
+            "patientPhenotypeLabel": "Sensorineural hearing impairment",
+            "diseasePhenotypeCurie": "HP:0002321",
+            "diseasePhenotypeLabel": "Vertigo",
+            "micaCurie": "HP:0011389",
+            "micaLabel": "Functional abnormality of the inner ear",
+            "score": 2.413282902425293,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:871"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000369",
+            "patientPhenotypeLabel": "Low-set ears",
+            "diseasePhenotypeCurie": "HP:0002321",
+            "diseasePhenotypeLabel": "Vertigo",
+            "micaCurie": "HP:0000598",
+            "micaLabel": "Abnormality of the ear",
+            "score": 1.2966056063595444,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:871"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000358",
+            "patientPhenotypeLabel": "Posteriorly rotated ears",
+            "diseasePhenotypeCurie": "HP:0002321",
+            "diseasePhenotypeLabel": "Vertigo",
+            "micaCurie": "HP:0000598",
+            "micaLabel": "Abnormality of the ear",
+            "score": 1.2966056063595444,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:871"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000431",
+            "patientPhenotypeLabel": "Wide nasal bridge",
+            "diseasePhenotypeCurie": "HP:0006482",
+            "diseasePhenotypeLabel": "Abnormal dental morphology",
+            "micaCurie": "HP:0000271",
+            "micaLabel": "Abnormality of the face",
+            "score": 0.9071820911705433,
+            "evidenceCode": "0/18",
+            "referenceText": "OMIM:618531"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0200035",
+            "diseasePhenotypeLabel": "Skin plaque",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:316"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000767",
+            "patientPhenotypeLabel": "Pectus excavatum",
+            "diseasePhenotypeCurie": "HP:0200035",
+            "diseasePhenotypeLabel": "Skin plaque",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:316"
+          }
+        ]
+      },
+      {
+        "rank": 16,
+        "geneCurie": "NCBIGene:6262",
+        "geneLabel": "RYR2",
+        "geneSymbol": "RYR2",
+        "geneEntityId": 150029,
+        "bmaScore": 1.8948988456499798,
+        "normalizedScore": 0.209218,
+        "patientAverageScore": 1.430118117947951,
+        "phenotypeAverageScore": 2.3596795733520084,
+        "directPhenotypeCount": 28,
+        "matchedPhenotypeCount": 7,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011707",
+            "patientPhenotypeLabel": "Mobitz I atrioventricular block",
+            "diseasePhenotypeCurie": "HP:0001678",
+            "diseasePhenotypeLabel": "Atrioventricular block",
+            "micaCurie": "HP:0001678",
+            "micaLabel": "Atrioventricular block",
+            "score": 4.996629625026546,
+            "evidenceCode": "1/6",
+            "referenceText": "OMIM:604772"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000407",
+            "patientPhenotypeLabel": "Sensorineural hearing impairment",
+            "diseasePhenotypeCurie": "HP:0002321",
+            "diseasePhenotypeLabel": "Vertigo",
+            "micaCurie": "HP:0011389",
+            "micaLabel": "Functional abnormality of the inner ear",
+            "score": 2.413282902425293,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:3286"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000369",
+            "patientPhenotypeLabel": "Low-set ears",
+            "diseasePhenotypeCurie": "HP:0002321",
+            "diseasePhenotypeLabel": "Vertigo",
+            "micaCurie": "HP:0000598",
+            "micaLabel": "Abnormality of the ear",
+            "score": 1.2966056063595444,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:3286"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000358",
+            "patientPhenotypeLabel": "Posteriorly rotated ears",
+            "diseasePhenotypeCurie": "HP:0002321",
+            "diseasePhenotypeLabel": "Vertigo",
+            "micaCurie": "HP:0000598",
+            "micaLabel": "Abnormality of the ear",
+            "score": 1.2966056063595444,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:3286"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0034040",
+            "diseasePhenotypeLabel": "Bidirectional ventricular tachycardia",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "4/4",
+            "referenceText": "OMIM:604772"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000431",
+            "patientPhenotypeLabel": "Wide nasal bridge",
+            "diseasePhenotypeCurie": "HP:0034040",
+            "diseasePhenotypeLabel": "Bidirectional ventricular tachycardia",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "4/4",
+            "referenceText": "OMIM:604772"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000767",
+            "patientPhenotypeLabel": "Pectus excavatum",
+            "diseasePhenotypeCurie": "HP:0034040",
+            "diseasePhenotypeLabel": "Bidirectional ventricular tachycardia",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "4/4",
+            "referenceText": "OMIM:604772"
+          }
+        ]
+      },
+      {
+        "rank": 17,
+        "geneCurie": "NCBIGene:3762",
+        "geneLabel": "KCNJ5",
+        "geneSymbol": "KCNJ5",
+        "geneEntityId": 149260,
+        "bmaScore": 1.8940233369262836,
+        "normalizedScore": 0.209121,
+        "patientAverageScore": 2.6396267004756573,
+        "phenotypeAverageScore": 1.14841997337691,
+        "directPhenotypeCount": 93,
+        "matchedPhenotypeCount": 7,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011707",
+            "patientPhenotypeLabel": "Mobitz I atrioventricular block",
+            "diseasePhenotypeCurie": "HP:0001678",
+            "diseasePhenotypeLabel": "Atrioventricular block",
+            "micaCurie": "HP:0001678",
+            "micaLabel": "Atrioventricular block",
+            "score": 4.996629625026546,
+            "evidenceCode": "1/9",
+            "referenceText": "OMIM:613485"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000431",
+            "patientPhenotypeLabel": "Wide nasal bridge",
+            "diseasePhenotypeCurie": "HP:0000431",
+            "diseasePhenotypeLabel": "Wide nasal bridge",
+            "micaCurie": "HP:0000431",
+            "micaLabel": "Wide nasal bridge",
+            "score": 2.9840281014725605,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:37553"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000407",
+            "patientPhenotypeLabel": "Sensorineural hearing impairment",
+            "diseasePhenotypeCurie": "HP:0002321",
+            "diseasePhenotypeLabel": "Vertigo",
+            "micaCurie": "HP:0011389",
+            "micaLabel": "Functional abnormality of the inner ear",
+            "score": 2.413282902425293,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:334"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000369",
+            "patientPhenotypeLabel": "Low-set ears",
+            "diseasePhenotypeCurie": "HP:0000369",
+            "diseasePhenotypeLabel": "Low-set ears",
+            "micaCurie": "HP:0000369",
+            "micaLabel": "Low-set ears",
+            "score": 2.4067935869855432,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:37553"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0000316",
+            "diseasePhenotypeLabel": "Hypertelorism",
+            "micaCurie": "HP:0000316",
+            "micaLabel": "Hypertelorism",
+            "score": 2.385039690111898,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:37553"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000358",
+            "patientPhenotypeLabel": "Posteriorly rotated ears",
+            "diseasePhenotypeCurie": "HP:0000369",
+            "diseasePhenotypeLabel": "Low-set ears",
+            "micaCurie": "HP:0000357",
+            "micaLabel": "Abnormal location of ears",
+            "score": 2.2966579444895374,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:37553"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000767",
+            "patientPhenotypeLabel": "Pectus excavatum",
+            "diseasePhenotypeCurie": "HP:0030799",
+            "diseasePhenotypeLabel": "Scaphocephaly",
+            "micaCurie": "HP:0009121",
+            "micaLabel": "Abnormal axial skeleton morphology",
+            "score": 0.9949550528182267,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:37553"
+          }
+        ]
+      },
+      {
+        "rank": 18,
+        "geneCurie": "NCBIGene:10142",
+        "geneLabel": "AKAP9",
+        "geneSymbol": "AKAP9",
+        "geneEntityId": 150969,
+        "bmaScore": 1.8655090126281337,
+        "normalizedScore": 0.205973,
+        "patientAverageScore": 1.3552581963524126,
+        "phenotypeAverageScore": 2.375759828903855,
+        "directPhenotypeCount": 25,
+        "matchedPhenotypeCount": 7,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011707",
+            "patientPhenotypeLabel": "Mobitz I atrioventricular block",
+            "diseasePhenotypeCurie": "HP:0011705",
+            "diseasePhenotypeLabel": "First degree atrioventricular block",
+            "micaCurie": "HP:0001678",
+            "micaLabel": "Atrioventricular block",
+            "score": 4.996629625026546,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:130"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000407",
+            "patientPhenotypeLabel": "Sensorineural hearing impairment",
+            "diseasePhenotypeCurie": "HP:0000365",
+            "diseasePhenotypeLabel": "Hearing impairment",
+            "micaCurie": "HP:0000365",
+            "micaLabel": "Hearing impairment",
+            "score": 1.8892634512565214,
+            "evidenceCode": "-",
+            "referenceText": "ORPHA:101016"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000369",
+            "patientPhenotypeLabel": "Low-set ears",
+            "diseasePhenotypeCurie": "HP:0000365",
+            "diseasePhenotypeLabel": "Hearing impairment",
+            "micaCurie": "HP:0000598",
+            "micaLabel": "Abnormality of the ear",
+            "score": 1.2966056063595444,
+            "evidenceCode": "-",
+            "referenceText": "ORPHA:101016"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000358",
+            "patientPhenotypeLabel": "Posteriorly rotated ears",
+            "diseasePhenotypeCurie": "HP:0000365",
+            "diseasePhenotypeLabel": "Hearing impairment",
+            "micaCurie": "HP:0000598",
+            "micaLabel": "Abnormality of the ear",
+            "score": 1.2966056063595444,
+            "evidenceCode": "-",
+            "referenceText": "ORPHA:101016"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0500018",
+            "diseasePhenotypeLabel": "Abnormal cardiac exercise stress test",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:101016"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000431",
+            "patientPhenotypeLabel": "Wide nasal bridge",
+            "diseasePhenotypeCurie": "HP:0500018",
+            "diseasePhenotypeLabel": "Abnormal cardiac exercise stress test",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:101016"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000767",
+            "patientPhenotypeLabel": "Pectus excavatum",
+            "diseasePhenotypeCurie": "HP:0500018",
+            "diseasePhenotypeLabel": "Abnormal cardiac exercise stress test",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:101016"
+          }
+        ]
+      },
+      {
+        "rank": 19,
+        "geneCurie": "NCBIGene:805",
+        "geneLabel": "CALM2",
+        "geneSymbol": "CALM2",
+        "geneEntityId": 148351,
+        "bmaScore": 1.8463950268514684,
+        "normalizedScore": 0.203862,
+        "patientAverageScore": 1.6551947409134395,
+        "phenotypeAverageScore": 2.037595312789497,
+        "directPhenotypeCount": 31,
+        "matchedPhenotypeCount": 7,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011707",
+            "patientPhenotypeLabel": "Mobitz I atrioventricular block",
+            "diseasePhenotypeCurie": "HP:0034305",
+            "diseasePhenotypeLabel": "2:1 atrioventricular block",
+            "micaCurie": "HP:0011706",
+            "micaLabel": "Second degree atrioventricular block",
+            "score": 6.572165985784965,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:616249"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000407",
+            "patientPhenotypeLabel": "Sensorineural hearing impairment",
+            "diseasePhenotypeCurie": "HP:0002321",
+            "diseasePhenotypeLabel": "Vertigo",
+            "micaCurie": "HP:0011389",
+            "micaLabel": "Functional abnormality of the inner ear",
+            "score": 2.413282902425293,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:3286"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000369",
+            "patientPhenotypeLabel": "Low-set ears",
+            "diseasePhenotypeCurie": "HP:0002321",
+            "diseasePhenotypeLabel": "Vertigo",
+            "micaCurie": "HP:0000598",
+            "micaLabel": "Abnormality of the ear",
+            "score": 1.2966056063595444,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:3286"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000358",
+            "patientPhenotypeLabel": "Posteriorly rotated ears",
+            "diseasePhenotypeCurie": "HP:0002321",
+            "diseasePhenotypeLabel": "Vertigo",
+            "micaCurie": "HP:0000598",
+            "micaLabel": "Abnormality of the ear",
+            "score": 1.2966056063595444,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:3286"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0500018",
+            "diseasePhenotypeLabel": "Abnormal cardiac exercise stress test",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:101016"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000431",
+            "patientPhenotypeLabel": "Wide nasal bridge",
+            "diseasePhenotypeCurie": "HP:0500018",
+            "diseasePhenotypeLabel": "Abnormal cardiac exercise stress test",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:101016"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000767",
+            "patientPhenotypeLabel": "Pectus excavatum",
+            "diseasePhenotypeCurie": "HP:0500018",
+            "diseasePhenotypeLabel": "Abnormal cardiac exercise stress test",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:101016"
+          }
+        ]
+      },
+      {
+        "rank": 20,
+        "geneCurie": "NCBIGene:5500",
+        "geneLabel": "PPP1CB",
+        "geneSymbol": "PPP1CB",
+        "geneEntityId": 149825,
+        "bmaScore": 1.8408272800750072,
+        "normalizedScore": 0.203247,
+        "patientAverageScore": 2.7770537569524625,
+        "phenotypeAverageScore": 0.9046008031975517,
+        "directPhenotypeCount": 99,
+        "matchedPhenotypeCount": 7,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011707",
+            "patientPhenotypeLabel": "Mobitz I atrioventricular block",
+            "diseasePhenotypeCurie": "HP:0011712",
+            "diseasePhenotypeLabel": "Complete right bundle branch block",
+            "micaCurie": "HP:0012722",
+            "micaLabel": "Heart block",
+            "score": 4.451902449584874,
+            "evidenceCode": "1/3",
+            "referenceText": "OMIM:617506"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000767",
+            "patientPhenotypeLabel": "Pectus excavatum",
+            "diseasePhenotypeCurie": "HP:0000767",
+            "diseasePhenotypeLabel": "Pectus excavatum",
+            "micaCurie": "HP:0000767",
+            "micaLabel": "Pectus excavatum",
+            "score": 3.3499623708240898,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:2701"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000358",
+            "patientPhenotypeLabel": "Posteriorly rotated ears",
+            "diseasePhenotypeCurie": "HP:0000358",
+            "diseasePhenotypeLabel": "Posteriorly rotated ears",
+            "micaCurie": "HP:0000358",
+            "micaLabel": "Posteriorly rotated ears",
+            "score": 3.1991394810895057,
+            "evidenceCode": "8/14",
+            "referenceText": "OMIM:617506"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000369",
+            "patientPhenotypeLabel": "Low-set ears",
+            "diseasePhenotypeCurie": "HP:0000369",
+            "diseasePhenotypeLabel": "Low-set ears",
+            "micaCurie": "HP:0000369",
+            "micaLabel": "Low-set ears",
+            "score": 2.4067935869855432,
+            "evidenceCode": "6/12",
+            "referenceText": "OMIM:617506"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0000316",
+            "diseasePhenotypeLabel": "Hypertelorism",
+            "micaCurie": "HP:0000316",
+            "micaLabel": "Hypertelorism",
+            "score": 2.385039690111898,
+            "evidenceCode": "9/14",
+            "referenceText": "OMIM:617506"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000407",
+            "patientPhenotypeLabel": "Sensorineural hearing impairment",
+            "diseasePhenotypeCurie": "HP:0000365",
+            "diseasePhenotypeLabel": "Hearing impairment",
+            "micaCurie": "HP:0000365",
+            "micaLabel": "Hearing impairment",
+            "score": 1.8892634512565214,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:2701"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000431",
+            "patientPhenotypeLabel": "Wide nasal bridge",
+            "diseasePhenotypeCurie": "HP:0003196",
+            "diseasePhenotypeLabel": "Short nose",
+            "micaCurie": "HP:0005105",
+            "micaLabel": "Abnormal nasal morphology",
+            "score": 1.7572752688148046,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:2701"
+          }
+        ]
+      },
+      {
+        "rank": 21,
+        "geneCurie": "NCBIGene:2033",
+        "geneLabel": "EP300",
+        "geneSymbol": "EP300",
+        "geneEntityId": 148746,
+        "bmaScore": 1.8358443922823353,
+        "normalizedScore": 0.202697,
+        "patientAverageScore": 3.0347503894293815,
+        "phenotypeAverageScore": 0.6369383951352894,
+        "directPhenotypeCount": 247,
+        "matchedPhenotypeCount": 7,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011707",
+            "patientPhenotypeLabel": "Mobitz I atrioventricular block",
+            "diseasePhenotypeCurie": "HP:0031546",
+            "diseasePhenotypeLabel": "Cardiac conduction abnormality",
+            "micaCurie": "HP:0031546",
+            "micaLabel": "Cardiac conduction abnormality",
+            "score": 4.432099822288694,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:353284"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000767",
+            "patientPhenotypeLabel": "Pectus excavatum",
+            "diseasePhenotypeCurie": "HP:0000767",
+            "diseasePhenotypeLabel": "Pectus excavatum",
+            "micaCurie": "HP:0000767",
+            "micaLabel": "Pectus excavatum",
+            "score": 3.3499623708240898,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:180849"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000358",
+            "patientPhenotypeLabel": "Posteriorly rotated ears",
+            "diseasePhenotypeCurie": "HP:0000358",
+            "diseasePhenotypeLabel": "Posteriorly rotated ears",
+            "micaCurie": "HP:0000358",
+            "micaLabel": "Posteriorly rotated ears",
+            "score": 3.1991394810895057,
+            "evidenceCode": "7/12",
+            "referenceText": "OMIM:613684"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000431",
+            "patientPhenotypeLabel": "Wide nasal bridge",
+            "diseasePhenotypeCurie": "HP:0000431",
+            "diseasePhenotypeLabel": "Wide nasal bridge",
+            "micaCurie": "HP:0000431",
+            "micaLabel": "Wide nasal bridge",
+            "score": 2.9840281014725605,
+            "evidenceCode": "11/11",
+            "referenceText": "OMIM:180849"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000407",
+            "patientPhenotypeLabel": "Sensorineural hearing impairment",
+            "diseasePhenotypeCurie": "HP:0000407",
+            "diseasePhenotypeLabel": "Sensorineural hearing impairment",
+            "micaCurie": "HP:0000407",
+            "micaLabel": "Sensorineural hearing impairment",
+            "score": 2.486189673233381,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "ORPHA:353284"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000369",
+            "patientPhenotypeLabel": "Low-set ears",
+            "diseasePhenotypeCurie": "HP:0000369",
+            "diseasePhenotypeLabel": "Low-set ears",
+            "micaCurie": "HP:0000369",
+            "micaLabel": "Low-set ears",
+            "score": 2.4067935869855432,
+            "evidenceCode": "2/9",
+            "referenceText": "OMIM:613684"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0000316",
+            "diseasePhenotypeLabel": "Hypertelorism",
+            "micaCurie": "HP:0000316",
+            "micaLabel": "Hypertelorism",
+            "score": 2.385039690111898,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:180849"
+          }
+        ]
+      },
+      {
+        "rank": 22,
+        "geneCurie": "NCBIGene:650",
+        "geneLabel": "BMP2",
+        "geneSymbol": "BMP2",
+        "geneEntityId": 148292,
+        "bmaScore": 1.8332476961339244,
+        "normalizedScore": 0.202411,
+        "patientAverageScore": 2.7462753054666864,
+        "phenotypeAverageScore": 0.9202200868011625,
+        "directPhenotypeCount": 102,
+        "matchedPhenotypeCount": 7,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000767",
+            "patientPhenotypeLabel": "Pectus excavatum",
+            "diseasePhenotypeCurie": "HP:0000767",
+            "diseasePhenotypeLabel": "Pectus excavatum",
+            "micaCurie": "HP:0000767",
+            "micaLabel": "Pectus excavatum",
+            "score": 3.3499623708240898,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:617877"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000358",
+            "patientPhenotypeLabel": "Posteriorly rotated ears",
+            "diseasePhenotypeCurie": "HP:0000358",
+            "diseasePhenotypeLabel": "Posteriorly rotated ears",
+            "micaCurie": "HP:0000358",
+            "micaLabel": "Posteriorly rotated ears",
+            "score": 3.1991394810895057,
+            "evidenceCode": "7/12",
+            "referenceText": "OMIM:617877"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011707",
+            "patientPhenotypeLabel": "Mobitz I atrioventricular block",
+            "diseasePhenotypeCurie": "HP:0011675",
+            "diseasePhenotypeLabel": "Arrhythmia",
+            "micaCurie": "HP:0030956",
+            "micaLabel": "Abnormality of cardiovascular system electrophysiology",
+            "score": 3.009700456526687,
+            "evidenceCode": "3/9",
+            "referenceText": "OMIM:617877"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000431",
+            "patientPhenotypeLabel": "Wide nasal bridge",
+            "diseasePhenotypeCurie": "HP:0000431",
+            "diseasePhenotypeLabel": "Wide nasal bridge",
+            "micaCurie": "HP:0000431",
+            "micaLabel": "Wide nasal bridge",
+            "score": 2.9840281014725605,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:261295"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000369",
+            "patientPhenotypeLabel": "Low-set ears",
+            "diseasePhenotypeCurie": "HP:0000369",
+            "diseasePhenotypeLabel": "Low-set ears",
+            "micaCurie": "HP:0000369",
+            "micaLabel": "Low-set ears",
+            "score": 2.4067935869855432,
+            "evidenceCode": "7/12",
+            "referenceText": "OMIM:617877"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0000316",
+            "diseasePhenotypeLabel": "Hypertelorism",
+            "micaCurie": "HP:0000316",
+            "micaLabel": "Hypertelorism",
+            "score": 2.385039690111898,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:261295"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000407",
+            "patientPhenotypeLabel": "Sensorineural hearing impairment",
+            "diseasePhenotypeCurie": "HP:0000405",
+            "diseasePhenotypeLabel": "Conductive hearing impairment",
+            "micaCurie": "HP:0000365",
+            "micaLabel": "Hearing impairment",
+            "score": 1.8892634512565214,
+            "evidenceCode": "4/11",
+            "referenceText": "OMIM:617877"
+          }
+        ]
+      },
+      {
+        "rank": 23,
+        "geneCurie": "NCBIGene:10265",
+        "geneLabel": "IRX5",
+        "geneSymbol": "IRX5",
+        "geneEntityId": 150993,
+        "bmaScore": 1.831420927463868,
+        "normalizedScore": 0.202209,
+        "patientAverageScore": 2.7026245462348135,
+        "phenotypeAverageScore": 0.9602173086929222,
+        "directPhenotypeCount": 55,
+        "matchedPhenotypeCount": 7,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000767",
+            "patientPhenotypeLabel": "Pectus excavatum",
+            "diseasePhenotypeCurie": "HP:0000767",
+            "diseasePhenotypeLabel": "Pectus excavatum",
+            "micaCurie": "HP:0000767",
+            "micaLabel": "Pectus excavatum",
+            "score": 3.3499623708240898,
+            "evidenceCode": "1/3",
+            "referenceText": "OMIM:611174"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011707",
+            "patientPhenotypeLabel": "Mobitz I atrioventricular block",
+            "diseasePhenotypeCurie": "HP:0006677",
+            "diseasePhenotypeLabel": "Prolonged QRS complex",
+            "micaCurie": "HP:0030956",
+            "micaLabel": "Abnormality of cardiovascular system electrophysiology",
+            "score": 3.009700456526687,
+            "evidenceCode": "4/6",
+            "referenceText": "OMIM:611174"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000431",
+            "patientPhenotypeLabel": "Wide nasal bridge",
+            "diseasePhenotypeCurie": "HP:0000431",
+            "diseasePhenotypeLabel": "Wide nasal bridge",
+            "micaCurie": "HP:0000431",
+            "micaLabel": "Wide nasal bridge",
+            "score": 2.9840281014725605,
+            "evidenceCode": "7/7",
+            "referenceText": "OMIM:611174"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000407",
+            "patientPhenotypeLabel": "Sensorineural hearing impairment",
+            "diseasePhenotypeCurie": "HP:0000407",
+            "diseasePhenotypeLabel": "Sensorineural hearing impairment",
+            "micaCurie": "HP:0000407",
+            "micaLabel": "Sensorineural hearing impairment",
+            "score": 2.486189673233381,
+            "evidenceCode": "4/4",
+            "referenceText": "OMIM:611174"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000369",
+            "patientPhenotypeLabel": "Low-set ears",
+            "diseasePhenotypeCurie": "HP:0000369",
+            "diseasePhenotypeLabel": "Low-set ears",
+            "micaCurie": "HP:0000369",
+            "micaLabel": "Low-set ears",
+            "score": 2.4067935869855432,
+            "evidenceCode": "6/6",
+            "referenceText": "OMIM:611174"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0000316",
+            "diseasePhenotypeLabel": "Hypertelorism",
+            "micaCurie": "HP:0000316",
+            "micaLabel": "Hypertelorism",
+            "score": 2.385039690111898,
+            "evidenceCode": "5/5",
+            "referenceText": "OMIM:611174"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000358",
+            "patientPhenotypeLabel": "Posteriorly rotated ears",
+            "diseasePhenotypeCurie": "HP:0000369",
+            "diseasePhenotypeLabel": "Low-set ears",
+            "micaCurie": "HP:0000357",
+            "micaLabel": "Abnormal location of ears",
+            "score": 2.2966579444895374,
+            "evidenceCode": "6/6",
+            "referenceText": "OMIM:611174"
+          }
+        ]
+      },
+      {
+        "rank": 24,
+        "geneCurie": "NCBIGene:4878",
+        "geneLabel": "NPPA",
+        "geneSymbol": "NPPA",
+        "geneEntityId": 149620,
+        "bmaScore": 1.827419757784734,
+        "normalizedScore": 0.201767,
+        "patientAverageScore": 2.120145454772814,
+        "phenotypeAverageScore": 1.534694060796654,
+        "directPhenotypeCount": 52,
+        "matchedPhenotypeCount": 7,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011707",
+            "patientPhenotypeLabel": "Mobitz I atrioventricular block",
+            "diseasePhenotypeCurie": "HP:0011707",
+            "diseasePhenotypeLabel": "Mobitz I atrioventricular block",
+            "micaCurie": "HP:0011707",
+            "micaLabel": "Mobitz I atrioventricular block",
+            "score": 9.057072635572965,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1344"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000407",
+            "patientPhenotypeLabel": "Sensorineural hearing impairment",
+            "diseasePhenotypeCurie": "HP:0002321",
+            "diseasePhenotypeLabel": "Vertigo",
+            "micaCurie": "HP:0011389",
+            "micaLabel": "Functional abnormality of the inner ear",
+            "score": 2.413282902425293,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1344"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000369",
+            "patientPhenotypeLabel": "Low-set ears",
+            "diseasePhenotypeCurie": "HP:0002321",
+            "diseasePhenotypeLabel": "Vertigo",
+            "micaCurie": "HP:0000598",
+            "micaLabel": "Abnormality of the ear",
+            "score": 1.2966056063595444,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1344"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000358",
+            "patientPhenotypeLabel": "Posteriorly rotated ears",
+            "diseasePhenotypeCurie": "HP:0002321",
+            "diseasePhenotypeLabel": "Vertigo",
+            "micaCurie": "HP:0000598",
+            "micaLabel": "Abnormality of the ear",
+            "score": 1.2966056063595444,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1344"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000767",
+            "patientPhenotypeLabel": "Pectus excavatum",
+            "diseasePhenotypeCurie": "HP:0001371",
+            "diseasePhenotypeLabel": "Flexion contracture",
+            "micaCurie": "HP:0011842",
+            "micaLabel": "Abnormal skeletal morphology",
+            "score": 0.7723160423825302,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1344"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0410174",
+            "diseasePhenotypeLabel": "Increased circulating troponin T concentration",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:1344"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000431",
+            "patientPhenotypeLabel": "Wide nasal bridge",
+            "diseasePhenotypeCurie": "HP:0410174",
+            "diseasePhenotypeLabel": "Increased circulating troponin T concentration",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:1344"
+          }
+        ]
+      },
+      {
+        "rank": 25,
+        "geneCurie": "NCBIGene:2200",
+        "geneLabel": "FBN1",
+        "geneSymbol": "FBN1",
+        "geneEntityId": 148810,
+        "bmaScore": 1.8213546045590394,
+        "normalizedScore": 0.201097,
+        "patientAverageScore": 2.8315504800348092,
+        "phenotypeAverageScore": 0.8111587290832696,
+        "directPhenotypeCount": 312,
+        "matchedPhenotypeCount": 7,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000767",
+            "patientPhenotypeLabel": "Pectus excavatum",
+            "diseasePhenotypeCurie": "HP:0000767",
+            "diseasePhenotypeLabel": "Pectus excavatum",
+            "micaCurie": "HP:0000767",
+            "micaLabel": "Pectus excavatum",
+            "score": 3.3499623708240898,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:616914"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000358",
+            "patientPhenotypeLabel": "Posteriorly rotated ears",
+            "diseasePhenotypeCurie": "HP:0000358",
+            "diseasePhenotypeLabel": "Posteriorly rotated ears",
+            "micaCurie": "HP:0000358",
+            "micaLabel": "Posteriorly rotated ears",
+            "score": 3.1991394810895057,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:2462"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011707",
+            "patientPhenotypeLabel": "Mobitz I atrioventricular block",
+            "diseasePhenotypeCurie": "HP:0005184",
+            "diseasePhenotypeLabel": "Prolonged QTc interval",
+            "micaCurie": "HP:0030956",
+            "micaLabel": "Abnormality of cardiovascular system electrophysiology",
+            "score": 3.009700456526687,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:3449"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000431",
+            "patientPhenotypeLabel": "Wide nasal bridge",
+            "diseasePhenotypeCurie": "HP:0000431",
+            "diseasePhenotypeLabel": "Wide nasal bridge",
+            "micaCurie": "HP:0000431",
+            "micaLabel": "Wide nasal bridge",
+            "score": 2.9840281014725605,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:284979"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000407",
+            "patientPhenotypeLabel": "Sensorineural hearing impairment",
+            "diseasePhenotypeCurie": "HP:0000407",
+            "diseasePhenotypeLabel": "Sensorineural hearing impairment",
+            "micaCurie": "HP:0000407",
+            "micaLabel": "Sensorineural hearing impairment",
+            "score": 2.486189673233381,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:2833"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000369",
+            "patientPhenotypeLabel": "Low-set ears",
+            "diseasePhenotypeCurie": "HP:0000369",
+            "diseasePhenotypeLabel": "Low-set ears",
+            "micaCurie": "HP:0000369",
+            "micaLabel": "Low-set ears",
+            "score": 2.4067935869855432,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:284979"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0000316",
+            "diseasePhenotypeLabel": "Hypertelorism",
+            "micaCurie": "HP:0000316",
+            "micaLabel": "Hypertelorism",
+            "score": 2.385039690111898,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:2623"
+          }
+        ]
+      }
+    ],
+    "engineSummary": {
+      "diseaseCount": 8579,
+      "geneCount": 5256,
+      "phenotypeCount": 19389,
+      "sourceMode": {
+        "disease": "relationship_fallback",
+        "gene": "relationship_fallback"
+      },
+      "generatedAt": "2026-03-15T21:00:39.457Z"
+    }
+  }
+}

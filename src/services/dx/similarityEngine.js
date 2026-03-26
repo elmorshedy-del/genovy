@@ -55,6 +55,48 @@ function safeRatio(numerator, denominator) {
   return numerator / denominator;
 }
 
+function countExactPhenotypeOverlap(
+  patientPhenotypeCuries,
+  diseasePhenotypes,
+  { directOnly = false } = {}
+) {
+  const patientCurieSet = new Set(patientPhenotypeCuries || []);
+  let overlapCount = 0;
+
+  for (const phenotype of diseasePhenotypes || []) {
+    if (directOnly && phenotype.edgeOrigin === 'propagated') {
+      continue;
+    }
+    if (patientCurieSet.has(phenotype.phenotypeCurie)) {
+      overlapCount += 1;
+    }
+  }
+
+  return overlapCount;
+}
+
+function shouldApplySpecificDirectHandoffOverride({
+  patientPhenotypeCuries,
+  diseaseProfile,
+  supportWeight
+}) {
+  const overrideConfig = DX_SIMILARITY_DEFAULTS.specificDirectHandoffOverride;
+  if (!overrideConfig.enabled) {
+    return false;
+  }
+  if ((supportWeight || 0) >= overrideConfig.weightFloor) {
+    return false;
+  }
+  if ((diseaseProfile?.directPhenotypeEdgeCount || 0) < overrideConfig.minDirectPhenotypeEdges) {
+    return false;
+  }
+
+  const exactDirectOverlap = countExactPhenotypeOverlap(patientPhenotypeCuries, diseaseProfile?.phenotypes, {
+    directOnly: true
+  });
+  return exactDirectOverlap >= overrideConfig.minExactDirectOverlap;
+}
+
 function sampleWithoutReplacement(values, count, random) {
   const pool = [...values];
   const selected = [];
@@ -700,6 +742,7 @@ export function rankGenesByPhenotypeSimilarity(
   index,
   { phenotypeCuries, excludedPhenotypeCuries = [], limit = DX_QUERY_DEFAULTS.defaultLimit }
 ) {
+  const diseaseProfileByCurie = new Map(index.diseaseProfiles.map((profile) => [profile.entityCurie, profile]));
   const directRanking = buildRankedResults(index, index.geneProfiles, {
     phenotypeCuries,
     excludedPhenotypeCuries,
@@ -745,11 +788,19 @@ export function rankGenesByPhenotypeSimilarity(
   }
 
   for (const diseaseResult of diseaseRanking.results) {
+    const diseaseProfile = diseaseProfileByCurie.get(diseaseResult.entityCurie);
     const links = index.geneDiseaseSupportIndex.get(diseaseResult.entityCurie) || [];
     for (const link of links) {
       const supportingDiseaseEvidenceWeight = computeDiseaseSupportEvidenceWeight(diseaseResult);
+      const supportWeight = shouldApplySpecificDirectHandoffOverride({
+        patientPhenotypeCuries: phenotypeCuries,
+        diseaseProfile,
+        supportWeight: link.supportWeight
+      })
+        ? DX_SIMILARITY_DEFAULTS.specificDirectHandoffOverride.weightFloor
+        : link.supportWeight;
       const diseaseSupportScore = Number(
-        (diseaseResult.normalizedScore * link.supportWeight * supportingDiseaseEvidenceWeight).toFixed(
+        (diseaseResult.normalizedScore * supportWeight * supportingDiseaseEvidenceWeight).toFixed(
           DX_SIMILARITY_DEFAULTS.normalizedScorePrecision
         )
       );

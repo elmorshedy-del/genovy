@@ -1,0 +1,1338 @@
+{
+  "success": true,
+  "engine": "genovy-dx-sim",
+  "analysisType": "gene",
+  "input": {
+    "presentPhenotypeCuries": [
+      "HP:0008872",
+      "HP:0000164",
+      "HP:0001263"
+    ],
+    "excludedPhenotypeCuries": [
+      "HP:0000175",
+      "HP:0001250",
+      "HP:0001510",
+      "HP:0410263"
+    ],
+    "sourceFormat": "phenopacket"
+  },
+  "ranking": {
+    "queryPhenotypes": [
+      {
+        "phenotypeCurie": "HP:0008872",
+        "phenotypeLabel": "Feeding difficulties in infancy"
+      },
+      {
+        "phenotypeCurie": "HP:0000164",
+        "phenotypeLabel": "Abnormality of the dentition"
+      },
+      {
+        "phenotypeCurie": "HP:0001263",
+        "phenotypeLabel": "Global developmental delay"
+      }
+    ],
+    "results": [
+      {
+        "rank": 1,
+        "geneCurie": "NCBIGene:9411",
+        "geneLabel": "ARHGAP29",
+        "geneSymbol": "ARHGAP29",
+        "geneEntityId": 150789,
+        "bmaScore": 1.854297777255342,
+        "normalizedScore": 0.204735,
+        "patientAverageScore": 2.2199625881396567,
+        "phenotypeAverageScore": 1.4886329663710272,
+        "directPhenotypeCount": 21,
+        "matchedPhenotypeCount": 3,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0008872",
+            "patientPhenotypeLabel": "Feeding difficulties in infancy",
+            "diseasePhenotypeCurie": "HP:0008872",
+            "diseasePhenotypeLabel": "Feeding difficulties in infancy",
+            "micaCurie": "HP:0008872",
+            "micaLabel": "Feeding difficulties in infancy",
+            "score": 3.231072528192515,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000164",
+            "patientPhenotypeLabel": "Abnormality of the dentition",
+            "diseasePhenotypeCurie": "HP:0200153",
+            "diseasePhenotypeLabel": "Agenesis of lateral incisor",
+            "micaCurie": "HP:0000164",
+            "micaLabel": "Abnormality of the dentition",
+            "score": 2.2326989655298792,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0012758",
+            "micaLabel": "Neurodevelopmental delay",
+            "score": 1.1961162706965762,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:199306"
+          }
+        ],
+        "directNormalizedScore": 0.204735,
+        "diseaseSupportScore": 0,
+        "supportingDiseaseCurie": "",
+        "supportingDiseaseLabel": "",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 2,
+        "geneCurie": "NCBIGene:54848",
+        "geneLabel": "ARHGEF38",
+        "geneSymbol": "ARHGEF38",
+        "geneEntityId": 151871,
+        "bmaScore": 1.854297777255342,
+        "normalizedScore": 0.204735,
+        "patientAverageScore": 2.2199625881396567,
+        "phenotypeAverageScore": 1.4886329663710272,
+        "directPhenotypeCount": 21,
+        "matchedPhenotypeCount": 3,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0008872",
+            "patientPhenotypeLabel": "Feeding difficulties in infancy",
+            "diseasePhenotypeCurie": "HP:0008872",
+            "diseasePhenotypeLabel": "Feeding difficulties in infancy",
+            "micaCurie": "HP:0008872",
+            "micaLabel": "Feeding difficulties in infancy",
+            "score": 3.231072528192515,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000164",
+            "patientPhenotypeLabel": "Abnormality of the dentition",
+            "diseasePhenotypeCurie": "HP:0200153",
+            "diseasePhenotypeLabel": "Agenesis of lateral incisor",
+            "micaCurie": "HP:0000164",
+            "micaLabel": "Abnormality of the dentition",
+            "score": 2.2326989655298792,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0012758",
+            "micaLabel": "Neurodevelopmental delay",
+            "score": 1.1961162706965762,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:199306"
+          }
+        ],
+        "directNormalizedScore": 0.204735,
+        "diseaseSupportScore": 0,
+        "supportingDiseaseCurie": "",
+        "supportingDiseaseLabel": "",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 3,
+        "geneCurie": "NCBIGene:22837",
+        "geneLabel": "COBLL1",
+        "geneSymbol": "COBLL1",
+        "geneEntityId": 151224,
+        "bmaScore": 1.854297777255342,
+        "normalizedScore": 0.204735,
+        "patientAverageScore": 2.2199625881396567,
+        "phenotypeAverageScore": 1.4886329663710272,
+        "directPhenotypeCount": 21,
+        "matchedPhenotypeCount": 3,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0008872",
+            "patientPhenotypeLabel": "Feeding difficulties in infancy",
+            "diseasePhenotypeCurie": "HP:0008872",
+            "diseasePhenotypeLabel": "Feeding difficulties in infancy",
+            "micaCurie": "HP:0008872",
+            "micaLabel": "Feeding difficulties in infancy",
+            "score": 3.231072528192515,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000164",
+            "patientPhenotypeLabel": "Abnormality of the dentition",
+            "diseasePhenotypeCurie": "HP:0200153",
+            "diseasePhenotypeLabel": "Agenesis of lateral incisor",
+            "micaCurie": "HP:0000164",
+            "micaLabel": "Abnormality of the dentition",
+            "score": 2.2326989655298792,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0012758",
+            "micaLabel": "Neurodevelopmental delay",
+            "score": 1.1961162706965762,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:199306"
+          }
+        ],
+        "directNormalizedScore": 0.204735,
+        "diseaseSupportScore": 0,
+        "supportingDiseaseCurie": "",
+        "supportingDiseaseLabel": "",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 4,
+        "geneCurie": "NCBIGene:1739",
+        "geneLabel": "DLG1",
+        "geneSymbol": "DLG1",
+        "geneEntityId": 148654,
+        "bmaScore": 1.854297777255342,
+        "normalizedScore": 0.204735,
+        "patientAverageScore": 2.2199625881396567,
+        "phenotypeAverageScore": 1.4886329663710272,
+        "directPhenotypeCount": 21,
+        "matchedPhenotypeCount": 3,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0008872",
+            "patientPhenotypeLabel": "Feeding difficulties in infancy",
+            "diseasePhenotypeCurie": "HP:0008872",
+            "diseasePhenotypeLabel": "Feeding difficulties in infancy",
+            "micaCurie": "HP:0008872",
+            "micaLabel": "Feeding difficulties in infancy",
+            "score": 3.231072528192515,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000164",
+            "patientPhenotypeLabel": "Abnormality of the dentition",
+            "diseasePhenotypeCurie": "HP:0200153",
+            "diseasePhenotypeLabel": "Agenesis of lateral incisor",
+            "micaCurie": "HP:0000164",
+            "micaLabel": "Abnormality of the dentition",
+            "score": 2.2326989655298792,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0012758",
+            "micaLabel": "Neurodevelopmental delay",
+            "score": 1.1961162706965762,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:199306"
+          }
+        ],
+        "directNormalizedScore": 0.204735,
+        "diseaseSupportScore": 0,
+        "supportingDiseaseCurie": "",
+        "supportingDiseaseLabel": "",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 5,
+        "geneCurie": "NCBIGene:57589",
+        "geneLabel": "RIC1",
+        "geneSymbol": "RIC1",
+        "geneEntityId": 152175,
+        "bmaScore": 1.7270769882465749,
+        "normalizedScore": 0.190688,
+        "patientAverageScore": 2.304984709414079,
+        "phenotypeAverageScore": 1.1491692670790705,
+        "directPhenotypeCount": 43,
+        "matchedPhenotypeCount": 3,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0008872",
+            "patientPhenotypeLabel": "Feeding difficulties in infancy",
+            "diseasePhenotypeCurie": "HP:0008872",
+            "diseasePhenotypeLabel": "Feeding difficulties in infancy",
+            "micaCurie": "HP:0008872",
+            "micaLabel": "Feeding difficulties in infancy",
+            "score": 3.231072528192515,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000164",
+            "patientPhenotypeLabel": "Abnormality of the dentition",
+            "diseasePhenotypeCurie": "HP:0200153",
+            "diseasePhenotypeLabel": "Agenesis of lateral incisor",
+            "micaCurie": "HP:0000164",
+            "micaLabel": "Abnormality of the dentition",
+            "score": 2.2326989655298792,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "10/10",
+            "referenceText": "OMIM:618761"
+          }
+        ],
+        "directNormalizedScore": 0.190688,
+        "diseaseSupportScore": 0.091506,
+        "supportingDiseaseCurie": "MONDO:0032901",
+        "supportingDiseaseLabel": "Catifa syndrome",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 6,
+        "geneCurie": "NCBIGene:4487",
+        "geneLabel": "MSX1",
+        "geneSymbol": "MSX1",
+        "geneEntityId": 149468,
+        "bmaScore": 1.7019746007153869,
+        "normalizedScore": 0.187917,
+        "patientAverageScore": 2.2199625881396567,
+        "phenotypeAverageScore": 1.183986613291117,
+        "directPhenotypeCount": 88,
+        "matchedPhenotypeCount": 3,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0008872",
+            "patientPhenotypeLabel": "Feeding difficulties in infancy",
+            "diseasePhenotypeCurie": "HP:0008872",
+            "diseasePhenotypeLabel": "Feeding difficulties in infancy",
+            "micaCurie": "HP:0008872",
+            "micaLabel": "Feeding difficulties in infancy",
+            "score": 3.231072528192515,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000164",
+            "patientPhenotypeLabel": "Abnormality of the dentition",
+            "diseasePhenotypeCurie": "HP:0200153",
+            "diseasePhenotypeLabel": "Agenesis of lateral incisor",
+            "micaCurie": "HP:0000164",
+            "micaLabel": "Abnormality of the dentition",
+            "score": 2.2326989655298792,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0012758",
+            "micaLabel": "Neurodevelopmental delay",
+            "score": 1.1961162706965762,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:199306"
+          }
+        ],
+        "directNormalizedScore": 0.187917,
+        "diseaseSupportScore": 0.055941,
+        "supportingDiseaseCurie": "MONDO:0007129",
+        "supportingDiseaseLabel": "tooth agenesis, selective, 1",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 7,
+        "geneCurie": "NCBIGene:57822",
+        "geneLabel": "GRHL3",
+        "geneSymbol": "GRHL3",
+        "geneEntityId": 152198,
+        "bmaScore": 1.7004733433575354,
+        "normalizedScore": 0.187751,
+        "patientAverageScore": 2.2199625881396567,
+        "phenotypeAverageScore": 1.1809840985754143,
+        "directPhenotypeCount": 34,
+        "matchedPhenotypeCount": 3,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0008872",
+            "patientPhenotypeLabel": "Feeding difficulties in infancy",
+            "diseasePhenotypeCurie": "HP:0011469",
+            "diseasePhenotypeLabel": "Nasal regurgitation",
+            "micaCurie": "HP:0008872",
+            "micaLabel": "Feeding difficulties in infancy",
+            "score": 3.231072528192515,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:99772"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000164",
+            "patientPhenotypeLabel": "Abnormality of the dentition",
+            "diseasePhenotypeCurie": "HP:0000689",
+            "diseasePhenotypeLabel": "Dental malocclusion",
+            "micaCurie": "HP:0000164",
+            "micaLabel": "Abnormality of the dentition",
+            "score": 2.2326989655298792,
+            "evidenceCode": "2/27",
+            "referenceText": "OMIM:606713"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0010863",
+            "diseasePhenotypeLabel": "Receptive language delay",
+            "micaCurie": "HP:0012758",
+            "micaLabel": "Neurodevelopmental delay",
+            "score": 1.1961162706965762,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:99772"
+          }
+        ],
+        "directNormalizedScore": 0.187751,
+        "diseaseSupportScore": 0.077806,
+        "supportingDiseaseCurie": "MONDO:0011712",
+        "supportingDiseaseLabel": "van der Woude syndrome 2",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 8,
+        "geneCurie": "NCBIGene:1748",
+        "geneLabel": "DLX4",
+        "geneSymbol": "DLX4",
+        "geneEntityId": 148659,
+        "bmaScore": 1.6423191188150095,
+        "normalizedScore": 0.18133,
+        "patientAverageScore": 2.2199625881396567,
+        "phenotypeAverageScore": 1.0646756494903622,
+        "directPhenotypeCount": 41,
+        "matchedPhenotypeCount": 3,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0008872",
+            "patientPhenotypeLabel": "Feeding difficulties in infancy",
+            "diseasePhenotypeCurie": "HP:0008872",
+            "diseasePhenotypeLabel": "Feeding difficulties in infancy",
+            "micaCurie": "HP:0008872",
+            "micaLabel": "Feeding difficulties in infancy",
+            "score": 3.231072528192515,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000164",
+            "patientPhenotypeLabel": "Abnormality of the dentition",
+            "diseasePhenotypeCurie": "HP:0200153",
+            "diseasePhenotypeLabel": "Agenesis of lateral incisor",
+            "micaCurie": "HP:0000164",
+            "micaLabel": "Abnormality of the dentition",
+            "score": 2.2326989655298792,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0012758",
+            "micaLabel": "Neurodevelopmental delay",
+            "score": 1.1961162706965762,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:199306"
+          }
+        ],
+        "directNormalizedScore": 0.18133,
+        "diseaseSupportScore": 0.069748,
+        "supportingDiseaseCurie": "MONDO:0014772",
+        "supportingDiseaseLabel": "orofacial cleft 15",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 9,
+        "geneCurie": "NCBIGene:3664",
+        "geneLabel": "IRF6",
+        "geneSymbol": "IRF6",
+        "geneEntityId": 149216,
+        "bmaScore": 1.6322597023081007,
+        "normalizedScore": 0.180219,
+        "patientAverageScore": 2.2199625881396567,
+        "phenotypeAverageScore": 1.0445568164765446,
+        "directPhenotypeCount": 101,
+        "matchedPhenotypeCount": 3,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0008872",
+            "patientPhenotypeLabel": "Feeding difficulties in infancy",
+            "diseasePhenotypeCurie": "HP:0008872",
+            "diseasePhenotypeLabel": "Feeding difficulties in infancy",
+            "micaCurie": "HP:0008872",
+            "micaLabel": "Feeding difficulties in infancy",
+            "score": 3.231072528192515,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000164",
+            "patientPhenotypeLabel": "Abnormality of the dentition",
+            "diseasePhenotypeCurie": "HP:0200153",
+            "diseasePhenotypeLabel": "Agenesis of lateral incisor",
+            "micaCurie": "HP:0000164",
+            "micaLabel": "Abnormality of the dentition",
+            "score": 2.2326989655298792,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0012758",
+            "micaLabel": "Neurodevelopmental delay",
+            "score": 1.1961162706965762,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:199306"
+          }
+        ],
+        "directNormalizedScore": 0.180219,
+        "diseaseSupportScore": 0.067973,
+        "supportingDiseaseCurie": "MONDO:0007333",
+        "supportingDiseaseLabel": "van der Woude syndrome 1",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 10,
+        "geneCurie": "NCBIGene:5156",
+        "geneLabel": "PDGFRA",
+        "geneSymbol": "PDGFRA",
+        "geneEntityId": 149703,
+        "bmaScore": 1.5900168085016835,
+        "normalizedScore": 0.175555,
+        "patientAverageScore": 2.2199625881396567,
+        "phenotypeAverageScore": 0.9600710288637103,
+        "directPhenotypeCount": 55,
+        "matchedPhenotypeCount": 3,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0008872",
+            "patientPhenotypeLabel": "Feeding difficulties in infancy",
+            "diseasePhenotypeCurie": "HP:0008872",
+            "diseasePhenotypeLabel": "Feeding difficulties in infancy",
+            "micaCurie": "HP:0008872",
+            "micaLabel": "Feeding difficulties in infancy",
+            "score": 3.231072528192515,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000164",
+            "patientPhenotypeLabel": "Abnormality of the dentition",
+            "diseasePhenotypeCurie": "HP:0200153",
+            "diseasePhenotypeLabel": "Agenesis of lateral incisor",
+            "micaCurie": "HP:0000164",
+            "micaLabel": "Abnormality of the dentition",
+            "score": 2.2326989655298792,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0012758",
+            "micaLabel": "Neurodevelopmental delay",
+            "score": 1.1961162706965762,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:199306"
+          }
+        ],
+        "directNormalizedScore": 0.175555,
+        "diseaseSupportScore": 0.044426,
+        "supportingDiseaseCurie": "MONDO:0008285",
+        "supportingDiseaseLabel": "polyps, multiple and recurrent inflammatory fibroid, gastrointestinal",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 11,
+        "geneCurie": "NCBIGene:51305",
+        "geneLabel": "KCNK9",
+        "geneSymbol": "KCNK9",
+        "geneEntityId": 151726,
+        "bmaScore": 1.579733679531761,
+        "normalizedScore": 0.17442,
+        "patientAverageScore": 2.304984709414079,
+        "phenotypeAverageScore": 0.8544826496494426,
+        "directPhenotypeCount": 45,
+        "matchedPhenotypeCount": 3,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0008872",
+            "patientPhenotypeLabel": "Feeding difficulties in infancy",
+            "diseasePhenotypeCurie": "HP:0008872",
+            "diseasePhenotypeLabel": "Feeding difficulties in infancy",
+            "micaCurie": "HP:0008872",
+            "micaLabel": "Feeding difficulties in infancy",
+            "score": 3.231072528192515,
+            "evidenceCode": "4/4",
+            "referenceText": "OMIM:612292"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000164",
+            "patientPhenotypeLabel": "Abnormality of the dentition",
+            "diseasePhenotypeCurie": "HP:0011081",
+            "diseasePhenotypeLabel": "Incisor macrodontia",
+            "micaCurie": "HP:0000164",
+            "micaLabel": "Abnormality of the dentition",
+            "score": 2.2326989655298792,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:166108"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "4/4",
+            "referenceText": "OMIM:612292"
+          }
+        ],
+        "directNormalizedScore": 0.17442,
+        "diseaseSupportScore": 0.118606,
+        "supportingDiseaseCurie": "MONDO:0012856",
+        "supportingDiseaseLabel": "Birk-Barel syndrome",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 12,
+        "geneCurie": "NCBIGene:999",
+        "geneLabel": "CDH1",
+        "geneSymbol": "CDH1",
+        "geneEntityId": 148409,
+        "bmaScore": 1.5595307816005208,
+        "normalizedScore": 0.172189,
+        "patientAverageScore": 2.2199625881396567,
+        "phenotypeAverageScore": 0.8990989750613848,
+        "directPhenotypeCount": 57,
+        "matchedPhenotypeCount": 3,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0008872",
+            "patientPhenotypeLabel": "Feeding difficulties in infancy",
+            "diseasePhenotypeCurie": "HP:0008872",
+            "diseasePhenotypeLabel": "Feeding difficulties in infancy",
+            "micaCurie": "HP:0008872",
+            "micaLabel": "Feeding difficulties in infancy",
+            "score": 3.231072528192515,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000164",
+            "patientPhenotypeLabel": "Abnormality of the dentition",
+            "diseasePhenotypeCurie": "HP:0200153",
+            "diseasePhenotypeLabel": "Agenesis of lateral incisor",
+            "micaCurie": "HP:0000164",
+            "micaLabel": "Abnormality of the dentition",
+            "score": 2.2326989655298792,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0012758",
+            "micaLabel": "Neurodevelopmental delay",
+            "score": 1.1961162706965762,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:199306"
+          }
+        ],
+        "directNormalizedScore": 0.172189,
+        "diseaseSupportScore": 0.074093,
+        "supportingDiseaseCurie": "MONDO:0054740",
+        "supportingDiseaseLabel": "blepharocheilodontic syndrome 1",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 13,
+        "geneCurie": "NCBIGene:7204",
+        "geneLabel": "TRIO",
+        "geneSymbol": "TRIO",
+        "geneEntityId": 150355,
+        "bmaScore": 1.5182056219675748,
+        "normalizedScore": 0.167627,
+        "patientAverageScore": 2.304984709414079,
+        "phenotypeAverageScore": 0.7314265345210705,
+        "directPhenotypeCount": 110,
+        "matchedPhenotypeCount": 3,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0008872",
+            "patientPhenotypeLabel": "Feeding difficulties in infancy",
+            "diseasePhenotypeCurie": "HP:0011471",
+            "diseasePhenotypeLabel": "Gastrostomy tube feeding in infancy",
+            "micaCurie": "HP:0008872",
+            "micaLabel": "Feeding difficulties in infancy",
+            "score": 3.231072528192515,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:476126"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000164",
+            "patientPhenotypeLabel": "Abnormality of the dentition",
+            "diseasePhenotypeCurie": "HP:0000706",
+            "diseasePhenotypeLabel": "Eruption failure",
+            "micaCurie": "HP:0000164",
+            "micaLabel": "Abnormality of the dentition",
+            "score": 2.2326989655298792,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:476126"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:476126"
+          }
+        ],
+        "directNormalizedScore": 0.167627,
+        "diseaseSupportScore": 0.122954,
+        "supportingDiseaseCurie": "MONDO:0032939",
+        "supportingDiseaseLabel": "intellectual developmental disorder, autosomal dominant 63, with macrocephaly",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 14,
+        "geneCurie": "NCBIGene:84172",
+        "geneLabel": "POLR1B",
+        "geneSymbol": "POLR1B",
+        "geneEntityId": 152569,
+        "bmaScore": 1.514793841343757,
+        "normalizedScore": 0.16725,
+        "patientAverageScore": 2.304984709414079,
+        "phenotypeAverageScore": 0.7246029732734347,
+        "directPhenotypeCount": 75,
+        "matchedPhenotypeCount": 3,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0008872",
+            "patientPhenotypeLabel": "Feeding difficulties in infancy",
+            "diseasePhenotypeCurie": "HP:0008872",
+            "diseasePhenotypeLabel": "Feeding difficulties in infancy",
+            "micaCurie": "HP:0008872",
+            "micaLabel": "Feeding difficulties in infancy",
+            "score": 3.231072528192515,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:861"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000164",
+            "patientPhenotypeLabel": "Abnormality of the dentition",
+            "diseasePhenotypeCurie": "HP:0010807",
+            "diseasePhenotypeLabel": "Open bite",
+            "micaCurie": "HP:0000164",
+            "micaLabel": "Abnormality of the dentition",
+            "score": 2.2326989655298792,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:861"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:861"
+          }
+        ],
+        "directNormalizedScore": 0.16725,
+        "diseaseSupportScore": 0.102047,
+        "supportingDiseaseCurie": "MONDO:0030067",
+        "supportingDiseaseLabel": "Treacher Collins syndrome 4",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 15,
+        "geneCurie": "NCBIGene:80232",
+        "geneLabel": "WDR26",
+        "geneSymbol": "WDR26",
+        "geneEntityId": 152458,
+        "bmaScore": 1.5143273819150433,
+        "normalizedScore": 0.167198,
+        "patientAverageScore": 2.304984709414079,
+        "phenotypeAverageScore": 0.7236700544160077,
+        "directPhenotypeCount": 95,
+        "matchedPhenotypeCount": 3,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0008872",
+            "patientPhenotypeLabel": "Feeding difficulties in infancy",
+            "diseasePhenotypeCurie": "HP:0011471",
+            "diseasePhenotypeLabel": "Gastrostomy tube feeding in infancy",
+            "micaCurie": "HP:0008872",
+            "micaLabel": "Feeding difficulties in infancy",
+            "score": 3.231072528192515,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:513456"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000164",
+            "patientPhenotypeLabel": "Abnormality of the dentition",
+            "diseasePhenotypeCurie": "HP:0006335",
+            "diseasePhenotypeLabel": "Persistence of primary teeth",
+            "micaCurie": "HP:0000164",
+            "micaLabel": "Abnormality of the dentition",
+            "score": 2.2326989655298792,
+            "evidenceCode": "4/9",
+            "referenceText": "OMIM:617616"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0011344",
+            "diseasePhenotypeLabel": "Severe global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:513456"
+          }
+        ],
+        "directNormalizedScore": 0.167198,
+        "diseaseSupportScore": 0.10029,
+        "supportingDiseaseCurie": "MONDO:0054636",
+        "supportingDiseaseLabel": "Skraban-Deardorff syndrome",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 16,
+        "geneCurie": "NCBIGene:7314",
+        "geneLabel": "UBB",
+        "geneSymbol": "UBB",
+        "geneEntityId": 150386,
+        "bmaScore": 1.5124439583466973,
+        "normalizedScore": 0.16699,
+        "patientAverageScore": 1.9107853671278157,
+        "phenotypeAverageScore": 1.114102549565579,
+        "directPhenotypeCount": 23,
+        "matchedPhenotypeCount": 3,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0008872",
+            "patientPhenotypeLabel": "Feeding difficulties in infancy",
+            "diseasePhenotypeCurie": "HP:0011469",
+            "diseasePhenotypeLabel": "Nasal regurgitation",
+            "micaCurie": "HP:0008872",
+            "micaLabel": "Feeding difficulties in infancy",
+            "score": 3.231072528192515,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:155878"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000164",
+            "patientPhenotypeLabel": "Abnormality of the dentition",
+            "diseasePhenotypeCurie": "HP:5201016",
+            "diseasePhenotypeLabel": "Submucous cleft palate",
+            "micaCurie": "HP:0000163",
+            "micaLabel": "Abnormal oral cavity morphology",
+            "score": 1.3051673024943553,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:155878"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0010863",
+            "diseasePhenotypeLabel": "Receptive language delay",
+            "micaCurie": "HP:0012758",
+            "micaLabel": "Neurodevelopmental delay",
+            "score": 1.1961162706965762,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:99772"
+          }
+        ],
+        "directNormalizedScore": 0.16699,
+        "diseaseSupportScore": 0,
+        "supportingDiseaseCurie": "",
+        "supportingDiseaseLabel": "",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 17,
+        "geneCurie": "HGNC:12496",
+        "geneLabel": "UBE3A",
+        "geneSymbol": "UBE3A",
+        "geneEntityId": 206487,
+        "bmaScore": 0,
+        "normalizedScore": 0.166925,
+        "patientAverageScore": 0,
+        "phenotypeAverageScore": 0,
+        "directPhenotypeCount": 0,
+        "matchedPhenotypeCount": 0,
+        "trace": [],
+        "directNormalizedScore": 0,
+        "diseaseSupportScore": 0.166925,
+        "supportingDiseaseCurie": "MONDO:0007113",
+        "supportingDiseaseLabel": "Angelman syndrome",
+        "supportingDiseaseClassification": "Definitive"
+      },
+      {
+        "rank": 18,
+        "geneCurie": "NCBIGene:5818",
+        "geneLabel": "NECTIN1",
+        "geneSymbol": "NECTIN1",
+        "geneEntityId": 149907,
+        "bmaScore": 1.5113432481797346,
+        "normalizedScore": 0.166869,
+        "patientAverageScore": 2.2199625881396567,
+        "phenotypeAverageScore": 0.8027239082198128,
+        "directPhenotypeCount": 105,
+        "matchedPhenotypeCount": 3,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0008872",
+            "patientPhenotypeLabel": "Feeding difficulties in infancy",
+            "diseasePhenotypeCurie": "HP:0008872",
+            "diseasePhenotypeLabel": "Feeding difficulties in infancy",
+            "micaCurie": "HP:0008872",
+            "micaLabel": "Feeding difficulties in infancy",
+            "score": 3.231072528192515,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000164",
+            "patientPhenotypeLabel": "Abnormality of the dentition",
+            "diseasePhenotypeCurie": "HP:0200153",
+            "diseasePhenotypeLabel": "Agenesis of lateral incisor",
+            "micaCurie": "HP:0000164",
+            "micaLabel": "Abnormality of the dentition",
+            "score": 2.2326989655298792,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0012758",
+            "micaLabel": "Neurodevelopmental delay",
+            "score": 1.1961162706965762,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:199306"
+          }
+        ],
+        "directNormalizedScore": 0.166869,
+        "diseaseSupportScore": 0.061867,
+        "supportingDiseaseCurie": "MONDO:0009151",
+        "supportingDiseaseLabel": "cleft lip/palate-ectodermal dysplasia syndrome",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 19,
+        "geneCurie": "NCBIGene:5813",
+        "geneLabel": "PURA",
+        "geneSymbol": "PURA",
+        "geneEntityId": 149906,
+        "bmaScore": 1.5029359341709707,
+        "normalizedScore": 0.165941,
+        "patientAverageScore": 2.304984709414079,
+        "phenotypeAverageScore": 0.7008871589278625,
+        "directPhenotypeCount": 83,
+        "matchedPhenotypeCount": 3,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0008872",
+            "patientPhenotypeLabel": "Feeding difficulties in infancy",
+            "diseasePhenotypeCurie": "HP:0008872",
+            "diseasePhenotypeLabel": "Feeding difficulties in infancy",
+            "micaCurie": "HP:0008872",
+            "micaLabel": "Feeding difficulties in infancy",
+            "score": 3.231072528192515,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:314655"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000164",
+            "patientPhenotypeLabel": "Abnormality of the dentition",
+            "diseasePhenotypeCurie": "HP:0011081",
+            "diseasePhenotypeLabel": "Incisor macrodontia",
+            "micaCurie": "HP:0000164",
+            "micaLabel": "Abnormality of the dentition",
+            "score": 2.2326989655298792,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:438216"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0011344",
+            "diseasePhenotypeLabel": "Severe global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:438216"
+          }
+        ],
+        "directNormalizedScore": 0.165941,
+        "diseaseSupportScore": 0,
+        "supportingDiseaseCurie": "",
+        "supportingDiseaseLabel": "",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 20,
+        "geneCurie": "NCBIGene:51082",
+        "geneLabel": "POLR1D",
+        "geneSymbol": "POLR1D",
+        "geneEntityId": 151679,
+        "bmaScore": 1.502332669148761,
+        "normalizedScore": 0.165874,
+        "patientAverageScore": 2.304984709414079,
+        "phenotypeAverageScore": 0.699680628883443,
+        "directPhenotypeCount": 78,
+        "matchedPhenotypeCount": 3,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0008872",
+            "patientPhenotypeLabel": "Feeding difficulties in infancy",
+            "diseasePhenotypeCurie": "HP:0008872",
+            "diseasePhenotypeLabel": "Feeding difficulties in infancy",
+            "micaCurie": "HP:0008872",
+            "micaLabel": "Feeding difficulties in infancy",
+            "score": 3.231072528192515,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:861"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000164",
+            "patientPhenotypeLabel": "Abnormality of the dentition",
+            "diseasePhenotypeCurie": "HP:0010807",
+            "diseasePhenotypeLabel": "Open bite",
+            "micaCurie": "HP:0000164",
+            "micaLabel": "Abnormality of the dentition",
+            "score": 2.2326989655298792,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:861"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:861"
+          }
+        ],
+        "directNormalizedScore": 0.165874,
+        "diseaseSupportScore": 0.054566,
+        "supportingDiseaseCurie": "MONDO:0013385",
+        "supportingDiseaseLabel": "Treacher Collins syndrome 2",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 21,
+        "geneCurie": "NCBIGene:9533",
+        "geneLabel": "POLR1C",
+        "geneSymbol": "POLR1C",
+        "geneEntityId": 150825,
+        "bmaScore": 1.5004821479992545,
+        "normalizedScore": 0.16567,
+        "patientAverageScore": 2.304984709414079,
+        "phenotypeAverageScore": 0.6959795865844298,
+        "directPhenotypeCount": 87,
+        "matchedPhenotypeCount": 3,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0008872",
+            "patientPhenotypeLabel": "Feeding difficulties in infancy",
+            "diseasePhenotypeCurie": "HP:0008872",
+            "diseasePhenotypeLabel": "Feeding difficulties in infancy",
+            "micaCurie": "HP:0008872",
+            "micaLabel": "Feeding difficulties in infancy",
+            "score": 3.231072528192515,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:861"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000164",
+            "patientPhenotypeLabel": "Abnormality of the dentition",
+            "diseasePhenotypeCurie": "HP:0010807",
+            "diseasePhenotypeLabel": "Open bite",
+            "micaCurie": "HP:0000164",
+            "micaLabel": "Abnormality of the dentition",
+            "score": 2.2326989655298792,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:861"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "7/8",
+            "referenceText": "OMIM:616494"
+          }
+        ],
+        "directNormalizedScore": 0.16567,
+        "diseaseSupportScore": 0.068892,
+        "supportingDiseaseCurie": "MONDO:0014666",
+        "supportingDiseaseLabel": "hypomyelinating leukodystrophy 11",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 22,
+        "geneCurie": "NCBIGene:80816",
+        "geneLabel": "ASXL3",
+        "geneSymbol": "ASXL3",
+        "geneEntityId": 152479,
+        "bmaScore": 1.4979808581957332,
+        "normalizedScore": 0.165393,
+        "patientAverageScore": 2.304984709414079,
+        "phenotypeAverageScore": 0.6909770069773874,
+        "directPhenotypeCount": 107,
+        "matchedPhenotypeCount": 3,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0008872",
+            "patientPhenotypeLabel": "Feeding difficulties in infancy",
+            "diseasePhenotypeCurie": "HP:0008872",
+            "diseasePhenotypeLabel": "Feeding difficulties in infancy",
+            "micaCurie": "HP:0008872",
+            "micaLabel": "Feeding difficulties in infancy",
+            "score": 3.231072528192515,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:352577"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000164",
+            "patientPhenotypeLabel": "Abnormality of the dentition",
+            "diseasePhenotypeCurie": "HP:0000678",
+            "diseasePhenotypeLabel": "Dental crowding",
+            "micaCurie": "HP:0000164",
+            "micaLabel": "Abnormality of the dentition",
+            "score": 2.2326989655298792,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:352577"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0011344",
+            "diseasePhenotypeLabel": "Severe global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "4/4",
+            "referenceText": "OMIM:615485"
+          }
+        ],
+        "directNormalizedScore": 0.165393,
+        "diseaseSupportScore": 0.112467,
+        "supportingDiseaseCurie": "MONDO:0014205",
+        "supportingDiseaseLabel": "severe feeding difficulties-failure to thrive-microcephaly due to ASXL3 deficiency syndrome",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 23,
+        "geneCurie": "NCBIGene:6949",
+        "geneLabel": "TCOF1",
+        "geneSymbol": "TCOF1",
+        "geneEntityId": 150273,
+        "bmaScore": 1.4969095946600957,
+        "normalizedScore": 0.165275,
+        "patientAverageScore": 2.304984709414079,
+        "phenotypeAverageScore": 0.6888344799061122,
+        "directPhenotypeCount": 87,
+        "matchedPhenotypeCount": 3,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0008872",
+            "patientPhenotypeLabel": "Feeding difficulties in infancy",
+            "diseasePhenotypeCurie": "HP:0008872",
+            "diseasePhenotypeLabel": "Feeding difficulties in infancy",
+            "micaCurie": "HP:0008872",
+            "micaLabel": "Feeding difficulties in infancy",
+            "score": 3.231072528192515,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:861"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000164",
+            "patientPhenotypeLabel": "Abnormality of the dentition",
+            "diseasePhenotypeCurie": "HP:0010807",
+            "diseasePhenotypeLabel": "Open bite",
+            "micaCurie": "HP:0000164",
+            "micaLabel": "Abnormality of the dentition",
+            "score": 2.2326989655298792,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:861"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:861"
+          }
+        ],
+        "directNormalizedScore": 0.165275,
+        "diseaseSupportScore": 0.050637,
+        "supportingDiseaseCurie": "MONDO:0007944",
+        "supportingDiseaseLabel": "Treacher Collins syndrome 1",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 24,
+        "geneCurie": "NCBIGene:23314",
+        "geneLabel": "SATB2",
+        "geneSymbol": "SATB2",
+        "geneEntityId": 151344,
+        "bmaScore": 1.486659406909706,
+        "normalizedScore": 0.164143,
+        "patientAverageScore": 2.304984709414079,
+        "phenotypeAverageScore": 0.668334104405333,
+        "directPhenotypeCount": 151,
+        "matchedPhenotypeCount": 3,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0008872",
+            "patientPhenotypeLabel": "Feeding difficulties in infancy",
+            "diseasePhenotypeCurie": "HP:0011470",
+            "diseasePhenotypeLabel": "Nasogastric tube feeding in infancy",
+            "micaCurie": "HP:0008872",
+            "micaLabel": "Feeding difficulties in infancy",
+            "score": 3.231072528192515,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:251028"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000164",
+            "patientPhenotypeLabel": "Abnormality of the dentition",
+            "diseasePhenotypeCurie": "HP:0006349",
+            "diseasePhenotypeLabel": "Agenesis of permanent teeth",
+            "micaCurie": "HP:0000164",
+            "micaLabel": "Abnormality of the dentition",
+            "score": 2.2326989655298792,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:251028"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0011344",
+            "diseasePhenotypeLabel": "Severe global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:251028"
+          }
+        ],
+        "directNormalizedScore": 0.164143,
+        "diseaseSupportScore": 0.115678,
+        "supportingDiseaseCurie": "MONDO:0012864",
+        "supportingDiseaseLabel": "chromosome 2q32-q33 deletion syndrome",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 25,
+        "geneCurie": "NCBIGene:7337",
+        "geneLabel": "UBE3A",
+        "geneSymbol": "UBE3A",
+        "geneEntityId": 150390,
+        "bmaScore": 1.4835320539943897,
+        "normalizedScore": 0.163798,
+        "patientAverageScore": 2.304984709414079,
+        "phenotypeAverageScore": 0.6620793985747001,
+        "directPhenotypeCount": 98,
+        "matchedPhenotypeCount": 3,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0008872",
+            "patientPhenotypeLabel": "Feeding difficulties in infancy",
+            "diseasePhenotypeCurie": "HP:0008872",
+            "diseasePhenotypeLabel": "Feeding difficulties in infancy",
+            "micaCurie": "HP:0008872",
+            "micaLabel": "Feeding difficulties in infancy",
+            "score": 3.231072528192515,
+            "evidenceCode": "20/26",
+            "referenceText": "OMIM:105830"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000164",
+            "patientPhenotypeLabel": "Abnormality of the dentition",
+            "diseasePhenotypeCurie": "HP:0000687",
+            "diseasePhenotypeLabel": "Widely spaced teeth",
+            "micaCurie": "HP:0000164",
+            "micaLabel": "Abnormality of the dentition",
+            "score": 2.2326989655298792,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:98795"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:98794"
+          }
+        ],
+        "directNormalizedScore": 0.163798,
+        "diseaseSupportScore": 0.113509,
+        "supportingDiseaseCurie": "MONDO:0007113",
+        "supportingDiseaseLabel": "Angelman syndrome",
+        "supportingDiseaseClassification": ""
+      }
+    ],
+    "engineSummary": {
+      "diseaseCount": 8579,
+      "geneCount": 5256,
+      "phenotypeCount": 19389,
+      "sourceMode": {
+        "disease": "relationship_fallback",
+        "gene": "relationship_fallback"
+      },
+      "generatedAt": "2026-03-15T21:25:30.675Z"
+    }
+  }
+}

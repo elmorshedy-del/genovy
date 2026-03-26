@@ -1,0 +1,684 @@
+{
+  "success": true,
+  "engine": "genovy-dx-sim",
+  "analysisType": "gene",
+  "input": {
+    "presentPhenotypeCuries": [
+      "HP:0001250"
+    ],
+    "excludedPhenotypeCuries": [
+      "HP:0012443"
+    ],
+    "sourceFormat": "phenopacket"
+  },
+  "ranking": {
+    "queryPhenotypes": [
+      {
+        "phenotypeCurie": "HP:0001250",
+        "phenotypeLabel": "Seizure"
+      }
+    ],
+    "results": [
+      {
+        "rank": 1,
+        "geneCurie": "NCBIGene:51083",
+        "geneLabel": "GAL",
+        "geneSymbol": "GAL",
+        "geneEntityId": 151680,
+        "bmaScore": 1.3008007105761425,
+        "normalizedScore": 0.143623,
+        "patientAverageScore": 1.4866293835155915,
+        "phenotypeAverageScore": 1.1149720376366936,
+        "directPhenotypeCount": 8,
+        "matchedPhenotypeCount": 1,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001250",
+            "patientPhenotypeLabel": "Seizure",
+            "diseasePhenotypeCurie": "HP:0032864",
+            "diseasePhenotypeLabel": "Focal aware sensory seizure with auditory features",
+            "micaCurie": "HP:0001250",
+            "micaLabel": "Seizure",
+            "score": 1.4866293835155915,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:616461"
+          }
+        ]
+      },
+      {
+        "rank": 2,
+        "geneCurie": "NCBIGene:64780",
+        "geneLabel": "MICAL1",
+        "geneSymbol": "MICAL1",
+        "geneEntityId": 152291,
+        "bmaScore": 1.2495554642446476,
+        "normalizedScore": 0.137965,
+        "patientAverageScore": 1.4866293835155915,
+        "phenotypeAverageScore": 1.0124815449737035,
+        "directPhenotypeCount": 35,
+        "matchedPhenotypeCount": 1,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001250",
+            "patientPhenotypeLabel": "Seizure",
+            "diseasePhenotypeCurie": "HP:0032898",
+            "diseasePhenotypeLabel": "Focal automatism seizure",
+            "micaCurie": "HP:0001250",
+            "micaLabel": "Seizure",
+            "score": 1.4866293835155915,
+            "evidenceCode": "1/11",
+            "referenceText": "OMIM:600512"
+          }
+        ]
+      },
+      {
+        "rank": 3,
+        "geneCurie": "NCBIGene:610",
+        "geneLabel": "HCN2",
+        "geneSymbol": "HCN2",
+        "geneEntityId": 148279,
+        "bmaScore": 1.2388578195963262,
+        "normalizedScore": 0.136783,
+        "patientAverageScore": 1.4866293835155915,
+        "phenotypeAverageScore": 0.991086255677061,
+        "directPhenotypeCount": 6,
+        "matchedPhenotypeCount": 1,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001250",
+            "patientPhenotypeLabel": "Seizure",
+            "diseasePhenotypeCurie": "HP:0010819",
+            "diseasePhenotypeLabel": "Atonic seizure",
+            "micaCurie": "HP:0001250",
+            "micaLabel": "Seizure",
+            "score": 1.4866293835155915,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:602477"
+          }
+        ]
+      },
+      {
+        "rank": 4,
+        "geneCurie": "NCBIGene:23031",
+        "geneLabel": "MAST3",
+        "geneSymbol": "MAST3",
+        "geneEntityId": 151272,
+        "bmaScore": 1.231028873161203,
+        "normalizedScore": 0.135919,
+        "patientAverageScore": 1.4866293835155915,
+        "phenotypeAverageScore": 0.9754283628068142,
+        "directPhenotypeCount": 16,
+        "matchedPhenotypeCount": 1,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001250",
+            "patientPhenotypeLabel": "Seizure",
+            "diseasePhenotypeCurie": "HP:0032794",
+            "diseasePhenotypeLabel": "Myoclonic seizure",
+            "micaCurie": "HP:0001250",
+            "micaLabel": "Seizure",
+            "score": 1.4866293835155915,
+            "evidenceCode": "5/11",
+            "referenceText": "OMIM:620115"
+          }
+        ]
+      },
+      {
+        "rank": 5,
+        "geneCurie": "NCBIGene:527",
+        "geneLabel": "ATP6V0C",
+        "geneSymbol": "ATP6V0C",
+        "geneEntityId": 148250,
+        "bmaScore": 1.1979499879714546,
+        "normalizedScore": 0.132267,
+        "patientAverageScore": 1.4866293835155915,
+        "phenotypeAverageScore": 0.9092705924273177,
+        "directPhenotypeCount": 24,
+        "matchedPhenotypeCount": 1,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001250",
+            "patientPhenotypeLabel": "Seizure",
+            "diseasePhenotypeCurie": "HP:0032794",
+            "diseasePhenotypeLabel": "Myoclonic seizure",
+            "micaCurie": "HP:0001250",
+            "micaLabel": "Seizure",
+            "score": 1.4866293835155915,
+            "evidenceCode": "5/5",
+            "referenceText": "OMIM:620465"
+          }
+        ]
+      },
+      {
+        "rank": 6,
+        "geneCurie": "NCBIGene:3786",
+        "geneLabel": "KCNQ3",
+        "geneSymbol": "KCNQ3",
+        "geneEntityId": 149275,
+        "bmaScore": 1.1808062340818841,
+        "normalizedScore": 0.130374,
+        "patientAverageScore": 1.4866293835155915,
+        "phenotypeAverageScore": 0.8749830846481765,
+        "directPhenotypeCount": 54,
+        "matchedPhenotypeCount": 1,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001250",
+            "patientPhenotypeLabel": "Seizure",
+            "diseasePhenotypeCurie": "HP:0032906",
+            "diseasePhenotypeLabel": "Focal head nodding automatism seizure",
+            "micaCurie": "HP:0001250",
+            "micaLabel": "Seizure",
+            "score": 1.4866293835155915,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:306"
+          }
+        ]
+      },
+      {
+        "rank": 7,
+        "geneCurie": "NCBIGene:114327",
+        "geneLabel": "EFHC1",
+        "geneSymbol": "EFHC1",
+        "geneEntityId": 152778,
+        "bmaScore": 1.1664038429012558,
+        "normalizedScore": 0.128784,
+        "patientAverageScore": 1.4866293835155915,
+        "phenotypeAverageScore": 0.8461783022869203,
+        "directPhenotypeCount": 23,
+        "matchedPhenotypeCount": 1,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001250",
+            "patientPhenotypeLabel": "Seizure",
+            "diseasePhenotypeCurie": "HP:0032794",
+            "diseasePhenotypeLabel": "Myoclonic seizure",
+            "micaCurie": "HP:0001250",
+            "micaLabel": "Seizure",
+            "score": 1.4866293835155915,
+            "evidenceCode": "10/13",
+            "referenceText": "OMIM:254770"
+          }
+        ]
+      },
+      {
+        "rank": 8,
+        "geneCurie": "NCBIGene:10565",
+        "geneLabel": "ARFGEF1",
+        "geneSymbol": "ARFGEF1",
+        "geneEntityId": 151069,
+        "bmaScore": 1.154424485799149,
+        "normalizedScore": 0.127461,
+        "patientAverageScore": 1.4866293835155915,
+        "phenotypeAverageScore": 0.8222195880827065,
+        "directPhenotypeCount": 12,
+        "matchedPhenotypeCount": 1,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001250",
+            "patientPhenotypeLabel": "Seizure",
+            "diseasePhenotypeCurie": "HP:0032794",
+            "diseasePhenotypeLabel": "Myoclonic seizure",
+            "micaCurie": "HP:0001250",
+            "micaLabel": "Seizure",
+            "score": 1.4866293835155915,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:619964"
+          }
+        ]
+      },
+      {
+        "rank": 9,
+        "geneCurie": "NCBIGene:6487",
+        "geneLabel": "ST3GAL3",
+        "geneSymbol": "ST3GAL3",
+        "geneEntityId": 150087,
+        "bmaScore": 1.1430901083087006,
+        "normalizedScore": 0.12621,
+        "patientAverageScore": 1.4866293835155915,
+        "phenotypeAverageScore": 0.79955083310181,
+        "directPhenotypeCount": 18,
+        "matchedPhenotypeCount": 1,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001250",
+            "patientPhenotypeLabel": "Seizure",
+            "diseasePhenotypeCurie": "HP:0032794",
+            "diseasePhenotypeLabel": "Myoclonic seizure",
+            "micaCurie": "HP:0001250",
+            "micaLabel": "Seizure",
+            "score": 1.4866293835155915,
+            "evidenceCode": "1/4",
+            "referenceText": "OMIM:615006"
+          }
+        ]
+      },
+      {
+        "rank": 10,
+        "geneCurie": "NCBIGene:378884",
+        "geneLabel": "NHLRC1",
+        "geneSymbol": "NHLRC1",
+        "geneEntityId": 153225,
+        "bmaScore": 1.1407156845102953,
+        "normalizedScore": 0.125948,
+        "patientAverageScore": 1.4866293835155915,
+        "phenotypeAverageScore": 0.794801985504999,
+        "directPhenotypeCount": 42,
+        "matchedPhenotypeCount": 1,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001250",
+            "patientPhenotypeLabel": "Seizure",
+            "diseasePhenotypeCurie": "HP:0032794",
+            "diseasePhenotypeLabel": "Myoclonic seizure",
+            "micaCurie": "HP:0001250",
+            "micaLabel": "Seizure",
+            "score": 1.4866293835155915,
+            "evidenceCode": "21/22",
+            "referenceText": "OMIM:620681"
+          }
+        ]
+      },
+      {
+        "rank": 11,
+        "geneCurie": "NCBIGene:5602",
+        "geneLabel": "MAPK10",
+        "geneSymbol": "MAPK10",
+        "geneEntityId": 149853,
+        "bmaScore": 1.1385071007562206,
+        "normalizedScore": 0.125704,
+        "patientAverageScore": 1.4866293835155915,
+        "phenotypeAverageScore": 0.7903848179968499,
+        "directPhenotypeCount": 25,
+        "matchedPhenotypeCount": 1,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001250",
+            "patientPhenotypeLabel": "Seizure",
+            "diseasePhenotypeCurie": "HP:0010819",
+            "diseasePhenotypeLabel": "Atonic seizure",
+            "micaCurie": "HP:0001250",
+            "micaLabel": "Seizure",
+            "score": 1.4866293835155915,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:2382"
+          }
+        ]
+      },
+      {
+        "rank": 12,
+        "geneCurie": "NCBIGene:10641",
+        "geneLabel": "NPRL2",
+        "geneSymbol": "NPRL2",
+        "geneEntityId": 151087,
+        "bmaScore": 1.1260340463542133,
+        "normalizedScore": 0.124326,
+        "patientAverageScore": 1.4866293835155915,
+        "phenotypeAverageScore": 0.7654387091928353,
+        "directPhenotypeCount": 29,
+        "matchedPhenotypeCount": 1,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001250",
+            "patientPhenotypeLabel": "Seizure",
+            "diseasePhenotypeCurie": "HP:0031951",
+            "diseasePhenotypeLabel": "Nocturnal seizures",
+            "micaCurie": "HP:0001250",
+            "micaLabel": "Seizure",
+            "score": 1.4866293835155915,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:98820"
+          }
+        ]
+      },
+      {
+        "rank": 13,
+        "geneCurie": "NCBIGene:6900",
+        "geneLabel": "CNTN2",
+        "geneSymbol": "CNTN2",
+        "geneEntityId": 150250,
+        "bmaScore": 1.1244300028751906,
+        "normalizedScore": 0.124149,
+        "patientAverageScore": 1.4866293835155915,
+        "phenotypeAverageScore": 0.7622306222347894,
+        "directPhenotypeCount": 16,
+        "matchedPhenotypeCount": 1,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001250",
+            "patientPhenotypeLabel": "Seizure",
+            "diseasePhenotypeCurie": "HP:0011165",
+            "diseasePhenotypeLabel": "Focal sensory seizure with visual features",
+            "micaCurie": "HP:0001250",
+            "micaLabel": "Seizure",
+            "score": 1.4866293835155915,
+            "evidenceCode": "3/5",
+            "referenceText": "OMIM:615400"
+          }
+        ]
+      },
+      {
+        "rank": 14,
+        "geneCurie": "NCBIGene:8131",
+        "geneLabel": "NPRL3",
+        "geneSymbol": "NPRL3",
+        "geneEntityId": 150522,
+        "bmaScore": 1.121707810627157,
+        "normalizedScore": 0.123849,
+        "patientAverageScore": 1.4866293835155915,
+        "phenotypeAverageScore": 0.7567862377387224,
+        "directPhenotypeCount": 30,
+        "matchedPhenotypeCount": 1,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001250",
+            "patientPhenotypeLabel": "Seizure",
+            "diseasePhenotypeCurie": "HP:0031951",
+            "diseasePhenotypeLabel": "Nocturnal seizures",
+            "micaCurie": "HP:0001250",
+            "micaLabel": "Seizure",
+            "score": 1.4866293835155915,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:98820"
+          }
+        ]
+      },
+      {
+        "rank": 15,
+        "geneCurie": "NCBIGene:151",
+        "geneLabel": "ADRA2B",
+        "geneSymbol": "ADRA2B",
+        "geneEntityId": 148123,
+        "bmaScore": 1.1192195053522085,
+        "normalizedScore": 0.123574,
+        "patientAverageScore": 1.4866293835155915,
+        "phenotypeAverageScore": 0.7518096271888256,
+        "directPhenotypeCount": 8,
+        "matchedPhenotypeCount": 1,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001250",
+            "patientPhenotypeLabel": "Seizure",
+            "diseasePhenotypeCurie": "HP:0007359",
+            "diseasePhenotypeLabel": "Focal-onset seizure",
+            "micaCurie": "HP:0001250",
+            "micaLabel": "Seizure",
+            "score": 1.4866293835155915,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:86814"
+          }
+        ]
+      },
+      {
+        "rank": 16,
+        "geneCurie": "NCBIGene:23732",
+        "geneLabel": "FRRS1L",
+        "geneSymbol": "FRRS1L",
+        "geneEntityId": 151422,
+        "bmaScore": 1.1169609418305808,
+        "normalizedScore": 0.123325,
+        "patientAverageScore": 1.4866293835155915,
+        "phenotypeAverageScore": 0.7472925001455699,
+        "directPhenotypeCount": 50,
+        "matchedPhenotypeCount": 1,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001250",
+            "patientPhenotypeLabel": "Seizure",
+            "diseasePhenotypeCurie": "HP:0031165",
+            "diseasePhenotypeLabel": "Multifocal seizures",
+            "micaCurie": "HP:0001250",
+            "micaLabel": "Seizure",
+            "score": 1.4866293835155915,
+            "evidenceCode": "2/8",
+            "referenceText": "OMIM:616981"
+          }
+        ]
+      },
+      {
+        "rank": 17,
+        "geneCurie": "NCBIGene:10458",
+        "geneLabel": "BAIAP2",
+        "geneSymbol": "BAIAP2",
+        "geneEntityId": 151037,
+        "bmaScore": 1.1148477992434942,
+        "normalizedScore": 0.123091,
+        "patientAverageScore": 1.4866293835155915,
+        "phenotypeAverageScore": 0.7430662149713969,
+        "directPhenotypeCount": 43,
+        "matchedPhenotypeCount": 1,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001250",
+            "patientPhenotypeLabel": "Seizure",
+            "diseasePhenotypeCurie": "HP:0032794",
+            "diseasePhenotypeLabel": "Myoclonic seizure",
+            "micaCurie": "HP:0001250",
+            "micaLabel": "Seizure",
+            "score": 1.4866293835155915,
+            "evidenceCode": "3/3",
+            "referenceText": "OMIM:621468"
+          }
+        ]
+      },
+      {
+        "rank": 18,
+        "geneCurie": "NCBIGene:57094",
+        "geneLabel": "CPA6",
+        "geneSymbol": "CPA6",
+        "geneEntityId": 152114,
+        "bmaScore": 1.1136306099168072,
+        "normalizedScore": 0.122957,
+        "patientAverageScore": 1.4866293835155915,
+        "phenotypeAverageScore": 0.7406318363180229,
+        "directPhenotypeCount": 36,
+        "matchedPhenotypeCount": 1,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001250",
+            "patientPhenotypeLabel": "Seizure",
+            "diseasePhenotypeCurie": "HP:0020216",
+            "diseasePhenotypeLabel": "Visually-induced seizure",
+            "micaCurie": "HP:0001250",
+            "micaLabel": "Seizure",
+            "score": 1.4866293835155915,
+            "evidenceCode": "1/4",
+            "referenceText": "OMIM:614417"
+          }
+        ]
+      },
+      {
+        "rank": 19,
+        "geneCurie": "NCBIGene:23316",
+        "geneLabel": "CUX2",
+        "geneSymbol": "CUX2",
+        "geneEntityId": 151345,
+        "bmaScore": 1.1115457181678152,
+        "normalizedScore": 0.122727,
+        "patientAverageScore": 1.4866293835155915,
+        "phenotypeAverageScore": 0.736462052820039,
+        "directPhenotypeCount": 41,
+        "matchedPhenotypeCount": 1,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001250",
+            "patientPhenotypeLabel": "Seizure",
+            "diseasePhenotypeCurie": "HP:0032792",
+            "diseasePhenotypeLabel": "Tonic seizure",
+            "micaCurie": "HP:0001250",
+            "micaLabel": "Seizure",
+            "score": 1.4866293835155915,
+            "evidenceCode": "3/9",
+            "referenceText": "OMIM:618141"
+          }
+        ]
+      },
+      {
+        "rank": 20,
+        "geneCurie": "NCBIGene:57526",
+        "geneLabel": "PCDH19",
+        "geneSymbol": "PCDH19",
+        "geneEntityId": 152162,
+        "bmaScore": 1.1092766566112298,
+        "normalizedScore": 0.122476,
+        "patientAverageScore": 1.4866293835155915,
+        "phenotypeAverageScore": 0.7319239297068683,
+        "directPhenotypeCount": 73,
+        "matchedPhenotypeCount": 1,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001250",
+            "patientPhenotypeLabel": "Seizure",
+            "diseasePhenotypeCurie": "HP:0032810",
+            "diseasePhenotypeLabel": "Focal sensory seizure with cephalic sensation",
+            "micaCurie": "HP:0001250",
+            "micaLabel": "Seizure",
+            "score": 1.4866293835155915,
+            "evidenceCode": "1/3",
+            "referenceText": "OMIM:300088"
+          }
+        ]
+      },
+      {
+        "rank": 21,
+        "geneCurie": "NCBIGene:112755",
+        "geneLabel": "STX1B",
+        "geneSymbol": "STX1B",
+        "geneEntityId": 152762,
+        "bmaScore": 1.1044287241782056,
+        "normalizedScore": 0.121941,
+        "patientAverageScore": 1.4866293835155915,
+        "phenotypeAverageScore": 0.7222280648408196,
+        "directPhenotypeCount": 35,
+        "matchedPhenotypeCount": 1,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001250",
+            "patientPhenotypeLabel": "Seizure",
+            "diseasePhenotypeCurie": "HP:0032792",
+            "diseasePhenotypeLabel": "Tonic seizure",
+            "micaCurie": "HP:0001250",
+            "micaLabel": "Seizure",
+            "score": 1.4866293835155915,
+            "evidenceCode": "8/29",
+            "referenceText": "OMIM:616172"
+          }
+        ]
+      },
+      {
+        "rank": 22,
+        "geneCurie": "NCBIGene:8629",
+        "geneLabel": "JRK",
+        "geneSymbol": "JRK",
+        "geneEntityId": 150615,
+        "bmaScore": 1.1038500753593397,
+        "normalizedScore": 0.121877,
+        "patientAverageScore": 1.4866293835155915,
+        "phenotypeAverageScore": 0.7210707672030876,
+        "directPhenotypeCount": 30,
+        "matchedPhenotypeCount": 1,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001250",
+            "patientPhenotypeLabel": "Seizure",
+            "diseasePhenotypeCurie": "HP:0011150",
+            "diseasePhenotypeLabel": "Myoclonic absence seizure",
+            "micaCurie": "HP:0001250",
+            "micaLabel": "Seizure",
+            "score": 1.4866293835155915,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:64280"
+          }
+        ]
+      },
+      {
+        "rank": 23,
+        "geneCurie": "NCBIGene:7957",
+        "geneLabel": "EPM2A",
+        "geneSymbol": "EPM2A",
+        "geneEntityId": 150498,
+        "bmaScore": 1.1021526781042579,
+        "normalizedScore": 0.12169,
+        "patientAverageScore": 1.4866293835155915,
+        "phenotypeAverageScore": 0.7176759726929242,
+        "directPhenotypeCount": 42,
+        "matchedPhenotypeCount": 1,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001250",
+            "patientPhenotypeLabel": "Seizure",
+            "diseasePhenotypeCurie": "HP:0011165",
+            "diseasePhenotypeLabel": "Focal sensory seizure with visual features",
+            "micaCurie": "HP:0001250",
+            "micaLabel": "Seizure",
+            "score": 1.4866293835155915,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:501"
+          }
+        ]
+      },
+      {
+        "rank": 24,
+        "geneCurie": "NCBIGene:3785",
+        "geneLabel": "KCNQ2",
+        "geneSymbol": "KCNQ2",
+        "geneEntityId": 149274,
+        "bmaScore": 1.0949931374009407,
+        "normalizedScore": 0.120899,
+        "patientAverageScore": 1.4866293835155915,
+        "phenotypeAverageScore": 0.7033568912862899,
+        "directPhenotypeCount": 94,
+        "matchedPhenotypeCount": 1,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001250",
+            "patientPhenotypeLabel": "Seizure",
+            "diseasePhenotypeCurie": "HP:0032906",
+            "diseasePhenotypeLabel": "Focal head nodding automatism seizure",
+            "micaCurie": "HP:0001250",
+            "micaLabel": "Seizure",
+            "score": 1.4866293835155915,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:306"
+          }
+        ]
+      },
+      {
+        "rank": 25,
+        "geneCurie": "NCBIGene:2891",
+        "geneLabel": "GRIA2",
+        "geneSymbol": "GRIA2",
+        "geneEntityId": 149006,
+        "bmaScore": 1.0925966429478908,
+        "normalizedScore": 0.120635,
+        "patientAverageScore": 1.4866293835155915,
+        "phenotypeAverageScore": 0.6985639023801903,
+        "directPhenotypeCount": 25,
+        "matchedPhenotypeCount": 1,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001250",
+            "patientPhenotypeLabel": "Seizure",
+            "diseasePhenotypeCurie": "HP:0032792",
+            "diseasePhenotypeLabel": "Tonic seizure",
+            "micaCurie": "HP:0001250",
+            "micaLabel": "Seizure",
+            "score": 1.4866293835155915,
+            "evidenceCode": "1/28",
+            "referenceText": "OMIM:618917"
+          }
+        ]
+      }
+    ],
+    "engineSummary": {
+      "diseaseCount": 8579,
+      "geneCount": 5256,
+      "phenotypeCount": 19389,
+      "sourceMode": {
+        "disease": "relationship_fallback",
+        "gene": "relationship_fallback"
+      },
+      "generatedAt": "2026-03-15T21:00:39.457Z"
+    }
+  }
+}

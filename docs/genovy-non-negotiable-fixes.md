@@ -6,6 +6,32 @@ Baseline position: 82 found, 34 top-1, 46 top-5, 58 top-10, MRR 0.4097 (propagat
 
 ---
 
+## Hard Rule: No Benchmark Cheating
+
+This is non-negotiable for all future enrichment and curation work.
+
+- The benchmark may generate hypotheses about missing syndrome features.
+- The benchmark may **not** define truth.
+- Never add a term, edge, or disease assertion just because it improves a benchmark case.
+- Never "cheat" a gene to a higher rank by copying terms from a winning competitor into the truth profile unless those terms are independently documented for the truth syndrome.
+- All enrichment must be:
+  - source-backed
+  - shadow-tested first
+  - attached at the disease-profile level, not the individual case level
+  - recorded with provenance and rationale
+- Seam repair and profile enrichment are separate operations:
+  - missing `gene -> disease` support must not be disguised as phenotype enrichment
+  - phenotype enrichment must not be used to hide a broken attachment path
+- Promotion rule:
+  - first prove the terms in a shadow profile
+  - then check the whole truth-gene family slice
+  - then rerun the full benchmark
+  - only then promote into the real graph or canonical source layer
+
+If source evidence is absent, leave the gap open and record it as an unresolved evidence hole. Do not invent truth from benchmark pressure.
+
+---
+
 ## Phase 0: Source Freshness Audit
 
 Nothing else matters if the data you're scoring against is stale. Do this before any other work.

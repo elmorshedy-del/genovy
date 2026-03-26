@@ -1,0 +1,2692 @@
+{
+  "success": true,
+  "engine": "genovy-dx-sim",
+  "input": {
+    "presentPhenotypeCuries": [
+      "HP:0001249",
+      "HP:0001263",
+      "HP:0007018",
+      "HP:0000739",
+      "HP:0000718",
+      "HP:0000219",
+      "HP:0007665",
+      "HP:0000527",
+      "HP:0002714",
+      "HP:0000343",
+      "HP:0000463",
+      "HP:0004322",
+      "HP:0000252",
+      "HP:0000347",
+      "HP:0001511",
+      "HP:0002020",
+      "HP:0002553",
+      "HP:0001250"
+    ],
+    "excludedPhenotypeCuries": [
+      "HP:0000729",
+      "HP:0100716",
+      "HP:0009623",
+      "HP:0001007",
+      "HP:0000750",
+      "HP:0000508",
+      "HP:0009829",
+      "HP:0410030",
+      "HP:0000175",
+      "HP:0000218",
+      "HP:0005280",
+      "HP:0000028",
+      "HP:0000687",
+      "HP:0000365",
+      "HP:0000954",
+      "HP:0000470",
+      "HP:0000776",
+      "HP:0000664",
+      "HP:0000545",
+      "HP:0001377",
+      "HP:0004209",
+      "HP:0200055",
+      "HP:0012165",
+      "HP:0001642",
+      "HP:0001629",
+      "HP:0001631",
+      "HP:0001636",
+      "HP:0004383",
+      "HP:0001647"
+    ],
+    "sourceFormat": "phenopacket"
+  },
+  "ranking": {
+    "queryPhenotypes": [
+      {
+        "phenotypeCurie": "HP:0001249",
+        "phenotypeLabel": "Intellectual disability"
+      },
+      {
+        "phenotypeCurie": "HP:0001263",
+        "phenotypeLabel": "Global developmental delay"
+      },
+      {
+        "phenotypeCurie": "HP:0007018",
+        "phenotypeLabel": "Attention deficit hyperactivity disorder"
+      },
+      {
+        "phenotypeCurie": "HP:0000739",
+        "phenotypeLabel": "Anxiety"
+      },
+      {
+        "phenotypeCurie": "HP:0000718",
+        "phenotypeLabel": "Aggressive behavior"
+      },
+      {
+        "phenotypeCurie": "HP:0000219",
+        "phenotypeLabel": "Thin upper lip vermilion"
+      },
+      {
+        "phenotypeCurie": "HP:0007665",
+        "phenotypeLabel": "Curly eyelashes"
+      },
+      {
+        "phenotypeCurie": "HP:0000527",
+        "phenotypeLabel": "Long eyelashes"
+      },
+      {
+        "phenotypeCurie": "HP:0002714",
+        "phenotypeLabel": "Downturned corners of mouth"
+      },
+      {
+        "phenotypeCurie": "HP:0000343",
+        "phenotypeLabel": "Long philtrum"
+      },
+      {
+        "phenotypeCurie": "HP:0000463",
+        "phenotypeLabel": "Anteverted nares"
+      },
+      {
+        "phenotypeCurie": "HP:0004322",
+        "phenotypeLabel": "Short stature"
+      },
+      {
+        "phenotypeCurie": "HP:0000252",
+        "phenotypeLabel": "Microcephaly"
+      },
+      {
+        "phenotypeCurie": "HP:0000347",
+        "phenotypeLabel": "Micrognathia"
+      },
+      {
+        "phenotypeCurie": "HP:0001511",
+        "phenotypeLabel": "Intrauterine growth retardation"
+      },
+      {
+        "phenotypeCurie": "HP:0002020",
+        "phenotypeLabel": "Gastroesophageal reflux"
+      },
+      {
+        "phenotypeCurie": "HP:0002553",
+        "phenotypeLabel": "Highly arched eyebrow"
+      },
+      {
+        "phenotypeCurie": "HP:0001250",
+        "phenotypeLabel": "Seizure"
+      }
+    ],
+    "results": [
+      {
+        "rank": 1,
+        "diseaseCurie": "MONDO:0010370",
+        "diseaseLabel": "Cornelia de Lange syndrome 2",
+        "diseaseEntityId": 71656,
+        "bmaScore": 2.1471996824477313,
+        "normalizedScore": 0.237074,
+        "patientAverageScore": 2.531632909714635,
+        "diseaseAverageScore": 1.7627664551808278,
+        "directPhenotypeCount": 39,
+        "matchedPhenotypeCount": 18,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000527",
+            "patientPhenotypeLabel": "Long eyelashes",
+            "diseasePhenotypeCurie": "HP:0000527",
+            "diseasePhenotypeLabel": "Long eyelashes",
+            "micaCurie": "HP:0000527",
+            "micaLabel": "Long eyelashes",
+            "score": 4.151797857134536,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:300590"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002714",
+            "patientPhenotypeLabel": "Downturned corners of mouth",
+            "diseasePhenotypeCurie": "HP:0002714",
+            "diseasePhenotypeLabel": "Downturned corners of mouth",
+            "micaCurie": "HP:0002714",
+            "micaLabel": "Downturned corners of mouth",
+            "score": 4.033192114726689,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:300590"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002553",
+            "patientPhenotypeLabel": "Highly arched eyebrow",
+            "diseasePhenotypeCurie": "HP:0002553",
+            "diseasePhenotypeLabel": "Highly arched eyebrow",
+            "micaCurie": "HP:0002553",
+            "micaLabel": "Highly arched eyebrow",
+            "score": 3.9271739206498917,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:22106055"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007665",
+            "patientPhenotypeLabel": "Curly eyelashes",
+            "diseasePhenotypeCurie": "HP:0000527",
+            "diseasePhenotypeLabel": "Long eyelashes",
+            "micaCurie": "HP:0000499",
+            "micaLabel": "Abnormal eyelash morphology",
+            "score": 3.363340496770266,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:300590"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002020",
+            "patientPhenotypeLabel": "Gastroesophageal reflux",
+            "diseasePhenotypeCurie": "HP:0002020",
+            "diseasePhenotypeLabel": "Gastroesophageal reflux",
+            "micaCurie": "HP:0002020",
+            "micaLabel": "Gastroesophageal reflux",
+            "score": 3.3532901609167642,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:300590"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000219",
+            "patientPhenotypeLabel": "Thin upper lip vermilion",
+            "diseasePhenotypeCurie": "HP:0000219",
+            "diseasePhenotypeLabel": "Thin upper lip vermilion",
+            "micaCurie": "HP:0000219",
+            "micaLabel": "Thin upper lip vermilion",
+            "score": 3.3172797233937312,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:300590"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000463",
+            "patientPhenotypeLabel": "Anteverted nares",
+            "diseasePhenotypeCurie": "HP:0000463",
+            "diseasePhenotypeLabel": "Anteverted nares",
+            "micaCurie": "HP:0000463",
+            "micaLabel": "Anteverted nares",
+            "score": 3.028794115342267,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:300590"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001511",
+            "patientPhenotypeLabel": "Intrauterine growth retardation",
+            "diseasePhenotypeCurie": "HP:0001511",
+            "diseasePhenotypeLabel": "Intrauterine growth retardation",
+            "micaCurie": "HP:0001511",
+            "micaLabel": "Intrauterine growth retardation",
+            "score": 2.9022145415565475,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:20358602"
+          }
+        ]
+      },
+      {
+        "rank": 2,
+        "diseaseCurie": "MONDO:0007387",
+        "diseaseLabel": "Cornelia de Lange syndrome 1",
+        "diseaseEntityId": 68673,
+        "bmaScore": 2.13294762062469,
+        "normalizedScore": 0.235501,
+        "patientAverageScore": 3.118182241872839,
+        "diseaseAverageScore": 1.1477129993765411,
+        "directPhenotypeCount": 129,
+        "matchedPhenotypeCount": 18,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0007665",
+            "patientPhenotypeLabel": "Curly eyelashes",
+            "diseasePhenotypeCurie": "HP:0007665",
+            "diseasePhenotypeLabel": "Curly eyelashes",
+            "micaCurie": "HP:0007665",
+            "micaLabel": "Curly eyelashes",
+            "score": 6.977631093893129,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:21165303;PMID:23304577;PMID:31337854;PMID:36777704;PMID:32074972;PMID:25447906;PMID:38284454"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000527",
+            "patientPhenotypeLabel": "Long eyelashes",
+            "diseasePhenotypeCurie": "HP:0000527",
+            "diseasePhenotypeLabel": "Long eyelashes",
+            "micaCurie": "HP:0000527",
+            "micaLabel": "Long eyelashes",
+            "score": 4.151797857134536,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:21165303;PMID:23304577;PMID:31337854;PMID:36777704;PMID:32074972;PMID:30246735;PMID:22241092;PMID:38284454"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002714",
+            "patientPhenotypeLabel": "Downturned corners of mouth",
+            "diseasePhenotypeCurie": "HP:0002714",
+            "diseasePhenotypeLabel": "Downturned corners of mouth",
+            "micaCurie": "HP:0002714",
+            "micaLabel": "Downturned corners of mouth",
+            "score": 4.033192114726689,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:21165303;PMID:31337854;PMID:36777704;PMID:30246735;PMID:32074972;PMID:38284454;PMID:22241092"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002553",
+            "patientPhenotypeLabel": "Highly arched eyebrow",
+            "diseasePhenotypeCurie": "HP:0002553",
+            "diseasePhenotypeLabel": "Highly arched eyebrow",
+            "micaCurie": "HP:0002553",
+            "micaLabel": "Highly arched eyebrow",
+            "score": 3.9271739206498917,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:23304577;PMID:31337854;PMID:36777704;PMID:32074972;PMID:38284454;PMID:22241092"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000739",
+            "patientPhenotypeLabel": "Anxiety",
+            "diseasePhenotypeCurie": "HP:0000739",
+            "diseasePhenotypeLabel": "Anxiety",
+            "micaCurie": "HP:0000739",
+            "micaLabel": "Anxiety",
+            "score": 3.743866656531178,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31337854"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007018",
+            "patientPhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "diseasePhenotypeCurie": "HP:0007018",
+            "diseasePhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "micaCurie": "HP:0007018",
+            "micaLabel": "Attention deficit hyperactivity disorder",
+            "score": 3.5197383685544286,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31337854"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000718",
+            "patientPhenotypeLabel": "Aggressive behavior",
+            "diseasePhenotypeCurie": "HP:0000718",
+            "diseasePhenotypeLabel": "Aggressive behavior",
+            "micaCurie": "HP:0000718",
+            "micaLabel": "Aggressive behavior",
+            "score": 3.477342809586743,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31337854"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002020",
+            "patientPhenotypeLabel": "Gastroesophageal reflux",
+            "diseasePhenotypeCurie": "HP:0002020",
+            "diseasePhenotypeLabel": "Gastroesophageal reflux",
+            "micaCurie": "HP:0002020",
+            "micaLabel": "Gastroesophageal reflux",
+            "score": 3.3532901609167642,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:21165303;PMID:31337854;PMID:20358602;PMID:22241092"
+          }
+        ]
+      },
+      {
+        "rank": 3,
+        "diseaseCurie": "MONDO:0007974",
+        "diseaseLabel": "intellectual disability, autosomal dominant 1",
+        "diseaseEntityId": 69260,
+        "bmaScore": 2.1253883659824164,
+        "normalizedScore": 0.234666,
+        "patientAverageScore": 2.7365262129747787,
+        "diseaseAverageScore": 1.514250518990054,
+        "directPhenotypeCount": 81,
+        "matchedPhenotypeCount": 18,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000527",
+            "patientPhenotypeLabel": "Long eyelashes",
+            "diseasePhenotypeCurie": "HP:0000527",
+            "diseasePhenotypeLabel": "Long eyelashes",
+            "micaCurie": "HP:0000527",
+            "micaLabel": "Long eyelashes",
+            "score": 4.151797857134536,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:18812405"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002714",
+            "patientPhenotypeLabel": "Downturned corners of mouth",
+            "diseasePhenotypeCurie": "HP:0002714",
+            "diseasePhenotypeLabel": "Downturned corners of mouth",
+            "micaCurie": "HP:0002714",
+            "micaLabel": "Downturned corners of mouth",
+            "score": 4.033192114726689,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:156200"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002553",
+            "patientPhenotypeLabel": "Highly arched eyebrow",
+            "diseasePhenotypeCurie": "HP:0002553",
+            "diseasePhenotypeLabel": "Highly arched eyebrow",
+            "micaCurie": "HP:0002553",
+            "micaLabel": "Highly arched eyebrow",
+            "score": 3.9271739206498917,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:156200"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000739",
+            "patientPhenotypeLabel": "Anxiety",
+            "diseasePhenotypeCurie": "HP:0000739",
+            "diseasePhenotypeLabel": "Anxiety",
+            "micaCurie": "HP:0000739",
+            "micaLabel": "Anxiety",
+            "score": 3.743866656531178,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:18812405"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000718",
+            "patientPhenotypeLabel": "Aggressive behavior",
+            "diseasePhenotypeCurie": "HP:0000718",
+            "diseasePhenotypeLabel": "Aggressive behavior",
+            "micaCurie": "HP:0000718",
+            "micaLabel": "Aggressive behavior",
+            "score": 3.477342809586743,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:156200"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007018",
+            "patientPhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "diseasePhenotypeCurie": "HP:0000736",
+            "diseasePhenotypeLabel": "Short attention span",
+            "micaCurie": "HP:0000736",
+            "micaLabel": "Short attention span",
+            "score": 3.397590419813344,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:18812405"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007665",
+            "patientPhenotypeLabel": "Curly eyelashes",
+            "diseasePhenotypeCurie": "HP:0000527",
+            "diseasePhenotypeLabel": "Long eyelashes",
+            "micaCurie": "HP:0000499",
+            "micaLabel": "Abnormal eyelash morphology",
+            "score": 3.363340496770266,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:18812405"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002020",
+            "patientPhenotypeLabel": "Gastroesophageal reflux",
+            "diseasePhenotypeCurie": "HP:0002020",
+            "diseasePhenotypeLabel": "Gastroesophageal reflux",
+            "micaCurie": "HP:0002020",
+            "micaLabel": "Gastroesophageal reflux",
+            "score": 3.3532901609167642,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:18812405"
+          }
+        ]
+      },
+      {
+        "rank": 4,
+        "diseaseCurie": "MONDO:0011518",
+        "diseaseLabel": "Wiedemann-Steiner syndrome",
+        "diseaseEntityId": 72804,
+        "bmaScore": 2.1182233349702084,
+        "normalizedScore": 0.233875,
+        "patientAverageScore": 2.715915610876827,
+        "diseaseAverageScore": 1.5205310590635892,
+        "directPhenotypeCount": 104,
+        "matchedPhenotypeCount": 18,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000527",
+            "patientPhenotypeLabel": "Long eyelashes",
+            "diseasePhenotypeCurie": "HP:0000527",
+            "diseasePhenotypeLabel": "Long eyelashes",
+            "micaCurie": "HP:0000527",
+            "micaLabel": "Long eyelashes",
+            "score": 4.151797857134536,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:319182"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002553",
+            "patientPhenotypeLabel": "Highly arched eyebrow",
+            "diseasePhenotypeCurie": "HP:0002553",
+            "diseasePhenotypeLabel": "Highly arched eyebrow",
+            "micaCurie": "HP:0002553",
+            "micaLabel": "Highly arched eyebrow",
+            "score": 3.9271739206498917,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:25810209;PMID:36291481"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000739",
+            "patientPhenotypeLabel": "Anxiety",
+            "diseasePhenotypeCurie": "HP:0000739",
+            "diseasePhenotypeLabel": "Anxiety",
+            "micaCurie": "HP:0000739",
+            "micaLabel": "Anxiety",
+            "score": 3.743866656531178,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:319182"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000718",
+            "patientPhenotypeLabel": "Aggressive behavior",
+            "diseasePhenotypeCurie": "HP:0000718",
+            "diseasePhenotypeLabel": "Aggressive behavior",
+            "micaCurie": "HP:0000718",
+            "micaLabel": "Aggressive behavior",
+            "score": 3.477342809586743,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:25810209;PMID:22795537"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007018",
+            "patientPhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "diseasePhenotypeCurie": "HP:0000736",
+            "diseasePhenotypeLabel": "Short attention span",
+            "micaCurie": "HP:0000736",
+            "micaLabel": "Short attention span",
+            "score": 3.397590419813344,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:319182"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007665",
+            "patientPhenotypeLabel": "Curly eyelashes",
+            "diseasePhenotypeCurie": "HP:0000527",
+            "diseasePhenotypeLabel": "Long eyelashes",
+            "micaCurie": "HP:0000499",
+            "micaLabel": "Abnormal eyelash morphology",
+            "score": 3.363340496770266,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:319182"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002020",
+            "patientPhenotypeLabel": "Gastroesophageal reflux",
+            "diseasePhenotypeCurie": "HP:0002020",
+            "diseasePhenotypeLabel": "Gastroesophageal reflux",
+            "micaCurie": "HP:0002020",
+            "micaLabel": "Gastroesophageal reflux",
+            "score": 3.3532901609167642,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:319182"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000219",
+            "patientPhenotypeLabel": "Thin upper lip vermilion",
+            "diseasePhenotypeCurie": "HP:0000219",
+            "diseasePhenotypeLabel": "Thin upper lip vermilion",
+            "micaCurie": "HP:0000219",
+            "micaLabel": "Thin upper lip vermilion",
+            "score": 3.3172797233937312,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:319182"
+          }
+        ]
+      },
+      {
+        "rank": 5,
+        "diseaseCurie": "MONDO:0012555",
+        "diseaseLabel": "Cornelia de Lange syndrome 3",
+        "diseaseEntityId": 73841,
+        "bmaScore": 2.0869512607572624,
+        "normalizedScore": 0.230422,
+        "patientAverageScore": 2.68910714489483,
+        "diseaseAverageScore": 1.4847953766196949,
+        "directPhenotypeCount": 83,
+        "matchedPhenotypeCount": 18,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0007665",
+            "patientPhenotypeLabel": "Curly eyelashes",
+            "diseasePhenotypeCurie": "HP:0007665",
+            "diseasePhenotypeLabel": "Curly eyelashes",
+            "micaCurie": "HP:0007665",
+            "micaLabel": "Curly eyelashes",
+            "score": 6.977631093893129,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:28781842"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000527",
+            "patientPhenotypeLabel": "Long eyelashes",
+            "diseasePhenotypeCurie": "HP:0000527",
+            "diseasePhenotypeLabel": "Long eyelashes",
+            "micaCurie": "HP:0000527",
+            "micaLabel": "Long eyelashes",
+            "score": 4.151797857134536,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:28781842;PMID:25655089;PMID:17273969"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002714",
+            "patientPhenotypeLabel": "Downturned corners of mouth",
+            "diseasePhenotypeCurie": "HP:0002714",
+            "diseasePhenotypeLabel": "Downturned corners of mouth",
+            "micaCurie": "HP:0002714",
+            "micaLabel": "Downturned corners of mouth",
+            "score": 4.033192114726689,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:28781842;PMID:25655089;PMID:17273969"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002553",
+            "patientPhenotypeLabel": "Highly arched eyebrow",
+            "diseasePhenotypeCurie": "HP:0002553",
+            "diseasePhenotypeLabel": "Highly arched eyebrow",
+            "micaCurie": "HP:0002553",
+            "micaLabel": "Highly arched eyebrow",
+            "score": 3.9271739206498917,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:28781842;PMID:25655089;PMID:17273969"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002020",
+            "patientPhenotypeLabel": "Gastroesophageal reflux",
+            "diseasePhenotypeCurie": "HP:0002020",
+            "diseasePhenotypeLabel": "Gastroesophageal reflux",
+            "micaCurie": "HP:0002020",
+            "micaLabel": "Gastroesophageal reflux",
+            "score": 3.3532901609167642,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:25655089;PMID:17273969"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000219",
+            "patientPhenotypeLabel": "Thin upper lip vermilion",
+            "diseasePhenotypeCurie": "HP:0000219",
+            "diseasePhenotypeLabel": "Thin upper lip vermilion",
+            "micaCurie": "HP:0000219",
+            "micaLabel": "Thin upper lip vermilion",
+            "score": 3.3172797233937312,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:25655089"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000343",
+            "patientPhenotypeLabel": "Long philtrum",
+            "diseasePhenotypeCurie": "HP:0000343",
+            "diseasePhenotypeLabel": "Long philtrum",
+            "micaCurie": "HP:0000343",
+            "micaLabel": "Long philtrum",
+            "score": 3.1381787812998185,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:25655089"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000463",
+            "patientPhenotypeLabel": "Anteverted nares",
+            "diseasePhenotypeCurie": "HP:0000463",
+            "diseasePhenotypeLabel": "Anteverted nares",
+            "micaCurie": "HP:0000463",
+            "micaLabel": "Anteverted nares",
+            "score": 3.028794115342267,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:28781842;PMID:25655089;PMID:17273969"
+          }
+        ]
+      },
+      {
+        "rank": 6,
+        "diseaseCurie": "MONDO:0011053",
+        "diseaseLabel": "intellectual disability-sparse hair-brachydactyly syndrome",
+        "diseaseEntityId": 72339,
+        "bmaScore": 2.0826758088501944,
+        "normalizedScore": 0.22995,
+        "patientAverageScore": 2.671076646311129,
+        "diseaseAverageScore": 1.49427497138926,
+        "directPhenotypeCount": 107,
+        "matchedPhenotypeCount": 18,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0007665",
+            "patientPhenotypeLabel": "Curly eyelashes",
+            "diseasePhenotypeCurie": "HP:0007665",
+            "diseasePhenotypeLabel": "Curly eyelashes",
+            "micaCurie": "HP:0007665",
+            "micaLabel": "Curly eyelashes",
+            "score": 6.977631093893129,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:3051"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000527",
+            "patientPhenotypeLabel": "Long eyelashes",
+            "diseasePhenotypeCurie": "HP:0000527",
+            "diseasePhenotypeLabel": "Long eyelashes",
+            "micaCurie": "HP:0000527",
+            "micaLabel": "Long eyelashes",
+            "score": 4.151797857134536,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:3051"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002553",
+            "patientPhenotypeLabel": "Highly arched eyebrow",
+            "diseasePhenotypeCurie": "HP:0002553",
+            "diseasePhenotypeLabel": "Highly arched eyebrow",
+            "micaCurie": "HP:0002553",
+            "micaLabel": "Highly arched eyebrow",
+            "score": 3.9271739206498917,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:3051"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007018",
+            "patientPhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "diseasePhenotypeCurie": "HP:0007018",
+            "diseasePhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "micaCurie": "HP:0007018",
+            "micaLabel": "Attention deficit hyperactivity disorder",
+            "score": 3.5197383685544286,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:22822383"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000718",
+            "patientPhenotypeLabel": "Aggressive behavior",
+            "diseasePhenotypeCurie": "HP:0000718",
+            "diseasePhenotypeLabel": "Aggressive behavior",
+            "micaCurie": "HP:0000718",
+            "micaLabel": "Aggressive behavior",
+            "score": 3.477342809586743,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:22822383"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000219",
+            "patientPhenotypeLabel": "Thin upper lip vermilion",
+            "diseasePhenotypeCurie": "HP:0000219",
+            "diseasePhenotypeLabel": "Thin upper lip vermilion",
+            "micaCurie": "HP:0000219",
+            "micaLabel": "Thin upper lip vermilion",
+            "score": 3.3172797233937312,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:22366787;PMID:22822383"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000343",
+            "patientPhenotypeLabel": "Long philtrum",
+            "diseasePhenotypeCurie": "HP:0000343",
+            "diseasePhenotypeLabel": "Long philtrum",
+            "micaCurie": "HP:0000343",
+            "micaLabel": "Long philtrum",
+            "score": 3.1381787812998185,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:22366787;PMID:22822383"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000463",
+            "patientPhenotypeLabel": "Anteverted nares",
+            "diseasePhenotypeCurie": "HP:0000463",
+            "diseasePhenotypeLabel": "Anteverted nares",
+            "micaCurie": "HP:0000463",
+            "micaLabel": "Anteverted nares",
+            "score": 3.028794115342267,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:3051"
+          }
+        ]
+      },
+      {
+        "rank": 7,
+        "diseaseCurie": "MONDO:0971172",
+        "diseaseLabel": "neurodevelopmental disorder with hypotonia, brain anomalies, distinctive facies, and absent language",
+        "diseaseEntityId": 88612,
+        "bmaScore": 2.050187224057449,
+        "normalizedScore": 0.226363,
+        "patientAverageScore": 2.804188214874232,
+        "diseaseAverageScore": 1.2961862332406655,
+        "directPhenotypeCount": 211,
+        "matchedPhenotypeCount": 18,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000527",
+            "patientPhenotypeLabel": "Long eyelashes",
+            "diseasePhenotypeCurie": "HP:0000527",
+            "diseasePhenotypeLabel": "Long eyelashes",
+            "micaCurie": "HP:0000527",
+            "micaLabel": "Long eyelashes",
+            "score": 4.151797857134536,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:38859706;PMID:38991538"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002714",
+            "patientPhenotypeLabel": "Downturned corners of mouth",
+            "diseasePhenotypeCurie": "HP:0002714",
+            "diseasePhenotypeLabel": "Downturned corners of mouth",
+            "micaCurie": "HP:0002714",
+            "micaLabel": "Downturned corners of mouth",
+            "score": 4.033192114726689,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:38859706;PMID:38991538"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000739",
+            "patientPhenotypeLabel": "Anxiety",
+            "diseasePhenotypeCurie": "HP:6000029",
+            "diseasePhenotypeLabel": "Social anxiety",
+            "micaCurie": "HP:0000739",
+            "micaLabel": "Anxiety",
+            "score": 3.743866656531178,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:38991538"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000718",
+            "patientPhenotypeLabel": "Aggressive behavior",
+            "diseasePhenotypeCurie": "HP:0000718",
+            "diseasePhenotypeLabel": "Aggressive behavior",
+            "micaCurie": "HP:0000718",
+            "micaLabel": "Aggressive behavior",
+            "score": 3.477342809586743,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:38991538;PMID:39369315"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007018",
+            "patientPhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "diseasePhenotypeCurie": "HP:0000736",
+            "diseasePhenotypeLabel": "Short attention span",
+            "micaCurie": "HP:0000736",
+            "micaLabel": "Short attention span",
+            "score": 3.397590419813344,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:39369315"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007665",
+            "patientPhenotypeLabel": "Curly eyelashes",
+            "diseasePhenotypeCurie": "HP:0000527",
+            "diseasePhenotypeLabel": "Long eyelashes",
+            "micaCurie": "HP:0000499",
+            "micaLabel": "Abnormal eyelash morphology",
+            "score": 3.363340496770266,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:38859706;PMID:38991538"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002020",
+            "patientPhenotypeLabel": "Gastroesophageal reflux",
+            "diseasePhenotypeCurie": "HP:0002020",
+            "diseasePhenotypeLabel": "Gastroesophageal reflux",
+            "micaCurie": "HP:0002020",
+            "micaLabel": "Gastroesophageal reflux",
+            "score": 3.3532901609167642,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:38859706;PMID:38991538;PMID:39369315"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000219",
+            "patientPhenotypeLabel": "Thin upper lip vermilion",
+            "diseasePhenotypeCurie": "HP:0000219",
+            "diseasePhenotypeLabel": "Thin upper lip vermilion",
+            "micaCurie": "HP:0000219",
+            "micaLabel": "Thin upper lip vermilion",
+            "score": 3.3172797233937312,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:38859706;PMID:38991538"
+          }
+        ]
+      },
+      {
+        "rank": 8,
+        "diseaseCurie": "MONDO:0014213",
+        "diseaseLabel": "CTCF-related neurodevelopmental disorder",
+        "diseaseEntityId": 75499,
+        "bmaScore": 2.0349104453638245,
+        "normalizedScore": 0.224676,
+        "patientAverageScore": 2.8096425447284004,
+        "diseaseAverageScore": 1.2601783459992488,
+        "directPhenotypeCount": 121,
+        "matchedPhenotypeCount": 18,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000527",
+            "patientPhenotypeLabel": "Long eyelashes",
+            "diseasePhenotypeCurie": "HP:0000527",
+            "diseasePhenotypeLabel": "Long eyelashes",
+            "micaCurie": "HP:0000527",
+            "micaLabel": "Long eyelashes",
+            "score": 4.151797857134536,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31239556;PMID:23746550"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002553",
+            "patientPhenotypeLabel": "Highly arched eyebrow",
+            "diseasePhenotypeCurie": "HP:0002553",
+            "diseasePhenotypeLabel": "Highly arched eyebrow",
+            "micaCurie": "HP:0002553",
+            "micaLabel": "Highly arched eyebrow",
+            "score": 3.9271739206498917,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31239556"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000739",
+            "patientPhenotypeLabel": "Anxiety",
+            "diseasePhenotypeCurie": "HP:0000739",
+            "diseasePhenotypeLabel": "Anxiety",
+            "micaCurie": "HP:0000739",
+            "micaLabel": "Anxiety",
+            "score": 3.743866656531178,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31239556"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007018",
+            "patientPhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "diseasePhenotypeCurie": "HP:0007018",
+            "diseasePhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "micaCurie": "HP:0007018",
+            "micaLabel": "Attention deficit hyperactivity disorder",
+            "score": 3.5197383685544286,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31239556"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002714",
+            "patientPhenotypeLabel": "Downturned corners of mouth",
+            "diseasePhenotypeCurie": "HP:0000194",
+            "diseasePhenotypeLabel": "Open mouth",
+            "micaCurie": "HP:0011338",
+            "micaLabel": "Abnormality of mouth shape",
+            "score": 3.481123532426649,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31239556"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000718",
+            "patientPhenotypeLabel": "Aggressive behavior",
+            "diseasePhenotypeCurie": "HP:0000718",
+            "diseasePhenotypeLabel": "Aggressive behavior",
+            "micaCurie": "HP:0000718",
+            "micaLabel": "Aggressive behavior",
+            "score": 3.477342809586743,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31239556"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007665",
+            "patientPhenotypeLabel": "Curly eyelashes",
+            "diseasePhenotypeCurie": "HP:0000527",
+            "diseasePhenotypeLabel": "Long eyelashes",
+            "micaCurie": "HP:0000499",
+            "micaLabel": "Abnormal eyelash morphology",
+            "score": 3.363340496770266,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31239556;PMID:23746550"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002020",
+            "patientPhenotypeLabel": "Gastroesophageal reflux",
+            "diseasePhenotypeCurie": "HP:0002020",
+            "diseasePhenotypeLabel": "Gastroesophageal reflux",
+            "micaCurie": "HP:0002020",
+            "micaLabel": "Gastroesophageal reflux",
+            "score": 3.3532901609167642,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31239556"
+          }
+        ]
+      },
+      {
+        "rank": 9,
+        "diseaseCurie": "MONDO:0014931",
+        "diseaseLabel": "Alazami-Yuan syndrome",
+        "diseaseEntityId": 76217,
+        "bmaScore": 2.019095148351628,
+        "normalizedScore": 0.22293,
+        "patientAverageScore": 2.1523407489347597,
+        "diseaseAverageScore": 1.885849547768496,
+        "directPhenotypeCount": 26,
+        "matchedPhenotypeCount": 18,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000527",
+            "patientPhenotypeLabel": "Long eyelashes",
+            "diseasePhenotypeCurie": "HP:0000527",
+            "diseasePhenotypeLabel": "Long eyelashes",
+            "micaCurie": "HP:0000527",
+            "micaLabel": "Long eyelashes",
+            "score": 4.151797857134536,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:25574841"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002553",
+            "patientPhenotypeLabel": "Highly arched eyebrow",
+            "diseasePhenotypeCurie": "HP:0002553",
+            "diseasePhenotypeLabel": "Highly arched eyebrow",
+            "micaCurie": "HP:0002553",
+            "micaLabel": "Highly arched eyebrow",
+            "score": 3.9271739206498917,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:25574841"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007665",
+            "patientPhenotypeLabel": "Curly eyelashes",
+            "diseasePhenotypeCurie": "HP:0000527",
+            "diseasePhenotypeLabel": "Long eyelashes",
+            "micaCurie": "HP:0000499",
+            "micaLabel": "Abnormal eyelash morphology",
+            "score": 3.363340496770266,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:25574841"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000219",
+            "patientPhenotypeLabel": "Thin upper lip vermilion",
+            "diseasePhenotypeCurie": "HP:0000219",
+            "diseasePhenotypeLabel": "Thin upper lip vermilion",
+            "micaCurie": "HP:0000219",
+            "micaLabel": "Thin upper lip vermilion",
+            "score": 3.3172797233937312,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:25574841"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000343",
+            "patientPhenotypeLabel": "Long philtrum",
+            "diseasePhenotypeCurie": "HP:0000343",
+            "diseasePhenotypeLabel": "Long philtrum",
+            "micaCurie": "HP:0000343",
+            "micaLabel": "Long philtrum",
+            "score": 3.1381787812998185,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:25574841"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007018",
+            "patientPhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "diseasePhenotypeCurie": "HP:0000752",
+            "diseasePhenotypeLabel": "Hyperactivity",
+            "micaCurie": "HP:0000752",
+            "micaLabel": "Hyperactivity",
+            "score": 3.1012352661081346,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:617126"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000463",
+            "patientPhenotypeLabel": "Anteverted nares",
+            "diseasePhenotypeCurie": "HP:0000430",
+            "diseasePhenotypeLabel": "Underdeveloped nasal alae",
+            "micaCurie": "HP:0000429",
+            "micaLabel": "Abnormal morphology of the nasal alae",
+            "score": 2.8167967904021958,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:617126"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000718",
+            "patientPhenotypeLabel": "Aggressive behavior",
+            "diseasePhenotypeCurie": "HP:0000752",
+            "diseasePhenotypeLabel": "Hyperactivity",
+            "micaCurie": "HP:0000734",
+            "micaLabel": "Disinhibition",
+            "score": 2.7618066341333187,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:617126"
+          }
+        ]
+      },
+      {
+        "rank": 10,
+        "diseaseCurie": "MONDO:0859143",
+        "diseaseLabel": "Radio-Tartaglia syndrome",
+        "diseaseEntityId": 87808,
+        "bmaScore": 1.9805224597856408,
+        "normalizedScore": 0.218671,
+        "patientAverageScore": 2.4769090295997582,
+        "diseaseAverageScore": 1.4841358899715236,
+        "directPhenotypeCount": 79,
+        "matchedPhenotypeCount": 18,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000527",
+            "patientPhenotypeLabel": "Long eyelashes",
+            "diseasePhenotypeCurie": "HP:0000527",
+            "diseasePhenotypeLabel": "Long eyelashes",
+            "micaCurie": "HP:0000527",
+            "micaLabel": "Long eyelashes",
+            "score": 4.151797857134536,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:33596411"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002553",
+            "patientPhenotypeLabel": "Highly arched eyebrow",
+            "diseasePhenotypeCurie": "HP:0002553",
+            "diseasePhenotypeLabel": "Highly arched eyebrow",
+            "micaCurie": "HP:0002553",
+            "micaLabel": "Highly arched eyebrow",
+            "score": 3.9271739206498917,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:33596411"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007018",
+            "patientPhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "diseasePhenotypeCurie": "HP:0007018",
+            "diseasePhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "micaCurie": "HP:0007018",
+            "micaLabel": "Attention deficit hyperactivity disorder",
+            "score": 3.5197383685544286,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:33596411"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000718",
+            "patientPhenotypeLabel": "Aggressive behavior",
+            "diseasePhenotypeCurie": "HP:0000718",
+            "diseasePhenotypeLabel": "Aggressive behavior",
+            "micaCurie": "HP:0000718",
+            "micaLabel": "Aggressive behavior",
+            "score": 3.477342809586743,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:33596411"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007665",
+            "patientPhenotypeLabel": "Curly eyelashes",
+            "diseasePhenotypeCurie": "HP:0000527",
+            "diseasePhenotypeLabel": "Long eyelashes",
+            "micaCurie": "HP:0000499",
+            "micaLabel": "Abnormal eyelash morphology",
+            "score": 3.363340496770266,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:33596411"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002020",
+            "patientPhenotypeLabel": "Gastroesophageal reflux",
+            "diseasePhenotypeCurie": "HP:0002020",
+            "diseasePhenotypeLabel": "Gastroesophageal reflux",
+            "micaCurie": "HP:0002020",
+            "micaLabel": "Gastroesophageal reflux",
+            "score": 3.3532901609167642,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:33596411"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000219",
+            "patientPhenotypeLabel": "Thin upper lip vermilion",
+            "diseasePhenotypeCurie": "HP:0000219",
+            "diseasePhenotypeLabel": "Thin upper lip vermilion",
+            "micaCurie": "HP:0000219",
+            "micaLabel": "Thin upper lip vermilion",
+            "score": 3.3172797233937312,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:33596411"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000343",
+            "patientPhenotypeLabel": "Long philtrum",
+            "diseasePhenotypeCurie": "HP:0000343",
+            "diseasePhenotypeLabel": "Long philtrum",
+            "micaCurie": "HP:0000343",
+            "micaLabel": "Long philtrum",
+            "score": 3.1381787812998185,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:33596411"
+          }
+        ]
+      },
+      {
+        "rank": 11,
+        "diseaseCurie": "MONDO:1060177",
+        "diseaseLabel": "developmental and epileptic encephalopathy 119",
+        "diseaseEntityId": 91840,
+        "bmaScore": 1.9716128930016195,
+        "normalizedScore": 0.217688,
+        "patientAverageScore": 2.695374461752119,
+        "diseaseAverageScore": 1.24785132425112,
+        "directPhenotypeCount": 183,
+        "matchedPhenotypeCount": 18,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000527",
+            "patientPhenotypeLabel": "Long eyelashes",
+            "diseasePhenotypeCurie": "HP:0000527",
+            "diseasePhenotypeLabel": "Long eyelashes",
+            "micaCurie": "HP:0000527",
+            "micaLabel": "Long eyelashes",
+            "score": 4.151797857134536,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:40210679"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007018",
+            "patientPhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "diseasePhenotypeCurie": "HP:0007018",
+            "diseasePhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "micaCurie": "HP:0007018",
+            "micaLabel": "Attention deficit hyperactivity disorder",
+            "score": 3.5197383685544286,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:40442284"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002714",
+            "patientPhenotypeLabel": "Downturned corners of mouth",
+            "diseasePhenotypeCurie": "HP:0000194",
+            "diseasePhenotypeLabel": "Open mouth",
+            "micaCurie": "HP:0011338",
+            "micaLabel": "Abnormality of mouth shape",
+            "score": 3.481123532426649,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:40210679"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000718",
+            "patientPhenotypeLabel": "Aggressive behavior",
+            "diseasePhenotypeCurie": "HP:0000718",
+            "diseasePhenotypeLabel": "Aggressive behavior",
+            "micaCurie": "HP:0000718",
+            "micaLabel": "Aggressive behavior",
+            "score": 3.477342809586743,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:40442284"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007665",
+            "patientPhenotypeLabel": "Curly eyelashes",
+            "diseasePhenotypeCurie": "HP:0000527",
+            "diseasePhenotypeLabel": "Long eyelashes",
+            "micaCurie": "HP:0000499",
+            "micaLabel": "Abnormal eyelash morphology",
+            "score": 3.363340496770266,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:40210679"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002020",
+            "patientPhenotypeLabel": "Gastroesophageal reflux",
+            "diseasePhenotypeCurie": "HP:0002020",
+            "diseasePhenotypeLabel": "Gastroesophageal reflux",
+            "micaCurie": "HP:0002020",
+            "micaLabel": "Gastroesophageal reflux",
+            "score": 3.3532901609167642,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:40442284;PMID:40210679"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000739",
+            "patientPhenotypeLabel": "Anxiety",
+            "diseasePhenotypeCurie": "HP:0000709",
+            "diseasePhenotypeLabel": "Psychosis",
+            "micaCurie": "HP:5200423",
+            "micaLabel": "Abnormal experience of reality",
+            "score": 3.3466456181980955,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:40442284"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000219",
+            "patientPhenotypeLabel": "Thin upper lip vermilion",
+            "diseasePhenotypeCurie": "HP:0000219",
+            "diseasePhenotypeLabel": "Thin upper lip vermilion",
+            "micaCurie": "HP:0000219",
+            "micaLabel": "Thin upper lip vermilion",
+            "score": 3.3172797233937312,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:40210679"
+          }
+        ]
+      },
+      {
+        "rank": 12,
+        "diseaseCurie": "MONDO:0010471",
+        "diseaseLabel": "Cornelia de Lange syndrome 5",
+        "diseaseEntityId": 71757,
+        "bmaScore": 1.9691240723902026,
+        "normalizedScore": 0.217413,
+        "patientAverageScore": 2.5012133663199645,
+        "diseaseAverageScore": 1.4370347784604407,
+        "directPhenotypeCount": 53,
+        "matchedPhenotypeCount": 18,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000527",
+            "patientPhenotypeLabel": "Long eyelashes",
+            "diseasePhenotypeCurie": "HP:0000527",
+            "diseasePhenotypeLabel": "Long eyelashes",
+            "micaCurie": "HP:0000527",
+            "micaLabel": "Long eyelashes",
+            "score": 4.151797857134536,
+            "evidenceCode": "IEA",
+            "referenceText": "PMID:22885700"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002714",
+            "patientPhenotypeLabel": "Downturned corners of mouth",
+            "diseasePhenotypeCurie": "HP:0002714",
+            "diseasePhenotypeLabel": "Downturned corners of mouth",
+            "micaCurie": "HP:0002714",
+            "micaLabel": "Downturned corners of mouth",
+            "score": 4.033192114726689,
+            "evidenceCode": "IEA",
+            "referenceText": "PMID:22885700"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002553",
+            "patientPhenotypeLabel": "Highly arched eyebrow",
+            "diseasePhenotypeCurie": "HP:0002553",
+            "diseasePhenotypeLabel": "Highly arched eyebrow",
+            "micaCurie": "HP:0002553",
+            "micaLabel": "Highly arched eyebrow",
+            "score": 3.9271739206498917,
+            "evidenceCode": "IEA",
+            "referenceText": "PMID:22885700"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007665",
+            "patientPhenotypeLabel": "Curly eyelashes",
+            "diseasePhenotypeCurie": "HP:0000527",
+            "diseasePhenotypeLabel": "Long eyelashes",
+            "micaCurie": "HP:0000499",
+            "micaLabel": "Abnormal eyelash morphology",
+            "score": 3.363340496770266,
+            "evidenceCode": "IEA",
+            "referenceText": "PMID:22885700"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002020",
+            "patientPhenotypeLabel": "Gastroesophageal reflux",
+            "diseasePhenotypeCurie": "HP:0002020",
+            "diseasePhenotypeLabel": "Gastroesophageal reflux",
+            "micaCurie": "HP:0002020",
+            "micaLabel": "Gastroesophageal reflux",
+            "score": 3.3532901609167642,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:300882"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000343",
+            "patientPhenotypeLabel": "Long philtrum",
+            "diseasePhenotypeCurie": "HP:0000343",
+            "diseasePhenotypeLabel": "Long philtrum",
+            "micaCurie": "HP:0000343",
+            "micaLabel": "Long philtrum",
+            "score": 3.1381787812998185,
+            "evidenceCode": "IEA",
+            "referenceText": "PMID:22885700"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000219",
+            "patientPhenotypeLabel": "Thin upper lip vermilion",
+            "diseasePhenotypeCurie": "HP:0000233",
+            "diseasePhenotypeLabel": "Thin vermilion border",
+            "micaCurie": "HP:0000233",
+            "micaLabel": "Thin vermilion border",
+            "score": 3.0781868706718436,
+            "evidenceCode": "IEA",
+            "referenceText": "PMID:22885700"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000463",
+            "patientPhenotypeLabel": "Anteverted nares",
+            "diseasePhenotypeCurie": "HP:0000463",
+            "diseasePhenotypeLabel": "Anteverted nares",
+            "micaCurie": "HP:0000463",
+            "micaLabel": "Anteverted nares",
+            "score": 3.028794115342267,
+            "evidenceCode": "IEA",
+            "referenceText": "PMID:22885700"
+          }
+        ]
+      },
+      {
+        "rank": 13,
+        "diseaseCurie": "MONDO:0010483",
+        "diseaseLabel": "X-linked intellectual disability, Cantagrel type",
+        "diseaseEntityId": 71769,
+        "bmaScore": 1.9647599420242465,
+        "normalizedScore": 0.216931,
+        "patientAverageScore": 2.3955592870327074,
+        "diseaseAverageScore": 1.5339605970157855,
+        "directPhenotypeCount": 67,
+        "matchedPhenotypeCount": 18,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002714",
+            "patientPhenotypeLabel": "Downturned corners of mouth",
+            "diseasePhenotypeCurie": "HP:0002714",
+            "diseasePhenotypeLabel": "Downturned corners of mouth",
+            "micaCurie": "HP:0002714",
+            "micaLabel": "Downturned corners of mouth",
+            "score": 4.033192114726689,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:23615299"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000739",
+            "patientPhenotypeLabel": "Anxiety",
+            "diseasePhenotypeCurie": "HP:0000739",
+            "diseasePhenotypeLabel": "Anxiety",
+            "micaCurie": "HP:0000739",
+            "micaLabel": "Anxiety",
+            "score": 3.743866656531178,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:23615299"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000718",
+            "patientPhenotypeLabel": "Aggressive behavior",
+            "diseasePhenotypeCurie": "HP:0000718",
+            "diseasePhenotypeLabel": "Aggressive behavior",
+            "micaCurie": "HP:0000718",
+            "micaLabel": "Aggressive behavior",
+            "score": 3.477342809586743,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:26576034;PMID:23615299"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002020",
+            "patientPhenotypeLabel": "Gastroesophageal reflux",
+            "diseasePhenotypeCurie": "HP:0002020",
+            "diseasePhenotypeLabel": "Gastroesophageal reflux",
+            "micaCurie": "HP:0002020",
+            "micaLabel": "Gastroesophageal reflux",
+            "score": 3.3532901609167642,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:25900396;PMID:23615299"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007018",
+            "patientPhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "diseasePhenotypeCurie": "HP:0000752",
+            "diseasePhenotypeLabel": "Hyperactivity",
+            "micaCurie": "HP:0000752",
+            "micaLabel": "Hyperactivity",
+            "score": 3.1012352661081346,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:26576034;PMID:23615299"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000219",
+            "patientPhenotypeLabel": "Thin upper lip vermilion",
+            "diseasePhenotypeCurie": "HP:0000233",
+            "diseasePhenotypeLabel": "Thin vermilion border",
+            "micaCurie": "HP:0000233",
+            "micaLabel": "Thin vermilion border",
+            "score": 3.0781868706718436,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:25900396"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000463",
+            "patientPhenotypeLabel": "Anteverted nares",
+            "diseasePhenotypeCurie": "HP:0000463",
+            "diseasePhenotypeLabel": "Anteverted nares",
+            "micaCurie": "HP:0000463",
+            "micaLabel": "Anteverted nares",
+            "score": 3.028794115342267,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:300912"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000343",
+            "patientPhenotypeLabel": "Long philtrum",
+            "diseasePhenotypeCurie": "HP:0000322",
+            "diseasePhenotypeLabel": "Short philtrum",
+            "micaCurie": "HP:0000288",
+            "micaLabel": "Abnormality of the philtrum",
+            "score": 2.530577776002175,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:23615299"
+          }
+        ]
+      },
+      {
+        "rank": 14,
+        "diseaseCurie": "MONDO:0013886",
+        "diseaseLabel": "cerebellar dysfunction with variable cognitive and behavioral abnormalities",
+        "diseaseEntityId": 75172,
+        "bmaScore": 1.9619975737790492,
+        "normalizedScore": 0.216626,
+        "patientAverageScore": 2.544314743566015,
+        "diseaseAverageScore": 1.3796804039920834,
+        "directPhenotypeCount": 64,
+        "matchedPhenotypeCount": 18,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000527",
+            "patientPhenotypeLabel": "Long eyelashes",
+            "diseasePhenotypeCurie": "HP:0000527",
+            "diseasePhenotypeLabel": "Long eyelashes",
+            "micaCurie": "HP:0000527",
+            "micaLabel": "Long eyelashes",
+            "score": 4.151797857134536,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:24738973"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002714",
+            "patientPhenotypeLabel": "Downturned corners of mouth",
+            "diseasePhenotypeCurie": "HP:0002714",
+            "diseasePhenotypeLabel": "Downturned corners of mouth",
+            "micaCurie": "HP:0002714",
+            "micaLabel": "Downturned corners of mouth",
+            "score": 4.033192114726689,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:22693284"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007018",
+            "patientPhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "diseasePhenotypeCurie": "HP:0007018",
+            "diseasePhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "micaCurie": "HP:0007018",
+            "micaLabel": "Attention deficit hyperactivity disorder",
+            "score": 3.5197383685544286,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:24738973"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000718",
+            "patientPhenotypeLabel": "Aggressive behavior",
+            "diseasePhenotypeCurie": "HP:0000718",
+            "diseasePhenotypeLabel": "Aggressive behavior",
+            "micaCurie": "HP:0000718",
+            "micaLabel": "Aggressive behavior",
+            "score": 3.477342809586743,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:24738973;PMID:22693284"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007665",
+            "patientPhenotypeLabel": "Curly eyelashes",
+            "diseasePhenotypeCurie": "HP:0000527",
+            "diseasePhenotypeLabel": "Long eyelashes",
+            "micaCurie": "HP:0000499",
+            "micaLabel": "Abnormal eyelash morphology",
+            "score": 3.363340496770266,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:24738973"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002020",
+            "patientPhenotypeLabel": "Gastroesophageal reflux",
+            "diseasePhenotypeCurie": "HP:0002020",
+            "diseasePhenotypeLabel": "Gastroesophageal reflux",
+            "micaCurie": "HP:0002020",
+            "micaLabel": "Gastroesophageal reflux",
+            "score": 3.3532901609167642,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:22693284"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000343",
+            "patientPhenotypeLabel": "Long philtrum",
+            "diseasePhenotypeCurie": "HP:0000343",
+            "diseasePhenotypeLabel": "Long philtrum",
+            "micaCurie": "HP:0000343",
+            "micaLabel": "Long philtrum",
+            "score": 3.1381787812998185,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:22693284"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000219",
+            "patientPhenotypeLabel": "Thin upper lip vermilion",
+            "diseasePhenotypeCurie": "HP:0000233",
+            "diseasePhenotypeLabel": "Thin vermilion border",
+            "micaCurie": "HP:0000233",
+            "micaLabel": "Thin vermilion border",
+            "score": 3.0781868706718436,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:24738973"
+          }
+        ]
+      },
+      {
+        "rank": 15,
+        "diseaseCurie": "MONDO:0014205",
+        "diseaseLabel": "severe feeding difficulties-failure to thrive-microcephaly due to ASXL3 deficiency syndrome",
+        "diseaseEntityId": 75491,
+        "bmaScore": 1.956469948834366,
+        "normalizedScore": 0.216016,
+        "patientAverageScore": 2.5513154041632142,
+        "diseaseAverageScore": 1.3616244935055175,
+        "directPhenotypeCount": 107,
+        "matchedPhenotypeCount": 18,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000527",
+            "patientPhenotypeLabel": "Long eyelashes",
+            "diseasePhenotypeCurie": "HP:0000527",
+            "diseasePhenotypeLabel": "Long eyelashes",
+            "micaCurie": "HP:0000527",
+            "micaLabel": "Long eyelashes",
+            "score": 4.151797857134536,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:23383720"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002553",
+            "patientPhenotypeLabel": "Highly arched eyebrow",
+            "diseasePhenotypeCurie": "HP:0002553",
+            "diseasePhenotypeLabel": "Highly arched eyebrow",
+            "micaCurie": "HP:0002553",
+            "micaLabel": "Highly arched eyebrow",
+            "score": 3.9271739206498917,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:352577"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002714",
+            "patientPhenotypeLabel": "Downturned corners of mouth",
+            "diseasePhenotypeCurie": "HP:0000194",
+            "diseasePhenotypeLabel": "Open mouth",
+            "micaCurie": "HP:0011338",
+            "micaLabel": "Abnormality of mouth shape",
+            "score": 3.481123532426649,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:352577"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007665",
+            "patientPhenotypeLabel": "Curly eyelashes",
+            "diseasePhenotypeCurie": "HP:0000527",
+            "diseasePhenotypeLabel": "Long eyelashes",
+            "micaCurie": "HP:0000499",
+            "micaLabel": "Abnormal eyelash morphology",
+            "score": 3.363340496770266,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:23383720"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002020",
+            "patientPhenotypeLabel": "Gastroesophageal reflux",
+            "diseasePhenotypeCurie": "HP:0002020",
+            "diseasePhenotypeLabel": "Gastroesophageal reflux",
+            "micaCurie": "HP:0002020",
+            "micaLabel": "Gastroesophageal reflux",
+            "score": 3.3532901609167642,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:23383720"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000219",
+            "patientPhenotypeLabel": "Thin upper lip vermilion",
+            "diseasePhenotypeCurie": "HP:0000219",
+            "diseasePhenotypeLabel": "Thin upper lip vermilion",
+            "micaCurie": "HP:0000219",
+            "micaLabel": "Thin upper lip vermilion",
+            "score": 3.3172797233937312,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:28100473"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000463",
+            "patientPhenotypeLabel": "Anteverted nares",
+            "diseasePhenotypeCurie": "HP:0000463",
+            "diseasePhenotypeLabel": "Anteverted nares",
+            "micaCurie": "HP:0000463",
+            "micaLabel": "Anteverted nares",
+            "score": 3.028794115342267,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:26647312;PMID:24044690;PMID:23383720"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001511",
+            "patientPhenotypeLabel": "Intrauterine growth retardation",
+            "diseasePhenotypeCurie": "HP:0001511",
+            "diseasePhenotypeLabel": "Intrauterine growth retardation",
+            "micaCurie": "HP:0001511",
+            "micaLabel": "Intrauterine growth retardation",
+            "score": 2.9022145415565475,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:26647312"
+          }
+        ]
+      },
+      {
+        "rank": 16,
+        "diseaseCurie": "MONDO:0060760",
+        "diseaseLabel": "intellectual developmental disorder with dysmorphic facies and behavioral abnormalities",
+        "diseaseEntityId": 86214,
+        "bmaScore": 1.952140576029473,
+        "normalizedScore": 0.215538,
+        "patientAverageScore": 2.63747989297099,
+        "diseaseAverageScore": 1.2668012590879563,
+        "directPhenotypeCount": 123,
+        "matchedPhenotypeCount": 18,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000527",
+            "patientPhenotypeLabel": "Long eyelashes",
+            "diseasePhenotypeCurie": "HP:0000527",
+            "diseasePhenotypeLabel": "Long eyelashes",
+            "micaCurie": "HP:0000527",
+            "micaLabel": "Long eyelashes",
+            "score": 4.151797857134536,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:30057029"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002714",
+            "patientPhenotypeLabel": "Downturned corners of mouth",
+            "diseasePhenotypeCurie": "HP:0002714",
+            "diseasePhenotypeLabel": "Downturned corners of mouth",
+            "micaCurie": "HP:0002714",
+            "micaLabel": "Downturned corners of mouth",
+            "score": 4.033192114726689,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:618089"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002553",
+            "patientPhenotypeLabel": "Highly arched eyebrow",
+            "diseasePhenotypeCurie": "HP:0002553",
+            "diseasePhenotypeLabel": "Highly arched eyebrow",
+            "micaCurie": "HP:0002553",
+            "micaLabel": "Highly arched eyebrow",
+            "score": 3.9271739206498917,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:30057029"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007018",
+            "patientPhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "diseasePhenotypeCurie": "HP:0000736",
+            "diseasePhenotypeLabel": "Short attention span",
+            "micaCurie": "HP:0000736",
+            "micaLabel": "Short attention span",
+            "score": 3.397590419813344,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:618089"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007665",
+            "patientPhenotypeLabel": "Curly eyelashes",
+            "diseasePhenotypeCurie": "HP:0000527",
+            "diseasePhenotypeLabel": "Long eyelashes",
+            "micaCurie": "HP:0000499",
+            "micaLabel": "Abnormal eyelash morphology",
+            "score": 3.363340496770266,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:30057029"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002020",
+            "patientPhenotypeLabel": "Gastroesophageal reflux",
+            "diseasePhenotypeCurie": "HP:0002020",
+            "diseasePhenotypeLabel": "Gastroesophageal reflux",
+            "micaCurie": "HP:0002020",
+            "micaLabel": "Gastroesophageal reflux",
+            "score": 3.3532901609167642,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:30057029"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000219",
+            "patientPhenotypeLabel": "Thin upper lip vermilion",
+            "diseasePhenotypeCurie": "HP:0000219",
+            "diseasePhenotypeLabel": "Thin upper lip vermilion",
+            "micaCurie": "HP:0000219",
+            "micaLabel": "Thin upper lip vermilion",
+            "score": 3.3172797233937312,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:30057029"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000343",
+            "patientPhenotypeLabel": "Long philtrum",
+            "diseasePhenotypeCurie": "HP:0000343",
+            "diseasePhenotypeLabel": "Long philtrum",
+            "micaCurie": "HP:0000343",
+            "micaLabel": "Long philtrum",
+            "score": 3.1381787812998185,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:30057029"
+          }
+        ]
+      },
+      {
+        "rank": 17,
+        "diseaseCurie": "MONDO:0010361",
+        "diseaseLabel": "intellectual disability, X-linked 30",
+        "diseaseEntityId": 71647,
+        "bmaScore": 1.9350294087100521,
+        "normalizedScore": 0.213648,
+        "patientAverageScore": 2.1566623537730822,
+        "diseaseAverageScore": 1.713396463647022,
+        "directPhenotypeCount": 39,
+        "matchedPhenotypeCount": 18,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000739",
+            "patientPhenotypeLabel": "Anxiety",
+            "diseasePhenotypeCurie": "HP:0000739",
+            "diseasePhenotypeLabel": "Anxiety",
+            "micaCurie": "HP:0000739",
+            "micaLabel": "Anxiety",
+            "score": 3.743866656531178,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:17853471"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002714",
+            "patientPhenotypeLabel": "Downturned corners of mouth",
+            "diseasePhenotypeCurie": "HP:0000194",
+            "diseasePhenotypeLabel": "Open mouth",
+            "micaCurie": "HP:0011338",
+            "micaLabel": "Abnormality of mouth shape",
+            "score": 3.481123532426649,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:17853471"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000718",
+            "patientPhenotypeLabel": "Aggressive behavior",
+            "diseasePhenotypeCurie": "HP:0000718",
+            "diseasePhenotypeLabel": "Aggressive behavior",
+            "micaCurie": "HP:0000718",
+            "micaLabel": "Aggressive behavior",
+            "score": 3.477342809586743,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:17853471"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007018",
+            "patientPhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "diseasePhenotypeCurie": "HP:0000736",
+            "diseasePhenotypeLabel": "Short attention span",
+            "micaCurie": "HP:0000736",
+            "micaLabel": "Short attention span",
+            "score": 3.397590419813344,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:17853471"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000219",
+            "patientPhenotypeLabel": "Thin upper lip vermilion",
+            "diseasePhenotypeCurie": "HP:0000219",
+            "diseasePhenotypeLabel": "Thin upper lip vermilion",
+            "micaCurie": "HP:0000219",
+            "micaLabel": "Thin upper lip vermilion",
+            "score": 3.3172797233937312,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:17853471"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000463",
+            "patientPhenotypeLabel": "Anteverted nares",
+            "diseasePhenotypeCurie": "HP:0000463",
+            "diseasePhenotypeLabel": "Anteverted nares",
+            "micaCurie": "HP:0000463",
+            "micaLabel": "Anteverted nares",
+            "score": 3.028794115342267,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:18523455"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000343",
+            "patientPhenotypeLabel": "Long philtrum",
+            "diseasePhenotypeCurie": "HP:0000219",
+            "diseasePhenotypeLabel": "Thin upper lip vermilion",
+            "micaCurie": "HP:0000177",
+            "micaLabel": "Abnormal upper lip morphology",
+            "score": 2.168500176007602,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:17853471"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000252",
+            "patientPhenotypeLabel": "Microcephaly",
+            "diseasePhenotypeCurie": "HP:0000252",
+            "diseasePhenotypeLabel": "Microcephaly",
+            "micaCurie": "HP:0000252",
+            "micaLabel": "Microcephaly",
+            "score": 1.8946751382172473,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:17853471;PMID:18523455"
+          }
+        ]
+      },
+      {
+        "rank": 18,
+        "diseaseCurie": "MONDO:0958204",
+        "diseaseLabel": "intellectual developmental disorder, autosomal recessive 81",
+        "diseaseEntityId": 88409,
+        "bmaScore": 1.9312664169565448,
+        "normalizedScore": 0.213233,
+        "patientAverageScore": 2.5357021395825603,
+        "diseaseAverageScore": 1.3268306943305295,
+        "directPhenotypeCount": 55,
+        "matchedPhenotypeCount": 18,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000527",
+            "patientPhenotypeLabel": "Long eyelashes",
+            "diseasePhenotypeCurie": "HP:0000527",
+            "diseasePhenotypeLabel": "Long eyelashes",
+            "micaCurie": "HP:0000527",
+            "micaLabel": "Long eyelashes",
+            "score": 4.151797857134536,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:35047834"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000739",
+            "patientPhenotypeLabel": "Anxiety",
+            "diseasePhenotypeCurie": "HP:0000739",
+            "diseasePhenotypeLabel": "Anxiety",
+            "micaCurie": "HP:0000739",
+            "micaLabel": "Anxiety",
+            "score": 3.743866656531178,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:35047834"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007018",
+            "patientPhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "diseasePhenotypeCurie": "HP:0007018",
+            "diseasePhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "micaCurie": "HP:0007018",
+            "micaLabel": "Attention deficit hyperactivity disorder",
+            "score": 3.5197383685544286,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:35047834"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007665",
+            "patientPhenotypeLabel": "Curly eyelashes",
+            "diseasePhenotypeCurie": "HP:0000527",
+            "diseasePhenotypeLabel": "Long eyelashes",
+            "micaCurie": "HP:0000499",
+            "micaLabel": "Abnormal eyelash morphology",
+            "score": 3.363340496770266,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:35047834"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000219",
+            "patientPhenotypeLabel": "Thin upper lip vermilion",
+            "diseasePhenotypeCurie": "HP:0000219",
+            "diseasePhenotypeLabel": "Thin upper lip vermilion",
+            "micaCurie": "HP:0000219",
+            "micaLabel": "Thin upper lip vermilion",
+            "score": 3.3172797233937312,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:35047834"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000463",
+            "patientPhenotypeLabel": "Anteverted nares",
+            "diseasePhenotypeCurie": "HP:0000463",
+            "diseasePhenotypeLabel": "Anteverted nares",
+            "micaCurie": "HP:0000463",
+            "micaLabel": "Anteverted nares",
+            "score": 3.028794115342267,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:35047834"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001511",
+            "patientPhenotypeLabel": "Intrauterine growth retardation",
+            "diseasePhenotypeCurie": "HP:0001511",
+            "diseasePhenotypeLabel": "Intrauterine growth retardation",
+            "micaCurie": "HP:0001511",
+            "micaLabel": "Intrauterine growth retardation",
+            "score": 2.9022145415565475,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:35047834"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000718",
+            "patientPhenotypeLabel": "Aggressive behavior",
+            "diseasePhenotypeCurie": "HP:0007018",
+            "diseasePhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "micaCurie": "HP:0000734",
+            "micaLabel": "Disinhibition",
+            "score": 2.7618066341333187,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:35047834"
+          }
+        ]
+      },
+      {
+        "rank": 19,
+        "diseaseCurie": "MONDO:0030914",
+        "diseaseLabel": "Clark-Baraitser syndrome",
+        "diseaseEntityId": 84290,
+        "bmaScore": 1.9247813542901557,
+        "normalizedScore": 0.212517,
+        "patientAverageScore": 2.16918775273101,
+        "diseaseAverageScore": 1.6803749558493017,
+        "directPhenotypeCount": 38,
+        "matchedPhenotypeCount": 18,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002714",
+            "patientPhenotypeLabel": "Downturned corners of mouth",
+            "diseasePhenotypeCurie": "HP:0002714",
+            "diseasePhenotypeLabel": "Downturned corners of mouth",
+            "micaCurie": "HP:0002714",
+            "micaLabel": "Downturned corners of mouth",
+            "score": 4.033192114726689,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:28251352"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000739",
+            "patientPhenotypeLabel": "Anxiety",
+            "diseasePhenotypeCurie": "HP:0000739",
+            "diseasePhenotypeLabel": "Anxiety",
+            "micaCurie": "HP:0000739",
+            "micaLabel": "Anxiety",
+            "score": 3.743866656531178,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:28251352"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000718",
+            "patientPhenotypeLabel": "Aggressive behavior",
+            "diseasePhenotypeCurie": "HP:0000718",
+            "diseasePhenotypeLabel": "Aggressive behavior",
+            "micaCurie": "HP:0000718",
+            "micaLabel": "Aggressive behavior",
+            "score": 3.477342809586743,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:28251352"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000219",
+            "patientPhenotypeLabel": "Thin upper lip vermilion",
+            "diseasePhenotypeCurie": "HP:0000219",
+            "diseasePhenotypeLabel": "Thin upper lip vermilion",
+            "micaCurie": "HP:0000219",
+            "micaLabel": "Thin upper lip vermilion",
+            "score": 3.3172797233937312,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:27848077;PMID:28251352"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000343",
+            "patientPhenotypeLabel": "Long philtrum",
+            "diseasePhenotypeCurie": "HP:0000343",
+            "diseasePhenotypeLabel": "Long philtrum",
+            "micaCurie": "HP:0000343",
+            "micaLabel": "Long philtrum",
+            "score": 3.1381787812998185,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:27848077;PMID:28251352"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007018",
+            "patientPhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "diseasePhenotypeCurie": "HP:0000752",
+            "diseasePhenotypeLabel": "Hyperactivity",
+            "micaCurie": "HP:0000752",
+            "micaLabel": "Hyperactivity",
+            "score": 3.1012352661081346,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:28251352"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000463",
+            "patientPhenotypeLabel": "Anteverted nares",
+            "diseasePhenotypeCurie": "HP:0000463",
+            "diseasePhenotypeLabel": "Anteverted nares",
+            "micaCurie": "HP:0000463",
+            "micaLabel": "Anteverted nares",
+            "score": 3.028794115342267,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:27848077;PMID:28251352"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000252",
+            "patientPhenotypeLabel": "Microcephaly",
+            "diseasePhenotypeCurie": "HP:0000252",
+            "diseasePhenotypeLabel": "Microcephaly",
+            "micaCurie": "HP:0000252",
+            "micaLabel": "Microcephaly",
+            "score": 1.8946751382172473,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:27848077;PMID:28251352"
+          }
+        ]
+      },
+      {
+        "rank": 20,
+        "diseaseCurie": "MONDO:0014606",
+        "diseaseLabel": "intellectual disability-microcephaly-strabismus-behavioral abnormalities syndrome",
+        "diseaseEntityId": 75892,
+        "bmaScore": 1.9170159154400768,
+        "normalizedScore": 0.21166,
+        "patientAverageScore": 2.6311287910319385,
+        "diseaseAverageScore": 1.2029030398482148,
+        "directPhenotypeCount": 161,
+        "matchedPhenotypeCount": 18,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002714",
+            "patientPhenotypeLabel": "Downturned corners of mouth",
+            "diseasePhenotypeCurie": "HP:0002714",
+            "diseasePhenotypeLabel": "Downturned corners of mouth",
+            "micaCurie": "HP:0002714",
+            "micaLabel": "Downturned corners of mouth",
+            "score": 4.033192114726689,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:34133408;PMID:33377604;PMID:33277917;PMID:35052493;PMID:26739615;PMID:25694107;PMID:26763879;PMID:31347273;PMID:26942287;PMID:31136090;PMID:28480548"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002553",
+            "patientPhenotypeLabel": "Highly arched eyebrow",
+            "diseasePhenotypeCurie": "HP:0002553",
+            "diseasePhenotypeLabel": "Highly arched eyebrow",
+            "micaCurie": "HP:0002553",
+            "micaLabel": "Highly arched eyebrow",
+            "score": 3.9271739206498917,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:33377604;PMID:30879264;PMID:26739615;PMID:35052493;PMID:34206215;PMID:31347273;PMID:26763879;PMID:31136090;PMID:28480548"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000739",
+            "patientPhenotypeLabel": "Anxiety",
+            "diseasePhenotypeCurie": "HP:0000739",
+            "diseasePhenotypeLabel": "Anxiety",
+            "micaCurie": "HP:0000739",
+            "micaLabel": "Anxiety",
+            "score": 3.743866656531178,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:27148570;PMID:32359026;PMID:33909211;PMID:33277917;PMID:35052493;PMID:26942287"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007018",
+            "patientPhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "diseasePhenotypeCurie": "HP:0007018",
+            "diseasePhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "micaCurie": "HP:0007018",
+            "micaLabel": "Attention deficit hyperactivity disorder",
+            "score": 3.5197383685544286,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:27148570;PMID:34215294;PMID:27824329;PMID:32359026;PMID:33277917;PMID:35052493;PMID:26942287"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000718",
+            "patientPhenotypeLabel": "Aggressive behavior",
+            "diseasePhenotypeCurie": "HP:0000718",
+            "diseasePhenotypeLabel": "Aggressive behavior",
+            "micaCurie": "HP:0000718",
+            "micaLabel": "Aggressive behavior",
+            "score": 3.477342809586743,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:26739615"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002020",
+            "patientPhenotypeLabel": "Gastroesophageal reflux",
+            "diseasePhenotypeCurie": "HP:0002020",
+            "diseasePhenotypeLabel": "Gastroesophageal reflux",
+            "micaCurie": "HP:0002020",
+            "micaLabel": "Gastroesophageal reflux",
+            "score": 3.3532901609167642,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:26739615;PMID:35052493;PMID:26942287;PMID:28480548"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000219",
+            "patientPhenotypeLabel": "Thin upper lip vermilion",
+            "diseasePhenotypeCurie": "HP:0000219",
+            "diseasePhenotypeLabel": "Thin upper lip vermilion",
+            "micaCurie": "HP:0000219",
+            "micaLabel": "Thin upper lip vermilion",
+            "score": 3.3172797233937312,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:34133408;PMID:33377604;PMID:32359026;PMID:30879264;PMID:33277917;PMID:26739615;PMID:35052493;PMID:31136090;PMID:28480548"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001511",
+            "patientPhenotypeLabel": "Intrauterine growth retardation",
+            "diseasePhenotypeCurie": "HP:0001511",
+            "diseasePhenotypeLabel": "Intrauterine growth retardation",
+            "micaCurie": "HP:0001511",
+            "micaLabel": "Intrauterine growth retardation",
+            "score": 2.9022145415565475,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:26942287"
+          }
+        ]
+      },
+      {
+        "rank": 21,
+        "diseaseCurie": "MONDO:0030993",
+        "diseaseLabel": "Tessadori-Van Haaften neurodevelopmental syndrome 3",
+        "diseaseEntityId": 84351,
+        "bmaScore": 1.9039801602097004,
+        "normalizedScore": 0.21022,
+        "patientAverageScore": 2.5183100312045155,
+        "diseaseAverageScore": 1.2896502892148856,
+        "directPhenotypeCount": 118,
+        "matchedPhenotypeCount": 18,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000527",
+            "patientPhenotypeLabel": "Long eyelashes",
+            "diseasePhenotypeCurie": "HP:0000527",
+            "diseasePhenotypeLabel": "Long eyelashes",
+            "micaCurie": "HP:0000527",
+            "micaLabel": "Long eyelashes",
+            "score": 4.151797857134536,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:35202563"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002714",
+            "patientPhenotypeLabel": "Downturned corners of mouth",
+            "diseasePhenotypeCurie": "HP:0002714",
+            "diseasePhenotypeLabel": "Downturned corners of mouth",
+            "micaCurie": "HP:0002714",
+            "micaLabel": "Downturned corners of mouth",
+            "score": 4.033192114726689,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:35202563"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007018",
+            "patientPhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "diseasePhenotypeCurie": "HP:0007018",
+            "diseasePhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "micaCurie": "HP:0007018",
+            "micaLabel": "Attention deficit hyperactivity disorder",
+            "score": 3.5197383685544286,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:35202563"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007665",
+            "patientPhenotypeLabel": "Curly eyelashes",
+            "diseasePhenotypeCurie": "HP:0000527",
+            "diseasePhenotypeLabel": "Long eyelashes",
+            "micaCurie": "HP:0000499",
+            "micaLabel": "Abnormal eyelash morphology",
+            "score": 3.363340496770266,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:35202563"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002020",
+            "patientPhenotypeLabel": "Gastroesophageal reflux",
+            "diseasePhenotypeCurie": "HP:0002020",
+            "diseasePhenotypeLabel": "Gastroesophageal reflux",
+            "micaCurie": "HP:0002020",
+            "micaLabel": "Gastroesophageal reflux",
+            "score": 3.3532901609167642,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:35202563"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000219",
+            "patientPhenotypeLabel": "Thin upper lip vermilion",
+            "diseasePhenotypeCurie": "HP:0000219",
+            "diseasePhenotypeLabel": "Thin upper lip vermilion",
+            "micaCurie": "HP:0000219",
+            "micaLabel": "Thin upper lip vermilion",
+            "score": 3.3172797233937312,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:35202563"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000463",
+            "patientPhenotypeLabel": "Anteverted nares",
+            "diseasePhenotypeCurie": "HP:0000463",
+            "diseasePhenotypeLabel": "Anteverted nares",
+            "micaCurie": "HP:0000463",
+            "micaLabel": "Anteverted nares",
+            "score": 3.028794115342267,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:35202563"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000718",
+            "patientPhenotypeLabel": "Aggressive behavior",
+            "diseasePhenotypeCurie": "HP:0100710",
+            "diseasePhenotypeLabel": "Impulsivity",
+            "micaCurie": "HP:0000734",
+            "micaLabel": "Disinhibition",
+            "score": 2.7618066341333187,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:35202563"
+          }
+        ]
+      },
+      {
+        "rank": 22,
+        "diseaseCurie": "MONDO:0013256",
+        "diseaseLabel": "chromosome 15q24 deletion syndrome",
+        "diseaseEntityId": 74542,
+        "bmaScore": 1.9034705696364642,
+        "normalizedScore": 0.210164,
+        "patientAverageScore": 2.604685207032839,
+        "diseaseAverageScore": 1.2022559322400899,
+        "directPhenotypeCount": 130,
+        "matchedPhenotypeCount": 18,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000739",
+            "patientPhenotypeLabel": "Anxiety",
+            "diseasePhenotypeCurie": "HP:0000739",
+            "diseasePhenotypeLabel": "Anxiety",
+            "micaCurie": "HP:0000739",
+            "micaLabel": "Anxiety",
+            "score": 3.743866656531178,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:27399968"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007018",
+            "patientPhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "diseasePhenotypeCurie": "HP:0007018",
+            "diseasePhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "micaCurie": "HP:0007018",
+            "micaLabel": "Attention deficit hyperactivity disorder",
+            "score": 3.5197383685544286,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:613406"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002714",
+            "patientPhenotypeLabel": "Downturned corners of mouth",
+            "diseasePhenotypeCurie": "HP:0000194",
+            "diseasePhenotypeLabel": "Open mouth",
+            "micaCurie": "HP:0011338",
+            "micaLabel": "Abnormality of mouth shape",
+            "score": 3.481123532426649,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:613406"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000718",
+            "patientPhenotypeLabel": "Aggressive behavior",
+            "diseasePhenotypeCurie": "HP:0000718",
+            "diseasePhenotypeLabel": "Aggressive behavior",
+            "micaCurie": "HP:0000718",
+            "micaLabel": "Aggressive behavior",
+            "score": 3.477342809586743,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:19233321"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002020",
+            "patientPhenotypeLabel": "Gastroesophageal reflux",
+            "diseasePhenotypeCurie": "HP:0002020",
+            "diseasePhenotypeLabel": "Gastroesophageal reflux",
+            "micaCurie": "HP:0002020",
+            "micaLabel": "Gastroesophageal reflux",
+            "score": 3.3532901609167642,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:27399968"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000219",
+            "patientPhenotypeLabel": "Thin upper lip vermilion",
+            "diseasePhenotypeCurie": "HP:0000219",
+            "diseasePhenotypeLabel": "Thin upper lip vermilion",
+            "micaCurie": "HP:0000219",
+            "micaLabel": "Thin upper lip vermilion",
+            "score": 3.3172797233937312,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:27399968"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000343",
+            "patientPhenotypeLabel": "Long philtrum",
+            "diseasePhenotypeCurie": "HP:0000343",
+            "diseasePhenotypeLabel": "Long philtrum",
+            "micaCurie": "HP:0000343",
+            "micaLabel": "Long philtrum",
+            "score": 3.1381787812998185,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:19233321"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000463",
+            "patientPhenotypeLabel": "Anteverted nares",
+            "diseasePhenotypeCurie": "HP:0000463",
+            "diseasePhenotypeLabel": "Anteverted nares",
+            "micaCurie": "HP:0000463",
+            "micaLabel": "Anteverted nares",
+            "score": 3.028794115342267,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:27399968"
+          }
+        ]
+      },
+      {
+        "rank": 23,
+        "diseaseCurie": "MONDO:0007621",
+        "diseaseLabel": "Floating-Harbor syndrome",
+        "diseaseEntityId": 68907,
+        "bmaScore": 1.8985184570918245,
+        "normalizedScore": 0.209617,
+        "patientAverageScore": 2.6165723914515615,
+        "diseaseAverageScore": 1.1804645227320874,
+        "directPhenotypeCount": 110,
+        "matchedPhenotypeCount": 18,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000527",
+            "patientPhenotypeLabel": "Long eyelashes",
+            "diseasePhenotypeCurie": "HP:0000527",
+            "diseasePhenotypeLabel": "Long eyelashes",
+            "micaCurie": "HP:0000527",
+            "micaLabel": "Long eyelashes",
+            "score": 4.151797857134536,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:22265015"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002714",
+            "patientPhenotypeLabel": "Downturned corners of mouth",
+            "diseasePhenotypeCurie": "HP:0002714",
+            "diseasePhenotypeLabel": "Downturned corners of mouth",
+            "micaCurie": "HP:0002714",
+            "micaLabel": "Downturned corners of mouth",
+            "score": 4.033192114726689,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:136140"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000739",
+            "patientPhenotypeLabel": "Anxiety",
+            "diseasePhenotypeCurie": "HP:0000739",
+            "diseasePhenotypeLabel": "Anxiety",
+            "micaCurie": "HP:0000739",
+            "micaLabel": "Anxiety",
+            "score": 3.743866656531178,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:2044"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007018",
+            "patientPhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "diseasePhenotypeCurie": "HP:0007018",
+            "diseasePhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "micaCurie": "HP:0007018",
+            "micaLabel": "Attention deficit hyperactivity disorder",
+            "score": 3.5197383685544286,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:2044"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000718",
+            "patientPhenotypeLabel": "Aggressive behavior",
+            "diseasePhenotypeCurie": "HP:0000718",
+            "diseasePhenotypeLabel": "Aggressive behavior",
+            "micaCurie": "HP:0000718",
+            "micaLabel": "Aggressive behavior",
+            "score": 3.477342809586743,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:2044"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007665",
+            "patientPhenotypeLabel": "Curly eyelashes",
+            "diseasePhenotypeCurie": "HP:0000527",
+            "diseasePhenotypeLabel": "Long eyelashes",
+            "micaCurie": "HP:0000499",
+            "micaLabel": "Abnormal eyelash morphology",
+            "score": 3.363340496770266,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:22265015"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002020",
+            "patientPhenotypeLabel": "Gastroesophageal reflux",
+            "diseasePhenotypeCurie": "HP:0002020",
+            "diseasePhenotypeLabel": "Gastroesophageal reflux",
+            "micaCurie": "HP:0002020",
+            "micaLabel": "Gastroesophageal reflux",
+            "score": 3.3532901609167642,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:2044"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000219",
+            "patientPhenotypeLabel": "Thin upper lip vermilion",
+            "diseasePhenotypeCurie": "HP:0000219",
+            "diseasePhenotypeLabel": "Thin upper lip vermilion",
+            "micaCurie": "HP:0000219",
+            "micaLabel": "Thin upper lip vermilion",
+            "score": 3.3172797233937312,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:23763483;PMID:22265015"
+          }
+        ]
+      },
+      {
+        "rank": 24,
+        "diseaseCurie": "MONDO:0859531",
+        "diseaseLabel": "neurodevelopmental disorder with language delay and behavioral abnormalities, with or without seizures",
+        "diseaseEntityId": 88051,
+        "bmaScore": 1.8957936382977794,
+        "normalizedScore": 0.209316,
+        "patientAverageScore": 2.1339312629815175,
+        "diseaseAverageScore": 1.657656013614041,
+        "directPhenotypeCount": 37,
+        "matchedPhenotypeCount": 18,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000739",
+            "patientPhenotypeLabel": "Anxiety",
+            "diseasePhenotypeCurie": "HP:0000739",
+            "diseasePhenotypeLabel": "Anxiety",
+            "micaCurie": "HP:0000739",
+            "micaLabel": "Anxiety",
+            "score": 3.743866656531178,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:34930816"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007018",
+            "patientPhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "diseasePhenotypeCurie": "HP:0007018",
+            "diseasePhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "micaCurie": "HP:0007018",
+            "micaLabel": "Attention deficit hyperactivity disorder",
+            "score": 3.5197383685544286,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:34930816"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000718",
+            "patientPhenotypeLabel": "Aggressive behavior",
+            "diseasePhenotypeCurie": "HP:0000718",
+            "diseasePhenotypeLabel": "Aggressive behavior",
+            "micaCurie": "HP:0000718",
+            "micaLabel": "Aggressive behavior",
+            "score": 3.477342809586743,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:34930816"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002020",
+            "patientPhenotypeLabel": "Gastroesophageal reflux",
+            "diseasePhenotypeCurie": "HP:0002020",
+            "diseasePhenotypeLabel": "Gastroesophageal reflux",
+            "micaCurie": "HP:0002020",
+            "micaLabel": "Gastroesophageal reflux",
+            "score": 3.3532901609167642,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:34930816"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000219",
+            "patientPhenotypeLabel": "Thin upper lip vermilion",
+            "diseasePhenotypeCurie": "HP:0000219",
+            "diseasePhenotypeLabel": "Thin upper lip vermilion",
+            "micaCurie": "HP:0000219",
+            "micaLabel": "Thin upper lip vermilion",
+            "score": 3.3172797233937312,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:34930816"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000463",
+            "patientPhenotypeLabel": "Anteverted nares",
+            "diseasePhenotypeCurie": "HP:0000414",
+            "diseasePhenotypeLabel": "Bulbous nose",
+            "micaCurie": "HP:0010938",
+            "micaLabel": "Abnormal external nose morphology",
+            "score": 2.2524581155103416,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:30213762"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000343",
+            "patientPhenotypeLabel": "Long philtrum",
+            "diseasePhenotypeCurie": "HP:0000219",
+            "diseasePhenotypeLabel": "Thin upper lip vermilion",
+            "micaCurie": "HP:0000177",
+            "micaLabel": "Abnormal upper lip morphology",
+            "score": 2.168500176007602,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:34930816"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0004322",
+            "patientPhenotypeLabel": "Short stature",
+            "diseasePhenotypeCurie": "HP:0003502",
+            "diseasePhenotypeLabel": "Mild short stature",
+            "micaCurie": "HP:0004322",
+            "micaLabel": "Short stature",
+            "score": 1.858889058471022,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:30213762"
+          }
+        ]
+      },
+      {
+        "rank": 25,
+        "diseaseCurie": "MONDO:0012735",
+        "diseaseLabel": "Temple-Baraitser syndrome",
+        "diseaseEntityId": 74021,
+        "bmaScore": 1.894877219339885,
+        "normalizedScore": 0.209215,
+        "patientAverageScore": 2.273735372755877,
+        "diseaseAverageScore": 1.5160190659238928,
+        "directPhenotypeCount": 63,
+        "matchedPhenotypeCount": 18,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000527",
+            "patientPhenotypeLabel": "Long eyelashes",
+            "diseasePhenotypeCurie": "HP:0000527",
+            "diseasePhenotypeLabel": "Long eyelashes",
+            "micaCurie": "HP:0000527",
+            "micaLabel": "Long eyelashes",
+            "score": 4.151797857134536,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:420561"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002714",
+            "patientPhenotypeLabel": "Downturned corners of mouth",
+            "diseasePhenotypeCurie": "HP:0002714",
+            "diseasePhenotypeLabel": "Downturned corners of mouth",
+            "micaCurie": "HP:0002714",
+            "micaLabel": "Downturned corners of mouth",
+            "score": 4.033192114726689,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:25420144"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007665",
+            "patientPhenotypeLabel": "Curly eyelashes",
+            "diseasePhenotypeCurie": "HP:0000527",
+            "diseasePhenotypeLabel": "Long eyelashes",
+            "micaCurie": "HP:0000499",
+            "micaLabel": "Abnormal eyelash morphology",
+            "score": 3.363340496770266,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:420561"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002020",
+            "patientPhenotypeLabel": "Gastroesophageal reflux",
+            "diseasePhenotypeCurie": "HP:0002020",
+            "diseasePhenotypeLabel": "Gastroesophageal reflux",
+            "micaCurie": "HP:0002020",
+            "micaLabel": "Gastroesophageal reflux",
+            "score": 3.3532901609167642,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:25420144"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000343",
+            "patientPhenotypeLabel": "Long philtrum",
+            "diseasePhenotypeCurie": "HP:0000343",
+            "diseasePhenotypeLabel": "Long philtrum",
+            "micaCurie": "HP:0000343",
+            "micaLabel": "Long philtrum",
+            "score": 3.1381787812998185,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:25420144"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000463",
+            "patientPhenotypeLabel": "Anteverted nares",
+            "diseasePhenotypeCurie": "HP:0000463",
+            "diseasePhenotypeLabel": "Anteverted nares",
+            "micaCurie": "HP:0000463",
+            "micaLabel": "Anteverted nares",
+            "score": 3.028794115342267,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:420561"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000219",
+            "patientPhenotypeLabel": "Thin upper lip vermilion",
+            "diseasePhenotypeCurie": "HP:0010804",
+            "diseasePhenotypeLabel": "Tented upper lip vermilion",
+            "micaCurie": "HP:0011339",
+            "micaLabel": "Abnormality of upper lip vermillion",
+            "score": 2.9635028655278295,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:420561"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002553",
+            "patientPhenotypeLabel": "Highly arched eyebrow",
+            "diseasePhenotypeCurie": "HP:0000574",
+            "diseasePhenotypeLabel": "Thick eyebrow",
+            "micaCurie": "HP:0000534",
+            "micaLabel": "Abnormal eyebrow morphology",
+            "score": 2.6193209858365636,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:420561"
+          }
+        ]
+      }
+    ],
+    "engineSummary": {
+      "diseaseCount": 8579,
+      "phenotypeCount": 19389,
+      "sourceMode": "relationship_fallback",
+      "generatedAt": "2026-03-15T20:43:58.513Z"
+    }
+  }
+}

@@ -1,0 +1,1333 @@
+{
+  "success": true,
+  "engine": "genovy-dx-sim",
+  "analysisType": "gene",
+  "input": {
+    "presentPhenotypeCuries": [
+      "HP:0000717",
+      "HP:0002069",
+      "HP:0002342"
+    ],
+    "excludedPhenotypeCuries": [],
+    "sourceFormat": "phenopacket"
+  },
+  "ranking": {
+    "queryPhenotypes": [
+      {
+        "phenotypeCurie": "HP:0000717",
+        "phenotypeLabel": "Autism"
+      },
+      {
+        "phenotypeCurie": "HP:0002069",
+        "phenotypeLabel": "Bilateral tonic-clonic seizure"
+      },
+      {
+        "phenotypeCurie": "HP:0002342",
+        "phenotypeLabel": "Moderate intellectual disability"
+      }
+    ],
+    "results": [
+      {
+        "rank": 1,
+        "geneCurie": "NCBIGene:6334",
+        "geneLabel": "SCN8A",
+        "geneSymbol": "SCN8A",
+        "geneEntityId": 150053,
+        "bmaScore": 2.3293396604904784,
+        "normalizedScore": 0.257185,
+        "patientAverageScore": 3.81670366334795,
+        "phenotypeAverageScore": 0.841975657633007,
+        "directPhenotypeCount": 126,
+        "matchedPhenotypeCount": 3,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000717",
+            "patientPhenotypeLabel": "Autism",
+            "diseasePhenotypeCurie": "HP:0000717",
+            "diseasePhenotypeLabel": "Autism",
+            "micaCurie": "HP:0000717",
+            "micaLabel": "Autism",
+            "score": 4.166723507351211,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:442835"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002342",
+            "patientPhenotypeLabel": "Moderate intellectual disability",
+            "diseasePhenotypeCurie": "HP:0002342",
+            "diseasePhenotypeLabel": "Moderate intellectual disability",
+            "micaCurie": "HP:0002342",
+            "micaLabel": "Moderate intellectual disability",
+            "score": 4.101245577971705,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:352582"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002069",
+            "patientPhenotypeLabel": "Bilateral tonic-clonic seizure",
+            "diseasePhenotypeCurie": "HP:0025190",
+            "diseasePhenotypeLabel": "Bilateral tonic-clonic seizure with generalized onset",
+            "micaCurie": "HP:0002069",
+            "micaLabel": "Bilateral tonic-clonic seizure",
+            "score": 3.1821419047209347,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:352582"
+          }
+        ],
+        "directNormalizedScore": 0.257185,
+        "diseaseSupportScore": 0.136862,
+        "supportingDiseaseCurie": "MONDO:0013801",
+        "supportingDiseaseLabel": "developmental and epileptic encephalopathy, 13",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 2,
+        "geneCurie": "NCBIGene:10458",
+        "geneLabel": "BAIAP2",
+        "geneSymbol": "BAIAP2",
+        "geneEntityId": 151037,
+        "bmaScore": 2.2931138565627323,
+        "normalizedScore": 0.253185,
+        "patientAverageScore": 3.4217046957256403,
+        "phenotypeAverageScore": 1.1645230173998244,
+        "directPhenotypeCount": 43,
+        "matchedPhenotypeCount": 3,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002342",
+            "patientPhenotypeLabel": "Moderate intellectual disability",
+            "diseasePhenotypeCurie": "HP:0002342",
+            "diseasePhenotypeLabel": "Moderate intellectual disability",
+            "micaCurie": "HP:0002342",
+            "micaLabel": "Moderate intellectual disability",
+            "score": 4.101245577971705,
+            "evidenceCode": "3/6",
+            "referenceText": "OMIM:621468"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002069",
+            "patientPhenotypeLabel": "Bilateral tonic-clonic seizure",
+            "diseasePhenotypeCurie": "HP:0025190",
+            "diseasePhenotypeLabel": "Bilateral tonic-clonic seizure with generalized onset",
+            "micaCurie": "HP:0002069",
+            "micaLabel": "Bilateral tonic-clonic seizure",
+            "score": 3.1821419047209347,
+            "evidenceCode": "4/4",
+            "referenceText": "OMIM:621468"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000717",
+            "patientPhenotypeLabel": "Autism",
+            "diseasePhenotypeCurie": "HP:0000729",
+            "diseasePhenotypeLabel": "Autistic behavior",
+            "micaCurie": "HP:0000729",
+            "micaLabel": "Autistic behavior",
+            "score": 2.9817266044842814,
+            "evidenceCode": "1/6",
+            "referenceText": "OMIM:621468"
+          }
+        ],
+        "directNormalizedScore": 0.253185,
+        "diseaseSupportScore": 0.172166,
+        "supportingDiseaseCurie": "MONDO:0980948",
+        "supportingDiseaseLabel": "developmental and epileptic encephalopathy 120",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 3,
+        "geneCurie": "NCBIGene:57526",
+        "geneLabel": "PCDH19",
+        "geneSymbol": "PCDH19",
+        "geneEntityId": 152162,
+        "bmaScore": 2.2881995413593548,
+        "normalizedScore": 0.252642,
+        "patientAverageScore": 3.4217046957256403,
+        "phenotypeAverageScore": 1.154694386993069,
+        "directPhenotypeCount": 73,
+        "matchedPhenotypeCount": 3,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002342",
+            "patientPhenotypeLabel": "Moderate intellectual disability",
+            "diseasePhenotypeCurie": "HP:0002342",
+            "diseasePhenotypeLabel": "Moderate intellectual disability",
+            "micaCurie": "HP:0002342",
+            "micaLabel": "Moderate intellectual disability",
+            "score": 4.101245577971705,
+            "evidenceCode": "1/3",
+            "referenceText": "OMIM:300088"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002069",
+            "patientPhenotypeLabel": "Bilateral tonic-clonic seizure",
+            "diseasePhenotypeCurie": "HP:0032660",
+            "diseasePhenotypeLabel": "Convulsive status epilepticus",
+            "micaCurie": "HP:0002069",
+            "micaLabel": "Bilateral tonic-clonic seizure",
+            "score": 3.1821419047209347,
+            "evidenceCode": "1/3",
+            "referenceText": "OMIM:300088"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000717",
+            "patientPhenotypeLabel": "Autism",
+            "diseasePhenotypeCurie": "HP:0000729",
+            "diseasePhenotypeLabel": "Autistic behavior",
+            "micaCurie": "HP:0000729",
+            "micaLabel": "Autistic behavior",
+            "score": 2.9817266044842814,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:714652"
+          }
+        ],
+        "directNormalizedScore": 0.252642,
+        "diseaseSupportScore": 0.18947,
+        "supportingDiseaseCurie": "MONDO:0010246",
+        "supportingDiseaseLabel": "developmental and epileptic encephalopathy, 9",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 4,
+        "geneCurie": "NCBIGene:26047",
+        "geneLabel": "CNTNAP2",
+        "geneSymbol": "CNTNAP2",
+        "geneEntityId": 151477,
+        "bmaScore": 2.285380643378832,
+        "normalizedScore": 0.252331,
+        "patientAverageScore": 3.81670366334795,
+        "phenotypeAverageScore": 0.754057623409714,
+        "directPhenotypeCount": 119,
+        "matchedPhenotypeCount": 3,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000717",
+            "patientPhenotypeLabel": "Autism",
+            "diseasePhenotypeCurie": "HP:0000717",
+            "diseasePhenotypeLabel": "Autism",
+            "micaCurie": "HP:0000717",
+            "micaLabel": "Autism",
+            "score": 4.166723507351211,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:163681"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002342",
+            "patientPhenotypeLabel": "Moderate intellectual disability",
+            "diseasePhenotypeCurie": "HP:0002342",
+            "diseasePhenotypeLabel": "Moderate intellectual disability",
+            "micaCurie": "HP:0002342",
+            "micaLabel": "Moderate intellectual disability",
+            "score": 4.101245577971705,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:163681"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002069",
+            "patientPhenotypeLabel": "Bilateral tonic-clonic seizure",
+            "diseasePhenotypeCurie": "HP:0032661",
+            "diseasePhenotypeLabel": "Generalized convulsive status epilepticus",
+            "micaCurie": "HP:0002069",
+            "micaLabel": "Bilateral tonic-clonic seizure",
+            "score": 3.1821419047209347,
+            "evidenceCode": "2/8",
+            "referenceText": "OMIM:610042"
+          }
+        ],
+        "directNormalizedScore": 0.252331,
+        "diseaseSupportScore": 0.119797,
+        "supportingDiseaseCurie": "MONDO:0012400",
+        "supportingDiseaseLabel": "cortical dysplasia-focal epilepsy syndrome",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 5,
+        "geneCurie": "NCBIGene:51343",
+        "geneLabel": "FZR1",
+        "geneSymbol": "FZR1",
+        "geneEntityId": 151737,
+        "bmaScore": 2.280118469980242,
+        "normalizedScore": 0.25175,
+        "patientAverageScore": 3.81670366334795,
+        "phenotypeAverageScore": 0.7435332766125345,
+        "directPhenotypeCount": 73,
+        "matchedPhenotypeCount": 3,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000717",
+            "patientPhenotypeLabel": "Autism",
+            "diseasePhenotypeCurie": "HP:0000717",
+            "diseasePhenotypeLabel": "Autism",
+            "micaCurie": "HP:0000717",
+            "micaLabel": "Autism",
+            "score": 4.166723507351211,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:442835"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002342",
+            "patientPhenotypeLabel": "Moderate intellectual disability",
+            "diseasePhenotypeCurie": "HP:0002342",
+            "diseasePhenotypeLabel": "Moderate intellectual disability",
+            "micaCurie": "HP:0002342",
+            "micaLabel": "Moderate intellectual disability",
+            "score": 4.101245577971705,
+            "evidenceCode": "1/3",
+            "referenceText": "OMIM:620145"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002069",
+            "patientPhenotypeLabel": "Bilateral tonic-clonic seizure",
+            "diseasePhenotypeCurie": "HP:0002069",
+            "diseasePhenotypeLabel": "Bilateral tonic-clonic seizure",
+            "micaCurie": "HP:0002069",
+            "micaLabel": "Bilateral tonic-clonic seizure",
+            "score": 3.1821419047209347,
+            "evidenceCode": "3/4",
+            "referenceText": "OMIM:620145"
+          }
+        ],
+        "directNormalizedScore": 0.25175,
+        "diseaseSupportScore": 0.162071,
+        "supportingDiseaseCurie": "MONDO:0859325",
+        "supportingDiseaseLabel": "developmental and epileptic encephalopathy 109",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 6,
+        "geneCurie": "NCBIGene:144577",
+        "geneLabel": "KICS2",
+        "geneSymbol": "KICS2",
+        "geneEntityId": 152915,
+        "bmaScore": 2.27485688983419,
+        "normalizedScore": 0.251169,
+        "patientAverageScore": 3.81670366334795,
+        "phenotypeAverageScore": 0.7330101163204307,
+        "directPhenotypeCount": 61,
+        "matchedPhenotypeCount": 3,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000717",
+            "patientPhenotypeLabel": "Autism",
+            "diseasePhenotypeCurie": "HP:0000717",
+            "diseasePhenotypeLabel": "Autism",
+            "micaCurie": "HP:0000717",
+            "micaLabel": "Autism",
+            "score": 4.166723507351211,
+            "evidenceCode": "1/5",
+            "referenceText": "OMIM:621100"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002342",
+            "patientPhenotypeLabel": "Moderate intellectual disability",
+            "diseasePhenotypeCurie": "HP:0002342",
+            "diseasePhenotypeLabel": "Moderate intellectual disability",
+            "micaCurie": "HP:0002342",
+            "micaLabel": "Moderate intellectual disability",
+            "score": 4.101245577971705,
+            "evidenceCode": "4/4",
+            "referenceText": "OMIM:621100"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002069",
+            "patientPhenotypeLabel": "Bilateral tonic-clonic seizure",
+            "diseasePhenotypeCurie": "HP:0002069",
+            "diseasePhenotypeLabel": "Bilateral tonic-clonic seizure",
+            "micaCurie": "HP:0002069",
+            "micaLabel": "Bilateral tonic-clonic seizure",
+            "score": 3.1821419047209347,
+            "evidenceCode": "3/3",
+            "referenceText": "OMIM:621100"
+          }
+        ],
+        "directNormalizedScore": 0.251169,
+        "diseaseSupportScore": 0.170795,
+        "supportingDiseaseCurie": "MONDO:0976231",
+        "supportingDiseaseLabel": "intellectual developmental disorder, autosomal recessive 83",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 7,
+        "geneCurie": "NCBIGene:6323",
+        "geneLabel": "SCN1A",
+        "geneSymbol": "SCN1A",
+        "geneEntityId": 150045,
+        "bmaScore": 2.261317131439239,
+        "normalizedScore": 0.249674,
+        "patientAverageScore": 3.81670366334795,
+        "phenotypeAverageScore": 0.7059305995305285,
+        "directPhenotypeCount": 228,
+        "matchedPhenotypeCount": 3,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000717",
+            "patientPhenotypeLabel": "Autism",
+            "diseasePhenotypeCurie": "HP:0000717",
+            "diseasePhenotypeLabel": "Autism",
+            "micaCurie": "HP:0000717",
+            "micaLabel": "Autism",
+            "score": 4.166723507351211,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:442835"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002342",
+            "patientPhenotypeLabel": "Moderate intellectual disability",
+            "diseasePhenotypeCurie": "HP:0002342",
+            "diseasePhenotypeLabel": "Moderate intellectual disability",
+            "micaCurie": "HP:0002342",
+            "micaLabel": "Moderate intellectual disability",
+            "score": 4.101245577971705,
+            "evidenceCode": "4/7",
+            "referenceText": "OMIM:607208"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002069",
+            "patientPhenotypeLabel": "Bilateral tonic-clonic seizure",
+            "diseasePhenotypeCurie": "HP:0025190",
+            "diseasePhenotypeLabel": "Bilateral tonic-clonic seizure with generalized onset",
+            "micaCurie": "HP:0002069",
+            "micaLabel": "Bilateral tonic-clonic seizure",
+            "score": 3.1821419047209347,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:1942"
+          }
+        ],
+        "directNormalizedScore": 0.249674,
+        "diseaseSupportScore": 0.148175,
+        "supportingDiseaseCurie": "MONDO:0100079",
+        "supportingDiseaseLabel": "developmental and epileptic encephalopathy, 6A",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 8,
+        "geneCurie": "NCBIGene:8831",
+        "geneLabel": "SYNGAP1",
+        "geneSymbol": "SYNGAP1",
+        "geneEntityId": 150659,
+        "bmaScore": 2.257438407566748,
+        "normalizedScore": 0.249246,
+        "patientAverageScore": 3.81670366334795,
+        "phenotypeAverageScore": 0.6981731517855458,
+        "directPhenotypeCount": 121,
+        "matchedPhenotypeCount": 3,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000717",
+            "patientPhenotypeLabel": "Autism",
+            "diseasePhenotypeCurie": "HP:0000717",
+            "diseasePhenotypeLabel": "Autism",
+            "micaCurie": "HP:0000717",
+            "micaLabel": "Autism",
+            "score": 4.166723507351211,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:442835"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002342",
+            "patientPhenotypeLabel": "Moderate intellectual disability",
+            "diseasePhenotypeCurie": "HP:0002342",
+            "diseasePhenotypeLabel": "Moderate intellectual disability",
+            "micaCurie": "HP:0002342",
+            "micaLabel": "Moderate intellectual disability",
+            "score": 4.101245577971705,
+            "evidenceCode": "6/6",
+            "referenceText": "OMIM:612621"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002069",
+            "patientPhenotypeLabel": "Bilateral tonic-clonic seizure",
+            "diseasePhenotypeCurie": "HP:0025190",
+            "diseasePhenotypeLabel": "Bilateral tonic-clonic seizure with generalized onset",
+            "micaCurie": "HP:0002069",
+            "micaLabel": "Bilateral tonic-clonic seizure",
+            "score": 3.1821419047209347,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:1942"
+          }
+        ],
+        "directNormalizedScore": 0.249246,
+        "diseaseSupportScore": 0.166572,
+        "supportingDiseaseCurie": "MONDO:0012960",
+        "supportingDiseaseLabel": "intellectual disability, autosomal dominant 5",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 9,
+        "geneCurie": "NCBIGene:2892",
+        "geneLabel": "GRIA3",
+        "geneSymbol": "GRIA3",
+        "geneEntityId": 149007,
+        "bmaScore": 2.242472300428136,
+        "normalizedScore": 0.247593,
+        "patientAverageScore": 3.81670366334795,
+        "phenotypeAverageScore": 0.6682409375083224,
+        "directPhenotypeCount": 69,
+        "matchedPhenotypeCount": 3,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000717",
+            "patientPhenotypeLabel": "Autism",
+            "diseasePhenotypeCurie": "HP:0000717",
+            "diseasePhenotypeLabel": "Autism",
+            "micaCurie": "HP:0000717",
+            "micaLabel": "Autism",
+            "score": 4.166723507351211,
+            "evidenceCode": "2/8",
+            "referenceText": "OMIM:300699"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002342",
+            "patientPhenotypeLabel": "Moderate intellectual disability",
+            "diseasePhenotypeCurie": "HP:0002342",
+            "diseasePhenotypeLabel": "Moderate intellectual disability",
+            "micaCurie": "HP:0002342",
+            "micaLabel": "Moderate intellectual disability",
+            "score": 4.101245577971705,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:364028"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002069",
+            "patientPhenotypeLabel": "Bilateral tonic-clonic seizure",
+            "diseasePhenotypeCurie": "HP:0002069",
+            "diseasePhenotypeLabel": "Bilateral tonic-clonic seizure",
+            "micaCurie": "HP:0002069",
+            "micaLabel": "Bilateral tonic-clonic seizure",
+            "score": 3.1821419047209347,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:364028"
+          }
+        ],
+        "directNormalizedScore": 0.247593,
+        "diseaseSupportScore": 0.119786,
+        "supportingDiseaseCurie": "MONDO:0010402",
+        "supportingDiseaseLabel": "syndromic X-linked intellectual disability 94",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 10,
+        "geneCurie": "NCBIGene:26855",
+        "geneLabel": "RNU2-2",
+        "geneSymbol": "RNU2-2",
+        "geneEntityId": 151527,
+        "bmaScore": 2.2048199279439054,
+        "normalizedScore": 0.243436,
+        "patientAverageScore": 3.81670366334795,
+        "phenotypeAverageScore": 0.5929361925398607,
+        "directPhenotypeCount": 183,
+        "matchedPhenotypeCount": 3,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000717",
+            "patientPhenotypeLabel": "Autism",
+            "diseasePhenotypeCurie": "HP:0000717",
+            "diseasePhenotypeLabel": "Autism",
+            "micaCurie": "HP:0000717",
+            "micaLabel": "Autism",
+            "score": 4.166723507351211,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:621304"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002342",
+            "patientPhenotypeLabel": "Moderate intellectual disability",
+            "diseasePhenotypeCurie": "HP:0002342",
+            "diseasePhenotypeLabel": "Moderate intellectual disability",
+            "micaCurie": "HP:0002342",
+            "micaLabel": "Moderate intellectual disability",
+            "score": 4.101245577971705,
+            "evidenceCode": "2/6",
+            "referenceText": "OMIM:621304"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002069",
+            "patientPhenotypeLabel": "Bilateral tonic-clonic seizure",
+            "diseasePhenotypeCurie": "HP:0007334",
+            "diseasePhenotypeLabel": "Bilateral tonic-clonic seizure with focal onset",
+            "micaCurie": "HP:0002069",
+            "micaLabel": "Bilateral tonic-clonic seizure",
+            "score": 3.1821419047209347,
+            "evidenceCode": "4/8",
+            "referenceText": "OMIM:621304"
+          }
+        ],
+        "directNormalizedScore": 0.243436,
+        "diseaseSupportScore": 0.165536,
+        "supportingDiseaseCurie": "MONDO:1060177",
+        "supportingDiseaseLabel": "developmental and epileptic encephalopathy 119",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 11,
+        "geneCurie": "NCBIGene:2903",
+        "geneLabel": "GRIN2A",
+        "geneSymbol": "GRIN2A",
+        "geneEntityId": 149013,
+        "bmaScore": 2.1953007219298066,
+        "normalizedScore": 0.242385,
+        "patientAverageScore": 3.4217046957256403,
+        "phenotypeAverageScore": 0.9688967481339733,
+        "directPhenotypeCount": 109,
+        "matchedPhenotypeCount": 3,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002342",
+            "patientPhenotypeLabel": "Moderate intellectual disability",
+            "diseasePhenotypeCurie": "HP:0002342",
+            "diseasePhenotypeLabel": "Moderate intellectual disability",
+            "micaCurie": "HP:0002342",
+            "micaLabel": "Moderate intellectual disability",
+            "score": 4.101245577971705,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:289266"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002069",
+            "patientPhenotypeLabel": "Bilateral tonic-clonic seizure",
+            "diseasePhenotypeCurie": "HP:0025190",
+            "diseasePhenotypeLabel": "Bilateral tonic-clonic seizure with generalized onset",
+            "micaCurie": "HP:0002069",
+            "micaLabel": "Bilateral tonic-clonic seizure",
+            "score": 3.1821419047209347,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:98818"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000717",
+            "patientPhenotypeLabel": "Autism",
+            "diseasePhenotypeCurie": "HP:0000729",
+            "diseasePhenotypeLabel": "Autistic behavior",
+            "micaCurie": "HP:0000729",
+            "micaLabel": "Autistic behavior",
+            "score": 2.9817266044842814,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:725"
+          }
+        ],
+        "directNormalizedScore": 0.242385,
+        "diseaseSupportScore": 0.105805,
+        "supportingDiseaseCurie": "MONDO:0007295",
+        "supportingDiseaseLabel": "self-limited epilepsy with centrotemporal spikes",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 12,
+        "geneCurie": "NCBIGene:2554",
+        "geneLabel": "GABRA1",
+        "geneSymbol": "GABRA1",
+        "geneEntityId": 148894,
+        "bmaScore": 2.1696785204914617,
+        "normalizedScore": 0.239556,
+        "patientAverageScore": 3.4217046957256403,
+        "phenotypeAverageScore": 0.9176523452572829,
+        "directPhenotypeCount": 98,
+        "matchedPhenotypeCount": 3,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002342",
+            "patientPhenotypeLabel": "Moderate intellectual disability",
+            "diseasePhenotypeCurie": "HP:0002342",
+            "diseasePhenotypeLabel": "Moderate intellectual disability",
+            "micaCurie": "HP:0002342",
+            "micaLabel": "Moderate intellectual disability",
+            "score": 4.101245577971705,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:615744"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002069",
+            "patientPhenotypeLabel": "Bilateral tonic-clonic seizure",
+            "diseasePhenotypeCurie": "HP:0025190",
+            "diseasePhenotypeLabel": "Bilateral tonic-clonic seizure with generalized onset",
+            "micaCurie": "HP:0002069",
+            "micaLabel": "Bilateral tonic-clonic seizure",
+            "score": 3.1821419047209347,
+            "evidenceCode": "4/4",
+            "referenceText": "OMIM:615744"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000717",
+            "patientPhenotypeLabel": "Autism",
+            "diseasePhenotypeCurie": "HP:0000729",
+            "diseasePhenotypeLabel": "Autistic behavior",
+            "micaCurie": "HP:0000729",
+            "micaLabel": "Autistic behavior",
+            "score": 2.9817266044842814,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:33069"
+          }
+        ],
+        "directNormalizedScore": 0.239556,
+        "diseaseSupportScore": 0.138743,
+        "supportingDiseaseCurie": "MONDO:0014328",
+        "supportingDiseaseLabel": "developmental and epileptic encephalopathy, 19",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 13,
+        "geneCurie": "NCBIGene:55167",
+        "geneLabel": "MSL2",
+        "geneSymbol": "MSL2",
+        "geneEntityId": 151934,
+        "bmaScore": 2.160334276221877,
+        "normalizedScore": 0.238525,
+        "patientAverageScore": 3.81670366334795,
+        "phenotypeAverageScore": 0.5039648890958043,
+        "directPhenotypeCount": 125,
+        "matchedPhenotypeCount": 3,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000717",
+            "patientPhenotypeLabel": "Autism",
+            "diseasePhenotypeCurie": "HP:0000717",
+            "diseasePhenotypeLabel": "Autism",
+            "micaCurie": "HP:0000717",
+            "micaLabel": "Autism",
+            "score": 4.166723507351211,
+            "evidenceCode": "4/4",
+            "referenceText": "OMIM:620985"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002342",
+            "patientPhenotypeLabel": "Moderate intellectual disability",
+            "diseasePhenotypeCurie": "HP:0002342",
+            "diseasePhenotypeLabel": "Moderate intellectual disability",
+            "micaCurie": "HP:0002342",
+            "micaLabel": "Moderate intellectual disability",
+            "score": 4.101245577971705,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:620985"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002069",
+            "patientPhenotypeLabel": "Bilateral tonic-clonic seizure",
+            "diseasePhenotypeCurie": "HP:0025190",
+            "diseasePhenotypeLabel": "Bilateral tonic-clonic seizure with generalized onset",
+            "micaCurie": "HP:0002069",
+            "micaLabel": "Bilateral tonic-clonic seizure",
+            "score": 3.1821419047209347,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:620985"
+          }
+        ],
+        "directNormalizedScore": 0.238525,
+        "diseaseSupportScore": 0.162197,
+        "supportingDiseaseCurie": "MONDO:0975836",
+        "supportingDiseaseLabel": "Karayol-Borroto-Haghshenas neurodevelopmental syndrome",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 14,
+        "geneCurie": "NCBIGene:4204",
+        "geneLabel": "MECP2",
+        "geneSymbol": "MECP2",
+        "geneEntityId": 149415,
+        "bmaScore": 2.1498055033593286,
+        "normalizedScore": 0.237362,
+        "patientAverageScore": 3.81670366334795,
+        "phenotypeAverageScore": 0.4829073433707071,
+        "directPhenotypeCount": 255,
+        "matchedPhenotypeCount": 3,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000717",
+            "patientPhenotypeLabel": "Autism",
+            "diseasePhenotypeCurie": "HP:0000717",
+            "diseasePhenotypeLabel": "Autism",
+            "micaCurie": "HP:0000717",
+            "micaLabel": "Autism",
+            "score": 4.166723507351211,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:300496"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002342",
+            "patientPhenotypeLabel": "Moderate intellectual disability",
+            "diseasePhenotypeCurie": "HP:0002342",
+            "diseasePhenotypeLabel": "Moderate intellectual disability",
+            "micaCurie": "HP:0002342",
+            "micaLabel": "Moderate intellectual disability",
+            "score": 4.101245577971705,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:3077"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002069",
+            "patientPhenotypeLabel": "Bilateral tonic-clonic seizure",
+            "diseasePhenotypeCurie": "HP:0002069",
+            "diseasePhenotypeLabel": "Bilateral tonic-clonic seizure",
+            "micaCurie": "HP:0002069",
+            "micaLabel": "Bilateral tonic-clonic seizure",
+            "score": 3.1821419047209347,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:209370"
+          }
+        ],
+        "directNormalizedScore": 0.237362,
+        "diseaseSupportScore": 0.136968,
+        "supportingDiseaseCurie": "MONDO:0010342",
+        "supportingDiseaseLabel": "autism, susceptibility to, X-linked 3",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 15,
+        "geneCurie": "NCBIGene:24140",
+        "geneLabel": "FTSJ1",
+        "geneSymbol": "FTSJ1",
+        "geneEntityId": 151431,
+        "bmaScore": 2.149687745675152,
+        "normalizedScore": 0.237349,
+        "patientAverageScore": 3.251532822946169,
+        "phenotypeAverageScore": 1.0478426684041346,
+        "directPhenotypeCount": 19,
+        "matchedPhenotypeCount": 3,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000717",
+            "patientPhenotypeLabel": "Autism",
+            "diseasePhenotypeCurie": "HP:0000717",
+            "diseasePhenotypeLabel": "Autism",
+            "micaCurie": "HP:0000717",
+            "micaLabel": "Autism",
+            "score": 4.166723507351211,
+            "evidenceCode": "1/3",
+            "referenceText": "OMIM:309549"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002342",
+            "patientPhenotypeLabel": "Moderate intellectual disability",
+            "diseasePhenotypeCurie": "HP:0002342",
+            "diseasePhenotypeLabel": "Moderate intellectual disability",
+            "micaCurie": "HP:0002342",
+            "micaLabel": "Moderate intellectual disability",
+            "score": 4.101245577971705,
+            "evidenceCode": "4/4",
+            "referenceText": "OMIM:309549"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002069",
+            "patientPhenotypeLabel": "Bilateral tonic-clonic seizure",
+            "diseasePhenotypeCurie": "HP:0001250",
+            "diseasePhenotypeLabel": "Seizure",
+            "micaCurie": "HP:0001250",
+            "micaLabel": "Seizure",
+            "score": 1.4866293835155915,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "OMIM:309549"
+          }
+        ],
+        "directNormalizedScore": 0.237349,
+        "diseaseSupportScore": 0.161397,
+        "supportingDiseaseCurie": "MONDO:0010660",
+        "supportingDiseaseLabel": "intellectual disability, X-linked 9",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 16,
+        "geneCurie": "NCBIGene:26832",
+        "geneLabel": "RNU5B-1",
+        "geneSymbol": "RNU5B-1",
+        "geneEntityId": 151525,
+        "bmaScore": 2.146888640750407,
+        "normalizedScore": 0.23704,
+        "patientAverageScore": 3.81670366334795,
+        "phenotypeAverageScore": 0.47707361815286403,
+        "directPhenotypeCount": 153,
+        "matchedPhenotypeCount": 3,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000717",
+            "patientPhenotypeLabel": "Autism",
+            "diseasePhenotypeCurie": "HP:0000717",
+            "diseasePhenotypeLabel": "Autism",
+            "micaCurie": "HP:0000717",
+            "micaLabel": "Autism",
+            "score": 4.166723507351211,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:621302"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002342",
+            "patientPhenotypeLabel": "Moderate intellectual disability",
+            "diseasePhenotypeCurie": "HP:0002342",
+            "diseasePhenotypeLabel": "Moderate intellectual disability",
+            "micaCurie": "HP:0002342",
+            "micaLabel": "Moderate intellectual disability",
+            "score": 4.101245577971705,
+            "evidenceCode": "6/14",
+            "referenceText": "OMIM:621302"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002069",
+            "patientPhenotypeLabel": "Bilateral tonic-clonic seizure",
+            "diseasePhenotypeCurie": "HP:0002069",
+            "diseasePhenotypeLabel": "Bilateral tonic-clonic seizure",
+            "micaCurie": "HP:0002069",
+            "micaLabel": "Bilateral tonic-clonic seizure",
+            "score": 3.1821419047209347,
+            "evidenceCode": "2/5",
+            "referenceText": "OMIM:621302"
+          }
+        ],
+        "directNormalizedScore": 0.23704,
+        "diseaseSupportScore": 0.161187,
+        "supportingDiseaseCurie": "MONDO:1060179",
+        "supportingDiseaseLabel": "RNU5B-1 related neurodevelopmental disorder with seizures and joint laxity",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 17,
+        "geneCurie": "NCBIGene:26523",
+        "geneLabel": "AGO1",
+        "geneSymbol": "AGO1",
+        "geneEntityId": 151517,
+        "bmaScore": 2.140471561272138,
+        "normalizedScore": 0.236331,
+        "patientAverageScore": 3.4217046957256403,
+        "phenotypeAverageScore": 0.8592384268186354,
+        "directPhenotypeCount": 37,
+        "matchedPhenotypeCount": 3,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002342",
+            "patientPhenotypeLabel": "Moderate intellectual disability",
+            "diseasePhenotypeCurie": "HP:0002342",
+            "diseasePhenotypeLabel": "Moderate intellectual disability",
+            "micaCurie": "HP:0002342",
+            "micaLabel": "Moderate intellectual disability",
+            "score": 4.101245577971705,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:620292"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002069",
+            "patientPhenotypeLabel": "Bilateral tonic-clonic seizure",
+            "diseasePhenotypeCurie": "HP:0002069",
+            "diseasePhenotypeLabel": "Bilateral tonic-clonic seizure",
+            "micaCurie": "HP:0002069",
+            "micaLabel": "Bilateral tonic-clonic seizure",
+            "score": 3.1821419047209347,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:620292"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000717",
+            "patientPhenotypeLabel": "Autism",
+            "diseasePhenotypeCurie": "HP:0000729",
+            "diseasePhenotypeLabel": "Autistic behavior",
+            "micaCurie": "HP:0000729",
+            "micaLabel": "Autistic behavior",
+            "score": 2.9817266044842814,
+            "evidenceCode": "24/30",
+            "referenceText": "OMIM:620292"
+          }
+        ],
+        "directNormalizedScore": 0.236331,
+        "diseaseSupportScore": 0.160705,
+        "supportingDiseaseCurie": "MONDO:0859531",
+        "supportingDiseaseLabel": "neurodevelopmental disorder with language delay and behavioral abnormalities, with or without seizures",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 18,
+        "geneCurie": "NCBIGene:1183",
+        "geneLabel": "CLCN4",
+        "geneSymbol": "CLCN4",
+        "geneEntityId": 148469,
+        "bmaScore": 2.1201380634378277,
+        "normalizedScore": 0.234086,
+        "patientAverageScore": 3.4217046957256403,
+        "phenotypeAverageScore": 0.8185714311500153,
+        "directPhenotypeCount": 57,
+        "matchedPhenotypeCount": 3,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002342",
+            "patientPhenotypeLabel": "Moderate intellectual disability",
+            "diseasePhenotypeCurie": "HP:0002342",
+            "diseasePhenotypeLabel": "Moderate intellectual disability",
+            "micaCurie": "HP:0002342",
+            "micaLabel": "Moderate intellectual disability",
+            "score": 4.101245577971705,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:485350"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002069",
+            "patientPhenotypeLabel": "Bilateral tonic-clonic seizure",
+            "diseasePhenotypeCurie": "HP:0002069",
+            "diseasePhenotypeLabel": "Bilateral tonic-clonic seizure",
+            "micaCurie": "HP:0002069",
+            "micaLabel": "Bilateral tonic-clonic seizure",
+            "score": 3.1821419047209347,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:485350"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000717",
+            "patientPhenotypeLabel": "Autism",
+            "diseasePhenotypeCurie": "HP:0000729",
+            "diseasePhenotypeLabel": "Autistic behavior",
+            "micaCurie": "HP:0000729",
+            "micaLabel": "Autistic behavior",
+            "score": 2.9817266044842814,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:300114"
+          }
+        ],
+        "directNormalizedScore": 0.234086,
+        "diseaseSupportScore": 0.10222,
+        "supportingDiseaseCurie": "MONDO:0010250",
+        "supportingDiseaseLabel": "intellectual disability, X-linked 49",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 19,
+        "geneCurie": "NCBIGene:23314",
+        "geneLabel": "SATB2",
+        "geneSymbol": "SATB2",
+        "geneEntityId": 151344,
+        "bmaScore": 2.09255425984134,
+        "normalizedScore": 0.231041,
+        "patientAverageScore": 3.81670366334795,
+        "phenotypeAverageScore": 0.36840485633472986,
+        "directPhenotypeCount": 151,
+        "matchedPhenotypeCount": 3,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000717",
+            "patientPhenotypeLabel": "Autism",
+            "diseasePhenotypeCurie": "HP:0000717",
+            "diseasePhenotypeLabel": "Autism",
+            "micaCurie": "HP:0000717",
+            "micaLabel": "Autism",
+            "score": 4.166723507351211,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:251019"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002342",
+            "patientPhenotypeLabel": "Moderate intellectual disability",
+            "diseasePhenotypeCurie": "HP:0002342",
+            "diseasePhenotypeLabel": "Moderate intellectual disability",
+            "micaCurie": "HP:0002342",
+            "micaLabel": "Moderate intellectual disability",
+            "score": 4.101245577971705,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:576283"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002069",
+            "patientPhenotypeLabel": "Bilateral tonic-clonic seizure",
+            "diseasePhenotypeCurie": "HP:0002069",
+            "diseasePhenotypeLabel": "Bilateral tonic-clonic seizure",
+            "micaCurie": "HP:0002069",
+            "micaLabel": "Bilateral tonic-clonic seizure",
+            "score": 3.1821419047209347,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:612313"
+          }
+        ],
+        "directNormalizedScore": 0.231041,
+        "diseaseSupportScore": 0.095341,
+        "supportingDiseaseCurie": "MONDO:0012864",
+        "supportingDiseaseLabel": "chromosome 2q32-q33 deletion syndrome",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 20,
+        "geneCurie": "HGNC:25230",
+        "geneLabel": "AHDC1",
+        "geneSymbol": "AHDC1",
+        "geneEntityId": 204816,
+        "bmaScore": 0,
+        "normalizedScore": 0.23003,
+        "patientAverageScore": 0,
+        "phenotypeAverageScore": 0,
+        "directPhenotypeCount": 0,
+        "matchedPhenotypeCount": 0,
+        "trace": [],
+        "directNormalizedScore": 0,
+        "diseaseSupportScore": 0.23003,
+        "supportingDiseaseCurie": "MONDO:0014358",
+        "supportingDiseaseLabel": "AHDC1-related intellectual disability - obstructive sleep apnea - mild dysmorphism syndrome",
+        "supportingDiseaseClassification": "Definitive"
+      },
+      {
+        "rank": 21,
+        "geneCurie": "NCBIGene:27245",
+        "geneLabel": "AHDC1",
+        "geneSymbol": "AHDC1",
+        "geneEntityId": 151564,
+        "bmaScore": 2.0822468877780342,
+        "normalizedScore": 0.229903,
+        "patientAverageScore": 3.81670366334795,
+        "phenotypeAverageScore": 0.3477901122081189,
+        "directPhenotypeCount": 199,
+        "matchedPhenotypeCount": 3,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000717",
+            "patientPhenotypeLabel": "Autism",
+            "diseasePhenotypeCurie": "HP:0000717",
+            "diseasePhenotypeLabel": "Autism",
+            "micaCurie": "HP:0000717",
+            "micaLabel": "Autism",
+            "score": 4.166723507351211,
+            "evidenceCode": "11/28",
+            "referenceText": "OMIM:615829"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002342",
+            "patientPhenotypeLabel": "Moderate intellectual disability",
+            "diseasePhenotypeCurie": "HP:0002342",
+            "diseasePhenotypeLabel": "Moderate intellectual disability",
+            "micaCurie": "HP:0002342",
+            "micaLabel": "Moderate intellectual disability",
+            "score": 4.101245577971705,
+            "evidenceCode": "8/13",
+            "referenceText": "OMIM:615829"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002069",
+            "patientPhenotypeLabel": "Bilateral tonic-clonic seizure",
+            "diseasePhenotypeCurie": "HP:0007334",
+            "diseasePhenotypeLabel": "Bilateral tonic-clonic seizure with focal onset",
+            "micaCurie": "HP:0002069",
+            "micaLabel": "Bilateral tonic-clonic seizure",
+            "score": 3.1821419047209347,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:615829"
+          }
+        ],
+        "directNormalizedScore": 0.229903,
+        "diseaseSupportScore": 0.15642,
+        "supportingDiseaseCurie": "MONDO:0014358",
+        "supportingDiseaseLabel": "AHDC1-related intellectual disability - obstructive sleep apnea - mild dysmorphism syndrome",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 22,
+        "geneCurie": "NCBIGene:2742",
+        "geneLabel": "GLRA2",
+        "geneSymbol": "GLRA2",
+        "geneEntityId": 148971,
+        "bmaScore": 2.0807187105397156,
+        "normalizedScore": 0.229734,
+        "patientAverageScore": 2.91811415792917,
+        "phenotypeAverageScore": 1.2433232631502613,
+        "directPhenotypeCount": 11,
+        "matchedPhenotypeCount": 3,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000717",
+            "patientPhenotypeLabel": "Autism",
+            "diseasePhenotypeCurie": "HP:0000717",
+            "diseasePhenotypeLabel": "Autism",
+            "micaCurie": "HP:0000717",
+            "micaLabel": "Autism",
+            "score": 4.166723507351211,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:301076"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002069",
+            "patientPhenotypeLabel": "Bilateral tonic-clonic seizure",
+            "diseasePhenotypeCurie": "HP:0002069",
+            "diseasePhenotypeLabel": "Bilateral tonic-clonic seizure",
+            "micaCurie": "HP:0002069",
+            "micaLabel": "Bilateral tonic-clonic seizure",
+            "score": 3.1821419047209347,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:301076"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002342",
+            "patientPhenotypeLabel": "Moderate intellectual disability",
+            "diseasePhenotypeCurie": "HP:0001256",
+            "diseasePhenotypeLabel": "Mild intellectual disability",
+            "micaCurie": "HP:0001249",
+            "micaLabel": "Intellectual disability",
+            "score": 1.4054770617153647,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:301076"
+          }
+        ],
+        "directNormalizedScore": 0.229734,
+        "diseaseSupportScore": 0.156219,
+        "supportingDiseaseCurie": "MONDO:0024772",
+        "supportingDiseaseLabel": "intellectual developmental disorder, X-linked, syndromic, Pilorge type",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 23,
+        "geneCurie": "NCBIGene:23135",
+        "geneLabel": "KDM6B",
+        "geneSymbol": "KDM6B",
+        "geneEntityId": 151297,
+        "bmaScore": 2.0789877189582286,
+        "normalizedScore": 0.229543,
+        "patientAverageScore": 3.81670366334795,
+        "phenotypeAverageScore": 0.34127177456850755,
+        "directPhenotypeCount": 233,
+        "matchedPhenotypeCount": 3,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000717",
+            "patientPhenotypeLabel": "Autism",
+            "diseasePhenotypeCurie": "HP:0000717",
+            "diseasePhenotypeLabel": "Autism",
+            "micaCurie": "HP:0000717",
+            "micaLabel": "Autism",
+            "score": 4.166723507351211,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:618505"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002342",
+            "patientPhenotypeLabel": "Moderate intellectual disability",
+            "diseasePhenotypeCurie": "HP:0002342",
+            "diseasePhenotypeLabel": "Moderate intellectual disability",
+            "micaCurie": "HP:0002342",
+            "micaLabel": "Moderate intellectual disability",
+            "score": 4.101245577971705,
+            "evidenceCode": "3/3",
+            "referenceText": "OMIM:618505"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002069",
+            "patientPhenotypeLabel": "Bilateral tonic-clonic seizure",
+            "diseasePhenotypeCurie": "HP:0002069",
+            "diseasePhenotypeLabel": "Bilateral tonic-clonic seizure",
+            "micaCurie": "HP:0002069",
+            "micaLabel": "Bilateral tonic-clonic seizure",
+            "score": 3.1821419047209347,
+            "evidenceCode": "1/9",
+            "referenceText": "OMIM:618505"
+          }
+        ],
+        "directNormalizedScore": 0.229543,
+        "diseaseSupportScore": 0.156089,
+        "supportingDiseaseCurie": "MONDO:0032790",
+        "supportingDiseaseLabel": "neurodevelopmental disorder with coarse facies and mild distal skeletal abnormalities",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 24,
+        "geneCurie": "NCBIGene:27252",
+        "geneLabel": "KLHL20",
+        "geneSymbol": "KLHL20",
+        "geneEntityId": 151567,
+        "bmaScore": 2.0699545106669768,
+        "normalizedScore": 0.228546,
+        "patientAverageScore": 3.4217046957256403,
+        "phenotypeAverageScore": 0.7182043256083136,
+        "directPhenotypeCount": 79,
+        "matchedPhenotypeCount": 3,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002342",
+            "patientPhenotypeLabel": "Moderate intellectual disability",
+            "diseasePhenotypeCurie": "HP:0002342",
+            "diseasePhenotypeLabel": "Moderate intellectual disability",
+            "micaCurie": "HP:0002342",
+            "micaLabel": "Moderate intellectual disability",
+            "score": 4.101245577971705,
+            "evidenceCode": "4/4",
+            "referenceText": "OMIM:621390"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002069",
+            "patientPhenotypeLabel": "Bilateral tonic-clonic seizure",
+            "diseasePhenotypeCurie": "HP:0025190",
+            "diseasePhenotypeLabel": "Bilateral tonic-clonic seizure with generalized onset",
+            "micaCurie": "HP:0002069",
+            "micaLabel": "Bilateral tonic-clonic seizure",
+            "score": 3.1821419047209347,
+            "evidenceCode": "4/4",
+            "referenceText": "OMIM:621390"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000717",
+            "patientPhenotypeLabel": "Autism",
+            "diseasePhenotypeCurie": "HP:0000729",
+            "diseasePhenotypeLabel": "Autistic behavior",
+            "micaCurie": "HP:0000729",
+            "micaLabel": "Autistic behavior",
+            "score": 2.9817266044842814,
+            "evidenceCode": "12/14",
+            "referenceText": "OMIM:621390"
+          }
+        ],
+        "directNormalizedScore": 0.228546,
+        "diseaseSupportScore": 0.155411,
+        "supportingDiseaseCurie": "MONDO:0980709",
+        "supportingDiseaseLabel": "neurodevelopmental disorder with early-onset seizures, facial dysmorphism, and behavioral abnormalities",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 25,
+        "geneCurie": "NCBIGene:527",
+        "geneLabel": "ATP6V0C",
+        "geneSymbol": "ATP6V0C",
+        "geneEntityId": 148250,
+        "bmaScore": 2.063623110741597,
+        "normalizedScore": 0.227847,
+        "patientAverageScore": 2.7379806498282986,
+        "phenotypeAverageScore": 1.3892655716548956,
+        "directPhenotypeCount": 24,
+        "matchedPhenotypeCount": 3,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002342",
+            "patientPhenotypeLabel": "Moderate intellectual disability",
+            "diseasePhenotypeCurie": "HP:0002342",
+            "diseasePhenotypeLabel": "Moderate intellectual disability",
+            "micaCurie": "HP:0002342",
+            "micaLabel": "Moderate intellectual disability",
+            "score": 4.101245577971705,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:620465"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002069",
+            "patientPhenotypeLabel": "Bilateral tonic-clonic seizure",
+            "diseasePhenotypeCurie": "HP:0007334",
+            "diseasePhenotypeLabel": "Bilateral tonic-clonic seizure with focal onset",
+            "micaCurie": "HP:0002069",
+            "micaLabel": "Bilateral tonic-clonic seizure",
+            "score": 3.1821419047209347,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:620465"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000717",
+            "patientPhenotypeLabel": "Autism",
+            "diseasePhenotypeCurie": "HP:0010864",
+            "diseasePhenotypeLabel": "Severe intellectual disability",
+            "micaCurie": "HP:0011446",
+            "micaLabel": "Abnormality of mental function",
+            "score": 0.9305544667922568,
+            "evidenceCode": "4/4",
+            "referenceText": "OMIM:620465"
+          }
+        ],
+        "directNormalizedScore": 0.227847,
+        "diseaseSupportScore": 0.154936,
+        "supportingDiseaseCurie": "MONDO:0958196",
+        "supportingDiseaseLabel": "epilepsy, early-onset, 3, with or without developmental delay",
+        "supportingDiseaseClassification": ""
+      }
+    ],
+    "engineSummary": {
+      "diseaseCount": 8579,
+      "geneCount": 5256,
+      "phenotypeCount": 19389,
+      "sourceMode": {
+        "disease": "relationship_fallback",
+        "gene": "relationship_fallback"
+      },
+      "generatedAt": "2026-03-15T21:10:05.213Z"
+    }
+  }
+}

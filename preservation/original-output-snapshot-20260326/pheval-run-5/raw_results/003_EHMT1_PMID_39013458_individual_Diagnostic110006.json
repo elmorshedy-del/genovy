@@ -1,0 +1,2643 @@
+{
+  "success": true,
+  "engine": "genovy-dx-sim",
+  "input": {
+    "presentPhenotypeCuries": [
+      "HP:0000028",
+      "HP:0000126",
+      "HP:0000365",
+      "HP:0001249",
+      "HP:0001518",
+      "HP:0011641",
+      "HP:0001643",
+      "HP:0001629",
+      "HP:0001631",
+      "HP:0001762"
+    ],
+    "excludedPhenotypeCuries": [
+      "HP:0000047",
+      "HP:0000010",
+      "HP:0000074",
+      "HP:0000107",
+      "HP:0001263",
+      "HP:0002376",
+      "HP:0001250",
+      "HP:0000023",
+      "HP:0001537",
+      "HP:0001252",
+      "HP:0001822",
+      "HP:0004209",
+      "HP:0000767",
+      "HP:0002650",
+      "HP:0002808",
+      "HP:0001382",
+      "HP:0001520",
+      "HP:0006695",
+      "HP:0001655",
+      "HP:0001763"
+    ],
+    "sourceFormat": "phenopacket"
+  },
+  "ranking": {
+    "queryPhenotypes": [
+      {
+        "phenotypeCurie": "HP:0000028",
+        "phenotypeLabel": "Cryptorchidism"
+      },
+      {
+        "phenotypeCurie": "HP:0000126",
+        "phenotypeLabel": "Hydronephrosis"
+      },
+      {
+        "phenotypeCurie": "HP:0000365",
+        "phenotypeLabel": "Hearing impairment"
+      },
+      {
+        "phenotypeCurie": "HP:0001249",
+        "phenotypeLabel": "Intellectual disability"
+      },
+      {
+        "phenotypeCurie": "HP:0001518",
+        "phenotypeLabel": "Small for gestational age"
+      },
+      {
+        "phenotypeCurie": "HP:0011641",
+        "phenotypeLabel": "Coronary artery fistula"
+      },
+      {
+        "phenotypeCurie": "HP:0001643",
+        "phenotypeLabel": "Patent ductus arteriosus"
+      },
+      {
+        "phenotypeCurie": "HP:0001629",
+        "phenotypeLabel": "Ventricular septal defect"
+      },
+      {
+        "phenotypeCurie": "HP:0001631",
+        "phenotypeLabel": "Atrial septal defect"
+      },
+      {
+        "phenotypeCurie": "HP:0001762",
+        "phenotypeLabel": "Talipes equinovarus"
+      }
+    ],
+    "results": [
+      {
+        "rank": 1,
+        "diseaseCurie": "MONDO:0027407",
+        "diseaseLabel": "Kleefstra syndrome 1",
+        "diseaseEntityId": 83896,
+        "bmaScore": 2.1622132009533055,
+        "normalizedScore": 0.238732,
+        "patientAverageScore": 3.3196476483168027,
+        "diseaseAverageScore": 1.0047787535898083,
+        "directPhenotypeCount": 88,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011641",
+            "patientPhenotypeLabel": "Coronary artery fistula",
+            "diseasePhenotypeCurie": "HP:0011641",
+            "diseasePhenotypeLabel": "Coronary artery fistula",
+            "micaCurie": "HP:0011641",
+            "micaLabel": "Coronary artery fistula",
+            "score": 7.26531316634491,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:39013458"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000126",
+            "patientPhenotypeLabel": "Hydronephrosis",
+            "diseasePhenotypeCurie": "HP:0000126",
+            "diseasePhenotypeLabel": "Hydronephrosis",
+            "micaCurie": "HP:0000126",
+            "micaLabel": "Hydronephrosis",
+            "score": 3.820630672743016,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:39013458"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001518",
+            "patientPhenotypeLabel": "Small for gestational age",
+            "diseasePhenotypeCurie": "HP:0001518",
+            "diseasePhenotypeLabel": "Small for gestational age",
+            "micaCurie": "HP:0001518",
+            "micaLabel": "Small for gestational age",
+            "score": 3.668000905756464,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:39013458"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001643",
+            "patientPhenotypeLabel": "Patent ductus arteriosus",
+            "diseasePhenotypeCurie": "HP:0001643",
+            "diseasePhenotypeLabel": "Patent ductus arteriosus",
+            "micaCurie": "HP:0001643",
+            "micaLabel": "Patent ductus arteriosus",
+            "score": 3.3367608589655537,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:39013458"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001762",
+            "patientPhenotypeLabel": "Talipes equinovarus",
+            "diseasePhenotypeCurie": "HP:0001762",
+            "diseasePhenotypeLabel": "Talipes equinovarus",
+            "micaCurie": "HP:0001762",
+            "micaLabel": "Talipes equinovarus",
+            "score": 3.11165202696639,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:39013458"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001631",
+            "patientPhenotypeLabel": "Atrial septal defect",
+            "diseasePhenotypeCurie": "HP:0001631",
+            "diseasePhenotypeLabel": "Atrial septal defect",
+            "micaCurie": "HP:0001631",
+            "micaLabel": "Atrial septal defect",
+            "score": 3.0507194759712326,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:39013458"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001629",
+            "patientPhenotypeLabel": "Ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0001629",
+            "diseasePhenotypeLabel": "Ventricular septal defect",
+            "micaCurie": "HP:0001629",
+            "micaLabel": "Ventricular septal defect",
+            "score": 2.9389754375316173,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:39013458"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000028",
+            "patientPhenotypeLabel": "Cryptorchidism",
+            "diseasePhenotypeCurie": "HP:0000028",
+            "diseasePhenotypeLabel": "Cryptorchidism",
+            "micaCurie": "HP:0000028",
+            "micaLabel": "Cryptorchidism",
+            "score": 2.709683425916955,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:39013458"
+          }
+        ]
+      },
+      {
+        "rank": 2,
+        "diseaseCurie": "MONDO:0859222",
+        "diseaseLabel": "heterotaxy, visceral, 12, autosomal",
+        "diseaseEntityId": 87884,
+        "bmaScore": 2.0058622711792893,
+        "normalizedScore": 0.221469,
+        "patientAverageScore": 1.5632029854337612,
+        "diseaseAverageScore": 2.4485215569248178,
+        "directPhenotypeCount": 28,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011641",
+            "patientPhenotypeLabel": "Coronary artery fistula",
+            "diseasePhenotypeCurie": "HP:0011640",
+            "diseasePhenotypeLabel": "Single coronary artery origin",
+            "micaCurie": "HP:0006704",
+            "micaLabel": "Abnormal coronary artery morphology",
+            "score": 5.105828916991538,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:34903892"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001643",
+            "patientPhenotypeLabel": "Patent ductus arteriosus",
+            "diseasePhenotypeCurie": "HP:0001643",
+            "diseasePhenotypeLabel": "Patent ductus arteriosus",
+            "micaCurie": "HP:0001643",
+            "micaLabel": "Patent ductus arteriosus",
+            "score": 3.3367608589655537,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:34903892"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001631",
+            "patientPhenotypeLabel": "Atrial septal defect",
+            "diseasePhenotypeCurie": "HP:0001631",
+            "diseasePhenotypeLabel": "Atrial septal defect",
+            "micaCurie": "HP:0001631",
+            "micaLabel": "Atrial septal defect",
+            "score": 3.0507194759712326,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:34903892"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001629",
+            "patientPhenotypeLabel": "Ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0001629",
+            "diseasePhenotypeLabel": "Ventricular septal defect",
+            "micaCurie": "HP:0001629",
+            "micaLabel": "Ventricular septal defect",
+            "score": 2.9389754375316173,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:34903892"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001518",
+            "patientPhenotypeLabel": "Small for gestational age",
+            "diseasePhenotypeCurie": "HP:0031854",
+            "diseasePhenotypeLabel": "Left Isomerism",
+            "micaCurie": "HP:0001507",
+            "micaLabel": "Growth abnormality",
+            "score": 1.18690668910312,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:34903892"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000028",
+            "patientPhenotypeLabel": "Cryptorchidism",
+            "diseasePhenotypeCurie": "HP:0031854",
+            "diseasePhenotypeLabel": "Left Isomerism",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:34903892"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000126",
+            "patientPhenotypeLabel": "Hydronephrosis",
+            "diseasePhenotypeCurie": "HP:0031854",
+            "diseasePhenotypeLabel": "Left Isomerism",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:34903892"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000365",
+            "patientPhenotypeLabel": "Hearing impairment",
+            "diseasePhenotypeCurie": "HP:0031854",
+            "diseasePhenotypeLabel": "Left Isomerism",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:34903892"
+          }
+        ]
+      },
+      {
+        "rank": 3,
+        "diseaseCurie": "MONDO:0011243",
+        "diseaseLabel": "grange syndrome",
+        "diseaseEntityId": 72529,
+        "bmaScore": 1.9699830718321738,
+        "normalizedScore": 0.217508,
+        "patientAverageScore": 2.1835118318617623,
+        "diseaseAverageScore": 1.7564543118025853,
+        "directPhenotypeCount": 21,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011641",
+            "patientPhenotypeLabel": "Coronary artery fistula",
+            "diseasePhenotypeCurie": "HP:0005145",
+            "diseasePhenotypeLabel": "Coronary artery stenosis",
+            "micaCurie": "HP:0006704",
+            "micaLabel": "Abnormal coronary artery morphology",
+            "score": 5.105828916991538,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:602531"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001643",
+            "patientPhenotypeLabel": "Patent ductus arteriosus",
+            "diseasePhenotypeCurie": "HP:0001643",
+            "diseasePhenotypeLabel": "Patent ductus arteriosus",
+            "micaCurie": "HP:0001643",
+            "micaLabel": "Patent ductus arteriosus",
+            "score": 3.3367608589655537,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:79094"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001629",
+            "patientPhenotypeLabel": "Ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0001629",
+            "diseasePhenotypeLabel": "Ventricular septal defect",
+            "micaCurie": "HP:0001629",
+            "micaLabel": "Ventricular septal defect",
+            "score": 2.9389754375316173,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:79094"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001631",
+            "patientPhenotypeLabel": "Atrial septal defect",
+            "diseasePhenotypeCurie": "HP:0001629",
+            "diseasePhenotypeLabel": "Ventricular septal defect",
+            "micaCurie": "HP:0001671",
+            "micaLabel": "Abnormal cardiac septum morphology",
+            "score": 2.469522620748169,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:79094"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000126",
+            "patientPhenotypeLabel": "Hydronephrosis",
+            "diseasePhenotypeCurie": "HP:0001920",
+            "diseasePhenotypeLabel": "Renal artery stenosis",
+            "micaCurie": "HP:0012210",
+            "micaLabel": "Abnormal renal morphology",
+            "score": 2.259132222598035,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:602531"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001518",
+            "patientPhenotypeLabel": "Small for gestational age",
+            "diseasePhenotypeCurie": "HP:0004325",
+            "diseasePhenotypeLabel": "Decreased body weight",
+            "micaCurie": "HP:0004325",
+            "micaLabel": "Decreased body weight",
+            "score": 2.0854040308471755,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:602531"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001249",
+            "patientPhenotypeLabel": "Intellectual disability",
+            "diseasePhenotypeCurie": "HP:0006889",
+            "diseasePhenotypeLabel": "Borderline intellectual disability",
+            "micaCurie": "HP:0001249",
+            "micaLabel": "Intellectual disability",
+            "score": 1.4054770617153647,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:79094"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000028",
+            "patientPhenotypeLabel": "Cryptorchidism",
+            "diseasePhenotypeCurie": "HP:0100817",
+            "diseasePhenotypeLabel": "Renovascular hypertension",
+            "micaCurie": "HP:0000119",
+            "micaLabel": "Abnormality of the genitourinary system",
+            "score": 1.1713672443299454,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:602531"
+          }
+        ]
+      },
+      {
+        "rank": 4,
+        "diseaseCurie": "MONDO:0054581",
+        "diseaseLabel": "Townes-Brocks syndrome 1",
+        "diseaseEntityId": 86026,
+        "bmaScore": 1.9568735980282352,
+        "normalizedScore": 0.21606,
+        "patientAverageScore": 2.637380738044892,
+        "diseaseAverageScore": 1.2763664580115783,
+        "directPhenotypeCount": 58,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001518",
+            "patientPhenotypeLabel": "Small for gestational age",
+            "diseasePhenotypeCurie": "HP:0001518",
+            "diseasePhenotypeLabel": "Small for gestational age",
+            "micaCurie": "HP:0001518",
+            "micaLabel": "Small for gestational age",
+            "score": 3.668000905756464,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:9425907"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001643",
+            "patientPhenotypeLabel": "Patent ductus arteriosus",
+            "diseasePhenotypeCurie": "HP:0001636",
+            "diseasePhenotypeLabel": "Tetralogy of Fallot",
+            "micaCurie": "HP:0011603",
+            "micaLabel": "Congenital malformation of the great arteries",
+            "score": 3.0807217262750313,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:107480"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001631",
+            "patientPhenotypeLabel": "Atrial septal defect",
+            "diseasePhenotypeCurie": "HP:0001631",
+            "diseasePhenotypeLabel": "Atrial septal defect",
+            "micaCurie": "HP:0001631",
+            "micaLabel": "Atrial septal defect",
+            "score": 3.0507194759712326,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:9425907"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001762",
+            "patientPhenotypeLabel": "Talipes equinovarus",
+            "diseasePhenotypeCurie": "HP:0001883",
+            "diseasePhenotypeLabel": "Talipes",
+            "micaCurie": "HP:0001883",
+            "micaLabel": "Talipes",
+            "score": 2.995615716644948,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:11478532"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001629",
+            "patientPhenotypeLabel": "Ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0001629",
+            "diseasePhenotypeLabel": "Ventricular septal defect",
+            "micaCurie": "HP:0001629",
+            "micaLabel": "Ventricular septal defect",
+            "score": 2.9389754375316173,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:11478532;PMID:9973281"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000028",
+            "patientPhenotypeLabel": "Cryptorchidism",
+            "diseasePhenotypeCurie": "HP:0000028",
+            "diseasePhenotypeLabel": "Cryptorchidism",
+            "micaCurie": "HP:0000028",
+            "micaLabel": "Cryptorchidism",
+            "score": 2.709683425916955,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:107480"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011641",
+            "patientPhenotypeLabel": "Coronary artery fistula",
+            "diseasePhenotypeCurie": "HP:0001636",
+            "diseasePhenotypeLabel": "Tetralogy of Fallot",
+            "micaCurie": "HP:0033353",
+            "micaLabel": "Abnormal blood vessel morphology",
+            "score": 2.3762179567827504,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:107480"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000126",
+            "patientPhenotypeLabel": "Hydronephrosis",
+            "diseasePhenotypeCurie": "HP:0000110",
+            "diseasePhenotypeLabel": "Renal dysplasia",
+            "micaCurie": "HP:0012210",
+            "micaLabel": "Abnormal renal morphology",
+            "score": 2.259132222598035,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:107480"
+          }
+        ]
+      },
+      {
+        "rank": 5,
+        "diseaseCurie": "MONDO:0009367",
+        "diseaseLabel": "McKusick-Kaufman syndrome",
+        "diseaseEntityId": 70653,
+        "bmaScore": 1.947434132590973,
+        "normalizedScore": 0.215018,
+        "patientAverageScore": 2.334630288433025,
+        "diseaseAverageScore": 1.5602379767489212,
+        "directPhenotypeCount": 42,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000126",
+            "patientPhenotypeLabel": "Hydronephrosis",
+            "diseasePhenotypeCurie": "HP:0000126",
+            "diseasePhenotypeLabel": "Hydronephrosis",
+            "micaCurie": "HP:0000126",
+            "micaLabel": "Hydronephrosis",
+            "score": 3.820630672743016,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:236700"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001643",
+            "patientPhenotypeLabel": "Patent ductus arteriosus",
+            "diseasePhenotypeCurie": "HP:0001643",
+            "diseasePhenotypeLabel": "Patent ductus arteriosus",
+            "micaCurie": "HP:0001643",
+            "micaLabel": "Patent ductus arteriosus",
+            "score": 3.3367608589655537,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:2473"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001631",
+            "patientPhenotypeLabel": "Atrial septal defect",
+            "diseasePhenotypeCurie": "HP:0001631",
+            "diseasePhenotypeLabel": "Atrial septal defect",
+            "micaCurie": "HP:0001631",
+            "micaLabel": "Atrial septal defect",
+            "score": 3.0507194759712326,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:2473"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001629",
+            "patientPhenotypeLabel": "Ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0001629",
+            "diseasePhenotypeLabel": "Ventricular septal defect",
+            "micaCurie": "HP:0001629",
+            "micaLabel": "Ventricular septal defect",
+            "score": 2.9389754375316173,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:2473"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000028",
+            "patientPhenotypeLabel": "Cryptorchidism",
+            "diseasePhenotypeCurie": "HP:0000028",
+            "diseasePhenotypeLabel": "Cryptorchidism",
+            "micaCurie": "HP:0000028",
+            "micaLabel": "Cryptorchidism",
+            "score": 2.709683425916955,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:236700"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011641",
+            "patientPhenotypeLabel": "Coronary artery fistula",
+            "diseasePhenotypeCurie": "HP:0001643",
+            "diseasePhenotypeLabel": "Patent ductus arteriosus",
+            "micaCurie": "HP:0033353",
+            "micaLabel": "Abnormal blood vessel morphology",
+            "score": 2.3762179567827504,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:2473"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001518",
+            "patientPhenotypeLabel": "Small for gestational age",
+            "diseasePhenotypeCurie": "HP:0001508",
+            "diseasePhenotypeLabel": "Failure to thrive",
+            "micaCurie": "HP:0004325",
+            "micaLabel": "Decreased body weight",
+            "score": 2.0854040308471755,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:2473"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001762",
+            "patientPhenotypeLabel": "Talipes equinovarus",
+            "diseasePhenotypeCurie": "HP:0008368",
+            "diseasePhenotypeLabel": "Tarsal synostosis",
+            "micaCurie": "HP:0001760",
+            "micaLabel": "Abnormal foot morphology",
+            "score": 1.6198662687016727,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:2473"
+          }
+        ]
+      },
+      {
+        "rank": 6,
+        "diseaseCurie": "MONDO:0014187",
+        "diseaseLabel": "aortic aneurysm, familial thoracic 8",
+        "diseaseEntityId": 75473,
+        "bmaScore": 1.943002163283294,
+        "normalizedScore": 0.214529,
+        "patientAverageScore": 1.0947513589722977,
+        "diseaseAverageScore": 2.79125296759429,
+        "directPhenotypeCount": 7,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011641",
+            "patientPhenotypeLabel": "Coronary artery fistula",
+            "diseasePhenotypeCurie": "HP:0030882",
+            "diseasePhenotypeLabel": "Coronary artery aneurysm",
+            "micaCurie": "HP:0006704",
+            "micaLabel": "Abnormal coronary artery morphology",
+            "score": 5.105828916991538,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:23910461"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001643",
+            "patientPhenotypeLabel": "Patent ductus arteriosus",
+            "diseasePhenotypeCurie": "HP:0012499",
+            "diseasePhenotypeLabel": "Descending aortic dissection",
+            "micaCurie": "HP:0030962",
+            "micaLabel": "Abnormal morphology of the great vessels",
+            "score": 2.7131922014466343,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:23910461"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001629",
+            "patientPhenotypeLabel": "Ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0030882",
+            "diseasePhenotypeLabel": "Coronary artery aneurysm",
+            "micaCurie": "HP:0030680",
+            "micaLabel": "Abnormal cardiovascular system morphology",
+            "score": 1.55654315017767,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:23910461"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001631",
+            "patientPhenotypeLabel": "Atrial septal defect",
+            "diseasePhenotypeCurie": "HP:0030882",
+            "diseasePhenotypeLabel": "Coronary artery aneurysm",
+            "micaCurie": "HP:0030680",
+            "micaLabel": "Abnormal cardiovascular system morphology",
+            "score": 1.55654315017767,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:23910461"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000028",
+            "patientPhenotypeLabel": "Cryptorchidism",
+            "diseasePhenotypeCurie": "HP:0030882",
+            "diseasePhenotypeLabel": "Coronary artery aneurysm",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:23910461"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000126",
+            "patientPhenotypeLabel": "Hydronephrosis",
+            "diseasePhenotypeCurie": "HP:0030882",
+            "diseasePhenotypeLabel": "Coronary artery aneurysm",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:23910461"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000365",
+            "patientPhenotypeLabel": "Hearing impairment",
+            "diseasePhenotypeCurie": "HP:0030882",
+            "diseasePhenotypeLabel": "Coronary artery aneurysm",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:23910461"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001249",
+            "patientPhenotypeLabel": "Intellectual disability",
+            "diseasePhenotypeCurie": "HP:0030882",
+            "diseasePhenotypeLabel": "Coronary artery aneurysm",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:23910461"
+          }
+        ]
+      },
+      {
+        "rank": 7,
+        "diseaseCurie": "MONDO:0859283",
+        "diseaseLabel": "neurodevelopmental disorder with seizures, microcephaly, and brain abnormalities",
+        "diseaseEntityId": 87940,
+        "bmaScore": 1.941197262075142,
+        "normalizedScore": 0.214329,
+        "patientAverageScore": 2.852589370121156,
+        "diseaseAverageScore": 1.0298051540291282,
+        "directPhenotypeCount": 46,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011641",
+            "patientPhenotypeLabel": "Coronary artery fistula",
+            "diseasePhenotypeCurie": "HP:0011641",
+            "diseasePhenotypeLabel": "Coronary artery fistula",
+            "micaCurie": "HP:0011641",
+            "micaLabel": "Coronary artery fistula",
+            "score": 7.26531316634491,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:35830857"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001518",
+            "patientPhenotypeLabel": "Small for gestational age",
+            "diseasePhenotypeCurie": "HP:0001518",
+            "diseasePhenotypeLabel": "Small for gestational age",
+            "micaCurie": "HP:0001518",
+            "micaLabel": "Small for gestational age",
+            "score": 3.668000905756464,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:35830857"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001643",
+            "patientPhenotypeLabel": "Patent ductus arteriosus",
+            "diseasePhenotypeCurie": "HP:0001643",
+            "diseasePhenotypeLabel": "Patent ductus arteriosus",
+            "micaCurie": "HP:0001643",
+            "micaLabel": "Patent ductus arteriosus",
+            "score": 3.3367608589655537,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:30214071;PMID:35830857"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001631",
+            "patientPhenotypeLabel": "Atrial septal defect",
+            "diseasePhenotypeCurie": "HP:0001631",
+            "diseasePhenotypeLabel": "Atrial septal defect",
+            "micaCurie": "HP:0001631",
+            "micaLabel": "Atrial septal defect",
+            "score": 3.0507194759712326,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:30214071;PMID:35830857"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001629",
+            "patientPhenotypeLabel": "Ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0001629",
+            "diseasePhenotypeLabel": "Ventricular septal defect",
+            "micaCurie": "HP:0001629",
+            "micaLabel": "Ventricular septal defect",
+            "score": 2.9389754375316173,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:35830857"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000028",
+            "patientPhenotypeLabel": "Cryptorchidism",
+            "diseasePhenotypeCurie": "HP:0000028",
+            "diseasePhenotypeLabel": "Cryptorchidism",
+            "micaCurie": "HP:0000028",
+            "micaLabel": "Cryptorchidism",
+            "score": 2.709683425916955,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:35830857"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000126",
+            "patientPhenotypeLabel": "Hydronephrosis",
+            "diseasePhenotypeCurie": "HP:0000122",
+            "diseasePhenotypeLabel": "Unilateral renal agenesis",
+            "micaCurie": "HP:0012210",
+            "micaLabel": "Abnormal renal morphology",
+            "score": 2.259132222598035,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:30214071"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000365",
+            "patientPhenotypeLabel": "Hearing impairment",
+            "diseasePhenotypeCurie": "HP:0000365",
+            "diseasePhenotypeLabel": "Hearing impairment",
+            "micaCurie": "HP:0000365",
+            "micaLabel": "Hearing impairment",
+            "score": 1.8892634512565214,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:35830857"
+          }
+        ]
+      },
+      {
+        "rank": 8,
+        "diseaseCurie": "MONDO:0010408",
+        "diseaseLabel": "syndactyly-telecanthus-anogenital and renal malformations syndrome",
+        "diseaseEntityId": 71694,
+        "bmaScore": 1.9234251663528408,
+        "normalizedScore": 0.212367,
+        "patientAverageScore": 2.524184943341376,
+        "diseaseAverageScore": 1.3226653893643054,
+        "directPhenotypeCount": 43,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000126",
+            "patientPhenotypeLabel": "Hydronephrosis",
+            "diseasePhenotypeCurie": "HP:0000126",
+            "diseasePhenotypeLabel": "Hydronephrosis",
+            "micaCurie": "HP:0000126",
+            "micaLabel": "Hydronephrosis",
+            "score": 3.820630672743016,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:18297069"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001518",
+            "patientPhenotypeLabel": "Small for gestational age",
+            "diseasePhenotypeCurie": "HP:0001518",
+            "diseasePhenotypeLabel": "Small for gestational age",
+            "micaCurie": "HP:0001518",
+            "micaLabel": "Small for gestational age",
+            "score": 3.668000905756464,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:18297069"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001762",
+            "patientPhenotypeLabel": "Talipes equinovarus",
+            "diseasePhenotypeCurie": "HP:0001776",
+            "diseasePhenotypeLabel": "Bilateral talipes equinovarus",
+            "micaCurie": "HP:0001762",
+            "micaLabel": "Talipes equinovarus",
+            "score": 3.11165202696639,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:28225384"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001631",
+            "patientPhenotypeLabel": "Atrial septal defect",
+            "diseasePhenotypeCurie": "HP:0001631",
+            "diseasePhenotypeLabel": "Atrial septal defect",
+            "micaCurie": "HP:0001631",
+            "micaLabel": "Atrial septal defect",
+            "score": 3.0507194759712326,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:18297069"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001643",
+            "patientPhenotypeLabel": "Patent ductus arteriosus",
+            "diseasePhenotypeCurie": "HP:0004969",
+            "diseasePhenotypeLabel": "Peripheral pulmonary artery stenosis",
+            "micaCurie": "HP:0030962",
+            "micaLabel": "Abnormal morphology of the great vessels",
+            "score": 2.7131922014466343,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:18297069"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001629",
+            "patientPhenotypeLabel": "Ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0001655",
+            "diseasePhenotypeLabel": "Patent foramen ovale",
+            "micaCurie": "HP:0001671",
+            "micaLabel": "Abnormal cardiac septum morphology",
+            "score": 2.469522620748169,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:18297069"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011641",
+            "patientPhenotypeLabel": "Coronary artery fistula",
+            "diseasePhenotypeCurie": "HP:0004969",
+            "diseasePhenotypeLabel": "Peripheral pulmonary artery stenosis",
+            "micaCurie": "HP:0033353",
+            "micaLabel": "Abnormal blood vessel morphology",
+            "score": 2.3762179567827504,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:18297069"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000028",
+            "patientPhenotypeLabel": "Cryptorchidism",
+            "diseasePhenotypeCurie": "HP:0008665",
+            "diseasePhenotypeLabel": "Clitoral hypertrophy",
+            "micaCurie": "HP:0000811",
+            "micaLabel": "Abnormal external genitalia morphology",
+            "score": 2.229443401070113,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:18297069;PMID:28225384"
+          }
+        ]
+      },
+      {
+        "rank": 9,
+        "diseaseCurie": "MONDO:0014447",
+        "diseaseLabel": "Bardet-Biedl syndrome 19",
+        "diseaseEntityId": 75733,
+        "bmaScore": 1.9137135103620349,
+        "normalizedScore": 0.211295,
+        "patientAverageScore": 2.455970684153895,
+        "diseaseAverageScore": 1.3714563365701744,
+        "directPhenotypeCount": 29,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000126",
+            "patientPhenotypeLabel": "Hydronephrosis",
+            "diseasePhenotypeCurie": "HP:0000126",
+            "diseasePhenotypeLabel": "Hydronephrosis",
+            "micaCurie": "HP:0000126",
+            "micaLabel": "Hydronephrosis",
+            "score": 3.820630672743016,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:24488770"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001643",
+            "patientPhenotypeLabel": "Patent ductus arteriosus",
+            "diseasePhenotypeCurie": "HP:0001643",
+            "diseasePhenotypeLabel": "Patent ductus arteriosus",
+            "micaCurie": "HP:0001643",
+            "micaLabel": "Patent ductus arteriosus",
+            "score": 3.3367608589655537,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:24488770"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001631",
+            "patientPhenotypeLabel": "Atrial septal defect",
+            "diseasePhenotypeCurie": "HP:0001631",
+            "diseasePhenotypeLabel": "Atrial septal defect",
+            "micaCurie": "HP:0001631",
+            "micaLabel": "Atrial septal defect",
+            "score": 3.0507194759712326,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:24488770"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001629",
+            "patientPhenotypeLabel": "Ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0001629",
+            "diseasePhenotypeLabel": "Ventricular septal defect",
+            "micaCurie": "HP:0001629",
+            "micaLabel": "Ventricular septal defect",
+            "score": 2.9389754375316173,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:24488770"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011641",
+            "patientPhenotypeLabel": "Coronary artery fistula",
+            "diseasePhenotypeCurie": "HP:0001643",
+            "diseasePhenotypeLabel": "Patent ductus arteriosus",
+            "micaCurie": "HP:0033353",
+            "micaLabel": "Abnormal blood vessel morphology",
+            "score": 2.3762179567827504,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:24488770"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000028",
+            "patientPhenotypeLabel": "Cryptorchidism",
+            "diseasePhenotypeCurie": "HP:0003241",
+            "diseasePhenotypeLabel": "External genital hypoplasia",
+            "micaCurie": "HP:0000811",
+            "micaLabel": "Abnormal external genitalia morphology",
+            "score": 2.229443401070113,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:615996"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001518",
+            "patientPhenotypeLabel": "Small for gestational age",
+            "diseasePhenotypeCurie": "HP:0001513",
+            "diseasePhenotypeLabel": "Obesity",
+            "micaCurie": "HP:0004323",
+            "micaLabel": "Abnormality of body weight",
+            "score": 1.8923522568011077,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:24488770;PMID:30761183"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000365",
+            "patientPhenotypeLabel": "Hearing impairment",
+            "diseasePhenotypeCurie": "HP:0000365",
+            "diseasePhenotypeLabel": "Hearing impairment",
+            "micaCurie": "HP:0000365",
+            "micaLabel": "Hearing impairment",
+            "score": 1.8892634512565214,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:24488770"
+          }
+        ]
+      },
+      {
+        "rank": 10,
+        "diseaseCurie": "MONDO:0007385",
+        "diseaseLabel": "idiopathic spontaneous coronary artery dissection",
+        "diseaseEntityId": 68671,
+        "bmaScore": 1.8996713944835975,
+        "normalizedScore": 0.209745,
+        "patientAverageScore": 1.0610539345059091,
+        "diseaseAverageScore": 2.738288854461286,
+        "directPhenotypeCount": 3,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011641",
+            "patientPhenotypeLabel": "Coronary artery fistula",
+            "diseasePhenotypeCurie": "HP:0006702",
+            "diseasePhenotypeLabel": "Coronary artery dissection",
+            "micaCurie": "HP:0006704",
+            "micaLabel": "Abnormal coronary artery morphology",
+            "score": 5.105828916991538,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:122455"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001643",
+            "patientPhenotypeLabel": "Patent ductus arteriosus",
+            "diseasePhenotypeCurie": "HP:0012180",
+            "diseasePhenotypeLabel": "Cystic medial necrosis",
+            "micaCurie": "HP:0033353",
+            "micaLabel": "Abnormal blood vessel morphology",
+            "score": 2.3762179567827504,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:122455"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001629",
+            "patientPhenotypeLabel": "Ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0012180",
+            "diseasePhenotypeLabel": "Cystic medial necrosis",
+            "micaCurie": "HP:0030680",
+            "micaLabel": "Abnormal cardiovascular system morphology",
+            "score": 1.55654315017767,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:122455"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001631",
+            "patientPhenotypeLabel": "Atrial septal defect",
+            "diseasePhenotypeCurie": "HP:0012180",
+            "diseasePhenotypeLabel": "Cystic medial necrosis",
+            "micaCurie": "HP:0030680",
+            "micaLabel": "Abnormal cardiovascular system morphology",
+            "score": 1.55654315017767,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:122455"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000028",
+            "patientPhenotypeLabel": "Cryptorchidism",
+            "diseasePhenotypeCurie": "HP:0012180",
+            "diseasePhenotypeLabel": "Cystic medial necrosis",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:122455"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000126",
+            "patientPhenotypeLabel": "Hydronephrosis",
+            "diseasePhenotypeCurie": "HP:0012180",
+            "diseasePhenotypeLabel": "Cystic medial necrosis",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:122455"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000365",
+            "patientPhenotypeLabel": "Hearing impairment",
+            "diseasePhenotypeCurie": "HP:0012180",
+            "diseasePhenotypeLabel": "Cystic medial necrosis",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:122455"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001249",
+            "patientPhenotypeLabel": "Intellectual disability",
+            "diseasePhenotypeCurie": "HP:0012180",
+            "diseasePhenotypeLabel": "Cystic medial necrosis",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:122455"
+          }
+        ]
+      },
+      {
+        "rank": 11,
+        "diseaseCurie": "MONDO:0010607",
+        "diseaseLabel": "heterotaxy, visceral, 1, X-linked",
+        "diseaseEntityId": 71893,
+        "bmaScore": 1.8924454004378046,
+        "normalizedScore": 0.208947,
+        "patientAverageScore": 2.286551911553126,
+        "diseaseAverageScore": 1.4983388893224832,
+        "directPhenotypeCount": 55,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001643",
+            "patientPhenotypeLabel": "Patent ductus arteriosus",
+            "diseasePhenotypeCurie": "HP:0001643",
+            "diseasePhenotypeLabel": "Patent ductus arteriosus",
+            "micaCurie": "HP:0001643",
+            "micaLabel": "Patent ductus arteriosus",
+            "score": 3.3367608589655537,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:21465648"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001762",
+            "patientPhenotypeLabel": "Talipes equinovarus",
+            "diseasePhenotypeCurie": "HP:0001776",
+            "diseasePhenotypeLabel": "Bilateral talipes equinovarus",
+            "micaCurie": "HP:0001762",
+            "micaLabel": "Talipes equinovarus",
+            "score": 3.11165202696639,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:8298651;PMID:21465648"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011641",
+            "patientPhenotypeLabel": "Coronary artery fistula",
+            "diseasePhenotypeCurie": "HP:0012304",
+            "diseasePhenotypeLabel": "Hypoplastic aortic arch",
+            "micaCurie": "HP:0011004",
+            "micaLabel": "Abnormal systemic arterial morphology",
+            "score": 3.109037646392319,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:21465648"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001631",
+            "patientPhenotypeLabel": "Atrial septal defect",
+            "diseasePhenotypeCurie": "HP:0001631",
+            "diseasePhenotypeLabel": "Atrial septal defect",
+            "micaCurie": "HP:0001631",
+            "micaLabel": "Atrial septal defect",
+            "score": 3.0507194759712326,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:306955"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001629",
+            "patientPhenotypeLabel": "Ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0001629",
+            "diseasePhenotypeLabel": "Ventricular septal defect",
+            "micaCurie": "HP:0001629",
+            "micaLabel": "Ventricular septal defect",
+            "score": 2.9389754375316173,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:21465648;PMID:14681828"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000126",
+            "patientPhenotypeLabel": "Hydronephrosis",
+            "diseasePhenotypeCurie": "HP:0000105",
+            "diseasePhenotypeLabel": "Enlarged kidney",
+            "micaCurie": "HP:0012210",
+            "micaLabel": "Abnormal renal morphology",
+            "score": 2.259132222598035,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:21465648"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001518",
+            "patientPhenotypeLabel": "Small for gestational age",
+            "diseasePhenotypeCurie": "HP:0001508",
+            "diseasePhenotypeLabel": "Failure to thrive",
+            "micaCurie": "HP:0004325",
+            "micaLabel": "Decreased body weight",
+            "score": 2.0854040308471755,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:306955"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000365",
+            "patientPhenotypeLabel": "Hearing impairment",
+            "diseasePhenotypeCurie": "HP:0000369",
+            "diseasePhenotypeLabel": "Low-set ears",
+            "micaCurie": "HP:0000598",
+            "micaLabel": "Abnormality of the ear",
+            "score": 1.2966056063595444,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:14681828"
+          }
+        ]
+      },
+      {
+        "rank": 12,
+        "diseaseCurie": "MONDO:0971043",
+        "diseaseLabel": "neurodevelopmental disorder with hypotonia, feeding difficulties, facial dysmorphism, and brain abnormalities",
+        "diseaseEntityId": 88552,
+        "bmaScore": 1.8774216031834796,
+        "normalizedScore": 0.207288,
+        "patientAverageScore": 2.8307381273605867,
+        "diseaseAverageScore": 0.9241050790063726,
+        "directPhenotypeCount": 67,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000126",
+            "patientPhenotypeLabel": "Hydronephrosis",
+            "diseasePhenotypeCurie": "HP:0000126",
+            "diseasePhenotypeLabel": "Hydronephrosis",
+            "micaCurie": "HP:0000126",
+            "micaLabel": "Hydronephrosis",
+            "score": 3.820630672743016,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:37963460"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001518",
+            "patientPhenotypeLabel": "Small for gestational age",
+            "diseasePhenotypeCurie": "HP:0001518",
+            "diseasePhenotypeLabel": "Small for gestational age",
+            "micaCurie": "HP:0001518",
+            "micaLabel": "Small for gestational age",
+            "score": 3.668000905756464,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:37963460"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001643",
+            "patientPhenotypeLabel": "Patent ductus arteriosus",
+            "diseasePhenotypeCurie": "HP:0001643",
+            "diseasePhenotypeLabel": "Patent ductus arteriosus",
+            "micaCurie": "HP:0001643",
+            "micaLabel": "Patent ductus arteriosus",
+            "score": 3.3367608589655537,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:37963460"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001762",
+            "patientPhenotypeLabel": "Talipes equinovarus",
+            "diseasePhenotypeCurie": "HP:0001776",
+            "diseasePhenotypeLabel": "Bilateral talipes equinovarus",
+            "micaCurie": "HP:0001762",
+            "micaLabel": "Talipes equinovarus",
+            "score": 3.11165202696639,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:37963460"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001631",
+            "patientPhenotypeLabel": "Atrial septal defect",
+            "diseasePhenotypeCurie": "HP:0001631",
+            "diseasePhenotypeLabel": "Atrial septal defect",
+            "micaCurie": "HP:0001631",
+            "micaLabel": "Atrial septal defect",
+            "score": 3.0507194759712326,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:37963460"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001629",
+            "patientPhenotypeLabel": "Ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0001629",
+            "diseasePhenotypeLabel": "Ventricular septal defect",
+            "micaCurie": "HP:0001629",
+            "micaLabel": "Ventricular septal defect",
+            "score": 2.9389754375316173,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:37963460"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000028",
+            "patientPhenotypeLabel": "Cryptorchidism",
+            "diseasePhenotypeCurie": "HP:0000028",
+            "diseasePhenotypeLabel": "Cryptorchidism",
+            "micaCurie": "HP:0000028",
+            "micaLabel": "Cryptorchidism",
+            "score": 2.709683425916955,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:37963460"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011641",
+            "patientPhenotypeLabel": "Coronary artery fistula",
+            "diseasePhenotypeCurie": "HP:0001643",
+            "diseasePhenotypeLabel": "Patent ductus arteriosus",
+            "micaCurie": "HP:0033353",
+            "micaLabel": "Abnormal blood vessel morphology",
+            "score": 2.3762179567827504,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:37963460"
+          }
+        ]
+      },
+      {
+        "rank": 13,
+        "diseaseCurie": "MONDO:0007568",
+        "diseaseLabel": "aortic aneurysm, familial thoracic 4",
+        "diseaseEntityId": 68854,
+        "bmaScore": 1.8742259259359955,
+        "normalizedScore": 0.206935,
+        "patientAverageScore": 1.2578429943705804,
+        "diseaseAverageScore": 2.4906088575014103,
+        "directPhenotypeCount": 19,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011641",
+            "patientPhenotypeLabel": "Coronary artery fistula",
+            "diseasePhenotypeCurie": "HP:0001677",
+            "diseasePhenotypeLabel": "Coronary artery atherosclerosis",
+            "micaCurie": "HP:0006704",
+            "micaLabel": "Abnormal coronary artery morphology",
+            "score": 5.105828916991538,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:17666408"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001643",
+            "patientPhenotypeLabel": "Patent ductus arteriosus",
+            "diseasePhenotypeCurie": "HP:0001643",
+            "diseasePhenotypeLabel": "Patent ductus arteriosus",
+            "micaCurie": "HP:0001643",
+            "micaLabel": "Patent ductus arteriosus",
+            "score": 3.3367608589655537,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:16444274;PMID:32081817;PMID:17666408"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001629",
+            "patientPhenotypeLabel": "Ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0001647",
+            "diseasePhenotypeLabel": "Bicuspid aortic valve",
+            "micaCurie": "HP:0001627",
+            "micaLabel": "Abnormal heart morphology",
+            "score": 1.808568563202355,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:132900"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001631",
+            "patientPhenotypeLabel": "Atrial septal defect",
+            "diseasePhenotypeCurie": "HP:0001647",
+            "diseasePhenotypeLabel": "Bicuspid aortic valve",
+            "micaCurie": "HP:0001627",
+            "micaLabel": "Abnormal heart morphology",
+            "score": 1.808568563202355,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:132900"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001249",
+            "patientPhenotypeLabel": "Intellectual disability",
+            "diseasePhenotypeCurie": "HP:0012495",
+            "diseasePhenotypeLabel": "Posterior cerebral artery stenosis",
+            "micaCurie": "HP:0000707",
+            "micaLabel": "Abnormality of the nervous system",
+            "score": 0.5058645655694501,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:32081817"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000028",
+            "patientPhenotypeLabel": "Cryptorchidism",
+            "diseasePhenotypeCurie": "HP:0100546",
+            "diseasePhenotypeLabel": "Carotid artery stenosis",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:32081817"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000126",
+            "patientPhenotypeLabel": "Hydronephrosis",
+            "diseasePhenotypeCurie": "HP:0100546",
+            "diseasePhenotypeLabel": "Carotid artery stenosis",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:32081817"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000365",
+            "patientPhenotypeLabel": "Hearing impairment",
+            "diseasePhenotypeCurie": "HP:0100546",
+            "diseasePhenotypeLabel": "Carotid artery stenosis",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:32081817"
+          }
+        ]
+      },
+      {
+        "rank": 14,
+        "diseaseCurie": "MONDO:0012473",
+        "diseaseLabel": "right pulmonary artery, anomalous origin of, familial",
+        "diseaseEntityId": 73759,
+        "bmaScore": 1.8654181765014726,
+        "normalizedScore": 0.205963,
+        "patientAverageScore": 1.2304520054687813,
+        "diseaseAverageScore": 2.500384347534164,
+        "directPhenotypeCount": 6,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001643",
+            "patientPhenotypeLabel": "Patent ductus arteriosus",
+            "diseasePhenotypeCurie": "HP:0001643",
+            "diseasePhenotypeLabel": "Patent ductus arteriosus",
+            "micaCurie": "HP:0001643",
+            "micaLabel": "Patent ductus arteriosus",
+            "score": 3.3367608589655537,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:610338"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011641",
+            "patientPhenotypeLabel": "Coronary artery fistula",
+            "diseasePhenotypeCurie": "HP:0001680",
+            "diseasePhenotypeLabel": "Coarctation of aorta",
+            "micaCurie": "HP:0011004",
+            "micaLabel": "Abnormal systemic arterial morphology",
+            "score": 3.109037646392319,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:610338"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001629",
+            "patientPhenotypeLabel": "Ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0001629",
+            "diseasePhenotypeLabel": "Ventricular septal defect",
+            "micaCurie": "HP:0001629",
+            "micaLabel": "Ventricular septal defect",
+            "score": 2.9389754375316173,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:610338"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001631",
+            "patientPhenotypeLabel": "Atrial septal defect",
+            "diseasePhenotypeCurie": "HP:0001655",
+            "diseasePhenotypeLabel": "Patent foramen ovale",
+            "micaCurie": "HP:0011994",
+            "micaLabel": "Abnormal atrial septum morphology",
+            "score": 2.904339940868861,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:610338"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000028",
+            "patientPhenotypeLabel": "Cryptorchidism",
+            "diseasePhenotypeCurie": "HP:0005143",
+            "diseasePhenotypeLabel": "Anomalous origin of right pulmonary artery from ascending aorta",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:610338"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000126",
+            "patientPhenotypeLabel": "Hydronephrosis",
+            "diseasePhenotypeCurie": "HP:0005143",
+            "diseasePhenotypeLabel": "Anomalous origin of right pulmonary artery from ascending aorta",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:610338"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000365",
+            "patientPhenotypeLabel": "Hearing impairment",
+            "diseasePhenotypeCurie": "HP:0005143",
+            "diseasePhenotypeLabel": "Anomalous origin of right pulmonary artery from ascending aorta",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:610338"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001249",
+            "patientPhenotypeLabel": "Intellectual disability",
+            "diseasePhenotypeCurie": "HP:0005143",
+            "diseasePhenotypeLabel": "Anomalous origin of right pulmonary artery from ascending aorta",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:610338"
+          }
+        ]
+      },
+      {
+        "rank": 15,
+        "diseaseCurie": "MONDO:0032653",
+        "diseaseLabel": "cardiac-urogenital syndrome",
+        "diseaseEntityId": 84520,
+        "bmaScore": 1.8620337854003282,
+        "normalizedScore": 0.205589,
+        "patientAverageScore": 2.043478778810257,
+        "diseaseAverageScore": 1.680588791990399,
+        "directPhenotypeCount": 39,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001643",
+            "patientPhenotypeLabel": "Patent ductus arteriosus",
+            "diseasePhenotypeCurie": "HP:0001643",
+            "diseasePhenotypeLabel": "Patent ductus arteriosus",
+            "micaCurie": "HP:0001643",
+            "micaLabel": "Patent ductus arteriosus",
+            "score": 3.3367608589655537,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:29446546"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011641",
+            "patientPhenotypeLabel": "Coronary artery fistula",
+            "diseasePhenotypeCurie": "HP:0011611",
+            "diseasePhenotypeLabel": "Interrupted aortic arch",
+            "micaCurie": "HP:0011004",
+            "micaLabel": "Abnormal systemic arterial morphology",
+            "score": 3.109037646392319,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:29446546"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001631",
+            "patientPhenotypeLabel": "Atrial septal defect",
+            "diseasePhenotypeCurie": "HP:0001631",
+            "diseasePhenotypeLabel": "Atrial septal defect",
+            "micaCurie": "HP:0001631",
+            "micaLabel": "Atrial septal defect",
+            "score": 3.0507194759712326,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:618280"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001629",
+            "patientPhenotypeLabel": "Ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0001629",
+            "diseasePhenotypeLabel": "Ventricular septal defect",
+            "micaCurie": "HP:0001629",
+            "micaLabel": "Ventricular septal defect",
+            "score": 2.9389754375316173,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:29446546"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000028",
+            "patientPhenotypeLabel": "Cryptorchidism",
+            "diseasePhenotypeCurie": "HP:0012741",
+            "diseasePhenotypeLabel": "Unilateral cryptorchidism",
+            "micaCurie": "HP:0000028",
+            "micaLabel": "Cryptorchidism",
+            "score": 2.709683425916955,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:29446546"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000126",
+            "patientPhenotypeLabel": "Hydronephrosis",
+            "diseasePhenotypeCurie": "HP:0000105",
+            "diseasePhenotypeLabel": "Enlarged kidney",
+            "micaCurie": "HP:0012210",
+            "micaLabel": "Abnormal renal morphology",
+            "score": 2.259132222598035,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:29446546"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001762",
+            "patientPhenotypeLabel": "Talipes equinovarus",
+            "diseasePhenotypeCurie": "HP:0004691",
+            "diseasePhenotypeLabel": "2-3 toe syndactyly",
+            "micaCurie": "HP:0001760",
+            "micaLabel": "Abnormal foot morphology",
+            "score": 1.6198662687016727,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:29446546"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001249",
+            "patientPhenotypeLabel": "Intellectual disability",
+            "diseasePhenotypeCurie": "HP:0001249",
+            "diseasePhenotypeLabel": "Intellectual disability",
+            "micaCurie": "HP:0001249",
+            "micaLabel": "Intellectual disability",
+            "score": 1.4054770617153647,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:618280"
+          }
+        ]
+      },
+      {
+        "rank": 16,
+        "diseaseCurie": "MONDO:0976135",
+        "diseaseLabel": "heterotaxy, visceral, 14, autosomal",
+        "diseaseEntityId": 88723,
+        "bmaScore": 1.8605320191912698,
+        "normalizedScore": 0.205423,
+        "patientAverageScore": 2.2319772991911924,
+        "diseaseAverageScore": 1.4890867391913472,
+        "directPhenotypeCount": 59,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000126",
+            "patientPhenotypeLabel": "Hydronephrosis",
+            "diseasePhenotypeCurie": "HP:0000126",
+            "diseasePhenotypeLabel": "Hydronephrosis",
+            "micaCurie": "HP:0000126",
+            "micaLabel": "Hydronephrosis",
+            "score": 3.820630672743016,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:39753129"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001643",
+            "patientPhenotypeLabel": "Patent ductus arteriosus",
+            "diseasePhenotypeCurie": "HP:0001643",
+            "diseasePhenotypeLabel": "Patent ductus arteriosus",
+            "micaCurie": "HP:0001643",
+            "micaLabel": "Patent ductus arteriosus",
+            "score": 3.3367608589655537,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:39753129"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011641",
+            "patientPhenotypeLabel": "Coronary artery fistula",
+            "diseasePhenotypeCurie": "HP:0012304",
+            "diseasePhenotypeLabel": "Hypoplastic aortic arch",
+            "micaCurie": "HP:0011004",
+            "micaLabel": "Abnormal systemic arterial morphology",
+            "score": 3.109037646392319,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:39753129"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001631",
+            "patientPhenotypeLabel": "Atrial septal defect",
+            "diseasePhenotypeCurie": "HP:0001631",
+            "diseasePhenotypeLabel": "Atrial septal defect",
+            "micaCurie": "HP:0001631",
+            "micaLabel": "Atrial septal defect",
+            "score": 3.0507194759712326,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:39753129"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001629",
+            "patientPhenotypeLabel": "Ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0011682",
+            "diseasePhenotypeLabel": "Perimembranous ventricular septal defect",
+            "micaCurie": "HP:0001629",
+            "micaLabel": "Ventricular septal defect",
+            "score": 2.9389754375316173,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:39753129"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000028",
+            "patientPhenotypeLabel": "Cryptorchidism",
+            "diseasePhenotypeCurie": "HP:0000034",
+            "diseasePhenotypeLabel": "Hydrocele testis",
+            "micaCurie": "HP:0000035",
+            "micaLabel": "Abnormal testis morphology",
+            "score": 2.5174866799552955,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:39753129"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000365",
+            "patientPhenotypeLabel": "Hearing impairment",
+            "diseasePhenotypeCurie": "HP:0000369",
+            "diseasePhenotypeLabel": "Low-set ears",
+            "micaCurie": "HP:0000598",
+            "micaLabel": "Abnormality of the ear",
+            "score": 1.2966056063595444,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:39753129"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001518",
+            "patientPhenotypeLabel": "Small for gestational age",
+            "diseasePhenotypeCurie": "HP:0031854",
+            "diseasePhenotypeLabel": "Left Isomerism",
+            "micaCurie": "HP:0001507",
+            "micaLabel": "Growth abnormality",
+            "score": 1.18690668910312,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:39753129"
+          }
+        ]
+      },
+      {
+        "rank": 17,
+        "diseaseCurie": "MONDO:0007032",
+        "diseaseLabel": "prune belly syndrome",
+        "diseaseEntityId": 68318,
+        "bmaScore": 1.84110990106741,
+        "normalizedScore": 0.203279,
+        "patientAverageScore": 2.436316604767186,
+        "diseaseAverageScore": 1.2459031973676342,
+        "directPhenotypeCount": 40,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000126",
+            "patientPhenotypeLabel": "Hydronephrosis",
+            "diseasePhenotypeCurie": "HP:0000126",
+            "diseasePhenotypeLabel": "Hydronephrosis",
+            "micaCurie": "HP:0000126",
+            "micaLabel": "Hydronephrosis",
+            "score": 3.820630672743016,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:100100"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001643",
+            "patientPhenotypeLabel": "Patent ductus arteriosus",
+            "diseasePhenotypeCurie": "HP:0001643",
+            "diseasePhenotypeLabel": "Patent ductus arteriosus",
+            "micaCurie": "HP:0001643",
+            "micaLabel": "Patent ductus arteriosus",
+            "score": 3.3367608589655537,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:2970"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001762",
+            "patientPhenotypeLabel": "Talipes equinovarus",
+            "diseasePhenotypeCurie": "HP:0001762",
+            "diseasePhenotypeLabel": "Talipes equinovarus",
+            "micaCurie": "HP:0001762",
+            "micaLabel": "Talipes equinovarus",
+            "score": 3.11165202696639,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:100100"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001631",
+            "patientPhenotypeLabel": "Atrial septal defect",
+            "diseasePhenotypeCurie": "HP:0001631",
+            "diseasePhenotypeLabel": "Atrial septal defect",
+            "micaCurie": "HP:0001631",
+            "micaLabel": "Atrial septal defect",
+            "score": 3.0507194759712326,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:2970"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001629",
+            "patientPhenotypeLabel": "Ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0001629",
+            "diseasePhenotypeLabel": "Ventricular septal defect",
+            "micaCurie": "HP:0001629",
+            "micaLabel": "Ventricular septal defect",
+            "score": 2.9389754375316173,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:2970"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000028",
+            "patientPhenotypeLabel": "Cryptorchidism",
+            "diseasePhenotypeCurie": "HP:0000028",
+            "diseasePhenotypeLabel": "Cryptorchidism",
+            "micaCurie": "HP:0000028",
+            "micaLabel": "Cryptorchidism",
+            "score": 2.709683425916955,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:2970"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011641",
+            "patientPhenotypeLabel": "Coronary artery fistula",
+            "diseasePhenotypeCurie": "HP:0001643",
+            "diseasePhenotypeLabel": "Patent ductus arteriosus",
+            "micaCurie": "HP:0033353",
+            "micaLabel": "Abnormal blood vessel morphology",
+            "score": 2.3762179567827504,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:2970"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001518",
+            "patientPhenotypeLabel": "Small for gestational age",
+            "diseasePhenotypeCurie": "HP:0001508",
+            "diseasePhenotypeLabel": "Failure to thrive",
+            "micaCurie": "HP:0004325",
+            "micaLabel": "Decreased body weight",
+            "score": 2.0854040308471755,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:2970"
+          }
+        ]
+      },
+      {
+        "rank": 18,
+        "diseaseCurie": "MONDO:0013463",
+        "diseaseLabel": "congenital heart defects, multiple types, 6",
+        "diseaseEntityId": 74749,
+        "bmaScore": 1.8393666646883267,
+        "normalizedScore": 0.203086,
+        "patientAverageScore": 1.2194860457099663,
+        "diseaseAverageScore": 2.459247283666687,
+        "directPhenotypeCount": 15,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011641",
+            "patientPhenotypeLabel": "Coronary artery fistula",
+            "diseasePhenotypeCurie": "HP:0012020",
+            "diseasePhenotypeLabel": "Right aortic arch",
+            "micaCurie": "HP:0011004",
+            "micaLabel": "Abnormal systemic arterial morphology",
+            "score": 3.109037646392319,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:613854"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001643",
+            "patientPhenotypeLabel": "Patent ductus arteriosus",
+            "diseasePhenotypeCurie": "HP:0001719",
+            "diseasePhenotypeLabel": "Double outlet right ventricle",
+            "micaCurie": "HP:0011603",
+            "micaLabel": "Congenital malformation of the great arteries",
+            "score": 3.0807217262750313,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:613854"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001631",
+            "patientPhenotypeLabel": "Atrial septal defect",
+            "diseasePhenotypeCurie": "HP:0001684",
+            "diseasePhenotypeLabel": "Secundum atrial septal defect",
+            "micaCurie": "HP:0001631",
+            "micaLabel": "Atrial septal defect",
+            "score": 3.0507194759712326,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:613854"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001629",
+            "patientPhenotypeLabel": "Ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0001629",
+            "diseasePhenotypeLabel": "Ventricular septal defect",
+            "micaCurie": "HP:0001629",
+            "micaLabel": "Ventricular septal defect",
+            "score": 2.9389754375316173,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:613854"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000028",
+            "patientPhenotypeLabel": "Cryptorchidism",
+            "diseasePhenotypeCurie": "HP:0032092",
+            "diseasePhenotypeLabel": "Left ventricular outflow tract obstruction",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:613854"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000126",
+            "patientPhenotypeLabel": "Hydronephrosis",
+            "diseasePhenotypeCurie": "HP:0032092",
+            "diseasePhenotypeLabel": "Left ventricular outflow tract obstruction",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:613854"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000365",
+            "patientPhenotypeLabel": "Hearing impairment",
+            "diseasePhenotypeCurie": "HP:0032092",
+            "diseasePhenotypeLabel": "Left ventricular outflow tract obstruction",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:613854"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001249",
+            "patientPhenotypeLabel": "Intellectual disability",
+            "diseasePhenotypeCurie": "HP:0032092",
+            "diseasePhenotypeLabel": "Left ventricular outflow tract obstruction",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:613854"
+          }
+        ]
+      },
+      {
+        "rank": 19,
+        "diseaseCurie": "MONDO:0012730",
+        "diseaseLabel": "aortic aneurysm, familial thoracic 6",
+        "diseaseEntityId": 74016,
+        "bmaScore": 1.8383883687727998,
+        "normalizedScore": 0.202978,
+        "patientAverageScore": 1.1450810460137517,
+        "diseaseAverageScore": 2.531695691531848,
+        "directPhenotypeCount": 10,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011641",
+            "patientPhenotypeLabel": "Coronary artery fistula",
+            "diseasePhenotypeCurie": "HP:0005181",
+            "diseasePhenotypeLabel": "Premature coronary artery atherosclerosis",
+            "micaCurie": "HP:0006704",
+            "micaLabel": "Abnormal coronary artery morphology",
+            "score": 5.105828916991538,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:19409525"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001643",
+            "patientPhenotypeLabel": "Patent ductus arteriosus",
+            "diseasePhenotypeCurie": "HP:0012727",
+            "diseasePhenotypeLabel": "Thoracic aortic aneurysm",
+            "micaCurie": "HP:0030962",
+            "micaLabel": "Abnormal morphology of the great vessels",
+            "score": 2.7131922014466343,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:17994018"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001629",
+            "patientPhenotypeLabel": "Ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0012727",
+            "diseasePhenotypeLabel": "Thoracic aortic aneurysm",
+            "micaCurie": "HP:0030680",
+            "micaLabel": "Abnormal cardiovascular system morphology",
+            "score": 1.55654315017767,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:17994018"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001631",
+            "patientPhenotypeLabel": "Atrial septal defect",
+            "diseasePhenotypeCurie": "HP:0012727",
+            "diseasePhenotypeLabel": "Thoracic aortic aneurysm",
+            "micaCurie": "HP:0030680",
+            "micaLabel": "Abnormal cardiovascular system morphology",
+            "score": 1.55654315017767,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:17994018"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001249",
+            "patientPhenotypeLabel": "Intellectual disability",
+            "diseasePhenotypeCurie": "HP:0011834",
+            "diseasePhenotypeLabel": "Moyamoya phenomenon",
+            "micaCurie": "HP:0000707",
+            "micaLabel": "Abnormality of the nervous system",
+            "score": 0.5058645655694501,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:19409525"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000028",
+            "patientPhenotypeLabel": "Cryptorchidism",
+            "diseasePhenotypeCurie": "HP:0500007",
+            "diseasePhenotypeLabel": "Iris flocculi",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:17994018"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000126",
+            "patientPhenotypeLabel": "Hydronephrosis",
+            "diseasePhenotypeCurie": "HP:0500007",
+            "diseasePhenotypeLabel": "Iris flocculi",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:17994018"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000365",
+            "patientPhenotypeLabel": "Hearing impairment",
+            "diseasePhenotypeCurie": "HP:0500007",
+            "diseasePhenotypeLabel": "Iris flocculi",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:17994018"
+          }
+        ]
+      },
+      {
+        "rank": 20,
+        "diseaseCurie": "MONDO:0010890",
+        "diseaseLabel": "acrocardiofacial syndrome",
+        "diseaseEntityId": 72176,
+        "bmaScore": 1.833315416025847,
+        "normalizedScore": 0.202418,
+        "patientAverageScore": 2.1063532431970087,
+        "diseaseAverageScore": 1.5602775888546854,
+        "directPhenotypeCount": 22,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001643",
+            "patientPhenotypeLabel": "Patent ductus arteriosus",
+            "diseasePhenotypeCurie": "HP:0001643",
+            "diseasePhenotypeLabel": "Patent ductus arteriosus",
+            "micaCurie": "HP:0001643",
+            "micaLabel": "Patent ductus arteriosus",
+            "score": 3.3367608589655537,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:600460"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011641",
+            "patientPhenotypeLabel": "Coronary artery fistula",
+            "diseasePhenotypeCurie": "HP:0001680",
+            "diseasePhenotypeLabel": "Coarctation of aorta",
+            "micaCurie": "HP:0011004",
+            "micaLabel": "Abnormal systemic arterial morphology",
+            "score": 3.109037646392319,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:600460"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001629",
+            "patientPhenotypeLabel": "Ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0001629",
+            "diseasePhenotypeLabel": "Ventricular septal defect",
+            "micaCurie": "HP:0001629",
+            "micaLabel": "Ventricular septal defect",
+            "score": 2.9389754375316173,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:600460"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000028",
+            "patientPhenotypeLabel": "Cryptorchidism",
+            "diseasePhenotypeCurie": "HP:0000028",
+            "diseasePhenotypeLabel": "Cryptorchidism",
+            "micaCurie": "HP:0000028",
+            "micaLabel": "Cryptorchidism",
+            "score": 2.709683425916955,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:600460"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001631",
+            "patientPhenotypeLabel": "Atrial septal defect",
+            "diseasePhenotypeCurie": "HP:0001629",
+            "diseasePhenotypeLabel": "Ventricular septal defect",
+            "micaCurie": "HP:0001671",
+            "micaLabel": "Abnormal cardiac septum morphology",
+            "score": 2.469522620748169,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:600460"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000126",
+            "patientPhenotypeLabel": "Hydronephrosis",
+            "diseasePhenotypeCurie": "HP:0000047",
+            "diseasePhenotypeLabel": "Hypospadias",
+            "micaCurie": "HP:0000079",
+            "micaLabel": "Abnormality of the urinary system",
+            "score": 1.5504808555021241,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:600460"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001249",
+            "patientPhenotypeLabel": "Intellectual disability",
+            "diseasePhenotypeCurie": "HP:0001249",
+            "diseasePhenotypeLabel": "Intellectual disability",
+            "micaCurie": "HP:0001249",
+            "micaLabel": "Intellectual disability",
+            "score": 1.4054770617153647,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:600460"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000365",
+            "patientPhenotypeLabel": "Hearing impairment",
+            "diseasePhenotypeCurie": "HP:0008589",
+            "diseasePhenotypeLabel": "Hypoplastic helices",
+            "micaCurie": "HP:0000598",
+            "micaLabel": "Abnormality of the ear",
+            "score": 1.2966056063595444,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:600460"
+          }
+        ]
+      },
+      {
+        "rank": 21,
+        "diseaseCurie": "MONDO:0007345",
+        "diseaseLabel": "aorta coarctation",
+        "diseaseEntityId": 68631,
+        "bmaScore": 1.832829446558025,
+        "normalizedScore": 0.202364,
+        "patientAverageScore": 1.4369790875580881,
+        "diseaseAverageScore": 2.228679805557962,
+        "directPhenotypeCount": 19,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011641",
+            "patientPhenotypeLabel": "Coronary artery fistula",
+            "diseasePhenotypeCurie": "HP:0001677",
+            "diseasePhenotypeLabel": "Coronary artery atherosclerosis",
+            "micaCurie": "HP:0006704",
+            "micaLabel": "Abnormal coronary artery morphology",
+            "score": 5.105828916991538,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:1457"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001643",
+            "patientPhenotypeLabel": "Patent ductus arteriosus",
+            "diseasePhenotypeCurie": "HP:0001643",
+            "diseasePhenotypeLabel": "Patent ductus arteriosus",
+            "micaCurie": "HP:0001643",
+            "micaLabel": "Patent ductus arteriosus",
+            "score": 3.3367608589655537,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:1457"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001629",
+            "patientPhenotypeLabel": "Ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0011682",
+            "diseasePhenotypeLabel": "Perimembranous ventricular septal defect",
+            "micaCurie": "HP:0001629",
+            "micaLabel": "Ventricular septal defect",
+            "score": 2.9389754375316173,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:1457"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001631",
+            "patientPhenotypeLabel": "Atrial septal defect",
+            "diseasePhenotypeCurie": "HP:0011682",
+            "diseasePhenotypeLabel": "Perimembranous ventricular septal defect",
+            "micaCurie": "HP:0001671",
+            "micaLabel": "Abnormal cardiac septum morphology",
+            "score": 2.469522620748169,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:1457"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001249",
+            "patientPhenotypeLabel": "Intellectual disability",
+            "diseasePhenotypeCurie": "HP:0001297",
+            "diseasePhenotypeLabel": "Stroke",
+            "micaCurie": "HP:0000707",
+            "micaLabel": "Abnormality of the nervous system",
+            "score": 0.5058645655694501,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:1457"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000028",
+            "patientPhenotypeLabel": "Cryptorchidism",
+            "diseasePhenotypeCurie": "HP:0012305",
+            "diseasePhenotypeLabel": "Coarctation of the descending aortic arch",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:1457"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000126",
+            "patientPhenotypeLabel": "Hydronephrosis",
+            "diseasePhenotypeCurie": "HP:0012305",
+            "diseasePhenotypeLabel": "Coarctation of the descending aortic arch",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:1457"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000365",
+            "patientPhenotypeLabel": "Hearing impairment",
+            "diseasePhenotypeCurie": "HP:0012305",
+            "diseasePhenotypeLabel": "Coarctation of the descending aortic arch",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:1457"
+          }
+        ]
+      },
+      {
+        "rank": 22,
+        "diseaseCurie": "MONDO:0008393",
+        "diseaseLabel": "Rubinstein-Taybi syndrome due to CREBBP mutations",
+        "diseaseEntityId": 69679,
+        "bmaScore": 1.831846956855867,
+        "normalizedScore": 0.202256,
+        "patientAverageScore": 2.9040200963215432,
+        "diseaseAverageScore": 0.7596738173901911,
+        "directPhenotypeCount": 141,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000126",
+            "patientPhenotypeLabel": "Hydronephrosis",
+            "diseasePhenotypeCurie": "HP:0000126",
+            "diseasePhenotypeLabel": "Hydronephrosis",
+            "micaCurie": "HP:0000126",
+            "micaLabel": "Hydronephrosis",
+            "score": 3.820630672743016,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:35637708"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001518",
+            "patientPhenotypeLabel": "Small for gestational age",
+            "diseasePhenotypeCurie": "HP:0001518",
+            "diseasePhenotypeLabel": "Small for gestational age",
+            "micaCurie": "HP:0001518",
+            "micaLabel": "Small for gestational age",
+            "score": 3.668000905756464,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:10573006"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001643",
+            "patientPhenotypeLabel": "Patent ductus arteriosus",
+            "diseasePhenotypeCurie": "HP:0001643",
+            "diseasePhenotypeLabel": "Patent ductus arteriosus",
+            "micaCurie": "HP:0001643",
+            "micaLabel": "Patent ductus arteriosus",
+            "score": 3.3367608589655537,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:35464843;PMID:10573006"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001762",
+            "patientPhenotypeLabel": "Talipes equinovarus",
+            "diseasePhenotypeCurie": "HP:0001762",
+            "diseasePhenotypeLabel": "Talipes equinovarus",
+            "micaCurie": "HP:0001762",
+            "micaLabel": "Talipes equinovarus",
+            "score": 3.11165202696639,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:34795756"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011641",
+            "patientPhenotypeLabel": "Coronary artery fistula",
+            "diseasePhenotypeCurie": "HP:0034227",
+            "diseasePhenotypeLabel": "Aortic isthmus hypoplasia",
+            "micaCurie": "HP:0011004",
+            "micaLabel": "Abnormal systemic arterial morphology",
+            "score": 3.109037646392319,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:35464843"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001631",
+            "patientPhenotypeLabel": "Atrial septal defect",
+            "diseasePhenotypeCurie": "HP:0001631",
+            "diseasePhenotypeLabel": "Atrial septal defect",
+            "micaCurie": "HP:0001631",
+            "micaLabel": "Atrial septal defect",
+            "score": 3.0507194759712326,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:8599359"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001629",
+            "patientPhenotypeLabel": "Ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0011682",
+            "diseasePhenotypeLabel": "Perimembranous ventricular septal defect",
+            "micaCurie": "HP:0001629",
+            "micaLabel": "Ventricular septal defect",
+            "score": 2.9389754375316173,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:35464843"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000028",
+            "patientPhenotypeLabel": "Cryptorchidism",
+            "diseasePhenotypeCurie": "HP:0008689",
+            "diseasePhenotypeLabel": "Bilateral cryptorchidism",
+            "micaCurie": "HP:0000028",
+            "micaLabel": "Cryptorchidism",
+            "score": 2.709683425916955,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:35637708;PMID:19204439"
+          }
+        ]
+      },
+      {
+        "rank": 23,
+        "diseaseCurie": "MONDO:0011010",
+        "diseaseLabel": "Matthew-Wood syndrome",
+        "diseaseEntityId": 72296,
+        "bmaScore": 1.823646319276853,
+        "normalizedScore": 0.201351,
+        "patientAverageScore": 2.285736456985363,
+        "diseaseAverageScore": 1.361556181568343,
+        "directPhenotypeCount": 46,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000126",
+            "patientPhenotypeLabel": "Hydronephrosis",
+            "diseasePhenotypeCurie": "HP:0000126",
+            "diseasePhenotypeLabel": "Hydronephrosis",
+            "micaCurie": "HP:0000126",
+            "micaLabel": "Hydronephrosis",
+            "score": 3.820630672743016,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:601186"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001643",
+            "patientPhenotypeLabel": "Patent ductus arteriosus",
+            "diseasePhenotypeCurie": "HP:0001643",
+            "diseasePhenotypeLabel": "Patent ductus arteriosus",
+            "micaCurie": "HP:0001643",
+            "micaLabel": "Patent ductus arteriosus",
+            "score": 3.3367608589655537,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:17273977"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011641",
+            "patientPhenotypeLabel": "Coronary artery fistula",
+            "diseasePhenotypeCurie": "HP:0002627",
+            "diseasePhenotypeLabel": "Right aortic arch with mirror image branching",
+            "micaCurie": "HP:0011004",
+            "micaLabel": "Abnormal systemic arterial morphology",
+            "score": 3.109037646392319,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:601186"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001631",
+            "patientPhenotypeLabel": "Atrial septal defect",
+            "diseasePhenotypeCurie": "HP:0001631",
+            "diseasePhenotypeLabel": "Atrial septal defect",
+            "micaCurie": "HP:0001631",
+            "micaLabel": "Atrial septal defect",
+            "score": 3.0507194759712326,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:601186"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001629",
+            "patientPhenotypeLabel": "Ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0001629",
+            "diseasePhenotypeLabel": "Ventricular septal defect",
+            "micaCurie": "HP:0001629",
+            "micaLabel": "Ventricular septal defect",
+            "score": 2.9389754375316173,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:17273977"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000028",
+            "patientPhenotypeLabel": "Cryptorchidism",
+            "diseasePhenotypeCurie": "HP:0000028",
+            "diseasePhenotypeLabel": "Cryptorchidism",
+            "micaCurie": "HP:0000028",
+            "micaLabel": "Cryptorchidism",
+            "score": 2.709683425916955,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:601186"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001249",
+            "patientPhenotypeLabel": "Intellectual disability",
+            "diseasePhenotypeCurie": "HP:0002187",
+            "diseasePhenotypeLabel": "Profound intellectual disability",
+            "micaCurie": "HP:0001249",
+            "micaLabel": "Intellectual disability",
+            "score": 1.4054770617153647,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:17273977"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000365",
+            "patientPhenotypeLabel": "Hearing impairment",
+            "diseasePhenotypeCurie": "HP:0000369",
+            "diseasePhenotypeLabel": "Low-set ears",
+            "micaCurie": "HP:0000598",
+            "micaLabel": "Abnormality of the ear",
+            "score": 1.2966056063595444,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:17273977"
+          }
+        ]
+      },
+      {
+        "rank": 24,
+        "diseaseCurie": "MONDO:0012496",
+        "diseaseLabel": "Koolen-de Vries syndrome",
+        "diseaseEntityId": 73782,
+        "bmaScore": 1.8135334039248387,
+        "normalizedScore": 0.200234,
+        "patientAverageScore": 2.891951348171826,
+        "diseaseAverageScore": 0.7351154596778513,
+        "directPhenotypeCount": 120,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000126",
+            "patientPhenotypeLabel": "Hydronephrosis",
+            "diseasePhenotypeCurie": "HP:0000126",
+            "diseasePhenotypeLabel": "Hydronephrosis",
+            "micaCurie": "HP:0000126",
+            "micaLabel": "Hydronephrosis",
+            "score": 3.820630672743016,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:610443"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001518",
+            "patientPhenotypeLabel": "Small for gestational age",
+            "diseasePhenotypeCurie": "HP:0001518",
+            "diseasePhenotypeLabel": "Small for gestational age",
+            "micaCurie": "HP:0001518",
+            "micaLabel": "Small for gestational age",
+            "score": 3.668000905756464,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:18628315"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001643",
+            "patientPhenotypeLabel": "Patent ductus arteriosus",
+            "diseasePhenotypeCurie": "HP:0001643",
+            "diseasePhenotypeLabel": "Patent ductus arteriosus",
+            "micaCurie": "HP:0001643",
+            "micaLabel": "Patent ductus arteriosus",
+            "score": 3.3367608589655537,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:18628315"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011641",
+            "patientPhenotypeLabel": "Coronary artery fistula",
+            "diseasePhenotypeCurie": "HP:0002616",
+            "diseasePhenotypeLabel": "Aortic root aneurysm",
+            "micaCurie": "HP:0011004",
+            "micaLabel": "Abnormal systemic arterial morphology",
+            "score": 3.109037646392319,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:19447831"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001631",
+            "patientPhenotypeLabel": "Atrial septal defect",
+            "diseasePhenotypeCurie": "HP:0001631",
+            "diseasePhenotypeLabel": "Atrial septal defect",
+            "micaCurie": "HP:0001631",
+            "micaLabel": "Atrial septal defect",
+            "score": 3.0507194759712326,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:19447831"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001762",
+            "patientPhenotypeLabel": "Talipes equinovarus",
+            "diseasePhenotypeCurie": "HP:0005656",
+            "diseasePhenotypeLabel": "Positional foot deformity",
+            "micaCurie": "HP:0005656",
+            "micaLabel": "Positional foot deformity",
+            "score": 2.9909645454692173,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:20301783"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001629",
+            "patientPhenotypeLabel": "Ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0001629",
+            "diseasePhenotypeLabel": "Ventricular septal defect",
+            "micaCurie": "HP:0001629",
+            "micaLabel": "Ventricular septal defect",
+            "score": 2.9389754375316173,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:96169"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000028",
+            "patientPhenotypeLabel": "Cryptorchidism",
+            "diseasePhenotypeCurie": "HP:0000028",
+            "diseasePhenotypeLabel": "Cryptorchidism",
+            "micaCurie": "HP:0000028",
+            "micaLabel": "Cryptorchidism",
+            "score": 2.709683425916955,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:18628315"
+          }
+        ]
+      },
+      {
+        "rank": 25,
+        "diseaseCurie": "MONDO:0032879",
+        "diseaseLabel": "megabladder, congenital",
+        "diseaseEntityId": 84720,
+        "bmaScore": 1.810717258484622,
+        "normalizedScore": 0.199923,
+        "patientAverageScore": 1.5143443976798776,
+        "diseaseAverageScore": 2.1070901192893667,
+        "directPhenotypeCount": 10,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001643",
+            "patientPhenotypeLabel": "Patent ductus arteriosus",
+            "diseasePhenotypeCurie": "HP:0001643",
+            "diseasePhenotypeLabel": "Patent ductus arteriosus",
+            "micaCurie": "HP:0001643",
+            "micaLabel": "Patent ductus arteriosus",
+            "score": 3.3367608589655537,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31513549"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001631",
+            "patientPhenotypeLabel": "Atrial septal defect",
+            "diseasePhenotypeCurie": "HP:0001631",
+            "diseasePhenotypeLabel": "Atrial septal defect",
+            "micaCurie": "HP:0001631",
+            "micaLabel": "Atrial septal defect",
+            "score": 3.0507194759712326,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31513549"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001629",
+            "patientPhenotypeLabel": "Ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0001629",
+            "diseasePhenotypeLabel": "Ventricular septal defect",
+            "micaCurie": "HP:0001629",
+            "micaLabel": "Ventricular septal defect",
+            "score": 2.9389754375316173,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31513549"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011641",
+            "patientPhenotypeLabel": "Coronary artery fistula",
+            "diseasePhenotypeCurie": "HP:0001643",
+            "diseasePhenotypeLabel": "Patent ductus arteriosus",
+            "micaCurie": "HP:0033353",
+            "micaLabel": "Abnormal blood vessel morphology",
+            "score": 2.3762179567827504,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31513549"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000126",
+            "patientPhenotypeLabel": "Hydronephrosis",
+            "diseasePhenotypeCurie": "HP:0100611",
+            "diseasePhenotypeLabel": "Multiple glomerular cysts",
+            "micaCurie": "HP:0012210",
+            "micaLabel": "Abnormal renal morphology",
+            "score": 2.259132222598035,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31513549"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000028",
+            "patientPhenotypeLabel": "Cryptorchidism",
+            "diseasePhenotypeCurie": "HP:0100611",
+            "diseasePhenotypeLabel": "Multiple glomerular cysts",
+            "micaCurie": "HP:0000119",
+            "micaLabel": "Abnormality of the genitourinary system",
+            "score": 1.1713672443299454,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31513549"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000365",
+            "patientPhenotypeLabel": "Hearing impairment",
+            "diseasePhenotypeCurie": "HP:0100611",
+            "diseasePhenotypeLabel": "Multiple glomerular cysts",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31513549"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001249",
+            "patientPhenotypeLabel": "Intellectual disability",
+            "diseasePhenotypeCurie": "HP:0100611",
+            "diseasePhenotypeLabel": "Multiple glomerular cysts",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31513549"
+          }
+        ]
+      }
+    ],
+    "engineSummary": {
+      "diseaseCount": 8579,
+      "phenotypeCount": 19389,
+      "sourceMode": "relationship_fallback",
+      "generatedAt": "2026-03-15T20:43:58.513Z"
+    }
+  }
+}

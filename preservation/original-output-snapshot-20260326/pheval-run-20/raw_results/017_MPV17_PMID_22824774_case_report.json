@@ -1,0 +1,2703 @@
+{
+  "success": true,
+  "engine": "genovy-dx-sim",
+  "input": {
+    "presentPhenotypeCuries": [
+      "HP:0030890",
+      "HP:0003700",
+      "HP:0002151",
+      "HP:0031964",
+      "HP:0031956",
+      "HP:0003155",
+      "HP:0001943",
+      "HP:0003073",
+      "HP:0002240",
+      "HP:0001944",
+      "HP:0003231",
+      "HP:0001508",
+      "HP:0011968",
+      "HP:0007588",
+      "HP:0001399",
+      "HP:0000787",
+      "HP:0001252",
+      "HP:0002908",
+      "HP:0008151",
+      "HP:0003645",
+      "HP:0040189",
+      "HP:0002572",
+      "HP:0001284",
+      "HP:0006581",
+      "HP:0002299"
+    ],
+    "excludedPhenotypeCuries": [
+      "HP:0000431",
+      "HP:0002380",
+      "HP:0001987",
+      "HP:0001518",
+      "HP:0009141"
+    ],
+    "sourceFormat": "phenopacket"
+  },
+  "ranking": {
+    "queryPhenotypes": [
+      {
+        "phenotypeCurie": "HP:0030890",
+        "phenotypeLabel": "Hyperintensity of cerebral white matter on MRI"
+      },
+      {
+        "phenotypeCurie": "HP:0003700",
+        "phenotypeLabel": "Generalized amyotrophy"
+      },
+      {
+        "phenotypeCurie": "HP:0002151",
+        "phenotypeLabel": "Increased circulating lactate concentration"
+      },
+      {
+        "phenotypeCurie": "HP:0031964",
+        "phenotypeLabel": "Elevated circulating alanine aminotransferase concentration"
+      },
+      {
+        "phenotypeCurie": "HP:0031956",
+        "phenotypeLabel": "Elevated circulating aspartate aminotransferase concentration"
+      },
+      {
+        "phenotypeCurie": "HP:0003155",
+        "phenotypeLabel": "Elevated circulating alkaline phosphatase concentration"
+      },
+      {
+        "phenotypeCurie": "HP:0001943",
+        "phenotypeLabel": "Hypoglycemia"
+      },
+      {
+        "phenotypeCurie": "HP:0003073",
+        "phenotypeLabel": "Hypoalbuminemia"
+      },
+      {
+        "phenotypeCurie": "HP:0002240",
+        "phenotypeLabel": "Hepatomegaly"
+      },
+      {
+        "phenotypeCurie": "HP:0001944",
+        "phenotypeLabel": "Dehydration"
+      },
+      {
+        "phenotypeCurie": "HP:0003231",
+        "phenotypeLabel": "Hypertyrosinemia"
+      },
+      {
+        "phenotypeCurie": "HP:0001508",
+        "phenotypeLabel": "Failure to thrive"
+      },
+      {
+        "phenotypeCurie": "HP:0011968",
+        "phenotypeLabel": "Feeding difficulties"
+      },
+      {
+        "phenotypeCurie": "HP:0007588",
+        "phenotypeLabel": "Reticular hyperpigmentation"
+      },
+      {
+        "phenotypeCurie": "HP:0001399",
+        "phenotypeLabel": "Hepatic failure"
+      },
+      {
+        "phenotypeCurie": "HP:0000787",
+        "phenotypeLabel": "Nephrolithiasis"
+      },
+      {
+        "phenotypeCurie": "HP:0001252",
+        "phenotypeLabel": "Hypotonia"
+      },
+      {
+        "phenotypeCurie": "HP:0002908",
+        "phenotypeLabel": "Conjugated hyperbilirubinemia"
+      },
+      {
+        "phenotypeCurie": "HP:0008151",
+        "phenotypeLabel": "Prolonged prothrombin time"
+      },
+      {
+        "phenotypeCurie": "HP:0003645",
+        "phenotypeLabel": "Prolonged partial thromboplastin time"
+      },
+      {
+        "phenotypeCurie": "HP:0040189",
+        "phenotypeLabel": "Scaling skin"
+      },
+      {
+        "phenotypeCurie": "HP:0002572",
+        "phenotypeLabel": "Episodic vomiting"
+      },
+      {
+        "phenotypeCurie": "HP:0001284",
+        "phenotypeLabel": "Areflexia"
+      },
+      {
+        "phenotypeCurie": "HP:0006581",
+        "phenotypeLabel": "Depletion of mitochondrial DNA in liver"
+      },
+      {
+        "phenotypeCurie": "HP:0002299",
+        "phenotypeLabel": "Brittle hair"
+      }
+    ],
+    "results": [
+      {
+        "rank": 1,
+        "diseaseCurie": "MONDO:0009747",
+        "diseaseLabel": "mitochondrial DNA depletion syndrome 6 (hepatocerebral type)",
+        "diseaseEntityId": 71033,
+        "bmaScore": 3.2668917924311454,
+        "normalizedScore": 0.360701,
+        "patientAverageScore": 4.647195600057061,
+        "diseaseAverageScore": 1.8865879848052298,
+        "directPhenotypeCount": 190,
+        "matchedPhenotypeCount": 25,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0006581",
+            "patientPhenotypeLabel": "Depletion of mitochondrial DNA in liver",
+            "diseasePhenotypeCurie": "HP:0006581",
+            "diseasePhenotypeLabel": "Depletion of mitochondrial DNA in liver",
+            "micaCurie": "HP:0006581",
+            "micaLabel": "Depletion of mitochondrial DNA in liver",
+            "score": 7.958460346904856,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:18695062;PMID:20074988;PMID:22824774;PMID:16909392;PMID:23714749"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003231",
+            "patientPhenotypeLabel": "Hypertyrosinemia",
+            "diseasePhenotypeCurie": "HP:0003231",
+            "diseasePhenotypeLabel": "Hypertyrosinemia",
+            "micaCurie": "HP:0003231",
+            "micaLabel": "Hypertyrosinemia",
+            "score": 6.859848058236746,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:18695062;PMID:31664948;PMID:22824774"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007588",
+            "patientPhenotypeLabel": "Reticular hyperpigmentation",
+            "diseasePhenotypeCurie": "HP:0007588",
+            "diseasePhenotypeLabel": "Reticular hyperpigmentation",
+            "micaCurie": "HP:0007588",
+            "micaLabel": "Reticular hyperpigmentation",
+            "score": 6.572165985784965,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:22824774"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008151",
+            "patientPhenotypeLabel": "Prolonged prothrombin time",
+            "diseasePhenotypeCurie": "HP:0008151",
+            "diseasePhenotypeLabel": "Prolonged prothrombin time",
+            "micaCurie": "HP:0008151",
+            "micaLabel": "Prolonged prothrombin time",
+            "score": 5.591336732773239,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:18695062;PMID:29318572;PMID:24190800;PMID:31664948;PMID:28209105;PMID:16909392;PMID:22824774;PMID:34979697;PMID:28673863;PMID:24894789;PMID:34035203"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003645",
+            "patientPhenotypeLabel": "Prolonged partial thromboplastin time",
+            "diseasePhenotypeCurie": "HP:0003645",
+            "diseasePhenotypeLabel": "Prolonged partial thromboplastin time",
+            "micaCurie": "HP:0003645",
+            "micaLabel": "Prolonged partial thromboplastin time",
+            "score": 5.591336732773239,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:29318572;PMID:31664948;PMID:28209105;PMID:22824774;PMID:24894789"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002908",
+            "patientPhenotypeLabel": "Conjugated hyperbilirubinemia",
+            "diseasePhenotypeCurie": "HP:0002908",
+            "diseasePhenotypeLabel": "Conjugated hyperbilirubinemia",
+            "micaCurie": "HP:0002908",
+            "micaLabel": "Conjugated hyperbilirubinemia",
+            "score": 5.473553697116856,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:18695062;PMID:29318572;PMID:28209105;PMID:22824774;PMID:16909392;PMID:28673863;PMID:34979697;PMID:34035203"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0040189",
+            "patientPhenotypeLabel": "Scaling skin",
+            "diseasePhenotypeCurie": "HP:0040189",
+            "diseasePhenotypeLabel": "Scaling skin",
+            "micaCurie": "HP:0040189",
+            "micaLabel": "Scaling skin",
+            "score": 5.343500568868658,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:22824774"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002572",
+            "patientPhenotypeLabel": "Episodic vomiting",
+            "diseasePhenotypeCurie": "HP:0002572",
+            "diseasePhenotypeLabel": "Episodic vomiting",
+            "micaCurie": "HP:0002572",
+            "micaLabel": "Episodic vomiting",
+            "score": 5.295872519879403,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:20074988;PMID:27536553;PMID:22824774"
+          }
+        ]
+      },
+      {
+        "rank": 2,
+        "diseaseCurie": "MONDO:0032799",
+        "diseaseLabel": "mitochondrial DNA depletion syndrome 16 (hepatic type)",
+        "diseaseEntityId": 84643,
+        "bmaScore": 2.71784367166876,
+        "normalizedScore": 0.30008,
+        "patientAverageScore": 2.421812471524291,
+        "diseaseAverageScore": 3.0138748718132296,
+        "directPhenotypeCount": 22,
+        "matchedPhenotypeCount": 25,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0006581",
+            "patientPhenotypeLabel": "Depletion of mitochondrial DNA in liver",
+            "diseasePhenotypeCurie": "HP:0006581",
+            "diseasePhenotypeLabel": "Depletion of mitochondrial DNA in liver",
+            "micaCurie": "HP:0006581",
+            "micaLabel": "Depletion of mitochondrial DNA in liver",
+            "score": 7.958460346904856,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:27592148"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002908",
+            "patientPhenotypeLabel": "Conjugated hyperbilirubinemia",
+            "diseasePhenotypeCurie": "HP:0002908",
+            "diseasePhenotypeLabel": "Conjugated hyperbilirubinemia",
+            "micaCurie": "HP:0002908",
+            "micaLabel": "Conjugated hyperbilirubinemia",
+            "score": 5.473553697116856,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:27592148"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003073",
+            "patientPhenotypeLabel": "Hypoalbuminemia",
+            "diseasePhenotypeCurie": "HP:0003073",
+            "diseasePhenotypeLabel": "Hypoalbuminemia",
+            "micaCurie": "HP:0003073",
+            "micaLabel": "Hypoalbuminemia",
+            "score": 4.766613194424574,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:27592148"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001399",
+            "patientPhenotypeLabel": "Hepatic failure",
+            "diseasePhenotypeCurie": "HP:0004448",
+            "diseasePhenotypeLabel": "Fulminant hepatic failure",
+            "micaCurie": "HP:0001399",
+            "micaLabel": "Hepatic failure",
+            "score": 4.579735821094759,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:27592148"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0031964",
+            "patientPhenotypeLabel": "Elevated circulating alanine aminotransferase concentration",
+            "diseasePhenotypeCurie": "HP:0031964",
+            "diseasePhenotypeLabel": "Elevated circulating alanine aminotransferase concentration",
+            "micaCurie": "HP:0031964",
+            "micaLabel": "Elevated circulating alanine aminotransferase concentration",
+            "score": 4.557262965242701,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:27592148"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0031956",
+            "patientPhenotypeLabel": "Elevated circulating aspartate aminotransferase concentration",
+            "diseasePhenotypeCurie": "HP:0031956",
+            "diseasePhenotypeLabel": "Elevated circulating aspartate aminotransferase concentration",
+            "micaCurie": "HP:0031956",
+            "micaLabel": "Elevated circulating aspartate aminotransferase concentration",
+            "score": 4.524473142419709,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:27592148"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002151",
+            "patientPhenotypeLabel": "Increased circulating lactate concentration",
+            "diseasePhenotypeCurie": "HP:0002151",
+            "diseasePhenotypeLabel": "Increased circulating lactate concentration",
+            "micaCurie": "HP:0002151",
+            "micaLabel": "Increased circulating lactate concentration",
+            "score": 3.691096620551114,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:27592148"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003231",
+            "patientPhenotypeLabel": "Hypertyrosinemia",
+            "diseasePhenotypeCurie": "HP:0003573",
+            "diseasePhenotypeLabel": "Increased total bilirubin",
+            "micaCurie": "HP:0004354",
+            "micaLabel": "Abnormal circulating carboxylic acid concentration",
+            "score": 3.2369897052206036,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:27592148"
+          }
+        ]
+      },
+      {
+        "rank": 3,
+        "diseaseCurie": "MONDO:0010161",
+        "diseaseLabel": "tyrosinemia type I",
+        "diseaseEntityId": 71447,
+        "bmaScore": 2.638769432865306,
+        "normalizedScore": 0.291349,
+        "patientAverageScore": 2.6490774952671967,
+        "diseaseAverageScore": 2.6284613704634157,
+        "directPhenotypeCount": 39,
+        "matchedPhenotypeCount": 25,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0003231",
+            "patientPhenotypeLabel": "Hypertyrosinemia",
+            "diseasePhenotypeCurie": "HP:0003231",
+            "diseasePhenotypeLabel": "Hypertyrosinemia",
+            "micaCurie": "HP:0003231",
+            "micaLabel": "Hypertyrosinemia",
+            "score": 6.859848058236746,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:33046095"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008151",
+            "patientPhenotypeLabel": "Prolonged prothrombin time",
+            "diseasePhenotypeCurie": "HP:0008151",
+            "diseasePhenotypeLabel": "Prolonged prothrombin time",
+            "micaCurie": "HP:0008151",
+            "micaLabel": "Prolonged prothrombin time",
+            "score": 5.591336732773239,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:276700"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003645",
+            "patientPhenotypeLabel": "Prolonged partial thromboplastin time",
+            "diseasePhenotypeCurie": "HP:0003645",
+            "diseasePhenotypeLabel": "Prolonged partial thromboplastin time",
+            "micaCurie": "HP:0003645",
+            "micaLabel": "Prolonged partial thromboplastin time",
+            "score": 5.591336732773239,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:276700"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002572",
+            "patientPhenotypeLabel": "Episodic vomiting",
+            "diseasePhenotypeCurie": "HP:0002572",
+            "diseasePhenotypeLabel": "Episodic vomiting",
+            "micaCurie": "HP:0002572",
+            "micaLabel": "Episodic vomiting",
+            "score": 5.295872519879403,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:33046095"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001399",
+            "patientPhenotypeLabel": "Hepatic failure",
+            "diseasePhenotypeCurie": "HP:0006554",
+            "diseasePhenotypeLabel": "Acute hepatic failure",
+            "micaCurie": "HP:0001399",
+            "micaLabel": "Hepatic failure",
+            "score": 4.579735821094759,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:276700"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001943",
+            "patientPhenotypeLabel": "Hypoglycemia",
+            "diseasePhenotypeCurie": "HP:0001943",
+            "diseasePhenotypeLabel": "Hypoglycemia",
+            "micaCurie": "HP:0001943",
+            "micaLabel": "Hypoglycemia",
+            "score": 3.789214476509637,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:33046095"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0031964",
+            "patientPhenotypeLabel": "Elevated circulating alanine aminotransferase concentration",
+            "diseasePhenotypeCurie": "HP:0002910",
+            "diseasePhenotypeLabel": "Elevated circulating hepatic transaminase concentration",
+            "micaCurie": "HP:0002910",
+            "micaLabel": "Elevated circulating hepatic transaminase concentration",
+            "score": 3.477342809586743,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:276700"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0031956",
+            "patientPhenotypeLabel": "Elevated circulating aspartate aminotransferase concentration",
+            "diseasePhenotypeCurie": "HP:0002910",
+            "diseasePhenotypeLabel": "Elevated circulating hepatic transaminase concentration",
+            "micaCurie": "HP:0002910",
+            "micaLabel": "Elevated circulating hepatic transaminase concentration",
+            "score": 3.477342809586743,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:276700"
+          }
+        ]
+      },
+      {
+        "rank": 4,
+        "diseaseCurie": "MONDO:0011601",
+        "diseaseLabel": "neonatal intrahepatic cholestasis due to citrin deficiency",
+        "diseaseEntityId": 72887,
+        "bmaScore": 2.5658864471473066,
+        "normalizedScore": 0.283302,
+        "patientAverageScore": 1.8229120207300589,
+        "diseaseAverageScore": 3.3088608735645546,
+        "directPhenotypeCount": 25,
+        "matchedPhenotypeCount": 25,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0003231",
+            "patientPhenotypeLabel": "Hypertyrosinemia",
+            "diseasePhenotypeCurie": "HP:0003231",
+            "diseasePhenotypeLabel": "Hypertyrosinemia",
+            "micaCurie": "HP:0003231",
+            "micaLabel": "Hypertyrosinemia",
+            "score": 6.859848058236746,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:11281457"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002908",
+            "patientPhenotypeLabel": "Conjugated hyperbilirubinemia",
+            "diseasePhenotypeCurie": "HP:0002908",
+            "diseasePhenotypeLabel": "Conjugated hyperbilirubinemia",
+            "micaCurie": "HP:0002908",
+            "micaLabel": "Conjugated hyperbilirubinemia",
+            "score": 5.473553697116856,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:11281457"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0031964",
+            "patientPhenotypeLabel": "Elevated circulating alanine aminotransferase concentration",
+            "diseasePhenotypeCurie": "HP:0031964",
+            "diseasePhenotypeLabel": "Elevated circulating alanine aminotransferase concentration",
+            "micaCurie": "HP:0031964",
+            "micaLabel": "Elevated circulating alanine aminotransferase concentration",
+            "score": 4.557262965242701,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:11281457"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0031956",
+            "patientPhenotypeLabel": "Elevated circulating aspartate aminotransferase concentration",
+            "diseasePhenotypeCurie": "HP:0031956",
+            "diseasePhenotypeLabel": "Elevated circulating aspartate aminotransferase concentration",
+            "micaCurie": "HP:0031956",
+            "micaLabel": "Elevated circulating aspartate aminotransferase concentration",
+            "score": 4.524473142419709,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:11281457"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003155",
+            "patientPhenotypeLabel": "Elevated circulating alkaline phosphatase concentration",
+            "diseasePhenotypeCurie": "HP:0003155",
+            "diseasePhenotypeLabel": "Elevated circulating alkaline phosphatase concentration",
+            "micaCurie": "HP:0003155",
+            "micaLabel": "Elevated circulating alkaline phosphatase concentration",
+            "score": 4.441952118731706,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:11281457"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001399",
+            "patientPhenotypeLabel": "Hepatic failure",
+            "diseasePhenotypeCurie": "HP:0001406",
+            "diseasePhenotypeLabel": "Intrahepatic cholestasis",
+            "micaCurie": "HP:0025155",
+            "micaLabel": "Abnormal hepatobiliary system physiology",
+            "score": 4.0803388931523905,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:605814"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002240",
+            "patientPhenotypeLabel": "Hepatomegaly",
+            "diseasePhenotypeCurie": "HP:0001414",
+            "diseasePhenotypeLabel": "Microvesicular hepatic steatosis",
+            "micaCurie": "HP:0410042",
+            "micaLabel": "Abnormal liver morphology",
+            "score": 2.4946285418792455,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:11281457"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0006581",
+            "patientPhenotypeLabel": "Depletion of mitochondrial DNA in liver",
+            "diseasePhenotypeCurie": "HP:0001414",
+            "diseasePhenotypeLabel": "Microvesicular hepatic steatosis",
+            "micaCurie": "HP:0410042",
+            "micaLabel": "Abnormal liver morphology",
+            "score": 2.4946285418792455,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:11281457"
+          }
+        ]
+      },
+      {
+        "rank": 5,
+        "diseaseCurie": "MONDO:0009636",
+        "diseaseLabel": "mitochondrial DNA depletion syndrome 3 (hepatocerebral type)",
+        "diseaseEntityId": 70922,
+        "bmaScore": 2.5588225894850156,
+        "normalizedScore": 0.282522,
+        "patientAverageScore": 2.779915099350363,
+        "diseaseAverageScore": 2.3377300796196683,
+        "directPhenotypeCount": 39,
+        "matchedPhenotypeCount": 25,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0006581",
+            "patientPhenotypeLabel": "Depletion of mitochondrial DNA in liver",
+            "diseasePhenotypeCurie": "HP:0006581",
+            "diseasePhenotypeLabel": "Depletion of mitochondrial DNA in liver",
+            "micaCurie": "HP:0006581",
+            "micaLabel": "Depletion of mitochondrial DNA in liver",
+            "score": 7.958460346904856,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:11687800"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003073",
+            "patientPhenotypeLabel": "Hypoalbuminemia",
+            "diseasePhenotypeCurie": "HP:0003073",
+            "diseasePhenotypeLabel": "Hypoalbuminemia",
+            "micaCurie": "HP:0003073",
+            "micaLabel": "Hypoalbuminemia",
+            "score": 4.766613194424574,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:251880"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001399",
+            "patientPhenotypeLabel": "Hepatic failure",
+            "diseasePhenotypeCurie": "HP:0001399",
+            "diseasePhenotypeLabel": "Hepatic failure",
+            "micaCurie": "HP:0001399",
+            "micaLabel": "Hepatic failure",
+            "score": 4.579735821094759,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:11687800"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002908",
+            "patientPhenotypeLabel": "Conjugated hyperbilirubinemia",
+            "diseasePhenotypeCurie": "HP:0002904",
+            "diseasePhenotypeLabel": "Hyperbilirubinemia",
+            "micaCurie": "HP:0002904",
+            "micaLabel": "Hyperbilirubinemia",
+            "score": 4.294898700775209,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:251880"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001943",
+            "patientPhenotypeLabel": "Hypoglycemia",
+            "diseasePhenotypeCurie": "HP:0001943",
+            "diseasePhenotypeLabel": "Hypoglycemia",
+            "micaCurie": "HP:0001943",
+            "micaLabel": "Hypoglycemia",
+            "score": 3.789214476509637,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:251880"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002572",
+            "patientPhenotypeLabel": "Episodic vomiting",
+            "diseasePhenotypeCurie": "HP:0002013",
+            "diseasePhenotypeLabel": "Vomiting",
+            "micaCurie": "HP:0002013",
+            "micaLabel": "Vomiting",
+            "score": 3.5356117177107187,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:251880"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0031964",
+            "patientPhenotypeLabel": "Elevated circulating alanine aminotransferase concentration",
+            "diseasePhenotypeCurie": "HP:0002910",
+            "diseasePhenotypeLabel": "Elevated circulating hepatic transaminase concentration",
+            "micaCurie": "HP:0002910",
+            "micaLabel": "Elevated circulating hepatic transaminase concentration",
+            "score": 3.477342809586743,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:251880"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0031956",
+            "patientPhenotypeLabel": "Elevated circulating aspartate aminotransferase concentration",
+            "diseasePhenotypeCurie": "HP:0002910",
+            "diseasePhenotypeLabel": "Elevated circulating hepatic transaminase concentration",
+            "micaCurie": "HP:0002910",
+            "micaLabel": "Elevated circulating hepatic transaminase concentration",
+            "score": 3.477342809586743,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:251880"
+          }
+        ]
+      },
+      {
+        "rank": 6,
+        "diseaseCurie": "MONDO:0013111",
+        "diseaseLabel": "acute infantile liver failure due to synthesis defect of mtDNA-encoded proteins",
+        "diseaseEntityId": 74397,
+        "bmaScore": 2.5581383808717906,
+        "normalizedScore": 0.282446,
+        "patientAverageScore": 2.6613655268216605,
+        "diseaseAverageScore": 2.45491123492192,
+        "directPhenotypeCount": 27,
+        "matchedPhenotypeCount": 25,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0008151",
+            "patientPhenotypeLabel": "Prolonged prothrombin time",
+            "diseasePhenotypeCurie": "HP:0008151",
+            "diseasePhenotypeLabel": "Prolonged prothrombin time",
+            "micaCurie": "HP:0008151",
+            "micaLabel": "Prolonged prothrombin time",
+            "score": 5.591336732773239,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:19732863"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003073",
+            "patientPhenotypeLabel": "Hypoalbuminemia",
+            "diseasePhenotypeCurie": "HP:0003073",
+            "diseasePhenotypeLabel": "Hypoalbuminemia",
+            "micaCurie": "HP:0003073",
+            "micaLabel": "Hypoalbuminemia",
+            "score": 4.766613194424574,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:19732863"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001399",
+            "patientPhenotypeLabel": "Hepatic failure",
+            "diseasePhenotypeCurie": "HP:0006554",
+            "diseasePhenotypeLabel": "Acute hepatic failure",
+            "micaCurie": "HP:0001399",
+            "micaLabel": "Hepatic failure",
+            "score": 4.579735821094759,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:19732863"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0031964",
+            "patientPhenotypeLabel": "Elevated circulating alanine aminotransferase concentration",
+            "diseasePhenotypeCurie": "HP:0031964",
+            "diseasePhenotypeLabel": "Elevated circulating alanine aminotransferase concentration",
+            "micaCurie": "HP:0031964",
+            "micaLabel": "Elevated circulating alanine aminotransferase concentration",
+            "score": 4.557262965242701,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:19732863"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002908",
+            "patientPhenotypeLabel": "Conjugated hyperbilirubinemia",
+            "diseasePhenotypeCurie": "HP:0002904",
+            "diseasePhenotypeLabel": "Hyperbilirubinemia",
+            "micaCurie": "HP:0002904",
+            "micaLabel": "Hyperbilirubinemia",
+            "score": 4.294898700775209,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:19732863"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003645",
+            "patientPhenotypeLabel": "Prolonged partial thromboplastin time",
+            "diseasePhenotypeCurie": "HP:0008151",
+            "diseasePhenotypeLabel": "Prolonged prothrombin time",
+            "micaCurie": "HP:0001928",
+            "micaLabel": "Abnormality of coagulation",
+            "score": 4.159232835622054,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:19732863"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0006581",
+            "patientPhenotypeLabel": "Depletion of mitochondrial DNA in liver",
+            "diseasePhenotypeCurie": "HP:0200125",
+            "diseasePhenotypeLabel": "Mitochondrial respiratory chain defects",
+            "micaCurie": "HP:0003287",
+            "micaLabel": "Abnormality of mitochondrial metabolism",
+            "score": 3.734062656434557,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:19732863"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002151",
+            "patientPhenotypeLabel": "Increased circulating lactate concentration",
+            "diseasePhenotypeCurie": "HP:0002151",
+            "diseasePhenotypeLabel": "Increased circulating lactate concentration",
+            "micaCurie": "HP:0002151",
+            "micaLabel": "Increased circulating lactate concentration",
+            "score": 3.691096620551114,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:19732863"
+          }
+        ]
+      },
+      {
+        "rank": 7,
+        "diseaseCurie": "MONDO:0013439",
+        "diseaseLabel": "congenital bile acid synthesis defect 3",
+        "diseaseEntityId": 74725,
+        "bmaScore": 2.5184223818645837,
+        "normalizedScore": 0.278061,
+        "patientAverageScore": 2.233797357788474,
+        "diseaseAverageScore": 2.803047405940694,
+        "directPhenotypeCount": 22,
+        "matchedPhenotypeCount": 25,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0008151",
+            "patientPhenotypeLabel": "Prolonged prothrombin time",
+            "diseasePhenotypeCurie": "HP:0008151",
+            "diseasePhenotypeLabel": "Prolonged prothrombin time",
+            "micaCurie": "HP:0008151",
+            "micaLabel": "Prolonged prothrombin time",
+            "score": 5.591336732773239,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:9802883"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001399",
+            "patientPhenotypeLabel": "Hepatic failure",
+            "diseasePhenotypeCurie": "HP:0001399",
+            "diseasePhenotypeLabel": "Hepatic failure",
+            "micaCurie": "HP:0001399",
+            "micaLabel": "Hepatic failure",
+            "score": 4.579735821094759,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:9802883"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0031964",
+            "patientPhenotypeLabel": "Elevated circulating alanine aminotransferase concentration",
+            "diseasePhenotypeCurie": "HP:0031964",
+            "diseasePhenotypeLabel": "Elevated circulating alanine aminotransferase concentration",
+            "micaCurie": "HP:0031964",
+            "micaLabel": "Elevated circulating alanine aminotransferase concentration",
+            "score": 4.557262965242701,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:9802883"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0031956",
+            "patientPhenotypeLabel": "Elevated circulating aspartate aminotransferase concentration",
+            "diseasePhenotypeCurie": "HP:0031956",
+            "diseasePhenotypeLabel": "Elevated circulating aspartate aminotransferase concentration",
+            "micaCurie": "HP:0031956",
+            "micaLabel": "Elevated circulating aspartate aminotransferase concentration",
+            "score": 4.524473142419709,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:9802883"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003155",
+            "patientPhenotypeLabel": "Elevated circulating alkaline phosphatase concentration",
+            "diseasePhenotypeCurie": "HP:0003155",
+            "diseasePhenotypeLabel": "Elevated circulating alkaline phosphatase concentration",
+            "micaCurie": "HP:0003155",
+            "micaLabel": "Elevated circulating alkaline phosphatase concentration",
+            "score": 4.441952118731706,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:9802883"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002908",
+            "patientPhenotypeLabel": "Conjugated hyperbilirubinemia",
+            "diseasePhenotypeCurie": "HP:0002904",
+            "diseasePhenotypeLabel": "Hyperbilirubinemia",
+            "micaCurie": "HP:0002904",
+            "micaLabel": "Hyperbilirubinemia",
+            "score": 4.294898700775209,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:9802883"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003645",
+            "patientPhenotypeLabel": "Prolonged partial thromboplastin time",
+            "diseasePhenotypeCurie": "HP:0008151",
+            "diseasePhenotypeLabel": "Prolonged prothrombin time",
+            "micaCurie": "HP:0001928",
+            "micaLabel": "Abnormality of coagulation",
+            "score": 4.159232835622054,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:9802883"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003231",
+            "patientPhenotypeLabel": "Hypertyrosinemia",
+            "diseasePhenotypeCurie": "HP:0002904",
+            "diseasePhenotypeLabel": "Hyperbilirubinemia",
+            "micaCurie": "HP:0004354",
+            "micaLabel": "Abnormal circulating carboxylic acid concentration",
+            "score": 3.2369897052206036,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:9802883"
+          }
+        ]
+      },
+      {
+        "rank": 8,
+        "diseaseCurie": "MONDO:0008967",
+        "diseaseLabel": "congenital bile acid synthesis defect 4",
+        "diseaseEntityId": 70253,
+        "bmaScore": 2.5075157636439336,
+        "normalizedScore": 0.276857,
+        "patientAverageScore": 2.186380220333769,
+        "diseaseAverageScore": 2.8286513069540975,
+        "directPhenotypeCount": 18,
+        "matchedPhenotypeCount": 25,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0008151",
+            "patientPhenotypeLabel": "Prolonged prothrombin time",
+            "diseasePhenotypeCurie": "HP:0008151",
+            "diseasePhenotypeLabel": "Prolonged prothrombin time",
+            "micaCurie": "HP:0008151",
+            "micaLabel": "Prolonged prothrombin time",
+            "score": 5.591336732773239,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:12512044"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003645",
+            "patientPhenotypeLabel": "Prolonged partial thromboplastin time",
+            "diseasePhenotypeCurie": "HP:0003645",
+            "diseasePhenotypeLabel": "Prolonged partial thromboplastin time",
+            "micaCurie": "HP:0003645",
+            "micaLabel": "Prolonged partial thromboplastin time",
+            "score": 5.591336732773239,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:12512044"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001399",
+            "patientPhenotypeLabel": "Hepatic failure",
+            "diseasePhenotypeCurie": "HP:0001399",
+            "diseasePhenotypeLabel": "Hepatic failure",
+            "micaCurie": "HP:0001399",
+            "micaLabel": "Hepatic failure",
+            "score": 4.579735821094759,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:214950"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0031956",
+            "patientPhenotypeLabel": "Elevated circulating aspartate aminotransferase concentration",
+            "diseasePhenotypeCurie": "HP:0031956",
+            "diseasePhenotypeLabel": "Elevated circulating aspartate aminotransferase concentration",
+            "micaCurie": "HP:0031956",
+            "micaLabel": "Elevated circulating aspartate aminotransferase concentration",
+            "score": 4.524473142419709,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:12512044"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002908",
+            "patientPhenotypeLabel": "Conjugated hyperbilirubinemia",
+            "diseasePhenotypeCurie": "HP:0002904",
+            "diseasePhenotypeLabel": "Hyperbilirubinemia",
+            "micaCurie": "HP:0002904",
+            "micaLabel": "Hyperbilirubinemia",
+            "score": 4.294898700775209,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:12512044"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0031964",
+            "patientPhenotypeLabel": "Elevated circulating alanine aminotransferase concentration",
+            "diseasePhenotypeCurie": "HP:0031956",
+            "diseasePhenotypeLabel": "Elevated circulating aspartate aminotransferase concentration",
+            "micaCurie": "HP:0002910",
+            "micaLabel": "Elevated circulating hepatic transaminase concentration",
+            "score": 3.477342809586743,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:12512044"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003231",
+            "patientPhenotypeLabel": "Hypertyrosinemia",
+            "diseasePhenotypeCurie": "HP:0030985",
+            "diseasePhenotypeLabel": "Decreased serum bile acid concentration",
+            "micaCurie": "HP:0004354",
+            "micaLabel": "Abnormal circulating carboxylic acid concentration",
+            "score": 3.2369897052206036,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:12512044"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003155",
+            "patientPhenotypeLabel": "Elevated circulating alkaline phosphatase concentration",
+            "diseasePhenotypeCurie": "HP:0031956",
+            "diseasePhenotypeLabel": "Elevated circulating aspartate aminotransferase concentration",
+            "micaCurie": "HP:0012379",
+            "micaLabel": "Abnormal circulating enzyme concentration or activity",
+            "score": 2.904339940868861,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:12512044"
+          }
+        ]
+      },
+      {
+        "rank": 9,
+        "diseaseCurie": "MONDO:0014943",
+        "diseaseLabel": "mitochondrial DNA depletion syndrome 15 (hepatocerebral type)",
+        "diseaseEntityId": 76229,
+        "bmaScore": 2.4969765298298325,
+        "normalizedScore": 0.275694,
+        "patientAverageScore": 2.5374777815888017,
+        "diseaseAverageScore": 2.456475278070864,
+        "directPhenotypeCount": 28,
+        "matchedPhenotypeCount": 25,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0003231",
+            "patientPhenotypeLabel": "Hypertyrosinemia",
+            "diseasePhenotypeCurie": "HP:0003231",
+            "diseasePhenotypeLabel": "Hypertyrosinemia",
+            "micaCurie": "HP:0003231",
+            "micaLabel": "Hypertyrosinemia",
+            "score": 6.859848058236746,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:27448789"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0006581",
+            "patientPhenotypeLabel": "Depletion of mitochondrial DNA in liver",
+            "diseasePhenotypeCurie": "HP:0009141",
+            "diseasePhenotypeLabel": "Depletion of mitochondrial DNA in muscle tissue",
+            "micaCurie": "HP:0030059",
+            "micaLabel": "Mitochondrial depletion",
+            "score": 5.560565074106485,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:27448789"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002908",
+            "patientPhenotypeLabel": "Conjugated hyperbilirubinemia",
+            "diseasePhenotypeCurie": "HP:0002908",
+            "diseasePhenotypeLabel": "Conjugated hyperbilirubinemia",
+            "micaCurie": "HP:0002908",
+            "micaLabel": "Conjugated hyperbilirubinemia",
+            "score": 5.473553697116856,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:27448789"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003073",
+            "patientPhenotypeLabel": "Hypoalbuminemia",
+            "diseasePhenotypeCurie": "HP:0003073",
+            "diseasePhenotypeLabel": "Hypoalbuminemia",
+            "micaCurie": "HP:0003073",
+            "micaLabel": "Hypoalbuminemia",
+            "score": 4.766613194424574,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:27448789"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001399",
+            "patientPhenotypeLabel": "Hepatic failure",
+            "diseasePhenotypeCurie": "HP:0001399",
+            "diseasePhenotypeLabel": "Hepatic failure",
+            "micaCurie": "HP:0001399",
+            "micaLabel": "Hepatic failure",
+            "score": 4.579735821094759,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:27448789"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003155",
+            "patientPhenotypeLabel": "Elevated circulating alkaline phosphatase concentration",
+            "diseasePhenotypeCurie": "HP:0003155",
+            "diseasePhenotypeLabel": "Elevated circulating alkaline phosphatase concentration",
+            "micaCurie": "HP:0003155",
+            "micaLabel": "Elevated circulating alkaline phosphatase concentration",
+            "score": 4.441952118731706,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:27448789"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001943",
+            "patientPhenotypeLabel": "Hypoglycemia",
+            "diseasePhenotypeCurie": "HP:0001943",
+            "diseasePhenotypeLabel": "Hypoglycemia",
+            "micaCurie": "HP:0001943",
+            "micaLabel": "Hypoglycemia",
+            "score": 3.789214476509637,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:27448789"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0031964",
+            "patientPhenotypeLabel": "Elevated circulating alanine aminotransferase concentration",
+            "diseasePhenotypeCurie": "HP:0002910",
+            "diseasePhenotypeLabel": "Elevated circulating hepatic transaminase concentration",
+            "micaCurie": "HP:0002910",
+            "micaLabel": "Elevated circulating hepatic transaminase concentration",
+            "score": 3.477342809586743,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:27448789"
+          }
+        ]
+      },
+      {
+        "rank": 10,
+        "diseaseCurie": "MONDO:0014884",
+        "diseaseLabel": "cholestasis, progressive familial intrahepatic, 5",
+        "diseaseEntityId": 76170,
+        "bmaScore": 2.4525131591586833,
+        "normalizedScore": 0.270784,
+        "patientAverageScore": 2.431010797969297,
+        "diseaseAverageScore": 2.474015520348069,
+        "directPhenotypeCount": 20,
+        "matchedPhenotypeCount": 25,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0008151",
+            "patientPhenotypeLabel": "Prolonged prothrombin time",
+            "diseasePhenotypeCurie": "HP:0008151",
+            "diseasePhenotypeLabel": "Prolonged prothrombin time",
+            "micaCurie": "HP:0008151",
+            "micaLabel": "Prolonged prothrombin time",
+            "score": 5.591336732773239,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:26888176"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002908",
+            "patientPhenotypeLabel": "Conjugated hyperbilirubinemia",
+            "diseasePhenotypeCurie": "HP:0002908",
+            "diseasePhenotypeLabel": "Conjugated hyperbilirubinemia",
+            "micaCurie": "HP:0002908",
+            "micaLabel": "Conjugated hyperbilirubinemia",
+            "score": 5.473553697116856,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:26888176"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001399",
+            "patientPhenotypeLabel": "Hepatic failure",
+            "diseasePhenotypeCurie": "HP:0001399",
+            "diseasePhenotypeLabel": "Hepatic failure",
+            "micaCurie": "HP:0001399",
+            "micaLabel": "Hepatic failure",
+            "score": 4.579735821094759,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:26888176"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0031964",
+            "patientPhenotypeLabel": "Elevated circulating alanine aminotransferase concentration",
+            "diseasePhenotypeCurie": "HP:0031964",
+            "diseasePhenotypeLabel": "Elevated circulating alanine aminotransferase concentration",
+            "micaCurie": "HP:0031964",
+            "micaLabel": "Elevated circulating alanine aminotransferase concentration",
+            "score": 4.557262965242701,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:26888176"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0031956",
+            "patientPhenotypeLabel": "Elevated circulating aspartate aminotransferase concentration",
+            "diseasePhenotypeCurie": "HP:0031956",
+            "diseasePhenotypeLabel": "Elevated circulating aspartate aminotransferase concentration",
+            "micaCurie": "HP:0031956",
+            "micaLabel": "Elevated circulating aspartate aminotransferase concentration",
+            "score": 4.524473142419709,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:26888176"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003645",
+            "patientPhenotypeLabel": "Prolonged partial thromboplastin time",
+            "diseasePhenotypeCurie": "HP:0008151",
+            "diseasePhenotypeLabel": "Prolonged prothrombin time",
+            "micaCurie": "HP:0001928",
+            "micaLabel": "Abnormality of coagulation",
+            "score": 4.159232835622054,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:26888176"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001943",
+            "patientPhenotypeLabel": "Hypoglycemia",
+            "diseasePhenotypeCurie": "HP:0001943",
+            "diseasePhenotypeLabel": "Hypoglycemia",
+            "micaCurie": "HP:0001943",
+            "micaLabel": "Hypoglycemia",
+            "score": 3.789214476509637,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:26888176"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003231",
+            "patientPhenotypeLabel": "Hypertyrosinemia",
+            "diseasePhenotypeCurie": "HP:0002908",
+            "diseasePhenotypeLabel": "Conjugated hyperbilirubinemia",
+            "micaCurie": "HP:0004354",
+            "micaLabel": "Abnormal circulating carboxylic acid concentration",
+            "score": 3.2369897052206036,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:26888176"
+          }
+        ]
+      },
+      {
+        "rank": 11,
+        "diseaseCurie": "MONDO:0009520",
+        "diseaseLabel": "3-hydroxy-3-methylglutaric aciduria",
+        "diseaseEntityId": 70806,
+        "bmaScore": 2.434717997741265,
+        "normalizedScore": 0.26882,
+        "patientAverageScore": 2.820943039651952,
+        "diseaseAverageScore": 2.048492955830578,
+        "directPhenotypeCount": 42,
+        "matchedPhenotypeCount": 25,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0008151",
+            "patientPhenotypeLabel": "Prolonged prothrombin time",
+            "diseasePhenotypeCurie": "HP:0032198",
+            "diseasePhenotypeLabel": "Decreased prothrombin time",
+            "micaCurie": "HP:0032199",
+            "micaLabel": "Abnormal prothrombin time",
+            "score": 5.473553697116856,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:28583327"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002572",
+            "patientPhenotypeLabel": "Episodic vomiting",
+            "diseasePhenotypeCurie": "HP:0002572",
+            "diseasePhenotypeLabel": "Episodic vomiting",
+            "micaCurie": "HP:0002572",
+            "micaLabel": "Episodic vomiting",
+            "score": 5.295872519879403,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:28583327"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001944",
+            "patientPhenotypeLabel": "Dehydration",
+            "diseasePhenotypeCurie": "HP:0001944",
+            "diseasePhenotypeLabel": "Dehydration",
+            "micaCurie": "HP:0001944",
+            "micaLabel": "Dehydration",
+            "score": 5.031720944837816,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:28583327"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0031964",
+            "patientPhenotypeLabel": "Elevated circulating alanine aminotransferase concentration",
+            "diseasePhenotypeCurie": "HP:0031964",
+            "diseasePhenotypeLabel": "Elevated circulating alanine aminotransferase concentration",
+            "micaCurie": "HP:0031964",
+            "micaLabel": "Elevated circulating alanine aminotransferase concentration",
+            "score": 4.557262965242701,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:28583327"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0031956",
+            "patientPhenotypeLabel": "Elevated circulating aspartate aminotransferase concentration",
+            "diseasePhenotypeCurie": "HP:0031956",
+            "diseasePhenotypeLabel": "Elevated circulating aspartate aminotransferase concentration",
+            "micaCurie": "HP:0031956",
+            "micaLabel": "Elevated circulating aspartate aminotransferase concentration",
+            "score": 4.524473142419709,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:28583327"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003645",
+            "patientPhenotypeLabel": "Prolonged partial thromboplastin time",
+            "diseasePhenotypeCurie": "HP:0032198",
+            "diseasePhenotypeLabel": "Decreased prothrombin time",
+            "micaCurie": "HP:0001928",
+            "micaLabel": "Abnormality of coagulation",
+            "score": 4.159232835622054,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:28583327"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001943",
+            "patientPhenotypeLabel": "Hypoglycemia",
+            "diseasePhenotypeCurie": "HP:0001943",
+            "diseasePhenotypeLabel": "Hypoglycemia",
+            "micaCurie": "HP:0001943",
+            "micaLabel": "Hypoglycemia",
+            "score": 3.789214476509637,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:28583327"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0006581",
+            "patientPhenotypeLabel": "Depletion of mitochondrial DNA in liver",
+            "diseasePhenotypeCurie": "HP:0003234",
+            "diseasePhenotypeLabel": "Decreased circulating carnitine concentration",
+            "micaCurie": "HP:0003287",
+            "micaLabel": "Abnormality of mitochondrial metabolism",
+            "score": 3.734062656434557,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:246450"
+          }
+        ]
+      },
+      {
+        "rank": 12,
+        "diseaseCurie": "MONDO:0009339",
+        "diseaseLabel": "congenital bile acid synthesis defect 2",
+        "diseaseEntityId": 70625,
+        "bmaScore": 2.4250717134663278,
+        "normalizedScore": 0.267754,
+        "patientAverageScore": 2.0972011667166517,
+        "diseaseAverageScore": 2.752942260216004,
+        "directPhenotypeCount": 14,
+        "matchedPhenotypeCount": 25,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001399",
+            "patientPhenotypeLabel": "Hepatic failure",
+            "diseasePhenotypeCurie": "HP:0001399",
+            "diseasePhenotypeLabel": "Hepatic failure",
+            "micaCurie": "HP:0001399",
+            "micaLabel": "Hepatic failure",
+            "score": 4.579735821094759,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:235555"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003155",
+            "patientPhenotypeLabel": "Elevated circulating alkaline phosphatase concentration",
+            "diseasePhenotypeCurie": "HP:0003155",
+            "diseasePhenotypeLabel": "Elevated circulating alkaline phosphatase concentration",
+            "micaCurie": "HP:0003155",
+            "micaLabel": "Elevated circulating alkaline phosphatase concentration",
+            "score": 4.441952118731706,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:235555"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008151",
+            "patientPhenotypeLabel": "Prolonged prothrombin time",
+            "diseasePhenotypeCurie": "HP:0003256",
+            "diseasePhenotypeLabel": "Abnormality of the coagulation cascade",
+            "micaCurie": "HP:0003256",
+            "micaLabel": "Abnormality of the coagulation cascade",
+            "score": 4.3034824444666,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:235555"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002908",
+            "patientPhenotypeLabel": "Conjugated hyperbilirubinemia",
+            "diseasePhenotypeCurie": "HP:0002904",
+            "diseasePhenotypeLabel": "Hyperbilirubinemia",
+            "micaCurie": "HP:0002904",
+            "micaLabel": "Hyperbilirubinemia",
+            "score": 4.294898700775209,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:235555"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003645",
+            "patientPhenotypeLabel": "Prolonged partial thromboplastin time",
+            "diseasePhenotypeCurie": "HP:0003256",
+            "diseasePhenotypeLabel": "Abnormality of the coagulation cascade",
+            "micaCurie": "HP:0001928",
+            "micaLabel": "Abnormality of coagulation",
+            "score": 4.159232835622054,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:235555"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0031964",
+            "patientPhenotypeLabel": "Elevated circulating alanine aminotransferase concentration",
+            "diseasePhenotypeCurie": "HP:0002910",
+            "diseasePhenotypeLabel": "Elevated circulating hepatic transaminase concentration",
+            "micaCurie": "HP:0002910",
+            "micaLabel": "Elevated circulating hepatic transaminase concentration",
+            "score": 3.477342809586743,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:235555"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0031956",
+            "patientPhenotypeLabel": "Elevated circulating aspartate aminotransferase concentration",
+            "diseasePhenotypeCurie": "HP:0002910",
+            "diseasePhenotypeLabel": "Elevated circulating hepatic transaminase concentration",
+            "micaCurie": "HP:0002910",
+            "micaLabel": "Elevated circulating hepatic transaminase concentration",
+            "score": 3.477342809586743,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:235555"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003231",
+            "patientPhenotypeLabel": "Hypertyrosinemia",
+            "diseasePhenotypeCurie": "HP:0002904",
+            "diseasePhenotypeLabel": "Hyperbilirubinemia",
+            "micaCurie": "HP:0004354",
+            "micaLabel": "Abnormal circulating carboxylic acid concentration",
+            "score": 3.2369897052206036,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:235555"
+          }
+        ]
+      },
+      {
+        "rank": 13,
+        "diseaseCurie": "MONDO:0975807",
+        "diseaseLabel": "cholestasis, progressive familial intrahepatic, 13",
+        "diseaseEntityId": 88645,
+        "bmaScore": 2.414923927718174,
+        "normalizedScore": 0.266634,
+        "patientAverageScore": 2.640416919960324,
+        "diseaseAverageScore": 2.189430935476025,
+        "directPhenotypeCount": 53,
+        "matchedPhenotypeCount": 25,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002908",
+            "patientPhenotypeLabel": "Conjugated hyperbilirubinemia",
+            "diseasePhenotypeCurie": "HP:0002908",
+            "diseasePhenotypeLabel": "Conjugated hyperbilirubinemia",
+            "micaCurie": "HP:0002908",
+            "micaLabel": "Conjugated hyperbilirubinemia",
+            "score": 5.473553697116856,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:39132680"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003073",
+            "patientPhenotypeLabel": "Hypoalbuminemia",
+            "diseasePhenotypeCurie": "HP:0003073",
+            "diseasePhenotypeLabel": "Hypoalbuminemia",
+            "micaCurie": "HP:0003073",
+            "micaLabel": "Hypoalbuminemia",
+            "score": 4.766613194424574,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:39132680"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001399",
+            "patientPhenotypeLabel": "Hepatic failure",
+            "diseasePhenotypeCurie": "HP:0001399",
+            "diseasePhenotypeLabel": "Hepatic failure",
+            "micaCurie": "HP:0001399",
+            "micaLabel": "Hepatic failure",
+            "score": 4.579735821094759,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:39132680"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0031964",
+            "patientPhenotypeLabel": "Elevated circulating alanine aminotransferase concentration",
+            "diseasePhenotypeCurie": "HP:0031964",
+            "diseasePhenotypeLabel": "Elevated circulating alanine aminotransferase concentration",
+            "micaCurie": "HP:0031964",
+            "micaLabel": "Elevated circulating alanine aminotransferase concentration",
+            "score": 4.557262965242701,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:39132680"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0031956",
+            "patientPhenotypeLabel": "Elevated circulating aspartate aminotransferase concentration",
+            "diseasePhenotypeCurie": "HP:0031956",
+            "diseasePhenotypeLabel": "Elevated circulating aspartate aminotransferase concentration",
+            "micaCurie": "HP:0031956",
+            "micaLabel": "Elevated circulating aspartate aminotransferase concentration",
+            "score": 4.524473142419709,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:39132680"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003155",
+            "patientPhenotypeLabel": "Elevated circulating alkaline phosphatase concentration",
+            "diseasePhenotypeCurie": "HP:0003155",
+            "diseasePhenotypeLabel": "Elevated circulating alkaline phosphatase concentration",
+            "micaCurie": "HP:0003155",
+            "micaLabel": "Elevated circulating alkaline phosphatase concentration",
+            "score": 4.441952118731706,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:39132680"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008151",
+            "patientPhenotypeLabel": "Prolonged prothrombin time",
+            "diseasePhenotypeCurie": "HP:0005542",
+            "diseasePhenotypeLabel": "Prolonged whole-blood clotting time",
+            "micaCurie": "HP:0001928",
+            "micaLabel": "Abnormality of coagulation",
+            "score": 4.159232835622054,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:39132680"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003645",
+            "patientPhenotypeLabel": "Prolonged partial thromboplastin time",
+            "diseasePhenotypeCurie": "HP:0005542",
+            "diseasePhenotypeLabel": "Prolonged whole-blood clotting time",
+            "micaCurie": "HP:0001928",
+            "micaLabel": "Abnormality of coagulation",
+            "score": 4.159232835622054,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:39132680"
+          }
+        ]
+      },
+      {
+        "rank": 14,
+        "diseaseCurie": "MONDO:0031040",
+        "diseaseLabel": "cholestasis, progressive familial intrahepatic, 12",
+        "diseaseEntityId": 84379,
+        "bmaScore": 2.4127683701747022,
+        "normalizedScore": 0.266396,
+        "patientAverageScore": 2.0398718870265813,
+        "diseaseAverageScore": 2.785664853322823,
+        "directPhenotypeCount": 15,
+        "matchedPhenotypeCount": 25,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0003645",
+            "patientPhenotypeLabel": "Prolonged partial thromboplastin time",
+            "diseasePhenotypeCurie": "HP:0003645",
+            "diseasePhenotypeLabel": "Prolonged partial thromboplastin time",
+            "micaCurie": "HP:0003645",
+            "micaLabel": "Prolonged partial thromboplastin time",
+            "score": 5.591336732773239,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31479177"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002908",
+            "patientPhenotypeLabel": "Conjugated hyperbilirubinemia",
+            "diseasePhenotypeCurie": "HP:0002908",
+            "diseasePhenotypeLabel": "Conjugated hyperbilirubinemia",
+            "micaCurie": "HP:0002908",
+            "micaLabel": "Conjugated hyperbilirubinemia",
+            "score": 5.473553697116856,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31479177"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0031964",
+            "patientPhenotypeLabel": "Elevated circulating alanine aminotransferase concentration",
+            "diseasePhenotypeCurie": "HP:0031964",
+            "diseasePhenotypeLabel": "Elevated circulating alanine aminotransferase concentration",
+            "micaCurie": "HP:0031964",
+            "micaLabel": "Elevated circulating alanine aminotransferase concentration",
+            "score": 4.557262965242701,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31479177"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0031956",
+            "patientPhenotypeLabel": "Elevated circulating aspartate aminotransferase concentration",
+            "diseasePhenotypeCurie": "HP:0031956",
+            "diseasePhenotypeLabel": "Elevated circulating aspartate aminotransferase concentration",
+            "micaCurie": "HP:0031956",
+            "micaLabel": "Elevated circulating aspartate aminotransferase concentration",
+            "score": 4.524473142419709,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31479177"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008151",
+            "patientPhenotypeLabel": "Prolonged prothrombin time",
+            "diseasePhenotypeCurie": "HP:0003645",
+            "diseasePhenotypeLabel": "Prolonged partial thromboplastin time",
+            "micaCurie": "HP:0001928",
+            "micaLabel": "Abnormality of coagulation",
+            "score": 4.159232835622054,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31479177"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003231",
+            "patientPhenotypeLabel": "Hypertyrosinemia",
+            "diseasePhenotypeCurie": "HP:0012202",
+            "diseasePhenotypeLabel": "Increased serum bile acid concentration",
+            "micaCurie": "HP:0004354",
+            "micaLabel": "Abnormal circulating carboxylic acid concentration",
+            "score": 3.2369897052206036,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31479177"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003155",
+            "patientPhenotypeLabel": "Elevated circulating alkaline phosphatase concentration",
+            "diseasePhenotypeCurie": "HP:0031964",
+            "diseasePhenotypeLabel": "Elevated circulating alanine aminotransferase concentration",
+            "micaCurie": "HP:0012379",
+            "micaLabel": "Abnormal circulating enzyme concentration or activity",
+            "score": 2.904339940868861,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31479177"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002240",
+            "patientPhenotypeLabel": "Hepatomegaly",
+            "diseasePhenotypeCurie": "HP:0002240",
+            "diseasePhenotypeLabel": "Hepatomegaly",
+            "micaCurie": "HP:0002240",
+            "micaLabel": "Hepatomegaly",
+            "score": 2.774805888676959,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31479177"
+          }
+        ]
+      },
+      {
+        "rank": 15,
+        "diseaseCurie": "MONDO:0014066",
+        "diseaseLabel": "mitochondrial complex III deficiency nuclear type 5",
+        "diseaseEntityId": 75352,
+        "bmaScore": 2.331164927226041,
+        "normalizedScore": 0.257386,
+        "patientAverageScore": 1.9297404587689697,
+        "diseaseAverageScore": 2.7325893956831124,
+        "directPhenotypeCount": 19,
+        "matchedPhenotypeCount": 25,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002572",
+            "patientPhenotypeLabel": "Episodic vomiting",
+            "diseasePhenotypeCurie": "HP:0002572",
+            "diseasePhenotypeLabel": "Episodic vomiting",
+            "micaCurie": "HP:0002572",
+            "micaLabel": "Episodic vomiting",
+            "score": 5.295872519879403,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:23281071"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001399",
+            "patientPhenotypeLabel": "Hepatic failure",
+            "diseasePhenotypeCurie": "HP:0001410",
+            "diseasePhenotypeLabel": "Decreased liver function",
+            "micaCurie": "HP:0001410",
+            "micaLabel": "Decreased liver function",
+            "score": 4.205042371653348,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:615160"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002908",
+            "patientPhenotypeLabel": "Conjugated hyperbilirubinemia",
+            "diseasePhenotypeCurie": "HP:0033504",
+            "diseasePhenotypeLabel": "Elevated circulating fumarate concentration",
+            "micaCurie": "HP:0010995",
+            "micaLabel": "Abnormal circulating dicarboxylic acid concentration",
+            "score": 4.122598702442273,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:23281071"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003231",
+            "patientPhenotypeLabel": "Hypertyrosinemia",
+            "diseasePhenotypeCurie": "HP:0003348",
+            "diseasePhenotypeLabel": "Hyperalaninemia",
+            "micaCurie": "HP:0003112",
+            "micaLabel": "Abnormal circulating amino acid concentration",
+            "score": 3.93907882315621,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:23281071"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001943",
+            "patientPhenotypeLabel": "Hypoglycemia",
+            "diseasePhenotypeCurie": "HP:0001943",
+            "diseasePhenotypeLabel": "Hypoglycemia",
+            "micaCurie": "HP:0001943",
+            "micaLabel": "Hypoglycemia",
+            "score": 3.789214476509637,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:23281071"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002151",
+            "patientPhenotypeLabel": "Increased circulating lactate concentration",
+            "diseasePhenotypeCurie": "HP:0002151",
+            "diseasePhenotypeLabel": "Increased circulating lactate concentration",
+            "micaCurie": "HP:0002151",
+            "micaLabel": "Increased circulating lactate concentration",
+            "score": 3.691096620551114,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:23281071"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0031964",
+            "patientPhenotypeLabel": "Elevated circulating alanine aminotransferase concentration",
+            "diseasePhenotypeCurie": "HP:0002910",
+            "diseasePhenotypeLabel": "Elevated circulating hepatic transaminase concentration",
+            "micaCurie": "HP:0002910",
+            "micaLabel": "Elevated circulating hepatic transaminase concentration",
+            "score": 3.477342809586743,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:615160"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0031956",
+            "patientPhenotypeLabel": "Elevated circulating aspartate aminotransferase concentration",
+            "diseasePhenotypeCurie": "HP:0002910",
+            "diseasePhenotypeLabel": "Elevated circulating hepatic transaminase concentration",
+            "micaCurie": "HP:0002910",
+            "micaLabel": "Elevated circulating hepatic transaminase concentration",
+            "score": 3.477342809586743,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:615160"
+          }
+        ]
+      },
+      {
+        "rank": 16,
+        "diseaseCurie": "MONDO:0009109",
+        "diseaseLabel": "lysinuric protein intolerance",
+        "diseaseEntityId": 70395,
+        "bmaScore": 2.321345443143058,
+        "normalizedScore": 0.256302,
+        "patientAverageScore": 2.764379730002537,
+        "diseaseAverageScore": 1.8783111562835786,
+        "directPhenotypeCount": 100,
+        "matchedPhenotypeCount": 25,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001399",
+            "patientPhenotypeLabel": "Hepatic failure",
+            "diseasePhenotypeCurie": "HP:0001399",
+            "diseasePhenotypeLabel": "Hepatic failure",
+            "micaCurie": "HP:0001399",
+            "micaLabel": "Hepatic failure",
+            "score": 4.579735821094759,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:470"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003231",
+            "patientPhenotypeLabel": "Hypertyrosinemia",
+            "diseasePhenotypeCurie": "HP:0500142",
+            "diseasePhenotypeLabel": "Hypolysinemia",
+            "micaCurie": "HP:0033107",
+            "micaLabel": "Abnormal circulating proteinogenic amino acid concentration",
+            "score": 4.32087418717847,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:10080182"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008151",
+            "patientPhenotypeLabel": "Prolonged prothrombin time",
+            "diseasePhenotypeCurie": "HP:0011900",
+            "diseasePhenotypeLabel": "Hypofibrinogenemia",
+            "micaCurie": "HP:0003256",
+            "micaLabel": "Abnormality of the coagulation cascade",
+            "score": 4.3034824444666,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:470"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003645",
+            "patientPhenotypeLabel": "Prolonged partial thromboplastin time",
+            "diseasePhenotypeCurie": "HP:0011900",
+            "diseasePhenotypeLabel": "Hypofibrinogenemia",
+            "micaCurie": "HP:0001928",
+            "micaLabel": "Abnormality of coagulation",
+            "score": 4.159232835622054,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:470"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002299",
+            "patientPhenotypeLabel": "Brittle hair",
+            "diseasePhenotypeCurie": "HP:0002213",
+            "diseasePhenotypeLabel": "Fine hair",
+            "micaCurie": "HP:0010719",
+            "micaLabel": "Abnormality of hair texture",
+            "score": 3.734062656434557,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:222700"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002151",
+            "patientPhenotypeLabel": "Increased circulating lactate concentration",
+            "diseasePhenotypeCurie": "HP:0002151",
+            "diseasePhenotypeLabel": "Increased circulating lactate concentration",
+            "micaCurie": "HP:0002151",
+            "micaLabel": "Increased circulating lactate concentration",
+            "score": 3.691096620551114,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:222700"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002572",
+            "patientPhenotypeLabel": "Episodic vomiting",
+            "diseasePhenotypeCurie": "HP:0002013",
+            "diseasePhenotypeLabel": "Vomiting",
+            "micaCurie": "HP:0002013",
+            "micaLabel": "Vomiting",
+            "score": 3.5356117177107187,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:470"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0031964",
+            "patientPhenotypeLabel": "Elevated circulating alanine aminotransferase concentration",
+            "diseasePhenotypeCurie": "HP:0002910",
+            "diseasePhenotypeLabel": "Elevated circulating hepatic transaminase concentration",
+            "micaCurie": "HP:0002910",
+            "micaLabel": "Elevated circulating hepatic transaminase concentration",
+            "score": 3.477342809586743,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:470"
+          }
+        ]
+      },
+      {
+        "rank": 17,
+        "diseaseCurie": "MONDO:0011906",
+        "diseaseLabel": "congenital bile acid synthesis defect 1",
+        "diseaseEntityId": 73192,
+        "bmaScore": 2.309115589651917,
+        "normalizedScore": 0.254952,
+        "patientAverageScore": 2.1237743996360634,
+        "diseaseAverageScore": 2.494456779667771,
+        "directPhenotypeCount": 20,
+        "matchedPhenotypeCount": 25,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002908",
+            "patientPhenotypeLabel": "Conjugated hyperbilirubinemia",
+            "diseasePhenotypeCurie": "HP:0002908",
+            "diseasePhenotypeLabel": "Conjugated hyperbilirubinemia",
+            "micaCurie": "HP:0002908",
+            "micaLabel": "Conjugated hyperbilirubinemia",
+            "score": 5.473553697116856,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:12679481"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001399",
+            "patientPhenotypeLabel": "Hepatic failure",
+            "diseasePhenotypeCurie": "HP:0001399",
+            "diseasePhenotypeLabel": "Hepatic failure",
+            "micaCurie": "HP:0001399",
+            "micaLabel": "Hepatic failure",
+            "score": 4.579735821094759,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:607765"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008151",
+            "patientPhenotypeLabel": "Prolonged prothrombin time",
+            "diseasePhenotypeCurie": "HP:0003256",
+            "diseasePhenotypeLabel": "Abnormality of the coagulation cascade",
+            "micaCurie": "HP:0003256",
+            "micaLabel": "Abnormality of the coagulation cascade",
+            "score": 4.3034824444666,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:607765"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003645",
+            "patientPhenotypeLabel": "Prolonged partial thromboplastin time",
+            "diseasePhenotypeCurie": "HP:0003256",
+            "diseasePhenotypeLabel": "Abnormality of the coagulation cascade",
+            "micaCurie": "HP:0001928",
+            "micaLabel": "Abnormality of coagulation",
+            "score": 4.159232835622054,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:607765"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0031964",
+            "patientPhenotypeLabel": "Elevated circulating alanine aminotransferase concentration",
+            "diseasePhenotypeCurie": "HP:0002910",
+            "diseasePhenotypeLabel": "Elevated circulating hepatic transaminase concentration",
+            "micaCurie": "HP:0002910",
+            "micaLabel": "Elevated circulating hepatic transaminase concentration",
+            "score": 3.477342809586743,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:12679481"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0031956",
+            "patientPhenotypeLabel": "Elevated circulating aspartate aminotransferase concentration",
+            "diseasePhenotypeCurie": "HP:0002910",
+            "diseasePhenotypeLabel": "Elevated circulating hepatic transaminase concentration",
+            "micaCurie": "HP:0002910",
+            "micaLabel": "Elevated circulating hepatic transaminase concentration",
+            "score": 3.477342809586743,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:12679481"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003231",
+            "patientPhenotypeLabel": "Hypertyrosinemia",
+            "diseasePhenotypeCurie": "HP:0002908",
+            "diseasePhenotypeLabel": "Conjugated hyperbilirubinemia",
+            "micaCurie": "HP:0004354",
+            "micaLabel": "Abnormal circulating carboxylic acid concentration",
+            "score": 3.2369897052206036,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:12679481"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003155",
+            "patientPhenotypeLabel": "Elevated circulating alkaline phosphatase concentration",
+            "diseasePhenotypeCurie": "HP:0002910",
+            "diseasePhenotypeLabel": "Elevated circulating hepatic transaminase concentration",
+            "micaCurie": "HP:0012379",
+            "micaLabel": "Abnormal circulating enzyme concentration or activity",
+            "score": 2.904339940868861,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:12679481"
+          }
+        ]
+      },
+      {
+        "rank": 18,
+        "diseaseCurie": "MONDO:0019149",
+        "diseaseLabel": "cholesteryl ester storage disease",
+        "diseaseEntityId": 80435,
+        "bmaScore": 2.248772044941957,
+        "normalizedScore": 0.248289,
+        "patientAverageScore": 2.4193716208981253,
+        "diseaseAverageScore": 2.078172468985789,
+        "directPhenotypeCount": 76,
+        "matchedPhenotypeCount": 25,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001944",
+            "patientPhenotypeLabel": "Dehydration",
+            "diseasePhenotypeCurie": "HP:0001944",
+            "diseasePhenotypeLabel": "Dehydration",
+            "micaCurie": "HP:0001944",
+            "micaLabel": "Dehydration",
+            "score": 5.031720944837816,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:275761"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001399",
+            "patientPhenotypeLabel": "Hepatic failure",
+            "diseasePhenotypeCurie": "HP:0006583",
+            "diseasePhenotypeLabel": "Fatal liver failure in infancy",
+            "micaCurie": "HP:0001399",
+            "micaLabel": "Hepatic failure",
+            "score": 4.579735821094759,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:275761"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0031964",
+            "patientPhenotypeLabel": "Elevated circulating alanine aminotransferase concentration",
+            "diseasePhenotypeCurie": "HP:0031964",
+            "diseasePhenotypeLabel": "Elevated circulating alanine aminotransferase concentration",
+            "micaCurie": "HP:0031964",
+            "micaLabel": "Elevated circulating alanine aminotransferase concentration",
+            "score": 4.557262965242701,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31230978;PMID:27876313"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0031956",
+            "patientPhenotypeLabel": "Elevated circulating aspartate aminotransferase concentration",
+            "diseasePhenotypeCurie": "HP:0031956",
+            "diseasePhenotypeLabel": "Elevated circulating aspartate aminotransferase concentration",
+            "micaCurie": "HP:0031956",
+            "micaLabel": "Elevated circulating aspartate aminotransferase concentration",
+            "score": 4.524473142419709,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31230978;PMID:27876313"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003155",
+            "patientPhenotypeLabel": "Elevated circulating alkaline phosphatase concentration",
+            "diseasePhenotypeCurie": "HP:0003155",
+            "diseasePhenotypeLabel": "Elevated circulating alkaline phosphatase concentration",
+            "micaCurie": "HP:0003155",
+            "micaLabel": "Elevated circulating alkaline phosphatase concentration",
+            "score": 4.441952118731706,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:275761"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002572",
+            "patientPhenotypeLabel": "Episodic vomiting",
+            "diseasePhenotypeCurie": "HP:0002013",
+            "diseasePhenotypeLabel": "Vomiting",
+            "micaCurie": "HP:0002013",
+            "micaLabel": "Vomiting",
+            "score": 3.5356117177107187,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:27876313"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002151",
+            "patientPhenotypeLabel": "Increased circulating lactate concentration",
+            "diseasePhenotypeCurie": "HP:0001941",
+            "diseasePhenotypeLabel": "Acidosis",
+            "micaCurie": "HP:0001941",
+            "micaLabel": "Acidosis",
+            "score": 3.0409154758746118,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:275761"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002240",
+            "patientPhenotypeLabel": "Hepatomegaly",
+            "diseasePhenotypeCurie": "HP:0002240",
+            "diseasePhenotypeLabel": "Hepatomegaly",
+            "micaCurie": "HP:0002240",
+            "micaLabel": "Hepatomegaly",
+            "score": 2.774805888676959,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31230978;PMID:27876313;PMID:8254026"
+          }
+        ]
+      },
+      {
+        "rank": 19,
+        "diseaseCurie": "MONDO:0007745",
+        "diseaseLabel": "Gilbert syndrome",
+        "diseaseEntityId": 69031,
+        "bmaScore": 2.2433473341799632,
+        "normalizedScore": 0.24769,
+        "patientAverageScore": 1.5532248138844025,
+        "diseaseAverageScore": 2.933469854475524,
+        "directPhenotypeCount": 5,
+        "matchedPhenotypeCount": 25,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001399",
+            "patientPhenotypeLabel": "Hepatic failure",
+            "diseasePhenotypeCurie": "HP:0001399",
+            "diseasePhenotypeLabel": "Hepatic failure",
+            "micaCurie": "HP:0001399",
+            "micaLabel": "Hepatic failure",
+            "score": 4.579735821094759,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:11316168"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002908",
+            "patientPhenotypeLabel": "Conjugated hyperbilirubinemia",
+            "diseasePhenotypeCurie": "HP:0008282",
+            "diseasePhenotypeLabel": "Unconjugated hyperbilirubinemia",
+            "micaCurie": "HP:0002904",
+            "micaLabel": "Hyperbilirubinemia",
+            "score": 4.294898700775209,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:11316168"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0031964",
+            "patientPhenotypeLabel": "Elevated circulating alanine aminotransferase concentration",
+            "diseasePhenotypeCurie": "HP:0002910",
+            "diseasePhenotypeLabel": "Elevated circulating hepatic transaminase concentration",
+            "micaCurie": "HP:0002910",
+            "micaLabel": "Elevated circulating hepatic transaminase concentration",
+            "score": 3.477342809586743,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:11316168"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0031956",
+            "patientPhenotypeLabel": "Elevated circulating aspartate aminotransferase concentration",
+            "diseasePhenotypeCurie": "HP:0002910",
+            "diseasePhenotypeLabel": "Elevated circulating hepatic transaminase concentration",
+            "micaCurie": "HP:0002910",
+            "micaLabel": "Elevated circulating hepatic transaminase concentration",
+            "score": 3.477342809586743,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:11316168"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003231",
+            "patientPhenotypeLabel": "Hypertyrosinemia",
+            "diseasePhenotypeCurie": "HP:0008282",
+            "diseasePhenotypeLabel": "Unconjugated hyperbilirubinemia",
+            "micaCurie": "HP:0004354",
+            "micaLabel": "Abnormal circulating carboxylic acid concentration",
+            "score": 3.2369897052206036,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:11316168"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003155",
+            "patientPhenotypeLabel": "Elevated circulating alkaline phosphatase concentration",
+            "diseasePhenotypeCurie": "HP:0002910",
+            "diseasePhenotypeLabel": "Elevated circulating hepatic transaminase concentration",
+            "micaCurie": "HP:0012379",
+            "micaLabel": "Abnormal circulating enzyme concentration or activity",
+            "score": 2.904339940868861,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:11316168"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002240",
+            "patientPhenotypeLabel": "Hepatomegaly",
+            "diseasePhenotypeCurie": "HP:0000952",
+            "diseasePhenotypeLabel": "Jaundice",
+            "micaCurie": "HP:0001392",
+            "micaLabel": "Abnormality of the liver",
+            "score": 2.315371940920911,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:143500"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0006581",
+            "patientPhenotypeLabel": "Depletion of mitochondrial DNA in liver",
+            "diseasePhenotypeCurie": "HP:0000952",
+            "diseasePhenotypeLabel": "Jaundice",
+            "micaCurie": "HP:0001392",
+            "micaLabel": "Abnormality of the liver",
+            "score": 2.315371940920911,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:143500"
+          }
+        ]
+      },
+      {
+        "rank": 20,
+        "diseaseCurie": "MONDO:0007415",
+        "diseaseLabel": "mitochondrial complex III deficiency nuclear type 1",
+        "diseaseEntityId": 68701,
+        "bmaScore": 2.242205481987977,
+        "normalizedScore": 0.247564,
+        "patientAverageScore": 2.6241634852998605,
+        "diseaseAverageScore": 1.8602474786760927,
+        "directPhenotypeCount": 57,
+        "matchedPhenotypeCount": 25,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0003231",
+            "patientPhenotypeLabel": "Hypertyrosinemia",
+            "diseasePhenotypeCurie": "HP:0003231",
+            "diseasePhenotypeLabel": "Hypertyrosinemia",
+            "micaCurie": "HP:0003231",
+            "micaLabel": "Hypertyrosinemia",
+            "score": 6.859848058236746,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:12910490"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002299",
+            "patientPhenotypeLabel": "Brittle hair",
+            "diseasePhenotypeCurie": "HP:0002299",
+            "diseasePhenotypeLabel": "Brittle hair",
+            "micaCurie": "HP:0002299",
+            "micaLabel": "Brittle hair",
+            "score": 5.105828916991538,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:124000"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003155",
+            "patientPhenotypeLabel": "Elevated circulating alkaline phosphatase concentration",
+            "diseasePhenotypeCurie": "HP:0003155",
+            "diseasePhenotypeLabel": "Elevated circulating alkaline phosphatase concentration",
+            "micaCurie": "HP:0003155",
+            "micaLabel": "Elevated circulating alkaline phosphatase concentration",
+            "score": 4.441952118731706,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:12910490"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001399",
+            "patientPhenotypeLabel": "Hepatic failure",
+            "diseasePhenotypeCurie": "HP:0001410",
+            "diseasePhenotypeLabel": "Decreased liver function",
+            "micaCurie": "HP:0001410",
+            "micaLabel": "Decreased liver function",
+            "score": 4.205042371653348,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:12910490"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001943",
+            "patientPhenotypeLabel": "Hypoglycemia",
+            "diseasePhenotypeCurie": "HP:0001988",
+            "diseasePhenotypeLabel": "Recurrent hypoglycemia",
+            "micaCurie": "HP:0001943",
+            "micaLabel": "Hypoglycemia",
+            "score": 3.789214476509637,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:12910490"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0006581",
+            "patientPhenotypeLabel": "Depletion of mitochondrial DNA in liver",
+            "diseasePhenotypeCurie": "HP:0011924",
+            "diseasePhenotypeLabel": "Decreased activity of mitochondrial complex III",
+            "micaCurie": "HP:0003287",
+            "micaLabel": "Abnormality of mitochondrial metabolism",
+            "score": 3.734062656434557,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:12910490"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002151",
+            "patientPhenotypeLabel": "Increased circulating lactate concentration",
+            "diseasePhenotypeCurie": "HP:0002151",
+            "diseasePhenotypeLabel": "Increased circulating lactate concentration",
+            "micaCurie": "HP:0002151",
+            "micaLabel": "Increased circulating lactate concentration",
+            "score": 3.691096620551114,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:124000"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0031964",
+            "patientPhenotypeLabel": "Elevated circulating alanine aminotransferase concentration",
+            "diseasePhenotypeCurie": "HP:0002910",
+            "diseasePhenotypeLabel": "Elevated circulating hepatic transaminase concentration",
+            "micaCurie": "HP:0002910",
+            "micaLabel": "Elevated circulating hepatic transaminase concentration",
+            "score": 3.477342809586743,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:12910490"
+          }
+        ]
+      },
+      {
+        "rank": 21,
+        "diseaseCurie": "MONDO:0030360",
+        "diseaseLabel": "cholestasis, progressive familial intrahepatic, 6",
+        "diseaseEntityId": 84070,
+        "bmaScore": 2.2365943251599165,
+        "normalizedScore": 0.246945,
+        "patientAverageScore": 1.9189439646082433,
+        "diseaseAverageScore": 2.55424468571159,
+        "directPhenotypeCount": 12,
+        "matchedPhenotypeCount": 25,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002908",
+            "patientPhenotypeLabel": "Conjugated hyperbilirubinemia",
+            "diseasePhenotypeCurie": "HP:0002908",
+            "diseasePhenotypeLabel": "Conjugated hyperbilirubinemia",
+            "micaCurie": "HP:0002908",
+            "micaLabel": "Conjugated hyperbilirubinemia",
+            "score": 5.473553697116856,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31863603"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003155",
+            "patientPhenotypeLabel": "Elevated circulating alkaline phosphatase concentration",
+            "diseasePhenotypeCurie": "HP:0003155",
+            "diseasePhenotypeLabel": "Elevated circulating alkaline phosphatase concentration",
+            "micaCurie": "HP:0003155",
+            "micaLabel": "Elevated circulating alkaline phosphatase concentration",
+            "score": 4.441952118731706,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31863603"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001399",
+            "patientPhenotypeLabel": "Hepatic failure",
+            "diseasePhenotypeCurie": "HP:0001406",
+            "diseasePhenotypeLabel": "Intrahepatic cholestasis",
+            "micaCurie": "HP:0025155",
+            "micaLabel": "Abnormal hepatobiliary system physiology",
+            "score": 4.0803388931523905,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31863603"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0031964",
+            "patientPhenotypeLabel": "Elevated circulating alanine aminotransferase concentration",
+            "diseasePhenotypeCurie": "HP:0002910",
+            "diseasePhenotypeLabel": "Elevated circulating hepatic transaminase concentration",
+            "micaCurie": "HP:0002910",
+            "micaLabel": "Elevated circulating hepatic transaminase concentration",
+            "score": 3.477342809586743,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31863603"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0031956",
+            "patientPhenotypeLabel": "Elevated circulating aspartate aminotransferase concentration",
+            "diseasePhenotypeCurie": "HP:0002910",
+            "diseasePhenotypeLabel": "Elevated circulating hepatic transaminase concentration",
+            "micaCurie": "HP:0002910",
+            "micaLabel": "Elevated circulating hepatic transaminase concentration",
+            "score": 3.477342809586743,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31863603"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003231",
+            "patientPhenotypeLabel": "Hypertyrosinemia",
+            "diseasePhenotypeCurie": "HP:0002908",
+            "diseasePhenotypeLabel": "Conjugated hyperbilirubinemia",
+            "micaCurie": "HP:0004354",
+            "micaLabel": "Abnormal circulating carboxylic acid concentration",
+            "score": 3.2369897052206036,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31863603"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002240",
+            "patientPhenotypeLabel": "Hepatomegaly",
+            "diseasePhenotypeCurie": "HP:0001405",
+            "diseasePhenotypeLabel": "Periportal fibrosis",
+            "micaCurie": "HP:0410042",
+            "micaLabel": "Abnormal liver morphology",
+            "score": 2.4946285418792455,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31863603"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0006581",
+            "patientPhenotypeLabel": "Depletion of mitochondrial DNA in liver",
+            "diseasePhenotypeCurie": "HP:0001405",
+            "diseasePhenotypeLabel": "Periportal fibrosis",
+            "micaCurie": "HP:0410042",
+            "micaLabel": "Abnormal liver morphology",
+            "score": 2.4946285418792455,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31863603"
+          }
+        ]
+      },
+      {
+        "rank": 22,
+        "diseaseCurie": "MONDO:0011559",
+        "diseaseLabel": "benign recurrent intrahepatic cholestasis type 2",
+        "diseaseEntityId": 72845,
+        "bmaScore": 2.231901124540261,
+        "normalizedScore": 0.246426,
+        "patientAverageScore": 1.6216070161860319,
+        "diseaseAverageScore": 2.8421952328944897,
+        "directPhenotypeCount": 8,
+        "matchedPhenotypeCount": 25,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002908",
+            "patientPhenotypeLabel": "Conjugated hyperbilirubinemia",
+            "diseasePhenotypeCurie": "HP:0002908",
+            "diseasePhenotypeLabel": "Conjugated hyperbilirubinemia",
+            "micaCurie": "HP:0002908",
+            "micaLabel": "Conjugated hyperbilirubinemia",
+            "score": 5.473553697116856,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:605479"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003155",
+            "patientPhenotypeLabel": "Elevated circulating alkaline phosphatase concentration",
+            "diseasePhenotypeCurie": "HP:0003155",
+            "diseasePhenotypeLabel": "Elevated circulating alkaline phosphatase concentration",
+            "micaCurie": "HP:0003155",
+            "micaLabel": "Elevated circulating alkaline phosphatase concentration",
+            "score": 4.441952118731706,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:605479"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001399",
+            "patientPhenotypeLabel": "Hepatic failure",
+            "diseasePhenotypeCurie": "HP:0001406",
+            "diseasePhenotypeLabel": "Intrahepatic cholestasis",
+            "micaCurie": "HP:0025155",
+            "micaLabel": "Abnormal hepatobiliary system physiology",
+            "score": 4.0803388931523905,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:605479"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003231",
+            "patientPhenotypeLabel": "Hypertyrosinemia",
+            "diseasePhenotypeCurie": "HP:0002908",
+            "diseasePhenotypeLabel": "Conjugated hyperbilirubinemia",
+            "micaCurie": "HP:0004354",
+            "micaLabel": "Abnormal circulating carboxylic acid concentration",
+            "score": 3.2369897052206036,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:605479"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0031964",
+            "patientPhenotypeLabel": "Elevated circulating alanine aminotransferase concentration",
+            "diseasePhenotypeCurie": "HP:0003155",
+            "diseasePhenotypeLabel": "Elevated circulating alkaline phosphatase concentration",
+            "micaCurie": "HP:0012379",
+            "micaLabel": "Abnormal circulating enzyme concentration or activity",
+            "score": 2.904339940868861,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:605479"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0031956",
+            "patientPhenotypeLabel": "Elevated circulating aspartate aminotransferase concentration",
+            "diseasePhenotypeCurie": "HP:0003155",
+            "diseasePhenotypeLabel": "Elevated circulating alkaline phosphatase concentration",
+            "micaCurie": "HP:0012379",
+            "micaLabel": "Abnormal circulating enzyme concentration or activity",
+            "score": 2.904339940868861,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:605479"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002240",
+            "patientPhenotypeLabel": "Hepatomegaly",
+            "diseasePhenotypeCurie": "HP:0002240",
+            "diseasePhenotypeLabel": "Hepatomegaly",
+            "micaCurie": "HP:0002240",
+            "micaLabel": "Hepatomegaly",
+            "score": 2.774805888676959,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:605479"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0006581",
+            "patientPhenotypeLabel": "Depletion of mitochondrial DNA in liver",
+            "diseasePhenotypeCurie": "HP:0002240",
+            "diseasePhenotypeLabel": "Hepatomegaly",
+            "micaCurie": "HP:0410042",
+            "micaLabel": "Abnormal liver morphology",
+            "score": 2.4946285418792455,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:605479"
+          }
+        ]
+      },
+      {
+        "rank": 23,
+        "diseaseCurie": "MONDO:0014564",
+        "diseaseLabel": "congenital bile acid synthesis defect 5",
+        "diseaseEntityId": 75850,
+        "bmaScore": 2.2304273280191804,
+        "normalizedScore": 0.246264,
+        "patientAverageScore": 1.9685898029563966,
+        "diseaseAverageScore": 2.4922648530819638,
+        "directPhenotypeCount": 16,
+        "matchedPhenotypeCount": 25,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0003645",
+            "patientPhenotypeLabel": "Prolonged partial thromboplastin time",
+            "diseasePhenotypeCurie": "HP:0003645",
+            "diseasePhenotypeLabel": "Prolonged partial thromboplastin time",
+            "micaCurie": "HP:0003645",
+            "micaLabel": "Prolonged partial thromboplastin time",
+            "score": 5.591336732773239,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:25168382"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001399",
+            "patientPhenotypeLabel": "Hepatic failure",
+            "diseasePhenotypeCurie": "HP:0001399",
+            "diseasePhenotypeLabel": "Hepatic failure",
+            "micaCurie": "HP:0001399",
+            "micaLabel": "Hepatic failure",
+            "score": 4.579735821094759,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:25168382"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002908",
+            "patientPhenotypeLabel": "Conjugated hyperbilirubinemia",
+            "diseasePhenotypeCurie": "HP:0002904",
+            "diseasePhenotypeLabel": "Hyperbilirubinemia",
+            "micaCurie": "HP:0002904",
+            "micaLabel": "Hyperbilirubinemia",
+            "score": 4.294898700775209,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:25168382"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008151",
+            "patientPhenotypeLabel": "Prolonged prothrombin time",
+            "diseasePhenotypeCurie": "HP:0003645",
+            "diseasePhenotypeLabel": "Prolonged partial thromboplastin time",
+            "micaCurie": "HP:0001928",
+            "micaLabel": "Abnormality of coagulation",
+            "score": 4.159232835622054,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:25168382"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0031964",
+            "patientPhenotypeLabel": "Elevated circulating alanine aminotransferase concentration",
+            "diseasePhenotypeCurie": "HP:0002910",
+            "diseasePhenotypeLabel": "Elevated circulating hepatic transaminase concentration",
+            "micaCurie": "HP:0002910",
+            "micaLabel": "Elevated circulating hepatic transaminase concentration",
+            "score": 3.477342809586743,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:25168382"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0031956",
+            "patientPhenotypeLabel": "Elevated circulating aspartate aminotransferase concentration",
+            "diseasePhenotypeCurie": "HP:0002910",
+            "diseasePhenotypeLabel": "Elevated circulating hepatic transaminase concentration",
+            "micaCurie": "HP:0002910",
+            "micaLabel": "Elevated circulating hepatic transaminase concentration",
+            "score": 3.477342809586743,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:25168382"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003231",
+            "patientPhenotypeLabel": "Hypertyrosinemia",
+            "diseasePhenotypeCurie": "HP:0012202",
+            "diseasePhenotypeLabel": "Increased serum bile acid concentration",
+            "micaCurie": "HP:0004354",
+            "micaLabel": "Abnormal circulating carboxylic acid concentration",
+            "score": 3.2369897052206036,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:25168382"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003155",
+            "patientPhenotypeLabel": "Elevated circulating alkaline phosphatase concentration",
+            "diseasePhenotypeCurie": "HP:0002910",
+            "diseasePhenotypeLabel": "Elevated circulating hepatic transaminase concentration",
+            "micaCurie": "HP:0012379",
+            "micaLabel": "Abnormal circulating enzyme concentration or activity",
+            "score": 2.904339940868861,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:25168382"
+          }
+        ]
+      },
+      {
+        "rank": 24,
+        "diseaseCurie": "MONDO:0008815",
+        "diseaseLabel": "argininosuccinic aciduria",
+        "diseaseEntityId": 70101,
+        "bmaScore": 2.2050000488805375,
+        "normalizedScore": 0.243456,
+        "patientAverageScore": 2.613647873288993,
+        "diseaseAverageScore": 1.7963522244720818,
+        "directPhenotypeCount": 65,
+        "matchedPhenotypeCount": 25,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002299",
+            "patientPhenotypeLabel": "Brittle hair",
+            "diseasePhenotypeCurie": "HP:0002299",
+            "diseasePhenotypeLabel": "Brittle hair",
+            "micaCurie": "HP:0002299",
+            "micaLabel": "Brittle hair",
+            "score": 5.105828916991538,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:207900"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001399",
+            "patientPhenotypeLabel": "Hepatic failure",
+            "diseasePhenotypeCurie": "HP:0001399",
+            "diseasePhenotypeLabel": "Hepatic failure",
+            "micaCurie": "HP:0001399",
+            "micaLabel": "Hepatic failure",
+            "score": 4.579735821094759,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:23"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0031956",
+            "patientPhenotypeLabel": "Elevated circulating aspartate aminotransferase concentration",
+            "diseasePhenotypeCurie": "HP:0031956",
+            "diseasePhenotypeLabel": "Elevated circulating aspartate aminotransferase concentration",
+            "micaCurie": "HP:0031956",
+            "micaLabel": "Elevated circulating aspartate aminotransferase concentration",
+            "score": 4.524473142419709,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:207900"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003231",
+            "patientPhenotypeLabel": "Hypertyrosinemia",
+            "diseasePhenotypeCurie": "HP:0005961",
+            "diseasePhenotypeLabel": "Hypoargininemia",
+            "micaCurie": "HP:0033107",
+            "micaLabel": "Abnormal circulating proteinogenic amino acid concentration",
+            "score": 4.32087418717847,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:23"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002572",
+            "patientPhenotypeLabel": "Episodic vomiting",
+            "diseasePhenotypeCurie": "HP:0002013",
+            "diseasePhenotypeLabel": "Vomiting",
+            "micaCurie": "HP:0002013",
+            "micaLabel": "Vomiting",
+            "score": 3.5356117177107187,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:23"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0031964",
+            "patientPhenotypeLabel": "Elevated circulating alanine aminotransferase concentration",
+            "diseasePhenotypeCurie": "HP:0031956",
+            "diseasePhenotypeLabel": "Elevated circulating aspartate aminotransferase concentration",
+            "micaCurie": "HP:0002910",
+            "micaLabel": "Elevated circulating hepatic transaminase concentration",
+            "score": 3.477342809586743,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:207900"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002908",
+            "patientPhenotypeLabel": "Conjugated hyperbilirubinemia",
+            "diseasePhenotypeCurie": "HP:0032491",
+            "diseasePhenotypeLabel": "Increased circulating argininosuccinic acid",
+            "micaCurie": "HP:0004354",
+            "micaLabel": "Abnormal circulating carboxylic acid concentration",
+            "score": 3.2369897052206036,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:23"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001944",
+            "patientPhenotypeLabel": "Dehydration",
+            "diseasePhenotypeCurie": "HP:0002181",
+            "diseasePhenotypeLabel": "Cerebral edema",
+            "micaCurie": "HP:0011032",
+            "micaLabel": "Abnormality of fluid regulation",
+            "score": 3.0073391803410074,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:207900"
+          }
+        ]
+      },
+      {
+        "rank": 25,
+        "diseaseCurie": "MONDO:0014194",
+        "diseaseLabel": "mitochondrial complex III deficiency nuclear type 6",
+        "diseaseEntityId": 75480,
+        "bmaScore": 2.2038531381370747,
+        "normalizedScore": 0.24333,
+        "patientAverageScore": 1.9670768433704304,
+        "diseaseAverageScore": 2.4406294329037186,
+        "directPhenotypeCount": 23,
+        "matchedPhenotypeCount": 25,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001944",
+            "patientPhenotypeLabel": "Dehydration",
+            "diseasePhenotypeCurie": "HP:0001944",
+            "diseasePhenotypeLabel": "Dehydration",
+            "micaCurie": "HP:0001944",
+            "micaLabel": "Dehydration",
+            "score": 5.031720944837816,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:23910460"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001399",
+            "patientPhenotypeLabel": "Hepatic failure",
+            "diseasePhenotypeCurie": "HP:0006554",
+            "diseasePhenotypeLabel": "Acute hepatic failure",
+            "micaCurie": "HP:0001399",
+            "micaLabel": "Hepatic failure",
+            "score": 4.579735821094759,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:23910460"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001943",
+            "patientPhenotypeLabel": "Hypoglycemia",
+            "diseasePhenotypeCurie": "HP:0001943",
+            "diseasePhenotypeLabel": "Hypoglycemia",
+            "micaCurie": "HP:0001943",
+            "micaLabel": "Hypoglycemia",
+            "score": 3.789214476509637,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:23910460"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0006581",
+            "patientPhenotypeLabel": "Depletion of mitochondrial DNA in liver",
+            "diseasePhenotypeCurie": "HP:0011924",
+            "diseasePhenotypeLabel": "Decreased activity of mitochondrial complex III",
+            "micaCurie": "HP:0003287",
+            "micaLabel": "Abnormality of mitochondrial metabolism",
+            "score": 3.734062656434557,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:23910460"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002151",
+            "patientPhenotypeLabel": "Increased circulating lactate concentration",
+            "diseasePhenotypeCurie": "HP:0002151",
+            "diseasePhenotypeLabel": "Increased circulating lactate concentration",
+            "micaCurie": "HP:0002151",
+            "micaLabel": "Increased circulating lactate concentration",
+            "score": 3.691096620551114,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:23910460"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002572",
+            "patientPhenotypeLabel": "Episodic vomiting",
+            "diseasePhenotypeCurie": "HP:0002013",
+            "diseasePhenotypeLabel": "Vomiting",
+            "micaCurie": "HP:0002013",
+            "micaLabel": "Vomiting",
+            "score": 3.5356117177107187,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:23910460"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0031964",
+            "patientPhenotypeLabel": "Elevated circulating alanine aminotransferase concentration",
+            "diseasePhenotypeCurie": "HP:0002910",
+            "diseasePhenotypeLabel": "Elevated circulating hepatic transaminase concentration",
+            "micaCurie": "HP:0002910",
+            "micaLabel": "Elevated circulating hepatic transaminase concentration",
+            "score": 3.477342809586743,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:23910460"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0031956",
+            "patientPhenotypeLabel": "Elevated circulating aspartate aminotransferase concentration",
+            "diseasePhenotypeCurie": "HP:0002910",
+            "diseasePhenotypeLabel": "Elevated circulating hepatic transaminase concentration",
+            "micaCurie": "HP:0002910",
+            "micaLabel": "Elevated circulating hepatic transaminase concentration",
+            "score": 3.477342809586743,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:23910460"
+          }
+        ]
+      }
+    ],
+    "engineSummary": {
+      "diseaseCount": 8579,
+      "phenotypeCount": 19389,
+      "sourceMode": "relationship_fallback",
+      "generatedAt": "2026-03-15T20:43:58.513Z"
+    }
+  }
+}

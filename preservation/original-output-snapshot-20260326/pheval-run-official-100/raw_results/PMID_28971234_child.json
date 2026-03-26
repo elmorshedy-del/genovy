@@ -1,0 +1,2662 @@
+{
+  "success": true,
+  "engine": "genovy-dx-sim",
+  "analysisType": "gene",
+  "input": {
+    "presentPhenotypeCuries": [
+      "HP:0001382",
+      "HP:0030840",
+      "HP:0030839",
+      "HP:0001252",
+      "HP:0002757",
+      "HP:0007973",
+      "HP:0007968",
+      "HP:0000545",
+      "HP:0012109",
+      "HP:0003508"
+    ],
+    "excludedPhenotypeCuries": [
+      "HP:0000175",
+      "HP:0000463",
+      "HP:0005280",
+      "HP:0000193",
+      "HP:0000347",
+      "HP:0000586",
+      "HP:0000201",
+      "HP:0011800",
+      "HP:0000407"
+    ],
+    "sourceFormat": "phenopacket"
+  },
+  "ranking": {
+    "queryPhenotypes": [
+      {
+        "phenotypeCurie": "HP:0001382",
+        "phenotypeLabel": "Joint hypermobility"
+      },
+      {
+        "phenotypeCurie": "HP:0030840",
+        "phenotypeLabel": "Ankle pain"
+      },
+      {
+        "phenotypeCurie": "HP:0030839",
+        "phenotypeLabel": "Knee pain"
+      },
+      {
+        "phenotypeCurie": "HP:0001252",
+        "phenotypeLabel": "Hypotonia"
+      },
+      {
+        "phenotypeCurie": "HP:0002757",
+        "phenotypeLabel": "Recurrent fractures"
+      },
+      {
+        "phenotypeCurie": "HP:0007973",
+        "phenotypeLabel": "Retinal dysplasia"
+      },
+      {
+        "phenotypeCurie": "HP:0007968",
+        "phenotypeLabel": "Remnants of the hyaloid vascular system"
+      },
+      {
+        "phenotypeCurie": "HP:0000545",
+        "phenotypeLabel": "Myopia"
+      },
+      {
+        "phenotypeCurie": "HP:0012109",
+        "phenotypeLabel": "Angle closure glaucoma"
+      },
+      {
+        "phenotypeCurie": "HP:0003508",
+        "phenotypeLabel": "Proportionate short stature"
+      }
+    ],
+    "results": [
+      {
+        "rank": 1,
+        "geneCurie": "NCBIGene:1301",
+        "geneLabel": "COL11A1",
+        "geneSymbol": "COL11A1",
+        "geneEntityId": 148508,
+        "bmaScore": 2.9843819905654545,
+        "normalizedScore": 0.329508,
+        "patientAverageScore": 5.036115019988965,
+        "phenotypeAverageScore": 0.932648961141944,
+        "directPhenotypeCount": 151,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0030840",
+            "patientPhenotypeLabel": "Ankle pain",
+            "diseasePhenotypeCurie": "HP:0030840",
+            "diseasePhenotypeLabel": "Ankle pain",
+            "micaCurie": "HP:0030840",
+            "micaLabel": "Ankle pain",
+            "score": 7.670778274453075,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:604841"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0012109",
+            "patientPhenotypeLabel": "Angle closure glaucoma",
+            "diseasePhenotypeCurie": "HP:0012109",
+            "diseasePhenotypeLabel": "Angle closure glaucoma",
+            "micaCurie": "HP:0012109",
+            "micaLabel": "Angle closure glaucoma",
+            "score": 7.447634723138865,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:604841"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0030839",
+            "patientPhenotypeLabel": "Knee pain",
+            "diseasePhenotypeCurie": "HP:0030839",
+            "diseasePhenotypeLabel": "Knee pain",
+            "micaCurie": "HP:0030839",
+            "micaLabel": "Knee pain",
+            "score": 6.418015305957707,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:604841"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007968",
+            "patientPhenotypeLabel": "Remnants of the hyaloid vascular system",
+            "diseasePhenotypeCurie": "HP:0007968",
+            "diseasePhenotypeLabel": "Remnants of the hyaloid vascular system",
+            "micaCurie": "HP:0007968",
+            "micaLabel": "Remnants of the hyaloid vascular system",
+            "score": 6.349022434470755,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:604841"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007973",
+            "patientPhenotypeLabel": "Retinal dysplasia",
+            "diseasePhenotypeCurie": "HP:0007973",
+            "diseasePhenotypeLabel": "Retinal dysplasia",
+            "micaCurie": "HP:0007973",
+            "micaLabel": "Retinal dysplasia",
+            "score": 6.1667008776768,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:604841"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002757",
+            "patientPhenotypeLabel": "Recurrent fractures",
+            "diseasePhenotypeCurie": "HP:0002757",
+            "diseasePhenotypeLabel": "Recurrent fractures",
+            "micaCurie": "HP:0002757",
+            "micaLabel": "Recurrent fractures",
+            "score": 4.626255836729651,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:604841"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003508",
+            "patientPhenotypeLabel": "Proportionate short stature",
+            "diseasePhenotypeCurie": "HP:0003508",
+            "diseasePhenotypeLabel": "Proportionate short stature",
+            "micaCurie": "HP:0003508",
+            "micaLabel": "Proportionate short stature",
+            "score": 4.073466013864628,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:604841"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000545",
+            "patientPhenotypeLabel": "Myopia",
+            "diseasePhenotypeCurie": "HP:0011003",
+            "diseasePhenotypeLabel": "High myopia",
+            "micaCurie": "HP:0000545",
+            "micaLabel": "Myopia",
+            "score": 3.085810795782503,
+            "evidenceCode": "7/7",
+            "referenceText": "OMIM:604841"
+          }
+        ]
+      },
+      {
+        "rank": 2,
+        "geneCurie": "NCBIGene:8322",
+        "geneLabel": "FZD4",
+        "geneSymbol": "FZD4",
+        "geneEntityId": 150555,
+        "bmaScore": 2.5804365449880553,
+        "normalizedScore": 0.284908,
+        "patientAverageScore": 3.0490503232029225,
+        "phenotypeAverageScore": 2.111822766773188,
+        "directPhenotypeCount": 67,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0012109",
+            "patientPhenotypeLabel": "Angle closure glaucoma",
+            "diseasePhenotypeCurie": "HP:0012109",
+            "diseasePhenotypeLabel": "Angle closure glaucoma",
+            "micaCurie": "HP:0012109",
+            "micaLabel": "Angle closure glaucoma",
+            "score": 7.447634723138865,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:91495"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007968",
+            "patientPhenotypeLabel": "Remnants of the hyaloid vascular system",
+            "diseasePhenotypeCurie": "HP:0030744",
+            "diseasePhenotypeLabel": "Hyaloid vascular remnant and retrolental mass",
+            "micaCurie": "HP:0007968",
+            "micaLabel": "Remnants of the hyaloid vascular system",
+            "score": 6.349022434470755,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:91495"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002757",
+            "patientPhenotypeLabel": "Recurrent fractures",
+            "diseasePhenotypeCurie": "HP:0002757",
+            "diseasePhenotypeLabel": "Recurrent fractures",
+            "micaCurie": "HP:0002757",
+            "micaLabel": "Recurrent fractures",
+            "score": 4.626255836729651,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:133780"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000545",
+            "patientPhenotypeLabel": "Myopia",
+            "diseasePhenotypeCurie": "HP:0000545",
+            "diseasePhenotypeLabel": "Myopia",
+            "micaCurie": "HP:0000545",
+            "micaLabel": "Myopia",
+            "score": 3.085810795782503,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:90050"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007973",
+            "patientPhenotypeLabel": "Retinal dysplasia",
+            "diseasePhenotypeCurie": "HP:0500049",
+            "diseasePhenotypeLabel": "Retinopathy of prematurity",
+            "micaCurie": "HP:0000479",
+            "micaLabel": "Abnormal retinal morphology",
+            "score": 2.3368524804376705,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:90050"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001382",
+            "patientPhenotypeLabel": "Joint hypermobility",
+            "diseasePhenotypeCurie": "HP:0002757",
+            "diseasePhenotypeLabel": "Recurrent fractures",
+            "micaCurie": "HP:0011843",
+            "micaLabel": "Abnormal musculoskeletal physiology",
+            "score": 1.6479361916528372,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:133780"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0030840",
+            "patientPhenotypeLabel": "Ankle pain",
+            "diseasePhenotypeCurie": "HP:0002757",
+            "diseasePhenotypeLabel": "Recurrent fractures",
+            "micaCurie": "HP:0011843",
+            "micaLabel": "Abnormal musculoskeletal physiology",
+            "score": 1.6479361916528372,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:133780"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0030839",
+            "patientPhenotypeLabel": "Knee pain",
+            "diseasePhenotypeCurie": "HP:0002757",
+            "diseasePhenotypeLabel": "Recurrent fractures",
+            "micaCurie": "HP:0011843",
+            "micaLabel": "Abnormal musculoskeletal physiology",
+            "score": 1.6479361916528372,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:133780"
+          }
+        ]
+      },
+      {
+        "rank": 3,
+        "geneCurie": "NCBIGene:4041",
+        "geneLabel": "LRP5",
+        "geneSymbol": "LRP5",
+        "geneEntityId": 149360,
+        "bmaScore": 2.3618597898258784,
+        "normalizedScore": 0.260775,
+        "patientAverageScore": 3.61549369979018,
+        "phenotypeAverageScore": 1.1082258798615774,
+        "directPhenotypeCount": 175,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0012109",
+            "patientPhenotypeLabel": "Angle closure glaucoma",
+            "diseasePhenotypeCurie": "HP:0012109",
+            "diseasePhenotypeLabel": "Angle closure glaucoma",
+            "micaCurie": "HP:0012109",
+            "micaLabel": "Angle closure glaucoma",
+            "score": 7.447634723138865,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:2788"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007968",
+            "patientPhenotypeLabel": "Remnants of the hyaloid vascular system",
+            "diseasePhenotypeCurie": "HP:0007968",
+            "diseasePhenotypeLabel": "Remnants of the hyaloid vascular system",
+            "micaCurie": "HP:0007968",
+            "micaLabel": "Remnants of the hyaloid vascular system",
+            "score": 6.349022434470755,
+            "evidenceCode": "3/4",
+            "referenceText": "OMIM:259770"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002757",
+            "patientPhenotypeLabel": "Recurrent fractures",
+            "diseasePhenotypeCurie": "HP:0002757",
+            "diseasePhenotypeLabel": "Recurrent fractures",
+            "micaCurie": "HP:0002757",
+            "micaLabel": "Recurrent fractures",
+            "score": 4.626255836729651,
+            "evidenceCode": "7/9",
+            "referenceText": "OMIM:259770"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000545",
+            "patientPhenotypeLabel": "Myopia",
+            "diseasePhenotypeCurie": "HP:0000545",
+            "diseasePhenotypeLabel": "Myopia",
+            "micaCurie": "HP:0000545",
+            "micaLabel": "Myopia",
+            "score": 3.085810795782503,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:90050"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001382",
+            "patientPhenotypeLabel": "Joint hypermobility",
+            "diseasePhenotypeCurie": "HP:0001382",
+            "diseasePhenotypeLabel": "Joint hypermobility",
+            "micaCurie": "HP:0001382",
+            "micaLabel": "Joint hypermobility",
+            "score": 2.968027760126119,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:2788"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0030840",
+            "patientPhenotypeLabel": "Ankle pain",
+            "diseasePhenotypeCurie": "HP:0200025",
+            "diseasePhenotypeLabel": "Mandibular pain",
+            "micaCurie": "HP:0012531",
+            "micaLabel": "Pain",
+            "score": 2.9635028655278295,
+            "evidenceCode": "1/10",
+            "referenceText": "OMIM:607634"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0030839",
+            "patientPhenotypeLabel": "Knee pain",
+            "diseasePhenotypeCurie": "HP:0200025",
+            "diseasePhenotypeLabel": "Mandibular pain",
+            "micaCurie": "HP:0012531",
+            "micaLabel": "Pain",
+            "score": 2.9635028655278295,
+            "evidenceCode": "1/10",
+            "referenceText": "OMIM:607634"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007973",
+            "patientPhenotypeLabel": "Retinal dysplasia",
+            "diseasePhenotypeCurie": "HP:0500049",
+            "diseasePhenotypeLabel": "Retinopathy of prematurity",
+            "micaCurie": "HP:0000479",
+            "micaLabel": "Abnormal retinal morphology",
+            "score": 2.3368524804376705,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:90050"
+          }
+        ]
+      },
+      {
+        "rank": 4,
+        "geneCurie": "NCBIGene:1280",
+        "geneLabel": "COL2A1",
+        "geneSymbol": "COL2A1",
+        "geneEntityId": 148489,
+        "bmaScore": 2.3358939461974972,
+        "normalizedScore": 0.257908,
+        "patientAverageScore": 3.918773913237122,
+        "phenotypeAverageScore": 0.7530139791578724,
+        "directPhenotypeCount": 360,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0030839",
+            "patientPhenotypeLabel": "Knee pain",
+            "diseasePhenotypeCurie": "HP:0030839",
+            "diseasePhenotypeLabel": "Knee pain",
+            "micaCurie": "HP:0030839",
+            "micaLabel": "Knee pain",
+            "score": 6.418015305957707,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:94068"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0030840",
+            "patientPhenotypeLabel": "Ankle pain",
+            "diseasePhenotypeCurie": "HP:0030839",
+            "diseasePhenotypeLabel": "Knee pain",
+            "micaCurie": "HP:0012514",
+            "micaLabel": "Lower limb pain",
+            "score": 5.689776805586491,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:94068"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007968",
+            "patientPhenotypeLabel": "Remnants of the hyaloid vascular system",
+            "diseasePhenotypeCurie": "HP:0031153",
+            "diseasePhenotypeLabel": "Membranous vitreous appearance",
+            "micaCurie": "HP:0004327",
+            "micaLabel": "Abnormal vitreous humor morphology",
+            "score": 5.014021367738415,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:108300"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002757",
+            "patientPhenotypeLabel": "Recurrent fractures",
+            "diseasePhenotypeCurie": "HP:0002659",
+            "diseasePhenotypeLabel": "Increased susceptibility to fractures",
+            "micaCurie": "HP:0002659",
+            "micaLabel": "Increased susceptibility to fractures",
+            "score": 4.101245577971705,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "ORPHA:93315"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003508",
+            "patientPhenotypeLabel": "Proportionate short stature",
+            "diseasePhenotypeCurie": "HP:0003510",
+            "diseasePhenotypeLabel": "Severe short stature",
+            "micaCurie": "HP:0003508",
+            "micaLabel": "Proportionate short stature",
+            "score": 4.073466013864628,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:184250"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0012109",
+            "patientPhenotypeLabel": "Angle closure glaucoma",
+            "diseasePhenotypeCurie": "HP:0000501",
+            "diseasePhenotypeLabel": "Glaucoma",
+            "micaCurie": "HP:0000501",
+            "micaLabel": "Glaucoma",
+            "score": 3.945084847216422,
+            "evidenceCode": "2/25",
+            "referenceText": "OMIM:108300"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000545",
+            "patientPhenotypeLabel": "Myopia",
+            "diseasePhenotypeCurie": "HP:0011003",
+            "diseasePhenotypeLabel": "High myopia",
+            "micaCurie": "HP:0000545",
+            "micaLabel": "Myopia",
+            "score": 3.085810795782503,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:485"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001382",
+            "patientPhenotypeLabel": "Joint hypermobility",
+            "diseasePhenotypeCurie": "HP:0002761",
+            "diseasePhenotypeLabel": "Generalized joint hypermobility",
+            "micaCurie": "HP:0001382",
+            "micaLabel": "Joint hypermobility",
+            "score": 2.968027760126119,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:85198"
+          }
+        ]
+      },
+      {
+        "rank": 5,
+        "geneCurie": "NCBIGene:4909",
+        "geneLabel": "NTF4",
+        "geneSymbol": "NTF4",
+        "geneEntityId": 149631,
+        "bmaScore": 2.3138828172610126,
+        "normalizedScore": 0.255478,
+        "patientAverageScore": 0.6826807873056033,
+        "phenotypeAverageScore": 3.945084847216422,
+        "directPhenotypeCount": 1,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0012109",
+            "patientPhenotypeLabel": "Angle closure glaucoma",
+            "diseasePhenotypeCurie": "HP:0012108",
+            "diseasePhenotypeLabel": "Open angle glaucoma",
+            "micaCurie": "HP:0000501",
+            "micaLabel": "Glaucoma",
+            "score": 3.945084847216422,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:613100"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000545",
+            "patientPhenotypeLabel": "Myopia",
+            "diseasePhenotypeCurie": "HP:0012108",
+            "diseasePhenotypeLabel": "Open angle glaucoma",
+            "micaCurie": "HP:0012373",
+            "micaLabel": "Abnormal eye physiology",
+            "score": 1.1642471093218474,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:613100"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007973",
+            "patientPhenotypeLabel": "Retinal dysplasia",
+            "diseasePhenotypeCurie": "HP:0012108",
+            "diseasePhenotypeLabel": "Open angle glaucoma",
+            "micaCurie": "HP:0000478",
+            "micaLabel": "Abnormality of the eye",
+            "score": 0.8510348727941508,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:613100"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007968",
+            "patientPhenotypeLabel": "Remnants of the hyaloid vascular system",
+            "diseasePhenotypeCurie": "HP:0012108",
+            "diseasePhenotypeLabel": "Open angle glaucoma",
+            "micaCurie": "HP:0000478",
+            "micaLabel": "Abnormality of the eye",
+            "score": 0.8510348727941508,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:613100"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001382",
+            "patientPhenotypeLabel": "Joint hypermobility",
+            "diseasePhenotypeCurie": "HP:0012108",
+            "diseasePhenotypeLabel": "Open angle glaucoma",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:613100"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0030840",
+            "patientPhenotypeLabel": "Ankle pain",
+            "diseasePhenotypeCurie": "HP:0012108",
+            "diseasePhenotypeLabel": "Open angle glaucoma",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:613100"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0030839",
+            "patientPhenotypeLabel": "Knee pain",
+            "diseasePhenotypeCurie": "HP:0012108",
+            "diseasePhenotypeLabel": "Open angle glaucoma",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:613100"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001252",
+            "patientPhenotypeLabel": "Hypotonia",
+            "diseasePhenotypeCurie": "HP:0012108",
+            "diseasePhenotypeLabel": "Open angle glaucoma",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:613100"
+          }
+        ]
+      },
+      {
+        "rank": 6,
+        "geneCurie": "NCBIGene:134430",
+        "geneLabel": "WDR36",
+        "geneSymbol": "WDR36",
+        "geneEntityId": 152885,
+        "bmaScore": 2.3138828172610126,
+        "normalizedScore": 0.255478,
+        "patientAverageScore": 0.6826807873056033,
+        "phenotypeAverageScore": 3.945084847216422,
+        "directPhenotypeCount": 1,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0012109",
+            "patientPhenotypeLabel": "Angle closure glaucoma",
+            "diseasePhenotypeCurie": "HP:0012108",
+            "diseasePhenotypeLabel": "Open angle glaucoma",
+            "micaCurie": "HP:0000501",
+            "micaLabel": "Glaucoma",
+            "score": 3.945084847216422,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:609887"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000545",
+            "patientPhenotypeLabel": "Myopia",
+            "diseasePhenotypeCurie": "HP:0012108",
+            "diseasePhenotypeLabel": "Open angle glaucoma",
+            "micaCurie": "HP:0012373",
+            "micaLabel": "Abnormal eye physiology",
+            "score": 1.1642471093218474,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:609887"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007973",
+            "patientPhenotypeLabel": "Retinal dysplasia",
+            "diseasePhenotypeCurie": "HP:0012108",
+            "diseasePhenotypeLabel": "Open angle glaucoma",
+            "micaCurie": "HP:0000478",
+            "micaLabel": "Abnormality of the eye",
+            "score": 0.8510348727941508,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:609887"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007968",
+            "patientPhenotypeLabel": "Remnants of the hyaloid vascular system",
+            "diseasePhenotypeCurie": "HP:0012108",
+            "diseasePhenotypeLabel": "Open angle glaucoma",
+            "micaCurie": "HP:0000478",
+            "micaLabel": "Abnormality of the eye",
+            "score": 0.8510348727941508,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:609887"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001382",
+            "patientPhenotypeLabel": "Joint hypermobility",
+            "diseasePhenotypeCurie": "HP:0012108",
+            "diseasePhenotypeLabel": "Open angle glaucoma",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:609887"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0030840",
+            "patientPhenotypeLabel": "Ankle pain",
+            "diseasePhenotypeCurie": "HP:0012108",
+            "diseasePhenotypeLabel": "Open angle glaucoma",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:609887"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0030839",
+            "patientPhenotypeLabel": "Knee pain",
+            "diseasePhenotypeCurie": "HP:0012108",
+            "diseasePhenotypeLabel": "Open angle glaucoma",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:609887"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001252",
+            "patientPhenotypeLabel": "Hypotonia",
+            "diseasePhenotypeCurie": "HP:0012108",
+            "diseasePhenotypeLabel": "Open angle glaucoma",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:609887"
+          }
+        ]
+      },
+      {
+        "rank": 7,
+        "geneCurie": "NCBIGene:1298",
+        "geneLabel": "COL9A2",
+        "geneSymbol": "COL9A2",
+        "geneEntityId": 148505,
+        "bmaScore": 2.21346286325744,
+        "normalizedScore": 0.244391,
+        "patientAverageScore": 3.3514286703713396,
+        "phenotypeAverageScore": 1.0754970561435402,
+        "directPhenotypeCount": 66,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0030839",
+            "patientPhenotypeLabel": "Knee pain",
+            "diseasePhenotypeCurie": "HP:0030839",
+            "diseasePhenotypeLabel": "Knee pain",
+            "micaCurie": "HP:0030839",
+            "micaLabel": "Knee pain",
+            "score": 6.418015305957707,
+            "evidenceCode": "3/4",
+            "referenceText": "OMIM:600204"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0030840",
+            "patientPhenotypeLabel": "Ankle pain",
+            "diseasePhenotypeCurie": "HP:0030839",
+            "diseasePhenotypeLabel": "Knee pain",
+            "micaCurie": "HP:0012514",
+            "micaLabel": "Lower limb pain",
+            "score": 5.689776805586491,
+            "evidenceCode": "3/4",
+            "referenceText": "OMIM:600204"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007968",
+            "patientPhenotypeLabel": "Remnants of the hyaloid vascular system",
+            "diseasePhenotypeCurie": "HP:0007773",
+            "diseasePhenotypeLabel": "Vitreoretinopathy",
+            "micaCurie": "HP:0004327",
+            "micaLabel": "Abnormal vitreous humor morphology",
+            "score": 5.014021367738415,
+            "evidenceCode": "8/8",
+            "referenceText": "OMIM:614284"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003508",
+            "patientPhenotypeLabel": "Proportionate short stature",
+            "diseasePhenotypeCurie": "HP:0003502",
+            "diseasePhenotypeLabel": "Mild short stature",
+            "micaCurie": "HP:0003508",
+            "micaLabel": "Proportionate short stature",
+            "score": 4.073466013864628,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:600204"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000545",
+            "patientPhenotypeLabel": "Myopia",
+            "diseasePhenotypeCurie": "HP:0011003",
+            "diseasePhenotypeLabel": "High myopia",
+            "micaCurie": "HP:0000545",
+            "micaLabel": "Myopia",
+            "score": 3.085810795782503,
+            "evidenceCode": "8/8",
+            "referenceText": "OMIM:614284"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001382",
+            "patientPhenotypeLabel": "Joint hypermobility",
+            "diseasePhenotypeCurie": "HP:0001382",
+            "diseasePhenotypeLabel": "Joint hypermobility",
+            "micaCurie": "HP:0001382",
+            "micaLabel": "Joint hypermobility",
+            "score": 2.968027760126119,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:250984"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007973",
+            "patientPhenotypeLabel": "Retinal dysplasia",
+            "diseasePhenotypeCurie": "HP:0007992",
+            "diseasePhenotypeLabel": "Lattice retinal degeneration",
+            "micaCurie": "HP:0000479",
+            "micaLabel": "Abnormal retinal morphology",
+            "score": 2.3368524804376705,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:250984"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002757",
+            "patientPhenotypeLabel": "Recurrent fractures",
+            "diseasePhenotypeCurie": "HP:0030839",
+            "diseasePhenotypeLabel": "Knee pain",
+            "micaCurie": "HP:0011843",
+            "micaLabel": "Abnormal musculoskeletal physiology",
+            "score": 1.6479361916528372,
+            "evidenceCode": "3/4",
+            "referenceText": "OMIM:600204"
+          }
+        ]
+      },
+      {
+        "rank": 8,
+        "geneCurie": "NCBIGene:1299",
+        "geneLabel": "COL9A3",
+        "geneSymbol": "COL9A3",
+        "geneEntityId": 148506,
+        "bmaScore": 2.2010312958664446,
+        "normalizedScore": 0.243018,
+        "patientAverageScore": 3.3514286703713396,
+        "phenotypeAverageScore": 1.0506339213615499,
+        "directPhenotypeCount": 68,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0030839",
+            "patientPhenotypeLabel": "Knee pain",
+            "diseasePhenotypeCurie": "HP:0030839",
+            "diseasePhenotypeLabel": "Knee pain",
+            "micaCurie": "HP:0030839",
+            "micaLabel": "Knee pain",
+            "score": 6.418015305957707,
+            "evidenceCode": "6/8",
+            "referenceText": "OMIM:600969"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0030840",
+            "patientPhenotypeLabel": "Ankle pain",
+            "diseasePhenotypeCurie": "HP:0030839",
+            "diseasePhenotypeLabel": "Knee pain",
+            "micaCurie": "HP:0012514",
+            "micaLabel": "Lower limb pain",
+            "score": 5.689776805586491,
+            "evidenceCode": "6/8",
+            "referenceText": "OMIM:600969"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007968",
+            "patientPhenotypeLabel": "Remnants of the hyaloid vascular system",
+            "diseasePhenotypeCurie": "HP:0007773",
+            "diseasePhenotypeLabel": "Vitreoretinopathy",
+            "micaCurie": "HP:0004327",
+            "micaLabel": "Abnormal vitreous humor morphology",
+            "score": 5.014021367738415,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:250984"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003508",
+            "patientPhenotypeLabel": "Proportionate short stature",
+            "diseasePhenotypeCurie": "HP:0003502",
+            "diseasePhenotypeLabel": "Mild short stature",
+            "micaCurie": "HP:0003508",
+            "micaLabel": "Proportionate short stature",
+            "score": 4.073466013864628,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:600969"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000545",
+            "patientPhenotypeLabel": "Myopia",
+            "diseasePhenotypeCurie": "HP:0031624",
+            "diseasePhenotypeLabel": "Moderate myopia",
+            "micaCurie": "HP:0000545",
+            "micaLabel": "Myopia",
+            "score": 3.085810795782503,
+            "evidenceCode": "1/3",
+            "referenceText": "OMIM:620022"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001382",
+            "patientPhenotypeLabel": "Joint hypermobility",
+            "diseasePhenotypeCurie": "HP:0001382",
+            "diseasePhenotypeLabel": "Joint hypermobility",
+            "micaCurie": "HP:0001382",
+            "micaLabel": "Joint hypermobility",
+            "score": 2.968027760126119,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:250984"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007973",
+            "patientPhenotypeLabel": "Retinal dysplasia",
+            "diseasePhenotypeCurie": "HP:0007992",
+            "diseasePhenotypeLabel": "Lattice retinal degeneration",
+            "micaCurie": "HP:0000479",
+            "micaLabel": "Abnormal retinal morphology",
+            "score": 2.3368524804376705,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:250984"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002757",
+            "patientPhenotypeLabel": "Recurrent fractures",
+            "diseasePhenotypeCurie": "HP:0030839",
+            "diseasePhenotypeLabel": "Knee pain",
+            "micaCurie": "HP:0011843",
+            "micaLabel": "Abnormal musculoskeletal physiology",
+            "score": 1.6479361916528372,
+            "evidenceCode": "6/8",
+            "referenceText": "OMIM:600969"
+          }
+        ]
+      },
+      {
+        "rank": 9,
+        "geneCurie": "NCBIGene:4693",
+        "geneLabel": "NDP",
+        "geneSymbol": "NDP",
+        "geneEntityId": 149555,
+        "bmaScore": 2.119639409605042,
+        "normalizedScore": 0.234031,
+        "patientAverageScore": 2.817631297077064,
+        "phenotypeAverageScore": 1.4216475221330203,
+        "directPhenotypeCount": 126,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0012109",
+            "patientPhenotypeLabel": "Angle closure glaucoma",
+            "diseasePhenotypeCurie": "HP:0012109",
+            "diseasePhenotypeLabel": "Angle closure glaucoma",
+            "micaCurie": "HP:0012109",
+            "micaLabel": "Angle closure glaucoma",
+            "score": 7.447634723138865,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:91495"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007968",
+            "patientPhenotypeLabel": "Remnants of the hyaloid vascular system",
+            "diseasePhenotypeCurie": "HP:0030744",
+            "diseasePhenotypeLabel": "Hyaloid vascular remnant and retrolental mass",
+            "micaCurie": "HP:0007968",
+            "micaLabel": "Remnants of the hyaloid vascular system",
+            "score": 6.349022434470755,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:91495"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007973",
+            "patientPhenotypeLabel": "Retinal dysplasia",
+            "diseasePhenotypeCurie": "HP:0007973",
+            "diseasePhenotypeLabel": "Retinal dysplasia",
+            "micaCurie": "HP:0007973",
+            "micaLabel": "Retinal dysplasia",
+            "score": 6.1667008776768,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:310600"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000545",
+            "patientPhenotypeLabel": "Myopia",
+            "diseasePhenotypeCurie": "HP:0011003",
+            "diseasePhenotypeLabel": "High myopia",
+            "micaCurie": "HP:0000545",
+            "micaLabel": "Myopia",
+            "score": 3.085810795782503,
+            "evidenceCode": "1/4",
+            "referenceText": "OMIM:305390"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001252",
+            "patientPhenotypeLabel": "Hypotonia",
+            "diseasePhenotypeCurie": "HP:0001252",
+            "diseasePhenotypeLabel": "Hypotonia",
+            "micaCurie": "HP:0001252",
+            "micaLabel": "Hypotonia",
+            "score": 1.5554381776895518,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:649"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003508",
+            "patientPhenotypeLabel": "Proportionate short stature",
+            "diseasePhenotypeCurie": "HP:0000823",
+            "diseasePhenotypeLabel": "Delayed puberty",
+            "micaCurie": "HP:0001510",
+            "micaLabel": "Growth delay",
+            "score": 1.5148591723795624,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:649"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001382",
+            "patientPhenotypeLabel": "Joint hypermobility",
+            "diseasePhenotypeCurie": "HP:0010766",
+            "diseasePhenotypeLabel": "Ectopic calcification",
+            "micaCurie": "HP:0033127",
+            "micaLabel": "Abnormality of the musculoskeletal system",
+            "score": 0.51421169740815,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "ORPHA:91495"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0030840",
+            "patientPhenotypeLabel": "Ankle pain",
+            "diseasePhenotypeCurie": "HP:0010766",
+            "diseasePhenotypeLabel": "Ectopic calcification",
+            "micaCurie": "HP:0033127",
+            "micaLabel": "Abnormality of the musculoskeletal system",
+            "score": 0.51421169740815,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "ORPHA:91495"
+          }
+        ]
+      },
+      {
+        "rank": 10,
+        "geneCurie": "NCBIGene:1297",
+        "geneLabel": "COL9A1",
+        "geneSymbol": "COL9A1",
+        "geneEntityId": 148504,
+        "bmaScore": 2.072565730749146,
+        "normalizedScore": 0.228834,
+        "patientAverageScore": 3.129970974831979,
+        "phenotypeAverageScore": 1.015160486666313,
+        "directPhenotypeCount": 71,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0030839",
+            "patientPhenotypeLabel": "Knee pain",
+            "diseasePhenotypeCurie": "HP:0030839",
+            "diseasePhenotypeLabel": "Knee pain",
+            "micaCurie": "HP:0030839",
+            "micaLabel": "Knee pain",
+            "score": 6.418015305957707,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:614135"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0030840",
+            "patientPhenotypeLabel": "Ankle pain",
+            "diseasePhenotypeCurie": "HP:0030839",
+            "diseasePhenotypeLabel": "Knee pain",
+            "micaCurie": "HP:0012514",
+            "micaLabel": "Lower limb pain",
+            "score": 5.689776805586491,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:614135"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007968",
+            "patientPhenotypeLabel": "Remnants of the hyaloid vascular system",
+            "diseasePhenotypeCurie": "HP:0007964",
+            "diseasePhenotypeLabel": "Degenerative vitreoretinopathy",
+            "micaCurie": "HP:0004327",
+            "micaLabel": "Abnormal vitreous humor morphology",
+            "score": 5.014021367738415,
+            "evidenceCode": "4/4",
+            "referenceText": "OMIM:614134"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000545",
+            "patientPhenotypeLabel": "Myopia",
+            "diseasePhenotypeCurie": "HP:0011003",
+            "diseasePhenotypeLabel": "High myopia",
+            "micaCurie": "HP:0000545",
+            "micaLabel": "Myopia",
+            "score": 3.085810795782503,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:250984"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001382",
+            "patientPhenotypeLabel": "Joint hypermobility",
+            "diseasePhenotypeCurie": "HP:0001382",
+            "diseasePhenotypeLabel": "Joint hypermobility",
+            "micaCurie": "HP:0001382",
+            "micaLabel": "Joint hypermobility",
+            "score": 2.968027760126119,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:250984"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007973",
+            "patientPhenotypeLabel": "Retinal dysplasia",
+            "diseasePhenotypeCurie": "HP:0012230",
+            "diseasePhenotypeLabel": "Rhegmatogenous retinal detachment",
+            "micaCurie": "HP:0000479",
+            "micaLabel": "Abnormal retinal morphology",
+            "score": 2.3368524804376705,
+            "evidenceCode": "3/3",
+            "referenceText": "OMIM:614134"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003508",
+            "patientPhenotypeLabel": "Proportionate short stature",
+            "diseasePhenotypeCurie": "HP:0004322",
+            "diseasePhenotypeLabel": "Short stature",
+            "micaCurie": "HP:0004322",
+            "micaLabel": "Short stature",
+            "score": 1.858889058471022,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:166002"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002757",
+            "patientPhenotypeLabel": "Recurrent fractures",
+            "diseasePhenotypeCurie": "HP:0030839",
+            "diseasePhenotypeLabel": "Knee pain",
+            "micaCurie": "HP:0011843",
+            "micaLabel": "Abnormal musculoskeletal physiology",
+            "score": 1.6479361916528372,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:614135"
+          }
+        ]
+      },
+      {
+        "rank": 11,
+        "geneCurie": "NCBIGene:220202",
+        "geneLabel": "ATOH7",
+        "geneSymbol": "ATOH7",
+        "geneEntityId": 153064,
+        "bmaScore": 1.985976921421095,
+        "normalizedScore": 0.219274,
+        "patientAverageScore": 1.9871382929564796,
+        "phenotypeAverageScore": 1.9848155498857105,
+        "directPhenotypeCount": 35,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0012109",
+            "patientPhenotypeLabel": "Angle closure glaucoma",
+            "diseasePhenotypeCurie": "HP:0012109",
+            "diseasePhenotypeLabel": "Angle closure glaucoma",
+            "micaCurie": "HP:0012109",
+            "micaLabel": "Angle closure glaucoma",
+            "score": 7.447634723138865,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:91495"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007968",
+            "patientPhenotypeLabel": "Remnants of the hyaloid vascular system",
+            "diseasePhenotypeCurie": "HP:0030744",
+            "diseasePhenotypeLabel": "Hyaloid vascular remnant and retrolental mass",
+            "micaCurie": "HP:0007968",
+            "micaLabel": "Remnants of the hyaloid vascular system",
+            "score": 6.349022434470755,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:91495"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007973",
+            "patientPhenotypeLabel": "Retinal dysplasia",
+            "diseasePhenotypeCurie": "HP:0008052",
+            "diseasePhenotypeLabel": "Retinal fold",
+            "micaCurie": "HP:0000479",
+            "micaLabel": "Abnormal retinal morphology",
+            "score": 2.3368524804376705,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:91495"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000545",
+            "patientPhenotypeLabel": "Myopia",
+            "diseasePhenotypeCurie": "HP:0032287",
+            "diseasePhenotypeLabel": "Ultra-low vision with no light perception",
+            "micaCurie": "HP:0012373",
+            "micaLabel": "Abnormal eye physiology",
+            "score": 1.1642471093218474,
+            "evidenceCode": "31/31",
+            "referenceText": "OMIM:221900"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001382",
+            "patientPhenotypeLabel": "Joint hypermobility",
+            "diseasePhenotypeCurie": "HP:0010766",
+            "diseasePhenotypeLabel": "Ectopic calcification",
+            "micaCurie": "HP:0033127",
+            "micaLabel": "Abnormality of the musculoskeletal system",
+            "score": 0.51421169740815,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "ORPHA:91495"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0030840",
+            "patientPhenotypeLabel": "Ankle pain",
+            "diseasePhenotypeCurie": "HP:0010766",
+            "diseasePhenotypeLabel": "Ectopic calcification",
+            "micaCurie": "HP:0033127",
+            "micaLabel": "Abnormality of the musculoskeletal system",
+            "score": 0.51421169740815,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "ORPHA:91495"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0030839",
+            "patientPhenotypeLabel": "Knee pain",
+            "diseasePhenotypeCurie": "HP:0010766",
+            "diseasePhenotypeLabel": "Ectopic calcification",
+            "micaCurie": "HP:0033127",
+            "micaLabel": "Abnormality of the musculoskeletal system",
+            "score": 0.51421169740815,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "ORPHA:91495"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001252",
+            "patientPhenotypeLabel": "Hypotonia",
+            "diseasePhenotypeCurie": "HP:0010766",
+            "diseasePhenotypeLabel": "Ectopic calcification",
+            "micaCurie": "HP:0033127",
+            "micaLabel": "Abnormality of the musculoskeletal system",
+            "score": 0.51421169740815,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "ORPHA:91495"
+          }
+        ]
+      },
+      {
+        "rank": 12,
+        "geneCurie": "NCBIGene:729920",
+        "geneLabel": "CRPPA",
+        "geneSymbol": "CRPPA",
+        "geneEntityId": 153298,
+        "bmaScore": 1.8615105892762909,
+        "normalizedScore": 0.205531,
+        "patientAverageScore": 3.053995281543805,
+        "phenotypeAverageScore": 0.6690258970087768,
+        "directPhenotypeCount": 128,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0007968",
+            "patientPhenotypeLabel": "Remnants of the hyaloid vascular system",
+            "diseasePhenotypeCurie": "HP:0007968",
+            "diseasePhenotypeLabel": "Remnants of the hyaloid vascular system",
+            "micaCurie": "HP:0007968",
+            "micaLabel": "Remnants of the hyaloid vascular system",
+            "score": 6.349022434470755,
+            "evidenceCode": "1/6",
+            "referenceText": "OMIM:614643"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007973",
+            "patientPhenotypeLabel": "Retinal dysplasia",
+            "diseasePhenotypeCurie": "HP:0007973",
+            "diseasePhenotypeLabel": "Retinal dysplasia",
+            "micaCurie": "HP:0007973",
+            "micaLabel": "Retinal dysplasia",
+            "score": 6.1667008776768,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:614643"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0012109",
+            "patientPhenotypeLabel": "Angle closure glaucoma",
+            "diseasePhenotypeCurie": "HP:0000501",
+            "diseasePhenotypeLabel": "Glaucoma",
+            "micaCurie": "HP:0000501",
+            "micaLabel": "Glaucoma",
+            "score": 3.945084847216422,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:899"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000545",
+            "patientPhenotypeLabel": "Myopia",
+            "diseasePhenotypeCurie": "HP:0000545",
+            "diseasePhenotypeLabel": "Myopia",
+            "micaCurie": "HP:0000545",
+            "micaLabel": "Myopia",
+            "score": 3.085810795782503,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:588"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0030840",
+            "patientPhenotypeLabel": "Ankle pain",
+            "diseasePhenotypeCurie": "HP:0003326",
+            "diseasePhenotypeLabel": "Myalgia",
+            "micaCurie": "HP:0012531",
+            "micaLabel": "Pain",
+            "score": 2.9635028655278295,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:352479"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0030839",
+            "patientPhenotypeLabel": "Knee pain",
+            "diseasePhenotypeCurie": "HP:0003326",
+            "diseasePhenotypeLabel": "Myalgia",
+            "micaCurie": "HP:0012531",
+            "micaLabel": "Pain",
+            "score": 2.9635028655278295,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:352479"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001382",
+            "patientPhenotypeLabel": "Joint hypermobility",
+            "diseasePhenotypeCurie": "HP:0001771",
+            "diseasePhenotypeLabel": "Achilles tendon contracture",
+            "micaCurie": "HP:0011729",
+            "micaLabel": "Abnormality of joint mobility",
+            "score": 1.8603860647386155,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:370980"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002757",
+            "patientPhenotypeLabel": "Recurrent fractures",
+            "diseasePhenotypeCurie": "HP:0001771",
+            "diseasePhenotypeLabel": "Achilles tendon contracture",
+            "micaCurie": "HP:0011843",
+            "micaLabel": "Abnormal musculoskeletal physiology",
+            "score": 1.6479361916528372,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:370980"
+          }
+        ]
+      },
+      {
+        "rank": 13,
+        "geneCurie": "NCBIGene:11107",
+        "geneLabel": "PRDM5",
+        "geneSymbol": "PRDM5",
+        "geneEntityId": 151170,
+        "bmaScore": 1.8591609906587878,
+        "normalizedScore": 0.205272,
+        "patientAverageScore": 2.634560196243613,
+        "phenotypeAverageScore": 1.0837617850739627,
+        "directPhenotypeCount": 45,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002757",
+            "patientPhenotypeLabel": "Recurrent fractures",
+            "diseasePhenotypeCurie": "HP:0002757",
+            "diseasePhenotypeLabel": "Recurrent fractures",
+            "micaCurie": "HP:0002757",
+            "micaLabel": "Recurrent fractures",
+            "score": 4.626255836729651,
+            "evidenceCode": "2/8",
+            "referenceText": "OMIM:614170"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0012109",
+            "patientPhenotypeLabel": "Angle closure glaucoma",
+            "diseasePhenotypeCurie": "HP:0000501",
+            "diseasePhenotypeLabel": "Glaucoma",
+            "micaCurie": "HP:0000501",
+            "micaLabel": "Glaucoma",
+            "score": 3.945084847216422,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:90354"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000545",
+            "patientPhenotypeLabel": "Myopia",
+            "diseasePhenotypeCurie": "HP:0011003",
+            "diseasePhenotypeLabel": "High myopia",
+            "micaCurie": "HP:0000545",
+            "micaLabel": "Myopia",
+            "score": 3.085810795782503,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:90354"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001382",
+            "patientPhenotypeLabel": "Joint hypermobility",
+            "diseasePhenotypeCurie": "HP:0001382",
+            "diseasePhenotypeLabel": "Joint hypermobility",
+            "micaCurie": "HP:0001382",
+            "micaLabel": "Joint hypermobility",
+            "score": 2.968027760126119,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:90354"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0030840",
+            "patientPhenotypeLabel": "Ankle pain",
+            "diseasePhenotypeCurie": "HP:0003326",
+            "diseasePhenotypeLabel": "Myalgia",
+            "micaCurie": "HP:0012531",
+            "micaLabel": "Pain",
+            "score": 2.9635028655278295,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:90354"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0030839",
+            "patientPhenotypeLabel": "Knee pain",
+            "diseasePhenotypeCurie": "HP:0003326",
+            "diseasePhenotypeLabel": "Myalgia",
+            "micaCurie": "HP:0012531",
+            "micaLabel": "Pain",
+            "score": 2.9635028655278295,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:90354"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007973",
+            "patientPhenotypeLabel": "Retinal dysplasia",
+            "diseasePhenotypeCurie": "HP:0000541",
+            "diseasePhenotypeLabel": "Retinal detachment",
+            "micaCurie": "HP:0000479",
+            "micaLabel": "Abnormal retinal morphology",
+            "score": 2.3368524804376705,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:90354"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007968",
+            "patientPhenotypeLabel": "Remnants of the hyaloid vascular system",
+            "diseasePhenotypeCurie": "HP:0000541",
+            "diseasePhenotypeLabel": "Retinal detachment",
+            "micaCurie": "HP:0004329",
+            "micaLabel": "Abnormal posterior eye segment morphology",
+            "score": 1.898558638243645,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:90354"
+          }
+        ]
+      },
+      {
+        "rank": 14,
+        "geneCurie": "NCBIGene:1462",
+        "geneLabel": "VCAN",
+        "geneSymbol": "VCAN",
+        "geneEntityId": 148565,
+        "bmaScore": 1.8446796801343757,
+        "normalizedScore": 0.203673,
+        "patientAverageScore": 1.4397175662104476,
+        "phenotypeAverageScore": 2.2496417940583036,
+        "directPhenotypeCount": 21,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0007968",
+            "patientPhenotypeLabel": "Remnants of the hyaloid vascular system",
+            "diseasePhenotypeCurie": "HP:0030663",
+            "diseasePhenotypeLabel": "Optically empty vitreous",
+            "micaCurie": "HP:0004327",
+            "micaLabel": "Abnormal vitreous humor morphology",
+            "score": 5.014021367738415,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:898"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0012109",
+            "patientPhenotypeLabel": "Angle closure glaucoma",
+            "diseasePhenotypeCurie": "HP:0000501",
+            "diseasePhenotypeLabel": "Glaucoma",
+            "micaCurie": "HP:0000501",
+            "micaLabel": "Glaucoma",
+            "score": 3.945084847216422,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:143200"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000545",
+            "patientPhenotypeLabel": "Myopia",
+            "diseasePhenotypeCurie": "HP:0000545",
+            "diseasePhenotypeLabel": "Myopia",
+            "micaCurie": "HP:0000545",
+            "micaLabel": "Myopia",
+            "score": 3.085810795782503,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:143200"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007973",
+            "patientPhenotypeLabel": "Retinal dysplasia",
+            "diseasePhenotypeCurie": "HP:0025007",
+            "diseasePhenotypeLabel": "Ectopic fovea",
+            "micaCurie": "HP:0000479",
+            "micaLabel": "Abnormal retinal morphology",
+            "score": 2.3368524804376705,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:898"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001382",
+            "patientPhenotypeLabel": "Joint hypermobility",
+            "diseasePhenotypeCurie": "HP:0030663",
+            "diseasePhenotypeLabel": "Optically empty vitreous",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:898"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0030840",
+            "patientPhenotypeLabel": "Ankle pain",
+            "diseasePhenotypeCurie": "HP:0030663",
+            "diseasePhenotypeLabel": "Optically empty vitreous",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:898"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0030839",
+            "patientPhenotypeLabel": "Knee pain",
+            "diseasePhenotypeCurie": "HP:0030663",
+            "diseasePhenotypeLabel": "Optically empty vitreous",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:898"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001252",
+            "patientPhenotypeLabel": "Hypotonia",
+            "diseasePhenotypeCurie": "HP:0030663",
+            "diseasePhenotypeLabel": "Optically empty vitreous",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:898"
+          }
+        ]
+      },
+      {
+        "rank": 15,
+        "geneCurie": "NCBIGene:26022",
+        "geneLabel": "TMEM98",
+        "geneSymbol": "TMEM98",
+        "geneEntityId": 151474,
+        "bmaScore": 1.8311638093602598,
+        "normalizedScore": 0.202181,
+        "patientAverageScore": 1.4348644662253294,
+        "phenotypeAverageScore": 2.2274631524951904,
+        "directPhenotypeCount": 12,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0012109",
+            "patientPhenotypeLabel": "Angle closure glaucoma",
+            "diseasePhenotypeCurie": "HP:0012109",
+            "diseasePhenotypeLabel": "Angle closure glaucoma",
+            "micaCurie": "HP:0012109",
+            "micaLabel": "Angle closure glaucoma",
+            "score": 7.447634723138865,
+            "evidenceCode": "3/9",
+            "referenceText": "OMIM:615972"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000545",
+            "patientPhenotypeLabel": "Myopia",
+            "diseasePhenotypeCurie": "HP:0008499",
+            "diseasePhenotypeLabel": "High hypermetropia",
+            "micaCurie": "HP:0000539",
+            "micaLabel": "Abnormality of refraction",
+            "score": 2.650192649503651,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:35612"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007973",
+            "patientPhenotypeLabel": "Retinal dysplasia",
+            "diseasePhenotypeCurie": "HP:0012426",
+            "diseasePhenotypeLabel": "Optic disc drusen",
+            "micaCurie": "HP:0000479",
+            "micaLabel": "Abnormal retinal morphology",
+            "score": 2.3368524804376705,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "OMIM:615972"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007968",
+            "patientPhenotypeLabel": "Remnants of the hyaloid vascular system",
+            "diseasePhenotypeCurie": "HP:0012426",
+            "diseasePhenotypeLabel": "Optic disc drusen",
+            "micaCurie": "HP:0004329",
+            "micaLabel": "Abnormal posterior eye segment morphology",
+            "score": 1.898558638243645,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "OMIM:615972"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001382",
+            "patientPhenotypeLabel": "Joint hypermobility",
+            "diseasePhenotypeCurie": "HP:0012426",
+            "diseasePhenotypeLabel": "Optic disc drusen",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "OMIM:615972"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0030840",
+            "patientPhenotypeLabel": "Ankle pain",
+            "diseasePhenotypeCurie": "HP:0012426",
+            "diseasePhenotypeLabel": "Optic disc drusen",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "OMIM:615972"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0030839",
+            "patientPhenotypeLabel": "Knee pain",
+            "diseasePhenotypeCurie": "HP:0012426",
+            "diseasePhenotypeLabel": "Optic disc drusen",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "OMIM:615972"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001252",
+            "patientPhenotypeLabel": "Hypotonia",
+            "diseasePhenotypeCurie": "HP:0012426",
+            "diseasePhenotypeLabel": "Optic disc drusen",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "OMIM:615972"
+          }
+        ]
+      },
+      {
+        "rank": 16,
+        "geneCurie": "NCBIGene:84627",
+        "geneLabel": "ZNF469",
+        "geneSymbol": "ZNF469",
+        "geneEntityId": 152606,
+        "bmaScore": 1.829663220397589,
+        "normalizedScore": 0.202015,
+        "patientAverageScore": 2.759577780868162,
+        "phenotypeAverageScore": 0.8997486599270166,
+        "directPhenotypeCount": 49,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002757",
+            "patientPhenotypeLabel": "Recurrent fractures",
+            "diseasePhenotypeCurie": "HP:0002659",
+            "diseasePhenotypeLabel": "Increased susceptibility to fractures",
+            "micaCurie": "HP:0002659",
+            "micaLabel": "Increased susceptibility to fractures",
+            "score": 4.101245577971705,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:90354"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0012109",
+            "patientPhenotypeLabel": "Angle closure glaucoma",
+            "diseasePhenotypeCurie": "HP:0000501",
+            "diseasePhenotypeLabel": "Glaucoma",
+            "micaCurie": "HP:0000501",
+            "micaLabel": "Glaucoma",
+            "score": 3.945084847216422,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:90354"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000545",
+            "patientPhenotypeLabel": "Myopia",
+            "diseasePhenotypeCurie": "HP:0011003",
+            "diseasePhenotypeLabel": "High myopia",
+            "micaCurie": "HP:0000545",
+            "micaLabel": "Myopia",
+            "score": 3.085810795782503,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:90354"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001382",
+            "patientPhenotypeLabel": "Joint hypermobility",
+            "diseasePhenotypeCurie": "HP:0001382",
+            "diseasePhenotypeLabel": "Joint hypermobility",
+            "micaCurie": "HP:0001382",
+            "micaLabel": "Joint hypermobility",
+            "score": 2.968027760126119,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:90354"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0030840",
+            "patientPhenotypeLabel": "Ankle pain",
+            "diseasePhenotypeCurie": "HP:0003326",
+            "diseasePhenotypeLabel": "Myalgia",
+            "micaCurie": "HP:0012531",
+            "micaLabel": "Pain",
+            "score": 2.9635028655278295,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:90354"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0030839",
+            "patientPhenotypeLabel": "Knee pain",
+            "diseasePhenotypeCurie": "HP:0003326",
+            "diseasePhenotypeLabel": "Myalgia",
+            "micaCurie": "HP:0012531",
+            "micaLabel": "Pain",
+            "score": 2.9635028655278295,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:90354"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007973",
+            "patientPhenotypeLabel": "Retinal dysplasia",
+            "diseasePhenotypeCurie": "HP:0000541",
+            "diseasePhenotypeLabel": "Retinal detachment",
+            "micaCurie": "HP:0000479",
+            "micaLabel": "Abnormal retinal morphology",
+            "score": 2.3368524804376705,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:90354"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007968",
+            "patientPhenotypeLabel": "Remnants of the hyaloid vascular system",
+            "diseasePhenotypeCurie": "HP:0000541",
+            "diseasePhenotypeLabel": "Retinal detachment",
+            "micaCurie": "HP:0004329",
+            "micaLabel": "Abnormal posterior eye segment morphology",
+            "score": 1.898558638243645,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:90354"
+          }
+        ]
+      },
+      {
+        "rank": 17,
+        "geneCurie": "NCBIGene:80781",
+        "geneLabel": "COL18A1",
+        "geneSymbol": "COL18A1",
+        "geneEntityId": 152478,
+        "bmaScore": 1.799099700031894,
+        "normalizedScore": 0.19864,
+        "patientAverageScore": 2.6312935094745145,
+        "phenotypeAverageScore": 0.9669058905892737,
+        "directPhenotypeCount": 75,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0012109",
+            "patientPhenotypeLabel": "Angle closure glaucoma",
+            "diseasePhenotypeCurie": "HP:0012109",
+            "diseasePhenotypeLabel": "Angle closure glaucoma",
+            "micaCurie": "HP:0012109",
+            "micaLabel": "Angle closure glaucoma",
+            "score": 7.447634723138865,
+            "evidenceCode": "2/10",
+            "referenceText": "OMIM:618880"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007968",
+            "patientPhenotypeLabel": "Remnants of the hyaloid vascular system",
+            "diseasePhenotypeCurie": "HP:0007773",
+            "diseasePhenotypeLabel": "Vitreoretinopathy",
+            "micaCurie": "HP:0004327",
+            "micaLabel": "Abnormal vitreous humor morphology",
+            "score": 5.014021367738415,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:1571"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000545",
+            "patientPhenotypeLabel": "Myopia",
+            "diseasePhenotypeCurie": "HP:0011003",
+            "diseasePhenotypeLabel": "High myopia",
+            "micaCurie": "HP:0000545",
+            "micaLabel": "Myopia",
+            "score": 3.085810795782503,
+            "evidenceCode": "30/31",
+            "referenceText": "OMIM:267750"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001382",
+            "patientPhenotypeLabel": "Joint hypermobility",
+            "diseasePhenotypeCurie": "HP:0001382",
+            "diseasePhenotypeLabel": "Joint hypermobility",
+            "micaCurie": "HP:0001382",
+            "micaLabel": "Joint hypermobility",
+            "score": 2.968027760126119,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1571"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007973",
+            "patientPhenotypeLabel": "Retinal dysplasia",
+            "diseasePhenotypeCurie": "HP:0007843",
+            "diseasePhenotypeLabel": "Attenuation of retinal blood vessels",
+            "micaCurie": "HP:0000479",
+            "micaLabel": "Abnormal retinal morphology",
+            "score": 2.3368524804376705,
+            "evidenceCode": "4/5",
+            "referenceText": "OMIM:267750"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0030840",
+            "patientPhenotypeLabel": "Ankle pain",
+            "diseasePhenotypeCurie": "HP:0001382",
+            "diseasePhenotypeLabel": "Joint hypermobility",
+            "micaCurie": "HP:0011843",
+            "micaLabel": "Abnormal musculoskeletal physiology",
+            "score": 1.6479361916528372,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1571"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0030839",
+            "patientPhenotypeLabel": "Knee pain",
+            "diseasePhenotypeCurie": "HP:0001382",
+            "diseasePhenotypeLabel": "Joint hypermobility",
+            "micaCurie": "HP:0011843",
+            "micaLabel": "Abnormal musculoskeletal physiology",
+            "score": 1.6479361916528372,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1571"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002757",
+            "patientPhenotypeLabel": "Recurrent fractures",
+            "diseasePhenotypeCurie": "HP:0001382",
+            "diseasePhenotypeLabel": "Joint hypermobility",
+            "micaCurie": "HP:0011843",
+            "micaLabel": "Abnormal musculoskeletal physiology",
+            "score": 1.6479361916528372,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1571"
+          }
+        ]
+      },
+      {
+        "rank": 18,
+        "geneCurie": "NCBIGene:84695",
+        "geneLabel": "LOXL3",
+        "geneSymbol": "LOXL3",
+        "geneEntityId": 152619,
+        "bmaScore": 1.7845202469421348,
+        "normalizedScore": 0.197031,
+        "patientAverageScore": 2.2660680828678115,
+        "phenotypeAverageScore": 1.3029724110164582,
+        "directPhenotypeCount": 25,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0007968",
+            "patientPhenotypeLabel": "Remnants of the hyaloid vascular system",
+            "diseasePhenotypeCurie": "HP:0007773",
+            "diseasePhenotypeLabel": "Vitreoretinopathy",
+            "micaCurie": "HP:0004327",
+            "micaLabel": "Abnormal vitreous humor morphology",
+            "score": 5.014021367738415,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:250984"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000545",
+            "patientPhenotypeLabel": "Myopia",
+            "diseasePhenotypeCurie": "HP:0011003",
+            "diseasePhenotypeLabel": "High myopia",
+            "micaCurie": "HP:0000545",
+            "micaLabel": "Myopia",
+            "score": 3.085810795782503,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:250984"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001382",
+            "patientPhenotypeLabel": "Joint hypermobility",
+            "diseasePhenotypeCurie": "HP:0001382",
+            "diseasePhenotypeLabel": "Joint hypermobility",
+            "micaCurie": "HP:0001382",
+            "micaLabel": "Joint hypermobility",
+            "score": 2.968027760126119,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:250984"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0030840",
+            "patientPhenotypeLabel": "Ankle pain",
+            "diseasePhenotypeCurie": "HP:0002829",
+            "diseasePhenotypeLabel": "Arthralgia",
+            "micaCurie": "HP:0012531",
+            "micaLabel": "Pain",
+            "score": 2.9635028655278295,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:250984"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0030839",
+            "patientPhenotypeLabel": "Knee pain",
+            "diseasePhenotypeCurie": "HP:0002829",
+            "diseasePhenotypeLabel": "Arthralgia",
+            "micaCurie": "HP:0012531",
+            "micaLabel": "Pain",
+            "score": 2.9635028655278295,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:250984"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007973",
+            "patientPhenotypeLabel": "Retinal dysplasia",
+            "diseasePhenotypeCurie": "HP:0007992",
+            "diseasePhenotypeLabel": "Lattice retinal degeneration",
+            "micaCurie": "HP:0000479",
+            "micaLabel": "Abnormal retinal morphology",
+            "score": 2.3368524804376705,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:250984"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002757",
+            "patientPhenotypeLabel": "Recurrent fractures",
+            "diseasePhenotypeCurie": "HP:0001382",
+            "diseasePhenotypeLabel": "Joint hypermobility",
+            "micaCurie": "HP:0011843",
+            "micaLabel": "Abnormal musculoskeletal physiology",
+            "score": 1.6479361916528372,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:250984"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0012109",
+            "patientPhenotypeLabel": "Angle closure glaucoma",
+            "diseasePhenotypeCurie": "HP:0011003",
+            "diseasePhenotypeLabel": "High myopia",
+            "micaCurie": "HP:0012373",
+            "micaLabel": "Abnormal eye physiology",
+            "score": 1.1642471093218474,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:250984"
+          }
+        ]
+      },
+      {
+        "rank": 19,
+        "geneCurie": "NCBIGene:3373",
+        "geneLabel": "HYAL1",
+        "geneSymbol": "HYAL1",
+        "geneEntityId": 149140,
+        "bmaScore": 1.7686698430348726,
+        "normalizedScore": 0.195281,
+        "patientAverageScore": 2.1088129068688546,
+        "phenotypeAverageScore": 1.4285267792008904,
+        "directPhenotypeCount": 22,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0030840",
+            "patientPhenotypeLabel": "Ankle pain",
+            "diseasePhenotypeCurie": "HP:0030840",
+            "diseasePhenotypeLabel": "Ankle pain",
+            "micaCurie": "HP:0030840",
+            "micaLabel": "Ankle pain",
+            "score": 7.670778274453075,
+            "evidenceCode": "1/3",
+            "referenceText": "OMIM:601492"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0030839",
+            "patientPhenotypeLabel": "Knee pain",
+            "diseasePhenotypeCurie": "HP:0030839",
+            "diseasePhenotypeLabel": "Knee pain",
+            "micaCurie": "HP:0030839",
+            "micaLabel": "Knee pain",
+            "score": 6.418015305957707,
+            "evidenceCode": "3/3",
+            "referenceText": "OMIM:601492"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001382",
+            "patientPhenotypeLabel": "Joint hypermobility",
+            "diseasePhenotypeCurie": "HP:0010485",
+            "diseasePhenotypeLabel": "Hyperextensibility at elbow",
+            "micaCurie": "HP:0001382",
+            "micaLabel": "Joint hypermobility",
+            "score": 2.968027760126119,
+            "evidenceCode": "1/3",
+            "referenceText": "OMIM:601492"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003508",
+            "patientPhenotypeLabel": "Proportionate short stature",
+            "diseasePhenotypeCurie": "HP:0004322",
+            "diseasePhenotypeLabel": "Short stature",
+            "micaCurie": "HP:0004322",
+            "micaLabel": "Short stature",
+            "score": 1.858889058471022,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:601492"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002757",
+            "patientPhenotypeLabel": "Recurrent fractures",
+            "diseasePhenotypeCurie": "HP:0030840",
+            "diseasePhenotypeLabel": "Ankle pain",
+            "micaCurie": "HP:0011843",
+            "micaLabel": "Abnormal musculoskeletal physiology",
+            "score": 1.6479361916528372,
+            "evidenceCode": "1/3",
+            "referenceText": "OMIM:601492"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001252",
+            "patientPhenotypeLabel": "Hypotonia",
+            "diseasePhenotypeCurie": "HP:0100769",
+            "diseasePhenotypeLabel": "Synovitis",
+            "micaCurie": "HP:0033127",
+            "micaLabel": "Abnormality of the musculoskeletal system",
+            "score": 0.51421169740815,
+            "evidenceCode": "3/3",
+            "referenceText": "OMIM:601492"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007973",
+            "patientPhenotypeLabel": "Retinal dysplasia",
+            "diseasePhenotypeCurie": "HP:6000969",
+            "diseasePhenotypeLabel": "Diminished circulating hyaluronidase activity",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:601492"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007968",
+            "patientPhenotypeLabel": "Remnants of the hyaloid vascular system",
+            "diseasePhenotypeCurie": "HP:6000969",
+            "diseasePhenotypeLabel": "Diminished circulating hyaluronidase activity",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:601492"
+          }
+        ]
+      },
+      {
+        "rank": 20,
+        "geneCurie": "NCBIGene:1499",
+        "geneLabel": "CTNNB1",
+        "geneSymbol": "CTNNB1",
+        "geneEntityId": 148580,
+        "bmaScore": 1.7595230397537678,
+        "normalizedScore": 0.194271,
+        "patientAverageScore": 2.91184733186006,
+        "phenotypeAverageScore": 0.6071987476474753,
+        "directPhenotypeCount": 256,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0007968",
+            "patientPhenotypeLabel": "Remnants of the hyaloid vascular system",
+            "diseasePhenotypeCurie": "HP:0100832",
+            "diseasePhenotypeLabel": "Vitreous floaters",
+            "micaCurie": "HP:0004327",
+            "micaLabel": "Abnormal vitreous humor morphology",
+            "score": 5.014021367738415,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:891"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002757",
+            "patientPhenotypeLabel": "Recurrent fractures",
+            "diseasePhenotypeCurie": "HP:0002659",
+            "diseasePhenotypeLabel": "Increased susceptibility to fractures",
+            "micaCurie": "HP:0002659",
+            "micaLabel": "Increased susceptibility to fractures",
+            "score": 4.101245577971705,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:54595"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003508",
+            "patientPhenotypeLabel": "Proportionate short stature",
+            "diseasePhenotypeCurie": "HP:0003510",
+            "diseasePhenotypeLabel": "Severe short stature",
+            "micaCurie": "HP:0003508",
+            "micaLabel": "Proportionate short stature",
+            "score": 4.073466013864628,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:2780"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000545",
+            "patientPhenotypeLabel": "Myopia",
+            "diseasePhenotypeCurie": "HP:0000545",
+            "diseasePhenotypeLabel": "Myopia",
+            "micaCurie": "HP:0000545",
+            "micaLabel": "Myopia",
+            "score": 3.085810795782503,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:404473"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0030840",
+            "patientPhenotypeLabel": "Ankle pain",
+            "diseasePhenotypeCurie": "HP:0410019",
+            "diseasePhenotypeLabel": "Epigastric pain",
+            "micaCurie": "HP:0012531",
+            "micaLabel": "Pain",
+            "score": 2.9635028655278295,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:33402"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0030839",
+            "patientPhenotypeLabel": "Knee pain",
+            "diseasePhenotypeCurie": "HP:0410019",
+            "diseasePhenotypeLabel": "Epigastric pain",
+            "micaCurie": "HP:0012531",
+            "micaLabel": "Pain",
+            "score": 2.9635028655278295,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:33402"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007973",
+            "patientPhenotypeLabel": "Retinal dysplasia",
+            "diseasePhenotypeCurie": "HP:0100014",
+            "diseasePhenotypeLabel": "Epiretinal membrane",
+            "micaCurie": "HP:0000479",
+            "micaLabel": "Abnormal retinal morphology",
+            "score": 2.3368524804376705,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:891"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001382",
+            "patientPhenotypeLabel": "Joint hypermobility",
+            "diseasePhenotypeCurie": "HP:0001376",
+            "diseasePhenotypeLabel": "Limitation of joint mobility",
+            "micaCurie": "HP:0011729",
+            "micaLabel": "Abnormality of joint mobility",
+            "score": 1.8603860647386155,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:873"
+          }
+        ]
+      },
+      {
+        "rank": 21,
+        "geneCurie": "NCBIGene:1311",
+        "geneLabel": "COMP",
+        "geneSymbol": "COMP",
+        "geneEntityId": 148513,
+        "bmaScore": 1.7374896234999173,
+        "normalizedScore": 0.191838,
+        "patientAverageScore": 2.373694369389237,
+        "phenotypeAverageScore": 1.1012848776105977,
+        "directPhenotypeCount": 93,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0030840",
+            "patientPhenotypeLabel": "Ankle pain",
+            "diseasePhenotypeCurie": "HP:0030840",
+            "diseasePhenotypeLabel": "Ankle pain",
+            "micaCurie": "HP:0030840",
+            "micaLabel": "Ankle pain",
+            "score": 7.670778274453075,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:132400"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0030839",
+            "patientPhenotypeLabel": "Knee pain",
+            "diseasePhenotypeCurie": "HP:0030839",
+            "diseasePhenotypeLabel": "Knee pain",
+            "micaCurie": "HP:0030839",
+            "micaLabel": "Knee pain",
+            "score": 6.418015305957707,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:93308"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003508",
+            "patientPhenotypeLabel": "Proportionate short stature",
+            "diseasePhenotypeCurie": "HP:0003510",
+            "diseasePhenotypeLabel": "Severe short stature",
+            "micaCurie": "HP:0003508",
+            "micaLabel": "Proportionate short stature",
+            "score": 4.073466013864628,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:132400"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001382",
+            "patientPhenotypeLabel": "Joint hypermobility",
+            "diseasePhenotypeCurie": "HP:0045086",
+            "diseasePhenotypeLabel": "Knee joint hypermobility",
+            "micaCurie": "HP:0001382",
+            "micaLabel": "Joint hypermobility",
+            "score": 2.968027760126119,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:93308"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002757",
+            "patientPhenotypeLabel": "Recurrent fractures",
+            "diseasePhenotypeCurie": "HP:0046505",
+            "diseasePhenotypeLabel": "Hand pain",
+            "micaCurie": "HP:0011843",
+            "micaLabel": "Abnormal musculoskeletal physiology",
+            "score": 1.6479361916528372,
+            "evidenceCode": "13/14",
+            "referenceText": "OMIM:619161"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001252",
+            "patientPhenotypeLabel": "Hypotonia",
+            "diseasePhenotypeCurie": "HP:0003756",
+            "diseasePhenotypeLabel": "Skeletal myopathy",
+            "micaCurie": "HP:0003011",
+            "micaLabel": "Abnormality of the musculature",
+            "score": 0.9484493672183709,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:750"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007973",
+            "patientPhenotypeLabel": "Retinal dysplasia",
+            "diseasePhenotypeCurie": "HP:0100864",
+            "diseasePhenotypeLabel": "Short femoral neck",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:132400"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007968",
+            "patientPhenotypeLabel": "Remnants of the hyaloid vascular system",
+            "diseasePhenotypeCurie": "HP:0100864",
+            "diseasePhenotypeLabel": "Short femoral neck",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:132400"
+          }
+        ]
+      },
+      {
+        "rank": 22,
+        "geneCurie": "NCBIGene:652",
+        "geneLabel": "BMP4",
+        "geneSymbol": "BMP4",
+        "geneEntityId": 148293,
+        "bmaScore": 1.7327449430882678,
+        "normalizedScore": 0.191314,
+        "patientAverageScore": 2.83390664101702,
+        "phenotypeAverageScore": 0.6315832451595151,
+        "directPhenotypeCount": 157,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0007968",
+            "patientPhenotypeLabel": "Remnants of the hyaloid vascular system",
+            "diseasePhenotypeCurie": "HP:0031154",
+            "diseasePhenotypeLabel": "Beaded vitreous appearance",
+            "micaCurie": "HP:0004327",
+            "micaLabel": "Abnormal vitreous humor morphology",
+            "score": 5.014021367738415,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:828"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0012109",
+            "patientPhenotypeLabel": "Angle closure glaucoma",
+            "diseasePhenotypeCurie": "HP:0000501",
+            "diseasePhenotypeLabel": "Glaucoma",
+            "micaCurie": "HP:0000501",
+            "micaLabel": "Glaucoma",
+            "score": 3.945084847216422,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:828"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000545",
+            "patientPhenotypeLabel": "Myopia",
+            "diseasePhenotypeCurie": "HP:0011003",
+            "diseasePhenotypeLabel": "High myopia",
+            "micaCurie": "HP:0000545",
+            "micaLabel": "Myopia",
+            "score": 3.085810795782503,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:828"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001382",
+            "patientPhenotypeLabel": "Joint hypermobility",
+            "diseasePhenotypeCurie": "HP:0001382",
+            "diseasePhenotypeLabel": "Joint hypermobility",
+            "micaCurie": "HP:0001382",
+            "micaLabel": "Joint hypermobility",
+            "score": 2.968027760126119,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:828"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0030840",
+            "patientPhenotypeLabel": "Ankle pain",
+            "diseasePhenotypeCurie": "HP:0002829",
+            "diseasePhenotypeLabel": "Arthralgia",
+            "micaCurie": "HP:0012531",
+            "micaLabel": "Pain",
+            "score": 2.9635028655278295,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:828"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0030839",
+            "patientPhenotypeLabel": "Knee pain",
+            "diseasePhenotypeCurie": "HP:0002829",
+            "diseasePhenotypeLabel": "Arthralgia",
+            "micaCurie": "HP:0012531",
+            "micaLabel": "Pain",
+            "score": 2.9635028655278295,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:828"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007973",
+            "patientPhenotypeLabel": "Retinal dysplasia",
+            "diseasePhenotypeCurie": "HP:0011530",
+            "diseasePhenotypeLabel": "Retinal hole",
+            "micaCurie": "HP:0000479",
+            "micaLabel": "Abnormal retinal morphology",
+            "score": 2.3368524804376705,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:828"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003508",
+            "patientPhenotypeLabel": "Proportionate short stature",
+            "diseasePhenotypeCurie": "HP:0004322",
+            "diseasePhenotypeLabel": "Short stature",
+            "micaCurie": "HP:0004322",
+            "micaLabel": "Short stature",
+            "score": 1.858889058471022,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:828"
+          }
+        ]
+      },
+      {
+        "rank": 23,
+        "geneCurie": "NCBIGene:4010",
+        "geneLabel": "LMX1B",
+        "geneSymbol": "LMX1B",
+        "geneEntityId": 149350,
+        "bmaScore": 1.7257855175343055,
+        "normalizedScore": 0.190546,
+        "patientAverageScore": 2.8990694014988656,
+        "phenotypeAverageScore": 0.5525016335697454,
+        "directPhenotypeCount": 155,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0030839",
+            "patientPhenotypeLabel": "Knee pain",
+            "diseasePhenotypeCurie": "HP:0030839",
+            "diseasePhenotypeLabel": "Knee pain",
+            "micaCurie": "HP:0030839",
+            "micaLabel": "Knee pain",
+            "score": 6.418015305957707,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:2614"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0030840",
+            "patientPhenotypeLabel": "Ankle pain",
+            "diseasePhenotypeCurie": "HP:0030839",
+            "diseasePhenotypeLabel": "Knee pain",
+            "micaCurie": "HP:0012514",
+            "micaLabel": "Lower limb pain",
+            "score": 5.689776805586491,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:2614"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0012109",
+            "patientPhenotypeLabel": "Angle closure glaucoma",
+            "diseasePhenotypeCurie": "HP:0012108",
+            "diseasePhenotypeLabel": "Open angle glaucoma",
+            "micaCurie": "HP:0000501",
+            "micaLabel": "Glaucoma",
+            "score": 3.945084847216422,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:2614"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001382",
+            "patientPhenotypeLabel": "Joint hypermobility",
+            "diseasePhenotypeCurie": "HP:0045086",
+            "diseasePhenotypeLabel": "Knee joint hypermobility",
+            "micaCurie": "HP:0001382",
+            "micaLabel": "Joint hypermobility",
+            "score": 2.968027760126119,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:2614"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000545",
+            "patientPhenotypeLabel": "Myopia",
+            "diseasePhenotypeCurie": "HP:0000483",
+            "diseasePhenotypeLabel": "Astigmatism",
+            "micaCurie": "HP:0000539",
+            "micaLabel": "Abnormality of refraction",
+            "score": 2.650192649503651,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:495818"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003508",
+            "patientPhenotypeLabel": "Proportionate short stature",
+            "diseasePhenotypeCurie": "HP:0004322",
+            "diseasePhenotypeLabel": "Short stature",
+            "micaCurie": "HP:0004322",
+            "micaLabel": "Short stature",
+            "score": 1.858889058471022,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:2613"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002757",
+            "patientPhenotypeLabel": "Recurrent fractures",
+            "diseasePhenotypeCurie": "HP:0045086",
+            "diseasePhenotypeLabel": "Knee joint hypermobility",
+            "micaCurie": "HP:0011843",
+            "micaLabel": "Abnormal musculoskeletal physiology",
+            "score": 1.6479361916528372,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:2614"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001252",
+            "patientPhenotypeLabel": "Hypotonia",
+            "diseasePhenotypeCurie": "HP:0008936",
+            "diseasePhenotypeLabel": "Axial hypotonia",
+            "micaCurie": "HP:0001252",
+            "micaLabel": "Hypotonia",
+            "score": 1.5554381776895518,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:495818"
+          }
+        ]
+      },
+      {
+        "rank": 24,
+        "geneCurie": "NCBIGene:6247",
+        "geneLabel": "RS1",
+        "geneSymbol": "RS1",
+        "geneEntityId": 150026,
+        "bmaScore": 1.7115971204176976,
+        "normalizedScore": 0.188979,
+        "patientAverageScore": 1.3961557515825622,
+        "phenotypeAverageScore": 2.027038489252833,
+        "directPhenotypeCount": 22,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0007968",
+            "patientPhenotypeLabel": "Remnants of the hyaloid vascular system",
+            "diseasePhenotypeCurie": "HP:0007902",
+            "diseasePhenotypeLabel": "Vitreous hemorrhage",
+            "micaCurie": "HP:0004327",
+            "micaLabel": "Abnormal vitreous humor morphology",
+            "score": 5.014021367738415,
+            "evidenceCode": "26/86",
+            "referenceText": "OMIM:312700"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0012109",
+            "patientPhenotypeLabel": "Angle closure glaucoma",
+            "diseasePhenotypeCurie": "HP:0000501",
+            "diseasePhenotypeLabel": "Glaucoma",
+            "micaCurie": "HP:0000501",
+            "micaLabel": "Glaucoma",
+            "score": 3.945084847216422,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:792"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000545",
+            "patientPhenotypeLabel": "Myopia",
+            "diseasePhenotypeCurie": "HP:0000540",
+            "diseasePhenotypeLabel": "Hypermetropia",
+            "micaCurie": "HP:0000539",
+            "micaLabel": "Abnormality of refraction",
+            "score": 2.650192649503651,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:312700"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007973",
+            "patientPhenotypeLabel": "Retinal dysplasia",
+            "diseasePhenotypeCurie": "HP:0030825",
+            "diseasePhenotypeLabel": "Absent foveal reflex",
+            "micaCurie": "HP:0000479",
+            "micaLabel": "Abnormal retinal morphology",
+            "score": 2.3368524804376705,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:792"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001382",
+            "patientPhenotypeLabel": "Joint hypermobility",
+            "diseasePhenotypeCurie": "HP:0030825",
+            "diseasePhenotypeLabel": "Absent foveal reflex",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:792"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0030840",
+            "patientPhenotypeLabel": "Ankle pain",
+            "diseasePhenotypeCurie": "HP:0030825",
+            "diseasePhenotypeLabel": "Absent foveal reflex",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:792"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0030839",
+            "patientPhenotypeLabel": "Knee pain",
+            "diseasePhenotypeCurie": "HP:0030825",
+            "diseasePhenotypeLabel": "Absent foveal reflex",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:792"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001252",
+            "patientPhenotypeLabel": "Hypotonia",
+            "diseasePhenotypeCurie": "HP:0030825",
+            "diseasePhenotypeLabel": "Absent foveal reflex",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:792"
+          }
+        ]
+      },
+      {
+        "rank": 25,
+        "geneCurie": "NCBIGene:1277",
+        "geneLabel": "COL1A1",
+        "geneSymbol": "COL1A1",
+        "geneEntityId": 148487,
+        "bmaScore": 1.7093799680853075,
+        "normalizedScore": 0.188734,
+        "patientAverageScore": 2.8074900198640593,
+        "phenotypeAverageScore": 0.6112699163065556,
+        "directPhenotypeCount": 186,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0030840",
+            "patientPhenotypeLabel": "Ankle pain",
+            "diseasePhenotypeCurie": "HP:0009763",
+            "diseasePhenotypeLabel": "Limb pain",
+            "micaCurie": "HP:0009763",
+            "micaLabel": "Limb pain",
+            "score": 5.446154722928741,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:287"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0030839",
+            "patientPhenotypeLabel": "Knee pain",
+            "diseasePhenotypeCurie": "HP:0009763",
+            "diseasePhenotypeLabel": "Limb pain",
+            "micaCurie": "HP:0009763",
+            "micaLabel": "Limb pain",
+            "score": 5.446154722928741,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:287"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002757",
+            "patientPhenotypeLabel": "Recurrent fractures",
+            "diseasePhenotypeCurie": "HP:0002757",
+            "diseasePhenotypeLabel": "Recurrent fractures",
+            "micaCurie": "HP:0002757",
+            "micaLabel": "Recurrent fractures",
+            "score": 4.626255836729651,
+            "evidenceCode": "12/12",
+            "referenceText": "OMIM:619115"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003508",
+            "patientPhenotypeLabel": "Proportionate short stature",
+            "diseasePhenotypeCurie": "HP:0003510",
+            "diseasePhenotypeLabel": "Severe short stature",
+            "micaCurie": "HP:0003508",
+            "micaLabel": "Proportionate short stature",
+            "score": 4.073466013864628,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:1899"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001382",
+            "patientPhenotypeLabel": "Joint hypermobility",
+            "diseasePhenotypeCurie": "HP:0006094",
+            "diseasePhenotypeLabel": "Finger joint hypermobility",
+            "micaCurie": "HP:0001382",
+            "micaLabel": "Joint hypermobility",
+            "score": 2.968027760126119,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:166200"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001252",
+            "patientPhenotypeLabel": "Hypotonia",
+            "diseasePhenotypeCurie": "HP:0001290",
+            "diseasePhenotypeLabel": "Generalized hypotonia",
+            "micaCurie": "HP:0001252",
+            "micaLabel": "Hypotonia",
+            "score": 1.5554381776895518,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:619115"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007973",
+            "patientPhenotypeLabel": "Retinal dysplasia",
+            "diseasePhenotypeCurie": "HP:0000592",
+            "diseasePhenotypeLabel": "Blue sclerae",
+            "micaCurie": "HP:0012372",
+            "micaLabel": "Abnormal eye morphology",
+            "score": 1.1286666093924305,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:166200"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007968",
+            "patientPhenotypeLabel": "Remnants of the hyaloid vascular system",
+            "diseasePhenotypeCurie": "HP:0000592",
+            "diseasePhenotypeLabel": "Blue sclerae",
+            "micaCurie": "HP:0012372",
+            "micaLabel": "Abnormal eye morphology",
+            "score": 1.1286666093924305,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:166200"
+          }
+        ]
+      }
+    ],
+    "engineSummary": {
+      "diseaseCount": 8579,
+      "geneCount": 5256,
+      "phenotypeCount": 19389,
+      "sourceMode": {
+        "disease": "relationship_fallback",
+        "gene": "relationship_fallback"
+      },
+      "generatedAt": "2026-03-15T21:00:39.457Z"
+    }
+  }
+}

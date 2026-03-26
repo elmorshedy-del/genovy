@@ -1,0 +1,2672 @@
+{
+  "success": true,
+  "engine": "genovy-dx-sim",
+  "input": {
+    "presentPhenotypeCuries": [
+      "HP:0000973",
+      "HP:0001015",
+      "HP:0009099",
+      "HP:0034273",
+      "HP:0000678",
+      "HP:0000160",
+      "HP:0000463",
+      "HP:0000444",
+      "HP:0000343",
+      "HP:0000350",
+      "HP:0000581",
+      "HP:0000629",
+      "HP:0000621",
+      "HP:0000486",
+      "HP:0001324",
+      "HP:0001845",
+      "HP:0001655",
+      "HP:0011648",
+      "HP:0005180",
+      "HP:0001562"
+    ],
+    "excludedPhenotypeCuries": [],
+    "sourceFormat": "phenopacket"
+  },
+  "ranking": {
+    "queryPhenotypes": [
+      {
+        "phenotypeCurie": "HP:0000973",
+        "phenotypeLabel": "Cutis laxa"
+      },
+      {
+        "phenotypeCurie": "HP:0001015",
+        "phenotypeLabel": "Prominent superficial veins"
+      },
+      {
+        "phenotypeCurie": "HP:0009099",
+        "phenotypeLabel": "Median cleft palate"
+      },
+      {
+        "phenotypeCurie": "HP:0034273",
+        "phenotypeLabel": "Premature sagging cheeks"
+      },
+      {
+        "phenotypeCurie": "HP:0000678",
+        "phenotypeLabel": "Dental crowding"
+      },
+      {
+        "phenotypeCurie": "HP:0000160",
+        "phenotypeLabel": "Narrow mouth"
+      },
+      {
+        "phenotypeCurie": "HP:0000463",
+        "phenotypeLabel": "Anteverted nares"
+      },
+      {
+        "phenotypeCurie": "HP:0000444",
+        "phenotypeLabel": "Convex nasal ridge"
+      },
+      {
+        "phenotypeCurie": "HP:0000343",
+        "phenotypeLabel": "Long philtrum"
+      },
+      {
+        "phenotypeCurie": "HP:0000350",
+        "phenotypeLabel": "Small forehead"
+      },
+      {
+        "phenotypeCurie": "HP:0000581",
+        "phenotypeLabel": "Blepharophimosis"
+      },
+      {
+        "phenotypeCurie": "HP:0000629",
+        "phenotypeLabel": "Periorbital fullness"
+      },
+      {
+        "phenotypeCurie": "HP:0000621",
+        "phenotypeLabel": "Entropion"
+      },
+      {
+        "phenotypeCurie": "HP:0000486",
+        "phenotypeLabel": "Strabismus"
+      },
+      {
+        "phenotypeCurie": "HP:0001324",
+        "phenotypeLabel": "Muscle weakness"
+      },
+      {
+        "phenotypeCurie": "HP:0001845",
+        "phenotypeLabel": "Overlapping toe"
+      },
+      {
+        "phenotypeCurie": "HP:0001655",
+        "phenotypeLabel": "Patent foramen ovale"
+      },
+      {
+        "phenotypeCurie": "HP:0011648",
+        "phenotypeLabel": "Patent ductus arteriosus after birth at term"
+      },
+      {
+        "phenotypeCurie": "HP:0005180",
+        "phenotypeLabel": "Tricuspid regurgitation"
+      },
+      {
+        "phenotypeCurie": "HP:0001562",
+        "phenotypeLabel": "Oligohydramnios"
+      }
+    ],
+    "results": [
+      {
+        "rank": 1,
+        "diseaseCurie": "MONDO:0027462",
+        "diseaseLabel": "autosomal recessive cutis laxa type 2C",
+        "diseaseEntityId": 83899,
+        "bmaScore": 3.509699595968831,
+        "normalizedScore": 0.387509,
+        "patientAverageScore": 4.731985735236094,
+        "diseaseAverageScore": 2.2874134567015676,
+        "directPhenotypeCount": 65,
+        "matchedPhenotypeCount": 20,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011648",
+            "patientPhenotypeLabel": "Patent ductus arteriosus after birth at term",
+            "diseasePhenotypeCurie": "HP:0011648",
+            "diseasePhenotypeLabel": "Patent ductus arteriosus after birth at term",
+            "micaCurie": "HP:0011648",
+            "micaLabel": "Patent ductus arteriosus after birth at term",
+            "score": 7.670778274453075,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:27023906"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0034273",
+            "patientPhenotypeLabel": "Premature sagging cheeks",
+            "diseasePhenotypeCurie": "HP:0034273",
+            "diseasePhenotypeLabel": "Premature sagging cheeks",
+            "micaCurie": "HP:0034273",
+            "micaLabel": "Premature sagging cheeks",
+            "score": 7.26531316634491,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:27023906"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000350",
+            "patientPhenotypeLabel": "Small forehead",
+            "diseasePhenotypeCurie": "HP:0000350",
+            "diseasePhenotypeLabel": "Small forehead",
+            "micaCurie": "HP:0000350",
+            "micaLabel": "Small forehead",
+            "score": 6.659177362774595,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:27023906;PMID:28065471"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000621",
+            "patientPhenotypeLabel": "Entropion",
+            "diseasePhenotypeCurie": "HP:0000621",
+            "diseasePhenotypeLabel": "Entropion",
+            "micaCurie": "HP:0000621",
+            "micaLabel": "Entropion",
+            "score": 6.284483913333184,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:27023906;PMID:28065471"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009099",
+            "patientPhenotypeLabel": "Median cleft palate",
+            "diseasePhenotypeCurie": "HP:0009099",
+            "diseasePhenotypeLabel": "Median cleft palate",
+            "micaCurie": "HP:0009099",
+            "micaLabel": "Median cleft palate",
+            "score": 6.1667008776768,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:28065471"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001015",
+            "patientPhenotypeLabel": "Prominent superficial veins",
+            "diseasePhenotypeCurie": "HP:0001015",
+            "diseasePhenotypeLabel": "Prominent superficial veins",
+            "micaCurie": "HP:0001015",
+            "micaLabel": "Prominent superficial veins",
+            "score": 5.798976097551483,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:27023906"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000629",
+            "patientPhenotypeLabel": "Periorbital fullness",
+            "diseasePhenotypeCurie": "HP:0000629",
+            "diseasePhenotypeLabel": "Periorbital fullness",
+            "micaCurie": "HP:0000629",
+            "micaLabel": "Periorbital fullness",
+            "score": 5.185871624665074,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:27023906"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0005180",
+            "patientPhenotypeLabel": "Tricuspid regurgitation",
+            "diseasePhenotypeCurie": "HP:0005180",
+            "diseasePhenotypeLabel": "Tricuspid regurgitation",
+            "micaCurie": "HP:0005180",
+            "micaLabel": "Tricuspid regurgitation",
+            "score": 4.979535191667246,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:27023906"
+          }
+        ]
+      },
+      {
+        "rank": 2,
+        "diseaseCurie": "MONDO:0012853",
+        "diseaseLabel": "Fontaine progeroid syndrome",
+        "diseaseEntityId": 74139,
+        "bmaScore": 2.2021976490697885,
+        "normalizedScore": 0.243147,
+        "patientAverageScore": 3.1085772866742873,
+        "diseaseAverageScore": 1.2958180114652897,
+        "directPhenotypeCount": 96,
+        "matchedPhenotypeCount": 20,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001015",
+            "patientPhenotypeLabel": "Prominent superficial veins",
+            "diseasePhenotypeCurie": "HP:0001015",
+            "diseasePhenotypeLabel": "Prominent superficial veins",
+            "micaCurie": "HP:0001015",
+            "micaLabel": "Prominent superficial veins",
+            "score": 5.798976097551483,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:29100094"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0005180",
+            "patientPhenotypeLabel": "Tricuspid regurgitation",
+            "diseasePhenotypeCurie": "HP:0005180",
+            "diseasePhenotypeLabel": "Tricuspid regurgitation",
+            "micaCurie": "HP:0005180",
+            "micaLabel": "Tricuspid regurgitation",
+            "score": 4.979535191667246,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:612289"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000444",
+            "patientPhenotypeLabel": "Convex nasal ridge",
+            "diseasePhenotypeCurie": "HP:0000444",
+            "diseasePhenotypeLabel": "Convex nasal ridge",
+            "micaCurie": "HP:0000444",
+            "micaLabel": "Convex nasal ridge",
+            "score": 4.614421379082649,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:29100094"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000973",
+            "patientPhenotypeLabel": "Cutis laxa",
+            "diseasePhenotypeCurie": "HP:0001582",
+            "diseasePhenotypeLabel": "Redundant skin",
+            "micaCurie": "HP:0000973",
+            "micaLabel": "Cutis laxa",
+            "score": 4.374941408448746,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:612289"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001562",
+            "patientPhenotypeLabel": "Oligohydramnios",
+            "diseasePhenotypeCurie": "HP:0001562",
+            "diseasePhenotypeLabel": "Oligohydramnios",
+            "micaCurie": "HP:0001562",
+            "micaLabel": "Oligohydramnios",
+            "score": 4.220790728621488,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:29100094"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000629",
+            "patientPhenotypeLabel": "Periorbital fullness",
+            "diseasePhenotypeCurie": "HP:0009891",
+            "diseasePhenotypeLabel": "Underdeveloped supraorbital ridges",
+            "micaCurie": "HP:0000606",
+            "micaLabel": "Abnormality of the periorbital region",
+            "score": 3.820630672743016,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:29100093"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000160",
+            "patientPhenotypeLabel": "Narrow mouth",
+            "diseasePhenotypeCurie": "HP:0000160",
+            "diseasePhenotypeLabel": "Narrow mouth",
+            "micaCurie": "HP:0000160",
+            "micaLabel": "Narrow mouth",
+            "score": 3.700486360900953,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:612289"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011648",
+            "patientPhenotypeLabel": "Patent ductus arteriosus after birth at term",
+            "diseasePhenotypeCurie": "HP:0001643",
+            "diseasePhenotypeLabel": "Patent ductus arteriosus",
+            "micaCurie": "HP:0001643",
+            "micaLabel": "Patent ductus arteriosus",
+            "score": 3.3367608589655537,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:29100094"
+          }
+        ]
+      },
+      {
+        "rank": 3,
+        "diseaseCurie": "MONDO:0979227",
+        "diseaseLabel": "Guillouet-Gordon syndrome",
+        "diseaseEntityId": 88766,
+        "bmaScore": 2.158689516316018,
+        "normalizedScore": 0.238343,
+        "patientAverageScore": 3.1137242539609473,
+        "diseaseAverageScore": 1.203654778671088,
+        "directPhenotypeCount": 196,
+        "matchedPhenotypeCount": 20,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001845",
+            "patientPhenotypeLabel": "Overlapping toe",
+            "diseasePhenotypeCurie": "HP:0001845",
+            "diseasePhenotypeLabel": "Overlapping toe",
+            "micaCurie": "HP:0001845",
+            "micaLabel": "Overlapping toe",
+            "score": 4.6626234809005265,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:40081376"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001562",
+            "patientPhenotypeLabel": "Oligohydramnios",
+            "diseasePhenotypeCurie": "HP:0001562",
+            "diseasePhenotypeLabel": "Oligohydramnios",
+            "micaCurie": "HP:0001562",
+            "micaLabel": "Oligohydramnios",
+            "score": 4.220790728621488,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:40081376"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0005180",
+            "patientPhenotypeLabel": "Tricuspid regurgitation",
+            "diseasePhenotypeCurie": "HP:0001653",
+            "diseasePhenotypeLabel": "Mitral regurgitation",
+            "micaCurie": "HP:0034376",
+            "micaLabel": "Atrioventricular valve regurgitation",
+            "score": 4.122598702442273,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:40081376"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001655",
+            "patientPhenotypeLabel": "Patent foramen ovale",
+            "diseasePhenotypeCurie": "HP:0001655",
+            "diseasePhenotypeLabel": "Patent foramen ovale",
+            "micaCurie": "HP:0001655",
+            "micaLabel": "Patent foramen ovale",
+            "score": 4.115430212963661,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:40081376"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000629",
+            "patientPhenotypeLabel": "Periorbital fullness",
+            "diseasePhenotypeCurie": "HP:0100540",
+            "diseasePhenotypeLabel": "Palpebral edema",
+            "micaCurie": "HP:0000606",
+            "micaLabel": "Abnormality of the periorbital region",
+            "score": 3.820630672743016,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:40081376"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000973",
+            "patientPhenotypeLabel": "Cutis laxa",
+            "diseasePhenotypeCurie": "HP:0001027",
+            "diseasePhenotypeLabel": "Soft, doughy skin",
+            "micaCurie": "HP:0010647",
+            "micaLabel": "Abnormal elasticity of skin",
+            "score": 3.763767810848473,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:40081376"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000160",
+            "patientPhenotypeLabel": "Narrow mouth",
+            "diseasePhenotypeCurie": "HP:0000160",
+            "diseasePhenotypeLabel": "Narrow mouth",
+            "micaCurie": "HP:0000160",
+            "micaLabel": "Narrow mouth",
+            "score": 3.700486360900953,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:40081376"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0034273",
+            "patientPhenotypeLabel": "Premature sagging cheeks",
+            "diseasePhenotypeCurie": "HP:0004467",
+            "diseasePhenotypeLabel": "Preauricular pit",
+            "micaCurie": "HP:0004426",
+            "micaLabel": "Abnormal cheek morphology",
+            "score": 3.601751520215264,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:40081376"
+          }
+        ]
+      },
+      {
+        "rank": 4,
+        "diseaseCurie": "MONDO:0800042",
+        "diseaseLabel": "restrictive dermopathy 1",
+        "diseaseEntityId": 87283,
+        "bmaScore": 2.1379247363238387,
+        "normalizedScore": 0.23605,
+        "patientAverageScore": 2.6036534162684304,
+        "diseaseAverageScore": 1.6721960563792468,
+        "directPhenotypeCount": 59,
+        "matchedPhenotypeCount": 20,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000621",
+            "patientPhenotypeLabel": "Entropion",
+            "diseasePhenotypeCurie": "HP:0000621",
+            "diseasePhenotypeLabel": "Entropion",
+            "micaCurie": "HP:0000621",
+            "micaLabel": "Entropion",
+            "score": 6.284483913333184,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:275210"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001015",
+            "patientPhenotypeLabel": "Prominent superficial veins",
+            "diseasePhenotypeCurie": "HP:0007394",
+            "diseasePhenotypeLabel": "Prominent superficial blood vessels",
+            "micaCurie": "HP:0007394",
+            "micaLabel": "Prominent superficial blood vessels",
+            "score": 5.65587525391081,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:15317753"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000444",
+            "patientPhenotypeLabel": "Convex nasal ridge",
+            "diseasePhenotypeCurie": "HP:0000444",
+            "diseasePhenotypeLabel": "Convex nasal ridge",
+            "micaCurie": "HP:0000444",
+            "micaLabel": "Convex nasal ridge",
+            "score": 4.614421379082649,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:15317753"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001562",
+            "patientPhenotypeLabel": "Oligohydramnios",
+            "diseasePhenotypeCurie": "HP:0001562",
+            "diseasePhenotypeLabel": "Oligohydramnios",
+            "micaCurie": "HP:0001562",
+            "micaLabel": "Oligohydramnios",
+            "score": 4.220790728621488,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:19504603"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000581",
+            "patientPhenotypeLabel": "Blepharophimosis",
+            "diseasePhenotypeCurie": "HP:0000581",
+            "diseasePhenotypeLabel": "Blepharophimosis",
+            "micaCurie": "HP:0000581",
+            "micaLabel": "Blepharophimosis",
+            "score": 4.087259335996965,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:275210"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000160",
+            "patientPhenotypeLabel": "Narrow mouth",
+            "diseasePhenotypeCurie": "HP:0000160",
+            "diseasePhenotypeLabel": "Narrow mouth",
+            "micaCurie": "HP:0000160",
+            "micaLabel": "Narrow mouth",
+            "score": 3.700486360900953,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:15317753"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011648",
+            "patientPhenotypeLabel": "Patent ductus arteriosus after birth at term",
+            "diseasePhenotypeCurie": "HP:0001643",
+            "diseasePhenotypeLabel": "Patent ductus arteriosus",
+            "micaCurie": "HP:0001643",
+            "micaLabel": "Patent ductus arteriosus",
+            "score": 3.3367608589655537,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:275210"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001655",
+            "patientPhenotypeLabel": "Patent foramen ovale",
+            "diseasePhenotypeCurie": "HP:0001631",
+            "diseasePhenotypeLabel": "Atrial septal defect",
+            "micaCurie": "HP:0011994",
+            "micaLabel": "Abnormal atrial septum morphology",
+            "score": 2.904339940868861,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:275210"
+          }
+        ]
+      },
+      {
+        "rank": 5,
+        "diseaseCurie": "MONDO:0971179",
+        "diseaseLabel": "arterial tortuosity-bone fragility syndrome",
+        "diseaseEntityId": 88619,
+        "bmaScore": 2.1229106496331767,
+        "normalizedScore": 0.234393,
+        "patientAverageScore": 2.747766816714865,
+        "diseaseAverageScore": 1.498054482551488,
+        "directPhenotypeCount": 115,
+        "matchedPhenotypeCount": 20,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0034273",
+            "patientPhenotypeLabel": "Premature sagging cheeks",
+            "diseasePhenotypeCurie": "HP:0034273",
+            "diseasePhenotypeLabel": "Premature sagging cheeks",
+            "micaCurie": "HP:0034273",
+            "micaLabel": "Premature sagging cheeks",
+            "score": 7.26531316634491,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:36351433"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000444",
+            "patientPhenotypeLabel": "Convex nasal ridge",
+            "diseasePhenotypeCurie": "HP:0000444",
+            "diseasePhenotypeLabel": "Convex nasal ridge",
+            "micaCurie": "HP:0000444",
+            "micaLabel": "Convex nasal ridge",
+            "score": 4.614421379082649,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:36351433"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000973",
+            "patientPhenotypeLabel": "Cutis laxa",
+            "diseasePhenotypeCurie": "HP:0000973",
+            "diseasePhenotypeLabel": "Cutis laxa",
+            "micaCurie": "HP:0000973",
+            "micaLabel": "Cutis laxa",
+            "score": 4.374941408448746,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:36351433"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0005180",
+            "patientPhenotypeLabel": "Tricuspid regurgitation",
+            "diseasePhenotypeCurie": "HP:0001653",
+            "diseasePhenotypeLabel": "Mitral regurgitation",
+            "micaCurie": "HP:0034376",
+            "micaLabel": "Atrioventricular valve regurgitation",
+            "score": 4.122598702442273,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:36351433"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000581",
+            "patientPhenotypeLabel": "Blepharophimosis",
+            "diseasePhenotypeCurie": "HP:0000581",
+            "diseasePhenotypeLabel": "Blepharophimosis",
+            "micaCurie": "HP:0000581",
+            "micaLabel": "Blepharophimosis",
+            "score": 4.087259335996965,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:36351433"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000343",
+            "patientPhenotypeLabel": "Long philtrum",
+            "diseasePhenotypeCurie": "HP:0000343",
+            "diseasePhenotypeLabel": "Long philtrum",
+            "micaCurie": "HP:0000343",
+            "micaLabel": "Long philtrum",
+            "score": 3.1381787812998185,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:36351433"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001015",
+            "patientPhenotypeLabel": "Prominent superficial veins",
+            "diseasePhenotypeCurie": "HP:0000978",
+            "diseasePhenotypeLabel": "Bruising susceptibility",
+            "micaCurie": "HP:0011276",
+            "micaLabel": "Vascular skin abnormality",
+            "score": 2.9863349075704755,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:36351433"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001655",
+            "patientPhenotypeLabel": "Patent foramen ovale",
+            "diseasePhenotypeCurie": "HP:0001631",
+            "diseasePhenotypeLabel": "Atrial septal defect",
+            "micaCurie": "HP:0011994",
+            "micaLabel": "Abnormal atrial septum morphology",
+            "score": 2.904339940868861,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:36351433"
+          }
+        ]
+      },
+      {
+        "rank": 6,
+        "diseaseCurie": "MONDO:0011531",
+        "diseaseLabel": "Noonan syndrome 2",
+        "diseaseEntityId": 72817,
+        "bmaScore": 2.1078693022880106,
+        "normalizedScore": 0.232732,
+        "patientAverageScore": 2.7187707270715276,
+        "diseaseAverageScore": 1.4969678775044937,
+        "directPhenotypeCount": 85,
+        "matchedPhenotypeCount": 20,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000973",
+            "patientPhenotypeLabel": "Cutis laxa",
+            "diseasePhenotypeCurie": "HP:0007517",
+            "diseasePhenotypeLabel": "Palmoplantar cutis laxa",
+            "micaCurie": "HP:0000973",
+            "micaLabel": "Cutis laxa",
+            "score": 4.374941408448746,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:30368668"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001655",
+            "patientPhenotypeLabel": "Patent foramen ovale",
+            "diseasePhenotypeCurie": "HP:0001655",
+            "diseasePhenotypeLabel": "Patent foramen ovale",
+            "micaCurie": "HP:0001655",
+            "micaLabel": "Patent foramen ovale",
+            "score": 4.115430212963661,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:29469822;PMID:30368668"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0005180",
+            "patientPhenotypeLabel": "Tricuspid regurgitation",
+            "diseasePhenotypeCurie": "HP:0001718",
+            "diseasePhenotypeLabel": "Mitral stenosis",
+            "micaCurie": "HP:0031650",
+            "micaLabel": "Abnormal atrioventricular valve physiology",
+            "score": 4.000826830224657,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:605275"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000629",
+            "patientPhenotypeLabel": "Periorbital fullness",
+            "diseasePhenotypeCurie": "HP:0009891",
+            "diseasePhenotypeLabel": "Underdeveloped supraorbital ridges",
+            "micaCurie": "HP:0000606",
+            "micaLabel": "Abnormality of the periorbital region",
+            "score": 3.820630672743016,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:30368668"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011648",
+            "patientPhenotypeLabel": "Patent ductus arteriosus after birth at term",
+            "diseasePhenotypeCurie": "HP:0001643",
+            "diseasePhenotypeLabel": "Patent ductus arteriosus",
+            "micaCurie": "HP:0001643",
+            "micaLabel": "Patent ductus arteriosus",
+            "score": 3.3367608589655537,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:30368668"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000343",
+            "patientPhenotypeLabel": "Long philtrum",
+            "diseasePhenotypeCurie": "HP:0000343",
+            "diseasePhenotypeLabel": "Long philtrum",
+            "micaCurie": "HP:0000343",
+            "micaLabel": "Long philtrum",
+            "score": 3.1381787812998185,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:29469822"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001562",
+            "patientPhenotypeLabel": "Oligohydramnios",
+            "diseasePhenotypeCurie": "HP:0001561",
+            "diseasePhenotypeLabel": "Polyhydramnios",
+            "micaCurie": "HP:0001560",
+            "micaLabel": "Abnormality of the amniotic fluid",
+            "score": 3.1301466096025545,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:29469822"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000160",
+            "patientPhenotypeLabel": "Narrow mouth",
+            "diseasePhenotypeCurie": "HP:0000154",
+            "diseasePhenotypeLabel": "Wide mouth",
+            "micaCurie": "HP:0011337",
+            "micaLabel": "Abnormality of mouth size",
+            "score": 3.085810795782503,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:29469822"
+          }
+        ]
+      },
+      {
+        "rank": 7,
+        "diseaseCurie": "MONDO:0009910",
+        "diseaseLabel": "Wiedemann-Rautenstrauch syndrome",
+        "diseaseEntityId": 71196,
+        "bmaScore": 2.1025868385749558,
+        "normalizedScore": 0.232149,
+        "patientAverageScore": 3.1069588458726676,
+        "diseaseAverageScore": 1.0982148312772442,
+        "directPhenotypeCount": 189,
+        "matchedPhenotypeCount": 20,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000621",
+            "patientPhenotypeLabel": "Entropion",
+            "diseasePhenotypeCurie": "HP:0000621",
+            "diseasePhenotypeLabel": "Entropion",
+            "micaCurie": "HP:0000621",
+            "micaLabel": "Entropion",
+            "score": 6.284483913333184,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:21671373"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001015",
+            "patientPhenotypeLabel": "Prominent superficial veins",
+            "diseasePhenotypeCurie": "HP:0001043",
+            "diseasePhenotypeLabel": "Prominent scalp veins",
+            "micaCurie": "HP:0001015",
+            "micaLabel": "Prominent superficial veins",
+            "score": 5.798976097551483,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:3455"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000444",
+            "patientPhenotypeLabel": "Convex nasal ridge",
+            "diseasePhenotypeCurie": "HP:0000444",
+            "diseasePhenotypeLabel": "Convex nasal ridge",
+            "micaCurie": "HP:0000444",
+            "micaLabel": "Convex nasal ridge",
+            "score": 4.614421379082649,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:21671373"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000629",
+            "patientPhenotypeLabel": "Periorbital fullness",
+            "diseasePhenotypeCurie": "HP:0000336",
+            "diseasePhenotypeLabel": "Prominent supraorbital ridges",
+            "micaCurie": "HP:0000606",
+            "micaLabel": "Abnormality of the periorbital region",
+            "score": 3.820630672743016,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:21671373"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000160",
+            "patientPhenotypeLabel": "Narrow mouth",
+            "diseasePhenotypeCurie": "HP:0000160",
+            "diseasePhenotypeLabel": "Narrow mouth",
+            "micaCurie": "HP:0000160",
+            "micaLabel": "Narrow mouth",
+            "score": 3.700486360900953,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:3455"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000581",
+            "patientPhenotypeLabel": "Blepharophimosis",
+            "diseasePhenotypeCurie": "HP:0045025",
+            "diseasePhenotypeLabel": "Narrow palpebral fissure",
+            "micaCurie": "HP:0200007",
+            "micaLabel": "Abnormal size of the palpebral fissures",
+            "score": 3.304499996747332,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:21671373"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0005180",
+            "patientPhenotypeLabel": "Tricuspid regurgitation",
+            "diseasePhenotypeCurie": "HP:0001642",
+            "diseasePhenotypeLabel": "Pulmonic stenosis",
+            "micaCurie": "HP:0031653",
+            "micaLabel": "Abnormal heart valve physiology",
+            "score": 3.2369897052206036,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:3455"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000343",
+            "patientPhenotypeLabel": "Long philtrum",
+            "diseasePhenotypeCurie": "HP:0000343",
+            "diseasePhenotypeLabel": "Long philtrum",
+            "micaCurie": "HP:0000343",
+            "micaLabel": "Long philtrum",
+            "score": 3.1381787812998185,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:21671373"
+          }
+        ]
+      },
+      {
+        "rank": 8,
+        "diseaseCurie": "MONDO:0008005",
+        "diseaseLabel": "cardiospondylocarpofacial syndrome",
+        "diseaseEntityId": 69291,
+        "bmaScore": 2.0905999790563694,
+        "normalizedScore": 0.230825,
+        "patientAverageScore": 2.7516585469416963,
+        "diseaseAverageScore": 1.4295414111710425,
+        "directPhenotypeCount": 64,
+        "matchedPhenotypeCount": 20,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000629",
+            "patientPhenotypeLabel": "Periorbital fullness",
+            "diseasePhenotypeCurie": "HP:0000629",
+            "diseasePhenotypeLabel": "Periorbital fullness",
+            "micaCurie": "HP:0000629",
+            "micaLabel": "Periorbital fullness",
+            "score": 5.185871624665074,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:27426734"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0005180",
+            "patientPhenotypeLabel": "Tricuspid regurgitation",
+            "diseasePhenotypeCurie": "HP:0001653",
+            "diseasePhenotypeLabel": "Mitral regurgitation",
+            "micaCurie": "HP:0034376",
+            "micaLabel": "Atrioventricular valve regurgitation",
+            "score": 4.122598702442273,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:3238"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001655",
+            "patientPhenotypeLabel": "Patent foramen ovale",
+            "diseasePhenotypeCurie": "HP:0001655",
+            "diseasePhenotypeLabel": "Patent foramen ovale",
+            "micaCurie": "HP:0001655",
+            "micaLabel": "Patent foramen ovale",
+            "score": 4.115430212963661,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:29467388"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000973",
+            "patientPhenotypeLabel": "Cutis laxa",
+            "diseasePhenotypeCurie": "HP:0000977",
+            "diseasePhenotypeLabel": "Soft skin",
+            "micaCurie": "HP:0010647",
+            "micaLabel": "Abnormal elasticity of skin",
+            "score": 3.763767810848473,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:29467388"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0034273",
+            "patientPhenotypeLabel": "Premature sagging cheeks",
+            "diseasePhenotypeCurie": "HP:0000293",
+            "diseasePhenotypeLabel": "Full cheeks",
+            "micaCurie": "HP:0004426",
+            "micaLabel": "Abnormal cheek morphology",
+            "score": 3.601751520215264,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:27426734"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000343",
+            "patientPhenotypeLabel": "Long philtrum",
+            "diseasePhenotypeCurie": "HP:0000343",
+            "diseasePhenotypeLabel": "Long philtrum",
+            "micaCurie": "HP:0000343",
+            "micaLabel": "Long philtrum",
+            "score": 3.1381787812998185,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:29467388;PMID:27426734"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000678",
+            "patientPhenotypeLabel": "Dental crowding",
+            "diseasePhenotypeCurie": "HP:0000692",
+            "diseasePhenotypeLabel": "Tooth malposition",
+            "micaCurie": "HP:0000692",
+            "micaLabel": "Tooth malposition",
+            "score": 3.1248274481249543,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:3238"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000160",
+            "patientPhenotypeLabel": "Narrow mouth",
+            "diseasePhenotypeCurie": "HP:0000154",
+            "diseasePhenotypeLabel": "Wide mouth",
+            "micaCurie": "HP:0011337",
+            "micaLabel": "Abnormality of mouth size",
+            "score": 3.085810795782503,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:29467388"
+          }
+        ]
+      },
+      {
+        "rank": 9,
+        "diseaseCurie": "MONDO:0958322",
+        "diseaseLabel": "intellectual developmental disorder, X-linked, syndromic 37",
+        "diseaseEntityId": 88459,
+        "bmaScore": 2.0643726020973956,
+        "normalizedScore": 0.227929,
+        "patientAverageScore": 2.9775849773098315,
+        "diseaseAverageScore": 1.1511602268849594,
+        "directPhenotypeCount": 201,
+        "matchedPhenotypeCount": 20,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000629",
+            "patientPhenotypeLabel": "Periorbital fullness",
+            "diseasePhenotypeCurie": "HP:0000629",
+            "diseasePhenotypeLabel": "Periorbital fullness",
+            "micaCurie": "HP:0000629",
+            "micaLabel": "Periorbital fullness",
+            "score": 5.185871624665074,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:38325380"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001845",
+            "patientPhenotypeLabel": "Overlapping toe",
+            "diseasePhenotypeCurie": "HP:0001845",
+            "diseasePhenotypeLabel": "Overlapping toe",
+            "micaCurie": "HP:0001845",
+            "micaLabel": "Overlapping toe",
+            "score": 4.6626234809005265,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:38325380"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000678",
+            "patientPhenotypeLabel": "Dental crowding",
+            "diseasePhenotypeCurie": "HP:0000678",
+            "diseasePhenotypeLabel": "Dental crowding",
+            "micaCurie": "HP:0000678",
+            "micaLabel": "Dental crowding",
+            "score": 4.277949142461436,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:38325380"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001562",
+            "patientPhenotypeLabel": "Oligohydramnios",
+            "diseasePhenotypeCurie": "HP:0001562",
+            "diseasePhenotypeLabel": "Oligohydramnios",
+            "micaCurie": "HP:0001562",
+            "micaLabel": "Oligohydramnios",
+            "score": 4.220790728621488,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:38325380"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000581",
+            "patientPhenotypeLabel": "Blepharophimosis",
+            "diseasePhenotypeCurie": "HP:0000581",
+            "diseasePhenotypeLabel": "Blepharophimosis",
+            "micaCurie": "HP:0000581",
+            "micaLabel": "Blepharophimosis",
+            "score": 4.087259335996965,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:38325380"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0034273",
+            "patientPhenotypeLabel": "Premature sagging cheeks",
+            "diseasePhenotypeCurie": "HP:0000384",
+            "diseasePhenotypeLabel": "Preauricular skin tag",
+            "micaCurie": "HP:0004426",
+            "micaLabel": "Abnormal cheek morphology",
+            "score": 3.601751520215264,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:38325380"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011648",
+            "patientPhenotypeLabel": "Patent ductus arteriosus after birth at term",
+            "diseasePhenotypeCurie": "HP:0001643",
+            "diseasePhenotypeLabel": "Patent ductus arteriosus",
+            "micaCurie": "HP:0001643",
+            "micaLabel": "Patent ductus arteriosus",
+            "score": 3.3367608589655537,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:38325380"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000343",
+            "patientPhenotypeLabel": "Long philtrum",
+            "diseasePhenotypeCurie": "HP:0000343",
+            "diseasePhenotypeLabel": "Long philtrum",
+            "micaCurie": "HP:0000343",
+            "micaLabel": "Long philtrum",
+            "score": 3.1381787812998185,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:38325380"
+          }
+        ]
+      },
+      {
+        "rank": 10,
+        "diseaseCurie": "MONDO:0008818",
+        "diseaseLabel": "arterial tortuosity syndrome",
+        "diseaseEntityId": 70104,
+        "bmaScore": 2.0385986475642945,
+        "normalizedScore": 0.225084,
+        "patientAverageScore": 2.4637007385756426,
+        "diseaseAverageScore": 1.6134965565529464,
+        "directPhenotypeCount": 95,
+        "matchedPhenotypeCount": 20,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0009099",
+            "patientPhenotypeLabel": "Median cleft palate",
+            "diseasePhenotypeCurie": "HP:0009099",
+            "diseasePhenotypeLabel": "Median cleft palate",
+            "micaCurie": "HP:0009099",
+            "micaLabel": "Median cleft palate",
+            "score": 6.1667008776768,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:3342"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000444",
+            "patientPhenotypeLabel": "Convex nasal ridge",
+            "diseasePhenotypeCurie": "HP:0000444",
+            "diseasePhenotypeLabel": "Convex nasal ridge",
+            "micaCurie": "HP:0000444",
+            "micaLabel": "Convex nasal ridge",
+            "score": 4.614421379082649,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:17935213"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000973",
+            "patientPhenotypeLabel": "Cutis laxa",
+            "diseasePhenotypeCurie": "HP:0001582",
+            "diseasePhenotypeLabel": "Redundant skin",
+            "micaCurie": "HP:0000973",
+            "micaLabel": "Cutis laxa",
+            "score": 4.374941408448746,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:3342"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000581",
+            "patientPhenotypeLabel": "Blepharophimosis",
+            "diseasePhenotypeCurie": "HP:0000581",
+            "diseasePhenotypeLabel": "Blepharophimosis",
+            "micaCurie": "HP:0000581",
+            "micaLabel": "Blepharophimosis",
+            "score": 4.087259335996965,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:208050"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0005180",
+            "patientPhenotypeLabel": "Tricuspid regurgitation",
+            "diseasePhenotypeCurie": "HP:0001659",
+            "diseasePhenotypeLabel": "Aortic regurgitation",
+            "micaCurie": "HP:0031653",
+            "micaLabel": "Abnormal heart valve physiology",
+            "score": 3.2369897052206036,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:208050"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000343",
+            "patientPhenotypeLabel": "Long philtrum",
+            "diseasePhenotypeCurie": "HP:0000343",
+            "diseasePhenotypeLabel": "Long philtrum",
+            "micaCurie": "HP:0000343",
+            "micaLabel": "Long philtrum",
+            "score": 3.1381787812998185,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:208050"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001015",
+            "patientPhenotypeLabel": "Prominent superficial veins",
+            "diseasePhenotypeCurie": "HP:0100585",
+            "diseasePhenotypeLabel": "Telangiectasia of the skin",
+            "micaCurie": "HP:0011276",
+            "micaLabel": "Vascular skin abnormality",
+            "score": 2.9863349075704755,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:3342"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011648",
+            "patientPhenotypeLabel": "Patent ductus arteriosus after birth at term",
+            "diseasePhenotypeCurie": "HP:0006687",
+            "diseasePhenotypeLabel": "Aortic tortuosity",
+            "micaCurie": "HP:0030962",
+            "micaLabel": "Abnormal morphology of the great vessels",
+            "score": 2.7131922014466343,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:17935213"
+          }
+        ]
+      },
+      {
+        "rank": 11,
+        "diseaseCurie": "MONDO:0013051",
+        "diseaseLabel": "autosomal recessive cutis laxa type 2B",
+        "diseaseEntityId": 74337,
+        "bmaScore": 2.0322512405220636,
+        "normalizedScore": 0.224383,
+        "patientAverageScore": 2.4347708823163052,
+        "diseaseAverageScore": 1.629731598727822,
+        "directPhenotypeCount": 53,
+        "matchedPhenotypeCount": 20,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0034273",
+            "patientPhenotypeLabel": "Premature sagging cheeks",
+            "diseasePhenotypeCurie": "HP:0034273",
+            "diseasePhenotypeLabel": "Premature sagging cheeks",
+            "micaCurie": "HP:0034273",
+            "micaLabel": "Premature sagging cheeks",
+            "score": 7.26531316634491,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:19576563"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001015",
+            "patientPhenotypeLabel": "Prominent superficial veins",
+            "diseasePhenotypeCurie": "HP:0001015",
+            "diseasePhenotypeLabel": "Prominent superficial veins",
+            "micaCurie": "HP:0001015",
+            "micaLabel": "Prominent superficial veins",
+            "score": 5.798976097551483,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:19576563"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000973",
+            "patientPhenotypeLabel": "Cutis laxa",
+            "diseasePhenotypeCurie": "HP:0001582",
+            "diseasePhenotypeLabel": "Redundant skin",
+            "micaCurie": "HP:0000973",
+            "micaLabel": "Cutis laxa",
+            "score": 4.374941408448746,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:612940"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000444",
+            "patientPhenotypeLabel": "Convex nasal ridge",
+            "diseasePhenotypeCurie": "HP:0000418",
+            "diseasePhenotypeLabel": "Narrow nasal ridge",
+            "micaCurie": "HP:0011119",
+            "micaLabel": "Abnormal nasal dorsum morphology",
+            "score": 3.87528908528088,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:19576563"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000343",
+            "patientPhenotypeLabel": "Long philtrum",
+            "diseasePhenotypeCurie": "HP:0000343",
+            "diseasePhenotypeLabel": "Long philtrum",
+            "micaCurie": "HP:0000343",
+            "micaLabel": "Long philtrum",
+            "score": 3.1381787812998185,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:19576563"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001845",
+            "patientPhenotypeLabel": "Overlapping toe",
+            "diseasePhenotypeCurie": "HP:0001822",
+            "diseasePhenotypeLabel": "Hallux valgus",
+            "micaCurie": "HP:0001780",
+            "micaLabel": "Abnormal toe morphology",
+            "score": 2.4932171090408377,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:21487760"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011648",
+            "patientPhenotypeLabel": "Patent ductus arteriosus after birth at term",
+            "diseasePhenotypeCurie": "HP:0004948",
+            "diseasePhenotypeLabel": "Vascular tortuosity",
+            "micaCurie": "HP:0033353",
+            "micaLabel": "Abnormal blood vessel morphology",
+            "score": 2.3762179567827504,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:19576563"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000581",
+            "patientPhenotypeLabel": "Blepharophimosis",
+            "diseasePhenotypeCurie": "HP:0000494",
+            "diseasePhenotypeLabel": "Downslanted palpebral fissures",
+            "micaCurie": "HP:0008050",
+            "micaLabel": "Abnormality of the palpebral fissures",
+            "score": 2.288579423924336,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:19576563"
+          }
+        ]
+      },
+      {
+        "rank": 12,
+        "diseaseCurie": "MONDO:0060760",
+        "diseaseLabel": "intellectual developmental disorder with dysmorphic facies and behavioral abnormalities",
+        "diseaseEntityId": 86214,
+        "bmaScore": 1.9883804885501746,
+        "normalizedScore": 0.219539,
+        "patientAverageScore": 2.626792238691258,
+        "diseaseAverageScore": 1.3499687384090913,
+        "directPhenotypeCount": 123,
+        "matchedPhenotypeCount": 20,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000629",
+            "patientPhenotypeLabel": "Periorbital fullness",
+            "diseasePhenotypeCurie": "HP:0000629",
+            "diseasePhenotypeLabel": "Periorbital fullness",
+            "micaCurie": "HP:0000629",
+            "micaLabel": "Periorbital fullness",
+            "score": 5.185871624665074,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:30057029"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000444",
+            "patientPhenotypeLabel": "Convex nasal ridge",
+            "diseasePhenotypeCurie": "HP:0000457",
+            "diseasePhenotypeLabel": "Depressed nasal ridge",
+            "micaCurie": "HP:0011119",
+            "micaLabel": "Abnormal nasal dorsum morphology",
+            "score": 3.87528908528088,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:30057029"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000973",
+            "patientPhenotypeLabel": "Cutis laxa",
+            "diseasePhenotypeCurie": "HP:0001065",
+            "diseasePhenotypeLabel": "Striae distensae",
+            "micaCurie": "HP:0010647",
+            "micaLabel": "Abnormal elasticity of skin",
+            "score": 3.763767810848473,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:30057029"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000160",
+            "patientPhenotypeLabel": "Narrow mouth",
+            "diseasePhenotypeCurie": "HP:0000160",
+            "diseasePhenotypeLabel": "Narrow mouth",
+            "micaCurie": "HP:0000160",
+            "micaLabel": "Narrow mouth",
+            "score": 3.700486360900953,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:30057029"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0034273",
+            "patientPhenotypeLabel": "Premature sagging cheeks",
+            "diseasePhenotypeCurie": "HP:0004467",
+            "diseasePhenotypeLabel": "Preauricular pit",
+            "micaCurie": "HP:0004426",
+            "micaLabel": "Abnormal cheek morphology",
+            "score": 3.601751520215264,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:30057029"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000581",
+            "patientPhenotypeLabel": "Blepharophimosis",
+            "diseasePhenotypeCurie": "HP:0045025",
+            "diseasePhenotypeLabel": "Narrow palpebral fissure",
+            "micaCurie": "HP:0200007",
+            "micaLabel": "Abnormal size of the palpebral fissures",
+            "score": 3.304499996747332,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:30057029"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000343",
+            "patientPhenotypeLabel": "Long philtrum",
+            "diseasePhenotypeCurie": "HP:0000343",
+            "diseasePhenotypeLabel": "Long philtrum",
+            "micaCurie": "HP:0000343",
+            "micaLabel": "Long philtrum",
+            "score": 3.1381787812998185,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:30057029"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000463",
+            "patientPhenotypeLabel": "Anteverted nares",
+            "diseasePhenotypeCurie": "HP:0000463",
+            "diseasePhenotypeLabel": "Anteverted nares",
+            "micaCurie": "HP:0000463",
+            "micaLabel": "Anteverted nares",
+            "score": 3.028794115342267,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:30057029"
+          }
+        ]
+      },
+      {
+        "rank": 13,
+        "diseaseCurie": "MONDO:0032707",
+        "diseaseLabel": "turnpenny-fry syndrome",
+        "diseaseEntityId": 84565,
+        "bmaScore": 1.9771233061565803,
+        "normalizedScore": 0.218296,
+        "patientAverageScore": 2.696451127116391,
+        "diseaseAverageScore": 1.2577954851967696,
+        "directPhenotypeCount": 82,
+        "matchedPhenotypeCount": 20,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000629",
+            "patientPhenotypeLabel": "Periorbital fullness",
+            "diseasePhenotypeCurie": "HP:0000629",
+            "diseasePhenotypeLabel": "Periorbital fullness",
+            "micaCurie": "HP:0000629",
+            "micaLabel": "Periorbital fullness",
+            "score": 5.185871624665074,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:30343942"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001845",
+            "patientPhenotypeLabel": "Overlapping toe",
+            "diseasePhenotypeCurie": "HP:0001845",
+            "diseasePhenotypeLabel": "Overlapping toe",
+            "micaCurie": "HP:0001845",
+            "micaLabel": "Overlapping toe",
+            "score": 4.6626234809005265,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:618371"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000678",
+            "patientPhenotypeLabel": "Dental crowding",
+            "diseasePhenotypeCurie": "HP:0000678",
+            "diseasePhenotypeLabel": "Dental crowding",
+            "micaCurie": "HP:0000678",
+            "micaLabel": "Dental crowding",
+            "score": 4.277949142461436,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:618371"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000160",
+            "patientPhenotypeLabel": "Narrow mouth",
+            "diseasePhenotypeCurie": "HP:0000160",
+            "diseasePhenotypeLabel": "Narrow mouth",
+            "micaCurie": "HP:0000160",
+            "micaLabel": "Narrow mouth",
+            "score": 3.700486360900953,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:30343942"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011648",
+            "patientPhenotypeLabel": "Patent ductus arteriosus after birth at term",
+            "diseasePhenotypeCurie": "HP:0001643",
+            "diseasePhenotypeLabel": "Patent ductus arteriosus",
+            "micaCurie": "HP:0001643",
+            "micaLabel": "Patent ductus arteriosus",
+            "score": 3.3367608589655537,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:618371"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000581",
+            "patientPhenotypeLabel": "Blepharophimosis",
+            "diseasePhenotypeCurie": "HP:0045025",
+            "diseasePhenotypeLabel": "Narrow palpebral fissure",
+            "micaCurie": "HP:0200007",
+            "micaLabel": "Abnormal size of the palpebral fissures",
+            "score": 3.304499996747332,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:30343942"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0005180",
+            "patientPhenotypeLabel": "Tricuspid regurgitation",
+            "diseasePhenotypeCurie": "HP:0001659",
+            "diseasePhenotypeLabel": "Aortic regurgitation",
+            "micaCurie": "HP:0031653",
+            "micaLabel": "Abnormal heart valve physiology",
+            "score": 3.2369897052206036,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:618371"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001562",
+            "patientPhenotypeLabel": "Oligohydramnios",
+            "diseasePhenotypeCurie": "HP:0001561",
+            "diseasePhenotypeLabel": "Polyhydramnios",
+            "micaCurie": "HP:0001560",
+            "micaLabel": "Abnormality of the amniotic fluid",
+            "score": 3.1301466096025545,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:30343942"
+          }
+        ]
+      },
+      {
+        "rank": 14,
+        "diseaseCurie": "MONDO:0859147",
+        "diseaseLabel": "Marbach-Rustad progeroid syndrome",
+        "diseaseEntityId": 87811,
+        "bmaScore": 1.9722312327912273,
+        "normalizedScore": 0.217756,
+        "patientAverageScore": 2.3898201161154597,
+        "diseaseAverageScore": 1.5546423494669948,
+        "directPhenotypeCount": 33,
+        "matchedPhenotypeCount": 20,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001015",
+            "patientPhenotypeLabel": "Prominent superficial veins",
+            "diseasePhenotypeCurie": "HP:0001015",
+            "diseasePhenotypeLabel": "Prominent superficial veins",
+            "micaCurie": "HP:0001015",
+            "micaLabel": "Prominent superficial veins",
+            "score": 5.798976097551483,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:30905398"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000444",
+            "patientPhenotypeLabel": "Convex nasal ridge",
+            "diseasePhenotypeCurie": "HP:0000444",
+            "diseasePhenotypeLabel": "Convex nasal ridge",
+            "micaCurie": "HP:0000444",
+            "micaLabel": "Convex nasal ridge",
+            "score": 4.614421379082649,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:30905398"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000160",
+            "patientPhenotypeLabel": "Narrow mouth",
+            "diseasePhenotypeCurie": "HP:0000160",
+            "diseasePhenotypeLabel": "Narrow mouth",
+            "micaCurie": "HP:0000160",
+            "micaLabel": "Narrow mouth",
+            "score": 3.700486360900953,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:30905398"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0005180",
+            "patientPhenotypeLabel": "Tricuspid regurgitation",
+            "diseasePhenotypeCurie": "HP:0010444",
+            "diseasePhenotypeLabel": "Pulmonic regurgitation",
+            "micaCurie": "HP:0031653",
+            "micaLabel": "Abnormal heart valve physiology",
+            "score": 3.2369897052206036,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:30905398"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0034273",
+            "patientPhenotypeLabel": "Premature sagging cheeks",
+            "diseasePhenotypeCurie": "HP:0011800",
+            "diseasePhenotypeLabel": "Midface retrusion",
+            "micaCurie": "HP:0000309",
+            "micaLabel": "Abnormal midface morphology",
+            "score": 2.6257415536394864,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:30905398"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000343",
+            "patientPhenotypeLabel": "Long philtrum",
+            "diseasePhenotypeCurie": "HP:0000319",
+            "diseasePhenotypeLabel": "Smooth philtrum",
+            "micaCurie": "HP:0000288",
+            "micaLabel": "Abnormality of the philtrum",
+            "score": 2.530577776002175,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:30905398"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001655",
+            "patientPhenotypeLabel": "Patent foramen ovale",
+            "diseasePhenotypeCurie": "HP:0005144",
+            "diseasePhenotypeLabel": "Ventricular septal hypertrophy",
+            "micaCurie": "HP:0001671",
+            "micaLabel": "Abnormal cardiac septum morphology",
+            "score": 2.469522620748169,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:30905398"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001562",
+            "patientPhenotypeLabel": "Oligohydramnios",
+            "diseasePhenotypeCurie": "HP:0001788",
+            "diseasePhenotypeLabel": "Premature rupture of membranes",
+            "micaCurie": "HP:0001197",
+            "micaLabel": "Abnormality of prenatal development or birth",
+            "score": 2.4585636069584496,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:30905398"
+          }
+        ]
+      },
+      {
+        "rank": 15,
+        "diseaseCurie": "MONDO:0859185",
+        "diseaseLabel": "neurodevelopmental disorder with hypotonia and dysmorphic facies",
+        "diseaseEntityId": 87848,
+        "bmaScore": 1.9677787184431526,
+        "normalizedScore": 0.217264,
+        "patientAverageScore": 2.753585320720612,
+        "diseaseAverageScore": 1.1819721161656933,
+        "directPhenotypeCount": 154,
+        "matchedPhenotypeCount": 20,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001015",
+            "patientPhenotypeLabel": "Prominent superficial veins",
+            "diseasePhenotypeCurie": "HP:0005301",
+            "diseasePhenotypeLabel": "Persistent left superior vena cava",
+            "micaCurie": "HP:0002624",
+            "micaLabel": "Abnormal venous morphology",
+            "score": 4.461952785438375,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:34183358"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000973",
+            "patientPhenotypeLabel": "Cutis laxa",
+            "diseasePhenotypeCurie": "HP:0000973",
+            "diseasePhenotypeLabel": "Cutis laxa",
+            "micaCurie": "HP:0000973",
+            "micaLabel": "Cutis laxa",
+            "score": 4.374941408448746,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:33971351"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000678",
+            "patientPhenotypeLabel": "Dental crowding",
+            "diseasePhenotypeCurie": "HP:0000678",
+            "diseasePhenotypeLabel": "Dental crowding",
+            "micaCurie": "HP:0000678",
+            "micaLabel": "Dental crowding",
+            "score": 4.277949142461436,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31698099"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001562",
+            "patientPhenotypeLabel": "Oligohydramnios",
+            "diseasePhenotypeCurie": "HP:0001562",
+            "diseasePhenotypeLabel": "Oligohydramnios",
+            "micaCurie": "HP:0001562",
+            "micaLabel": "Oligohydramnios",
+            "score": 4.220790728621488,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:34183358"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000160",
+            "patientPhenotypeLabel": "Narrow mouth",
+            "diseasePhenotypeCurie": "HP:0000160",
+            "diseasePhenotypeLabel": "Narrow mouth",
+            "micaCurie": "HP:0000160",
+            "micaLabel": "Narrow mouth",
+            "score": 3.700486360900953,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:33971351"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0034273",
+            "patientPhenotypeLabel": "Premature sagging cheeks",
+            "diseasePhenotypeCurie": "HP:0000293",
+            "diseasePhenotypeLabel": "Full cheeks",
+            "micaCurie": "HP:0004426",
+            "micaLabel": "Abnormal cheek morphology",
+            "score": 3.601751520215264,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:34183358"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000581",
+            "patientPhenotypeLabel": "Blepharophimosis",
+            "diseasePhenotypeCurie": "HP:0000637",
+            "diseasePhenotypeLabel": "Long palpebral fissure",
+            "micaCurie": "HP:0200007",
+            "micaLabel": "Abnormal size of the palpebral fissures",
+            "score": 3.304499996747332,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:34183358"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011648",
+            "patientPhenotypeLabel": "Patent ductus arteriosus after birth at term",
+            "diseasePhenotypeCurie": "HP:0001719",
+            "diseasePhenotypeLabel": "Double outlet right ventricle",
+            "micaCurie": "HP:0011603",
+            "micaLabel": "Congenital malformation of the great arteries",
+            "score": 3.0807217262750313,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:34183358"
+          }
+        ]
+      },
+      {
+        "rank": 16,
+        "diseaseCurie": "MONDO:0007411",
+        "diseaseLabel": "cutis laxa, autosomal dominant 1",
+        "diseaseEntityId": 68697,
+        "bmaScore": 1.9613318005277371,
+        "normalizedScore": 0.216553,
+        "patientAverageScore": 1.777325115711164,
+        "diseaseAverageScore": 2.1453384853443103,
+        "directPhenotypeCount": 20,
+        "matchedPhenotypeCount": 20,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000444",
+            "patientPhenotypeLabel": "Convex nasal ridge",
+            "diseasePhenotypeCurie": "HP:0000444",
+            "diseasePhenotypeLabel": "Convex nasal ridge",
+            "micaCurie": "HP:0000444",
+            "micaLabel": "Convex nasal ridge",
+            "score": 4.614421379082649,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:15955094"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000973",
+            "patientPhenotypeLabel": "Cutis laxa",
+            "diseasePhenotypeCurie": "HP:0001582",
+            "diseasePhenotypeLabel": "Redundant skin",
+            "micaCurie": "HP:0000973",
+            "micaLabel": "Cutis laxa",
+            "score": 4.374941408448746,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:9580666"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0005180",
+            "patientPhenotypeLabel": "Tricuspid regurgitation",
+            "diseasePhenotypeCurie": "HP:0001653",
+            "diseasePhenotypeLabel": "Mitral regurgitation",
+            "micaCurie": "HP:0034376",
+            "micaLabel": "Atrioventricular valve regurgitation",
+            "score": 4.122598702442273,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:123700"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000343",
+            "patientPhenotypeLabel": "Long philtrum",
+            "diseasePhenotypeCurie": "HP:0000343",
+            "diseasePhenotypeLabel": "Long philtrum",
+            "micaCurie": "HP:0000343",
+            "micaLabel": "Long philtrum",
+            "score": 3.1381787812998185,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:15955094"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011648",
+            "patientPhenotypeLabel": "Patent ductus arteriosus after birth at term",
+            "diseasePhenotypeCurie": "HP:0004969",
+            "diseasePhenotypeLabel": "Peripheral pulmonary artery stenosis",
+            "micaCurie": "HP:0030962",
+            "micaLabel": "Abnormal morphology of the great vessels",
+            "score": 2.7131922014466343,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:9580666"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001655",
+            "patientPhenotypeLabel": "Patent foramen ovale",
+            "diseasePhenotypeCurie": "HP:0001629",
+            "diseasePhenotypeLabel": "Ventricular septal defect",
+            "micaCurie": "HP:0001671",
+            "micaLabel": "Abnormal cardiac septum morphology",
+            "score": 2.469522620748169,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:15955094"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001015",
+            "patientPhenotypeLabel": "Prominent superficial veins",
+            "diseasePhenotypeCurie": "HP:0004969",
+            "diseasePhenotypeLabel": "Peripheral pulmonary artery stenosis",
+            "micaCurie": "HP:0033353",
+            "micaLabel": "Abnormal blood vessel morphology",
+            "score": 2.3762179567827504,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:9580666"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000463",
+            "patientPhenotypeLabel": "Anteverted nares",
+            "diseasePhenotypeCurie": "HP:0000444",
+            "diseasePhenotypeLabel": "Convex nasal ridge",
+            "micaCurie": "HP:0010938",
+            "micaLabel": "Abnormal external nose morphology",
+            "score": 2.2524581155103416,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:15955094"
+          }
+        ]
+      },
+      {
+        "rank": 17,
+        "diseaseCurie": "MONDO:0013754",
+        "diseaseLabel": "cutis laxa, autosomal recessive, type 1B",
+        "diseaseEntityId": 75040,
+        "bmaScore": 1.950523518609092,
+        "normalizedScore": 0.215359,
+        "patientAverageScore": 2.294558628598585,
+        "diseaseAverageScore": 1.6064884086195987,
+        "directPhenotypeCount": 51,
+        "matchedPhenotypeCount": 20,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0005180",
+            "patientPhenotypeLabel": "Tricuspid regurgitation",
+            "diseasePhenotypeCurie": "HP:0005180",
+            "diseasePhenotypeLabel": "Tricuspid regurgitation",
+            "micaCurie": "HP:0005180",
+            "micaLabel": "Tricuspid regurgitation",
+            "score": 4.979535191667246,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:17937443"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000444",
+            "patientPhenotypeLabel": "Convex nasal ridge",
+            "diseasePhenotypeCurie": "HP:0000444",
+            "diseasePhenotypeLabel": "Convex nasal ridge",
+            "micaCurie": "HP:0000444",
+            "micaLabel": "Convex nasal ridge",
+            "score": 4.614421379082649,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:19664000"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000973",
+            "patientPhenotypeLabel": "Cutis laxa",
+            "diseasePhenotypeCurie": "HP:0000973",
+            "diseasePhenotypeLabel": "Cutis laxa",
+            "micaCurie": "HP:0000973",
+            "micaLabel": "Cutis laxa",
+            "score": 4.374941408448746,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:16685658;PMID:19664000;PMID:17937443"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001562",
+            "patientPhenotypeLabel": "Oligohydramnios",
+            "diseasePhenotypeCurie": "HP:0001562",
+            "diseasePhenotypeLabel": "Oligohydramnios",
+            "micaCurie": "HP:0001562",
+            "micaLabel": "Oligohydramnios",
+            "score": 4.220790728621488,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:16685658;PMID:19664000"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000581",
+            "patientPhenotypeLabel": "Blepharophimosis",
+            "diseasePhenotypeCurie": "HP:0045025",
+            "diseasePhenotypeLabel": "Narrow palpebral fissure",
+            "micaCurie": "HP:0200007",
+            "micaLabel": "Abnormal size of the palpebral fissures",
+            "score": 3.304499996747332,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:614437"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011648",
+            "patientPhenotypeLabel": "Patent ductus arteriosus after birth at term",
+            "diseasePhenotypeCurie": "HP:0004970",
+            "diseasePhenotypeLabel": "Ascending tubular aorta aneurysm",
+            "micaCurie": "HP:0030962",
+            "micaLabel": "Abnormal morphology of the great vessels",
+            "score": 2.7131922014466343,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:17937443"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001015",
+            "patientPhenotypeLabel": "Prominent superficial veins",
+            "diseasePhenotypeCurie": "HP:0005116",
+            "diseasePhenotypeLabel": "Arterial tortuosity",
+            "micaCurie": "HP:0033353",
+            "micaLabel": "Abnormal blood vessel morphology",
+            "score": 2.3762179567827504,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:16685658;PMID:20389311"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000463",
+            "patientPhenotypeLabel": "Anteverted nares",
+            "diseasePhenotypeCurie": "HP:0000444",
+            "diseasePhenotypeLabel": "Convex nasal ridge",
+            "micaCurie": "HP:0010938",
+            "micaLabel": "Abnormal external nose morphology",
+            "score": 2.2524581155103416,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:19664000"
+          }
+        ]
+      },
+      {
+        "rank": 18,
+        "diseaseCurie": "MONDO:0012948",
+        "diseaseLabel": "chromosome 6pter-p24 deletion syndrome",
+        "diseaseEntityId": 74234,
+        "bmaScore": 1.9500999481776118,
+        "normalizedScore": 0.215312,
+        "patientAverageScore": 2.4594156752690495,
+        "diseaseAverageScore": 1.440784221086174,
+        "directPhenotypeCount": 66,
+        "matchedPhenotypeCount": 20,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000678",
+            "patientPhenotypeLabel": "Dental crowding",
+            "diseasePhenotypeCurie": "HP:0000678",
+            "diseasePhenotypeLabel": "Dental crowding",
+            "micaCurie": "HP:0000678",
+            "micaLabel": "Dental crowding",
+            "score": 4.277949142461436,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:612582"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001655",
+            "patientPhenotypeLabel": "Patent foramen ovale",
+            "diseasePhenotypeCurie": "HP:0001655",
+            "diseasePhenotypeLabel": "Patent foramen ovale",
+            "micaCurie": "HP:0001655",
+            "micaLabel": "Patent foramen ovale",
+            "score": 4.115430212963661,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:15150541"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000629",
+            "patientPhenotypeLabel": "Periorbital fullness",
+            "diseasePhenotypeCurie": "HP:0009891",
+            "diseasePhenotypeLabel": "Underdeveloped supraorbital ridges",
+            "micaCurie": "HP:0000606",
+            "micaLabel": "Abnormality of the periorbital region",
+            "score": 3.820630672743016,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:15150541"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000160",
+            "patientPhenotypeLabel": "Narrow mouth",
+            "diseasePhenotypeCurie": "HP:0000160",
+            "diseasePhenotypeLabel": "Narrow mouth",
+            "micaCurie": "HP:0000160",
+            "micaLabel": "Narrow mouth",
+            "score": 3.700486360900953,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:15150541"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0034273",
+            "patientPhenotypeLabel": "Premature sagging cheeks",
+            "diseasePhenotypeCurie": "HP:0004467",
+            "diseasePhenotypeLabel": "Preauricular pit",
+            "micaCurie": "HP:0004426",
+            "micaLabel": "Abnormal cheek morphology",
+            "score": 3.601751520215264,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:15150541"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011648",
+            "patientPhenotypeLabel": "Patent ductus arteriosus after birth at term",
+            "diseasePhenotypeCurie": "HP:0001643",
+            "diseasePhenotypeLabel": "Patent ductus arteriosus",
+            "micaCurie": "HP:0001643",
+            "micaLabel": "Patent ductus arteriosus",
+            "score": 3.3367608589655537,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:15150541"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000581",
+            "patientPhenotypeLabel": "Blepharophimosis",
+            "diseasePhenotypeCurie": "HP:0012745",
+            "diseasePhenotypeLabel": "Short palpebral fissure",
+            "micaCurie": "HP:0200007",
+            "micaLabel": "Abnormal size of the palpebral fissures",
+            "score": 3.304499996747332,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:15150541"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001015",
+            "patientPhenotypeLabel": "Prominent superficial veins",
+            "diseasePhenotypeCurie": "HP:0001009",
+            "diseasePhenotypeLabel": "Telangiectasia",
+            "micaCurie": "HP:0011276",
+            "micaLabel": "Vascular skin abnormality",
+            "score": 2.9863349075704755,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:15150541"
+          }
+        ]
+      },
+      {
+        "rank": 19,
+        "diseaseCurie": "MONDO:0030029",
+        "diseaseLabel": "skeletal dysplasia, mild, with joint laxity and advanced bone age",
+        "diseaseEntityId": 83979,
+        "bmaScore": 1.945042647654576,
+        "normalizedScore": 0.214754,
+        "patientAverageScore": 2.3962898717804353,
+        "diseaseAverageScore": 1.4937954235287165,
+        "directPhenotypeCount": 48,
+        "matchedPhenotypeCount": 20,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0005180",
+            "patientPhenotypeLabel": "Tricuspid regurgitation",
+            "diseasePhenotypeCurie": "HP:0005180",
+            "diseasePhenotypeLabel": "Tricuspid regurgitation",
+            "micaCurie": "HP:0005180",
+            "micaLabel": "Tricuspid regurgitation",
+            "score": 4.979535191667246,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31705726"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000444",
+            "patientPhenotypeLabel": "Convex nasal ridge",
+            "diseasePhenotypeCurie": "HP:0000444",
+            "diseasePhenotypeLabel": "Convex nasal ridge",
+            "micaCurie": "HP:0000444",
+            "micaLabel": "Convex nasal ridge",
+            "score": 4.614421379082649,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31705726"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001655",
+            "patientPhenotypeLabel": "Patent foramen ovale",
+            "diseasePhenotypeCurie": "HP:0001655",
+            "diseasePhenotypeLabel": "Patent foramen ovale",
+            "micaCurie": "HP:0001655",
+            "micaLabel": "Patent foramen ovale",
+            "score": 4.115430212963661,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31705726"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011648",
+            "patientPhenotypeLabel": "Patent ductus arteriosus after birth at term",
+            "diseasePhenotypeCurie": "HP:0001643",
+            "diseasePhenotypeLabel": "Patent ductus arteriosus",
+            "micaCurie": "HP:0001643",
+            "micaLabel": "Patent ductus arteriosus",
+            "score": 3.3367608589655537,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31705726"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000343",
+            "patientPhenotypeLabel": "Long philtrum",
+            "diseasePhenotypeCurie": "HP:0000343",
+            "diseasePhenotypeLabel": "Long philtrum",
+            "micaCurie": "HP:0000343",
+            "micaLabel": "Long philtrum",
+            "score": 3.1381787812998185,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:27599773"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000463",
+            "patientPhenotypeLabel": "Anteverted nares",
+            "diseasePhenotypeCurie": "HP:0000463",
+            "diseasePhenotypeLabel": "Anteverted nares",
+            "micaCurie": "HP:0000463",
+            "micaLabel": "Anteverted nares",
+            "score": 3.028794115342267,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:27599773;PMID:31705726"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0034273",
+            "patientPhenotypeLabel": "Premature sagging cheeks",
+            "diseasePhenotypeCurie": "HP:0011800",
+            "diseasePhenotypeLabel": "Midface retrusion",
+            "micaCurie": "HP:0000309",
+            "micaLabel": "Abnormal midface morphology",
+            "score": 2.6257415536394864,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:27599773;PMID:31705726"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001845",
+            "patientPhenotypeLabel": "Overlapping toe",
+            "diseasePhenotypeCurie": "HP:0004691",
+            "diseasePhenotypeLabel": "2-3 toe syndactyly",
+            "micaCurie": "HP:0001780",
+            "micaLabel": "Abnormal toe morphology",
+            "score": 2.4932171090408377,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31705726"
+          }
+        ]
+      },
+      {
+        "rank": 20,
+        "diseaseCurie": "MONDO:0013323",
+        "diseaseLabel": "cranioectodermal dysplasia 2",
+        "diseaseEntityId": 74609,
+        "bmaScore": 1.942798550099472,
+        "normalizedScore": 0.214506,
+        "patientAverageScore": 2.4696239548785015,
+        "diseaseAverageScore": 1.4159731453204427,
+        "directPhenotypeCount": 80,
+        "matchedPhenotypeCount": 20,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000973",
+            "patientPhenotypeLabel": "Cutis laxa",
+            "diseasePhenotypeCurie": "HP:0000973",
+            "diseasePhenotypeLabel": "Cutis laxa",
+            "micaCurie": "HP:0000973",
+            "micaLabel": "Cutis laxa",
+            "score": 4.374941408448746,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:613610"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001655",
+            "patientPhenotypeLabel": "Patent foramen ovale",
+            "diseasePhenotypeCurie": "HP:0001655",
+            "diseasePhenotypeLabel": "Patent foramen ovale",
+            "micaCurie": "HP:0001655",
+            "micaLabel": "Patent foramen ovale",
+            "score": 4.115430212963661,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:613610"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000581",
+            "patientPhenotypeLabel": "Blepharophimosis",
+            "diseasePhenotypeCurie": "HP:0000581",
+            "diseasePhenotypeLabel": "Blepharophimosis",
+            "micaCurie": "HP:0000581",
+            "micaLabel": "Blepharophimosis",
+            "score": 4.087259335996965,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:613610"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0034273",
+            "patientPhenotypeLabel": "Premature sagging cheeks",
+            "diseasePhenotypeCurie": "HP:0000293",
+            "diseasePhenotypeLabel": "Full cheeks",
+            "micaCurie": "HP:0004426",
+            "micaLabel": "Abnormal cheek morphology",
+            "score": 3.601751520215264,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:613610"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011648",
+            "patientPhenotypeLabel": "Patent ductus arteriosus after birth at term",
+            "diseasePhenotypeCurie": "HP:0001643",
+            "diseasePhenotypeLabel": "Patent ductus arteriosus",
+            "micaCurie": "HP:0001643",
+            "micaLabel": "Patent ductus arteriosus",
+            "score": 3.3367608589655537,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:613610"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001562",
+            "patientPhenotypeLabel": "Oligohydramnios",
+            "diseasePhenotypeCurie": "HP:0001561",
+            "diseasePhenotypeLabel": "Polyhydramnios",
+            "micaCurie": "HP:0001560",
+            "micaLabel": "Abnormality of the amniotic fluid",
+            "score": 3.1301466096025545,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:613610"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000678",
+            "patientPhenotypeLabel": "Dental crowding",
+            "diseasePhenotypeCurie": "HP:0000687",
+            "diseasePhenotypeLabel": "Widely spaced teeth",
+            "micaCurie": "HP:0000692",
+            "micaLabel": "Tooth malposition",
+            "score": 3.1248274481249543,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:20817137"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009099",
+            "patientPhenotypeLabel": "Median cleft palate",
+            "diseasePhenotypeCurie": "HP:0000175",
+            "diseasePhenotypeLabel": "Cleft palate",
+            "micaCurie": "HP:0000175",
+            "micaLabel": "Cleft palate",
+            "score": 2.7710745410641007,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:613610"
+          }
+        ]
+      },
+      {
+        "rank": 21,
+        "diseaseCurie": "MONDO:0054588",
+        "diseaseLabel": "Noonan syndrome-like disorder with loose anagen hair 2",
+        "diseaseEntityId": 86028,
+        "bmaScore": 1.9404693036538212,
+        "normalizedScore": 0.214249,
+        "patientAverageScore": 2.416834923881731,
+        "diseaseAverageScore": 1.4641036834259116,
+        "directPhenotypeCount": 82,
+        "matchedPhenotypeCount": 20,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0005180",
+            "patientPhenotypeLabel": "Tricuspid regurgitation",
+            "diseasePhenotypeCurie": "HP:0005180",
+            "diseasePhenotypeLabel": "Tricuspid regurgitation",
+            "micaCurie": "HP:0005180",
+            "micaLabel": "Tricuspid regurgitation",
+            "score": 4.979535191667246,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:27681385"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001655",
+            "patientPhenotypeLabel": "Patent foramen ovale",
+            "diseasePhenotypeCurie": "HP:0001655",
+            "diseasePhenotypeLabel": "Patent foramen ovale",
+            "micaCurie": "HP:0001655",
+            "micaLabel": "Patent foramen ovale",
+            "score": 4.115430212963661,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:27681385;PMID:28211982;PMID:27868344"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0034273",
+            "patientPhenotypeLabel": "Premature sagging cheeks",
+            "diseasePhenotypeCurie": "HP:0004467",
+            "diseasePhenotypeLabel": "Preauricular pit",
+            "micaCurie": "HP:0004426",
+            "micaLabel": "Abnormal cheek morphology",
+            "score": 3.601751520215264,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:27681385"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011648",
+            "patientPhenotypeLabel": "Patent ductus arteriosus after birth at term",
+            "diseasePhenotypeCurie": "HP:0001643",
+            "diseasePhenotypeLabel": "Patent ductus arteriosus",
+            "micaCurie": "HP:0001643",
+            "micaLabel": "Patent ductus arteriosus",
+            "score": 3.3367608589655537,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:617506"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000343",
+            "patientPhenotypeLabel": "Long philtrum",
+            "diseasePhenotypeCurie": "HP:0000343",
+            "diseasePhenotypeLabel": "Long philtrum",
+            "micaCurie": "HP:0000343",
+            "micaLabel": "Long philtrum",
+            "score": 3.1381787812998185,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:27681385"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001562",
+            "patientPhenotypeLabel": "Oligohydramnios",
+            "diseasePhenotypeCurie": "HP:0001561",
+            "diseasePhenotypeLabel": "Polyhydramnios",
+            "micaCurie": "HP:0001560",
+            "micaLabel": "Abnormality of the amniotic fluid",
+            "score": 3.1301466096025545,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:27868344"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000678",
+            "patientPhenotypeLabel": "Dental crowding",
+            "diseasePhenotypeCurie": "HP:0000687",
+            "diseasePhenotypeLabel": "Widely spaced teeth",
+            "micaCurie": "HP:0000692",
+            "micaLabel": "Tooth malposition",
+            "score": 3.1248274481249543,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:27681385"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000463",
+            "patientPhenotypeLabel": "Anteverted nares",
+            "diseasePhenotypeCurie": "HP:0000430",
+            "diseasePhenotypeLabel": "Underdeveloped nasal alae",
+            "micaCurie": "HP:0000429",
+            "micaLabel": "Abnormal morphology of the nasal alae",
+            "score": 2.8167967904021958,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:27681385"
+          }
+        ]
+      },
+      {
+        "rank": 22,
+        "diseaseCurie": "MONDO:0013998",
+        "diseaseLabel": "MEGF8-related Carpenter syndrome",
+        "diseaseEntityId": 75284,
+        "bmaScore": 1.927963973842643,
+        "normalizedScore": 0.212868,
+        "patientAverageScore": 2.453771070280232,
+        "diseaseAverageScore": 1.402156877405054,
+        "directPhenotypeCount": 75,
+        "matchedPhenotypeCount": 20,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0005180",
+            "patientPhenotypeLabel": "Tricuspid regurgitation",
+            "diseasePhenotypeCurie": "HP:0005180",
+            "diseasePhenotypeLabel": "Tricuspid regurgitation",
+            "micaCurie": "HP:0005180",
+            "micaLabel": "Tricuspid regurgitation",
+            "score": 4.979535191667246,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:23063620"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000973",
+            "patientPhenotypeLabel": "Cutis laxa",
+            "diseasePhenotypeCurie": "HP:0000973",
+            "diseasePhenotypeLabel": "Cutis laxa",
+            "micaCurie": "HP:0000973",
+            "micaLabel": "Cutis laxa",
+            "score": 4.374941408448746,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:23063620"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000629",
+            "patientPhenotypeLabel": "Periorbital fullness",
+            "diseasePhenotypeCurie": "HP:0009891",
+            "diseasePhenotypeLabel": "Underdeveloped supraorbital ridges",
+            "micaCurie": "HP:0000606",
+            "micaLabel": "Abnormality of the periorbital region",
+            "score": 3.820630672743016,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:23063620"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011648",
+            "patientPhenotypeLabel": "Patent ductus arteriosus after birth at term",
+            "diseasePhenotypeCurie": "HP:0001643",
+            "diseasePhenotypeLabel": "Patent ductus arteriosus",
+            "micaCurie": "HP:0001643",
+            "micaLabel": "Patent ductus arteriosus",
+            "score": 3.3367608589655537,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:23063620"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000343",
+            "patientPhenotypeLabel": "Long philtrum",
+            "diseasePhenotypeCurie": "HP:0000343",
+            "diseasePhenotypeLabel": "Long philtrum",
+            "micaCurie": "HP:0000343",
+            "micaLabel": "Long philtrum",
+            "score": 3.1381787812998185,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:23063620"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000678",
+            "patientPhenotypeLabel": "Dental crowding",
+            "diseasePhenotypeCurie": "HP:0000689",
+            "diseasePhenotypeLabel": "Dental malocclusion",
+            "micaCurie": "HP:0000692",
+            "micaLabel": "Tooth malposition",
+            "score": 3.1248274481249543,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:23063620"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000463",
+            "patientPhenotypeLabel": "Anteverted nares",
+            "diseasePhenotypeCurie": "HP:0000463",
+            "diseasePhenotypeLabel": "Anteverted nares",
+            "micaCurie": "HP:0000463",
+            "micaLabel": "Anteverted nares",
+            "score": 3.028794115342267,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:23063620"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001655",
+            "patientPhenotypeLabel": "Patent foramen ovale",
+            "diseasePhenotypeCurie": "HP:0001631",
+            "diseasePhenotypeLabel": "Atrial septal defect",
+            "micaCurie": "HP:0011994",
+            "micaLabel": "Abnormal atrial septum morphology",
+            "score": 2.904339940868861,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:23063620"
+          }
+        ]
+      },
+      {
+        "rank": 23,
+        "diseaseCurie": "MONDO:0008310",
+        "diseaseLabel": "Hutchinson-Gilford progeria syndrome",
+        "diseaseEntityId": 69596,
+        "bmaScore": 1.9242502359313276,
+        "normalizedScore": 0.212458,
+        "patientAverageScore": 2.3852729232955348,
+        "diseaseAverageScore": 1.4632275485671207,
+        "directPhenotypeCount": 104,
+        "matchedPhenotypeCount": 20,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001015",
+            "patientPhenotypeLabel": "Prominent superficial veins",
+            "diseasePhenotypeCurie": "HP:0007394",
+            "diseasePhenotypeLabel": "Prominent superficial blood vessels",
+            "micaCurie": "HP:0007394",
+            "micaLabel": "Prominent superficial blood vessels",
+            "score": 5.65587525391081,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:740"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000444",
+            "patientPhenotypeLabel": "Convex nasal ridge",
+            "diseasePhenotypeCurie": "HP:0000444",
+            "diseasePhenotypeLabel": "Convex nasal ridge",
+            "micaCurie": "HP:0000444",
+            "micaLabel": "Convex nasal ridge",
+            "score": 4.614421379082649,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:740"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000678",
+            "patientPhenotypeLabel": "Dental crowding",
+            "diseasePhenotypeCurie": "HP:0000678",
+            "diseasePhenotypeLabel": "Dental crowding",
+            "micaCurie": "HP:0000678",
+            "micaLabel": "Dental crowding",
+            "score": 4.277949142461436,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:740"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0005180",
+            "patientPhenotypeLabel": "Tricuspid regurgitation",
+            "diseasePhenotypeCurie": "HP:0001653",
+            "diseasePhenotypeLabel": "Mitral regurgitation",
+            "micaCurie": "HP:0034376",
+            "micaLabel": "Atrioventricular valve regurgitation",
+            "score": 4.122598702442273,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:740"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000973",
+            "patientPhenotypeLabel": "Cutis laxa",
+            "diseasePhenotypeCurie": "HP:0100679",
+            "diseasePhenotypeLabel": "Lack of skin elasticity",
+            "micaCurie": "HP:0010647",
+            "micaLabel": "Abnormal elasticity of skin",
+            "score": 3.763767810848473,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:740"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000160",
+            "patientPhenotypeLabel": "Narrow mouth",
+            "diseasePhenotypeCurie": "HP:0000160",
+            "diseasePhenotypeLabel": "Narrow mouth",
+            "micaCurie": "HP:0000160",
+            "micaLabel": "Narrow mouth",
+            "score": 3.700486360900953,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:740"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0034273",
+            "patientPhenotypeLabel": "Premature sagging cheeks",
+            "diseasePhenotypeCurie": "HP:0011800",
+            "diseasePhenotypeLabel": "Midface retrusion",
+            "micaCurie": "HP:0000309",
+            "micaLabel": "Abnormal midface morphology",
+            "score": 2.6257415536394864,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:176670"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011648",
+            "patientPhenotypeLabel": "Patent ductus arteriosus after birth at term",
+            "diseasePhenotypeCurie": "HP:0012474",
+            "diseasePhenotypeLabel": "Carotid artery occlusion",
+            "micaCurie": "HP:0033353",
+            "micaLabel": "Abnormal blood vessel morphology",
+            "score": 2.3762179567827504,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:740"
+          }
+        ]
+      },
+      {
+        "rank": 24,
+        "diseaseCurie": "MONDO:0009263",
+        "diseaseLabel": "GAPO syndrome",
+        "diseaseEntityId": 70549,
+        "bmaScore": 1.9156147353976456,
+        "normalizedScore": 0.211505,
+        "patientAverageScore": 2.4935066189329147,
+        "diseaseAverageScore": 1.3377228518623767,
+        "directPhenotypeCount": 99,
+        "matchedPhenotypeCount": 20,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001015",
+            "patientPhenotypeLabel": "Prominent superficial veins",
+            "diseasePhenotypeCurie": "HP:0001043",
+            "diseasePhenotypeLabel": "Prominent scalp veins",
+            "micaCurie": "HP:0001015",
+            "micaLabel": "Prominent superficial veins",
+            "score": 5.798976097551483,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:230740"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000973",
+            "patientPhenotypeLabel": "Cutis laxa",
+            "diseasePhenotypeCurie": "HP:0001582",
+            "diseasePhenotypeLabel": "Redundant skin",
+            "micaCurie": "HP:0000973",
+            "micaLabel": "Cutis laxa",
+            "score": 4.374941408448746,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:230740"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000444",
+            "patientPhenotypeLabel": "Convex nasal ridge",
+            "diseasePhenotypeCurie": "HP:0011120",
+            "diseasePhenotypeLabel": "Concave nasal ridge",
+            "micaCurie": "HP:0011119",
+            "micaLabel": "Abnormal nasal dorsum morphology",
+            "score": 3.87528908528088,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:27587992"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000629",
+            "patientPhenotypeLabel": "Periorbital fullness",
+            "diseasePhenotypeCurie": "HP:0100540",
+            "diseasePhenotypeLabel": "Palpebral edema",
+            "micaCurie": "HP:0000606",
+            "micaLabel": "Abnormality of the periorbital region",
+            "score": 3.820630672743016,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:2067"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000343",
+            "patientPhenotypeLabel": "Long philtrum",
+            "diseasePhenotypeCurie": "HP:0000343",
+            "diseasePhenotypeLabel": "Long philtrum",
+            "micaCurie": "HP:0000343",
+            "micaLabel": "Long philtrum",
+            "score": 3.1381787812998185,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:2067"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000463",
+            "patientPhenotypeLabel": "Anteverted nares",
+            "diseasePhenotypeCurie": "HP:0000463",
+            "diseasePhenotypeLabel": "Anteverted nares",
+            "micaCurie": "HP:0000463",
+            "micaLabel": "Anteverted nares",
+            "score": 3.028794115342267,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:2067"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0034273",
+            "patientPhenotypeLabel": "Premature sagging cheeks",
+            "diseasePhenotypeCurie": "HP:0011800",
+            "diseasePhenotypeLabel": "Midface retrusion",
+            "micaCurie": "HP:0000309",
+            "micaLabel": "Abnormal midface morphology",
+            "score": 2.6257415536394864,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:2067"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011648",
+            "patientPhenotypeLabel": "Patent ductus arteriosus after birth at term",
+            "diseasePhenotypeCurie": "HP:0002621",
+            "diseasePhenotypeLabel": "Atherosclerosis",
+            "micaCurie": "HP:0033353",
+            "micaLabel": "Abnormal blood vessel morphology",
+            "score": 2.3762179567827504,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:2067"
+          }
+        ]
+      },
+      {
+        "rank": 25,
+        "diseaseCurie": "MONDO:0012914",
+        "diseaseLabel": "chromosome 1q21.1 deletion syndrome",
+        "diseaseEntityId": 74200,
+        "bmaScore": 1.9095932122950292,
+        "normalizedScore": 0.21084,
+        "patientAverageScore": 2.379127753732409,
+        "diseaseAverageScore": 1.4400586708576495,
+        "directPhenotypeCount": 98,
+        "matchedPhenotypeCount": 20,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001845",
+            "patientPhenotypeLabel": "Overlapping toe",
+            "diseasePhenotypeCurie": "HP:0001845",
+            "diseasePhenotypeLabel": "Overlapping toe",
+            "micaCurie": "HP:0001845",
+            "micaLabel": "Overlapping toe",
+            "score": 4.6626234809005265,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:18784092"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011648",
+            "patientPhenotypeLabel": "Patent ductus arteriosus after birth at term",
+            "diseasePhenotypeCurie": "HP:0001643",
+            "diseasePhenotypeLabel": "Patent ductus arteriosus",
+            "micaCurie": "HP:0001643",
+            "micaLabel": "Patent ductus arteriosus",
+            "score": 3.3367608589655537,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:18784092"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000581",
+            "patientPhenotypeLabel": "Blepharophimosis",
+            "diseasePhenotypeCurie": "HP:0012745",
+            "diseasePhenotypeLabel": "Short palpebral fissure",
+            "micaCurie": "HP:0200007",
+            "micaLabel": "Abnormal size of the palpebral fissures",
+            "score": 3.304499996747332,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:18784092"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0005180",
+            "patientPhenotypeLabel": "Tricuspid regurgitation",
+            "diseasePhenotypeCurie": "HP:0001659",
+            "diseasePhenotypeLabel": "Aortic regurgitation",
+            "micaCurie": "HP:0031653",
+            "micaLabel": "Abnormal heart valve physiology",
+            "score": 3.2369897052206036,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:18784092"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000343",
+            "patientPhenotypeLabel": "Long philtrum",
+            "diseasePhenotypeCurie": "HP:0000343",
+            "diseasePhenotypeLabel": "Long philtrum",
+            "micaCurie": "HP:0000343",
+            "micaLabel": "Long philtrum",
+            "score": 3.1381787812998185,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:18784092"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000678",
+            "patientPhenotypeLabel": "Dental crowding",
+            "diseasePhenotypeCurie": "HP:0000687",
+            "diseasePhenotypeLabel": "Widely spaced teeth",
+            "micaCurie": "HP:0000692",
+            "micaLabel": "Tooth malposition",
+            "score": 3.1248274481249543,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:18784092"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000463",
+            "patientPhenotypeLabel": "Anteverted nares",
+            "diseasePhenotypeCurie": "HP:0000463",
+            "diseasePhenotypeLabel": "Anteverted nares",
+            "micaCurie": "HP:0000463",
+            "micaLabel": "Anteverted nares",
+            "score": 3.028794115342267,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:18784092"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001015",
+            "patientPhenotypeLabel": "Prominent superficial veins",
+            "diseasePhenotypeCurie": "HP:0025493",
+            "diseasePhenotypeLabel": "Palmoplantar erythema",
+            "micaCurie": "HP:0011276",
+            "micaLabel": "Vascular skin abnormality",
+            "score": 2.9863349075704755,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:18784092"
+          }
+        ]
+      }
+    ],
+    "engineSummary": {
+      "diseaseCount": 8579,
+      "phenotypeCount": 19389,
+      "sourceMode": "relationship_fallback",
+      "generatedAt": "2026-03-15T20:43:58.513Z"
+    }
+  }
+}

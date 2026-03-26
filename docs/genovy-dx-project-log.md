@@ -1,6 +1,6 @@
 # Genovy DX Project Log
 
-Last updated: 2026-03-22
+Last updated: 2026-03-26
 
 ## Purpose
 This file is the running memory for Genovy DX. It records concrete changes, benchmark results, hypotheses, failed ideas, and next-step logic so progress is not lost between sessions.
@@ -23,6 +23,10 @@ Official 100-case phenotype-only gene benchmark vs Exomiser.
 - The main problem is no longer missing genes. It is ranking pressure caused by weak, generic, or poorly connected phenotype profiles for the true gene.
 - The most effective fixes so far have been evidence-surface fixes, not ML.
 - The propagation-weight heuristic is the current best rule-based result because it improved recall and top-10 without introducing broad regressions.
+- New hard rule:
+  - never overfit the graph
+  - never cheat a gene upward just because a benchmark case wants it
+  - benchmark only generates hypotheses; source-backed curation authors truth
 - The March 20-22 audits sharpened that further:
   - the `18` misses collapse to `12` unique truth genes
   - only `U2AF2` is a true empty shell
@@ -588,3 +592,307 @@ Official 100-case phenotype-only gene benchmark vs Exomiser.
   - but support aggregation/weighting still prevents that gain from changing the final STXBP1 gene score
 - Detailed writeup:
   - [stxbp1-discriminating-term-shadow-test-20260325.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/stxbp1-discriminating-term-shadow-test-20260325.md)
+
+## 2026-03-25 STXBP1 Support-Handoff Override Shadow
+- Added follow-up shadow script:
+  - [shadowStxbp1SupportHandoffOverride.js](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/shadowStxbp1SupportHandoffOverride.js)
+- Source artifact reused:
+  - [shadow-stxbp1-discriminating-case-20260325.json](/Users/ahmedelmorshedy/Genovy/output/shadow-stxbp1-discriminating-case-20260325.json)
+- Purpose:
+  - test whether the remaining leak is the disease-to-gene handoff weight rather than the enriched `DEE4` branch itself
+- Critical numbers:
+  - enriched `DEE4` disease score: `0.186806`
+  - support evidence weight: `1.0`
+  - current support weight: `0.68`
+  - current handoff score: `0.127028`
+  - baseline direct `STXBP1` gene score: `0.163948`
+  - exact minimum support weight to beat the current direct gene score: `0.877638`
+- Scenario results:
+  - `0.80` and `0.85` still fail
+  - `0.90` succeeds:
+    - handoff `0.168125`
+    - final `STXBP1` gene score changes
+  - `1.00` succeeds:
+    - handoff `0.186806`
+- Interpretation:
+  - the March 25 discriminating enrichment was already strong enough
+  - the real remaining leak is the current disease-to-gene handoff weight
+  - a narrow floor override at `0.9` is sufficient to let the improved specific branch beat the existing direct `STXBP1` gene score
+- Detailed writeup:
+  - [stxbp1-support-handoff-override-shadow-20260325.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/stxbp1-support-handoff-override-shadow-20260325.md)
+
+## 2026-03-25 STXBP1 Case-Slice Handoff Floor Shadow
+- Added STXBP1 family rerun script:
+  - [shadowStxbp1CaseSliceHandoffFloor.js](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/shadowStxbp1CaseSliceHandoffFloor.js)
+- Shadow policy:
+  - same `4` discriminating `DEE4` terms
+  - same narrow `0.9` handoff floor
+  - rerun only the `10` STXBP1 benchmark cases
+- Benchmark-comparable result (`limit=100`):
+  - baseline unchanged:
+    - `6 / 10` found
+    - `top-10 = 1`
+    - `MRR = 0.024438`
+  - shadow unchanged:
+    - `6 / 10` found
+    - `top-10 = 1`
+    - `MRR = 0.024438`
+  - delta:
+    - `0` improved
+    - `0` worsened
+- Full-rank diagnostic result (`limit=500`):
+  - `2` cases improved slightly:
+    - `PMID_35190816_STX_27159321_LD_0358`: `153 -> 152`
+    - `PMID_35190816_STX_28944233_270001`: `267 -> 208`
+  - `MRR 0.026578 -> 0.026688`
+- Interpretation:
+  - the single-case handoff leak is real
+  - but `4-term + 0.9 floor` is still not enough to produce a visible top-100 STXBP1 benchmark gain
+  - so the next STXBP1 lever is likely stronger branch enrichment or a stronger aggregation change than the narrow floor alone
+- Detailed writeup:
+  - [stxbp1-case-slice-handoff-floor-shadow-20260325.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/stxbp1-case-slice-handoff-floor-shadow-20260325.md)
+
+## 2026-03-25 Generic Specific-Direct Handoff Floor Shadow
+- Added full-benchmark shadow script:
+  - [shadowGenericSpecificDirectHandoffFloor.js](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/shadowGenericSpecificDirectHandoffFloor.js)
+- Shadow policy:
+  - no enrichment
+  - no graph edits
+  - no source refresh
+  - raise disease-to-gene handoff floor to `0.9` when a support disease already has:
+    - direct phenotype edges
+    - and at least one exact direct patient overlap
+- Full 100-case result:
+  - baseline:
+    - `Found = 82%`
+    - `Top-1 = 34%`
+    - `Top-3 = 43%`
+    - `Top-5 = 46%`
+    - `Top-10 = 57%`
+    - `Median rank = 3`
+    - `MRR = 0.409646`
+  - shadow:
+    - `Found = 83%`
+    - `Top-1 = 36%`
+    - `Top-3 = 47%`
+    - `Top-5 = 51%`
+    - `Top-10 = 60%`
+    - `Median rank = 2`
+    - `MRR = 0.437917`
+  - delta:
+    - `9` improved
+    - `2` worsened
+    - `1` recovered from miss
+    - `0` regressed to miss
+- Important wins:
+  - `STXBP1` `PMID_35190816_STX_27159321_LD_0358`: `miss -> 96`
+  - `WWOX` `PMID_24369382_Family1II4`: `33 -> 2`
+  - `SCN2A` `PMID_33731876_fam163`: `92 -> 52`
+  - `FBN1` `PMID_21683322_25`: `10 -> 1`
+- Mild regressions:
+  - `SATB2` `PMID_31021519_individualfromTrakadisetal`: `65 -> 67`
+  - `PPP2R1A` `PMID_37761890_22`: `79 -> 80`
+- Interpretation:
+  - the handoff leak is a real global scorer issue, not just an STXBP1-specific oddity
+  - this generic rule is more promising than the narrow STXBP1 `4-term + 0.9 floor` slice
+  - it is the strongest March 25 scorer-side shadow so far that improves the benchmark without new data
+  - still not a ship signal yet:
+    - it remains a shadow benchmark
+    - it needs a `1.0` ablation
+    - the `2` regressions need inspection
+- Detailed writeup:
+  - [generic-specific-direct-handoff-floor-shadow-20260325.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/generic-specific-direct-handoff-floor-shadow-20260325.md)
+
+## 2026-03-25 Generic Specific-Direct Handoff Floor Shadow (`1.0`)
+- Reused the same full-benchmark shadow script:
+  - [shadowGenericSpecificDirectHandoffFloor.js](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/shadowGenericSpecificDirectHandoffFloor.js)
+- Shadow policy:
+  - same generic condition as the `0.9` run
+  - stronger handoff floor:
+    - `1.0` instead of `0.9`
+- Full 100-case result:
+  - baseline:
+    - `Found = 82%`
+    - `Top-1 = 34%`
+    - `Top-3 = 43%`
+    - `Top-5 = 46%`
+    - `Top-10 = 57%`
+    - `Median rank = 3`
+    - `MRR = 0.409646`
+  - shadow:
+    - `Found = 84%`
+    - `Top-1 = 42%`
+    - `Top-3 = 52%`
+    - `Top-5 = 53%`
+    - `Top-10 = 60%`
+    - `Median rank = 1.5`
+    - `MRR = 0.485974`
+  - delta:
+    - `21` improved
+    - `14` worsened
+    - `2` recovered from miss
+    - `0` regressed to miss
+- Important wins:
+  - `STXBP1` `PMID_35190816_STX_27159321_LD_0358`: `miss -> 25`
+  - `SCN2A` `PMID_33731876_fam421`: `miss -> 43`
+  - `SCN2A` `PMID_33731876_fam163`: `92 -> 20`
+  - `SATB2` `PMID_31021519_individualfromTrakadisetal`: `65 -> 24`
+  - `WWOX` `PMID_24369382_Family1II4`: `33 -> 1`
+- Important regressions:
+  - `PPP2R1A` `PMID_37761890_22`: `79 -> 90`
+  - `PMID_32154675_Family4Patient11`: `33 -> 39`
+  - `PMID_29122497_29122497_P1`: `75 -> 79`
+  - `STXBP1` `PMID_35190816_STX_25818041_Patient_20`: `66 -> 70`
+- Interpretation:
+  - `1.0` is stronger than `0.9` on the benchmark headline metrics
+  - but it is also clearly less restrained
+  - so the next work is not more escalation
+  - it is regression inspection and guardrail design
+- Detailed writeup:
+  - [generic-specific-direct-handoff-floor-shadow-20260325-w1.0.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/generic-specific-direct-handoff-floor-shadow-20260325-w1.0.md)
+
+## 2026-03-25 Official Handoff Floor `1.0` Benchmark
+- Patched the real scorer with a named specific-direct handoff override:
+  - [dx.js](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/constants/dx.js)
+  - [similarityEngine.js](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/services/dx/similarityEngine.js)
+- Added focused unit coverage:
+  - [dxSimilarity.test.js](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/test/dxSimilarity.test.js)
+- Test status:
+  - `node --test test/dxSimilarity.test.js` passed
+- Official benchmark rerun artifacts:
+  - [handoff-floor-1.0.json](/Users/ahmedelmorshedy/Genovy/output/handoff-floor-1.0.json)
+  - [handoff-floor-1.0.md](/Users/ahmedelmorshedy/Genovy/output/handoff-floor-1.0.md)
+- Baseline vs patched scorer:
+  - baseline:
+    - `Found = 83%`
+    - `Top-1 = 34%`
+    - `Top-3 = 43%`
+    - `Top-5 = 46%`
+    - `Top-10 = 57%`
+    - `MRR = 0.410153`
+  - patched scorer:
+    - `Found = 84%`
+    - `Top-1 = 42%`
+    - `Top-3 = 52%`
+    - `Top-5 = 53%`
+    - `Top-10 = 60%`
+    - `Median rank = 1.5`
+    - `MRR = 0.485974`
+  - delta:
+    - `21` improved
+    - `15` worsened
+    - `2` recovered from miss
+    - `1` regressed to miss
+- Exomiser comparison:
+  - Genovy now leads on:
+    - `Top-1`
+    - `Top-3`
+    - `Top-5`
+    - `Top-10`
+    - `MRR`
+  - Exomiser still leads on:
+    - total recall / found rate
+- Important nuance:
+  - the real scorer run is slightly less clean than the earlier `1.0` shadow
+  - `U2AF2` `PMID_36747105_proband` regressed from `30 -> miss`
+- Interpretation:
+  - this is the strongest real rule-based scorer result so far
+  - the handoff-floor family is now proven in production-like evaluation, not just in shadow
+  - but `U2AF2` shows the rule still needs follow-up triage before it can be treated as final
+- Detailed writeup:
+  - [official-handoff-floor-1.0-benchmark-20260325.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/official-handoff-floor-1.0-benchmark-20260325.md)
+
+## 2026-03-26 Anti-Overfitting Rule + U2AF2 Safe Start
+- Added explicit curation hard rules:
+  - [source-backed-curation-hard-rules-20260326.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/source-backed-curation-hard-rules-20260326.md)
+- Also embedded the same rule into:
+  - [genovy-non-negotiable-fixes.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/genovy-non-negotiable-fixes.md)
+- Rule in plain language:
+  - benchmark can point to a missing syndrome feature
+  - benchmark cannot define truth
+  - no direct graph mutation from benchmark pressure
+  - every added term must be source-backed and shadow-tested first
+- Started the safe U2AF2 workflow with a prep note:
+  - [u2af2-source-backed-shadow-prep-20260326.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/u2af2-source-backed-shadow-prep-20260326.md)
+- Important new U2AF2 split:
+  - `PMID_36747105_proband`
+    - current disease profile already covers all `7 / 7` positive terms
+    - this is mainly seam/support fragility, not missing positive terms
+  - `PMID_37962958_43`
+    - current disease profile covers only `3 / 25` positive terms
+    - this is a real undercoverage case and a valid target for source-backed shadow enrichment
+- Interpretation:
+  - `U2AF2` is not one homogeneous failure mode
+  - the earlier hope that ClinVar should have cleanly yielded `+2` was too simplistic
+  - one case needed a stronger seam
+  - the other needs a richer syndrome surface
+
+## 2026-03-26 U2AF2 Public-Source Candidate List Started
+- Added:
+  - [u2af2-public-source-candidate-terms-20260326.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/u2af2-public-source-candidate-terms-20260326.md)
+- Evidence used:
+  - GenCC
+  - public PMC cohort/review papers
+- No graph mutation performed.
+- First safe shadow-candidate set for the harder `U2AF2` case:
+  - `Intellectual disability`
+  - `Delayed speech and language development`
+  - `Delayed fine motor development`
+  - `Delayed ability to walk`
+  - `Bilateral tonic-clonic seizure`
+  - `Anxiety`
+  - `Obsessive-compulsive trait`
+  - `Clinodactyly`
+  - `Short palpebral fissure`
+  - `Hypertelorism`
+  - `Bilateral ptosis`
+  - `Unilateral ptosis`
+  - `Short neck`
+  - `Hearing impairment`
+- Important discipline point:
+  - these are only safe **shadow** candidates
+  - several tempting terms remain intentionally excluded until stronger source proof exists
+
+## 2026-03-26 U2AF2 Public-Source Shadow Result
+- Added:
+  - [shadowU2af2PublicSourceCandidates.js](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/shadowU2af2PublicSourceCandidates.js)
+  - [u2af2-public-source-shadow-test-20260326.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/u2af2-public-source-shadow-test-20260326.md)
+- Result on the `2` U2AF2 cases:
+  - `miss -> miss`
+  - `miss -> miss`
+  - no truth-gene recovery at all
+- Interpretation:
+  - public-source-backed disease enrichment alone is not enough for `U2AF2`
+  - this is now a stronger proof that `U2AF2` is seam/support-path first, not enrichment first
+- Practical consequence:
+  - park more U2AF2 term-chasing
+  - move next to support-seam repair for `U2AF2`
+
+## 2026-03-26 U2AF2 Manual OMIM Shadow Result
+- Added:
+  - [u2af2-manual-omim-extract-20260326.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/u2af2-manual-omim-extract-20260326.md)
+  - [u2af2-omim-shadow-test-20260326.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/u2af2-omim-shadow-test-20260326.md)
+- OMIM-backed shadow set:
+  - requested `10` terms
+  - corrected rerun: all `10` were actually added in shadow
+- Result:
+  - still `miss -> miss`
+  - still `miss -> miss`
+  - truth gene absent from the reported ranking in both U2AF2 cases
+- Interpretation:
+  - even manual OMIM syndrome enrichment does not move U2AF2 while the seam remains weak
+  - this is now strong evidence that U2AF2 should move to the support-seam repair track, not the enrichment track
+
+## 2026-03-26 U2AF2 OMIM Shadow Script Correction
+- Fixed:
+  - [shadowU2af2PublicSourceCandidates.js](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/shadowU2af2PublicSourceCandidates.js)
+- Bug:
+  - the script accepted `--target-terms` for candidate loading but still iterated an older hardcoded candidate list when constructing shadow rows
+- Corrected rerun:
+  - all `10` requested OMIM-backed terms were added successfully
+  - result remained unchanged:
+    - `PMID_36747105_proband`: `miss -> miss`
+    - `PMID_37962958_43`: `miss -> miss`
+- Practical consequence:
+  - the negative U2AF2 OMIM result is now stronger, not weaker
+  - do not spend more time on U2AF2 term enrichment before support-seam repair

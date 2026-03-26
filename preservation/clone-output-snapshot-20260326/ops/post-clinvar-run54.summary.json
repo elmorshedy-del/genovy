@@ -1,0 +1,79 @@
+{
+  "runLabel": "post-clinvar-run54",
+  "generatedAt": "2026-03-24T00:07:32.328Z",
+  "baselineReference": {
+    "bucketCounts": {
+      "totalLogicalGenes": 5705,
+      "hollowShell": 23,
+      "sparseOneSided": 426,
+      "poorlyEnrichedTwoSided": 777,
+      "betterCovered": 4479
+    },
+    "poorlyEnrichedCutoffs": {
+      "diseaseLinkCountMax": 3,
+      "phenotypeLinkCountMax": 19
+    }
+  },
+  "baselineAligned": {
+    "cutoffs": {
+      "diseaseLinkCountMax": 3,
+      "phenotypeLinkCountMax": 19
+    },
+    "totalLogicalGenes": 5705,
+    "buckets": {
+      "hollowShell": {
+        "count": 148,
+        "sharePct": 2.59
+      },
+      "sparseOneSided": {
+        "count": 504,
+        "sharePct": 8.83
+      },
+      "poorlyEnrichedTwoSided": {
+        "count": 1207,
+        "sharePct": 21.16
+      },
+      "betterCovered": {
+        "count": 3846,
+        "sharePct": 67.41
+      }
+    }
+  },
+  "deltaVsBaseline": {
+    "totalLogicalGenes": 0,
+    "hollowShell": 125,
+    "sparseOneSided": 78,
+    "poorlyEnrichedTwoSided": 430,
+    "betterCovered": -633
+  },
+  "currentQuartileAligned": {
+    "cutoffs": {
+      "diseaseLinkCountMax": 1,
+      "phenotypeLinkCountMax": 18
+    },
+    "totalLogicalGenes": 5705,
+    "buckets": {
+      "hollowShell": {
+        "count": 148,
+        "sharePct": 2.59
+      },
+      "sparseOneSided": {
+        "count": 504,
+        "sharePct": 8.83
+      },
+      "poorlyEnrichedTwoSided": {
+        "count": 636,
+        "sharePct": 11.15
+      },
+      "betterCovered": {
+        "count": 4417,
+        "sharePct": 77.42
+      }
+    }
+  },
+  "provenanceSlice": {
+    "genesWithClinvarVariantDerivedDiseaseSupport": 4671,
+    "genesWhoseOnlyDiseaseSupportIsClinvarVariantDerived": 2759,
+    "genesWithClinvarVariantDerivedAndPhenotypeSupport": 4594
+  }
+}

@@ -1,0 +1,1802 @@
+{
+  "success": true,
+  "engine": "genovy-dx-sim",
+  "analysisType": "gene",
+  "input": {
+    "presentPhenotypeCuries": [
+      "HP:0000164",
+      "HP:0000175",
+      "HP:0000750",
+      "HP:0001249",
+      "HP:0001263"
+    ],
+    "excludedPhenotypeCuries": [],
+    "sourceFormat": "phenopacket"
+  },
+  "ranking": {
+    "queryPhenotypes": [
+      {
+        "phenotypeCurie": "HP:0000164",
+        "phenotypeLabel": "Abnormality of the dentition"
+      },
+      {
+        "phenotypeCurie": "HP:0000175",
+        "phenotypeLabel": "Cleft palate"
+      },
+      {
+        "phenotypeCurie": "HP:0000750",
+        "phenotypeLabel": "Delayed speech and language development"
+      },
+      {
+        "phenotypeCurie": "HP:0001249",
+        "phenotypeLabel": "Intellectual disability"
+      },
+      {
+        "phenotypeCurie": "HP:0001263",
+        "phenotypeLabel": "Global developmental delay"
+      }
+    ],
+    "results": [
+      {
+        "rank": 1,
+        "geneCurie": "NCBIGene:9411",
+        "geneLabel": "ARHGAP29",
+        "geneSymbol": "ARHGAP29",
+        "geneEntityId": 150789,
+        "bmaScore": 1.6798903410364971,
+        "normalizedScore": 0.185478,
+        "patientAverageScore": 1.8467367787796334,
+        "phenotypeAverageScore": 1.5130439032933607,
+        "directPhenotypeCount": 21,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000175",
+            "patientPhenotypeLabel": "Cleft palate",
+            "diseasePhenotypeCurie": "HP:0100337",
+            "diseasePhenotypeLabel": "Bilateral cleft palate",
+            "micaCurie": "HP:0000175",
+            "micaLabel": "Cleft palate",
+            "score": 2.7710745410641007,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000164",
+            "patientPhenotypeLabel": "Abnormality of the dentition",
+            "diseasePhenotypeCurie": "HP:0200153",
+            "diseasePhenotypeLabel": "Agenesis of lateral incisor",
+            "micaCurie": "HP:0000164",
+            "micaLabel": "Abnormality of the dentition",
+            "score": 2.2326989655298792,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0012758",
+            "micaLabel": "Neurodevelopmental delay",
+            "score": 1.1961162706965762,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001249",
+            "patientPhenotypeLabel": "Intellectual disability",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0012759",
+            "micaLabel": "Neurodevelopmental abnormality",
+            "score": 0.9688179084505344,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:199306"
+          }
+        ]
+      },
+      {
+        "rank": 2,
+        "geneCurie": "NCBIGene:54848",
+        "geneLabel": "ARHGEF38",
+        "geneSymbol": "ARHGEF38",
+        "geneEntityId": 151871,
+        "bmaScore": 1.6798903410364971,
+        "normalizedScore": 0.185478,
+        "patientAverageScore": 1.8467367787796334,
+        "phenotypeAverageScore": 1.5130439032933607,
+        "directPhenotypeCount": 21,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000175",
+            "patientPhenotypeLabel": "Cleft palate",
+            "diseasePhenotypeCurie": "HP:0100337",
+            "diseasePhenotypeLabel": "Bilateral cleft palate",
+            "micaCurie": "HP:0000175",
+            "micaLabel": "Cleft palate",
+            "score": 2.7710745410641007,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000164",
+            "patientPhenotypeLabel": "Abnormality of the dentition",
+            "diseasePhenotypeCurie": "HP:0200153",
+            "diseasePhenotypeLabel": "Agenesis of lateral incisor",
+            "micaCurie": "HP:0000164",
+            "micaLabel": "Abnormality of the dentition",
+            "score": 2.2326989655298792,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0012758",
+            "micaLabel": "Neurodevelopmental delay",
+            "score": 1.1961162706965762,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001249",
+            "patientPhenotypeLabel": "Intellectual disability",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0012759",
+            "micaLabel": "Neurodevelopmental abnormality",
+            "score": 0.9688179084505344,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:199306"
+          }
+        ]
+      },
+      {
+        "rank": 3,
+        "geneCurie": "NCBIGene:22837",
+        "geneLabel": "COBLL1",
+        "geneSymbol": "COBLL1",
+        "geneEntityId": 151224,
+        "bmaScore": 1.6798903410364971,
+        "normalizedScore": 0.185478,
+        "patientAverageScore": 1.8467367787796334,
+        "phenotypeAverageScore": 1.5130439032933607,
+        "directPhenotypeCount": 21,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000175",
+            "patientPhenotypeLabel": "Cleft palate",
+            "diseasePhenotypeCurie": "HP:0100337",
+            "diseasePhenotypeLabel": "Bilateral cleft palate",
+            "micaCurie": "HP:0000175",
+            "micaLabel": "Cleft palate",
+            "score": 2.7710745410641007,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000164",
+            "patientPhenotypeLabel": "Abnormality of the dentition",
+            "diseasePhenotypeCurie": "HP:0200153",
+            "diseasePhenotypeLabel": "Agenesis of lateral incisor",
+            "micaCurie": "HP:0000164",
+            "micaLabel": "Abnormality of the dentition",
+            "score": 2.2326989655298792,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0012758",
+            "micaLabel": "Neurodevelopmental delay",
+            "score": 1.1961162706965762,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001249",
+            "patientPhenotypeLabel": "Intellectual disability",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0012759",
+            "micaLabel": "Neurodevelopmental abnormality",
+            "score": 0.9688179084505344,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:199306"
+          }
+        ]
+      },
+      {
+        "rank": 4,
+        "geneCurie": "NCBIGene:1739",
+        "geneLabel": "DLG1",
+        "geneSymbol": "DLG1",
+        "geneEntityId": 148654,
+        "bmaScore": 1.6798903410364971,
+        "normalizedScore": 0.185478,
+        "patientAverageScore": 1.8467367787796334,
+        "phenotypeAverageScore": 1.5130439032933607,
+        "directPhenotypeCount": 21,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000175",
+            "patientPhenotypeLabel": "Cleft palate",
+            "diseasePhenotypeCurie": "HP:0100337",
+            "diseasePhenotypeLabel": "Bilateral cleft palate",
+            "micaCurie": "HP:0000175",
+            "micaLabel": "Cleft palate",
+            "score": 2.7710745410641007,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000164",
+            "patientPhenotypeLabel": "Abnormality of the dentition",
+            "diseasePhenotypeCurie": "HP:0200153",
+            "diseasePhenotypeLabel": "Agenesis of lateral incisor",
+            "micaCurie": "HP:0000164",
+            "micaLabel": "Abnormality of the dentition",
+            "score": 2.2326989655298792,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0012758",
+            "micaLabel": "Neurodevelopmental delay",
+            "score": 1.1961162706965762,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001249",
+            "patientPhenotypeLabel": "Intellectual disability",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0012759",
+            "micaLabel": "Neurodevelopmental abnormality",
+            "score": 0.9688179084505344,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:199306"
+          }
+        ]
+      },
+      {
+        "rank": 5,
+        "geneCurie": "NCBIGene:57589",
+        "geneLabel": "RIC1",
+        "geneSymbol": "RIC1",
+        "geneEntityId": 152175,
+        "bmaScore": 1.5730171138966496,
+        "normalizedScore": 0.173678,
+        "patientAverageScore": 1.9850818821972531,
+        "phenotypeAverageScore": 1.1609523455960462,
+        "directPhenotypeCount": 43,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000175",
+            "patientPhenotypeLabel": "Cleft palate",
+            "diseasePhenotypeCurie": "HP:0100337",
+            "diseasePhenotypeLabel": "Bilateral cleft palate",
+            "micaCurie": "HP:0000175",
+            "micaLabel": "Cleft palate",
+            "score": 2.7710745410641007,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000164",
+            "patientPhenotypeLabel": "Abnormality of the dentition",
+            "diseasePhenotypeCurie": "HP:0200153",
+            "diseasePhenotypeLabel": "Agenesis of lateral incisor",
+            "micaCurie": "HP:0000164",
+            "micaLabel": "Abnormality of the dentition",
+            "score": 2.2326989655298792,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "10/10",
+            "referenceText": "OMIM:618761"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001249",
+            "patientPhenotypeLabel": "Intellectual disability",
+            "diseasePhenotypeCurie": "HP:0001249",
+            "diseasePhenotypeLabel": "Intellectual disability",
+            "micaCurie": "HP:0001249",
+            "micaLabel": "Intellectual disability",
+            "score": 1.4054770617153647,
+            "evidenceCode": "8/8",
+            "referenceText": "OMIM:618761"
+          }
+        ]
+      },
+      {
+        "rank": 6,
+        "geneCurie": "NCBIGene:7039",
+        "geneLabel": "TGFA",
+        "geneSymbol": "TGFA",
+        "geneEntityId": 150292,
+        "bmaScore": 1.55385592550107,
+        "normalizedScore": 0.171563,
+        "patientAverageScore": 0.9935507562089759,
+        "phenotypeAverageScore": 2.114161094793164,
+        "directPhenotypeCount": 23,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000175",
+            "patientPhenotypeLabel": "Cleft palate",
+            "diseasePhenotypeCurie": "HP:0000202",
+            "diseasePhenotypeLabel": "Orofacial cleft",
+            "micaCurie": "HP:0000202",
+            "micaLabel": "Orofacial cleft",
+            "score": 2.7273517300502688,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:99798"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000164",
+            "patientPhenotypeLabel": "Abnormality of the dentition",
+            "diseasePhenotypeCurie": "HP:0011078",
+            "diseasePhenotypeLabel": "Abnormality of canine",
+            "micaCurie": "HP:0000164",
+            "micaLabel": "Abnormality of the dentition",
+            "score": 2.2326989655298792,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:99798"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0012472",
+            "diseasePhenotypeLabel": "Eclabion",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:99798"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001249",
+            "patientPhenotypeLabel": "Intellectual disability",
+            "diseasePhenotypeCurie": "HP:0012472",
+            "diseasePhenotypeLabel": "Eclabion",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:99798"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0012472",
+            "diseasePhenotypeLabel": "Eclabion",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:99798"
+          }
+        ]
+      },
+      {
+        "rank": 7,
+        "geneCurie": "NCBIGene:57822",
+        "geneLabel": "GRHL3",
+        "geneSymbol": "GRHL3",
+        "geneEntityId": 152198,
+        "bmaScore": 1.5420310938172659,
+        "normalizedScore": 0.170257,
+        "patientAverageScore": 1.8467367787796334,
+        "phenotypeAverageScore": 1.2373254088548984,
+        "directPhenotypeCount": 34,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000175",
+            "patientPhenotypeLabel": "Cleft palate",
+            "diseasePhenotypeCurie": "HP:5201016",
+            "diseasePhenotypeLabel": "Submucous cleft palate",
+            "micaCurie": "HP:0000175",
+            "micaLabel": "Cleft palate",
+            "score": 2.7710745410641007,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:155878"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000164",
+            "patientPhenotypeLabel": "Abnormality of the dentition",
+            "diseasePhenotypeCurie": "HP:0000689",
+            "diseasePhenotypeLabel": "Dental malocclusion",
+            "micaCurie": "HP:0000164",
+            "micaLabel": "Abnormality of the dentition",
+            "score": 2.2326989655298792,
+            "evidenceCode": "2/27",
+            "referenceText": "OMIM:606713"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0010863",
+            "diseasePhenotypeLabel": "Receptive language delay",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:99772"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0010863",
+            "diseasePhenotypeLabel": "Receptive language delay",
+            "micaCurie": "HP:0012758",
+            "micaLabel": "Neurodevelopmental delay",
+            "score": 1.1961162706965762,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:99772"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001249",
+            "patientPhenotypeLabel": "Intellectual disability",
+            "diseasePhenotypeCurie": "HP:0010863",
+            "diseasePhenotypeLabel": "Receptive language delay",
+            "micaCurie": "HP:0012759",
+            "micaLabel": "Neurodevelopmental abnormality",
+            "score": 0.9688179084505344,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:99772"
+          }
+        ]
+      },
+      {
+        "rank": 8,
+        "geneCurie": "NCBIGene:4487",
+        "geneLabel": "MSX1",
+        "geneSymbol": "MSX1",
+        "geneEntityId": 149468,
+        "bmaScore": 1.531100429519618,
+        "normalizedScore": 0.16905,
+        "patientAverageScore": 1.8467367787796334,
+        "phenotypeAverageScore": 1.2154640802596028,
+        "directPhenotypeCount": 88,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000175",
+            "patientPhenotypeLabel": "Cleft palate",
+            "diseasePhenotypeCurie": "HP:0100337",
+            "diseasePhenotypeLabel": "Bilateral cleft palate",
+            "micaCurie": "HP:0000175",
+            "micaLabel": "Cleft palate",
+            "score": 2.7710745410641007,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000164",
+            "patientPhenotypeLabel": "Abnormality of the dentition",
+            "diseasePhenotypeCurie": "HP:0200153",
+            "diseasePhenotypeLabel": "Agenesis of lateral incisor",
+            "micaCurie": "HP:0000164",
+            "micaLabel": "Abnormality of the dentition",
+            "score": 2.2326989655298792,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0012758",
+            "micaLabel": "Neurodevelopmental delay",
+            "score": 1.1961162706965762,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001249",
+            "patientPhenotypeLabel": "Intellectual disability",
+            "diseasePhenotypeCurie": "HP:0001328",
+            "diseasePhenotypeLabel": "Specific learning disability",
+            "micaCurie": "HP:0012759",
+            "micaLabel": "Neurodevelopmental abnormality",
+            "score": 0.9688179084505344,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "ORPHA:199302"
+          }
+        ]
+      },
+      {
+        "rank": 9,
+        "geneCurie": "NCBIGene:64388",
+        "geneLabel": "GREM2",
+        "geneSymbol": "GREM2",
+        "geneEntityId": 152278,
+        "bmaScore": 1.513943461019941,
+        "normalizedScore": 0.167156,
+        "patientAverageScore": 0.9935507562089759,
+        "phenotypeAverageScore": 2.034336165830906,
+        "directPhenotypeCount": 25,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000175",
+            "patientPhenotypeLabel": "Cleft palate",
+            "diseasePhenotypeCurie": "HP:0000202",
+            "diseasePhenotypeLabel": "Orofacial cleft",
+            "micaCurie": "HP:0000202",
+            "micaLabel": "Orofacial cleft",
+            "score": 2.7273517300502688,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:99798"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000164",
+            "patientPhenotypeLabel": "Abnormality of the dentition",
+            "diseasePhenotypeCurie": "HP:0011078",
+            "diseasePhenotypeLabel": "Abnormality of canine",
+            "micaCurie": "HP:0000164",
+            "micaLabel": "Abnormality of the dentition",
+            "score": 2.2326989655298792,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:99798"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0012472",
+            "diseasePhenotypeLabel": "Eclabion",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:99798"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001249",
+            "patientPhenotypeLabel": "Intellectual disability",
+            "diseasePhenotypeCurie": "HP:0012472",
+            "diseasePhenotypeLabel": "Eclabion",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:99798"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0012472",
+            "diseasePhenotypeLabel": "Eclabion",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:99798"
+          }
+        ]
+      },
+      {
+        "rank": 10,
+        "geneCurie": "NCBIGene:7341",
+        "geneLabel": "SUMO1",
+        "geneSymbol": "SUMO1",
+        "geneEntityId": 150391,
+        "bmaScore": 1.5034463897865589,
+        "normalizedScore": 0.165997,
+        "patientAverageScore": 1.0022953184117422,
+        "phenotypeAverageScore": 2.0045974611613757,
+        "directPhenotypeCount": 27,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000175",
+            "patientPhenotypeLabel": "Cleft palate",
+            "diseasePhenotypeCurie": "HP:0100334",
+            "diseasePhenotypeLabel": "Unilateral cleft palate",
+            "micaCurie": "HP:0000175",
+            "micaLabel": "Cleft palate",
+            "score": 2.7710745410641007,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:613705"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000164",
+            "patientPhenotypeLabel": "Abnormality of the dentition",
+            "diseasePhenotypeCurie": "HP:0011078",
+            "diseasePhenotypeLabel": "Abnormality of canine",
+            "micaCurie": "HP:0000164",
+            "micaLabel": "Abnormality of the dentition",
+            "score": 2.2326989655298792,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:99798"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0100334",
+            "diseasePhenotypeLabel": "Unilateral cleft palate",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:613705"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001249",
+            "patientPhenotypeLabel": "Intellectual disability",
+            "diseasePhenotypeCurie": "HP:0100334",
+            "diseasePhenotypeLabel": "Unilateral cleft palate",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:613705"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0100334",
+            "diseasePhenotypeLabel": "Unilateral cleft palate",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:613705"
+          }
+        ]
+      },
+      {
+        "rank": 11,
+        "geneCurie": "NCBIGene:1748",
+        "geneLabel": "DLX4",
+        "geneSymbol": "DLX4",
+        "geneEntityId": 148659,
+        "bmaScore": 1.4660299816845872,
+        "normalizedScore": 0.161866,
+        "patientAverageScore": 1.8467367787796334,
+        "phenotypeAverageScore": 1.0853231845895408,
+        "directPhenotypeCount": 41,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000175",
+            "patientPhenotypeLabel": "Cleft palate",
+            "diseasePhenotypeCurie": "HP:0100337",
+            "diseasePhenotypeLabel": "Bilateral cleft palate",
+            "micaCurie": "HP:0000175",
+            "micaLabel": "Cleft palate",
+            "score": 2.7710745410641007,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000164",
+            "patientPhenotypeLabel": "Abnormality of the dentition",
+            "diseasePhenotypeCurie": "HP:0200153",
+            "diseasePhenotypeLabel": "Agenesis of lateral incisor",
+            "micaCurie": "HP:0000164",
+            "micaLabel": "Abnormality of the dentition",
+            "score": 2.2326989655298792,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:616788"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0012758",
+            "micaLabel": "Neurodevelopmental delay",
+            "score": 1.1961162706965762,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001249",
+            "patientPhenotypeLabel": "Intellectual disability",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0012759",
+            "micaLabel": "Neurodevelopmental abnormality",
+            "score": 0.9688179084505344,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:199306"
+          }
+        ]
+      },
+      {
+        "rank": 12,
+        "geneCurie": "NCBIGene:3664",
+        "geneLabel": "IRF6",
+        "geneSymbol": "IRF6",
+        "geneEntityId": 149216,
+        "bmaScore": 1.4645361996968171,
+        "normalizedScore": 0.161701,
+        "patientAverageScore": 1.8467367787796334,
+        "phenotypeAverageScore": 1.0823356206140007,
+        "directPhenotypeCount": 101,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000175",
+            "patientPhenotypeLabel": "Cleft palate",
+            "diseasePhenotypeCurie": "HP:0100337",
+            "diseasePhenotypeLabel": "Bilateral cleft palate",
+            "micaCurie": "HP:0000175",
+            "micaLabel": "Cleft palate",
+            "score": 2.7710745410641007,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000164",
+            "patientPhenotypeLabel": "Abnormality of the dentition",
+            "diseasePhenotypeCurie": "HP:0200153",
+            "diseasePhenotypeLabel": "Agenesis of lateral incisor",
+            "micaCurie": "HP:0000164",
+            "micaLabel": "Abnormality of the dentition",
+            "score": 2.2326989655298792,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0012758",
+            "micaLabel": "Neurodevelopmental delay",
+            "score": 1.1961162706965762,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001249",
+            "patientPhenotypeLabel": "Intellectual disability",
+            "diseasePhenotypeCurie": "HP:0001328",
+            "diseasePhenotypeLabel": "Specific learning disability",
+            "micaCurie": "HP:0012759",
+            "micaLabel": "Neurodevelopmental abnormality",
+            "score": 0.9688179084505344,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1300"
+          }
+        ]
+      },
+      {
+        "rank": 13,
+        "geneCurie": "NCBIGene:79005",
+        "geneLabel": "SCNM1",
+        "geneSymbol": "SCNM1",
+        "geneEntityId": 152331,
+        "bmaScore": 1.4201505420296425,
+        "normalizedScore": 0.1568,
+        "patientAverageScore": 1.9340686094325996,
+        "phenotypeAverageScore": 0.9062324746266855,
+        "directPhenotypeCount": 42,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000175",
+            "patientPhenotypeLabel": "Cleft palate",
+            "diseasePhenotypeCurie": "HP:0000185",
+            "diseasePhenotypeLabel": "Cleft soft palate",
+            "micaCurie": "HP:0000175",
+            "micaLabel": "Cleft palate",
+            "score": 2.7710745410641007,
+            "evidenceCode": "1/4",
+            "referenceText": "OMIM:620107"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000164",
+            "patientPhenotypeLabel": "Abnormality of the dentition",
+            "diseasePhenotypeCurie": "HP:0000691",
+            "diseasePhenotypeLabel": "Microdontia",
+            "micaCurie": "HP:0000164",
+            "micaLabel": "Abnormality of the dentition",
+            "score": 2.2326989655298792,
+            "evidenceCode": "1/4",
+            "referenceText": "OMIM:620107"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "2/4",
+            "referenceText": "OMIM:620107"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001249",
+            "patientPhenotypeLabel": "Intellectual disability",
+            "diseasePhenotypeCurie": "HP:0001249",
+            "diseasePhenotypeLabel": "Intellectual disability",
+            "micaCurie": "HP:0001249",
+            "micaLabel": "Intellectual disability",
+            "score": 1.4054770617153647,
+            "evidenceCode": "0/3",
+            "referenceText": "OMIM:620107"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0012758",
+            "micaLabel": "Neurodevelopmental delay",
+            "score": 1.1961162706965762,
+            "evidenceCode": "2/4",
+            "referenceText": "OMIM:620107"
+          }
+        ]
+      },
+      {
+        "rank": 14,
+        "geneCurie": "NCBIGene:7314",
+        "geneLabel": "UBB",
+        "geneSymbol": "UBB",
+        "geneEntityId": 150386,
+        "bmaScore": 1.3974425263675911,
+        "normalizedScore": 0.154293,
+        "patientAverageScore": 1.6612304461725287,
+        "phenotypeAverageScore": 1.1336546065626538,
+        "directPhenotypeCount": 23,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000175",
+            "patientPhenotypeLabel": "Cleft palate",
+            "diseasePhenotypeCurie": "HP:5201016",
+            "diseasePhenotypeLabel": "Submucous cleft palate",
+            "micaCurie": "HP:0000175",
+            "micaLabel": "Cleft palate",
+            "score": 2.7710745410641007,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:155878"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0010863",
+            "diseasePhenotypeLabel": "Receptive language delay",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:99772"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000164",
+            "patientPhenotypeLabel": "Abnormality of the dentition",
+            "diseasePhenotypeCurie": "HP:5201016",
+            "diseasePhenotypeLabel": "Submucous cleft palate",
+            "micaCurie": "HP:0000163",
+            "micaLabel": "Abnormal oral cavity morphology",
+            "score": 1.3051673024943553,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:155878"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0010863",
+            "diseasePhenotypeLabel": "Receptive language delay",
+            "micaCurie": "HP:0012758",
+            "micaLabel": "Neurodevelopmental delay",
+            "score": 1.1961162706965762,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:99772"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001249",
+            "patientPhenotypeLabel": "Intellectual disability",
+            "diseasePhenotypeCurie": "HP:0010863",
+            "diseasePhenotypeLabel": "Receptive language delay",
+            "micaCurie": "HP:0012759",
+            "micaLabel": "Neurodevelopmental abnormality",
+            "score": 0.9688179084505344,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:99772"
+          }
+        ]
+      },
+      {
+        "rank": 15,
+        "geneCurie": "NCBIGene:5818",
+        "geneLabel": "NECTIN1",
+        "geneSymbol": "NECTIN1",
+        "geneEntityId": 149907,
+        "bmaScore": 1.38879878013947,
+        "normalizedScore": 0.153339,
+        "patientAverageScore": 1.9340686094325996,
+        "phenotypeAverageScore": 0.8435289508463402,
+        "directPhenotypeCount": 105,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000175",
+            "patientPhenotypeLabel": "Cleft palate",
+            "diseasePhenotypeCurie": "HP:0100337",
+            "diseasePhenotypeLabel": "Bilateral cleft palate",
+            "micaCurie": "HP:0000175",
+            "micaLabel": "Cleft palate",
+            "score": 2.7710745410641007,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000164",
+            "patientPhenotypeLabel": "Abnormality of the dentition",
+            "diseasePhenotypeCurie": "HP:0200153",
+            "diseasePhenotypeLabel": "Agenesis of lateral incisor",
+            "micaCurie": "HP:0000164",
+            "micaLabel": "Abnormality of the dentition",
+            "score": 2.2326989655298792,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001249",
+            "patientPhenotypeLabel": "Intellectual disability",
+            "diseasePhenotypeCurie": "HP:0001249",
+            "diseasePhenotypeLabel": "Intellectual disability",
+            "micaCurie": "HP:0001249",
+            "micaLabel": "Intellectual disability",
+            "score": 1.4054770617153647,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:3253"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0012758",
+            "micaLabel": "Neurodevelopmental delay",
+            "score": 1.1961162706965762,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:199306"
+          }
+        ]
+      },
+      {
+        "rank": 16,
+        "geneCurie": "NCBIGene:89795",
+        "geneLabel": "NAV3",
+        "geneSymbol": "NAV3",
+        "geneEntityId": 152682,
+        "bmaScore": 1.3745618673123765,
+        "normalizedScore": 0.151767,
+        "patientAverageScore": 1.9850818821972531,
+        "phenotypeAverageScore": 0.7640418524275,
+        "directPhenotypeCount": 66,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000175",
+            "patientPhenotypeLabel": "Cleft palate",
+            "diseasePhenotypeCurie": "HP:0000175",
+            "diseasePhenotypeLabel": "Cleft palate",
+            "micaCurie": "HP:0000175",
+            "micaLabel": "Cleft palate",
+            "score": 2.7710745410641007,
+            "evidenceCode": "0/5",
+            "referenceText": "OMIM:621182"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000164",
+            "patientPhenotypeLabel": "Abnormality of the dentition",
+            "diseasePhenotypeCurie": "HP:0006315",
+            "diseasePhenotypeLabel": "Solitary median maxillary central incisor",
+            "micaCurie": "HP:0000164",
+            "micaLabel": "Abnormality of the dentition",
+            "score": 2.2326989655298792,
+            "evidenceCode": "0/5",
+            "referenceText": "OMIM:621182"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0001344",
+            "diseasePhenotypeLabel": "Absent speech",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "1/3",
+            "referenceText": "OMIM:621182"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "14/14",
+            "referenceText": "OMIM:621182"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001249",
+            "patientPhenotypeLabel": "Intellectual disability",
+            "diseasePhenotypeCurie": "HP:0010864",
+            "diseasePhenotypeLabel": "Severe intellectual disability",
+            "micaCurie": "HP:0001249",
+            "micaLabel": "Intellectual disability",
+            "score": 1.4054770617153647,
+            "evidenceCode": "3/11",
+            "referenceText": "OMIM:621182"
+          }
+        ]
+      },
+      {
+        "rank": 17,
+        "geneCurie": "NCBIGene:84172",
+        "geneLabel": "POLR1B",
+        "geneSymbol": "POLR1B",
+        "geneEntityId": 152569,
+        "bmaScore": 1.361400248288849,
+        "normalizedScore": 0.150313,
+        "patientAverageScore": 1.9850818821972531,
+        "phenotypeAverageScore": 0.737718614380445,
+        "directPhenotypeCount": 75,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000175",
+            "patientPhenotypeLabel": "Cleft palate",
+            "diseasePhenotypeCurie": "HP:0000175",
+            "diseasePhenotypeLabel": "Cleft palate",
+            "micaCurie": "HP:0000175",
+            "micaLabel": "Cleft palate",
+            "score": 2.7710745410641007,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:861"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000164",
+            "patientPhenotypeLabel": "Abnormality of the dentition",
+            "diseasePhenotypeCurie": "HP:0010807",
+            "diseasePhenotypeLabel": "Open bite",
+            "micaCurie": "HP:0000164",
+            "micaLabel": "Abnormality of the dentition",
+            "score": 2.2326989655298792,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:861"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:861"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:861"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001249",
+            "patientPhenotypeLabel": "Intellectual disability",
+            "diseasePhenotypeCurie": "HP:0001249",
+            "diseasePhenotypeLabel": "Intellectual disability",
+            "micaCurie": "HP:0001249",
+            "micaLabel": "Intellectual disability",
+            "score": 1.4054770617153647,
+            "evidenceCode": "0/6",
+            "referenceText": "OMIM:618939"
+          }
+        ]
+      },
+      {
+        "rank": 18,
+        "geneCurie": "NCBIGene:54517",
+        "geneLabel": "PUS7",
+        "geneSymbol": "PUS7",
+        "geneEntityId": 151832,
+        "bmaScore": 1.3564068995102176,
+        "normalizedScore": 0.149762,
+        "patientAverageScore": 1.8364639882690938,
+        "phenotypeAverageScore": 0.8763498107513414,
+        "directPhenotypeCount": 50,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000164",
+            "patientPhenotypeLabel": "Abnormality of the dentition",
+            "diseasePhenotypeCurie": "HP:0011095",
+            "diseasePhenotypeLabel": "Overjet",
+            "micaCurie": "HP:0000164",
+            "micaLabel": "Abnormality of the dentition",
+            "score": 2.2326989655298792,
+            "evidenceCode": "1/3",
+            "referenceText": "OMIM:618342"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "9/9",
+            "referenceText": "OMIM:618342"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000175",
+            "patientPhenotypeLabel": "Cleft palate",
+            "diseasePhenotypeCurie": "HP:0000218",
+            "diseasePhenotypeLabel": "High palate",
+            "micaCurie": "HP:0000174",
+            "micaLabel": "Abnormal palate morphology",
+            "score": 2.0279850714233034,
+            "evidenceCode": "1/3",
+            "referenceText": "OMIM:618342"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "3/3",
+            "referenceText": "OMIM:618342"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001249",
+            "patientPhenotypeLabel": "Intellectual disability",
+            "diseasePhenotypeCurie": "HP:0001249",
+            "diseasePhenotypeLabel": "Intellectual disability",
+            "micaCurie": "HP:0001249",
+            "micaLabel": "Intellectual disability",
+            "score": 1.4054770617153647,
+            "evidenceCode": "9/9",
+            "referenceText": "OMIM:618342"
+          }
+        ]
+      },
+      {
+        "rank": 19,
+        "geneCurie": "NCBIGene:5083",
+        "geneLabel": "PAX9",
+        "geneSymbol": "PAX9",
+        "geneEntityId": 149679,
+        "bmaScore": 1.3532491505548454,
+        "normalizedScore": 0.149414,
+        "patientAverageScore": 0.9935507562089759,
+        "phenotypeAverageScore": 1.712947544900715,
+        "directPhenotypeCount": 31,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000175",
+            "patientPhenotypeLabel": "Cleft palate",
+            "diseasePhenotypeCurie": "HP:0000202",
+            "diseasePhenotypeLabel": "Orofacial cleft",
+            "micaCurie": "HP:0000202",
+            "micaLabel": "Orofacial cleft",
+            "score": 2.7273517300502688,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:99798"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000164",
+            "patientPhenotypeLabel": "Abnormality of the dentition",
+            "diseasePhenotypeCurie": "HP:0012225",
+            "diseasePhenotypeLabel": "Oligodontia of primary teeth",
+            "micaCurie": "HP:0000164",
+            "micaLabel": "Abnormality of the dentition",
+            "score": 2.2326989655298792,
+            "evidenceCode": "0/16",
+            "referenceText": "OMIM:604625"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0012472",
+            "diseasePhenotypeLabel": "Eclabion",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:99798"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001249",
+            "patientPhenotypeLabel": "Intellectual disability",
+            "diseasePhenotypeCurie": "HP:0012472",
+            "diseasePhenotypeLabel": "Eclabion",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:99798"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0012472",
+            "diseasePhenotypeLabel": "Eclabion",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:99798"
+          }
+        ]
+      },
+      {
+        "rank": 20,
+        "geneCurie": "NCBIGene:6949",
+        "geneLabel": "TCOF1",
+        "geneSymbol": "TCOF1",
+        "geneEntityId": 150273,
+        "bmaScore": 1.3510362288769442,
+        "normalizedScore": 0.149169,
+        "patientAverageScore": 1.9850818821972531,
+        "phenotypeAverageScore": 0.7169905755566354,
+        "directPhenotypeCount": 87,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000175",
+            "patientPhenotypeLabel": "Cleft palate",
+            "diseasePhenotypeCurie": "HP:0000185",
+            "diseasePhenotypeLabel": "Cleft soft palate",
+            "micaCurie": "HP:0000175",
+            "micaLabel": "Cleft palate",
+            "score": 2.7710745410641007,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:154500"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000164",
+            "patientPhenotypeLabel": "Abnormality of the dentition",
+            "diseasePhenotypeCurie": "HP:0010807",
+            "diseasePhenotypeLabel": "Open bite",
+            "micaCurie": "HP:0000164",
+            "micaLabel": "Abnormality of the dentition",
+            "score": 2.2326989655298792,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:861"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:861"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:861"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001249",
+            "patientPhenotypeLabel": "Intellectual disability",
+            "diseasePhenotypeCurie": "HP:0001249",
+            "diseasePhenotypeLabel": "Intellectual disability",
+            "micaCurie": "HP:0001249",
+            "micaLabel": "Intellectual disability",
+            "score": 1.4054770617153647,
+            "evidenceCode": "1/53",
+            "referenceText": "OMIM:154500"
+          }
+        ]
+      },
+      {
+        "rank": 21,
+        "geneCurie": "NCBIGene:999",
+        "geneLabel": "CDH1",
+        "geneSymbol": "CDH1",
+        "geneEntityId": 148409,
+        "bmaScore": 1.3487760715151866,
+        "normalizedScore": 0.14892,
+        "patientAverageScore": 1.8467367787796334,
+        "phenotypeAverageScore": 0.8508153642507397,
+        "directPhenotypeCount": 57,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000175",
+            "patientPhenotypeLabel": "Cleft palate",
+            "diseasePhenotypeCurie": "HP:0100337",
+            "diseasePhenotypeLabel": "Bilateral cleft palate",
+            "micaCurie": "HP:0000175",
+            "micaLabel": "Cleft palate",
+            "score": 2.7710745410641007,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000164",
+            "patientPhenotypeLabel": "Abnormality of the dentition",
+            "diseasePhenotypeCurie": "HP:0200153",
+            "diseasePhenotypeLabel": "Agenesis of lateral incisor",
+            "micaCurie": "HP:0000164",
+            "micaLabel": "Abnormality of the dentition",
+            "score": 2.2326989655298792,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0012758",
+            "micaLabel": "Neurodevelopmental delay",
+            "score": 1.1961162706965762,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001249",
+            "patientPhenotypeLabel": "Intellectual disability",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0012759",
+            "micaLabel": "Neurodevelopmental abnormality",
+            "score": 0.9688179084505344,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:199306"
+          }
+        ]
+      },
+      {
+        "rank": 22,
+        "geneCurie": "NCBIGene:6418",
+        "geneLabel": "SET",
+        "geneSymbol": "SET",
+        "geneEntityId": 150068,
+        "bmaScore": 1.3476319597516249,
+        "normalizedScore": 0.148793,
+        "patientAverageScore": 1.9850818821972531,
+        "phenotypeAverageScore": 0.7101820373059967,
+        "directPhenotypeCount": 41,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000175",
+            "patientPhenotypeLabel": "Cleft palate",
+            "diseasePhenotypeCurie": "HP:0000176",
+            "diseasePhenotypeLabel": "Submucous cleft hard palate",
+            "micaCurie": "HP:0000175",
+            "micaLabel": "Cleft palate",
+            "score": 2.7710745410641007,
+            "evidenceCode": "1/5",
+            "referenceText": "OMIM:618106"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000164",
+            "patientPhenotypeLabel": "Abnormality of the dentition",
+            "diseasePhenotypeCurie": "HP:0000678",
+            "diseasePhenotypeLabel": "Dental crowding",
+            "micaCurie": "HP:0000164",
+            "micaLabel": "Abnormality of the dentition",
+            "score": 2.2326989655298792,
+            "evidenceCode": "1/5",
+            "referenceText": "OMIM:618106"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "5/5",
+            "referenceText": "OMIM:618106"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "5/5",
+            "referenceText": "OMIM:618106"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001249",
+            "patientPhenotypeLabel": "Intellectual disability",
+            "diseasePhenotypeCurie": "HP:0001249",
+            "diseasePhenotypeLabel": "Intellectual disability",
+            "micaCurie": "HP:0001249",
+            "micaLabel": "Intellectual disability",
+            "score": 1.4054770617153647,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:618106"
+          }
+        ]
+      },
+      {
+        "rank": 23,
+        "geneCurie": "NCBIGene:9533",
+        "geneLabel": "POLR1C",
+        "geneSymbol": "POLR1C",
+        "geneEntityId": 150825,
+        "bmaScore": 1.3461840279714492,
+        "normalizedScore": 0.148633,
+        "patientAverageScore": 1.9850818821972531,
+        "phenotypeAverageScore": 0.7072861737456455,
+        "directPhenotypeCount": 87,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000175",
+            "patientPhenotypeLabel": "Cleft palate",
+            "diseasePhenotypeCurie": "HP:0000175",
+            "diseasePhenotypeLabel": "Cleft palate",
+            "micaCurie": "HP:0000175",
+            "micaLabel": "Cleft palate",
+            "score": 2.7710745410641007,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:861"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000164",
+            "patientPhenotypeLabel": "Abnormality of the dentition",
+            "diseasePhenotypeCurie": "HP:0010807",
+            "diseasePhenotypeLabel": "Open bite",
+            "micaCurie": "HP:0000164",
+            "micaLabel": "Abnormality of the dentition",
+            "score": 2.2326989655298792,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:861"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:861"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:861"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001249",
+            "patientPhenotypeLabel": "Intellectual disability",
+            "diseasePhenotypeCurie": "HP:0001249",
+            "diseasePhenotypeLabel": "Intellectual disability",
+            "micaCurie": "HP:0001249",
+            "micaLabel": "Intellectual disability",
+            "score": 1.4054770617153647,
+            "evidenceCode": "6/8",
+            "referenceText": "OMIM:616494"
+          }
+        ]
+      },
+      {
+        "rank": 24,
+        "geneCurie": "NCBIGene:79641",
+        "geneLabel": "ROGDI",
+        "geneSymbol": "ROGDI",
+        "geneEntityId": 152369,
+        "bmaScore": 1.3424234517094997,
+        "normalizedScore": 0.148218,
+        "patientAverageScore": 1.6919004344833042,
+        "phenotypeAverageScore": 0.9929464689356955,
+        "directPhenotypeCount": 30,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000164",
+            "patientPhenotypeLabel": "Abnormality of the dentition",
+            "diseasePhenotypeCurie": "HP:0011073",
+            "diseasePhenotypeLabel": "Abnormality of dental color",
+            "micaCurie": "HP:0000164",
+            "micaLabel": "Abnormality of the dentition",
+            "score": 2.2326989655298792,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:1946"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "4/4",
+            "referenceText": "OMIM:226750"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "OMIM:226750"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001249",
+            "patientPhenotypeLabel": "Intellectual disability",
+            "diseasePhenotypeCurie": "HP:0010864",
+            "diseasePhenotypeLabel": "Severe intellectual disability",
+            "micaCurie": "HP:0001249",
+            "micaLabel": "Intellectual disability",
+            "score": 1.4054770617153647,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:226750"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000175",
+            "patientPhenotypeLabel": "Cleft palate",
+            "diseasePhenotypeCurie": "HP:0011073",
+            "diseasePhenotypeLabel": "Abnormality of dental color",
+            "micaCurie": "HP:0000163",
+            "micaLabel": "Abnormal oral cavity morphology",
+            "score": 1.3051673024943553,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:1946"
+          }
+        ]
+      },
+      {
+        "rank": 25,
+        "geneCurie": "NCBIGene:64094",
+        "geneLabel": "SMOC2",
+        "geneSymbol": "SMOC2",
+        "geneEntityId": 152255,
+        "bmaScore": 1.3313627327682187,
+        "normalizedScore": 0.146997,
+        "patientAverageScore": 0.7091138706977932,
+        "phenotypeAverageScore": 1.9536115948386443,
+        "directPhenotypeCount": 8,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000164",
+            "patientPhenotypeLabel": "Abnormality of the dentition",
+            "diseasePhenotypeCurie": "HP:0006350",
+            "diseasePhenotypeLabel": "Pulp obliteration",
+            "micaCurie": "HP:0000164",
+            "micaLabel": "Abnormality of the dentition",
+            "score": 2.2326989655298792,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:125400"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000175",
+            "patientPhenotypeLabel": "Cleft palate",
+            "diseasePhenotypeCurie": "HP:0006350",
+            "diseasePhenotypeLabel": "Pulp obliteration",
+            "micaCurie": "HP:0000163",
+            "micaLabel": "Abnormal oral cavity morphology",
+            "score": 1.3051673024943553,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:125400"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0006350",
+            "diseasePhenotypeLabel": "Pulp obliteration",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:125400"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001249",
+            "patientPhenotypeLabel": "Intellectual disability",
+            "diseasePhenotypeCurie": "HP:0006350",
+            "diseasePhenotypeLabel": "Pulp obliteration",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:125400"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0006350",
+            "diseasePhenotypeLabel": "Pulp obliteration",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:125400"
+          }
+        ]
+      }
+    ],
+    "engineSummary": {
+      "diseaseCount": 8579,
+      "geneCount": 5256,
+      "phenotypeCount": 19389,
+      "sourceMode": {
+        "disease": "relationship_fallback",
+        "gene": "relationship_fallback"
+      },
+      "generatedAt": "2026-03-15T21:00:39.457Z"
+    }
+  }
+}

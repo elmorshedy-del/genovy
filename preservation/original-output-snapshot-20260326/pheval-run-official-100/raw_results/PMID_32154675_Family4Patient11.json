@@ -1,0 +1,1542 @@
+{
+  "success": true,
+  "engine": "genovy-dx-sim",
+  "analysisType": "gene",
+  "input": {
+    "presentPhenotypeCuries": [
+      "HP:0001166",
+      "HP:0002650",
+      "HP:0000218",
+      "HP:0000316"
+    ],
+    "excludedPhenotypeCuries": [
+      "HP:0002758",
+      "HP:0000938",
+      "HP:0000939",
+      "HP:0000766",
+      "HP:0001382",
+      "HP:0001659",
+      "HP:0002647",
+      "HP:0001634",
+      "HP:0004942",
+      "HP:0001065",
+      "HP:0001519",
+      "HP:0001763",
+      "HP:0000023",
+      "HP:0001537",
+      "HP:0000193",
+      "HP:0000977",
+      "HP:0001083",
+      "HP:0000592",
+      "HP:0002108"
+    ],
+    "sourceFormat": "phenopacket"
+  },
+  "ranking": {
+    "queryPhenotypes": [
+      {
+        "phenotypeCurie": "HP:0001166",
+        "phenotypeLabel": "Arachnodactyly"
+      },
+      {
+        "phenotypeCurie": "HP:0002650",
+        "phenotypeLabel": "Scoliosis"
+      },
+      {
+        "phenotypeCurie": "HP:0000218",
+        "phenotypeLabel": "High palate"
+      },
+      {
+        "phenotypeCurie": "HP:0000316",
+        "phenotypeLabel": "Hypertelorism"
+      }
+    ],
+    "results": [
+      {
+        "rank": 1,
+        "geneCurie": "NCBIGene:633",
+        "geneLabel": "BGN",
+        "geneSymbol": "BGN",
+        "geneEntityId": 148286,
+        "bmaScore": 1.9762393354650505,
+        "normalizedScore": 0.218198,
+        "patientAverageScore": 2.8423002081306628,
+        "phenotypeAverageScore": 1.110178462799438,
+        "directPhenotypeCount": 77,
+        "matchedPhenotypeCount": 4,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001166",
+            "patientPhenotypeLabel": "Arachnodactyly",
+            "diseasePhenotypeCurie": "HP:0001166",
+            "diseasePhenotypeLabel": "Arachnodactyly",
+            "micaCurie": "HP:0001166",
+            "micaLabel": "Arachnodactyly",
+            "score": 4.461952785438375,
+            "evidenceCode": "4/10",
+            "referenceText": "OMIM:300989"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000218",
+            "patientPhenotypeLabel": "High palate",
+            "diseasePhenotypeCurie": "HP:0000218",
+            "diseasePhenotypeLabel": "High palate",
+            "micaCurie": "HP:0000218",
+            "micaLabel": "High palate",
+            "score": 2.507421893339155,
+            "evidenceCode": "2/5",
+            "referenceText": "OMIM:300989"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0000316",
+            "diseasePhenotypeLabel": "Hypertelorism",
+            "micaCurie": "HP:0000316",
+            "micaLabel": "Hypertelorism",
+            "score": 2.385039690111898,
+            "evidenceCode": "8/11",
+            "referenceText": "OMIM:300989"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002650",
+            "patientPhenotypeLabel": "Scoliosis",
+            "diseasePhenotypeCurie": "HP:0002938",
+            "diseasePhenotypeLabel": "Lumbar hyperlordosis",
+            "micaCurie": "HP:0010674",
+            "micaLabel": "Abnormal curvature of the vertebral column",
+            "score": 2.014786463633222,
+            "evidenceCode": "7/8",
+            "referenceText": "OMIM:300106"
+          }
+        ]
+      },
+      {
+        "rank": 2,
+        "geneCurie": "NCBIGene:1280",
+        "geneLabel": "COL2A1",
+        "geneSymbol": "COL2A1",
+        "geneEntityId": 148489,
+        "bmaScore": 1.9715970448103728,
+        "normalizedScore": 0.217686,
+        "patientAverageScore": 2.872457205077816,
+        "phenotypeAverageScore": 1.07073688454293,
+        "directPhenotypeCount": 360,
+        "matchedPhenotypeCount": 4,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001166",
+            "patientPhenotypeLabel": "Arachnodactyly",
+            "diseasePhenotypeCurie": "HP:0001166",
+            "diseasePhenotypeLabel": "Arachnodactyly",
+            "micaCurie": "HP:0001166",
+            "micaLabel": "Arachnodactyly",
+            "score": 4.461952785438375,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:108300"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000218",
+            "patientPhenotypeLabel": "High palate",
+            "diseasePhenotypeCurie": "HP:0000218",
+            "diseasePhenotypeLabel": "High palate",
+            "micaCurie": "HP:0000218",
+            "micaLabel": "High palate",
+            "score": 2.507421893339155,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:93315"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0000316",
+            "diseasePhenotypeLabel": "Hypertelorism",
+            "micaCurie": "HP:0000316",
+            "micaLabel": "Hypertelorism",
+            "score": 2.385039690111898,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:93346"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002650",
+            "patientPhenotypeLabel": "Scoliosis",
+            "diseasePhenotypeCurie": "HP:0004619",
+            "diseasePhenotypeLabel": "Lumbar kyphoscoliosis",
+            "micaCurie": "HP:0002650",
+            "micaLabel": "Scoliosis",
+            "score": 2.1354144514218367,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:156550"
+          }
+        ]
+      },
+      {
+        "rank": 3,
+        "geneCurie": "NCBIGene:1301",
+        "geneLabel": "COL11A1",
+        "geneSymbol": "COL11A1",
+        "geneEntityId": 148508,
+        "bmaScore": 1.943120954146909,
+        "normalizedScore": 0.214542,
+        "patientAverageScore": 2.8423002081306628,
+        "phenotypeAverageScore": 1.0439417001631552,
+        "directPhenotypeCount": 151,
+        "matchedPhenotypeCount": 4,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001166",
+            "patientPhenotypeLabel": "Arachnodactyly",
+            "diseasePhenotypeCurie": "HP:0001166",
+            "diseasePhenotypeLabel": "Arachnodactyly",
+            "micaCurie": "HP:0001166",
+            "micaLabel": "Arachnodactyly",
+            "score": 4.461952785438375,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:604841"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000218",
+            "patientPhenotypeLabel": "High palate",
+            "diseasePhenotypeCurie": "HP:0002705",
+            "diseasePhenotypeLabel": "High, narrow palate",
+            "micaCurie": "HP:0000218",
+            "micaLabel": "High palate",
+            "score": 2.507421893339155,
+            "evidenceCode": "3/31",
+            "referenceText": "OMIM:604841"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0000316",
+            "diseasePhenotypeLabel": "Hypertelorism",
+            "micaCurie": "HP:0000316",
+            "micaLabel": "Hypertelorism",
+            "score": 2.385039690111898,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:2021"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002650",
+            "patientPhenotypeLabel": "Scoliosis",
+            "diseasePhenotypeCurie": "HP:0034770",
+            "diseasePhenotypeLabel": "Lumbar hypolordosis",
+            "micaCurie": "HP:0010674",
+            "micaLabel": "Abnormal curvature of the vertebral column",
+            "score": 2.014786463633222,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:604841"
+          }
+        ]
+      },
+      {
+        "rank": 4,
+        "geneCurie": "NCBIGene:652",
+        "geneLabel": "BMP4",
+        "geneSymbol": "BMP4",
+        "geneEntityId": 148293,
+        "bmaScore": 1.875721920309548,
+        "normalizedScore": 0.2071,
+        "patientAverageScore": 2.872457205077816,
+        "phenotypeAverageScore": 0.8789866355412803,
+        "directPhenotypeCount": 157,
+        "matchedPhenotypeCount": 4,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001166",
+            "patientPhenotypeLabel": "Arachnodactyly",
+            "diseasePhenotypeCurie": "HP:0001166",
+            "diseasePhenotypeLabel": "Arachnodactyly",
+            "micaCurie": "HP:0001166",
+            "micaLabel": "Arachnodactyly",
+            "score": 4.461952785438375,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:828"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000218",
+            "patientPhenotypeLabel": "High palate",
+            "diseasePhenotypeCurie": "HP:0000218",
+            "diseasePhenotypeLabel": "High palate",
+            "micaCurie": "HP:0000218",
+            "micaLabel": "High palate",
+            "score": 2.507421893339155,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:139471"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0000316",
+            "diseasePhenotypeLabel": "Hypertelorism",
+            "micaCurie": "HP:0000316",
+            "micaLabel": "Hypertelorism",
+            "score": 2.385039690111898,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:828"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002650",
+            "patientPhenotypeLabel": "Scoliosis",
+            "diseasePhenotypeCurie": "HP:0002650",
+            "diseasePhenotypeLabel": "Scoliosis",
+            "micaCurie": "HP:0002650",
+            "micaLabel": "Scoliosis",
+            "score": 2.1354144514218367,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:828"
+          }
+        ]
+      },
+      {
+        "rank": 5,
+        "geneCurie": "NCBIGene:2263",
+        "geneLabel": "FGFR2",
+        "geneSymbol": "FGFR2",
+        "geneEntityId": 148838,
+        "bmaScore": 1.8731745218928184,
+        "normalizedScore": 0.206819,
+        "patientAverageScore": 2.872457205077816,
+        "phenotypeAverageScore": 0.8738918387078208,
+        "directPhenotypeCount": 369,
+        "matchedPhenotypeCount": 4,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001166",
+            "patientPhenotypeLabel": "Arachnodactyly",
+            "diseasePhenotypeCurie": "HP:0001166",
+            "diseasePhenotypeLabel": "Arachnodactyly",
+            "micaCurie": "HP:0001166",
+            "micaLabel": "Arachnodactyly",
+            "score": 4.461952785438375,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:207410"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000218",
+            "patientPhenotypeLabel": "High palate",
+            "diseasePhenotypeCurie": "HP:0000218",
+            "diseasePhenotypeLabel": "High palate",
+            "micaCurie": "HP:0000218",
+            "micaLabel": "High palate",
+            "score": 2.507421893339155,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:101200"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0000316",
+            "diseasePhenotypeLabel": "Hypertelorism",
+            "micaCurie": "HP:0000316",
+            "micaLabel": "Hypertelorism",
+            "score": 2.385039690111898,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:123790"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002650",
+            "patientPhenotypeLabel": "Scoliosis",
+            "diseasePhenotypeCurie": "HP:0002650",
+            "diseasePhenotypeLabel": "Scoliosis",
+            "micaCurie": "HP:0002650",
+            "micaLabel": "Scoliosis",
+            "score": 2.1354144514218367,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "ORPHA:2363"
+          }
+        ]
+      },
+      {
+        "rank": 6,
+        "geneCurie": "NCBIGene:860",
+        "geneLabel": "RUNX2",
+        "geneSymbol": "RUNX2",
+        "geneEntityId": 148372,
+        "bmaScore": 1.8695700819221266,
+        "normalizedScore": 0.206421,
+        "patientAverageScore": 2.6020487170443936,
+        "phenotypeAverageScore": 1.1370914467998596,
+        "directPhenotypeCount": 106,
+        "matchedPhenotypeCount": 4,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001166",
+            "patientPhenotypeLabel": "Arachnodactyly",
+            "diseasePhenotypeCurie": "HP:0001182",
+            "diseasePhenotypeLabel": "Tapered finger",
+            "micaCurie": "HP:0100807",
+            "micaLabel": "Long fingers",
+            "score": 3.3803188333046834,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1452"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000218",
+            "patientPhenotypeLabel": "High palate",
+            "diseasePhenotypeCurie": "HP:0002705",
+            "diseasePhenotypeLabel": "High, narrow palate",
+            "micaCurie": "HP:0000218",
+            "micaLabel": "High palate",
+            "score": 2.507421893339155,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:1452"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0000316",
+            "diseasePhenotypeLabel": "Hypertelorism",
+            "micaCurie": "HP:0000316",
+            "micaLabel": "Hypertelorism",
+            "score": 2.385039690111898,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:119600"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002650",
+            "patientPhenotypeLabel": "Scoliosis",
+            "diseasePhenotypeCurie": "HP:0002650",
+            "diseasePhenotypeLabel": "Scoliosis",
+            "micaCurie": "HP:0002650",
+            "micaLabel": "Scoliosis",
+            "score": 2.1354144514218367,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1452"
+          }
+        ]
+      },
+      {
+        "rank": 7,
+        "geneCurie": "NCBIGene:91252",
+        "geneLabel": "SLC39A13",
+        "geneSymbol": "SLC39A13",
+        "geneEntityId": 152713,
+        "bmaScore": 1.8686873486233169,
+        "normalizedScore": 0.206324,
+        "patientAverageScore": 2.6020487170443936,
+        "phenotypeAverageScore": 1.13532598020224,
+        "directPhenotypeCount": 45,
+        "matchedPhenotypeCount": 4,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001166",
+            "patientPhenotypeLabel": "Arachnodactyly",
+            "diseasePhenotypeCurie": "HP:0001182",
+            "diseasePhenotypeLabel": "Tapered finger",
+            "micaCurie": "HP:0100807",
+            "micaLabel": "Long fingers",
+            "score": 3.3803188333046834,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:612350"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000218",
+            "patientPhenotypeLabel": "High palate",
+            "diseasePhenotypeCurie": "HP:0000218",
+            "diseasePhenotypeLabel": "High palate",
+            "micaCurie": "HP:0000218",
+            "micaLabel": "High palate",
+            "score": 2.507421893339155,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:612350"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0000316",
+            "diseasePhenotypeLabel": "Hypertelorism",
+            "micaCurie": "HP:0000316",
+            "micaLabel": "Hypertelorism",
+            "score": 2.385039690111898,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:612350"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002650",
+            "patientPhenotypeLabel": "Scoliosis",
+            "diseasePhenotypeCurie": "HP:0002751",
+            "diseasePhenotypeLabel": "Kyphoscoliosis",
+            "micaCurie": "HP:0002650",
+            "micaLabel": "Scoliosis",
+            "score": 2.1354144514218367,
+            "evidenceCode": "1/7",
+            "referenceText": "OMIM:612350"
+          }
+        ]
+      },
+      {
+        "rank": 8,
+        "geneCurie": "NCBIGene:2316",
+        "geneLabel": "FLNA",
+        "geneSymbol": "FLNA",
+        "geneEntityId": 148857,
+        "bmaScore": 1.8625042396170035,
+        "normalizedScore": 0.205641,
+        "patientAverageScore": 2.872457205077816,
+        "phenotypeAverageScore": 0.852551274156191,
+        "directPhenotypeCount": 356,
+        "matchedPhenotypeCount": 4,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001166",
+            "patientPhenotypeLabel": "Arachnodactyly",
+            "diseasePhenotypeCurie": "HP:0001166",
+            "diseasePhenotypeLabel": "Arachnodactyly",
+            "micaCurie": "HP:0001166",
+            "micaLabel": "Arachnodactyly",
+            "score": 4.461952785438375,
+            "evidenceCode": "5/11",
+            "referenceText": "OMIM:305620"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000218",
+            "patientPhenotypeLabel": "High palate",
+            "diseasePhenotypeCurie": "HP:0000218",
+            "diseasePhenotypeLabel": "High palate",
+            "micaCurie": "HP:0000218",
+            "micaLabel": "High palate",
+            "score": 2.507421893339155,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:305620"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0000316",
+            "diseasePhenotypeLabel": "Hypertelorism",
+            "micaCurie": "HP:0000316",
+            "micaLabel": "Hypertelorism",
+            "score": 2.385039690111898,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:300048"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002650",
+            "patientPhenotypeLabel": "Scoliosis",
+            "diseasePhenotypeCurie": "HP:0002751",
+            "diseasePhenotypeLabel": "Kyphoscoliosis",
+            "micaCurie": "HP:0002650",
+            "micaLabel": "Scoliosis",
+            "score": 2.1354144514218367,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:304120"
+          }
+        ]
+      },
+      {
+        "rank": 9,
+        "geneCurie": "NCBIGene:1146",
+        "geneLabel": "CHRNG",
+        "geneSymbol": "CHRNG",
+        "geneEntityId": 148459,
+        "bmaScore": 1.845763878156263,
+        "normalizedScore": 0.203793,
+        "patientAverageScore": 2.872457205077816,
+        "phenotypeAverageScore": 0.8190705512347105,
+        "directPhenotypeCount": 121,
+        "matchedPhenotypeCount": 4,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001166",
+            "patientPhenotypeLabel": "Arachnodactyly",
+            "diseasePhenotypeCurie": "HP:0001166",
+            "diseasePhenotypeLabel": "Arachnodactyly",
+            "micaCurie": "HP:0001166",
+            "micaLabel": "Arachnodactyly",
+            "score": 4.461952785438375,
+            "evidenceCode": "10/11",
+            "referenceText": "OMIM:265000"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000218",
+            "patientPhenotypeLabel": "High palate",
+            "diseasePhenotypeCurie": "HP:0000218",
+            "diseasePhenotypeLabel": "High palate",
+            "micaCurie": "HP:0000218",
+            "micaLabel": "High palate",
+            "score": 2.507421893339155,
+            "evidenceCode": "11/12",
+            "referenceText": "OMIM:265000"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0000316",
+            "diseasePhenotypeLabel": "Hypertelorism",
+            "micaCurie": "HP:0000316",
+            "micaLabel": "Hypertelorism",
+            "score": 2.385039690111898,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:2990"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002650",
+            "patientPhenotypeLabel": "Scoliosis",
+            "diseasePhenotypeCurie": "HP:0002944",
+            "diseasePhenotypeLabel": "Thoracolumbar scoliosis",
+            "micaCurie": "HP:0002650",
+            "micaLabel": "Scoliosis",
+            "score": 2.1354144514218367,
+            "evidenceCode": "1/3",
+            "referenceText": "OMIM:265000"
+          }
+        ]
+      },
+      {
+        "rank": 10,
+        "geneCurie": "NCBIGene:2261",
+        "geneLabel": "FGFR3",
+        "geneSymbol": "FGFR3",
+        "geneEntityId": 148837,
+        "bmaScore": 1.8443826224624686,
+        "normalizedScore": 0.20364,
+        "patientAverageScore": 2.872457205077816,
+        "phenotypeAverageScore": 0.8163080398471216,
+        "directPhenotypeCount": 338,
+        "matchedPhenotypeCount": 4,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001166",
+            "patientPhenotypeLabel": "Arachnodactyly",
+            "diseasePhenotypeCurie": "HP:0001166",
+            "diseasePhenotypeLabel": "Arachnodactyly",
+            "micaCurie": "HP:0001166",
+            "micaLabel": "Arachnodactyly",
+            "score": 4.461952785438375,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:610474"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000218",
+            "patientPhenotypeLabel": "High palate",
+            "diseasePhenotypeCurie": "HP:0002705",
+            "diseasePhenotypeLabel": "High, narrow palate",
+            "micaCurie": "HP:0000218",
+            "micaLabel": "High palate",
+            "score": 2.507421893339155,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:53271"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0000316",
+            "diseasePhenotypeLabel": "Hypertelorism",
+            "micaCurie": "HP:0000316",
+            "micaLabel": "Hypertelorism",
+            "score": 2.385039690111898,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:794"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002650",
+            "patientPhenotypeLabel": "Scoliosis",
+            "diseasePhenotypeCurie": "HP:0002650",
+            "diseasePhenotypeLabel": "Scoliosis",
+            "micaCurie": "HP:0002650",
+            "micaLabel": "Scoliosis",
+            "score": 2.1354144514218367,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "ORPHA:2363"
+          }
+        ]
+      },
+      {
+        "rank": 11,
+        "geneCurie": "NCBIGene:6611",
+        "geneLabel": "SMS",
+        "geneSymbol": "SMS",
+        "geneEntityId": 150147,
+        "bmaScore": 1.8400057630986326,
+        "normalizedScore": 0.203157,
+        "patientAverageScore": 2.872457205077816,
+        "phenotypeAverageScore": 0.8075543211194495,
+        "directPhenotypeCount": 92,
+        "matchedPhenotypeCount": 4,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001166",
+            "patientPhenotypeLabel": "Arachnodactyly",
+            "diseasePhenotypeCurie": "HP:0001166",
+            "diseasePhenotypeLabel": "Arachnodactyly",
+            "micaCurie": "HP:0001166",
+            "micaLabel": "Arachnodactyly",
+            "score": 4.461952785438375,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:3063"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000218",
+            "patientPhenotypeLabel": "High palate",
+            "diseasePhenotypeCurie": "HP:0002705",
+            "diseasePhenotypeLabel": "High, narrow palate",
+            "micaCurie": "HP:0000218",
+            "micaLabel": "High palate",
+            "score": 2.507421893339155,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:309583"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0000316",
+            "diseasePhenotypeLabel": "Hypertelorism",
+            "micaCurie": "HP:0000316",
+            "micaLabel": "Hypertelorism",
+            "score": 2.385039690111898,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:309583"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002650",
+            "patientPhenotypeLabel": "Scoliosis",
+            "diseasePhenotypeCurie": "HP:0002751",
+            "diseasePhenotypeLabel": "Kyphoscoliosis",
+            "micaCurie": "HP:0002650",
+            "micaLabel": "Scoliosis",
+            "score": 2.1354144514218367,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:309583"
+          }
+        ]
+      },
+      {
+        "rank": 12,
+        "geneCurie": "NCBIGene:126792",
+        "geneLabel": "B3GALT6",
+        "geneSymbol": "B3GALT6",
+        "geneEntityId": 152852,
+        "bmaScore": 1.8373212206656346,
+        "normalizedScore": 0.20286,
+        "patientAverageScore": 2.7890181866297072,
+        "phenotypeAverageScore": 0.8856242547015621,
+        "directPhenotypeCount": 157,
+        "matchedPhenotypeCount": 4,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001166",
+            "patientPhenotypeLabel": "Arachnodactyly",
+            "diseasePhenotypeCurie": "HP:0001166",
+            "diseasePhenotypeLabel": "Arachnodactyly",
+            "micaCurie": "HP:0001166",
+            "micaLabel": "Arachnodactyly",
+            "score": 4.461952785438375,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:536467"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000218",
+            "patientPhenotypeLabel": "High palate",
+            "diseasePhenotypeCurie": "HP:0000218",
+            "diseasePhenotypeLabel": "High palate",
+            "micaCurie": "HP:0000218",
+            "micaLabel": "High palate",
+            "score": 2.507421893339155,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:536467"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002650",
+            "patientPhenotypeLabel": "Scoliosis",
+            "diseasePhenotypeCurie": "HP:0008453",
+            "diseasePhenotypeLabel": "Congenital kyphoscoliosis",
+            "micaCurie": "HP:0002650",
+            "micaLabel": "Scoliosis",
+            "score": 2.1354144514218367,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:536467"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0000520",
+            "diseasePhenotypeLabel": "Proptosis",
+            "micaCurie": "HP:0100886",
+            "micaLabel": "Abnormality of globe location",
+            "score": 2.0512836163194628,
+            "evidenceCode": "3/5",
+            "referenceText": "OMIM:271640"
+          }
+        ]
+      },
+      {
+        "rank": 13,
+        "geneCurie": "NCBIGene:139285",
+        "geneLabel": "AMER1",
+        "geneSymbol": "AMER1",
+        "geneEntityId": 152898,
+        "bmaScore": 1.8326753807209293,
+        "normalizedScore": 0.202347,
+        "patientAverageScore": 2.872457205077816,
+        "phenotypeAverageScore": 0.7928935563640426,
+        "directPhenotypeCount": 100,
+        "matchedPhenotypeCount": 4,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001166",
+            "patientPhenotypeLabel": "Arachnodactyly",
+            "diseasePhenotypeCurie": "HP:0001166",
+            "diseasePhenotypeLabel": "Arachnodactyly",
+            "micaCurie": "HP:0001166",
+            "micaLabel": "Arachnodactyly",
+            "score": 4.461952785438375,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:300373"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000218",
+            "patientPhenotypeLabel": "High palate",
+            "diseasePhenotypeCurie": "HP:0002705",
+            "diseasePhenotypeLabel": "High, narrow palate",
+            "micaCurie": "HP:0000218",
+            "micaLabel": "High palate",
+            "score": 2.507421893339155,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:2780"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0000316",
+            "diseasePhenotypeLabel": "Hypertelorism",
+            "micaCurie": "HP:0000316",
+            "micaLabel": "Hypertelorism",
+            "score": 2.385039690111898,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:300373"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002650",
+            "patientPhenotypeLabel": "Scoliosis",
+            "diseasePhenotypeCurie": "HP:0002650",
+            "diseasePhenotypeLabel": "Scoliosis",
+            "micaCurie": "HP:0002650",
+            "micaLabel": "Scoliosis",
+            "score": 2.1354144514218367,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:2780"
+          }
+        ]
+      },
+      {
+        "rank": 14,
+        "geneCurie": "NCBIGene:29940",
+        "geneLabel": "DSE",
+        "geneSymbol": "DSE",
+        "geneEntityId": 151621,
+        "bmaScore": 1.8256462000780718,
+        "normalizedScore": 0.201571,
+        "patientAverageScore": 2.872457205077816,
+        "phenotypeAverageScore": 0.7788351950783275,
+        "directPhenotypeCount": 88,
+        "matchedPhenotypeCount": 4,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001166",
+            "patientPhenotypeLabel": "Arachnodactyly",
+            "diseasePhenotypeCurie": "HP:0001166",
+            "diseasePhenotypeLabel": "Arachnodactyly",
+            "micaCurie": "HP:0001166",
+            "micaLabel": "Arachnodactyly",
+            "score": 4.461952785438375,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:615539"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000218",
+            "patientPhenotypeLabel": "High palate",
+            "diseasePhenotypeCurie": "HP:0000218",
+            "diseasePhenotypeLabel": "High palate",
+            "micaCurie": "HP:0000218",
+            "micaLabel": "High palate",
+            "score": 2.507421893339155,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:615539"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0000316",
+            "diseasePhenotypeLabel": "Hypertelorism",
+            "micaCurie": "HP:0000316",
+            "micaLabel": "Hypertelorism",
+            "score": 2.385039690111898,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:2953"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002650",
+            "patientPhenotypeLabel": "Scoliosis",
+            "diseasePhenotypeCurie": "HP:0002751",
+            "diseasePhenotypeLabel": "Kyphoscoliosis",
+            "micaCurie": "HP:0002650",
+            "micaLabel": "Scoliosis",
+            "score": 2.1354144514218367,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:2953"
+          }
+        ]
+      },
+      {
+        "rank": 15,
+        "geneCurie": "NCBIGene:11285",
+        "geneLabel": "B4GALT7",
+        "geneSymbol": "B4GALT7",
+        "geneEntityId": 151208,
+        "bmaScore": 1.8254513963613714,
+        "normalizedScore": 0.20155,
+        "patientAverageScore": 2.752597999598853,
+        "phenotypeAverageScore": 0.8983047931238897,
+        "directPhenotypeCount": 75,
+        "matchedPhenotypeCount": 4,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001166",
+            "patientPhenotypeLabel": "Arachnodactyly",
+            "diseasePhenotypeCurie": "HP:0001166",
+            "diseasePhenotypeLabel": "Arachnodactyly",
+            "micaCurie": "HP:0001166",
+            "micaLabel": "Arachnodactyly",
+            "score": 4.461952785438375,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:75496"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0000316",
+            "diseasePhenotypeLabel": "Hypertelorism",
+            "micaCurie": "HP:0000316",
+            "micaLabel": "Hypertelorism",
+            "score": 2.385039690111898,
+            "evidenceCode": "28/32",
+            "referenceText": "OMIM:130070"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002650",
+            "patientPhenotypeLabel": "Scoliosis",
+            "diseasePhenotypeCurie": "HP:0002751",
+            "diseasePhenotypeLabel": "Kyphoscoliosis",
+            "micaCurie": "HP:0002650",
+            "micaLabel": "Scoliosis",
+            "score": 2.1354144514218367,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:75496"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000218",
+            "patientPhenotypeLabel": "High palate",
+            "diseasePhenotypeCurie": "HP:0000193",
+            "diseasePhenotypeLabel": "Bifid uvula",
+            "micaCurie": "HP:0000174",
+            "micaLabel": "Abnormal palate morphology",
+            "score": 2.0279850714233034,
+            "evidenceCode": "4/31",
+            "referenceText": "OMIM:130070"
+          }
+        ]
+      },
+      {
+        "rank": 16,
+        "geneCurie": "NCBIGene:5594",
+        "geneLabel": "MAPK1",
+        "geneSymbol": "MAPK1",
+        "geneEntityId": 149852,
+        "bmaScore": 1.816150774922359,
+        "normalizedScore": 0.200523,
+        "patientAverageScore": 2.872457205077816,
+        "phenotypeAverageScore": 0.7598443447669024,
+        "directPhenotypeCount": 120,
+        "matchedPhenotypeCount": 4,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001166",
+            "patientPhenotypeLabel": "Arachnodactyly",
+            "diseasePhenotypeCurie": "HP:0001166",
+            "diseasePhenotypeLabel": "Arachnodactyly",
+            "micaCurie": "HP:0001166",
+            "micaLabel": "Arachnodactyly",
+            "score": 4.461952785438375,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:261330"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000218",
+            "patientPhenotypeLabel": "High palate",
+            "diseasePhenotypeCurie": "HP:0002705",
+            "diseasePhenotypeLabel": "High, narrow palate",
+            "micaCurie": "HP:0000218",
+            "micaLabel": "High palate",
+            "score": 2.507421893339155,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:261330"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0000316",
+            "diseasePhenotypeLabel": "Hypertelorism",
+            "micaCurie": "HP:0000316",
+            "micaLabel": "Hypertelorism",
+            "score": 2.385039690111898,
+            "evidenceCode": "5/7",
+            "referenceText": "OMIM:619087"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002650",
+            "patientPhenotypeLabel": "Scoliosis",
+            "diseasePhenotypeCurie": "HP:0002650",
+            "diseasePhenotypeLabel": "Scoliosis",
+            "micaCurie": "HP:0002650",
+            "micaLabel": "Scoliosis",
+            "score": 2.1354144514218367,
+            "evidenceCode": "1/7",
+            "referenceText": "OMIM:619087"
+          }
+        ]
+      },
+      {
+        "rank": 17,
+        "geneCurie": "NCBIGene:259232",
+        "geneLabel": "NALCN",
+        "geneSymbol": "NALCN",
+        "geneEntityId": 153102,
+        "bmaScore": 1.8134775322638577,
+        "normalizedScore": 0.200228,
+        "patientAverageScore": 2.872457205077816,
+        "phenotypeAverageScore": 0.7544978594498992,
+        "directPhenotypeCount": 123,
+        "matchedPhenotypeCount": 4,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001166",
+            "patientPhenotypeLabel": "Arachnodactyly",
+            "diseasePhenotypeCurie": "HP:0001166",
+            "diseasePhenotypeLabel": "Arachnodactyly",
+            "micaCurie": "HP:0001166",
+            "micaLabel": "Arachnodactyly",
+            "score": 4.461952785438375,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "ORPHA:562528"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000218",
+            "patientPhenotypeLabel": "High palate",
+            "diseasePhenotypeCurie": "HP:0000218",
+            "diseasePhenotypeLabel": "High palate",
+            "micaCurie": "HP:0000218",
+            "micaLabel": "High palate",
+            "score": 2.507421893339155,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:562528"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0000316",
+            "diseasePhenotypeLabel": "Hypertelorism",
+            "micaCurie": "HP:0000316",
+            "micaLabel": "Hypertelorism",
+            "score": 2.385039690111898,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "ORPHA:562528"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002650",
+            "patientPhenotypeLabel": "Scoliosis",
+            "diseasePhenotypeCurie": "HP:0002650",
+            "diseasePhenotypeLabel": "Scoliosis",
+            "micaCurie": "HP:0002650",
+            "micaLabel": "Scoliosis",
+            "score": 2.1354144514218367,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:562528"
+          }
+        ]
+      },
+      {
+        "rank": 18,
+        "geneCurie": "NCBIGene:63895",
+        "geneLabel": "PIEZO2",
+        "geneSymbol": "PIEZO2",
+        "geneEntityId": 152236,
+        "bmaScore": 1.8036036352498288,
+        "normalizedScore": 0.199138,
+        "patientAverageScore": 2.872457205077816,
+        "phenotypeAverageScore": 0.7347500654218416,
+        "directPhenotypeCount": 175,
+        "matchedPhenotypeCount": 4,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001166",
+            "patientPhenotypeLabel": "Arachnodactyly",
+            "diseasePhenotypeCurie": "HP:0001166",
+            "diseasePhenotypeLabel": "Arachnodactyly",
+            "micaCurie": "HP:0001166",
+            "micaLabel": "Arachnodactyly",
+            "score": 4.461952785438375,
+            "evidenceCode": "4/10",
+            "referenceText": "OMIM:617146"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000218",
+            "patientPhenotypeLabel": "High palate",
+            "diseasePhenotypeCurie": "HP:0002705",
+            "diseasePhenotypeLabel": "High, narrow palate",
+            "micaCurie": "HP:0000218",
+            "micaLabel": "High palate",
+            "score": 2.507421893339155,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:248700"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0000316",
+            "diseasePhenotypeLabel": "Hypertelorism",
+            "micaCurie": "HP:0000316",
+            "micaLabel": "Hypertelorism",
+            "score": 2.385039690111898,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:248700"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002650",
+            "patientPhenotypeLabel": "Scoliosis",
+            "diseasePhenotypeCurie": "HP:0002944",
+            "diseasePhenotypeLabel": "Thoracolumbar scoliosis",
+            "micaCurie": "HP:0002650",
+            "micaLabel": "Scoliosis",
+            "score": 2.1354144514218367,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:114300"
+          }
+        ]
+      },
+      {
+        "rank": 19,
+        "geneCurie": "NCBIGene:8925",
+        "geneLabel": "HERC1",
+        "geneSymbol": "HERC1",
+        "geneEntityId": 150686,
+        "bmaScore": 1.7977365902130011,
+        "normalizedScore": 0.19849,
+        "patientAverageScore": 2.872457205077816,
+        "phenotypeAverageScore": 0.7230159753481863,
+        "directPhenotypeCount": 65,
+        "matchedPhenotypeCount": 4,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001166",
+            "patientPhenotypeLabel": "Arachnodactyly",
+            "diseasePhenotypeCurie": "HP:0001166",
+            "diseasePhenotypeLabel": "Arachnodactyly",
+            "micaCurie": "HP:0001166",
+            "micaLabel": "Arachnodactyly",
+            "score": 4.461952785438375,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:457359"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000218",
+            "patientPhenotypeLabel": "High palate",
+            "diseasePhenotypeCurie": "HP:0000218",
+            "diseasePhenotypeLabel": "High palate",
+            "micaCurie": "HP:0000218",
+            "micaLabel": "High palate",
+            "score": 2.507421893339155,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:617011"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0000316",
+            "diseasePhenotypeLabel": "Hypertelorism",
+            "micaCurie": "HP:0000316",
+            "micaLabel": "Hypertelorism",
+            "score": 2.385039690111898,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:457359"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002650",
+            "patientPhenotypeLabel": "Scoliosis",
+            "diseasePhenotypeCurie": "HP:0002751",
+            "diseasePhenotypeLabel": "Kyphoscoliosis",
+            "micaCurie": "HP:0002650",
+            "micaLabel": "Scoliosis",
+            "score": 2.1354144514218367,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:457359"
+          }
+        ]
+      },
+      {
+        "rank": 20,
+        "geneCurie": "NCBIGene:113189",
+        "geneLabel": "CHST14",
+        "geneSymbol": "CHST14",
+        "geneEntityId": 152769,
+        "bmaScore": 1.7936682215668664,
+        "normalizedScore": 0.198041,
+        "patientAverageScore": 2.872457205077816,
+        "phenotypeAverageScore": 0.7148792380559169,
+        "directPhenotypeCount": 106,
+        "matchedPhenotypeCount": 4,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001166",
+            "patientPhenotypeLabel": "Arachnodactyly",
+            "diseasePhenotypeCurie": "HP:0001166",
+            "diseasePhenotypeLabel": "Arachnodactyly",
+            "micaCurie": "HP:0001166",
+            "micaLabel": "Arachnodactyly",
+            "score": 4.461952785438375,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:601776"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000218",
+            "patientPhenotypeLabel": "High palate",
+            "diseasePhenotypeCurie": "HP:0000218",
+            "diseasePhenotypeLabel": "High palate",
+            "micaCurie": "HP:0000218",
+            "micaLabel": "High palate",
+            "score": 2.507421893339155,
+            "evidenceCode": "6/6",
+            "referenceText": "OMIM:601776"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0000316",
+            "diseasePhenotypeLabel": "Hypertelorism",
+            "micaCurie": "HP:0000316",
+            "micaLabel": "Hypertelorism",
+            "score": 2.385039690111898,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:2953"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002650",
+            "patientPhenotypeLabel": "Scoliosis",
+            "diseasePhenotypeCurie": "HP:0002751",
+            "diseasePhenotypeLabel": "Kyphoscoliosis",
+            "micaCurie": "HP:0002650",
+            "micaLabel": "Scoliosis",
+            "score": 2.1354144514218367,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:2953"
+          }
+        ]
+      },
+      {
+        "rank": 21,
+        "geneCurie": "NCBIGene:3188",
+        "geneLabel": "HNRNPH2",
+        "geneSymbol": "HNRNPH2",
+        "geneEntityId": 149106,
+        "bmaScore": 1.768696890390146,
+        "normalizedScore": 0.195284,
+        "patientAverageScore": 2.872457205077816,
+        "phenotypeAverageScore": 0.6649365757024763,
+        "directPhenotypeCount": 52,
+        "matchedPhenotypeCount": 4,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001166",
+            "patientPhenotypeLabel": "Arachnodactyly",
+            "diseasePhenotypeCurie": "HP:0001166",
+            "diseasePhenotypeLabel": "Arachnodactyly",
+            "micaCurie": "HP:0001166",
+            "micaLabel": "Arachnodactyly",
+            "score": 4.461952785438375,
+            "evidenceCode": "1/6",
+            "referenceText": "OMIM:300986"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000218",
+            "patientPhenotypeLabel": "High palate",
+            "diseasePhenotypeCurie": "HP:0000218",
+            "diseasePhenotypeLabel": "High palate",
+            "micaCurie": "HP:0000218",
+            "micaLabel": "High palate",
+            "score": 2.507421893339155,
+            "evidenceCode": "2/6",
+            "referenceText": "OMIM:300986"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0000316",
+            "diseasePhenotypeLabel": "Hypertelorism",
+            "micaCurie": "HP:0000316",
+            "micaLabel": "Hypertelorism",
+            "score": 2.385039690111898,
+            "evidenceCode": "1/6",
+            "referenceText": "OMIM:300986"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002650",
+            "patientPhenotypeLabel": "Scoliosis",
+            "diseasePhenotypeCurie": "HP:0002650",
+            "diseasePhenotypeLabel": "Scoliosis",
+            "micaCurie": "HP:0002650",
+            "micaLabel": "Scoliosis",
+            "score": 2.1354144514218367,
+            "evidenceCode": "1/6",
+            "referenceText": "OMIM:300986"
+          }
+        ]
+      },
+      {
+        "rank": 22,
+        "geneCurie": "NCBIGene:2200",
+        "geneLabel": "FBN1",
+        "geneSymbol": "FBN1",
+        "geneEntityId": 148810,
+        "bmaScore": 1.7682925824368172,
+        "normalizedScore": 0.195239,
+        "patientAverageScore": 2.872457205077816,
+        "phenotypeAverageScore": 0.6641279597958183,
+        "directPhenotypeCount": 312,
+        "matchedPhenotypeCount": 4,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001166",
+            "patientPhenotypeLabel": "Arachnodactyly",
+            "diseasePhenotypeCurie": "HP:0001166",
+            "diseasePhenotypeLabel": "Arachnodactyly",
+            "micaCurie": "HP:0001166",
+            "micaLabel": "Arachnodactyly",
+            "score": 4.461952785438375,
+            "evidenceCode": "124/197",
+            "referenceText": "OMIM:154700"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000218",
+            "patientPhenotypeLabel": "High palate",
+            "diseasePhenotypeCurie": "HP:0002705",
+            "diseasePhenotypeLabel": "High, narrow palate",
+            "micaCurie": "HP:0000218",
+            "micaLabel": "High palate",
+            "score": 2.507421893339155,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:284979"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0000316",
+            "diseasePhenotypeLabel": "Hypertelorism",
+            "micaCurie": "HP:0000316",
+            "micaLabel": "Hypertelorism",
+            "score": 2.385039690111898,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:2623"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002650",
+            "patientPhenotypeLabel": "Scoliosis",
+            "diseasePhenotypeCurie": "HP:0002751",
+            "diseasePhenotypeLabel": "Kyphoscoliosis",
+            "micaCurie": "HP:0002650",
+            "micaLabel": "Scoliosis",
+            "score": 2.1354144514218367,
+            "evidenceCode": "37/146",
+            "referenceText": "OMIM:154700"
+          }
+        ]
+      },
+      {
+        "rank": 23,
+        "geneCurie": "NCBIGene:89910",
+        "geneLabel": "UBE3B",
+        "geneSymbol": "UBE3B",
+        "geneEntityId": 152688,
+        "bmaScore": 1.767644992592189,
+        "normalizedScore": 0.195167,
+        "patientAverageScore": 2.7684748152309497,
+        "phenotypeAverageScore": 0.7668151699534286,
+        "directPhenotypeCount": 92,
+        "matchedPhenotypeCount": 4,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001166",
+            "patientPhenotypeLabel": "Arachnodactyly",
+            "diseasePhenotypeCurie": "HP:0001166",
+            "diseasePhenotypeLabel": "Arachnodactyly",
+            "micaCurie": "HP:0001166",
+            "micaLabel": "Arachnodactyly",
+            "score": 4.461952785438375,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:2707"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000218",
+            "patientPhenotypeLabel": "High palate",
+            "diseasePhenotypeCurie": "HP:0002705",
+            "diseasePhenotypeLabel": "High, narrow palate",
+            "micaCurie": "HP:0000218",
+            "micaLabel": "High palate",
+            "score": 2.507421893339155,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:2707"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0000316",
+            "diseasePhenotypeLabel": "Hypertelorism",
+            "micaCurie": "HP:0000316",
+            "micaLabel": "Hypertelorism",
+            "score": 2.385039690111898,
+            "evidenceCode": "3/4",
+            "referenceText": "OMIM:244450"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002650",
+            "patientPhenotypeLabel": "Scoliosis",
+            "diseasePhenotypeCurie": "HP:0003300",
+            "diseasePhenotypeLabel": "Ovoid vertebral bodies",
+            "micaCurie": "HP:0000925",
+            "micaLabel": "Abnormality of the vertebral column",
+            "score": 1.7194848920343693,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:244450"
+          }
+        ]
+      },
+      {
+        "rank": 24,
+        "geneCurie": "NCBIGene:1399",
+        "geneLabel": "CRKL",
+        "geneSymbol": "CRKL",
+        "geneEntityId": 148542,
+        "bmaScore": 1.7675093630417607,
+        "normalizedScore": 0.195152,
+        "patientAverageScore": 2.7588611896825537,
+        "phenotypeAverageScore": 0.7761575364009677,
+        "directPhenotypeCount": 60,
+        "matchedPhenotypeCount": 4,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001166",
+            "patientPhenotypeLabel": "Arachnodactyly",
+            "diseasePhenotypeCurie": "HP:0001166",
+            "diseasePhenotypeLabel": "Arachnodactyly",
+            "micaCurie": "HP:0001166",
+            "micaLabel": "Arachnodactyly",
+            "score": 4.461952785438375,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:261330"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000218",
+            "patientPhenotypeLabel": "High palate",
+            "diseasePhenotypeCurie": "HP:0002705",
+            "diseasePhenotypeLabel": "High, narrow palate",
+            "micaCurie": "HP:0000218",
+            "micaLabel": "High palate",
+            "score": 2.507421893339155,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:261330"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0000490",
+            "diseasePhenotypeLabel": "Deeply set eye",
+            "micaCurie": "HP:0100886",
+            "micaLabel": "Abnormality of globe location",
+            "score": 2.0512836163194628,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:261330"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002650",
+            "patientPhenotypeLabel": "Scoliosis",
+            "diseasePhenotypeCurie": "HP:0003307",
+            "diseasePhenotypeLabel": "Hyperlordosis",
+            "micaCurie": "HP:0010674",
+            "micaLabel": "Abnormal curvature of the vertebral column",
+            "score": 2.014786463633222,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:261330"
+          }
+        ]
+      },
+      {
+        "rank": 25,
+        "geneCurie": "NCBIGene:1487",
+        "geneLabel": "CTBP1",
+        "geneSymbol": "CTBP1",
+        "geneEntityId": 148573,
+        "bmaScore": 1.7658268650399345,
+        "normalizedScore": 0.194967,
+        "patientAverageScore": 2.872457205077816,
+        "phenotypeAverageScore": 0.6591965250020532,
+        "directPhenotypeCount": 155,
+        "matchedPhenotypeCount": 4,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001166",
+            "patientPhenotypeLabel": "Arachnodactyly",
+            "diseasePhenotypeCurie": "HP:0001166",
+            "diseasePhenotypeLabel": "Arachnodactyly",
+            "micaCurie": "HP:0001166",
+            "micaLabel": "Arachnodactyly",
+            "score": 4.461952785438375,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:280"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000218",
+            "patientPhenotypeLabel": "High palate",
+            "diseasePhenotypeCurie": "HP:0000218",
+            "diseasePhenotypeLabel": "High palate",
+            "micaCurie": "HP:0000218",
+            "micaLabel": "High palate",
+            "score": 2.507421893339155,
+            "evidenceCode": "1/4",
+            "referenceText": "OMIM:617915"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0000316",
+            "diseasePhenotypeLabel": "Hypertelorism",
+            "micaCurie": "HP:0000316",
+            "micaLabel": "Hypertelorism",
+            "score": 2.385039690111898,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "OMIM:194190"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002650",
+            "patientPhenotypeLabel": "Scoliosis",
+            "diseasePhenotypeCurie": "HP:0002650",
+            "diseasePhenotypeLabel": "Scoliosis",
+            "micaCurie": "HP:0002650",
+            "micaLabel": "Scoliosis",
+            "score": 2.1354144514218367,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:280"
+          }
+        ]
+      }
+    ],
+    "engineSummary": {
+      "diseaseCount": 8579,
+      "geneCount": 5256,
+      "phenotypeCount": 19389,
+      "sourceMode": {
+        "disease": "relationship_fallback",
+        "gene": "relationship_fallback"
+      },
+      "generatedAt": "2026-03-15T21:00:39.457Z"
+    }
+  }
+}

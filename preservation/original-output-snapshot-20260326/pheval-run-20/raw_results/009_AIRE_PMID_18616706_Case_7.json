@@ -1,0 +1,2062 @@
+{
+  "success": true,
+  "engine": "genovy-dx-sim",
+  "input": {
+    "presentPhenotypeCuries": [
+      "HP:0002728",
+      "HP:0000829",
+      "HP:0008207",
+      "HP:0100647",
+      "HP:0008209",
+      "HP:6000343"
+    ],
+    "excludedPhenotypeCuries": [
+      "HP:0001596",
+      "HP:0001045",
+      "HP:0001081",
+      "HP:0002582",
+      "HP:0001250",
+      "HP:0002024",
+      "HP:0000121",
+      "HP:0100651",
+      "HP:0001746"
+    ],
+    "sourceFormat": "phenopacket"
+  },
+  "ranking": {
+    "queryPhenotypes": [
+      {
+        "phenotypeCurie": "HP:0002728",
+        "phenotypeLabel": "Chronic mucocutaneous candidiasis"
+      },
+      {
+        "phenotypeCurie": "HP:0000829",
+        "phenotypeLabel": "Hypoparathyroidism"
+      },
+      {
+        "phenotypeCurie": "HP:0008207",
+        "phenotypeLabel": "Primary adrenal insufficiency"
+      },
+      {
+        "phenotypeCurie": "HP:0100647",
+        "phenotypeLabel": "Graves disease"
+      },
+      {
+        "phenotypeCurie": "HP:0008209",
+        "phenotypeLabel": "Premature ovarian insufficiency"
+      },
+      {
+        "phenotypeCurie": "HP:6000343",
+        "phenotypeLabel": "Antiparietal cell antibody positivity"
+      }
+    ],
+    "results": [
+      {
+        "rank": 1,
+        "diseaseCurie": "MONDO:0009411",
+        "diseaseLabel": "autoimmune polyendocrine syndrome type 1",
+        "diseaseEntityId": 70697,
+        "bmaScore": 4.478170954096209,
+        "normalizedScore": 0.494439,
+        "patientAverageScore": 6.654897716521454,
+        "diseaseAverageScore": 2.3014441916709627,
+        "directPhenotypeCount": 63,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:6000343",
+            "patientPhenotypeLabel": "Antiparietal cell antibody positivity",
+            "diseasePhenotypeCurie": "HP:6000343",
+            "diseasePhenotypeLabel": "Antiparietal cell antibody positivity",
+            "micaCurie": "HP:6000343",
+            "micaLabel": "Antiparietal cell antibody positivity",
+            "score": 9.057072635572965,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:19758376;PMID:18616706;PMID:22024611;PMID:19807739"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0100647",
+            "patientPhenotypeLabel": "Graves disease",
+            "diseasePhenotypeCurie": "HP:0100647",
+            "diseasePhenotypeLabel": "Graves disease",
+            "micaCurie": "HP:0100647",
+            "micaLabel": "Graves disease",
+            "score": 7.958460346904856,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:22024611;PMID:18616706"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008207",
+            "patientPhenotypeLabel": "Primary adrenal insufficiency",
+            "diseasePhenotypeCurie": "HP:0008207",
+            "diseasePhenotypeLabel": "Primary adrenal insufficiency",
+            "micaCurie": "HP:0008207",
+            "micaLabel": "Primary adrenal insufficiency",
+            "score": 6.659177362774595,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:18616706"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000829",
+            "patientPhenotypeLabel": "Hypoparathyroidism",
+            "diseasePhenotypeCurie": "HP:0000829",
+            "diseasePhenotypeLabel": "Hypoparathyroidism",
+            "micaCurie": "HP:0000829",
+            "micaLabel": "Hypoparathyroidism",
+            "score": 6.061340362018974,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:16965330;PMID:28540407;PMID:19758376;PMID:2348835;PMID:18616706;PMID:22024611;PMID:11836330;PMID:19807739"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008209",
+            "patientPhenotypeLabel": "Premature ovarian insufficiency",
+            "diseasePhenotypeCurie": "HP:0008209",
+            "diseasePhenotypeLabel": "Premature ovarian insufficiency",
+            "micaCurie": "HP:0008209",
+            "micaLabel": "Premature ovarian insufficiency",
+            "score": 5.125247002848639,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:16965330;PMID:2348835;PMID:18616706;PMID:19807739"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002728",
+            "patientPhenotypeLabel": "Chronic mucocutaneous candidiasis",
+            "diseasePhenotypeCurie": "HP:0009098",
+            "diseasePhenotypeLabel": "Chronic oral candidiasis",
+            "micaCurie": "HP:0002728",
+            "micaLabel": "Chronic mucocutaneous candidiasis",
+            "score": 5.068088589008691,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:2348835"
+          }
+        ]
+      },
+      {
+        "rank": 2,
+        "diseaseCurie": "MONDO:0012552",
+        "diseaseLabel": "multiple endocrine neoplasia type 4",
+        "diseaseEntityId": 73838,
+        "bmaScore": 2.8246092408264403,
+        "normalizedScore": 0.311868,
+        "patientAverageScore": 2.9775269868960965,
+        "diseaseAverageScore": 2.6716914947567836,
+        "directPhenotypeCount": 12,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000829",
+            "patientPhenotypeLabel": "Hypoparathyroidism",
+            "diseasePhenotypeCurie": "HP:0008200",
+            "diseasePhenotypeLabel": "Primary hyperparathyroidism",
+            "micaCurie": "HP:0011767",
+            "micaLabel": "Abnormality of the parathyroid physiology",
+            "score": 5.105828916991538,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:24819502"
+          },
+          {
+            "patientPhenotypeCurie": "HP:6000343",
+            "patientPhenotypeLabel": "Antiparietal cell antibody positivity",
+            "diseasePhenotypeCurie": "HP:0000872",
+            "diseasePhenotypeLabel": "Hashimoto thyroiditis",
+            "micaCurie": "HP:0002960",
+            "micaLabel": "Autoimmunity",
+            "score": 3.76880560487843,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:24819502"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0100647",
+            "patientPhenotypeLabel": "Graves disease",
+            "diseasePhenotypeCurie": "HP:0000821",
+            "diseasePhenotypeLabel": "Hypothyroidism",
+            "micaCurie": "HP:0002926",
+            "micaLabel": "Abnormality of thyroid physiology",
+            "score": 3.6146549250511715,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:24819502"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002728",
+            "patientPhenotypeLabel": "Chronic mucocutaneous candidiasis",
+            "diseasePhenotypeCurie": "HP:0000872",
+            "diseasePhenotypeLabel": "Hashimoto thyroiditis",
+            "micaCurie": "HP:0012649",
+            "micaLabel": "Increased inflammatory response",
+            "score": 2.1265778696213387,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:24819502"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008207",
+            "patientPhenotypeLabel": "Primary adrenal insufficiency",
+            "diseasePhenotypeCurie": "HP:0100570",
+            "diseasePhenotypeLabel": "Carcinoid tumor",
+            "micaCurie": "HP:0000818",
+            "micaLabel": "Abnormality of the endocrine system",
+            "score": 2.0779273605041553,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:610755"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008209",
+            "patientPhenotypeLabel": "Premature ovarian insufficiency",
+            "diseasePhenotypeCurie": "HP:0006772",
+            "diseasePhenotypeLabel": "Renal angiomyolipoma",
+            "micaCurie": "HP:0000119",
+            "micaLabel": "Abnormality of the genitourinary system",
+            "score": 1.1713672443299454,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:610755"
+          }
+        ]
+      },
+      {
+        "rank": 3,
+        "diseaseCurie": "MONDO:0011982",
+        "diseaseLabel": "autoimmune thyroid disease, susceptibility to, 3",
+        "diseaseEntityId": 73268,
+        "bmaScore": 2.6505177054568287,
+        "normalizedScore": 0.292646,
+        "patientAverageScore": 1.8999545861605451,
+        "diseaseAverageScore": 3.401080824753113,
+        "directPhenotypeCount": 1,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0100647",
+            "patientPhenotypeLabel": "Graves disease",
+            "diseasePhenotypeCurie": "HP:0100646",
+            "diseasePhenotypeLabel": "Thyroiditis",
+            "micaCurie": "HP:0000820",
+            "micaLabel": "Abnormality of the thyroid gland",
+            "score": 3.401080824753113,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:608175"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002728",
+            "patientPhenotypeLabel": "Chronic mucocutaneous candidiasis",
+            "diseasePhenotypeCurie": "HP:0100646",
+            "diseasePhenotypeLabel": "Thyroiditis",
+            "micaCurie": "HP:0012649",
+            "micaLabel": "Increased inflammatory response",
+            "score": 2.1265778696213387,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:608175"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000829",
+            "patientPhenotypeLabel": "Hypoparathyroidism",
+            "diseasePhenotypeCurie": "HP:0100646",
+            "diseasePhenotypeLabel": "Thyroiditis",
+            "micaCurie": "HP:0000818",
+            "micaLabel": "Abnormality of the endocrine system",
+            "score": 2.0779273605041553,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:608175"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008207",
+            "patientPhenotypeLabel": "Primary adrenal insufficiency",
+            "diseasePhenotypeCurie": "HP:0100646",
+            "diseasePhenotypeLabel": "Thyroiditis",
+            "micaCurie": "HP:0000818",
+            "micaLabel": "Abnormality of the endocrine system",
+            "score": 2.0779273605041553,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:608175"
+          },
+          {
+            "patientPhenotypeCurie": "HP:6000343",
+            "patientPhenotypeLabel": "Antiparietal cell antibody positivity",
+            "diseasePhenotypeCurie": "HP:0100646",
+            "diseasePhenotypeLabel": "Thyroiditis",
+            "micaCurie": "HP:0010978",
+            "micaLabel": "Abnormality of immune system physiology",
+            "score": 1.7136464064255978,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:608175"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008209",
+            "patientPhenotypeLabel": "Premature ovarian insufficiency",
+            "diseasePhenotypeCurie": "HP:0100646",
+            "diseasePhenotypeLabel": "Thyroiditis",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:608175"
+          }
+        ]
+      },
+      {
+        "rank": 4,
+        "diseaseCurie": "MONDO:0975843",
+        "diseaseLabel": "premature ovarian failure 25",
+        "diseaseEntityId": 88665,
+        "bmaScore": 2.6184066475573737,
+        "normalizedScore": 0.289101,
+        "patientAverageScore": 2.806913515944189,
+        "diseaseAverageScore": 2.4298997791705585,
+        "directPhenotypeCount": 8,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0008209",
+            "patientPhenotypeLabel": "Premature ovarian insufficiency",
+            "diseasePhenotypeCurie": "HP:0008209",
+            "diseasePhenotypeLabel": "Premature ovarian insufficiency",
+            "micaCurie": "HP:0008209",
+            "micaLabel": "Premature ovarian insufficiency",
+            "score": 5.125247002848639,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:35285020"
+          },
+          {
+            "patientPhenotypeCurie": "HP:6000343",
+            "patientPhenotypeLabel": "Antiparietal cell antibody positivity",
+            "diseasePhenotypeCurie": "HP:0002960",
+            "diseasePhenotypeLabel": "Autoimmunity",
+            "micaCurie": "HP:0002960",
+            "micaLabel": "Autoimmunity",
+            "score": 3.76880560487843,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:35285020"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000829",
+            "patientPhenotypeLabel": "Hypoparathyroidism",
+            "diseasePhenotypeCurie": "HP:0031103",
+            "diseasePhenotypeLabel": "Decreased circulating antimullerian hormone circulation",
+            "micaCurie": "HP:0000818",
+            "micaLabel": "Abnormality of the endocrine system",
+            "score": 2.0779273605041553,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:35285020"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008207",
+            "patientPhenotypeLabel": "Primary adrenal insufficiency",
+            "diseasePhenotypeCurie": "HP:0031103",
+            "diseasePhenotypeLabel": "Decreased circulating antimullerian hormone circulation",
+            "micaCurie": "HP:0000818",
+            "micaLabel": "Abnormality of the endocrine system",
+            "score": 2.0779273605041553,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:35285020"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0100647",
+            "patientPhenotypeLabel": "Graves disease",
+            "diseasePhenotypeCurie": "HP:0031103",
+            "diseasePhenotypeLabel": "Decreased circulating antimullerian hormone circulation",
+            "micaCurie": "HP:0000818",
+            "micaLabel": "Abnormality of the endocrine system",
+            "score": 2.0779273605041553,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:35285020"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002728",
+            "patientPhenotypeLabel": "Chronic mucocutaneous candidiasis",
+            "diseasePhenotypeCurie": "HP:0002960",
+            "diseasePhenotypeLabel": "Autoimmunity",
+            "micaCurie": "HP:0010978",
+            "micaLabel": "Abnormality of immune system physiology",
+            "score": 1.7136464064255978,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:35285020"
+          }
+        ]
+      },
+      {
+        "rank": 5,
+        "diseaseCurie": "MONDO:0010012",
+        "diseaseLabel": "autoimmune polyendocrinopathy type 2",
+        "diseaseEntityId": 71298,
+        "bmaScore": 2.5443529627756063,
+        "normalizedScore": 0.280924,
+        "patientAverageScore": 3.588992935286248,
+        "diseaseAverageScore": 1.4997129902649646,
+        "directPhenotypeCount": 23,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0008207",
+            "patientPhenotypeLabel": "Primary adrenal insufficiency",
+            "diseasePhenotypeCurie": "HP:0008207",
+            "diseasePhenotypeLabel": "Primary adrenal insufficiency",
+            "micaCurie": "HP:0008207",
+            "micaLabel": "Primary adrenal insufficiency",
+            "score": 6.659177362774595,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:269200"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0100647",
+            "patientPhenotypeLabel": "Graves disease",
+            "diseasePhenotypeCurie": "HP:0000836",
+            "diseasePhenotypeLabel": "Hyperthyroidism",
+            "micaCurie": "HP:0000836",
+            "micaLabel": "Hyperthyroidism",
+            "score": 6.012550197849542,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:269200"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002728",
+            "patientPhenotypeLabel": "Chronic mucocutaneous candidiasis",
+            "diseasePhenotypeCurie": "HP:0002728",
+            "diseasePhenotypeLabel": "Chronic mucocutaneous candidiasis",
+            "micaCurie": "HP:0002728",
+            "micaLabel": "Chronic mucocutaneous candidiasis",
+            "score": 5.068088589008691,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:269200"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000829",
+            "patientPhenotypeLabel": "Hypoparathyroidism",
+            "diseasePhenotypeCurie": "HP:0100522",
+            "diseasePhenotypeLabel": "Thymoma",
+            "micaCurie": "HP:0000818",
+            "micaLabel": "Abnormality of the endocrine system",
+            "score": 2.0779273605041553,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:269200"
+          },
+          {
+            "patientPhenotypeCurie": "HP:6000343",
+            "patientPhenotypeLabel": "Antiparietal cell antibody positivity",
+            "diseasePhenotypeCurie": "HP:0200123",
+            "diseasePhenotypeLabel": "Chronic hepatitis",
+            "micaCurie": "HP:0010978",
+            "micaLabel": "Abnormality of immune system physiology",
+            "score": 1.7136464064255978,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:269200"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008209",
+            "patientPhenotypeLabel": "Premature ovarian insufficiency",
+            "diseasePhenotypeCurie": "HP:0200123",
+            "diseasePhenotypeLabel": "Chronic hepatitis",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:269200"
+          }
+        ]
+      },
+      {
+        "rank": 6,
+        "diseaseCurie": "MONDO:0013419",
+        "diseaseLabel": "complement component C1s deficiency",
+        "diseaseEntityId": 74705,
+        "bmaScore": 2.543469995343483,
+        "normalizedScore": 0.280827,
+        "patientAverageScore": 2.2424811192360172,
+        "diseaseAverageScore": 2.844458871450949,
+        "directPhenotypeCount": 4,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:6000343",
+            "patientPhenotypeLabel": "Antiparietal cell antibody positivity",
+            "diseasePhenotypeCurie": "HP:0002725",
+            "diseasePhenotypeLabel": "Systemic lupus erythematosus",
+            "micaCurie": "HP:0002960",
+            "micaLabel": "Autoimmunity",
+            "score": 3.76880560487843,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:613783"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0100647",
+            "patientPhenotypeLabel": "Graves disease",
+            "diseasePhenotypeCurie": "HP:0000872",
+            "diseasePhenotypeLabel": "Hashimoto thyroiditis",
+            "micaCurie": "HP:0000820",
+            "micaLabel": "Abnormality of the thyroid gland",
+            "score": 3.401080824753113,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:613783"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002728",
+            "patientPhenotypeLabel": "Chronic mucocutaneous candidiasis",
+            "diseasePhenotypeCurie": "HP:0012115",
+            "diseasePhenotypeLabel": "Hepatitis",
+            "micaCurie": "HP:0012649",
+            "micaLabel": "Increased inflammatory response",
+            "score": 2.1265778696213387,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:613783"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000829",
+            "patientPhenotypeLabel": "Hypoparathyroidism",
+            "diseasePhenotypeCurie": "HP:0000872",
+            "diseasePhenotypeLabel": "Hashimoto thyroiditis",
+            "micaCurie": "HP:0000818",
+            "micaLabel": "Abnormality of the endocrine system",
+            "score": 2.0779273605041553,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:613783"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008207",
+            "patientPhenotypeLabel": "Primary adrenal insufficiency",
+            "diseasePhenotypeCurie": "HP:0000872",
+            "diseasePhenotypeLabel": "Hashimoto thyroiditis",
+            "micaCurie": "HP:0000818",
+            "micaLabel": "Abnormality of the endocrine system",
+            "score": 2.0779273605041553,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:613783"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008209",
+            "patientPhenotypeLabel": "Premature ovarian insufficiency",
+            "diseasePhenotypeCurie": "HP:0012115",
+            "diseasePhenotypeLabel": "Hepatitis",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:613783"
+          }
+        ]
+      },
+      {
+        "rank": 7,
+        "diseaseCurie": "MONDO:0014260",
+        "diseaseLabel": "immunodeficiency, common variable, 10",
+        "diseaseEntityId": 75546,
+        "bmaScore": 2.5273461549806626,
+        "normalizedScore": 0.279047,
+        "patientAverageScore": 3.107332909039499,
+        "diseaseAverageScore": 1.9473594009218262,
+        "directPhenotypeCount": 26,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0008207",
+            "patientPhenotypeLabel": "Primary adrenal insufficiency",
+            "diseasePhenotypeCurie": "HP:0011734",
+            "diseasePhenotypeLabel": "Central adrenal insufficiency",
+            "micaCurie": "HP:0000846",
+            "micaLabel": "Adrenal insufficiency",
+            "score": 5.419486475846579,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:24140114"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002728",
+            "patientPhenotypeLabel": "Chronic mucocutaneous candidiasis",
+            "diseasePhenotypeCurie": "HP:0012203",
+            "diseasePhenotypeLabel": "Onychomycosis",
+            "micaCurie": "HP:0002841",
+            "micaLabel": "Recurrent fungal infections",
+            "score": 4.700363808883374,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:24140114"
+          },
+          {
+            "patientPhenotypeCurie": "HP:6000343",
+            "patientPhenotypeLabel": "Antiparietal cell antibody positivity",
+            "diseasePhenotypeCurie": "HP:0032069",
+            "diseasePhenotypeLabel": "Anti-thyroglobulin antibody positivity",
+            "micaCurie": "HP:0030057",
+            "micaLabel": "Autoimmune antibody positivity",
+            "score": 4.365724753343821,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:24140114"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000829",
+            "patientPhenotypeLabel": "Hypoparathyroidism",
+            "diseasePhenotypeCurie": "HP:0031074",
+            "diseasePhenotypeLabel": "Abnormal response to ACTH stimulation test",
+            "micaCurie": "HP:0000818",
+            "micaLabel": "Abnormality of the endocrine system",
+            "score": 2.0779273605041553,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:24140114"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0100647",
+            "patientPhenotypeLabel": "Graves disease",
+            "diseasePhenotypeCurie": "HP:0031074",
+            "diseasePhenotypeLabel": "Abnormal response to ACTH stimulation test",
+            "micaCurie": "HP:0000818",
+            "micaLabel": "Abnormality of the endocrine system",
+            "score": 2.0779273605041553,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:24140114"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008209",
+            "patientPhenotypeLabel": "Premature ovarian insufficiency",
+            "diseasePhenotypeCurie": "HP:0410028",
+            "diseasePhenotypeLabel": "Recurrent oral herpes",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:24140114"
+          }
+        ]
+      },
+      {
+        "rank": 8,
+        "diseaseCurie": "MONDO:0009688",
+        "diseaseLabel": "myasthenia gravis",
+        "diseaseEntityId": 70974,
+        "bmaScore": 2.5269513072110086,
+        "normalizedScore": 0.279003,
+        "patientAverageScore": 3.7355541314039002,
+        "diseaseAverageScore": 1.3183484830181167,
+        "directPhenotypeCount": 54,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0008207",
+            "patientPhenotypeLabel": "Primary adrenal insufficiency",
+            "diseasePhenotypeCurie": "HP:0008207",
+            "diseasePhenotypeLabel": "Primary adrenal insufficiency",
+            "micaCurie": "HP:0008207",
+            "micaLabel": "Primary adrenal insufficiency",
+            "score": 6.659177362774595,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:589"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0100647",
+            "patientPhenotypeLabel": "Graves disease",
+            "diseasePhenotypeCurie": "HP:0000836",
+            "diseasePhenotypeLabel": "Hyperthyroidism",
+            "micaCurie": "HP:0000836",
+            "micaLabel": "Hyperthyroidism",
+            "score": 6.012550197849542,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:589"
+          },
+          {
+            "patientPhenotypeCurie": "HP:6000343",
+            "patientPhenotypeLabel": "Antiparietal cell antibody positivity",
+            "diseasePhenotypeCurie": "HP:6000881",
+            "diseasePhenotypeLabel": "Anti-DCC netrin 1 receptor antibody positivity",
+            "micaCurie": "HP:0030057",
+            "micaLabel": "Autoimmune antibody positivity",
+            "score": 4.365724753343821,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:589"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002728",
+            "patientPhenotypeLabel": "Chronic mucocutaneous candidiasis",
+            "diseasePhenotypeCurie": "HP:0100614",
+            "diseasePhenotypeLabel": "Myositis",
+            "micaCurie": "HP:0012649",
+            "micaLabel": "Increased inflammatory response",
+            "score": 2.1265778696213387,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:589"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000829",
+            "patientPhenotypeLabel": "Hypoparathyroidism",
+            "diseasePhenotypeCurie": "HP:0100522",
+            "diseasePhenotypeLabel": "Thymoma",
+            "micaCurie": "HP:0000818",
+            "micaLabel": "Abnormality of the endocrine system",
+            "score": 2.0779273605041553,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:589"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008209",
+            "patientPhenotypeLabel": "Premature ovarian insufficiency",
+            "diseasePhenotypeCurie": "HP:0003076",
+            "diseasePhenotypeLabel": "Glycosuria",
+            "micaCurie": "HP:0000119",
+            "micaLabel": "Abnormality of the genitourinary system",
+            "score": 1.1713672443299454,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:589"
+          }
+        ]
+      },
+      {
+        "rank": 9,
+        "diseaseCurie": "MONDO:0007699",
+        "diseaseLabel": "Hashimoto thyroiditis",
+        "diseaseEntityId": 68985,
+        "bmaScore": 2.5267388816938334,
+        "normalizedScore": 0.27898,
+        "patientAverageScore": 2.341967643980249,
+        "diseaseAverageScore": 2.7115101194074174,
+        "directPhenotypeCount": 3,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:6000343",
+            "patientPhenotypeLabel": "Antiparietal cell antibody positivity",
+            "diseasePhenotypeCurie": "HP:0030057",
+            "diseasePhenotypeLabel": "Autoimmune antibody positivity",
+            "micaCurie": "HP:0030057",
+            "micaLabel": "Autoimmune antibody positivity",
+            "score": 4.365724753343821,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:140300"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0100647",
+            "patientPhenotypeLabel": "Graves disease",
+            "diseasePhenotypeCurie": "HP:0000872",
+            "diseasePhenotypeLabel": "Hashimoto thyroiditis",
+            "micaCurie": "HP:0000820",
+            "micaLabel": "Abnormality of the thyroid gland",
+            "score": 3.401080824753113,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:140300"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002728",
+            "patientPhenotypeLabel": "Chronic mucocutaneous candidiasis",
+            "diseasePhenotypeCurie": "HP:0000872",
+            "diseasePhenotypeLabel": "Hashimoto thyroiditis",
+            "micaCurie": "HP:0012649",
+            "micaLabel": "Increased inflammatory response",
+            "score": 2.1265778696213387,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:140300"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000829",
+            "patientPhenotypeLabel": "Hypoparathyroidism",
+            "diseasePhenotypeCurie": "HP:0000872",
+            "diseasePhenotypeLabel": "Hashimoto thyroiditis",
+            "micaCurie": "HP:0000818",
+            "micaLabel": "Abnormality of the endocrine system",
+            "score": 2.0779273605041553,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:140300"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008207",
+            "patientPhenotypeLabel": "Primary adrenal insufficiency",
+            "diseasePhenotypeCurie": "HP:0000872",
+            "diseasePhenotypeLabel": "Hashimoto thyroiditis",
+            "micaCurie": "HP:0000818",
+            "micaLabel": "Abnormality of the endocrine system",
+            "score": 2.0779273605041553,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:140300"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008209",
+            "patientPhenotypeLabel": "Premature ovarian insufficiency",
+            "diseasePhenotypeCurie": "HP:0030057",
+            "diseasePhenotypeLabel": "Autoimmune antibody positivity",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:140300"
+          }
+        ]
+      },
+      {
+        "rank": 10,
+        "diseaseCurie": "MONDO:0032881",
+        "diseaseLabel": "premature ovarian failure 16",
+        "diseaseEntityId": 84722,
+        "bmaScore": 2.3782959730920537,
+        "normalizedScore": 0.26259,
+        "patientAverageScore": 1.8940274124451546,
+        "diseaseAverageScore": 2.862564533738953,
+        "directPhenotypeCount": 5,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0008209",
+            "patientPhenotypeLabel": "Premature ovarian insufficiency",
+            "diseasePhenotypeCurie": "HP:0008209",
+            "diseasePhenotypeLabel": "Premature ovarian insufficiency",
+            "micaCurie": "HP:0008209",
+            "micaLabel": "Premature ovarian insufficiency",
+            "score": 5.125247002848639,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:30010909"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000829",
+            "patientPhenotypeLabel": "Hypoparathyroidism",
+            "diseasePhenotypeCurie": "HP:0008232",
+            "diseasePhenotypeLabel": "Elevated circulating follicle stimulating hormone level",
+            "micaCurie": "HP:0000818",
+            "micaLabel": "Abnormality of the endocrine system",
+            "score": 2.0779273605041553,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:30010909"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008207",
+            "patientPhenotypeLabel": "Primary adrenal insufficiency",
+            "diseasePhenotypeCurie": "HP:0008232",
+            "diseasePhenotypeLabel": "Elevated circulating follicle stimulating hormone level",
+            "micaCurie": "HP:0000818",
+            "micaLabel": "Abnormality of the endocrine system",
+            "score": 2.0779273605041553,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:30010909"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0100647",
+            "patientPhenotypeLabel": "Graves disease",
+            "diseasePhenotypeCurie": "HP:0008232",
+            "diseasePhenotypeLabel": "Elevated circulating follicle stimulating hormone level",
+            "micaCurie": "HP:0000818",
+            "micaLabel": "Abnormality of the endocrine system",
+            "score": 2.0779273605041553,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:30010909"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002728",
+            "patientPhenotypeLabel": "Chronic mucocutaneous candidiasis",
+            "diseasePhenotypeCurie": "HP:0033085",
+            "diseasePhenotypeLabel": "Reduced antral follicle count",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "IEA",
+            "referenceText": "PMID:30010909"
+          },
+          {
+            "patientPhenotypeCurie": "HP:6000343",
+            "patientPhenotypeLabel": "Antiparietal cell antibody positivity",
+            "diseasePhenotypeCurie": "HP:0033085",
+            "diseasePhenotypeLabel": "Reduced antral follicle count",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "IEA",
+            "referenceText": "PMID:30010909"
+          }
+        ]
+      },
+      {
+        "rank": 11,
+        "diseaseCurie": "MONDO:0011158",
+        "diseaseLabel": "autoimmune lymphoproliferative syndrome type 1",
+        "diseaseEntityId": 72444,
+        "bmaScore": 2.3674580921001938,
+        "normalizedScore": 0.261393,
+        "patientAverageScore": 3.19574752859587,
+        "diseaseAverageScore": 1.5391686556045177,
+        "directPhenotypeCount": 81,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0008209",
+            "patientPhenotypeLabel": "Premature ovarian insufficiency",
+            "diseasePhenotypeCurie": "HP:0008209",
+            "diseasePhenotypeLabel": "Premature ovarian insufficiency",
+            "micaCurie": "HP:0008209",
+            "micaLabel": "Premature ovarian insufficiency",
+            "score": 5.125247002848639,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:3261"
+          },
+          {
+            "patientPhenotypeCurie": "HP:6000343",
+            "patientPhenotypeLabel": "Antiparietal cell antibody positivity",
+            "diseasePhenotypeCurie": "HP:0003613",
+            "diseasePhenotypeLabel": "Antiphospholipid antibody positivity",
+            "micaCurie": "HP:0030057",
+            "micaLabel": "Autoimmune antibody positivity",
+            "score": 4.365724753343821,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:601859"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0100647",
+            "patientPhenotypeLabel": "Graves disease",
+            "diseasePhenotypeCurie": "HP:0100646",
+            "diseasePhenotypeLabel": "Thyroiditis",
+            "micaCurie": "HP:0000820",
+            "micaLabel": "Abnormality of the thyroid gland",
+            "score": 3.401080824753113,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:3261"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002728",
+            "patientPhenotypeLabel": "Chronic mucocutaneous candidiasis",
+            "diseasePhenotypeCurie": "HP:0100646",
+            "diseasePhenotypeLabel": "Thyroiditis",
+            "micaCurie": "HP:0012649",
+            "micaLabel": "Increased inflammatory response",
+            "score": 2.1265778696213387,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:3261"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000829",
+            "patientPhenotypeLabel": "Hypoparathyroidism",
+            "diseasePhenotypeCurie": "HP:0100646",
+            "diseasePhenotypeLabel": "Thyroiditis",
+            "micaCurie": "HP:0000818",
+            "micaLabel": "Abnormality of the endocrine system",
+            "score": 2.0779273605041553,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:3261"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008207",
+            "patientPhenotypeLabel": "Primary adrenal insufficiency",
+            "diseasePhenotypeCurie": "HP:0100646",
+            "diseasePhenotypeLabel": "Thyroiditis",
+            "micaCurie": "HP:0000818",
+            "micaLabel": "Abnormality of the endocrine system",
+            "score": 2.0779273605041553,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:3261"
+          }
+        ]
+      },
+      {
+        "rank": 12,
+        "diseaseCurie": "MONDO:0979233",
+        "diseaseLabel": "immunodysregulation with variable immunodeficiency and autoimmunity",
+        "diseaseEntityId": 88772,
+        "bmaScore": 2.3514193158016727,
+        "normalizedScore": 0.259622,
+        "patientAverageScore": 3.164024649558913,
+        "diseaseAverageScore": 1.5388139820444322,
+        "directPhenotypeCount": 65,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002728",
+            "patientPhenotypeLabel": "Chronic mucocutaneous candidiasis",
+            "diseasePhenotypeCurie": "HP:0012204",
+            "diseasePhenotypeLabel": "Recurrent vulvovaginal candidiasis",
+            "micaCurie": "HP:0002728",
+            "micaLabel": "Chronic mucocutaneous candidiasis",
+            "score": 5.068088589008691,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:34826260"
+          },
+          {
+            "patientPhenotypeCurie": "HP:6000343",
+            "patientPhenotypeLabel": "Antiparietal cell antibody positivity",
+            "diseasePhenotypeCurie": "HP:0020151",
+            "diseasePhenotypeLabel": "Anti-dsDNA antibody positivity",
+            "micaCurie": "HP:0030057",
+            "micaLabel": "Autoimmune antibody positivity",
+            "score": 4.365724753343821,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:34920454"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0100647",
+            "patientPhenotypeLabel": "Graves disease",
+            "diseasePhenotypeCurie": "HP:0000821",
+            "diseasePhenotypeLabel": "Hypothyroidism",
+            "micaCurie": "HP:0002926",
+            "micaLabel": "Abnormality of thyroid physiology",
+            "score": 3.6146549250511715,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:34826260;PMID:34826259"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000829",
+            "patientPhenotypeLabel": "Hypoparathyroidism",
+            "diseasePhenotypeCurie": "HP:0000821",
+            "diseasePhenotypeLabel": "Hypothyroidism",
+            "micaCurie": "HP:0000818",
+            "micaLabel": "Abnormality of the endocrine system",
+            "score": 2.0779273605041553,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:34826260;PMID:34826259"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008207",
+            "patientPhenotypeLabel": "Primary adrenal insufficiency",
+            "diseasePhenotypeCurie": "HP:0000821",
+            "diseasePhenotypeLabel": "Hypothyroidism",
+            "micaCurie": "HP:0000818",
+            "micaLabel": "Abnormality of the endocrine system",
+            "score": 2.0779273605041553,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:34826260;PMID:34826259"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008209",
+            "patientPhenotypeLabel": "Premature ovarian insufficiency",
+            "diseasePhenotypeCurie": "HP:0030683",
+            "diseasePhenotypeLabel": "Recurrent bacterial vaginosis",
+            "micaCurie": "HP:0000078",
+            "micaLabel": "Abnormality of the genital system",
+            "score": 1.7798249089414813,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:34826260"
+          }
+        ]
+      },
+      {
+        "rank": 13,
+        "diseaseCurie": "MONDO:0044776",
+        "diseaseLabel": "premature ovarian failure 10",
+        "diseaseEntityId": 85865,
+        "bmaScore": 2.3442241905692827,
+        "normalizedScore": 0.258828,
+        "patientAverageScore": 2.1501486732029904,
+        "diseaseAverageScore": 2.538299707935575,
+        "directPhenotypeCount": 9,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0008209",
+            "patientPhenotypeLabel": "Premature ovarian insufficiency",
+            "diseasePhenotypeCurie": "HP:0008209",
+            "diseasePhenotypeLabel": "Premature ovarian insufficiency",
+            "micaCurie": "HP:0008209",
+            "micaLabel": "Premature ovarian insufficiency",
+            "score": 5.125247002848639,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:25437880"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0100647",
+            "patientPhenotypeLabel": "Graves disease",
+            "diseasePhenotypeCurie": "HP:0000821",
+            "diseasePhenotypeLabel": "Hypothyroidism",
+            "micaCurie": "HP:0002926",
+            "micaLabel": "Abnormality of thyroid physiology",
+            "score": 3.6146549250511715,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:25437880"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000829",
+            "patientPhenotypeLabel": "Hypoparathyroidism",
+            "diseasePhenotypeCurie": "HP:0011969",
+            "diseasePhenotypeLabel": "Elevated circulating luteinizing hormone level",
+            "micaCurie": "HP:0000818",
+            "micaLabel": "Abnormality of the endocrine system",
+            "score": 2.0779273605041553,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:612885"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008207",
+            "patientPhenotypeLabel": "Primary adrenal insufficiency",
+            "diseasePhenotypeCurie": "HP:0011969",
+            "diseasePhenotypeLabel": "Elevated circulating luteinizing hormone level",
+            "micaCurie": "HP:0000818",
+            "micaLabel": "Abnormality of the endocrine system",
+            "score": 2.0779273605041553,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:612885"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002728",
+            "patientPhenotypeLabel": "Chronic mucocutaneous candidiasis",
+            "diseasePhenotypeCurie": "HP:0011969",
+            "diseasePhenotypeLabel": "Elevated circulating luteinizing hormone level",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:612885"
+          },
+          {
+            "patientPhenotypeCurie": "HP:6000343",
+            "patientPhenotypeLabel": "Antiparietal cell antibody positivity",
+            "diseasePhenotypeCurie": "HP:0011969",
+            "diseasePhenotypeLabel": "Elevated circulating luteinizing hormone level",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:612885"
+          }
+        ]
+      },
+      {
+        "rank": 14,
+        "diseaseCurie": "MONDO:0976228",
+        "diseaseLabel": "immunodeficiency 132b",
+        "diseaseEntityId": 88729,
+        "bmaScore": 2.318586829018275,
+        "normalizedScore": 0.255997,
+        "patientAverageScore": 2.7198102559535084,
+        "diseaseAverageScore": 1.9173634020830423,
+        "directPhenotypeCount": 53,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002728",
+            "patientPhenotypeLabel": "Chronic mucocutaneous candidiasis",
+            "diseasePhenotypeCurie": "HP:0000999",
+            "diseasePhenotypeLabel": "Pyoderma",
+            "micaCurie": "HP:0001581",
+            "micaLabel": "Recurrent skin infections",
+            "score": 4.393633541460898,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:39579173"
+          },
+          {
+            "patientPhenotypeCurie": "HP:6000343",
+            "patientPhenotypeLabel": "Antiparietal cell antibody positivity",
+            "diseasePhenotypeCurie": "HP:0034189",
+            "diseasePhenotypeLabel": "Anti-thyroid-stimulating hormone receptor antibody positivity",
+            "micaCurie": "HP:0030057",
+            "micaLabel": "Autoimmune antibody positivity",
+            "score": 4.365724753343821,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:35960817"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0100647",
+            "patientPhenotypeLabel": "Graves disease",
+            "diseasePhenotypeCurie": "HP:0100646",
+            "diseasePhenotypeLabel": "Thyroiditis",
+            "micaCurie": "HP:0000820",
+            "micaLabel": "Abnormality of the thyroid gland",
+            "score": 3.401080824753113,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:35960817"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000829",
+            "patientPhenotypeLabel": "Hypoparathyroidism",
+            "diseasePhenotypeCurie": "HP:0100646",
+            "diseasePhenotypeLabel": "Thyroiditis",
+            "micaCurie": "HP:0000818",
+            "micaLabel": "Abnormality of the endocrine system",
+            "score": 2.0779273605041553,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:35960817"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008207",
+            "patientPhenotypeLabel": "Primary adrenal insufficiency",
+            "diseasePhenotypeCurie": "HP:0100646",
+            "diseasePhenotypeLabel": "Thyroiditis",
+            "micaCurie": "HP:0000818",
+            "micaLabel": "Abnormality of the endocrine system",
+            "score": 2.0779273605041553,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:35960817"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008209",
+            "patientPhenotypeLabel": "Premature ovarian insufficiency",
+            "diseasePhenotypeCurie": "HP:0410323",
+            "diseasePhenotypeLabel": "Drug allergy",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:35960817"
+          }
+        ]
+      },
+      {
+        "rank": 15,
+        "diseaseCurie": "MONDO:0013616",
+        "diseaseLabel": "pigmented nodular adrenocortical disease, primary, 3",
+        "diseaseEntityId": 74902,
+        "bmaScore": 2.3141309315495606,
+        "normalizedScore": 0.255505,
+        "patientAverageScore": 1.5129159526090792,
+        "diseaseAverageScore": 3.115345910490042,
+        "directPhenotypeCount": 3,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0008207",
+            "patientPhenotypeLabel": "Primary adrenal insufficiency",
+            "diseasePhenotypeCurie": "HP:0003118",
+            "diseasePhenotypeLabel": "Increased circulating cortisol level",
+            "micaCurie": "HP:0011733",
+            "micaLabel": "Abnormality of adrenal physiology",
+            "score": 4.913937909181432,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:614190"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000829",
+            "patientPhenotypeLabel": "Hypoparathyroidism",
+            "diseasePhenotypeCurie": "HP:0008221",
+            "diseasePhenotypeLabel": "Adrenal hyperplasia",
+            "micaCurie": "HP:0000818",
+            "micaLabel": "Abnormality of the endocrine system",
+            "score": 2.0779273605041553,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:614190"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0100647",
+            "patientPhenotypeLabel": "Graves disease",
+            "diseasePhenotypeCurie": "HP:0008221",
+            "diseasePhenotypeLabel": "Adrenal hyperplasia",
+            "micaCurie": "HP:0000818",
+            "micaLabel": "Abnormality of the endocrine system",
+            "score": 2.0779273605041553,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:614190"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002728",
+            "patientPhenotypeLabel": "Chronic mucocutaneous candidiasis",
+            "diseasePhenotypeCurie": "HP:0008221",
+            "diseasePhenotypeLabel": "Adrenal hyperplasia",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:614190"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008209",
+            "patientPhenotypeLabel": "Premature ovarian insufficiency",
+            "diseasePhenotypeCurie": "HP:0008221",
+            "diseasePhenotypeLabel": "Adrenal hyperplasia",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:614190"
+          },
+          {
+            "patientPhenotypeCurie": "HP:6000343",
+            "patientPhenotypeLabel": "Antiparietal cell antibody positivity",
+            "diseasePhenotypeCurie": "HP:0008221",
+            "diseasePhenotypeLabel": "Adrenal hyperplasia",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:614190"
+          }
+        ]
+      },
+      {
+        "rank": 16,
+        "diseaseCurie": "MONDO:0007784",
+        "diseaseLabel": "selective pituitary resistance to thyroid hormone",
+        "diseaseEntityId": 69070,
+        "bmaScore": 2.311150560785824,
+        "normalizedScore": 0.255176,
+        "patientAverageScore": 1.6960180007204306,
+        "diseaseAverageScore": 2.9262831208512172,
+        "directPhenotypeCount": 4,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0100647",
+            "patientPhenotypeLabel": "Graves disease",
+            "diseasePhenotypeCurie": "HP:0000836",
+            "diseasePhenotypeLabel": "Hyperthyroidism",
+            "micaCurie": "HP:0000836",
+            "micaLabel": "Hyperthyroidism",
+            "score": 6.012550197849542,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:145650"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000829",
+            "patientPhenotypeLabel": "Hypoparathyroidism",
+            "diseasePhenotypeCurie": "HP:0002930",
+            "diseasePhenotypeLabel": "Impaired sensitivity to thyroid hormone",
+            "micaCurie": "HP:0000818",
+            "micaLabel": "Abnormality of the endocrine system",
+            "score": 2.0779273605041553,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:145650"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008207",
+            "patientPhenotypeLabel": "Primary adrenal insufficiency",
+            "diseasePhenotypeCurie": "HP:0002930",
+            "diseasePhenotypeLabel": "Impaired sensitivity to thyroid hormone",
+            "micaCurie": "HP:0000818",
+            "micaLabel": "Abnormality of the endocrine system",
+            "score": 2.0779273605041553,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:145650"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002728",
+            "patientPhenotypeLabel": "Chronic mucocutaneous candidiasis",
+            "diseasePhenotypeCurie": "HP:0002930",
+            "diseasePhenotypeLabel": "Impaired sensitivity to thyroid hormone",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:145650"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008209",
+            "patientPhenotypeLabel": "Premature ovarian insufficiency",
+            "diseasePhenotypeCurie": "HP:0002930",
+            "diseasePhenotypeLabel": "Impaired sensitivity to thyroid hormone",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:145650"
+          },
+          {
+            "patientPhenotypeCurie": "HP:6000343",
+            "patientPhenotypeLabel": "Antiparietal cell antibody positivity",
+            "diseasePhenotypeCurie": "HP:0002930",
+            "diseasePhenotypeLabel": "Impaired sensitivity to thyroid hormone",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:145650"
+          }
+        ]
+      },
+      {
+        "rank": 17,
+        "diseaseCurie": "MONDO:0007540",
+        "diseaseLabel": "multiple endocrine neoplasia type 1",
+        "diseaseEntityId": 68826,
+        "bmaScore": 2.299657127064144,
+        "normalizedScore": 0.253907,
+        "patientAverageScore": 2.8562243161339396,
+        "diseaseAverageScore": 1.7430899379943483,
+        "directPhenotypeCount": 24,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000829",
+            "patientPhenotypeLabel": "Hypoparathyroidism",
+            "diseasePhenotypeCurie": "HP:0002897",
+            "diseasePhenotypeLabel": "Parathyroid adenoma",
+            "micaCurie": "HP:0000828",
+            "micaLabel": "Abnormality of the parathyroid gland",
+            "score": 4.979535191667246,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:131100"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008207",
+            "patientPhenotypeLabel": "Primary adrenal insufficiency",
+            "diseasePhenotypeCurie": "HP:0003118",
+            "diseasePhenotypeLabel": "Increased circulating cortisol level",
+            "micaCurie": "HP:0011733",
+            "micaLabel": "Abnormality of adrenal physiology",
+            "score": 4.913937909181432,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:131100"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0100647",
+            "patientPhenotypeLabel": "Graves disease",
+            "diseasePhenotypeCurie": "HP:0000854",
+            "diseasePhenotypeLabel": "Thyroid adenoma",
+            "micaCurie": "HP:0000820",
+            "micaLabel": "Abnormality of the thyroid gland",
+            "score": 3.401080824753113,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:131100"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002728",
+            "patientPhenotypeLabel": "Chronic mucocutaneous candidiasis",
+            "diseasePhenotypeCurie": "HP:0100633",
+            "diseasePhenotypeLabel": "Esophagitis",
+            "micaCurie": "HP:0012649",
+            "micaLabel": "Increased inflammatory response",
+            "score": 2.1265778696213387,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:131100"
+          },
+          {
+            "patientPhenotypeCurie": "HP:6000343",
+            "patientPhenotypeLabel": "Antiparietal cell antibody positivity",
+            "diseasePhenotypeCurie": "HP:0100633",
+            "diseasePhenotypeLabel": "Esophagitis",
+            "micaCurie": "HP:0010978",
+            "micaLabel": "Abnormality of immune system physiology",
+            "score": 1.7136464064255978,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:131100"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008209",
+            "patientPhenotypeLabel": "Premature ovarian insufficiency",
+            "diseasePhenotypeCurie": "HP:0100633",
+            "diseasePhenotypeLabel": "Esophagitis",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:131100"
+          }
+        ]
+      },
+      {
+        "rank": 18,
+        "diseaseCurie": "MONDO:0976129",
+        "diseaseLabel": "premature ovarian failure 26",
+        "diseaseEntityId": 88717,
+        "bmaScore": 2.2858198038334567,
+        "normalizedScore": 0.25238,
+        "patientAverageScore": 1.8940274124451546,
+        "diseaseAverageScore": 2.6776121952217586,
+        "directPhenotypeCount": 8,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0008209",
+            "patientPhenotypeLabel": "Premature ovarian insufficiency",
+            "diseasePhenotypeCurie": "HP:0008209",
+            "diseasePhenotypeLabel": "Premature ovarian insufficiency",
+            "micaCurie": "HP:0008209",
+            "micaLabel": "Premature ovarian insufficiency",
+            "score": 5.125247002848639,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:39545409"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000829",
+            "patientPhenotypeLabel": "Hypoparathyroidism",
+            "diseasePhenotypeCurie": "HP:0011969",
+            "diseasePhenotypeLabel": "Elevated circulating luteinizing hormone level",
+            "micaCurie": "HP:0000818",
+            "micaLabel": "Abnormality of the endocrine system",
+            "score": 2.0779273605041553,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:39545409"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008207",
+            "patientPhenotypeLabel": "Primary adrenal insufficiency",
+            "diseasePhenotypeCurie": "HP:0011969",
+            "diseasePhenotypeLabel": "Elevated circulating luteinizing hormone level",
+            "micaCurie": "HP:0000818",
+            "micaLabel": "Abnormality of the endocrine system",
+            "score": 2.0779273605041553,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:39545409"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0100647",
+            "patientPhenotypeLabel": "Graves disease",
+            "diseasePhenotypeCurie": "HP:0011969",
+            "diseasePhenotypeLabel": "Elevated circulating luteinizing hormone level",
+            "micaCurie": "HP:0000818",
+            "micaLabel": "Abnormality of the endocrine system",
+            "score": 2.0779273605041553,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:39545409"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002728",
+            "patientPhenotypeLabel": "Chronic mucocutaneous candidiasis",
+            "diseasePhenotypeCurie": "HP:0011969",
+            "diseasePhenotypeLabel": "Elevated circulating luteinizing hormone level",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:39545409"
+          },
+          {
+            "patientPhenotypeCurie": "HP:6000343",
+            "patientPhenotypeLabel": "Antiparietal cell antibody positivity",
+            "diseasePhenotypeCurie": "HP:0011969",
+            "diseasePhenotypeLabel": "Elevated circulating luteinizing hormone level",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:39545409"
+          }
+        ]
+      },
+      {
+        "rank": 19,
+        "diseaseCurie": "MONDO:0013766",
+        "diseaseLabel": "familial cold autoinflammatory syndrome 3",
+        "diseaseEntityId": 75052,
+        "bmaScore": 2.28040557944916,
+        "normalizedScore": 0.251782,
+        "patientAverageScore": 2.770931967190588,
+        "diseaseAverageScore": 1.7898791917077317,
+        "directPhenotypeCount": 18,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002728",
+            "patientPhenotypeLabel": "Chronic mucocutaneous candidiasis",
+            "diseasePhenotypeCurie": "HP:0012203",
+            "diseasePhenotypeLabel": "Onychomycosis",
+            "micaCurie": "HP:0002841",
+            "micaLabel": "Recurrent fungal infections",
+            "score": 4.700363808883374,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:22236196"
+          },
+          {
+            "patientPhenotypeCurie": "HP:6000343",
+            "patientPhenotypeLabel": "Antiparietal cell antibody positivity",
+            "diseasePhenotypeCurie": "HP:0003493",
+            "diseasePhenotypeLabel": "Antinuclear antibody positivity",
+            "micaCurie": "HP:0030057",
+            "micaLabel": "Autoimmune antibody positivity",
+            "score": 4.365724753343821,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:22236196"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0100647",
+            "patientPhenotypeLabel": "Graves disease",
+            "diseasePhenotypeCurie": "HP:0000872",
+            "diseasePhenotypeLabel": "Hashimoto thyroiditis",
+            "micaCurie": "HP:0000820",
+            "micaLabel": "Abnormality of the thyroid gland",
+            "score": 3.401080824753113,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:22236196"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000829",
+            "patientPhenotypeLabel": "Hypoparathyroidism",
+            "diseasePhenotypeCurie": "HP:0000872",
+            "diseasePhenotypeLabel": "Hashimoto thyroiditis",
+            "micaCurie": "HP:0000818",
+            "micaLabel": "Abnormality of the endocrine system",
+            "score": 2.0779273605041553,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:22236196"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008207",
+            "patientPhenotypeLabel": "Primary adrenal insufficiency",
+            "diseasePhenotypeCurie": "HP:0000872",
+            "diseasePhenotypeLabel": "Hashimoto thyroiditis",
+            "micaCurie": "HP:0000818",
+            "micaLabel": "Abnormality of the endocrine system",
+            "score": 2.0779273605041553,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:22236196"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008209",
+            "patientPhenotypeLabel": "Premature ovarian insufficiency",
+            "diseasePhenotypeCurie": "HP:0410135",
+            "diseasePhenotypeLabel": "Cold urticaria",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:22236196"
+          }
+        ]
+      },
+      {
+        "rank": 20,
+        "diseaseCurie": "MONDO:0007064",
+        "diseaseLabel": "severe combined immunodeficiency, autosomal recessive, T cell-negative, B cell-negative, NK cell-negative, due to adenosine deaminase deficiency",
+        "diseaseEntityId": 68350,
+        "bmaScore": 2.267963812183302,
+        "normalizedScore": 0.250408,
+        "patientAverageScore": 3.0993693302523453,
+        "diseaseAverageScore": 1.4365582941142587,
+        "directPhenotypeCount": 42,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002728",
+            "patientPhenotypeLabel": "Chronic mucocutaneous candidiasis",
+            "diseasePhenotypeCurie": "HP:0002728",
+            "diseasePhenotypeLabel": "Chronic mucocutaneous candidiasis",
+            "micaCurie": "HP:0002728",
+            "micaLabel": "Chronic mucocutaneous candidiasis",
+            "score": 5.068088589008691,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:28823388"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008207",
+            "patientPhenotypeLabel": "Primary adrenal insufficiency",
+            "diseasePhenotypeCurie": "HP:0034829",
+            "diseasePhenotypeLabel": "Adrenal cortical sclerosis",
+            "micaCurie": "HP:0000834",
+            "micaLabel": "Abnormality of the adrenal glands",
+            "score": 4.432099822288694,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:4014441"
+          },
+          {
+            "patientPhenotypeCurie": "HP:6000343",
+            "patientPhenotypeLabel": "Antiparietal cell antibody positivity",
+            "diseasePhenotypeCurie": "HP:0001973",
+            "diseasePhenotypeLabel": "Autoimmune thrombocytopenia",
+            "micaCurie": "HP:0002960",
+            "micaLabel": "Autoimmunity",
+            "score": 3.76880560487843,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:102700"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000829",
+            "patientPhenotypeLabel": "Hypoparathyroidism",
+            "diseasePhenotypeCurie": "HP:0034829",
+            "diseasePhenotypeLabel": "Adrenal cortical sclerosis",
+            "micaCurie": "HP:0000818",
+            "micaLabel": "Abnormality of the endocrine system",
+            "score": 2.0779273605041553,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:4014441"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0100647",
+            "patientPhenotypeLabel": "Graves disease",
+            "diseasePhenotypeCurie": "HP:0034829",
+            "diseasePhenotypeLabel": "Adrenal cortical sclerosis",
+            "micaCurie": "HP:0000818",
+            "micaLabel": "Abnormality of the endocrine system",
+            "score": 2.0779273605041553,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:4014441"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008209",
+            "patientPhenotypeLabel": "Premature ovarian insufficiency",
+            "diseasePhenotypeCurie": "HP:0001967",
+            "diseasePhenotypeLabel": "Diffuse mesangial sclerosis",
+            "micaCurie": "HP:0000119",
+            "micaLabel": "Abnormality of the genitourinary system",
+            "score": 1.1713672443299454,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:102700"
+          }
+        ]
+      },
+      {
+        "rank": 21,
+        "diseaseCurie": "MONDO:0011664",
+        "diseaseLabel": "immunodeficiency due to CD25 deficiency",
+        "diseaseEntityId": 72950,
+        "bmaScore": 2.2209167909379266,
+        "normalizedScore": 0.245214,
+        "patientAverageScore": 2.768328589183586,
+        "diseaseAverageScore": 1.6735049926922674,
+        "directPhenotypeCount": 38,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002728",
+            "patientPhenotypeLabel": "Chronic mucocutaneous candidiasis",
+            "diseasePhenotypeCurie": "HP:0009098",
+            "diseasePhenotypeLabel": "Chronic oral candidiasis",
+            "micaCurie": "HP:0002728",
+            "micaLabel": "Chronic mucocutaneous candidiasis",
+            "score": 5.068088589008691,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:9096364"
+          },
+          {
+            "patientPhenotypeCurie": "HP:6000343",
+            "patientPhenotypeLabel": "Antiparietal cell antibody positivity",
+            "diseasePhenotypeCurie": "HP:0001890",
+            "diseasePhenotypeLabel": "Autoimmune hemolytic anemia",
+            "micaCurie": "HP:0002960",
+            "micaLabel": "Autoimmunity",
+            "score": 3.76880560487843,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:9096364"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0100647",
+            "patientPhenotypeLabel": "Graves disease",
+            "diseasePhenotypeCurie": "HP:0000821",
+            "diseasePhenotypeLabel": "Hypothyroidism",
+            "micaCurie": "HP:0002926",
+            "micaLabel": "Abnormality of thyroid physiology",
+            "score": 3.6146549250511715,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:17196245"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000829",
+            "patientPhenotypeLabel": "Hypoparathyroidism",
+            "diseasePhenotypeCurie": "HP:0100651",
+            "diseasePhenotypeLabel": "Type I diabetes mellitus",
+            "micaCurie": "HP:0000818",
+            "micaLabel": "Abnormality of the endocrine system",
+            "score": 2.0779273605041553,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:17196245"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008207",
+            "patientPhenotypeLabel": "Primary adrenal insufficiency",
+            "diseasePhenotypeCurie": "HP:0100651",
+            "diseasePhenotypeLabel": "Type I diabetes mellitus",
+            "micaCurie": "HP:0000818",
+            "micaLabel": "Abnormality of the endocrine system",
+            "score": 2.0779273605041553,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:17196245"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008209",
+            "patientPhenotypeLabel": "Premature ovarian insufficiency",
+            "diseasePhenotypeCurie": "HP:0100658",
+            "diseasePhenotypeLabel": "Cellulitis",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:23416241"
+          }
+        ]
+      },
+      {
+        "rank": 22,
+        "diseaseCurie": "MONDO:0012861",
+        "diseaseLabel": "premature ovarian failure 6",
+        "diseaseEntityId": 74147,
+        "bmaScore": 2.219381485064404,
+        "normalizedScore": 0.245044,
+        "patientAverageScore": 1.8940274124451546,
+        "diseaseAverageScore": 2.5447355576836532,
+        "directPhenotypeCount": 9,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0008209",
+            "patientPhenotypeLabel": "Premature ovarian insufficiency",
+            "diseasePhenotypeCurie": "HP:0008209",
+            "diseasePhenotypeLabel": "Premature ovarian insufficiency",
+            "micaCurie": "HP:0008209",
+            "micaLabel": "Premature ovarian insufficiency",
+            "score": 5.125247002848639,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:18499083"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000829",
+            "patientPhenotypeLabel": "Hypoparathyroidism",
+            "diseasePhenotypeCurie": "HP:0011969",
+            "diseasePhenotypeLabel": "Elevated circulating luteinizing hormone level",
+            "micaCurie": "HP:0000818",
+            "micaLabel": "Abnormality of the endocrine system",
+            "score": 2.0779273605041553,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:30474133"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008207",
+            "patientPhenotypeLabel": "Primary adrenal insufficiency",
+            "diseasePhenotypeCurie": "HP:0011969",
+            "diseasePhenotypeLabel": "Elevated circulating luteinizing hormone level",
+            "micaCurie": "HP:0000818",
+            "micaLabel": "Abnormality of the endocrine system",
+            "score": 2.0779273605041553,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:30474133"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0100647",
+            "patientPhenotypeLabel": "Graves disease",
+            "diseasePhenotypeCurie": "HP:0011969",
+            "diseasePhenotypeLabel": "Elevated circulating luteinizing hormone level",
+            "micaCurie": "HP:0000818",
+            "micaLabel": "Abnormality of the endocrine system",
+            "score": 2.0779273605041553,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:30474133"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002728",
+            "patientPhenotypeLabel": "Chronic mucocutaneous candidiasis",
+            "diseasePhenotypeCurie": "HP:0011969",
+            "diseasePhenotypeLabel": "Elevated circulating luteinizing hormone level",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:30474133"
+          },
+          {
+            "patientPhenotypeCurie": "HP:6000343",
+            "patientPhenotypeLabel": "Antiparietal cell antibody positivity",
+            "diseasePhenotypeCurie": "HP:0011969",
+            "diseasePhenotypeLabel": "Elevated circulating luteinizing hormone level",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:30474133"
+          }
+        ]
+      },
+      {
+        "rank": 23,
+        "diseaseCurie": "MONDO:0013400",
+        "diseaseLabel": "Congenital adrenal insufficiency with 46, XY sex reversal OR 46,XY disorder of sex development-adrenal insufficiency due to CYP11A1 deficiency",
+        "diseaseEntityId": 74686,
+        "bmaScore": 2.213050159862498,
+        "normalizedScore": 0.244345,
+        "patientAverageScore": 2.1156501974312447,
+        "diseaseAverageScore": 2.310450122293751,
+        "directPhenotypeCount": 6,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0008207",
+            "patientPhenotypeLabel": "Primary adrenal insufficiency",
+            "diseasePhenotypeCurie": "HP:0000846",
+            "diseasePhenotypeLabel": "Adrenal insufficiency",
+            "micaCurie": "HP:0000846",
+            "micaLabel": "Adrenal insufficiency",
+            "score": 5.419486475846579,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:613743"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000829",
+            "patientPhenotypeLabel": "Hypoparathyroidism",
+            "diseasePhenotypeCurie": "HP:0011749",
+            "diseasePhenotypeLabel": "Adrenocorticotropic hormone excess",
+            "micaCurie": "HP:0000818",
+            "micaLabel": "Abnormality of the endocrine system",
+            "score": 2.0779273605041553,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:613743"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0100647",
+            "patientPhenotypeLabel": "Graves disease",
+            "diseasePhenotypeCurie": "HP:0011749",
+            "diseasePhenotypeLabel": "Adrenocorticotropic hormone excess",
+            "micaCurie": "HP:0000818",
+            "micaLabel": "Abnormality of the endocrine system",
+            "score": 2.0779273605041553,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:613743"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008209",
+            "patientPhenotypeLabel": "Premature ovarian insufficiency",
+            "diseasePhenotypeCurie": "HP:0012245",
+            "diseasePhenotypeLabel": "Sex reversal",
+            "micaCurie": "HP:0000078",
+            "micaLabel": "Abnormality of the genital system",
+            "score": 1.7798249089414813,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:613743"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002728",
+            "patientPhenotypeLabel": "Chronic mucocutaneous candidiasis",
+            "diseasePhenotypeCurie": "HP:0000953",
+            "diseasePhenotypeLabel": "Hyperpigmentation of the skin",
+            "micaCurie": "HP:0000951",
+            "micaLabel": "Abnormality of the skin",
+            "score": 1.3361673836361867,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:613743"
+          },
+          {
+            "patientPhenotypeCurie": "HP:6000343",
+            "patientPhenotypeLabel": "Antiparietal cell antibody positivity",
+            "diseasePhenotypeCurie": "HP:0012245",
+            "diseasePhenotypeLabel": "Sex reversal",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:613743"
+          }
+        ]
+      },
+      {
+        "rank": 24,
+        "diseaseCurie": "MONDO:0975847",
+        "diseaseLabel": "autoimmune disease with susceptibility to mycobacterium tuberculosis",
+        "diseaseEntityId": 88667,
+        "bmaScore": 2.2075362685498385,
+        "normalizedScore": 0.243736,
+        "patientAverageScore": 2.786422985942162,
+        "diseaseAverageScore": 1.628649551157515,
+        "directPhenotypeCount": 26,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002728",
+            "patientPhenotypeLabel": "Chronic mucocutaneous candidiasis",
+            "diseasePhenotypeCurie": "HP:0020102",
+            "diseasePhenotypeLabel": "Pneumocystis jirovecii pneumonia",
+            "micaCurie": "HP:0020100",
+            "micaLabel": "Unusual fungal infection",
+            "score": 4.579735821094759,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:34183838"
+          },
+          {
+            "patientPhenotypeCurie": "HP:6000343",
+            "patientPhenotypeLabel": "Antiparietal cell antibody positivity",
+            "diseasePhenotypeCurie": "HP:0034063",
+            "diseasePhenotypeLabel": "Anti-islet antigen-2 antibody positivity",
+            "micaCurie": "HP:0030057",
+            "micaLabel": "Autoimmune antibody positivity",
+            "score": 4.365724753343821,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:34183838"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0100647",
+            "patientPhenotypeLabel": "Graves disease",
+            "diseasePhenotypeCurie": "HP:0000821",
+            "diseasePhenotypeLabel": "Hypothyroidism",
+            "micaCurie": "HP:0002926",
+            "micaLabel": "Abnormality of thyroid physiology",
+            "score": 3.6146549250511715,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:34183838"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000829",
+            "patientPhenotypeLabel": "Hypoparathyroidism",
+            "diseasePhenotypeCurie": "HP:0100651",
+            "diseasePhenotypeLabel": "Type I diabetes mellitus",
+            "micaCurie": "HP:0000818",
+            "micaLabel": "Abnormality of the endocrine system",
+            "score": 2.0779273605041553,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:34183838"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008207",
+            "patientPhenotypeLabel": "Primary adrenal insufficiency",
+            "diseasePhenotypeCurie": "HP:0100651",
+            "diseasePhenotypeLabel": "Type I diabetes mellitus",
+            "micaCurie": "HP:0000818",
+            "micaLabel": "Abnormality of the endocrine system",
+            "score": 2.0779273605041553,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:34183838"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008209",
+            "patientPhenotypeLabel": "Premature ovarian insufficiency",
+            "diseasePhenotypeCurie": "HP:6000901",
+            "diseasePhenotypeLabel": "Positive bloodstream tuberculosis-induced T-cell-based interferon-gamma release assay",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:34183838"
+          }
+        ]
+      },
+      {
+        "rank": 25,
+        "diseaseCurie": "MONDO:0013140",
+        "diseaseLabel": "candidiasis, familial, 4",
+        "diseaseEntityId": 74426,
+        "bmaScore": 2.1940758809865053,
+        "normalizedScore": 0.24225,
+        "patientAverageScore": 1.132000962675655,
+        "diseaseAverageScore": 3.2561507992973553,
+        "directPhenotypeCount": 3,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002728",
+            "patientPhenotypeLabel": "Chronic mucocutaneous candidiasis",
+            "diseasePhenotypeCurie": "HP:0012204",
+            "diseasePhenotypeLabel": "Recurrent vulvovaginal candidiasis",
+            "micaCurie": "HP:0002728",
+            "micaLabel": "Chronic mucocutaneous candidiasis",
+            "score": 5.068088589008691,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:19864674"
+          },
+          {
+            "patientPhenotypeCurie": "HP:6000343",
+            "patientPhenotypeLabel": "Antiparietal cell antibody positivity",
+            "diseasePhenotypeCurie": "HP:0012204",
+            "diseasePhenotypeLabel": "Recurrent vulvovaginal candidiasis",
+            "micaCurie": "HP:0010978",
+            "micaLabel": "Abnormality of immune system physiology",
+            "score": 1.7136464064255978,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:19864674"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000829",
+            "patientPhenotypeLabel": "Hypoparathyroidism",
+            "diseasePhenotypeCurie": "HP:0012204",
+            "diseasePhenotypeLabel": "Recurrent vulvovaginal candidiasis",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:19864674"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008207",
+            "patientPhenotypeLabel": "Primary adrenal insufficiency",
+            "diseasePhenotypeCurie": "HP:0012204",
+            "diseasePhenotypeLabel": "Recurrent vulvovaginal candidiasis",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:19864674"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0100647",
+            "patientPhenotypeLabel": "Graves disease",
+            "diseasePhenotypeCurie": "HP:0012204",
+            "diseasePhenotypeLabel": "Recurrent vulvovaginal candidiasis",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:19864674"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008209",
+            "patientPhenotypeLabel": "Premature ovarian insufficiency",
+            "diseasePhenotypeCurie": "HP:0012204",
+            "diseasePhenotypeLabel": "Recurrent vulvovaginal candidiasis",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:19864674"
+          }
+        ]
+      }
+    ],
+    "engineSummary": {
+      "diseaseCount": 8579,
+      "phenotypeCount": 19389,
+      "sourceMode": "relationship_fallback",
+      "generatedAt": "2026-03-15T20:43:58.513Z"
+    }
+  }
+}

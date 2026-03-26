@@ -1,0 +1,151 @@
+{
+  "date": "2026-03-26",
+  "purpose": "Consultant-facing update after the March 25 scorer patch and March 26 U2AF2 follow-up work.",
+  "current_working_baseline": {
+    "name": "handoff-floor-1.0",
+    "status": "new strongest real rule-based scorer baseline on the working branch",
+    "metrics": {
+      "found": 84,
+      "top_1": 42,
+      "top_3": 52,
+      "top_5": 53,
+      "top_10": 60,
+      "median_rank": 1.5,
+      "mrr": 0.485974
+    },
+    "previous_working_baseline": {
+      "name": "post-clinvar-run54",
+      "metrics": {
+        "found": 83,
+        "top_1": 34,
+        "top_3": 43,
+        "top_5": 46,
+        "top_10": 57,
+        "mrr": 0.410153
+      }
+    },
+    "delta_vs_previous_working_baseline": {
+      "improved_cases": 21,
+      "worsened_cases": 15,
+      "recovered_from_miss": 2,
+      "regressed_to_miss": 1
+    }
+  },
+  "comparison_to_exomiser": {
+    "exomiser_metrics": {
+      "found": 100,
+      "top_1": 39,
+      "top_3": 46,
+      "top_5": 48,
+      "top_10": 55,
+      "mrr": 0.447212
+    },
+    "genovy_vs_exomiser": {
+      "wins_on": [
+        "top_1",
+        "top_3",
+        "top_5",
+        "top_10",
+        "mrr"
+      ],
+      "still_loses_on": [
+        "overall_recall_found_rate"
+      ]
+    },
+    "bottom_line": "Genovy now beats Exomiser on ranking quality metrics in the real scorer run, but still trails on recall."
+  },
+  "important_caveat": {
+    "case": "PMID_36747105_proband",
+    "truth_gene": "U2AF2",
+    "change": "30 -> miss",
+    "meaning": "The real 1.0 scorer patch is stronger globally, but it is not perfectly clean. Source-model fragile genes can still be harmed by a broad scorer change."
+  },
+  "anti_overfit_policy": {
+    "status": "active hard rule",
+    "summary": [
+      "The benchmark may identify a possible gap.",
+      "The benchmark may not author truth.",
+      "Never add a term because it helps a case.",
+      "Never cheat a gene to a higher rank.",
+      "Always separate seam repair from disease-profile enrichment.",
+      "All benchmark-tail enrichment must stay shadow-only until it is independently source-backed and validated."
+    ],
+    "reason": "We do not want benchmark-tail cleanup to pollute the knowledge graph."
+  },
+  "u2af2_follow_up": {
+    "status": "still unresolved",
+    "current_read": "U2AF2 is a support-seam problem first, not an enrichment-first problem.",
+    "why": [
+      "The syndrome node exists in the graph as MONDO:0957810 / OMIM:620535 with phenotype annotations.",
+      "The gene node exists.",
+      "The key seam is still weak or missing: a stable robust U2AF2 -> disease support path.",
+      "Disease-profile enrichment alone does not rescue the truth gene under the current support geometry."
+    ],
+    "case_split": {
+      "PMID_36747105_proband": {
+        "current_read": "mostly seam/support fragility, not mainly missing disease terms",
+        "current_surface_overlap": {
+          "positive_overlap": "7/7",
+          "excluded_overlap": "15/15"
+        }
+      },
+      "PMID_37962958_43": {
+        "current_read": "genuine undercoverage plus seam weakness",
+        "current_surface_overlap": {
+          "positive_overlap": "3/25",
+          "excluded_overlap": "1/9"
+        }
+      }
+    },
+    "shadow_enrichment_tests": [
+      {
+        "name": "public_source_shadow",
+        "source_basis": [
+          "GenCC submission",
+          "public literature / PMC case reports"
+        ],
+        "terms_added_in_shadow": 14,
+        "result": "0/2 -> 0/2",
+        "meaning": "Public-source-backed disease-profile enrichment alone did nothing."
+      },
+      {
+        "name": "manual_omim_shadow",
+        "source_basis": [
+          "manual browser extraction from OMIM 191318 and OMIM 620535"
+        ],
+        "terms_requested": 10,
+        "terms_added_in_shadow": 8,
+        "result": "0/2 -> 0/2",
+        "meaning": "Even stricter OMIM-backed disease-profile enrichment still did nothing under the current support geometry."
+      }
+    ],
+    "conclusion": "U2AF2 should not be treated as just another thin branch like STXBP1. The next U2AF2 step is support-seam repair, not more phenotype-term chasing."
+  },
+  "what_we_learned": [
+    "The 1.0 disease-to-gene handoff rule unlocked a real global scorer bottleneck.",
+    "The rule is strong enough to beat Exomiser on ranking metrics in the real benchmark run.",
+    "The U2AF2 regression proves that some genes remain structurally fragile even when the global scorer improves.",
+    "Two negative shadow-enrichment tests on U2AF2 show that enrichment-first is the wrong ordering for that gene.",
+    "The project now has an explicit anti-overfit curation rule to prevent benchmark-driven graph pollution."
+  ],
+  "recommended_next_step": {
+    "priority_1": "Inspect and repair the U2AF2 -> MONDO:0957810 support seam / bridge.",
+    "priority_2": "Only after seam repair, revisit whether phenotype enrichment still adds value for U2AF2.",
+    "priority_3": "Keep the 1.0 scorer as the current working baseline while tracking the U2AF2 caveat explicitly."
+  },
+  "evidence_files": {
+    "benchmark": [
+      "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/official-handoff-floor-1.0-benchmark-20260325.md",
+      "/Users/ahmedelmorshedy/Genovy/output/handoff-floor-1.0.json"
+    ],
+    "hard_rules": [
+      "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/source-backed-curation-hard-rules-20260326.md"
+    ],
+    "u2af2": [
+      "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/u2af2-source-backed-shadow-prep-20260326.md",
+      "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/u2af2-public-source-shadow-test-20260326.md",
+      "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/u2af2-manual-omim-extract-20260326.md",
+      "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/u2af2-omim-shadow-test-20260326.md"
+    ]
+  }
+}

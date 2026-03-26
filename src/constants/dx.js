@@ -13,6 +13,12 @@ export const DX_SIMILARITY_DEFAULTS = Object.freeze({
   defaultPhenotypeWeight: 1,
   patientExcludedContradictionPenaltyWeight: 0.3,
   diseaseExcludedContradictionPenaltyWeight: 0.2,
+  specificDirectHandoffOverride: Object.freeze({
+    enabled: true,
+    weightFloor: 1,
+    minDirectPhenotypeEdges: 1,
+    minExactDirectOverlap: 1
+  }),
   frequencyWeights: Object.freeze({
     obligate: 1,
     veryFrequent: 0.95,

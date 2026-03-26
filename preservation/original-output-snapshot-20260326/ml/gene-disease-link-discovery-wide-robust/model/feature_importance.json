@@ -1,0 +1,76 @@
+{
+  "feature_importance": [
+    {
+      "feature": "shared_ratio_to_gene",
+      "importance": 27.80186015239933
+    },
+    {
+      "feature": "shared_ratio_to_disease",
+      "importance": 15.344289382363554
+    },
+    {
+      "feature": "disease_out_degree",
+      "importance": 11.192107136108827
+    },
+    {
+      "feature": "shared_phenotype_rarity_score",
+      "importance": 10.081971266862137
+    },
+    {
+      "feature": "disease_phenotype_count",
+      "importance": 6.86499870126668
+    },
+    {
+      "feature": "gene_out_degree",
+      "importance": 6.061415277699546
+    },
+    {
+      "feature": "phenotype_jaccard",
+      "importance": 5.368453697327751
+    },
+    {
+      "feature": "shared_phenotype_count",
+      "importance": 4.598490008561584
+    },
+    {
+      "feature": "disease_xref_count",
+      "importance": 4.291478322994834
+    },
+    {
+      "feature": "gene_phenotype_count",
+      "importance": 3.6939683138528507
+    },
+    {
+      "feature": "disease_alias_count",
+      "importance": 2.1120527620980853
+    },
+    {
+      "feature": "disease_in_degree",
+      "importance": 2.075416106318222
+    },
+    {
+      "feature": "disease_trial_count",
+      "importance": 0.46699621347296844
+    },
+    {
+      "feature": "disease_lacks_phenotype_count",
+      "importance": 0.04650265867363382
+    },
+    {
+      "feature": "gene_alias_count",
+      "importance": 0.0
+    },
+    {
+      "feature": "gene_member_count",
+      "importance": 0.0
+    },
+    {
+      "feature": "gene_xref_count",
+      "importance": 0.0
+    },
+    {
+      "feature": "disease_member_count",
+      "importance": 0.0
+    }
+  ]
+}

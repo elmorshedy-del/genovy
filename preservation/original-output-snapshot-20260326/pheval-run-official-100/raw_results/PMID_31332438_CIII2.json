@@ -1,0 +1,2663 @@
+{
+  "success": true,
+  "engine": "genovy-dx-sim",
+  "analysisType": "gene",
+  "input": {
+    "presentPhenotypeCuries": [
+      "HP:0002355",
+      "HP:0033748",
+      "HP:0003376",
+      "HP:0009129",
+      "HP:0003484",
+      "HP:0012391",
+      "HP:0008944",
+      "HP:0009053",
+      "HP:0002522",
+      "HP:0001761",
+      "HP:0001765",
+      "HP:0001771",
+      "HP:0003477"
+    ],
+    "excludedPhenotypeCuries": [],
+    "sourceFormat": "phenopacket"
+  },
+  "ranking": {
+    "queryPhenotypes": [
+      {
+        "phenotypeCurie": "HP:0033748",
+        "phenotypeLabel": "Hypoesthesia"
+      },
+      {
+        "phenotypeCurie": "HP:0003376",
+        "phenotypeLabel": "Steppage gait"
+      },
+      {
+        "phenotypeCurie": "HP:0009129",
+        "phenotypeLabel": "Upper limb amyotrophy"
+      },
+      {
+        "phenotypeCurie": "HP:0003484",
+        "phenotypeLabel": "Upper limb muscle weakness"
+      },
+      {
+        "phenotypeCurie": "HP:0012391",
+        "phenotypeLabel": "Hyporeflexia of upper limbs"
+      },
+      {
+        "phenotypeCurie": "HP:0008944",
+        "phenotypeLabel": "Distal lower limb amyotrophy"
+      },
+      {
+        "phenotypeCurie": "HP:0009053",
+        "phenotypeLabel": "Distal lower limb muscle weakness"
+      },
+      {
+        "phenotypeCurie": "HP:0002522",
+        "phenotypeLabel": "Areflexia of lower limbs"
+      },
+      {
+        "phenotypeCurie": "HP:0001761",
+        "phenotypeLabel": "Pes cavus"
+      },
+      {
+        "phenotypeCurie": "HP:0001765",
+        "phenotypeLabel": "Hammertoe"
+      },
+      {
+        "phenotypeCurie": "HP:0001771",
+        "phenotypeLabel": "Achilles tendon contracture"
+      },
+      {
+        "phenotypeCurie": "HP:0003477",
+        "phenotypeLabel": "Peripheral axonal neuropathy"
+      }
+    ],
+    "results": [
+      {
+        "rank": 1,
+        "geneCurie": "NCBIGene:59345",
+        "geneLabel": "GNB4",
+        "geneSymbol": "GNB4",
+        "geneEntityId": 152214,
+        "bmaScore": 3.653294379906784,
+        "normalizedScore": 0.403364,
+        "patientAverageScore": 4.171590999442053,
+        "phenotypeAverageScore": 3.1349977603715153,
+        "directPhenotypeCount": 21,
+        "matchedPhenotypeCount": 12,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0008944",
+            "patientPhenotypeLabel": "Distal lower limb amyotrophy",
+            "diseasePhenotypeCurie": "HP:0008944",
+            "diseasePhenotypeLabel": "Distal lower limb amyotrophy",
+            "micaCurie": "HP:0008944",
+            "micaLabel": "Distal lower limb amyotrophy",
+            "score": 5.165252337462339,
+            "evidenceCode": "7/7",
+            "referenceText": "OMIM:615185"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003376",
+            "patientPhenotypeLabel": "Steppage gait",
+            "diseasePhenotypeCurie": "HP:0003376",
+            "diseasePhenotypeLabel": "Steppage gait",
+            "micaCurie": "HP:0003376",
+            "micaLabel": "Steppage gait",
+            "score": 4.913937909181432,
+            "evidenceCode": "4/7",
+            "referenceText": "OMIM:615185"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001765",
+            "patientPhenotypeLabel": "Hammertoe",
+            "diseasePhenotypeCurie": "HP:0001765",
+            "diseasePhenotypeLabel": "Hammertoe",
+            "micaCurie": "HP:0001765",
+            "micaLabel": "Hammertoe",
+            "score": 4.913937909181432,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:615185"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009053",
+            "patientPhenotypeLabel": "Distal lower limb muscle weakness",
+            "diseasePhenotypeCurie": "HP:0009053",
+            "diseasePhenotypeLabel": "Distal lower limb muscle weakness",
+            "micaCurie": "HP:0009053",
+            "micaLabel": "Distal lower limb muscle weakness",
+            "score": 4.8674178935465395,
+            "evidenceCode": "7/7",
+            "referenceText": "OMIM:615185"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009129",
+            "patientPhenotypeLabel": "Upper limb amyotrophy",
+            "diseasePhenotypeCurie": "HP:0007149",
+            "diseasePhenotypeLabel": "Distal upper limb amyotrophy",
+            "micaCurie": "HP:0009129",
+            "micaLabel": "Upper limb amyotrophy",
+            "score": 4.837564930396859,
+            "evidenceCode": "2/7",
+            "referenceText": "OMIM:615185"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003484",
+            "patientPhenotypeLabel": "Upper limb muscle weakness",
+            "diseasePhenotypeCurie": "HP:0008959",
+            "diseasePhenotypeLabel": "Distal upper limb muscle weakness",
+            "micaCurie": "HP:0003484",
+            "micaLabel": "Upper limb muscle weakness",
+            "score": 4.602725339319457,
+            "evidenceCode": "1/7",
+            "referenceText": "OMIM:615185"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002522",
+            "patientPhenotypeLabel": "Areflexia of lower limbs",
+            "diseasePhenotypeCurie": "HP:0006844",
+            "diseasePhenotypeLabel": "Absent patellar reflexes",
+            "micaCurie": "HP:0002522",
+            "micaLabel": "Areflexia of lower limbs",
+            "score": 4.602725339319457,
+            "evidenceCode": "6/7",
+            "referenceText": "OMIM:615185"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0033748",
+            "patientPhenotypeLabel": "Hypoesthesia",
+            "diseasePhenotypeCurie": "HP:0007328",
+            "diseasePhenotypeLabel": "Impaired pain sensation",
+            "micaCurie": "HP:0033747",
+            "micaLabel": "Abnormal exteroceptive sensation",
+            "score": 4.046437341476709,
+            "evidenceCode": "5/7",
+            "referenceText": "OMIM:615185"
+          }
+        ]
+      },
+      {
+        "rank": 2,
+        "geneCurie": "NCBIGene:3315",
+        "geneLabel": "HSPB1",
+        "geneSymbol": "HSPB1",
+        "geneEntityId": 149132,
+        "bmaScore": 3.536296995363201,
+        "normalizedScore": 0.390446,
+        "patientAverageScore": 4.390338195717402,
+        "phenotypeAverageScore": 2.682255795008999,
+        "directPhenotypeCount": 36,
+        "matchedPhenotypeCount": 12,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0012391",
+            "patientPhenotypeLabel": "Hyporeflexia of upper limbs",
+            "diseasePhenotypeCurie": "HP:0012391",
+            "diseasePhenotypeLabel": "Hyporeflexia of upper limbs",
+            "micaCurie": "HP:0012391",
+            "micaLabel": "Hyporeflexia of upper limbs",
+            "score": 6.859848058236746,
+            "evidenceCode": "4/7",
+            "referenceText": "OMIM:606595"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008944",
+            "patientPhenotypeLabel": "Distal lower limb amyotrophy",
+            "diseasePhenotypeCurie": "HP:0008944",
+            "diseasePhenotypeLabel": "Distal lower limb amyotrophy",
+            "micaCurie": "HP:0008944",
+            "micaLabel": "Distal lower limb amyotrophy",
+            "score": 5.165252337462339,
+            "evidenceCode": "7/7",
+            "referenceText": "OMIM:606595"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0033748",
+            "patientPhenotypeLabel": "Hypoesthesia",
+            "diseasePhenotypeCurie": "HP:0010829",
+            "diseasePhenotypeLabel": "Impaired temperature sensation",
+            "micaCurie": "HP:0033748",
+            "micaLabel": "Hypoesthesia",
+            "score": 5.049739450340494,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:99940"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003376",
+            "patientPhenotypeLabel": "Steppage gait",
+            "diseasePhenotypeCurie": "HP:0003376",
+            "diseasePhenotypeLabel": "Steppage gait",
+            "micaCurie": "HP:0003376",
+            "micaLabel": "Steppage gait",
+            "score": 4.913937909181432,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:99940"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009053",
+            "patientPhenotypeLabel": "Distal lower limb muscle weakness",
+            "diseasePhenotypeCurie": "HP:0009053",
+            "diseasePhenotypeLabel": "Distal lower limb muscle weakness",
+            "micaCurie": "HP:0009053",
+            "micaLabel": "Distal lower limb muscle weakness",
+            "score": 4.8674178935465395,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:608634"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009129",
+            "patientPhenotypeLabel": "Upper limb amyotrophy",
+            "diseasePhenotypeCurie": "HP:0009129",
+            "diseasePhenotypeLabel": "Upper limb amyotrophy",
+            "micaCurie": "HP:0009129",
+            "micaLabel": "Upper limb amyotrophy",
+            "score": 4.837564930396859,
+            "evidenceCode": "7/7",
+            "referenceText": "OMIM:606595"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002522",
+            "patientPhenotypeLabel": "Areflexia of lower limbs",
+            "diseasePhenotypeCurie": "HP:0002522",
+            "diseasePhenotypeLabel": "Areflexia of lower limbs",
+            "micaCurie": "HP:0002522",
+            "micaLabel": "Areflexia of lower limbs",
+            "score": 4.602725339319457,
+            "evidenceCode": "6/7",
+            "referenceText": "OMIM:606595"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003477",
+            "patientPhenotypeLabel": "Peripheral axonal neuropathy",
+            "diseasePhenotypeCurie": "HP:0007267",
+            "diseasePhenotypeLabel": "Chronic axonal neuropathy",
+            "micaCurie": "HP:0003477",
+            "micaLabel": "Peripheral axonal neuropathy",
+            "score": 4.087259335996965,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:606595"
+          }
+        ]
+      },
+      {
+        "rank": 3,
+        "geneCurie": "NCBIGene:54332",
+        "geneLabel": "GDAP1",
+        "geneSymbol": "GDAP1",
+        "geneEntityId": 151815,
+        "bmaScore": 3.516540572944037,
+        "normalizedScore": 0.388265,
+        "patientAverageScore": 4.464557723770171,
+        "phenotypeAverageScore": 2.5685234221179027,
+        "directPhenotypeCount": 99,
+        "matchedPhenotypeCount": 12,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0012391",
+            "patientPhenotypeLabel": "Hyporeflexia of upper limbs",
+            "diseasePhenotypeCurie": "HP:0012391",
+            "diseasePhenotypeLabel": "Hyporeflexia of upper limbs",
+            "micaCurie": "HP:0012391",
+            "micaLabel": "Hyporeflexia of upper limbs",
+            "score": 6.859848058236746,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:99948"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0033748",
+            "patientPhenotypeLabel": "Hypoesthesia",
+            "diseasePhenotypeCurie": "HP:0010830",
+            "diseasePhenotypeLabel": "Impaired tactile sensation",
+            "micaCurie": "HP:0033748",
+            "micaLabel": "Hypoesthesia",
+            "score": 5.049739450340494,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:101097"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003376",
+            "patientPhenotypeLabel": "Steppage gait",
+            "diseasePhenotypeCurie": "HP:0003376",
+            "diseasePhenotypeLabel": "Steppage gait",
+            "micaCurie": "HP:0003376",
+            "micaLabel": "Steppage gait",
+            "score": 4.913937909181432,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:608340"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001765",
+            "patientPhenotypeLabel": "Hammertoe",
+            "diseasePhenotypeCurie": "HP:0001765",
+            "diseasePhenotypeLabel": "Hammertoe",
+            "micaCurie": "HP:0001765",
+            "micaLabel": "Hammertoe",
+            "score": 4.913937909181432,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:214400"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009053",
+            "patientPhenotypeLabel": "Distal lower limb muscle weakness",
+            "diseasePhenotypeCurie": "HP:0011727",
+            "diseasePhenotypeLabel": "Peroneal muscle weakness",
+            "micaCurie": "HP:0009053",
+            "micaLabel": "Distal lower limb muscle weakness",
+            "score": 4.8674178935465395,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:101097"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009129",
+            "patientPhenotypeLabel": "Upper limb amyotrophy",
+            "diseasePhenotypeCurie": "HP:0009130",
+            "diseasePhenotypeLabel": "Hand muscle atrophy",
+            "micaCurie": "HP:0009129",
+            "micaLabel": "Upper limb amyotrophy",
+            "score": 4.837564930396859,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:99944"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003484",
+            "patientPhenotypeLabel": "Upper limb muscle weakness",
+            "diseasePhenotypeCurie": "HP:0008997",
+            "diseasePhenotypeLabel": "Proximal upper limb muscle weakness",
+            "micaCurie": "HP:0003484",
+            "micaLabel": "Upper limb muscle weakness",
+            "score": 4.602725339319457,
+            "evidenceCode": "9/9",
+            "referenceText": "OMIM:607706"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003477",
+            "patientPhenotypeLabel": "Peripheral axonal neuropathy",
+            "diseasePhenotypeCurie": "HP:0007267",
+            "diseasePhenotypeLabel": "Chronic axonal neuropathy",
+            "micaCurie": "HP:0003477",
+            "micaLabel": "Peripheral axonal neuropathy",
+            "score": 4.087259335996965,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:101097"
+          }
+        ]
+      },
+      {
+        "rank": 4,
+        "geneCurie": "NCBIGene:55958",
+        "geneLabel": "KLHL9",
+        "geneSymbol": "KLHL9",
+        "geneEntityId": 152056,
+        "bmaScore": 3.5132478385283674,
+        "normalizedScore": 0.387901,
+        "patientAverageScore": 3.6580957959722666,
+        "phenotypeAverageScore": 3.3683998810844686,
+        "directPhenotypeCount": 17,
+        "matchedPhenotypeCount": 12,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0033748",
+            "patientPhenotypeLabel": "Hypoesthesia",
+            "diseasePhenotypeCurie": "HP:0006937",
+            "diseasePhenotypeLabel": "Impaired distal tactile sensation",
+            "micaCurie": "HP:0033748",
+            "micaLabel": "Hypoesthesia",
+            "score": 5.049739450340494,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:399081"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003376",
+            "patientPhenotypeLabel": "Steppage gait",
+            "diseasePhenotypeCurie": "HP:0003376",
+            "diseasePhenotypeLabel": "Steppage gait",
+            "micaCurie": "HP:0003376",
+            "micaLabel": "Steppage gait",
+            "score": 4.913937909181432,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:399081"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009129",
+            "patientPhenotypeLabel": "Upper limb amyotrophy",
+            "diseasePhenotypeCurie": "HP:0008954",
+            "diseasePhenotypeLabel": "Intrinsic hand muscle atrophy",
+            "micaCurie": "HP:0009129",
+            "micaLabel": "Upper limb amyotrophy",
+            "score": 4.837564930396859,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:399081"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002522",
+            "patientPhenotypeLabel": "Areflexia of lower limbs",
+            "diseasePhenotypeCurie": "HP:0006844",
+            "diseasePhenotypeLabel": "Absent patellar reflexes",
+            "micaCurie": "HP:0002522",
+            "micaLabel": "Areflexia of lower limbs",
+            "score": 4.602725339319457,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:399081"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001771",
+            "patientPhenotypeLabel": "Achilles tendon contracture",
+            "diseasePhenotypeCurie": "HP:0006466",
+            "diseasePhenotypeLabel": "Ankle flexion contracture",
+            "micaCurie": "HP:0008366",
+            "micaLabel": "Foot joint contracture",
+            "score": 4.3034824444666,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:399081"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003477",
+            "patientPhenotypeLabel": "Peripheral axonal neuropathy",
+            "diseasePhenotypeCurie": "HP:0003477",
+            "diseasePhenotypeLabel": "Peripheral axonal neuropathy",
+            "micaCurie": "HP:0003477",
+            "micaLabel": "Peripheral axonal neuropathy",
+            "score": 4.087259335996965,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "ORPHA:399081"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008944",
+            "patientPhenotypeLabel": "Distal lower limb amyotrophy",
+            "diseasePhenotypeCurie": "HP:0008954",
+            "diseasePhenotypeLabel": "Intrinsic hand muscle atrophy",
+            "micaCurie": "HP:0003693",
+            "micaLabel": "Distal amyotrophy",
+            "score": 3.6771752820325054,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:399081"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009053",
+            "patientPhenotypeLabel": "Distal lower limb muscle weakness",
+            "diseasePhenotypeCurie": "HP:0009063",
+            "diseasePhenotypeLabel": "Progressive distal muscle weakness",
+            "micaCurie": "HP:0002460",
+            "micaLabel": "Distal muscle weakness",
+            "score": 3.6321226180915627,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:399081"
+          }
+        ]
+      },
+      {
+        "rank": 5,
+        "geneCurie": "NCBIGene:7879",
+        "geneLabel": "RAB7A",
+        "geneSymbol": "RAB7A",
+        "geneEntityId": 150493,
+        "bmaScore": 3.477132621614767,
+        "normalizedScore": 0.383914,
+        "patientAverageScore": 3.980227305073171,
+        "phenotypeAverageScore": 2.9740379381563633,
+        "directPhenotypeCount": 29,
+        "matchedPhenotypeCount": 12,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0008944",
+            "patientPhenotypeLabel": "Distal lower limb amyotrophy",
+            "diseasePhenotypeCurie": "HP:0008944",
+            "diseasePhenotypeLabel": "Distal lower limb amyotrophy",
+            "micaCurie": "HP:0008944",
+            "micaLabel": "Distal lower limb amyotrophy",
+            "score": 5.165252337462339,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:600882"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0033748",
+            "patientPhenotypeLabel": "Hypoesthesia",
+            "diseasePhenotypeCurie": "HP:0006937",
+            "diseasePhenotypeLabel": "Impaired distal tactile sensation",
+            "micaCurie": "HP:0033748",
+            "micaLabel": "Hypoesthesia",
+            "score": 5.049739450340494,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:600882"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003376",
+            "patientPhenotypeLabel": "Steppage gait",
+            "diseasePhenotypeCurie": "HP:0003376",
+            "diseasePhenotypeLabel": "Steppage gait",
+            "micaCurie": "HP:0003376",
+            "micaLabel": "Steppage gait",
+            "score": 4.913937909181432,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:600882"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001765",
+            "patientPhenotypeLabel": "Hammertoe",
+            "diseasePhenotypeCurie": "HP:0001765",
+            "diseasePhenotypeLabel": "Hammertoe",
+            "micaCurie": "HP:0001765",
+            "micaLabel": "Hammertoe",
+            "score": 4.913937909181432,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:600882"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009053",
+            "patientPhenotypeLabel": "Distal lower limb muscle weakness",
+            "diseasePhenotypeCurie": "HP:0009053",
+            "diseasePhenotypeLabel": "Distal lower limb muscle weakness",
+            "micaCurie": "HP:0009053",
+            "micaLabel": "Distal lower limb muscle weakness",
+            "score": 4.8674178935465395,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:600882"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002522",
+            "patientPhenotypeLabel": "Areflexia of lower limbs",
+            "diseasePhenotypeCurie": "HP:0003438",
+            "diseasePhenotypeLabel": "Absent Achilles reflex",
+            "micaCurie": "HP:0002522",
+            "micaLabel": "Areflexia of lower limbs",
+            "score": 4.602725339319457,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:600882"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003477",
+            "patientPhenotypeLabel": "Peripheral axonal neuropathy",
+            "diseasePhenotypeCurie": "HP:0003384",
+            "diseasePhenotypeLabel": "Peripheral axonal atrophy",
+            "micaCurie": "HP:0000764",
+            "micaLabel": "Peripheral axonal degeneration",
+            "score": 3.8047992075263353,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:600882"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001761",
+            "patientPhenotypeLabel": "Pes cavus",
+            "diseasePhenotypeCurie": "HP:0001761",
+            "diseasePhenotypeLabel": "Pes cavus",
+            "micaCurie": "HP:0001761",
+            "micaLabel": "Pes cavus",
+            "score": 3.4080983974117594,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:600882"
+          }
+        ]
+      },
+      {
+        "rank": 6,
+        "geneCurie": "NCBIGene:84986",
+        "geneLabel": "ARHGAP19",
+        "geneSymbol": "ARHGAP19",
+        "geneEntityId": 152656,
+        "bmaScore": 3.461632123369121,
+        "normalizedScore": 0.382202,
+        "patientAverageScore": 4.237726728323768,
+        "phenotypeAverageScore": 2.6855375184144745,
+        "directPhenotypeCount": 54,
+        "matchedPhenotypeCount": 12,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0008944",
+            "patientPhenotypeLabel": "Distal lower limb amyotrophy",
+            "diseasePhenotypeCurie": "HP:0008944",
+            "diseasePhenotypeLabel": "Distal lower limb amyotrophy",
+            "micaCurie": "HP:0008944",
+            "micaLabel": "Distal lower limb amyotrophy",
+            "score": 5.165252337462339,
+            "evidenceCode": "16/17",
+            "referenceText": "OMIM:621466"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0033748",
+            "patientPhenotypeLabel": "Hypoesthesia",
+            "diseasePhenotypeCurie": "HP:0010829",
+            "diseasePhenotypeLabel": "Impaired temperature sensation",
+            "micaCurie": "HP:0033748",
+            "micaLabel": "Hypoesthesia",
+            "score": 5.049739450340494,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:621466"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003376",
+            "patientPhenotypeLabel": "Steppage gait",
+            "diseasePhenotypeCurie": "HP:0003376",
+            "diseasePhenotypeLabel": "Steppage gait",
+            "micaCurie": "HP:0003376",
+            "micaLabel": "Steppage gait",
+            "score": 4.913937909181432,
+            "evidenceCode": "13/15",
+            "referenceText": "OMIM:621466"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001765",
+            "patientPhenotypeLabel": "Hammertoe",
+            "diseasePhenotypeCurie": "HP:0001765",
+            "diseasePhenotypeLabel": "Hammertoe",
+            "micaCurie": "HP:0001765",
+            "micaLabel": "Hammertoe",
+            "score": 4.913937909181432,
+            "evidenceCode": "2/8",
+            "referenceText": "OMIM:621466"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009053",
+            "patientPhenotypeLabel": "Distal lower limb muscle weakness",
+            "diseasePhenotypeCurie": "HP:0009053",
+            "diseasePhenotypeLabel": "Distal lower limb muscle weakness",
+            "micaCurie": "HP:0009053",
+            "micaLabel": "Distal lower limb muscle weakness",
+            "score": 4.8674178935465395,
+            "evidenceCode": "12/12",
+            "referenceText": "OMIM:621466"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009129",
+            "patientPhenotypeLabel": "Upper limb amyotrophy",
+            "diseasePhenotypeCurie": "HP:0007149",
+            "diseasePhenotypeLabel": "Distal upper limb amyotrophy",
+            "micaCurie": "HP:0009129",
+            "micaLabel": "Upper limb amyotrophy",
+            "score": 4.837564930396859,
+            "evidenceCode": "2/13",
+            "referenceText": "OMIM:621466"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003484",
+            "patientPhenotypeLabel": "Upper limb muscle weakness",
+            "diseasePhenotypeCurie": "HP:0008959",
+            "diseasePhenotypeLabel": "Distal upper limb muscle weakness",
+            "micaCurie": "HP:0003484",
+            "micaLabel": "Upper limb muscle weakness",
+            "score": 4.602725339319457,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:621466"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002522",
+            "patientPhenotypeLabel": "Areflexia of lower limbs",
+            "diseasePhenotypeCurie": "HP:0006844",
+            "diseasePhenotypeLabel": "Absent patellar reflexes",
+            "micaCurie": "HP:0002522",
+            "micaLabel": "Areflexia of lower limbs",
+            "score": 4.602725339319457,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:621466"
+          }
+        ]
+      },
+      {
+        "rank": 7,
+        "geneCurie": "NCBIGene:5376",
+        "geneLabel": "PMP22",
+        "geneSymbol": "PMP22",
+        "geneEntityId": 149795,
+        "bmaScore": 3.369267813028621,
+        "normalizedScore": 0.372004,
+        "patientAverageScore": 4.568526585023234,
+        "phenotypeAverageScore": 2.170009041034008,
+        "directPhenotypeCount": 130,
+        "matchedPhenotypeCount": 12,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0012391",
+            "patientPhenotypeLabel": "Hyporeflexia of upper limbs",
+            "diseasePhenotypeCurie": "HP:0012391",
+            "diseasePhenotypeLabel": "Hyporeflexia of upper limbs",
+            "micaCurie": "HP:0012391",
+            "micaLabel": "Hyporeflexia of upper limbs",
+            "score": 6.859848058236746,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:90658"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008944",
+            "patientPhenotypeLabel": "Distal lower limb amyotrophy",
+            "diseasePhenotypeCurie": "HP:0008944",
+            "diseasePhenotypeLabel": "Distal lower limb amyotrophy",
+            "micaCurie": "HP:0008944",
+            "micaLabel": "Distal lower limb amyotrophy",
+            "score": 5.165252337462339,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:90658"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0033748",
+            "patientPhenotypeLabel": "Hypoesthesia",
+            "diseasePhenotypeCurie": "HP:0033748",
+            "diseasePhenotypeLabel": "Hypoesthesia",
+            "micaCurie": "HP:0033748",
+            "micaLabel": "Hypoesthesia",
+            "score": 5.049739450340494,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:162500"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003376",
+            "patientPhenotypeLabel": "Steppage gait",
+            "diseasePhenotypeCurie": "HP:0003376",
+            "diseasePhenotypeLabel": "Steppage gait",
+            "micaCurie": "HP:0003376",
+            "micaLabel": "Steppage gait",
+            "score": 4.913937909181432,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:145900"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001765",
+            "patientPhenotypeLabel": "Hammertoe",
+            "diseasePhenotypeCurie": "HP:0001765",
+            "diseasePhenotypeLabel": "Hammertoe",
+            "micaCurie": "HP:0001765",
+            "micaLabel": "Hammertoe",
+            "score": 4.913937909181432,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:118220"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009053",
+            "patientPhenotypeLabel": "Distal lower limb muscle weakness",
+            "diseasePhenotypeCurie": "HP:0011727",
+            "diseasePhenotypeLabel": "Peroneal muscle weakness",
+            "micaCurie": "HP:0009053",
+            "micaLabel": "Distal lower limb muscle weakness",
+            "score": 4.8674178935465395,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:90658"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009129",
+            "patientPhenotypeLabel": "Upper limb amyotrophy",
+            "diseasePhenotypeCurie": "HP:0009130",
+            "diseasePhenotypeLabel": "Hand muscle atrophy",
+            "micaCurie": "HP:0009129",
+            "micaLabel": "Upper limb amyotrophy",
+            "score": 4.837564930396859,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:90658"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002522",
+            "patientPhenotypeLabel": "Areflexia of lower limbs",
+            "diseasePhenotypeCurie": "HP:0200101",
+            "diseasePhenotypeLabel": "Decreased/absent ankle reflexes",
+            "micaCurie": "HP:0002522",
+            "micaLabel": "Areflexia of lower limbs",
+            "score": 4.602725339319457,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:640"
+          }
+        ]
+      },
+      {
+        "rank": 8,
+        "geneCurie": "NCBIGene:50717",
+        "geneLabel": "DCAF8",
+        "geneSymbol": "DCAF8",
+        "geneEntityId": 151654,
+        "bmaScore": 3.3353814464827733,
+        "normalizedScore": 0.368263,
+        "patientAverageScore": 3.5650230373366107,
+        "phenotypeAverageScore": 3.105739855628936,
+        "directPhenotypeCount": 15,
+        "matchedPhenotypeCount": 12,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0033748",
+            "patientPhenotypeLabel": "Hypoesthesia",
+            "diseasePhenotypeCurie": "HP:0006937",
+            "diseasePhenotypeLabel": "Impaired distal tactile sensation",
+            "micaCurie": "HP:0033748",
+            "micaLabel": "Hypoesthesia",
+            "score": 5.049739450340494,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:610100"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003376",
+            "patientPhenotypeLabel": "Steppage gait",
+            "diseasePhenotypeCurie": "HP:0003376",
+            "diseasePhenotypeLabel": "Steppage gait",
+            "micaCurie": "HP:0003376",
+            "micaLabel": "Steppage gait",
+            "score": 4.913937909181432,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:610100"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001765",
+            "patientPhenotypeLabel": "Hammertoe",
+            "diseasePhenotypeCurie": "HP:0001765",
+            "diseasePhenotypeLabel": "Hammertoe",
+            "micaCurie": "HP:0001765",
+            "micaLabel": "Hammertoe",
+            "score": 4.913937909181432,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:610100"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003477",
+            "patientPhenotypeLabel": "Peripheral axonal neuropathy",
+            "diseasePhenotypeCurie": "HP:0003477",
+            "diseasePhenotypeLabel": "Peripheral axonal neuropathy",
+            "micaCurie": "HP:0003477",
+            "micaLabel": "Peripheral axonal neuropathy",
+            "score": 4.087259335996965,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:610100"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008944",
+            "patientPhenotypeLabel": "Distal lower limb amyotrophy",
+            "diseasePhenotypeCurie": "HP:0003693",
+            "diseasePhenotypeLabel": "Distal amyotrophy",
+            "micaCurie": "HP:0003693",
+            "micaLabel": "Distal amyotrophy",
+            "score": 3.6771752820325054,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:610100"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009053",
+            "patientPhenotypeLabel": "Distal lower limb muscle weakness",
+            "diseasePhenotypeCurie": "HP:0002460",
+            "diseasePhenotypeLabel": "Distal muscle weakness",
+            "micaCurie": "HP:0002460",
+            "micaLabel": "Distal muscle weakness",
+            "score": 3.6321226180915627,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:610100"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001761",
+            "patientPhenotypeLabel": "Pes cavus",
+            "diseasePhenotypeCurie": "HP:0001761",
+            "diseasePhenotypeLabel": "Pes cavus",
+            "micaCurie": "HP:0001761",
+            "micaLabel": "Pes cavus",
+            "score": 3.4080983974117594,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:610100"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002522",
+            "patientPhenotypeLabel": "Areflexia of lower limbs",
+            "diseasePhenotypeCurie": "HP:0001284",
+            "diseasePhenotypeLabel": "Areflexia",
+            "micaCurie": "HP:0001284",
+            "micaLabel": "Areflexia",
+            "score": 3.3013304219860533,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:610100"
+          }
+        ]
+      },
+      {
+        "rank": 9,
+        "geneCurie": "NCBIGene:26353",
+        "geneLabel": "HSPB8",
+        "geneSymbol": "HSPB8",
+        "geneEntityId": 151512,
+        "bmaScore": 3.270819027205518,
+        "normalizedScore": 0.361134,
+        "patientAverageScore": 4.455645886295213,
+        "phenotypeAverageScore": 2.085992168115824,
+        "directPhenotypeCount": 86,
+        "matchedPhenotypeCount": 12,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0012391",
+            "patientPhenotypeLabel": "Hyporeflexia of upper limbs",
+            "diseasePhenotypeCurie": "HP:0033202",
+            "diseasePhenotypeLabel": "Brachioradialis hyporeflexia",
+            "micaCurie": "HP:0012391",
+            "micaLabel": "Hyporeflexia of upper limbs",
+            "score": 6.859848058236746,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:621078"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001771",
+            "patientPhenotypeLabel": "Achilles tendon contracture",
+            "diseasePhenotypeCurie": "HP:0001771",
+            "diseasePhenotypeLabel": "Achilles tendon contracture",
+            "micaCurie": "HP:0001771",
+            "micaLabel": "Achilles tendon contracture",
+            "score": 5.2284312390838705,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:621078"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0033748",
+            "patientPhenotypeLabel": "Hypoesthesia",
+            "diseasePhenotypeCurie": "HP:0010830",
+            "diseasePhenotypeLabel": "Impaired tactile sensation",
+            "micaCurie": "HP:0033748",
+            "micaLabel": "Hypoesthesia",
+            "score": 5.049739450340494,
+            "evidenceCode": "0/3",
+            "referenceText": "OMIM:621078"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003376",
+            "patientPhenotypeLabel": "Steppage gait",
+            "diseasePhenotypeCurie": "HP:0003376",
+            "diseasePhenotypeLabel": "Steppage gait",
+            "micaCurie": "HP:0003376",
+            "micaLabel": "Steppage gait",
+            "score": 4.913937909181432,
+            "evidenceCode": "3/3",
+            "referenceText": "OMIM:621078"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009053",
+            "patientPhenotypeLabel": "Distal lower limb muscle weakness",
+            "diseasePhenotypeCurie": "HP:0009053",
+            "diseasePhenotypeLabel": "Distal lower limb muscle weakness",
+            "micaCurie": "HP:0009053",
+            "micaLabel": "Distal lower limb muscle weakness",
+            "score": 4.8674178935465395,
+            "evidenceCode": "9/9",
+            "referenceText": "OMIM:621078"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003484",
+            "patientPhenotypeLabel": "Upper limb muscle weakness",
+            "diseasePhenotypeCurie": "HP:0008997",
+            "diseasePhenotypeLabel": "Proximal upper limb muscle weakness",
+            "micaCurie": "HP:0003484",
+            "micaLabel": "Upper limb muscle weakness",
+            "score": 4.602725339319457,
+            "evidenceCode": "6/6",
+            "referenceText": "OMIM:621078"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002522",
+            "patientPhenotypeLabel": "Areflexia of lower limbs",
+            "diseasePhenotypeCurie": "HP:0003438",
+            "diseasePhenotypeLabel": "Absent Achilles reflex",
+            "micaCurie": "HP:0002522",
+            "micaLabel": "Areflexia of lower limbs",
+            "score": 4.602725339319457,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:621078"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003477",
+            "patientPhenotypeLabel": "Peripheral axonal neuropathy",
+            "diseasePhenotypeCurie": "HP:0003477",
+            "diseasePhenotypeLabel": "Peripheral axonal neuropathy",
+            "micaCurie": "HP:0003477",
+            "micaLabel": "Peripheral axonal neuropathy",
+            "score": 4.087259335996965,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:608673"
+          }
+        ]
+      },
+      {
+        "rank": 10,
+        "geneCurie": "NCBIGene:4747",
+        "geneLabel": "NEFL",
+        "geneSymbol": "NEFL",
+        "geneEntityId": 149580,
+        "bmaScore": 3.250479648682654,
+        "normalizedScore": 0.358889,
+        "patientAverageScore": 4.314778634223784,
+        "phenotypeAverageScore": 2.186180663141524,
+        "directPhenotypeCount": 106,
+        "matchedPhenotypeCount": 12,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0008944",
+            "patientPhenotypeLabel": "Distal lower limb amyotrophy",
+            "diseasePhenotypeCurie": "HP:0008944",
+            "diseasePhenotypeLabel": "Distal lower limb amyotrophy",
+            "micaCurie": "HP:0008944",
+            "micaLabel": "Distal lower limb amyotrophy",
+            "score": 5.165252337462339,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:101085"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003376",
+            "patientPhenotypeLabel": "Steppage gait",
+            "diseasePhenotypeCurie": "HP:0003376",
+            "diseasePhenotypeLabel": "Steppage gait",
+            "micaCurie": "HP:0003376",
+            "micaLabel": "Steppage gait",
+            "score": 4.913937909181432,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:101085"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001765",
+            "patientPhenotypeLabel": "Hammertoe",
+            "diseasePhenotypeCurie": "HP:0001765",
+            "diseasePhenotypeLabel": "Hammertoe",
+            "micaCurie": "HP:0001765",
+            "micaLabel": "Hammertoe",
+            "score": 4.913937909181432,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:607684"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009053",
+            "patientPhenotypeLabel": "Distal lower limb muscle weakness",
+            "diseasePhenotypeCurie": "HP:0009053",
+            "diseasePhenotypeLabel": "Distal lower limb muscle weakness",
+            "micaCurie": "HP:0009053",
+            "micaLabel": "Distal lower limb muscle weakness",
+            "score": 4.8674178935465395,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:607684"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009129",
+            "patientPhenotypeLabel": "Upper limb amyotrophy",
+            "diseasePhenotypeCurie": "HP:0009130",
+            "diseasePhenotypeLabel": "Hand muscle atrophy",
+            "micaCurie": "HP:0009129",
+            "micaLabel": "Upper limb amyotrophy",
+            "score": 4.837564930396859,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:101085"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003484",
+            "patientPhenotypeLabel": "Upper limb muscle weakness",
+            "diseasePhenotypeCurie": "HP:0008997",
+            "diseasePhenotypeLabel": "Proximal upper limb muscle weakness",
+            "micaCurie": "HP:0003484",
+            "micaLabel": "Upper limb muscle weakness",
+            "score": 4.602725339319457,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:101085"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002522",
+            "patientPhenotypeLabel": "Areflexia of lower limbs",
+            "diseasePhenotypeCurie": "HP:0200101",
+            "diseasePhenotypeLabel": "Decreased/absent ankle reflexes",
+            "micaCurie": "HP:0002522",
+            "micaLabel": "Areflexia of lower limbs",
+            "score": 4.602725339319457,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:99939"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003477",
+            "patientPhenotypeLabel": "Peripheral axonal neuropathy",
+            "diseasePhenotypeCurie": "HP:0003477",
+            "diseasePhenotypeLabel": "Peripheral axonal neuropathy",
+            "micaCurie": "HP:0003477",
+            "micaLabel": "Peripheral axonal neuropathy",
+            "score": 4.087259335996965,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:99939"
+          }
+        ]
+      },
+      {
+        "rank": 11,
+        "geneCurie": "NCBIGene:6709",
+        "geneLabel": "SPTAN1",
+        "geneSymbol": "SPTAN1",
+        "geneEntityId": 150181,
+        "bmaScore": 3.2479813838702203,
+        "normalizedScore": 0.358613,
+        "patientAverageScore": 4.878078178289779,
+        "phenotypeAverageScore": 1.6178845894506622,
+        "directPhenotypeCount": 104,
+        "matchedPhenotypeCount": 12,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0012391",
+            "patientPhenotypeLabel": "Hyporeflexia of upper limbs",
+            "diseasePhenotypeCurie": "HP:0012391",
+            "diseasePhenotypeLabel": "Hyporeflexia of upper limbs",
+            "micaCurie": "HP:0012391",
+            "micaLabel": "Hyporeflexia of upper limbs",
+            "score": 6.859848058236746,
+            "evidenceCode": "3/12",
+            "referenceText": "OMIM:620528"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001771",
+            "patientPhenotypeLabel": "Achilles tendon contracture",
+            "diseasePhenotypeCurie": "HP:0001771",
+            "diseasePhenotypeLabel": "Achilles tendon contracture",
+            "micaCurie": "HP:0001771",
+            "micaLabel": "Achilles tendon contracture",
+            "score": 5.2284312390838705,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:620528"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008944",
+            "patientPhenotypeLabel": "Distal lower limb amyotrophy",
+            "diseasePhenotypeCurie": "HP:0008944",
+            "diseasePhenotypeLabel": "Distal lower limb amyotrophy",
+            "micaCurie": "HP:0008944",
+            "micaLabel": "Distal lower limb amyotrophy",
+            "score": 5.165252337462339,
+            "evidenceCode": "8/8",
+            "referenceText": "OMIM:620528"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0033748",
+            "patientPhenotypeLabel": "Hypoesthesia",
+            "diseasePhenotypeCurie": "HP:0033748",
+            "diseasePhenotypeLabel": "Hypoesthesia",
+            "micaCurie": "HP:0033748",
+            "micaLabel": "Hypoesthesia",
+            "score": 5.049739450340494,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:620528"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003376",
+            "patientPhenotypeLabel": "Steppage gait",
+            "diseasePhenotypeCurie": "HP:0003376",
+            "diseasePhenotypeLabel": "Steppage gait",
+            "micaCurie": "HP:0003376",
+            "micaLabel": "Steppage gait",
+            "score": 4.913937909181432,
+            "evidenceCode": "5/5",
+            "referenceText": "OMIM:620528"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001765",
+            "patientPhenotypeLabel": "Hammertoe",
+            "diseasePhenotypeCurie": "HP:0001765",
+            "diseasePhenotypeLabel": "Hammertoe",
+            "micaCurie": "HP:0001765",
+            "micaLabel": "Hammertoe",
+            "score": 4.913937909181432,
+            "evidenceCode": "5/5",
+            "referenceText": "OMIM:620528"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009053",
+            "patientPhenotypeLabel": "Distal lower limb muscle weakness",
+            "diseasePhenotypeCurie": "HP:0009053",
+            "diseasePhenotypeLabel": "Distal lower limb muscle weakness",
+            "micaCurie": "HP:0009053",
+            "micaLabel": "Distal lower limb muscle weakness",
+            "score": 4.8674178935465395,
+            "evidenceCode": "11/11",
+            "referenceText": "OMIM:620528"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009129",
+            "patientPhenotypeLabel": "Upper limb amyotrophy",
+            "diseasePhenotypeCurie": "HP:0009129",
+            "diseasePhenotypeLabel": "Upper limb amyotrophy",
+            "micaCurie": "HP:0009129",
+            "micaLabel": "Upper limb amyotrophy",
+            "score": 4.837564930396859,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:620528"
+          }
+        ]
+      },
+      {
+        "rank": 12,
+        "geneCurie": "NCBIGene:10397",
+        "geneLabel": "NDRG1",
+        "geneSymbol": "NDRG1",
+        "geneEntityId": 151028,
+        "bmaScore": 3.20422058723171,
+        "normalizedScore": 0.353781,
+        "patientAverageScore": 4.001278437866339,
+        "phenotypeAverageScore": 2.4071627365970816,
+        "directPhenotypeCount": 44,
+        "matchedPhenotypeCount": 12,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0033748",
+            "patientPhenotypeLabel": "Hypoesthesia",
+            "diseasePhenotypeCurie": "HP:0006937",
+            "diseasePhenotypeLabel": "Impaired distal tactile sensation",
+            "micaCurie": "HP:0033748",
+            "micaLabel": "Hypoesthesia",
+            "score": 5.049739450340494,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:601455"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001765",
+            "patientPhenotypeLabel": "Hammertoe",
+            "diseasePhenotypeCurie": "HP:0001765",
+            "diseasePhenotypeLabel": "Hammertoe",
+            "micaCurie": "HP:0001765",
+            "micaLabel": "Hammertoe",
+            "score": 4.913937909181432,
+            "evidenceCode": "2/3",
+            "referenceText": "OMIM:601455"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009053",
+            "patientPhenotypeLabel": "Distal lower limb muscle weakness",
+            "diseasePhenotypeCurie": "HP:0009053",
+            "diseasePhenotypeLabel": "Distal lower limb muscle weakness",
+            "micaCurie": "HP:0009053",
+            "micaLabel": "Distal lower limb muscle weakness",
+            "score": 4.8674178935465395,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:99950"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009129",
+            "patientPhenotypeLabel": "Upper limb amyotrophy",
+            "diseasePhenotypeCurie": "HP:0009129",
+            "diseasePhenotypeLabel": "Upper limb amyotrophy",
+            "micaCurie": "HP:0009129",
+            "micaLabel": "Upper limb amyotrophy",
+            "score": 4.837564930396859,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:99950"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008944",
+            "patientPhenotypeLabel": "Distal lower limb amyotrophy",
+            "diseasePhenotypeCurie": "HP:0007210",
+            "diseasePhenotypeLabel": "Lower limb amyotrophy",
+            "micaCurie": "HP:0007210",
+            "micaLabel": "Lower limb amyotrophy",
+            "score": 4.808577393523606,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:99950"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003484",
+            "patientPhenotypeLabel": "Upper limb muscle weakness",
+            "diseasePhenotypeCurie": "HP:0008959",
+            "diseasePhenotypeLabel": "Distal upper limb muscle weakness",
+            "micaCurie": "HP:0003484",
+            "micaLabel": "Upper limb muscle weakness",
+            "score": 4.602725339319457,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:99950"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003477",
+            "patientPhenotypeLabel": "Peripheral axonal neuropathy",
+            "diseasePhenotypeCurie": "HP:0003447",
+            "diseasePhenotypeLabel": "Axonal loss",
+            "micaCurie": "HP:0000764",
+            "micaLabel": "Peripheral axonal degeneration",
+            "score": 3.8047992075263353,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:601455"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001761",
+            "patientPhenotypeLabel": "Pes cavus",
+            "diseasePhenotypeCurie": "HP:0001761",
+            "diseasePhenotypeLabel": "Pes cavus",
+            "micaCurie": "HP:0001761",
+            "micaLabel": "Pes cavus",
+            "score": 3.4080983974117594,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:601455"
+          }
+        ]
+      },
+      {
+        "rank": 13,
+        "geneCurie": "NCBIGene:8988",
+        "geneLabel": "HSPB3",
+        "geneSymbol": "HSPB3",
+        "geneEntityId": 150696,
+        "bmaScore": 3.199429059206402,
+        "normalizedScore": 0.353252,
+        "patientAverageScore": 3.3074741481722874,
+        "phenotypeAverageScore": 3.091383970240517,
+        "directPhenotypeCount": 16,
+        "matchedPhenotypeCount": 12,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0008944",
+            "patientPhenotypeLabel": "Distal lower limb amyotrophy",
+            "diseasePhenotypeCurie": "HP:0008944",
+            "diseasePhenotypeLabel": "Distal lower limb amyotrophy",
+            "micaCurie": "HP:0008944",
+            "micaLabel": "Distal lower limb amyotrophy",
+            "score": 5.165252337462339,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:613376"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003376",
+            "patientPhenotypeLabel": "Steppage gait",
+            "diseasePhenotypeCurie": "HP:0003376",
+            "diseasePhenotypeLabel": "Steppage gait",
+            "micaCurie": "HP:0003376",
+            "micaLabel": "Steppage gait",
+            "score": 4.913937909181432,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:613376"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009053",
+            "patientPhenotypeLabel": "Distal lower limb muscle weakness",
+            "diseasePhenotypeCurie": "HP:0009053",
+            "diseasePhenotypeLabel": "Distal lower limb muscle weakness",
+            "micaCurie": "HP:0009053",
+            "micaLabel": "Distal lower limb muscle weakness",
+            "score": 4.8674178935465395,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:613376"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009129",
+            "patientPhenotypeLabel": "Upper limb amyotrophy",
+            "diseasePhenotypeCurie": "HP:0008954",
+            "diseasePhenotypeLabel": "Intrinsic hand muscle atrophy",
+            "micaCurie": "HP:0009129",
+            "micaLabel": "Upper limb amyotrophy",
+            "score": 4.837564930396859,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:613376"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003484",
+            "patientPhenotypeLabel": "Upper limb muscle weakness",
+            "diseasePhenotypeCurie": "HP:0008959",
+            "diseasePhenotypeLabel": "Distal upper limb muscle weakness",
+            "micaCurie": "HP:0003484",
+            "micaLabel": "Upper limb muscle weakness",
+            "score": 4.602725339319457,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:613376"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002522",
+            "patientPhenotypeLabel": "Areflexia of lower limbs",
+            "diseasePhenotypeCurie": "HP:0006844",
+            "diseasePhenotypeLabel": "Absent patellar reflexes",
+            "micaCurie": "HP:0002522",
+            "micaLabel": "Areflexia of lower limbs",
+            "score": 4.602725339319457,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:613376"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003477",
+            "patientPhenotypeLabel": "Peripheral axonal neuropathy",
+            "diseasePhenotypeCurie": "HP:0009830",
+            "diseasePhenotypeLabel": "Peripheral neuropathy",
+            "micaCurie": "HP:0009830",
+            "micaLabel": "Peripheral neuropathy",
+            "score": 3.0336250426119324,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:613376"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0012391",
+            "patientPhenotypeLabel": "Hyporeflexia of upper limbs",
+            "diseasePhenotypeCurie": "HP:0006844",
+            "diseasePhenotypeLabel": "Absent patellar reflexes",
+            "micaCurie": "HP:0001315",
+            "micaLabel": "Reduced tendon reflexes",
+            "score": 2.7841956290267977,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:613376"
+          }
+        ]
+      },
+      {
+        "rank": 14,
+        "geneCurie": "NCBIGene:5375",
+        "geneLabel": "PMP2",
+        "geneSymbol": "PMP2",
+        "geneEntityId": 149794,
+        "bmaScore": 3.1980444546335915,
+        "normalizedScore": 0.353099,
+        "patientAverageScore": 3.6814515336287994,
+        "phenotypeAverageScore": 2.7146373756383837,
+        "directPhenotypeCount": 23,
+        "matchedPhenotypeCount": 12,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0003376",
+            "patientPhenotypeLabel": "Steppage gait",
+            "diseasePhenotypeCurie": "HP:0003376",
+            "diseasePhenotypeLabel": "Steppage gait",
+            "micaCurie": "HP:0003376",
+            "micaLabel": "Steppage gait",
+            "score": 4.913937909181432,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:618279"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001765",
+            "patientPhenotypeLabel": "Hammertoe",
+            "diseasePhenotypeCurie": "HP:0001765",
+            "diseasePhenotypeLabel": "Hammertoe",
+            "micaCurie": "HP:0001765",
+            "micaLabel": "Hammertoe",
+            "score": 4.913937909181432,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:618279"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009053",
+            "patientPhenotypeLabel": "Distal lower limb muscle weakness",
+            "diseasePhenotypeCurie": "HP:0009053",
+            "diseasePhenotypeLabel": "Distal lower limb muscle weakness",
+            "micaCurie": "HP:0009053",
+            "micaLabel": "Distal lower limb muscle weakness",
+            "score": 4.8674178935465395,
+            "evidenceCode": "3/3",
+            "referenceText": "OMIM:618279"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002522",
+            "patientPhenotypeLabel": "Areflexia of lower limbs",
+            "diseasePhenotypeCurie": "HP:0006844",
+            "diseasePhenotypeLabel": "Absent patellar reflexes",
+            "micaCurie": "HP:0002522",
+            "micaLabel": "Areflexia of lower limbs",
+            "score": 4.602725339319457,
+            "evidenceCode": "2/3",
+            "referenceText": "OMIM:618279"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0033748",
+            "patientPhenotypeLabel": "Hypoesthesia",
+            "diseasePhenotypeCurie": "HP:0007328",
+            "diseasePhenotypeLabel": "Impaired pain sensation",
+            "micaCurie": "HP:0033747",
+            "micaLabel": "Abnormal exteroceptive sensation",
+            "score": 4.046437341476709,
+            "evidenceCode": "3/3",
+            "referenceText": "OMIM:618279"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008944",
+            "patientPhenotypeLabel": "Distal lower limb amyotrophy",
+            "diseasePhenotypeCurie": "HP:0003693",
+            "diseasePhenotypeLabel": "Distal amyotrophy",
+            "micaCurie": "HP:0003693",
+            "micaLabel": "Distal amyotrophy",
+            "score": 3.6771752820325054,
+            "evidenceCode": "4/4",
+            "referenceText": "OMIM:618279"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001761",
+            "patientPhenotypeLabel": "Pes cavus",
+            "diseasePhenotypeCurie": "HP:0001761",
+            "diseasePhenotypeLabel": "Pes cavus",
+            "micaCurie": "HP:0001761",
+            "micaLabel": "Pes cavus",
+            "score": 3.4080983974117594,
+            "evidenceCode": "4/4",
+            "referenceText": "OMIM:618279"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003484",
+            "patientPhenotypeLabel": "Upper limb muscle weakness",
+            "diseasePhenotypeCurie": "HP:0009053",
+            "diseasePhenotypeLabel": "Distal lower limb muscle weakness",
+            "micaCurie": "HP:0003690",
+            "micaLabel": "Limb muscle weakness",
+            "score": 3.343339830063596,
+            "evidenceCode": "3/3",
+            "referenceText": "OMIM:618279"
+          }
+        ]
+      },
+      {
+        "rank": 15,
+        "geneCurie": "NCBIGene:121512",
+        "geneLabel": "FGD4",
+        "geneSymbol": "FGD4",
+        "geneEntityId": 152819,
+        "bmaScore": 3.171718071171463,
+        "normalizedScore": 0.350192,
+        "patientAverageScore": 3.492336395103893,
+        "phenotypeAverageScore": 2.8510997472390334,
+        "directPhenotypeCount": 21,
+        "matchedPhenotypeCount": 12,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0008944",
+            "patientPhenotypeLabel": "Distal lower limb amyotrophy",
+            "diseasePhenotypeCurie": "HP:0008944",
+            "diseasePhenotypeLabel": "Distal lower limb amyotrophy",
+            "micaCurie": "HP:0008944",
+            "micaLabel": "Distal lower limb amyotrophy",
+            "score": 5.165252337462339,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:609311"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0033748",
+            "patientPhenotypeLabel": "Hypoesthesia",
+            "diseasePhenotypeCurie": "HP:0033748",
+            "diseasePhenotypeLabel": "Hypoesthesia",
+            "micaCurie": "HP:0033748",
+            "micaLabel": "Hypoesthesia",
+            "score": 5.049739450340494,
+            "evidenceCode": "6/6",
+            "referenceText": "OMIM:609311"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009053",
+            "patientPhenotypeLabel": "Distal lower limb muscle weakness",
+            "diseasePhenotypeCurie": "HP:0009053",
+            "diseasePhenotypeLabel": "Distal lower limb muscle weakness",
+            "micaCurie": "HP:0009053",
+            "micaLabel": "Distal lower limb muscle weakness",
+            "score": 4.8674178935465395,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:609311"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003484",
+            "patientPhenotypeLabel": "Upper limb muscle weakness",
+            "diseasePhenotypeCurie": "HP:0003484",
+            "diseasePhenotypeLabel": "Upper limb muscle weakness",
+            "micaCurie": "HP:0003484",
+            "micaLabel": "Upper limb muscle weakness",
+            "score": 4.602725339319457,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:609311"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009129",
+            "patientPhenotypeLabel": "Upper limb amyotrophy",
+            "diseasePhenotypeCurie": "HP:0010487",
+            "diseasePhenotypeLabel": "Small hypothenar eminence",
+            "micaCurie": "HP:0001446",
+            "micaLabel": "Abnormality of the musculature of the upper limbs",
+            "score": 3.6771752820325054,
+            "evidenceCode": "2/6",
+            "referenceText": "OMIM:609311"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001761",
+            "patientPhenotypeLabel": "Pes cavus",
+            "diseasePhenotypeCurie": "HP:0001761",
+            "diseasePhenotypeLabel": "Pes cavus",
+            "micaCurie": "HP:0001761",
+            "micaLabel": "Pes cavus",
+            "score": 3.4080983974117594,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:609311"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002522",
+            "patientPhenotypeLabel": "Areflexia of lower limbs",
+            "diseasePhenotypeCurie": "HP:0001284",
+            "diseasePhenotypeLabel": "Areflexia",
+            "micaCurie": "HP:0001284",
+            "micaLabel": "Areflexia",
+            "score": 3.3013304219860533,
+            "evidenceCode": "6/6",
+            "referenceText": "OMIM:609311"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0012391",
+            "patientPhenotypeLabel": "Hyporeflexia of upper limbs",
+            "diseasePhenotypeCurie": "HP:0001265",
+            "diseasePhenotypeLabel": "Hyporeflexia",
+            "micaCurie": "HP:0001265",
+            "micaLabel": "Hyporeflexia",
+            "score": 3.2763291197806357,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:609311"
+          }
+        ]
+      },
+      {
+        "rank": 16,
+        "geneCurie": "NCBIGene:64856",
+        "geneLabel": "VWA1",
+        "geneSymbol": "VWA1",
+        "geneEntityId": 152302,
+        "bmaScore": 3.135156357510138,
+        "normalizedScore": 0.346156,
+        "patientAverageScore": 3.4964909422305204,
+        "phenotypeAverageScore": 2.773821772789756,
+        "directPhenotypeCount": 21,
+        "matchedPhenotypeCount": 12,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0033748",
+            "patientPhenotypeLabel": "Hypoesthesia",
+            "diseasePhenotypeCurie": "HP:0010830",
+            "diseasePhenotypeLabel": "Impaired tactile sensation",
+            "micaCurie": "HP:0033748",
+            "micaLabel": "Hypoesthesia",
+            "score": 5.049739450340494,
+            "evidenceCode": "3/15",
+            "referenceText": "OMIM:619216"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009053",
+            "patientPhenotypeLabel": "Distal lower limb muscle weakness",
+            "diseasePhenotypeCurie": "HP:0009053",
+            "diseasePhenotypeLabel": "Distal lower limb muscle weakness",
+            "micaCurie": "HP:0009053",
+            "micaLabel": "Distal lower limb muscle weakness",
+            "score": 4.8674178935465395,
+            "evidenceCode": "15/16",
+            "referenceText": "OMIM:619216"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008944",
+            "patientPhenotypeLabel": "Distal lower limb amyotrophy",
+            "diseasePhenotypeCurie": "HP:0007210",
+            "diseasePhenotypeLabel": "Lower limb amyotrophy",
+            "micaCurie": "HP:0007210",
+            "micaLabel": "Lower limb amyotrophy",
+            "score": 4.808577393523606,
+            "evidenceCode": "10/17",
+            "referenceText": "OMIM:619216"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003484",
+            "patientPhenotypeLabel": "Upper limb muscle weakness",
+            "diseasePhenotypeCurie": "HP:0008997",
+            "diseasePhenotypeLabel": "Proximal upper limb muscle weakness",
+            "micaCurie": "HP:0003484",
+            "micaLabel": "Upper limb muscle weakness",
+            "score": 4.602725339319457,
+            "evidenceCode": "10/17",
+            "referenceText": "OMIM:619216"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003477",
+            "patientPhenotypeLabel": "Peripheral axonal neuropathy",
+            "diseasePhenotypeCurie": "HP:0007002",
+            "diseasePhenotypeLabel": "Motor axonal neuropathy",
+            "micaCurie": "HP:0003477",
+            "micaLabel": "Peripheral axonal neuropathy",
+            "score": 4.087259335996965,
+            "evidenceCode": "15/15",
+            "referenceText": "OMIM:619216"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009129",
+            "patientPhenotypeLabel": "Upper limb amyotrophy",
+            "diseasePhenotypeCurie": "HP:0008997",
+            "diseasePhenotypeLabel": "Proximal upper limb muscle weakness",
+            "micaCurie": "HP:0001446",
+            "micaLabel": "Abnormality of the musculature of the upper limbs",
+            "score": 3.6771752820325054,
+            "evidenceCode": "10/17",
+            "referenceText": "OMIM:619216"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001761",
+            "patientPhenotypeLabel": "Pes cavus",
+            "diseasePhenotypeCurie": "HP:0001761",
+            "diseasePhenotypeLabel": "Pes cavus",
+            "micaCurie": "HP:0001761",
+            "micaLabel": "Pes cavus",
+            "score": 3.4080983974117594,
+            "evidenceCode": "11/17",
+            "referenceText": "OMIM:619216"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0012391",
+            "patientPhenotypeLabel": "Hyporeflexia of upper limbs",
+            "diseasePhenotypeCurie": "HP:0001265",
+            "diseasePhenotypeLabel": "Hyporeflexia",
+            "micaCurie": "HP:0001265",
+            "micaLabel": "Hyporeflexia",
+            "score": 3.2763291197806357,
+            "evidenceCode": "8/16",
+            "referenceText": "OMIM:619216"
+          }
+        ]
+      },
+      {
+        "rank": 17,
+        "geneCurie": "NCBIGene:3094",
+        "geneLabel": "HINT1",
+        "geneSymbol": "HINT1",
+        "geneEntityId": 149074,
+        "bmaScore": 3.12344247676165,
+        "normalizedScore": 0.344862,
+        "patientAverageScore": 4.075426296108755,
+        "phenotypeAverageScore": 2.1714586574145454,
+        "directPhenotypeCount": 57,
+        "matchedPhenotypeCount": 12,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001771",
+            "patientPhenotypeLabel": "Achilles tendon contracture",
+            "diseasePhenotypeCurie": "HP:0001771",
+            "diseasePhenotypeLabel": "Achilles tendon contracture",
+            "micaCurie": "HP:0001771",
+            "micaLabel": "Achilles tendon contracture",
+            "score": 5.2284312390838705,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:324442"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008944",
+            "patientPhenotypeLabel": "Distal lower limb amyotrophy",
+            "diseasePhenotypeCurie": "HP:0008944",
+            "diseasePhenotypeLabel": "Distal lower limb amyotrophy",
+            "micaCurie": "HP:0008944",
+            "micaLabel": "Distal lower limb amyotrophy",
+            "score": 5.165252337462339,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:324442"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003376",
+            "patientPhenotypeLabel": "Steppage gait",
+            "diseasePhenotypeCurie": "HP:0003376",
+            "diseasePhenotypeLabel": "Steppage gait",
+            "micaCurie": "HP:0003376",
+            "micaLabel": "Steppage gait",
+            "score": 4.913937909181432,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:324442"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009053",
+            "patientPhenotypeLabel": "Distal lower limb muscle weakness",
+            "diseasePhenotypeCurie": "HP:0009053",
+            "diseasePhenotypeLabel": "Distal lower limb muscle weakness",
+            "micaCurie": "HP:0009053",
+            "micaLabel": "Distal lower limb muscle weakness",
+            "score": 4.8674178935465395,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:324442"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009129",
+            "patientPhenotypeLabel": "Upper limb amyotrophy",
+            "diseasePhenotypeCurie": "HP:0009130",
+            "diseasePhenotypeLabel": "Hand muscle atrophy",
+            "micaCurie": "HP:0009129",
+            "micaLabel": "Upper limb amyotrophy",
+            "score": 4.837564930396859,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:324442"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002522",
+            "patientPhenotypeLabel": "Areflexia of lower limbs",
+            "diseasePhenotypeCurie": "HP:0003438",
+            "diseasePhenotypeLabel": "Absent Achilles reflex",
+            "micaCurie": "HP:0002522",
+            "micaLabel": "Areflexia of lower limbs",
+            "score": 4.602725339319457,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:324442"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003477",
+            "patientPhenotypeLabel": "Peripheral axonal neuropathy",
+            "diseasePhenotypeCurie": "HP:0007002",
+            "diseasePhenotypeLabel": "Motor axonal neuropathy",
+            "micaCurie": "HP:0003477",
+            "micaLabel": "Peripheral axonal neuropathy",
+            "score": 4.087259335996965,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:324442"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0033748",
+            "patientPhenotypeLabel": "Hypoesthesia",
+            "diseasePhenotypeCurie": "HP:0003401",
+            "diseasePhenotypeLabel": "Paresthesia",
+            "micaCurie": "HP:0033747",
+            "micaLabel": "Abnormal exteroceptive sensation",
+            "score": 4.046437341476709,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:324442"
+          }
+        ]
+      },
+      {
+        "rank": 18,
+        "geneCurie": "NCBIGene:9927",
+        "geneLabel": "MFN2",
+        "geneSymbol": "MFN2",
+        "geneEntityId": 150910,
+        "bmaScore": 3.1199489532840814,
+        "normalizedScore": 0.344477,
+        "patientAverageScore": 4.340418862486987,
+        "phenotypeAverageScore": 1.8994790440811753,
+        "directPhenotypeCount": 111,
+        "matchedPhenotypeCount": 12,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0008944",
+            "patientPhenotypeLabel": "Distal lower limb amyotrophy",
+            "diseasePhenotypeCurie": "HP:0008944",
+            "diseasePhenotypeLabel": "Distal lower limb amyotrophy",
+            "micaCurie": "HP:0008944",
+            "micaLabel": "Distal lower limb amyotrophy",
+            "score": 5.165252337462339,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:99947"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0033748",
+            "patientPhenotypeLabel": "Hypoesthesia",
+            "diseasePhenotypeCurie": "HP:0010829",
+            "diseasePhenotypeLabel": "Impaired temperature sensation",
+            "micaCurie": "HP:0033748",
+            "micaLabel": "Hypoesthesia",
+            "score": 5.049739450340494,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:99947"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003376",
+            "patientPhenotypeLabel": "Steppage gait",
+            "diseasePhenotypeCurie": "HP:0003376",
+            "diseasePhenotypeLabel": "Steppage gait",
+            "micaCurie": "HP:0003376",
+            "micaLabel": "Steppage gait",
+            "score": 4.913937909181432,
+            "evidenceCode": "1/10",
+            "referenceText": "OMIM:601152"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001765",
+            "patientPhenotypeLabel": "Hammertoe",
+            "diseasePhenotypeCurie": "HP:0001765",
+            "diseasePhenotypeLabel": "Hammertoe",
+            "micaCurie": "HP:0001765",
+            "micaLabel": "Hammertoe",
+            "score": 4.913937909181432,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:609260"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009053",
+            "patientPhenotypeLabel": "Distal lower limb muscle weakness",
+            "diseasePhenotypeCurie": "HP:0009053",
+            "diseasePhenotypeLabel": "Distal lower limb muscle weakness",
+            "micaCurie": "HP:0009053",
+            "micaLabel": "Distal lower limb muscle weakness",
+            "score": 4.8674178935465395,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:99947"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009129",
+            "patientPhenotypeLabel": "Upper limb amyotrophy",
+            "diseasePhenotypeCurie": "HP:0009129",
+            "diseasePhenotypeLabel": "Upper limb amyotrophy",
+            "micaCurie": "HP:0009129",
+            "micaLabel": "Upper limb amyotrophy",
+            "score": 4.837564930396859,
+            "evidenceCode": "3/3",
+            "referenceText": "OMIM:617087"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003484",
+            "patientPhenotypeLabel": "Upper limb muscle weakness",
+            "diseasePhenotypeCurie": "HP:0031108",
+            "diseasePhenotypeLabel": "Triceps weakness",
+            "micaCurie": "HP:0003484",
+            "micaLabel": "Upper limb muscle weakness",
+            "score": 4.602725339319457,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:99947"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002522",
+            "patientPhenotypeLabel": "Areflexia of lower limbs",
+            "diseasePhenotypeCurie": "HP:0006844",
+            "diseasePhenotypeLabel": "Absent patellar reflexes",
+            "micaCurie": "HP:0002522",
+            "micaLabel": "Areflexia of lower limbs",
+            "score": 4.602725339319457,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:99947"
+          }
+        ]
+      },
+      {
+        "rank": 19,
+        "geneCurie": "NCBIGene:22880",
+        "geneLabel": "MORC2",
+        "geneSymbol": "MORC2",
+        "geneEntityId": 151237,
+        "bmaScore": 3.1113225417820676,
+        "normalizedScore": 0.343524,
+        "patientAverageScore": 4.1629892703449025,
+        "phenotypeAverageScore": 2.059655813219233,
+        "directPhenotypeCount": 108,
+        "matchedPhenotypeCount": 12,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0008944",
+            "patientPhenotypeLabel": "Distal lower limb amyotrophy",
+            "diseasePhenotypeCurie": "HP:0008944",
+            "diseasePhenotypeLabel": "Distal lower limb amyotrophy",
+            "micaCurie": "HP:0008944",
+            "micaLabel": "Distal lower limb amyotrophy",
+            "score": 5.165252337462339,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:466768"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0033748",
+            "patientPhenotypeLabel": "Hypoesthesia",
+            "diseasePhenotypeCurie": "HP:0010830",
+            "diseasePhenotypeLabel": "Impaired tactile sensation",
+            "micaCurie": "HP:0033748",
+            "micaLabel": "Hypoesthesia",
+            "score": 5.049739450340494,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:466768"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001765",
+            "patientPhenotypeLabel": "Hammertoe",
+            "diseasePhenotypeCurie": "HP:0001765",
+            "diseasePhenotypeLabel": "Hammertoe",
+            "micaCurie": "HP:0001765",
+            "micaLabel": "Hammertoe",
+            "score": 4.913937909181432,
+            "evidenceCode": "1/25",
+            "referenceText": "OMIM:619090"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009053",
+            "patientPhenotypeLabel": "Distal lower limb muscle weakness",
+            "diseasePhenotypeCurie": "HP:0009053",
+            "diseasePhenotypeLabel": "Distal lower limb muscle weakness",
+            "micaCurie": "HP:0009053",
+            "micaLabel": "Distal lower limb muscle weakness",
+            "score": 4.8674178935465395,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:466768"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009129",
+            "patientPhenotypeLabel": "Upper limb amyotrophy",
+            "diseasePhenotypeCurie": "HP:0009129",
+            "diseasePhenotypeLabel": "Upper limb amyotrophy",
+            "micaCurie": "HP:0009129",
+            "micaLabel": "Upper limb amyotrophy",
+            "score": 4.837564930396859,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:466768"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003484",
+            "patientPhenotypeLabel": "Upper limb muscle weakness",
+            "diseasePhenotypeCurie": "HP:0031189",
+            "diseasePhenotypeLabel": "Wrist drop",
+            "micaCurie": "HP:0003484",
+            "micaLabel": "Upper limb muscle weakness",
+            "score": 4.602725339319457,
+            "evidenceCode": "1/4",
+            "referenceText": "OMIM:616688"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002522",
+            "patientPhenotypeLabel": "Areflexia of lower limbs",
+            "diseasePhenotypeCurie": "HP:0003438",
+            "diseasePhenotypeLabel": "Absent Achilles reflex",
+            "micaCurie": "HP:0002522",
+            "micaLabel": "Areflexia of lower limbs",
+            "score": 4.602725339319457,
+            "evidenceCode": "1/4",
+            "referenceText": "OMIM:616688"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003477",
+            "patientPhenotypeLabel": "Peripheral axonal neuropathy",
+            "diseasePhenotypeCurie": "HP:0007002",
+            "diseasePhenotypeLabel": "Motor axonal neuropathy",
+            "micaCurie": "HP:0003477",
+            "micaLabel": "Peripheral axonal neuropathy",
+            "score": 4.087259335996965,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:466768"
+          }
+        ]
+      },
+      {
+        "rank": 20,
+        "geneCurie": "NCBIGene:90678",
+        "geneLabel": "LRSAM1",
+        "geneSymbol": "LRSAM1",
+        "geneEntityId": 152704,
+        "bmaScore": 3.105935579400911,
+        "normalizedScore": 0.342929,
+        "patientAverageScore": 3.4854649552596126,
+        "phenotypeAverageScore": 2.7264062035422096,
+        "directPhenotypeCount": 20,
+        "matchedPhenotypeCount": 12,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0003376",
+            "patientPhenotypeLabel": "Steppage gait",
+            "diseasePhenotypeCurie": "HP:0003376",
+            "diseasePhenotypeLabel": "Steppage gait",
+            "micaCurie": "HP:0003376",
+            "micaLabel": "Steppage gait",
+            "score": 4.913937909181432,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:614436"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001765",
+            "patientPhenotypeLabel": "Hammertoe",
+            "diseasePhenotypeCurie": "HP:0001765",
+            "diseasePhenotypeLabel": "Hammertoe",
+            "micaCurie": "HP:0001765",
+            "micaLabel": "Hammertoe",
+            "score": 4.913937909181432,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "OMIM:614436"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003477",
+            "patientPhenotypeLabel": "Peripheral axonal neuropathy",
+            "diseasePhenotypeCurie": "HP:0040078",
+            "diseasePhenotypeLabel": "Axonal degeneration",
+            "micaCurie": "HP:0000764",
+            "micaLabel": "Peripheral axonal degeneration",
+            "score": 3.8047992075263353,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:614436"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008944",
+            "patientPhenotypeLabel": "Distal lower limb amyotrophy",
+            "diseasePhenotypeCurie": "HP:0003693",
+            "diseasePhenotypeLabel": "Distal amyotrophy",
+            "micaCurie": "HP:0003693",
+            "micaLabel": "Distal amyotrophy",
+            "score": 3.6771752820325054,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:614436"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009053",
+            "patientPhenotypeLabel": "Distal lower limb muscle weakness",
+            "diseasePhenotypeCurie": "HP:0002460",
+            "diseasePhenotypeLabel": "Distal muscle weakness",
+            "micaCurie": "HP:0002460",
+            "micaLabel": "Distal muscle weakness",
+            "score": 3.6321226180915627,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:614436"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001761",
+            "patientPhenotypeLabel": "Pes cavus",
+            "diseasePhenotypeCurie": "HP:0001761",
+            "diseasePhenotypeLabel": "Pes cavus",
+            "micaCurie": "HP:0001761",
+            "micaLabel": "Pes cavus",
+            "score": 3.4080983974117594,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:614436"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003484",
+            "patientPhenotypeLabel": "Upper limb muscle weakness",
+            "diseasePhenotypeCurie": "HP:0009027",
+            "diseasePhenotypeLabel": "Foot dorsiflexor weakness",
+            "micaCurie": "HP:0003690",
+            "micaLabel": "Limb muscle weakness",
+            "score": 3.343339830063596,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:614436"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002522",
+            "patientPhenotypeLabel": "Areflexia of lower limbs",
+            "diseasePhenotypeCurie": "HP:0001284",
+            "diseasePhenotypeLabel": "Areflexia",
+            "micaCurie": "HP:0001284",
+            "micaLabel": "Areflexia",
+            "score": 3.3013304219860533,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:614436"
+          }
+        ]
+      },
+      {
+        "rank": 21,
+        "geneCurie": "NCBIGene:8729",
+        "geneLabel": "GBF1",
+        "geneSymbol": "GBF1",
+        "geneEntityId": 150636,
+        "bmaScore": 3.0790044379578645,
+        "normalizedScore": 0.339956,
+        "patientAverageScore": 3.657827526508419,
+        "phenotypeAverageScore": 2.50018134940731,
+        "directPhenotypeCount": 23,
+        "matchedPhenotypeCount": 12,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0003376",
+            "patientPhenotypeLabel": "Steppage gait",
+            "diseasePhenotypeCurie": "HP:0003376",
+            "diseasePhenotypeLabel": "Steppage gait",
+            "micaCurie": "HP:0003376",
+            "micaLabel": "Steppage gait",
+            "score": 4.913937909181432,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:606483"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001765",
+            "patientPhenotypeLabel": "Hammertoe",
+            "diseasePhenotypeCurie": "HP:0001765",
+            "diseasePhenotypeLabel": "Hammertoe",
+            "micaCurie": "HP:0001765",
+            "micaLabel": "Hammertoe",
+            "score": 4.913937909181432,
+            "evidenceCode": "1/7",
+            "referenceText": "OMIM:606483"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009129",
+            "patientPhenotypeLabel": "Upper limb amyotrophy",
+            "diseasePhenotypeCurie": "HP:0003393",
+            "diseasePhenotypeLabel": "Thenar muscle atrophy",
+            "micaCurie": "HP:0009129",
+            "micaLabel": "Upper limb amyotrophy",
+            "score": 4.837564930396859,
+            "evidenceCode": "1/7",
+            "referenceText": "OMIM:606483"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003477",
+            "patientPhenotypeLabel": "Peripheral axonal neuropathy",
+            "diseasePhenotypeCurie": "HP:0003378",
+            "diseasePhenotypeLabel": "Axonal degeneration/regeneration",
+            "micaCurie": "HP:0000764",
+            "micaLabel": "Peripheral axonal degeneration",
+            "score": 3.8047992075263353,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:606483"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008944",
+            "patientPhenotypeLabel": "Distal lower limb amyotrophy",
+            "diseasePhenotypeCurie": "HP:0003693",
+            "diseasePhenotypeLabel": "Distal amyotrophy",
+            "micaCurie": "HP:0003693",
+            "micaLabel": "Distal amyotrophy",
+            "score": 3.6771752820325054,
+            "evidenceCode": "20/20",
+            "referenceText": "OMIM:606483"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009053",
+            "patientPhenotypeLabel": "Distal lower limb muscle weakness",
+            "diseasePhenotypeCurie": "HP:0002460",
+            "diseasePhenotypeLabel": "Distal muscle weakness",
+            "micaCurie": "HP:0002460",
+            "micaLabel": "Distal muscle weakness",
+            "score": 3.6321226180915627,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:606483"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001761",
+            "patientPhenotypeLabel": "Pes cavus",
+            "diseasePhenotypeCurie": "HP:0001761",
+            "diseasePhenotypeLabel": "Pes cavus",
+            "micaCurie": "HP:0001761",
+            "micaLabel": "Pes cavus",
+            "score": 3.4080983974117594,
+            "evidenceCode": "3/7",
+            "referenceText": "OMIM:606483"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003484",
+            "patientPhenotypeLabel": "Upper limb muscle weakness",
+            "diseasePhenotypeCurie": "HP:0009027",
+            "diseasePhenotypeLabel": "Foot dorsiflexor weakness",
+            "micaCurie": "HP:0003690",
+            "micaLabel": "Limb muscle weakness",
+            "score": 3.343339830063596,
+            "evidenceCode": "5/14",
+            "referenceText": "OMIM:606483"
+          }
+        ]
+      },
+      {
+        "rank": 22,
+        "geneCurie": "NCBIGene:65055",
+        "geneLabel": "REEP1",
+        "geneSymbol": "REEP1",
+        "geneEntityId": 152310,
+        "bmaScore": 3.0766562389563705,
+        "normalizedScore": 0.339697,
+        "patientAverageScore": 3.98594232074754,
+        "phenotypeAverageScore": 2.167370157165201,
+        "directPhenotypeCount": 75,
+        "matchedPhenotypeCount": 12,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001765",
+            "patientPhenotypeLabel": "Hammertoe",
+            "diseasePhenotypeCurie": "HP:0001765",
+            "diseasePhenotypeLabel": "Hammertoe",
+            "micaCurie": "HP:0001765",
+            "micaLabel": "Hammertoe",
+            "score": 4.913937909181432,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:139536"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009053",
+            "patientPhenotypeLabel": "Distal lower limb muscle weakness",
+            "diseasePhenotypeCurie": "HP:0011727",
+            "diseasePhenotypeLabel": "Peroneal muscle weakness",
+            "micaCurie": "HP:0009053",
+            "micaLabel": "Distal lower limb muscle weakness",
+            "score": 4.8674178935465395,
+            "evidenceCode": "3/4",
+            "referenceText": "OMIM:614751"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009129",
+            "patientPhenotypeLabel": "Upper limb amyotrophy",
+            "diseasePhenotypeCurie": "HP:0003393",
+            "diseasePhenotypeLabel": "Thenar muscle atrophy",
+            "micaCurie": "HP:0009129",
+            "micaLabel": "Upper limb amyotrophy",
+            "score": 4.837564930396859,
+            "evidenceCode": "4/4",
+            "referenceText": "OMIM:614751"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003484",
+            "patientPhenotypeLabel": "Upper limb muscle weakness",
+            "diseasePhenotypeCurie": "HP:0031189",
+            "diseasePhenotypeLabel": "Wrist drop",
+            "micaCurie": "HP:0003484",
+            "micaLabel": "Upper limb muscle weakness",
+            "score": 4.602725339319457,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:620011"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002522",
+            "patientPhenotypeLabel": "Areflexia of lower limbs",
+            "diseasePhenotypeCurie": "HP:0003438",
+            "diseasePhenotypeLabel": "Absent Achilles reflex",
+            "micaCurie": "HP:0002522",
+            "micaLabel": "Areflexia of lower limbs",
+            "score": 4.602725339319457,
+            "evidenceCode": "4/4",
+            "referenceText": "OMIM:614751"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001771",
+            "patientPhenotypeLabel": "Achilles tendon contracture",
+            "diseasePhenotypeCurie": "HP:0008112",
+            "diseasePhenotypeLabel": "Plantar flexion contracture",
+            "micaCurie": "HP:0008366",
+            "micaLabel": "Foot joint contracture",
+            "score": 4.3034824444666,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:620011"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003477",
+            "patientPhenotypeLabel": "Peripheral axonal neuropathy",
+            "diseasePhenotypeCurie": "HP:0003477",
+            "diseasePhenotypeLabel": "Peripheral axonal neuropathy",
+            "micaCurie": "HP:0003477",
+            "micaLabel": "Peripheral axonal neuropathy",
+            "score": 4.087259335996965,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:620011"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008944",
+            "patientPhenotypeLabel": "Distal lower limb amyotrophy",
+            "diseasePhenotypeCurie": "HP:0003693",
+            "diseasePhenotypeLabel": "Distal amyotrophy",
+            "micaCurie": "HP:0003693",
+            "micaLabel": "Distal amyotrophy",
+            "score": 3.6771752820325054,
+            "evidenceCode": "1/6",
+            "referenceText": "OMIM:610250"
+          }
+        ]
+      },
+      {
+        "rank": 23,
+        "geneCurie": "NCBIGene:5165",
+        "geneLabel": "PDK3",
+        "geneSymbol": "PDK3",
+        "geneEntityId": 149710,
+        "bmaScore": 3.053279071728454,
+        "normalizedScore": 0.337115,
+        "patientAverageScore": 3.650510134022022,
+        "phenotypeAverageScore": 2.4560480094348858,
+        "directPhenotypeCount": 27,
+        "matchedPhenotypeCount": 12,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0008944",
+            "patientPhenotypeLabel": "Distal lower limb amyotrophy",
+            "diseasePhenotypeCurie": "HP:0008944",
+            "diseasePhenotypeLabel": "Distal lower limb amyotrophy",
+            "micaCurie": "HP:0008944",
+            "micaLabel": "Distal lower limb amyotrophy",
+            "score": 5.165252337462339,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:352675"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003376",
+            "patientPhenotypeLabel": "Steppage gait",
+            "diseasePhenotypeCurie": "HP:0003376",
+            "diseasePhenotypeLabel": "Steppage gait",
+            "micaCurie": "HP:0003376",
+            "micaLabel": "Steppage gait",
+            "score": 4.913937909181432,
+            "evidenceCode": "5/5",
+            "referenceText": "OMIM:300905"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009129",
+            "patientPhenotypeLabel": "Upper limb amyotrophy",
+            "diseasePhenotypeCurie": "HP:0008954",
+            "diseasePhenotypeLabel": "Intrinsic hand muscle atrophy",
+            "micaCurie": "HP:0009129",
+            "micaLabel": "Upper limb amyotrophy",
+            "score": 4.837564930396859,
+            "evidenceCode": "5/8",
+            "referenceText": "OMIM:300905"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002522",
+            "patientPhenotypeLabel": "Areflexia of lower limbs",
+            "diseasePhenotypeCurie": "HP:0003438",
+            "diseasePhenotypeLabel": "Absent Achilles reflex",
+            "micaCurie": "HP:0002522",
+            "micaLabel": "Areflexia of lower limbs",
+            "score": 4.602725339319457,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:352675"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0033748",
+            "patientPhenotypeLabel": "Hypoesthesia",
+            "diseasePhenotypeCurie": "HP:0007328",
+            "diseasePhenotypeLabel": "Impaired pain sensation",
+            "micaCurie": "HP:0033747",
+            "micaLabel": "Abnormal exteroceptive sensation",
+            "score": 4.046437341476709,
+            "evidenceCode": "0/8",
+            "referenceText": "OMIM:300905"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009053",
+            "patientPhenotypeLabel": "Distal lower limb muscle weakness",
+            "diseasePhenotypeCurie": "HP:0007340",
+            "diseasePhenotypeLabel": "Lower limb muscle weakness",
+            "micaCurie": "HP:0007340",
+            "micaLabel": "Lower limb muscle weakness",
+            "score": 3.93907882315621,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:352675"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001761",
+            "patientPhenotypeLabel": "Pes cavus",
+            "diseasePhenotypeCurie": "HP:0001761",
+            "diseasePhenotypeLabel": "Pes cavus",
+            "micaCurie": "HP:0001761",
+            "micaLabel": "Pes cavus",
+            "score": 3.4080983974117594,
+            "evidenceCode": "2/8",
+            "referenceText": "OMIM:300905"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003484",
+            "patientPhenotypeLabel": "Upper limb muscle weakness",
+            "diseasePhenotypeCurie": "HP:0007340",
+            "diseasePhenotypeLabel": "Lower limb muscle weakness",
+            "micaCurie": "HP:0003690",
+            "micaLabel": "Limb muscle weakness",
+            "score": 3.343339830063596,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:352675"
+          }
+        ]
+      },
+      {
+        "rank": 24,
+        "geneCurie": "NCBIGene:57716",
+        "geneLabel": "PRX",
+        "geneSymbol": "PRX",
+        "geneEntityId": 152192,
+        "bmaScore": 3.019541803118713,
+        "normalizedScore": 0.33339,
+        "patientAverageScore": 3.7129582428518493,
+        "phenotypeAverageScore": 2.326125363385577,
+        "directPhenotypeCount": 47,
+        "matchedPhenotypeCount": 12,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0003376",
+            "patientPhenotypeLabel": "Steppage gait",
+            "diseasePhenotypeCurie": "HP:0003376",
+            "diseasePhenotypeLabel": "Steppage gait",
+            "micaCurie": "HP:0003376",
+            "micaLabel": "Steppage gait",
+            "score": 4.913937909181432,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:614895"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001765",
+            "patientPhenotypeLabel": "Hammertoe",
+            "diseasePhenotypeCurie": "HP:0001765",
+            "diseasePhenotypeLabel": "Hammertoe",
+            "micaCurie": "HP:0001765",
+            "micaLabel": "Hammertoe",
+            "score": 4.913937909181432,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:145900"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009053",
+            "patientPhenotypeLabel": "Distal lower limb muscle weakness",
+            "diseasePhenotypeCurie": "HP:0009053",
+            "diseasePhenotypeLabel": "Distal lower limb muscle weakness",
+            "micaCurie": "HP:0009053",
+            "micaLabel": "Distal lower limb muscle weakness",
+            "score": 4.8674178935465395,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:145900"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009129",
+            "patientPhenotypeLabel": "Upper limb amyotrophy",
+            "diseasePhenotypeCurie": "HP:0008954",
+            "diseasePhenotypeLabel": "Intrinsic hand muscle atrophy",
+            "micaCurie": "HP:0009129",
+            "micaLabel": "Upper limb amyotrophy",
+            "score": 4.837564930396859,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:614895"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008944",
+            "patientPhenotypeLabel": "Distal lower limb amyotrophy",
+            "diseasePhenotypeCurie": "HP:0008954",
+            "diseasePhenotypeLabel": "Intrinsic hand muscle atrophy",
+            "micaCurie": "HP:0003693",
+            "micaLabel": "Distal amyotrophy",
+            "score": 3.6771752820325054,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:614895"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001761",
+            "patientPhenotypeLabel": "Pes cavus",
+            "diseasePhenotypeCurie": "HP:0001761",
+            "diseasePhenotypeLabel": "Pes cavus",
+            "micaCurie": "HP:0001761",
+            "micaLabel": "Pes cavus",
+            "score": 3.4080983974117594,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:614895"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003484",
+            "patientPhenotypeLabel": "Upper limb muscle weakness",
+            "diseasePhenotypeCurie": "HP:0009053",
+            "diseasePhenotypeLabel": "Distal lower limb muscle weakness",
+            "micaCurie": "HP:0003690",
+            "micaLabel": "Limb muscle weakness",
+            "score": 3.343339830063596,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:145900"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002522",
+            "patientPhenotypeLabel": "Areflexia of lower limbs",
+            "diseasePhenotypeCurie": "HP:0001284",
+            "diseasePhenotypeLabel": "Areflexia",
+            "micaCurie": "HP:0001284",
+            "micaLabel": "Areflexia",
+            "score": 3.3013304219860533,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:614895"
+          }
+        ]
+      },
+      {
+        "rank": 25,
+        "geneCurie": "NCBIGene:2617",
+        "geneLabel": "GARS1",
+        "geneSymbol": "GARS1",
+        "geneEntityId": 148914,
+        "bmaScore": 3.0120547388977656,
+        "normalizedScore": 0.332564,
+        "patientAverageScore": 3.7468342225245905,
+        "phenotypeAverageScore": 2.2772752552709408,
+        "directPhenotypeCount": 42,
+        "matchedPhenotypeCount": 12,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001765",
+            "patientPhenotypeLabel": "Hammertoe",
+            "diseasePhenotypeCurie": "HP:0001765",
+            "diseasePhenotypeLabel": "Hammertoe",
+            "micaCurie": "HP:0001765",
+            "micaLabel": "Hammertoe",
+            "score": 4.913937909181432,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:139536"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009053",
+            "patientPhenotypeLabel": "Distal lower limb muscle weakness",
+            "diseasePhenotypeCurie": "HP:0009053",
+            "diseasePhenotypeLabel": "Distal lower limb muscle weakness",
+            "micaCurie": "HP:0009053",
+            "micaLabel": "Distal lower limb muscle weakness",
+            "score": 4.8674178935465395,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:139536"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009129",
+            "patientPhenotypeLabel": "Upper limb amyotrophy",
+            "diseasePhenotypeCurie": "HP:0009129",
+            "diseasePhenotypeLabel": "Upper limb amyotrophy",
+            "micaCurie": "HP:0009129",
+            "micaLabel": "Upper limb amyotrophy",
+            "score": 4.837564930396859,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:600794"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003484",
+            "patientPhenotypeLabel": "Upper limb muscle weakness",
+            "diseasePhenotypeCurie": "HP:0003484",
+            "diseasePhenotypeLabel": "Upper limb muscle weakness",
+            "micaCurie": "HP:0003484",
+            "micaLabel": "Upper limb muscle weakness",
+            "score": 4.602725339319457,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:139536"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001771",
+            "patientPhenotypeLabel": "Achilles tendon contracture",
+            "diseasePhenotypeCurie": "HP:0003273",
+            "diseasePhenotypeLabel": "Hip contracture",
+            "micaCurie": "HP:0005750",
+            "micaLabel": "Lower-limb joint contracture",
+            "score": 3.789214476509637,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:619042"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008944",
+            "patientPhenotypeLabel": "Distal lower limb amyotrophy",
+            "diseasePhenotypeCurie": "HP:0003693",
+            "diseasePhenotypeLabel": "Distal amyotrophy",
+            "micaCurie": "HP:0003693",
+            "micaLabel": "Distal amyotrophy",
+            "score": 3.6771752820325054,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:139536"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001761",
+            "patientPhenotypeLabel": "Pes cavus",
+            "diseasePhenotypeCurie": "HP:0001761",
+            "diseasePhenotypeLabel": "Pes cavus",
+            "micaCurie": "HP:0001761",
+            "micaLabel": "Pes cavus",
+            "score": 3.4080983974117594,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "OMIM:600794"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002522",
+            "patientPhenotypeLabel": "Areflexia of lower limbs",
+            "diseasePhenotypeCurie": "HP:0001284",
+            "diseasePhenotypeLabel": "Areflexia",
+            "micaCurie": "HP:0001284",
+            "micaLabel": "Areflexia",
+            "score": 3.3013304219860533,
+            "evidenceCode": "3/3",
+            "referenceText": "OMIM:619042"
+          }
+        ]
+      }
+    ],
+    "engineSummary": {
+      "diseaseCount": 8579,
+      "geneCount": 5256,
+      "phenotypeCount": 19389,
+      "sourceMode": {
+        "disease": "relationship_fallback",
+        "gene": "relationship_fallback"
+      },
+      "generatedAt": "2026-03-15T21:00:39.457Z"
+    }
+  }
+}

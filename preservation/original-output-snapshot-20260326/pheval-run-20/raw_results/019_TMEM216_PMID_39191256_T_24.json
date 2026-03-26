@@ -1,0 +1,1777 @@
+{
+  "success": true,
+  "engine": "genovy-dx-sim",
+  "input": {
+    "presentPhenotypeCuries": [
+      "HP:0000510",
+      "HP:0007994",
+      "HP:0032037",
+      "HP:0000662",
+      "HP:0000545"
+    ],
+    "excludedPhenotypeCuries": [
+      "HP:0001513",
+      "HP:0001250",
+      "HP:0040293",
+      "HP:0000717"
+    ],
+    "sourceFormat": "phenopacket"
+  },
+  "ranking": {
+    "queryPhenotypes": [
+      {
+        "phenotypeCurie": "HP:0000510",
+        "phenotypeLabel": "Rod-cone dystrophy"
+      },
+      {
+        "phenotypeCurie": "HP:0007994",
+        "phenotypeLabel": "Peripheral visual field loss"
+      },
+      {
+        "phenotypeCurie": "HP:0032037",
+        "phenotypeLabel": "Mildly reduced visual acuity"
+      },
+      {
+        "phenotypeCurie": "HP:0000662",
+        "phenotypeLabel": "Nyctalopia"
+      },
+      {
+        "phenotypeCurie": "HP:0000545",
+        "phenotypeLabel": "Myopia"
+      }
+    ],
+    "results": [
+      {
+        "rank": 1,
+        "diseaseCurie": "MONDO:0978291",
+        "diseaseLabel": "retinitis pigmentosa 99",
+        "diseaseEntityId": 88748,
+        "bmaScore": 3.3855707913304722,
+        "normalizedScore": 0.373804,
+        "patientAverageScore": 4.115285979270276,
+        "diseaseAverageScore": 2.655855603390669,
+        "directPhenotypeCount": 14,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0032037",
+            "patientPhenotypeLabel": "Mildly reduced visual acuity",
+            "diseasePhenotypeCurie": "HP:0032037",
+            "diseasePhenotypeLabel": "Mildly reduced visual acuity",
+            "micaCurie": "HP:0032037",
+            "micaLabel": "Mildly reduced visual acuity",
+            "score": 6.75448754257892,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:40119724"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007994",
+            "patientPhenotypeLabel": "Peripheral visual field loss",
+            "diseasePhenotypeCurie": "HP:0001133",
+            "diseasePhenotypeLabel": "Constriction of peripheral visual field",
+            "micaCurie": "HP:0001133",
+            "micaLabel": "Constriction of peripheral visual field",
+            "score": 4.472105156902393,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:40119724"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000662",
+            "patientPhenotypeLabel": "Nyctalopia",
+            "diseasePhenotypeCurie": "HP:0000662",
+            "diseasePhenotypeLabel": "Nyctalopia",
+            "micaCurie": "HP:0000662",
+            "micaLabel": "Nyctalopia",
+            "score": 3.9271739206498917,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:40119724"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000545",
+            "patientPhenotypeLabel": "Myopia",
+            "diseasePhenotypeCurie": "HP:0011003",
+            "diseasePhenotypeLabel": "High myopia",
+            "micaCurie": "HP:0000545",
+            "micaLabel": "Myopia",
+            "score": 3.085810795782503,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:40119724"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000510",
+            "patientPhenotypeLabel": "Rod-cone dystrophy",
+            "diseasePhenotypeCurie": "HP:0034362",
+            "diseasePhenotypeLabel": "Dull foveal reflex",
+            "micaCurie": "HP:0000479",
+            "micaLabel": "Abnormal retinal morphology",
+            "score": 2.3368524804376705,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:40119724"
+          }
+        ]
+      },
+      {
+        "rank": 2,
+        "diseaseCurie": "MONDO:0975840",
+        "diseaseLabel": "retinitis pigmentosa 98",
+        "diseaseEntityId": 88662,
+        "bmaScore": 3.302480067158735,
+        "normalizedScore": 0.36463,
+        "patientAverageScore": 4.683143526625711,
+        "diseaseAverageScore": 1.9218166076917589,
+        "directPhenotypeCount": 24,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0032037",
+            "patientPhenotypeLabel": "Mildly reduced visual acuity",
+            "diseasePhenotypeCurie": "HP:0032037",
+            "diseasePhenotypeLabel": "Mildly reduced visual acuity",
+            "micaCurie": "HP:0032037",
+            "micaLabel": "Mildly reduced visual acuity",
+            "score": 6.75448754257892,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:39191256"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007994",
+            "patientPhenotypeLabel": "Peripheral visual field loss",
+            "diseasePhenotypeCurie": "HP:0007994",
+            "diseasePhenotypeLabel": "Peripheral visual field loss",
+            "micaCurie": "HP:0007994",
+            "micaLabel": "Peripheral visual field loss",
+            "score": 5.838196810704765,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:39191256"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000662",
+            "patientPhenotypeLabel": "Nyctalopia",
+            "diseasePhenotypeCurie": "HP:0000662",
+            "diseasePhenotypeLabel": "Nyctalopia",
+            "micaCurie": "HP:0000662",
+            "micaLabel": "Nyctalopia",
+            "score": 3.9271739206498917,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:39191256"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000510",
+            "patientPhenotypeLabel": "Rod-cone dystrophy",
+            "diseasePhenotypeCurie": "HP:0000510",
+            "diseasePhenotypeLabel": "Rod-cone dystrophy",
+            "micaCurie": "HP:0000510",
+            "micaLabel": "Rod-cone dystrophy",
+            "score": 3.810048563412479,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:39191256"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000545",
+            "patientPhenotypeLabel": "Myopia",
+            "diseasePhenotypeCurie": "HP:0011003",
+            "diseasePhenotypeLabel": "High myopia",
+            "micaCurie": "HP:0000545",
+            "micaLabel": "Myopia",
+            "score": 3.085810795782503,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:39191256"
+          }
+        ]
+      },
+      {
+        "rank": 3,
+        "diseaseCurie": "MONDO:0013405",
+        "diseaseLabel": "retinitis pigmentosa 49",
+        "diseaseEntityId": 74691,
+        "bmaScore": 3.201494489363202,
+        "normalizedScore": 0.35348,
+        "patientAverageScore": 3.5237589851222695,
+        "diseaseAverageScore": 2.8792299936041337,
+        "directPhenotypeCount": 8,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0007994",
+            "patientPhenotypeLabel": "Peripheral visual field loss",
+            "diseasePhenotypeCurie": "HP:0007994",
+            "diseasePhenotypeLabel": "Peripheral visual field loss",
+            "micaCurie": "HP:0007994",
+            "micaLabel": "Peripheral visual field loss",
+            "score": 5.838196810704765,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:15570217"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000662",
+            "patientPhenotypeLabel": "Nyctalopia",
+            "diseasePhenotypeCurie": "HP:0000662",
+            "diseasePhenotypeLabel": "Nyctalopia",
+            "micaCurie": "HP:0000662",
+            "micaLabel": "Nyctalopia",
+            "score": 3.9271739206498917,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:15570217"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000510",
+            "patientPhenotypeLabel": "Rod-cone dystrophy",
+            "diseasePhenotypeCurie": "HP:0000510",
+            "diseasePhenotypeLabel": "Rod-cone dystrophy",
+            "micaCurie": "HP:0000510",
+            "micaLabel": "Rod-cone dystrophy",
+            "score": 3.810048563412479,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:7479749"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0032037",
+            "patientPhenotypeLabel": "Mildly reduced visual acuity",
+            "diseasePhenotypeCurie": "HP:0007663",
+            "diseasePhenotypeLabel": "Reduced visual acuity",
+            "micaCurie": "HP:0007663",
+            "micaLabel": "Reduced visual acuity",
+            "score": 2.879128521522365,
+            "evidenceCode": "TAS",
+            "referenceText": "PMID:15570217"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000545",
+            "patientPhenotypeLabel": "Myopia",
+            "diseasePhenotypeCurie": "HP:0007994",
+            "diseasePhenotypeLabel": "Peripheral visual field loss",
+            "micaCurie": "HP:0012373",
+            "micaLabel": "Abnormal eye physiology",
+            "score": 1.1642471093218474,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:15570217"
+          }
+        ]
+      },
+      {
+        "rank": 4,
+        "diseaseCurie": "MONDO:0011987",
+        "diseaseLabel": "cone-rod dystrophy 13",
+        "diseaseEntityId": 73273,
+        "bmaScore": 3.198467511937852,
+        "normalizedScore": 0.353146,
+        "patientAverageScore": 4.3185735153660945,
+        "diseaseAverageScore": 2.07836150850961,
+        "directPhenotypeCount": 31,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0032037",
+            "patientPhenotypeLabel": "Mildly reduced visual acuity",
+            "diseasePhenotypeCurie": "HP:0032037",
+            "diseasePhenotypeLabel": "Mildly reduced visual acuity",
+            "micaCurie": "HP:0032037",
+            "micaLabel": "Mildly reduced visual acuity",
+            "score": 6.75448754257892,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:34722527;PMID:25943428"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007994",
+            "patientPhenotypeLabel": "Peripheral visual field loss",
+            "diseasePhenotypeCurie": "HP:0001133",
+            "diseasePhenotypeLabel": "Constriction of peripheral visual field",
+            "micaCurie": "HP:0001133",
+            "micaLabel": "Constriction of peripheral visual field",
+            "score": 4.472105156902393,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:28456785;PMID:34722527"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000662",
+            "patientPhenotypeLabel": "Nyctalopia",
+            "diseasePhenotypeCurie": "HP:0000662",
+            "diseasePhenotypeLabel": "Nyctalopia",
+            "micaCurie": "HP:0000662",
+            "micaLabel": "Nyctalopia",
+            "score": 3.9271739206498917,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:28456785;PMID:34722527;PMID:25943428"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000510",
+            "patientPhenotypeLabel": "Rod-cone dystrophy",
+            "diseasePhenotypeCurie": "HP:0000548",
+            "diseasePhenotypeLabel": "Cone/cone-rod dystrophy",
+            "micaCurie": "HP:0000556",
+            "micaLabel": "Retinal dystrophy",
+            "score": 3.3532901609167642,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:12920076"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000545",
+            "patientPhenotypeLabel": "Myopia",
+            "diseasePhenotypeCurie": "HP:0000545",
+            "diseasePhenotypeLabel": "Myopia",
+            "micaCurie": "HP:0000545",
+            "micaLabel": "Myopia",
+            "score": 3.085810795782503,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:34722527"
+          }
+        ]
+      },
+      {
+        "rank": 5,
+        "diseaseCurie": "MONDO:0007362",
+        "diseaseLabel": "cone-rod dystrophy 2",
+        "diseaseEntityId": 68648,
+        "bmaScore": 3.1126696235540168,
+        "normalizedScore": 0.343673,
+        "patientAverageScore": 3.432407304623127,
+        "diseaseAverageScore": 2.792931942484907,
+        "directPhenotypeCount": 15,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0007994",
+            "patientPhenotypeLabel": "Peripheral visual field loss",
+            "diseasePhenotypeCurie": "HP:0007994",
+            "diseasePhenotypeLabel": "Peripheral visual field loss",
+            "micaCurie": "HP:0007994",
+            "micaLabel": "Peripheral visual field loss",
+            "score": 5.838196810704765,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:120970"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000662",
+            "patientPhenotypeLabel": "Nyctalopia",
+            "diseasePhenotypeCurie": "HP:0000662",
+            "diseasePhenotypeLabel": "Nyctalopia",
+            "micaCurie": "HP:0000662",
+            "micaLabel": "Nyctalopia",
+            "score": 3.9271739206498917,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:7864751"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000510",
+            "patientPhenotypeLabel": "Rod-cone dystrophy",
+            "diseasePhenotypeCurie": "HP:0000548",
+            "diseasePhenotypeLabel": "Cone/cone-rod dystrophy",
+            "micaCurie": "HP:0000556",
+            "micaLabel": "Retinal dystrophy",
+            "score": 3.3532901609167642,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:9610810"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0032037",
+            "patientPhenotypeLabel": "Mildly reduced visual acuity",
+            "diseasePhenotypeCurie": "HP:0007663",
+            "diseasePhenotypeLabel": "Reduced visual acuity",
+            "micaCurie": "HP:0007663",
+            "micaLabel": "Reduced visual acuity",
+            "score": 2.879128521522365,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:9610810"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000545",
+            "patientPhenotypeLabel": "Myopia",
+            "diseasePhenotypeCurie": "HP:0012508",
+            "diseasePhenotypeLabel": "Metamorphopsia",
+            "micaCurie": "HP:0012373",
+            "micaLabel": "Abnormal eye physiology",
+            "score": 1.1642471093218474,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:15531334"
+          }
+        ]
+      },
+      {
+        "rank": 6,
+        "diseaseCurie": "MONDO:0014871",
+        "diseaseLabel": "retinitis pigmentosa 75",
+        "diseaseEntityId": 76157,
+        "bmaScore": 3.0860965496670634,
+        "normalizedScore": 0.340739,
+        "patientAverageScore": 3.773423559725772,
+        "diseaseAverageScore": 2.398769539608354,
+        "directPhenotypeCount": 10,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0007994",
+            "patientPhenotypeLabel": "Peripheral visual field loss",
+            "diseasePhenotypeCurie": "HP:0007994",
+            "diseasePhenotypeLabel": "Peripheral visual field loss",
+            "micaCurie": "HP:0007994",
+            "micaLabel": "Peripheral visual field loss",
+            "score": 5.838196810704765,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:617023"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000662",
+            "patientPhenotypeLabel": "Nyctalopia",
+            "diseasePhenotypeCurie": "HP:0000662",
+            "diseasePhenotypeLabel": "Nyctalopia",
+            "micaCurie": "HP:0000662",
+            "micaLabel": "Nyctalopia",
+            "score": 3.9271739206498917,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:617023"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000510",
+            "patientPhenotypeLabel": "Rod-cone dystrophy",
+            "diseasePhenotypeCurie": "HP:0000510",
+            "diseasePhenotypeLabel": "Rod-cone dystrophy",
+            "micaCurie": "HP:0000510",
+            "micaLabel": "Rod-cone dystrophy",
+            "score": 3.810048563412479,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:26355662"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000545",
+            "patientPhenotypeLabel": "Myopia",
+            "diseasePhenotypeCurie": "HP:0000545",
+            "diseasePhenotypeLabel": "Myopia",
+            "micaCurie": "HP:0000545",
+            "micaLabel": "Myopia",
+            "score": 3.085810795782503,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:26720455"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0032037",
+            "patientPhenotypeLabel": "Mildly reduced visual acuity",
+            "diseasePhenotypeCurie": "HP:0007994",
+            "diseasePhenotypeLabel": "Peripheral visual field loss",
+            "micaCurie": "HP:0000505",
+            "micaLabel": "Visual impairment",
+            "score": 2.2058877080792225,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:617023"
+          }
+        ]
+      },
+      {
+        "rank": 7,
+        "diseaseCurie": "MONDO:0013413",
+        "diseaseLabel": "retinitis pigmentosa 45",
+        "diseaseEntityId": 74699,
+        "bmaScore": 3.0812247944285582,
+        "normalizedScore": 0.340201,
+        "patientAverageScore": 3.3891108224336413,
+        "diseaseAverageScore": 2.7733387664234748,
+        "directPhenotypeCount": 7,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0007994",
+            "patientPhenotypeLabel": "Peripheral visual field loss",
+            "diseasePhenotypeCurie": "HP:0007994",
+            "diseasePhenotypeLabel": "Peripheral visual field loss",
+            "micaCurie": "HP:0007994",
+            "micaLabel": "Peripheral visual field loss",
+            "score": 5.838196810704765,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:11379879"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000662",
+            "patientPhenotypeLabel": "Nyctalopia",
+            "diseasePhenotypeCurie": "HP:0000662",
+            "diseasePhenotypeLabel": "Nyctalopia",
+            "micaCurie": "HP:0000662",
+            "micaLabel": "Nyctalopia",
+            "score": 3.9271739206498917,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:11379879"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000510",
+            "patientPhenotypeLabel": "Rod-cone dystrophy",
+            "diseasePhenotypeCurie": "HP:0000510",
+            "diseasePhenotypeLabel": "Rod-cone dystrophy",
+            "micaCurie": "HP:0000510",
+            "micaLabel": "Rod-cone dystrophy",
+            "score": 3.810048563412479,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:11379879"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0032037",
+            "patientPhenotypeLabel": "Mildly reduced visual acuity",
+            "diseasePhenotypeCurie": "HP:0007994",
+            "diseasePhenotypeLabel": "Peripheral visual field loss",
+            "micaCurie": "HP:0000505",
+            "micaLabel": "Visual impairment",
+            "score": 2.2058877080792225,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:11379879"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000545",
+            "patientPhenotypeLabel": "Myopia",
+            "diseasePhenotypeCurie": "HP:0007994",
+            "diseasePhenotypeLabel": "Peripheral visual field loss",
+            "micaCurie": "HP:0012373",
+            "micaLabel": "Abnormal eye physiology",
+            "score": 1.1642471093218474,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:11379879"
+          }
+        ]
+      },
+      {
+        "rank": 8,
+        "diseaseCurie": "MONDO:0013516",
+        "diseaseLabel": "retinitis pigmentosa 60",
+        "diseaseEntityId": 74802,
+        "bmaScore": 3.0379314888551647,
+        "normalizedScore": 0.335421,
+        "patientAverageScore": 3.5237589851222695,
+        "diseaseAverageScore": 2.5521039925880604,
+        "directPhenotypeCount": 13,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0007994",
+            "patientPhenotypeLabel": "Peripheral visual field loss",
+            "diseasePhenotypeCurie": "HP:0007994",
+            "diseasePhenotypeLabel": "Peripheral visual field loss",
+            "micaCurie": "HP:0007994",
+            "micaLabel": "Peripheral visual field loss",
+            "score": 5.838196810704765,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:21549338"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000662",
+            "patientPhenotypeLabel": "Nyctalopia",
+            "diseasePhenotypeCurie": "HP:0000662",
+            "diseasePhenotypeLabel": "Nyctalopia",
+            "micaCurie": "HP:0000662",
+            "micaLabel": "Nyctalopia",
+            "score": 3.9271739206498917,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:21549338"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000510",
+            "patientPhenotypeLabel": "Rod-cone dystrophy",
+            "diseasePhenotypeCurie": "HP:0000510",
+            "diseasePhenotypeLabel": "Rod-cone dystrophy",
+            "micaCurie": "HP:0000510",
+            "micaLabel": "Rod-cone dystrophy",
+            "score": 3.810048563412479,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:21549338"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0032037",
+            "patientPhenotypeLabel": "Mildly reduced visual acuity",
+            "diseasePhenotypeCurie": "HP:0007663",
+            "diseasePhenotypeLabel": "Reduced visual acuity",
+            "micaCurie": "HP:0007663",
+            "micaLabel": "Reduced visual acuity",
+            "score": 2.879128521522365,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:21549338"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000545",
+            "patientPhenotypeLabel": "Myopia",
+            "diseasePhenotypeCurie": "HP:0007994",
+            "diseasePhenotypeLabel": "Peripheral visual field loss",
+            "micaCurie": "HP:0012373",
+            "micaLabel": "Abnormal eye physiology",
+            "score": 1.1642471093218474,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:21549338"
+          }
+        ]
+      },
+      {
+        "rank": 9,
+        "diseaseCurie": "MONDO:0012464",
+        "diseaseLabel": "cone-rod dystrophy 10",
+        "diseaseEntityId": 73750,
+        "bmaScore": 2.995886297699209,
+        "normalizedScore": 0.330779,
+        "patientAverageScore": 3.3891108224336413,
+        "diseaseAverageScore": 2.602661772964776,
+        "directPhenotypeCount": 10,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0007994",
+            "patientPhenotypeLabel": "Peripheral visual field loss",
+            "diseasePhenotypeCurie": "HP:0007994",
+            "diseasePhenotypeLabel": "Peripheral visual field loss",
+            "micaCurie": "HP:0007994",
+            "micaLabel": "Peripheral visual field loss",
+            "score": 5.838196810704765,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:16199541"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000662",
+            "patientPhenotypeLabel": "Nyctalopia",
+            "diseasePhenotypeCurie": "HP:0000662",
+            "diseasePhenotypeLabel": "Nyctalopia",
+            "micaCurie": "HP:0000662",
+            "micaLabel": "Nyctalopia",
+            "score": 3.9271739206498917,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:16199541"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000510",
+            "patientPhenotypeLabel": "Rod-cone dystrophy",
+            "diseasePhenotypeCurie": "HP:0000510",
+            "diseasePhenotypeLabel": "Rod-cone dystrophy",
+            "micaCurie": "HP:0000510",
+            "micaLabel": "Rod-cone dystrophy",
+            "score": 3.810048563412479,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:16199541"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0032037",
+            "patientPhenotypeLabel": "Mildly reduced visual acuity",
+            "diseasePhenotypeCurie": "HP:0007994",
+            "diseasePhenotypeLabel": "Peripheral visual field loss",
+            "micaCurie": "HP:0000505",
+            "micaLabel": "Visual impairment",
+            "score": 2.2058877080792225,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:16199541"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000545",
+            "patientPhenotypeLabel": "Myopia",
+            "diseasePhenotypeCurie": "HP:0009926",
+            "diseasePhenotypeLabel": "Epiphora",
+            "micaCurie": "HP:0012373",
+            "micaLabel": "Abnormal eye physiology",
+            "score": 1.1642471093218474,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:16199541"
+          }
+        ]
+      },
+      {
+        "rank": 10,
+        "diseaseCurie": "MONDO:0010227",
+        "diseaseLabel": "retinitis pigmentosa 3",
+        "diseaseEntityId": 71513,
+        "bmaScore": 2.9883104300936347,
+        "normalizedScore": 0.329942,
+        "patientAverageScore": 3.634853391653926,
+        "diseaseAverageScore": 2.341767468533344,
+        "directPhenotypeCount": 13,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0007994",
+            "patientPhenotypeLabel": "Peripheral visual field loss",
+            "diseasePhenotypeCurie": "HP:0001133",
+            "diseasePhenotypeLabel": "Constriction of peripheral visual field",
+            "micaCurie": "HP:0001133",
+            "micaLabel": "Constriction of peripheral visual field",
+            "score": 4.472105156902393,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:33467000"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000662",
+            "patientPhenotypeLabel": "Nyctalopia",
+            "diseasePhenotypeCurie": "HP:0000662",
+            "diseasePhenotypeLabel": "Nyctalopia",
+            "micaCurie": "HP:0000662",
+            "micaLabel": "Nyctalopia",
+            "score": 3.9271739206498917,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:34800980;PMID:33467000"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000510",
+            "patientPhenotypeLabel": "Rod-cone dystrophy",
+            "diseasePhenotypeCurie": "HP:0000510",
+            "diseasePhenotypeLabel": "Rod-cone dystrophy",
+            "micaCurie": "HP:0000510",
+            "micaLabel": "Rod-cone dystrophy",
+            "score": 3.810048563412479,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:34800980"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000545",
+            "patientPhenotypeLabel": "Myopia",
+            "diseasePhenotypeCurie": "HP:0011003",
+            "diseasePhenotypeLabel": "High myopia",
+            "micaCurie": "HP:0000545",
+            "micaLabel": "Myopia",
+            "score": 3.085810795782503,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:33467000"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0032037",
+            "patientPhenotypeLabel": "Mildly reduced visual acuity",
+            "diseasePhenotypeCurie": "HP:0007663",
+            "diseasePhenotypeLabel": "Reduced visual acuity",
+            "micaCurie": "HP:0007663",
+            "micaLabel": "Reduced visual acuity",
+            "score": 2.879128521522365,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:34800980;PMID:33467000"
+          }
+        ]
+      },
+      {
+        "rank": 11,
+        "diseaseCurie": "MONDO:0011075",
+        "diseaseLabel": "retinitis pigmentosa 18",
+        "diseaseEntityId": 72361,
+        "bmaScore": 2.988185086961201,
+        "normalizedScore": 0.329928,
+        "patientAverageScore": 2.9999287926225784,
+        "diseaseAverageScore": 2.9764413812998236,
+        "directPhenotypeCount": 6,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000662",
+            "patientPhenotypeLabel": "Nyctalopia",
+            "diseasePhenotypeCurie": "HP:0000662",
+            "diseasePhenotypeLabel": "Nyctalopia",
+            "micaCurie": "HP:0000662",
+            "micaLabel": "Nyctalopia",
+            "score": 3.9271739206498917,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:601414"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007994",
+            "patientPhenotypeLabel": "Peripheral visual field loss",
+            "diseasePhenotypeCurie": "HP:0007987",
+            "diseasePhenotypeLabel": "Progressive visual field defects",
+            "micaCurie": "HP:0001123",
+            "micaLabel": "Visual field defect",
+            "score": 3.892286661649451,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:601414"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000510",
+            "patientPhenotypeLabel": "Rod-cone dystrophy",
+            "diseasePhenotypeCurie": "HP:0000510",
+            "diseasePhenotypeLabel": "Rod-cone dystrophy",
+            "micaCurie": "HP:0000510",
+            "micaLabel": "Rod-cone dystrophy",
+            "score": 3.810048563412479,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:601414"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0032037",
+            "patientPhenotypeLabel": "Mildly reduced visual acuity",
+            "diseasePhenotypeCurie": "HP:0007987",
+            "diseasePhenotypeLabel": "Progressive visual field defects",
+            "micaCurie": "HP:0000505",
+            "micaLabel": "Visual impairment",
+            "score": 2.2058877080792225,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:601414"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000545",
+            "patientPhenotypeLabel": "Myopia",
+            "diseasePhenotypeCurie": "HP:0007987",
+            "diseasePhenotypeLabel": "Progressive visual field defects",
+            "micaCurie": "HP:0012373",
+            "micaLabel": "Abnormal eye physiology",
+            "score": 1.1642471093218474,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:601414"
+          }
+        ]
+      },
+      {
+        "rank": 12,
+        "diseaseCurie": "MONDO:0013328",
+        "diseaseLabel": "retinitis pigmentosa 58",
+        "diseaseEntityId": 74614,
+        "bmaScore": 2.968013107951707,
+        "normalizedScore": 0.327701,
+        "patientAverageScore": 3.5237589851222695,
+        "diseaseAverageScore": 2.412267230781145,
+        "directPhenotypeCount": 11,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0007994",
+            "patientPhenotypeLabel": "Peripheral visual field loss",
+            "diseasePhenotypeCurie": "HP:0007994",
+            "diseasePhenotypeLabel": "Peripheral visual field loss",
+            "micaCurie": "HP:0007994",
+            "micaLabel": "Peripheral visual field loss",
+            "score": 5.838196810704765,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:20797688"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000662",
+            "patientPhenotypeLabel": "Nyctalopia",
+            "diseasePhenotypeCurie": "HP:0000662",
+            "diseasePhenotypeLabel": "Nyctalopia",
+            "micaCurie": "HP:0000662",
+            "micaLabel": "Nyctalopia",
+            "score": 3.9271739206498917,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:20797688"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000510",
+            "patientPhenotypeLabel": "Rod-cone dystrophy",
+            "diseasePhenotypeCurie": "HP:0000510",
+            "diseasePhenotypeLabel": "Rod-cone dystrophy",
+            "micaCurie": "HP:0000510",
+            "micaLabel": "Rod-cone dystrophy",
+            "score": 3.810048563412479,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:20797688"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0032037",
+            "patientPhenotypeLabel": "Mildly reduced visual acuity",
+            "diseasePhenotypeCurie": "HP:0001141",
+            "diseasePhenotypeLabel": "Severely reduced visual acuity",
+            "micaCurie": "HP:0007663",
+            "micaLabel": "Reduced visual acuity",
+            "score": 2.879128521522365,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:20797688"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000545",
+            "patientPhenotypeLabel": "Myopia",
+            "diseasePhenotypeCurie": "HP:0008323",
+            "diseasePhenotypeLabel": "Abnormal light- and dark-adapted electroretinogram",
+            "micaCurie": "HP:0012373",
+            "micaLabel": "Abnormal eye physiology",
+            "score": 1.1642471093218474,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:20797688"
+          }
+        ]
+      },
+      {
+        "rank": 13,
+        "diseaseCurie": "MONDO:0010723",
+        "diseaseLabel": "retinitis pigmentosa 2",
+        "diseaseEntityId": 72009,
+        "bmaScore": 2.929591450948878,
+        "normalizedScore": 0.323459,
+        "patientAverageScore": 3.500205228965298,
+        "diseaseAverageScore": 2.358977672932458,
+        "directPhenotypeCount": 17,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0007994",
+            "patientPhenotypeLabel": "Peripheral visual field loss",
+            "diseasePhenotypeCurie": "HP:0001133",
+            "diseasePhenotypeLabel": "Constriction of peripheral visual field",
+            "micaCurie": "HP:0001133",
+            "micaLabel": "Constriction of peripheral visual field",
+            "score": 4.472105156902393,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:20625056"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000662",
+            "patientPhenotypeLabel": "Nyctalopia",
+            "diseasePhenotypeCurie": "HP:0000662",
+            "diseasePhenotypeLabel": "Nyctalopia",
+            "micaCurie": "HP:0000662",
+            "micaLabel": "Nyctalopia",
+            "score": 3.9271739206498917,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:20625056"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000510",
+            "patientPhenotypeLabel": "Rod-cone dystrophy",
+            "diseasePhenotypeCurie": "HP:0000510",
+            "diseasePhenotypeLabel": "Rod-cone dystrophy",
+            "micaCurie": "HP:0000510",
+            "micaLabel": "Rod-cone dystrophy",
+            "score": 3.810048563412479,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:20625056"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000545",
+            "patientPhenotypeLabel": "Myopia",
+            "diseasePhenotypeCurie": "HP:0011003",
+            "diseasePhenotypeLabel": "High myopia",
+            "micaCurie": "HP:0000545",
+            "micaLabel": "Myopia",
+            "score": 3.085810795782503,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:20625056"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0032037",
+            "patientPhenotypeLabel": "Mildly reduced visual acuity",
+            "diseasePhenotypeCurie": "HP:0030529",
+            "diseasePhenotypeLabel": "Ring scotoma",
+            "micaCurie": "HP:0000505",
+            "micaLabel": "Visual impairment",
+            "score": 2.2058877080792225,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:20625056"
+          }
+        ]
+      },
+      {
+        "rank": 14,
+        "diseaseCurie": "MONDO:0011630",
+        "diseaseLabel": "retinitis pigmentosa 28",
+        "diseaseEntityId": 72916,
+        "bmaScore": 2.928926853592472,
+        "normalizedScore": 0.323386,
+        "patientAverageScore": 3.1158924916731667,
+        "diseaseAverageScore": 2.741961215511777,
+        "directPhenotypeCount": 6,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0007994",
+            "patientPhenotypeLabel": "Peripheral visual field loss",
+            "diseasePhenotypeCurie": "HP:0001133",
+            "diseasePhenotypeLabel": "Constriction of peripheral visual field",
+            "micaCurie": "HP:0001133",
+            "micaLabel": "Constriction of peripheral visual field",
+            "score": 4.472105156902393,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:20705278"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000662",
+            "patientPhenotypeLabel": "Nyctalopia",
+            "diseasePhenotypeCurie": "HP:0000662",
+            "diseasePhenotypeLabel": "Nyctalopia",
+            "micaCurie": "HP:0000662",
+            "micaLabel": "Nyctalopia",
+            "score": 3.9271739206498917,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:20705278"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000510",
+            "patientPhenotypeLabel": "Rod-cone dystrophy",
+            "diseasePhenotypeCurie": "HP:0000510",
+            "diseasePhenotypeLabel": "Rod-cone dystrophy",
+            "micaCurie": "HP:0000510",
+            "micaLabel": "Rod-cone dystrophy",
+            "score": 3.810048563412479,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:20705278"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0032037",
+            "patientPhenotypeLabel": "Mildly reduced visual acuity",
+            "diseasePhenotypeCurie": "HP:0001133",
+            "diseasePhenotypeLabel": "Constriction of peripheral visual field",
+            "micaCurie": "HP:0000505",
+            "micaLabel": "Visual impairment",
+            "score": 2.2058877080792225,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:20705278"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000545",
+            "patientPhenotypeLabel": "Myopia",
+            "diseasePhenotypeCurie": "HP:0001133",
+            "diseasePhenotypeLabel": "Constriction of peripheral visual field",
+            "micaCurie": "HP:0012373",
+            "micaLabel": "Abnormal eye physiology",
+            "score": 1.1642471093218474,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:20705278"
+          }
+        ]
+      },
+      {
+        "rank": 15,
+        "diseaseCurie": "MONDO:0013437",
+        "diseaseLabel": "retinitis pigmentosa 43",
+        "diseaseEntityId": 74723,
+        "bmaScore": 2.9213901991505424,
+        "normalizedScore": 0.322553,
+        "patientAverageScore": 3.3891108224336413,
+        "diseaseAverageScore": 2.4536695758674436,
+        "directPhenotypeCount": 11,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0007994",
+            "patientPhenotypeLabel": "Peripheral visual field loss",
+            "diseasePhenotypeCurie": "HP:0007994",
+            "diseasePhenotypeLabel": "Peripheral visual field loss",
+            "micaCurie": "HP:0007994",
+            "micaLabel": "Peripheral visual field loss",
+            "score": 5.838196810704765,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:21039428"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000662",
+            "patientPhenotypeLabel": "Nyctalopia",
+            "diseasePhenotypeCurie": "HP:0000662",
+            "diseasePhenotypeLabel": "Nyctalopia",
+            "micaCurie": "HP:0000662",
+            "micaLabel": "Nyctalopia",
+            "score": 3.9271739206498917,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:21039428"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000510",
+            "patientPhenotypeLabel": "Rod-cone dystrophy",
+            "diseasePhenotypeCurie": "HP:0000510",
+            "diseasePhenotypeLabel": "Rod-cone dystrophy",
+            "micaCurie": "HP:0000510",
+            "micaLabel": "Rod-cone dystrophy",
+            "score": 3.810048563412479,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:21039428"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0032037",
+            "patientPhenotypeLabel": "Mildly reduced visual acuity",
+            "diseasePhenotypeCurie": "HP:0007994",
+            "diseasePhenotypeLabel": "Peripheral visual field loss",
+            "micaCurie": "HP:0000505",
+            "micaLabel": "Visual impairment",
+            "score": 2.2058877080792225,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:21039428"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000545",
+            "patientPhenotypeLabel": "Myopia",
+            "diseasePhenotypeCurie": "HP:0007994",
+            "diseasePhenotypeLabel": "Peripheral visual field loss",
+            "micaCurie": "HP:0012373",
+            "micaLabel": "Abnormal eye physiology",
+            "score": 1.1642471093218474,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:21039428"
+          }
+        ]
+      },
+      {
+        "rank": 16,
+        "diseaseCurie": "MONDO:0012475",
+        "diseaseLabel": "cone dystrophy with supernormal rod response",
+        "diseaseEntityId": 73761,
+        "bmaScore": 2.9193933508372125,
+        "normalizedScore": 0.322333,
+        "patientAverageScore": 3.4275380121041947,
+        "diseaseAverageScore": 2.4112486895702303,
+        "directPhenotypeCount": 11,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000662",
+            "patientPhenotypeLabel": "Nyctalopia",
+            "diseasePhenotypeCurie": "HP:0000662",
+            "diseasePhenotypeLabel": "Nyctalopia",
+            "micaCurie": "HP:0000662",
+            "micaLabel": "Nyctalopia",
+            "score": 3.9271739206498917,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:16909397"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007994",
+            "patientPhenotypeLabel": "Peripheral visual field loss",
+            "diseasePhenotypeCurie": "HP:0000575",
+            "diseasePhenotypeLabel": "Scotoma",
+            "micaCurie": "HP:0001123",
+            "micaLabel": "Visual field defect",
+            "score": 3.892286661649451,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:610356"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000510",
+            "patientPhenotypeLabel": "Rod-cone dystrophy",
+            "diseasePhenotypeCurie": "HP:0000548",
+            "diseasePhenotypeLabel": "Cone/cone-rod dystrophy",
+            "micaCurie": "HP:0000556",
+            "micaLabel": "Retinal dystrophy",
+            "score": 3.3532901609167642,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:16909397"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000545",
+            "patientPhenotypeLabel": "Myopia",
+            "diseasePhenotypeCurie": "HP:0000545",
+            "diseasePhenotypeLabel": "Myopia",
+            "micaCurie": "HP:0000545",
+            "micaLabel": "Myopia",
+            "score": 3.085810795782503,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:610356"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0032037",
+            "patientPhenotypeLabel": "Mildly reduced visual acuity",
+            "diseasePhenotypeCurie": "HP:0007663",
+            "diseasePhenotypeLabel": "Reduced visual acuity",
+            "micaCurie": "HP:0007663",
+            "micaLabel": "Reduced visual acuity",
+            "score": 2.879128521522365,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:16909397"
+          }
+        ]
+      },
+      {
+        "rank": 17,
+        "diseaseCurie": "MONDO:0014614",
+        "diseaseLabel": "congenital stationary night blindness 1G",
+        "diseaseEntityId": 75900,
+        "bmaScore": 2.918013122562601,
+        "normalizedScore": 0.322181,
+        "patientAverageScore": 3.1158924916731667,
+        "diseaseAverageScore": 2.720133753452036,
+        "directPhenotypeCount": 6,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0007994",
+            "patientPhenotypeLabel": "Peripheral visual field loss",
+            "diseasePhenotypeCurie": "HP:0001133",
+            "diseasePhenotypeLabel": "Constriction of peripheral visual field",
+            "micaCurie": "HP:0001133",
+            "micaLabel": "Constriction of peripheral visual field",
+            "score": 4.472105156902393,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:26472407"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000662",
+            "patientPhenotypeLabel": "Nyctalopia",
+            "diseasePhenotypeCurie": "HP:0007642",
+            "diseasePhenotypeLabel": "Early-onset non-progressive night blindness",
+            "micaCurie": "HP:0000662",
+            "micaLabel": "Nyctalopia",
+            "score": 3.9271739206498917,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:26472407"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000510",
+            "patientPhenotypeLabel": "Rod-cone dystrophy",
+            "diseasePhenotypeCurie": "HP:0000510",
+            "diseasePhenotypeLabel": "Rod-cone dystrophy",
+            "micaCurie": "HP:0000510",
+            "micaLabel": "Rod-cone dystrophy",
+            "score": 3.810048563412479,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:26472407"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0032037",
+            "patientPhenotypeLabel": "Mildly reduced visual acuity",
+            "diseasePhenotypeCurie": "HP:0001133",
+            "diseasePhenotypeLabel": "Constriction of peripheral visual field",
+            "micaCurie": "HP:0000505",
+            "micaLabel": "Visual impairment",
+            "score": 2.2058877080792225,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:26472407"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000545",
+            "patientPhenotypeLabel": "Myopia",
+            "diseasePhenotypeCurie": "HP:0007642",
+            "diseasePhenotypeLabel": "Early-onset non-progressive night blindness",
+            "micaCurie": "HP:0012373",
+            "micaLabel": "Abnormal eye physiology",
+            "score": 1.1642471093218474,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:26472407"
+          }
+        ]
+      },
+      {
+        "rank": 18,
+        "diseaseCurie": "MONDO:0012796",
+        "diseaseLabel": "retinitis pigmentosa 41",
+        "diseaseEntityId": 74082,
+        "bmaScore": 2.9171117667285236,
+        "normalizedScore": 0.322081,
+        "patientAverageScore": 3.5237589851222695,
+        "diseaseAverageScore": 2.310464548334777,
+        "directPhenotypeCount": 13,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0007994",
+            "patientPhenotypeLabel": "Peripheral visual field loss",
+            "diseasePhenotypeCurie": "HP:0007994",
+            "diseasePhenotypeLabel": "Peripheral visual field loss",
+            "micaCurie": "HP:0007994",
+            "micaLabel": "Peripheral visual field loss",
+            "score": 5.838196810704765,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:10587575"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000662",
+            "patientPhenotypeLabel": "Nyctalopia",
+            "diseasePhenotypeCurie": "HP:0000662",
+            "diseasePhenotypeLabel": "Nyctalopia",
+            "micaCurie": "HP:0000662",
+            "micaLabel": "Nyctalopia",
+            "score": 3.9271739206498917,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:10587575"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000510",
+            "patientPhenotypeLabel": "Rod-cone dystrophy",
+            "diseasePhenotypeCurie": "HP:0000510",
+            "diseasePhenotypeLabel": "Rod-cone dystrophy",
+            "micaCurie": "HP:0000510",
+            "micaLabel": "Rod-cone dystrophy",
+            "score": 3.810048563412479,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:10587575"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0032037",
+            "patientPhenotypeLabel": "Mildly reduced visual acuity",
+            "diseasePhenotypeCurie": "HP:0001141",
+            "diseasePhenotypeLabel": "Severely reduced visual acuity",
+            "micaCurie": "HP:0007663",
+            "micaLabel": "Reduced visual acuity",
+            "score": 2.879128521522365,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:10587575;PMID:17605048"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000545",
+            "patientPhenotypeLabel": "Myopia",
+            "diseasePhenotypeCurie": "HP:0007994",
+            "diseasePhenotypeLabel": "Peripheral visual field loss",
+            "micaCurie": "HP:0012373",
+            "micaLabel": "Abnormal eye physiology",
+            "score": 1.1642471093218474,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:10587575"
+          }
+        ]
+      },
+      {
+        "rank": 19,
+        "diseaseCurie": "MONDO:0008865",
+        "diseaseLabel": "Bietti crystalline corneoretinal dystrophy",
+        "diseaseEntityId": 70151,
+        "bmaScore": 2.9152630395406653,
+        "normalizedScore": 0.321877,
+        "patientAverageScore": 3.340214175058965,
+        "diseaseAverageScore": 2.490311904022366,
+        "directPhenotypeCount": 11,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0007994",
+            "patientPhenotypeLabel": "Peripheral visual field loss",
+            "diseasePhenotypeCurie": "HP:0001133",
+            "diseasePhenotypeLabel": "Constriction of peripheral visual field",
+            "micaCurie": "HP:0001133",
+            "micaLabel": "Constriction of peripheral visual field",
+            "score": 4.472105156902393,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:210370"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000662",
+            "patientPhenotypeLabel": "Nyctalopia",
+            "diseasePhenotypeCurie": "HP:0007675",
+            "diseasePhenotypeLabel": "Progressive night blindness",
+            "micaCurie": "HP:0000662",
+            "micaLabel": "Nyctalopia",
+            "score": 3.9271739206498917,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:210370"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000545",
+            "patientPhenotypeLabel": "Myopia",
+            "diseasePhenotypeCurie": "HP:0011003",
+            "diseasePhenotypeLabel": "High myopia",
+            "micaCurie": "HP:0000545",
+            "micaLabel": "Myopia",
+            "score": 3.085810795782503,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:210370"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0032037",
+            "patientPhenotypeLabel": "Mildly reduced visual acuity",
+            "diseasePhenotypeCurie": "HP:0007663",
+            "diseasePhenotypeLabel": "Reduced visual acuity",
+            "micaCurie": "HP:0007663",
+            "micaLabel": "Reduced visual acuity",
+            "score": 2.879128521522365,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:15937078"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000510",
+            "patientPhenotypeLabel": "Rod-cone dystrophy",
+            "diseasePhenotypeCurie": "HP:0000546",
+            "diseasePhenotypeLabel": "Retinal degeneration",
+            "micaCurie": "HP:0000479",
+            "micaLabel": "Abnormal retinal morphology",
+            "score": 2.3368524804376705,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:210370"
+          }
+        ]
+      },
+      {
+        "rank": 20,
+        "diseaseCurie": "MONDO:0011838",
+        "diseaseLabel": "Bothnia retinal dystrophy",
+        "diseaseEntityId": 73124,
+        "bmaScore": 2.894511632274244,
+        "normalizedScore": 0.319586,
+        "patientAverageScore": 3.2971179006589386,
+        "diseaseAverageScore": 2.49190536388955,
+        "directPhenotypeCount": 25,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000662",
+            "patientPhenotypeLabel": "Nyctalopia",
+            "diseasePhenotypeCurie": "HP:0000662",
+            "diseasePhenotypeLabel": "Nyctalopia",
+            "micaCurie": "HP:0000662",
+            "micaLabel": "Nyctalopia",
+            "score": 3.9271739206498917,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:85128"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007994",
+            "patientPhenotypeLabel": "Peripheral visual field loss",
+            "diseasePhenotypeCurie": "HP:0030529",
+            "diseasePhenotypeLabel": "Ring scotoma",
+            "micaCurie": "HP:0001123",
+            "micaLabel": "Visual field defect",
+            "score": 3.892286661649451,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:85128"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000510",
+            "patientPhenotypeLabel": "Rod-cone dystrophy",
+            "diseasePhenotypeCurie": "HP:0000510",
+            "diseasePhenotypeLabel": "Rod-cone dystrophy",
+            "micaCurie": "HP:0000510",
+            "micaLabel": "Rod-cone dystrophy",
+            "score": 3.810048563412479,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:85128"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000545",
+            "patientPhenotypeLabel": "Myopia",
+            "diseasePhenotypeCurie": "HP:0000539",
+            "diseasePhenotypeLabel": "Abnormality of refraction",
+            "micaCurie": "HP:0000539",
+            "micaLabel": "Abnormality of refraction",
+            "score": 2.650192649503651,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:85128"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0032037",
+            "patientPhenotypeLabel": "Mildly reduced visual acuity",
+            "diseasePhenotypeCurie": "HP:0030529",
+            "diseasePhenotypeLabel": "Ring scotoma",
+            "micaCurie": "HP:0000505",
+            "micaLabel": "Visual impairment",
+            "score": 2.2058877080792225,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:85128"
+          }
+        ]
+      },
+      {
+        "rank": 21,
+        "diseaseCurie": "MONDO:0011564",
+        "diseaseLabel": "cone-rod dystrophy 8",
+        "diseaseEntityId": 72850,
+        "bmaScore": 2.8891726109539935,
+        "normalizedScore": 0.318996,
+        "patientAverageScore": 3.432407304623127,
+        "diseaseAverageScore": 2.3459379172848602,
+        "directPhenotypeCount": 12,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0007994",
+            "patientPhenotypeLabel": "Peripheral visual field loss",
+            "diseasePhenotypeCurie": "HP:0007994",
+            "diseasePhenotypeLabel": "Peripheral visual field loss",
+            "micaCurie": "HP:0007994",
+            "micaLabel": "Peripheral visual field loss",
+            "score": 5.838196810704765,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:605549"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000662",
+            "patientPhenotypeLabel": "Nyctalopia",
+            "diseasePhenotypeCurie": "HP:0000662",
+            "diseasePhenotypeLabel": "Nyctalopia",
+            "micaCurie": "HP:0000662",
+            "micaLabel": "Nyctalopia",
+            "score": 3.9271739206498917,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:605549"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000510",
+            "patientPhenotypeLabel": "Rod-cone dystrophy",
+            "diseasePhenotypeCurie": "HP:0000548",
+            "diseasePhenotypeLabel": "Cone/cone-rod dystrophy",
+            "micaCurie": "HP:0000556",
+            "micaLabel": "Retinal dystrophy",
+            "score": 3.3532901609167642,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:605549"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0032037",
+            "patientPhenotypeLabel": "Mildly reduced visual acuity",
+            "diseasePhenotypeCurie": "HP:0000618",
+            "diseasePhenotypeLabel": "Blindness",
+            "micaCurie": "HP:0007663",
+            "micaLabel": "Reduced visual acuity",
+            "score": 2.879128521522365,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:605549"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000545",
+            "patientPhenotypeLabel": "Myopia",
+            "diseasePhenotypeCurie": "HP:0009926",
+            "diseasePhenotypeLabel": "Epiphora",
+            "micaCurie": "HP:0012373",
+            "micaLabel": "Abnormal eye physiology",
+            "score": 1.1642471093218474,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:605549"
+          }
+        ]
+      },
+      {
+        "rank": 22,
+        "diseaseCurie": "MONDO:0014653",
+        "diseaseLabel": "retinitis pigmentosa 72",
+        "diseaseEntityId": 75939,
+        "bmaScore": 2.8837952332569774,
+        "normalizedScore": 0.318403,
+        "patientAverageScore": 3.634853391653926,
+        "diseaseAverageScore": 2.1327370748600285,
+        "directPhenotypeCount": 14,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0007994",
+            "patientPhenotypeLabel": "Peripheral visual field loss",
+            "diseasePhenotypeCurie": "HP:0001133",
+            "diseasePhenotypeLabel": "Constriction of peripheral visual field",
+            "micaCurie": "HP:0001133",
+            "micaLabel": "Constriction of peripheral visual field",
+            "score": 4.472105156902393,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:25882705"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000662",
+            "patientPhenotypeLabel": "Nyctalopia",
+            "diseasePhenotypeCurie": "HP:0000662",
+            "diseasePhenotypeLabel": "Nyctalopia",
+            "micaCurie": "HP:0000662",
+            "micaLabel": "Nyctalopia",
+            "score": 3.9271739206498917,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:25882705"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000510",
+            "patientPhenotypeLabel": "Rod-cone dystrophy",
+            "diseasePhenotypeCurie": "HP:0000510",
+            "diseasePhenotypeLabel": "Rod-cone dystrophy",
+            "micaCurie": "HP:0000510",
+            "micaLabel": "Rod-cone dystrophy",
+            "score": 3.810048563412479,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:25882705"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000545",
+            "patientPhenotypeLabel": "Myopia",
+            "diseasePhenotypeCurie": "HP:0011003",
+            "diseasePhenotypeLabel": "High myopia",
+            "micaCurie": "HP:0000545",
+            "micaLabel": "Myopia",
+            "score": 3.085810795782503,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:25882705"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0032037",
+            "patientPhenotypeLabel": "Mildly reduced visual acuity",
+            "diseasePhenotypeCurie": "HP:0007663",
+            "diseasePhenotypeLabel": "Reduced visual acuity",
+            "micaCurie": "HP:0007663",
+            "micaLabel": "Reduced visual acuity",
+            "score": 2.879128521522365,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:25882705"
+          }
+        ]
+      },
+      {
+        "rank": 23,
+        "diseaseCurie": "MONDO:0011137",
+        "diseaseLabel": "retinitis pigmentosa 19",
+        "diseaseEntityId": 72423,
+        "bmaScore": 2.869576490493145,
+        "normalizedScore": 0.316833,
+        "patientAverageScore": 3.250540654361795,
+        "diseaseAverageScore": 2.488612326624495,
+        "directPhenotypeCount": 11,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0007994",
+            "patientPhenotypeLabel": "Peripheral visual field loss",
+            "diseasePhenotypeCurie": "HP:0001133",
+            "diseasePhenotypeLabel": "Constriction of peripheral visual field",
+            "micaCurie": "HP:0001133",
+            "micaLabel": "Constriction of peripheral visual field",
+            "score": 4.472105156902393,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:9070931"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000662",
+            "patientPhenotypeLabel": "Nyctalopia",
+            "diseasePhenotypeCurie": "HP:0000662",
+            "diseasePhenotypeLabel": "Nyctalopia",
+            "micaCurie": "HP:0000662",
+            "micaLabel": "Nyctalopia",
+            "score": 3.9271739206498917,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:9070931"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000510",
+            "patientPhenotypeLabel": "Rod-cone dystrophy",
+            "diseasePhenotypeCurie": "HP:0000510",
+            "diseasePhenotypeLabel": "Rod-cone dystrophy",
+            "micaCurie": "HP:0000510",
+            "micaLabel": "Rod-cone dystrophy",
+            "score": 3.810048563412479,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:601718"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0032037",
+            "patientPhenotypeLabel": "Mildly reduced visual acuity",
+            "diseasePhenotypeCurie": "HP:0007663",
+            "diseasePhenotypeLabel": "Reduced visual acuity",
+            "micaCurie": "HP:0007663",
+            "micaLabel": "Reduced visual acuity",
+            "score": 2.879128521522365,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:601718"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000545",
+            "patientPhenotypeLabel": "Myopia",
+            "diseasePhenotypeCurie": "HP:0007663",
+            "diseasePhenotypeLabel": "Reduced visual acuity",
+            "micaCurie": "HP:0012373",
+            "micaLabel": "Abnormal eye physiology",
+            "score": 1.1642471093218474,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:601718"
+          }
+        ]
+      },
+      {
+        "rank": 24,
+        "diseaseCurie": "MONDO:0957240",
+        "diseaseLabel": "cone-rod dystrophy 24",
+        "diseaseEntityId": 88147,
+        "bmaScore": 2.865495614698718,
+        "normalizedScore": 0.316382,
+        "patientAverageScore": 3.4275380121041947,
+        "diseaseAverageScore": 2.303453217293241,
+        "directPhenotypeCount": 16,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000662",
+            "patientPhenotypeLabel": "Nyctalopia",
+            "diseasePhenotypeCurie": "HP:0000662",
+            "diseasePhenotypeLabel": "Nyctalopia",
+            "micaCurie": "HP:0000662",
+            "micaLabel": "Nyctalopia",
+            "score": 3.9271739206498917,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:11006213;PMID:35947183"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007994",
+            "patientPhenotypeLabel": "Peripheral visual field loss",
+            "diseasePhenotypeCurie": "HP:0007761",
+            "diseasePhenotypeLabel": "Pericentral scotoma",
+            "micaCurie": "HP:0001123",
+            "micaLabel": "Visual field defect",
+            "score": 3.892286661649451,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:11006213"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000510",
+            "patientPhenotypeLabel": "Rod-cone dystrophy",
+            "diseasePhenotypeCurie": "HP:0000548",
+            "diseasePhenotypeLabel": "Cone/cone-rod dystrophy",
+            "micaCurie": "HP:0000556",
+            "micaLabel": "Retinal dystrophy",
+            "score": 3.3532901609167642,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:11006213;PMID:35947183"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000545",
+            "patientPhenotypeLabel": "Myopia",
+            "diseasePhenotypeCurie": "HP:0000545",
+            "diseasePhenotypeLabel": "Myopia",
+            "micaCurie": "HP:0000545",
+            "micaLabel": "Myopia",
+            "score": 3.085810795782503,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:11006213"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0032037",
+            "patientPhenotypeLabel": "Mildly reduced visual acuity",
+            "diseasePhenotypeCurie": "HP:0007663",
+            "diseasePhenotypeLabel": "Reduced visual acuity",
+            "micaCurie": "HP:0007663",
+            "micaLabel": "Reduced visual acuity",
+            "score": 2.879128521522365,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:11006213"
+          }
+        ]
+      },
+      {
+        "rank": 25,
+        "diseaseCurie": "MONDO:0013348",
+        "diseaseLabel": "cone-rod dystrophy 15",
+        "diseaseEntityId": 74634,
+        "bmaScore": 2.848498060406161,
+        "normalizedScore": 0.314505,
+        "patientAverageScore": 3.1158924916731667,
+        "diseaseAverageScore": 2.581103629139156,
+        "directPhenotypeCount": 9,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0007994",
+            "patientPhenotypeLabel": "Peripheral visual field loss",
+            "diseasePhenotypeCurie": "HP:0001133",
+            "diseasePhenotypeLabel": "Constriction of peripheral visual field",
+            "micaCurie": "HP:0001133",
+            "micaLabel": "Constriction of peripheral visual field",
+            "score": 4.472105156902393,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:20805371"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000662",
+            "patientPhenotypeLabel": "Nyctalopia",
+            "diseasePhenotypeCurie": "HP:0000662",
+            "diseasePhenotypeLabel": "Nyctalopia",
+            "micaCurie": "HP:0000662",
+            "micaLabel": "Nyctalopia",
+            "score": 3.9271739206498917,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:20805371"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000510",
+            "patientPhenotypeLabel": "Rod-cone dystrophy",
+            "diseasePhenotypeCurie": "HP:0000510",
+            "diseasePhenotypeLabel": "Rod-cone dystrophy",
+            "micaCurie": "HP:0000510",
+            "micaLabel": "Rod-cone dystrophy",
+            "score": 3.810048563412479,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:20805371"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0032037",
+            "patientPhenotypeLabel": "Mildly reduced visual acuity",
+            "diseasePhenotypeCurie": "HP:0001133",
+            "diseasePhenotypeLabel": "Constriction of peripheral visual field",
+            "micaCurie": "HP:0000505",
+            "micaLabel": "Visual impairment",
+            "score": 2.2058877080792225,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:20805371"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000545",
+            "patientPhenotypeLabel": "Myopia",
+            "diseasePhenotypeCurie": "HP:0001133",
+            "diseasePhenotypeLabel": "Constriction of peripheral visual field",
+            "micaCurie": "HP:0012373",
+            "micaLabel": "Abnormal eye physiology",
+            "score": 1.1642471093218474,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:20805371"
+          }
+        ]
+      }
+    ],
+    "engineSummary": {
+      "diseaseCount": 8579,
+      "phenotypeCount": 19389,
+      "sourceMode": "relationship_fallback",
+      "generatedAt": "2026-03-15T20:43:58.513Z"
+    }
+  }
+}

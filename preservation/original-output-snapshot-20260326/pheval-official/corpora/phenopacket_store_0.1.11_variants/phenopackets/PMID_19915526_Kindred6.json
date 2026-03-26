@@ -1,0 +1,217 @@
+{
+  "id": "PMID_19915526_Kindred_6",
+  "subject": {
+    "id": "Kindred 6"
+  },
+  "phenotypicFeatures": [
+    {
+      "type": {
+        "id": "HP:0000202",
+        "label": "Orofacial cleft"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000347",
+        "label": "Micrognathia"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000378",
+        "label": "Cupped ear"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000411",
+        "label": "Protruding ear"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000448",
+        "label": "Prominent nose"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0000625",
+        "label": "Eyelid coloboma"
+      }
+    },
+    {
+      "type": {
+        "id": "HP:0002558",
+        "label": "Supernumerary nipple"
+      }
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "Kindred 6",
+      "progressStatus": "SOLVED",
+      "diagnosis": {
+        "disease": {
+          "id": "OMIM:263750",
+          "label": "Postaxial acrofacial dysostosis"
+        },
+        "genomicInterpretations": [
+          {
+            "subjectOrBiosampleId": "Kindred 6",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "variationDescriptor": {
+                "id": "var_ijJUSxnAUmZuktowUKWGFWioj",
+                "geneContext": {
+                  "valueId": "ENSG00000102967",
+                  "symbol": "DHODH",
+                  "alternateIds": [
+                    "HGNC:2867",
+                    "ncbigene:1723",
+                    "ensembl:ENSG00000102967",
+                    "symbol:DHODH"
+                  ]
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "NM_001361.4:c.851C>T"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000016.10:g.72023196C>T"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr16",
+                  "pos": "72023196",
+                  "ref": "C",
+                  "alt": "T"
+                },
+                "moleculeContext": "genomic",
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                }
+              }
+            }
+          },
+          {
+            "subjectOrBiosampleId": "Kindred 6",
+            "interpretationStatus": "CAUSATIVE",
+            "variantInterpretation": {
+              "variationDescriptor": {
+                "id": "var_bIxaGxiNqPMGiHFXSfpmrQDPL",
+                "geneContext": {
+                  "valueId": "ENSG00000102967",
+                  "symbol": "DHODH",
+                  "alternateIds": [
+                    "HGNC:2867",
+                    "ncbigene:1723",
+                    "ensembl:ENSG00000102967",
+                    "symbol:DHODH"
+                  ]
+                },
+                "expressions": [
+                  {
+                    "syntax": "hgvs.c",
+                    "value": "NM_001361.4:c.1175A>G"
+                  },
+                  {
+                    "syntax": "hgvs.g",
+                    "value": "NC_000016.10:g.72024186A>G"
+                  }
+                ],
+                "vcfRecord": {
+                  "genomeAssembly": "hg38",
+                  "chrom": "chr16",
+                  "pos": "72024186",
+                  "ref": "A",
+                  "alt": "G"
+                },
+                "moleculeContext": "genomic",
+                "allelicState": {
+                  "id": "GENO:0000135",
+                  "label": "heterozygous"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "diseases": [
+    {
+      "term": {
+        "id": "OMIM:263750",
+        "label": "Postaxial acrofacial dysostosis"
+      }
+    }
+  ],
+  "files": [
+    {
+      "uri": "file:///data/scratch/bty201/paper/corpora/phenopacket_store_variants/DHODH/variant_phenopackets/vcf/PMID_19915526_Kindred6.vcf.gz",
+      "fileAttributes": {
+        "genomeAssembly": "GRCh38",
+        "fileFormat": "vcf"
+      }
+    }
+  ],
+  "metaData": {
+    "created": "2024-05-13T04:24:38.911417007Z",
+    "createdBy": "ORCID:0000-0002-0736-9199",
+    "resources": [
+      {
+        "id": "geno",
+        "name": "Genotype Ontology",
+        "url": "http://purl.obolibrary.org/obo/geno.owl",
+        "version": "2022-03-05",
+        "namespacePrefix": "GENO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/GENO_"
+      },
+      {
+        "id": "hgnc",
+        "name": "HUGO Gene Nomenclature Committee",
+        "url": "https://www.genenames.org",
+        "version": "06/01/23",
+        "namespacePrefix": "HGNC",
+        "iriPrefix": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/"
+      },
+      {
+        "id": "omim",
+        "name": "An Online Catalog of Human Genes and Genetic Disorders",
+        "url": "https://www.omim.org",
+        "version": "January 4, 2023",
+        "namespacePrefix": "OMIM",
+        "iriPrefix": "https://www.omim.org/entry/"
+      },
+      {
+        "id": "so",
+        "name": "Sequence types and features ontology",
+        "url": "http://purl.obolibrary.org/obo/so.obo",
+        "version": "2021-11-22",
+        "namespacePrefix": "SO",
+        "iriPrefix": "http://purl.obolibrary.org/obo/SO_"
+      },
+      {
+        "id": "hp",
+        "name": "human phenotype ontology",
+        "url": "http://purl.obolibrary.org/obo/hp.owl",
+        "version": "2024-04-26",
+        "namespacePrefix": "HP",
+        "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+      }
+    ],
+    "phenopacketSchemaVersion": "2.0",
+    "externalReferences": [
+      {
+        "id": "PMID:19915526",
+        "reference": "https://pubmed.ncbi.nlm.nih.gov/19915526",
+        "description": "Exome sequencing identifies the cause of a mendelian disorder."
+      }
+    ]
+  }
+}

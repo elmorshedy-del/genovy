@@ -1,0 +1,1018 @@
+{
+  "success": true,
+  "engine": "genovy-dx-sim",
+  "analysisType": "gene",
+  "input": {
+    "presentPhenotypeCuries": [
+      "HP:0000175",
+      "HP:0001263"
+    ],
+    "excludedPhenotypeCuries": [],
+    "sourceFormat": "phenopacket"
+  },
+  "ranking": {
+    "queryPhenotypes": [
+      {
+        "phenotypeCurie": "HP:0000175",
+        "phenotypeLabel": "Cleft palate"
+      },
+      {
+        "phenotypeCurie": "HP:0001263",
+        "phenotypeLabel": "Global developmental delay"
+      }
+    ],
+    "results": [
+      {
+        "rank": 1,
+        "geneCurie": "NCBIGene:9411",
+        "geneLabel": "ARHGAP29",
+        "geneSymbol": "ARHGAP29",
+        "geneEntityId": 150789,
+        "bmaScore": 1.582820159647961,
+        "normalizedScore": 0.174761,
+        "patientAverageScore": 1.9835954058803384,
+        "phenotypeAverageScore": 1.1820449134155835,
+        "directPhenotypeCount": 21,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000175",
+            "patientPhenotypeLabel": "Cleft palate",
+            "diseasePhenotypeCurie": "HP:0100337",
+            "diseasePhenotypeLabel": "Bilateral cleft palate",
+            "micaCurie": "HP:0000175",
+            "micaLabel": "Cleft palate",
+            "score": 2.7710745410641007,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0012758",
+            "micaLabel": "Neurodevelopmental delay",
+            "score": 1.1961162706965762,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:199306"
+          }
+        ],
+        "directNormalizedScore": 0.174761,
+        "diseaseSupportScore": 0,
+        "supportingDiseaseCurie": "",
+        "supportingDiseaseLabel": "",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 2,
+        "geneCurie": "NCBIGene:54848",
+        "geneLabel": "ARHGEF38",
+        "geneSymbol": "ARHGEF38",
+        "geneEntityId": 151871,
+        "bmaScore": 1.582820159647961,
+        "normalizedScore": 0.174761,
+        "patientAverageScore": 1.9835954058803384,
+        "phenotypeAverageScore": 1.1820449134155835,
+        "directPhenotypeCount": 21,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000175",
+            "patientPhenotypeLabel": "Cleft palate",
+            "diseasePhenotypeCurie": "HP:0100337",
+            "diseasePhenotypeLabel": "Bilateral cleft palate",
+            "micaCurie": "HP:0000175",
+            "micaLabel": "Cleft palate",
+            "score": 2.7710745410641007,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0012758",
+            "micaLabel": "Neurodevelopmental delay",
+            "score": 1.1961162706965762,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:199306"
+          }
+        ],
+        "directNormalizedScore": 0.174761,
+        "diseaseSupportScore": 0,
+        "supportingDiseaseCurie": "",
+        "supportingDiseaseLabel": "",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 3,
+        "geneCurie": "NCBIGene:22837",
+        "geneLabel": "COBLL1",
+        "geneSymbol": "COBLL1",
+        "geneEntityId": 151224,
+        "bmaScore": 1.582820159647961,
+        "normalizedScore": 0.174761,
+        "patientAverageScore": 1.9835954058803384,
+        "phenotypeAverageScore": 1.1820449134155835,
+        "directPhenotypeCount": 21,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000175",
+            "patientPhenotypeLabel": "Cleft palate",
+            "diseasePhenotypeCurie": "HP:0100337",
+            "diseasePhenotypeLabel": "Bilateral cleft palate",
+            "micaCurie": "HP:0000175",
+            "micaLabel": "Cleft palate",
+            "score": 2.7710745410641007,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0012758",
+            "micaLabel": "Neurodevelopmental delay",
+            "score": 1.1961162706965762,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:199306"
+          }
+        ],
+        "directNormalizedScore": 0.174761,
+        "diseaseSupportScore": 0,
+        "supportingDiseaseCurie": "",
+        "supportingDiseaseLabel": "",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 4,
+        "geneCurie": "NCBIGene:1739",
+        "geneLabel": "DLG1",
+        "geneSymbol": "DLG1",
+        "geneEntityId": 148654,
+        "bmaScore": 1.582820159647961,
+        "normalizedScore": 0.174761,
+        "patientAverageScore": 1.9835954058803384,
+        "phenotypeAverageScore": 1.1820449134155835,
+        "directPhenotypeCount": 21,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000175",
+            "patientPhenotypeLabel": "Cleft palate",
+            "diseasePhenotypeCurie": "HP:0100337",
+            "diseasePhenotypeLabel": "Bilateral cleft palate",
+            "micaCurie": "HP:0000175",
+            "micaLabel": "Cleft palate",
+            "score": 2.7710745410641007,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0012758",
+            "micaLabel": "Neurodevelopmental delay",
+            "score": 1.1961162706965762,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:199306"
+          }
+        ],
+        "directNormalizedScore": 0.174761,
+        "diseaseSupportScore": 0,
+        "supportingDiseaseCurie": "",
+        "supportingDiseaseLabel": "",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 5,
+        "geneCurie": "NCBIGene:57589",
+        "geneLabel": "RIC1",
+        "geneSymbol": "RIC1",
+        "geneEntityId": 152175,
+        "bmaScore": 1.5102744010979694,
+        "normalizedScore": 0.166751,
+        "patientAverageScore": 2.1111285877919723,
+        "phenotypeAverageScore": 0.9094202144039666,
+        "directPhenotypeCount": 43,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000175",
+            "patientPhenotypeLabel": "Cleft palate",
+            "diseasePhenotypeCurie": "HP:0100337",
+            "diseasePhenotypeLabel": "Bilateral cleft palate",
+            "micaCurie": "HP:0000175",
+            "micaLabel": "Cleft palate",
+            "score": 2.7710745410641007,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "10/10",
+            "referenceText": "OMIM:618761"
+          }
+        ],
+        "directNormalizedScore": 0.166751,
+        "diseaseSupportScore": 0.107085,
+        "supportingDiseaseCurie": "MONDO:0032901",
+        "supportingDiseaseLabel": "Catifa syndrome",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 6,
+        "geneCurie": "NCBIGene:57822",
+        "geneLabel": "GRHL3",
+        "geneSymbol": "GRHL3",
+        "geneEntityId": 152198,
+        "bmaScore": 1.4936802076444033,
+        "normalizedScore": 0.164919,
+        "patientAverageScore": 1.9835954058803384,
+        "phenotypeAverageScore": 1.0037650094084682,
+        "directPhenotypeCount": 34,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000175",
+            "patientPhenotypeLabel": "Cleft palate",
+            "diseasePhenotypeCurie": "HP:5201016",
+            "diseasePhenotypeLabel": "Submucous cleft palate",
+            "micaCurie": "HP:0000175",
+            "micaLabel": "Cleft palate",
+            "score": 2.7710745410641007,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:155878"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0010863",
+            "diseasePhenotypeLabel": "Receptive language delay",
+            "micaCurie": "HP:0012758",
+            "micaLabel": "Neurodevelopmental delay",
+            "score": 1.1961162706965762,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:99772"
+          }
+        ],
+        "directNormalizedScore": 0.164919,
+        "diseaseSupportScore": 0.095686,
+        "supportingDiseaseCurie": "MONDO:0011712",
+        "supportingDiseaseLabel": "van der Woude syndrome 2",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 7,
+        "geneCurie": "HGNC:11600",
+        "geneLabel": "TBX22",
+        "geneSymbol": "TBX22",
+        "geneEntityId": 206866,
+        "bmaScore": 0,
+        "normalizedScore": 0.160807,
+        "patientAverageScore": 0,
+        "phenotypeAverageScore": 0,
+        "directPhenotypeCount": 0,
+        "matchedPhenotypeCount": 0,
+        "trace": [],
+        "directNormalizedScore": 0,
+        "diseaseSupportScore": 0.160807,
+        "supportingDiseaseCurie": "MONDO:0010560",
+        "supportingDiseaseLabel": "cleft palate with or without ankyloglossia, X-linked",
+        "supportingDiseaseClassification": "Definitive"
+      },
+      {
+        "rank": 8,
+        "geneCurie": "NCBIGene:9734",
+        "geneLabel": "HDAC9",
+        "geneSymbol": "HDAC9",
+        "geneEntityId": 150868,
+        "bmaScore": 1.4530804342405812,
+        "normalizedScore": 0.160436,
+        "patientAverageScore": 2.1111285877919723,
+        "phenotypeAverageScore": 0.7950322806891901,
+        "directPhenotypeCount": 13,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000175",
+            "patientPhenotypeLabel": "Cleft palate",
+            "diseasePhenotypeCurie": "HP:0000175",
+            "diseasePhenotypeLabel": "Cleft palate",
+            "micaCurie": "HP:0000175",
+            "micaLabel": "Cleft palate",
+            "score": 2.7710745410641007,
+            "evidenceCode": "1/10",
+            "referenceText": "OMIM:620457"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "0/10",
+            "referenceText": "OMIM:620457"
+          }
+        ],
+        "directNormalizedScore": 0.160436,
+        "diseaseSupportScore": 0.109096,
+        "supportingDiseaseCurie": "MONDO:0957543",
+        "supportingDiseaseLabel": "auriculocondylar syndrome 4",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 9,
+        "geneCurie": "NCBIGene:1748",
+        "geneLabel": "DLX4",
+        "geneSymbol": "DLX4",
+        "geneEntityId": 148659,
+        "bmaScore": 1.4496912612418504,
+        "normalizedScore": 0.160062,
+        "patientAverageScore": 1.9835954058803384,
+        "phenotypeAverageScore": 0.9157871166033625,
+        "directPhenotypeCount": 41,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000175",
+            "patientPhenotypeLabel": "Cleft palate",
+            "diseasePhenotypeCurie": "HP:0100337",
+            "diseasePhenotypeLabel": "Bilateral cleft palate",
+            "micaCurie": "HP:0000175",
+            "micaLabel": "Cleft palate",
+            "score": 2.7710745410641007,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0012758",
+            "micaLabel": "Neurodevelopmental delay",
+            "score": 1.1961162706965762,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:199306"
+          }
+        ],
+        "directNormalizedScore": 0.160062,
+        "diseaseSupportScore": 0.082792,
+        "supportingDiseaseCurie": "MONDO:0014772",
+        "supportingDiseaseLabel": "orofacial cleft 15",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 10,
+        "geneCurie": "NCBIGene:11023",
+        "geneLabel": "VAX1",
+        "geneSymbol": "VAX1",
+        "geneEntityId": 151161,
+        "bmaScore": 1.4470968422260728,
+        "normalizedScore": 0.159775,
+        "patientAverageScore": 2.1111285877919723,
+        "phenotypeAverageScore": 0.7830650966601733,
+        "directPhenotypeCount": 9,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000175",
+            "patientPhenotypeLabel": "Cleft palate",
+            "diseasePhenotypeCurie": "HP:0000175",
+            "diseasePhenotypeLabel": "Cleft palate",
+            "micaCurie": "HP:0000175",
+            "micaLabel": "Cleft palate",
+            "score": 2.7710745410641007,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:614402"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:614402"
+          }
+        ],
+        "directNormalizedScore": 0.159775,
+        "diseaseSupportScore": 0.108647,
+        "supportingDiseaseCurie": "MONDO:0013734",
+        "supportingDiseaseLabel": "microphthalmia, syndromic 11",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 11,
+        "geneCurie": "NCBIGene:7314",
+        "geneLabel": "UBB",
+        "geneSymbol": "UBB",
+        "geneEntityId": 150386,
+        "bmaScore": 1.4464846020460167,
+        "normalizedScore": 0.159708,
+        "patientAverageScore": 1.9835954058803384,
+        "phenotypeAverageScore": 0.9093737982116951,
+        "directPhenotypeCount": 23,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000175",
+            "patientPhenotypeLabel": "Cleft palate",
+            "diseasePhenotypeCurie": "HP:5201016",
+            "diseasePhenotypeLabel": "Submucous cleft palate",
+            "micaCurie": "HP:0000175",
+            "micaLabel": "Cleft palate",
+            "score": 2.7710745410641007,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:155878"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0010863",
+            "diseasePhenotypeLabel": "Receptive language delay",
+            "micaCurie": "HP:0012758",
+            "micaLabel": "Neurodevelopmental delay",
+            "score": 1.1961162706965762,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:99772"
+          }
+        ],
+        "directNormalizedScore": 0.159708,
+        "diseaseSupportScore": 0,
+        "supportingDiseaseCurie": "",
+        "supportingDiseaseLabel": "",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 12,
+        "geneCurie": "NCBIGene:83479",
+        "geneLabel": "DDX59",
+        "geneSymbol": "DDX59",
+        "geneEntityId": 152517,
+        "bmaScore": 1.4310667613173462,
+        "normalizedScore": 0.158005,
+        "patientAverageScore": 2.1111285877919723,
+        "phenotypeAverageScore": 0.7510049348427202,
+        "directPhenotypeCount": 60,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000175",
+            "patientPhenotypeLabel": "Cleft palate",
+            "diseasePhenotypeCurie": "HP:0000185",
+            "diseasePhenotypeLabel": "Cleft soft palate",
+            "micaCurie": "HP:0000175",
+            "micaLabel": "Cleft palate",
+            "score": 2.7710745410641007,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:2919"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "5/5",
+            "referenceText": "OMIM:174300"
+          }
+        ],
+        "directNormalizedScore": 0.158005,
+        "diseaseSupportScore": 0.101457,
+        "supportingDiseaseCurie": "MONDO:0008267",
+        "supportingDiseaseLabel": "orofaciodigital syndrome V",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 13,
+        "geneCurie": "NCBIGene:4487",
+        "geneLabel": "MSX1",
+        "geneSymbol": "MSX1",
+        "geneEntityId": 149468,
+        "bmaScore": 1.4257818654422205,
+        "normalizedScore": 0.157422,
+        "patientAverageScore": 1.9835954058803384,
+        "phenotypeAverageScore": 0.8679683250041026,
+        "directPhenotypeCount": 88,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000175",
+            "patientPhenotypeLabel": "Cleft palate",
+            "diseasePhenotypeCurie": "HP:0100337",
+            "diseasePhenotypeLabel": "Bilateral cleft palate",
+            "micaCurie": "HP:0000175",
+            "micaLabel": "Cleft palate",
+            "score": 2.7710745410641007,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0012758",
+            "micaLabel": "Neurodevelopmental delay",
+            "score": 1.1961162706965762,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:199306"
+          }
+        ],
+        "directNormalizedScore": 0.157422,
+        "diseaseSupportScore": 0.103068,
+        "supportingDiseaseCurie": "MONDO:0012142",
+        "supportingDiseaseLabel": "orofacial cleft 5",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 14,
+        "geneCurie": "NCBIGene:51305",
+        "geneLabel": "KCNK9",
+        "geneSymbol": "KCNK9",
+        "geneEntityId": 151726,
+        "bmaScore": 1.4180620554445773,
+        "normalizedScore": 0.15657,
+        "patientAverageScore": 2.1111285877919723,
+        "phenotypeAverageScore": 0.7249955230971824,
+        "directPhenotypeCount": 45,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000175",
+            "patientPhenotypeLabel": "Cleft palate",
+            "diseasePhenotypeCurie": "HP:0011819",
+            "diseasePhenotypeLabel": "Submucous cleft soft palate",
+            "micaCurie": "HP:0000175",
+            "micaLabel": "Cleft palate",
+            "score": 2.7710745410641007,
+            "evidenceCode": "8/19",
+            "referenceText": "OMIM:612292"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:166108"
+          }
+        ],
+        "directNormalizedScore": 0.15657,
+        "diseaseSupportScore": 0.106468,
+        "supportingDiseaseCurie": "MONDO:0012856",
+        "supportingDiseaseLabel": "Birk-Barel syndrome",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 15,
+        "geneCurie": "NCBIGene:26057",
+        "geneLabel": "ANKRD17",
+        "geneSymbol": "ANKRD17",
+        "geneEntityId": 151479,
+        "bmaScore": 1.415202666076409,
+        "normalizedScore": 0.156254,
+        "patientAverageScore": 2.1111285877919723,
+        "phenotypeAverageScore": 0.7192767443608458,
+        "directPhenotypeCount": 35,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000175",
+            "patientPhenotypeLabel": "Cleft palate",
+            "diseasePhenotypeCurie": "HP:0000175",
+            "diseasePhenotypeLabel": "Cleft palate",
+            "micaCurie": "HP:0000175",
+            "micaLabel": "Cleft palate",
+            "score": 2.7710745410641007,
+            "evidenceCode": "1/34",
+            "referenceText": "OMIM:619504"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "31/34",
+            "referenceText": "OMIM:619504"
+          }
+        ],
+        "directNormalizedScore": 0.156254,
+        "diseaseSupportScore": 0.106253,
+        "supportingDiseaseCurie": "MONDO:0859186",
+        "supportingDiseaseLabel": "Chopra-Amiel-Gordon syndrome",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 16,
+        "geneCurie": "NCBIGene:10524",
+        "geneLabel": "KAT5",
+        "geneSymbol": "KAT5",
+        "geneEntityId": 151056,
+        "bmaScore": 1.4047660047141628,
+        "normalizedScore": 0.155102,
+        "patientAverageScore": 2.1111285877919723,
+        "phenotypeAverageScore": 0.6984034216363535,
+        "directPhenotypeCount": 40,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000175",
+            "patientPhenotypeLabel": "Cleft palate",
+            "diseasePhenotypeCurie": "HP:0100334",
+            "diseasePhenotypeLabel": "Unilateral cleft palate",
+            "micaCurie": "HP:0000175",
+            "micaLabel": "Cleft palate",
+            "score": 2.7710745410641007,
+            "evidenceCode": "1/3",
+            "referenceText": "OMIM:619103"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "3/3",
+            "referenceText": "OMIM:619103"
+          }
+        ],
+        "directNormalizedScore": 0.155102,
+        "diseaseSupportScore": 0.105469,
+        "supportingDiseaseCurie": "MONDO:0030852",
+        "supportingDiseaseLabel": "neurodevelopmental disorder with dysmorphic facies, sleep disturbance, and brain abnormalities",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 17,
+        "geneCurie": "HGNC:23719",
+        "geneLabel": "PGAP3",
+        "geneSymbol": "PGAP3",
+        "geneEntityId": 207335,
+        "bmaScore": 0,
+        "normalizedScore": 0.154538,
+        "patientAverageScore": 0,
+        "phenotypeAverageScore": 0,
+        "directPhenotypeCount": 0,
+        "matchedPhenotypeCount": 0,
+        "trace": [],
+        "directNormalizedScore": 0,
+        "diseaseSupportScore": 0.154538,
+        "supportingDiseaseCurie": "MONDO:0014318",
+        "supportingDiseaseLabel": "hyperphosphatasia with intellectual disability syndrome 4",
+        "supportingDiseaseClassification": "Definitive"
+      },
+      {
+        "rank": 18,
+        "geneCurie": "NCBIGene:3664",
+        "geneLabel": "IRF6",
+        "geneSymbol": "IRF6",
+        "geneEntityId": 149216,
+        "bmaScore": 1.3983500470785095,
+        "normalizedScore": 0.154393,
+        "patientAverageScore": 1.9835954058803384,
+        "phenotypeAverageScore": 0.8131046882766807,
+        "directPhenotypeCount": 101,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000175",
+            "patientPhenotypeLabel": "Cleft palate",
+            "diseasePhenotypeCurie": "HP:0100337",
+            "diseasePhenotypeLabel": "Bilateral cleft palate",
+            "micaCurie": "HP:0000175",
+            "micaLabel": "Cleft palate",
+            "score": 2.7710745410641007,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0012758",
+            "micaLabel": "Neurodevelopmental delay",
+            "score": 1.1961162706965762,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:199306"
+          }
+        ],
+        "directNormalizedScore": 0.154393,
+        "diseaseSupportScore": 0.098795,
+        "supportingDiseaseCurie": "MONDO:0007333",
+        "supportingDiseaseLabel": "van der Woude syndrome 1",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 19,
+        "geneCurie": "NCBIGene:79005",
+        "geneLabel": "SCNM1",
+        "geneSymbol": "SCNM1",
+        "geneEntityId": 152331,
+        "bmaScore": 1.3962459154936084,
+        "normalizedScore": 0.154161,
+        "patientAverageScore": 1.9835954058803384,
+        "phenotypeAverageScore": 0.8088964251068783,
+        "directPhenotypeCount": 42,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000175",
+            "patientPhenotypeLabel": "Cleft palate",
+            "diseasePhenotypeCurie": "HP:0000185",
+            "diseasePhenotypeLabel": "Cleft soft palate",
+            "micaCurie": "HP:0000175",
+            "micaLabel": "Cleft palate",
+            "score": 2.7710745410641007,
+            "evidenceCode": "1/4",
+            "referenceText": "OMIM:620107"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0012758",
+            "micaLabel": "Neurodevelopmental delay",
+            "score": 1.1961162706965762,
+            "evidenceCode": "2/4",
+            "referenceText": "OMIM:620107"
+          }
+        ],
+        "directNormalizedScore": 0.154161,
+        "diseaseSupportScore": 0.104829,
+        "supportingDiseaseCurie": "MONDO:0859310",
+        "supportingDiseaseLabel": "orofaciodigital syndrome 19",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 20,
+        "geneCurie": "NCBIGene:1009",
+        "geneLabel": "CDH11",
+        "geneSymbol": "CDH11",
+        "geneEntityId": 148412,
+        "bmaScore": 1.395064378369332,
+        "normalizedScore": 0.15403,
+        "patientAverageScore": 2.1111285877919723,
+        "phenotypeAverageScore": 0.6790001689466915,
+        "directPhenotypeCount": 118,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000175",
+            "patientPhenotypeLabel": "Cleft palate",
+            "diseasePhenotypeCurie": "HP:0100334",
+            "diseasePhenotypeLabel": "Unilateral cleft palate",
+            "micaCurie": "HP:0000175",
+            "micaLabel": "Cleft palate",
+            "score": 2.7710745410641007,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:1299"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "7/19",
+            "referenceText": "OMIM:619736"
+          }
+        ],
+        "directNormalizedScore": 0.15403,
+        "diseaseSupportScore": 0.107969,
+        "supportingDiseaseCurie": "MONDO:0030674",
+        "supportingDiseaseLabel": "Teebi hypertelorism syndrome 2",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 21,
+        "geneCurie": "NCBIGene:6228",
+        "geneLabel": "RPS23",
+        "geneSymbol": "RPS23",
+        "geneEntityId": 150017,
+        "bmaScore": 1.3838825149661873,
+        "normalizedScore": 0.152796,
+        "patientAverageScore": 1.9835954058803384,
+        "phenotypeAverageScore": 0.784169624052036,
+        "directPhenotypeCount": 29,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000175",
+            "patientPhenotypeLabel": "Cleft palate",
+            "diseasePhenotypeCurie": "HP:0000176",
+            "diseasePhenotypeLabel": "Submucous cleft hard palate",
+            "micaCurie": "HP:0000175",
+            "micaLabel": "Cleft palate",
+            "score": 2.7710745410641007,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:617412"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001270",
+            "diseasePhenotypeLabel": "Motor delay",
+            "micaCurie": "HP:0012758",
+            "micaLabel": "Neurodevelopmental delay",
+            "score": 1.1961162706965762,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:617412"
+          }
+        ],
+        "directNormalizedScore": 0.152796,
+        "diseaseSupportScore": 0.103901,
+        "supportingDiseaseCurie": "MONDO:0044311",
+        "supportingDiseaseLabel": "brachycephaly, trichomegaly, and developmental delay",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 22,
+        "geneCurie": "NCBIGene:2773",
+        "geneLabel": "GNAI3",
+        "geneSymbol": "GNAI3",
+        "geneEntityId": 148980,
+        "bmaScore": 1.3818181723463943,
+        "normalizedScore": 0.152568,
+        "patientAverageScore": 2.1111285877919723,
+        "phenotypeAverageScore": 0.6525077569008161,
+        "directPhenotypeCount": 47,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000175",
+            "patientPhenotypeLabel": "Cleft palate",
+            "diseasePhenotypeCurie": "HP:0000175",
+            "diseasePhenotypeLabel": "Cleft palate",
+            "micaCurie": "HP:0000175",
+            "micaLabel": "Cleft palate",
+            "score": 2.7710745410641007,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:602483"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:137888"
+          }
+        ],
+        "directNormalizedScore": 0.152568,
+        "diseaseSupportScore": 0.09039,
+        "supportingDiseaseCurie": "MONDO:0011234",
+        "supportingDiseaseLabel": "auriculocondylar syndrome 1",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 23,
+        "geneCurie": "NCBIGene:1906",
+        "geneLabel": "EDN1",
+        "geneSymbol": "EDN1",
+        "geneEntityId": 148716,
+        "bmaScore": 1.3811163068357415,
+        "normalizedScore": 0.15249,
+        "patientAverageScore": 2.1111285877919723,
+        "phenotypeAverageScore": 0.6511040258795106,
+        "directPhenotypeCount": 42,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000175",
+            "patientPhenotypeLabel": "Cleft palate",
+            "diseasePhenotypeCurie": "HP:0000175",
+            "diseasePhenotypeLabel": "Cleft palate",
+            "micaCurie": "HP:0000175",
+            "micaLabel": "Cleft palate",
+            "score": 2.7710745410641007,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:137888"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:137888"
+          }
+        ],
+        "directNormalizedScore": 0.15249,
+        "diseaseSupportScore": 0.059089,
+        "supportingDiseaseCurie": "MONDO:0014312",
+        "supportingDiseaseLabel": "auriculocondylar syndrome 3",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 24,
+        "geneCurie": "NCBIGene:3720",
+        "geneLabel": "JARID2",
+        "geneSymbol": "JARID2",
+        "geneEntityId": 149241,
+        "bmaScore": 1.3802186603054212,
+        "normalizedScore": 0.152391,
+        "patientAverageScore": 2.1111285877919723,
+        "phenotypeAverageScore": 0.6493087328188701,
+        "directPhenotypeCount": 54,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000175",
+            "patientPhenotypeLabel": "Cleft palate",
+            "diseasePhenotypeCurie": "HP:0000175",
+            "diseasePhenotypeLabel": "Cleft palate",
+            "micaCurie": "HP:0000175",
+            "micaLabel": "Cleft palate",
+            "score": 2.7710745410641007,
+            "evidenceCode": "1/16",
+            "referenceText": "OMIM:620098"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "16/16",
+            "referenceText": "OMIM:620098"
+          }
+        ],
+        "directNormalizedScore": 0.152391,
+        "diseaseSupportScore": 0.103626,
+        "supportingDiseaseCurie": "MONDO:0859306",
+        "supportingDiseaseLabel": "developmental delay with variable intellectual disability and dysmorphic facies",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 25,
+        "geneCurie": "HGNC:6196",
+        "geneLabel": "JARID2",
+        "geneSymbol": "JARID2",
+        "geneEntityId": 206967,
+        "bmaScore": 0,
+        "normalizedScore": 0.152391,
+        "patientAverageScore": 0,
+        "phenotypeAverageScore": 0,
+        "directPhenotypeCount": 0,
+        "matchedPhenotypeCount": 0,
+        "trace": [],
+        "directNormalizedScore": 0,
+        "diseaseSupportScore": 0.152391,
+        "supportingDiseaseCurie": "MONDO:0859306",
+        "supportingDiseaseLabel": "developmental delay with variable intellectual disability and dysmorphic facies",
+        "supportingDiseaseClassification": "Definitive"
+      }
+    ],
+    "engineSummary": {
+      "diseaseCount": 8579,
+      "geneCount": 5256,
+      "phenotypeCount": 19389,
+      "sourceMode": {
+        "disease": "relationship_fallback",
+        "gene": "relationship_fallback"
+      },
+      "generatedAt": "2026-03-15T21:10:05.213Z"
+    }
+  }
+}

@@ -1,0 +1,2659 @@
+{
+  "success": true,
+  "engine": "genovy-dx-sim",
+  "analysisType": "gene",
+  "input": {
+    "presentPhenotypeCuries": [
+      "HP:0430046",
+      "HP:0000768",
+      "HP:0002808",
+      "HP:0005781",
+      "HP:0000750",
+      "HP:0002267",
+      "HP:0010864",
+      "HP:0002188",
+      "HP:0007410",
+      "HP:0000253"
+    ],
+    "excludedPhenotypeCuries": [
+      "HP:0001838",
+      "HP:0033725",
+      "HP:0002120",
+      "HP:0002197",
+      "HP:0002119",
+      "HP:0003487"
+    ],
+    "sourceFormat": "phenopacket"
+  },
+  "ranking": {
+    "queryPhenotypes": [
+      {
+        "phenotypeCurie": "HP:0430046",
+        "phenotypeLabel": "Small joint hypermobilty"
+      },
+      {
+        "phenotypeCurie": "HP:0000768",
+        "phenotypeLabel": "Pectus carinatum"
+      },
+      {
+        "phenotypeCurie": "HP:0002808",
+        "phenotypeLabel": "Kyphosis"
+      },
+      {
+        "phenotypeCurie": "HP:0005781",
+        "phenotypeLabel": "Contractures of the large joints"
+      },
+      {
+        "phenotypeCurie": "HP:0000750",
+        "phenotypeLabel": "Delayed speech and language development"
+      },
+      {
+        "phenotypeCurie": "HP:0002267",
+        "phenotypeLabel": "Exaggerated startle response"
+      },
+      {
+        "phenotypeCurie": "HP:0010864",
+        "phenotypeLabel": "Severe intellectual disability"
+      },
+      {
+        "phenotypeCurie": "HP:0002188",
+        "phenotypeLabel": "Delayed CNS myelination"
+      },
+      {
+        "phenotypeCurie": "HP:0007410",
+        "phenotypeLabel": "Palmoplantar hyperhidrosis"
+      },
+      {
+        "phenotypeCurie": "HP:0000253",
+        "phenotypeLabel": "Progressive microcephaly"
+      }
+    ],
+    "results": [
+      {
+        "rank": 1,
+        "geneCurie": "NCBIGene:9373",
+        "geneLabel": "PLAA",
+        "geneSymbol": "PLAA",
+        "geneEntityId": 150780,
+        "bmaScore": 3.032114129012907,
+        "normalizedScore": 0.334779,
+        "patientAverageScore": 4.54415810651397,
+        "phenotypeAverageScore": 1.5200701515118447,
+        "directPhenotypeCount": 84,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0005781",
+            "patientPhenotypeLabel": "Contractures of the large joints",
+            "diseasePhenotypeCurie": "HP:0005781",
+            "diseasePhenotypeLabel": "Contractures of the large joints",
+            "micaCurie": "HP:0005781",
+            "micaLabel": "Contractures of the large joints",
+            "score": 7.447634723138865,
+            "evidenceCode": "7/7",
+            "referenceText": "OMIM:617527"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007410",
+            "patientPhenotypeLabel": "Palmoplantar hyperhidrosis",
+            "diseasePhenotypeCurie": "HP:0007410",
+            "diseasePhenotypeLabel": "Palmoplantar hyperhidrosis",
+            "micaCurie": "HP:0007410",
+            "micaLabel": "Palmoplantar hyperhidrosis",
+            "score": 6.75448754257892,
+            "evidenceCode": "6/7",
+            "referenceText": "OMIM:617527"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002267",
+            "patientPhenotypeLabel": "Exaggerated startle response",
+            "diseasePhenotypeCurie": "HP:0002267",
+            "diseasePhenotypeLabel": "Exaggerated startle response",
+            "micaCurie": "HP:0002267",
+            "micaLabel": "Exaggerated startle response",
+            "score": 5.591336732773239,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:521426"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0430046",
+            "patientPhenotypeLabel": "Small joint hypermobilty",
+            "diseasePhenotypeCurie": "HP:0430046",
+            "diseasePhenotypeLabel": "Small joint hypermobilty",
+            "micaCurie": "HP:0430046",
+            "micaLabel": "Small joint hypermobilty",
+            "score": 4.837564930396859,
+            "evidenceCode": "6/7",
+            "referenceText": "OMIM:617527"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000253",
+            "patientPhenotypeLabel": "Progressive microcephaly",
+            "diseasePhenotypeCurie": "HP:0000253",
+            "diseasePhenotypeLabel": "Progressive microcephaly",
+            "micaCurie": "HP:0000253",
+            "micaLabel": "Progressive microcephaly",
+            "score": 4.79439275853165,
+            "evidenceCode": "7/7",
+            "referenceText": "OMIM:617527"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000768",
+            "patientPhenotypeLabel": "Pectus carinatum",
+            "diseasePhenotypeCurie": "HP:0000768",
+            "diseasePhenotypeLabel": "Pectus carinatum",
+            "micaCurie": "HP:0000768",
+            "micaLabel": "Pectus carinatum",
+            "score": 3.951127161672385,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:521426"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002188",
+            "patientPhenotypeLabel": "Delayed CNS myelination",
+            "diseasePhenotypeCurie": "HP:0002188",
+            "diseasePhenotypeLabel": "Delayed CNS myelination",
+            "micaCurie": "HP:0002188",
+            "micaLabel": "Delayed CNS myelination",
+            "score": 3.5974871214288062,
+            "evidenceCode": "6/11",
+            "referenceText": "OMIM:617527"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0010864",
+            "patientPhenotypeLabel": "Severe intellectual disability",
+            "diseasePhenotypeCurie": "HP:0010864",
+            "diseasePhenotypeLabel": "Severe intellectual disability",
+            "micaCurie": "HP:0010864",
+            "micaLabel": "Severe intellectual disability",
+            "score": 3.397590419813344,
+            "evidenceCode": "7/7",
+            "referenceText": "OMIM:617527"
+          }
+        ]
+      },
+      {
+        "rank": 2,
+        "geneCurie": "NCBIGene:54676",
+        "geneLabel": "GTPBP2",
+        "geneSymbol": "GTPBP2",
+        "geneEntityId": 151844,
+        "bmaScore": 2.1789494289988527,
+        "normalizedScore": 0.24058,
+        "patientAverageScore": 3.1416952102029327,
+        "phenotypeAverageScore": 1.2162036477947724,
+        "directPhenotypeCount": 139,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0430046",
+            "patientPhenotypeLabel": "Small joint hypermobilty",
+            "diseasePhenotypeCurie": "HP:0430046",
+            "diseasePhenotypeLabel": "Small joint hypermobilty",
+            "micaCurie": "HP:0430046",
+            "micaLabel": "Small joint hypermobilty",
+            "score": 4.837564930396859,
+            "evidenceCode": "2/3",
+            "referenceText": "OMIM:617988"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000253",
+            "patientPhenotypeLabel": "Progressive microcephaly",
+            "diseasePhenotypeCurie": "HP:0000253",
+            "diseasePhenotypeLabel": "Progressive microcephaly",
+            "micaCurie": "HP:0000253",
+            "micaLabel": "Progressive microcephaly",
+            "score": 4.79439275853165,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:617988"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000768",
+            "patientPhenotypeLabel": "Pectus carinatum",
+            "diseasePhenotypeCurie": "HP:0000768",
+            "diseasePhenotypeLabel": "Pectus carinatum",
+            "micaCurie": "HP:0000768",
+            "micaLabel": "Pectus carinatum",
+            "score": 3.951127161672385,
+            "evidenceCode": "2/14",
+            "referenceText": "OMIM:617988"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002188",
+            "patientPhenotypeLabel": "Delayed CNS myelination",
+            "diseasePhenotypeCurie": "HP:0002188",
+            "diseasePhenotypeLabel": "Delayed CNS myelination",
+            "micaCurie": "HP:0002188",
+            "micaLabel": "Delayed CNS myelination",
+            "score": 3.5974871214288062,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:617988"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0010864",
+            "patientPhenotypeLabel": "Severe intellectual disability",
+            "diseasePhenotypeCurie": "HP:0010864",
+            "diseasePhenotypeLabel": "Severe intellectual disability",
+            "micaCurie": "HP:0010864",
+            "micaLabel": "Severe intellectual disability",
+            "score": 3.397590419813344,
+            "evidenceCode": "3/3",
+            "referenceText": "OMIM:617988"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002808",
+            "patientPhenotypeLabel": "Kyphosis",
+            "diseasePhenotypeCurie": "HP:0002751",
+            "diseasePhenotypeLabel": "Kyphoscoliosis",
+            "micaCurie": "HP:0002808",
+            "micaLabel": "Kyphosis",
+            "score": 3.0049834666485484,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:617988"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0005781",
+            "patientPhenotypeLabel": "Contractures of the large joints",
+            "diseasePhenotypeCurie": "HP:0100490",
+            "diseasePhenotypeLabel": "Camptodactyly of finger",
+            "micaCurie": "HP:0001371",
+            "micaLabel": "Flexion contracture",
+            "score": 2.6837528459959525,
+            "evidenceCode": "3/3",
+            "referenceText": "OMIM:617988"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0001344",
+            "diseasePhenotypeLabel": "Absent speech",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "5/6",
+            "referenceText": "OMIM:617988"
+          }
+        ]
+      },
+      {
+        "rank": 3,
+        "geneCurie": "NCBIGene:29920",
+        "geneLabel": "PYCR2",
+        "geneSymbol": "PYCR2",
+        "geneEntityId": 151615,
+        "bmaScore": 2.081553923004511,
+        "normalizedScore": 0.229826,
+        "patientAverageScore": 2.987262545711536,
+        "phenotypeAverageScore": 1.1758453002974862,
+        "directPhenotypeCount": 91,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0430046",
+            "patientPhenotypeLabel": "Small joint hypermobilty",
+            "diseasePhenotypeCurie": "HP:0005072",
+            "diseasePhenotypeLabel": "Wrist hypermobility",
+            "micaCurie": "HP:0430046",
+            "micaLabel": "Small joint hypermobilty",
+            "score": 4.837564930396859,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:481152"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000253",
+            "patientPhenotypeLabel": "Progressive microcephaly",
+            "diseasePhenotypeCurie": "HP:0000253",
+            "diseasePhenotypeLabel": "Progressive microcephaly",
+            "micaCurie": "HP:0000253",
+            "micaLabel": "Progressive microcephaly",
+            "score": 4.79439275853165,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:481152"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000768",
+            "patientPhenotypeLabel": "Pectus carinatum",
+            "diseasePhenotypeCurie": "HP:0000768",
+            "diseasePhenotypeLabel": "Pectus carinatum",
+            "micaCurie": "HP:0000768",
+            "micaLabel": "Pectus carinatum",
+            "score": 3.951127161672385,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:481152"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0010864",
+            "patientPhenotypeLabel": "Severe intellectual disability",
+            "diseasePhenotypeCurie": "HP:0010864",
+            "diseasePhenotypeLabel": "Severe intellectual disability",
+            "micaCurie": "HP:0010864",
+            "micaLabel": "Severe intellectual disability",
+            "score": 3.397590419813344,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:2512"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002188",
+            "patientPhenotypeLabel": "Delayed CNS myelination",
+            "diseasePhenotypeCurie": "HP:0007258",
+            "diseasePhenotypeLabel": "Severe demyelination of the white matter",
+            "micaCurie": "HP:0011400",
+            "micaLabel": "Abnormal CNS myelination",
+            "score": 3.0433574795301634,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:481152"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0005781",
+            "patientPhenotypeLabel": "Contractures of the large joints",
+            "diseasePhenotypeCurie": "HP:0001371",
+            "diseasePhenotypeLabel": "Flexion contracture",
+            "micaCurie": "HP:0001371",
+            "micaLabel": "Flexion contracture",
+            "score": 2.6837528459959525,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:481152"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0001344",
+            "diseasePhenotypeLabel": "Absent speech",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:616420"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002808",
+            "patientPhenotypeLabel": "Kyphosis",
+            "diseasePhenotypeCurie": "HP:0005659",
+            "diseasePhenotypeLabel": "Thoracic kyphoscoliosis",
+            "micaCurie": "HP:0010674",
+            "micaLabel": "Abnormal curvature of the vertebral column",
+            "score": 2.014786463633222,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:481152"
+          }
+        ]
+      },
+      {
+        "rank": 4,
+        "geneCurie": "NCBIGene:23769",
+        "geneLabel": "FLRT1",
+        "geneSymbol": "FLRT1",
+        "geneEntityId": 151428,
+        "bmaScore": 2.072772969447469,
+        "normalizedScore": 0.228857,
+        "patientAverageScore": 2.4195301464313763,
+        "phenotypeAverageScore": 1.7260157924635617,
+        "directPhenotypeCount": 20,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002267",
+            "patientPhenotypeLabel": "Exaggerated startle response",
+            "diseasePhenotypeCurie": "HP:0002267",
+            "diseasePhenotypeLabel": "Exaggerated startle response",
+            "micaCurie": "HP:0002267",
+            "micaLabel": "Exaggerated startle response",
+            "score": 5.591336732773239,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:320406"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007410",
+            "patientPhenotypeLabel": "Palmoplantar hyperhidrosis",
+            "diseasePhenotypeCurie": "HP:0000975",
+            "diseasePhenotypeLabel": "Hyperhidrosis",
+            "micaCurie": "HP:0000975",
+            "micaLabel": "Hyperhidrosis",
+            "score": 4.6626234809005265,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:320406"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002188",
+            "patientPhenotypeLabel": "Delayed CNS myelination",
+            "diseasePhenotypeCurie": "HP:0003380",
+            "diseasePhenotypeLabel": "Decreased number of peripheral myelinated nerve fibers",
+            "micaCurie": "HP:0012447",
+            "micaLabel": "Abnormal myelination",
+            "score": 2.7381045218265307,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:320406"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0005781",
+            "patientPhenotypeLabel": "Contractures of the large joints",
+            "diseasePhenotypeCurie": "HP:0002828",
+            "diseasePhenotypeLabel": "Multiple joint contractures",
+            "micaCurie": "HP:0001371",
+            "micaLabel": "Flexion contracture",
+            "score": 2.6837528459959525,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:320406"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002808",
+            "patientPhenotypeLabel": "Kyphosis",
+            "diseasePhenotypeCurie": "HP:0002650",
+            "diseasePhenotypeLabel": "Scoliosis",
+            "micaCurie": "HP:0010674",
+            "micaLabel": "Abnormal curvature of the vertebral column",
+            "score": 2.014786463633222,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:320406"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0430046",
+            "patientPhenotypeLabel": "Small joint hypermobilty",
+            "diseasePhenotypeCurie": "HP:0002828",
+            "diseasePhenotypeLabel": "Multiple joint contractures",
+            "micaCurie": "HP:0011729",
+            "micaLabel": "Abnormality of joint mobility",
+            "score": 1.8603860647386155,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:320406"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0001260",
+            "diseasePhenotypeLabel": "Dysarthria",
+            "micaCurie": "HP:0002167",
+            "micaLabel": "Abnormal speech pattern",
+            "score": 1.6855833403586882,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:320406"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000768",
+            "patientPhenotypeLabel": "Pectus carinatum",
+            "diseasePhenotypeCurie": "HP:0002650",
+            "diseasePhenotypeLabel": "Scoliosis",
+            "micaCurie": "HP:0009121",
+            "micaLabel": "Abnormal axial skeleton morphology",
+            "score": 0.9949550528182267,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:320406"
+          }
+        ]
+      },
+      {
+        "rank": 5,
+        "geneCurie": "NCBIGene:25782",
+        "geneLabel": "RAB3GAP2",
+        "geneSymbol": "RAB3GAP2",
+        "geneEntityId": 151437,
+        "bmaScore": 2.069850976573734,
+        "normalizedScore": 0.228534,
+        "patientAverageScore": 3.0724727654073254,
+        "phenotypeAverageScore": 1.067229187740143,
+        "directPhenotypeCount": 139,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0430046",
+            "patientPhenotypeLabel": "Small joint hypermobilty",
+            "diseasePhenotypeCurie": "HP:0006094",
+            "diseasePhenotypeLabel": "Finger joint hypermobility",
+            "micaCurie": "HP:0430046",
+            "micaLabel": "Small joint hypermobilty",
+            "score": 4.837564930396859,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:212720"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000768",
+            "patientPhenotypeLabel": "Pectus carinatum",
+            "diseasePhenotypeCurie": "HP:0000768",
+            "diseasePhenotypeLabel": "Pectus carinatum",
+            "micaCurie": "HP:0000768",
+            "micaLabel": "Pectus carinatum",
+            "score": 3.951127161672385,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:212720"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000253",
+            "patientPhenotypeLabel": "Progressive microcephaly",
+            "diseasePhenotypeCurie": "HP:0005484",
+            "diseasePhenotypeLabel": "Secondary microcephaly",
+            "micaCurie": "HP:0005484",
+            "micaLabel": "Secondary microcephaly",
+            "score": 3.7587552690249284,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:614225"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0010864",
+            "patientPhenotypeLabel": "Severe intellectual disability",
+            "diseasePhenotypeCurie": "HP:0010864",
+            "diseasePhenotypeLabel": "Severe intellectual disability",
+            "micaCurie": "HP:0010864",
+            "micaLabel": "Severe intellectual disability",
+            "score": 3.397590419813344,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:2510"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002808",
+            "patientPhenotypeLabel": "Kyphosis",
+            "diseasePhenotypeCurie": "HP:0002808",
+            "diseasePhenotypeLabel": "Kyphosis",
+            "micaCurie": "HP:0002808",
+            "micaLabel": "Kyphosis",
+            "score": 3.0049834666485484,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:2510"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007410",
+            "patientPhenotypeLabel": "Palmoplantar hyperhidrosis",
+            "diseasePhenotypeCurie": "HP:0004279",
+            "diseasePhenotypeLabel": "Short palm",
+            "micaCurie": "HP:0100871",
+            "micaLabel": "Abnormal palm morphology",
+            "score": 2.8226619098545935,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:212720"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002188",
+            "patientPhenotypeLabel": "Delayed CNS myelination",
+            "diseasePhenotypeCurie": "HP:0012447",
+            "diseasePhenotypeLabel": "Abnormal myelination",
+            "micaCurie": "HP:0012447",
+            "micaLabel": "Abnormal myelination",
+            "score": 2.7381045218265307,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:401830"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0005781",
+            "patientPhenotypeLabel": "Contractures of the large joints",
+            "diseasePhenotypeCurie": "HP:0001371",
+            "diseasePhenotypeLabel": "Flexion contracture",
+            "micaCurie": "HP:0001371",
+            "micaLabel": "Flexion contracture",
+            "score": 2.6837528459959525,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:614225"
+          }
+        ]
+      },
+      {
+        "rank": 6,
+        "geneCurie": "NCBIGene:6567",
+        "geneLabel": "SLC16A2",
+        "geneSymbol": "SLC16A2",
+        "geneEntityId": 150124,
+        "bmaScore": 2.0300061895444115,
+        "normalizedScore": 0.224135,
+        "patientAverageScore": 2.978667351867362,
+        "phenotypeAverageScore": 1.0813450272214609,
+        "directPhenotypeCount": 79,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0007410",
+            "patientPhenotypeLabel": "Palmoplantar hyperhidrosis",
+            "diseasePhenotypeCurie": "HP:0000975",
+            "diseasePhenotypeLabel": "Hyperhidrosis",
+            "micaCurie": "HP:0000975",
+            "micaLabel": "Hyperhidrosis",
+            "score": 4.6626234809005265,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:59"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002267",
+            "patientPhenotypeLabel": "Exaggerated startle response",
+            "diseasePhenotypeCurie": "HP:0002071",
+            "diseasePhenotypeLabel": "Abnormality of extrapyramidal motor function",
+            "micaCurie": "HP:0002071",
+            "micaLabel": "Abnormality of extrapyramidal motor function",
+            "score": 3.6634450892206036,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:59"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002188",
+            "patientPhenotypeLabel": "Delayed CNS myelination",
+            "diseasePhenotypeCurie": "HP:0002188",
+            "diseasePhenotypeLabel": "Delayed CNS myelination",
+            "micaCurie": "HP:0002188",
+            "micaLabel": "Delayed CNS myelination",
+            "score": 3.5974871214288062,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:300523"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0010864",
+            "patientPhenotypeLabel": "Severe intellectual disability",
+            "diseasePhenotypeCurie": "HP:0010864",
+            "diseasePhenotypeLabel": "Severe intellectual disability",
+            "micaCurie": "HP:0010864",
+            "micaLabel": "Severe intellectual disability",
+            "score": 3.397590419813344,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:300523"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002808",
+            "patientPhenotypeLabel": "Kyphosis",
+            "diseasePhenotypeCurie": "HP:0002751",
+            "diseasePhenotypeLabel": "Kyphoscoliosis",
+            "micaCurie": "HP:0002808",
+            "micaLabel": "Kyphosis",
+            "score": 3.0049834666485484,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:59"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000768",
+            "patientPhenotypeLabel": "Pectus carinatum",
+            "diseasePhenotypeCurie": "HP:0000767",
+            "diseasePhenotypeLabel": "Pectus excavatum",
+            "micaCurie": "HP:0000766",
+            "micaLabel": "Abnormal sternum morphology",
+            "score": 2.9567536835529014,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:300523"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0005781",
+            "patientPhenotypeLabel": "Contractures of the large joints",
+            "diseasePhenotypeCurie": "HP:0001371",
+            "diseasePhenotypeLabel": "Flexion contracture",
+            "micaCurie": "HP:0001371",
+            "micaLabel": "Flexion contracture",
+            "score": 2.6837528459959525,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:300523"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:59"
+          }
+        ]
+      },
+      {
+        "rank": 7,
+        "geneCurie": "NCBIGene:4854",
+        "geneLabel": "NOTCH3",
+        "geneSymbol": "NOTCH3",
+        "geneEntityId": 149612,
+        "bmaScore": 2.0030589229099465,
+        "normalizedScore": 0.22116,
+        "patientAverageScore": 3.1346318588116047,
+        "phenotypeAverageScore": 0.8714859870082886,
+        "directPhenotypeCount": 295,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0007410",
+            "patientPhenotypeLabel": "Palmoplantar hyperhidrosis",
+            "diseasePhenotypeCurie": "HP:0006089",
+            "diseasePhenotypeLabel": "Palmar hyperhidrosis",
+            "micaCurie": "HP:0006089",
+            "micaLabel": "Palmar hyperhidrosis",
+            "score": 6.492123278111428,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:621295"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002267",
+            "patientPhenotypeLabel": "Exaggerated startle response",
+            "diseasePhenotypeCurie": "HP:0001300",
+            "diseasePhenotypeLabel": "Parkinsonism",
+            "micaCurie": "HP:0002071",
+            "micaLabel": "Abnormality of extrapyramidal motor function",
+            "score": 3.6634450892206036,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:136"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0010864",
+            "patientPhenotypeLabel": "Severe intellectual disability",
+            "diseasePhenotypeCurie": "HP:0010864",
+            "diseasePhenotypeLabel": "Severe intellectual disability",
+            "micaCurie": "HP:0010864",
+            "micaLabel": "Severe intellectual disability",
+            "score": 3.397590419813344,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:621295"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002188",
+            "patientPhenotypeLabel": "Delayed CNS myelination",
+            "diseasePhenotypeCurie": "HP:0002415",
+            "diseasePhenotypeLabel": "Leukodystrophy",
+            "micaCurie": "HP:0011400",
+            "micaLabel": "Abnormal CNS myelination",
+            "score": 3.0433574795301634,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:621295"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002808",
+            "patientPhenotypeLabel": "Kyphosis",
+            "diseasePhenotypeCurie": "HP:0002808",
+            "diseasePhenotypeLabel": "Kyphosis",
+            "micaCurie": "HP:0002808",
+            "micaLabel": "Kyphosis",
+            "score": 3.0049834666485484,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:130720"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0430046",
+            "patientPhenotypeLabel": "Small joint hypermobilty",
+            "diseasePhenotypeCurie": "HP:0001382",
+            "diseasePhenotypeLabel": "Joint hypermobility",
+            "micaCurie": "HP:0001382",
+            "micaLabel": "Joint hypermobility",
+            "score": 2.968027760126119,
+            "evidenceCode": "6/6",
+            "referenceText": "OMIM:130720"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000768",
+            "patientPhenotypeLabel": "Pectus carinatum",
+            "diseasePhenotypeCurie": "HP:0000767",
+            "diseasePhenotypeLabel": "Pectus excavatum",
+            "micaCurie": "HP:0000766",
+            "micaLabel": "Abnormal sternum morphology",
+            "score": 2.9567536835529014,
+            "evidenceCode": "2/5",
+            "referenceText": "OMIM:130720"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0001344",
+            "diseasePhenotypeLabel": "Absent speech",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "2/17",
+            "referenceText": "OMIM:621295"
+          }
+        ]
+      },
+      {
+        "rank": 8,
+        "geneCurie": "NCBIGene:64837",
+        "geneLabel": "KLC2",
+        "geneSymbol": "KLC2",
+        "geneEntityId": 152298,
+        "bmaScore": 1.990714136386044,
+        "normalizedScore": 0.219797,
+        "patientAverageScore": 2.518549846732909,
+        "phenotypeAverageScore": 1.4628784260391794,
+        "directPhenotypeCount": 34,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002267",
+            "patientPhenotypeLabel": "Exaggerated startle response",
+            "diseasePhenotypeCurie": "HP:0002267",
+            "diseasePhenotypeLabel": "Exaggerated startle response",
+            "micaCurie": "HP:0002267",
+            "micaLabel": "Exaggerated startle response",
+            "score": 5.591336732773239,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:320406"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007410",
+            "patientPhenotypeLabel": "Palmoplantar hyperhidrosis",
+            "diseasePhenotypeCurie": "HP:0000975",
+            "diseasePhenotypeLabel": "Hyperhidrosis",
+            "micaCurie": "HP:0000975",
+            "micaLabel": "Hyperhidrosis",
+            "score": 4.6626234809005265,
+            "evidenceCode": "16/22",
+            "referenceText": "OMIM:609541"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002808",
+            "patientPhenotypeLabel": "Kyphosis",
+            "diseasePhenotypeCurie": "HP:0002808",
+            "diseasePhenotypeLabel": "Kyphosis",
+            "micaCurie": "HP:0002808",
+            "micaLabel": "Kyphosis",
+            "score": 3.0049834666485484,
+            "evidenceCode": "14/22",
+            "referenceText": "OMIM:609541"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002188",
+            "patientPhenotypeLabel": "Delayed CNS myelination",
+            "diseasePhenotypeCurie": "HP:0003380",
+            "diseasePhenotypeLabel": "Decreased number of peripheral myelinated nerve fibers",
+            "micaCurie": "HP:0012447",
+            "micaLabel": "Abnormal myelination",
+            "score": 2.7381045218265307,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:320406"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0005781",
+            "patientPhenotypeLabel": "Contractures of the large joints",
+            "diseasePhenotypeCurie": "HP:0002828",
+            "diseasePhenotypeLabel": "Multiple joint contractures",
+            "micaCurie": "HP:0001371",
+            "micaLabel": "Flexion contracture",
+            "score": 2.6837528459959525,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:320406"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0430046",
+            "patientPhenotypeLabel": "Small joint hypermobilty",
+            "diseasePhenotypeCurie": "HP:0002828",
+            "diseasePhenotypeLabel": "Multiple joint contractures",
+            "micaCurie": "HP:0011729",
+            "micaLabel": "Abnormality of joint mobility",
+            "score": 1.8603860647386155,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:320406"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0001260",
+            "diseasePhenotypeLabel": "Dysarthria",
+            "micaCurie": "HP:0002167",
+            "micaLabel": "Abnormal speech pattern",
+            "score": 1.6855833403586882,
+            "evidenceCode": "19/22",
+            "referenceText": "OMIM:609541"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000768",
+            "patientPhenotypeLabel": "Pectus carinatum",
+            "diseasePhenotypeCurie": "HP:0002808",
+            "diseasePhenotypeLabel": "Kyphosis",
+            "micaCurie": "HP:0009121",
+            "micaLabel": "Abnormal axial skeleton morphology",
+            "score": 0.9949550528182267,
+            "evidenceCode": "14/22",
+            "referenceText": "OMIM:609541"
+          }
+        ]
+      },
+      {
+        "rank": 9,
+        "geneCurie": "NCBIGene:26855",
+        "geneLabel": "RNU2-2",
+        "geneSymbol": "RNU2-2",
+        "geneEntityId": 151527,
+        "bmaScore": 1.9835763855287216,
+        "normalizedScore": 0.219009,
+        "patientAverageScore": 3.059919834381143,
+        "phenotypeAverageScore": 0.9072329366763,
+        "directPhenotypeCount": 183,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0007410",
+            "patientPhenotypeLabel": "Palmoplantar hyperhidrosis",
+            "diseasePhenotypeCurie": "HP:0001869",
+            "diseasePhenotypeLabel": "Deep plantar creases",
+            "micaCurie": "HP:0100872",
+            "micaLabel": "Abnormality of the plantar skin of foot",
+            "score": 3.880922902999136,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:621304"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000253",
+            "patientPhenotypeLabel": "Progressive microcephaly",
+            "diseasePhenotypeCurie": "HP:0005484",
+            "diseasePhenotypeLabel": "Secondary microcephaly",
+            "micaCurie": "HP:0005484",
+            "micaLabel": "Secondary microcephaly",
+            "score": 3.7587552690249284,
+            "evidenceCode": "4/4",
+            "referenceText": "OMIM:621304"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002267",
+            "patientPhenotypeLabel": "Exaggerated startle response",
+            "diseasePhenotypeCurie": "HP:0001300",
+            "diseasePhenotypeLabel": "Parkinsonism",
+            "micaCurie": "HP:0002071",
+            "micaLabel": "Abnormality of extrapyramidal motor function",
+            "score": 3.6634450892206036,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:621304"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0010864",
+            "patientPhenotypeLabel": "Severe intellectual disability",
+            "diseasePhenotypeCurie": "HP:0010864",
+            "diseasePhenotypeLabel": "Severe intellectual disability",
+            "micaCurie": "HP:0010864",
+            "micaLabel": "Severe intellectual disability",
+            "score": 3.397590419813344,
+            "evidenceCode": "6/8",
+            "referenceText": "OMIM:621304"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002188",
+            "patientPhenotypeLabel": "Delayed CNS myelination",
+            "diseasePhenotypeCurie": "HP:0011400",
+            "diseasePhenotypeLabel": "Abnormal CNS myelination",
+            "micaCurie": "HP:0011400",
+            "micaLabel": "Abnormal CNS myelination",
+            "score": 3.0433574795301634,
+            "evidenceCode": "1/8",
+            "referenceText": "OMIM:621304"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002808",
+            "patientPhenotypeLabel": "Kyphosis",
+            "diseasePhenotypeCurie": "HP:0002751",
+            "diseasePhenotypeLabel": "Kyphoscoliosis",
+            "micaCurie": "HP:0002808",
+            "micaLabel": "Kyphosis",
+            "score": 3.0049834666485484,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:621304"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0430046",
+            "patientPhenotypeLabel": "Small joint hypermobilty",
+            "diseasePhenotypeCurie": "HP:0001382",
+            "diseasePhenotypeLabel": "Joint hypermobility",
+            "micaCurie": "HP:0001382",
+            "micaLabel": "Joint hypermobility",
+            "score": 2.968027760126119,
+            "evidenceCode": "1/8",
+            "referenceText": "OMIM:621304"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000768",
+            "patientPhenotypeLabel": "Pectus carinatum",
+            "diseasePhenotypeCurie": "HP:0000767",
+            "diseasePhenotypeLabel": "Pectus excavatum",
+            "micaCurie": "HP:0000766",
+            "micaLabel": "Abnormal sternum morphology",
+            "score": 2.9567536835529014,
+            "evidenceCode": "0/7",
+            "referenceText": "OMIM:621304"
+          }
+        ]
+      },
+      {
+        "rank": 10,
+        "geneCurie": "NCBIGene:7343",
+        "geneLabel": "UBTF",
+        "geneSymbol": "UBTF",
+        "geneEntityId": 150392,
+        "bmaScore": 1.9634472428942815,
+        "normalizedScore": 0.216786,
+        "patientAverageScore": 2.56591618317837,
+        "phenotypeAverageScore": 1.3609783026101934,
+        "directPhenotypeCount": 48,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000768",
+            "patientPhenotypeLabel": "Pectus carinatum",
+            "diseasePhenotypeCurie": "HP:0000768",
+            "diseasePhenotypeLabel": "Pectus carinatum",
+            "micaCurie": "HP:0000768",
+            "micaLabel": "Pectus carinatum",
+            "score": 3.951127161672385,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:500180"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000253",
+            "patientPhenotypeLabel": "Progressive microcephaly",
+            "diseasePhenotypeCurie": "HP:0005484",
+            "diseasePhenotypeLabel": "Secondary microcephaly",
+            "micaCurie": "HP:0005484",
+            "micaLabel": "Secondary microcephaly",
+            "score": 3.7587552690249284,
+            "evidenceCode": "5/7",
+            "referenceText": "OMIM:617672"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002267",
+            "patientPhenotypeLabel": "Exaggerated startle response",
+            "diseasePhenotypeCurie": "HP:0002071",
+            "diseasePhenotypeLabel": "Abnormality of extrapyramidal motor function",
+            "micaCurie": "HP:0002071",
+            "micaLabel": "Abnormality of extrapyramidal motor function",
+            "score": 3.6634450892206036,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:500180"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0010864",
+            "patientPhenotypeLabel": "Severe intellectual disability",
+            "diseasePhenotypeCurie": "HP:0010864",
+            "diseasePhenotypeLabel": "Severe intellectual disability",
+            "micaCurie": "HP:0010864",
+            "micaLabel": "Severe intellectual disability",
+            "score": 3.397590419813344,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:500180"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002808",
+            "patientPhenotypeLabel": "Kyphosis",
+            "diseasePhenotypeCurie": "HP:0002808",
+            "diseasePhenotypeLabel": "Kyphosis",
+            "micaCurie": "HP:0002808",
+            "micaLabel": "Kyphosis",
+            "score": 3.0049834666485484,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:500180"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002188",
+            "patientPhenotypeLabel": "Delayed CNS myelination",
+            "diseasePhenotypeCurie": "HP:0011096",
+            "diseasePhenotypeLabel": "Peripheral demyelination",
+            "micaCurie": "HP:0012447",
+            "micaLabel": "Abnormal myelination",
+            "score": 2.7381045218265307,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:617672"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0001344",
+            "diseasePhenotypeLabel": "Absent speech",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "7/7",
+            "referenceText": "OMIM:617672"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0005781",
+            "patientPhenotypeLabel": "Contractures of the large joints",
+            "diseasePhenotypeCurie": "HP:0002509",
+            "diseasePhenotypeLabel": "Limb hypertonia",
+            "micaCurie": "HP:0011805",
+            "micaLabel": "Abnormal skeletal muscle morphology",
+            "score": 1.5058857682768159,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:500180"
+          }
+        ]
+      },
+      {
+        "rank": 11,
+        "geneCurie": "NCBIGene:6709",
+        "geneLabel": "SPTAN1",
+        "geneSymbol": "SPTAN1",
+        "geneEntityId": 150181,
+        "bmaScore": 1.9444655956757693,
+        "normalizedScore": 0.21469,
+        "patientAverageScore": 2.767937382875515,
+        "phenotypeAverageScore": 1.1209938084760236,
+        "directPhenotypeCount": 104,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000253",
+            "patientPhenotypeLabel": "Progressive microcephaly",
+            "diseasePhenotypeCurie": "HP:0000253",
+            "diseasePhenotypeLabel": "Progressive microcephaly",
+            "micaCurie": "HP:0000253",
+            "micaLabel": "Progressive microcephaly",
+            "score": 4.79439275853165,
+            "evidenceCode": "3/3",
+            "referenceText": "OMIM:613477"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000768",
+            "patientPhenotypeLabel": "Pectus carinatum",
+            "diseasePhenotypeCurie": "HP:0000768",
+            "diseasePhenotypeLabel": "Pectus carinatum",
+            "micaCurie": "HP:0000768",
+            "micaLabel": "Pectus carinatum",
+            "score": 3.951127161672385,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:620528"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0010864",
+            "patientPhenotypeLabel": "Severe intellectual disability",
+            "diseasePhenotypeCurie": "HP:0010864",
+            "diseasePhenotypeLabel": "Severe intellectual disability",
+            "micaCurie": "HP:0010864",
+            "micaLabel": "Severe intellectual disability",
+            "score": 3.397590419813344,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:613477"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002188",
+            "patientPhenotypeLabel": "Delayed CNS myelination",
+            "diseasePhenotypeCurie": "HP:0003429",
+            "diseasePhenotypeLabel": "CNS hypomyelination",
+            "micaCurie": "HP:0011400",
+            "micaLabel": "Abnormal CNS myelination",
+            "score": 3.0433574795301634,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:613477"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0430046",
+            "patientPhenotypeLabel": "Small joint hypermobilty",
+            "diseasePhenotypeCurie": "HP:0001382",
+            "diseasePhenotypeLabel": "Joint hypermobility",
+            "micaCurie": "HP:0001382",
+            "micaLabel": "Joint hypermobility",
+            "score": 2.968027760126119,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:620538"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0005781",
+            "patientPhenotypeLabel": "Contractures of the large joints",
+            "diseasePhenotypeCurie": "HP:0034337",
+            "diseasePhenotypeLabel": "Claw hand deformity",
+            "micaCurie": "HP:0034392",
+            "micaLabel": "Joint contracture",
+            "score": 2.3600383879064806,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:620528"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:620528"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002808",
+            "patientPhenotypeLabel": "Kyphosis",
+            "diseasePhenotypeCurie": "HP:0002650",
+            "diseasePhenotypeLabel": "Scoliosis",
+            "micaCurie": "HP:0010674",
+            "micaLabel": "Abnormal curvature of the vertebral column",
+            "score": 2.014786463633222,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:620538"
+          }
+        ]
+      },
+      {
+        "rank": 12,
+        "geneCurie": "NCBIGene:26832",
+        "geneLabel": "RNU5B-1",
+        "geneSymbol": "RNU5B-1",
+        "geneEntityId": 151525,
+        "bmaScore": 1.918903453636744,
+        "normalizedScore": 0.211868,
+        "patientAverageScore": 2.9481896208842753,
+        "phenotypeAverageScore": 0.8896172863892127,
+        "directPhenotypeCount": 153,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002267",
+            "patientPhenotypeLabel": "Exaggerated startle response",
+            "diseasePhenotypeCurie": "HP:0002267",
+            "diseasePhenotypeLabel": "Exaggerated startle response",
+            "micaCurie": "HP:0002267",
+            "micaLabel": "Exaggerated startle response",
+            "score": 5.591336732773239,
+            "evidenceCode": "1/6",
+            "referenceText": "OMIM:621302"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000253",
+            "patientPhenotypeLabel": "Progressive microcephaly",
+            "diseasePhenotypeCurie": "HP:0005484",
+            "diseasePhenotypeLabel": "Secondary microcephaly",
+            "micaCurie": "HP:0005484",
+            "micaLabel": "Secondary microcephaly",
+            "score": 3.7587552690249284,
+            "evidenceCode": "3/10",
+            "referenceText": "OMIM:621302"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0010864",
+            "patientPhenotypeLabel": "Severe intellectual disability",
+            "diseasePhenotypeCurie": "HP:0010864",
+            "diseasePhenotypeLabel": "Severe intellectual disability",
+            "micaCurie": "HP:0010864",
+            "micaLabel": "Severe intellectual disability",
+            "score": 3.397590419813344,
+            "evidenceCode": "6/14",
+            "referenceText": "OMIM:621302"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007410",
+            "patientPhenotypeLabel": "Palmoplantar hyperhidrosis",
+            "diseasePhenotypeCurie": "HP:0000954",
+            "diseasePhenotypeLabel": "Single transverse palmar crease",
+            "micaCurie": "HP:0040211",
+            "micaLabel": "Abnormal skin morphology of the palm",
+            "score": 3.026387375311702,
+            "evidenceCode": "2/4",
+            "referenceText": "OMIM:621302"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0430046",
+            "patientPhenotypeLabel": "Small joint hypermobilty",
+            "diseasePhenotypeCurie": "HP:0001382",
+            "diseasePhenotypeLabel": "Joint hypermobility",
+            "micaCurie": "HP:0001382",
+            "micaLabel": "Joint hypermobility",
+            "score": 2.968027760126119,
+            "evidenceCode": "8/11",
+            "referenceText": "OMIM:621302"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000768",
+            "patientPhenotypeLabel": "Pectus carinatum",
+            "diseasePhenotypeCurie": "HP:0000767",
+            "diseasePhenotypeLabel": "Pectus excavatum",
+            "micaCurie": "HP:0000766",
+            "micaLabel": "Abnormal sternum morphology",
+            "score": 2.9567536835529014,
+            "evidenceCode": "4/9",
+            "referenceText": "OMIM:621302"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0005781",
+            "patientPhenotypeLabel": "Contractures of the large joints",
+            "diseasePhenotypeCurie": "HP:0012385",
+            "diseasePhenotypeLabel": "Camptodactyly",
+            "micaCurie": "HP:0001371",
+            "micaLabel": "Flexion contracture",
+            "score": 2.6837528459959525,
+            "evidenceCode": "2/8",
+            "referenceText": "OMIM:621302"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0001344",
+            "diseasePhenotypeLabel": "Absent speech",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "6/15",
+            "referenceText": "OMIM:621302"
+          }
+        ]
+      },
+      {
+        "rank": 13,
+        "geneCurie": "NCBIGene:4010",
+        "geneLabel": "LMX1B",
+        "geneSymbol": "LMX1B",
+        "geneEntityId": 149350,
+        "bmaScore": 1.895065817626091,
+        "normalizedScore": 0.209236,
+        "patientAverageScore": 2.7939185107190143,
+        "phenotypeAverageScore": 0.9962131245331676,
+        "directPhenotypeCount": 155,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0430046",
+            "patientPhenotypeLabel": "Small joint hypermobilty",
+            "diseasePhenotypeCurie": "HP:0005190",
+            "diseasePhenotypeLabel": "Proximal finger joint hyperextensibility",
+            "micaCurie": "HP:0430046",
+            "micaLabel": "Small joint hypermobilty",
+            "score": 4.837564930396859,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:2614"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002188",
+            "patientPhenotypeLabel": "Delayed CNS myelination",
+            "diseasePhenotypeCurie": "HP:0002188",
+            "diseasePhenotypeLabel": "Delayed CNS myelination",
+            "micaCurie": "HP:0002188",
+            "micaLabel": "Delayed CNS myelination",
+            "score": 3.5974871214288062,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:495818"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0010864",
+            "patientPhenotypeLabel": "Severe intellectual disability",
+            "diseasePhenotypeCurie": "HP:0010864",
+            "diseasePhenotypeLabel": "Severe intellectual disability",
+            "micaCurie": "HP:0010864",
+            "micaLabel": "Severe intellectual disability",
+            "score": 3.397590419813344,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:495818"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007410",
+            "patientPhenotypeLabel": "Palmoplantar hyperhidrosis",
+            "diseasePhenotypeCurie": "HP:0000954",
+            "diseasePhenotypeLabel": "Single transverse palmar crease",
+            "micaCurie": "HP:0040211",
+            "micaLabel": "Abnormal skin morphology of the palm",
+            "score": 3.026387375311702,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:495818"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000768",
+            "patientPhenotypeLabel": "Pectus carinatum",
+            "diseasePhenotypeCurie": "HP:0000767",
+            "diseasePhenotypeLabel": "Pectus excavatum",
+            "micaCurie": "HP:0000766",
+            "micaLabel": "Abnormal sternum morphology",
+            "score": 2.9567536835529014,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:2614"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0005781",
+            "patientPhenotypeLabel": "Contractures of the large joints",
+            "diseasePhenotypeCurie": "HP:0001371",
+            "diseasePhenotypeLabel": "Flexion contracture",
+            "micaCurie": "HP:0001371",
+            "micaLabel": "Flexion contracture",
+            "score": 2.6837528459959525,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:2614"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:495818"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002808",
+            "patientPhenotypeLabel": "Kyphosis",
+            "diseasePhenotypeCurie": "HP:0002938",
+            "diseasePhenotypeLabel": "Lumbar hyperlordosis",
+            "micaCurie": "HP:0010674",
+            "micaLabel": "Abnormal curvature of the vertebral column",
+            "score": 2.014786463633222,
+            "evidenceCode": "41/87",
+            "referenceText": "OMIM:161200"
+          }
+        ]
+      },
+      {
+        "rank": 14,
+        "geneCurie": "NCBIGene:51360",
+        "geneLabel": "MBTPS2",
+        "geneSymbol": "MBTPS2",
+        "geneEntityId": 151738,
+        "bmaScore": 1.8883507061144957,
+        "normalizedScore": 0.208495,
+        "patientAverageScore": 2.747802016726826,
+        "phenotypeAverageScore": 1.0288993955021655,
+        "directPhenotypeCount": 197,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0007410",
+            "patientPhenotypeLabel": "Palmoplantar hyperhidrosis",
+            "diseasePhenotypeCurie": "HP:0007410",
+            "diseasePhenotypeLabel": "Palmoplantar hyperhidrosis",
+            "micaCurie": "HP:0007410",
+            "micaLabel": "Palmoplantar hyperhidrosis",
+            "score": 6.75448754257892,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:659"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000768",
+            "patientPhenotypeLabel": "Pectus carinatum",
+            "diseasePhenotypeCurie": "HP:0000768",
+            "diseasePhenotypeLabel": "Pectus carinatum",
+            "micaCurie": "HP:0000768",
+            "micaLabel": "Pectus carinatum",
+            "score": 3.951127161672385,
+            "evidenceCode": "3/8",
+            "referenceText": "OMIM:301014"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0010864",
+            "patientPhenotypeLabel": "Severe intellectual disability",
+            "diseasePhenotypeCurie": "HP:0010864",
+            "diseasePhenotypeLabel": "Severe intellectual disability",
+            "micaCurie": "HP:0010864",
+            "micaLabel": "Severe intellectual disability",
+            "score": 3.397590419813344,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:85284"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002808",
+            "patientPhenotypeLabel": "Kyphosis",
+            "diseasePhenotypeCurie": "HP:0002808",
+            "diseasePhenotypeLabel": "Kyphosis",
+            "micaCurie": "HP:0002808",
+            "micaLabel": "Kyphosis",
+            "score": 3.0049834666485484,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:2273"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0430046",
+            "patientPhenotypeLabel": "Small joint hypermobilty",
+            "diseasePhenotypeCurie": "HP:0001382",
+            "diseasePhenotypeLabel": "Joint hypermobility",
+            "micaCurie": "HP:0001382",
+            "micaLabel": "Joint hypermobility",
+            "score": 2.968027760126119,
+            "evidenceCode": "0/8",
+            "referenceText": "OMIM:301014"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0005781",
+            "patientPhenotypeLabel": "Contractures of the large joints",
+            "diseasePhenotypeCurie": "HP:0100490",
+            "diseasePhenotypeLabel": "Camptodactyly of finger",
+            "micaCurie": "HP:0001371",
+            "micaLabel": "Flexion contracture",
+            "score": 2.6837528459959525,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:2273"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000253",
+            "patientPhenotypeLabel": "Progressive microcephaly",
+            "diseasePhenotypeCurie": "HP:0000252",
+            "diseasePhenotypeLabel": "Microcephaly",
+            "micaCurie": "HP:0000252",
+            "micaLabel": "Microcephaly",
+            "score": 1.8946751382172473,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:85284"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0001270",
+            "diseasePhenotypeLabel": "Motor delay",
+            "micaCurie": "HP:0012758",
+            "micaLabel": "Neurodevelopmental delay",
+            "score": 1.1961162706965762,
+            "evidenceCode": "1/13",
+            "referenceText": "OMIM:308205"
+          }
+        ]
+      },
+      {
+        "rank": 15,
+        "geneCurie": "NCBIGene:54808",
+        "geneLabel": "DYM",
+        "geneSymbol": "DYM",
+        "geneEntityId": 151861,
+        "bmaScore": 1.8780263803930413,
+        "normalizedScore": 0.207355,
+        "patientAverageScore": 2.4164893586235063,
+        "phenotypeAverageScore": 1.339563402162576,
+        "directPhenotypeCount": 118,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000768",
+            "patientPhenotypeLabel": "Pectus carinatum",
+            "diseasePhenotypeCurie": "HP:0000768",
+            "diseasePhenotypeLabel": "Pectus carinatum",
+            "micaCurie": "HP:0000768",
+            "micaLabel": "Pectus carinatum",
+            "score": 3.951127161672385,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:239"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0010864",
+            "patientPhenotypeLabel": "Severe intellectual disability",
+            "diseasePhenotypeCurie": "HP:0010864",
+            "diseasePhenotypeLabel": "Severe intellectual disability",
+            "micaCurie": "HP:0010864",
+            "micaLabel": "Severe intellectual disability",
+            "score": 3.397590419813344,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:239"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002808",
+            "patientPhenotypeLabel": "Kyphosis",
+            "diseasePhenotypeCurie": "HP:0002942",
+            "diseasePhenotypeLabel": "Thoracic kyphosis",
+            "micaCurie": "HP:0002808",
+            "micaLabel": "Kyphosis",
+            "score": 3.0049834666485484,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:223800"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007410",
+            "patientPhenotypeLabel": "Palmoplantar hyperhidrosis",
+            "diseasePhenotypeCurie": "HP:0001169",
+            "diseasePhenotypeLabel": "Broad palm",
+            "micaCurie": "HP:0100871",
+            "micaLabel": "Abnormal palm morphology",
+            "score": 2.8226619098545935,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:223800"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0005781",
+            "patientPhenotypeLabel": "Contractures of the large joints",
+            "diseasePhenotypeCurie": "HP:0012385",
+            "diseasePhenotypeLabel": "Camptodactyly",
+            "micaCurie": "HP:0001371",
+            "micaLabel": "Flexion contracture",
+            "score": 2.6837528459959525,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:223800"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0001344",
+            "diseasePhenotypeLabel": "Absent speech",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:223800"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000253",
+            "patientPhenotypeLabel": "Progressive microcephaly",
+            "diseasePhenotypeCurie": "HP:0000252",
+            "diseasePhenotypeLabel": "Microcephaly",
+            "micaCurie": "HP:0000252",
+            "micaLabel": "Microcephaly",
+            "score": 1.8946751382172473,
+            "evidenceCode": "0/1",
+            "referenceText": "OMIM:607326"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0430046",
+            "patientPhenotypeLabel": "Small joint hypermobilty",
+            "diseasePhenotypeCurie": "HP:0012385",
+            "diseasePhenotypeLabel": "Camptodactyly",
+            "micaCurie": "HP:0011729",
+            "micaLabel": "Abnormality of joint mobility",
+            "score": 1.8603860647386155,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:223800"
+          }
+        ]
+      },
+      {
+        "rank": 16,
+        "geneCurie": "NCBIGene:57554",
+        "geneLabel": "LRRC7",
+        "geneSymbol": "LRRC7",
+        "geneEntityId": 152169,
+        "bmaScore": 1.867775997921544,
+        "normalizedScore": 0.206223,
+        "patientAverageScore": 2.7961832468793046,
+        "phenotypeAverageScore": 0.9393687489637832,
+        "directPhenotypeCount": 160,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0007410",
+            "patientPhenotypeLabel": "Palmoplantar hyperhidrosis",
+            "diseasePhenotypeCurie": "HP:0000966",
+            "diseasePhenotypeLabel": "Hypohidrosis",
+            "micaCurie": "HP:0007550",
+            "micaLabel": "Hypohidrosis or hyperhidrosis",
+            "score": 4.1370917097448405,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:621415"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000768",
+            "patientPhenotypeLabel": "Pectus carinatum",
+            "diseasePhenotypeCurie": "HP:0000768",
+            "diseasePhenotypeLabel": "Pectus carinatum",
+            "micaCurie": "HP:0000768",
+            "micaLabel": "Pectus carinatum",
+            "score": 3.951127161672385,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:621415"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002267",
+            "patientPhenotypeLabel": "Exaggerated startle response",
+            "diseasePhenotypeCurie": "HP:0002067",
+            "diseasePhenotypeLabel": "Bradykinesia",
+            "micaCurie": "HP:0002071",
+            "micaLabel": "Abnormality of extrapyramidal motor function",
+            "score": 3.6634450892206036,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:621415"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0010864",
+            "patientPhenotypeLabel": "Severe intellectual disability",
+            "diseasePhenotypeCurie": "HP:0010864",
+            "diseasePhenotypeLabel": "Severe intellectual disability",
+            "micaCurie": "HP:0010864",
+            "micaLabel": "Severe intellectual disability",
+            "score": 3.397590419813344,
+            "evidenceCode": "3/3",
+            "referenceText": "OMIM:621415"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002808",
+            "patientPhenotypeLabel": "Kyphosis",
+            "diseasePhenotypeCurie": "HP:0002751",
+            "diseasePhenotypeLabel": "Kyphoscoliosis",
+            "micaCurie": "HP:0002808",
+            "micaLabel": "Kyphosis",
+            "score": 3.0049834666485484,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:621415"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0430046",
+            "patientPhenotypeLabel": "Small joint hypermobilty",
+            "diseasePhenotypeCurie": "HP:0001382",
+            "diseasePhenotypeLabel": "Joint hypermobility",
+            "micaCurie": "HP:0001382",
+            "micaLabel": "Joint hypermobility",
+            "score": 2.968027760126119,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:621415"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0011351",
+            "diseasePhenotypeLabel": "Moderate receptive language delay",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:621415"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000253",
+            "patientPhenotypeLabel": "Progressive microcephaly",
+            "diseasePhenotypeCurie": "HP:0000252",
+            "diseasePhenotypeLabel": "Microcephaly",
+            "micaCurie": "HP:0000252",
+            "micaLabel": "Microcephaly",
+            "score": 1.8946751382172473,
+            "evidenceCode": "5/11",
+            "referenceText": "OMIM:621415"
+          }
+        ]
+      },
+      {
+        "rank": 17,
+        "geneCurie": "NCBIGene:8450",
+        "geneLabel": "CUL4B",
+        "geneSymbol": "CUL4B",
+        "geneEntityId": 150572,
+        "bmaScore": 1.8551127348749898,
+        "normalizedScore": 0.204825,
+        "patientAverageScore": 2.5435117125965125,
+        "phenotypeAverageScore": 1.1667137571534671,
+        "directPhenotypeCount": 82,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0007410",
+            "patientPhenotypeLabel": "Palmoplantar hyperhidrosis",
+            "diseasePhenotypeCurie": "HP:0000975",
+            "diseasePhenotypeLabel": "Hyperhidrosis",
+            "micaCurie": "HP:0000975",
+            "micaLabel": "Hyperhidrosis",
+            "score": 4.6626234809005265,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:85293"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0010864",
+            "patientPhenotypeLabel": "Severe intellectual disability",
+            "diseasePhenotypeCurie": "HP:0010864",
+            "diseasePhenotypeLabel": "Severe intellectual disability",
+            "micaCurie": "HP:0010864",
+            "micaLabel": "Severe intellectual disability",
+            "score": 3.397590419813344,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:85293"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002808",
+            "patientPhenotypeLabel": "Kyphosis",
+            "diseasePhenotypeCurie": "HP:0002808",
+            "diseasePhenotypeLabel": "Kyphosis",
+            "micaCurie": "HP:0002808",
+            "micaLabel": "Kyphosis",
+            "score": 3.0049834666485484,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:85293"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0430046",
+            "patientPhenotypeLabel": "Small joint hypermobilty",
+            "diseasePhenotypeCurie": "HP:0001382",
+            "diseasePhenotypeLabel": "Joint hypermobility",
+            "micaCurie": "HP:0001382",
+            "micaLabel": "Joint hypermobility",
+            "score": 2.968027760126119,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:85293"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0005781",
+            "patientPhenotypeLabel": "Contractures of the large joints",
+            "diseasePhenotypeCurie": "HP:0100490",
+            "diseasePhenotypeLabel": "Camptodactyly of finger",
+            "micaCurie": "HP:0001371",
+            "micaLabel": "Flexion contracture",
+            "score": 2.6837528459959525,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:85293"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000768",
+            "patientPhenotypeLabel": "Pectus carinatum",
+            "diseasePhenotypeCurie": "HP:0200021",
+            "diseasePhenotypeLabel": "Down-sloping shoulders",
+            "micaCurie": "HP:0000765",
+            "micaLabel": "Abnormal thorax morphology",
+            "score": 2.273747434969005,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:85293"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0001344",
+            "diseasePhenotypeLabel": "Absent speech",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:85293"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000253",
+            "patientPhenotypeLabel": "Progressive microcephaly",
+            "diseasePhenotypeCurie": "HP:0000252",
+            "diseasePhenotypeLabel": "Microcephaly",
+            "micaCurie": "HP:0000252",
+            "micaLabel": "Microcephaly",
+            "score": 1.8946751382172473,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:85293"
+          }
+        ]
+      },
+      {
+        "rank": 18,
+        "geneCurie": "NCBIGene:27245",
+        "geneLabel": "AHDC1",
+        "geneSymbol": "AHDC1",
+        "geneEntityId": 151564,
+        "bmaScore": 1.8482376067114632,
+        "normalizedScore": 0.204066,
+        "patientAverageScore": 2.7444515324199643,
+        "phenotypeAverageScore": 0.952023681002962,
+        "directPhenotypeCount": 199,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002267",
+            "patientPhenotypeLabel": "Exaggerated startle response",
+            "diseasePhenotypeCurie": "HP:0002067",
+            "diseasePhenotypeLabel": "Bradykinesia",
+            "micaCurie": "HP:0002071",
+            "micaLabel": "Abnormality of extrapyramidal motor function",
+            "score": 3.6634450892206036,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:615829"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002188",
+            "patientPhenotypeLabel": "Delayed CNS myelination",
+            "diseasePhenotypeCurie": "HP:0002188",
+            "diseasePhenotypeLabel": "Delayed CNS myelination",
+            "micaCurie": "HP:0002188",
+            "micaLabel": "Delayed CNS myelination",
+            "score": 3.5974871214288062,
+            "evidenceCode": "7/10",
+            "referenceText": "OMIM:615829"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0010864",
+            "patientPhenotypeLabel": "Severe intellectual disability",
+            "diseasePhenotypeCurie": "HP:0010864",
+            "diseasePhenotypeLabel": "Severe intellectual disability",
+            "micaCurie": "HP:0010864",
+            "micaLabel": "Severe intellectual disability",
+            "score": 3.397590419813344,
+            "evidenceCode": "6/15",
+            "referenceText": "OMIM:615829"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007410",
+            "patientPhenotypeLabel": "Palmoplantar hyperhidrosis",
+            "diseasePhenotypeCurie": "HP:0000954",
+            "diseasePhenotypeLabel": "Single transverse palmar crease",
+            "micaCurie": "HP:0040211",
+            "micaLabel": "Abnormal skin morphology of the palm",
+            "score": 3.026387375311702,
+            "evidenceCode": "5/8",
+            "referenceText": "OMIM:615829"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0430046",
+            "patientPhenotypeLabel": "Small joint hypermobilty",
+            "diseasePhenotypeCurie": "HP:0001382",
+            "diseasePhenotypeLabel": "Joint hypermobility",
+            "micaCurie": "HP:0001382",
+            "micaLabel": "Joint hypermobility",
+            "score": 2.968027760126119,
+            "evidenceCode": "17/18",
+            "referenceText": "OMIM:615829"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000768",
+            "patientPhenotypeLabel": "Pectus carinatum",
+            "diseasePhenotypeCurie": "HP:0000767",
+            "diseasePhenotypeLabel": "Pectus excavatum",
+            "micaCurie": "HP:0000766",
+            "micaLabel": "Abnormal sternum morphology",
+            "score": 2.9567536835529014,
+            "evidenceCode": "2/3",
+            "referenceText": "OMIM:615829"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0002474",
+            "diseasePhenotypeLabel": "Expressive language delay",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:412069"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002808",
+            "patientPhenotypeLabel": "Kyphosis",
+            "diseasePhenotypeCurie": "HP:0010674",
+            "diseasePhenotypeLabel": "Abnormal curvature of the vertebral column",
+            "micaCurie": "HP:0010674",
+            "micaLabel": "Abnormal curvature of the vertebral column",
+            "score": 2.014786463633222,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:615829"
+          }
+        ]
+      },
+      {
+        "rank": 19,
+        "geneCurie": "NCBIGene:23545",
+        "geneLabel": "ATP6V0A2",
+        "geneSymbol": "ATP6V0A2",
+        "geneEntityId": 151403,
+        "bmaScore": 1.8467374211651166,
+        "normalizedScore": 0.2039,
+        "patientAverageScore": 2.5420660277606713,
+        "phenotypeAverageScore": 1.1514088145695618,
+        "directPhenotypeCount": 118,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000253",
+            "patientPhenotypeLabel": "Progressive microcephaly",
+            "diseasePhenotypeCurie": "HP:0000253",
+            "diseasePhenotypeLabel": "Progressive microcephaly",
+            "micaCurie": "HP:0000253",
+            "micaLabel": "Progressive microcephaly",
+            "score": 4.79439275853165,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:357074"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007410",
+            "patientPhenotypeLabel": "Palmoplantar hyperhidrosis",
+            "diseasePhenotypeCurie": "HP:0008113",
+            "diseasePhenotypeLabel": "Multiple plantar creases",
+            "micaCurie": "HP:0100872",
+            "micaLabel": "Abnormality of the plantar skin of foot",
+            "score": 3.880922902999136,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:2834"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002808",
+            "patientPhenotypeLabel": "Kyphosis",
+            "diseasePhenotypeCurie": "HP:0002808",
+            "diseasePhenotypeLabel": "Kyphosis",
+            "micaCurie": "HP:0002808",
+            "micaLabel": "Kyphosis",
+            "score": 3.0049834666485484,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:278250"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0430046",
+            "patientPhenotypeLabel": "Small joint hypermobilty",
+            "diseasePhenotypeCurie": "HP:0002761",
+            "diseasePhenotypeLabel": "Generalized joint hypermobility",
+            "micaCurie": "HP:0001382",
+            "micaLabel": "Joint hypermobility",
+            "score": 2.968027760126119,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:2834"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000768",
+            "patientPhenotypeLabel": "Pectus carinatum",
+            "diseasePhenotypeCurie": "HP:0000767",
+            "diseasePhenotypeLabel": "Pectus excavatum",
+            "micaCurie": "HP:0000766",
+            "micaLabel": "Abnormal sternum morphology",
+            "score": 2.9567536835529014,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:278250"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:278250"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0005781",
+            "patientPhenotypeLabel": "Contractures of the large joints",
+            "diseasePhenotypeCurie": "HP:0002761",
+            "diseasePhenotypeLabel": "Generalized joint hypermobility",
+            "micaCurie": "HP:0011729",
+            "micaLabel": "Abnormality of joint mobility",
+            "score": 1.8603860647386155,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:2834"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002267",
+            "patientPhenotypeLabel": "Exaggerated startle response",
+            "diseasePhenotypeCurie": "HP:0002073",
+            "diseasePhenotypeLabel": "Progressive cerebellar ataxia",
+            "micaCurie": "HP:0011442",
+            "micaLabel": "Abnormal central motor function",
+            "score": 1.465210920683032,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:2834"
+          }
+        ]
+      },
+      {
+        "rank": 20,
+        "geneCurie": "NCBIGene:10479",
+        "geneLabel": "SLC9A6",
+        "geneSymbol": "SLC9A6",
+        "geneEntityId": 151044,
+        "bmaScore": 1.8441996901405373,
+        "normalizedScore": 0.20362,
+        "patientAverageScore": 2.614748345868009,
+        "phenotypeAverageScore": 1.0736510344130659,
+        "directPhenotypeCount": 92,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000253",
+            "patientPhenotypeLabel": "Progressive microcephaly",
+            "diseasePhenotypeCurie": "HP:0005484",
+            "diseasePhenotypeLabel": "Secondary microcephaly",
+            "micaCurie": "HP:0005484",
+            "micaLabel": "Secondary microcephaly",
+            "score": 3.7587552690249284,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:85278"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002267",
+            "patientPhenotypeLabel": "Exaggerated startle response",
+            "diseasePhenotypeCurie": "HP:0002067",
+            "diseasePhenotypeLabel": "Bradykinesia",
+            "micaCurie": "HP:0002071",
+            "micaLabel": "Abnormality of extrapyramidal motor function",
+            "score": 3.6634450892206036,
+            "evidenceCode": "2/3",
+            "referenceText": "OMIM:301142"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0010864",
+            "patientPhenotypeLabel": "Severe intellectual disability",
+            "diseasePhenotypeCurie": "HP:0010864",
+            "diseasePhenotypeLabel": "Severe intellectual disability",
+            "micaCurie": "HP:0010864",
+            "micaLabel": "Severe intellectual disability",
+            "score": 3.397590419813344,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:300243"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0430046",
+            "patientPhenotypeLabel": "Small joint hypermobilty",
+            "diseasePhenotypeCurie": "HP:0001382",
+            "diseasePhenotypeLabel": "Joint hypermobility",
+            "micaCurie": "HP:0001382",
+            "micaLabel": "Joint hypermobility",
+            "score": 2.968027760126119,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:85278"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000768",
+            "patientPhenotypeLabel": "Pectus carinatum",
+            "diseasePhenotypeCurie": "HP:0000767",
+            "diseasePhenotypeLabel": "Pectus excavatum",
+            "micaCurie": "HP:0000766",
+            "micaLabel": "Abnormal sternum morphology",
+            "score": 2.9567536835529014,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:85278"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0005781",
+            "patientPhenotypeLabel": "Contractures of the large joints",
+            "diseasePhenotypeCurie": "HP:0001371",
+            "diseasePhenotypeLabel": "Flexion contracture",
+            "micaCurie": "HP:0001371",
+            "micaLabel": "Flexion contracture",
+            "score": 2.6837528459959525,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:300243"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0001344",
+            "diseasePhenotypeLabel": "Absent speech",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "11/11",
+            "referenceText": "OMIM:300243"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002808",
+            "patientPhenotypeLabel": "Kyphosis",
+            "diseasePhenotypeCurie": "HP:0002650",
+            "diseasePhenotypeLabel": "Scoliosis",
+            "micaCurie": "HP:0010674",
+            "micaLabel": "Abnormal curvature of the vertebral column",
+            "score": 2.014786463633222,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:85278"
+          }
+        ]
+      },
+      {
+        "rank": 21,
+        "geneCurie": "NCBIGene:7543",
+        "geneLabel": "ZFX",
+        "geneSymbol": "ZFX",
+        "geneEntityId": 150458,
+        "bmaScore": 1.8297606774223116,
+        "normalizedScore": 0.202026,
+        "patientAverageScore": 2.7910578750148276,
+        "phenotypeAverageScore": 0.8684634798297958,
+        "directPhenotypeCount": 201,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0430046",
+            "patientPhenotypeLabel": "Small joint hypermobilty",
+            "diseasePhenotypeCurie": "HP:0001187",
+            "diseasePhenotypeLabel": "Hyperextensibility of the finger joints",
+            "micaCurie": "HP:0430046",
+            "micaLabel": "Small joint hypermobilty",
+            "score": 4.837564930396859,
+            "evidenceCode": "1/18",
+            "referenceText": "OMIM:301118"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000768",
+            "patientPhenotypeLabel": "Pectus carinatum",
+            "diseasePhenotypeCurie": "HP:0000768",
+            "diseasePhenotypeLabel": "Pectus carinatum",
+            "micaCurie": "HP:0000768",
+            "micaLabel": "Pectus carinatum",
+            "score": 3.951127161672385,
+            "evidenceCode": "1/18",
+            "referenceText": "OMIM:301118"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002188",
+            "patientPhenotypeLabel": "Delayed CNS myelination",
+            "diseasePhenotypeCurie": "HP:0002188",
+            "diseasePhenotypeLabel": "Delayed CNS myelination",
+            "micaCurie": "HP:0002188",
+            "micaLabel": "Delayed CNS myelination",
+            "score": 3.5974871214288062,
+            "evidenceCode": "1/13",
+            "referenceText": "OMIM:301118"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0010864",
+            "patientPhenotypeLabel": "Severe intellectual disability",
+            "diseasePhenotypeCurie": "HP:0010864",
+            "diseasePhenotypeLabel": "Severe intellectual disability",
+            "micaCurie": "HP:0010864",
+            "micaLabel": "Severe intellectual disability",
+            "score": 3.397590419813344,
+            "evidenceCode": "0/13",
+            "referenceText": "OMIM:301118"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007410",
+            "patientPhenotypeLabel": "Palmoplantar hyperhidrosis",
+            "diseasePhenotypeCurie": "HP:0006191",
+            "diseasePhenotypeLabel": "Deep palmar crease",
+            "micaCurie": "HP:0040211",
+            "micaLabel": "Abnormal skin morphology of the palm",
+            "score": 3.026387375311702,
+            "evidenceCode": "1/18",
+            "referenceText": "OMIM:301118"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "16/18",
+            "referenceText": "OMIM:301118"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002808",
+            "patientPhenotypeLabel": "Kyphosis",
+            "diseasePhenotypeCurie": "HP:0002943",
+            "diseasePhenotypeLabel": "Thoracic scoliosis",
+            "micaCurie": "HP:0010674",
+            "micaLabel": "Abnormal curvature of the vertebral column",
+            "score": 2.014786463633222,
+            "evidenceCode": "1/18",
+            "referenceText": "OMIM:301118"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0005781",
+            "patientPhenotypeLabel": "Contractures of the large joints",
+            "diseasePhenotypeCurie": "HP:0001382",
+            "diseasePhenotypeLabel": "Joint hypermobility",
+            "micaCurie": "HP:0011729",
+            "micaLabel": "Abnormality of joint mobility",
+            "score": 1.8603860647386155,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:301118"
+          }
+        ]
+      },
+      {
+        "rank": 22,
+        "geneCurie": "NCBIGene:2517",
+        "geneLabel": "FUCA1",
+        "geneSymbol": "FUCA1",
+        "geneEntityId": 148880,
+        "bmaScore": 1.8253500660359385,
+        "normalizedScore": 0.201539,
+        "patientAverageScore": 2.526085156157022,
+        "phenotypeAverageScore": 1.124614975914855,
+        "directPhenotypeCount": 83,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0007410",
+            "patientPhenotypeLabel": "Palmoplantar hyperhidrosis",
+            "diseasePhenotypeCurie": "HP:0000975",
+            "diseasePhenotypeLabel": "Hyperhidrosis",
+            "micaCurie": "HP:0000975",
+            "micaLabel": "Hyperhidrosis",
+            "score": 4.6626234809005265,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:349"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0010864",
+            "patientPhenotypeLabel": "Severe intellectual disability",
+            "diseasePhenotypeCurie": "HP:0010864",
+            "diseasePhenotypeLabel": "Severe intellectual disability",
+            "micaCurie": "HP:0010864",
+            "micaLabel": "Severe intellectual disability",
+            "score": 3.397590419813344,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:349"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002188",
+            "patientPhenotypeLabel": "Delayed CNS myelination",
+            "diseasePhenotypeCurie": "HP:0003429",
+            "diseasePhenotypeLabel": "CNS hypomyelination",
+            "micaCurie": "HP:0011400",
+            "micaLabel": "Abnormal CNS myelination",
+            "score": 3.0433574795301634,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:230000"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002808",
+            "patientPhenotypeLabel": "Kyphosis",
+            "diseasePhenotypeCurie": "HP:0002808",
+            "diseasePhenotypeLabel": "Kyphosis",
+            "micaCurie": "HP:0002808",
+            "micaLabel": "Kyphosis",
+            "score": 3.0049834666485484,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:349"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0005781",
+            "patientPhenotypeLabel": "Contractures of the large joints",
+            "diseasePhenotypeCurie": "HP:0001371",
+            "diseasePhenotypeLabel": "Flexion contracture",
+            "micaCurie": "HP:0001371",
+            "micaLabel": "Flexion contracture",
+            "score": 2.6837528459959525,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:230000"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000768",
+            "patientPhenotypeLabel": "Pectus carinatum",
+            "diseasePhenotypeCurie": "HP:0001552",
+            "diseasePhenotypeLabel": "Barrel-shaped chest",
+            "micaCurie": "HP:0000765",
+            "micaLabel": "Abnormal thorax morphology",
+            "score": 2.273747434969005,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:230000"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0430046",
+            "patientPhenotypeLabel": "Small joint hypermobilty",
+            "diseasePhenotypeCurie": "HP:0001371",
+            "diseasePhenotypeLabel": "Flexion contracture",
+            "micaCurie": "HP:0011729",
+            "micaLabel": "Abnormality of joint mobility",
+            "score": 1.8603860647386155,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:230000"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000253",
+            "patientPhenotypeLabel": "Progressive microcephaly",
+            "diseasePhenotypeCurie": "HP:0000240",
+            "diseasePhenotypeLabel": "Abnormality of skull size",
+            "micaCurie": "HP:0000240",
+            "micaLabel": "Abnormality of skull size",
+            "score": 1.6730831775944566,
+            "evidenceCode": "0/1",
+            "referenceText": "OMIM:230000"
+          }
+        ]
+      },
+      {
+        "rank": 23,
+        "geneCurie": "NCBIGene:221927",
+        "geneLabel": "BRAT1",
+        "geneSymbol": "BRAT1",
+        "geneEntityId": 153076,
+        "bmaScore": 1.8217335714445566,
+        "normalizedScore": 0.201139,
+        "patientAverageScore": 2.5237832660386803,
+        "phenotypeAverageScore": 1.1196838768504327,
+        "directPhenotypeCount": 61,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002267",
+            "patientPhenotypeLabel": "Exaggerated startle response",
+            "diseasePhenotypeCurie": "HP:0002267",
+            "diseasePhenotypeLabel": "Exaggerated startle response",
+            "micaCurie": "HP:0002267",
+            "micaLabel": "Exaggerated startle response",
+            "score": 5.591336732773239,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:618056"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000253",
+            "patientPhenotypeLabel": "Progressive microcephaly",
+            "diseasePhenotypeCurie": "HP:0000253",
+            "diseasePhenotypeLabel": "Progressive microcephaly",
+            "micaCurie": "HP:0000253",
+            "micaLabel": "Progressive microcephaly",
+            "score": 4.79439275853165,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:614498"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002188",
+            "patientPhenotypeLabel": "Delayed CNS myelination",
+            "diseasePhenotypeCurie": "HP:0002188",
+            "diseasePhenotypeLabel": "Delayed CNS myelination",
+            "micaCurie": "HP:0002188",
+            "micaLabel": "Delayed CNS myelination",
+            "score": 3.5974871214288062,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:614498"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0005781",
+            "patientPhenotypeLabel": "Contractures of the large joints",
+            "diseasePhenotypeCurie": "HP:0034392",
+            "diseasePhenotypeLabel": "Joint contracture",
+            "micaCurie": "HP:0034392",
+            "micaLabel": "Joint contracture",
+            "score": 2.3600383879064806,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:614498"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0001344",
+            "diseasePhenotypeLabel": "Absent speech",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:618056"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0430046",
+            "patientPhenotypeLabel": "Small joint hypermobilty",
+            "diseasePhenotypeCurie": "HP:0034392",
+            "diseasePhenotypeLabel": "Joint contracture",
+            "micaCurie": "HP:0011729",
+            "micaLabel": "Abnormality of joint mobility",
+            "score": 1.8603860647386155,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:614498"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007410",
+            "patientPhenotypeLabel": "Palmoplantar hyperhidrosis",
+            "diseasePhenotypeCurie": "HP:0004209",
+            "diseasePhenotypeLabel": "Clinodactyly of the 5th finger",
+            "micaCurie": "HP:0001155",
+            "micaLabel": "Abnormality of the hand",
+            "score": 1.5738282194991153,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:618056"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0010864",
+            "patientPhenotypeLabel": "Severe intellectual disability",
+            "diseasePhenotypeCurie": "HP:0001249",
+            "diseasePhenotypeLabel": "Intellectual disability",
+            "micaCurie": "HP:0001249",
+            "micaLabel": "Intellectual disability",
+            "score": 1.4054770617153647,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:618056"
+          }
+        ]
+      },
+      {
+        "rank": 24,
+        "geneCurie": "NCBIGene:6513",
+        "geneLabel": "SLC2A1",
+        "geneSymbol": "SLC2A1",
+        "geneEntityId": 150099,
+        "bmaScore": 1.8203127810933295,
+        "normalizedScore": 0.200982,
+        "patientAverageScore": 2.8193844870740348,
+        "phenotypeAverageScore": 0.8212410751126242,
+        "directPhenotypeCount": 195,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000253",
+            "patientPhenotypeLabel": "Progressive microcephaly",
+            "diseasePhenotypeCurie": "HP:0000253",
+            "diseasePhenotypeLabel": "Progressive microcephaly",
+            "micaCurie": "HP:0000253",
+            "micaLabel": "Progressive microcephaly",
+            "score": 4.79439275853165,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:71277"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007410",
+            "patientPhenotypeLabel": "Palmoplantar hyperhidrosis",
+            "diseasePhenotypeCurie": "HP:0000975",
+            "diseasePhenotypeLabel": "Hyperhidrosis",
+            "micaCurie": "HP:0000975",
+            "micaLabel": "Hyperhidrosis",
+            "score": 4.6626234809005265,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:2131"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002267",
+            "patientPhenotypeLabel": "Exaggerated startle response",
+            "diseasePhenotypeCurie": "HP:0007308",
+            "diseasePhenotypeLabel": "Extrapyramidal dyskinesia",
+            "micaCurie": "HP:0002071",
+            "micaLabel": "Abnormality of extrapyramidal motor function",
+            "score": 3.6634450892206036,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:71277"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002188",
+            "patientPhenotypeLabel": "Delayed CNS myelination",
+            "diseasePhenotypeCurie": "HP:0002188",
+            "diseasePhenotypeLabel": "Delayed CNS myelination",
+            "micaCurie": "HP:0002188",
+            "micaLabel": "Delayed CNS myelination",
+            "score": 3.5974871214288062,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:608885"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0010864",
+            "patientPhenotypeLabel": "Severe intellectual disability",
+            "diseasePhenotypeCurie": "HP:0010864",
+            "diseasePhenotypeLabel": "Severe intellectual disability",
+            "micaCurie": "HP:0010864",
+            "micaLabel": "Severe intellectual disability",
+            "score": 3.397590419813344,
+            "evidenceCode": "1/3",
+            "referenceText": "OMIM:606777"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000768",
+            "patientPhenotypeLabel": "Pectus carinatum",
+            "diseasePhenotypeCurie": "HP:0010306",
+            "diseasePhenotypeLabel": "Short thorax",
+            "micaCurie": "HP:0000765",
+            "micaLabel": "Abnormal thorax morphology",
+            "score": 2.273747434969005,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:168577"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0001344",
+            "diseasePhenotypeLabel": "Absent speech",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:608885"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002808",
+            "patientPhenotypeLabel": "Kyphosis",
+            "diseasePhenotypeCurie": "HP:0000470",
+            "diseasePhenotypeLabel": "Short neck",
+            "micaCurie": "HP:0000925",
+            "micaLabel": "Abnormality of the vertebral column",
+            "score": 1.7194848920343693,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:168577"
+          }
+        ]
+      },
+      {
+        "rank": 25,
+        "geneCurie": "NCBIGene:23516",
+        "geneLabel": "SLC39A14",
+        "geneSymbol": "SLC39A14",
+        "geneEntityId": 151396,
+        "bmaScore": 1.8146429472818912,
+        "normalizedScore": 0.200356,
+        "patientAverageScore": 2.516432447616551,
+        "phenotypeAverageScore": 1.1128534469472313,
+        "directPhenotypeCount": 72,
+        "matchedPhenotypeCount": 10,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000253",
+            "patientPhenotypeLabel": "Progressive microcephaly",
+            "diseasePhenotypeCurie": "HP:0000253",
+            "diseasePhenotypeLabel": "Progressive microcephaly",
+            "micaCurie": "HP:0000253",
+            "micaLabel": "Progressive microcephaly",
+            "score": 4.79439275853165,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:521406"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007410",
+            "patientPhenotypeLabel": "Palmoplantar hyperhidrosis",
+            "diseasePhenotypeCurie": "HP:0000975",
+            "diseasePhenotypeLabel": "Hyperhidrosis",
+            "micaCurie": "HP:0000975",
+            "micaLabel": "Hyperhidrosis",
+            "score": 4.6626234809005265,
+            "evidenceCode": "1/9",
+            "referenceText": "OMIM:617013"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002267",
+            "patientPhenotypeLabel": "Exaggerated startle response",
+            "diseasePhenotypeCurie": "HP:0002067",
+            "diseasePhenotypeLabel": "Bradykinesia",
+            "micaCurie": "HP:0002071",
+            "micaLabel": "Abnormality of extrapyramidal motor function",
+            "score": 3.6634450892206036,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:521406"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0005781",
+            "patientPhenotypeLabel": "Contractures of the large joints",
+            "diseasePhenotypeCurie": "HP:0002828",
+            "diseasePhenotypeLabel": "Multiple joint contractures",
+            "micaCurie": "HP:0001371",
+            "micaLabel": "Flexion contracture",
+            "score": 2.6837528459959525,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:521406"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0001344",
+            "diseasePhenotypeLabel": "Absent speech",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "1/9",
+            "referenceText": "OMIM:617013"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002808",
+            "patientPhenotypeLabel": "Kyphosis",
+            "diseasePhenotypeCurie": "HP:0002650",
+            "diseasePhenotypeLabel": "Scoliosis",
+            "micaCurie": "HP:0010674",
+            "micaLabel": "Abnormal curvature of the vertebral column",
+            "score": 2.014786463633222,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:521406"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0430046",
+            "patientPhenotypeLabel": "Small joint hypermobilty",
+            "diseasePhenotypeCurie": "HP:0003121",
+            "diseasePhenotypeLabel": "Limb joint contracture",
+            "micaCurie": "HP:0011729",
+            "micaLabel": "Abnormality of joint mobility",
+            "score": 1.8603860647386155,
+            "evidenceCode": "3/9",
+            "referenceText": "OMIM:617013"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0010864",
+            "patientPhenotypeLabel": "Severe intellectual disability",
+            "diseasePhenotypeCurie": "HP:0001249",
+            "diseasePhenotypeLabel": "Intellectual disability",
+            "micaCurie": "HP:0001249",
+            "micaLabel": "Intellectual disability",
+            "score": 1.4054770617153647,
+            "evidenceCode": "1/9",
+            "referenceText": "OMIM:617013"
+          }
+        ]
+      }
+    ],
+    "engineSummary": {
+      "diseaseCount": 8579,
+      "geneCount": 5256,
+      "phenotypeCount": 19389,
+      "sourceMode": {
+        "disease": "relationship_fallback",
+        "gene": "relationship_fallback"
+      },
+      "generatedAt": "2026-03-15T21:00:39.457Z"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "inputCandidateCount": 250,
+  "strictNovelCount": 188,
+  "sameFamilyCount": 57,
+  "noveltyBucketCounts": {
+    "novel_candidate": 188,
+    "same_family_shared_ancestor": 40,
+    "same_family_ancestor_link": 17,
+    "known_equivalent": 5
+  }
+}

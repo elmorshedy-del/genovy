@@ -1,0 +1,2647 @@
+{
+  "success": true,
+  "engine": "genovy-dx-sim",
+  "analysisType": "gene",
+  "input": {
+    "presentPhenotypeCuries": [
+      "HP:0012469",
+      "HP:0002521",
+      "HP:0007359",
+      "HP:0002267",
+      "HP:0011191",
+      "HP:0002376",
+      "HP:0011344",
+      "HP:0001344",
+      "HP:0000733"
+    ],
+    "excludedPhenotypeCuries": [],
+    "sourceFormat": "phenopacket"
+  },
+  "ranking": {
+    "queryPhenotypes": [
+      {
+        "phenotypeCurie": "HP:0012469",
+        "phenotypeLabel": "Infantile spasms"
+      },
+      {
+        "phenotypeCurie": "HP:0002521",
+        "phenotypeLabel": "Hypsarrhythmia"
+      },
+      {
+        "phenotypeCurie": "HP:0007359",
+        "phenotypeLabel": "Focal-onset seizure"
+      },
+      {
+        "phenotypeCurie": "HP:0002267",
+        "phenotypeLabel": "Exaggerated startle response"
+      },
+      {
+        "phenotypeCurie": "HP:0011191",
+        "phenotypeLabel": "Unilateral multifocal epileptiform discharges"
+      },
+      {
+        "phenotypeCurie": "HP:0002376",
+        "phenotypeLabel": "Developmental regression"
+      },
+      {
+        "phenotypeCurie": "HP:0011344",
+        "phenotypeLabel": "Severe global developmental delay"
+      },
+      {
+        "phenotypeCurie": "HP:0001344",
+        "phenotypeLabel": "Absent speech"
+      },
+      {
+        "phenotypeCurie": "HP:0000733",
+        "phenotypeLabel": "Motor stereotypy"
+      }
+    ],
+    "results": [
+      {
+        "rank": 1,
+        "geneCurie": "NCBIGene:2566",
+        "geneLabel": "GABRG2",
+        "geneSymbol": "GABRG2",
+        "geneEntityId": 148902,
+        "bmaScore": 2.6650185414571026,
+        "normalizedScore": 0.294247,
+        "patientAverageScore": 3.901324968468195,
+        "phenotypeAverageScore": 1.4287121144460102,
+        "directPhenotypeCount": 143,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011191",
+            "patientPhenotypeLabel": "Unilateral multifocal epileptiform discharges",
+            "diseasePhenotypeCurie": "HP:0010841",
+            "diseasePhenotypeLabel": "Multifocal epileptiform discharges",
+            "micaCurie": "HP:0010841",
+            "micaLabel": "Multifocal epileptiform discharges",
+            "score": 5.65587525391081,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:33069"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0012469",
+            "patientPhenotypeLabel": "Infantile spasms",
+            "diseasePhenotypeCurie": "HP:0012469",
+            "diseasePhenotypeLabel": "Infantile spasms",
+            "micaCurie": "HP:0012469",
+            "micaLabel": "Infantile spasms",
+            "score": 4.329684816860625,
+            "evidenceCode": "1/8",
+            "referenceText": "OMIM:618396"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002521",
+            "patientPhenotypeLabel": "Hypsarrhythmia",
+            "diseasePhenotypeCurie": "HP:0002521",
+            "diseasePhenotypeLabel": "Hypsarrhythmia",
+            "micaCurie": "HP:0002521",
+            "micaLabel": "Hypsarrhythmia",
+            "score": 4.2367910699679285,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:442835"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011344",
+            "patientPhenotypeLabel": "Severe global developmental delay",
+            "diseasePhenotypeCurie": "HP:0011344",
+            "diseasePhenotypeLabel": "Severe global developmental delay",
+            "micaCurie": "HP:0011344",
+            "micaLabel": "Severe global developmental delay",
+            "score": 3.810048563412479,
+            "evidenceCode": "8/8",
+            "referenceText": "OMIM:618396"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002267",
+            "patientPhenotypeLabel": "Exaggerated startle response",
+            "diseasePhenotypeCurie": "HP:0002067",
+            "diseasePhenotypeLabel": "Bradykinesia",
+            "micaCurie": "HP:0002071",
+            "micaLabel": "Abnormality of extrapyramidal motor function",
+            "score": 3.6634450892206036,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "ORPHA:36387"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000733",
+            "patientPhenotypeLabel": "Motor stereotypy",
+            "diseasePhenotypeCurie": "HP:0030218",
+            "diseasePhenotypeLabel": "Punding",
+            "micaCurie": "HP:0000733",
+            "micaLabel": "Motor stereotypy",
+            "score": 3.576433712230974,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:64280"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002376",
+            "patientPhenotypeLabel": "Developmental regression",
+            "diseasePhenotypeCurie": "HP:0002376",
+            "diseasePhenotypeLabel": "Developmental regression",
+            "micaCurie": "HP:0002376",
+            "micaLabel": "Developmental regression",
+            "score": 3.4476008403880054,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:36387"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007359",
+            "patientPhenotypeLabel": "Focal-onset seizure",
+            "diseasePhenotypeCurie": "HP:0007359",
+            "diseasePhenotypeLabel": "Focal-onset seizure",
+            "micaCurie": "HP:0007359",
+            "micaLabel": "Focal-onset seizure",
+            "score": 3.401080824753113,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:33069"
+          }
+        ]
+      },
+      {
+        "rank": 2,
+        "geneCurie": "NCBIGene:10565",
+        "geneLabel": "ARFGEF1",
+        "geneSymbol": "ARFGEF1",
+        "geneEntityId": 151069,
+        "bmaScore": 2.477127138867833,
+        "normalizedScore": 0.273502,
+        "patientAverageScore": 2.5175811322835226,
+        "phenotypeAverageScore": 2.4366731454521435,
+        "directPhenotypeCount": 12,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011191",
+            "patientPhenotypeLabel": "Unilateral multifocal epileptiform discharges",
+            "diseasePhenotypeCurie": "HP:0010841",
+            "diseasePhenotypeLabel": "Multifocal epileptiform discharges",
+            "micaCurie": "HP:0010841",
+            "micaLabel": "Multifocal epileptiform discharges",
+            "score": 5.65587525391081,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:619964"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0012469",
+            "patientPhenotypeLabel": "Infantile spasms",
+            "diseasePhenotypeCurie": "HP:0012469",
+            "diseasePhenotypeLabel": "Infantile spasms",
+            "micaCurie": "HP:0012469",
+            "micaLabel": "Infantile spasms",
+            "score": 4.329684816860625,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:619964"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002521",
+            "patientPhenotypeLabel": "Hypsarrhythmia",
+            "diseasePhenotypeCurie": "HP:0002521",
+            "diseasePhenotypeLabel": "Hypsarrhythmia",
+            "micaCurie": "HP:0002521",
+            "micaLabel": "Hypsarrhythmia",
+            "score": 4.2367910699679285,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:619964"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001344",
+            "patientPhenotypeLabel": "Absent speech",
+            "diseasePhenotypeCurie": "HP:0001344",
+            "diseasePhenotypeLabel": "Absent speech",
+            "micaCurie": "HP:0001344",
+            "micaLabel": "Absent speech",
+            "score": 2.9909645454692173,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:619964"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007359",
+            "patientPhenotypeLabel": "Focal-onset seizure",
+            "diseasePhenotypeCurie": "HP:0032794",
+            "diseasePhenotypeLabel": "Myoclonic seizure",
+            "micaCurie": "HP:0001250",
+            "micaLabel": "Seizure",
+            "score": 1.4866293835155915,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:619964"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011344",
+            "patientPhenotypeLabel": "Severe global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:619964"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002376",
+            "patientPhenotypeLabel": "Developmental regression",
+            "diseasePhenotypeCurie": "HP:0001344",
+            "diseasePhenotypeLabel": "Absent speech",
+            "micaCurie": "HP:0012759",
+            "micaLabel": "Neurodevelopmental abnormality",
+            "score": 0.9688179084505344,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:619964"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000733",
+            "patientPhenotypeLabel": "Motor stereotypy",
+            "diseasePhenotypeCurie": "HP:0001344",
+            "diseasePhenotypeLabel": "Absent speech",
+            "micaCurie": "HP:0011446",
+            "micaLabel": "Abnormality of mental function",
+            "score": 0.9305544667922568,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:619964"
+          }
+        ]
+      },
+      {
+        "rank": 3,
+        "geneCurie": "NCBIGene:57526",
+        "geneLabel": "PCDH19",
+        "geneSymbol": "PCDH19",
+        "geneEntityId": 152162,
+        "bmaScore": 2.4699888107753623,
+        "normalizedScore": 0.272714,
+        "patientAverageScore": 3.217362510468756,
+        "phenotypeAverageScore": 1.7226151110819683,
+        "directPhenotypeCount": 73,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011191",
+            "patientPhenotypeLabel": "Unilateral multifocal epileptiform discharges",
+            "diseasePhenotypeCurie": "HP:0010841",
+            "diseasePhenotypeLabel": "Multifocal epileptiform discharges",
+            "micaCurie": "HP:0010841",
+            "micaLabel": "Multifocal epileptiform discharges",
+            "score": 5.65587525391081,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:33069"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002521",
+            "patientPhenotypeLabel": "Hypsarrhythmia",
+            "diseasePhenotypeCurie": "HP:0011198",
+            "diseasePhenotypeLabel": "EEG with generalized epileptiform discharges",
+            "micaCurie": "HP:0011198",
+            "micaLabel": "EEG with generalized epileptiform discharges",
+            "score": 3.831325961859764,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:33069"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002267",
+            "patientPhenotypeLabel": "Exaggerated startle response",
+            "diseasePhenotypeCurie": "HP:0002067",
+            "diseasePhenotypeLabel": "Bradykinesia",
+            "micaCurie": "HP:0002071",
+            "micaLabel": "Abnormality of extrapyramidal motor function",
+            "score": 3.6634450892206036,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:33069"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002376",
+            "patientPhenotypeLabel": "Developmental regression",
+            "diseasePhenotypeCurie": "HP:0002376",
+            "diseasePhenotypeLabel": "Developmental regression",
+            "micaCurie": "HP:0002376",
+            "micaLabel": "Developmental regression",
+            "score": 3.4476008403880054,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:300088"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007359",
+            "patientPhenotypeLabel": "Focal-onset seizure",
+            "diseasePhenotypeCurie": "HP:0032810",
+            "diseasePhenotypeLabel": "Focal sensory seizure with cephalic sensation",
+            "micaCurie": "HP:0007359",
+            "micaLabel": "Focal-onset seizure",
+            "score": 3.401080824753113,
+            "evidenceCode": "1/3",
+            "referenceText": "OMIM:300088"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0012469",
+            "patientPhenotypeLabel": "Infantile spasms",
+            "diseasePhenotypeCurie": "HP:0025190",
+            "diseasePhenotypeLabel": "Bilateral tonic-clonic seizure with generalized onset",
+            "micaCurie": "HP:0020219",
+            "micaLabel": "Motor seizure",
+            "score": 3.028794115342267,
+            "evidenceCode": "2/3",
+            "referenceText": "OMIM:300088"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000733",
+            "patientPhenotypeLabel": "Motor stereotypy",
+            "diseasePhenotypeCurie": "HP:0100738",
+            "diseasePhenotypeLabel": "Abnormal eating behavior",
+            "micaCurie": "HP:5200241",
+            "micaLabel": "Recurrent maladaptive behavior",
+            "score": 2.4119816660673212,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "ORPHA:714652"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001344",
+            "patientPhenotypeLabel": "Absent speech",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:714652"
+          }
+        ]
+      },
+      {
+        "rank": 4,
+        "geneCurie": "NCBIGene:81603",
+        "geneLabel": "TRIM8",
+        "geneSymbol": "TRIM8",
+        "geneEntityId": 152491,
+        "bmaScore": 2.467826043068066,
+        "normalizedScore": 0.272475,
+        "patientAverageScore": 3.6570767275195757,
+        "phenotypeAverageScore": 1.278575358616557,
+        "directPhenotypeCount": 101,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011191",
+            "patientPhenotypeLabel": "Unilateral multifocal epileptiform discharges",
+            "diseasePhenotypeCurie": "HP:0011190",
+            "diseasePhenotypeLabel": "Uni- and bilateral multifocal epileptiform discharges",
+            "micaCurie": "HP:0010841",
+            "micaLabel": "Multifocal epileptiform discharges",
+            "score": 5.65587525391081,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1934"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0012469",
+            "patientPhenotypeLabel": "Infantile spasms",
+            "diseasePhenotypeCurie": "HP:0012469",
+            "diseasePhenotypeLabel": "Infantile spasms",
+            "micaCurie": "HP:0012469",
+            "micaLabel": "Infantile spasms",
+            "score": 4.329684816860625,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1934"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002521",
+            "patientPhenotypeLabel": "Hypsarrhythmia",
+            "diseasePhenotypeCurie": "HP:0002521",
+            "diseasePhenotypeLabel": "Hypsarrhythmia",
+            "micaCurie": "HP:0002521",
+            "micaLabel": "Hypsarrhythmia",
+            "score": 4.2367910699679285,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:1934"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011344",
+            "patientPhenotypeLabel": "Severe global developmental delay",
+            "diseasePhenotypeCurie": "HP:0011344",
+            "diseasePhenotypeLabel": "Severe global developmental delay",
+            "micaCurie": "HP:0011344",
+            "micaLabel": "Severe global developmental delay",
+            "score": 3.810048563412479,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:619428"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000733",
+            "patientPhenotypeLabel": "Motor stereotypy",
+            "diseasePhenotypeCurie": "HP:0000733",
+            "diseasePhenotypeLabel": "Motor stereotypy",
+            "micaCurie": "HP:0000733",
+            "micaLabel": "Motor stereotypy",
+            "score": 3.576433712230974,
+            "evidenceCode": "1/5",
+            "referenceText": "OMIM:619428"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002376",
+            "patientPhenotypeLabel": "Developmental regression",
+            "diseasePhenotypeCurie": "HP:0002376",
+            "diseasePhenotypeLabel": "Developmental regression",
+            "micaCurie": "HP:0002376",
+            "micaLabel": "Developmental regression",
+            "score": 3.4476008403880054,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1934"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007359",
+            "patientPhenotypeLabel": "Focal-onset seizure",
+            "diseasePhenotypeCurie": "HP:0011167",
+            "diseasePhenotypeLabel": "Focal tonic seizure",
+            "micaCurie": "HP:0007359",
+            "micaLabel": "Focal-onset seizure",
+            "score": 3.401080824753113,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:1934"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001344",
+            "patientPhenotypeLabel": "Absent speech",
+            "diseasePhenotypeCurie": "HP:0001344",
+            "diseasePhenotypeLabel": "Absent speech",
+            "micaCurie": "HP:0001344",
+            "micaLabel": "Absent speech",
+            "score": 2.9909645454692173,
+            "evidenceCode": "5/6",
+            "referenceText": "OMIM:619428"
+          }
+        ]
+      },
+      {
+        "rank": 5,
+        "geneCurie": "NCBIGene:10458",
+        "geneLabel": "BAIAP2",
+        "geneSymbol": "BAIAP2",
+        "geneEntityId": 151037,
+        "bmaScore": 2.46138194962609,
+        "normalizedScore": 0.271764,
+        "patientAverageScore": 3.220046436866384,
+        "phenotypeAverageScore": 1.7027174623857966,
+        "directPhenotypeCount": 43,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0012469",
+            "patientPhenotypeLabel": "Infantile spasms",
+            "diseasePhenotypeCurie": "HP:0011097",
+            "diseasePhenotypeLabel": "Epileptic spasm",
+            "micaCurie": "HP:0011097",
+            "micaLabel": "Epileptic spasm",
+            "score": 3.9944776025459987,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:621468"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002521",
+            "patientPhenotypeLabel": "Hypsarrhythmia",
+            "diseasePhenotypeCurie": "HP:0012001",
+            "diseasePhenotypeLabel": "EEG with generalized polyspikes",
+            "micaCurie": "HP:0011198",
+            "micaLabel": "EEG with generalized epileptiform discharges",
+            "score": 3.831325961859764,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:621468"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011344",
+            "patientPhenotypeLabel": "Severe global developmental delay",
+            "diseasePhenotypeCurie": "HP:0011344",
+            "diseasePhenotypeLabel": "Severe global developmental delay",
+            "micaCurie": "HP:0011344",
+            "micaLabel": "Severe global developmental delay",
+            "score": 3.810048563412479,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:621468"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011191",
+            "patientPhenotypeLabel": "Unilateral multifocal epileptiform discharges",
+            "diseasePhenotypeCurie": "HP:0012001",
+            "diseasePhenotypeLabel": "EEG with generalized polyspikes",
+            "micaCurie": "HP:0011182",
+            "micaLabel": "Interictal epileptiform activity",
+            "score": 3.6277270066185245,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:621468"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002376",
+            "patientPhenotypeLabel": "Developmental regression",
+            "diseasePhenotypeCurie": "HP:0002376",
+            "diseasePhenotypeLabel": "Developmental regression",
+            "micaCurie": "HP:0002376",
+            "micaLabel": "Developmental regression",
+            "score": 3.4476008403880054,
+            "evidenceCode": "1/6",
+            "referenceText": "OMIM:621468"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007359",
+            "patientPhenotypeLabel": "Focal-onset seizure",
+            "diseasePhenotypeCurie": "HP:0007359",
+            "diseasePhenotypeLabel": "Focal-onset seizure",
+            "micaCurie": "HP:0007359",
+            "micaLabel": "Focal-onset seizure",
+            "score": 3.401080824753113,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:621468"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001344",
+            "patientPhenotypeLabel": "Absent speech",
+            "diseasePhenotypeCurie": "HP:0001344",
+            "diseasePhenotypeLabel": "Absent speech",
+            "micaCurie": "HP:0001344",
+            "micaLabel": "Absent speech",
+            "score": 2.9909645454692173,
+            "evidenceCode": "4/6",
+            "referenceText": "OMIM:621468"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000733",
+            "patientPhenotypeLabel": "Motor stereotypy",
+            "diseasePhenotypeCurie": "HP:0000752",
+            "diseasePhenotypeLabel": "Hyperactivity",
+            "micaCurie": "HP:5200241",
+            "micaLabel": "Recurrent maladaptive behavior",
+            "score": 2.4119816660673212,
+            "evidenceCode": "1/6",
+            "referenceText": "OMIM:621468"
+          }
+        ]
+      },
+      {
+        "rank": 6,
+        "geneCurie": "NCBIGene:57582",
+        "geneLabel": "KCNT1",
+        "geneSymbol": "KCNT1",
+        "geneEntityId": 152174,
+        "bmaScore": 2.459652132725309,
+        "normalizedScore": 0.271573,
+        "patientAverageScore": 3.3577352671632132,
+        "phenotypeAverageScore": 1.5615689982874055,
+        "directPhenotypeCount": 82,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011191",
+            "patientPhenotypeLabel": "Unilateral multifocal epileptiform discharges",
+            "diseasePhenotypeCurie": "HP:0010841",
+            "diseasePhenotypeLabel": "Multifocal epileptiform discharges",
+            "micaCurie": "HP:0010841",
+            "micaLabel": "Multifocal epileptiform discharges",
+            "score": 5.65587525391081,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:293181"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002521",
+            "patientPhenotypeLabel": "Hypsarrhythmia",
+            "diseasePhenotypeCurie": "HP:0002521",
+            "diseasePhenotypeLabel": "Hypsarrhythmia",
+            "micaCurie": "HP:0002521",
+            "micaLabel": "Hypsarrhythmia",
+            "score": 4.2367910699679285,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:293181"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0012469",
+            "patientPhenotypeLabel": "Infantile spasms",
+            "diseasePhenotypeCurie": "HP:0011097",
+            "diseasePhenotypeLabel": "Epileptic spasm",
+            "micaCurie": "HP:0011097",
+            "micaLabel": "Epileptic spasm",
+            "score": 3.9944776025459987,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:293181"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000733",
+            "patientPhenotypeLabel": "Motor stereotypy",
+            "diseasePhenotypeCurie": "HP:0000733",
+            "diseasePhenotypeLabel": "Motor stereotypy",
+            "micaCurie": "HP:0000733",
+            "micaLabel": "Motor stereotypy",
+            "score": 3.576433712230974,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:98784"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002376",
+            "patientPhenotypeLabel": "Developmental regression",
+            "diseasePhenotypeCurie": "HP:0002376",
+            "diseasePhenotypeLabel": "Developmental regression",
+            "micaCurie": "HP:0002376",
+            "micaLabel": "Developmental regression",
+            "score": 3.4476008403880054,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:614959"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007359",
+            "patientPhenotypeLabel": "Focal-onset seizure",
+            "diseasePhenotypeCurie": "HP:0032773",
+            "diseasePhenotypeLabel": "Focal autonomic seizure with palpitations/tachycardia/bradycardia/asystole",
+            "micaCurie": "HP:0007359",
+            "micaLabel": "Focal-onset seizure",
+            "score": 3.401080824753113,
+            "evidenceCode": "2/8",
+            "referenceText": "OMIM:614959"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001344",
+            "patientPhenotypeLabel": "Absent speech",
+            "diseasePhenotypeCurie": "HP:0001344",
+            "diseasePhenotypeLabel": "Absent speech",
+            "micaCurie": "HP:0001344",
+            "micaLabel": "Absent speech",
+            "score": 2.9909645454692173,
+            "evidenceCode": "2/8",
+            "referenceText": "OMIM:614959"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002267",
+            "patientPhenotypeLabel": "Exaggerated startle response",
+            "diseasePhenotypeCurie": "HP:0004305",
+            "diseasePhenotypeLabel": "Involuntary movements",
+            "micaCurie": "HP:0011442",
+            "micaLabel": "Abnormal central motor function",
+            "score": 1.465210920683032,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:98784"
+          }
+        ]
+      },
+      {
+        "rank": 7,
+        "geneCurie": "NCBIGene:2554",
+        "geneLabel": "GABRA1",
+        "geneSymbol": "GABRA1",
+        "geneEntityId": 148894,
+        "bmaScore": 2.4521083718216414,
+        "normalizedScore": 0.27074,
+        "patientAverageScore": 3.3009479944178977,
+        "phenotypeAverageScore": 1.603268749225385,
+        "directPhenotypeCount": 98,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011191",
+            "patientPhenotypeLabel": "Unilateral multifocal epileptiform discharges",
+            "diseasePhenotypeCurie": "HP:0010841",
+            "diseasePhenotypeLabel": "Multifocal epileptiform discharges",
+            "micaCurie": "HP:0010841",
+            "micaLabel": "Multifocal epileptiform discharges",
+            "score": 5.65587525391081,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:33069"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002521",
+            "patientPhenotypeLabel": "Hypsarrhythmia",
+            "diseasePhenotypeCurie": "HP:0011198",
+            "diseasePhenotypeLabel": "EEG with generalized epileptiform discharges",
+            "micaCurie": "HP:0011198",
+            "micaLabel": "EEG with generalized epileptiform discharges",
+            "score": 3.831325961859764,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:33069"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002267",
+            "patientPhenotypeLabel": "Exaggerated startle response",
+            "diseasePhenotypeCurie": "HP:0002067",
+            "diseasePhenotypeLabel": "Bradykinesia",
+            "micaCurie": "HP:0002071",
+            "micaLabel": "Abnormality of extrapyramidal motor function",
+            "score": 3.6634450892206036,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:33069"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000733",
+            "patientPhenotypeLabel": "Motor stereotypy",
+            "diseasePhenotypeCurie": "HP:0030218",
+            "diseasePhenotypeLabel": "Punding",
+            "micaCurie": "HP:0000733",
+            "micaLabel": "Motor stereotypy",
+            "score": 3.576433712230974,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:64280"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002376",
+            "patientPhenotypeLabel": "Developmental regression",
+            "diseasePhenotypeCurie": "HP:0002376",
+            "diseasePhenotypeLabel": "Developmental regression",
+            "micaCurie": "HP:0002376",
+            "micaLabel": "Developmental regression",
+            "score": 3.4476008403880054,
+            "evidenceCode": "2/3",
+            "referenceText": "OMIM:615744"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007359",
+            "patientPhenotypeLabel": "Focal-onset seizure",
+            "diseasePhenotypeCurie": "HP:0007359",
+            "diseasePhenotypeLabel": "Focal-onset seizure",
+            "micaCurie": "HP:0007359",
+            "micaLabel": "Focal-onset seizure",
+            "score": 3.401080824753113,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:33069"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0012469",
+            "patientPhenotypeLabel": "Infantile spasms",
+            "diseasePhenotypeCurie": "HP:0032794",
+            "diseasePhenotypeLabel": "Myoclonic seizure",
+            "micaCurie": "HP:0020219",
+            "micaLabel": "Motor seizure",
+            "score": 3.028794115342267,
+            "evidenceCode": "2/4",
+            "referenceText": "OMIM:615744"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001344",
+            "patientPhenotypeLabel": "Absent speech",
+            "diseasePhenotypeCurie": "HP:0031469",
+            "diseasePhenotypeLabel": "Low self-esteem",
+            "micaCurie": "HP:0025792",
+            "micaLabel": "Abnormal cognitive process",
+            "score": 1.6527935175356971,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:64280"
+          }
+        ]
+      },
+      {
+        "rank": 8,
+        "geneCurie": "NCBIGene:2903",
+        "geneLabel": "GRIN2A",
+        "geneSymbol": "GRIN2A",
+        "geneEntityId": 149013,
+        "bmaScore": 2.4410507233698717,
+        "normalizedScore": 0.269519,
+        "patientAverageScore": 3.1724101913808225,
+        "phenotypeAverageScore": 1.7096912553589212,
+        "directPhenotypeCount": 109,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011191",
+            "patientPhenotypeLabel": "Unilateral multifocal epileptiform discharges",
+            "diseasePhenotypeCurie": "HP:0012557",
+            "diseasePhenotypeLabel": "EEG with centrotemporal focal spike waves",
+            "micaCurie": "HP:0011185",
+            "micaLabel": "EEG with focal epileptiform discharges",
+            "score": 5.319403017289597,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:725"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0012469",
+            "patientPhenotypeLabel": "Infantile spasms",
+            "diseasePhenotypeCurie": "HP:0011097",
+            "diseasePhenotypeLabel": "Epileptic spasm",
+            "micaCurie": "HP:0011097",
+            "micaLabel": "Epileptic spasm",
+            "score": 3.9944776025459987,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:289266"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002521",
+            "patientPhenotypeLabel": "Hypsarrhythmia",
+            "diseasePhenotypeCurie": "HP:0012001",
+            "diseasePhenotypeLabel": "EEG with generalized polyspikes",
+            "micaCurie": "HP:0011198",
+            "micaLabel": "EEG with generalized epileptiform discharges",
+            "score": 3.831325961859764,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:725"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000733",
+            "patientPhenotypeLabel": "Motor stereotypy",
+            "diseasePhenotypeCurie": "HP:0012171",
+            "diseasePhenotypeLabel": "Stereotypical hand wringing",
+            "micaCurie": "HP:0000733",
+            "micaLabel": "Motor stereotypy",
+            "score": 3.576433712230974,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:289266"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002376",
+            "patientPhenotypeLabel": "Developmental regression",
+            "diseasePhenotypeCurie": "HP:0002376",
+            "diseasePhenotypeLabel": "Developmental regression",
+            "micaCurie": "HP:0002376",
+            "micaLabel": "Developmental regression",
+            "score": 3.4476008403880054,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:98818"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007359",
+            "patientPhenotypeLabel": "Focal-onset seizure",
+            "diseasePhenotypeCurie": "HP:0011166",
+            "diseasePhenotypeLabel": "Focal myoclonic seizure",
+            "micaCurie": "HP:0007359",
+            "micaLabel": "Focal-onset seizure",
+            "score": 3.401080824753113,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:98818"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001344",
+            "patientPhenotypeLabel": "Absent speech",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "18/36",
+            "referenceText": "OMIM:245570"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002267",
+            "patientPhenotypeLabel": "Exaggerated startle response",
+            "diseasePhenotypeCurie": "HP:0011098",
+            "diseasePhenotypeLabel": "Speech apraxia",
+            "micaCurie": "HP:0011442",
+            "micaLabel": "Abnormal central motor function",
+            "score": 1.465210920683032,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:725"
+          }
+        ]
+      },
+      {
+        "rank": 9,
+        "geneCurie": "NCBIGene:6326",
+        "geneLabel": "SCN2A",
+        "geneSymbol": "SCN2A",
+        "geneEntityId": 150047,
+        "bmaScore": 2.4407999197651877,
+        "normalizedScore": 0.269491,
+        "patientAverageScore": 3.6690538147486627,
+        "phenotypeAverageScore": 1.2125460247817128,
+        "directPhenotypeCount": 208,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011191",
+            "patientPhenotypeLabel": "Unilateral multifocal epileptiform discharges",
+            "diseasePhenotypeCurie": "HP:0011190",
+            "diseasePhenotypeLabel": "Uni- and bilateral multifocal epileptiform discharges",
+            "micaCurie": "HP:0010841",
+            "micaLabel": "Multifocal epileptiform discharges",
+            "score": 5.65587525391081,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1934"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0012469",
+            "patientPhenotypeLabel": "Infantile spasms",
+            "diseasePhenotypeCurie": "HP:0012469",
+            "diseasePhenotypeLabel": "Infantile spasms",
+            "micaCurie": "HP:0012469",
+            "micaLabel": "Infantile spasms",
+            "score": 4.329684816860625,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:697160"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002521",
+            "patientPhenotypeLabel": "Hypsarrhythmia",
+            "diseasePhenotypeCurie": "HP:0002521",
+            "diseasePhenotypeLabel": "Hypsarrhythmia",
+            "micaCurie": "HP:0002521",
+            "micaLabel": "Hypsarrhythmia",
+            "score": 4.2367910699679285,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:697160"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011344",
+            "patientPhenotypeLabel": "Severe global developmental delay",
+            "diseasePhenotypeCurie": "HP:0011344",
+            "diseasePhenotypeLabel": "Severe global developmental delay",
+            "micaCurie": "HP:0011344",
+            "micaLabel": "Severe global developmental delay",
+            "score": 3.810048563412479,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:613721"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002267",
+            "patientPhenotypeLabel": "Exaggerated startle response",
+            "diseasePhenotypeCurie": "HP:0002067",
+            "diseasePhenotypeLabel": "Bradykinesia",
+            "micaCurie": "HP:0002071",
+            "micaLabel": "Abnormality of extrapyramidal motor function",
+            "score": 3.6634450892206036,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "ORPHA:36387"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002376",
+            "patientPhenotypeLabel": "Developmental regression",
+            "diseasePhenotypeCurie": "HP:0002376",
+            "diseasePhenotypeLabel": "Developmental regression",
+            "micaCurie": "HP:0002376",
+            "micaLabel": "Developmental regression",
+            "score": 3.4476008403880054,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:293181"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007359",
+            "patientPhenotypeLabel": "Focal-onset seizure",
+            "diseasePhenotypeCurie": "HP:0032906",
+            "diseasePhenotypeLabel": "Focal head nodding automatism seizure",
+            "micaCurie": "HP:0007359",
+            "micaLabel": "Focal-onset seizure",
+            "score": 3.401080824753113,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000733",
+            "patientPhenotypeLabel": "Motor stereotypy",
+            "diseasePhenotypeCurie": "HP:0100716",
+            "diseasePhenotypeLabel": "Self-injurious behavior",
+            "micaCurie": "HP:5200241",
+            "micaLabel": "Recurrent maladaptive behavior",
+            "score": 2.4119816660673212,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1934"
+          }
+        ]
+      },
+      {
+        "rank": 10,
+        "geneCurie": "NCBIGene:9211",
+        "geneLabel": "LGI1",
+        "geneSymbol": "LGI1",
+        "geneEntityId": 150746,
+        "bmaScore": 2.4195002701245887,
+        "normalizedScore": 0.267139,
+        "patientAverageScore": 3.4674816375610735,
+        "phenotypeAverageScore": 1.3715189026881034,
+        "directPhenotypeCount": 100,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011191",
+            "patientPhenotypeLabel": "Unilateral multifocal epileptiform discharges",
+            "diseasePhenotypeCurie": "HP:0010841",
+            "diseasePhenotypeLabel": "Multifocal epileptiform discharges",
+            "micaCurie": "HP:0010841",
+            "micaLabel": "Multifocal epileptiform discharges",
+            "score": 5.65587525391081,
+            "evidenceCode": "3/5",
+            "referenceText": "OMIM:621475"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002521",
+            "patientPhenotypeLabel": "Hypsarrhythmia",
+            "diseasePhenotypeCurie": "HP:0011198",
+            "diseasePhenotypeLabel": "EEG with generalized epileptiform discharges",
+            "micaCurie": "HP:0011198",
+            "micaLabel": "EEG with generalized epileptiform discharges",
+            "score": 3.831325961859764,
+            "evidenceCode": "1/4",
+            "referenceText": "OMIM:621475"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011344",
+            "patientPhenotypeLabel": "Severe global developmental delay",
+            "diseasePhenotypeCurie": "HP:0011344",
+            "diseasePhenotypeLabel": "Severe global developmental delay",
+            "micaCurie": "HP:0011344",
+            "micaLabel": "Severe global developmental delay",
+            "score": 3.810048563412479,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:621475"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000733",
+            "patientPhenotypeLabel": "Motor stereotypy",
+            "diseasePhenotypeCurie": "HP:0003763",
+            "diseasePhenotypeLabel": "Bruxism",
+            "micaCurie": "HP:0000733",
+            "micaLabel": "Motor stereotypy",
+            "score": 3.576433712230974,
+            "evidenceCode": "1/5",
+            "referenceText": "OMIM:621475"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002376",
+            "patientPhenotypeLabel": "Developmental regression",
+            "diseasePhenotypeCurie": "HP:0002376",
+            "diseasePhenotypeLabel": "Developmental regression",
+            "micaCurie": "HP:0002376",
+            "micaLabel": "Developmental regression",
+            "score": 3.4476008403880054,
+            "evidenceCode": "0/5",
+            "referenceText": "OMIM:621475"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007359",
+            "patientPhenotypeLabel": "Focal-onset seizure",
+            "diseasePhenotypeCurie": "HP:0032898",
+            "diseasePhenotypeLabel": "Focal automatism seizure",
+            "micaCurie": "HP:0007359",
+            "micaLabel": "Focal-onset seizure",
+            "score": 3.401080824753113,
+            "evidenceCode": "1/11",
+            "referenceText": "OMIM:600512"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0012469",
+            "patientPhenotypeLabel": "Infantile spasms",
+            "diseasePhenotypeCurie": "HP:0032898",
+            "diseasePhenotypeLabel": "Focal automatism seizure",
+            "micaCurie": "HP:0020219",
+            "micaLabel": "Motor seizure",
+            "score": 3.028794115342267,
+            "evidenceCode": "1/11",
+            "referenceText": "OMIM:600512"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001344",
+            "patientPhenotypeLabel": "Absent speech",
+            "diseasePhenotypeCurie": "HP:0001344",
+            "diseasePhenotypeLabel": "Absent speech",
+            "micaCurie": "HP:0001344",
+            "micaLabel": "Absent speech",
+            "score": 2.9909645454692173,
+            "evidenceCode": "5/5",
+            "referenceText": "OMIM:621475"
+          }
+        ]
+      },
+      {
+        "rank": 11,
+        "geneCurie": "NCBIGene:23732",
+        "geneLabel": "FRRS1L",
+        "geneSymbol": "FRRS1L",
+        "geneEntityId": 151422,
+        "bmaScore": 2.4142734554584733,
+        "normalizedScore": 0.266562,
+        "patientAverageScore": 3.0386160584857955,
+        "phenotypeAverageScore": 1.7899308524311508,
+        "directPhenotypeCount": 50,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011191",
+            "patientPhenotypeLabel": "Unilateral multifocal epileptiform discharges",
+            "diseasePhenotypeCurie": "HP:0012557",
+            "diseasePhenotypeLabel": "EEG with centrotemporal focal spike waves",
+            "micaCurie": "HP:0011185",
+            "micaLabel": "EEG with focal epileptiform discharges",
+            "score": 5.319403017289597,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:725"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002521",
+            "patientPhenotypeLabel": "Hypsarrhythmia",
+            "diseasePhenotypeCurie": "HP:0012001",
+            "diseasePhenotypeLabel": "EEG with generalized polyspikes",
+            "micaCurie": "HP:0011198",
+            "micaLabel": "EEG with generalized epileptiform discharges",
+            "score": 3.831325961859764,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:725"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002376",
+            "patientPhenotypeLabel": "Developmental regression",
+            "diseasePhenotypeCurie": "HP:0002376",
+            "diseasePhenotypeLabel": "Developmental regression",
+            "micaCurie": "HP:0002376",
+            "micaLabel": "Developmental regression",
+            "score": 3.4476008403880054,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:725"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007359",
+            "patientPhenotypeLabel": "Focal-onset seizure",
+            "diseasePhenotypeCurie": "HP:0031165",
+            "diseasePhenotypeLabel": "Multifocal seizures",
+            "micaCurie": "HP:0007359",
+            "micaLabel": "Focal-onset seizure",
+            "score": 3.401080824753113,
+            "evidenceCode": "2/8",
+            "referenceText": "OMIM:616981"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0012469",
+            "patientPhenotypeLabel": "Infantile spasms",
+            "diseasePhenotypeCurie": "HP:0011153",
+            "diseasePhenotypeLabel": "Focal motor seizure",
+            "micaCurie": "HP:0020219",
+            "micaLabel": "Motor seizure",
+            "score": 3.028794115342267,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:725"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001344",
+            "patientPhenotypeLabel": "Absent speech",
+            "diseasePhenotypeCurie": "HP:0001344",
+            "diseasePhenotypeLabel": "Absent speech",
+            "micaCurie": "HP:0001344",
+            "micaLabel": "Absent speech",
+            "score": 2.9909645454692173,
+            "evidenceCode": "8/8",
+            "referenceText": "OMIM:616981"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000733",
+            "patientPhenotypeLabel": "Motor stereotypy",
+            "diseasePhenotypeCurie": "HP:0000718",
+            "diseasePhenotypeLabel": "Aggressive behavior",
+            "micaCurie": "HP:5200241",
+            "micaLabel": "Recurrent maladaptive behavior",
+            "score": 2.4119816660673212,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:725"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002267",
+            "patientPhenotypeLabel": "Exaggerated startle response",
+            "diseasePhenotypeCurie": "HP:0011098",
+            "diseasePhenotypeLabel": "Speech apraxia",
+            "micaCurie": "HP:0011442",
+            "micaLabel": "Abnormal central motor function",
+            "score": 1.465210920683032,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:725"
+          }
+        ]
+      },
+      {
+        "rank": 12,
+        "geneCurie": "NCBIGene:9568",
+        "geneLabel": "GABBR2",
+        "geneSymbol": "GABBR2",
+        "geneEntityId": 150830,
+        "bmaScore": 2.4099928947569733,
+        "normalizedScore": 0.26609,
+        "patientAverageScore": 3.6570767275195757,
+        "phenotypeAverageScore": 1.1629090619943705,
+        "directPhenotypeCount": 114,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011191",
+            "patientPhenotypeLabel": "Unilateral multifocal epileptiform discharges",
+            "diseasePhenotypeCurie": "HP:0010841",
+            "diseasePhenotypeLabel": "Multifocal epileptiform discharges",
+            "micaCurie": "HP:0010841",
+            "micaLabel": "Multifocal epileptiform discharges",
+            "score": 5.65587525391081,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:617904"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0012469",
+            "patientPhenotypeLabel": "Infantile spasms",
+            "diseasePhenotypeCurie": "HP:0012469",
+            "diseasePhenotypeLabel": "Infantile spasms",
+            "micaCurie": "HP:0012469",
+            "micaLabel": "Infantile spasms",
+            "score": 4.329684816860625,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:617904"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002521",
+            "patientPhenotypeLabel": "Hypsarrhythmia",
+            "diseasePhenotypeCurie": "HP:0002521",
+            "diseasePhenotypeLabel": "Hypsarrhythmia",
+            "micaCurie": "HP:0002521",
+            "micaLabel": "Hypsarrhythmia",
+            "score": 4.2367910699679285,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:442835"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011344",
+            "patientPhenotypeLabel": "Severe global developmental delay",
+            "diseasePhenotypeCurie": "HP:0011344",
+            "diseasePhenotypeLabel": "Severe global developmental delay",
+            "micaCurie": "HP:0011344",
+            "micaLabel": "Severe global developmental delay",
+            "score": 3.810048563412479,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:3095"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000733",
+            "patientPhenotypeLabel": "Motor stereotypy",
+            "diseasePhenotypeCurie": "HP:0100703",
+            "diseasePhenotypeLabel": "Tongue thrusting",
+            "micaCurie": "HP:0000733",
+            "micaLabel": "Motor stereotypy",
+            "score": 3.576433712230974,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:3095"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002376",
+            "patientPhenotypeLabel": "Developmental regression",
+            "diseasePhenotypeCurie": "HP:0002376",
+            "diseasePhenotypeLabel": "Developmental regression",
+            "micaCurie": "HP:0002376",
+            "micaLabel": "Developmental regression",
+            "score": 3.4476008403880054,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:442835"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007359",
+            "patientPhenotypeLabel": "Focal-onset seizure",
+            "diseasePhenotypeCurie": "HP:0002384",
+            "diseasePhenotypeLabel": "Focal impaired awareness seizure",
+            "micaCurie": "HP:0007359",
+            "micaLabel": "Focal-onset seizure",
+            "score": 3.401080824753113,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:617904"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001344",
+            "patientPhenotypeLabel": "Absent speech",
+            "diseasePhenotypeCurie": "HP:0001344",
+            "diseasePhenotypeLabel": "Absent speech",
+            "micaCurie": "HP:0001344",
+            "micaLabel": "Absent speech",
+            "score": 2.9909645454692173,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:617904"
+          }
+        ]
+      },
+      {
+        "rank": 13,
+        "geneCurie": "NCBIGene:6323",
+        "geneLabel": "SCN1A",
+        "geneSymbol": "SCN1A",
+        "geneEntityId": 150045,
+        "bmaScore": 2.4063808921833796,
+        "normalizedScore": 0.265691,
+        "patientAverageScore": 3.6019835081118328,
+        "phenotypeAverageScore": 1.2107782762549264,
+        "directPhenotypeCount": 228,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011191",
+            "patientPhenotypeLabel": "Unilateral multifocal epileptiform discharges",
+            "diseasePhenotypeCurie": "HP:0010841",
+            "diseasePhenotypeLabel": "Multifocal epileptiform discharges",
+            "micaCurie": "HP:0010841",
+            "micaLabel": "Multifocal epileptiform discharges",
+            "score": 5.65587525391081,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:293181"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002521",
+            "patientPhenotypeLabel": "Hypsarrhythmia",
+            "diseasePhenotypeCurie": "HP:0002521",
+            "diseasePhenotypeLabel": "Hypsarrhythmia",
+            "micaCurie": "HP:0002521",
+            "micaLabel": "Hypsarrhythmia",
+            "score": 4.2367910699679285,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:442835"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0012469",
+            "patientPhenotypeLabel": "Infantile spasms",
+            "diseasePhenotypeCurie": "HP:0011097",
+            "diseasePhenotypeLabel": "Epileptic spasm",
+            "micaCurie": "HP:0011097",
+            "micaLabel": "Epileptic spasm",
+            "score": 3.9944776025459987,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:293181"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002267",
+            "patientPhenotypeLabel": "Exaggerated startle response",
+            "diseasePhenotypeCurie": "HP:0002067",
+            "diseasePhenotypeLabel": "Bradykinesia",
+            "micaCurie": "HP:0002071",
+            "micaLabel": "Abnormality of extrapyramidal motor function",
+            "score": 3.6634450892206036,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "ORPHA:36387"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000733",
+            "patientPhenotypeLabel": "Motor stereotypy",
+            "diseasePhenotypeCurie": "HP:0000733",
+            "diseasePhenotypeLabel": "Motor stereotypy",
+            "micaCurie": "HP:0000733",
+            "micaLabel": "Motor stereotypy",
+            "score": 3.576433712230974,
+            "evidenceCode": "1/9",
+            "referenceText": "OMIM:619317"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002376",
+            "patientPhenotypeLabel": "Developmental regression",
+            "diseasePhenotypeCurie": "HP:0002376",
+            "diseasePhenotypeLabel": "Developmental regression",
+            "micaCurie": "HP:0002376",
+            "micaLabel": "Developmental regression",
+            "score": 3.4476008403880054,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:442835"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007359",
+            "patientPhenotypeLabel": "Focal-onset seizure",
+            "diseasePhenotypeCurie": "HP:0032901",
+            "diseasePhenotypeLabel": "Focal pedal automatism seizure",
+            "micaCurie": "HP:0007359",
+            "micaLabel": "Focal-onset seizure",
+            "score": 3.401080824753113,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:569"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001344",
+            "patientPhenotypeLabel": "Absent speech",
+            "diseasePhenotypeCurie": "HP:0001344",
+            "diseasePhenotypeLabel": "Absent speech",
+            "micaCurie": "HP:0001344",
+            "micaLabel": "Absent speech",
+            "score": 2.9909645454692173,
+            "evidenceCode": "8/9",
+            "referenceText": "OMIM:619317"
+          }
+        ]
+      },
+      {
+        "rank": 14,
+        "geneCurie": "NCBIGene:2562",
+        "geneLabel": "GABRB3",
+        "geneSymbol": "GABRB3",
+        "geneEntityId": 148900,
+        "bmaScore": 2.4010471177956267,
+        "normalizedScore": 0.265102,
+        "patientAverageScore": 3.208909039358757,
+        "phenotypeAverageScore": 1.593185196232497,
+        "directPhenotypeCount": 58,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011191",
+            "patientPhenotypeLabel": "Unilateral multifocal epileptiform discharges",
+            "diseasePhenotypeCurie": "HP:0011195",
+            "diseasePhenotypeLabel": "EEG with focal sharp slow waves",
+            "micaCurie": "HP:0011185",
+            "micaLabel": "EEG with focal epileptiform discharges",
+            "score": 5.319403017289597,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:2382"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0012469",
+            "patientPhenotypeLabel": "Infantile spasms",
+            "diseasePhenotypeCurie": "HP:0012469",
+            "diseasePhenotypeLabel": "Infantile spasms",
+            "micaCurie": "HP:0012469",
+            "micaLabel": "Infantile spasms",
+            "score": 4.329684816860625,
+            "evidenceCode": "3/4",
+            "referenceText": "OMIM:617113"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002521",
+            "patientPhenotypeLabel": "Hypsarrhythmia",
+            "diseasePhenotypeCurie": "HP:0002521",
+            "diseasePhenotypeLabel": "Hypsarrhythmia",
+            "micaCurie": "HP:0002521",
+            "micaLabel": "Hypsarrhythmia",
+            "score": 4.2367910699679285,
+            "evidenceCode": "1/4",
+            "referenceText": "OMIM:617113"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000733",
+            "patientPhenotypeLabel": "Motor stereotypy",
+            "diseasePhenotypeCurie": "HP:0030218",
+            "diseasePhenotypeLabel": "Punding",
+            "micaCurie": "HP:0000733",
+            "micaLabel": "Motor stereotypy",
+            "score": 3.576433712230974,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:64280"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002376",
+            "patientPhenotypeLabel": "Developmental regression",
+            "diseasePhenotypeCurie": "HP:0002376",
+            "diseasePhenotypeLabel": "Developmental regression",
+            "micaCurie": "HP:0002376",
+            "micaLabel": "Developmental regression",
+            "score": 3.4476008403880054,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:2382"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007359",
+            "patientPhenotypeLabel": "Focal-onset seizure",
+            "diseasePhenotypeCurie": "HP:0007359",
+            "diseasePhenotypeLabel": "Focal-onset seizure",
+            "micaCurie": "HP:0007359",
+            "micaLabel": "Focal-onset seizure",
+            "score": 3.401080824753113,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:2382"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001344",
+            "patientPhenotypeLabel": "Absent speech",
+            "diseasePhenotypeCurie": "HP:0031469",
+            "diseasePhenotypeLabel": "Low self-esteem",
+            "micaCurie": "HP:0025792",
+            "micaLabel": "Abnormal cognitive process",
+            "score": 1.6527935175356971,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:64280"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002267",
+            "patientPhenotypeLabel": "Exaggerated startle response",
+            "diseasePhenotypeCurie": "HP:0045084",
+            "diseasePhenotypeLabel": "Limb myoclonus",
+            "micaCurie": "HP:0011442",
+            "micaLabel": "Abnormal central motor function",
+            "score": 1.465210920683032,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "ORPHA:64280"
+          }
+        ]
+      },
+      {
+        "rank": 15,
+        "geneCurie": "NCBIGene:2902",
+        "geneLabel": "GRIN1",
+        "geneSymbol": "GRIN1",
+        "geneEntityId": 149012,
+        "bmaScore": 2.399337758835575,
+        "normalizedScore": 0.264913,
+        "patientAverageScore": 3.6570767275195757,
+        "phenotypeAverageScore": 1.1415987901515738,
+        "directPhenotypeCount": 134,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011191",
+            "patientPhenotypeLabel": "Unilateral multifocal epileptiform discharges",
+            "diseasePhenotypeCurie": "HP:0011190",
+            "diseasePhenotypeLabel": "Uni- and bilateral multifocal epileptiform discharges",
+            "micaCurie": "HP:0010841",
+            "micaLabel": "Multifocal epileptiform discharges",
+            "score": 5.65587525391081,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1934"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0012469",
+            "patientPhenotypeLabel": "Infantile spasms",
+            "diseasePhenotypeCurie": "HP:0012469",
+            "diseasePhenotypeLabel": "Infantile spasms",
+            "micaCurie": "HP:0012469",
+            "micaLabel": "Infantile spasms",
+            "score": 4.329684816860625,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:208447"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002521",
+            "patientPhenotypeLabel": "Hypsarrhythmia",
+            "diseasePhenotypeCurie": "HP:0002521",
+            "diseasePhenotypeLabel": "Hypsarrhythmia",
+            "micaCurie": "HP:0002521",
+            "micaLabel": "Hypsarrhythmia",
+            "score": 4.2367910699679285,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:1934"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011344",
+            "patientPhenotypeLabel": "Severe global developmental delay",
+            "diseasePhenotypeCurie": "HP:0011344",
+            "diseasePhenotypeLabel": "Severe global developmental delay",
+            "micaCurie": "HP:0011344",
+            "micaLabel": "Severe global developmental delay",
+            "score": 3.810048563412479,
+            "evidenceCode": "3/3",
+            "referenceText": "OMIM:619814"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000733",
+            "patientPhenotypeLabel": "Motor stereotypy",
+            "diseasePhenotypeCurie": "HP:0012171",
+            "diseasePhenotypeLabel": "Stereotypical hand wringing",
+            "micaCurie": "HP:0000733",
+            "micaLabel": "Motor stereotypy",
+            "score": 3.576433712230974,
+            "evidenceCode": "2/4",
+            "referenceText": "OMIM:614254"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002376",
+            "patientPhenotypeLabel": "Developmental regression",
+            "diseasePhenotypeCurie": "HP:0002376",
+            "diseasePhenotypeLabel": "Developmental regression",
+            "micaCurie": "HP:0002376",
+            "micaLabel": "Developmental regression",
+            "score": 3.4476008403880054,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "ORPHA:208447"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007359",
+            "patientPhenotypeLabel": "Focal-onset seizure",
+            "diseasePhenotypeCurie": "HP:0011167",
+            "diseasePhenotypeLabel": "Focal tonic seizure",
+            "micaCurie": "HP:0007359",
+            "micaLabel": "Focal-onset seizure",
+            "score": 3.401080824753113,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:1934"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001344",
+            "patientPhenotypeLabel": "Absent speech",
+            "diseasePhenotypeCurie": "HP:0001344",
+            "diseasePhenotypeLabel": "Absent speech",
+            "micaCurie": "HP:0001344",
+            "micaLabel": "Absent speech",
+            "score": 2.9909645454692173,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:617820"
+          }
+        ]
+      },
+      {
+        "rank": 16,
+        "geneCurie": "NCBIGene:23316",
+        "geneLabel": "CUX2",
+        "geneSymbol": "CUX2",
+        "geneEntityId": 151345,
+        "bmaScore": 2.390349573096527,
+        "normalizedScore": 0.263921,
+        "patientAverageScore": 3.0652482752163244,
+        "phenotypeAverageScore": 1.7154508709767304,
+        "directPhenotypeCount": 41,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011191",
+            "patientPhenotypeLabel": "Unilateral multifocal epileptiform discharges",
+            "diseasePhenotypeCurie": "HP:0011195",
+            "diseasePhenotypeLabel": "EEG with focal sharp slow waves",
+            "micaCurie": "HP:0011185",
+            "micaLabel": "EEG with focal epileptiform discharges",
+            "score": 5.319403017289597,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:2382"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002521",
+            "patientPhenotypeLabel": "Hypsarrhythmia",
+            "diseasePhenotypeCurie": "HP:0002521",
+            "diseasePhenotypeLabel": "Hypsarrhythmia",
+            "micaCurie": "HP:0002521",
+            "micaLabel": "Hypsarrhythmia",
+            "score": 4.2367910699679285,
+            "evidenceCode": "1/9",
+            "referenceText": "OMIM:618141"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000733",
+            "patientPhenotypeLabel": "Motor stereotypy",
+            "diseasePhenotypeCurie": "HP:0100023",
+            "diseasePhenotypeLabel": "Recurrent hand flapping",
+            "micaCurie": "HP:0000733",
+            "micaLabel": "Motor stereotypy",
+            "score": 3.576433712230974,
+            "evidenceCode": "3/9",
+            "referenceText": "OMIM:618141"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002376",
+            "patientPhenotypeLabel": "Developmental regression",
+            "diseasePhenotypeCurie": "HP:0002376",
+            "diseasePhenotypeLabel": "Developmental regression",
+            "micaCurie": "HP:0002376",
+            "micaLabel": "Developmental regression",
+            "score": 3.4476008403880054,
+            "evidenceCode": "2/9",
+            "referenceText": "OMIM:618141"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007359",
+            "patientPhenotypeLabel": "Focal-onset seizure",
+            "diseasePhenotypeCurie": "HP:0007359",
+            "diseasePhenotypeLabel": "Focal-onset seizure",
+            "micaCurie": "HP:0007359",
+            "micaLabel": "Focal-onset seizure",
+            "score": 3.401080824753113,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:2382"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0012469",
+            "patientPhenotypeLabel": "Infantile spasms",
+            "diseasePhenotypeCurie": "HP:0032792",
+            "diseasePhenotypeLabel": "Tonic seizure",
+            "micaCurie": "HP:0020219",
+            "micaLabel": "Motor seizure",
+            "score": 3.028794115342267,
+            "evidenceCode": "3/9",
+            "referenceText": "OMIM:618141"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001344",
+            "patientPhenotypeLabel": "Absent speech",
+            "diseasePhenotypeCurie": "HP:0000817",
+            "diseasePhenotypeLabel": "Reduced eye contact",
+            "micaCurie": "HP:0034434",
+            "micaLabel": "Abnormal communication",
+            "score": 1.6607373417721571,
+            "evidenceCode": "1/9",
+            "referenceText": "OMIM:618141"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002267",
+            "patientPhenotypeLabel": "Exaggerated startle response",
+            "diseasePhenotypeCurie": "HP:0002305",
+            "diseasePhenotypeLabel": "Athetosis",
+            "micaCurie": "HP:0011442",
+            "micaLabel": "Abnormal central motor function",
+            "score": 1.465210920683032,
+            "evidenceCode": "1/9",
+            "referenceText": "OMIM:618141"
+          }
+        ]
+      },
+      {
+        "rank": 17,
+        "geneCurie": "NCBIGene:2258",
+        "geneLabel": "FGF13",
+        "geneSymbol": "FGF13",
+        "geneEntityId": 148834,
+        "bmaScore": 2.380607818352779,
+        "normalizedScore": 0.262845,
+        "patientAverageScore": 3.402048191248829,
+        "phenotypeAverageScore": 1.3591674454567284,
+        "directPhenotypeCount": 49,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002521",
+            "patientPhenotypeLabel": "Hypsarrhythmia",
+            "diseasePhenotypeCurie": "HP:0002521",
+            "diseasePhenotypeLabel": "Hypsarrhythmia",
+            "micaCurie": "HP:0002521",
+            "micaLabel": "Hypsarrhythmia",
+            "score": 4.2367910699679285,
+            "evidenceCode": "3/7",
+            "referenceText": "OMIM:301058"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011344",
+            "patientPhenotypeLabel": "Severe global developmental delay",
+            "diseasePhenotypeCurie": "HP:0011344",
+            "diseasePhenotypeLabel": "Severe global developmental delay",
+            "micaCurie": "HP:0011344",
+            "micaLabel": "Severe global developmental delay",
+            "score": 3.810048563412479,
+            "evidenceCode": "5/7",
+            "referenceText": "OMIM:301058"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002267",
+            "patientPhenotypeLabel": "Exaggerated startle response",
+            "diseasePhenotypeCurie": "HP:0002067",
+            "diseasePhenotypeLabel": "Bradykinesia",
+            "micaCurie": "HP:0002071",
+            "micaLabel": "Abnormality of extrapyramidal motor function",
+            "score": 3.6634450892206036,
+            "evidenceCode": "1/3",
+            "referenceText": "OMIM:301095"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011191",
+            "patientPhenotypeLabel": "Unilateral multifocal epileptiform discharges",
+            "diseasePhenotypeCurie": "HP:0010851",
+            "diseasePhenotypeLabel": "EEG with burst suppression",
+            "micaCurie": "HP:0011182",
+            "micaLabel": "Interictal epileptiform activity",
+            "score": 3.6277270066185245,
+            "evidenceCode": "1/7",
+            "referenceText": "OMIM:301058"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002376",
+            "patientPhenotypeLabel": "Developmental regression",
+            "diseasePhenotypeCurie": "HP:0002376",
+            "diseasePhenotypeLabel": "Developmental regression",
+            "micaCurie": "HP:0002376",
+            "micaLabel": "Developmental regression",
+            "score": 3.4476008403880054,
+            "evidenceCode": "1/7",
+            "referenceText": "OMIM:301058"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007359",
+            "patientPhenotypeLabel": "Focal-onset seizure",
+            "diseasePhenotypeCurie": "HP:0007359",
+            "diseasePhenotypeLabel": "Focal-onset seizure",
+            "micaCurie": "HP:0007359",
+            "micaLabel": "Focal-onset seizure",
+            "score": 3.401080824753113,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "ORPHA:36387"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0012469",
+            "patientPhenotypeLabel": "Infantile spasms",
+            "diseasePhenotypeCurie": "HP:0010819",
+            "diseasePhenotypeLabel": "Atonic seizure",
+            "micaCurie": "HP:0020219",
+            "micaLabel": "Motor seizure",
+            "score": 3.028794115342267,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:36387"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001344",
+            "patientPhenotypeLabel": "Absent speech",
+            "diseasePhenotypeCurie": "HP:0001344",
+            "diseasePhenotypeLabel": "Absent speech",
+            "micaCurie": "HP:0001344",
+            "micaLabel": "Absent speech",
+            "score": 2.9909645454692173,
+            "evidenceCode": "1/3",
+            "referenceText": "OMIM:301095"
+          }
+        ]
+      },
+      {
+        "rank": 18,
+        "geneCurie": "NCBIGene:64780",
+        "geneLabel": "MICAL1",
+        "geneSymbol": "MICAL1",
+        "geneEntityId": 152291,
+        "bmaScore": 2.3572801819464013,
+        "normalizedScore": 0.26027,
+        "patientAverageScore": 2.4466595442661645,
+        "phenotypeAverageScore": 2.2679008196266377,
+        "directPhenotypeCount": 35,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011191",
+            "patientPhenotypeLabel": "Unilateral multifocal epileptiform discharges",
+            "diseasePhenotypeCurie": "HP:0011185",
+            "diseasePhenotypeLabel": "EEG with focal epileptiform discharges",
+            "micaCurie": "HP:0011185",
+            "micaLabel": "EEG with focal epileptiform discharges",
+            "score": 5.319403017289597,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:101046"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002521",
+            "patientPhenotypeLabel": "Hypsarrhythmia",
+            "diseasePhenotypeCurie": "HP:0011185",
+            "diseasePhenotypeLabel": "EEG with focal epileptiform discharges",
+            "micaCurie": "HP:0011182",
+            "micaLabel": "Interictal epileptiform activity",
+            "score": 3.6277270066185245,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:101046"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007359",
+            "patientPhenotypeLabel": "Focal-onset seizure",
+            "diseasePhenotypeCurie": "HP:0032898",
+            "diseasePhenotypeLabel": "Focal automatism seizure",
+            "micaCurie": "HP:0007359",
+            "micaLabel": "Focal-onset seizure",
+            "score": 3.401080824753113,
+            "evidenceCode": "1/11",
+            "referenceText": "OMIM:600512"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0012469",
+            "patientPhenotypeLabel": "Infantile spasms",
+            "diseasePhenotypeCurie": "HP:0032898",
+            "diseasePhenotypeLabel": "Focal automatism seizure",
+            "micaCurie": "HP:0020219",
+            "micaLabel": "Motor seizure",
+            "score": 3.028794115342267,
+            "evidenceCode": "1/11",
+            "referenceText": "OMIM:600512"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000733",
+            "patientPhenotypeLabel": "Motor stereotypy",
+            "diseasePhenotypeCurie": "HP:0100710",
+            "diseasePhenotypeLabel": "Impulsivity",
+            "micaCurie": "HP:5200241",
+            "micaLabel": "Recurrent maladaptive behavior",
+            "score": 2.4119816660673212,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "ORPHA:101046"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001344",
+            "patientPhenotypeLabel": "Absent speech",
+            "diseasePhenotypeCurie": "HP:0002381",
+            "diseasePhenotypeLabel": "Aphasia",
+            "micaCurie": "HP:0002167",
+            "micaLabel": "Abnormal speech pattern",
+            "score": 1.6855833403586882,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:101046"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002376",
+            "patientPhenotypeLabel": "Developmental regression",
+            "diseasePhenotypeCurie": "HP:0001249",
+            "diseasePhenotypeLabel": "Intellectual disability",
+            "micaCurie": "HP:0012759",
+            "micaLabel": "Neurodevelopmental abnormality",
+            "score": 0.9688179084505344,
+            "evidenceCode": "-",
+            "referenceText": "ORPHA:101046"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011344",
+            "patientPhenotypeLabel": "Severe global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001249",
+            "diseasePhenotypeLabel": "Intellectual disability",
+            "micaCurie": "HP:0012759",
+            "micaLabel": "Neurodevelopmental abnormality",
+            "score": 0.9688179084505344,
+            "evidenceCode": "-",
+            "referenceText": "ORPHA:101046"
+          }
+        ]
+      },
+      {
+        "rank": 19,
+        "geneCurie": "NCBIGene:1106",
+        "geneLabel": "CHD2",
+        "geneSymbol": "CHD2",
+        "geneEntityId": 148437,
+        "bmaScore": 2.3485152311832413,
+        "normalizedScore": 0.259302,
+        "patientAverageScore": 3.0804124347649964,
+        "phenotypeAverageScore": 1.6166180276014863,
+        "directPhenotypeCount": 74,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011191",
+            "patientPhenotypeLabel": "Unilateral multifocal epileptiform discharges",
+            "diseasePhenotypeCurie": "HP:0010841",
+            "diseasePhenotypeLabel": "Multifocal epileptiform discharges",
+            "micaCurie": "HP:0010841",
+            "micaLabel": "Multifocal epileptiform discharges",
+            "score": 5.65587525391081,
+            "evidenceCode": "4/6",
+            "referenceText": "OMIM:615369"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0012469",
+            "patientPhenotypeLabel": "Infantile spasms",
+            "diseasePhenotypeCurie": "HP:0011097",
+            "diseasePhenotypeLabel": "Epileptic spasm",
+            "micaCurie": "HP:0011097",
+            "micaLabel": "Epileptic spasm",
+            "score": 3.9944776025459987,
+            "evidenceCode": "-",
+            "referenceText": "ORPHA:1942"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002521",
+            "patientPhenotypeLabel": "Hypsarrhythmia",
+            "diseasePhenotypeCurie": "HP:0012001",
+            "diseasePhenotypeLabel": "EEG with generalized polyspikes",
+            "micaCurie": "HP:0011198",
+            "micaLabel": "EEG with generalized epileptiform discharges",
+            "score": 3.831325961859764,
+            "evidenceCode": "4/6",
+            "referenceText": "OMIM:615369"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002376",
+            "patientPhenotypeLabel": "Developmental regression",
+            "diseasePhenotypeCurie": "HP:0002376",
+            "diseasePhenotypeLabel": "Developmental regression",
+            "micaCurie": "HP:0002376",
+            "micaLabel": "Developmental regression",
+            "score": 3.4476008403880054,
+            "evidenceCode": "6/6",
+            "referenceText": "OMIM:615369"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007359",
+            "patientPhenotypeLabel": "Focal-onset seizure",
+            "diseasePhenotypeCurie": "HP:0007359",
+            "diseasePhenotypeLabel": "Focal-onset seizure",
+            "micaCurie": "HP:0007359",
+            "micaLabel": "Focal-onset seizure",
+            "score": 3.401080824753113,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "ORPHA:1942"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000733",
+            "patientPhenotypeLabel": "Motor stereotypy",
+            "diseasePhenotypeCurie": "HP:0007018",
+            "diseasePhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "micaCurie": "HP:5200241",
+            "micaLabel": "Recurrent maladaptive behavior",
+            "score": 2.4119816660673212,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:1942"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001344",
+            "patientPhenotypeLabel": "Absent speech",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "ORPHA:1942"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002267",
+            "patientPhenotypeLabel": "Exaggerated startle response",
+            "diseasePhenotypeCurie": "HP:0007256",
+            "diseasePhenotypeLabel": "Abnormal pyramidal sign",
+            "micaCurie": "HP:0011442",
+            "micaLabel": "Abnormal central motor function",
+            "score": 1.465210920683032,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "ORPHA:1942"
+          }
+        ]
+      },
+      {
+        "rank": 20,
+        "geneCurie": "NCBIGene:1759",
+        "geneLabel": "DNM1",
+        "geneSymbol": "DNM1",
+        "geneEntityId": 148665,
+        "bmaScore": 2.3442760725624923,
+        "normalizedScore": 0.258834,
+        "patientAverageScore": 3.490307362765702,
+        "phenotypeAverageScore": 1.1982447823592828,
+        "directPhenotypeCount": 107,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011191",
+            "patientPhenotypeLabel": "Unilateral multifocal epileptiform discharges",
+            "diseasePhenotypeCurie": "HP:0011195",
+            "diseasePhenotypeLabel": "EEG with focal sharp slow waves",
+            "micaCurie": "HP:0011185",
+            "micaLabel": "EEG with focal epileptiform discharges",
+            "score": 5.319403017289597,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:2382"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0012469",
+            "patientPhenotypeLabel": "Infantile spasms",
+            "diseasePhenotypeCurie": "HP:0012469",
+            "diseasePhenotypeLabel": "Infantile spasms",
+            "micaCurie": "HP:0012469",
+            "micaLabel": "Infantile spasms",
+            "score": 4.329684816860625,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:620352"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002521",
+            "patientPhenotypeLabel": "Hypsarrhythmia",
+            "diseasePhenotypeCurie": "HP:0002521",
+            "diseasePhenotypeLabel": "Hypsarrhythmia",
+            "micaCurie": "HP:0002521",
+            "micaLabel": "Hypsarrhythmia",
+            "score": 4.2367910699679285,
+            "evidenceCode": "3/5",
+            "referenceText": "OMIM:616346"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011344",
+            "patientPhenotypeLabel": "Severe global developmental delay",
+            "diseasePhenotypeCurie": "HP:0011344",
+            "diseasePhenotypeLabel": "Severe global developmental delay",
+            "micaCurie": "HP:0011344",
+            "micaLabel": "Severe global developmental delay",
+            "score": 3.810048563412479,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:620352"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002376",
+            "patientPhenotypeLabel": "Developmental regression",
+            "diseasePhenotypeCurie": "HP:0002376",
+            "diseasePhenotypeLabel": "Developmental regression",
+            "micaCurie": "HP:0002376",
+            "micaLabel": "Developmental regression",
+            "score": 3.4476008403880054,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:616346"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007359",
+            "patientPhenotypeLabel": "Focal-onset seizure",
+            "diseasePhenotypeCurie": "HP:0031165",
+            "diseasePhenotypeLabel": "Multifocal seizures",
+            "micaCurie": "HP:0007359",
+            "micaLabel": "Focal-onset seizure",
+            "score": 3.401080824753113,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:620352"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001344",
+            "patientPhenotypeLabel": "Absent speech",
+            "diseasePhenotypeCurie": "HP:0001344",
+            "diseasePhenotypeLabel": "Absent speech",
+            "micaCurie": "HP:0001344",
+            "micaLabel": "Absent speech",
+            "score": 2.9909645454692173,
+            "evidenceCode": "5/5",
+            "referenceText": "OMIM:616346"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000733",
+            "patientPhenotypeLabel": "Motor stereotypy",
+            "diseasePhenotypeCurie": "HP:0100716",
+            "diseasePhenotypeLabel": "Self-injurious behavior",
+            "micaCurie": "HP:5200241",
+            "micaLabel": "Recurrent maladaptive behavior",
+            "score": 2.4119816660673212,
+            "evidenceCode": "2/5",
+            "referenceText": "OMIM:616346"
+          }
+        ]
+      },
+      {
+        "rank": 21,
+        "geneCurie": "NCBIGene:10695",
+        "geneLabel": "CNPY3",
+        "geneSymbol": "CNPY3",
+        "geneEntityId": 151102,
+        "bmaScore": 2.3400327682742006,
+        "normalizedScore": 0.258365,
+        "patientAverageScore": 2.3487788851110754,
+        "phenotypeAverageScore": 2.3312866514373254,
+        "directPhenotypeCount": 6,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0012469",
+            "patientPhenotypeLabel": "Infantile spasms",
+            "diseasePhenotypeCurie": "HP:0012469",
+            "diseasePhenotypeLabel": "Infantile spasms",
+            "micaCurie": "HP:0012469",
+            "micaLabel": "Infantile spasms",
+            "score": 4.329684816860625,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:697160"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002521",
+            "patientPhenotypeLabel": "Hypsarrhythmia",
+            "diseasePhenotypeCurie": "HP:0002521",
+            "diseasePhenotypeLabel": "Hypsarrhythmia",
+            "micaCurie": "HP:0002521",
+            "micaLabel": "Hypsarrhythmia",
+            "score": 4.2367910699679285,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:697160"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011191",
+            "patientPhenotypeLabel": "Unilateral multifocal epileptiform discharges",
+            "diseasePhenotypeCurie": "HP:0002521",
+            "diseasePhenotypeLabel": "Hypsarrhythmia",
+            "micaCurie": "HP:0011182",
+            "micaLabel": "Interictal epileptiform activity",
+            "score": 3.6277270066185245,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:697160"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002376",
+            "patientPhenotypeLabel": "Developmental regression",
+            "diseasePhenotypeCurie": "HP:0002376",
+            "diseasePhenotypeLabel": "Developmental regression",
+            "micaCurie": "HP:0002376",
+            "micaLabel": "Developmental regression",
+            "score": 3.4476008403880054,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:697160"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007359",
+            "patientPhenotypeLabel": "Focal-onset seizure",
+            "diseasePhenotypeCurie": "HP:0012469",
+            "diseasePhenotypeLabel": "Infantile spasms",
+            "micaCurie": "HP:0001250",
+            "micaLabel": "Seizure",
+            "score": 1.4866293835155915,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:697160"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002267",
+            "patientPhenotypeLabel": "Exaggerated startle response",
+            "diseasePhenotypeCurie": "HP:0001336",
+            "diseasePhenotypeLabel": "Myoclonus",
+            "micaCurie": "HP:0011442",
+            "micaLabel": "Abnormal central motor function",
+            "score": 1.465210920683032,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:697160"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011344",
+            "patientPhenotypeLabel": "Severe global developmental delay",
+            "diseasePhenotypeCurie": "HP:0002376",
+            "diseasePhenotypeLabel": "Developmental regression",
+            "micaCurie": "HP:0012759",
+            "micaLabel": "Neurodevelopmental abnormality",
+            "score": 0.9688179084505344,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:697160"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001344",
+            "patientPhenotypeLabel": "Absent speech",
+            "diseasePhenotypeCurie": "HP:0002376",
+            "diseasePhenotypeLabel": "Developmental regression",
+            "micaCurie": "HP:0012759",
+            "micaLabel": "Neurodevelopmental abnormality",
+            "score": 0.9688179084505344,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:697160"
+          }
+        ]
+      },
+      {
+        "rank": 22,
+        "geneCurie": "NCBIGene:5602",
+        "geneLabel": "MAPK10",
+        "geneSymbol": "MAPK10",
+        "geneEntityId": 149853,
+        "bmaScore": 2.335909643533918,
+        "normalizedScore": 0.25791,
+        "patientAverageScore": 2.788225659170557,
+        "phenotypeAverageScore": 1.8835936278972796,
+        "directPhenotypeCount": 25,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011191",
+            "patientPhenotypeLabel": "Unilateral multifocal epileptiform discharges",
+            "diseasePhenotypeCurie": "HP:0011195",
+            "diseasePhenotypeLabel": "EEG with focal sharp slow waves",
+            "micaCurie": "HP:0011185",
+            "micaLabel": "EEG with focal epileptiform discharges",
+            "score": 5.319403017289597,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:2382"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002521",
+            "patientPhenotypeLabel": "Hypsarrhythmia",
+            "diseasePhenotypeCurie": "HP:0011195",
+            "diseasePhenotypeLabel": "EEG with focal sharp slow waves",
+            "micaCurie": "HP:0011182",
+            "micaLabel": "Interictal epileptiform activity",
+            "score": 3.6277270066185245,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:2382"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002376",
+            "patientPhenotypeLabel": "Developmental regression",
+            "diseasePhenotypeCurie": "HP:0002376",
+            "diseasePhenotypeLabel": "Developmental regression",
+            "micaCurie": "HP:0002376",
+            "micaLabel": "Developmental regression",
+            "score": 3.4476008403880054,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:2382"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007359",
+            "patientPhenotypeLabel": "Focal-onset seizure",
+            "diseasePhenotypeCurie": "HP:0007359",
+            "diseasePhenotypeLabel": "Focal-onset seizure",
+            "micaCurie": "HP:0007359",
+            "micaLabel": "Focal-onset seizure",
+            "score": 3.401080824753113,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:2382"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0012469",
+            "patientPhenotypeLabel": "Infantile spasms",
+            "diseasePhenotypeCurie": "HP:0010819",
+            "diseasePhenotypeLabel": "Atonic seizure",
+            "micaCurie": "HP:0020219",
+            "micaLabel": "Motor seizure",
+            "score": 3.028794115342267,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:2382"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000733",
+            "patientPhenotypeLabel": "Motor stereotypy",
+            "diseasePhenotypeCurie": "HP:0000752",
+            "diseasePhenotypeLabel": "Hyperactivity",
+            "micaCurie": "HP:5200241",
+            "micaLabel": "Recurrent maladaptive behavior",
+            "score": 2.4119816660673212,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:2382"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002267",
+            "patientPhenotypeLabel": "Exaggerated startle response",
+            "diseasePhenotypeCurie": "HP:0001336",
+            "diseasePhenotypeLabel": "Myoclonus",
+            "micaCurie": "HP:0011442",
+            "micaLabel": "Abnormal central motor function",
+            "score": 1.465210920683032,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:2382"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011344",
+            "patientPhenotypeLabel": "Severe global developmental delay",
+            "diseasePhenotypeCurie": "HP:0012758",
+            "diseasePhenotypeLabel": "Neurodevelopmental delay",
+            "micaCurie": "HP:0012758",
+            "micaLabel": "Neurodevelopmental delay",
+            "score": 1.1961162706965762,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:2382"
+          }
+        ]
+      },
+      {
+        "rank": 23,
+        "geneCurie": "NCBIGene:150094",
+        "geneLabel": "SIK1",
+        "geneSymbol": "SIK1",
+        "geneEntityId": 152951,
+        "bmaScore": 2.3268185940417316,
+        "normalizedScore": 0.256906,
+        "patientAverageScore": 3.394980513198172,
+        "phenotypeAverageScore": 1.2586566748852912,
+        "directPhenotypeCount": 71,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011191",
+            "patientPhenotypeLabel": "Unilateral multifocal epileptiform discharges",
+            "diseasePhenotypeCurie": "HP:0011190",
+            "diseasePhenotypeLabel": "Uni- and bilateral multifocal epileptiform discharges",
+            "micaCurie": "HP:0010841",
+            "micaLabel": "Multifocal epileptiform discharges",
+            "score": 5.65587525391081,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1934"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0012469",
+            "patientPhenotypeLabel": "Infantile spasms",
+            "diseasePhenotypeCurie": "HP:0012469",
+            "diseasePhenotypeLabel": "Infantile spasms",
+            "micaCurie": "HP:0012469",
+            "micaLabel": "Infantile spasms",
+            "score": 4.329684816860625,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:697160"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002521",
+            "patientPhenotypeLabel": "Hypsarrhythmia",
+            "diseasePhenotypeCurie": "HP:0002521",
+            "diseasePhenotypeLabel": "Hypsarrhythmia",
+            "micaCurie": "HP:0002521",
+            "micaLabel": "Hypsarrhythmia",
+            "score": 4.2367910699679285,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:1934"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000733",
+            "patientPhenotypeLabel": "Motor stereotypy",
+            "diseasePhenotypeCurie": "HP:0000733",
+            "diseasePhenotypeLabel": "Motor stereotypy",
+            "micaCurie": "HP:0000733",
+            "micaLabel": "Motor stereotypy",
+            "score": 3.576433712230974,
+            "evidenceCode": "4/4",
+            "referenceText": "OMIM:616341"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002376",
+            "patientPhenotypeLabel": "Developmental regression",
+            "diseasePhenotypeCurie": "HP:0002376",
+            "diseasePhenotypeLabel": "Developmental regression",
+            "micaCurie": "HP:0002376",
+            "micaLabel": "Developmental regression",
+            "score": 3.4476008403880054,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:697160"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007359",
+            "patientPhenotypeLabel": "Focal-onset seizure",
+            "diseasePhenotypeCurie": "HP:0011167",
+            "diseasePhenotypeLabel": "Focal tonic seizure",
+            "micaCurie": "HP:0007359",
+            "micaLabel": "Focal-onset seizure",
+            "score": 3.401080824753113,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:1934"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001344",
+            "patientPhenotypeLabel": "Absent speech",
+            "diseasePhenotypeCurie": "HP:0001344",
+            "diseasePhenotypeLabel": "Absent speech",
+            "micaCurie": "HP:0001344",
+            "micaLabel": "Absent speech",
+            "score": 2.9909645454692173,
+            "evidenceCode": "4/4",
+            "referenceText": "OMIM:616341"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002267",
+            "patientPhenotypeLabel": "Exaggerated startle response",
+            "diseasePhenotypeCurie": "HP:0002131",
+            "diseasePhenotypeLabel": "Episodic ataxia",
+            "micaCurie": "HP:0011442",
+            "micaLabel": "Abnormal central motor function",
+            "score": 1.465210920683032,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1934"
+          }
+        ]
+      },
+      {
+        "rank": 24,
+        "geneCurie": "NCBIGene:6792",
+        "geneLabel": "CDKL5",
+        "geneSymbol": "CDKL5",
+        "geneEntityId": 150209,
+        "bmaScore": 2.326291997636157,
+        "normalizedScore": 0.256848,
+        "patientAverageScore": 3.5541891344848935,
+        "phenotypeAverageScore": 1.0983948607874205,
+        "directPhenotypeCount": 148,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011191",
+            "patientPhenotypeLabel": "Unilateral multifocal epileptiform discharges",
+            "diseasePhenotypeCurie": "HP:0011190",
+            "diseasePhenotypeLabel": "Uni- and bilateral multifocal epileptiform discharges",
+            "micaCurie": "HP:0010841",
+            "micaLabel": "Multifocal epileptiform discharges",
+            "score": 5.65587525391081,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1934"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0012469",
+            "patientPhenotypeLabel": "Infantile spasms",
+            "diseasePhenotypeCurie": "HP:0012469",
+            "diseasePhenotypeLabel": "Infantile spasms",
+            "micaCurie": "HP:0012469",
+            "micaLabel": "Infantile spasms",
+            "score": 4.329684816860625,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:3095"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002521",
+            "patientPhenotypeLabel": "Hypsarrhythmia",
+            "diseasePhenotypeCurie": "HP:0002521",
+            "diseasePhenotypeLabel": "Hypsarrhythmia",
+            "micaCurie": "HP:0002521",
+            "micaLabel": "Hypsarrhythmia",
+            "score": 4.2367910699679285,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:697160"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011344",
+            "patientPhenotypeLabel": "Severe global developmental delay",
+            "diseasePhenotypeCurie": "HP:0011344",
+            "diseasePhenotypeLabel": "Severe global developmental delay",
+            "micaCurie": "HP:0011344",
+            "micaLabel": "Severe global developmental delay",
+            "score": 3.810048563412479,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:505652"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000733",
+            "patientPhenotypeLabel": "Motor stereotypy",
+            "diseasePhenotypeCurie": "HP:0100703",
+            "diseasePhenotypeLabel": "Tongue thrusting",
+            "micaCurie": "HP:0000733",
+            "micaLabel": "Motor stereotypy",
+            "score": 3.576433712230974,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:3095"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002376",
+            "patientPhenotypeLabel": "Developmental regression",
+            "diseasePhenotypeCurie": "HP:0002376",
+            "diseasePhenotypeLabel": "Developmental regression",
+            "micaCurie": "HP:0002376",
+            "micaLabel": "Developmental regression",
+            "score": 3.4476008403880054,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1934"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007359",
+            "patientPhenotypeLabel": "Focal-onset seizure",
+            "diseasePhenotypeCurie": "HP:0031165",
+            "diseasePhenotypeLabel": "Multifocal seizures",
+            "micaCurie": "HP:0007359",
+            "micaLabel": "Focal-onset seizure",
+            "score": 3.401080824753113,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:300672"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001344",
+            "patientPhenotypeLabel": "Absent speech",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:505652"
+          }
+        ]
+      },
+      {
+        "rank": 25,
+        "geneCurie": "NCBIGene:23229",
+        "geneLabel": "ARHGEF9",
+        "geneSymbol": "ARHGEF9",
+        "geneEntityId": 151321,
+        "bmaScore": 2.2889809313440423,
+        "normalizedScore": 0.252729,
+        "patientAverageScore": 3.1104217676859354,
+        "phenotypeAverageScore": 1.4675400950021498,
+        "directPhenotypeCount": 20,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002267",
+            "patientPhenotypeLabel": "Exaggerated startle response",
+            "diseasePhenotypeCurie": "HP:0002267",
+            "diseasePhenotypeLabel": "Exaggerated startle response",
+            "micaCurie": "HP:0002267",
+            "micaLabel": "Exaggerated startle response",
+            "score": 5.591336732773239,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:300607"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011191",
+            "patientPhenotypeLabel": "Unilateral multifocal epileptiform discharges",
+            "diseasePhenotypeCurie": "HP:0012018",
+            "diseasePhenotypeLabel": "EEG with temporal focal spikes",
+            "micaCurie": "HP:0011185",
+            "micaLabel": "EEG with focal epileptiform discharges",
+            "score": 5.319403017289597,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:163985"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002521",
+            "patientPhenotypeLabel": "Hypsarrhythmia",
+            "diseasePhenotypeCurie": "HP:0012018",
+            "diseasePhenotypeLabel": "EEG with temporal focal spikes",
+            "micaCurie": "HP:0011182",
+            "micaLabel": "Interictal epileptiform activity",
+            "score": 3.6277270066185245,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:163985"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002376",
+            "patientPhenotypeLabel": "Developmental regression",
+            "diseasePhenotypeCurie": "HP:0002376",
+            "diseasePhenotypeLabel": "Developmental regression",
+            "micaCurie": "HP:0002376",
+            "micaLabel": "Developmental regression",
+            "score": 3.4476008403880054,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:300607"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007359",
+            "patientPhenotypeLabel": "Focal-onset seizure",
+            "diseasePhenotypeCurie": "HP:0002384",
+            "diseasePhenotypeLabel": "Focal impaired awareness seizure",
+            "micaCurie": "HP:0007359",
+            "micaLabel": "Focal-onset seizure",
+            "score": 3.401080824753113,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:163985"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0012469",
+            "patientPhenotypeLabel": "Infantile spasms",
+            "diseasePhenotypeCurie": "HP:0032792",
+            "diseasePhenotypeLabel": "Tonic seizure",
+            "micaCurie": "HP:0020219",
+            "micaLabel": "Motor seizure",
+            "score": 3.028794115342267,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:300607"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011344",
+            "patientPhenotypeLabel": "Severe global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "3/3",
+            "referenceText": "OMIM:300607"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001344",
+            "patientPhenotypeLabel": "Absent speech",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0012758",
+            "micaLabel": "Neurodevelopmental delay",
+            "score": 1.1961162706965762,
+            "evidenceCode": "3/3",
+            "referenceText": "OMIM:300607"
+          }
+        ]
+      }
+    ],
+    "engineSummary": {
+      "diseaseCount": 8579,
+      "geneCount": 5256,
+      "phenotypeCount": 19389,
+      "sourceMode": {
+        "disease": "relationship_fallback",
+        "gene": "relationship_fallback"
+      },
+      "generatedAt": "2026-03-15T21:00:39.457Z"
+    }
+  }
+}
