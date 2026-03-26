@@ -70,10 +70,16 @@ Target files:
 - `genovy-v0-freeze-20260322-backup-20260326.dump`
 - `genovy-v1-working-20260322-backup-20260326.dump`
 
-At the time this document was written:
-- production dump: completed
-- v0 freeze dump: completed
-- v1 working dump: in progress / verify final completion before closing the preservation phase
+Final dump state:
+- production dump: completed and verified
+- v0 freeze dump: completed and verified
+- v1 working dump: completed and verified
+
+Verification artifacts written into this preservation library:
+- `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/preservation/db-dump-checksums-20260326.txt`
+- `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/preservation/db-dump-verify-production-20260326.txt`
+- `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/preservation/db-dump-verify-v0-freeze-20260326.txt`
+- `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/preservation/db-dump-verify-v1-working-20260326.txt`
 
 Important hard correction discovered during this backup phase:
 - `production` and `v0-freeze` are the small `81,870`-entity lineage

@@ -1,0 +1,20 @@
+;
+; Archive created at 2026-03-26 03:01:29 EDT
+;     dbname: railway
+;     TOC Entries: 196
+;     Compression: gzip
+;     Dump Version: 1.16-0
+;     Format: CUSTOM
+;     Integer: 4 bytes
+;     Offset: 8 bytes
+;     Dumped from database version: 18.3 (Debian 18.3-1.pgdg13+1)
+;     Dumped by pg_dump version: 18.3
+;
+;
+; Selected TOC Entries:
+;
+5; 2615 23849 SCHEMA - public postgres
+3762; 0 0 COMMENT - SCHEMA public postgres
+3763; 0 0 ACL - SCHEMA public postgres
+219; 1259 23850 TABLE public canonical_concept_aliases postgres
+220; 1259 23863 SEQUENCE public canonical_concept_aliases_canonical_concept_alias_id_seq postgres
