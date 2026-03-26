@@ -896,3 +896,56 @@ Official 100-case phenotype-only gene benchmark vs Exomiser.
 - Practical consequence:
   - the negative U2AF2 OMIM result is now stronger, not weaker
   - do not spend more time on U2AF2 term enrichment before support-seam repair
+
+## 2026-03-26 ANKRD11 Symmetric Source Shadow
+- Added:
+  - [shadowAnkrd11SymmetricSourceTerms.js](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/shadowAnkrd11SymmetricSourceTerms.js)
+  - [ankrd11-symmetric-source-shadow-20260326.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/ankrd11-symmetric-source-shadow-20260326.md)
+- Strict literal-source scenario:
+  - added `3` terms
+  - `PMID_36446582_Goldenberg2016_P13`: `395 -> 368`
+  - `PMID_36446582_Miyatake2017_P1`: `176 -> 128`
+  - winner stayed wrong in both cases
+- Symmetric parent-promotion scenario:
+  - added `5` terms
+  - `PMID_36446582_Goldenberg2016_P13`: `395 -> 312`
+  - `PMID_36446582_Miyatake2017_P1`: `176 -> 112`
+  - winner still stayed wrong in both cases
+- Interpretation:
+  - the user's symmetric source-backed addition idea improves both ANKRD11 misses
+  - but current scorer geometry still does not let the broad true KBG branch win
+  - ANKRD11 is now stronger evidence that source repair alone is not sufficient for every remaining miss
+
+## 2026-03-26 ANKRD11 Manual OMIM Truth/Outranker Pass
+- Added:
+  - [ankrd11-manual-omim-extract-20260326.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/ankrd11-manual-omim-extract-20260326.md)
+- OMIM entries inspected manually in browser:
+  - `148050` `KBG syndrome`
+  - `615072` `Brachydactyly, type A1, C`
+  - `616461` `Epilepsy, familial temporal lobe, 8`
+- Important correction:
+  - the actual hand-focused outranker is the `GDF5` subtype `BDA1C`, not only the classical `IHH` parent `BDA1` entry
+- Main read:
+  - OMIM strongly confirms `KBG syndrome` as a broad hand-anomaly + short stature + developmental delay + seizure syndrome
+  - OMIM strongly confirms `ETL8` as a very narrow epilepsy branch
+  - OMIM confirms `BDA1C` as a narrow hand-focused brachydactyly branch with short stature
+- Interpretation:
+  - OMIM adds confidence and disease-shape clarity more than a large hidden term haul
+  - this reinforces the current read that `ANKRD11` is a hybrid miss: real source-backed truth support exists, but current scorer geometry still favors narrower sharper branches
+
+## 2026-03-26 ANKRD11 Symmetric OMIM Shadow
+- Added:
+  - [shadowAnkrd11SymmetricOmimTerms.js](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/shadowAnkrd11SymmetricOmimTerms.js)
+  - [ankrd11-symmetric-omim-shadow-20260326.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/ankrd11-symmetric-omim-shadow-20260326.md)
+- Strict literal OMIM structural scenario:
+  - `PMID_36446582_Goldenberg2016_P13`: `696 -> 696`
+  - `PMID_36446582_Miyatake2017_P1`: `175 -> 175`
+  - winner stayed wrong in both cases
+- OMIM cumulative with prior source shadow:
+  - `PMID_36446582_Goldenberg2016_P13`: `696 -> 696`
+  - `PMID_36446582_Miyatake2017_P1`: `175 -> 88`
+  - winner still stayed wrong in both cases
+- Interpretation:
+  - literal new OMIM structural terms do essentially nothing
+  - cumulative OMIM-backed truth/outranker additions materially improve the second case
+  - but `ANKRD11` still does not flip, reinforcing that this is a hybrid source-plus-scoring miss rather than a simple hidden-term miss

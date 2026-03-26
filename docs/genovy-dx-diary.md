@@ -92,6 +92,93 @@ Decision:
 Status:
 - kept
 
+## 2026-03-26 ANKRD11 OMIM correction
+
+- Manual OMIM pass completed for:
+  - `KBG syndrome` (`148050`)
+  - `Brachydactyly, type A1, C` (`615072`)
+  - `Epilepsy, familial temporal lobe, 8` (`616461`)
+- Important correction:
+  - the relevant hand-focused outranker is the `GDF5` subtype `BDA1C`, not just the classical `IHH` parent `BDA1` entry
+- Main takeaway:
+  - OMIM strengthens the interpretation more than it provides a large new term set
+  - `KBG syndrome` is clearly broad and real
+  - `BDA1C` and `ETL8` are clearly narrow sharp branches
+  - this supports the existing read that `ANKRD11` is a hybrid source-plus-scoring miss, not a simple missing-term case
+
+## 2026-03-26 ANKRD11 OMIM shadow
+
+- Shadow-only OMIM-backed rerun completed for both missed `ANKRD11` cases.
+- Strict new structural OMIM terms alone:
+  - no rank change in either case
+- Cumulative OMIM plus earlier source-backed shadow:
+  - `PMID_36446582_Goldenberg2016_P13`: still unchanged
+  - `PMID_36446582_Miyatake2017_P1`: `175 -> 88`
+- Main takeaway:
+  - OMIM-backed enrichment helps the second case but still does not let `ANKRD11` win
+  - the `ANKRD11` miss remains a hybrid truth-branch plus scoring-geometry problem
+
+- 2026-03-26
+
+Question:
+- If we stop cherry-picking and instead add source-backed terms symmetrically to both the true disease and the outranker disease, will the current scorer finally choose the truth for the two ANKRD11 misses?
+
+Evidence surface:
+- live direct disease phenotype rows from the real `v1-working` DB
+- [KBG Syndrome - GeneReviews® - NCBI Bookshelf](https://www.ncbi.nlm.nih.gov/books/NBK487886/)
+- [Epilepsy in KBG Syndrome: Report of Additional Cases - PubMed](https://pubmed.ncbi.nlm.nih.gov/38157719/)
+- [familial temporal lobe epilepsy 8 - MedGen](https://www.ncbi.nlm.nih.gov/medgen/909158)
+- existing HPO disease phenotype assertions for `brachydactyly type A1`
+
+Intentionally not inspected:
+- raw source dumps
+- broad mounted Railway exports
+- any live graph mutation
+
+Result:
+- I built a new shadow-only script:
+  - [shadowAnkrd11SymmetricSourceTerms.js](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/shadowAnkrd11SymmetricSourceTerms.js)
+- I ran two scenarios on the two missed ANKRD11 cases:
+  - strict literal-source additions
+  - plus a symmetric hand-parent promotion variant
+- Strict literal-source scenario:
+  - `Goldenberg2016_P13`: `395 -> 368`
+  - `Miyatake2017_P1`: `176 -> 128`
+  - wrong top gene remained wrong in both
+- Symmetric parent-promotion scenario:
+  - `Goldenberg2016_P13`: `395 -> 312`
+  - `Miyatake2017_P1`: `176 -> 112`
+  - wrong top gene still remained wrong in both
+
+Important numbers:
+- strict scenario:
+  - added terms: `3`
+  - improved cases: `2`
+  - worsened cases: `0`
+  - top-1 fixes: `0`
+- symmetric parent scenario:
+  - added terms: `5`
+  - improved cases: `2`
+  - worsened cases: `0`
+  - top-1 fixes: `0`
+
+Decision:
+- The symmetric source-backed idea is valid as a disciplined enrichment method.
+- But for ANKRD11 it is not enough to make the current scorer choose the truth branch.
+- This is now stronger evidence that some remaining misses are not just source-thinness; they are broad-true-syndrome vs narrow-sharp-outranker failures.
+
+Own commentary / alternatives:
+- This was the cleanest possible version of the user's proposal, and it still failed.
+- That is useful because it means we did not lose due to cheating or asymmetry.
+- It also means ML is not just a luxury later; some of these tradeoffs really do look like ranking-geometry problems once the obvious source gaps are patched.
+
+Rollback plan:
+- shadow-only
+- no live graph mutation
+
+Status:
+- kept
+
 ## 2026-03-26 OMIM U2AF2 Shadow Correction
 
 What happened:
