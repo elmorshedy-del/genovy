@@ -2341,3 +2341,28 @@ Status:
   - `28944233` = proven mimic-heavy / mixed case
 - Saved summary:
   - [stxbp1-remaining-miss-pair-status-20260327.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/stxbp1-remaining-miss-pair-status-20260327.md)
+
+## 2026-03-27 SPTAN1 Ranking Reopen
+- Re-opened `PMID_36331550_Family16Patient21` from preserved artifacts only.
+- Packet is extremely small:
+  - present: `Delayed speech and language development`, `Microcephaly`
+  - excluded: `19`
+- Truth row:
+  - gene `SPTAN1`
+  - disease `developmental delay with or without epilepsy`
+  - full-rank position `322`
+  - exact direct overlap count `2`
+- Top outranker:
+  - gene `ZBTB11`
+  - full-rank position `1`
+  - exact direct overlap count `2`
+- This is not a single-outranker anomaly:
+  - `20` competitors sit above the truth in the saved audit
+  - `17` of those are specific direct-match leaf diseases
+- The March 25 top-k shadow still holds:
+  - softening the broad-profile penalty helped only to `322 -> 182`
+- Read:
+  - `SPTAN1` remains the cleanest true ranking/specificity leftover
+  - exact match alone is not enough because too many leaf diseases can explain the two-term packet
+- Saved note:
+  - [sptan1-ranking-reopen-20260327.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/sptan1-ranking-reopen-20260327.md)

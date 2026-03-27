@@ -1078,3 +1078,17 @@ Official 100-case phenotype-only gene benchmark vs Exomiser.
   - do not force more heavy live reranks right now
   - keep `28944233` classified as the stronger mimic-heavy STXBP1 miss
   - treat `26865513` as the likely undercoverage STXBP1 miss until a lighter audit path is built
+
+## 2026-03-27 SPTAN1 Ranking Reopen
+- Added:
+  - [sptan1-ranking-reopen-20260327.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/sptan1-ranking-reopen-20260327.md)
+- Result:
+  - packet has only `2` present terms and `19` excluded terms
+  - truth `SPTAN1` row still has exact direct overlap `2` yet sits at rank `322`
+  - top outranker `ZBTB11` also has exact direct overlap `2` and sits at rank `1`
+  - there are `20` competitors above truth, and `17` are specific direct-match leaf diseases
+- Interpretation:
+  - this is still the cleanest genuine ranking/specificity leftover
+  - not a propagated-umbrella bug
+  - not a clean source-gap case
+  - and the earlier top-k scorer softening test remains too weak to rescue it
