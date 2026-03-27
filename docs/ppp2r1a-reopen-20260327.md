@@ -119,6 +119,84 @@ Current classification:
 Practical implication:
 - if `PPP2R1A` is revisited, truth-side profile inspection/enrichment comes before any scorer-only change
 
+## Narrow live direct-surface check
+
+Date:
+- 2026-03-27
+
+Goal:
+- Compare the current live exact direct surface for truth vs top outrankers on the packet terms only.
+- Avoid the heavy full rerank path.
+
+Important distinction:
+- the saved March 24 ranking audit reported exact direct overlap counts on the support path
+- the current live narrow lookup below shows what is directly present **now** on the exact disease and gene entities
+- so this section is useful for current surface shape, not for rewriting the preserved March 24 artifact record
+
+### Case 1: PMID_37761890_41
+
+Branches checked:
+- truth disease: `MONDO:0014605` `Houge-Janssens syndrome 2`
+- truth gene: `NCBIGene:5518` `PPP2R1A`
+- outranker disease: `MONDO:0958203` `intellectual developmental disorder, autosomal dominant 74`
+- outranker gene: `NCBIGene:3183` `HNRNPC`
+
+Current live exact direct hits on packet terms:
+
+| Term | truth disease | truth gene | outranker disease | outranker gene |
+| --- | --- | --- | --- | --- |
+| Intrauterine growth retardation | no | no | no | yes |
+| Microcephaly | no | yes | no | yes |
+| Moderate intellectual disability | no | no | no | yes |
+| Delayed speech and language development | no | no | no | yes |
+| Motor delay | no | no | no | no |
+| Seizure | no | yes | no | no |
+| Hypoplasia of the corpus callosum | no | yes | no | no |
+| Attention deficit hyperactivity disorder | no | no | no | no |
+| Feeding difficulties | no | no | no | yes |
+
+Read:
+- on the current live surface, the disease layer contributes no exact direct packet terms for either branch
+- the outranker advantage comes from the gene direct layer:
+  - `5` exacts on `HNRNPC`
+  - `3` exacts on `PPP2R1A`
+- so this case still reads as mixed, leaning truth weakness
+
+### Case 2: PMID_37761890_43
+
+Branches checked:
+- truth disease: `MONDO:0014605` `Houge-Janssens syndrome 2`
+- truth gene: `NCBIGene:5518` `PPP2R1A`
+- outranker disease: `MONDO:0032677` `lissencephaly 9 with complex brainstem malformation`
+- outranker gene: `NCBIGene:23499` `MACF1`
+
+Current live exact direct hits on packet terms:
+
+| Term | truth disease | truth gene | outranker disease | outranker gene |
+| --- | --- | --- | --- | --- |
+| Short stature | no | no | no | yes |
+| Microcephaly | no | yes | no | yes |
+| Global developmental delay | no | yes | no | yes |
+| Delayed speech and language development | no | no | no | no |
+| Motor delay | no | no | no | no |
+| Seizure | no | yes | no | yes |
+| Agenesis of corpus callosum | no | yes | no | no |
+| Hypotonia | no | yes | no | yes |
+| Feeding difficulties | no | no | no | yes |
+
+Read:
+- again, the current live disease layer contributes no exact direct packet terms for either branch
+- this case is closer than case `41`
+- but the outranker gene still carries one extra exact packet term:
+  - `Short stature`
+  - plus `Feeding difficulties`
+- while `PPP2R1A` keeps the stronger callosal exact:
+  - `Agenesis of corpus callosum`
+
+Updated classification after the live surface check:
+- `PMID_37761890_41` = mixed, leaning truth-profile weakness
+- `PMID_37761890_43` = mixed, more salvageable, but still not a pure disease-enrichment case
+
 ## Evidence boundaries
 
 Inspected:

@@ -2405,3 +2405,19 @@ Status:
   - closer to `SPTAN1` than to `SETD2`
 - Saved note:
   - [smarcc2-reopen-20260327.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/smarcc2-reopen-20260327.md)
+
+## 2026-03-27 PPP2R1A Narrow Live Surface Check
+- Added a narrow live exact-direct lookup on the packet terms for both `PPP2R1A` misses.
+- Important correction:
+  - on the **current live surface**, the exact packet signal is showing up at the gene layer, not the disease layer
+  - all four checked diseases (`PPP2R1A`, `HNRNPC`, `MACF1` case branches) had `0` exact direct hits on the packet terms in this narrow lookup
+- Case `PMID_37761890_41`:
+  - `PPP2R1A` gene direct exacts: `3`
+  - `HNRNPC` gene direct exacts: `5`
+- Case `PMID_37761890_43`:
+  - `PPP2R1A` gene direct exacts: `5`
+  - `MACF1` gene direct exacts: `6`
+- Read:
+  - case `41` still leans truth weakness
+  - case `43` is still the more salvageable of the two
+  - but this now looks more like gene-surface competition than disease-surface competition on the current live DB

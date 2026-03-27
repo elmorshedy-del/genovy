@@ -1127,3 +1127,17 @@ Official 100-case phenotype-only gene benchmark vs Exomiser.
   - this is a sparse ranking plus negative-evidence problem
   - not a promising manual-enrichment target
   - better left for negative-evidence/scorer work or later ML
+
+## 2026-03-27 PPP2R1A Narrow Live Surface Check
+- Updated:
+  - [ppp2r1a-reopen-20260327.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/ppp2r1a-reopen-20260327.md)
+- Result:
+  - narrow live lookup on exact packet terms only
+  - current disease branches for truth and top outrankers showed `0` exact direct packet hits
+  - exact packet coverage is currently carried by the gene direct layer instead:
+    - case `41`: `PPP2R1A 3` vs `HNRNPC 5`
+    - case `43`: `PPP2R1A 5` vs `MACF1 6`
+- Interpretation:
+  - `PPP2R1A` remains mixed
+  - case `41` is still the weaker truth branch
+  - case `43` is still the better salvage target
