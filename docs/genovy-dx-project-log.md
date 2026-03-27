@@ -1018,3 +1018,22 @@ Official 100-case phenotype-only gene benchmark vs Exomiser.
   - there was no disease-specific `GeneReviews` chapter to add for either branch
   - `TRAF7` is not losing because of a missed OMIM / primary-paper term haul
   - remaining leak is more likely finer exact granularity plus scorer geometry
+
+## 2026-03-26 SETD2 Symmetric Source Shadow
+- Added:
+  - [shadowSetd2SymmetricSourceTerms.js](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/shadowSetd2SymmetricSourceTerms.js)
+  - [setd2-symmetric-source-shadow-20260326.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/setd2-symmetric-source-shadow-20260326.md)
+  - [shadow-setd2-symmetric-source-terms-20260326.json](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/shadow-setd2-symmetric-source-terms-20260326.json)
+  - [shadow-setd2-symmetric-source-terms-20260326.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/shadow-setd2-symmetric-source-terms-20260326.md)
+- Result:
+  - added terms: `2`
+  - skipped existing terms: `8`
+  - new truth-side terms:
+    - `Motor delay`
+    - `Accelerated skeletal maturation`
+  - `SETD2` rank: `140 -> 1`
+  - top1 flipped: `TCF20 -> SETD2`
+- Interpretation:
+  - this is a clean source-backed rescue
+  - `SETD2` was mainly missing the two sharp exact terms that mattered most
+  - once those exact truth-side terms were restored, the current scorer chose the truth correctly

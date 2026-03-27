@@ -2293,3 +2293,13 @@ Status:
 - Added terms: `0`
 - Truth rank stayed `143 -> 143`.
 - Read: `TRAF7` is not losing because we forgot these obvious source-backed syndrome terms; the remaining leak looks more like exact granularity and/or scorer geometry.
+
+## 2026-03-26 SETD2 Symmetric Source Shadow
+- Case: `PMID_33766796_16`
+- `OMIM + GeneReviews + primary TCF20 literature` symmetric shadow rescued the truth branch.
+- Only `2` genuinely new terms were added, both on `SETD2`:
+  - `Motor delay`
+  - `Accelerated skeletal maturation`
+- `SETD2` moved `140 -> 1`.
+- Top1 flipped `TCF20 -> SETD2`.
+- Read: this is a clean source-backed rescue, not a scorer-only problem.
