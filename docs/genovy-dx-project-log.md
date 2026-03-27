@@ -1110,3 +1110,20 @@ Official 100-case phenotype-only gene benchmark vs Exomiser.
   - both cases are mixed
   - truth-side disease profile weakness is real in both
   - case `43` looks more salvageable than case `41`
+
+## 2026-03-27 SMARCC2 Reopen
+- Added:
+  - [smarcc2-reopen-20260327.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/smarcc2-reopen-20260327.md)
+- Result:
+  - packet has only `1` present term and `6` excluded craniofacial terms
+  - truth `SMARCC2` remains a benchmark miss while Exomiser is also poor at `927`
+  - saved truth disease routing is weak:
+    - `Coffin-Siris syndrome 8` direct branch has `0` exact direct overlap
+    - generic `Coffin-Siris syndrome` only helps through propagation
+  - narrow live lookup shows:
+    - both `SMARCC2` and `NLGN1` genes directly match `Autistic behavior`
+    - only `SMARCC2` picks up excluded `Microcephaly`
+- Interpretation:
+  - this is a sparse ranking plus negative-evidence problem
+  - not a promising manual-enrichment target
+  - better left for negative-evidence/scorer work or later ML

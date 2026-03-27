@@ -2385,3 +2385,23 @@ Status:
   - case `43` looks more salvageable
 - Saved note:
   - [ppp2r1a-reopen-20260327.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/ppp2r1a-reopen-20260327.md)
+
+## 2026-03-27 SMARCC2 Reopen
+- Re-opened the remaining `SMARCC2` miss from preserved artifacts.
+- Packet is extremely sparse:
+  - `1` present term: `Autistic behavior`
+  - `6` excluded craniofacial terms
+- Saved truth-side picture:
+  - `Coffin-Siris syndrome 8` has `29` direct disease phenotypes but `0` exact direct overlap on the packet
+  - generic `Coffin-Siris syndrome` only reaches the positive term through propagation
+- Narrow live DB lookup:
+  - `SMARCC2` gene direct profile has exact `Autistic behavior`
+  - and also exact excluded `Microcephaly`
+  - `NLGN1` gene direct profile has exact `Autistic behavior`
+  - and none of the excluded craniofacial terms in the narrow lookup
+- Read:
+  - this is a sparse ranking/negative-evidence failure
+  - not a good manual-enrichment target
+  - closer to `SPTAN1` than to `SETD2`
+- Saved note:
+  - [smarcc2-reopen-20260327.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/smarcc2-reopen-20260327.md)
