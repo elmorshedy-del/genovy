@@ -2317,3 +2317,27 @@ Status:
 - `SOCS1` moved `400 -> 48`.
 - `CTLA4` stayed `1`.
 - Read: `SOCS1` had a genuine source-gap, but `CTLA4` still keeps the strongest sharp packet exacts, so this one remains hybrid rather than pure undercoverage.
+
+## 2026-03-27 STXBP1 Remaining Pair Checkpoint
+- Re-opened the two remaining `STXBP1` misses from the real `v1-working` `1.0` run:
+  - `PMID_35190816_STX_26865513_Patient_45`
+  - `PMID_35190816_STX_28944233_270001`
+- Fresh live rerank for `28944233` succeeded and wrote:
+  - [audit-stxbp1-missed-case-28944233-270001-20260327.json](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/audit-stxbp1-missed-case-28944233-270001-20260327.json)
+- That rerank reaffirmed the earlier diagnosis:
+  - winner `RAI1`
+  - disease `Smith-Magenis syndrome`
+  - multiple rare/fairly specific exact hits still belong to the winner, not the truth branch
+- For `26865513`, the preserved gap audit remains the best live evidence:
+  - only `2` direct exact overlaps on `DEE4`
+  - large truth-side missing direct profile
+  - `Truncal ataxia`, `Head tremor`, and `Emotional lability` are still missing from all linked STXBP1 disease profiles at any level
+- Heavy live rerank for `26865513` failed with Postgres temp-space exhaustion:
+  - `could not write to file "base/pgsql_tmp/..." : No space left on device`
+- The live `/api/dx/rank-genes` route for both remaining STXBP1 packets also failed with Railway `502`:
+  - `Application failed to respond`
+- So the current STXBP1 split is now:
+  - `26865513` = still looks like undercoverage
+  - `28944233` = proven mimic-heavy / mixed case
+- Saved summary:
+  - [stxbp1-remaining-miss-pair-status-20260327.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/stxbp1-remaining-miss-pair-status-20260327.md)

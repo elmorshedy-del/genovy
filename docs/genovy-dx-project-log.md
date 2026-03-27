@@ -1059,3 +1059,22 @@ Official 100-case phenotype-only gene benchmark vs Exomiser.
   - this is a real source-backed lift, not a null result
   - `SOCS1` was materially undercovered on the disease surface
   - but `CTLA4` still keeps the sharpest exact packet terms, so the case remains mixed rather than fully rescued
+
+## 2026-03-27 STXBP1 Remaining Pair Status
+- Added:
+  - [stxbp1-remaining-miss-pair-status-20260327.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/stxbp1-remaining-miss-pair-status-20260327.md)
+- Result:
+  - fresh `28944233` live rerank succeeded and confirmed the older March 25 story still holds:
+    - top outranker `RAI1`
+    - support disease `Smith-Magenis syndrome`
+    - winner still owns many rare/specific exact overlaps
+  - `26865513` still has the preserved undercoverage profile:
+    - only `2` direct exact overlaps on the best STXBP1 support disease
+    - many truth terms absent from the specific direct branch
+    - `Truncal ataxia`, `Head tremor`, `Emotional lability` absent from all linked STXBP1 disease profiles at any level
+  - heavy full-index single-case rerank for `26865513` failed with Postgres temp-space exhaustion
+  - live `/api/dx/rank-genes` returned Railway `502` on both remaining STXBP1 packets
+- Interpretation:
+  - do not force more heavy live reranks right now
+  - keep `28944233` classified as the stronger mimic-heavy STXBP1 miss
+  - treat `26865513` as the likely undercoverage STXBP1 miss until a lighter audit path is built
