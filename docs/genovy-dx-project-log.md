@@ -1092,3 +1092,21 @@ Official 100-case phenotype-only gene benchmark vs Exomiser.
   - not a propagated-umbrella bug
   - not a clean source-gap case
   - and the earlier top-k scorer softening test remains too weak to rescue it
+
+## 2026-03-27 PPP2R1A Reopen
+- Added:
+  - [ppp2r1a-reopen-20260327.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/ppp2r1a-reopen-20260327.md)
+- Result:
+  - case `41`:
+    - truth rank `256`
+    - truth exact direct overlap `3`
+    - top outranker `HNRNPC` exact direct overlap `5`
+  - case `43`:
+    - truth rank `109`
+    - truth exact direct overlap `5`
+    - top outranker `MACF1` exact direct overlap `6`
+- Interpretation:
+  - `PPP2R1A` still should not sit in the same bucket as `SPTAN1`
+  - both cases are mixed
+  - truth-side disease profile weakness is real in both
+  - case `43` looks more salvageable than case `41`

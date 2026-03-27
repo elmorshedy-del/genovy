@@ -2366,3 +2366,22 @@ Status:
   - exact match alone is not enough because too many leaf diseases can explain the two-term packet
 - Saved note:
   - [sptan1-ranking-reopen-20260327.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/sptan1-ranking-reopen-20260327.md)
+
+## 2026-03-27 PPP2R1A Reopen
+- Re-opened both `PPP2R1A` misses from preserved artifacts only.
+- Case `PMID_37761890_41`:
+  - truth rank `256`
+  - exact truth-side direct overlap `3`
+  - truth branch is missing `6` packet terms directly
+  - top outranker `HNRNPC` has exact direct overlap `5`
+- Case `PMID_37761890_43`:
+  - truth rank `109`
+  - exact truth-side direct overlap `5`
+  - truth branch is missing `4` packet terms directly
+  - top outranker `MACF1` has exact direct overlap `6`
+- Read:
+  - both cases remain mixed rather than pure ranking failures
+  - case `41` leans more toward truth-profile weakness
+  - case `43` looks more salvageable
+- Saved note:
+  - [ppp2r1a-reopen-20260327.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/ppp2r1a-reopen-20260327.md)
