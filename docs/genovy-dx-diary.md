@@ -2540,3 +2540,23 @@ Status:
 - Saved:
   - [rere-live-symmetric-reopen-20260327.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/rere-live-symmetric-reopen-20260327.md)
   - [shadow-rere-live-symmetric-reopen-20260327.json](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/shadow-rere-live-symmetric-reopen-20260327.json)
+
+## 2026-03-27 Bulk Reopen Of Remaining Unsolved Misses
+- Built one batch reopen pass for the still-unsolved miss set, excluding `SETD2` because it is already source-rescued.
+- Scope:
+  - `12` unresolved case slots
+  - preserved phenopackets from the official 100-case slice
+  - current live direct disease-phenotype surface from the real `v1-working` DB
+  - current live narrow direct gene-phenotype edges for the truth and top outranker only
+- Output:
+  - [unsolved-miss-bulk-reopen-20260327.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/unsolved-miss-bulk-reopen-20260327.md)
+  - [unsolved-miss-bulk-reopen-20260327.json](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/unsolved-miss-bulk-reopen-20260327.json)
+- What it preserves:
+  - exact present ownership
+  - exact excluded contradictions
+  - disease direct vs gene direct packet fit
+  - the saved current read for each unresolved case
+- Important structural read from the batch:
+  - some misses are still mainly disease-surface undercoverage (`RERE`, `TRAF7`, `ANKRD11`, `SOCS1`, `U2AF2`)
+  - some are clearly ranking/negative-evidence failures (`SPTAN1`, `SMARCC2`)
+  - some remain mixed (`PPP2R1A`, `STXBP1`)

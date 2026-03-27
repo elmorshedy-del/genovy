@@ -1205,3 +1205,22 @@ Official 100-case phenotype-only gene benchmark vs Exomiser.
 - Interpretation:
   - this means the remaining `RERE` miss is no longer well explained by obvious truth-side exact-term absence
   - the unresolved piece is now how the scorer handles the case after exact recovery, especially contradiction and frequency behavior
+
+## 2026-03-27 Bulk Reopen Of Remaining Unsolved Misses
+- Added:
+  - [unsolved-miss-bulk-reopen-20260327.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/unsolved-miss-bulk-reopen-20260327.md)
+  - [unsolved-miss-bulk-reopen-20260327.json](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/unsolved-miss-bulk-reopen-20260327.json)
+  - [generateUnsolvedMissBulkReopen.js](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/generateUnsolvedMissBulkReopen.js)
+- Scope:
+  - `12` unresolved case slots from the real current miss set
+  - skipped `SETD2` because the saved symmetric source shadow already rescues it
+- Result:
+  - one consistent reopen artifact now exists for the remaining unresolved cases
+  - each case preserves:
+    - packet present/excluded terms
+    - disease direct exact present/excluded ownership
+    - gene direct exact present/excluded ownership
+    - the saved current read from earlier case work
+- Interpretation:
+  - this turns the remaining miss tail into one standardized evidence surface instead of fragmented case notes
+  - it should make the next prioritization pass much cleaner because all unresolved cases now share the same reopen format
