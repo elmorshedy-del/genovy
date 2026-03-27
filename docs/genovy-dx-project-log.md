@@ -1183,3 +1183,25 @@ Official 100-case phenotype-only gene benchmark vs Exomiser.
   - this confirms the hard `U2AF2` case is not blocked by missing rival curation
   - it is a real truthful enrichment win that still loses to a strong mimic under the current scorer
   - `LRRC7` staying top despite multiple exact excluded-term contradictions keeps this case in the future negative-evidence / ranking bucket
+
+## 2026-03-27 RERE Live Symmetric Reopen
+- Added:
+  - [rere-live-symmetric-reopen-20260327.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/rere-live-symmetric-reopen-20260327.md)
+  - [shadow-rere-live-symmetric-reopen-20260327.json](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/shadow-rere-live-symmetric-reopen-20260327.json)
+- Result:
+  - used a narrow live direct disease-surface lookup for `RERE` and `MED13` only
+  - did not rely on a second heavy full rerank after the fresh centerbeam path stalled
+  - confirmed baseline direct exact ownership before the saved additions:
+    - `RERE` owns `Anteverted nares`
+    - `MED13` owns `Wide mouth` and `Synophrys`
+    - both share `Hypertelorism`, `Autistic behavior`, `Hypotonia`, `Global developmental delay`
+  - confirmed direct exact excluded contradictions are highly asymmetric on the current live surface:
+    - `RERE` carries a large excluded-contradiction set
+    - `MED13` carries only `Smooth philtrum`
+  - preserved the saved symmetric case-series movement:
+    - `RERE 238 -> 82`
+    - `MED13 1 -> 1`
+  - after the saved additions, `MED13` no longer owns the main present exact discriminators
+- Interpretation:
+  - this means the remaining `RERE` miss is no longer well explained by obvious truth-side exact-term absence
+  - the unresolved piece is now how the scorer handles the case after exact recovery, especially contradiction and frequency behavior

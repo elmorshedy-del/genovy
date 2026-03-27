@@ -2487,3 +2487,56 @@ Status:
   - the remaining blocker is a strong `LRRC7` mimic plus weak use of excluded-term contradictions
 - Saved note:
   - [u2af2-symmetric-source-shadow-20260327.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/u2af2-symmetric-source-shadow-20260327.md)
+
+## 2026-03-27 RERE Live Symmetric Reopen
+- Re-opened `RERE` with the lighter evidence path after the fresh full live rerun stalled over the centerbeam proxy.
+- Evidence surface used:
+  - current live direct disease-phenotype rows for `RERE` and `MED13` only
+  - saved symmetric case-series shadow result from `2026-03-26`
+- Important continuity note:
+  - saved audit truth rank is `237`
+  - saved symmetric baseline truth rank is `238`
+  - reopen keeps the saved symmetric baseline for internal before/after continuity
+- Current live direct exact ownership before the saved additions:
+  - `RERE` present exacts:
+    - `Anteverted nares`
+    - `Hypertelorism`
+    - `Autistic behavior`
+    - `Hypotonia`
+    - `Global developmental delay`
+  - `MED13` present exacts:
+    - `Wide mouth`
+    - `Synophrys`
+    - `Hypertelorism`
+    - `Autistic behavior`
+    - `Hypotonia`
+    - `Global developmental delay`
+- Current live direct excluded contradictions:
+  - `RERE` carries a large contradiction set against the packet exclusions, including:
+    - `Cleft lip`
+    - `Smooth philtrum`
+    - `Macrocephaly`
+    - `Triangular face`
+    - `High palate`
+    - `Blepharophimosis`
+    - `Micrognathia`
+    - `Sensorineural hearing impairment`
+    - `Scoliosis`
+    - and many others
+  - `MED13` exact excluded contradiction:
+    - `Smooth philtrum`
+- Saved symmetric presence additions still give the core movement:
+  - `RERE 238 -> 82`
+  - `MED13 1 -> 1`
+- Exact ownership after those saved additions:
+  - `RERE` gains:
+    - `Wide mouth`
+    - `Synophrys`
+    - `Intellectual disability`
+  - after that, `MED13` no longer owns the key present exacts that separated it from `RERE`
+- Read:
+  - this case is no longer well explained by “truth branch still missing the obvious exact terms”
+  - the remaining unresolved part is scorer behavior after exact recovery, especially frequency and contradiction handling
+- Saved:
+  - [rere-live-symmetric-reopen-20260327.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/rere-live-symmetric-reopen-20260327.md)
+  - [shadow-rere-live-symmetric-reopen-20260327.json](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/shadow-rere-live-symmetric-reopen-20260327.json)
