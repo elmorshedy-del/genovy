@@ -1037,3 +1037,25 @@ Official 100-case phenotype-only gene benchmark vs Exomiser.
   - this is a clean source-backed rescue
   - `SETD2` was mainly missing the two sharp exact terms that mattered most
   - once those exact truth-side terms were restored, the current scorer chose the truth correctly
+
+## 2026-03-26 SOCS1 Symmetric Source Shadow
+- Added:
+  - [shadowSocs1SymmetricSourceTerms.js](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/shadowSocs1SymmetricSourceTerms.js)
+  - [socs1-symmetric-source-shadow-20260326.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/socs1-symmetric-source-shadow-20260326.md)
+  - [shadow-socs1-symmetric-source-terms-20260326.json](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/shadow-socs1-symmetric-source-terms-20260326.json)
+  - [shadow-socs1-symmetric-source-terms-20260326.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/shadow-socs1-symmetric-source-terms-20260326.md)
+- Result:
+  - added terms: `5`
+  - new truth-side exact terms:
+    - `Autoimmunity`
+    - `Otitis media`
+    - `Chronic colitis`
+    - `Eczematoid dermatitis`
+  - new outranker-side exact term:
+    - `Autoimmunity`
+  - `SOCS1` rank: `400 -> 48`
+  - top1 stayed `CTLA4`
+- Interpretation:
+  - this is a real source-backed lift, not a null result
+  - `SOCS1` was materially undercovered on the disease surface
+  - but `CTLA4` still keeps the sharpest exact packet terms, so the case remains mixed rather than fully rescued

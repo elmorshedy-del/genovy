@@ -2303,3 +2303,17 @@ Status:
 - `SETD2` moved `140 -> 1`.
 - Top1 flipped `TCF20 -> SETD2`.
 - Read: this is a clean source-backed rescue, not a scorer-only problem.
+
+## 2026-03-26 SOCS1 Symmetric Source Shadow
+- Case: `PMID_37156989_P1`
+- Strict literal `OMIM` shadow produced a real but incomplete rescue.
+- Added to `SOCS1`:
+  - `Autoimmunity`
+  - `Otitis media`
+  - `Chronic colitis`
+  - `Eczematoid dermatitis`
+- Added to `CTLA4`:
+  - `Autoimmunity`
+- `SOCS1` moved `400 -> 48`.
+- `CTLA4` stayed `1`.
+- Read: `SOCS1` had a genuine source-gap, but `CTLA4` still keeps the strongest sharp packet exacts, so this one remains hybrid rather than pure undercoverage.
