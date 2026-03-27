@@ -2421,3 +2421,29 @@ Status:
   - case `41` still leans truth weakness
   - case `43` is still the more salvageable of the two
   - but this now looks more like gene-surface competition than disease-surface competition on the current live DB
+
+## 2026-03-27 PPP2R1A Truth Shadow
+- Built a truthful `PPP2R1A` disease-term shadow from:
+  - `OMIM:616362`
+  - `GeneReviews:NBK580243`
+  - `PMID:37761890`
+- New exact disease terms added to `Houge-Janssens syndrome 2`:
+  - `Delayed speech and language development`
+  - `Motor delay`
+  - `Feeding difficulties`
+  - `Attention deficit hyperactivity disorder`
+  - `Short stature`
+  - `Moderate intellectual disability`
+- Already present and therefore skipped:
+  - `Global developmental delay`
+  - `Hypotonia`
+  - `Seizure`
+  - `Microcephaly`
+  - `Agenesis of corpus callosum`
+  - `Hypoplasia of the corpus callosum`
+- Head-to-head result:
+  - case `41`: `PPP2R1A 3 -> 2`, still behind `HNRNPC`
+  - case `43`: `PPP2R1A 2 -> 1`, flips over `MACF1`
+- Read:
+  - the salvageable `PPP2R1A` case is genuinely rescuable by truthful disease repair
+  - the harder case still needs more than this first source-backed patch

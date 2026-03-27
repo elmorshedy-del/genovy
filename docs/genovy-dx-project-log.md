@@ -1141,3 +1141,21 @@ Official 100-case phenotype-only gene benchmark vs Exomiser.
   - `PPP2R1A` remains mixed
   - case `41` is still the weaker truth branch
   - case `43` is still the better salvage target
+
+## 2026-03-27 PPP2R1A Truth Shadow
+- Updated:
+  - [ppp2r1a-reopen-20260327.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/ppp2r1a-reopen-20260327.md)
+- Added scripts:
+  - [shadowPpp2r1aTruthSourceTerms.js](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/shadowPpp2r1aTruthSourceTerms.js)
+  - [shadowPpp2r1aTruthHeadToHead.js](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/shadowPpp2r1aTruthHeadToHead.js)
+- Added outputs:
+  - [shadow-ppp2r1a-truth-headtohead-20260327.json](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/shadow-ppp2r1a-truth-headtohead-20260327.json)
+  - [shadow-ppp2r1a-truth-headtohead-20260327.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/shadow-ppp2r1a-truth-headtohead-20260327.md)
+- Result:
+  - truthful disease repair flips case `43` locally:
+    - `PPP2R1A 2 -> 1` over `MACF1`
+  - truthful disease repair improves but does not rescue case `41`:
+    - `PPP2R1A 3 -> 2`, still behind `HNRNPC`
+- Interpretation:
+  - this confirms `PPP2R1A` is a mixed gene with one clearly salvageable case
+  - and that truthful branch repair can matter materially here

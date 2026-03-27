@@ -197,6 +197,79 @@ Updated classification after the live surface check:
 - `PMID_37761890_41` = mixed, leaning truth-profile weakness
 - `PMID_37761890_43` = mixed, more salvageable, but still not a pure disease-enrichment case
 
+## Source-Backed Truth Shadow
+
+Date:
+- 2026-03-27
+
+Goal:
+- Add a small truthful set of `PPP2R1A` disease terms from `OMIM`, `GeneReviews`, and the `2023` paper.
+- Test whether the more salvageable case flips.
+
+Important limitation:
+- the full public-DB two-case shadow was too slow over the live public connection
+- so this result is a **head-to-head** shadow:
+  - `PPP2R1A` versus `HNRNPC` for case `41`
+  - `PPP2R1A` versus `MACF1` for case `43`
+- it uses the real ontology and the real current branch surfaces for those genes/diseases
+- it is useful for direction, not as a full benchmark replacement
+
+Sources used:
+- `OMIM:616362`
+- `GeneReviews:NBK580243`
+- `PMID:37761890`
+
+Truth terms requested:
+- `Global developmental delay`
+- `Delayed speech and language development`
+- `Motor delay`
+- `Hypotonia`
+- `Feeding difficulties`
+- `Seizure`
+- `Microcephaly`
+- `Agenesis of corpus callosum`
+- `Hypoplasia of the corpus callosum`
+- `Attention deficit hyperactivity disorder`
+- `Short stature`
+- `Moderate intellectual disability`
+
+Actually added:
+- `Delayed speech and language development`
+- `Motor delay`
+- `Feeding difficulties`
+- `Attention deficit hyperactivity disorder`
+- `Short stature`
+- `Moderate intellectual disability`
+
+Already present and skipped:
+- `Global developmental delay`
+- `Hypotonia`
+- `Seizure`
+- `Microcephaly`
+- `Agenesis of corpus callosum`
+- `Hypoplasia of the corpus callosum`
+
+### Head-to-head result
+
+| Case | Baseline truth rank | Shadow truth rank | Baseline top1 | Shadow top1 |
+| --- | ---: | ---: | --- | --- |
+| `PMID_37761890_41` | `3` | `2` | `HNRNPC` | `HNRNPC` |
+| `PMID_37761890_43` | `2` | `1` | `MACF1` | `PPP2R1A` |
+
+Read:
+- `PMID_37761890_41`
+  - truthful disease repair helps a little
+  - but `HNRNPC` still wins
+- `PMID_37761890_43`
+  - truthful disease repair is enough to flip the local winner
+  - this confirms the earlier read that case `43` is genuinely salvageable by source-backed truth repair
+
+Saved artifacts:
+- [shadowPpp2r1aTruthSourceTerms.js](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/shadowPpp2r1aTruthSourceTerms.js)
+- [shadowPpp2r1aTruthHeadToHead.js](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/shadowPpp2r1aTruthHeadToHead.js)
+- [shadow-ppp2r1a-truth-headtohead-20260327.json](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/shadow-ppp2r1a-truth-headtohead-20260327.json)
+- [shadow-ppp2r1a-truth-headtohead-20260327.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/shadow-ppp2r1a-truth-headtohead-20260327.md)
+
 ## Evidence boundaries
 
 Inspected:
@@ -207,7 +280,6 @@ Inspected:
 
 Intentionally not inspected:
 - no fresh live Railway rerank
-- no OMIM pass yet
 - no broad raw data crawl
 
 Confidence:
