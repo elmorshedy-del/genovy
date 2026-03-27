@@ -2277,3 +2277,19 @@ Status:
 - Added to `MED13`: `Intellectual disability`, `Expressive language delay`, `Strabismus`, `Nystagmus`.
 - Adding frequency buckets largely erased the gain: `238 -> 230`.
 - Read: exact truth-side recovery matters a lot, but the current scorer still keeps `MED13` at `1`, and frequency weighting hurts `RERE` because the recovered facial terms are only source-backed as occasional.
+
+## 2026-03-26 RERE Behavior Diagnostic Shadow
+- Case: `PMID_29330883_Subject9`
+- Diagnostic only; not source-backed curation.
+- Removing the weak wrong-side `MED13 -> ADHD` fallback did nothing: `237 -> 237`.
+- Adding exact `RERE -> Compulsive behaviors` helped only a little: `237 -> 209`.
+- Doing both together still left `MED13` at `1`.
+- Read: the compulsive-behavior semantic mismatch is real but not decisive.
+
+## 2026-03-26 TRAF7 Symmetric Source Shadow
+- Case: `PMID_32376980_11`
+- Manual OMIM plus primary-paper symmetric shadow was a strict null result.
+- Candidate additions for both `TRAF7` and `DOT1L` were all already present in the live direct disease profiles.
+- Added terms: `0`
+- Truth rank stayed `143 -> 143`.
+- Read: `TRAF7` is not losing because we forgot these obvious source-backed syndrome terms; the remaining leak looks more like exact granularity and/or scorer geometry.

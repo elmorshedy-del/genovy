@@ -984,3 +984,37 @@ Official 100-case phenotype-only gene benchmark vs Exomiser.
   - broader source-backed symmetric enrichment proved the truth branch can move strongly once it gets the exact discriminators `Synophrys` and `Wide mouth`
   - but the current scorer still does not choose the truth
   - frequency handling is now a confirmed part of the remaining `RERE` failure mode, not just a theory
+
+## 2026-03-26 RERE Behavior Diagnostic Shadow
+- Added:
+  - [shadowRereBehaviorDiagnostic.js](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/shadowRereBehaviorDiagnostic.js)
+  - [rere-behavior-diagnostic-shadow-20260326.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/rere-behavior-diagnostic-shadow-20260326.md)
+- Result:
+  - baseline `RERE`: `237`
+  - remove `MED13 -> ADHD` only: `237`
+  - add exact `RERE -> Compulsive behaviors` only: `209`
+  - do both together: `209`
+  - `MED13` stayed `1` in every scenario
+- Interpretation:
+  - the behavior semantic mismatch is real but not decisive
+  - it is not the main reason `MED13` wins
+
+## 2026-03-26 TRAF7 Symmetric Source Shadow
+- Added:
+  - [shadowTraf7SymmetricSourceTerms.js](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/shadowTraf7SymmetricSourceTerms.js)
+  - [traf7-symmetric-source-shadow-20260326.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/traf7-symmetric-source-shadow-20260326.md)
+  - [shadow-traf7-symmetric-source-terms-20260326.json](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/shadow-traf7-symmetric-source-terms-20260326.json)
+  - [shadow-traf7-symmetric-source-terms-20260326.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/shadow-traf7-symmetric-source-terms-20260326.md)
+- OMIM literal scenario:
+  - added terms: `0`
+  - truth rank `143 -> 143`
+  - winner stayed `DOT1L`
+- OMIM plus primary-paper scenario:
+  - added terms: `0`
+  - truth rank `143 -> 143`
+  - winner stayed `DOT1L`
+- Interpretation:
+  - these obvious source-backed syndrome terms were already present on both branches
+  - there was no disease-specific `GeneReviews` chapter to add for either branch
+  - `TRAF7` is not losing because of a missed OMIM / primary-paper term haul
+  - remaining leak is more likely finer exact granularity plus scorer geometry
