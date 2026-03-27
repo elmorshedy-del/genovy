@@ -1159,3 +1159,27 @@ Official 100-case phenotype-only gene benchmark vs Exomiser.
 - Interpretation:
   - this confirms `PPP2R1A` is a mixed gene with one clearly salvageable case
   - and that truthful branch repair can matter materially here
+
+## 2026-03-27 U2AF2 Symmetric Source Shadow
+- Added:
+  - [u2af2-symmetric-source-shadow-20260327.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/u2af2-symmetric-source-shadow-20260327.md)
+- Added script:
+  - [shadowU2af2SymmetricSourceTerms.js](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/shadowU2af2SymmetricSourceTerms.js)
+- Added outputs:
+  - [shadow-u2af2-symmetric-source-terms-20260327.json](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/shadow-u2af2-symmetric-source-terms-20260327.json)
+  - [shadow-u2af2-symmetric-source-terms-20260327.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/shadow-u2af2-symmetric-source-terms-20260327.md)
+- Result:
+  - current live hard-case outranker identified exactly:
+    - `LRRC7`
+    - `MONDO:0980748`
+    - `intellectual developmental disorder, autosomal dominant 77`
+  - strict symmetric source check found:
+    - `10` promotable truth-side additions for `U2AF2`
+    - `0` new packet-relevant rival additions for `LRRC7`
+  - rank outcome:
+    - `U2AF2 959 -> 2`
+    - `LRRC7 1 -> 1`
+- Interpretation:
+  - this confirms the hard `U2AF2` case is not blocked by missing rival curation
+  - it is a real truthful enrichment win that still loses to a strong mimic under the current scorer
+  - `LRRC7` staying top despite multiple exact excluded-term contradictions keeps this case in the future negative-evidence / ranking bucket

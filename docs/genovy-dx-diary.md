@@ -2447,3 +2447,43 @@ Status:
 - Read:
   - the salvageable `PPP2R1A` case is genuinely rescuable by truthful disease repair
   - the harder case still needs more than this first source-backed patch
+
+## 2026-03-27 U2AF2 Symmetric Source Shadow
+- Re-opened the hard `U2AF2` case on the real live `v1-working` DB with the stricter truthful-and-symmetric rule.
+- First exact correction:
+  - current live outranker is `LRRC7`
+  - support disease is `MONDO:0980748`
+  - baseline top row is not a seam/attachment story anymore
+- Truth-side checked source stack:
+  - `OMIM:191318`
+  - `OMIM:620535`
+  - existing manual OMIM extract note
+- Rival-side checked source stack:
+  - `OMIM:621415`
+  - `PMID:39256359`
+  - no `LRRC7` GeneReviews chapter found
+- Truth-side packet-relevant additions:
+  - `Intellectual disability`
+  - `Delayed speech and language development`
+  - `Delayed fine motor development`
+  - `Delayed ability to walk`
+  - `Bilateral tonic-clonic seizure`
+  - `Gastroesophageal reflux`
+  - `Feeding difficulties`
+  - `Short palpebral fissure`
+  - `Bilateral ptosis`
+  - `Unilateral ptosis`
+- Rival-side additions:
+  - none
+  - checked symmetrically, but no promotable packet-relevant terms were missing beyond the live graph surface
+- Exact fit outcome:
+  - `U2AF2` exact present terms rose from `3` to `12`
+  - `LRRC7` stayed unchanged with a broader exact present fit and `4` exact excluded contradictions
+- Rank outcome:
+  - `U2AF2` `959 -> 2`
+  - `LRRC7` stays `1`
+- Read:
+  - hard `U2AF2` is now a clean truthful enrichment win but not a full rescue
+  - the remaining blocker is a strong `LRRC7` mimic plus weak use of excluded-term contradictions
+- Saved note:
+  - [u2af2-symmetric-source-shadow-20260327.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/u2af2-symmetric-source-shadow-20260327.md)
