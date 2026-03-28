@@ -2,9 +2,11 @@ export const SOURCE_KEYS = Object.freeze({
   MONDO_ONTOLOGY: 'mondo_ontology',
   HPO_ONTOLOGY: 'hpo_ontology',
   HPO_DISEASE_PHENOTYPE: 'hpo_disease_phenotype',
+  HPO_DISEASE_PHENOTYPE_NEGATIVE: 'hpo_disease_phenotype_negative',
   ORPHADATA_PHENOTYPES: 'orphadata_phenotypes',
   ORPHADATA_HOOM: 'orphadata_hoom',
   ORPHADATA_NATURAL_HISTORY: 'orphadata_natural_history',
+  PRIMEKG: 'primekg',
   HPO_GENE_DISEASE: 'hpo_gene_disease',
   HPO_GENE_PHENOTYPE: 'hpo_gene_phenotype',
   PHENOTYPE_PROPAGATION: 'phenotype_propagation',
@@ -54,6 +56,15 @@ export const SOURCE_CATALOG = Object.freeze({
     updateFrequency: 'release-based',
     entityScope: 'disease,phenotype'
   },
+  [SOURCE_KEYS.HPO_DISEASE_PHENOTYPE_NEGATIVE]: {
+    sourceKey: SOURCE_KEYS.HPO_DISEASE_PHENOTYPE_NEGATIVE,
+    displayName: 'HPO Disease Negative Phenotype Annotations',
+    description: 'Disease-to-phenotype negative assertions from HPO phenotype.hpoa NOT rows.',
+    homepageUrl: 'https://human-phenotype-ontology.github.io/downloads.html',
+    accessUrl: 'https://github.com/obophenotype/human-phenotype-ontology/releases/latest/download/phenotype.hpoa',
+    updateFrequency: 'release-based',
+    entityScope: 'disease,phenotype'
+  },
   [SOURCE_KEYS.ORPHADATA_PHENOTYPES]: {
     sourceKey: SOURCE_KEYS.ORPHADATA_PHENOTYPES,
     displayName: 'Orphadata Phenotypes',
@@ -81,6 +92,15 @@ export const SOURCE_CATALOG = Object.freeze({
     accessUrl: 'https://www.orphadata.com/data/xml/en_product9_ages.xml',
     updateFrequency: 'bi-annual',
     entityScope: 'disease,onset,inheritance'
+  },
+  [SOURCE_KEYS.PRIMEKG]: {
+    sourceKey: SOURCE_KEYS.PRIMEKG,
+    displayName: 'PrimeKG',
+    description: 'Integrated disease-to-phenotype assertions from the Harvard PrimeKG CSV.',
+    homepageUrl: 'https://doi.org/10.7910/DVN/IXA7BM',
+    accessUrl: 'https://dataverse.harvard.edu/api/access/datafile/6180620',
+    updateFrequency: 'release-based',
+    entityScope: 'disease,phenotype'
   },
   [SOURCE_KEYS.HPO_GENE_DISEASE]: {
     sourceKey: SOURCE_KEYS.HPO_GENE_DISEASE,

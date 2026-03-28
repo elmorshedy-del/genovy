@@ -1251,3 +1251,23 @@ Official 100-case phenotype-only gene benchmark vs Exomiser.
 - Interpretation:
   - these structured sources are worth keeping as reproducible, provenance-rich enrichment infrastructure
   - but they did not recover any additional misses on their own in this pass
+
+## 2026-03-28 Global HPO Negative Benchmark
+- Added:
+  - [generateGlobalHpoNegativeManifest.js](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/generateGlobalHpoNegativeManifest.js)
+  - [source-enrichment-hpo-negative-global-pass-20260328.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/source-enrichment-hpo-negative-global-pass-20260328.md)
+  - [source-enrichment-manifest-hpo-negative-global-20260328.json](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/source-enrichment-manifest-hpo-negative-global-20260328.json)
+  - [source-enrichment-apply-log-hpo-negative-global-20260328.json](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/source-enrichment-apply-log-hpo-negative-global-20260328.json)
+  - [official-v1-enrich-hpo-negative-global-20260328.json](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/official-v1-enrich-hpo-negative-global-20260328.json)
+  - [official-v1-enrich-hpo-negative-global-20260328.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/official-v1-enrich-hpo-negative-global-20260328.md)
+- Result:
+  - imported `727` new HPO negative assertions from `phenotype.hpoa`
+  - all `727` mapped into existing graph diseases cleanly
+  - reran the official `100` immediately after on staging with the same `1.0` scorer
+- Outcome:
+  - topline benchmark stayed flat at `87 found`, `42 top-1`, `53 top-5`, `62 top-10`
+  - `MRR` nudged from `0.488736` to `0.488760`
+  - `5` cases improved by one rank and `2` worsened by one rank
+- Interpretation:
+  - full-graph HPO negatives are now operational in the enrichment pipeline
+  - but absent assertions by themselves are not enough to close the remaining recall gap

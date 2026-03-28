@@ -131,6 +131,8 @@ async function main() {
         const diseaseEntityId = entityIdByCurie.get(entry.diseaseCurie);
         const phenotypeEntityId = entityIdByCurie.get(entry.phenotypeCurie);
         const frequencyEntityId = entry.frequencyCurie ? entityIdByCurie.get(entry.frequencyCurie) || '' : '';
+        const assertionPresenceStatus = entry.assertionPresenceStatus || 'present';
+        const predicateKey = assertionPresenceStatus === 'absent' ? 'lacks_phenotype' : 'has_phenotype';
         const supportingSources =
           entry.supportingSources?.length
             ? entry.supportingSources
@@ -143,6 +145,7 @@ async function main() {
                   evidenceTag: entry.evidenceTag,
                   frequencyCurie: entry.frequencyCurie,
                   frequencyLabel: entry.frequencyLabel,
+                  assertionPresenceStatus,
                   referenceText: entry.referenceText,
                   payload: entry.payload?.source || entry.payload || {}
                 }
@@ -156,15 +159,16 @@ async function main() {
         }
 
         const qualifiers = {
+          assertion_presence_status: assertionPresenceStatus,
           frequency: entry.frequencyCurie || entry.frequencyLabel || '',
           packet_presence_status: entry.packetPresenceStatus || ''
         };
-        const relationshipKey = buildRelationshipKey(diseaseEntityId, 'has_phenotype', phenotypeEntityId, qualifiers);
+        const relationshipKey = buildRelationshipKey(diseaseEntityId, predicateKey, phenotypeEntityId, qualifiers);
 
         relationships.push({
           relationshipKey,
           subjectEntityId: diseaseEntityId,
-          predicateKey: 'has_phenotype',
+          predicateKey,
           objectEntityId: phenotypeEntityId,
           qualifiers
         });
@@ -193,6 +197,7 @@ async function main() {
               side: entry.side,
               caseId: entry.caseId,
               dateAdded: entry.dateAdded,
+              assertionPresenceStatus,
               evidenceTag: source.evidenceTag,
               packetPresenceStatus: entry.packetPresenceStatus,
               referenceText: source.referenceText || '',
@@ -215,6 +220,7 @@ async function main() {
               caseId: entry.caseId,
               side: entry.side,
               dateAdded: entry.dateAdded,
+              assertionPresenceStatus,
               evidenceTag: source.evidenceTag,
               sourceReference: source.sourceReference,
               packetPresenceStatus: entry.packetPresenceStatus,
@@ -227,7 +233,7 @@ async function main() {
           clinicalRows.push({
             subjectEntityId: diseaseEntityId,
             phenotypeEntityId,
-            presenceStatus: 'present',
+            presenceStatus: assertionPresenceStatus,
             sourceKey,
             syncRunId: syncRun?.sync_run_id || null,
             sourceRecordKey,
@@ -244,6 +250,7 @@ async function main() {
               caseId: entry.caseId,
               side: entry.side,
               dateAdded: entry.dateAdded,
+              assertionPresenceStatus,
               evidenceTag: source.evidenceTag,
               sourceReference: source.sourceReference,
               packetPresenceStatus: entry.packetPresenceStatus,

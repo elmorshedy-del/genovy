@@ -1,8 +1,11 @@
+import fsSync from 'node:fs';
 import fs from 'node:fs/promises';
 import os from 'node:os';
 import path from 'node:path';
 import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
+import readline from 'node:readline';
+import { Readable } from 'node:stream';
 import { XMLParser } from 'fast-xml-parser';
 import { withClient } from '../db/pool.js';
 import { loadDxDiseasePhenotypeRows } from '../repositories/dxRepository.js';
@@ -47,6 +50,16 @@ const HOOM_FREQUENCY_CODE_MAP = Object.freeze({
   EX: HPO_FREQUENCY_CURIES.excluded
 });
 
+const ASSERTION_STATUS = Object.freeze({
+  PRESENT: 'present',
+  ABSENT: 'absent'
+});
+
+const PRIMEKG_RELATION_TO_ASSERTION = Object.freeze({
+  disease_phenotype_positive: ASSERTION_STATUS.PRESENT,
+  disease_phenotype_negative: ASSERTION_STATUS.ABSENT
+});
+
 function parseArgs(argv) {
   const flags = {};
   for (let i = 0; i < argv.length; i += 1) {
@@ -76,6 +89,15 @@ function slugify(value) {
     .replace(/[^A-Za-z0-9]+/g, '_')
     .replace(/^_+|_+$/g, '')
     .toLowerCase();
+}
+
+function normalizeLabel(value) {
+  return String(value || '')
+    .trim()
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
 }
 
 function mapTextFrequencyCurie(rawValue) {
@@ -157,9 +179,62 @@ async function fetchCachedBuffer(url, fileName, cacheDir) {
   return buffer;
 }
 
+async function fetchCachedFile(url, fileName, cacheDir) {
+  await ensureDir(cacheDir);
+  const filePath = path.join(cacheDir, fileName);
+  try {
+    await fs.access(filePath);
+    return filePath;
+  } catch {}
+
+  const response = await fetch(url);
+  if (!response.ok || !response.body) {
+    throw new Error(`Failed to fetch ${url}: ${response.status}`);
+  }
+
+  await new Promise((resolve, reject) => {
+    const output = fsSync.createWriteStream(filePath);
+    output.on('error', reject);
+    output.on('finish', resolve);
+    Readable.fromWeb(response.body).on('error', reject).pipe(output);
+  });
+
+  return filePath;
+}
+
 async function unzipSingleFile(zipPath, memberName) {
   const { stdout } = await execFileAsync('unzip', ['-p', zipPath, memberName], { maxBuffer: 1024 * 1024 * 512 });
   return stdout;
+}
+
+function parseCsvLine(line) {
+  const values = [];
+  let current = '';
+  let inQuotes = false;
+
+  for (let index = 0; index < line.length; index += 1) {
+    const char = line[index];
+    if (char === '"') {
+      if (inQuotes && line[index + 1] === '"') {
+        current += '"';
+        index += 1;
+      } else {
+        inQuotes = !inQuotes;
+      }
+      continue;
+    }
+
+    if (char === ',' && !inQuotes) {
+      values.push(current);
+      current = '';
+      continue;
+    }
+
+    current += char;
+  }
+
+  values.push(current);
+  return values;
 }
 
 function loadPhenopacketTerms(payload) {
@@ -235,13 +310,19 @@ async function loadDiseaseContext(client, rosterCases) {
   );
 
   const dxRows = await loadDxDiseasePhenotypeRows(client);
-  const directPresentByDisease = new Map();
+  const directPhenotypesByDisease = new Map();
   for (const row of dxRows.rows) {
     if (row.phenotype_edge_origin !== 'direct') continue;
-    if (String(row.presence_status || 'present') !== 'present') continue;
-    const current = directPresentByDisease.get(row.disease_curie) || new Set();
-    current.add(row.phenotype_curie);
-    directPresentByDisease.set(row.disease_curie, current);
+    const presenceStatus =
+      String(row.presence_status || ASSERTION_STATUS.PRESENT).trim().toLowerCase() === ASSERTION_STATUS.ABSENT
+        ? ASSERTION_STATUS.ABSENT
+        : ASSERTION_STATUS.PRESENT;
+    const current = directPhenotypesByDisease.get(row.disease_curie) || {
+      [ASSERTION_STATUS.PRESENT]: new Set(),
+      [ASSERTION_STATUS.ABSENT]: new Set()
+    };
+    current[presenceStatus].add(row.phenotype_curie);
+    directPhenotypesByDisease.set(row.disease_curie, current);
   }
 
   const diseaseByCurie = new Map(
@@ -258,7 +339,11 @@ async function loadDiseaseContext(client, rosterCases) {
           orphanetXrefs: xrefs
             .map((xref) => normalizeCurie(xref.xrefCurie))
             .filter((xref) => xref.startsWith('ORPHANET:') || xref.startsWith('ORPHA:')),
-          directPresentPhenotypes: directPresentByDisease.get(row.canonical_curie) || new Set()
+          directPhenotypes:
+            directPhenotypesByDisease.get(row.canonical_curie) || {
+              [ASSERTION_STATUS.PRESENT]: new Set(),
+              [ASSERTION_STATUS.ABSENT]: new Set()
+            }
         }
       ];
     })
@@ -279,9 +364,17 @@ function parseHpoAnnotations(text) {
     const reference = String(cols[4] || '');
     const evidenceCode = String(cols[5] || '');
     const frequencyRaw = String(cols[6] || '');
-    if (!diseaseId || !phenotypeCurie || qualifier === 'NOT') continue;
+    if (!diseaseId || !phenotypeCurie) continue;
+    const assertionPresenceStatus =
+      qualifier === 'NOT' ? ASSERTION_STATUS.ABSENT : ASSERTION_STATUS.PRESENT;
+    const sourceKey =
+      assertionPresenceStatus === ASSERTION_STATUS.ABSENT
+        ? SOURCE_KEYS.HPO_DISEASE_PHENOTYPE_NEGATIVE
+        : SOURCE_KEYS.HPO_DISEASE_PHENOTYPE;
 
     const row = {
+      sourceKey,
+      assertionPresenceStatus,
       diseaseId,
       diseaseLabel,
       phenotypeCurie,
@@ -338,6 +431,8 @@ function parseOrphadataPhenotypes(xmlText) {
         association?.HPOFrequency?.Name?.['#text'] || association?.HPOFrequency?.Name || ''
       );
       rows.push({
+        sourceKey: SOURCE_KEYS.ORPHADATA_PHENOTYPES,
+        assertionPresenceStatus: ASSERTION_STATUS.PRESENT,
         diseaseId,
         diseaseLabel,
         phenotypeCurie,
@@ -372,6 +467,8 @@ function parseHoom(text) {
     const frequencyCurie = HOOM_FREQUENCY_CODE_MAP[frequencyCode] || '';
     const rows = byOrpha.get(diseaseId) || [];
     rows.push({
+      sourceKey: SOURCE_KEYS.ORPHADATA_HOOM,
+      assertionPresenceStatus: ASSERTION_STATUS.PRESENT,
       diseaseId,
       diseaseLabel: '',
       phenotypeCurie,
@@ -391,14 +488,96 @@ function parseHoom(text) {
   return byOrpha;
 }
 
-function collectSourceMatches(sourceRowsByDiseaseId, diseaseIds, packetLookup, sourceKey, sourceHomepageUrl) {
+async function parsePrimeKgPhenotypeRows(csvPath, { targetDiseaseLabels, targetPhenotypeCuries }) {
+  const byDiseaseLabel = new Map();
+  const input = fsSync.createReadStream(csvPath, { encoding: 'utf8' });
+  const rl = readline.createInterface({ input, crlfDelay: Infinity });
+  let headers = [];
+
+  for await (const line of rl) {
+    if (!line) continue;
+    if (!headers.length) {
+      headers = parseCsvLine(line);
+      continue;
+    }
+
+    const values = parseCsvLine(line);
+    if (values.length !== headers.length) continue;
+    const row = Object.fromEntries(headers.map((header, index) => [header, values[index] ?? '']));
+    const assertionPresenceStatus = PRIMEKG_RELATION_TO_ASSERTION[row.relation];
+    if (!assertionPresenceStatus) continue;
+    if (row.x_type !== 'disease' || row.y_source !== 'HPO') continue;
+
+    const normalizedDiseaseLabel = normalizeLabel(row.x_name);
+    if (!targetDiseaseLabels.has(normalizedDiseaseLabel)) continue;
+
+    const phenotypeCurie = normalizeCurie(
+      String(row.y_id || '').startsWith('HP:') ? row.y_id : `HP:${String(row.y_id || '').padStart(7, '0')}`
+    );
+    if (!targetPhenotypeCuries.has(phenotypeCurie)) continue;
+
+    const rows = byDiseaseLabel.get(normalizedDiseaseLabel) || [];
+    rows.push({
+      sourceKey: SOURCE_KEYS.PRIMEKG,
+      assertionPresenceStatus,
+      diseaseId: row.x_id,
+      diseaseLabel: row.x_name,
+      phenotypeCurie,
+      sourceReference: `PrimeKG:${row.x_source}:${row.x_id}`,
+      evidenceCode: '',
+      frequencyRaw: '',
+      frequency: buildFrequencyInfo(''),
+      referenceText: row.display_relation || row.relation,
+      payload: {
+        relation: row.relation,
+        display_relation: row.display_relation,
+        disease_id: row.x_id,
+        disease_name: row.x_name,
+        disease_source: row.x_source,
+        phenotype_id: phenotypeCurie,
+        phenotype_name: row.y_name,
+        phenotype_source: row.y_source
+      }
+    });
+    byDiseaseLabel.set(normalizedDiseaseLabel, rows);
+  }
+
+  return byDiseaseLabel;
+}
+
+function collectSourceMatches(sourceRowsByDiseaseId, diseaseIds, packetLookup) {
   const matches = [];
   for (const diseaseId of diseaseIds) {
     for (const row of sourceRowsByDiseaseId.get(diseaseId) || []) {
       if (!packetLookup.has(row.phenotypeCurie)) continue;
       matches.push({
-        sourceKey,
-        provenanceUrl: sourceHomepageUrl,
+        sourceKey: row.sourceKey,
+        assertionPresenceStatus: row.assertionPresenceStatus || ASSERTION_STATUS.PRESENT,
+        provenanceUrl: SOURCE_CATALOG[row.sourceKey]?.homepageUrl || '',
+        sourceReference: row.sourceReference,
+        phenotypeCurie: row.phenotypeCurie,
+        phenotypeLabel: packetLookup.get(row.phenotypeCurie) || row.phenotypeCurie,
+        evidenceCode: row.evidenceCode || '',
+        frequencyCurie: row.frequency?.curie || '',
+        frequencyLabel: row.frequency?.label || '',
+        referenceText: row.referenceText || '',
+        payload: row.payload || {}
+      });
+    }
+  }
+  return matches;
+}
+
+function collectSourceMatchesByDiseaseLabel(sourceRowsByDiseaseLabel, diseaseLabels, packetLookup) {
+  const matches = [];
+  for (const diseaseLabel of diseaseLabels) {
+    const normalizedDiseaseLabel = normalizeLabel(diseaseLabel);
+    for (const row of sourceRowsByDiseaseLabel.get(normalizedDiseaseLabel) || []) {
+      if (!packetLookup.has(row.phenotypeCurie)) continue;
+      matches.push({
+        sourceKey: row.sourceKey,
+        assertionPresenceStatus: row.assertionPresenceStatus || ASSERTION_STATUS.PRESENT,
+        provenanceUrl: SOURCE_CATALOG[row.sourceKey]?.homepageUrl || '',
         sourceReference: row.sourceReference,
         phenotypeCurie: row.phenotypeCurie,
         phenotypeLabel: packetLookup.get(row.phenotypeCurie) || row.phenotypeCurie,
@@ -435,6 +614,7 @@ function dedupeManifestEntries(entries) {
       entry.side,
       entry.diseaseCurie,
       entry.phenotypeCurie,
+      entry.assertionPresenceStatus,
       entry.packetPresenceStatus,
       entry.frequencyCurie
     ].join('|');
@@ -476,20 +656,29 @@ async function main() {
   const outputPath = flags.output || DEFAULTS.outputJson;
   const generatedAt = flags.date || DEFAULTS.generatedAt;
   const roster = await loadRostersAndPackets(rosterPath);
+  const targetDiseaseLabels = new Set((roster.cases || []).flatMap((entry) => [entry.diseaseLabel]).map(normalizeLabel));
+  const targetPhenotypeCuries = new Set(
+    (roster.cases || []).flatMap((entry) => [
+      ...(entry.packet?.present || []).map((term) => term.curie),
+      ...(entry.packet?.excluded || []).map((term) => term.curie)
+    ])
+  );
 
-  const [hpoText, orphadataXml, hoomZipBuffer] = await Promise.all([
+  const [hpoText, orphadataXml, hoomZipBuffer, primeKgCsvPath] = await Promise.all([
     fetchCachedText(SOURCE_CATALOG[SOURCE_KEYS.HPO_DISEASE_PHENOTYPE].accessUrl, 'phenotype.hpoa', DEFAULTS.cacheDir),
     fetchCachedText(SOURCE_CATALOG[SOURCE_KEYS.ORPHADATA_PHENOTYPES].accessUrl, 'en_product4.xml', DEFAULTS.cacheDir),
-    fetchCachedBuffer(SOURCE_CATALOG[SOURCE_KEYS.ORPHADATA_HOOM].accessUrl, 'hoom_orphanet_2.4.zip', DEFAULTS.cacheDir)
+    fetchCachedBuffer(SOURCE_CATALOG[SOURCE_KEYS.ORPHADATA_HOOM].accessUrl, 'hoom_orphanet_2.4.zip', DEFAULTS.cacheDir),
+    fetchCachedFile(SOURCE_CATALOG[SOURCE_KEYS.PRIMEKG].accessUrl, 'primekg.csv', DEFAULTS.cacheDir)
   ]);
 
   const hoomZipPath = path.join(DEFAULTS.cacheDir, 'hoom_orphanet_2.4.zip');
   await fs.writeFile(hoomZipPath, hoomZipBuffer);
 
-  const [hpoRowsByDisease, orphadataRowsByDisease, hoomRowsByDisease] = await Promise.all([
+  const [hpoRowsByDisease, orphadataRowsByDisease, hoomRowsByDisease, primeKgRowsByDiseaseLabel] = await Promise.all([
     Promise.resolve(parseHpoAnnotations(hpoText)),
     Promise.resolve(parseOrphadataPhenotypes(orphadataXml)),
-    unzipSingleFile(hoomZipPath, 'hoom_orphanet.owl').then(parseHoom)
+    unzipSingleFile(hoomZipPath, 'hoom_orphanet.owl').then(parseHoom),
+    parsePrimeKgPhenotypeRows(primeKgCsvPath, { targetDiseaseLabels, targetPhenotypeCuries })
   ]);
 
   const diseaseByCurie = await withClient((client) => loadDiseaseContext(client, roster.cases || []));
@@ -503,49 +692,50 @@ async function main() {
       ...(rosterEntry.packet?.present || []),
       ...(rosterEntry.packet?.excluded || [])
     ]);
-    const existingDirect = diseaseContext.directPresentPhenotypes || new Set();
+    const directPhenotypes = diseaseContext.directPhenotypes || {
+      [ASSERTION_STATUS.PRESENT]: new Set(),
+      [ASSERTION_STATUS.ABSENT]: new Set()
+    };
     const omimIds = diseaseContext.omimXrefs;
     const orphanetIds = diseaseContext.orphanetXrefs.map((value) =>
       value.startsWith('ORPHA:') ? value.replace(/^ORPHA:/, 'ORPHANET:') : value
     );
+    const diseaseLabels = [...new Set([diseaseContext.diseaseLabel, rosterEntry.diseaseLabel].filter(Boolean))];
 
     const sourceMatches = [
       ...collectSourceMatches(
         hpoRowsByDisease,
         [...omimIds, ...orphanetIds],
-        packetLookup,
-        SOURCE_KEYS.HPO_DISEASE_PHENOTYPE,
-        SOURCE_CATALOG[SOURCE_KEYS.HPO_DISEASE_PHENOTYPE].homepageUrl
+        packetLookup
       ),
       ...collectSourceMatches(
         orphadataRowsByDisease,
         orphanetIds,
-        packetLookup,
-        SOURCE_KEYS.ORPHADATA_PHENOTYPES,
-        SOURCE_CATALOG[SOURCE_KEYS.ORPHADATA_PHENOTYPES].homepageUrl
+        packetLookup
       ),
       ...collectSourceMatches(
         hoomRowsByDisease,
         orphanetIds,
-        packetLookup,
-        SOURCE_KEYS.ORPHADATA_HOOM,
-        SOURCE_CATALOG[SOURCE_KEYS.ORPHADATA_HOOM].homepageUrl
-      )
+        packetLookup
+      ),
+      ...collectSourceMatchesByDiseaseLabel(primeKgRowsByDiseaseLabel, diseaseLabels, packetLookup)
     ];
 
     for (const match of sourceMatches) {
-      if (existingDirect.has(match.phenotypeCurie)) {
+      const existingForStatus = directPhenotypes[match.assertionPresenceStatus || ASSERTION_STATUS.PRESENT] || new Set();
+      if (existingForStatus.has(match.phenotypeCurie)) {
         continue;
       }
 
       const sourceDiseaseRef = match.sourceReference || diseaseContext.diseaseCurie;
-      const evidenceTag = `${match.sourceKey}_${slugify(sourceDiseaseRef)}`;
+      const evidenceTag = `${match.sourceKey}_${slugify(sourceDiseaseRef)}_${match.assertionPresenceStatus || ASSERTION_STATUS.PRESENT}`;
       const sourceRecordKey = [
         'packet-source-enrichment',
         slugify(rosterEntry.caseId),
         slugify(rosterEntry.side),
         slugify(diseaseContext.diseaseCurie),
         slugify(match.phenotypeCurie),
+        slugify(match.assertionPresenceStatus || ASSERTION_STATUS.PRESENT),
         slugify(match.sourceKey),
         slugify(match.sourceReference || 'na')
       ].join(':');
@@ -559,6 +749,7 @@ async function main() {
         diseaseLabel: diseaseContext.diseaseLabel,
         phenotypeCurie: match.phenotypeCurie,
         phenotypeLabel: match.phenotypeLabel,
+        assertionPresenceStatus: match.assertionPresenceStatus || ASSERTION_STATUS.PRESENT,
         packetPresenceStatus:
           (rosterEntry.packet?.present || []).some((term) => term.curie === match.phenotypeCurie) ? 'present' : 'excluded',
         sourceKey: match.sourceKey,
@@ -577,7 +768,7 @@ async function main() {
             geneLabel: rosterEntry.geneLabel
           },
           source: match.payload,
-          note: 'Packet-relevant source enrichment manifest generated from HPO/Product4/HOOM.'
+          note: 'Packet-relevant source enrichment manifest generated from HPO/Product4/HOOM/PrimeKG.'
         }
       });
     }
@@ -589,6 +780,7 @@ async function main() {
       left.side,
       left.diseaseCurie,
       left.phenotypeCurie,
+      left.assertionPresenceStatus,
       left.sourceKey,
       left.sourceReference
     ]
@@ -599,6 +791,7 @@ async function main() {
           right.side,
           right.diseaseCurie,
           right.phenotypeCurie,
+          right.assertionPresenceStatus,
           right.sourceKey,
           right.sourceReference
         ].join('|')
@@ -611,8 +804,10 @@ async function main() {
     outputPath,
     sourceNotes: {
       [SOURCE_KEYS.HPO_DISEASE_PHENOTYPE]: SOURCE_CATALOG[SOURCE_KEYS.HPO_DISEASE_PHENOTYPE].accessUrl,
+      [SOURCE_KEYS.HPO_DISEASE_PHENOTYPE_NEGATIVE]: 'Uses NOT-qualified rows from phenotype.hpoa.',
       [SOURCE_KEYS.ORPHADATA_PHENOTYPES]: SOURCE_CATALOG[SOURCE_KEYS.ORPHADATA_PHENOTYPES].accessUrl,
       [SOURCE_KEYS.ORPHADATA_HOOM]: SOURCE_CATALOG[SOURCE_KEYS.ORPHADATA_HOOM].accessUrl,
+      [SOURCE_KEYS.PRIMEKG]: SOURCE_CATALOG[SOURCE_KEYS.PRIMEKG].accessUrl,
       hoomAccessNote:
         'The HOOM landing page advertised hoom_orphanet_2.5.zip on 2026-03-28, but the direct file returned 404. The latest live official archive was hoom_orphanet_2.4.zip.'
     },

@@ -2589,3 +2589,27 @@ Status:
 - Read:
   - these three structured curated sources are safe to use and provenance-friendly
   - on the current miss tail they are much lower yield than the earlier OMIM / GeneReviews / core-paper manual enrichments
+
+## 2026-03-28 Global HPO Negative Benchmark
+- Added:
+  - [generateGlobalHpoNegativeManifest.js](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/generateGlobalHpoNegativeManifest.js)
+  - [source-enrichment-hpo-negative-global-pass-20260328.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/source-enrichment-hpo-negative-global-pass-20260328.md)
+  - [source-enrichment-manifest-hpo-negative-global-20260328.json](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/source-enrichment-manifest-hpo-negative-global-20260328.json)
+  - [source-enrichment-apply-log-hpo-negative-global-20260328.json](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/source-enrichment-apply-log-hpo-negative-global-20260328.json)
+  - [official-v1-enrich-hpo-negative-global-20260328.json](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/official-v1-enrich-hpo-negative-global-20260328.json)
+  - [official-v1-enrich-hpo-negative-global-20260328.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/official-v1-enrich-hpo-negative-global-20260328.md)
+- Import result:
+  - `727` HPO `NOT` assertions mapped cleanly into the graph across `352` diseases
+  - `0` unmatched disease IDs
+  - `0` missing phenotype entities
+  - `0` skipped already-present absent assertions
+- Benchmark result on staging with the baseline `1.0` scorer:
+  - `87 found`
+  - `42 top-1`
+  - `53 top-5`
+  - `62 top-10`
+  - `MRR 0.488760`
+- Read:
+  - the negative path is now proven end-to-end on a full-graph import, not just a miss-tail roster slice
+  - absent assertions alone do not rescue the current unresolved miss set under the baseline scorer
+  - movement was limited to `7` one-rank shifts with no recall gain
