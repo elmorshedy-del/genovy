@@ -1,0 +1,189 @@
+{
+  "createdAt": "2026-03-28",
+  "description": "Broad miss-tail roster generated from unsolved reopen plus SETD2 control.",
+  "phenopacketDir": "/Users/ahmedelmorshedy/Genovy/output/pheval-official-sample-100/phenopackets",
+  "cases": [
+    {
+      "caseId": "PMID_29330883_Subject9",
+      "side": "truth-side",
+      "geneLabel": "RERE",
+      "diseaseCurie": "MONDO:0014857",
+      "diseaseLabel": "neurodevelopmental disorder with or without anomalies of the brain, eye, or heart"
+    },
+    {
+      "caseId": "PMID_29330883_Subject9",
+      "side": "rival-side",
+      "geneLabel": "MED13",
+      "diseaseCurie": "MONDO:0032485",
+      "diseaseLabel": "intellectual developmental disorder 61"
+    },
+    {
+      "caseId": "PMID_30580808_Lo_twin_2-Fam-52",
+      "side": "truth-side",
+      "geneLabel": "SMARCC2",
+      "diseaseCurie": "MONDO:0032702",
+      "diseaseLabel": "Coffin-Siris syndrome 8"
+    },
+    {
+      "caseId": "PMID_30580808_Lo_twin_2-Fam-52",
+      "side": "rival-side",
+      "geneLabel": "NLGN1",
+      "diseaseCurie": "MONDO:0030004",
+      "diseaseLabel": "autism, susceptibility to, 20"
+    },
+    {
+      "caseId": "PMID_32376980_11",
+      "side": "truth-side",
+      "geneLabel": "TRAF7",
+      "diseaseCurie": "MONDO:0032572",
+      "diseaseLabel": "cardiac, facial, and digital anomalies with developmental delay"
+    },
+    {
+      "caseId": "PMID_32376980_11",
+      "side": "rival-side",
+      "geneLabel": "DOT1L",
+      "diseaseCurie": "MONDO:0979246",
+      "diseaseLabel": "Nil-Deshwar neurodevelopmental syndrome"
+    },
+    {
+      "caseId": "PMID_35190816_STX_26865513_Patient_45",
+      "side": "truth-side",
+      "geneLabel": "STXBP1",
+      "diseaseCurie": "MONDO:0012812",
+      "diseaseLabel": "developmental and epileptic encephalopathy, 4"
+    },
+    {
+      "caseId": "PMID_35190816_STX_26865513_Patient_45",
+      "side": "rival-side",
+      "geneLabel": "",
+      "diseaseCurie": "",
+      "diseaseLabel": ""
+    },
+    {
+      "caseId": "PMID_35190816_STX_28944233_270001",
+      "side": "truth-side",
+      "geneLabel": "STXBP1",
+      "diseaseCurie": "MONDO:0008939",
+      "diseaseLabel": "isolated cerebellar hypoplasia/agenesis"
+    },
+    {
+      "caseId": "PMID_35190816_STX_28944233_270001",
+      "side": "rival-side",
+      "geneLabel": "RAI1",
+      "diseaseCurie": "MONDO:0008434",
+      "diseaseLabel": "Smith-Magenis syndrome"
+    },
+    {
+      "caseId": "PMID_36331550_Family16Patient21",
+      "side": "truth-side",
+      "geneLabel": "SPTAN1",
+      "diseaseCurie": "MONDO:0957815",
+      "diseaseLabel": "developmental delay with or without epilepsy"
+    },
+    {
+      "caseId": "PMID_36331550_Family16Patient21",
+      "side": "rival-side",
+      "geneLabel": "ZBTB11",
+      "diseaseCurie": "MONDO:0032715",
+      "diseaseLabel": "intellectual developmental disorder, autosomal recessive 69"
+    },
+    {
+      "caseId": "PMID_36446582_Goldenberg2016_P13",
+      "side": "truth-side",
+      "geneLabel": "ANKRD11",
+      "diseaseCurie": "MONDO:0007846",
+      "diseaseLabel": "KBG syndrome"
+    },
+    {
+      "caseId": "PMID_36446582_Goldenberg2016_P13",
+      "side": "rival-side",
+      "geneLabel": "GDF5",
+      "diseaseCurie": "MONDO:0007215",
+      "diseaseLabel": "brachydactyly type A1"
+    },
+    {
+      "caseId": "PMID_36446582_Miyatake2017_P1",
+      "side": "truth-side",
+      "geneLabel": "ANKRD11",
+      "diseaseCurie": "MONDO:0007846",
+      "diseaseLabel": "KBG syndrome"
+    },
+    {
+      "caseId": "PMID_36446582_Miyatake2017_P1",
+      "side": "rival-side",
+      "geneLabel": "GAL",
+      "diseaseCurie": "MONDO:0014650",
+      "diseaseLabel": "familial temporal lobe epilepsy 8"
+    },
+    {
+      "caseId": "PMID_37156989_P1",
+      "side": "truth-side",
+      "geneLabel": "SOCS1",
+      "diseaseCurie": "MONDO:0800130",
+      "diseaseLabel": "autoinflammatory syndrome with immunodeficiency"
+    },
+    {
+      "caseId": "PMID_37156989_P1",
+      "side": "rival-side",
+      "geneLabel": "CTLA4",
+      "diseaseCurie": "MONDO:0014493",
+      "diseaseLabel": "autoimmune lymphoproliferative syndrome due to CTLA4 haploinsufficiency"
+    },
+    {
+      "caseId": "PMID_37761890_41",
+      "side": "truth-side",
+      "geneLabel": "PPP2R1A",
+      "diseaseCurie": "MONDO:0014605",
+      "diseaseLabel": "Houge-Janssens syndrome 2"
+    },
+    {
+      "caseId": "PMID_37761890_41",
+      "side": "rival-side",
+      "geneLabel": "HNRNPC",
+      "diseaseCurie": "MONDO:0958203",
+      "diseaseLabel": "intellectual developmental disorder, autosomal dominant 74"
+    },
+    {
+      "caseId": "PMID_37761890_43",
+      "side": "truth-side",
+      "geneLabel": "PPP2R1A",
+      "diseaseCurie": "MONDO:0014605",
+      "diseaseLabel": "Houge-Janssens syndrome 2"
+    },
+    {
+      "caseId": "PMID_37761890_43",
+      "side": "rival-side",
+      "geneLabel": "MACF1",
+      "diseaseCurie": "MONDO:0032677",
+      "diseaseLabel": "lissencephaly 9 with complex brainstem malformation"
+    },
+    {
+      "caseId": "PMID_37962958_43",
+      "side": "truth-side",
+      "geneLabel": "U2AF2",
+      "diseaseCurie": "MONDO:0957810",
+      "diseaseLabel": "neurodevelopmental disorder with poor growth and dysmorphic facies"
+    },
+    {
+      "caseId": "PMID_37962958_43",
+      "side": "rival-side",
+      "geneLabel": "LRRC7",
+      "diseaseCurie": "MONDO:0980748",
+      "diseaseLabel": "intellectual developmental disorder, autosomal dominant 77"
+    },
+    {
+      "caseId": "PMID_33766796_16",
+      "side": "truth-side",
+      "geneLabel": "SETD2",
+      "diseaseCurie": "MONDO:0014791",
+      "diseaseLabel": "Luscan-Lumish syndrome"
+    },
+    {
+      "caseId": "PMID_33766796_16",
+      "side": "rival-side",
+      "geneLabel": "TCF20",
+      "diseaseCurie": "MONDO:0032745",
+      "diseaseLabel": "developmental delay with variable intellectual impairment and behavioral abnormalities"
+    }
+  ]
+}

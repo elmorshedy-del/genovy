@@ -2,6 +2,8 @@ export const SOURCE_KEYS = Object.freeze({
   MONDO_ONTOLOGY: 'mondo_ontology',
   HPO_ONTOLOGY: 'hpo_ontology',
   HPO_DISEASE_PHENOTYPE: 'hpo_disease_phenotype',
+  ORPHADATA_PHENOTYPES: 'orphadata_phenotypes',
+  ORPHADATA_HOOM: 'orphadata_hoom',
   ORPHADATA_NATURAL_HISTORY: 'orphadata_natural_history',
   HPO_GENE_DISEASE: 'hpo_gene_disease',
   HPO_GENE_PHENOTYPE: 'hpo_gene_phenotype',
@@ -51,6 +53,25 @@ export const SOURCE_CATALOG = Object.freeze({
     accessUrl: 'https://github.com/obophenotype/human-phenotype-ontology/releases/latest/download/phenotype.hpoa',
     updateFrequency: 'release-based',
     entityScope: 'disease,phenotype'
+  },
+  [SOURCE_KEYS.ORPHADATA_PHENOTYPES]: {
+    sourceKey: SOURCE_KEYS.ORPHADATA_PHENOTYPES,
+    displayName: 'Orphadata Phenotypes',
+    description: 'Orphanet disease-to-HPO phenotype assertions from Product 4 XML.',
+    homepageUrl: 'https://sciences.orphadata.com/phenotypes/',
+    accessUrl: 'https://www.orphadata.com/data/xml/en_product4.xml',
+    updateFrequency: 'bi-annual',
+    entityScope: 'disease,phenotype'
+  },
+  [SOURCE_KEYS.ORPHADATA_HOOM]: {
+    sourceKey: SOURCE_KEYS.ORPHADATA_HOOM,
+    displayName: 'Orphadata HOOM',
+    description:
+      'Orphanet HOOM phenotype-frequency ontology. Uses the latest live archive available on import day; the 2.5 landing-page link returned 404 on 2026-03-28, so 2.4 is pinned here until upstream restores the newer file.',
+    homepageUrl: 'https://sciences.orphadata.com/hoom/',
+    accessUrl: 'https://www.orphadata.com/data/ontologies/hoom/hoom_orphanet_2.4.zip',
+    updateFrequency: 'release-based',
+    entityScope: 'disease,phenotype,frequency'
   },
   [SOURCE_KEYS.ORPHADATA_NATURAL_HISTORY]: {
     sourceKey: SOURCE_KEYS.ORPHADATA_NATURAL_HISTORY,

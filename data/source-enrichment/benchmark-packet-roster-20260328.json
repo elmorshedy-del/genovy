@@ -1,0 +1,77 @@
+{
+  "createdAt": "2026-03-28",
+  "description": "Benchmark-targeted truth/rival disease roster for packet-relevant source enrichment from HPO disease phenotype annotations, Orphadata Product 4 phenotypes, and HOOM.",
+  "phenopacketDir": "/Users/ahmedelmorshedy/Genovy/output/pheval-official-sample-100/phenopackets",
+  "cases": [
+    {
+      "caseId": "PMID_33766796_16",
+      "side": "truth-side",
+      "geneLabel": "SETD2",
+      "diseaseCurie": "MONDO:0014791",
+      "diseaseLabel": "Luscan-Lumish syndrome"
+    },
+    {
+      "caseId": "PMID_33766796_16",
+      "side": "rival-side",
+      "geneLabel": "TCF20",
+      "diseaseCurie": "MONDO:0032745",
+      "diseaseLabel": "developmental delay with variable intellectual impairment and behavioral abnormalities"
+    },
+    {
+      "caseId": "PMID_37156989_P1",
+      "side": "truth-side",
+      "geneLabel": "SOCS1",
+      "diseaseCurie": "MONDO:0800130",
+      "diseaseLabel": "autoinflammatory syndrome with immunodeficiency"
+    },
+    {
+      "caseId": "PMID_37156989_P1",
+      "side": "rival-side",
+      "geneLabel": "CTLA4",
+      "diseaseCurie": "MONDO:0014493",
+      "diseaseLabel": "autoimmune lymphoproliferative syndrome due to CTLA4 haploinsufficiency"
+    },
+    {
+      "caseId": "PMID_37761890_41",
+      "side": "truth-side",
+      "geneLabel": "PPP2R1A",
+      "diseaseCurie": "MONDO:0014605",
+      "diseaseLabel": "Houge-Janssens syndrome 2"
+    },
+    {
+      "caseId": "PMID_37761890_41",
+      "side": "rival-side",
+      "geneLabel": "HNRNPC",
+      "diseaseCurie": "MONDO:0958203",
+      "diseaseLabel": "intellectual developmental disorder, autosomal dominant 74"
+    },
+    {
+      "caseId": "PMID_37761890_43",
+      "side": "truth-side",
+      "geneLabel": "PPP2R1A",
+      "diseaseCurie": "MONDO:0014605",
+      "diseaseLabel": "Houge-Janssens syndrome 2"
+    },
+    {
+      "caseId": "PMID_37761890_43",
+      "side": "rival-side",
+      "geneLabel": "MACF1",
+      "diseaseCurie": "MONDO:0032677",
+      "diseaseLabel": "lissencephaly 9 with complex brainstem malformation"
+    },
+    {
+      "caseId": "PMID_37962958_43",
+      "side": "truth-side",
+      "geneLabel": "U2AF2",
+      "diseaseCurie": "MONDO:0957810",
+      "diseaseLabel": "developmental delay, dysmorphic facies, and brain anomalies"
+    },
+    {
+      "caseId": "PMID_37962958_43",
+      "side": "rival-side",
+      "geneLabel": "LRRC7",
+      "diseaseCurie": "MONDO:0980748",
+      "diseaseLabel": "intellectual developmental disorder, autosomal dominant 77"
+    }
+  ]
+}

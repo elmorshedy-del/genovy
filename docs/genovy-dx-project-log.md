@@ -1224,3 +1224,30 @@ Official 100-case phenotype-only gene benchmark vs Exomiser.
 - Interpretation:
   - this turns the remaining miss tail into one standardized evidence surface instead of fragmented case notes
   - it should make the next prioritization pass much cleaner because all unresolved cases now share the same reopen format
+
+## 2026-03-28 Three-Source Structured Enrichment Pass
+- Added:
+  - [benchmark-miss-tail-broad-roster-20260328.json](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/data/source-enrichment/benchmark-miss-tail-broad-roster-20260328.json)
+  - [generatePacketSourceEnrichmentManifest.js](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/generatePacketSourceEnrichmentManifest.js)
+  - [applySourceEnrichmentManifest.js](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/applySourceEnrichmentManifest.js)
+  - [source-enrichment-three-source-pass-20260328.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/source-enrichment-three-source-pass-20260328.md)
+  - [source-enrichment-manifest-broad-20260328.json](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/source-enrichment-manifest-broad-20260328.json)
+  - [source-enrichment-apply-log-broad-20260328.json](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/source-enrichment-apply-log-broad-20260328.json)
+  - [official-v1-enrich-three-source-20260328.json](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/official-v1-enrich-three-source-20260328.json)
+  - [official-v1-enrich-three-source-20260328.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/official-v1-enrich-three-source-20260328.md)
+- Result:
+  - created a provenance-carrying manifest model that records:
+    - disease entity
+    - phenotype
+    - side (`truth-side` / `rival-side`)
+    - date added
+    - evidence tag
+    - supporting source rows
+  - applied the structured-source manifest on the staging clone only
+  - reran the full official benchmark immediately after with no other changes
+- Outcome:
+  - only `4` unique packet-relevant additions were discovered across the broad unresolved roster
+  - benchmark stayed flat at `87 found`, `42 top-1`, `MRR 0.488736`
+- Interpretation:
+  - these structured sources are worth keeping as reproducible, provenance-rich enrichment infrastructure
+  - but they did not recover any additional misses on their own in this pass

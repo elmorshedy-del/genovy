@@ -2560,3 +2560,32 @@ Status:
   - some misses are still mainly disease-surface undercoverage (`RERE`, `TRAF7`, `ANKRD11`, `SOCS1`, `U2AF2`)
   - some are clearly ranking/negative-evidence failures (`SPTAN1`, `SMARCC2`)
   - some remain mixed (`PPP2R1A`, `STXBP1`)
+
+## 2026-03-28 Three-Source Structured Enrichment Pass
+- Built a source-enrichment pipeline for:
+  - `Orphadata Phenotypes`
+  - `Orphadata HOOM`
+  - `HPO annotation files`
+- Added permanent files:
+  - [benchmark-miss-tail-broad-roster-20260328.json](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/data/source-enrichment/benchmark-miss-tail-broad-roster-20260328.json)
+  - [generatePacketSourceEnrichmentManifest.js](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/generatePacketSourceEnrichmentManifest.js)
+  - [applySourceEnrichmentManifest.js](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/applySourceEnrichmentManifest.js)
+  - [source-enrichment-three-source-pass-20260328.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/source-enrichment-three-source-pass-20260328.md)
+- Manifest/apply artifacts:
+  - [source-enrichment-manifest-broad-20260328.json](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/source-enrichment-manifest-broad-20260328.json)
+  - [source-enrichment-apply-log-broad-20260328.json](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/source-enrichment-apply-log-broad-20260328.json)
+- Benchmark artifacts:
+  - [official-v1-enrich-three-source-20260328.json](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/official-v1-enrich-three-source-20260328.json)
+  - [official-v1-enrich-three-source-20260328.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/official-v1-enrich-three-source-20260328.md)
+- Result:
+  - only `4` unique packet-relevant disease-term additions were found across the broad unresolved miss roster
+  - all `4` were truth-side terms with dual support from `orphadata_phenotypes` and `orphadata_hoom`
+  - the staging benchmark stayed flat at:
+    - `87 found`
+    - `42 top-1`
+    - `53 top-5`
+    - `62 top-10`
+    - `MRR 0.488736`
+- Read:
+  - these three structured curated sources are safe to use and provenance-friendly
+  - on the current miss tail they are much lower yield than the earlier OMIM / GeneReviews / core-paper manual enrichments
