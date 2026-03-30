@@ -1,0 +1,452 @@
+{
+  "createdAt": "2026-03-30",
+  "basedOn": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/data/source-enrichment/genereviews-chapter-policy-seeded-20260329.json",
+  "defaults": {
+    "ingestionDecision": "review_required",
+    "chapterScope": "unclassified",
+    "targetingMode": "manual_required",
+    "notes": "Do not auto-ingest GeneReviews into the graph until the chapter scope and disease targets are reviewed explicitly."
+  },
+  "chapters": [
+    {
+      "chapterKey": "3_hydroxyisobutyryl_coa_hydrolase_deficiency",
+      "nbkId": "",
+      "chapterTitle": "3-Hydroxyisobutyryl-CoA Hydrolase Deficiency",
+      "chapterPath": "/sites/books/n/gene/hibch-def/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/hibch-def/",
+      "rosterMappingStatus": "exact_label_or_alias",
+      "rosterMappedDiseaseCurie": "MONDO:0009603",
+      "rosterMappedDiseaseLabel": "3-hydroxyisobutyryl-CoA hydrolase deficiency",
+      "recommendedDecision": "candidate_auto_accept",
+      "recommendedScope": "candidate_disease_specific",
+      "recommendationReason": "Exact disease-label mapping exists, but manual approval is still required before ingestion.",
+      "policy": {
+        "ingestionDecision": "auto_accept",
+        "chapterScope": "disease_specific",
+        "targetingMode": "roster_exact_single_target",
+        "diseaseTargets": [
+          "MONDO:0009603"
+        ],
+        "notes": "Auto-seeded because the GeneReviews title maps exactly to one non-placeholder disease in the current graph and does not look like a mixed/related-disorders chapter."
+      }
+    },
+    {
+      "chapterKey": "3_m_syndrome",
+      "nbkId": "",
+      "chapterTitle": "3-M Syndrome",
+      "chapterPath": "/sites/books/n/gene/gr_3ms/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/gr_3ms/",
+      "rosterMappingStatus": "exact_label_or_alias",
+      "rosterMappedDiseaseCurie": "MONDO:0007477",
+      "rosterMappedDiseaseLabel": "3-M syndrome",
+      "recommendedDecision": "candidate_auto_accept",
+      "recommendedScope": "candidate_disease_specific",
+      "recommendationReason": "Exact disease-label mapping exists, but manual approval is still required before ingestion.",
+      "policy": {
+        "ingestionDecision": "auto_accept",
+        "chapterScope": "disease_specific",
+        "targetingMode": "roster_exact_single_target",
+        "diseaseTargets": [
+          "MONDO:0007477"
+        ],
+        "notes": "Auto-seeded because the GeneReviews title maps exactly to one non-placeholder disease in the current graph and does not look like a mixed/related-disorders chapter."
+      }
+    },
+    {
+      "chapterKey": "7q11_23_duplication_syndrome",
+      "nbkId": "",
+      "chapterTitle": "7q11.23 Duplication Syndrome",
+      "chapterPath": "/sites/books/n/gene/dup7q11_23/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/dup7q11_23/",
+      "rosterMappingStatus": "exact_label_or_alias",
+      "rosterMappedDiseaseCurie": "MONDO:0012342",
+      "rosterMappedDiseaseLabel": "7q11.23 microduplication syndrome",
+      "recommendedDecision": "candidate_auto_accept",
+      "recommendedScope": "candidate_disease_specific",
+      "recommendationReason": "Exact disease-label mapping exists, but manual approval is still required before ingestion.",
+      "policy": {
+        "ingestionDecision": "auto_accept",
+        "chapterScope": "disease_specific",
+        "targetingMode": "roster_exact_single_target",
+        "diseaseTargets": [
+          "MONDO:0012342"
+        ],
+        "notes": "Auto-seeded because the GeneReviews title maps exactly to one non-placeholder disease in the current graph and does not look like a mixed/related-disorders chapter."
+      }
+    },
+    {
+      "chapterKey": "17q12_recurrent_deletion_syndrome",
+      "nbkId": "",
+      "chapterTitle": "17q12 Recurrent Deletion Syndrome",
+      "chapterPath": "/sites/books/n/gene/mdel17q12/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/mdel17q12/",
+      "rosterMappingStatus": "exact_label_or_alias",
+      "rosterMappedDiseaseCurie": "MONDO:0013797",
+      "rosterMappedDiseaseLabel": "chromosome 17q12 deletion syndrome",
+      "recommendedDecision": "candidate_auto_accept",
+      "recommendedScope": "candidate_disease_specific",
+      "recommendationReason": "Exact disease-label mapping exists, but manual approval is still required before ingestion.",
+      "policy": {
+        "ingestionDecision": "auto_accept",
+        "chapterScope": "disease_specific",
+        "targetingMode": "roster_exact_single_target",
+        "diseaseTargets": [
+          "MONDO:0013797"
+        ],
+        "notes": "Auto-seeded because the GeneReviews title maps exactly to one non-placeholder disease in the current graph and does not look like a mixed/related-disorders chapter."
+      }
+    },
+    {
+      "chapterKey": "22q11_2_deletion_syndrome",
+      "nbkId": "",
+      "chapterTitle": "22q11.2 Deletion Syndrome",
+      "chapterPath": "/sites/books/n/gene/gr_22q11deletion/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/gr_22q11deletion/",
+      "rosterMappingStatus": "exact_label_or_alias",
+      "rosterMappedDiseaseCurie": "MONDO:0008564",
+      "rosterMappedDiseaseLabel": "22q11.2 deletion syndrome",
+      "recommendedDecision": "candidate_auto_accept",
+      "recommendedScope": "candidate_disease_specific",
+      "recommendationReason": "Exact disease-label mapping exists, but manual approval is still required before ingestion.",
+      "policy": {
+        "ingestionDecision": "auto_accept",
+        "chapterScope": "disease_specific",
+        "targetingMode": "roster_exact_single_target",
+        "diseaseTargets": [
+          "MONDO:0008564"
+        ],
+        "notes": "Auto-seeded because the GeneReviews title maps exactly to one non-placeholder disease in the current graph and does not look like a mixed/related-disorders chapter."
+      }
+    },
+    {
+      "chapterKey": "abetalipoproteinemia",
+      "nbkId": "",
+      "chapterTitle": "Abetalipoproteinemia",
+      "chapterPath": "/sites/books/n/gene/ab-lipo-p/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/ab-lipo-p/",
+      "rosterMappingStatus": "exact_label_or_alias",
+      "rosterMappedDiseaseCurie": "MONDO:0008692",
+      "rosterMappedDiseaseLabel": "abetalipoproteinemia",
+      "recommendedDecision": "candidate_auto_accept",
+      "recommendedScope": "candidate_disease_specific",
+      "recommendationReason": "Exact disease-label mapping exists, but manual approval is still required before ingestion.",
+      "policy": {
+        "ingestionDecision": "auto_accept",
+        "chapterScope": "disease_specific",
+        "targetingMode": "roster_exact_single_target",
+        "diseaseTargets": [
+          "MONDO:0008692"
+        ],
+        "notes": "Auto-seeded because the GeneReviews title maps exactly to one non-placeholder disease in the current graph and does not look like a mixed/related-disorders chapter."
+      }
+    },
+    {
+      "chapterKey": "aceruloplasminemia",
+      "nbkId": "",
+      "chapterTitle": "Aceruloplasminemia",
+      "chapterPath": "/sites/books/n/gene/acp/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/acp/",
+      "rosterMappingStatus": "exact_label_or_alias",
+      "rosterMappedDiseaseCurie": "MONDO:0011426",
+      "rosterMappedDiseaseLabel": "aceruloplasminemia",
+      "recommendedDecision": "candidate_auto_accept",
+      "recommendedScope": "candidate_disease_specific",
+      "recommendationReason": "Exact disease-label mapping exists, but manual approval is still required before ingestion.",
+      "policy": {
+        "ingestionDecision": "auto_accept",
+        "chapterScope": "disease_specific",
+        "targetingMode": "roster_exact_single_target",
+        "diseaseTargets": [
+          "MONDO:0011426"
+        ],
+        "notes": "Auto-seeded because the GeneReviews title maps exactly to one non-placeholder disease in the current graph and does not look like a mixed/related-disorders chapter."
+      }
+    },
+    {
+      "chapterKey": "achondrogenesis_type_1b",
+      "nbkId": "",
+      "chapterTitle": "Achondrogenesis Type 1B",
+      "chapterPath": "/sites/books/n/gene/achon1b/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/achon1b/",
+      "rosterMappingStatus": "exact_label_or_alias",
+      "rosterMappedDiseaseCurie": "MONDO:0010966",
+      "rosterMappedDiseaseLabel": "Achondrogenesis type 1B",
+      "recommendedDecision": "candidate_auto_accept",
+      "recommendedScope": "candidate_disease_specific",
+      "recommendationReason": "Exact disease-label mapping exists, but manual approval is still required before ingestion.",
+      "policy": {
+        "ingestionDecision": "auto_accept",
+        "chapterScope": "disease_specific",
+        "targetingMode": "roster_exact_single_target",
+        "diseaseTargets": [
+          "MONDO:0010966"
+        ],
+        "notes": "Auto-seeded because the GeneReviews title maps exactly to one non-placeholder disease in the current graph and does not look like a mixed/related-disorders chapter."
+      }
+    },
+    {
+      "chapterKey": "achondroplasia",
+      "nbkId": "",
+      "chapterTitle": "Achondroplasia",
+      "chapterPath": "/sites/books/n/gene/achondroplasia/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/achondroplasia/",
+      "rosterMappingStatus": "exact_label_or_alias",
+      "rosterMappedDiseaseCurie": "MONDO:0007037",
+      "rosterMappedDiseaseLabel": "achondroplasia",
+      "recommendedDecision": "candidate_auto_accept",
+      "recommendedScope": "candidate_disease_specific",
+      "recommendationReason": "Exact disease-label mapping exists, but manual approval is still required before ingestion.",
+      "policy": {
+        "ingestionDecision": "auto_accept",
+        "chapterScope": "disease_specific",
+        "targetingMode": "roster_exact_single_target",
+        "diseaseTargets": [
+          "MONDO:0007037"
+        ],
+        "notes": "Auto-seeded because the GeneReviews title maps exactly to one non-placeholder disease in the current graph and does not look like a mixed/related-disorders chapter."
+      }
+    },
+    {
+      "chapterKey": "achromatopsia",
+      "nbkId": "",
+      "chapterTitle": "Achromatopsia",
+      "chapterPath": "/sites/books/n/gene/achm/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/achm/",
+      "rosterMappingStatus": "exact_label_or_alias",
+      "rosterMappedDiseaseCurie": "MONDO:0018852",
+      "rosterMappedDiseaseLabel": "achromatopsia",
+      "recommendedDecision": "candidate_auto_accept",
+      "recommendedScope": "candidate_disease_specific",
+      "recommendationReason": "Exact disease-label mapping exists, but manual approval is still required before ingestion.",
+      "policy": {
+        "ingestionDecision": "auto_accept",
+        "chapterScope": "disease_specific",
+        "targetingMode": "roster_exact_single_target",
+        "diseaseTargets": [
+          "MONDO:0018852"
+        ],
+        "notes": "Auto-seeded because the GeneReviews title maps exactly to one non-placeholder disease in the current graph and does not look like a mixed/related-disorders chapter."
+      }
+    },
+    {
+      "chapterKey": "acid_sphingomyelinase_deficiency",
+      "nbkId": "",
+      "chapterTitle": "Acid Sphingomyelinase Deficiency",
+      "chapterPath": "/sites/books/n/gene/npab/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/npab/",
+      "rosterMappingStatus": "exact_label_or_alias",
+      "rosterMappedDiseaseCurie": "MONDO:0100464",
+      "rosterMappedDiseaseLabel": "acid sphingomyelinase deficiency",
+      "recommendedDecision": "candidate_auto_accept",
+      "recommendedScope": "candidate_disease_specific",
+      "recommendationReason": "Exact disease-label mapping exists, but manual approval is still required before ingestion.",
+      "policy": {
+        "ingestionDecision": "auto_accept",
+        "chapterScope": "disease_specific",
+        "targetingMode": "roster_exact_single_target",
+        "diseaseTargets": [
+          "MONDO:0100464"
+        ],
+        "notes": "Auto-seeded because the GeneReviews title maps exactly to one non-placeholder disease in the current graph and does not look like a mixed/related-disorders chapter."
+      }
+    },
+    {
+      "chapterKey": "acute_intermittent_porphyria",
+      "nbkId": "",
+      "chapterTitle": "Acute Intermittent Porphyria",
+      "chapterPath": "/sites/books/n/gene/aip/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/aip/",
+      "rosterMappingStatus": "exact_label_or_alias",
+      "rosterMappedDiseaseCurie": "MONDO:0008294",
+      "rosterMappedDiseaseLabel": "acute intermittent porphyria",
+      "recommendedDecision": "candidate_auto_accept",
+      "recommendedScope": "candidate_disease_specific",
+      "recommendationReason": "Exact disease-label mapping exists, but manual approval is still required before ingestion.",
+      "policy": {
+        "ingestionDecision": "auto_accept",
+        "chapterScope": "disease_specific",
+        "targetingMode": "roster_exact_single_target",
+        "diseaseTargets": [
+          "MONDO:0008294"
+        ],
+        "notes": "Auto-seeded because the GeneReviews title maps exactly to one non-placeholder disease in the current graph and does not look like a mixed/related-disorders chapter."
+      }
+    },
+    {
+      "chapterKey": "adenine_phosphoribosyltransferase_deficiency",
+      "nbkId": "",
+      "chapterTitle": "Adenine Phosphoribosyltransferase Deficiency",
+      "chapterPath": "/sites/books/n/gene/aprt-def/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/aprt-def/",
+      "rosterMappingStatus": "exact_label_or_alias",
+      "rosterMappedDiseaseCurie": "MONDO:0013869",
+      "rosterMappedDiseaseLabel": "adenine phosphoribosyltransferase deficiency",
+      "recommendedDecision": "candidate_auto_accept",
+      "recommendedScope": "candidate_disease_specific",
+      "recommendationReason": "Exact disease-label mapping exists, but manual approval is still required before ingestion.",
+      "policy": {
+        "ingestionDecision": "auto_accept",
+        "chapterScope": "disease_specific",
+        "targetingMode": "roster_exact_single_target",
+        "diseaseTargets": [
+          "MONDO:0013869"
+        ],
+        "notes": "Auto-seeded because the GeneReviews title maps exactly to one non-placeholder disease in the current graph and does not look like a mixed/related-disorders chapter."
+      }
+    },
+    {
+      "chapterKey": "adenosine_deaminase_2_deficiency",
+      "nbkId": "",
+      "chapterTitle": "Adenosine Deaminase 2 Deficiency",
+      "chapterPath": "/sites/books/n/gene/ada2-def/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/ada2-def/",
+      "rosterMappingStatus": "exact_label_or_alias",
+      "rosterMappedDiseaseCurie": "MONDO:0014306",
+      "rosterMappedDiseaseLabel": "deficiency of adenosine deaminase 2",
+      "recommendedDecision": "candidate_auto_accept",
+      "recommendedScope": "candidate_disease_specific",
+      "recommendationReason": "Exact disease-label mapping exists, but manual approval is still required before ingestion.",
+      "policy": {
+        "ingestionDecision": "auto_accept",
+        "chapterScope": "disease_specific",
+        "targetingMode": "roster_exact_single_target",
+        "diseaseTargets": [
+          "MONDO:0014306"
+        ],
+        "notes": "Auto-seeded because the GeneReviews title maps exactly to one non-placeholder disease in the current graph and does not look like a mixed/related-disorders chapter."
+      }
+    },
+    {
+      "chapterKey": "adenosine_deaminase_deficiency",
+      "nbkId": "",
+      "chapterTitle": "Adenosine Deaminase Deficiency",
+      "chapterPath": "/sites/books/n/gene/ada/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/ada/",
+      "rosterMappingStatus": "exact_label_or_alias",
+      "rosterMappedDiseaseCurie": "MONDO:0007064",
+      "rosterMappedDiseaseLabel": "severe combined immunodeficiency, autosomal recessive, T cell-negative, B cell-negative, NK cell-negative, due to adenosine deaminase deficiency",
+      "recommendedDecision": "candidate_auto_accept",
+      "recommendedScope": "candidate_disease_specific",
+      "recommendationReason": "Exact disease-label mapping exists, but manual approval is still required before ingestion.",
+      "policy": {
+        "ingestionDecision": "auto_accept",
+        "chapterScope": "disease_specific",
+        "targetingMode": "roster_exact_single_target",
+        "diseaseTargets": [
+          "MONDO:0007064"
+        ],
+        "notes": "Auto-seeded because the GeneReviews title maps exactly to one non-placeholder disease in the current graph and does not look like a mixed/related-disorders chapter."
+      }
+    },
+    {
+      "chapterKey": "adult_refsum_disease",
+      "nbkId": "",
+      "chapterTitle": "Adult Refsum Disease",
+      "chapterPath": "/sites/books/n/gene/refsum/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/refsum/",
+      "rosterMappingStatus": "exact_label_or_alias",
+      "rosterMappedDiseaseCurie": "MONDO:0009958",
+      "rosterMappedDiseaseLabel": "adult Refsum disease",
+      "recommendedDecision": "candidate_auto_accept",
+      "recommendedScope": "candidate_disease_specific",
+      "recommendationReason": "Exact disease-label mapping exists, but manual approval is still required before ingestion.",
+      "policy": {
+        "ingestionDecision": "auto_accept",
+        "chapterScope": "disease_specific",
+        "targetingMode": "roster_exact_single_target",
+        "diseaseTargets": [
+          "MONDO:0009958"
+        ],
+        "notes": "Auto-seeded because the GeneReviews title maps exactly to one non-placeholder disease in the current graph and does not look like a mixed/related-disorders chapter."
+      }
+    },
+    {
+      "chapterKey": "aicardi_gouti_res_syndrome",
+      "nbkId": "",
+      "chapterTitle": "Aicardi-Gouti\u00e8res Syndrome",
+      "chapterPath": "/sites/books/n/gene/ags/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/ags/",
+      "rosterMappingStatus": "exact_label_or_alias",
+      "rosterMappedDiseaseCurie": "MONDO:0018866",
+      "rosterMappedDiseaseLabel": "Aicardi-Gouti\u00e8res syndrome",
+      "recommendedDecision": "candidate_auto_accept",
+      "recommendedScope": "candidate_disease_specific",
+      "recommendationReason": "Exact disease-label mapping exists, but manual approval is still required before ingestion.",
+      "policy": {
+        "ingestionDecision": "auto_accept",
+        "chapterScope": "disease_specific",
+        "targetingMode": "roster_exact_single_target",
+        "diseaseTargets": [
+          "MONDO:0018866"
+        ],
+        "notes": "Auto-seeded because the GeneReviews title maps exactly to one non-placeholder disease in the current graph and does not look like a mixed/related-disorders chapter."
+      }
+    },
+    {
+      "chapterKey": "aicardi_syndrome",
+      "nbkId": "",
+      "chapterTitle": "Aicardi Syndrome",
+      "chapterPath": "/sites/books/n/gene/aic/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/aic/",
+      "rosterMappingStatus": "exact_label_or_alias",
+      "rosterMappedDiseaseCurie": "MONDO:0010568",
+      "rosterMappedDiseaseLabel": "Aicardi syndrome",
+      "recommendedDecision": "candidate_auto_accept",
+      "recommendedScope": "candidate_disease_specific",
+      "recommendationReason": "Exact disease-label mapping exists, but manual approval is still required before ingestion.",
+      "policy": {
+        "ingestionDecision": "auto_accept",
+        "chapterScope": "disease_specific",
+        "targetingMode": "roster_exact_single_target",
+        "diseaseTargets": [
+          "MONDO:0010568"
+        ],
+        "notes": "Auto-seeded because the GeneReviews title maps exactly to one non-placeholder disease in the current graph and does not look like a mixed/related-disorders chapter."
+      }
+    },
+    {
+      "chapterKey": "alagille_syndrome",
+      "nbkId": "",
+      "chapterTitle": "Alagille Syndrome",
+      "chapterPath": "/sites/books/n/gene/alagille/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/alagille/",
+      "rosterMappingStatus": "exact_label_or_alias",
+      "rosterMappedDiseaseCurie": "MONDO:0007318",
+      "rosterMappedDiseaseLabel": "Alagille syndrome",
+      "recommendedDecision": "candidate_auto_accept",
+      "recommendedScope": "candidate_disease_specific",
+      "recommendationReason": "Exact disease-label mapping exists, but manual approval is still required before ingestion.",
+      "policy": {
+        "ingestionDecision": "auto_accept",
+        "chapterScope": "disease_specific",
+        "targetingMode": "roster_exact_single_target",
+        "diseaseTargets": [
+          "MONDO:0007318"
+        ],
+        "notes": "Auto-seeded because the GeneReviews title maps exactly to one non-placeholder disease in the current graph and does not look like a mixed/related-disorders chapter."
+      }
+    },
+    {
+      "chapterKey": "alexander_disease",
+      "nbkId": "",
+      "chapterTitle": "Alexander Disease",
+      "chapterPath": "/sites/books/n/gene/alexander/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/alexander/",
+      "rosterMappingStatus": "exact_label_or_alias",
+      "rosterMappedDiseaseCurie": "MONDO:0008752",
+      "rosterMappedDiseaseLabel": "Alexander disease",
+      "recommendedDecision": "candidate_auto_accept",
+      "recommendedScope": "candidate_disease_specific",
+      "recommendationReason": "Exact disease-label mapping exists, but manual approval is still required before ingestion.",
+      "policy": {
+        "ingestionDecision": "auto_accept",
+        "chapterScope": "disease_specific",
+        "targetingMode": "roster_exact_single_target",
+        "diseaseTargets": [
+          "MONDO:0008752"
+        ],
+        "notes": "Auto-seeded because the GeneReviews title maps exactly to one non-placeholder disease in the current graph and does not look like a mixed/related-disorders chapter."
+      }
+    }
+  ]
+}

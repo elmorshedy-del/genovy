@@ -1,0 +1,105 @@
+{
+  "created_at": "2026-03-30T06:44:51Z",
+  "chapters": [
+    {
+      "chapterKey": "y_chromosome_infertility",
+      "nbkId": "",
+      "chapterTitle": "Y Chromosome Infertility",
+      "chapterPath": "/sites/books/n/gene/yci/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/yci/",
+      "rosterMappingStatus": "exact_label_or_alias",
+      "rosterMappedDiseaseCurie": "MONDO:0042605",
+      "rosterMappedDiseaseLabel": "Y chromosome infertility due to DAZ1 deletion",
+      "recommendedDecision": "candidate_auto_accept",
+      "recommendedScope": "candidate_disease_specific",
+      "recommendationReason": "Exact disease-label mapping exists, but manual approval is still required before ingestion.",
+      "policy": {
+        "ingestionDecision": "",
+        "chapterScope": "",
+        "targetingMode": "",
+        "diseaseTargets": [],
+        "notes": ""
+      }
+    },
+    {
+      "chapterKey": "yif1b_related_neurodevelopmental_disorder",
+      "nbkId": "",
+      "chapterTitle": "YIF1B -Related Neurodevelopmental Disorder",
+      "chapterPath": "/sites/books/n/gene/yif1b-ndd/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/yif1b-ndd/",
+      "rosterMappingStatus": "unresolved",
+      "rosterMappedDiseaseCurie": "",
+      "rosterMappedDiseaseLabel": "",
+      "recommendedDecision": "review_required",
+      "recommendedScope": "mapping_unresolved",
+      "recommendationReason": "Chapter title does not map cleanly to a disease in the current graph.",
+      "policy": {
+        "ingestionDecision": "",
+        "chapterScope": "",
+        "targetingMode": "",
+        "diseaseTargets": [],
+        "notes": ""
+      }
+    },
+    {
+      "chapterKey": "zap70_related_combined_immunodeficiency",
+      "nbkId": "",
+      "chapterTitle": "ZAP70 -Related Combined Immunodeficiency",
+      "chapterPath": "/sites/books/n/gene/zap70-scid/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/zap70-scid/",
+      "rosterMappingStatus": "unresolved",
+      "rosterMappedDiseaseCurie": "",
+      "rosterMappedDiseaseLabel": "",
+      "recommendedDecision": "review_required",
+      "recommendedScope": "mapping_unresolved",
+      "recommendationReason": "Chapter title does not map cleanly to a disease in the current graph.",
+      "policy": {
+        "ingestionDecision": "",
+        "chapterScope": "",
+        "targetingMode": "",
+        "diseaseTargets": [],
+        "notes": ""
+      }
+    },
+    {
+      "chapterKey": "zellweger_spectrum_disorder",
+      "nbkId": "",
+      "chapterTitle": "Zellweger Spectrum Disorder",
+      "chapterPath": "/sites/books/n/gene/pbd/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/pbd/",
+      "rosterMappingStatus": "exact_label_or_alias",
+      "rosterMappedDiseaseCurie": "MONDO:0019234",
+      "rosterMappedDiseaseLabel": "peroxisome biogenesis disorder",
+      "recommendedDecision": "candidate_auto_accept",
+      "recommendedScope": "candidate_disease_specific",
+      "recommendationReason": "Exact disease-label mapping exists, but manual approval is still required before ingestion.",
+      "policy": {
+        "ingestionDecision": "",
+        "chapterScope": "",
+        "targetingMode": "",
+        "diseaseTargets": [],
+        "notes": ""
+      }
+    },
+    {
+      "chapterKey": "zhu_tokita_takenouchi_kim_syndrome",
+      "nbkId": "",
+      "chapterTitle": "Zhu-Tokita-Takenouchi-Kim Syndrome",
+      "chapterPath": "/sites/books/n/gene/zttk/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/zttk/",
+      "rosterMappingStatus": "exact_label_or_alias",
+      "rosterMappedDiseaseCurie": "MONDO:0014936",
+      "rosterMappedDiseaseLabel": "ZTTK syndrome",
+      "recommendedDecision": "candidate_auto_accept",
+      "recommendedScope": "candidate_disease_specific",
+      "recommendationReason": "Exact disease-label mapping exists, but manual approval is still required before ingestion.",
+      "policy": {
+        "ingestionDecision": "",
+        "chapterScope": "",
+        "targetingMode": "",
+        "diseaseTargets": [],
+        "notes": ""
+      }
+    }
+  ]
+}
