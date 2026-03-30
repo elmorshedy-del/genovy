@@ -1,0 +1,328 @@
+{
+  "projects": [
+    {
+      "projectPath": "/Users/ahmedelmorshedy",
+      "projectName": null,
+      "environmentName": "production",
+      "environmentId": null,
+      "serviceName": null,
+      "serviceId": null,
+      "projectId": null
+    },
+    {
+      "projectPath": "/Users/ahmedelmorshedy/Downloads/dashboard-full/virona-shawq-dashboard-photo-magic-main",
+      "projectName": null,
+      "environmentName": "production",
+      "environmentId": null,
+      "serviceName": null,
+      "serviceId": null,
+      "projectId": null
+    },
+    {
+      "projectPath": "/Users/ahmedelmorshedy/Downloads/dashboard-full/virona-shawq-dashboard-photo-magic-main/photo_magic_ai_service",
+      "projectName": null,
+      "environmentName": "production",
+      "environmentId": null,
+      "serviceName": null,
+      "serviceId": null,
+      "projectId": null
+    },
+    {
+      "projectPath": "/Users/ahmedelmorshedy/Downloads/dashboard-full/virona-shawq-dashboard/apps/tajweed-ml/frontend",
+      "projectName": null,
+      "environmentName": "production",
+      "environmentId": null,
+      "serviceName": null,
+      "serviceId": null,
+      "projectId": null
+    },
+    {
+      "projectPath": "/Users/ahmedelmorshedy/Downloads/oracle-trader",
+      "projectName": null,
+      "environmentName": "production",
+      "environmentId": null,
+      "serviceName": null,
+      "serviceId": null,
+      "projectId": null
+    },
+    {
+      "projectPath": "/Users/ahmedelmorshedy/Genovy",
+      "projectName": null,
+      "environmentName": "production",
+      "environmentId": null,
+      "serviceName": null,
+      "serviceId": null,
+      "projectId": null
+    },
+    {
+      "projectPath": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914",
+      "projectName": null,
+      "environmentName": "genovy-v1-working-20260322",
+      "environmentId": null,
+      "serviceName": null,
+      "serviceId": null,
+      "projectId": null
+    },
+    {
+      "projectPath": "/private/tmp/oracle-railway-deploy-1772887161",
+      "projectName": null,
+      "environmentName": "production",
+      "environmentId": null,
+      "serviceName": null,
+      "serviceId": null,
+      "projectId": null
+    },
+    {
+      "projectPath": "/private/tmp/oracle-railway-deploy-1772887451",
+      "projectName": null,
+      "environmentName": "production",
+      "environmentId": null,
+      "serviceName": null,
+      "serviceId": null,
+      "projectId": null
+    },
+    {
+      "projectPath": "/private/tmp/oracle-railway-deploy-1772890674",
+      "projectName": null,
+      "environmentName": "production",
+      "environmentId": null,
+      "serviceName": null,
+      "serviceId": null,
+      "projectId": null
+    },
+    {
+      "projectPath": "/private/tmp/oracle-trader-clean",
+      "projectName": null,
+      "environmentName": "production",
+      "environmentId": null,
+      "serviceName": null,
+      "serviceId": null,
+      "projectId": null
+    },
+    {
+      "projectPath": "/private/tmp/oracle-trader-clean-0d819af",
+      "projectName": null,
+      "environmentName": "production",
+      "environmentId": null,
+      "serviceName": null,
+      "serviceId": null,
+      "projectId": null
+    },
+    {
+      "projectPath": "/private/tmp/oracle-trader-clean-6c46c11",
+      "projectName": null,
+      "environmentName": "production",
+      "environmentId": null,
+      "serviceName": null,
+      "serviceId": null,
+      "projectId": null
+    },
+    {
+      "projectPath": "/private/tmp/oracle-trader-deploy-669dcab",
+      "projectName": null,
+      "environmentName": "production",
+      "environmentId": null,
+      "serviceName": null,
+      "serviceId": null,
+      "projectId": null
+    },
+    {
+      "projectPath": "/private/tmp/oracle-trader-deploy-9040cb2",
+      "projectName": null,
+      "environmentName": "production",
+      "environmentId": null,
+      "serviceName": null,
+      "serviceId": null,
+      "projectId": null
+    },
+    {
+      "projectPath": "/private/tmp/oracle-trader-deploy-a8725cf",
+      "projectName": null,
+      "environmentName": "production",
+      "environmentId": null,
+      "serviceName": null,
+      "serviceId": null,
+      "projectId": null
+    },
+    {
+      "projectPath": "/private/tmp/oracle-trader-deploy-ac64627",
+      "projectName": null,
+      "environmentName": "production",
+      "environmentId": null,
+      "serviceName": null,
+      "serviceId": null,
+      "projectId": null
+    },
+    {
+      "projectPath": "/private/tmp/oracle-trader-deploy-e016282",
+      "projectName": null,
+      "environmentName": "production",
+      "environmentId": null,
+      "serviceName": null,
+      "serviceId": null,
+      "projectId": null
+    },
+    {
+      "projectPath": "/private/tmp/oracle-trader-deploy-link-Wblyf7",
+      "projectName": null,
+      "environmentName": "production",
+      "environmentId": null,
+      "serviceName": null,
+      "serviceId": null,
+      "projectId": null
+    },
+    {
+      "projectPath": "/private/tmp/oracle-trader-deploy-link-e55SVD",
+      "projectName": null,
+      "environmentName": "production",
+      "environmentId": null,
+      "serviceName": null,
+      "serviceId": null,
+      "projectId": null
+    },
+    {
+      "projectPath": "/private/tmp/oracle-trader-deploy-shadow-20260314-022816",
+      "projectName": null,
+      "environmentName": "production",
+      "environmentId": null,
+      "serviceName": null,
+      "serviceId": null,
+      "projectId": null
+    },
+    {
+      "projectPath": "/private/tmp/oracle-trader-deploy-shadow-20260314-023934",
+      "projectName": null,
+      "environmentName": "production",
+      "environmentId": null,
+      "serviceName": null,
+      "serviceId": null,
+      "projectId": null
+    },
+    {
+      "projectPath": "/private/tmp/oracle-trader-deploy-shadow-20260314-024740",
+      "projectName": null,
+      "environmentName": "production",
+      "environmentId": null,
+      "serviceName": null,
+      "serviceId": null,
+      "projectId": null
+    },
+    {
+      "projectPath": "/private/tmp/oracle-trader-deploy-shadow-20260314-025400",
+      "projectName": null,
+      "environmentName": "production",
+      "environmentId": null,
+      "serviceName": null,
+      "serviceId": null,
+      "projectId": null
+    },
+    {
+      "projectPath": "/private/tmp/oracle-weather-ml-deploy-a3be775",
+      "projectName": null,
+      "environmentName": "production",
+      "environmentId": null,
+      "serviceName": null,
+      "serviceId": null,
+      "projectId": null
+    },
+    {
+      "projectPath": "/private/tmp/quran-ai-deploy-check/repo",
+      "projectName": null,
+      "environmentName": "production",
+      "environmentId": null,
+      "serviceName": null,
+      "serviceId": null,
+      "projectId": null
+    },
+    {
+      "projectPath": "/private/tmp/railway-genovy-freeze",
+      "projectName": null,
+      "environmentName": "genovy-v0-freeze-20260322",
+      "environmentId": null,
+      "serviceName": null,
+      "serviceId": null,
+      "projectId": null
+    },
+    {
+      "projectPath": "/private/tmp/railway-genovy-prod-pres-verify",
+      "projectName": null,
+      "environmentName": "prod-pres-0326",
+      "environmentId": null,
+      "serviceName": null,
+      "serviceId": null,
+      "projectId": null
+    },
+    {
+      "projectPath": "/private/tmp/railway-genovy-v0-pres-0326",
+      "projectName": null,
+      "environmentName": "v0-pres-0326",
+      "environmentId": null,
+      "serviceName": null,
+      "serviceId": null,
+      "projectId": null
+    },
+    {
+      "projectPath": "/private/tmp/railway-genovy-v1",
+      "projectName": null,
+      "environmentName": "genovy-v1-working-20260322",
+      "environmentId": null,
+      "serviceName": null,
+      "serviceId": null,
+      "projectId": null
+    },
+    {
+      "projectPath": "/private/tmp/railway-genovy-v1-pres-0326",
+      "projectName": null,
+      "environmentName": "v1-pres-0326",
+      "environmentId": null,
+      "serviceName": null,
+      "serviceId": null,
+      "projectId": null
+    },
+    {
+      "projectPath": "/private/tmp/railway-inspect.efQHeY",
+      "projectName": null,
+      "environmentName": "production",
+      "environmentId": null,
+      "serviceName": null,
+      "serviceId": null,
+      "projectId": null
+    },
+    {
+      "projectPath": "/private/tmp/railway-laudable",
+      "projectName": null,
+      "environmentName": "production",
+      "environmentId": null,
+      "serviceName": null,
+      "serviceId": null,
+      "projectId": null
+    },
+    {
+      "projectPath": "/private/tmp/railway-photo-magic",
+      "projectName": null,
+      "environmentName": "production",
+      "environmentId": null,
+      "serviceName": null,
+      "serviceId": null,
+      "projectId": null
+    },
+    {
+      "projectPath": "/private/tmp/railway-respectful-abundance",
+      "projectName": null,
+      "environmentName": "production",
+      "environmentId": null,
+      "serviceName": null,
+      "serviceId": null,
+      "projectId": null
+    },
+    {
+      "projectPath": "/tmp/quran-ai-deploy-check/repo",
+      "projectName": null,
+      "environmentName": "production",
+      "environmentId": null,
+      "serviceName": null,
+      "serviceId": null,
+      "projectId": null
+    }
+  ]
+}

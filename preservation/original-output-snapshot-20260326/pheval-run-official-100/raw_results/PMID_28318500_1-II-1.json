@@ -1,0 +1,2663 @@
+{
+  "success": true,
+  "engine": "genovy-dx-sim",
+  "analysisType": "gene",
+  "input": {
+    "presentPhenotypeCuries": [
+      "HP:0011611",
+      "HP:0001629",
+      "HP:0010773",
+      "HP:0001660",
+      "HP:0000083",
+      "HP:0007430",
+      "HP:0001274",
+      "HP:0003259",
+      "HP:0011037"
+    ],
+    "excludedPhenotypeCuries": [
+      "HP:0001631",
+      "HP:0001636",
+      "HP:0012020",
+      "HP:0005301",
+      "HP:0011662",
+      "HP:0000252",
+      "HP:0000107",
+      "HP:0001845",
+      "HP:0000369",
+      "HP:0000384",
+      "HP:0000465",
+      "HP:0001252",
+      "HP:0000028",
+      "HP:0000961",
+      "HP:0001162"
+    ],
+    "sourceFormat": "phenopacket"
+  },
+  "ranking": {
+    "queryPhenotypes": [
+      {
+        "phenotypeCurie": "HP:0011611",
+        "phenotypeLabel": "Interrupted aortic arch"
+      },
+      {
+        "phenotypeCurie": "HP:0001629",
+        "phenotypeLabel": "Ventricular septal defect"
+      },
+      {
+        "phenotypeCurie": "HP:0010773",
+        "phenotypeLabel": "Partial anomalous pulmonary venous return"
+      },
+      {
+        "phenotypeCurie": "HP:0001660",
+        "phenotypeLabel": "Truncus arteriosus"
+      },
+      {
+        "phenotypeCurie": "HP:0000083",
+        "phenotypeLabel": "Renal insufficiency"
+      },
+      {
+        "phenotypeCurie": "HP:0007430",
+        "phenotypeLabel": "Generalized edema"
+      },
+      {
+        "phenotypeCurie": "HP:0001274",
+        "phenotypeLabel": "Agenesis of corpus callosum"
+      },
+      {
+        "phenotypeCurie": "HP:0003259",
+        "phenotypeLabel": "Elevated circulating creatinine concentration"
+      },
+      {
+        "phenotypeCurie": "HP:0011037",
+        "phenotypeLabel": "Decreased urine output"
+      }
+    ],
+    "results": [
+      {
+        "rank": 1,
+        "geneCurie": "NCBIGene:54916",
+        "geneLabel": "TMEM260",
+        "geneSymbol": "TMEM260",
+        "geneEntityId": 151886,
+        "bmaScore": 3.5451935441630447,
+        "normalizedScore": 0.391428,
+        "patientAverageScore": 4.71418985243435,
+        "phenotypeAverageScore": 2.3761972358917394,
+        "directPhenotypeCount": 25,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0010773",
+            "patientPhenotypeLabel": "Partial anomalous pulmonary venous return",
+            "diseasePhenotypeCurie": "HP:0010773",
+            "diseasePhenotypeLabel": "Partial anomalous pulmonary venous return",
+            "micaCurie": "HP:0010773",
+            "micaLabel": "Partial anomalous pulmonary venous return",
+            "score": 6.418015305957707,
+            "evidenceCode": "1/4",
+            "referenceText": "OMIM:617478"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011611",
+            "patientPhenotypeLabel": "Interrupted aortic arch",
+            "diseasePhenotypeCurie": "HP:0011611",
+            "diseasePhenotypeLabel": "Interrupted aortic arch",
+            "micaCurie": "HP:0011611",
+            "micaLabel": "Interrupted aortic arch",
+            "score": 6.223859291516749,
+            "evidenceCode": "1/4",
+            "referenceText": "OMIM:617478"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001660",
+            "patientPhenotypeLabel": "Truncus arteriosus",
+            "diseasePhenotypeCurie": "HP:0001660",
+            "diseasePhenotypeLabel": "Truncus arteriosus",
+            "micaCurie": "HP:0001660",
+            "micaLabel": "Truncus arteriosus",
+            "score": 6.1126336564065245,
+            "evidenceCode": "2/4",
+            "referenceText": "OMIM:617478"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007430",
+            "patientPhenotypeLabel": "Generalized edema",
+            "diseasePhenotypeCurie": "HP:0007430",
+            "diseasePhenotypeLabel": "Generalized edema",
+            "micaCurie": "HP:0007430",
+            "micaLabel": "Generalized edema",
+            "score": 5.798976097551483,
+            "evidenceCode": "2/4",
+            "referenceText": "OMIM:617478"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003259",
+            "patientPhenotypeLabel": "Elevated circulating creatinine concentration",
+            "diseasePhenotypeCurie": "HP:0003259",
+            "diseasePhenotypeLabel": "Elevated circulating creatinine concentration",
+            "micaCurie": "HP:0003259",
+            "micaLabel": "Elevated circulating creatinine concentration",
+            "score": 5.206925033862906,
+            "evidenceCode": "3/3",
+            "referenceText": "OMIM:617478"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001274",
+            "patientPhenotypeLabel": "Agenesis of corpus callosum",
+            "diseasePhenotypeCurie": "HP:0001338",
+            "diseasePhenotypeLabel": "Partial agenesis of the corpus callosum",
+            "micaCurie": "HP:0001274",
+            "micaLabel": "Agenesis of corpus callosum",
+            "score": 3.462361255971126,
+            "evidenceCode": "2/4",
+            "referenceText": "OMIM:617478"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000083",
+            "patientPhenotypeLabel": "Renal insufficiency",
+            "diseasePhenotypeCurie": "HP:0000083",
+            "diseasePhenotypeLabel": "Renal insufficiency",
+            "micaCurie": "HP:0000083",
+            "micaLabel": "Renal insufficiency",
+            "score": 3.3700972792331454,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:617478"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001629",
+            "patientPhenotypeLabel": "Ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0001629",
+            "diseasePhenotypeLabel": "Ventricular septal defect",
+            "micaCurie": "HP:0001629",
+            "micaLabel": "Ventricular septal defect",
+            "score": 2.9389754375316173,
+            "evidenceCode": "4/4",
+            "referenceText": "OMIM:617478"
+          }
+        ]
+      },
+      {
+        "rank": 2,
+        "geneCurie": "NCBIGene:284086",
+        "geneLabel": "NEK8",
+        "geneSymbol": "NEK8",
+        "geneEntityId": 153126,
+        "bmaScore": 2.4853904799237703,
+        "normalizedScore": 0.274414,
+        "patientAverageScore": 3.6529537181984373,
+        "phenotypeAverageScore": 1.3178272416491033,
+        "directPhenotypeCount": 89,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001660",
+            "patientPhenotypeLabel": "Truncus arteriosus",
+            "diseasePhenotypeCurie": "HP:0001660",
+            "diseasePhenotypeLabel": "Truncus arteriosus",
+            "micaCurie": "HP:0001660",
+            "micaLabel": "Truncus arteriosus",
+            "score": 6.1126336564065245,
+            "evidenceCode": "2/3",
+            "referenceText": "OMIM:615415"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003259",
+            "patientPhenotypeLabel": "Elevated circulating creatinine concentration",
+            "diseasePhenotypeCurie": "HP:0003259",
+            "diseasePhenotypeLabel": "Elevated circulating creatinine concentration",
+            "micaCurie": "HP:0003259",
+            "micaLabel": "Elevated circulating creatinine concentration",
+            "score": 5.206925033862906,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:730"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011037",
+            "patientPhenotypeLabel": "Decreased urine output",
+            "diseasePhenotypeCurie": "HP:0000103",
+            "diseasePhenotypeLabel": "Polyuria",
+            "micaCurie": "HP:0012590",
+            "micaLabel": "Abnormal urine output",
+            "score": 4.979535191667246,
+            "evidenceCode": "3/3",
+            "referenceText": "OMIM:613824"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011611",
+            "patientPhenotypeLabel": "Interrupted aortic arch",
+            "diseasePhenotypeCurie": "HP:0002616",
+            "diseasePhenotypeLabel": "Aortic root aneurysm",
+            "micaCurie": "HP:0001679",
+            "micaLabel": "Abnormal aortic morphology",
+            "score": 3.5974871214288062,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:730"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000083",
+            "patientPhenotypeLabel": "Renal insufficiency",
+            "diseasePhenotypeCurie": "HP:0012622",
+            "diseasePhenotypeLabel": "Chronic kidney disease",
+            "micaCurie": "HP:0000083",
+            "micaLabel": "Renal insufficiency",
+            "score": 3.3700972792331454,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:730"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007430",
+            "patientPhenotypeLabel": "Generalized edema",
+            "diseasePhenotypeCurie": "HP:0001790",
+            "diseasePhenotypeLabel": "Nonimmune hydrops fetalis",
+            "micaCurie": "HP:0000969",
+            "micaLabel": "Edema",
+            "score": 3.143569629934695,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:294415"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0010773",
+            "patientPhenotypeLabel": "Partial anomalous pulmonary venous return",
+            "diseasePhenotypeCurie": "HP:0002616",
+            "diseasePhenotypeLabel": "Aortic root aneurysm",
+            "micaCurie": "HP:0030962",
+            "micaLabel": "Abnormal morphology of the great vessels",
+            "score": 2.7131922014466343,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:730"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001629",
+            "patientPhenotypeLabel": "Ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0001712",
+            "diseasePhenotypeLabel": "Left ventricular hypertrophy",
+            "micaCurie": "HP:0001713",
+            "micaLabel": "Abnormal cardiac ventricle morphology",
+            "score": 2.6305841781152743,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:620903"
+          }
+        ]
+      },
+      {
+        "rank": 3,
+        "geneCurie": "NCBIGene:79989",
+        "geneLabel": "IFT56",
+        "geneSymbol": "IFT56",
+        "geneEntityId": 152430,
+        "bmaScore": 2.44281489724208,
+        "normalizedScore": 0.269714,
+        "patientAverageScore": 3.7668081690490802,
+        "phenotypeAverageScore": 1.1188216254350802,
+        "directPhenotypeCount": 107,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0007430",
+            "patientPhenotypeLabel": "Generalized edema",
+            "diseasePhenotypeCurie": "HP:0007430",
+            "diseasePhenotypeLabel": "Generalized edema",
+            "micaCurie": "HP:0007430",
+            "micaLabel": "Generalized edema",
+            "score": 5.798976097551483,
+            "evidenceCode": "1/6",
+            "referenceText": "OMIM:619534"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003259",
+            "patientPhenotypeLabel": "Elevated circulating creatinine concentration",
+            "diseasePhenotypeCurie": "HP:0003259",
+            "diseasePhenotypeLabel": "Elevated circulating creatinine concentration",
+            "micaCurie": "HP:0003259",
+            "micaLabel": "Elevated circulating creatinine concentration",
+            "score": 5.206925033862906,
+            "evidenceCode": "2/6",
+            "referenceText": "OMIM:619534"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011611",
+            "patientPhenotypeLabel": "Interrupted aortic arch",
+            "diseasePhenotypeCurie": "HP:0012020",
+            "diseasePhenotypeLabel": "Right aortic arch",
+            "micaCurie": "HP:0012303",
+            "micaLabel": "Abnormal aortic arch morphology",
+            "score": 4.929938250527874,
+            "evidenceCode": "1/6",
+            "referenceText": "OMIM:619534"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0010773",
+            "patientPhenotypeLabel": "Partial anomalous pulmonary venous return",
+            "diseasePhenotypeCurie": "HP:0004927",
+            "diseasePhenotypeLabel": "Pulmonary artery dilatation",
+            "micaCurie": "HP:0004930",
+            "micaLabel": "Abnormality of the pulmonary vasculature",
+            "score": 4.197260231211293,
+            "evidenceCode": "1/6",
+            "referenceText": "OMIM:619534"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000083",
+            "patientPhenotypeLabel": "Renal insufficiency",
+            "diseasePhenotypeCurie": "HP:0003774",
+            "diseasePhenotypeLabel": "Stage 5 chronic kidney disease",
+            "micaCurie": "HP:0000083",
+            "micaLabel": "Renal insufficiency",
+            "score": 3.3700972792331454,
+            "evidenceCode": "1/6",
+            "referenceText": "OMIM:619534"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001660",
+            "patientPhenotypeLabel": "Truncus arteriosus",
+            "diseasePhenotypeCurie": "HP:0001643",
+            "diseasePhenotypeLabel": "Patent ductus arteriosus",
+            "micaCurie": "HP:0011603",
+            "micaLabel": "Congenital malformation of the great arteries",
+            "score": 3.0807217262750313,
+            "evidenceCode": "2/7",
+            "referenceText": "OMIM:619534"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001629",
+            "patientPhenotypeLabel": "Ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0011622",
+            "diseasePhenotypeLabel": "Inlet ventricular septal defect",
+            "micaCurie": "HP:0001629",
+            "micaLabel": "Ventricular septal defect",
+            "score": 2.9389754375316173,
+            "evidenceCode": "1/6",
+            "referenceText": "OMIM:619534"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011037",
+            "patientPhenotypeLabel": "Decreased urine output",
+            "diseasePhenotypeCurie": "HP:0003774",
+            "diseasePhenotypeLabel": "Stage 5 chronic kidney disease",
+            "micaCurie": "HP:0012211",
+            "micaLabel": "Abnormal renal physiology",
+            "score": 2.8958653138778887,
+            "evidenceCode": "1/6",
+            "referenceText": "OMIM:619534"
+          }
+        ]
+      },
+      {
+        "rank": 4,
+        "geneCurie": "NCBIGene:5310",
+        "geneLabel": "PKD1",
+        "geneSymbol": "PKD1",
+        "geneEntityId": 149763,
+        "bmaScore": 2.3525541851936276,
+        "normalizedScore": 0.259748,
+        "patientAverageScore": 2.728106263266739,
+        "phenotypeAverageScore": 1.977002107120516,
+        "directPhenotypeCount": 31,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0003259",
+            "patientPhenotypeLabel": "Elevated circulating creatinine concentration",
+            "diseasePhenotypeCurie": "HP:0003259",
+            "diseasePhenotypeLabel": "Elevated circulating creatinine concentration",
+            "micaCurie": "HP:0003259",
+            "micaLabel": "Elevated circulating creatinine concentration",
+            "score": 5.206925033862906,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:730"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011611",
+            "patientPhenotypeLabel": "Interrupted aortic arch",
+            "diseasePhenotypeCurie": "HP:0002616",
+            "diseasePhenotypeLabel": "Aortic root aneurysm",
+            "micaCurie": "HP:0001679",
+            "micaLabel": "Abnormal aortic morphology",
+            "score": 3.5974871214288062,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:730"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000083",
+            "patientPhenotypeLabel": "Renal insufficiency",
+            "diseasePhenotypeCurie": "HP:0012622",
+            "diseasePhenotypeLabel": "Chronic kidney disease",
+            "micaCurie": "HP:0000083",
+            "micaLabel": "Renal insufficiency",
+            "score": 3.3700972792331454,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:730"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011037",
+            "patientPhenotypeLabel": "Decreased urine output",
+            "diseasePhenotypeCurie": "HP:0012622",
+            "diseasePhenotypeLabel": "Chronic kidney disease",
+            "micaCurie": "HP:0012211",
+            "micaLabel": "Abnormal renal physiology",
+            "score": 2.8958653138778887,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:730"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0010773",
+            "patientPhenotypeLabel": "Partial anomalous pulmonary venous return",
+            "diseasePhenotypeCurie": "HP:0002616",
+            "diseasePhenotypeLabel": "Aortic root aneurysm",
+            "micaCurie": "HP:0030962",
+            "micaLabel": "Abnormal morphology of the great vessels",
+            "score": 2.7131922014466343,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:730"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001660",
+            "patientPhenotypeLabel": "Truncus arteriosus",
+            "diseasePhenotypeCurie": "HP:0002616",
+            "diseasePhenotypeLabel": "Aortic root aneurysm",
+            "micaCurie": "HP:0030962",
+            "micaLabel": "Abnormal morphology of the great vessels",
+            "score": 2.7131922014466343,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:730"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001629",
+            "patientPhenotypeLabel": "Ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0001634",
+            "diseasePhenotypeLabel": "Mitral valve prolapse",
+            "micaCurie": "HP:0001627",
+            "micaLabel": "Abnormal heart morphology",
+            "score": 1.808568563202355,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:730"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007430",
+            "patientPhenotypeLabel": "Generalized edema",
+            "diseasePhenotypeCurie": "HP:0012592",
+            "diseasePhenotypeLabel": "Albuminuria",
+            "micaCurie": "HP:0001939",
+            "micaLabel": "Abnormality of metabolism/homeostasis",
+            "score": 1.1250694832115808,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:730"
+          }
+        ]
+      },
+      {
+        "rank": 5,
+        "geneCurie": "NCBIGene:80114",
+        "geneLabel": "BICC1",
+        "geneSymbol": "BICC1",
+        "geneEntityId": 152437,
+        "bmaScore": 2.3517438723305113,
+        "normalizedScore": 0.259658,
+        "patientAverageScore": 2.728106263266739,
+        "phenotypeAverageScore": 1.9753814813942838,
+        "directPhenotypeCount": 32,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0003259",
+            "patientPhenotypeLabel": "Elevated circulating creatinine concentration",
+            "diseasePhenotypeCurie": "HP:0003259",
+            "diseasePhenotypeLabel": "Elevated circulating creatinine concentration",
+            "micaCurie": "HP:0003259",
+            "micaLabel": "Elevated circulating creatinine concentration",
+            "score": 5.206925033862906,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:730"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011611",
+            "patientPhenotypeLabel": "Interrupted aortic arch",
+            "diseasePhenotypeCurie": "HP:0002616",
+            "diseasePhenotypeLabel": "Aortic root aneurysm",
+            "micaCurie": "HP:0001679",
+            "micaLabel": "Abnormal aortic morphology",
+            "score": 3.5974871214288062,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:730"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000083",
+            "patientPhenotypeLabel": "Renal insufficiency",
+            "diseasePhenotypeCurie": "HP:0012622",
+            "diseasePhenotypeLabel": "Chronic kidney disease",
+            "micaCurie": "HP:0000083",
+            "micaLabel": "Renal insufficiency",
+            "score": 3.3700972792331454,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:730"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011037",
+            "patientPhenotypeLabel": "Decreased urine output",
+            "diseasePhenotypeCurie": "HP:0012622",
+            "diseasePhenotypeLabel": "Chronic kidney disease",
+            "micaCurie": "HP:0012211",
+            "micaLabel": "Abnormal renal physiology",
+            "score": 2.8958653138778887,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:730"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0010773",
+            "patientPhenotypeLabel": "Partial anomalous pulmonary venous return",
+            "diseasePhenotypeCurie": "HP:0002616",
+            "diseasePhenotypeLabel": "Aortic root aneurysm",
+            "micaCurie": "HP:0030962",
+            "micaLabel": "Abnormal morphology of the great vessels",
+            "score": 2.7131922014466343,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:730"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001660",
+            "patientPhenotypeLabel": "Truncus arteriosus",
+            "diseasePhenotypeCurie": "HP:0002616",
+            "diseasePhenotypeLabel": "Aortic root aneurysm",
+            "micaCurie": "HP:0030962",
+            "micaLabel": "Abnormal morphology of the great vessels",
+            "score": 2.7131922014466343,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:730"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001629",
+            "patientPhenotypeLabel": "Ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0001634",
+            "diseasePhenotypeLabel": "Mitral valve prolapse",
+            "micaCurie": "HP:0001627",
+            "micaLabel": "Abnormal heart morphology",
+            "score": 1.808568563202355,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:730"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007430",
+            "patientPhenotypeLabel": "Generalized edema",
+            "diseasePhenotypeCurie": "HP:0012592",
+            "diseasePhenotypeLabel": "Albuminuria",
+            "micaCurie": "HP:0001939",
+            "micaLabel": "Abnormality of metabolism/homeostasis",
+            "score": 1.1250694832115808,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:730"
+          }
+        ]
+      },
+      {
+        "rank": 6,
+        "geneCurie": "NCBIGene:29880",
+        "geneLabel": "ALG5",
+        "geneSymbol": "ALG5",
+        "geneEntityId": 151608,
+        "bmaScore": 2.3510376595767775,
+        "normalizedScore": 0.25958,
+        "patientAverageScore": 2.728106263266739,
+        "phenotypeAverageScore": 1.9739690558868161,
+        "directPhenotypeCount": 31,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0003259",
+            "patientPhenotypeLabel": "Elevated circulating creatinine concentration",
+            "diseasePhenotypeCurie": "HP:0003259",
+            "diseasePhenotypeLabel": "Elevated circulating creatinine concentration",
+            "micaCurie": "HP:0003259",
+            "micaLabel": "Elevated circulating creatinine concentration",
+            "score": 5.206925033862906,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:730"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011611",
+            "patientPhenotypeLabel": "Interrupted aortic arch",
+            "diseasePhenotypeCurie": "HP:0002616",
+            "diseasePhenotypeLabel": "Aortic root aneurysm",
+            "micaCurie": "HP:0001679",
+            "micaLabel": "Abnormal aortic morphology",
+            "score": 3.5974871214288062,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:730"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000083",
+            "patientPhenotypeLabel": "Renal insufficiency",
+            "diseasePhenotypeCurie": "HP:0012622",
+            "diseasePhenotypeLabel": "Chronic kidney disease",
+            "micaCurie": "HP:0000083",
+            "micaLabel": "Renal insufficiency",
+            "score": 3.3700972792331454,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:730"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011037",
+            "patientPhenotypeLabel": "Decreased urine output",
+            "diseasePhenotypeCurie": "HP:0012622",
+            "diseasePhenotypeLabel": "Chronic kidney disease",
+            "micaCurie": "HP:0012211",
+            "micaLabel": "Abnormal renal physiology",
+            "score": 2.8958653138778887,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:730"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0010773",
+            "patientPhenotypeLabel": "Partial anomalous pulmonary venous return",
+            "diseasePhenotypeCurie": "HP:0002616",
+            "diseasePhenotypeLabel": "Aortic root aneurysm",
+            "micaCurie": "HP:0030962",
+            "micaLabel": "Abnormal morphology of the great vessels",
+            "score": 2.7131922014466343,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:730"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001660",
+            "patientPhenotypeLabel": "Truncus arteriosus",
+            "diseasePhenotypeCurie": "HP:0002616",
+            "diseasePhenotypeLabel": "Aortic root aneurysm",
+            "micaCurie": "HP:0030962",
+            "micaLabel": "Abnormal morphology of the great vessels",
+            "score": 2.7131922014466343,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:730"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001629",
+            "patientPhenotypeLabel": "Ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0001634",
+            "diseasePhenotypeLabel": "Mitral valve prolapse",
+            "micaCurie": "HP:0001627",
+            "micaLabel": "Abnormal heart morphology",
+            "score": 1.808568563202355,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:730"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007430",
+            "patientPhenotypeLabel": "Generalized edema",
+            "diseasePhenotypeCurie": "HP:0012592",
+            "diseasePhenotypeLabel": "Albuminuria",
+            "micaCurie": "HP:0001939",
+            "micaLabel": "Abnormality of metabolism/homeostasis",
+            "score": 1.1250694832115808,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:730"
+          }
+        ]
+      },
+      {
+        "rank": 7,
+        "geneCurie": "NCBIGene:7490",
+        "geneLabel": "WT1",
+        "geneSymbol": "WT1",
+        "geneEntityId": 150443,
+        "bmaScore": 2.3101156846918833,
+        "normalizedScore": 0.255062,
+        "patientAverageScore": 3.4717876567474963,
+        "phenotypeAverageScore": 1.14844371263627,
+        "directPhenotypeCount": 199,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0010773",
+            "patientPhenotypeLabel": "Partial anomalous pulmonary venous return",
+            "diseasePhenotypeCurie": "HP:0011626",
+            "diseasePhenotypeLabel": "Scimitar anomaly",
+            "micaCurie": "HP:0010773",
+            "micaLabel": "Partial anomalous pulmonary venous return",
+            "score": 6.418015305957707,
+            "evidenceCode": "1/13",
+            "referenceText": "OMIM:608978"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011611",
+            "patientPhenotypeLabel": "Interrupted aortic arch",
+            "diseasePhenotypeCurie": "HP:0012020",
+            "diseasePhenotypeLabel": "Right aortic arch",
+            "micaCurie": "HP:0012303",
+            "micaLabel": "Abnormal aortic arch morphology",
+            "score": 4.929938250527874,
+            "evidenceCode": "1/13",
+            "referenceText": "OMIM:608978"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000083",
+            "patientPhenotypeLabel": "Renal insufficiency",
+            "diseasePhenotypeCurie": "HP:0012622",
+            "diseasePhenotypeLabel": "Chronic kidney disease",
+            "micaCurie": "HP:0000083",
+            "micaLabel": "Renal insufficiency",
+            "score": 3.3700972792331454,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:656"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007430",
+            "patientPhenotypeLabel": "Generalized edema",
+            "diseasePhenotypeCurie": "HP:0100539",
+            "diseasePhenotypeLabel": "Periorbital edema",
+            "micaCurie": "HP:0000969",
+            "micaLabel": "Edema",
+            "score": 3.143569629934695,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:656"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001660",
+            "patientPhenotypeLabel": "Truncus arteriosus",
+            "diseasePhenotypeCurie": "HP:0001710",
+            "diseasePhenotypeLabel": "Conotruncal defect",
+            "micaCurie": "HP:0011603",
+            "micaLabel": "Congenital malformation of the great arteries",
+            "score": 3.0807217262750313,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:3097"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001629",
+            "patientPhenotypeLabel": "Ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0001629",
+            "diseasePhenotypeLabel": "Ventricular septal defect",
+            "micaCurie": "HP:0001629",
+            "micaLabel": "Ventricular septal defect",
+            "score": 2.9389754375316173,
+            "evidenceCode": "3/13",
+            "referenceText": "OMIM:608978"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011037",
+            "patientPhenotypeLabel": "Decreased urine output",
+            "diseasePhenotypeCurie": "HP:0012622",
+            "diseasePhenotypeLabel": "Chronic kidney disease",
+            "micaCurie": "HP:0012211",
+            "micaLabel": "Abnormal renal physiology",
+            "score": 2.8958653138778887,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:656"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001274",
+            "patientPhenotypeLabel": "Agenesis of corpus callosum",
+            "diseasePhenotypeCurie": "HP:0002079",
+            "diseasePhenotypeLabel": "Hypoplasia of the corpus callosum",
+            "micaCurie": "HP:0007370",
+            "micaLabel": "Aplasia/Hypoplasia of the corpus callosum",
+            "score": 2.5987343522281754,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:106210"
+          }
+        ]
+      },
+      {
+        "rank": 8,
+        "geneCurie": "NCBIGene:137814",
+        "geneLabel": "NKX2-6",
+        "geneSymbol": "NKX2-6",
+        "geneEntityId": 152895,
+        "bmaScore": 2.3018310379267364,
+        "normalizedScore": 0.254147,
+        "patientAverageScore": 2.9544407537824227,
+        "phenotypeAverageScore": 1.6492213220710497,
+        "directPhenotypeCount": 65,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011611",
+            "patientPhenotypeLabel": "Interrupted aortic arch",
+            "diseasePhenotypeCurie": "HP:0011611",
+            "diseasePhenotypeLabel": "Interrupted aortic arch",
+            "micaCurie": "HP:0011611",
+            "micaLabel": "Interrupted aortic arch",
+            "score": 6.223859291516749,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:3384"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001660",
+            "patientPhenotypeLabel": "Truncus arteriosus",
+            "diseasePhenotypeCurie": "HP:0001660",
+            "diseasePhenotypeLabel": "Truncus arteriosus",
+            "micaCurie": "HP:0001660",
+            "micaLabel": "Truncus arteriosus",
+            "score": 6.1126336564065245,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:217095"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0010773",
+            "patientPhenotypeLabel": "Partial anomalous pulmonary venous return",
+            "diseasePhenotypeCurie": "HP:0011660",
+            "diseasePhenotypeLabel": "Anomalous origin of one pulmonary artery from ascending aorta",
+            "micaCurie": "HP:0004930",
+            "micaLabel": "Abnormality of the pulmonary vasculature",
+            "score": 4.197260231211293,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:3384"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007430",
+            "patientPhenotypeLabel": "Generalized edema",
+            "diseasePhenotypeCurie": "HP:0100598",
+            "diseasePhenotypeLabel": "Pulmonary edema",
+            "micaCurie": "HP:0000969",
+            "micaLabel": "Edema",
+            "score": 3.143569629934695,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:3384"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001629",
+            "patientPhenotypeLabel": "Ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0001629",
+            "diseasePhenotypeLabel": "Ventricular septal defect",
+            "micaCurie": "HP:0001629",
+            "micaLabel": "Ventricular septal defect",
+            "score": 2.9389754375316173,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:3384"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000083",
+            "patientPhenotypeLabel": "Renal insufficiency",
+            "diseasePhenotypeCurie": "HP:0000028",
+            "diseasePhenotypeLabel": "Cryptorchidism",
+            "micaCurie": "HP:0000119",
+            "micaLabel": "Abnormality of the genitourinary system",
+            "score": 1.1713672443299454,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:3303"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011037",
+            "patientPhenotypeLabel": "Decreased urine output",
+            "diseasePhenotypeCurie": "HP:0000028",
+            "diseasePhenotypeLabel": "Cryptorchidism",
+            "micaCurie": "HP:0000119",
+            "micaLabel": "Abnormality of the genitourinary system",
+            "score": 1.1713672443299454,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:3303"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003259",
+            "patientPhenotypeLabel": "Elevated circulating creatinine concentration",
+            "diseasePhenotypeCurie": "HP:0100598",
+            "diseasePhenotypeLabel": "Pulmonary edema",
+            "micaCurie": "HP:0001939",
+            "micaLabel": "Abnormality of metabolism/homeostasis",
+            "score": 1.1250694832115808,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:3384"
+          }
+        ]
+      },
+      {
+        "rank": 9,
+        "geneCurie": "NCBIGene:51726",
+        "geneLabel": "DNAJB11",
+        "geneSymbol": "DNAJB11",
+        "geneEntityId": 151783,
+        "bmaScore": 2.2846738161656512,
+        "normalizedScore": 0.252253,
+        "patientAverageScore": 2.728106263266739,
+        "phenotypeAverageScore": 1.841241369064564,
+        "directPhenotypeCount": 31,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0003259",
+            "patientPhenotypeLabel": "Elevated circulating creatinine concentration",
+            "diseasePhenotypeCurie": "HP:0003259",
+            "diseasePhenotypeLabel": "Elevated circulating creatinine concentration",
+            "micaCurie": "HP:0003259",
+            "micaLabel": "Elevated circulating creatinine concentration",
+            "score": 5.206925033862906,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:730"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011611",
+            "patientPhenotypeLabel": "Interrupted aortic arch",
+            "diseasePhenotypeCurie": "HP:0002616",
+            "diseasePhenotypeLabel": "Aortic root aneurysm",
+            "micaCurie": "HP:0001679",
+            "micaLabel": "Abnormal aortic morphology",
+            "score": 3.5974871214288062,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:730"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000083",
+            "patientPhenotypeLabel": "Renal insufficiency",
+            "diseasePhenotypeCurie": "HP:0012622",
+            "diseasePhenotypeLabel": "Chronic kidney disease",
+            "micaCurie": "HP:0000083",
+            "micaLabel": "Renal insufficiency",
+            "score": 3.3700972792331454,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:730"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011037",
+            "patientPhenotypeLabel": "Decreased urine output",
+            "diseasePhenotypeCurie": "HP:0012622",
+            "diseasePhenotypeLabel": "Chronic kidney disease",
+            "micaCurie": "HP:0012211",
+            "micaLabel": "Abnormal renal physiology",
+            "score": 2.8958653138778887,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:730"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0010773",
+            "patientPhenotypeLabel": "Partial anomalous pulmonary venous return",
+            "diseasePhenotypeCurie": "HP:0002616",
+            "diseasePhenotypeLabel": "Aortic root aneurysm",
+            "micaCurie": "HP:0030962",
+            "micaLabel": "Abnormal morphology of the great vessels",
+            "score": 2.7131922014466343,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:730"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001660",
+            "patientPhenotypeLabel": "Truncus arteriosus",
+            "diseasePhenotypeCurie": "HP:0002616",
+            "diseasePhenotypeLabel": "Aortic root aneurysm",
+            "micaCurie": "HP:0030962",
+            "micaLabel": "Abnormal morphology of the great vessels",
+            "score": 2.7131922014466343,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:730"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001629",
+            "patientPhenotypeLabel": "Ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0001634",
+            "diseasePhenotypeLabel": "Mitral valve prolapse",
+            "micaCurie": "HP:0001627",
+            "micaLabel": "Abnormal heart morphology",
+            "score": 1.808568563202355,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:730"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007430",
+            "patientPhenotypeLabel": "Generalized edema",
+            "diseasePhenotypeCurie": "HP:0012592",
+            "diseasePhenotypeLabel": "Albuminuria",
+            "micaCurie": "HP:0001939",
+            "micaLabel": "Abnormality of metabolism/homeostasis",
+            "score": 1.1250694832115808,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:730"
+          }
+        ]
+      },
+      {
+        "rank": 10,
+        "geneCurie": "NCBIGene:2294",
+        "geneLabel": "FOXF1",
+        "geneSymbol": "FOXF1",
+        "geneEntityId": 148845,
+        "bmaScore": 2.28375278792017,
+        "normalizedScore": 0.252151,
+        "patientAverageScore": 3.129988448084757,
+        "phenotypeAverageScore": 1.4375171277555823,
+        "directPhenotypeCount": 75,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0010773",
+            "patientPhenotypeLabel": "Partial anomalous pulmonary venous return",
+            "diseasePhenotypeCurie": "HP:0010773",
+            "diseasePhenotypeLabel": "Partial anomalous pulmonary venous return",
+            "micaCurie": "HP:0010773",
+            "micaLabel": "Partial anomalous pulmonary venous return",
+            "score": 6.418015305957707,
+            "evidenceCode": "1/14",
+            "referenceText": "OMIM:265380"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011611",
+            "patientPhenotypeLabel": "Interrupted aortic arch",
+            "diseasePhenotypeCurie": "HP:0011611",
+            "diseasePhenotypeLabel": "Interrupted aortic arch",
+            "micaCurie": "HP:0011611",
+            "micaLabel": "Interrupted aortic arch",
+            "score": 6.223859291516749,
+            "evidenceCode": "1/37",
+            "referenceText": "OMIM:265380"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007430",
+            "patientPhenotypeLabel": "Generalized edema",
+            "diseasePhenotypeCurie": "HP:0002202",
+            "diseasePhenotypeLabel": "Pleural effusion",
+            "micaCurie": "HP:0000969",
+            "micaLabel": "Edema",
+            "score": 3.143569629934695,
+            "evidenceCode": "1/37",
+            "referenceText": "OMIM:265380"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001660",
+            "patientPhenotypeLabel": "Truncus arteriosus",
+            "diseasePhenotypeCurie": "HP:0001643",
+            "diseasePhenotypeLabel": "Patent ductus arteriosus",
+            "micaCurie": "HP:0011603",
+            "micaLabel": "Congenital malformation of the great arteries",
+            "score": 3.0807217262750313,
+            "evidenceCode": "22/51",
+            "referenceText": "OMIM:265380"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001629",
+            "patientPhenotypeLabel": "Ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0001629",
+            "diseasePhenotypeLabel": "Ventricular septal defect",
+            "micaCurie": "HP:0001629",
+            "micaLabel": "Ventricular septal defect",
+            "score": 2.9389754375316173,
+            "evidenceCode": "5/37",
+            "referenceText": "OMIM:265380"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000083",
+            "patientPhenotypeLabel": "Renal insufficiency",
+            "diseasePhenotypeCurie": "HP:0010946",
+            "diseasePhenotypeLabel": "Dilatation of the renal pelvis",
+            "micaCurie": "HP:0000077",
+            "micaLabel": "Abnormality of the kidney",
+            "score": 2.058562993322364,
+            "evidenceCode": "3/14",
+            "referenceText": "OMIM:265380"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011037",
+            "patientPhenotypeLabel": "Decreased urine output",
+            "diseasePhenotypeCurie": "HP:0010946",
+            "diseasePhenotypeLabel": "Dilatation of the renal pelvis",
+            "micaCurie": "HP:0000077",
+            "micaLabel": "Abnormality of the kidney",
+            "score": 2.058562993322364,
+            "evidenceCode": "3/14",
+            "referenceText": "OMIM:265380"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003259",
+            "patientPhenotypeLabel": "Elevated circulating creatinine concentration",
+            "diseasePhenotypeCurie": "HP:0002202",
+            "diseasePhenotypeLabel": "Pleural effusion",
+            "micaCurie": "HP:0001939",
+            "micaLabel": "Abnormality of metabolism/homeostasis",
+            "score": 1.1250694832115808,
+            "evidenceCode": "1/37",
+            "referenceText": "OMIM:265380"
+          }
+        ]
+      },
+      {
+        "rank": 11,
+        "geneCurie": "NCBIGene:100128908",
+        "geneLabel": "CIROP",
+        "geneSymbol": "CIROP",
+        "geneEntityId": 153305,
+        "bmaScore": 2.2674386127360875,
+        "normalizedScore": 0.25035,
+        "patientAverageScore": 1.9311654662296414,
+        "phenotypeAverageScore": 2.603711759242534,
+        "directPhenotypeCount": 28,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0010773",
+            "patientPhenotypeLabel": "Partial anomalous pulmonary venous return",
+            "diseasePhenotypeCurie": "HP:0010773",
+            "diseasePhenotypeLabel": "Partial anomalous pulmonary venous return",
+            "micaCurie": "HP:0010773",
+            "micaLabel": "Partial anomalous pulmonary venous return",
+            "score": 6.418015305957707,
+            "evidenceCode": "1/21",
+            "referenceText": "OMIM:619702"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011611",
+            "patientPhenotypeLabel": "Interrupted aortic arch",
+            "diseasePhenotypeCurie": "HP:0012304",
+            "diseasePhenotypeLabel": "Hypoplastic aortic arch",
+            "micaCurie": "HP:0012303",
+            "micaLabel": "Abnormal aortic arch morphology",
+            "score": 4.929938250527874,
+            "evidenceCode": "2/21",
+            "referenceText": "OMIM:619702"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001660",
+            "patientPhenotypeLabel": "Truncus arteriosus",
+            "diseasePhenotypeCurie": "HP:0031348",
+            "diseasePhenotypeLabel": "Dextrotransposition of the great arteries",
+            "micaCurie": "HP:0011603",
+            "micaLabel": "Congenital malformation of the great arteries",
+            "score": 3.0807217262750313,
+            "evidenceCode": "1/21",
+            "referenceText": "OMIM:619702"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001629",
+            "patientPhenotypeLabel": "Ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0001629",
+            "diseasePhenotypeLabel": "Ventricular septal defect",
+            "micaCurie": "HP:0001629",
+            "micaLabel": "Ventricular septal defect",
+            "score": 2.9389754375316173,
+            "evidenceCode": "3/21",
+            "referenceText": "OMIM:619702"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000083",
+            "patientPhenotypeLabel": "Renal insufficiency",
+            "diseasePhenotypeCurie": "HP:0031854",
+            "diseasePhenotypeLabel": "Left Isomerism",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "1/21",
+            "referenceText": "OMIM:619702"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007430",
+            "patientPhenotypeLabel": "Generalized edema",
+            "diseasePhenotypeCurie": "HP:0031854",
+            "diseasePhenotypeLabel": "Left Isomerism",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "1/21",
+            "referenceText": "OMIM:619702"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001274",
+            "patientPhenotypeLabel": "Agenesis of corpus callosum",
+            "diseasePhenotypeCurie": "HP:0031854",
+            "diseasePhenotypeLabel": "Left Isomerism",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "1/21",
+            "referenceText": "OMIM:619702"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003259",
+            "patientPhenotypeLabel": "Elevated circulating creatinine concentration",
+            "diseasePhenotypeCurie": "HP:0031854",
+            "diseasePhenotypeLabel": "Left Isomerism",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "1/21",
+            "referenceText": "OMIM:619702"
+          }
+        ]
+      },
+      {
+        "rank": 12,
+        "geneCurie": "NCBIGene:4179",
+        "geneLabel": "CD46",
+        "geneSymbol": "CD46",
+        "geneEntityId": 149410,
+        "bmaScore": 2.2491967183500123,
+        "normalizedScore": 0.248336,
+        "patientAverageScore": 3.3665988251845747,
+        "phenotypeAverageScore": 1.13179461151545,
+        "directPhenotypeCount": 44,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011037",
+            "patientPhenotypeLabel": "Decreased urine output",
+            "diseasePhenotypeCurie": "HP:0100519",
+            "diseasePhenotypeLabel": "Anuria",
+            "micaCurie": "HP:0011037",
+            "micaLabel": "Decreased urine output",
+            "score": 6.572165985784965,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:612922"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007430",
+            "patientPhenotypeLabel": "Generalized edema",
+            "diseasePhenotypeCurie": "HP:0007430",
+            "diseasePhenotypeLabel": "Generalized edema",
+            "micaCurie": "HP:0007430",
+            "micaLabel": "Generalized edema",
+            "score": 5.798976097551483,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:244242"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003259",
+            "patientPhenotypeLabel": "Elevated circulating creatinine concentration",
+            "diseasePhenotypeCurie": "HP:0003259",
+            "diseasePhenotypeLabel": "Elevated circulating creatinine concentration",
+            "micaCurie": "HP:0003259",
+            "micaLabel": "Elevated circulating creatinine concentration",
+            "score": 5.206925033862906,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:612922"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000083",
+            "patientPhenotypeLabel": "Renal insufficiency",
+            "diseasePhenotypeCurie": "HP:0001919",
+            "diseasePhenotypeLabel": "Acute kidney injury",
+            "micaCurie": "HP:0000083",
+            "micaLabel": "Renal insufficiency",
+            "score": 3.3700972792331454,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:612922"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011611",
+            "patientPhenotypeLabel": "Interrupted aortic arch",
+            "diseasePhenotypeCurie": "HP:0001342",
+            "diseasePhenotypeLabel": "Cerebral hemorrhage",
+            "micaCurie": "HP:0025015",
+            "micaLabel": "Abnormal vascular morphology",
+            "score": 2.224040902786765,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "ORPHA:244242"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0010773",
+            "patientPhenotypeLabel": "Partial anomalous pulmonary venous return",
+            "diseasePhenotypeCurie": "HP:0001342",
+            "diseasePhenotypeLabel": "Cerebral hemorrhage",
+            "micaCurie": "HP:0025015",
+            "micaLabel": "Abnormal vascular morphology",
+            "score": 2.224040902786765,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "ORPHA:244242"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001660",
+            "patientPhenotypeLabel": "Truncus arteriosus",
+            "diseasePhenotypeCurie": "HP:0001342",
+            "diseasePhenotypeLabel": "Cerebral hemorrhage",
+            "micaCurie": "HP:0025015",
+            "micaLabel": "Abnormal vascular morphology",
+            "score": 2.224040902786765,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "ORPHA:244242"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001629",
+            "patientPhenotypeLabel": "Ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0001342",
+            "diseasePhenotypeLabel": "Cerebral hemorrhage",
+            "micaCurie": "HP:0030680",
+            "micaLabel": "Abnormal cardiovascular system morphology",
+            "score": 1.55654315017767,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "ORPHA:244242"
+          }
+        ]
+      },
+      {
+        "rank": 13,
+        "geneCurie": "NCBIGene:5337",
+        "geneLabel": "PLD1",
+        "geneSymbol": "PLD1",
+        "geneEntityId": 149780,
+        "bmaScore": 2.2382319127941366,
+        "normalizedScore": 0.247125,
+        "patientAverageScore": 2.574188768407037,
+        "phenotypeAverageScore": 1.9022750571812361,
+        "directPhenotypeCount": 29,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011611",
+            "patientPhenotypeLabel": "Interrupted aortic arch",
+            "diseasePhenotypeCurie": "HP:0011591",
+            "diseasePhenotypeLabel": "Left aortic arch with cervical origin of the right subclavian artery",
+            "micaCurie": "HP:0012303",
+            "micaLabel": "Abnormal aortic arch morphology",
+            "score": 4.929938250527874,
+            "evidenceCode": "1/6",
+            "referenceText": "OMIM:212093"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0010773",
+            "patientPhenotypeLabel": "Partial anomalous pulmonary venous return",
+            "diseasePhenotypeCurie": "HP:0004935",
+            "diseasePhenotypeLabel": "Pulmonary artery atresia",
+            "micaCurie": "HP:0004930",
+            "micaLabel": "Abnormality of the pulmonary vasculature",
+            "score": 4.197260231211293,
+            "evidenceCode": "2/6",
+            "referenceText": "OMIM:212093"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007430",
+            "patientPhenotypeLabel": "Generalized edema",
+            "diseasePhenotypeCurie": "HP:0001789",
+            "diseasePhenotypeLabel": "Hydrops fetalis",
+            "micaCurie": "HP:0000969",
+            "micaLabel": "Edema",
+            "score": 3.143569629934695,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:212093"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001629",
+            "patientPhenotypeLabel": "Ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0011623",
+            "diseasePhenotypeLabel": "Muscular ventricular septal defect",
+            "micaCurie": "HP:0001629",
+            "micaLabel": "Ventricular septal defect",
+            "score": 2.9389754375316173,
+            "evidenceCode": "1/6",
+            "referenceText": "OMIM:212093"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001660",
+            "patientPhenotypeLabel": "Truncus arteriosus",
+            "diseasePhenotypeCurie": "HP:0011591",
+            "diseasePhenotypeLabel": "Left aortic arch with cervical origin of the right subclavian artery",
+            "micaCurie": "HP:0030962",
+            "micaLabel": "Abnormal morphology of the great vessels",
+            "score": 2.7131922014466343,
+            "evidenceCode": "1/6",
+            "referenceText": "OMIM:212093"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000083",
+            "patientPhenotypeLabel": "Renal insufficiency",
+            "diseasePhenotypeCurie": "HP:0000126",
+            "diseasePhenotypeLabel": "Hydronephrosis",
+            "micaCurie": "HP:0000077",
+            "micaLabel": "Abnormality of the kidney",
+            "score": 2.058562993322364,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:212093"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011037",
+            "patientPhenotypeLabel": "Decreased urine output",
+            "diseasePhenotypeCurie": "HP:0000126",
+            "diseasePhenotypeLabel": "Hydronephrosis",
+            "micaCurie": "HP:0000077",
+            "micaLabel": "Abnormality of the kidney",
+            "score": 2.058562993322364,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:212093"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003259",
+            "patientPhenotypeLabel": "Elevated circulating creatinine concentration",
+            "diseasePhenotypeCurie": "HP:0001789",
+            "diseasePhenotypeLabel": "Hydrops fetalis",
+            "micaCurie": "HP:0001939",
+            "micaLabel": "Abnormality of metabolism/homeostasis",
+            "score": 1.1250694832115808,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:212093"
+          }
+        ]
+      },
+      {
+        "rank": 14,
+        "geneCurie": "NCBIGene:2627",
+        "geneLabel": "GATA6",
+        "geneSymbol": "GATA6",
+        "geneEntityId": 148922,
+        "bmaScore": 2.236177209585414,
+        "normalizedScore": 0.246898,
+        "patientAverageScore": 3.324853987361092,
+        "phenotypeAverageScore": 1.1475004318097357,
+        "directPhenotypeCount": 123,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011611",
+            "patientPhenotypeLabel": "Interrupted aortic arch",
+            "diseasePhenotypeCurie": "HP:0011611",
+            "diseasePhenotypeLabel": "Interrupted aortic arch",
+            "micaCurie": "HP:0011611",
+            "micaLabel": "Interrupted aortic arch",
+            "score": 6.223859291516749,
+            "evidenceCode": "1/15",
+            "referenceText": "OMIM:600001"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001660",
+            "patientPhenotypeLabel": "Truncus arteriosus",
+            "diseasePhenotypeCurie": "HP:0001660",
+            "diseasePhenotypeLabel": "Truncus arteriosus",
+            "micaCurie": "HP:0001660",
+            "micaLabel": "Truncus arteriosus",
+            "score": 6.1126336564065245,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:217095"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0010773",
+            "patientPhenotypeLabel": "Partial anomalous pulmonary venous return",
+            "diseasePhenotypeCurie": "HP:0004415",
+            "diseasePhenotypeLabel": "Pulmonary artery stenosis",
+            "micaCurie": "HP:0004930",
+            "micaLabel": "Abnormality of the pulmonary vasculature",
+            "score": 4.197260231211293,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:2255"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007430",
+            "patientPhenotypeLabel": "Generalized edema",
+            "diseasePhenotypeCurie": "HP:0010741",
+            "diseasePhenotypeLabel": "Pedal edema",
+            "micaCurie": "HP:0000969",
+            "micaLabel": "Edema",
+            "score": 3.143569629934695,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:99103"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001629",
+            "patientPhenotypeLabel": "Ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0011682",
+            "diseasePhenotypeLabel": "Perimembranous ventricular septal defect",
+            "micaCurie": "HP:0001629",
+            "micaLabel": "Ventricular septal defect",
+            "score": 2.9389754375316173,
+            "evidenceCode": "1/15",
+            "referenceText": "OMIM:600001"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000083",
+            "patientPhenotypeLabel": "Renal insufficiency",
+            "diseasePhenotypeCurie": "HP:0003076",
+            "diseasePhenotypeLabel": "Glycosuria",
+            "micaCurie": "HP:0011277",
+            "micaLabel": "Abnormality of the urinary system physiology",
+            "score": 2.2436280360620695,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:600001"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011037",
+            "patientPhenotypeLabel": "Decreased urine output",
+            "diseasePhenotypeCurie": "HP:0003076",
+            "diseasePhenotypeLabel": "Glycosuria",
+            "micaCurie": "HP:0011277",
+            "micaLabel": "Abnormality of the urinary system physiology",
+            "score": 2.2436280360620695,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:600001"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001274",
+            "patientPhenotypeLabel": "Agenesis of corpus callosum",
+            "diseasePhenotypeCurie": "HP:0000252",
+            "diseasePhenotypeLabel": "Microcephaly",
+            "micaCurie": "HP:0007364",
+            "micaLabel": "Aplasia/Hypoplasia of the cerebrum",
+            "score": 1.6950620843132318,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "OMIM:600001"
+          }
+        ]
+      },
+      {
+        "rank": 15,
+        "geneCurie": "NCBIGene:23193",
+        "geneLabel": "GANAB",
+        "geneSymbol": "GANAB",
+        "geneEntityId": 151312,
+        "bmaScore": 2.228878623163695,
+        "normalizedScore": 0.246093,
+        "patientAverageScore": 2.728106263266739,
+        "phenotypeAverageScore": 1.729650983060651,
+        "directPhenotypeCount": 33,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0003259",
+            "patientPhenotypeLabel": "Elevated circulating creatinine concentration",
+            "diseasePhenotypeCurie": "HP:0003259",
+            "diseasePhenotypeLabel": "Elevated circulating creatinine concentration",
+            "micaCurie": "HP:0003259",
+            "micaLabel": "Elevated circulating creatinine concentration",
+            "score": 5.206925033862906,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:730"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011611",
+            "patientPhenotypeLabel": "Interrupted aortic arch",
+            "diseasePhenotypeCurie": "HP:0002616",
+            "diseasePhenotypeLabel": "Aortic root aneurysm",
+            "micaCurie": "HP:0001679",
+            "micaLabel": "Abnormal aortic morphology",
+            "score": 3.5974871214288062,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:730"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000083",
+            "patientPhenotypeLabel": "Renal insufficiency",
+            "diseasePhenotypeCurie": "HP:0012622",
+            "diseasePhenotypeLabel": "Chronic kidney disease",
+            "micaCurie": "HP:0000083",
+            "micaLabel": "Renal insufficiency",
+            "score": 3.3700972792331454,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:730"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011037",
+            "patientPhenotypeLabel": "Decreased urine output",
+            "diseasePhenotypeCurie": "HP:0012622",
+            "diseasePhenotypeLabel": "Chronic kidney disease",
+            "micaCurie": "HP:0012211",
+            "micaLabel": "Abnormal renal physiology",
+            "score": 2.8958653138778887,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:730"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0010773",
+            "patientPhenotypeLabel": "Partial anomalous pulmonary venous return",
+            "diseasePhenotypeCurie": "HP:0002616",
+            "diseasePhenotypeLabel": "Aortic root aneurysm",
+            "micaCurie": "HP:0030962",
+            "micaLabel": "Abnormal morphology of the great vessels",
+            "score": 2.7131922014466343,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:730"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001660",
+            "patientPhenotypeLabel": "Truncus arteriosus",
+            "diseasePhenotypeCurie": "HP:0002616",
+            "diseasePhenotypeLabel": "Aortic root aneurysm",
+            "micaCurie": "HP:0030962",
+            "micaLabel": "Abnormal morphology of the great vessels",
+            "score": 2.7131922014466343,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:730"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001629",
+            "patientPhenotypeLabel": "Ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0001634",
+            "diseasePhenotypeLabel": "Mitral valve prolapse",
+            "micaCurie": "HP:0001627",
+            "micaLabel": "Abnormal heart morphology",
+            "score": 1.808568563202355,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:730"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007430",
+            "patientPhenotypeLabel": "Generalized edema",
+            "diseasePhenotypeCurie": "HP:0012592",
+            "diseasePhenotypeLabel": "Albuminuria",
+            "micaCurie": "HP:0001939",
+            "micaLabel": "Abnormality of metabolism/homeostasis",
+            "score": 1.1250694832115808,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:730"
+          }
+        ]
+      },
+      {
+        "rank": 16,
+        "geneCurie": "NCBIGene:353",
+        "geneLabel": "APRT",
+        "geneSymbol": "APRT",
+        "geneEntityId": 148194,
+        "bmaScore": 2.1933443551818144,
+        "normalizedScore": 0.242169,
+        "patientAverageScore": 2.3846459364422765,
+        "phenotypeAverageScore": 2.0020427739213527,
+        "directPhenotypeCount": 28,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011037",
+            "patientPhenotypeLabel": "Decreased urine output",
+            "diseasePhenotypeCurie": "HP:0100520",
+            "diseasePhenotypeLabel": "Oliguria",
+            "micaCurie": "HP:0011037",
+            "micaLabel": "Decreased urine output",
+            "score": 6.572165985784965,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:614723"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003259",
+            "patientPhenotypeLabel": "Elevated circulating creatinine concentration",
+            "diseasePhenotypeCurie": "HP:0003259",
+            "diseasePhenotypeLabel": "Elevated circulating creatinine concentration",
+            "micaCurie": "HP:0003259",
+            "micaLabel": "Elevated circulating creatinine concentration",
+            "score": 5.206925033862906,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:614723"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000083",
+            "patientPhenotypeLabel": "Renal insufficiency",
+            "diseasePhenotypeCurie": "HP:0012622",
+            "diseasePhenotypeLabel": "Chronic kidney disease",
+            "micaCurie": "HP:0000083",
+            "micaLabel": "Renal insufficiency",
+            "score": 3.3700972792331454,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:976"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007430",
+            "patientPhenotypeLabel": "Generalized edema",
+            "diseasePhenotypeCurie": "HP:0001942",
+            "diseasePhenotypeLabel": "Metabolic acidosis",
+            "micaCurie": "HP:0012337",
+            "micaLabel": "Abnormal homeostasis",
+            "score": 1.911876500575794,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:614723"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011611",
+            "patientPhenotypeLabel": "Interrupted aortic arch",
+            "diseasePhenotypeCurie": "HP:0005110",
+            "diseasePhenotypeLabel": "Atrial fibrillation",
+            "micaCurie": "HP:0001626",
+            "micaLabel": "Abnormality of the cardiovascular system",
+            "score": 1.0995452333421922,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:976"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001629",
+            "patientPhenotypeLabel": "Ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0005110",
+            "diseasePhenotypeLabel": "Atrial fibrillation",
+            "micaCurie": "HP:0001626",
+            "micaLabel": "Abnormality of the cardiovascular system",
+            "score": 1.0995452333421922,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:976"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0010773",
+            "patientPhenotypeLabel": "Partial anomalous pulmonary venous return",
+            "diseasePhenotypeCurie": "HP:0005110",
+            "diseasePhenotypeLabel": "Atrial fibrillation",
+            "micaCurie": "HP:0001626",
+            "micaLabel": "Abnormality of the cardiovascular system",
+            "score": 1.0995452333421922,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:976"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001660",
+            "patientPhenotypeLabel": "Truncus arteriosus",
+            "diseasePhenotypeCurie": "HP:0005110",
+            "diseasePhenotypeLabel": "Atrial fibrillation",
+            "micaCurie": "HP:0001626",
+            "micaLabel": "Abnormality of the cardiovascular system",
+            "score": 1.0995452333421922,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:976"
+          }
+        ]
+      },
+      {
+        "rank": 17,
+        "geneCurie": "NCBIGene:118856",
+        "geneLabel": "MMP21",
+        "geneSymbol": "MMP21",
+        "geneEntityId": 152809,
+        "bmaScore": 2.180714743262616,
+        "normalizedScore": 0.240775,
+        "patientAverageScore": 1.9388586939739056,
+        "phenotypeAverageScore": 2.4225707925513267,
+        "directPhenotypeCount": 22,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011611",
+            "patientPhenotypeLabel": "Interrupted aortic arch",
+            "diseasePhenotypeCurie": "HP:0011611",
+            "diseasePhenotypeLabel": "Interrupted aortic arch",
+            "micaCurie": "HP:0011611",
+            "micaLabel": "Interrupted aortic arch",
+            "score": 6.223859291516749,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:616749"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0010773",
+            "patientPhenotypeLabel": "Partial anomalous pulmonary venous return",
+            "diseasePhenotypeCurie": "HP:0005160",
+            "diseasePhenotypeLabel": "Total anomalous pulmonary venous return",
+            "micaCurie": "HP:0010772",
+            "micaLabel": "Anomalous pulmonary venous return",
+            "score": 5.501724574083552,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:616749"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001660",
+            "patientPhenotypeLabel": "Truncus arteriosus",
+            "diseasePhenotypeCurie": "HP:0001669",
+            "diseasePhenotypeLabel": "Transposition of the great arteries",
+            "micaCurie": "HP:0011603",
+            "micaLabel": "Congenital malformation of the great arteries",
+            "score": 3.0807217262750313,
+            "evidenceCode": "4/14",
+            "referenceText": "OMIM:616749"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001629",
+            "patientPhenotypeLabel": "Ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0004762",
+            "diseasePhenotypeLabel": "Hypoplasia of right ventricle",
+            "micaCurie": "HP:0001713",
+            "micaLabel": "Abnormal cardiac ventricle morphology",
+            "score": 2.6305841781152743,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:616749"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000083",
+            "patientPhenotypeLabel": "Renal insufficiency",
+            "diseasePhenotypeCurie": "HP:0030853",
+            "diseasePhenotypeLabel": "Heterotaxy",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:616749"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007430",
+            "patientPhenotypeLabel": "Generalized edema",
+            "diseasePhenotypeCurie": "HP:0030853",
+            "diseasePhenotypeLabel": "Heterotaxy",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:616749"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001274",
+            "patientPhenotypeLabel": "Agenesis of corpus callosum",
+            "diseasePhenotypeCurie": "HP:0030853",
+            "diseasePhenotypeLabel": "Heterotaxy",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:616749"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003259",
+            "patientPhenotypeLabel": "Elevated circulating creatinine concentration",
+            "diseasePhenotypeCurie": "HP:0030853",
+            "diseasePhenotypeLabel": "Heterotaxy",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:616749"
+          }
+        ]
+      },
+      {
+        "rank": 18,
+        "geneCurie": "NCBIGene:7369",
+        "geneLabel": "UMOD",
+        "geneSymbol": "UMOD",
+        "geneEntityId": 150400,
+        "bmaScore": 2.1777491316144912,
+        "normalizedScore": 0.240447,
+        "patientAverageScore": 2.2076869593180857,
+        "phenotypeAverageScore": 2.1478113039108964,
+        "directPhenotypeCount": 40,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0003259",
+            "patientPhenotypeLabel": "Elevated circulating creatinine concentration",
+            "diseasePhenotypeCurie": "HP:0003259",
+            "diseasePhenotypeLabel": "Elevated circulating creatinine concentration",
+            "micaCurie": "HP:0003259",
+            "micaLabel": "Elevated circulating creatinine concentration",
+            "score": 5.206925033862906,
+            "evidenceCode": "50/57",
+            "referenceText": "OMIM:162000"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011037",
+            "patientPhenotypeLabel": "Decreased urine output",
+            "diseasePhenotypeCurie": "HP:0000103",
+            "diseasePhenotypeLabel": "Polyuria",
+            "micaCurie": "HP:0012590",
+            "micaLabel": "Abnormal urine output",
+            "score": 4.979535191667246,
+            "evidenceCode": "2/4",
+            "referenceText": "OMIM:162000"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000083",
+            "patientPhenotypeLabel": "Renal insufficiency",
+            "diseasePhenotypeCurie": "HP:0012626",
+            "diseasePhenotypeLabel": "Stage 4 chronic kidney disease",
+            "micaCurie": "HP:0000083",
+            "micaLabel": "Renal insufficiency",
+            "score": 3.3700972792331454,
+            "evidenceCode": "8/8",
+            "referenceText": "OMIM:162000"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007430",
+            "patientPhenotypeLabel": "Generalized edema",
+            "diseasePhenotypeCurie": "HP:0001942",
+            "diseasePhenotypeLabel": "Metabolic acidosis",
+            "micaCurie": "HP:0012337",
+            "micaLabel": "Abnormal homeostasis",
+            "score": 1.911876500575794,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:162000"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011611",
+            "patientPhenotypeLabel": "Interrupted aortic arch",
+            "diseasePhenotypeCurie": "HP:0000822",
+            "diseasePhenotypeLabel": "Hypertension",
+            "micaCurie": "HP:0001626",
+            "micaLabel": "Abnormality of the cardiovascular system",
+            "score": 1.0995452333421922,
+            "evidenceCode": "42/72",
+            "referenceText": "OMIM:162000"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001629",
+            "patientPhenotypeLabel": "Ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0000822",
+            "diseasePhenotypeLabel": "Hypertension",
+            "micaCurie": "HP:0001626",
+            "micaLabel": "Abnormality of the cardiovascular system",
+            "score": 1.0995452333421922,
+            "evidenceCode": "42/72",
+            "referenceText": "OMIM:162000"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0010773",
+            "patientPhenotypeLabel": "Partial anomalous pulmonary venous return",
+            "diseasePhenotypeCurie": "HP:0000822",
+            "diseasePhenotypeLabel": "Hypertension",
+            "micaCurie": "HP:0001626",
+            "micaLabel": "Abnormality of the cardiovascular system",
+            "score": 1.0995452333421922,
+            "evidenceCode": "42/72",
+            "referenceText": "OMIM:162000"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001660",
+            "patientPhenotypeLabel": "Truncus arteriosus",
+            "diseasePhenotypeCurie": "HP:0000822",
+            "diseasePhenotypeLabel": "Hypertension",
+            "micaCurie": "HP:0001626",
+            "micaLabel": "Abnormality of the cardiovascular system",
+            "score": 1.0995452333421922,
+            "evidenceCode": "42/72",
+            "referenceText": "OMIM:162000"
+          }
+        ]
+      },
+      {
+        "rank": 19,
+        "geneCurie": "NCBIGene:718",
+        "geneLabel": "C3",
+        "geneSymbol": "C3",
+        "geneEntityId": 148319,
+        "bmaScore": 2.16501663709363,
+        "normalizedScore": 0.239042,
+        "patientAverageScore": 2.6091084526197474,
+        "phenotypeAverageScore": 1.7209248215675128,
+        "directPhenotypeCount": 27,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011037",
+            "patientPhenotypeLabel": "Decreased urine output",
+            "diseasePhenotypeCurie": "HP:0100519",
+            "diseasePhenotypeLabel": "Anuria",
+            "micaCurie": "HP:0011037",
+            "micaLabel": "Decreased urine output",
+            "score": 6.572165985784965,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:612925"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003259",
+            "patientPhenotypeLabel": "Elevated circulating creatinine concentration",
+            "diseasePhenotypeCurie": "HP:0003259",
+            "diseasePhenotypeLabel": "Elevated circulating creatinine concentration",
+            "micaCurie": "HP:0003259",
+            "micaLabel": "Elevated circulating creatinine concentration",
+            "score": 5.206925033862906,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:612925"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000083",
+            "patientPhenotypeLabel": "Renal insufficiency",
+            "diseasePhenotypeCurie": "HP:0003774",
+            "diseasePhenotypeLabel": "Stage 5 chronic kidney disease",
+            "micaCurie": "HP:0000083",
+            "micaLabel": "Renal insufficiency",
+            "score": 3.3700972792331454,
+            "evidenceCode": "8/14",
+            "referenceText": "OMIM:612925"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0010773",
+            "patientPhenotypeLabel": "Partial anomalous pulmonary venous return",
+            "diseasePhenotypeCurie": "HP:0006532",
+            "diseasePhenotypeLabel": "Recurrent pneumonia",
+            "micaCurie": "HP:0002088",
+            "micaLabel": "Abnormal lung morphology",
+            "score": 2.2101294959875855,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:613779"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007430",
+            "patientPhenotypeLabel": "Generalized edema",
+            "diseasePhenotypeCurie": "HP:0001954",
+            "diseasePhenotypeLabel": "Recurrent fever",
+            "micaCurie": "HP:0012337",
+            "micaLabel": "Abnormal homeostasis",
+            "score": 1.911876500575794,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:613779"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011611",
+            "patientPhenotypeLabel": "Interrupted aortic arch",
+            "diseasePhenotypeCurie": "HP:0011110",
+            "diseasePhenotypeLabel": "Recurrent tonsillitis",
+            "micaCurie": "HP:0002597",
+            "micaLabel": "Abnormality of the vasculature",
+            "score": 1.5543344248181141,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:613779"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001660",
+            "patientPhenotypeLabel": "Truncus arteriosus",
+            "diseasePhenotypeCurie": "HP:0011110",
+            "diseasePhenotypeLabel": "Recurrent tonsillitis",
+            "micaCurie": "HP:0002597",
+            "micaLabel": "Abnormality of the vasculature",
+            "score": 1.5543344248181141,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:613779"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001629",
+            "patientPhenotypeLabel": "Ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0011110",
+            "diseasePhenotypeLabel": "Recurrent tonsillitis",
+            "micaCurie": "HP:0001626",
+            "micaLabel": "Abnormality of the cardiovascular system",
+            "score": 1.0995452333421922,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:613779"
+          }
+        ]
+      },
+      {
+        "rank": 20,
+        "geneCurie": "NCBIGene:4582",
+        "geneLabel": "MUC1",
+        "geneSymbol": "MUC1",
+        "geneEntityId": 149508,
+        "bmaScore": 2.1563951169549815,
+        "normalizedScore": 0.23809,
+        "patientAverageScore": 2.277413865580924,
+        "phenotypeAverageScore": 2.0353763683290387,
+        "directPhenotypeCount": 21,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0003259",
+            "patientPhenotypeLabel": "Elevated circulating creatinine concentration",
+            "diseasePhenotypeCurie": "HP:0003259",
+            "diseasePhenotypeLabel": "Elevated circulating creatinine concentration",
+            "micaCurie": "HP:0003259",
+            "micaLabel": "Elevated circulating creatinine concentration",
+            "score": 5.206925033862906,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:174000"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011037",
+            "patientPhenotypeLabel": "Decreased urine output",
+            "diseasePhenotypeCurie": "HP:0004732",
+            "diseasePhenotypeLabel": "Impaired renal uric acid clearance",
+            "micaCurie": "HP:0011036",
+            "micaLabel": "Abnormality of renal excretion",
+            "score": 4.913937909181432,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:174000"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000083",
+            "patientPhenotypeLabel": "Renal insufficiency",
+            "diseasePhenotypeCurie": "HP:0003774",
+            "diseasePhenotypeLabel": "Stage 5 chronic kidney disease",
+            "micaCurie": "HP:0000083",
+            "micaLabel": "Renal insufficiency",
+            "score": 3.3700972792331454,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:174000"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001274",
+            "patientPhenotypeLabel": "Agenesis of corpus callosum",
+            "diseasePhenotypeCurie": "HP:0002120",
+            "diseasePhenotypeLabel": "Cerebral cortical atrophy",
+            "micaCurie": "HP:0002977",
+            "micaLabel": "Aplasia/Hypoplasia involving the central nervous system",
+            "score": 1.482514151370485,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:174000"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007430",
+            "patientPhenotypeLabel": "Generalized edema",
+            "diseasePhenotypeCurie": "HP:0003259",
+            "diseasePhenotypeLabel": "Elevated circulating creatinine concentration",
+            "micaCurie": "HP:0001939",
+            "micaLabel": "Abnormality of metabolism/homeostasis",
+            "score": 1.1250694832115808,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:174000"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011611",
+            "patientPhenotypeLabel": "Interrupted aortic arch",
+            "diseasePhenotypeCurie": "HP:0002615",
+            "diseasePhenotypeLabel": "Hypotension",
+            "micaCurie": "HP:0001626",
+            "micaLabel": "Abnormality of the cardiovascular system",
+            "score": 1.0995452333421922,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:174000"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001629",
+            "patientPhenotypeLabel": "Ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0002615",
+            "diseasePhenotypeLabel": "Hypotension",
+            "micaCurie": "HP:0001626",
+            "micaLabel": "Abnormality of the cardiovascular system",
+            "score": 1.0995452333421922,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:174000"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0010773",
+            "patientPhenotypeLabel": "Partial anomalous pulmonary venous return",
+            "diseasePhenotypeCurie": "HP:0002615",
+            "diseasePhenotypeLabel": "Hypotension",
+            "micaCurie": "HP:0001626",
+            "micaLabel": "Abnormality of the cardiovascular system",
+            "score": 1.0995452333421922,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:174000"
+          }
+        ]
+      },
+      {
+        "rank": 21,
+        "geneCurie": "NCBIGene:5311",
+        "geneLabel": "PKD2",
+        "geneSymbol": "PKD2",
+        "geneEntityId": 149764,
+        "bmaScore": 2.1453300389394956,
+        "normalizedScore": 0.236868,
+        "patientAverageScore": 2.728106263266739,
+        "phenotypeAverageScore": 1.5625538146122524,
+        "directPhenotypeCount": 44,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0003259",
+            "patientPhenotypeLabel": "Elevated circulating creatinine concentration",
+            "diseasePhenotypeCurie": "HP:0003259",
+            "diseasePhenotypeLabel": "Elevated circulating creatinine concentration",
+            "micaCurie": "HP:0003259",
+            "micaLabel": "Elevated circulating creatinine concentration",
+            "score": 5.206925033862906,
+            "evidenceCode": "1/7",
+            "referenceText": "OMIM:613095"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011611",
+            "patientPhenotypeLabel": "Interrupted aortic arch",
+            "diseasePhenotypeCurie": "HP:0002616",
+            "diseasePhenotypeLabel": "Aortic root aneurysm",
+            "micaCurie": "HP:0001679",
+            "micaLabel": "Abnormal aortic morphology",
+            "score": 3.5974871214288062,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:730"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000083",
+            "patientPhenotypeLabel": "Renal insufficiency",
+            "diseasePhenotypeCurie": "HP:0012622",
+            "diseasePhenotypeLabel": "Chronic kidney disease",
+            "micaCurie": "HP:0000083",
+            "micaLabel": "Renal insufficiency",
+            "score": 3.3700972792331454,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:730"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011037",
+            "patientPhenotypeLabel": "Decreased urine output",
+            "diseasePhenotypeCurie": "HP:0012622",
+            "diseasePhenotypeLabel": "Chronic kidney disease",
+            "micaCurie": "HP:0012211",
+            "micaLabel": "Abnormal renal physiology",
+            "score": 2.8958653138778887,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:730"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0010773",
+            "patientPhenotypeLabel": "Partial anomalous pulmonary venous return",
+            "diseasePhenotypeCurie": "HP:0002616",
+            "diseasePhenotypeLabel": "Aortic root aneurysm",
+            "micaCurie": "HP:0030962",
+            "micaLabel": "Abnormal morphology of the great vessels",
+            "score": 2.7131922014466343,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:730"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001660",
+            "patientPhenotypeLabel": "Truncus arteriosus",
+            "diseasePhenotypeCurie": "HP:0002616",
+            "diseasePhenotypeLabel": "Aortic root aneurysm",
+            "micaCurie": "HP:0030962",
+            "micaLabel": "Abnormal morphology of the great vessels",
+            "score": 2.7131922014466343,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:730"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001629",
+            "patientPhenotypeLabel": "Ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0001696",
+            "diseasePhenotypeLabel": "Situs inversus totalis",
+            "micaCurie": "HP:0001627",
+            "micaLabel": "Abnormal heart morphology",
+            "score": 1.808568563202355,
+            "evidenceCode": "0/1",
+            "referenceText": "OMIM:613095"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007430",
+            "patientPhenotypeLabel": "Generalized edema",
+            "diseasePhenotypeCurie": "HP:0030948",
+            "diseasePhenotypeLabel": "Elevated gamma-glutamyltransferase level",
+            "micaCurie": "HP:0001939",
+            "micaLabel": "Abnormality of metabolism/homeostasis",
+            "score": 1.1250694832115808,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:613095"
+          }
+        ]
+      },
+      {
+        "rank": 22,
+        "geneCurie": "NCBIGene:254428",
+        "geneLabel": "SLC41A1",
+        "geneSymbol": "SLC41A1",
+        "geneEntityId": 153091,
+        "bmaScore": 2.1291245423535132,
+        "normalizedScore": 0.235079,
+        "patientAverageScore": 2.021347905817873,
+        "phenotypeAverageScore": 2.236901178889153,
+        "directPhenotypeCount": 14,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0003259",
+            "patientPhenotypeLabel": "Elevated circulating creatinine concentration",
+            "diseasePhenotypeCurie": "HP:0003259",
+            "diseasePhenotypeLabel": "Elevated circulating creatinine concentration",
+            "micaCurie": "HP:0003259",
+            "micaLabel": "Elevated circulating creatinine concentration",
+            "score": 5.206925033862906,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:619468"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011037",
+            "patientPhenotypeLabel": "Decreased urine output",
+            "diseasePhenotypeCurie": "HP:0000103",
+            "diseasePhenotypeLabel": "Polyuria",
+            "micaCurie": "HP:0012590",
+            "micaLabel": "Abnormal urine output",
+            "score": 4.979535191667246,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:619468"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000083",
+            "patientPhenotypeLabel": "Renal insufficiency",
+            "diseasePhenotypeCurie": "HP:0003774",
+            "diseasePhenotypeLabel": "Stage 5 chronic kidney disease",
+            "micaCurie": "HP:0000083",
+            "micaLabel": "Renal insufficiency",
+            "score": 3.3700972792331454,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:619468"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0010773",
+            "patientPhenotypeLabel": "Partial anomalous pulmonary venous return",
+            "diseasePhenotypeCurie": "HP:0002205",
+            "diseasePhenotypeLabel": "Recurrent respiratory infections",
+            "micaCurie": "HP:0002088",
+            "micaLabel": "Abnormal lung morphology",
+            "score": 2.2101294959875855,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:619468"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007430",
+            "patientPhenotypeLabel": "Generalized edema",
+            "diseasePhenotypeCurie": "HP:0001954",
+            "diseasePhenotypeLabel": "Recurrent fever",
+            "micaCurie": "HP:0012337",
+            "micaLabel": "Abnormal homeostasis",
+            "score": 1.911876500575794,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:619468"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001274",
+            "patientPhenotypeLabel": "Agenesis of corpus callosum",
+            "diseasePhenotypeCurie": "HP:0001959",
+            "diseasePhenotypeLabel": "Polydipsia",
+            "micaCurie": "HP:0000707",
+            "micaLabel": "Abnormality of the nervous system",
+            "score": 0.5058645655694501,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:619468"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011611",
+            "patientPhenotypeLabel": "Interrupted aortic arch",
+            "diseasePhenotypeCurie": "HP:0032622",
+            "diseasePhenotypeLabel": "Tubular luminal dilatation",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:619468"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001629",
+            "patientPhenotypeLabel": "Ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0032622",
+            "diseasePhenotypeLabel": "Tubular luminal dilatation",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:619468"
+          }
+        ]
+      },
+      {
+        "rank": 23,
+        "geneCurie": "NCBIGene:3426",
+        "geneLabel": "CFI",
+        "geneSymbol": "CFI",
+        "geneEntityId": 149150,
+        "bmaScore": 2.119725428776707,
+        "normalizedScore": 0.234041,
+        "patientAverageScore": 3.417324509849903,
+        "phenotypeAverageScore": 0.8221263477035105,
+        "directPhenotypeCount": 86,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011037",
+            "patientPhenotypeLabel": "Decreased urine output",
+            "diseasePhenotypeCurie": "HP:0100519",
+            "diseasePhenotypeLabel": "Anuria",
+            "micaCurie": "HP:0011037",
+            "micaLabel": "Decreased urine output",
+            "score": 6.572165985784965,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:612923"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007430",
+            "patientPhenotypeLabel": "Generalized edema",
+            "diseasePhenotypeCurie": "HP:0007430",
+            "diseasePhenotypeLabel": "Generalized edema",
+            "micaCurie": "HP:0007430",
+            "micaLabel": "Generalized edema",
+            "score": 5.798976097551483,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:244242"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003259",
+            "patientPhenotypeLabel": "Elevated circulating creatinine concentration",
+            "diseasePhenotypeCurie": "HP:0003259",
+            "diseasePhenotypeLabel": "Elevated circulating creatinine concentration",
+            "micaCurie": "HP:0003259",
+            "micaLabel": "Elevated circulating creatinine concentration",
+            "score": 5.206925033862906,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:612923"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000083",
+            "patientPhenotypeLabel": "Renal insufficiency",
+            "diseasePhenotypeCurie": "HP:0001919",
+            "diseasePhenotypeLabel": "Acute kidney injury",
+            "micaCurie": "HP:0000083",
+            "micaLabel": "Renal insufficiency",
+            "score": 3.3700972792331454,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "ORPHA:244242"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011611",
+            "patientPhenotypeLabel": "Interrupted aortic arch",
+            "diseasePhenotypeCurie": "HP:0002633",
+            "diseasePhenotypeLabel": "Vasculitis",
+            "micaCurie": "HP:0033353",
+            "micaLabel": "Abnormal blood vessel morphology",
+            "score": 2.3762179567827504,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:610984"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0010773",
+            "patientPhenotypeLabel": "Partial anomalous pulmonary venous return",
+            "diseasePhenotypeCurie": "HP:0002633",
+            "diseasePhenotypeLabel": "Vasculitis",
+            "micaCurie": "HP:0033353",
+            "micaLabel": "Abnormal blood vessel morphology",
+            "score": 2.3762179567827504,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:610984"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001660",
+            "patientPhenotypeLabel": "Truncus arteriosus",
+            "diseasePhenotypeCurie": "HP:0002633",
+            "diseasePhenotypeLabel": "Vasculitis",
+            "micaCurie": "HP:0033353",
+            "micaLabel": "Abnormal blood vessel morphology",
+            "score": 2.3762179567827504,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:610984"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001629",
+            "patientPhenotypeLabel": "Ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0002633",
+            "diseasePhenotypeLabel": "Vasculitis",
+            "micaCurie": "HP:0030680",
+            "micaLabel": "Abnormal cardiovascular system morphology",
+            "score": 1.55654315017767,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:610984"
+          }
+        ]
+      },
+      {
+        "rank": 24,
+        "geneCurie": "NCBIGene:2657",
+        "geneLabel": "GDF1",
+        "geneSymbol": "GDF1",
+        "geneEntityId": 148934,
+        "bmaScore": 2.1191792552823343,
+        "normalizedScore": 0.233981,
+        "patientAverageScore": 2.4735101248176563,
+        "phenotypeAverageScore": 1.764848385747012,
+        "directPhenotypeCount": 39,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0010773",
+            "patientPhenotypeLabel": "Partial anomalous pulmonary venous return",
+            "diseasePhenotypeCurie": "HP:0005160",
+            "diseasePhenotypeLabel": "Total anomalous pulmonary venous return",
+            "micaCurie": "HP:0010772",
+            "micaLabel": "Anomalous pulmonary venous return",
+            "score": 5.501724574083552,
+            "evidenceCode": "5/5",
+            "referenceText": "OMIM:208530"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011611",
+            "patientPhenotypeLabel": "Interrupted aortic arch",
+            "diseasePhenotypeCurie": "HP:0012020",
+            "diseasePhenotypeLabel": "Right aortic arch",
+            "micaCurie": "HP:0012303",
+            "micaLabel": "Abnormal aortic arch morphology",
+            "score": 4.929938250527874,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:613854"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001274",
+            "patientPhenotypeLabel": "Agenesis of corpus callosum",
+            "diseasePhenotypeCurie": "HP:0001274",
+            "diseasePhenotypeLabel": "Agenesis of corpus callosum",
+            "micaCurie": "HP:0001274",
+            "micaLabel": "Agenesis of corpus callosum",
+            "score": 3.462361255971126,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:208530"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001660",
+            "patientPhenotypeLabel": "Truncus arteriosus",
+            "diseasePhenotypeCurie": "HP:0001719",
+            "diseasePhenotypeLabel": "Double outlet right ventricle",
+            "micaCurie": "HP:0011603",
+            "micaLabel": "Congenital malformation of the great arteries",
+            "score": 3.0807217262750313,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:613854"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001629",
+            "patientPhenotypeLabel": "Ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0001629",
+            "diseasePhenotypeLabel": "Ventricular septal defect",
+            "micaCurie": "HP:0001629",
+            "micaLabel": "Ventricular septal defect",
+            "score": 2.9389754375316173,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:208530"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000083",
+            "patientPhenotypeLabel": "Renal insufficiency",
+            "diseasePhenotypeCurie": "HP:0000028",
+            "diseasePhenotypeLabel": "Cryptorchidism",
+            "micaCurie": "HP:0000119",
+            "micaLabel": "Abnormality of the genitourinary system",
+            "score": 1.1713672443299454,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:3303"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011037",
+            "patientPhenotypeLabel": "Decreased urine output",
+            "diseasePhenotypeCurie": "HP:0000028",
+            "diseasePhenotypeLabel": "Cryptorchidism",
+            "micaCurie": "HP:0000119",
+            "micaLabel": "Abnormality of the genitourinary system",
+            "score": 1.1713672443299454,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:3303"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007430",
+            "patientPhenotypeLabel": "Generalized edema",
+            "diseasePhenotypeCurie": "HP:0032092",
+            "diseasePhenotypeLabel": "Left ventricular outflow tract obstruction",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:613854"
+          }
+        ]
+      },
+      {
+        "rank": 25,
+        "geneCurie": "NCBIGene:93",
+        "geneLabel": "ACVR2B",
+        "geneSymbol": "ACVR2B",
+        "geneEntityId": 148104,
+        "bmaScore": 2.115358435440141,
+        "normalizedScore": 0.233559,
+        "patientAverageScore": 1.8293553849102908,
+        "phenotypeAverageScore": 2.401361485969991,
+        "directPhenotypeCount": 17,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0010773",
+            "patientPhenotypeLabel": "Partial anomalous pulmonary venous return",
+            "diseasePhenotypeCurie": "HP:0005160",
+            "diseasePhenotypeLabel": "Total anomalous pulmonary venous return",
+            "micaCurie": "HP:0010772",
+            "micaLabel": "Anomalous pulmonary venous return",
+            "score": 5.501724574083552,
+            "evidenceCode": "1/3",
+            "referenceText": "OMIM:613751"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011611",
+            "patientPhenotypeLabel": "Interrupted aortic arch",
+            "diseasePhenotypeCurie": "HP:0012020",
+            "diseasePhenotypeLabel": "Right aortic arch",
+            "micaCurie": "HP:0012303",
+            "micaLabel": "Abnormal aortic arch morphology",
+            "score": 4.929938250527874,
+            "evidenceCode": "1/3",
+            "referenceText": "OMIM:613751"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001660",
+            "patientPhenotypeLabel": "Truncus arteriosus",
+            "diseasePhenotypeCurie": "HP:0031348",
+            "diseasePhenotypeLabel": "Dextrotransposition of the great arteries",
+            "micaCurie": "HP:0011603",
+            "micaLabel": "Congenital malformation of the great arteries",
+            "score": 3.0807217262750313,
+            "evidenceCode": "1/3",
+            "referenceText": "OMIM:613751"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001629",
+            "patientPhenotypeLabel": "Ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0001629",
+            "diseasePhenotypeLabel": "Ventricular septal defect",
+            "micaCurie": "HP:0001629",
+            "micaLabel": "Ventricular septal defect",
+            "score": 2.9389754375316173,
+            "evidenceCode": "1/3",
+            "referenceText": "OMIM:613751"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000083",
+            "patientPhenotypeLabel": "Renal insufficiency",
+            "diseasePhenotypeCurie": "HP:0034188",
+            "diseasePhenotypeLabel": "Midline liver",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "2/3",
+            "referenceText": "OMIM:613751"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007430",
+            "patientPhenotypeLabel": "Generalized edema",
+            "diseasePhenotypeCurie": "HP:0034188",
+            "diseasePhenotypeLabel": "Midline liver",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "2/3",
+            "referenceText": "OMIM:613751"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001274",
+            "patientPhenotypeLabel": "Agenesis of corpus callosum",
+            "diseasePhenotypeCurie": "HP:0034188",
+            "diseasePhenotypeLabel": "Midline liver",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "2/3",
+            "referenceText": "OMIM:613751"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003259",
+            "patientPhenotypeLabel": "Elevated circulating creatinine concentration",
+            "diseasePhenotypeCurie": "HP:0034188",
+            "diseasePhenotypeLabel": "Midline liver",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "2/3",
+            "referenceText": "OMIM:613751"
+          }
+        ]
+      }
+    ],
+    "engineSummary": {
+      "diseaseCount": 8579,
+      "geneCount": 5256,
+      "phenotypeCount": 19389,
+      "sourceMode": {
+        "disease": "relationship_fallback",
+        "gene": "relationship_fallback"
+      },
+      "generatedAt": "2026-03-15T21:00:39.457Z"
+    }
+  }
+}

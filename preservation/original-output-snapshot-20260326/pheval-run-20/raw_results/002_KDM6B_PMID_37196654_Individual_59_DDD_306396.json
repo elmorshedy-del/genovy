@@ -1,0 +1,2620 @@
+{
+  "success": true,
+  "engine": "genovy-dx-sim",
+  "input": {
+    "presentPhenotypeCuries": [
+      "HP:0002007",
+      "HP:0011220",
+      "HP:0000268",
+      "HP:0001159",
+      "HP:0001263",
+      "HP:0001270",
+      "HP:0000750",
+      "HP:0001288"
+    ],
+    "excludedPhenotypeCuries": [
+      "HP:0002307",
+      "HP:0002376",
+      "HP:0012434",
+      "HP:0010529",
+      "HP:0003763",
+      "HP:4000079",
+      "HP:0000716"
+    ],
+    "sourceFormat": "phenopacket"
+  },
+  "ranking": {
+    "queryPhenotypes": [
+      {
+        "phenotypeCurie": "HP:0002007",
+        "phenotypeLabel": "Frontal bossing"
+      },
+      {
+        "phenotypeCurie": "HP:0011220",
+        "phenotypeLabel": "Prominent forehead"
+      },
+      {
+        "phenotypeCurie": "HP:0000268",
+        "phenotypeLabel": "Dolichocephaly"
+      },
+      {
+        "phenotypeCurie": "HP:0001159",
+        "phenotypeLabel": "Syndactyly"
+      },
+      {
+        "phenotypeCurie": "HP:0001263",
+        "phenotypeLabel": "Global developmental delay"
+      },
+      {
+        "phenotypeCurie": "HP:0001270",
+        "phenotypeLabel": "Motor delay"
+      },
+      {
+        "phenotypeCurie": "HP:0000750",
+        "phenotypeLabel": "Delayed speech and language development"
+      },
+      {
+        "phenotypeCurie": "HP:0001288",
+        "phenotypeLabel": "Gait disturbance"
+      }
+    ],
+    "results": [
+      {
+        "rank": 1,
+        "diseaseCurie": "MONDO:0007399",
+        "diseaseLabel": "TWIST1-related craniosynostosis",
+        "diseaseEntityId": 68685,
+        "bmaScore": 1.83078418797458,
+        "normalizedScore": 0.202139,
+        "patientAverageScore": 1.8449269043431855,
+        "diseaseAverageScore": 1.8166414716059747,
+        "directPhenotypeCount": 17,
+        "matchedPhenotypeCount": 8,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000268",
+            "patientPhenotypeLabel": "Dolichocephaly",
+            "diseasePhenotypeCurie": "HP:0030799",
+            "diseasePhenotypeLabel": "Scaphocephaly",
+            "micaCurie": "HP:0000268",
+            "micaLabel": "Dolichocephaly",
+            "score": 3.87528908528088,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:123100"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011220",
+            "patientPhenotypeLabel": "Prominent forehead",
+            "diseasePhenotypeCurie": "HP:0011220",
+            "diseasePhenotypeLabel": "Prominent forehead",
+            "micaCurie": "HP:0011220",
+            "micaLabel": "Prominent forehead",
+            "score": 3.4963910045574376,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:17343269"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002007",
+            "patientPhenotypeLabel": "Frontal bossing",
+            "diseasePhenotypeCurie": "HP:0002007",
+            "diseasePhenotypeLabel": "Frontal bossing",
+            "micaCurie": "HP:0002007",
+            "micaLabel": "Frontal bossing",
+            "score": 3.1012352661081346,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:17343269"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001249",
+            "diseasePhenotypeLabel": "Intellectual disability",
+            "micaCurie": "HP:0012759",
+            "micaLabel": "Neurodevelopmental abnormality",
+            "score": 0.9688179084505344,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:17343269"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001270",
+            "patientPhenotypeLabel": "Motor delay",
+            "diseasePhenotypeCurie": "HP:0001249",
+            "diseasePhenotypeLabel": "Intellectual disability",
+            "micaCurie": "HP:0012759",
+            "micaLabel": "Neurodevelopmental abnormality",
+            "score": 0.9688179084505344,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:17343269"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0001249",
+            "diseasePhenotypeLabel": "Intellectual disability",
+            "micaCurie": "HP:0012759",
+            "micaLabel": "Neurodevelopmental abnormality",
+            "score": 0.9688179084505344,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:17343269"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001159",
+            "patientPhenotypeLabel": "Syndactyly",
+            "diseasePhenotypeCurie": "HP:0030799",
+            "diseasePhenotypeLabel": "Scaphocephaly",
+            "micaCurie": "HP:0011842",
+            "micaLabel": "Abnormal skeletal morphology",
+            "score": 0.7723160423825302,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:123100"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001288",
+            "patientPhenotypeLabel": "Gait disturbance",
+            "diseasePhenotypeCurie": "HP:0001249",
+            "diseasePhenotypeLabel": "Intellectual disability",
+            "micaCurie": "HP:0012638",
+            "micaLabel": "Abnormal nervous system physiology",
+            "score": 0.6077301110649022,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:17343269"
+          }
+        ]
+      },
+      {
+        "rank": 2,
+        "diseaseCurie": "MONDO:0014289",
+        "diseaseLabel": "macrocephaly-developmental delay syndrome",
+        "diseaseEntityId": 75575,
+        "bmaScore": 1.72568468751544,
+        "normalizedScore": 0.190534,
+        "patientAverageScore": 2.292735553003434,
+        "diseaseAverageScore": 1.158633822027446,
+        "directPhenotypeCount": 32,
+        "matchedPhenotypeCount": 8,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000268",
+            "patientPhenotypeLabel": "Dolichocephaly",
+            "diseasePhenotypeCurie": "HP:0030799",
+            "diseasePhenotypeLabel": "Scaphocephaly",
+            "micaCurie": "HP:0000268",
+            "micaLabel": "Dolichocephaly",
+            "score": 3.87528908528088,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:24239382"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011220",
+            "patientPhenotypeLabel": "Prominent forehead",
+            "diseasePhenotypeCurie": "HP:0011220",
+            "diseasePhenotypeLabel": "Prominent forehead",
+            "micaCurie": "HP:0011220",
+            "micaLabel": "Prominent forehead",
+            "score": 3.4963910045574376,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:25847626"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002007",
+            "patientPhenotypeLabel": "Frontal bossing",
+            "diseasePhenotypeCurie": "HP:0002007",
+            "diseasePhenotypeLabel": "Frontal bossing",
+            "micaCurie": "HP:0002007",
+            "micaLabel": "Frontal bossing",
+            "score": 3.1012352661081346,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:24239382"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001270",
+            "patientPhenotypeLabel": "Motor delay",
+            "diseasePhenotypeCurie": "HP:0001270",
+            "diseasePhenotypeLabel": "Motor delay",
+            "micaCurie": "HP:0001270",
+            "micaLabel": "Motor delay",
+            "score": 2.1246247440004566,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:25847626"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:25847626;PMID:24239382"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001159",
+            "patientPhenotypeLabel": "Syndactyly",
+            "diseasePhenotypeCurie": "HP:0004209",
+            "diseasePhenotypeLabel": "Clinodactyly of the 5th finger",
+            "micaCurie": "HP:0011297",
+            "micaLabel": "Abnormal digit morphology",
+            "score": 1.620455370338739,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:24239382"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:25847626"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001288",
+            "patientPhenotypeLabel": "Gait disturbance",
+            "diseasePhenotypeCurie": "HP:0100716",
+            "diseasePhenotypeLabel": "Self-injurious behavior",
+            "micaCurie": "HP:0012638",
+            "micaLabel": "Abnormal nervous system physiology",
+            "score": 0.6077301110649022,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:25847626"
+          }
+        ]
+      },
+      {
+        "rank": 3,
+        "diseaseCurie": "MONDO:0008287",
+        "diseaseLabel": "Greig cephalopolysyndactyly syndrome",
+        "diseaseEntityId": 69573,
+        "bmaScore": 1.7122485555575309,
+        "normalizedScore": 0.189051,
+        "patientAverageScore": 2.174703307566822,
+        "diseaseAverageScore": 1.2497938035482397,
+        "directPhenotypeCount": 57,
+        "matchedPhenotypeCount": 8,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000268",
+            "patientPhenotypeLabel": "Dolichocephaly",
+            "diseasePhenotypeCurie": "HP:0030799",
+            "diseasePhenotypeLabel": "Scaphocephaly",
+            "micaCurie": "HP:0000268",
+            "micaLabel": "Dolichocephaly",
+            "score": 3.87528908528088,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:175700"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002007",
+            "patientPhenotypeLabel": "Frontal bossing",
+            "diseasePhenotypeCurie": "HP:0002007",
+            "diseasePhenotypeLabel": "Frontal bossing",
+            "micaCurie": "HP:0002007",
+            "micaLabel": "Frontal bossing",
+            "score": 3.1012352661081346,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:380"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001159",
+            "patientPhenotypeLabel": "Syndactyly",
+            "diseasePhenotypeCurie": "HP:0011939",
+            "diseasePhenotypeLabel": "3-4 finger cutaneous syndactyly",
+            "micaCurie": "HP:0001159",
+            "micaLabel": "Syndactyly",
+            "score": 3.0507194759712326,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:175700"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:24736735"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011220",
+            "patientPhenotypeLabel": "Prominent forehead",
+            "diseasePhenotypeCurie": "HP:0011330",
+            "diseasePhenotypeLabel": "Metopic synostosis",
+            "micaCurie": "HP:0000290",
+            "micaLabel": "Abnormal forehead morphology",
+            "score": 2.050377408735925,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:175700"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:24736735"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001270",
+            "patientPhenotypeLabel": "Motor delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0012758",
+            "micaLabel": "Neurodevelopmental delay",
+            "score": 1.196116270696576,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:24736735"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001288",
+            "patientPhenotypeLabel": "Gait disturbance",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0012638",
+            "micaLabel": "Abnormal nervous system physiology",
+            "score": 0.6077301110649022,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:24736735"
+          }
+        ]
+      },
+      {
+        "rank": 4,
+        "diseaseCurie": "MONDO:0011518",
+        "diseaseLabel": "Wiedemann-Steiner syndrome",
+        "diseaseEntityId": 72804,
+        "bmaScore": 1.7052078559037787,
+        "normalizedScore": 0.188274,
+        "patientAverageScore": 2.546913810377142,
+        "diseaseAverageScore": 0.8635019014304153,
+        "directPhenotypeCount": 104,
+        "matchedPhenotypeCount": 8,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000268",
+            "patientPhenotypeLabel": "Dolichocephaly",
+            "diseasePhenotypeCurie": "HP:0000268",
+            "diseasePhenotypeLabel": "Dolichocephaly",
+            "micaCurie": "HP:0000268",
+            "micaLabel": "Dolichocephaly",
+            "score": 3.87528908528088,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:319182"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011220",
+            "patientPhenotypeLabel": "Prominent forehead",
+            "diseasePhenotypeCurie": "HP:0011220",
+            "diseasePhenotypeLabel": "Prominent forehead",
+            "micaCurie": "HP:0011220",
+            "micaLabel": "Prominent forehead",
+            "score": 3.4963910045574376,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:25810209"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001159",
+            "patientPhenotypeLabel": "Syndactyly",
+            "diseasePhenotypeCurie": "HP:0004691",
+            "diseasePhenotypeLabel": "2-3 toe syndactyly",
+            "micaCurie": "HP:0001159",
+            "micaLabel": "Syndactyly",
+            "score": 3.0507194759712326,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:25810209;PMID:22795537"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002007",
+            "patientPhenotypeLabel": "Frontal bossing",
+            "diseasePhenotypeCurie": "HP:0000268",
+            "diseasePhenotypeLabel": "Dolichocephaly",
+            "micaCurie": "HP:0002683",
+            "micaLabel": "Abnormal calvaria morphology",
+            "score": 2.2229638967591265,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:319182"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001270",
+            "patientPhenotypeLabel": "Motor delay",
+            "diseasePhenotypeCurie": "HP:0002194",
+            "diseasePhenotypeLabel": "Delayed gross motor development",
+            "micaCurie": "HP:0001270",
+            "micaLabel": "Motor delay",
+            "score": 2.1246247440004566,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:319182"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001288",
+            "patientPhenotypeLabel": "Gait disturbance",
+            "diseasePhenotypeCurie": "HP:0002136",
+            "diseasePhenotypeLabel": "Broad-based gait",
+            "micaCurie": "HP:0001288",
+            "micaLabel": "Gait disturbance",
+            "score": 2.089163433771081,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:605130"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:319182"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:25810209;PMID:22795537"
+          }
+        ]
+      },
+      {
+        "rank": 5,
+        "diseaseCurie": "MONDO:0012315",
+        "diseaseLabel": "distal 10q deletion syndrome",
+        "diseaseEntityId": 73601,
+        "bmaScore": 1.7043015409285285,
+        "normalizedScore": 0.188174,
+        "patientAverageScore": 2.475946032068079,
+        "diseaseAverageScore": 0.9326570497889781,
+        "directPhenotypeCount": 64,
+        "matchedPhenotypeCount": 8,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000268",
+            "patientPhenotypeLabel": "Dolichocephaly",
+            "diseasePhenotypeCurie": "HP:0000268",
+            "diseasePhenotypeLabel": "Dolichocephaly",
+            "micaCurie": "HP:0000268",
+            "micaLabel": "Dolichocephaly",
+            "score": 3.87528908528088,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:609625"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002007",
+            "patientPhenotypeLabel": "Frontal bossing",
+            "diseasePhenotypeCurie": "HP:0002007",
+            "diseasePhenotypeLabel": "Frontal bossing",
+            "micaCurie": "HP:0002007",
+            "micaLabel": "Frontal bossing",
+            "score": 3.1012352661081346,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:609625"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001159",
+            "patientPhenotypeLabel": "Syndactyly",
+            "diseasePhenotypeCurie": "HP:0005709",
+            "diseasePhenotypeLabel": "2-3 toe cutaneous syndactyly",
+            "micaCurie": "HP:0001159",
+            "micaLabel": "Syndactyly",
+            "score": 3.0507194759712326,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:14598339"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001270",
+            "patientPhenotypeLabel": "Motor delay",
+            "diseasePhenotypeCurie": "HP:0001270",
+            "diseasePhenotypeLabel": "Motor delay",
+            "micaCurie": "HP:0001270",
+            "micaLabel": "Motor delay",
+            "score": 2.1246247440004566,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:14598339"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001288",
+            "patientPhenotypeLabel": "Gait disturbance",
+            "diseasePhenotypeCurie": "HP:0002136",
+            "diseasePhenotypeLabel": "Broad-based gait",
+            "micaCurie": "HP:0001288",
+            "micaLabel": "Gait disturbance",
+            "score": 2.089163433771081,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:609625"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:14598339"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011220",
+            "patientPhenotypeLabel": "Prominent forehead",
+            "diseasePhenotypeCurie": "HP:0002007",
+            "diseasePhenotypeLabel": "Frontal bossing",
+            "micaCurie": "HP:0000290",
+            "micaLabel": "Abnormal forehead morphology",
+            "score": 2.050377408735925,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:609625"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:14598339"
+          }
+        ]
+      },
+      {
+        "rank": 6,
+        "diseaseCurie": "MONDO:0032790",
+        "diseaseLabel": "neurodevelopmental disorder with coarse facies and mild distal skeletal abnormalities",
+        "diseaseEntityId": 84634,
+        "bmaScore": 1.7019210635569197,
+        "normalizedScore": 0.187911,
+        "patientAverageScore": 2.656697731545768,
+        "diseaseAverageScore": 0.7471443955680716,
+        "directPhenotypeCount": 233,
+        "matchedPhenotypeCount": 8,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000268",
+            "patientPhenotypeLabel": "Dolichocephaly",
+            "diseasePhenotypeCurie": "HP:0000268",
+            "diseasePhenotypeLabel": "Dolichocephaly",
+            "micaCurie": "HP:0000268",
+            "micaLabel": "Dolichocephaly",
+            "score": 3.87528908528088,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:37196654;PMID:31124279"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011220",
+            "patientPhenotypeLabel": "Prominent forehead",
+            "diseasePhenotypeCurie": "HP:0011220",
+            "diseasePhenotypeLabel": "Prominent forehead",
+            "micaCurie": "HP:0011220",
+            "micaLabel": "Prominent forehead",
+            "score": 3.4963910045574376,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:37196654;PMID:31124279"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002007",
+            "patientPhenotypeLabel": "Frontal bossing",
+            "diseasePhenotypeCurie": "HP:0002007",
+            "diseasePhenotypeLabel": "Frontal bossing",
+            "micaCurie": "HP:0002007",
+            "micaLabel": "Frontal bossing",
+            "score": 3.1012352661081346,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:37196654"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001159",
+            "patientPhenotypeLabel": "Syndactyly",
+            "diseasePhenotypeCurie": "HP:0010714",
+            "diseasePhenotypeLabel": "2-4 toe syndactyly",
+            "micaCurie": "HP:0001159",
+            "micaLabel": "Syndactyly",
+            "score": 3.0507194759712326,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31124279"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001270",
+            "patientPhenotypeLabel": "Motor delay",
+            "diseasePhenotypeCurie": "HP:0031936",
+            "diseasePhenotypeLabel": "Delayed ability to walk",
+            "micaCurie": "HP:0001270",
+            "micaLabel": "Motor delay",
+            "score": 2.1246247440004566,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:37196654"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001288",
+            "patientPhenotypeLabel": "Gait disturbance",
+            "diseasePhenotypeCurie": "HP:6001054",
+            "diseasePhenotypeLabel": "Intoeing",
+            "micaCurie": "HP:0001288",
+            "micaLabel": "Gait disturbance",
+            "score": 2.089163433771081,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31124279"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:37196654;PMID:31124279"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:37196654;PMID:31124279"
+          }
+        ]
+      },
+      {
+        "rank": 7,
+        "diseaseCurie": "MONDO:0957228",
+        "diseaseLabel": "intellectual developmental disorder, autosomal dominant 71, with behavioral abnormalities",
+        "diseaseEntityId": 88143,
+        "bmaScore": 1.6946897267985013,
+        "normalizedScore": 0.187112,
+        "patientAverageScore": 2.4440627365901704,
+        "diseaseAverageScore": 0.9453167170068324,
+        "directPhenotypeCount": 75,
+        "matchedPhenotypeCount": 8,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000268",
+            "patientPhenotypeLabel": "Dolichocephaly",
+            "diseasePhenotypeCurie": "HP:0030799",
+            "diseasePhenotypeLabel": "Scaphocephaly",
+            "micaCurie": "HP:0000268",
+            "micaLabel": "Dolichocephaly",
+            "score": 3.87528908528088,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:33658631"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002007",
+            "patientPhenotypeLabel": "Frontal bossing",
+            "diseasePhenotypeCurie": "HP:0002007",
+            "diseasePhenotypeLabel": "Frontal bossing",
+            "micaCurie": "HP:0002007",
+            "micaLabel": "Frontal bossing",
+            "score": 3.1012352661081346,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:33658631"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001159",
+            "patientPhenotypeLabel": "Syndactyly",
+            "diseasePhenotypeCurie": "HP:0012725",
+            "diseasePhenotypeLabel": "Cutaneous syndactyly",
+            "micaCurie": "HP:0001159",
+            "micaLabel": "Syndactyly",
+            "score": 3.0507194759712326,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:33658631"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001270",
+            "patientPhenotypeLabel": "Motor delay",
+            "diseasePhenotypeCurie": "HP:0001270",
+            "diseasePhenotypeLabel": "Motor delay",
+            "micaCurie": "HP:0001270",
+            "micaLabel": "Motor delay",
+            "score": 2.1246247440004566,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:33658631"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001288",
+            "patientPhenotypeLabel": "Gait disturbance",
+            "diseasePhenotypeCurie": "HP:0002136",
+            "diseasePhenotypeLabel": "Broad-based gait",
+            "micaCurie": "HP:0001288",
+            "micaLabel": "Gait disturbance",
+            "score": 2.089163433771081,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:33658631"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:33658631"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011220",
+            "patientPhenotypeLabel": "Prominent forehead",
+            "diseasePhenotypeCurie": "HP:0002007",
+            "diseasePhenotypeLabel": "Frontal bossing",
+            "micaCurie": "HP:0000290",
+            "micaLabel": "Abnormal forehead morphology",
+            "score": 2.050377408735925,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:33658631"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001270",
+            "diseasePhenotypeLabel": "Motor delay",
+            "micaCurie": "HP:0012758",
+            "micaLabel": "Neurodevelopmental delay",
+            "score": 1.196116270696576,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:33658631"
+          }
+        ]
+      },
+      {
+        "rank": 8,
+        "diseaseCurie": "MONDO:0014357",
+        "diseaseLabel": "intellectual disability, autosomal dominant 24",
+        "diseaseEntityId": 75643,
+        "bmaScore": 1.677361201527762,
+        "normalizedScore": 0.185199,
+        "patientAverageScore": 2.2188755252047447,
+        "diseaseAverageScore": 1.1358468778507789,
+        "directPhenotypeCount": 31,
+        "matchedPhenotypeCount": 8,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002007",
+            "patientPhenotypeLabel": "Frontal bossing",
+            "diseasePhenotypeCurie": "HP:0002007",
+            "diseasePhenotypeLabel": "Frontal bossing",
+            "micaCurie": "HP:0002007",
+            "micaLabel": "Frontal bossing",
+            "score": 3.1012352661081346,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:24726472"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001159",
+            "patientPhenotypeLabel": "Syndactyly",
+            "diseasePhenotypeCurie": "HP:0005709",
+            "diseasePhenotypeLabel": "2-3 toe cutaneous syndactyly",
+            "micaCurie": "HP:0001159",
+            "micaLabel": "Syndactyly",
+            "score": 3.0507194759712326,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:24726472"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000268",
+            "patientPhenotypeLabel": "Dolichocephaly",
+            "diseasePhenotypeCurie": "HP:0002007",
+            "diseasePhenotypeLabel": "Frontal bossing",
+            "micaCurie": "HP:0002683",
+            "micaLabel": "Abnormal calvaria morphology",
+            "score": 2.2229638967591265,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:24726472"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001270",
+            "patientPhenotypeLabel": "Motor delay",
+            "diseasePhenotypeCurie": "HP:0001270",
+            "diseasePhenotypeLabel": "Motor delay",
+            "micaCurie": "HP:0001270",
+            "micaLabel": "Motor delay",
+            "score": 2.1246247440004566,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:24726472"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001288",
+            "patientPhenotypeLabel": "Gait disturbance",
+            "diseasePhenotypeCurie": "HP:0001288",
+            "diseasePhenotypeLabel": "Gait disturbance",
+            "micaCurie": "HP:0001288",
+            "micaLabel": "Gait disturbance",
+            "score": 2.089163433771081,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:24726472"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011220",
+            "patientPhenotypeLabel": "Prominent forehead",
+            "diseasePhenotypeCurie": "HP:0002007",
+            "diseasePhenotypeLabel": "Frontal bossing",
+            "micaCurie": "HP:0000290",
+            "micaLabel": "Abnormal forehead morphology",
+            "score": 2.050377408735925,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:24726472"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0000817",
+            "diseasePhenotypeLabel": "Reduced eye contact",
+            "micaCurie": "HP:0034434",
+            "micaLabel": "Abnormal communication",
+            "score": 1.6607373417721571,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:24726472"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:24726472"
+          }
+        ]
+      },
+      {
+        "rank": 9,
+        "diseaseCurie": "MONDO:0859174",
+        "diseaseLabel": "Usmani-Riazuddin syndrome, autosomal dominant",
+        "diseaseEntityId": 87837,
+        "bmaScore": 1.6362960571302347,
+        "normalizedScore": 0.180665,
+        "patientAverageScore": 2.1489143584792916,
+        "diseaseAverageScore": 1.123677755781178,
+        "directPhenotypeCount": 30,
+        "matchedPhenotypeCount": 8,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011220",
+            "patientPhenotypeLabel": "Prominent forehead",
+            "diseasePhenotypeCurie": "HP:0011220",
+            "diseasePhenotypeLabel": "Prominent forehead",
+            "micaCurie": "HP:0011220",
+            "micaLabel": "Prominent forehead",
+            "score": 3.4963910045574376,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:34102099"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002007",
+            "patientPhenotypeLabel": "Frontal bossing",
+            "diseasePhenotypeCurie": "HP:0002007",
+            "diseasePhenotypeLabel": "Frontal bossing",
+            "micaCurie": "HP:0002007",
+            "micaLabel": "Frontal bossing",
+            "score": 3.1012352661081346,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:34102099"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001159",
+            "patientPhenotypeLabel": "Syndactyly",
+            "diseasePhenotypeCurie": "HP:0004691",
+            "diseasePhenotypeLabel": "2-3 toe syndactyly",
+            "micaCurie": "HP:0001159",
+            "micaLabel": "Syndactyly",
+            "score": 3.0507194759712326,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:34102099"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000268",
+            "patientPhenotypeLabel": "Dolichocephaly",
+            "diseasePhenotypeCurie": "HP:0002007",
+            "diseasePhenotypeLabel": "Frontal bossing",
+            "micaCurie": "HP:0002683",
+            "micaLabel": "Abnormal calvaria morphology",
+            "score": 2.2229638967591265,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:34102099"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:34102099"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:34102099"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001270",
+            "patientPhenotypeLabel": "Motor delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0012758",
+            "micaLabel": "Neurodevelopmental delay",
+            "score": 1.196116270696576,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:34102099"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001288",
+            "patientPhenotypeLabel": "Gait disturbance",
+            "diseasePhenotypeCurie": "HP:0100716",
+            "diseasePhenotypeLabel": "Self-injurious behavior",
+            "micaCurie": "HP:0012638",
+            "micaLabel": "Abnormal nervous system physiology",
+            "score": 0.6077301110649022,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:34102099"
+          }
+        ]
+      },
+      {
+        "rank": 10,
+        "diseaseCurie": "MONDO:0012307",
+        "diseaseLabel": "familial scaphocephaly syndrome, McGillivray type",
+        "diseaseEntityId": 73593,
+        "bmaScore": 1.628977337102467,
+        "normalizedScore": 0.179857,
+        "patientAverageScore": 1.8391917128954585,
+        "diseaseAverageScore": 1.4187629613094754,
+        "directPhenotypeCount": 15,
+        "matchedPhenotypeCount": 8,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000268",
+            "patientPhenotypeLabel": "Dolichocephaly",
+            "diseasePhenotypeCurie": "HP:0000268",
+            "diseasePhenotypeLabel": "Dolichocephaly",
+            "micaCurie": "HP:0000268",
+            "micaLabel": "Dolichocephaly",
+            "score": 3.87528908528088,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:168624"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001159",
+            "patientPhenotypeLabel": "Syndactyly",
+            "diseasePhenotypeCurie": "HP:0001770",
+            "diseasePhenotypeLabel": "Toe syndactyly",
+            "micaCurie": "HP:0001159",
+            "micaLabel": "Syndactyly",
+            "score": 3.0507194759712326,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:168624"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002007",
+            "patientPhenotypeLabel": "Frontal bossing",
+            "diseasePhenotypeCurie": "HP:0000268",
+            "diseasePhenotypeLabel": "Dolichocephaly",
+            "micaCurie": "HP:0002683",
+            "micaLabel": "Abnormal calvaria morphology",
+            "score": 2.2229638967591265,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:168624"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011220",
+            "patientPhenotypeLabel": "Prominent forehead",
+            "diseasePhenotypeCurie": "HP:0000348",
+            "diseasePhenotypeLabel": "High forehead",
+            "micaCurie": "HP:0000290",
+            "micaLabel": "Abnormal forehead morphology",
+            "score": 2.050377408735925,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:168624"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001256",
+            "diseasePhenotypeLabel": "Mild intellectual disability",
+            "micaCurie": "HP:0012759",
+            "micaLabel": "Neurodevelopmental abnormality",
+            "score": 0.9688179084505344,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:168624"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001270",
+            "patientPhenotypeLabel": "Motor delay",
+            "diseasePhenotypeCurie": "HP:0001256",
+            "diseasePhenotypeLabel": "Mild intellectual disability",
+            "micaCurie": "HP:0012759",
+            "micaLabel": "Neurodevelopmental abnormality",
+            "score": 0.9688179084505344,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:168624"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0001256",
+            "diseasePhenotypeLabel": "Mild intellectual disability",
+            "micaCurie": "HP:0012759",
+            "micaLabel": "Neurodevelopmental abnormality",
+            "score": 0.9688179084505344,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:168624"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001288",
+            "patientPhenotypeLabel": "Gait disturbance",
+            "diseasePhenotypeCurie": "HP:0001256",
+            "diseasePhenotypeLabel": "Mild intellectual disability",
+            "micaCurie": "HP:0012638",
+            "micaLabel": "Abnormal nervous system physiology",
+            "score": 0.6077301110649022,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:168624"
+          }
+        ]
+      },
+      {
+        "rank": 11,
+        "diseaseCurie": "MONDO:0019349",
+        "diseaseLabel": "Sotos syndrome",
+        "diseaseEntityId": 80635,
+        "bmaScore": 1.6273939389201606,
+        "normalizedScore": 0.179682,
+        "patientAverageScore": 2.572610903471799,
+        "diseaseAverageScore": 0.6821769743685219,
+        "directPhenotypeCount": 154,
+        "matchedPhenotypeCount": 8,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000268",
+            "patientPhenotypeLabel": "Dolichocephaly",
+            "diseasePhenotypeCurie": "HP:0000268",
+            "diseasePhenotypeLabel": "Dolichocephaly",
+            "micaCurie": "HP:0000268",
+            "micaLabel": "Dolichocephaly",
+            "score": 3.87528908528088,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:29164086"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011220",
+            "patientPhenotypeLabel": "Prominent forehead",
+            "diseasePhenotypeCurie": "HP:0011220",
+            "diseasePhenotypeLabel": "Prominent forehead",
+            "micaCurie": "HP:0011220",
+            "micaLabel": "Prominent forehead",
+            "score": 3.4963910045574376,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:821"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002007",
+            "patientPhenotypeLabel": "Frontal bossing",
+            "diseasePhenotypeCurie": "HP:0002007",
+            "diseasePhenotypeLabel": "Frontal bossing",
+            "micaCurie": "HP:0002007",
+            "micaLabel": "Frontal bossing",
+            "score": 3.1012352661081346,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:12525543;PMID:28328121"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001159",
+            "patientPhenotypeLabel": "Syndactyly",
+            "diseasePhenotypeCurie": "HP:0004691",
+            "diseasePhenotypeLabel": "2-3 toe syndactyly",
+            "micaCurie": "HP:0001159",
+            "micaLabel": "Syndactyly",
+            "score": 3.0507194759712326,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:821"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001270",
+            "patientPhenotypeLabel": "Motor delay",
+            "diseasePhenotypeCurie": "HP:0001270",
+            "diseasePhenotypeLabel": "Motor delay",
+            "micaCurie": "HP:0001270",
+            "micaLabel": "Motor delay",
+            "score": 2.1246247440004566,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:12525543"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0002474",
+            "diseasePhenotypeLabel": "Expressive language delay",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:117550"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:821"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001288",
+            "patientPhenotypeLabel": "Gait disturbance",
+            "diseasePhenotypeCurie": "HP:0001347",
+            "diseasePhenotypeLabel": "Hyperreflexia",
+            "micaCurie": "HP:0100022",
+            "micaLabel": "Abnormality of movement",
+            "score": 1.4164688091793307,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:117550"
+          }
+        ]
+      },
+      {
+        "rank": 12,
+        "diseaseCurie": "MONDO:0958006",
+        "diseaseLabel": "spondyloepimetaphyseal dysplasia, Guo-Campeau type",
+        "diseaseEntityId": 88327,
+        "bmaScore": 1.6168637553405685,
+        "normalizedScore": 0.178519,
+        "patientAverageScore": 2.258883571251898,
+        "diseaseAverageScore": 0.9748439394292387,
+        "directPhenotypeCount": 60,
+        "matchedPhenotypeCount": 8,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000268",
+            "patientPhenotypeLabel": "Dolichocephaly",
+            "diseasePhenotypeCurie": "HP:0000268",
+            "diseasePhenotypeLabel": "Dolichocephaly",
+            "micaCurie": "HP:0000268",
+            "micaLabel": "Dolichocephaly",
+            "score": 3.87528908528088,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:37352860"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002007",
+            "patientPhenotypeLabel": "Frontal bossing",
+            "diseasePhenotypeCurie": "HP:0002007",
+            "diseasePhenotypeLabel": "Frontal bossing",
+            "micaCurie": "HP:0002007",
+            "micaLabel": "Frontal bossing",
+            "score": 3.1012352661081346,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:37352860"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001159",
+            "patientPhenotypeLabel": "Syndactyly",
+            "diseasePhenotypeCurie": "HP:0001159",
+            "diseasePhenotypeLabel": "Syndactyly",
+            "micaCurie": "HP:0001159",
+            "micaLabel": "Syndactyly",
+            "score": 3.0507194759712326,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:37352860"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001270",
+            "patientPhenotypeLabel": "Motor delay",
+            "diseasePhenotypeCurie": "HP:0001270",
+            "diseasePhenotypeLabel": "Motor delay",
+            "micaCurie": "HP:0001270",
+            "micaLabel": "Motor delay",
+            "score": 2.1246247440004566,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:37352860"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:37352860"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011220",
+            "patientPhenotypeLabel": "Prominent forehead",
+            "diseasePhenotypeCurie": "HP:0002007",
+            "diseasePhenotypeLabel": "Frontal bossing",
+            "micaCurie": "HP:0000290",
+            "micaLabel": "Abnormal forehead morphology",
+            "score": 2.050377408735925,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:37352860"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001270",
+            "diseasePhenotypeLabel": "Motor delay",
+            "micaCurie": "HP:0012758",
+            "micaLabel": "Neurodevelopmental delay",
+            "score": 1.196116270696576,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:37352860"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001288",
+            "patientPhenotypeLabel": "Gait disturbance",
+            "diseasePhenotypeCurie": "HP:0001270",
+            "diseasePhenotypeLabel": "Motor delay",
+            "micaCurie": "HP:0012638",
+            "micaLabel": "Abnormal nervous system physiology",
+            "score": 0.6077301110649022,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:37352860"
+          }
+        ]
+      },
+      {
+        "rank": 13,
+        "diseaseCurie": "MONDO:0014948",
+        "diseaseLabel": "short stature, rhizomelic, with microcephaly, micrognathia, and developmental delay",
+        "diseaseEntityId": 76234,
+        "bmaScore": 1.6148289081389573,
+        "normalizedScore": 0.178295,
+        "patientAverageScore": 2.438306318194579,
+        "diseaseAverageScore": 0.7913514980833355,
+        "directPhenotypeCount": 46,
+        "matchedPhenotypeCount": 8,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000268",
+            "patientPhenotypeLabel": "Dolichocephaly",
+            "diseasePhenotypeCurie": "HP:0030799",
+            "diseasePhenotypeLabel": "Scaphocephaly",
+            "micaCurie": "HP:0000268",
+            "micaLabel": "Dolichocephaly",
+            "score": 3.87528908528088,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:27476655"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011220",
+            "patientPhenotypeLabel": "Prominent forehead",
+            "diseasePhenotypeCurie": "HP:0011220",
+            "diseasePhenotypeLabel": "Prominent forehead",
+            "micaCurie": "HP:0011220",
+            "micaLabel": "Prominent forehead",
+            "score": 3.4963910045574376,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:27476655"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001159",
+            "patientPhenotypeLabel": "Syndactyly",
+            "diseasePhenotypeCurie": "HP:0004691",
+            "diseasePhenotypeLabel": "2-3 toe syndactyly",
+            "micaCurie": "HP:0001159",
+            "micaLabel": "Syndactyly",
+            "score": 3.0507194759712326,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:617164"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002007",
+            "patientPhenotypeLabel": "Frontal bossing",
+            "diseasePhenotypeCurie": "HP:0030799",
+            "diseasePhenotypeLabel": "Scaphocephaly",
+            "micaCurie": "HP:0002683",
+            "micaLabel": "Abnormal calvaria morphology",
+            "score": 2.2229638967591265,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:27476655"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001270",
+            "patientPhenotypeLabel": "Motor delay",
+            "diseasePhenotypeCurie": "HP:0001270",
+            "diseasePhenotypeLabel": "Motor delay",
+            "micaCurie": "HP:0001270",
+            "micaLabel": "Motor delay",
+            "score": 2.1246247440004566,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:617164"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001288",
+            "patientPhenotypeLabel": "Gait disturbance",
+            "diseasePhenotypeCurie": "HP:0002066",
+            "diseasePhenotypeLabel": "Gait ataxia",
+            "micaCurie": "HP:0001288",
+            "micaLabel": "Gait disturbance",
+            "score": 2.089163433771081,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:617164"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:27476655"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0001270",
+            "diseasePhenotypeLabel": "Motor delay",
+            "micaCurie": "HP:0012758",
+            "micaLabel": "Neurodevelopmental delay",
+            "score": 1.196116270696576,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:617164"
+          }
+        ]
+      },
+      {
+        "rank": 14,
+        "diseaseCurie": "MONDO:0032816",
+        "diseaseLabel": "neurodevelopmental disorder with ataxia, hypotonia, and microcephaly",
+        "diseaseEntityId": 84660,
+        "bmaScore": 1.6127959456271028,
+        "normalizedScore": 0.17807,
+        "patientAverageScore": 2.074136911427794,
+        "diseaseAverageScore": 1.1514549798264118,
+        "directPhenotypeCount": 33,
+        "matchedPhenotypeCount": 8,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011220",
+            "patientPhenotypeLabel": "Prominent forehead",
+            "diseasePhenotypeCurie": "HP:0011220",
+            "diseasePhenotypeLabel": "Prominent forehead",
+            "micaCurie": "HP:0011220",
+            "micaLabel": "Prominent forehead",
+            "score": 3.4963910045574376,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31363758"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001159",
+            "patientPhenotypeLabel": "Syndactyly",
+            "diseasePhenotypeCurie": "HP:0005768",
+            "diseasePhenotypeLabel": "2-4 toe cutaneous syndactyly",
+            "micaCurie": "HP:0001159",
+            "micaLabel": "Syndactyly",
+            "score": 3.0507194759712326,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31363758"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001270",
+            "patientPhenotypeLabel": "Motor delay",
+            "diseasePhenotypeCurie": "HP:0001270",
+            "diseasePhenotypeLabel": "Motor delay",
+            "micaCurie": "HP:0001270",
+            "micaLabel": "Motor delay",
+            "score": 2.1246247440004566,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31363758"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31363758"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002007",
+            "patientPhenotypeLabel": "Frontal bossing",
+            "diseasePhenotypeCurie": "HP:0011220",
+            "diseasePhenotypeLabel": "Prominent forehead",
+            "micaCurie": "HP:0000290",
+            "micaLabel": "Abnormal forehead morphology",
+            "score": 2.050377408735925,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31363758"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001288",
+            "patientPhenotypeLabel": "Gait disturbance",
+            "diseasePhenotypeCurie": "HP:0001335",
+            "diseasePhenotypeLabel": "Bimanual synkinesia",
+            "micaCurie": "HP:0100022",
+            "micaLabel": "Abnormality of movement",
+            "score": 1.4164688091793307,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31363758"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001270",
+            "diseasePhenotypeLabel": "Motor delay",
+            "micaCurie": "HP:0012758",
+            "micaLabel": "Neurodevelopmental delay",
+            "score": 1.196116270696576,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31363758"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000268",
+            "patientPhenotypeLabel": "Dolichocephaly",
+            "diseasePhenotypeCurie": "HP:0000252",
+            "diseasePhenotypeLabel": "Microcephaly",
+            "micaCurie": "HP:0000929",
+            "micaLabel": "Abnormal skull morphology",
+            "score": 1.1934213701243137,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31363758"
+          }
+        ]
+      },
+      {
+        "rank": 15,
+        "diseaseCurie": "MONDO:0015021",
+        "diseaseLabel": "hypotonia, ataxia, and delayed development syndrome",
+        "diseaseEntityId": 76307,
+        "bmaScore": 1.6073611352440507,
+        "normalizedScore": 0.17747,
+        "patientAverageScore": 2.3681307971730803,
+        "diseaseAverageScore": 0.846591473315021,
+        "directPhenotypeCount": 70,
+        "matchedPhenotypeCount": 8,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000268",
+            "patientPhenotypeLabel": "Dolichocephaly",
+            "diseasePhenotypeCurie": "HP:0000268",
+            "diseasePhenotypeLabel": "Dolichocephaly",
+            "micaCurie": "HP:0000268",
+            "micaLabel": "Dolichocephaly",
+            "score": 3.87528908528088,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:28017370"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011220",
+            "patientPhenotypeLabel": "Prominent forehead",
+            "diseasePhenotypeCurie": "HP:0011220",
+            "diseasePhenotypeLabel": "Prominent forehead",
+            "micaCurie": "HP:0011220",
+            "micaLabel": "Prominent forehead",
+            "score": 3.4963910045574376,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:28017372;PMID:28017370"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002007",
+            "patientPhenotypeLabel": "Frontal bossing",
+            "diseasePhenotypeCurie": "HP:0000268",
+            "diseasePhenotypeLabel": "Dolichocephaly",
+            "micaCurie": "HP:0002683",
+            "micaLabel": "Abnormal calvaria morphology",
+            "score": 2.2229638967591265,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:28017370"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001270",
+            "patientPhenotypeLabel": "Motor delay",
+            "diseasePhenotypeCurie": "HP:0031936",
+            "diseasePhenotypeLabel": "Delayed ability to walk",
+            "micaCurie": "HP:0001270",
+            "micaLabel": "Motor delay",
+            "score": 2.1246247440004566,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:28017370"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001288",
+            "patientPhenotypeLabel": "Gait disturbance",
+            "diseasePhenotypeCurie": "HP:0002136",
+            "diseasePhenotypeLabel": "Broad-based gait",
+            "micaCurie": "HP:0001288",
+            "micaLabel": "Gait disturbance",
+            "score": 2.089163433771081,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:28017372"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:28017373;PMID:28017370"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001159",
+            "patientPhenotypeLabel": "Syndactyly",
+            "diseasePhenotypeCurie": "HP:0001182",
+            "diseasePhenotypeLabel": "Tapered finger",
+            "micaCurie": "HP:0011297",
+            "micaLabel": "Abnormal digit morphology",
+            "score": 1.620455370338739,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:28017370"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:28017373;PMID:28017372"
+          }
+        ]
+      },
+      {
+        "rank": 16,
+        "diseaseCurie": "MONDO:0859310",
+        "diseaseLabel": "orofaciodigital syndrome 19",
+        "diseaseEntityId": 87963,
+        "bmaScore": 1.6032771989949364,
+        "normalizedScore": 0.177019,
+        "patientAverageScore": 2.1428200120889134,
+        "diseaseAverageScore": 1.0637343859009594,
+        "directPhenotypeCount": 42,
+        "matchedPhenotypeCount": 8,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000268",
+            "patientPhenotypeLabel": "Dolichocephaly",
+            "diseasePhenotypeCurie": "HP:0000268",
+            "diseasePhenotypeLabel": "Dolichocephaly",
+            "micaCurie": "HP:0000268",
+            "micaLabel": "Dolichocephaly",
+            "score": 3.87528908528088,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:36084634"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002007",
+            "patientPhenotypeLabel": "Frontal bossing",
+            "diseasePhenotypeCurie": "HP:0002007",
+            "diseasePhenotypeLabel": "Frontal bossing",
+            "micaCurie": "HP:0002007",
+            "micaLabel": "Frontal bossing",
+            "score": 3.1012352661081346,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:36084634"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001159",
+            "patientPhenotypeLabel": "Syndactyly",
+            "diseasePhenotypeCurie": "HP:0001770",
+            "diseasePhenotypeLabel": "Toe syndactyly",
+            "micaCurie": "HP:0001159",
+            "micaLabel": "Syndactyly",
+            "score": 3.0507194759712326,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:36084634"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:36084634"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011220",
+            "patientPhenotypeLabel": "Prominent forehead",
+            "diseasePhenotypeCurie": "HP:0002007",
+            "diseasePhenotypeLabel": "Frontal bossing",
+            "micaCurie": "HP:0000290",
+            "micaLabel": "Abnormal forehead morphology",
+            "score": 2.050377408735925,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:36084634"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0012758",
+            "micaLabel": "Neurodevelopmental delay",
+            "score": 1.196116270696576,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:36084634"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001270",
+            "patientPhenotypeLabel": "Motor delay",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0012758",
+            "micaLabel": "Neurodevelopmental delay",
+            "score": 1.196116270696576,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:36084634"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001288",
+            "patientPhenotypeLabel": "Gait disturbance",
+            "diseasePhenotypeCurie": "HP:0001249",
+            "diseasePhenotypeLabel": "Intellectual disability",
+            "micaCurie": "HP:0012638",
+            "micaLabel": "Abnormal nervous system physiology",
+            "score": 0.6077301110649022,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:36084634"
+          }
+        ]
+      },
+      {
+        "rank": 17,
+        "diseaseCurie": "MONDO:0010803",
+        "diseaseLabel": "Eiken syndrome",
+        "diseaseEntityId": 72089,
+        "bmaScore": 1.6005384282650363,
+        "normalizedScore": 0.176717,
+        "patientAverageScore": 2.042460844174337,
+        "diseaseAverageScore": 1.1586160123557359,
+        "directPhenotypeCount": 57,
+        "matchedPhenotypeCount": 8,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000268",
+            "patientPhenotypeLabel": "Dolichocephaly",
+            "diseasePhenotypeCurie": "HP:0000268",
+            "diseasePhenotypeLabel": "Dolichocephaly",
+            "micaCurie": "HP:0000268",
+            "micaLabel": "Dolichocephaly",
+            "score": 3.87528908528088,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31297790;PMID:29987841"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011220",
+            "patientPhenotypeLabel": "Prominent forehead",
+            "diseasePhenotypeCurie": "HP:0011220",
+            "diseasePhenotypeLabel": "Prominent forehead",
+            "micaCurie": "HP:0011220",
+            "micaLabel": "Prominent forehead",
+            "score": 3.4963910045574376,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:29987841"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002007",
+            "patientPhenotypeLabel": "Frontal bossing",
+            "diseasePhenotypeCurie": "HP:0002684",
+            "diseasePhenotypeLabel": "Thickened calvaria",
+            "micaCurie": "HP:0002683",
+            "micaLabel": "Abnormal calvaria morphology",
+            "score": 2.2229638967591265,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31297790;PMID:29987841"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001270",
+            "patientPhenotypeLabel": "Motor delay",
+            "diseasePhenotypeCurie": "HP:0001270",
+            "diseasePhenotypeLabel": "Motor delay",
+            "micaCurie": "HP:0001270",
+            "micaLabel": "Motor delay",
+            "score": 2.1246247440004566,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31297790"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001159",
+            "patientPhenotypeLabel": "Syndactyly",
+            "diseasePhenotypeCurie": "HP:0032524",
+            "diseasePhenotypeLabel": "Long thumb",
+            "micaCurie": "HP:0011297",
+            "micaLabel": "Abnormal digit morphology",
+            "score": 1.620455370338739,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:29987841"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001270",
+            "diseasePhenotypeLabel": "Motor delay",
+            "micaCurie": "HP:0012758",
+            "micaLabel": "Neurodevelopmental delay",
+            "score": 1.196116270696576,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31297790"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0001270",
+            "diseasePhenotypeLabel": "Motor delay",
+            "micaCurie": "HP:0012758",
+            "micaLabel": "Neurodevelopmental delay",
+            "score": 1.196116270696576,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31297790"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001288",
+            "patientPhenotypeLabel": "Gait disturbance",
+            "diseasePhenotypeCurie": "HP:0002373",
+            "diseasePhenotypeLabel": "Febrile seizure (within the age range of 3 months to 6 years)",
+            "micaCurie": "HP:0012638",
+            "micaLabel": "Abnormal nervous system physiology",
+            "score": 0.6077301110649022,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:29987841"
+          }
+        ]
+      },
+      {
+        "rank": 18,
+        "diseaseCurie": "MONDO:0859306",
+        "diseaseLabel": "developmental delay with variable intellectual disability and dysmorphic facies",
+        "diseaseEntityId": 87959,
+        "bmaScore": 1.600245199371546,
+        "normalizedScore": 0.176685,
+        "patientAverageScore": 2.225486031635001,
+        "diseaseAverageScore": 0.975004367108091,
+        "directPhenotypeCount": 54,
+        "matchedPhenotypeCount": 8,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011220",
+            "patientPhenotypeLabel": "Prominent forehead",
+            "diseasePhenotypeCurie": "HP:0011220",
+            "diseasePhenotypeLabel": "Prominent forehead",
+            "micaCurie": "HP:0011220",
+            "micaLabel": "Prominent forehead",
+            "score": 3.4963910045574376,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:33077894"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002007",
+            "patientPhenotypeLabel": "Frontal bossing",
+            "diseasePhenotypeCurie": "HP:0002007",
+            "diseasePhenotypeLabel": "Frontal bossing",
+            "micaCurie": "HP:0002007",
+            "micaLabel": "Frontal bossing",
+            "score": 3.1012352661081346,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:33077894"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001159",
+            "patientPhenotypeLabel": "Syndactyly",
+            "diseasePhenotypeCurie": "HP:0004691",
+            "diseasePhenotypeLabel": "2-3 toe syndactyly",
+            "micaCurie": "HP:0001159",
+            "micaLabel": "Syndactyly",
+            "score": 3.0507194759712326,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:33077894"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000268",
+            "patientPhenotypeLabel": "Dolichocephaly",
+            "diseasePhenotypeCurie": "HP:0002007",
+            "diseasePhenotypeLabel": "Frontal bossing",
+            "micaCurie": "HP:0002683",
+            "micaLabel": "Abnormal calvaria morphology",
+            "score": 2.2229638967591265,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:33077894"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001288",
+            "patientPhenotypeLabel": "Gait disturbance",
+            "diseasePhenotypeCurie": "HP:0001288",
+            "diseasePhenotypeLabel": "Gait disturbance",
+            "micaCurie": "HP:0001288",
+            "micaLabel": "Gait disturbance",
+            "score": 2.089163433771081,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:33077894"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:33077894"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001270",
+            "patientPhenotypeLabel": "Motor delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0012758",
+            "micaLabel": "Neurodevelopmental delay",
+            "score": 1.196116270696576,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:33077894"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0012758",
+            "micaLabel": "Neurodevelopmental delay",
+            "score": 1.196116270696576,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:33077894"
+          }
+        ]
+      },
+      {
+        "rank": 19,
+        "diseaseCurie": "MONDO:0014205",
+        "diseaseLabel": "severe feeding difficulties-failure to thrive-microcephaly due to ASXL3 deficiency syndrome",
+        "diseaseEntityId": 75491,
+        "bmaScore": 1.5977893161138665,
+        "normalizedScore": 0.176413,
+        "patientAverageScore": 2.3681307971730803,
+        "diseaseAverageScore": 0.8274478350546527,
+        "directPhenotypeCount": 107,
+        "matchedPhenotypeCount": 8,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000268",
+            "patientPhenotypeLabel": "Dolichocephaly",
+            "diseasePhenotypeCurie": "HP:0030799",
+            "diseasePhenotypeLabel": "Scaphocephaly",
+            "micaCurie": "HP:0000268",
+            "micaLabel": "Dolichocephaly",
+            "score": 3.87528908528088,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:28100473"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011220",
+            "patientPhenotypeLabel": "Prominent forehead",
+            "diseasePhenotypeCurie": "HP:0011220",
+            "diseasePhenotypeLabel": "Prominent forehead",
+            "micaCurie": "HP:0011220",
+            "micaLabel": "Prominent forehead",
+            "score": 3.4963910045574376,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:352577"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002007",
+            "patientPhenotypeLabel": "Frontal bossing",
+            "diseasePhenotypeCurie": "HP:0030799",
+            "diseasePhenotypeLabel": "Scaphocephaly",
+            "micaCurie": "HP:0002683",
+            "micaLabel": "Abnormal calvaria morphology",
+            "score": 2.2229638967591265,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:28100473"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001270",
+            "patientPhenotypeLabel": "Motor delay",
+            "diseasePhenotypeCurie": "HP:0031936",
+            "diseasePhenotypeLabel": "Delayed ability to walk",
+            "micaCurie": "HP:0001270",
+            "micaLabel": "Motor delay",
+            "score": 2.1246247440004566,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:28100473"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001288",
+            "patientPhenotypeLabel": "Gait disturbance",
+            "diseasePhenotypeCurie": "HP:0002540",
+            "diseasePhenotypeLabel": "Inability to walk",
+            "micaCurie": "HP:0001288",
+            "micaLabel": "Gait disturbance",
+            "score": 2.089163433771081,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:352577"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0001344",
+            "diseasePhenotypeLabel": "Absent speech",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:352577"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001159",
+            "patientPhenotypeLabel": "Syndactyly",
+            "diseasePhenotypeCurie": "HP:0009276",
+            "diseasePhenotypeLabel": "Contracture of the proximal interphalangeal joint of the 4th finger",
+            "micaCurie": "HP:0011297",
+            "micaLabel": "Abnormal digit morphology",
+            "score": 1.620455370338739,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:28100473"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0011344",
+            "diseasePhenotypeLabel": "Severe global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:23383720"
+          }
+        ]
+      },
+      {
+        "rank": 20,
+        "diseaseCurie": "MONDO:0030606",
+        "diseaseLabel": "Bryant-Li-Bhoj neurodevelopmental syndrome 1",
+        "diseaseEntityId": 84154,
+        "bmaScore": 1.5973630288973024,
+        "normalizedScore": 0.176366,
+        "patientAverageScore": 2.2649779176422764,
+        "diseaseAverageScore": 0.9297481401523285,
+        "directPhenotypeCount": 67,
+        "matchedPhenotypeCount": 8,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011220",
+            "patientPhenotypeLabel": "Prominent forehead",
+            "diseasePhenotypeCurie": "HP:0011220",
+            "diseasePhenotypeLabel": "Prominent forehead",
+            "micaCurie": "HP:0011220",
+            "micaLabel": "Prominent forehead",
+            "score": 3.4963910045574376,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:33268356"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002007",
+            "patientPhenotypeLabel": "Frontal bossing",
+            "diseasePhenotypeCurie": "HP:0002007",
+            "diseasePhenotypeLabel": "Frontal bossing",
+            "micaCurie": "HP:0002007",
+            "micaLabel": "Frontal bossing",
+            "score": 3.1012352661081346,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:33268356"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001159",
+            "patientPhenotypeLabel": "Syndactyly",
+            "diseasePhenotypeCurie": "HP:0001770",
+            "diseasePhenotypeLabel": "Toe syndactyly",
+            "micaCurie": "HP:0001159",
+            "micaLabel": "Syndactyly",
+            "score": 3.0507194759712326,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:33268356"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000268",
+            "patientPhenotypeLabel": "Dolichocephaly",
+            "diseasePhenotypeCurie": "HP:0002007",
+            "diseasePhenotypeLabel": "Frontal bossing",
+            "micaCurie": "HP:0002683",
+            "micaLabel": "Abnormal calvaria morphology",
+            "score": 2.2229638967591265,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:33268356"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001270",
+            "patientPhenotypeLabel": "Motor delay",
+            "diseasePhenotypeCurie": "HP:0031936",
+            "diseasePhenotypeLabel": "Delayed ability to walk",
+            "micaCurie": "HP:0001270",
+            "micaLabel": "Motor delay",
+            "score": 2.1246247440004566,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:33268356"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:33268356"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:33268356"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001288",
+            "patientPhenotypeLabel": "Gait disturbance",
+            "diseasePhenotypeCurie": "HP:0031936",
+            "diseasePhenotypeLabel": "Delayed ability to walk",
+            "micaCurie": "HP:0012638",
+            "micaLabel": "Abnormal nervous system physiology",
+            "score": 0.6077301110649022,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:33268356"
+          }
+        ]
+      },
+      {
+        "rank": 21,
+        "diseaseCurie": "MONDO:0014213",
+        "diseaseLabel": "CTCF-related neurodevelopmental disorder",
+        "diseaseEntityId": 75499,
+        "bmaScore": 1.5970999298681068,
+        "normalizedScore": 0.176337,
+        "patientAverageScore": 2.3403731618119226,
+        "diseaseAverageScore": 0.853826697924291,
+        "directPhenotypeCount": 121,
+        "matchedPhenotypeCount": 8,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011220",
+            "patientPhenotypeLabel": "Prominent forehead",
+            "diseasePhenotypeCurie": "HP:0011220",
+            "diseasePhenotypeLabel": "Prominent forehead",
+            "micaCurie": "HP:0011220",
+            "micaLabel": "Prominent forehead",
+            "score": 3.4963910045574376,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31239556"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001159",
+            "patientPhenotypeLabel": "Syndactyly",
+            "diseasePhenotypeCurie": "HP:0006101",
+            "diseasePhenotypeLabel": "Finger syndactyly",
+            "micaCurie": "HP:0001159",
+            "micaLabel": "Syndactyly",
+            "score": 3.0507194759712326,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31239556"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002007",
+            "patientPhenotypeLabel": "Frontal bossing",
+            "diseasePhenotypeCurie": "HP:0000248",
+            "diseasePhenotypeLabel": "Brachycephaly",
+            "micaCurie": "HP:0002683",
+            "micaLabel": "Abnormal calvaria morphology",
+            "score": 2.2229638967591265,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31239556"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000268",
+            "patientPhenotypeLabel": "Dolichocephaly",
+            "diseasePhenotypeCurie": "HP:0000248",
+            "diseasePhenotypeLabel": "Brachycephaly",
+            "micaCurie": "HP:0002683",
+            "micaLabel": "Abnormal calvaria morphology",
+            "score": 2.2229638967591265,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31239556"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001270",
+            "patientPhenotypeLabel": "Motor delay",
+            "diseasePhenotypeCurie": "HP:0031936",
+            "diseasePhenotypeLabel": "Delayed ability to walk",
+            "micaCurie": "HP:0001270",
+            "micaLabel": "Motor delay",
+            "score": 2.1246247440004566,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31239556"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001288",
+            "patientPhenotypeLabel": "Gait disturbance",
+            "diseasePhenotypeCurie": "HP:0002064",
+            "diseasePhenotypeLabel": "Spastic gait",
+            "micaCurie": "HP:0001288",
+            "micaLabel": "Gait disturbance",
+            "score": 2.089163433771081,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31239556"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31239556"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31239556;PMID:23746550"
+          }
+        ]
+      },
+      {
+        "rank": 22,
+        "diseaseCurie": "MONDO:0010428",
+        "diseaseLabel": "chromosome Xp11.23-p11.22 duplication syndrome",
+        "diseaseEntityId": 71714,
+        "bmaScore": 1.594656330784645,
+        "normalizedScore": 0.176068,
+        "patientAverageScore": 2.1428200120889134,
+        "diseaseAverageScore": 1.0464926494803768,
+        "directPhenotypeCount": 33,
+        "matchedPhenotypeCount": 8,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000268",
+            "patientPhenotypeLabel": "Dolichocephaly",
+            "diseasePhenotypeCurie": "HP:0000268",
+            "diseasePhenotypeLabel": "Dolichocephaly",
+            "micaCurie": "HP:0000268",
+            "micaLabel": "Dolichocephaly",
+            "score": 3.87528908528088,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:19716111"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002007",
+            "patientPhenotypeLabel": "Frontal bossing",
+            "diseasePhenotypeCurie": "HP:0002007",
+            "diseasePhenotypeLabel": "Frontal bossing",
+            "micaCurie": "HP:0002007",
+            "micaLabel": "Frontal bossing",
+            "score": 3.1012352661081346,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:19716111"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001159",
+            "patientPhenotypeLabel": "Syndactyly",
+            "diseasePhenotypeCurie": "HP:0005709",
+            "diseasePhenotypeLabel": "2-3 toe cutaneous syndactyly",
+            "micaCurie": "HP:0001159",
+            "micaLabel": "Syndactyly",
+            "score": 3.0507194759712326,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:19716111"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:19716111"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011220",
+            "patientPhenotypeLabel": "Prominent forehead",
+            "diseasePhenotypeCurie": "HP:0002007",
+            "diseasePhenotypeLabel": "Frontal bossing",
+            "micaCurie": "HP:0000290",
+            "micaLabel": "Abnormal forehead morphology",
+            "score": 2.050377408735925,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:19716111"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0012758",
+            "micaLabel": "Neurodevelopmental delay",
+            "score": 1.196116270696576,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:19716111"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001270",
+            "patientPhenotypeLabel": "Motor delay",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0012758",
+            "micaLabel": "Neurodevelopmental delay",
+            "score": 1.196116270696576,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:19716111"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001288",
+            "patientPhenotypeLabel": "Gait disturbance",
+            "diseasePhenotypeCurie": "HP:0100962",
+            "diseasePhenotypeLabel": "Excessive shyness",
+            "micaCurie": "HP:0012638",
+            "micaLabel": "Abnormal nervous system physiology",
+            "score": 0.6077301110649022,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:19716111"
+          }
+        ]
+      },
+      {
+        "rank": 23,
+        "diseaseCurie": "MONDO:0011275",
+        "diseaseLabel": "acromesomelic dysplasia 1, Maroteaux type",
+        "diseaseEntityId": 72561,
+        "bmaScore": 1.5850933102808165,
+        "normalizedScore": 0.175012,
+        "patientAverageScore": 1.9509443203377117,
+        "diseaseAverageScore": 1.2192423002239212,
+        "directPhenotypeCount": 42,
+        "matchedPhenotypeCount": 8,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000268",
+            "patientPhenotypeLabel": "Dolichocephaly",
+            "diseasePhenotypeCurie": "HP:0000268",
+            "diseasePhenotypeLabel": "Dolichocephaly",
+            "micaCurie": "HP:0000268",
+            "micaLabel": "Dolichocephaly",
+            "score": 3.87528908528088,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:40"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011220",
+            "patientPhenotypeLabel": "Prominent forehead",
+            "diseasePhenotypeCurie": "HP:0011220",
+            "diseasePhenotypeLabel": "Prominent forehead",
+            "micaCurie": "HP:0011220",
+            "micaLabel": "Prominent forehead",
+            "score": 3.4963910045574376,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:602875"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002007",
+            "patientPhenotypeLabel": "Frontal bossing",
+            "diseasePhenotypeCurie": "HP:0002007",
+            "diseasePhenotypeLabel": "Frontal bossing",
+            "micaCurie": "HP:0002007",
+            "micaLabel": "Frontal bossing",
+            "score": 3.1012352661081346,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:602875"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001159",
+            "patientPhenotypeLabel": "Syndactyly",
+            "diseasePhenotypeCurie": "HP:0010230",
+            "diseasePhenotypeLabel": "Cone-shaped epiphyses of the phalanges of the hand",
+            "micaCurie": "HP:0011297",
+            "micaLabel": "Abnormal digit morphology",
+            "score": 1.620455370338739,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:602875"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001249",
+            "diseasePhenotypeLabel": "Intellectual disability",
+            "micaCurie": "HP:0012759",
+            "micaLabel": "Neurodevelopmental abnormality",
+            "score": 0.9688179084505344,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:25959430"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001270",
+            "patientPhenotypeLabel": "Motor delay",
+            "diseasePhenotypeCurie": "HP:0001249",
+            "diseasePhenotypeLabel": "Intellectual disability",
+            "micaCurie": "HP:0012759",
+            "micaLabel": "Neurodevelopmental abnormality",
+            "score": 0.9688179084505344,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:25959430"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0001249",
+            "diseasePhenotypeLabel": "Intellectual disability",
+            "micaCurie": "HP:0012759",
+            "micaLabel": "Neurodevelopmental abnormality",
+            "score": 0.9688179084505344,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:25959430"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001288",
+            "patientPhenotypeLabel": "Gait disturbance",
+            "diseasePhenotypeCurie": "HP:0001249",
+            "diseasePhenotypeLabel": "Intellectual disability",
+            "micaCurie": "HP:0012638",
+            "micaLabel": "Abnormal nervous system physiology",
+            "score": 0.6077301110649022,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:25959430"
+          }
+        ]
+      },
+      {
+        "rank": 24,
+        "diseaseCurie": "MONDO:0008434",
+        "diseaseLabel": "Smith-Magenis syndrome",
+        "diseaseEntityId": 69720,
+        "bmaScore": 1.580917206852449,
+        "normalizedScore": 0.174551,
+        "patientAverageScore": 2.4501570829805486,
+        "diseaseAverageScore": 0.7116773307243497,
+        "directPhenotypeCount": 134,
+        "matchedPhenotypeCount": 8,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011220",
+            "patientPhenotypeLabel": "Prominent forehead",
+            "diseasePhenotypeCurie": "HP:0011220",
+            "diseasePhenotypeLabel": "Prominent forehead",
+            "micaCurie": "HP:0011220",
+            "micaLabel": "Prominent forehead",
+            "score": 3.4963910045574376,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:1746552"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002007",
+            "patientPhenotypeLabel": "Frontal bossing",
+            "diseasePhenotypeCurie": "HP:0002007",
+            "diseasePhenotypeLabel": "Frontal bossing",
+            "micaCurie": "HP:0002007",
+            "micaLabel": "Frontal bossing",
+            "score": 3.1012352661081346,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:819"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001159",
+            "patientPhenotypeLabel": "Syndactyly",
+            "diseasePhenotypeCurie": "HP:0001770",
+            "diseasePhenotypeLabel": "Toe syndactyly",
+            "micaCurie": "HP:0001159",
+            "micaLabel": "Syndactyly",
+            "score": 3.0507194759712326,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:819"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000268",
+            "patientPhenotypeLabel": "Dolichocephaly",
+            "diseasePhenotypeCurie": "HP:0002007",
+            "diseasePhenotypeLabel": "Frontal bossing",
+            "micaCurie": "HP:0002683",
+            "micaLabel": "Abnormal calvaria morphology",
+            "score": 2.2229638967591265,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:819"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001270",
+            "patientPhenotypeLabel": "Motor delay",
+            "diseasePhenotypeCurie": "HP:0001270",
+            "diseasePhenotypeLabel": "Motor delay",
+            "micaCurie": "HP:0001270",
+            "micaLabel": "Motor delay",
+            "score": 2.1246247440004566,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:20932317"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001288",
+            "patientPhenotypeLabel": "Gait disturbance",
+            "diseasePhenotypeCurie": "HP:0030051",
+            "diseasePhenotypeLabel": "Tip-toe gait",
+            "micaCurie": "HP:0001288",
+            "micaLabel": "Gait disturbance",
+            "score": 2.089163433771081,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:819"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:20932317;PMID:20301487"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0011342",
+            "diseasePhenotypeLabel": "Mild global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:20932317"
+          }
+        ]
+      },
+      {
+        "rank": 25,
+        "diseaseCurie": "MONDO:1060179",
+        "diseaseLabel": "RNU5B-1 related neurodevelopmental disorder with seizures and joint laxity",
+        "diseaseEntityId": 91842,
+        "bmaScore": 1.5790281973012994,
+        "normalizedScore": 0.174342,
+        "patientAverageScore": 2.4501570829805486,
+        "diseaseAverageScore": 0.7078993116220502,
+        "directPhenotypeCount": 153,
+        "matchedPhenotypeCount": 8,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011220",
+            "patientPhenotypeLabel": "Prominent forehead",
+            "diseasePhenotypeCurie": "HP:0011220",
+            "diseasePhenotypeLabel": "Prominent forehead",
+            "micaCurie": "HP:0011220",
+            "micaLabel": "Prominent forehead",
+            "score": 3.4963910045574376,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:40442284"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002007",
+            "patientPhenotypeLabel": "Frontal bossing",
+            "diseasePhenotypeCurie": "HP:0002007",
+            "diseasePhenotypeLabel": "Frontal bossing",
+            "micaCurie": "HP:0002007",
+            "micaLabel": "Frontal bossing",
+            "score": 3.1012352661081346,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:40442284"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001159",
+            "patientPhenotypeLabel": "Syndactyly",
+            "diseasePhenotypeCurie": "HP:0005709",
+            "diseasePhenotypeLabel": "2-3 toe cutaneous syndactyly",
+            "micaCurie": "HP:0001159",
+            "micaLabel": "Syndactyly",
+            "score": 3.0507194759712326,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:40442284"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000268",
+            "patientPhenotypeLabel": "Dolichocephaly",
+            "diseasePhenotypeCurie": "HP:0002007",
+            "diseasePhenotypeLabel": "Frontal bossing",
+            "micaCurie": "HP:0002683",
+            "micaLabel": "Abnormal calvaria morphology",
+            "score": 2.2229638967591265,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:40442284"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001270",
+            "patientPhenotypeLabel": "Motor delay",
+            "diseasePhenotypeCurie": "HP:0032989",
+            "diseasePhenotypeLabel": "Delayed ability to roll over",
+            "micaCurie": "HP:0001270",
+            "micaLabel": "Motor delay",
+            "score": 2.1246247440004566,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:40442284"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001288",
+            "patientPhenotypeLabel": "Gait disturbance",
+            "diseasePhenotypeCurie": "HP:0030051",
+            "diseasePhenotypeLabel": "Tip-toe gait",
+            "micaCurie": "HP:0001288",
+            "micaLabel": "Gait disturbance",
+            "score": 2.089163433771081,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:40379786"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0001344",
+            "diseasePhenotypeLabel": "Absent speech",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:40379786;PMID:40442284"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0011344",
+            "diseasePhenotypeLabel": "Severe global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:40379786"
+          }
+        ]
+      }
+    ],
+    "engineSummary": {
+      "diseaseCount": 8579,
+      "phenotypeCount": 19389,
+      "sourceMode": "relationship_fallback",
+      "generatedAt": "2026-03-15T20:43:58.513Z"
+    }
+  }
+}

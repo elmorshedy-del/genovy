@@ -1,0 +1,964 @@
+{
+  "success": true,
+  "engine": "genovy-dx-sim",
+  "analysisType": "gene",
+  "input": {
+    "presentPhenotypeCuries": [
+      "HP:0001483",
+      "HP:0032122"
+    ],
+    "excludedPhenotypeCuries": [
+      "HP:0001263"
+    ],
+    "sourceFormat": "phenopacket"
+  },
+  "ranking": {
+    "queryPhenotypes": [
+      {
+        "phenotypeCurie": "HP:0001483",
+        "phenotypeLabel": "Eye poking"
+      },
+      {
+        "phenotypeCurie": "HP:0032122",
+        "phenotypeLabel": "Very low visual acuity"
+      }
+    ],
+    "results": [
+      {
+        "rank": 1,
+        "geneCurie": "NCBIGene:57096",
+        "geneLabel": "RPGRIP1",
+        "geneSymbol": "RPGRIP1",
+        "geneEntityId": 152115,
+        "bmaScore": 4.319101864022623,
+        "normalizedScore": 0.476876,
+        "patientAverageScore": 7.737543970765335,
+        "phenotypeAverageScore": 0.9006597572799111,
+        "directPhenotypeCount": 117,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0032122",
+            "patientPhenotypeLabel": "Very low visual acuity",
+            "diseasePhenotypeCurie": "HP:0032122",
+            "diseasePhenotypeLabel": "Very low visual acuity",
+            "micaCurie": "HP:0032122",
+            "micaLabel": "Very low visual acuity",
+            "score": 8.36392545501302,
+            "evidenceCode": "4/16",
+            "referenceText": "OMIM:608194"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001483",
+            "patientPhenotypeLabel": "Eye poking",
+            "diseasePhenotypeCurie": "HP:0001483",
+            "diseasePhenotypeLabel": "Eye poking",
+            "micaCurie": "HP:0001483",
+            "micaLabel": "Eye poking",
+            "score": 7.111162486517652,
+            "evidenceCode": "35/57",
+            "referenceText": "OMIM:613826"
+          }
+        ]
+      },
+      {
+        "rank": 2,
+        "geneCurie": "NCBIGene:58495",
+        "geneLabel": "OVOL2",
+        "geneSymbol": "OVOL2",
+        "geneEntityId": 152203,
+        "bmaScore": 3.7897477513460665,
+        "normalizedScore": 0.41843,
+        "patientAverageScore": 6.094944736865699,
+        "phenotypeAverageScore": 1.4845507658264343,
+        "directPhenotypeCount": 27,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0032122",
+            "patientPhenotypeLabel": "Very low visual acuity",
+            "diseasePhenotypeCurie": "HP:0032122",
+            "diseasePhenotypeLabel": "Very low visual acuity",
+            "micaCurie": "HP:0032122",
+            "micaLabel": "Very low visual acuity",
+            "score": 8.36392545501302,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:98973"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001483",
+            "patientPhenotypeLabel": "Eye poking",
+            "diseasePhenotypeCurie": "HP:0000613",
+            "diseasePhenotypeLabel": "Photophobia",
+            "micaCurie": "HP:5200046",
+            "micaLabel": "Sensory behavioral abnormality",
+            "score": 3.8259640187183788,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:122000"
+          }
+        ]
+      },
+      {
+        "rank": 3,
+        "geneCurie": "NCBIGene:1296",
+        "geneLabel": "COL8A2",
+        "geneSymbol": "COL8A2",
+        "geneEntityId": 148503,
+        "bmaScore": 3.7868362393780894,
+        "normalizedScore": 0.418108,
+        "patientAverageScore": 6.094944736865699,
+        "phenotypeAverageScore": 1.4787277418904798,
+        "directPhenotypeCount": 30,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0032122",
+            "patientPhenotypeLabel": "Very low visual acuity",
+            "diseasePhenotypeCurie": "HP:0032122",
+            "diseasePhenotypeLabel": "Very low visual acuity",
+            "micaCurie": "HP:0032122",
+            "micaLabel": "Very low visual acuity",
+            "score": 8.36392545501302,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:98973"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001483",
+            "patientPhenotypeLabel": "Eye poking",
+            "diseasePhenotypeCurie": "HP:0000613",
+            "diseasePhenotypeLabel": "Photophobia",
+            "micaCurie": "HP:5200046",
+            "micaLabel": "Sensory behavioral abnormality",
+            "score": 3.8259640187183788,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "ORPHA:98973"
+          }
+        ]
+      },
+      {
+        "rank": 4,
+        "geneCurie": "NCBIGene:6935",
+        "geneLabel": "ZEB1",
+        "geneSymbol": "ZEB1",
+        "geneEntityId": 150268,
+        "bmaScore": 3.7455600588765527,
+        "normalizedScore": 0.413551,
+        "patientAverageScore": 6.094944736865699,
+        "phenotypeAverageScore": 1.3961753808874062,
+        "directPhenotypeCount": 32,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0032122",
+            "patientPhenotypeLabel": "Very low visual acuity",
+            "diseasePhenotypeCurie": "HP:0032122",
+            "diseasePhenotypeLabel": "Very low visual acuity",
+            "micaCurie": "HP:0032122",
+            "micaLabel": "Very low visual acuity",
+            "score": 8.36392545501302,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:98973"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001483",
+            "patientPhenotypeLabel": "Eye poking",
+            "diseasePhenotypeCurie": "HP:0000613",
+            "diseasePhenotypeLabel": "Photophobia",
+            "micaCurie": "HP:5200046",
+            "micaLabel": "Sensory behavioral abnormality",
+            "score": 3.8259640187183788,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "ORPHA:98973"
+          }
+        ]
+      },
+      {
+        "rank": 5,
+        "geneCurie": "NCBIGene:30813",
+        "geneLabel": "VSX1",
+        "geneSymbol": "VSX1",
+        "geneEntityId": 151638,
+        "bmaScore": 3.612583414259577,
+        "normalizedScore": 0.398869,
+        "patientAverageScore": 6.094944736865699,
+        "phenotypeAverageScore": 1.1302220916534553,
+        "directPhenotypeCount": 39,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0032122",
+            "patientPhenotypeLabel": "Very low visual acuity",
+            "diseasePhenotypeCurie": "HP:0032122",
+            "diseasePhenotypeLabel": "Very low visual acuity",
+            "micaCurie": "HP:0032122",
+            "micaLabel": "Very low visual acuity",
+            "score": 8.36392545501302,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:98973"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001483",
+            "patientPhenotypeLabel": "Eye poking",
+            "diseasePhenotypeCurie": "HP:0000613",
+            "diseasePhenotypeLabel": "Photophobia",
+            "micaCurie": "HP:5200046",
+            "micaLabel": "Sensory behavioral abnormality",
+            "score": 3.8259640187183788,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "ORPHA:98973"
+          }
+        ]
+      },
+      {
+        "rank": 6,
+        "geneCurie": "NCBIGene:79977",
+        "geneLabel": "GRHL2",
+        "geneSymbol": "GRHL2",
+        "geneEntityId": 152428,
+        "bmaScore": 3.5245263097429165,
+        "normalizedScore": 0.389146,
+        "patientAverageScore": 6.094944736865699,
+        "phenotypeAverageScore": 0.9541078826201336,
+        "directPhenotypeCount": 37,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0032122",
+            "patientPhenotypeLabel": "Very low visual acuity",
+            "diseasePhenotypeCurie": "HP:0032122",
+            "diseasePhenotypeLabel": "Very low visual acuity",
+            "micaCurie": "HP:0032122",
+            "micaLabel": "Very low visual acuity",
+            "score": 8.36392545501302,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:98973"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001483",
+            "patientPhenotypeLabel": "Eye poking",
+            "diseasePhenotypeCurie": "HP:0000613",
+            "diseasePhenotypeLabel": "Photophobia",
+            "micaCurie": "HP:5200046",
+            "micaLabel": "Sensory behavioral abnormality",
+            "score": 3.8259640187183788,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "ORPHA:98973"
+          }
+        ]
+      },
+      {
+        "rank": 7,
+        "geneCurie": "NCBIGene:23746",
+        "geneLabel": "AIPL1",
+        "geneSymbol": "AIPL1",
+        "geneEntityId": 151424,
+        "bmaScore": 3.1651293576473254,
+        "normalizedScore": 0.349465,
+        "patientAverageScore": 4.995145504020009,
+        "phenotypeAverageScore": 1.3351132112746422,
+        "directPhenotypeCount": 47,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001483",
+            "patientPhenotypeLabel": "Eye poking",
+            "diseasePhenotypeCurie": "HP:0001483",
+            "diseasePhenotypeLabel": "Eye poking",
+            "micaCurie": "HP:0001483",
+            "micaLabel": "Eye poking",
+            "score": 7.111162486517652,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:65"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0032122",
+            "patientPhenotypeLabel": "Very low visual acuity",
+            "diseasePhenotypeCurie": "HP:0007663",
+            "diseasePhenotypeLabel": "Reduced visual acuity",
+            "micaCurie": "HP:0007663",
+            "micaLabel": "Reduced visual acuity",
+            "score": 2.879128521522365,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:604393"
+          }
+        ]
+      },
+      {
+        "rank": 8,
+        "geneCurie": "NCBIGene:343035",
+        "geneLabel": "RD3",
+        "geneSymbol": "RD3",
+        "geneEntityId": 153187,
+        "bmaScore": 3.128481920152757,
+        "normalizedScore": 0.345419,
+        "patientAverageScore": 4.995145504020009,
+        "phenotypeAverageScore": 1.2618183362855053,
+        "directPhenotypeCount": 28,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001483",
+            "patientPhenotypeLabel": "Eye poking",
+            "diseasePhenotypeCurie": "HP:0001483",
+            "diseasePhenotypeLabel": "Eye poking",
+            "micaCurie": "HP:0001483",
+            "micaLabel": "Eye poking",
+            "score": 7.111162486517652,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:65"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0032122",
+            "patientPhenotypeLabel": "Very low visual acuity",
+            "diseasePhenotypeCurie": "HP:0007875",
+            "diseasePhenotypeLabel": "Congenital blindness",
+            "micaCurie": "HP:0007663",
+            "micaLabel": "Reduced visual acuity",
+            "score": 2.879128521522365,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:610612"
+          }
+        ]
+      },
+      {
+        "rank": 9,
+        "geneCurie": "NCBIGene:85015",
+        "geneLabel": "USP45",
+        "geneSymbol": "USP45",
+        "geneEntityId": 152660,
+        "bmaScore": 3.1087886617544545,
+        "normalizedScore": 0.343244,
+        "patientAverageScore": 4.995145504020009,
+        "phenotypeAverageScore": 1.2224318194889001,
+        "directPhenotypeCount": 30,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001483",
+            "patientPhenotypeLabel": "Eye poking",
+            "diseasePhenotypeCurie": "HP:0001483",
+            "diseasePhenotypeLabel": "Eye poking",
+            "micaCurie": "HP:0001483",
+            "micaLabel": "Eye poking",
+            "score": 7.111162486517652,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:65"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0032122",
+            "patientPhenotypeLabel": "Very low visual acuity",
+            "diseasePhenotypeCurie": "HP:0001141",
+            "diseasePhenotypeLabel": "Severely reduced visual acuity",
+            "micaCurie": "HP:0007663",
+            "micaLabel": "Reduced visual acuity",
+            "score": 2.879128521522365,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:65"
+          }
+        ]
+      },
+      {
+        "rank": 10,
+        "geneCurie": "NCBIGene:1406",
+        "geneLabel": "CRX",
+        "geneSymbol": "CRX",
+        "geneEntityId": 148543,
+        "bmaScore": 3.1083877088261884,
+        "normalizedScore": 0.3432,
+        "patientAverageScore": 4.995145504020009,
+        "phenotypeAverageScore": 1.2216299136323678,
+        "directPhenotypeCount": 65,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001483",
+            "patientPhenotypeLabel": "Eye poking",
+            "diseasePhenotypeCurie": "HP:0001483",
+            "diseasePhenotypeLabel": "Eye poking",
+            "micaCurie": "HP:0001483",
+            "micaLabel": "Eye poking",
+            "score": 7.111162486517652,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:65"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0032122",
+            "patientPhenotypeLabel": "Very low visual acuity",
+            "diseasePhenotypeCurie": "HP:0007663",
+            "diseasePhenotypeLabel": "Reduced visual acuity",
+            "micaCurie": "HP:0007663",
+            "micaLabel": "Reduced visual acuity",
+            "score": 2.879128521522365,
+            "evidenceCode": "7/7",
+            "referenceText": "OMIM:120970"
+          }
+        ]
+      },
+      {
+        "rank": 11,
+        "geneCurie": "NCBIGene:167691",
+        "geneLabel": "LCA5",
+        "geneSymbol": "LCA5",
+        "geneEntityId": 153001,
+        "bmaScore": 3.1014395985743413,
+        "normalizedScore": 0.342433,
+        "patientAverageScore": 4.995145504020009,
+        "phenotypeAverageScore": 1.207733693128674,
+        "directPhenotypeCount": 57,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001483",
+            "patientPhenotypeLabel": "Eye poking",
+            "diseasePhenotypeCurie": "HP:0001483",
+            "diseasePhenotypeLabel": "Eye poking",
+            "micaCurie": "HP:0001483",
+            "micaLabel": "Eye poking",
+            "score": 7.111162486517652,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:65"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0032122",
+            "patientPhenotypeLabel": "Very low visual acuity",
+            "diseasePhenotypeCurie": "HP:0007663",
+            "diseasePhenotypeLabel": "Reduced visual acuity",
+            "micaCurie": "HP:0007663",
+            "micaLabel": "Reduced visual acuity",
+            "score": 2.879128521522365,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:364055"
+          }
+        ]
+      },
+      {
+        "rank": 12,
+        "geneCurie": "NCBIGene:7287",
+        "geneLabel": "TULP1",
+        "geneSymbol": "TULP1",
+        "geneEntityId": 150375,
+        "bmaScore": 3.09787500635678,
+        "normalizedScore": 0.342039,
+        "patientAverageScore": 4.995145504020009,
+        "phenotypeAverageScore": 1.2006045086935517,
+        "directPhenotypeCount": 61,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001483",
+            "patientPhenotypeLabel": "Eye poking",
+            "diseasePhenotypeCurie": "HP:0001483",
+            "diseasePhenotypeLabel": "Eye poking",
+            "micaCurie": "HP:0001483",
+            "micaLabel": "Eye poking",
+            "score": 7.111162486517652,
+            "evidenceCode": "0/7",
+            "referenceText": "OMIM:613843"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0032122",
+            "patientPhenotypeLabel": "Very low visual acuity",
+            "diseasePhenotypeCurie": "HP:0007663",
+            "diseasePhenotypeLabel": "Reduced visual acuity",
+            "micaCurie": "HP:0007663",
+            "micaLabel": "Reduced visual acuity",
+            "score": 2.879128521522365,
+            "evidenceCode": "5/5",
+            "referenceText": "OMIM:600132"
+          }
+        ]
+      },
+      {
+        "rank": 13,
+        "geneCurie": "NCBIGene:3614",
+        "geneLabel": "IMPDH1",
+        "geneSymbol": "IMPDH1",
+        "geneEntityId": 149198,
+        "bmaScore": 3.0969995813841837,
+        "normalizedScore": 0.341943,
+        "patientAverageScore": 4.995145504020009,
+        "phenotypeAverageScore": 1.1988536587483591,
+        "directPhenotypeCount": 56,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001483",
+            "patientPhenotypeLabel": "Eye poking",
+            "diseasePhenotypeCurie": "HP:0001483",
+            "diseasePhenotypeLabel": "Eye poking",
+            "micaCurie": "HP:0001483",
+            "micaLabel": "Eye poking",
+            "score": 7.111162486517652,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:65"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0032122",
+            "patientPhenotypeLabel": "Very low visual acuity",
+            "diseasePhenotypeCurie": "HP:0007663",
+            "diseasePhenotypeLabel": "Reduced visual acuity",
+            "micaCurie": "HP:0007663",
+            "micaLabel": "Reduced visual acuity",
+            "score": 2.879128521522365,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:180105"
+          }
+        ]
+      },
+      {
+        "rank": 14,
+        "geneCurie": "NCBIGene:145226",
+        "geneLabel": "RDH12",
+        "geneSymbol": "RDH12",
+        "geneEntityId": 152918,
+        "bmaScore": 3.0943381397688388,
+        "normalizedScore": 0.341649,
+        "patientAverageScore": 4.995145504020009,
+        "phenotypeAverageScore": 1.1935307755176685,
+        "directPhenotypeCount": 52,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001483",
+            "patientPhenotypeLabel": "Eye poking",
+            "diseasePhenotypeCurie": "HP:0001483",
+            "diseasePhenotypeLabel": "Eye poking",
+            "micaCurie": "HP:0001483",
+            "micaLabel": "Eye poking",
+            "score": 7.111162486517652,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:65"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0032122",
+            "patientPhenotypeLabel": "Very low visual acuity",
+            "diseasePhenotypeCurie": "HP:0007663",
+            "diseasePhenotypeLabel": "Reduced visual acuity",
+            "micaCurie": "HP:0007663",
+            "micaLabel": "Reduced visual acuity",
+            "score": 2.879128521522365,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:612712"
+          }
+        ]
+      },
+      {
+        "rank": 15,
+        "geneCurie": "NCBIGene:3769",
+        "geneLabel": "KCNJ13",
+        "geneSymbol": "KCNJ13",
+        "geneEntityId": 149265,
+        "bmaScore": 3.092208413661512,
+        "normalizedScore": 0.341414,
+        "patientAverageScore": 4.995145504020009,
+        "phenotypeAverageScore": 1.1892713233030152,
+        "directPhenotypeCount": 39,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001483",
+            "patientPhenotypeLabel": "Eye poking",
+            "diseasePhenotypeCurie": "HP:0001483",
+            "diseasePhenotypeLabel": "Eye poking",
+            "micaCurie": "HP:0001483",
+            "micaLabel": "Eye poking",
+            "score": 7.111162486517652,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:65"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0032122",
+            "patientPhenotypeLabel": "Very low visual acuity",
+            "diseasePhenotypeCurie": "HP:0007663",
+            "diseasePhenotypeLabel": "Reduced visual acuity",
+            "micaCurie": "HP:0007663",
+            "micaLabel": "Reduced visual acuity",
+            "score": 2.879128521522365,
+            "evidenceCode": "3/3",
+            "referenceText": "OMIM:614186"
+          }
+        ]
+      },
+      {
+        "rank": 16,
+        "geneCurie": "NCBIGene:3000",
+        "geneLabel": "GUCY2D",
+        "geneSymbol": "GUCY2D",
+        "geneEntityId": 149039,
+        "bmaScore": 3.0911944797229483,
+        "normalizedScore": 0.341302,
+        "patientAverageScore": 4.995145504020009,
+        "phenotypeAverageScore": 1.1872434554258877,
+        "directPhenotypeCount": 68,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001483",
+            "patientPhenotypeLabel": "Eye poking",
+            "diseasePhenotypeCurie": "HP:0001483",
+            "diseasePhenotypeLabel": "Eye poking",
+            "micaCurie": "HP:0001483",
+            "micaLabel": "Eye poking",
+            "score": 7.111162486517652,
+            "evidenceCode": "2/6",
+            "referenceText": "OMIM:204000"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0032122",
+            "patientPhenotypeLabel": "Very low visual acuity",
+            "diseasePhenotypeCurie": "HP:0007663",
+            "diseasePhenotypeLabel": "Reduced visual acuity",
+            "micaCurie": "HP:0007663",
+            "micaLabel": "Reduced visual acuity",
+            "score": 2.879128521522365,
+            "evidenceCode": "6/6",
+            "referenceText": "OMIM:204000"
+          }
+        ]
+      },
+      {
+        "rank": 17,
+        "geneCurie": "NCBIGene:55812",
+        "geneLabel": "SPATA7",
+        "geneSymbol": "SPATA7",
+        "geneEntityId": 152041,
+        "bmaScore": 3.085477062831867,
+        "normalizedScore": 0.34067,
+        "patientAverageScore": 4.995145504020009,
+        "phenotypeAverageScore": 1.1758086216437245,
+        "directPhenotypeCount": 72,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001483",
+            "patientPhenotypeLabel": "Eye poking",
+            "diseasePhenotypeCurie": "HP:0001483",
+            "diseasePhenotypeLabel": "Eye poking",
+            "micaCurie": "HP:0001483",
+            "micaLabel": "Eye poking",
+            "score": 7.111162486517652,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:65"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0032122",
+            "patientPhenotypeLabel": "Very low visual acuity",
+            "diseasePhenotypeCurie": "HP:0007663",
+            "diseasePhenotypeLabel": "Reduced visual acuity",
+            "micaCurie": "HP:0007663",
+            "micaLabel": "Reduced visual acuity",
+            "score": 2.879128521522365,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:364055"
+          }
+        ]
+      },
+      {
+        "rank": 18,
+        "geneCurie": "NCBIGene:9227",
+        "geneLabel": "LRAT",
+        "geneSymbol": "LRAT",
+        "geneEntityId": 150750,
+        "bmaScore": 3.0723106437133083,
+        "normalizedScore": 0.339217,
+        "patientAverageScore": 4.995145504020009,
+        "phenotypeAverageScore": 1.1494757834066078,
+        "directPhenotypeCount": 78,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001483",
+            "patientPhenotypeLabel": "Eye poking",
+            "diseasePhenotypeCurie": "HP:0001483",
+            "diseasePhenotypeLabel": "Eye poking",
+            "micaCurie": "HP:0001483",
+            "micaLabel": "Eye poking",
+            "score": 7.111162486517652,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:65"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0032122",
+            "patientPhenotypeLabel": "Very low visual acuity",
+            "diseasePhenotypeCurie": "HP:0007875",
+            "diseasePhenotypeLabel": "Congenital blindness",
+            "micaCurie": "HP:0007663",
+            "micaLabel": "Reduced visual acuity",
+            "score": 2.879128521522365,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:613341"
+          }
+        ]
+      },
+      {
+        "rank": 19,
+        "geneCurie": "NCBIGene:10383",
+        "geneLabel": "TUBB4B",
+        "geneSymbol": "TUBB4B",
+        "geneEntityId": 151025,
+        "bmaScore": 3.0593344868049925,
+        "normalizedScore": 0.337784,
+        "patientAverageScore": 4.995145504020009,
+        "phenotypeAverageScore": 1.1235234695899767,
+        "directPhenotypeCount": 34,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001483",
+            "patientPhenotypeLabel": "Eye poking",
+            "diseasePhenotypeCurie": "HP:0001483",
+            "diseasePhenotypeLabel": "Eye poking",
+            "micaCurie": "HP:0001483",
+            "micaLabel": "Eye poking",
+            "score": 7.111162486517652,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:65"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0032122",
+            "patientPhenotypeLabel": "Very low visual acuity",
+            "diseasePhenotypeCurie": "HP:0007663",
+            "diseasePhenotypeLabel": "Reduced visual acuity",
+            "micaCurie": "HP:0007663",
+            "micaLabel": "Reduced visual acuity",
+            "score": 2.879128521522365,
+            "evidenceCode": "6/6",
+            "referenceText": "OMIM:617879"
+          }
+        ]
+      },
+      {
+        "rank": 20,
+        "geneCurie": "NCBIGene:23418",
+        "geneLabel": "CRB1",
+        "geneSymbol": "CRB1",
+        "geneEntityId": 151371,
+        "bmaScore": 3.051161046223551,
+        "normalizedScore": 0.336882,
+        "patientAverageScore": 4.995145504020009,
+        "phenotypeAverageScore": 1.1071765884270939,
+        "directPhenotypeCount": 69,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001483",
+            "patientPhenotypeLabel": "Eye poking",
+            "diseasePhenotypeCurie": "HP:0001483",
+            "diseasePhenotypeLabel": "Eye poking",
+            "micaCurie": "HP:0001483",
+            "micaLabel": "Eye poking",
+            "score": 7.111162486517652,
+            "evidenceCode": "3/3",
+            "referenceText": "OMIM:613835"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0032122",
+            "patientPhenotypeLabel": "Very low visual acuity",
+            "diseasePhenotypeCurie": "HP:0007663",
+            "diseasePhenotypeLabel": "Reduced visual acuity",
+            "micaCurie": "HP:0007663",
+            "micaLabel": "Reduced visual acuity",
+            "score": 2.879128521522365,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:791"
+          }
+        ]
+      },
+      {
+        "rank": 21,
+        "geneCurie": "NCBIGene:6121",
+        "geneLabel": "RPE65",
+        "geneSymbol": "RPE65",
+        "geneEntityId": 149992,
+        "bmaScore": 3.049955645478285,
+        "normalizedScore": 0.336749,
+        "patientAverageScore": 4.995145504020009,
+        "phenotypeAverageScore": 1.1047657869365612,
+        "directPhenotypeCount": 78,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001483",
+            "patientPhenotypeLabel": "Eye poking",
+            "diseasePhenotypeCurie": "HP:0001483",
+            "diseasePhenotypeLabel": "Eye poking",
+            "micaCurie": "HP:0001483",
+            "micaLabel": "Eye poking",
+            "score": 7.111162486517652,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:204100"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0032122",
+            "patientPhenotypeLabel": "Very low visual acuity",
+            "diseasePhenotypeCurie": "HP:0007663",
+            "diseasePhenotypeLabel": "Reduced visual acuity",
+            "micaCurie": "HP:0007663",
+            "micaLabel": "Reduced visual acuity",
+            "score": 2.879128521522365,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:364055"
+          }
+        ]
+      },
+      {
+        "rank": 22,
+        "geneCurie": "NCBIGene:9657",
+        "geneLabel": "IQCB1",
+        "geneSymbol": "IQCB1",
+        "geneEntityId": 150849,
+        "bmaScore": 2.976890683896048,
+        "normalizedScore": 0.328681,
+        "patientAverageScore": 4.995145504020009,
+        "phenotypeAverageScore": 0.9586358637720865,
+        "directPhenotypeCount": 40,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001483",
+            "patientPhenotypeLabel": "Eye poking",
+            "diseasePhenotypeCurie": "HP:0001483",
+            "diseasePhenotypeLabel": "Eye poking",
+            "micaCurie": "HP:0001483",
+            "micaLabel": "Eye poking",
+            "score": 7.111162486517652,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:65"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0032122",
+            "patientPhenotypeLabel": "Very low visual acuity",
+            "diseasePhenotypeCurie": "HP:0001141",
+            "diseasePhenotypeLabel": "Severely reduced visual acuity",
+            "micaCurie": "HP:0007663",
+            "micaLabel": "Reduced visual acuity",
+            "score": 2.879128521522365,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:65"
+          }
+        ]
+      },
+      {
+        "rank": 23,
+        "geneCurie": "NCBIGene:64802",
+        "geneLabel": "NMNAT1",
+        "geneSymbol": "NMNAT1",
+        "geneEntityId": 152295,
+        "bmaScore": 2.9666288502722713,
+        "normalizedScore": 0.327548,
+        "patientAverageScore": 4.995145504020009,
+        "phenotypeAverageScore": 0.9381121965245334,
+        "directPhenotypeCount": 84,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001483",
+            "patientPhenotypeLabel": "Eye poking",
+            "diseasePhenotypeCurie": "HP:0001483",
+            "diseasePhenotypeLabel": "Eye poking",
+            "micaCurie": "HP:0001483",
+            "micaLabel": "Eye poking",
+            "score": 7.111162486517652,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:65"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0032122",
+            "patientPhenotypeLabel": "Very low visual acuity",
+            "diseasePhenotypeCurie": "HP:0032286",
+            "diseasePhenotypeLabel": "Ultra-low vision with retained light perception",
+            "micaCurie": "HP:0007663",
+            "micaLabel": "Reduced visual acuity",
+            "score": 2.879128521522365,
+            "evidenceCode": "7/11",
+            "referenceText": "OMIM:608553"
+          }
+        ]
+      },
+      {
+        "rank": 24,
+        "geneCurie": "NCBIGene:5130",
+        "geneLabel": "PCYT1A",
+        "geneSymbol": "PCYT1A",
+        "geneEntityId": 149691,
+        "bmaScore": 2.7829559338585392,
+        "normalizedScore": 0.307269,
+        "patientAverageScore": 4.995145504020009,
+        "phenotypeAverageScore": 0.5707663636970693,
+        "directPhenotypeCount": 97,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001483",
+            "patientPhenotypeLabel": "Eye poking",
+            "diseasePhenotypeCurie": "HP:0001483",
+            "diseasePhenotypeLabel": "Eye poking",
+            "micaCurie": "HP:0001483",
+            "micaLabel": "Eye poking",
+            "score": 7.111162486517652,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:65"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0032122",
+            "patientPhenotypeLabel": "Very low visual acuity",
+            "diseasePhenotypeCurie": "HP:0007663",
+            "diseasePhenotypeLabel": "Reduced visual acuity",
+            "micaCurie": "HP:0007663",
+            "micaLabel": "Reduced visual acuity",
+            "score": 2.879128521522365,
+            "evidenceCode": "8/10",
+            "referenceText": "OMIM:608940"
+          }
+        ]
+      },
+      {
+        "rank": 25,
+        "geneCurie": "NCBIGene:392255",
+        "geneLabel": "GDF6",
+        "geneSymbol": "GDF6",
+        "geneEntityId": 153252,
+        "bmaScore": 2.7549792728109908,
+        "normalizedScore": 0.30418,
+        "patientAverageScore": 4.995145504020009,
+        "phenotypeAverageScore": 0.5148130416019724,
+        "directPhenotypeCount": 91,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001483",
+            "patientPhenotypeLabel": "Eye poking",
+            "diseasePhenotypeCurie": "HP:0001483",
+            "diseasePhenotypeLabel": "Eye poking",
+            "micaCurie": "HP:0001483",
+            "micaLabel": "Eye poking",
+            "score": 7.111162486517652,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:65"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0032122",
+            "patientPhenotypeLabel": "Very low visual acuity",
+            "diseasePhenotypeCurie": "HP:0032284",
+            "diseasePhenotypeLabel": "Ultra-low vision with retained motion projection",
+            "micaCurie": "HP:0007663",
+            "micaLabel": "Reduced visual acuity",
+            "score": 2.879128521522365,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:615360"
+          }
+        ]
+      }
+    ],
+    "engineSummary": {
+      "diseaseCount": 8579,
+      "geneCount": 5256,
+      "phenotypeCount": 19389,
+      "sourceMode": {
+        "disease": "relationship_fallback",
+        "gene": "relationship_fallback"
+      },
+      "generatedAt": "2026-03-15T21:00:39.457Z"
+    }
+  }
+}

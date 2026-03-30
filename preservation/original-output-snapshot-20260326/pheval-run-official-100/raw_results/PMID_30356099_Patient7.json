@@ -1,0 +1,2666 @@
+{
+  "success": true,
+  "engine": "genovy-dx-sim",
+  "analysisType": "gene",
+  "input": {
+    "presentPhenotypeCuries": [
+      "HP:0033725",
+      "HP:0002059",
+      "HP:0002121",
+      "HP:0002069",
+      "HP:0200134",
+      "HP:0002375",
+      "HP:0001263",
+      "HP:0002353",
+      "HP:0000817"
+    ],
+    "excludedPhenotypeCuries": [
+      "HP:0000512",
+      "HP:0000648",
+      "HP:0011097",
+      "HP:0007334",
+      "HP:0011169",
+      "HP:0002266",
+      "HP:0011167",
+      "HP:0001257",
+      "HP:0002188",
+      "HP:0001558",
+      "HP:0000311",
+      "HP:0002007",
+      "HP:0000470",
+      "HP:0000341",
+      "HP:0000347",
+      "HP:0000463",
+      "HP:0000582",
+      "HP:0009909"
+    ],
+    "sourceFormat": "phenopacket"
+  },
+  "ranking": {
+    "queryPhenotypes": [
+      {
+        "phenotypeCurie": "HP:0033725",
+        "phenotypeLabel": "Thin corpus callosum"
+      },
+      {
+        "phenotypeCurie": "HP:0002059",
+        "phenotypeLabel": "Cerebral atrophy"
+      },
+      {
+        "phenotypeCurie": "HP:0002121",
+        "phenotypeLabel": "Generalized non-motor (absence) seizure"
+      },
+      {
+        "phenotypeCurie": "HP:0002069",
+        "phenotypeLabel": "Bilateral tonic-clonic seizure"
+      },
+      {
+        "phenotypeCurie": "HP:0200134",
+        "phenotypeLabel": "Epileptic encephalopathy"
+      },
+      {
+        "phenotypeCurie": "HP:0002375",
+        "phenotypeLabel": "Hypokinesia"
+      },
+      {
+        "phenotypeCurie": "HP:0001263",
+        "phenotypeLabel": "Global developmental delay"
+      },
+      {
+        "phenotypeCurie": "HP:0002353",
+        "phenotypeLabel": "EEG abnormality"
+      },
+      {
+        "phenotypeCurie": "HP:0000817",
+        "phenotypeLabel": "Reduced eye contact"
+      }
+    ],
+    "results": [
+      {
+        "rank": 1,
+        "geneCurie": "NCBIGene:23732",
+        "geneLabel": "FRRS1L",
+        "geneSymbol": "FRRS1L",
+        "geneEntityId": 151422,
+        "bmaScore": 2.363519633282419,
+        "normalizedScore": 0.260958,
+        "patientAverageScore": 3.0451996197553446,
+        "phenotypeAverageScore": 1.6818396468094938,
+        "directPhenotypeCount": 50,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002375",
+            "patientPhenotypeLabel": "Hypokinesia",
+            "diseasePhenotypeCurie": "HP:0002375",
+            "diseasePhenotypeLabel": "Hypokinesia",
+            "micaCurie": "HP:0002375",
+            "micaLabel": "Hypokinesia",
+            "score": 5.560565074106485,
+            "evidenceCode": "4/8",
+            "referenceText": "OMIM:616981"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0200134",
+            "patientPhenotypeLabel": "Epileptic encephalopathy",
+            "diseasePhenotypeCurie": "HP:0200134",
+            "diseasePhenotypeLabel": "Epileptic encephalopathy",
+            "micaCurie": "HP:0200134",
+            "micaLabel": "Epileptic encephalopathy",
+            "score": 4.312140507209715,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:616981"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002121",
+            "patientPhenotypeLabel": "Generalized non-motor (absence) seizure",
+            "diseasePhenotypeCurie": "HP:0011150",
+            "diseasePhenotypeLabel": "Myoclonic absence seizure",
+            "micaCurie": "HP:0002121",
+            "micaLabel": "Generalized non-motor (absence) seizure",
+            "score": 4.020120033159336,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:725"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002069",
+            "patientPhenotypeLabel": "Bilateral tonic-clonic seizure",
+            "diseasePhenotypeCurie": "HP:0002069",
+            "diseasePhenotypeLabel": "Bilateral tonic-clonic seizure",
+            "micaCurie": "HP:0002069",
+            "micaLabel": "Bilateral tonic-clonic seizure",
+            "score": 3.1821419047209347,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:725"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002353",
+            "patientPhenotypeLabel": "EEG abnormality",
+            "diseasePhenotypeCurie": "HP:0031491",
+            "diseasePhenotypeLabel": "Continuous spike and waves during slow sleep",
+            "micaCurie": "HP:0002353",
+            "micaLabel": "EEG abnormality",
+            "score": 3.0433574795301634,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:725"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002059",
+            "patientPhenotypeLabel": "Cerebral atrophy",
+            "diseasePhenotypeCurie": "HP:0002059",
+            "diseasePhenotypeLabel": "Cerebral atrophy",
+            "micaCurie": "HP:0002059",
+            "micaLabel": "Cerebral atrophy",
+            "score": 2.7917714228352555,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:616981"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000817",
+            "patientPhenotypeLabel": "Reduced eye contact",
+            "diseasePhenotypeCurie": "HP:0009088",
+            "diseasePhenotypeLabel": "Speech articulation difficulties",
+            "micaCurie": "HP:0034434",
+            "micaLabel": "Abnormal communication",
+            "score": 1.6607373417721571,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:725"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "8/8",
+            "referenceText": "OMIM:616981"
+          }
+        ]
+      },
+      {
+        "rank": 2,
+        "geneCurie": "NCBIGene:57582",
+        "geneLabel": "KCNT1",
+        "geneSymbol": "KCNT1",
+        "geneEntityId": 152174,
+        "bmaScore": 2.2517249336594856,
+        "normalizedScore": 0.248615,
+        "patientAverageScore": 3.007783427506366,
+        "phenotypeAverageScore": 1.4956664398126052,
+        "directPhenotypeCount": 82,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000817",
+            "patientPhenotypeLabel": "Reduced eye contact",
+            "diseasePhenotypeCurie": "HP:0000817",
+            "diseasePhenotypeLabel": "Reduced eye contact",
+            "micaCurie": "HP:0000817",
+            "micaLabel": "Reduced eye contact",
+            "score": 4.546213129056115,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "OMIM:614959"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0200134",
+            "patientPhenotypeLabel": "Epileptic encephalopathy",
+            "diseasePhenotypeCurie": "HP:0200134",
+            "diseasePhenotypeLabel": "Epileptic encephalopathy",
+            "micaCurie": "HP:0200134",
+            "micaLabel": "Epileptic encephalopathy",
+            "score": 4.312140507209715,
+            "evidenceCode": "8/8",
+            "referenceText": "OMIM:614959"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002121",
+            "patientPhenotypeLabel": "Generalized non-motor (absence) seizure",
+            "diseasePhenotypeCurie": "HP:0032773",
+            "diseasePhenotypeLabel": "Focal autonomic seizure with palpitations/tachycardia/bradycardia/asystole",
+            "micaCurie": "HP:0033259",
+            "micaLabel": "Non-motor seizure",
+            "score": 3.9212741985227035,
+            "evidenceCode": "2/8",
+            "referenceText": "OMIM:614959"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002069",
+            "patientPhenotypeLabel": "Bilateral tonic-clonic seizure",
+            "diseasePhenotypeCurie": "HP:0007334",
+            "diseasePhenotypeLabel": "Bilateral tonic-clonic seizure with focal onset",
+            "micaCurie": "HP:0002069",
+            "micaLabel": "Bilateral tonic-clonic seizure",
+            "score": 3.1821419047209347,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:293181"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002353",
+            "patientPhenotypeLabel": "EEG abnormality",
+            "diseasePhenotypeCurie": "HP:0031535",
+            "diseasePhenotypeLabel": "Increased theta frequency activity in EEG",
+            "micaCurie": "HP:0002353",
+            "micaLabel": "EEG abnormality",
+            "score": 3.0433574795301634,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:98784"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002059",
+            "patientPhenotypeLabel": "Cerebral atrophy",
+            "diseasePhenotypeCurie": "HP:0002120",
+            "diseasePhenotypeLabel": "Cerebral cortical atrophy",
+            "micaCurie": "HP:0002059",
+            "micaLabel": "Cerebral atrophy",
+            "score": 2.7917714228352555,
+            "evidenceCode": "3/8",
+            "referenceText": "OMIM:614959"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0033725",
+            "patientPhenotypeLabel": "Thin corpus callosum",
+            "diseasePhenotypeCurie": "HP:0033725",
+            "diseasePhenotypeLabel": "Thin corpus callosum",
+            "micaCurie": "HP:0033725",
+            "micaLabel": "Thin corpus callosum",
+            "score": 2.4055007619832383,
+            "evidenceCode": "3/8",
+            "referenceText": "OMIM:614959"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0012736",
+            "diseasePhenotypeLabel": "Profound global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "6/8",
+            "referenceText": "OMIM:614959"
+          }
+        ]
+      },
+      {
+        "rank": 3,
+        "geneCurie": "NCBIGene:23316",
+        "geneLabel": "CUX2",
+        "geneSymbol": "CUX2",
+        "geneEntityId": 151345,
+        "bmaScore": 2.1979816987739436,
+        "normalizedScore": 0.242681,
+        "patientAverageScore": 2.6907492045285375,
+        "phenotypeAverageScore": 1.7052141930193494,
+        "directPhenotypeCount": 41,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000817",
+            "patientPhenotypeLabel": "Reduced eye contact",
+            "diseasePhenotypeCurie": "HP:0000817",
+            "diseasePhenotypeLabel": "Reduced eye contact",
+            "micaCurie": "HP:0000817",
+            "micaLabel": "Reduced eye contact",
+            "score": 4.546213129056115,
+            "evidenceCode": "1/9",
+            "referenceText": "OMIM:618141"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0200134",
+            "patientPhenotypeLabel": "Epileptic encephalopathy",
+            "diseasePhenotypeCurie": "HP:0200134",
+            "diseasePhenotypeLabel": "Epileptic encephalopathy",
+            "micaCurie": "HP:0200134",
+            "micaLabel": "Epileptic encephalopathy",
+            "score": 4.312140507209715,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:618141"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002121",
+            "patientPhenotypeLabel": "Generalized non-motor (absence) seizure",
+            "diseasePhenotypeCurie": "HP:0007270",
+            "diseasePhenotypeLabel": "Atypical absence seizure",
+            "micaCurie": "HP:0002121",
+            "micaLabel": "Generalized non-motor (absence) seizure",
+            "score": 4.020120033159336,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:2382"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002069",
+            "patientPhenotypeLabel": "Bilateral tonic-clonic seizure",
+            "diseasePhenotypeCurie": "HP:0002069",
+            "diseasePhenotypeLabel": "Bilateral tonic-clonic seizure",
+            "micaCurie": "HP:0002069",
+            "micaLabel": "Bilateral tonic-clonic seizure",
+            "score": 3.1821419047209347,
+            "evidenceCode": "5/9",
+            "referenceText": "OMIM:618141"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002353",
+            "patientPhenotypeLabel": "EEG abnormality",
+            "diseasePhenotypeCurie": "HP:0011195",
+            "diseasePhenotypeLabel": "EEG with focal sharp slow waves",
+            "micaCurie": "HP:0002353",
+            "micaLabel": "EEG abnormality",
+            "score": 3.0433574795301634,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:2382"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "9/9",
+            "referenceText": "OMIM:618141"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002375",
+            "patientPhenotypeLabel": "Hypokinesia",
+            "diseasePhenotypeCurie": "HP:0100660",
+            "diseasePhenotypeLabel": "Dyskinesia",
+            "micaCurie": "HP:0100022",
+            "micaLabel": "Abnormality of movement",
+            "score": 1.4164688091793307,
+            "evidenceCode": "1/9",
+            "referenceText": "OMIM:618141"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0033725",
+            "patientPhenotypeLabel": "Thin corpus callosum",
+            "diseasePhenotypeCurie": "HP:0002363",
+            "diseasePhenotypeLabel": "Abnormal brainstem morphology",
+            "micaCurie": "HP:0012443",
+            "micaLabel": "Abnormal brain morphology",
+            "score": 1.122559171690702,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:2382"
+          }
+        ]
+      },
+      {
+        "rank": 4,
+        "geneCurie": "NCBIGene:4761",
+        "geneLabel": "NEUROD2",
+        "geneSymbol": "NEUROD2",
+        "geneEntityId": 149585,
+        "bmaScore": 2.117152898831105,
+        "normalizedScore": 0.233757,
+        "patientAverageScore": 3.018766298021548,
+        "phenotypeAverageScore": 1.2155394996406619,
+        "directPhenotypeCount": 77,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000817",
+            "patientPhenotypeLabel": "Reduced eye contact",
+            "diseasePhenotypeCurie": "HP:0000817",
+            "diseasePhenotypeLabel": "Reduced eye contact",
+            "micaCurie": "HP:0000817",
+            "micaLabel": "Reduced eye contact",
+            "score": 4.546213129056115,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:618374"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0200134",
+            "patientPhenotypeLabel": "Epileptic encephalopathy",
+            "diseasePhenotypeCurie": "HP:0200134",
+            "diseasePhenotypeLabel": "Epileptic encephalopathy",
+            "micaCurie": "HP:0200134",
+            "micaLabel": "Epileptic encephalopathy",
+            "score": 4.312140507209715,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:618374"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002121",
+            "patientPhenotypeLabel": "Generalized non-motor (absence) seizure",
+            "diseasePhenotypeCurie": "HP:0002121",
+            "diseasePhenotypeLabel": "Generalized non-motor (absence) seizure",
+            "micaCurie": "HP:0002121",
+            "micaLabel": "Generalized non-motor (absence) seizure",
+            "score": 4.020120033159336,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1934"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002069",
+            "patientPhenotypeLabel": "Bilateral tonic-clonic seizure",
+            "diseasePhenotypeCurie": "HP:0002069",
+            "diseasePhenotypeLabel": "Bilateral tonic-clonic seizure",
+            "micaCurie": "HP:0002069",
+            "micaLabel": "Bilateral tonic-clonic seizure",
+            "score": 3.1821419047209347,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1934"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002353",
+            "patientPhenotypeLabel": "EEG abnormality",
+            "diseasePhenotypeCurie": "HP:0011190",
+            "diseasePhenotypeLabel": "Uni- and bilateral multifocal epileptiform discharges",
+            "micaCurie": "HP:0002353",
+            "micaLabel": "EEG abnormality",
+            "score": 3.0433574795301634,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1934"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002059",
+            "patientPhenotypeLabel": "Cerebral atrophy",
+            "diseasePhenotypeCurie": "HP:0002506",
+            "diseasePhenotypeLabel": "Diffuse cerebral atrophy",
+            "micaCurie": "HP:0002059",
+            "micaLabel": "Cerebral atrophy",
+            "score": 2.7917714228352555,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1934"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0033725",
+            "patientPhenotypeLabel": "Thin corpus callosum",
+            "diseasePhenotypeCurie": "HP:0002079",
+            "diseasePhenotypeLabel": "Hypoplasia of the corpus callosum",
+            "micaCurie": "HP:0033725",
+            "micaLabel": "Thin corpus callosum",
+            "score": 2.4055007619832383,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:618374"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:618374"
+          }
+        ]
+      },
+      {
+        "rank": 5,
+        "geneCurie": "NCBIGene:81603",
+        "geneLabel": "TRIM8",
+        "geneSymbol": "TRIM8",
+        "geneEntityId": 152491,
+        "bmaScore": 2.100757847175794,
+        "normalizedScore": 0.231947,
+        "patientAverageScore": 3.018766298021548,
+        "phenotypeAverageScore": 1.1827493963300397,
+        "directPhenotypeCount": 101,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000817",
+            "patientPhenotypeLabel": "Reduced eye contact",
+            "diseasePhenotypeCurie": "HP:0000817",
+            "diseasePhenotypeLabel": "Reduced eye contact",
+            "micaCurie": "HP:0000817",
+            "micaLabel": "Reduced eye contact",
+            "score": 4.546213129056115,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:619428"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0200134",
+            "patientPhenotypeLabel": "Epileptic encephalopathy",
+            "diseasePhenotypeCurie": "HP:0200134",
+            "diseasePhenotypeLabel": "Epileptic encephalopathy",
+            "micaCurie": "HP:0200134",
+            "micaLabel": "Epileptic encephalopathy",
+            "score": 4.312140507209715,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:1934"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002121",
+            "patientPhenotypeLabel": "Generalized non-motor (absence) seizure",
+            "diseasePhenotypeCurie": "HP:0007270",
+            "diseasePhenotypeLabel": "Atypical absence seizure",
+            "micaCurie": "HP:0002121",
+            "micaLabel": "Generalized non-motor (absence) seizure",
+            "score": 4.020120033159336,
+            "evidenceCode": "1/5",
+            "referenceText": "OMIM:619428"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002069",
+            "patientPhenotypeLabel": "Bilateral tonic-clonic seizure",
+            "diseasePhenotypeCurie": "HP:0007334",
+            "diseasePhenotypeLabel": "Bilateral tonic-clonic seizure with focal onset",
+            "micaCurie": "HP:0002069",
+            "micaLabel": "Bilateral tonic-clonic seizure",
+            "score": 3.1821419047209347,
+            "evidenceCode": "1/5",
+            "referenceText": "OMIM:619428"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002353",
+            "patientPhenotypeLabel": "EEG abnormality",
+            "diseasePhenotypeCurie": "HP:0033720",
+            "diseasePhenotypeLabel": "EEG with occipital epileptiform discharges",
+            "micaCurie": "HP:0002353",
+            "micaLabel": "EEG abnormality",
+            "score": 3.0433574795301634,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:619428"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002059",
+            "patientPhenotypeLabel": "Cerebral atrophy",
+            "diseasePhenotypeCurie": "HP:0002506",
+            "diseasePhenotypeLabel": "Diffuse cerebral atrophy",
+            "micaCurie": "HP:0002059",
+            "micaLabel": "Cerebral atrophy",
+            "score": 2.7917714228352555,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1934"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0033725",
+            "patientPhenotypeLabel": "Thin corpus callosum",
+            "diseasePhenotypeCurie": "HP:0002079",
+            "diseasePhenotypeLabel": "Hypoplasia of the corpus callosum",
+            "micaCurie": "HP:0033725",
+            "micaLabel": "Thin corpus callosum",
+            "score": 2.4055007619832383,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1934"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0011344",
+            "diseasePhenotypeLabel": "Severe global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:619428"
+          }
+        ]
+      },
+      {
+        "rank": 6,
+        "geneCurie": "NCBIGene:2554",
+        "geneLabel": "GABRA1",
+        "geneSymbol": "GABRA1",
+        "geneEntityId": 148894,
+        "bmaScore": 2.089002228285102,
+        "normalizedScore": 0.230649,
+        "patientAverageScore": 2.697275230074835,
+        "phenotypeAverageScore": 1.4807292264953695,
+        "directPhenotypeCount": 98,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0200134",
+            "patientPhenotypeLabel": "Epileptic encephalopathy",
+            "diseasePhenotypeCurie": "HP:0200134",
+            "diseasePhenotypeLabel": "Epileptic encephalopathy",
+            "micaCurie": "HP:0200134",
+            "micaLabel": "Epileptic encephalopathy",
+            "score": 4.312140507209715,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:615744"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002121",
+            "patientPhenotypeLabel": "Generalized non-motor (absence) seizure",
+            "diseasePhenotypeCurie": "HP:0011150",
+            "diseasePhenotypeLabel": "Myoclonic absence seizure",
+            "micaCurie": "HP:0002121",
+            "micaLabel": "Generalized non-motor (absence) seizure",
+            "score": 4.020120033159336,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:64280"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002069",
+            "patientPhenotypeLabel": "Bilateral tonic-clonic seizure",
+            "diseasePhenotypeCurie": "HP:0025190",
+            "diseasePhenotypeLabel": "Bilateral tonic-clonic seizure with generalized onset",
+            "micaCurie": "HP:0002069",
+            "micaLabel": "Bilateral tonic-clonic seizure",
+            "score": 3.1821419047209347,
+            "evidenceCode": "4/4",
+            "referenceText": "OMIM:615744"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002353",
+            "patientPhenotypeLabel": "EEG abnormality",
+            "diseasePhenotypeCurie": "HP:0011198",
+            "diseasePhenotypeLabel": "EEG with generalized epileptiform discharges",
+            "micaCurie": "HP:0002353",
+            "micaLabel": "EEG abnormality",
+            "score": 3.0433574795301634,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:33069"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002059",
+            "patientPhenotypeLabel": "Cerebral atrophy",
+            "diseasePhenotypeCurie": "HP:0002059",
+            "diseasePhenotypeLabel": "Cerebral atrophy",
+            "micaCurie": "HP:0002059",
+            "micaLabel": "Cerebral atrophy",
+            "score": 2.7917714228352555,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:615744"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0033725",
+            "patientPhenotypeLabel": "Thin corpus callosum",
+            "diseasePhenotypeCurie": "HP:0033725",
+            "diseasePhenotypeLabel": "Thin corpus callosum",
+            "micaCurie": "HP:0033725",
+            "micaLabel": "Thin corpus callosum",
+            "score": 2.4055007619832383,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:615744"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000817",
+            "patientPhenotypeLabel": "Reduced eye contact",
+            "diseasePhenotypeCurie": "HP:0031469",
+            "diseasePhenotypeLabel": "Low self-esteem",
+            "micaCurie": "HP:0025792",
+            "micaLabel": "Abnormal cognitive process",
+            "score": 1.6527935175356971,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:64280"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0011342",
+            "diseasePhenotypeLabel": "Mild global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:615744"
+          }
+        ]
+      },
+      {
+        "rank": 7,
+        "geneCurie": "NCBIGene:2903",
+        "geneLabel": "GRIN2A",
+        "geneSymbol": "GRIN2A",
+        "geneEntityId": 149013,
+        "bmaScore": 2.088711788581552,
+        "normalizedScore": 0.230617,
+        "patientAverageScore": 2.6981578772122194,
+        "phenotypeAverageScore": 1.4792656999508844,
+        "directPhenotypeCount": 109,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0200134",
+            "patientPhenotypeLabel": "Epileptic encephalopathy",
+            "diseasePhenotypeCurie": "HP:0200134",
+            "diseasePhenotypeLabel": "Epileptic encephalopathy",
+            "micaCurie": "HP:0200134",
+            "micaLabel": "Epileptic encephalopathy",
+            "score": 4.312140507209715,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "ORPHA:98818"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002121",
+            "patientPhenotypeLabel": "Generalized non-motor (absence) seizure",
+            "diseasePhenotypeCurie": "HP:0011150",
+            "diseasePhenotypeLabel": "Myoclonic absence seizure",
+            "micaCurie": "HP:0002121",
+            "micaLabel": "Generalized non-motor (absence) seizure",
+            "score": 4.020120033159336,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:725"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002069",
+            "patientPhenotypeLabel": "Bilateral tonic-clonic seizure",
+            "diseasePhenotypeCurie": "HP:0025190",
+            "diseasePhenotypeLabel": "Bilateral tonic-clonic seizure with generalized onset",
+            "micaCurie": "HP:0002069",
+            "micaLabel": "Bilateral tonic-clonic seizure",
+            "score": 3.1821419047209347,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:98818"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002353",
+            "patientPhenotypeLabel": "EEG abnormality",
+            "diseasePhenotypeCurie": "HP:0031491",
+            "diseasePhenotypeLabel": "Continuous spike and waves during slow sleep",
+            "micaCurie": "HP:0002353",
+            "micaLabel": "EEG abnormality",
+            "score": 3.0433574795301634,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:163721"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002059",
+            "patientPhenotypeLabel": "Cerebral atrophy",
+            "diseasePhenotypeCurie": "HP:0002506",
+            "diseasePhenotypeLabel": "Diffuse cerebral atrophy",
+            "micaCurie": "HP:0002059",
+            "micaLabel": "Cerebral atrophy",
+            "score": 2.7917714228352555,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:289266"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0033725",
+            "patientPhenotypeLabel": "Thin corpus callosum",
+            "diseasePhenotypeCurie": "HP:0002079",
+            "diseasePhenotypeLabel": "Hypoplasia of the corpus callosum",
+            "micaCurie": "HP:0033725",
+            "micaLabel": "Thin corpus callosum",
+            "score": 2.4055007619832383,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:289266"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000817",
+            "patientPhenotypeLabel": "Reduced eye contact",
+            "diseasePhenotypeCurie": "HP:0031434",
+            "diseasePhenotypeLabel": "Abnormal prosody",
+            "micaCurie": "HP:0034434",
+            "micaLabel": "Abnormal communication",
+            "score": 1.6607373417721571,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:163721"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0012736",
+            "diseasePhenotypeLabel": "Profound global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:289266"
+          }
+        ]
+      },
+      {
+        "rank": 8,
+        "geneCurie": "NCBIGene:51227",
+        "geneLabel": "PIGP",
+        "geneSymbol": "PIGP",
+        "geneEntityId": 151715,
+        "bmaScore": 2.084732033168105,
+        "normalizedScore": 0.230177,
+        "patientAverageScore": 3.018766298021548,
+        "phenotypeAverageScore": 1.1506977683146615,
+        "directPhenotypeCount": 79,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000817",
+            "patientPhenotypeLabel": "Reduced eye contact",
+            "diseasePhenotypeCurie": "HP:0000817",
+            "diseasePhenotypeLabel": "Reduced eye contact",
+            "micaCurie": "HP:0000817",
+            "micaLabel": "Reduced eye contact",
+            "score": 4.546213129056115,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:617599"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0200134",
+            "patientPhenotypeLabel": "Epileptic encephalopathy",
+            "diseasePhenotypeCurie": "HP:0200134",
+            "diseasePhenotypeLabel": "Epileptic encephalopathy",
+            "micaCurie": "HP:0200134",
+            "micaLabel": "Epileptic encephalopathy",
+            "score": 4.312140507209715,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:1934"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002121",
+            "patientPhenotypeLabel": "Generalized non-motor (absence) seizure",
+            "diseasePhenotypeCurie": "HP:0002121",
+            "diseasePhenotypeLabel": "Generalized non-motor (absence) seizure",
+            "micaCurie": "HP:0002121",
+            "micaLabel": "Generalized non-motor (absence) seizure",
+            "score": 4.020120033159336,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1934"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002069",
+            "patientPhenotypeLabel": "Bilateral tonic-clonic seizure",
+            "diseasePhenotypeCurie": "HP:0002069",
+            "diseasePhenotypeLabel": "Bilateral tonic-clonic seizure",
+            "micaCurie": "HP:0002069",
+            "micaLabel": "Bilateral tonic-clonic seizure",
+            "score": 3.1821419047209347,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1934"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002353",
+            "patientPhenotypeLabel": "EEG abnormality",
+            "diseasePhenotypeCurie": "HP:0011190",
+            "diseasePhenotypeLabel": "Uni- and bilateral multifocal epileptiform discharges",
+            "micaCurie": "HP:0002353",
+            "micaLabel": "EEG abnormality",
+            "score": 3.0433574795301634,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1934"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002059",
+            "patientPhenotypeLabel": "Cerebral atrophy",
+            "diseasePhenotypeCurie": "HP:0002506",
+            "diseasePhenotypeLabel": "Diffuse cerebral atrophy",
+            "micaCurie": "HP:0002059",
+            "micaLabel": "Cerebral atrophy",
+            "score": 2.7917714228352555,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1934"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0033725",
+            "patientPhenotypeLabel": "Thin corpus callosum",
+            "diseasePhenotypeCurie": "HP:0002079",
+            "diseasePhenotypeLabel": "Hypoplasia of the corpus callosum",
+            "micaCurie": "HP:0033725",
+            "micaLabel": "Thin corpus callosum",
+            "score": 2.4055007619832383,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1934"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:617599"
+          }
+        ]
+      },
+      {
+        "rank": 9,
+        "geneCurie": "NCBIGene:2902",
+        "geneLabel": "GRIN1",
+        "geneSymbol": "GRIN1",
+        "geneEntityId": 149012,
+        "bmaScore": 2.065100957217477,
+        "normalizedScore": 0.22801,
+        "patientAverageScore": 3.018766298021548,
+        "phenotypeAverageScore": 1.1114356164134056,
+        "directPhenotypeCount": 134,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000817",
+            "patientPhenotypeLabel": "Reduced eye contact",
+            "diseasePhenotypeCurie": "HP:0000817",
+            "diseasePhenotypeLabel": "Reduced eye contact",
+            "micaCurie": "HP:0000817",
+            "micaLabel": "Reduced eye contact",
+            "score": 4.546213129056115,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:617820"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0200134",
+            "patientPhenotypeLabel": "Epileptic encephalopathy",
+            "diseasePhenotypeCurie": "HP:0200134",
+            "diseasePhenotypeLabel": "Epileptic encephalopathy",
+            "micaCurie": "HP:0200134",
+            "micaLabel": "Epileptic encephalopathy",
+            "score": 4.312140507209715,
+            "evidenceCode": "3/3",
+            "referenceText": "OMIM:619814"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002121",
+            "patientPhenotypeLabel": "Generalized non-motor (absence) seizure",
+            "diseasePhenotypeCurie": "HP:0011147",
+            "diseasePhenotypeLabel": "Typical absence seizure",
+            "micaCurie": "HP:0002121",
+            "micaLabel": "Generalized non-motor (absence) seizure",
+            "score": 4.020120033159336,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:208447"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002069",
+            "patientPhenotypeLabel": "Bilateral tonic-clonic seizure",
+            "diseasePhenotypeCurie": "HP:0002069",
+            "diseasePhenotypeLabel": "Bilateral tonic-clonic seizure",
+            "micaCurie": "HP:0002069",
+            "micaLabel": "Bilateral tonic-clonic seizure",
+            "score": 3.1821419047209347,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:208447"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002353",
+            "patientPhenotypeLabel": "EEG abnormality",
+            "diseasePhenotypeCurie": "HP:0011190",
+            "diseasePhenotypeLabel": "Uni- and bilateral multifocal epileptiform discharges",
+            "micaCurie": "HP:0002353",
+            "micaLabel": "EEG abnormality",
+            "score": 3.0433574795301634,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1934"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002059",
+            "patientPhenotypeLabel": "Cerebral atrophy",
+            "diseasePhenotypeCurie": "HP:0002506",
+            "diseasePhenotypeLabel": "Diffuse cerebral atrophy",
+            "micaCurie": "HP:0002059",
+            "micaLabel": "Cerebral atrophy",
+            "score": 2.7917714228352555,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1934"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0033725",
+            "patientPhenotypeLabel": "Thin corpus callosum",
+            "diseasePhenotypeCurie": "HP:0002079",
+            "diseasePhenotypeLabel": "Hypoplasia of the corpus callosum",
+            "micaCurie": "HP:0033725",
+            "micaLabel": "Thin corpus callosum",
+            "score": 2.4055007619832383,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1934"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0012736",
+            "diseasePhenotypeLabel": "Profound global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:208447"
+          }
+        ]
+      },
+      {
+        "rank": 10,
+        "geneCurie": "NCBIGene:51741",
+        "geneLabel": "WWOX",
+        "geneSymbol": "WWOX",
+        "geneEntityId": 151788,
+        "bmaScore": 2.0585562136390863,
+        "normalizedScore": 0.227287,
+        "patientAverageScore": 3.479221438569009,
+        "phenotypeAverageScore": 0.6378909887091639,
+        "directPhenotypeCount": 118,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002375",
+            "patientPhenotypeLabel": "Hypokinesia",
+            "diseasePhenotypeCurie": "HP:0002375",
+            "diseasePhenotypeLabel": "Hypokinesia",
+            "micaCurie": "HP:0002375",
+            "micaLabel": "Hypokinesia",
+            "score": 5.560565074106485,
+            "evidenceCode": "20/25",
+            "referenceText": "OMIM:616211"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000817",
+            "patientPhenotypeLabel": "Reduced eye contact",
+            "diseasePhenotypeCurie": "HP:0000817",
+            "diseasePhenotypeLabel": "Reduced eye contact",
+            "micaCurie": "HP:0000817",
+            "micaLabel": "Reduced eye contact",
+            "score": 4.546213129056115,
+            "evidenceCode": "19/25",
+            "referenceText": "OMIM:616211"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0200134",
+            "patientPhenotypeLabel": "Epileptic encephalopathy",
+            "diseasePhenotypeCurie": "HP:0200134",
+            "diseasePhenotypeLabel": "Epileptic encephalopathy",
+            "micaCurie": "HP:0200134",
+            "micaLabel": "Epileptic encephalopathy",
+            "score": 4.312140507209715,
+            "evidenceCode": "27/27",
+            "referenceText": "OMIM:616211"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002121",
+            "patientPhenotypeLabel": "Generalized non-motor (absence) seizure",
+            "diseasePhenotypeCurie": "HP:0002121",
+            "diseasePhenotypeLabel": "Generalized non-motor (absence) seizure",
+            "micaCurie": "HP:0002121",
+            "micaLabel": "Generalized non-motor (absence) seizure",
+            "score": 4.020120033159336,
+            "evidenceCode": "2/26",
+            "referenceText": "OMIM:616211"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002069",
+            "patientPhenotypeLabel": "Bilateral tonic-clonic seizure",
+            "diseasePhenotypeCurie": "HP:0007334",
+            "diseasePhenotypeLabel": "Bilateral tonic-clonic seizure with focal onset",
+            "micaCurie": "HP:0002069",
+            "micaLabel": "Bilateral tonic-clonic seizure",
+            "score": 3.1821419047209347,
+            "evidenceCode": "6/26",
+            "referenceText": "OMIM:616211"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002353",
+            "patientPhenotypeLabel": "EEG abnormality",
+            "diseasePhenotypeCurie": "HP:0002353",
+            "diseasePhenotypeLabel": "EEG abnormality",
+            "micaCurie": "HP:0002353",
+            "micaLabel": "EEG abnormality",
+            "score": 3.0433574795301634,
+            "evidenceCode": "24/24",
+            "referenceText": "OMIM:616211"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002059",
+            "patientPhenotypeLabel": "Cerebral atrophy",
+            "diseasePhenotypeCurie": "HP:0002059",
+            "diseasePhenotypeLabel": "Cerebral atrophy",
+            "micaCurie": "HP:0002059",
+            "micaLabel": "Cerebral atrophy",
+            "score": 2.7917714228352555,
+            "evidenceCode": "13/27",
+            "referenceText": "OMIM:616211"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0033725",
+            "patientPhenotypeLabel": "Thin corpus callosum",
+            "diseasePhenotypeCurie": "HP:0033725",
+            "diseasePhenotypeLabel": "Thin corpus callosum",
+            "micaCurie": "HP:0033725",
+            "micaLabel": "Thin corpus callosum",
+            "score": 2.4055007619832383,
+            "evidenceCode": "17/25",
+            "referenceText": "OMIM:616211"
+          }
+        ]
+      },
+      {
+        "rank": 11,
+        "geneCurie": "NCBIGene:3785",
+        "geneLabel": "KCNQ2",
+        "geneSymbol": "KCNQ2",
+        "geneEntityId": 149274,
+        "bmaScore": 2.0536205487129466,
+        "normalizedScore": 0.226742,
+        "patientAverageScore": 2.617026446658897,
+        "phenotypeAverageScore": 1.490214650766996,
+        "directPhenotypeCount": 94,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0200134",
+            "patientPhenotypeLabel": "Epileptic encephalopathy",
+            "diseasePhenotypeCurie": "HP:0200134",
+            "diseasePhenotypeLabel": "Epileptic encephalopathy",
+            "micaCurie": "HP:0200134",
+            "micaLabel": "Epileptic encephalopathy",
+            "score": 4.312140507209715,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:439218"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002121",
+            "patientPhenotypeLabel": "Generalized non-motor (absence) seizure",
+            "diseasePhenotypeCurie": "HP:0002121",
+            "diseasePhenotypeLabel": "Generalized non-motor (absence) seizure",
+            "micaCurie": "HP:0002121",
+            "micaLabel": "Generalized non-motor (absence) seizure",
+            "score": 4.020120033159336,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002069",
+            "patientPhenotypeLabel": "Bilateral tonic-clonic seizure",
+            "diseasePhenotypeCurie": "HP:0007334",
+            "diseasePhenotypeLabel": "Bilateral tonic-clonic seizure with focal onset",
+            "micaCurie": "HP:0002069",
+            "micaLabel": "Bilateral tonic-clonic seizure",
+            "score": 3.1821419047209347,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002353",
+            "patientPhenotypeLabel": "EEG abnormality",
+            "diseasePhenotypeCurie": "HP:0031535",
+            "diseasePhenotypeLabel": "Increased theta frequency activity in EEG",
+            "micaCurie": "HP:0002353",
+            "micaLabel": "EEG abnormality",
+            "score": 3.0433574795301634,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "ORPHA:1949"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002059",
+            "patientPhenotypeLabel": "Cerebral atrophy",
+            "diseasePhenotypeCurie": "HP:0002059",
+            "diseasePhenotypeLabel": "Cerebral atrophy",
+            "micaCurie": "HP:0002059",
+            "micaLabel": "Cerebral atrophy",
+            "score": 2.7917714228352555,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:293181"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0033725",
+            "patientPhenotypeLabel": "Thin corpus callosum",
+            "diseasePhenotypeCurie": "HP:0002079",
+            "diseasePhenotypeLabel": "Hypoplasia of the corpus callosum",
+            "micaCurie": "HP:0033725",
+            "micaLabel": "Thin corpus callosum",
+            "score": 2.4055007619832383,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:439218"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0012736",
+            "diseasePhenotypeLabel": "Profound global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:439218"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002375",
+            "patientPhenotypeLabel": "Hypokinesia",
+            "diseasePhenotypeCurie": "HP:0045084",
+            "diseasePhenotypeLabel": "Limb myoclonus",
+            "micaCurie": "HP:0100022",
+            "micaLabel": "Abnormality of movement",
+            "score": 1.4164688091793307,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:306"
+          }
+        ]
+      },
+      {
+        "rank": 12,
+        "geneCurie": "NCBIGene:85440",
+        "geneLabel": "DOCK7",
+        "geneSymbol": "DOCK7",
+        "geneEntityId": 152670,
+        "bmaScore": 2.049027728978596,
+        "normalizedScore": 0.226235,
+        "patientAverageScore": 3.018766298021548,
+        "phenotypeAverageScore": 1.0792891599356433,
+        "directPhenotypeCount": 47,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000817",
+            "patientPhenotypeLabel": "Reduced eye contact",
+            "diseasePhenotypeCurie": "HP:0000817",
+            "diseasePhenotypeLabel": "Reduced eye contact",
+            "micaCurie": "HP:0000817",
+            "micaLabel": "Reduced eye contact",
+            "score": 4.546213129056115,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:411986"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0200134",
+            "patientPhenotypeLabel": "Epileptic encephalopathy",
+            "diseasePhenotypeCurie": "HP:0200134",
+            "diseasePhenotypeLabel": "Epileptic encephalopathy",
+            "micaCurie": "HP:0200134",
+            "micaLabel": "Epileptic encephalopathy",
+            "score": 4.312140507209715,
+            "evidenceCode": "3/3",
+            "referenceText": "OMIM:615859"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002121",
+            "patientPhenotypeLabel": "Generalized non-motor (absence) seizure",
+            "diseasePhenotypeCurie": "HP:0002121",
+            "diseasePhenotypeLabel": "Generalized non-motor (absence) seizure",
+            "micaCurie": "HP:0002121",
+            "micaLabel": "Generalized non-motor (absence) seizure",
+            "score": 4.020120033159336,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:411986"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002069",
+            "patientPhenotypeLabel": "Bilateral tonic-clonic seizure",
+            "diseasePhenotypeCurie": "HP:0002069",
+            "diseasePhenotypeLabel": "Bilateral tonic-clonic seizure",
+            "micaCurie": "HP:0002069",
+            "micaLabel": "Bilateral tonic-clonic seizure",
+            "score": 3.1821419047209347,
+            "evidenceCode": "1/3",
+            "referenceText": "OMIM:615859"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002353",
+            "patientPhenotypeLabel": "EEG abnormality",
+            "diseasePhenotypeCurie": "HP:0010841",
+            "diseasePhenotypeLabel": "Multifocal epileptiform discharges",
+            "micaCurie": "HP:0002353",
+            "micaLabel": "EEG abnormality",
+            "score": 3.0433574795301634,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:411986"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002059",
+            "patientPhenotypeLabel": "Cerebral atrophy",
+            "diseasePhenotypeCurie": "HP:0012105",
+            "diseasePhenotypeLabel": "Occipital cortical atrophy",
+            "micaCurie": "HP:0002059",
+            "micaLabel": "Cerebral atrophy",
+            "score": 2.7917714228352555,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:411986"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0033725",
+            "patientPhenotypeLabel": "Thin corpus callosum",
+            "diseasePhenotypeCurie": "HP:0002079",
+            "diseasePhenotypeLabel": "Hypoplasia of the corpus callosum",
+            "micaCurie": "HP:0033725",
+            "micaLabel": "Thin corpus callosum",
+            "score": 2.4055007619832383,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:411986"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "3/3",
+            "referenceText": "OMIM:615859"
+          }
+        ]
+      },
+      {
+        "rank": 13,
+        "geneCurie": "NCBIGene:23031",
+        "geneLabel": "MAST3",
+        "geneSymbol": "MAST3",
+        "geneEntityId": 151272,
+        "bmaScore": 2.0259610203275367,
+        "normalizedScore": 0.223688,
+        "patientAverageScore": 2.0466128871544473,
+        "phenotypeAverageScore": 2.005309153500626,
+        "directPhenotypeCount": 16,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0200134",
+            "patientPhenotypeLabel": "Epileptic encephalopathy",
+            "diseasePhenotypeCurie": "HP:0200134",
+            "diseasePhenotypeLabel": "Epileptic encephalopathy",
+            "micaCurie": "HP:0200134",
+            "micaLabel": "Epileptic encephalopathy",
+            "score": 4.312140507209715,
+            "evidenceCode": "11/11",
+            "referenceText": "OMIM:620115"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002121",
+            "patientPhenotypeLabel": "Generalized non-motor (absence) seizure",
+            "diseasePhenotypeCurie": "HP:0002121",
+            "diseasePhenotypeLabel": "Generalized non-motor (absence) seizure",
+            "micaCurie": "HP:0002121",
+            "micaLabel": "Generalized non-motor (absence) seizure",
+            "score": 4.020120033159336,
+            "evidenceCode": "7/11",
+            "referenceText": "OMIM:620115"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002069",
+            "patientPhenotypeLabel": "Bilateral tonic-clonic seizure",
+            "diseasePhenotypeCurie": "HP:0032660",
+            "diseasePhenotypeLabel": "Convulsive status epilepticus",
+            "micaCurie": "HP:0002069",
+            "micaLabel": "Bilateral tonic-clonic seizure",
+            "score": 3.1821419047209347,
+            "evidenceCode": "2/11",
+            "referenceText": "OMIM:620115"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0033725",
+            "patientPhenotypeLabel": "Thin corpus callosum",
+            "diseasePhenotypeCurie": "HP:0033725",
+            "diseasePhenotypeLabel": "Thin corpus callosum",
+            "micaCurie": "HP:0033725",
+            "micaLabel": "Thin corpus callosum",
+            "score": 2.4055007619832383,
+            "evidenceCode": "3/5",
+            "referenceText": "OMIM:620115"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002059",
+            "patientPhenotypeLabel": "Cerebral atrophy",
+            "diseasePhenotypeCurie": "HP:0033725",
+            "diseasePhenotypeLabel": "Thin corpus callosum",
+            "micaCurie": "HP:0002060",
+            "micaLabel": "Abnormal cerebral morphology",
+            "score": 1.38478017994421,
+            "evidenceCode": "3/5",
+            "referenceText": "OMIM:620115"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001249",
+            "diseasePhenotypeLabel": "Intellectual disability",
+            "micaCurie": "HP:0012759",
+            "micaLabel": "Neurodevelopmental abnormality",
+            "score": 0.9688179084505344,
+            "evidenceCode": "11/11",
+            "referenceText": "OMIM:620115"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000817",
+            "patientPhenotypeLabel": "Reduced eye contact",
+            "diseasePhenotypeCurie": "HP:0001249",
+            "diseasePhenotypeLabel": "Intellectual disability",
+            "micaCurie": "HP:0011446",
+            "micaLabel": "Abnormality of mental function",
+            "score": 0.9305544667922568,
+            "evidenceCode": "11/11",
+            "referenceText": "OMIM:620115"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002375",
+            "patientPhenotypeLabel": "Hypokinesia",
+            "diseasePhenotypeCurie": "HP:0200134",
+            "diseasePhenotypeLabel": "Epileptic encephalopathy",
+            "micaCurie": "HP:0012638",
+            "micaLabel": "Abnormal nervous system physiology",
+            "score": 0.6077301110649022,
+            "evidenceCode": "11/11",
+            "referenceText": "OMIM:620115"
+          }
+        ]
+      },
+      {
+        "rank": 14,
+        "geneCurie": "NCBIGene:51083",
+        "geneLabel": "GAL",
+        "geneSymbol": "GAL",
+        "geneEntityId": 151680,
+        "bmaScore": 2.0255906782397832,
+        "normalizedScore": 0.223647,
+        "patientAverageScore": 1.2393106433007828,
+        "phenotypeAverageScore": 2.811870713178784,
+        "directPhenotypeCount": 8,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002121",
+            "patientPhenotypeLabel": "Generalized non-motor (absence) seizure",
+            "diseasePhenotypeCurie": "HP:0032864",
+            "diseasePhenotypeLabel": "Focal aware sensory seizure with auditory features",
+            "micaCurie": "HP:0033259",
+            "micaLabel": "Non-motor seizure",
+            "score": 3.9212741985227035,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:616461"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002069",
+            "patientPhenotypeLabel": "Bilateral tonic-clonic seizure",
+            "diseasePhenotypeCurie": "HP:0007334",
+            "diseasePhenotypeLabel": "Bilateral tonic-clonic seizure with focal onset",
+            "micaCurie": "HP:0002069",
+            "micaLabel": "Bilateral tonic-clonic seizure",
+            "score": 3.1821419047209347,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:616461"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0200134",
+            "patientPhenotypeLabel": "Epileptic encephalopathy",
+            "diseasePhenotypeCurie": "HP:0032864",
+            "diseasePhenotypeLabel": "Focal aware sensory seizure with auditory features",
+            "micaCurie": "HP:0012638",
+            "micaLabel": "Abnormal nervous system physiology",
+            "score": 0.6077301110649022,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:616461"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002375",
+            "patientPhenotypeLabel": "Hypokinesia",
+            "diseasePhenotypeCurie": "HP:0032864",
+            "diseasePhenotypeLabel": "Focal aware sensory seizure with auditory features",
+            "micaCurie": "HP:0012638",
+            "micaLabel": "Abnormal nervous system physiology",
+            "score": 0.6077301110649022,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:616461"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0032864",
+            "diseasePhenotypeLabel": "Focal aware sensory seizure with auditory features",
+            "micaCurie": "HP:0012638",
+            "micaLabel": "Abnormal nervous system physiology",
+            "score": 0.6077301110649022,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:616461"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002353",
+            "patientPhenotypeLabel": "EEG abnormality",
+            "diseasePhenotypeCurie": "HP:0032864",
+            "diseasePhenotypeLabel": "Focal aware sensory seizure with auditory features",
+            "micaCurie": "HP:0012638",
+            "micaLabel": "Abnormal nervous system physiology",
+            "score": 0.6077301110649022,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:616461"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000817",
+            "patientPhenotypeLabel": "Reduced eye contact",
+            "diseasePhenotypeCurie": "HP:0032864",
+            "diseasePhenotypeLabel": "Focal aware sensory seizure with auditory features",
+            "micaCurie": "HP:0012638",
+            "micaLabel": "Abnormal nervous system physiology",
+            "score": 0.6077301110649022,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:616461"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0033725",
+            "patientPhenotypeLabel": "Thin corpus callosum",
+            "diseasePhenotypeCurie": "HP:0032864",
+            "diseasePhenotypeLabel": "Focal aware sensory seizure with auditory features",
+            "micaCurie": "HP:0000707",
+            "micaLabel": "Abnormality of the nervous system",
+            "score": 0.5058645655694501,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:616461"
+          }
+        ]
+      },
+      {
+        "rank": 15,
+        "geneCurie": "NCBIGene:2566",
+        "geneLabel": "GABRG2",
+        "geneSymbol": "GABRG2",
+        "geneEntityId": 148902,
+        "bmaScore": 2.0034174257236117,
+        "normalizedScore": 0.221199,
+        "patientAverageScore": 2.6922864903928443,
+        "phenotypeAverageScore": 1.3145483610543793,
+        "directPhenotypeCount": 143,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0200134",
+            "patientPhenotypeLabel": "Epileptic encephalopathy",
+            "diseasePhenotypeCurie": "HP:0200134",
+            "diseasePhenotypeLabel": "Epileptic encephalopathy",
+            "micaCurie": "HP:0200134",
+            "micaLabel": "Epileptic encephalopathy",
+            "score": 4.312140507209715,
+            "evidenceCode": "8/8",
+            "referenceText": "OMIM:618396"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002121",
+            "patientPhenotypeLabel": "Generalized non-motor (absence) seizure",
+            "diseasePhenotypeCurie": "HP:0011150",
+            "diseasePhenotypeLabel": "Myoclonic absence seizure",
+            "micaCurie": "HP:0002121",
+            "micaLabel": "Generalized non-motor (absence) seizure",
+            "score": 4.020120033159336,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:64280"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002069",
+            "patientPhenotypeLabel": "Bilateral tonic-clonic seizure",
+            "diseasePhenotypeCurie": "HP:0007334",
+            "diseasePhenotypeLabel": "Bilateral tonic-clonic seizure with focal onset",
+            "micaCurie": "HP:0002069",
+            "micaLabel": "Bilateral tonic-clonic seizure",
+            "score": 3.1821419047209347,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:1945"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002353",
+            "patientPhenotypeLabel": "EEG abnormality",
+            "diseasePhenotypeCurie": "HP:0012557",
+            "diseasePhenotypeLabel": "EEG with centrotemporal focal spike waves",
+            "micaCurie": "HP:0002353",
+            "micaLabel": "EEG abnormality",
+            "score": 3.0433574795301634,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:1945"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002059",
+            "patientPhenotypeLabel": "Cerebral atrophy",
+            "diseasePhenotypeCurie": "HP:0007058",
+            "diseasePhenotypeLabel": "Generalized cerebral atrophy/hypoplasia",
+            "micaCurie": "HP:0002059",
+            "micaLabel": "Cerebral atrophy",
+            "score": 2.7917714228352555,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:36387"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0033725",
+            "patientPhenotypeLabel": "Thin corpus callosum",
+            "diseasePhenotypeCurie": "HP:0001273",
+            "diseasePhenotypeLabel": "Abnormal corpus callosum morphology",
+            "micaCurie": "HP:0001273",
+            "micaLabel": "Abnormal corpus callosum morphology",
+            "score": 2.3526582806088583,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:442835"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000817",
+            "patientPhenotypeLabel": "Reduced eye contact",
+            "diseasePhenotypeCurie": "HP:0009088",
+            "diseasePhenotypeLabel": "Speech articulation difficulties",
+            "micaCurie": "HP:0034434",
+            "micaLabel": "Abnormal communication",
+            "score": 1.6607373417721571,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:1945"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0011344",
+            "diseasePhenotypeLabel": "Severe global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "8/8",
+            "referenceText": "OMIM:618396"
+          }
+        ]
+      },
+      {
+        "rank": 16,
+        "geneCurie": "NCBIGene:9568",
+        "geneLabel": "GABBR2",
+        "geneSymbol": "GABBR2",
+        "geneEntityId": 150830,
+        "bmaScore": 1.9894920851143552,
+        "normalizedScore": 0.219662,
+        "patientAverageScore": 2.969295686030971,
+        "phenotypeAverageScore": 1.0096884841977394,
+        "directPhenotypeCount": 114,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000817",
+            "patientPhenotypeLabel": "Reduced eye contact",
+            "diseasePhenotypeCurie": "HP:0000817",
+            "diseasePhenotypeLabel": "Reduced eye contact",
+            "micaCurie": "HP:0000817",
+            "micaLabel": "Reduced eye contact",
+            "score": 4.546213129056115,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:3095"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0200134",
+            "patientPhenotypeLabel": "Epileptic encephalopathy",
+            "diseasePhenotypeCurie": "HP:0200134",
+            "diseasePhenotypeLabel": "Epileptic encephalopathy",
+            "micaCurie": "HP:0200134",
+            "micaLabel": "Epileptic encephalopathy",
+            "score": 4.312140507209715,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:617904"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002121",
+            "patientPhenotypeLabel": "Generalized non-motor (absence) seizure",
+            "diseasePhenotypeCurie": "HP:0002384",
+            "diseasePhenotypeLabel": "Focal impaired awareness seizure",
+            "micaCurie": "HP:0011146",
+            "micaLabel": "Dialeptic seizure",
+            "score": 3.6277270066185245,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:617904"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002069",
+            "patientPhenotypeLabel": "Bilateral tonic-clonic seizure",
+            "diseasePhenotypeCurie": "HP:0002069",
+            "diseasePhenotypeLabel": "Bilateral tonic-clonic seizure",
+            "micaCurie": "HP:0002069",
+            "micaLabel": "Bilateral tonic-clonic seizure",
+            "score": 3.1821419047209347,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:617904"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002353",
+            "patientPhenotypeLabel": "EEG abnormality",
+            "diseasePhenotypeCurie": "HP:0010844",
+            "diseasePhenotypeLabel": "EEG with multifocal slow activity",
+            "micaCurie": "HP:0002353",
+            "micaLabel": "EEG abnormality",
+            "score": 3.0433574795301634,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:442835"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002059",
+            "patientPhenotypeLabel": "Cerebral atrophy",
+            "diseasePhenotypeCurie": "HP:0002059",
+            "diseasePhenotypeLabel": "Cerebral atrophy",
+            "micaCurie": "HP:0002059",
+            "micaLabel": "Cerebral atrophy",
+            "score": 2.7917714228352555,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:442835"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0033725",
+            "patientPhenotypeLabel": "Thin corpus callosum",
+            "diseasePhenotypeCurie": "HP:0001273",
+            "diseasePhenotypeLabel": "Abnormal corpus callosum morphology",
+            "micaCurie": "HP:0001273",
+            "micaLabel": "Abnormal corpus callosum morphology",
+            "score": 2.3526582806088583,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:442835"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0011344",
+            "diseasePhenotypeLabel": "Severe global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:3095"
+          }
+        ]
+      },
+      {
+        "rank": 17,
+        "geneCurie": "NCBIGene:6334",
+        "geneLabel": "SCN8A",
+        "geneSymbol": "SCN8A",
+        "geneEntityId": 150053,
+        "bmaScore": 1.9855216837685679,
+        "normalizedScore": 0.219223,
+        "patientAverageScore": 2.6922864903928443,
+        "phenotypeAverageScore": 1.2787568771442912,
+        "directPhenotypeCount": 126,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0200134",
+            "patientPhenotypeLabel": "Epileptic encephalopathy",
+            "diseasePhenotypeCurie": "HP:0200134",
+            "diseasePhenotypeLabel": "Epileptic encephalopathy",
+            "micaCurie": "HP:0200134",
+            "micaLabel": "Epileptic encephalopathy",
+            "score": 4.312140507209715,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:614558"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002121",
+            "patientPhenotypeLabel": "Generalized non-motor (absence) seizure",
+            "diseasePhenotypeCurie": "HP:0002121",
+            "diseasePhenotypeLabel": "Generalized non-motor (absence) seizure",
+            "micaCurie": "HP:0002121",
+            "micaLabel": "Generalized non-motor (absence) seizure",
+            "score": 4.020120033159336,
+            "evidenceCode": "1/7",
+            "referenceText": "OMIM:614558"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002069",
+            "patientPhenotypeLabel": "Bilateral tonic-clonic seizure",
+            "diseasePhenotypeCurie": "HP:0025190",
+            "diseasePhenotypeLabel": "Bilateral tonic-clonic seizure with generalized onset",
+            "micaCurie": "HP:0002069",
+            "micaLabel": "Bilateral tonic-clonic seizure",
+            "score": 3.1821419047209347,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:352582"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002353",
+            "patientPhenotypeLabel": "EEG abnormality",
+            "diseasePhenotypeCurie": "HP:0025373",
+            "diseasePhenotypeLabel": "Interictal EEG abnormality",
+            "micaCurie": "HP:0002353",
+            "micaLabel": "EEG abnormality",
+            "score": 3.0433574795301634,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:352582"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002059",
+            "patientPhenotypeLabel": "Cerebral atrophy",
+            "diseasePhenotypeCurie": "HP:0002059",
+            "diseasePhenotypeLabel": "Cerebral atrophy",
+            "micaCurie": "HP:0002059",
+            "micaLabel": "Cerebral atrophy",
+            "score": 2.7917714228352555,
+            "evidenceCode": "4/8",
+            "referenceText": "OMIM:614558"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0033725",
+            "patientPhenotypeLabel": "Thin corpus callosum",
+            "diseasePhenotypeCurie": "HP:0001273",
+            "diseasePhenotypeLabel": "Abnormal corpus callosum morphology",
+            "micaCurie": "HP:0001273",
+            "micaLabel": "Abnormal corpus callosum morphology",
+            "score": 2.3526582806088583,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:442835"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000817",
+            "patientPhenotypeLabel": "Reduced eye contact",
+            "diseasePhenotypeCurie": "HP:0001260",
+            "diseasePhenotypeLabel": "Dysarthria",
+            "micaCurie": "HP:0034434",
+            "micaLabel": "Abnormal communication",
+            "score": 1.6607373417721571,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:352582"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:442835"
+          }
+        ]
+      },
+      {
+        "rank": 18,
+        "geneCurie": "NCBIGene:2775",
+        "geneLabel": "GNAO1",
+        "geneSymbol": "GNAO1",
+        "geneEntityId": 148982,
+        "bmaScore": 1.9849718713368638,
+        "normalizedScore": 0.219163,
+        "patientAverageScore": 2.6981578772122194,
+        "phenotypeAverageScore": 1.271785865461508,
+        "directPhenotypeCount": 81,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0200134",
+            "patientPhenotypeLabel": "Epileptic encephalopathy",
+            "diseasePhenotypeCurie": "HP:0200134",
+            "diseasePhenotypeLabel": "Epileptic encephalopathy",
+            "micaCurie": "HP:0200134",
+            "micaLabel": "Epileptic encephalopathy",
+            "score": 4.312140507209715,
+            "evidenceCode": "2/4",
+            "referenceText": "OMIM:617493"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002121",
+            "patientPhenotypeLabel": "Generalized non-motor (absence) seizure",
+            "diseasePhenotypeCurie": "HP:0002121",
+            "diseasePhenotypeLabel": "Generalized non-motor (absence) seizure",
+            "micaCurie": "HP:0002121",
+            "micaLabel": "Generalized non-motor (absence) seizure",
+            "score": 4.020120033159336,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1934"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002069",
+            "patientPhenotypeLabel": "Bilateral tonic-clonic seizure",
+            "diseasePhenotypeCurie": "HP:0002069",
+            "diseasePhenotypeLabel": "Bilateral tonic-clonic seizure",
+            "micaCurie": "HP:0002069",
+            "micaLabel": "Bilateral tonic-clonic seizure",
+            "score": 3.1821419047209347,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1934"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002353",
+            "patientPhenotypeLabel": "EEG abnormality",
+            "diseasePhenotypeCurie": "HP:0011190",
+            "diseasePhenotypeLabel": "Uni- and bilateral multifocal epileptiform discharges",
+            "micaCurie": "HP:0002353",
+            "micaLabel": "EEG abnormality",
+            "score": 3.0433574795301634,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1934"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002059",
+            "patientPhenotypeLabel": "Cerebral atrophy",
+            "diseasePhenotypeCurie": "HP:0002506",
+            "diseasePhenotypeLabel": "Diffuse cerebral atrophy",
+            "micaCurie": "HP:0002059",
+            "micaLabel": "Cerebral atrophy",
+            "score": 2.7917714228352555,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1934"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0033725",
+            "patientPhenotypeLabel": "Thin corpus callosum",
+            "diseasePhenotypeCurie": "HP:0002079",
+            "diseasePhenotypeLabel": "Hypoplasia of the corpus callosum",
+            "micaCurie": "HP:0033725",
+            "micaLabel": "Thin corpus callosum",
+            "score": 2.4055007619832383,
+            "evidenceCode": "2/4",
+            "referenceText": "OMIM:617493"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000817",
+            "patientPhenotypeLabel": "Reduced eye contact",
+            "diseasePhenotypeCurie": "HP:0001344",
+            "diseasePhenotypeLabel": "Absent speech",
+            "micaCurie": "HP:0034434",
+            "micaLabel": "Abnormal communication",
+            "score": 1.6607373417721571,
+            "evidenceCode": "4/4",
+            "referenceText": "OMIM:615473"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "2/4",
+            "referenceText": "OMIM:617493"
+          }
+        ]
+      },
+      {
+        "rank": 19,
+        "geneCurie": "NCBIGene:6792",
+        "geneLabel": "CDKL5",
+        "geneSymbol": "CDKL5",
+        "geneEntityId": 150209,
+        "bmaScore": 1.9771938931645827,
+        "normalizedScore": 0.218304,
+        "patientAverageScore": 3.018766298021548,
+        "phenotypeAverageScore": 0.9356214883076174,
+        "directPhenotypeCount": 148,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000817",
+            "patientPhenotypeLabel": "Reduced eye contact",
+            "diseasePhenotypeCurie": "HP:0000817",
+            "diseasePhenotypeLabel": "Reduced eye contact",
+            "micaCurie": "HP:0000817",
+            "micaLabel": "Reduced eye contact",
+            "score": 4.546213129056115,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:3095"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0200134",
+            "patientPhenotypeLabel": "Epileptic encephalopathy",
+            "diseasePhenotypeCurie": "HP:0200134",
+            "diseasePhenotypeLabel": "Epileptic encephalopathy",
+            "micaCurie": "HP:0200134",
+            "micaLabel": "Epileptic encephalopathy",
+            "score": 4.312140507209715,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:1934"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002121",
+            "patientPhenotypeLabel": "Generalized non-motor (absence) seizure",
+            "diseasePhenotypeCurie": "HP:0002121",
+            "diseasePhenotypeLabel": "Generalized non-motor (absence) seizure",
+            "micaCurie": "HP:0002121",
+            "micaLabel": "Generalized non-motor (absence) seizure",
+            "score": 4.020120033159336,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1934"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002069",
+            "patientPhenotypeLabel": "Bilateral tonic-clonic seizure",
+            "diseasePhenotypeCurie": "HP:0002069",
+            "diseasePhenotypeLabel": "Bilateral tonic-clonic seizure",
+            "micaCurie": "HP:0002069",
+            "micaLabel": "Bilateral tonic-clonic seizure",
+            "score": 3.1821419047209347,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:505652"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002353",
+            "patientPhenotypeLabel": "EEG abnormality",
+            "diseasePhenotypeCurie": "HP:0011190",
+            "diseasePhenotypeLabel": "Uni- and bilateral multifocal epileptiform discharges",
+            "micaCurie": "HP:0002353",
+            "micaLabel": "EEG abnormality",
+            "score": 3.0433574795301634,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1934"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002059",
+            "patientPhenotypeLabel": "Cerebral atrophy",
+            "diseasePhenotypeCurie": "HP:0002506",
+            "diseasePhenotypeLabel": "Diffuse cerebral atrophy",
+            "micaCurie": "HP:0002059",
+            "micaLabel": "Cerebral atrophy",
+            "score": 2.7917714228352555,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1934"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0033725",
+            "patientPhenotypeLabel": "Thin corpus callosum",
+            "diseasePhenotypeCurie": "HP:0002079",
+            "diseasePhenotypeLabel": "Hypoplasia of the corpus callosum",
+            "micaCurie": "HP:0033725",
+            "micaLabel": "Thin corpus callosum",
+            "score": 2.4055007619832383,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1934"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0011344",
+            "diseasePhenotypeLabel": "Severe global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:505652"
+          }
+        ]
+      },
+      {
+        "rank": 20,
+        "geneCurie": "NCBIGene:1173",
+        "geneLabel": "AP2M1",
+        "geneSymbol": "AP2M1",
+        "geneEntityId": 148463,
+        "bmaScore": 1.966797350796107,
+        "normalizedScore": 0.217156,
+        "patientAverageScore": 2.5263514486077296,
+        "phenotypeAverageScore": 1.4072432529844845,
+        "directPhenotypeCount": 57,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0200134",
+            "patientPhenotypeLabel": "Epileptic encephalopathy",
+            "diseasePhenotypeCurie": "HP:0200134",
+            "diseasePhenotypeLabel": "Epileptic encephalopathy",
+            "micaCurie": "HP:0200134",
+            "micaLabel": "Epileptic encephalopathy",
+            "score": 4.312140507209715,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "ORPHA:1942"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002121",
+            "patientPhenotypeLabel": "Generalized non-motor (absence) seizure",
+            "diseasePhenotypeCurie": "HP:0011149",
+            "diseasePhenotypeLabel": "Absence seizure with eyelid myoclonia",
+            "micaCurie": "HP:0002121",
+            "micaLabel": "Generalized non-motor (absence) seizure",
+            "score": 4.020120033159336,
+            "evidenceCode": "2/4",
+            "referenceText": "OMIM:618587"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002069",
+            "patientPhenotypeLabel": "Bilateral tonic-clonic seizure",
+            "diseasePhenotypeCurie": "HP:0025190",
+            "diseasePhenotypeLabel": "Bilateral tonic-clonic seizure with generalized onset",
+            "micaCurie": "HP:0002069",
+            "micaLabel": "Bilateral tonic-clonic seizure",
+            "score": 3.1821419047209347,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:1942"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002353",
+            "patientPhenotypeLabel": "EEG abnormality",
+            "diseasePhenotypeCurie": "HP:0011197",
+            "diseasePhenotypeLabel": "EEG with focal spike waves",
+            "micaCurie": "HP:0002353",
+            "micaLabel": "EEG abnormality",
+            "score": 3.0433574795301634,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:1942"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0033725",
+            "patientPhenotypeLabel": "Thin corpus callosum",
+            "diseasePhenotypeCurie": "HP:0002500",
+            "diseasePhenotypeLabel": "Abnormal cerebral white matter morphology",
+            "micaCurie": "HP:0002500",
+            "micaLabel": "Abnormal cerebral white matter morphology",
+            "score": 2.168500176007602,
+            "evidenceCode": "1/4",
+            "referenceText": "OMIM:618587"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000817",
+            "patientPhenotypeLabel": "Reduced eye contact",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0034434",
+            "micaLabel": "Abnormal communication",
+            "score": 1.6607373417721571,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "ORPHA:1942"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002059",
+            "patientPhenotypeLabel": "Cerebral atrophy",
+            "diseasePhenotypeCurie": "HP:0000252",
+            "diseasePhenotypeLabel": "Microcephaly",
+            "micaCurie": "HP:0002977",
+            "micaLabel": "Aplasia/Hypoplasia involving the central nervous system",
+            "score": 1.482514151370485,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "ORPHA:1942"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "ORPHA:1942"
+          }
+        ]
+      },
+      {
+        "rank": 21,
+        "geneCurie": "NCBIGene:10458",
+        "geneLabel": "BAIAP2",
+        "geneSymbol": "BAIAP2",
+        "geneEntityId": 151037,
+        "bmaScore": 1.9623941690483617,
+        "normalizedScore": 0.21667,
+        "patientAverageScore": 2.345498858943809,
+        "phenotypeAverageScore": 1.5792894791529144,
+        "directPhenotypeCount": 43,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000817",
+            "patientPhenotypeLabel": "Reduced eye contact",
+            "diseasePhenotypeCurie": "HP:0000817",
+            "diseasePhenotypeLabel": "Reduced eye contact",
+            "micaCurie": "HP:0000817",
+            "micaLabel": "Reduced eye contact",
+            "score": 4.546213129056115,
+            "evidenceCode": "1/5",
+            "referenceText": "OMIM:621468"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002121",
+            "patientPhenotypeLabel": "Generalized non-motor (absence) seizure",
+            "diseasePhenotypeCurie": "HP:0011147",
+            "diseasePhenotypeLabel": "Typical absence seizure",
+            "micaCurie": "HP:0002121",
+            "micaLabel": "Generalized non-motor (absence) seizure",
+            "score": 4.020120033159336,
+            "evidenceCode": "3/3",
+            "referenceText": "OMIM:621468"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002069",
+            "patientPhenotypeLabel": "Bilateral tonic-clonic seizure",
+            "diseasePhenotypeCurie": "HP:0025190",
+            "diseasePhenotypeLabel": "Bilateral tonic-clonic seizure with generalized onset",
+            "micaCurie": "HP:0002069",
+            "micaLabel": "Bilateral tonic-clonic seizure",
+            "score": 3.1821419047209347,
+            "evidenceCode": "4/4",
+            "referenceText": "OMIM:621468"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002353",
+            "patientPhenotypeLabel": "EEG abnormality",
+            "diseasePhenotypeCurie": "HP:0012001",
+            "diseasePhenotypeLabel": "EEG with generalized polyspikes",
+            "micaCurie": "HP:0002353",
+            "micaLabel": "EEG abnormality",
+            "score": 3.0433574795301634,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:621468"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0033725",
+            "patientPhenotypeLabel": "Thin corpus callosum",
+            "diseasePhenotypeCurie": "HP:0034295",
+            "diseasePhenotypeLabel": "Reduced cerebral white matter volume",
+            "micaCurie": "HP:0002500",
+            "micaLabel": "Abnormal cerebral white matter morphology",
+            "score": 2.168500176007602,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:621468"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002059",
+            "patientPhenotypeLabel": "Cerebral atrophy",
+            "diseasePhenotypeCurie": "HP:0000252",
+            "diseasePhenotypeLabel": "Microcephaly",
+            "micaCurie": "HP:0002977",
+            "micaLabel": "Aplasia/Hypoplasia involving the central nervous system",
+            "score": 1.482514151370485,
+            "evidenceCode": "0/6",
+            "referenceText": "OMIM:621468"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0011344",
+            "diseasePhenotypeLabel": "Severe global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:621468"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0200134",
+            "patientPhenotypeLabel": "Epileptic encephalopathy",
+            "diseasePhenotypeCurie": "HP:0032794",
+            "diseasePhenotypeLabel": "Myoclonic seizure",
+            "micaCurie": "HP:0012638",
+            "micaLabel": "Abnormal nervous system physiology",
+            "score": 0.6077301110649022,
+            "evidenceCode": "3/3",
+            "referenceText": "OMIM:621468"
+          }
+        ]
+      },
+      {
+        "rank": 22,
+        "geneCurie": "NCBIGene:9211",
+        "geneLabel": "LGI1",
+        "geneSymbol": "LGI1",
+        "geneEntityId": 150746,
+        "bmaScore": 1.962357888326658,
+        "normalizedScore": 0.216666,
+        "patientAverageScore": 2.596182272379165,
+        "phenotypeAverageScore": 1.3285335042741508,
+        "directPhenotypeCount": 100,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000817",
+            "patientPhenotypeLabel": "Reduced eye contact",
+            "diseasePhenotypeCurie": "HP:0000817",
+            "diseasePhenotypeLabel": "Reduced eye contact",
+            "micaCurie": "HP:0000817",
+            "micaLabel": "Reduced eye contact",
+            "score": 4.546213129056115,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:621475"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002121",
+            "patientPhenotypeLabel": "Generalized non-motor (absence) seizure",
+            "diseasePhenotypeCurie": "HP:0032864",
+            "diseasePhenotypeLabel": "Focal aware sensory seizure with auditory features",
+            "micaCurie": "HP:0033259",
+            "micaLabel": "Non-motor seizure",
+            "score": 3.9212741985227035,
+            "evidenceCode": "4/12",
+            "referenceText": "OMIM:600512"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002069",
+            "patientPhenotypeLabel": "Bilateral tonic-clonic seizure",
+            "diseasePhenotypeCurie": "HP:0025190",
+            "diseasePhenotypeLabel": "Bilateral tonic-clonic seizure with generalized onset",
+            "micaCurie": "HP:0002069",
+            "micaLabel": "Bilateral tonic-clonic seizure",
+            "score": 3.1821419047209347,
+            "evidenceCode": "6/7",
+            "referenceText": "OMIM:621475"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002353",
+            "patientPhenotypeLabel": "EEG abnormality",
+            "diseasePhenotypeCurie": "HP:0011203",
+            "diseasePhenotypeLabel": "EEG with abnormally slow frequencies",
+            "micaCurie": "HP:0002353",
+            "micaLabel": "EEG abnormality",
+            "score": 3.0433574795301634,
+            "evidenceCode": "1/4",
+            "referenceText": "OMIM:621475"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002059",
+            "patientPhenotypeLabel": "Cerebral atrophy",
+            "diseasePhenotypeCurie": "HP:0002059",
+            "diseasePhenotypeLabel": "Cerebral atrophy",
+            "micaCurie": "HP:0002059",
+            "micaLabel": "Cerebral atrophy",
+            "score": 2.7917714228352555,
+            "evidenceCode": "2/6",
+            "referenceText": "OMIM:621475"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0033725",
+            "patientPhenotypeLabel": "Thin corpus callosum",
+            "diseasePhenotypeCurie": "HP:0033725",
+            "diseasePhenotypeLabel": "Thin corpus callosum",
+            "micaCurie": "HP:0033725",
+            "micaLabel": "Thin corpus callosum",
+            "score": 2.4055007619832383,
+            "evidenceCode": "1/6",
+            "referenceText": "OMIM:621475"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0011344",
+            "diseasePhenotypeLabel": "Severe global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:621475"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002375",
+            "patientPhenotypeLabel": "Hypokinesia",
+            "diseasePhenotypeCurie": "HP:0100660",
+            "diseasePhenotypeLabel": "Dyskinesia",
+            "micaCurie": "HP:0100022",
+            "micaLabel": "Abnormality of movement",
+            "score": 1.4164688091793307,
+            "evidenceCode": "0/5",
+            "referenceText": "OMIM:621475"
+          }
+        ]
+      },
+      {
+        "rank": 23,
+        "geneCurie": "NCBIGene:2904",
+        "geneLabel": "GRIN2B",
+        "geneSymbol": "GRIN2B",
+        "geneEntityId": 149014,
+        "bmaScore": 1.9615800475625969,
+        "normalizedScore": 0.21658,
+        "patientAverageScore": 2.7162806446832573,
+        "phenotypeAverageScore": 1.2068794504419365,
+        "directPhenotypeCount": 37,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000817",
+            "patientPhenotypeLabel": "Reduced eye contact",
+            "diseasePhenotypeCurie": "HP:0000817",
+            "diseasePhenotypeLabel": "Reduced eye contact",
+            "micaCurie": "HP:0000817",
+            "micaLabel": "Reduced eye contact",
+            "score": 4.546213129056115,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:616139"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0200134",
+            "patientPhenotypeLabel": "Epileptic encephalopathy",
+            "diseasePhenotypeCurie": "HP:0200134",
+            "diseasePhenotypeLabel": "Epileptic encephalopathy",
+            "micaCurie": "HP:0200134",
+            "micaLabel": "Epileptic encephalopathy",
+            "score": 4.312140507209715,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:616139"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002121",
+            "patientPhenotypeLabel": "Generalized non-motor (absence) seizure",
+            "diseasePhenotypeCurie": "HP:0002384",
+            "diseasePhenotypeLabel": "Focal impaired awareness seizure",
+            "micaCurie": "HP:0011146",
+            "micaLabel": "Dialeptic seizure",
+            "score": 3.6277270066185245,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:613970"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002069",
+            "patientPhenotypeLabel": "Bilateral tonic-clonic seizure",
+            "diseasePhenotypeCurie": "HP:0002069",
+            "diseasePhenotypeLabel": "Bilateral tonic-clonic seizure",
+            "micaCurie": "HP:0002069",
+            "micaLabel": "Bilateral tonic-clonic seizure",
+            "score": 3.1821419047209347,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:616139"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002353",
+            "patientPhenotypeLabel": "EEG abnormality",
+            "diseasePhenotypeCurie": "HP:0002521",
+            "diseasePhenotypeLabel": "Hypsarrhythmia",
+            "micaCurie": "HP:0002353",
+            "micaLabel": "EEG abnormality",
+            "score": 3.0433574795301634,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:616139"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002059",
+            "patientPhenotypeLabel": "Cerebral atrophy",
+            "diseasePhenotypeCurie": "HP:0000252",
+            "diseasePhenotypeLabel": "Microcephaly",
+            "micaCurie": "HP:0002977",
+            "micaLabel": "Aplasia/Hypoplasia involving the central nervous system",
+            "score": 1.482514151370485,
+            "evidenceCode": "1/6",
+            "referenceText": "OMIM:613970"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:616139"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002375",
+            "patientPhenotypeLabel": "Hypokinesia",
+            "diseasePhenotypeCurie": "HP:0100660",
+            "diseasePhenotypeLabel": "Dyskinesia",
+            "micaCurie": "HP:0100022",
+            "micaLabel": "Abnormality of movement",
+            "score": 1.4164688091793307,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:616139"
+          }
+        ]
+      },
+      {
+        "rank": 24,
+        "geneCurie": "NCBIGene:6487",
+        "geneLabel": "ST3GAL3",
+        "geneSymbol": "ST3GAL3",
+        "geneEntityId": 150087,
+        "bmaScore": 1.960322336876745,
+        "normalizedScore": 0.216441,
+        "patientAverageScore": 2.2722069976522885,
+        "phenotypeAverageScore": 1.6484376761012016,
+        "directPhenotypeCount": 18,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000817",
+            "patientPhenotypeLabel": "Reduced eye contact",
+            "diseasePhenotypeCurie": "HP:0000817",
+            "diseasePhenotypeLabel": "Reduced eye contact",
+            "micaCurie": "HP:0000817",
+            "micaLabel": "Reduced eye contact",
+            "score": 4.546213129056115,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:615006"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0200134",
+            "patientPhenotypeLabel": "Epileptic encephalopathy",
+            "diseasePhenotypeCurie": "HP:0200134",
+            "diseasePhenotypeLabel": "Epileptic encephalopathy",
+            "micaCurie": "HP:0200134",
+            "micaLabel": "Epileptic encephalopathy",
+            "score": 4.312140507209715,
+            "evidenceCode": "4/4",
+            "referenceText": "OMIM:615006"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002069",
+            "patientPhenotypeLabel": "Bilateral tonic-clonic seizure",
+            "diseasePhenotypeCurie": "HP:0002069",
+            "diseasePhenotypeLabel": "Bilateral tonic-clonic seizure",
+            "micaCurie": "HP:0002069",
+            "micaLabel": "Bilateral tonic-clonic seizure",
+            "score": 3.1821419047209347,
+            "evidenceCode": "1/4",
+            "referenceText": "OMIM:615006"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002353",
+            "patientPhenotypeLabel": "EEG abnormality",
+            "diseasePhenotypeCurie": "HP:0002521",
+            "diseasePhenotypeLabel": "Hypsarrhythmia",
+            "micaCurie": "HP:0002353",
+            "micaLabel": "EEG abnormality",
+            "score": 3.0433574795301634,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:615006"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002121",
+            "patientPhenotypeLabel": "Generalized non-motor (absence) seizure",
+            "diseasePhenotypeCurie": "HP:0032794",
+            "diseasePhenotypeLabel": "Myoclonic seizure",
+            "micaCurie": "HP:0001250",
+            "micaLabel": "Seizure",
+            "score": 1.4866293835155915,
+            "evidenceCode": "1/4",
+            "referenceText": "OMIM:615006"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0011344",
+            "diseasePhenotypeLabel": "Severe global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "4/4",
+            "referenceText": "OMIM:615006"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002375",
+            "patientPhenotypeLabel": "Hypokinesia",
+            "diseasePhenotypeCurie": "HP:0002540",
+            "diseasePhenotypeLabel": "Inability to walk",
+            "micaCurie": "HP:0100022",
+            "micaLabel": "Abnormality of movement",
+            "score": 1.4164688091793307,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:615006"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0033725",
+            "patientPhenotypeLabel": "Thin corpus callosum",
+            "diseasePhenotypeCurie": "HP:0200134",
+            "diseasePhenotypeLabel": "Epileptic encephalopathy",
+            "micaCurie": "HP:0000707",
+            "micaLabel": "Abnormality of the nervous system",
+            "score": 0.5058645655694501,
+            "evidenceCode": "4/4",
+            "referenceText": "OMIM:615006"
+          }
+        ]
+      },
+      {
+        "rank": 25,
+        "geneCurie": "NCBIGene:23236",
+        "geneLabel": "PLCB1",
+        "geneSymbol": "PLCB1",
+        "geneEntityId": 151324,
+        "bmaScore": 1.9523419243429165,
+        "normalizedScore": 0.21556,
+        "patientAverageScore": 2.571831482232866,
+        "phenotypeAverageScore": 1.3328523664529668,
+        "directPhenotypeCount": 37,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0200134",
+            "patientPhenotypeLabel": "Epileptic encephalopathy",
+            "diseasePhenotypeCurie": "HP:0200134",
+            "diseasePhenotypeLabel": "Epileptic encephalopathy",
+            "micaCurie": "HP:0200134",
+            "micaLabel": "Epileptic encephalopathy",
+            "score": 4.312140507209715,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:613722"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002121",
+            "patientPhenotypeLabel": "Generalized non-motor (absence) seizure",
+            "diseasePhenotypeCurie": "HP:0010821",
+            "diseasePhenotypeLabel": "Focal emotional seizure with laughing",
+            "micaCurie": "HP:0033259",
+            "micaLabel": "Non-motor seizure",
+            "score": 3.9212741985227035,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:293181"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002069",
+            "patientPhenotypeLabel": "Bilateral tonic-clonic seizure",
+            "diseasePhenotypeCurie": "HP:0007334",
+            "diseasePhenotypeLabel": "Bilateral tonic-clonic seizure with focal onset",
+            "micaCurie": "HP:0002069",
+            "micaLabel": "Bilateral tonic-clonic seizure",
+            "score": 3.1821419047209347,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:293181"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002353",
+            "patientPhenotypeLabel": "EEG abnormality",
+            "diseasePhenotypeCurie": "HP:0010841",
+            "diseasePhenotypeLabel": "Multifocal epileptiform discharges",
+            "micaCurie": "HP:0002353",
+            "micaLabel": "EEG abnormality",
+            "score": 3.0433574795301634,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:293181"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002059",
+            "patientPhenotypeLabel": "Cerebral atrophy",
+            "diseasePhenotypeCurie": "HP:0002059",
+            "diseasePhenotypeLabel": "Cerebral atrophy",
+            "micaCurie": "HP:0002059",
+            "micaLabel": "Cerebral atrophy",
+            "score": 2.7917714228352555,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:293181"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0033725",
+            "patientPhenotypeLabel": "Thin corpus callosum",
+            "diseasePhenotypeCurie": "HP:0001273",
+            "diseasePhenotypeLabel": "Abnormal corpus callosum morphology",
+            "micaCurie": "HP:0001273",
+            "micaLabel": "Abnormal corpus callosum morphology",
+            "score": 2.3526582806088583,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:293181"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002375",
+            "patientPhenotypeLabel": "Hypokinesia",
+            "diseasePhenotypeCurie": "HP:0002540",
+            "diseasePhenotypeLabel": "Inability to walk",
+            "micaCurie": "HP:0100022",
+            "micaLabel": "Abnormality of movement",
+            "score": 1.4164688091793307,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:293181"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0012758",
+            "diseasePhenotypeLabel": "Neurodevelopmental delay",
+            "micaCurie": "HP:0012758",
+            "micaLabel": "Neurodevelopmental delay",
+            "score": 1.1961162706965762,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:293181"
+          }
+        ]
+      }
+    ],
+    "engineSummary": {
+      "diseaseCount": 8579,
+      "geneCount": 5256,
+      "phenotypeCount": 19389,
+      "sourceMode": {
+        "disease": "relationship_fallback",
+        "gene": "relationship_fallback"
+      },
+      "generatedAt": "2026-03-15T21:00:39.457Z"
+    }
+  }
+}

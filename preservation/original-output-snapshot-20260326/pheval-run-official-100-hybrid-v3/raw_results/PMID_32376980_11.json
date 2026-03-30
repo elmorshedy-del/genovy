@@ -1,0 +1,2681 @@
+{
+  "success": true,
+  "engine": "genovy-dx-sim",
+  "analysisType": "gene",
+  "input": {
+    "presentPhenotypeCuries": [
+      "HP:0001643",
+      "HP:0001320",
+      "HP:0000298",
+      "HP:0000268",
+      "HP:0000341",
+      "HP:0000411",
+      "HP:0045025",
+      "HP:0001763",
+      "HP:0000470",
+      "HP:0001508",
+      "HP:0002033",
+      "HP:0000506",
+      "HP:0000218",
+      "HP:0000646",
+      "HP:0004322",
+      "HP:0000508",
+      "HP:0000486",
+      "HP:0001263",
+      "HP:0000405",
+      "HP:0000064",
+      "HP:0011003",
+      "HP:0001270",
+      "HP:0000316",
+      "HP:0000278",
+      "HP:0001252",
+      "HP:0001845"
+    ],
+    "excludedPhenotypeCuries": [
+      "HP:0001250"
+    ],
+    "sourceFormat": "phenopacket"
+  },
+  "ranking": {
+    "queryPhenotypes": [
+      {
+        "phenotypeCurie": "HP:0001643",
+        "phenotypeLabel": "Patent ductus arteriosus"
+      },
+      {
+        "phenotypeCurie": "HP:0001320",
+        "phenotypeLabel": "Cerebellar vermis hypoplasia"
+      },
+      {
+        "phenotypeCurie": "HP:0000298",
+        "phenotypeLabel": "Mask-like facies"
+      },
+      {
+        "phenotypeCurie": "HP:0000268",
+        "phenotypeLabel": "Dolichocephaly"
+      },
+      {
+        "phenotypeCurie": "HP:0000341",
+        "phenotypeLabel": "Narrow forehead"
+      },
+      {
+        "phenotypeCurie": "HP:0000411",
+        "phenotypeLabel": "Protruding ear"
+      },
+      {
+        "phenotypeCurie": "HP:0045025",
+        "phenotypeLabel": "Narrow palpebral fissure"
+      },
+      {
+        "phenotypeCurie": "HP:0001763",
+        "phenotypeLabel": "Pes planus"
+      },
+      {
+        "phenotypeCurie": "HP:0000470",
+        "phenotypeLabel": "Short neck"
+      },
+      {
+        "phenotypeCurie": "HP:0001508",
+        "phenotypeLabel": "Failure to thrive"
+      },
+      {
+        "phenotypeCurie": "HP:0002033",
+        "phenotypeLabel": "Poor suck"
+      },
+      {
+        "phenotypeCurie": "HP:0000506",
+        "phenotypeLabel": "Telecanthus"
+      },
+      {
+        "phenotypeCurie": "HP:0000218",
+        "phenotypeLabel": "High palate"
+      },
+      {
+        "phenotypeCurie": "HP:0000646",
+        "phenotypeLabel": "Amblyopia"
+      },
+      {
+        "phenotypeCurie": "HP:0004322",
+        "phenotypeLabel": "Short stature"
+      },
+      {
+        "phenotypeCurie": "HP:0000508",
+        "phenotypeLabel": "Ptosis"
+      },
+      {
+        "phenotypeCurie": "HP:0000486",
+        "phenotypeLabel": "Strabismus"
+      },
+      {
+        "phenotypeCurie": "HP:0001263",
+        "phenotypeLabel": "Global developmental delay"
+      },
+      {
+        "phenotypeCurie": "HP:0000405",
+        "phenotypeLabel": "Conductive hearing impairment"
+      },
+      {
+        "phenotypeCurie": "HP:0000064",
+        "phenotypeLabel": "Hypoplastic labia minora"
+      },
+      {
+        "phenotypeCurie": "HP:0011003",
+        "phenotypeLabel": "High myopia"
+      },
+      {
+        "phenotypeCurie": "HP:0001270",
+        "phenotypeLabel": "Motor delay"
+      },
+      {
+        "phenotypeCurie": "HP:0000316",
+        "phenotypeLabel": "Hypertelorism"
+      },
+      {
+        "phenotypeCurie": "HP:0000278",
+        "phenotypeLabel": "Retrognathia"
+      },
+      {
+        "phenotypeCurie": "HP:0001252",
+        "phenotypeLabel": "Hypotonia"
+      },
+      {
+        "phenotypeCurie": "HP:0001845",
+        "phenotypeLabel": "Overlapping toe"
+      }
+    ],
+    "results": [
+      {
+        "rank": 1,
+        "geneCurie": "NCBIGene:84444",
+        "geneLabel": "DOT1L",
+        "geneSymbol": "DOT1L",
+        "geneEntityId": 152594,
+        "bmaScore": 2.1668561644394213,
+        "normalizedScore": 0.239245,
+        "patientAverageScore": 2.7102886173102387,
+        "phenotypeAverageScore": 1.6234237115686039,
+        "directPhenotypeCount": 103,
+        "matchedPhenotypeCount": 26,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001845",
+            "patientPhenotypeLabel": "Overlapping toe",
+            "diseasePhenotypeCurie": "HP:0001845",
+            "diseasePhenotypeLabel": "Overlapping toe",
+            "micaCurie": "HP:0001845",
+            "micaLabel": "Overlapping toe",
+            "score": 4.6626234809005265,
+            "evidenceCode": "1/9",
+            "referenceText": "OMIM:621265"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000646",
+            "patientPhenotypeLabel": "Amblyopia",
+            "diseasePhenotypeCurie": "HP:0000646",
+            "diseasePhenotypeLabel": "Amblyopia",
+            "micaCurie": "HP:0000646",
+            "micaLabel": "Amblyopia",
+            "score": 4.579735821094759,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:621265"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002033",
+            "patientPhenotypeLabel": "Poor suck",
+            "diseasePhenotypeCurie": "HP:0002033",
+            "diseasePhenotypeLabel": "Poor suck",
+            "micaCurie": "HP:0002033",
+            "micaLabel": "Poor suck",
+            "score": 4.557262965242701,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:621265"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011003",
+            "patientPhenotypeLabel": "High myopia",
+            "diseasePhenotypeCurie": "HP:0011003",
+            "diseasePhenotypeLabel": "High myopia",
+            "micaCurie": "HP:0011003",
+            "micaLabel": "High myopia",
+            "score": 4.365724753343821,
+            "evidenceCode": "1/9",
+            "referenceText": "OMIM:621265"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000298",
+            "patientPhenotypeLabel": "Mask-like facies",
+            "diseasePhenotypeCurie": "HP:0002058",
+            "diseasePhenotypeLabel": "Myopathic facies",
+            "micaCurie": "HP:0004673",
+            "micaLabel": "Decreased facial expression",
+            "score": 4.329684816860625,
+            "evidenceCode": "1/9",
+            "referenceText": "OMIM:621265"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000405",
+            "patientPhenotypeLabel": "Conductive hearing impairment",
+            "diseasePhenotypeCurie": "HP:0000405",
+            "diseasePhenotypeLabel": "Conductive hearing impairment",
+            "micaCurie": "HP:0000405",
+            "micaLabel": "Conductive hearing impairment",
+            "score": 3.8696868297322102,
+            "evidenceCode": "1/4",
+            "referenceText": "OMIM:621265"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000278",
+            "patientPhenotypeLabel": "Retrognathia",
+            "diseasePhenotypeCurie": "HP:0000278",
+            "diseasePhenotypeLabel": "Retrognathia",
+            "micaCurie": "HP:0000278",
+            "micaLabel": "Retrognathia",
+            "score": 3.3237313586752197,
+            "evidenceCode": "1/9",
+            "referenceText": "OMIM:621265"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0045025",
+            "patientPhenotypeLabel": "Narrow palpebral fissure",
+            "diseasePhenotypeCurie": "HP:0012745",
+            "diseasePhenotypeLabel": "Short palpebral fissure",
+            "micaCurie": "HP:0200007",
+            "micaLabel": "Abnormal size of the palpebral fissures",
+            "score": 3.304499996747332,
+            "evidenceCode": "2/9",
+            "referenceText": "OMIM:621265"
+          }
+        ],
+        "directNormalizedScore": 0.239245,
+        "diseaseSupportScore": 0.162687,
+        "supportingDiseaseCurie": "MONDO:0979246",
+        "supportingDiseaseLabel": "Nil-Deshwar neurodevelopmental syndrome",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 2,
+        "geneCurie": "NCBIGene:4621",
+        "geneLabel": "MYH3",
+        "geneSymbol": "MYH3",
+        "geneEntityId": 149525,
+        "bmaScore": 2.159969012379402,
+        "normalizedScore": 0.238484,
+        "patientAverageScore": 2.852933148119698,
+        "phenotypeAverageScore": 1.4670048766391062,
+        "directPhenotypeCount": 173,
+        "matchedPhenotypeCount": 26,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000298",
+            "patientPhenotypeLabel": "Mask-like facies",
+            "diseasePhenotypeCurie": "HP:0000298",
+            "diseasePhenotypeLabel": "Mask-like facies",
+            "micaCurie": "HP:0000298",
+            "micaLabel": "Mask-like facies",
+            "score": 5.689776805586491,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:193700"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000064",
+            "patientPhenotypeLabel": "Hypoplastic labia minora",
+            "diseasePhenotypeCurie": "HP:0008729",
+            "diseasePhenotypeLabel": "Absence of labia majora",
+            "micaCurie": "HP:0000058",
+            "micaLabel": "Abnormal labia morphology",
+            "score": 4.946198771399654,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:2990"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001845",
+            "patientPhenotypeLabel": "Overlapping toe",
+            "diseasePhenotypeCurie": "HP:0001845",
+            "diseasePhenotypeLabel": "Overlapping toe",
+            "micaCurie": "HP:0001845",
+            "micaLabel": "Overlapping toe",
+            "score": 4.6626234809005265,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:193700"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000411",
+            "patientPhenotypeLabel": "Protruding ear",
+            "diseasePhenotypeCurie": "HP:0000411",
+            "diseasePhenotypeLabel": "Protruding ear",
+            "micaCurie": "HP:0000411",
+            "micaLabel": "Protruding ear",
+            "score": 4.033192114726689,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:1147"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000506",
+            "patientPhenotypeLabel": "Telecanthus",
+            "diseasePhenotypeCurie": "HP:0000506",
+            "diseasePhenotypeLabel": "Telecanthus",
+            "micaCurie": "HP:0000506",
+            "micaLabel": "Telecanthus",
+            "score": 3.9095781587595124,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:193700"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000268",
+            "patientPhenotypeLabel": "Dolichocephaly",
+            "diseasePhenotypeCurie": "HP:0000268",
+            "diseasePhenotypeLabel": "Dolichocephaly",
+            "micaCurie": "HP:0000268",
+            "micaLabel": "Dolichocephaly",
+            "score": 3.87528908528088,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:2990"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000405",
+            "patientPhenotypeLabel": "Conductive hearing impairment",
+            "diseasePhenotypeCurie": "HP:0000405",
+            "diseasePhenotypeLabel": "Conductive hearing impairment",
+            "micaCurie": "HP:0000405",
+            "micaLabel": "Conductive hearing impairment",
+            "score": 3.8696868297322102,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:2990"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001763",
+            "patientPhenotypeLabel": "Pes planus",
+            "diseasePhenotypeCurie": "HP:0001763",
+            "diseasePhenotypeLabel": "Pes planus",
+            "micaCurie": "HP:0001763",
+            "micaLabel": "Pes planus",
+            "score": 3.4660856550621086,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:3275"
+          }
+        ],
+        "directNormalizedScore": 0.238484,
+        "diseaseSupportScore": 0.141981,
+        "supportingDiseaseCurie": "MONDO:0008675",
+        "supportingDiseaseLabel": "Freeman-Sheldon syndrome",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 3,
+        "geneCurie": "NCBIGene:1387",
+        "geneLabel": "CREBBP",
+        "geneSymbol": "CREBBP",
+        "geneEntityId": 148540,
+        "bmaScore": 2.1493314523319347,
+        "normalizedScore": 0.23731,
+        "patientAverageScore": 2.8617171132535244,
+        "phenotypeAverageScore": 1.4369457914103445,
+        "directPhenotypeCount": 261,
+        "matchedPhenotypeCount": 26,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001845",
+            "patientPhenotypeLabel": "Overlapping toe",
+            "diseasePhenotypeCurie": "HP:0001845",
+            "diseasePhenotypeLabel": "Overlapping toe",
+            "micaCurie": "HP:0001845",
+            "micaLabel": "Overlapping toe",
+            "score": 4.6626234809005265,
+            "evidenceCode": "5/24",
+            "referenceText": "OMIM:618332"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000298",
+            "patientPhenotypeLabel": "Mask-like facies",
+            "diseasePhenotypeCurie": "HP:0000273",
+            "diseasePhenotypeLabel": "Facial grimacing",
+            "micaCurie": "HP:0005346",
+            "micaLabel": "Abnormal facial expression",
+            "score": 4.2128855491143735,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:180849"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000411",
+            "patientPhenotypeLabel": "Protruding ear",
+            "diseasePhenotypeCurie": "HP:0000411",
+            "diseasePhenotypeLabel": "Protruding ear",
+            "micaCurie": "HP:0000411",
+            "micaLabel": "Protruding ear",
+            "score": 4.033192114726689,
+            "evidenceCode": "13/24",
+            "referenceText": "OMIM:618332"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000506",
+            "patientPhenotypeLabel": "Telecanthus",
+            "diseasePhenotypeCurie": "HP:0000506",
+            "diseasePhenotypeLabel": "Telecanthus",
+            "micaCurie": "HP:0000506",
+            "micaLabel": "Telecanthus",
+            "score": 3.9095781587595124,
+            "evidenceCode": "13/24",
+            "referenceText": "OMIM:618332"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000405",
+            "patientPhenotypeLabel": "Conductive hearing impairment",
+            "diseasePhenotypeCurie": "HP:0000405",
+            "diseasePhenotypeLabel": "Conductive hearing impairment",
+            "micaCurie": "HP:0000405",
+            "micaLabel": "Conductive hearing impairment",
+            "score": 3.8696868297322102,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:353281"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001763",
+            "patientPhenotypeLabel": "Pes planus",
+            "diseasePhenotypeCurie": "HP:0001763",
+            "diseasePhenotypeLabel": "Pes planus",
+            "micaCurie": "HP:0001763",
+            "micaLabel": "Pes planus",
+            "score": 3.4660856550621086,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:180849"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001643",
+            "patientPhenotypeLabel": "Patent ductus arteriosus",
+            "diseasePhenotypeCurie": "HP:0001643",
+            "diseasePhenotypeLabel": "Patent ductus arteriosus",
+            "micaCurie": "HP:0001643",
+            "micaLabel": "Patent ductus arteriosus",
+            "score": 3.3367608589655537,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:353281"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000278",
+            "patientPhenotypeLabel": "Retrognathia",
+            "diseasePhenotypeCurie": "HP:0000278",
+            "diseasePhenotypeLabel": "Retrognathia",
+            "micaCurie": "HP:0000278",
+            "micaLabel": "Retrognathia",
+            "score": 3.3237313586752197,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:180849"
+          }
+        ],
+        "directNormalizedScore": 0.23731,
+        "diseaseSupportScore": 0.140442,
+        "supportingDiseaseCurie": "MONDO:0008393",
+        "supportingDiseaseLabel": "Rubinstein-Taybi syndrome due to CREBBP mutations",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 4,
+        "geneCurie": "NCBIGene:2263",
+        "geneLabel": "FGFR2",
+        "geneSymbol": "FGFR2",
+        "geneEntityId": 148838,
+        "bmaScore": 2.1207001103190857,
+        "normalizedScore": 0.234149,
+        "patientAverageScore": 2.7040855862616513,
+        "phenotypeAverageScore": 1.53731463437652,
+        "directPhenotypeCount": 369,
+        "matchedPhenotypeCount": 26,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000064",
+            "patientPhenotypeLabel": "Hypoplastic labia minora",
+            "diseasePhenotypeCurie": "HP:0000063",
+            "diseasePhenotypeLabel": "Fused labia minora",
+            "micaCurie": "HP:0012880",
+            "micaLabel": "Abnormal labia minora morphology",
+            "score": 6.223859291516749,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:207410"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001845",
+            "patientPhenotypeLabel": "Overlapping toe",
+            "diseasePhenotypeCurie": "HP:0001845",
+            "diseasePhenotypeLabel": "Overlapping toe",
+            "micaCurie": "HP:0001845",
+            "micaLabel": "Overlapping toe",
+            "score": 4.6626234809005265,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:123790"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000646",
+            "patientPhenotypeLabel": "Amblyopia",
+            "diseasePhenotypeCurie": "HP:0000646",
+            "diseasePhenotypeLabel": "Amblyopia",
+            "micaCurie": "HP:0000646",
+            "micaLabel": "Amblyopia",
+            "score": 4.579735821094759,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:207"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000506",
+            "patientPhenotypeLabel": "Telecanthus",
+            "diseasePhenotypeCurie": "HP:0000506",
+            "diseasePhenotypeLabel": "Telecanthus",
+            "micaCurie": "HP:0000506",
+            "micaLabel": "Telecanthus",
+            "score": 3.9095781587595124,
+            "evidenceCode": "1/4",
+            "referenceText": "OMIM:149730"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000268",
+            "patientPhenotypeLabel": "Dolichocephaly",
+            "diseasePhenotypeCurie": "HP:0000268",
+            "diseasePhenotypeLabel": "Dolichocephaly",
+            "micaCurie": "HP:0000268",
+            "micaLabel": "Dolichocephaly",
+            "score": 3.87528908528088,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:168624"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000405",
+            "patientPhenotypeLabel": "Conductive hearing impairment",
+            "diseasePhenotypeCurie": "HP:0000410",
+            "diseasePhenotypeLabel": "Mixed hearing impairment",
+            "micaCurie": "HP:0000405",
+            "micaLabel": "Conductive hearing impairment",
+            "score": 3.8696868297322102,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:149730"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001643",
+            "patientPhenotypeLabel": "Patent ductus arteriosus",
+            "diseasePhenotypeCurie": "HP:0001643",
+            "diseasePhenotypeLabel": "Patent ductus arteriosus",
+            "micaCurie": "HP:0001643",
+            "micaLabel": "Patent ductus arteriosus",
+            "score": 3.3367608589655537,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "ORPHA:2363"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002033",
+            "patientPhenotypeLabel": "Poor suck",
+            "diseasePhenotypeCurie": "HP:0008872",
+            "diseasePhenotypeLabel": "Feeding difficulties in infancy",
+            "micaCurie": "HP:0008872",
+            "micaLabel": "Feeding difficulties in infancy",
+            "score": 3.231072528192515,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:123790"
+          }
+        ],
+        "directNormalizedScore": 0.234149,
+        "diseaseSupportScore": 0.138732,
+        "supportingDiseaseCurie": "MONDO:0007041",
+        "supportingDiseaseLabel": "Apert syndrome",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 5,
+        "geneCurie": "NCBIGene:6497",
+        "geneLabel": "SKI",
+        "geneSymbol": "SKI",
+        "geneEntityId": 150092,
+        "bmaScore": 2.1170986142005677,
+        "normalizedScore": 0.233751,
+        "patientAverageScore": 2.6972454070819483,
+        "phenotypeAverageScore": 1.5369518213191868,
+        "directPhenotypeCount": 166,
+        "matchedPhenotypeCount": 26,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000064",
+            "patientPhenotypeLabel": "Hypoplastic labia minora",
+            "diseasePhenotypeCurie": "HP:0000055",
+            "diseasePhenotypeLabel": "Abnormal female external genitalia morphology",
+            "micaCurie": "HP:0000055",
+            "micaLabel": "Abnormal female external genitalia morphology",
+            "score": 4.393633541460898,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1606"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000411",
+            "patientPhenotypeLabel": "Protruding ear",
+            "diseasePhenotypeCurie": "HP:0000411",
+            "diseasePhenotypeLabel": "Protruding ear",
+            "micaCurie": "HP:0000411",
+            "micaLabel": "Protruding ear",
+            "score": 4.033192114726689,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:2462"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000506",
+            "patientPhenotypeLabel": "Telecanthus",
+            "diseasePhenotypeCurie": "HP:0000506",
+            "diseasePhenotypeLabel": "Telecanthus",
+            "micaCurie": "HP:0000506",
+            "micaLabel": "Telecanthus",
+            "score": 3.9095781587595124,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:2462"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000268",
+            "patientPhenotypeLabel": "Dolichocephaly",
+            "diseasePhenotypeCurie": "HP:0000268",
+            "diseasePhenotypeLabel": "Dolichocephaly",
+            "micaCurie": "HP:0000268",
+            "micaLabel": "Dolichocephaly",
+            "score": 3.87528908528088,
+            "evidenceCode": "28/37",
+            "referenceText": "OMIM:182212"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000405",
+            "patientPhenotypeLabel": "Conductive hearing impairment",
+            "diseasePhenotypeCurie": "HP:0000405",
+            "diseasePhenotypeLabel": "Conductive hearing impairment",
+            "micaCurie": "HP:0000405",
+            "micaLabel": "Conductive hearing impairment",
+            "score": 3.8696868297322102,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1606"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001763",
+            "patientPhenotypeLabel": "Pes planus",
+            "diseasePhenotypeCurie": "HP:0001763",
+            "diseasePhenotypeLabel": "Pes planus",
+            "micaCurie": "HP:0001763",
+            "micaLabel": "Pes planus",
+            "score": 3.4660856550621086,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:2462"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001643",
+            "patientPhenotypeLabel": "Patent ductus arteriosus",
+            "diseasePhenotypeCurie": "HP:0001643",
+            "diseasePhenotypeLabel": "Patent ductus arteriosus",
+            "micaCurie": "HP:0001643",
+            "micaLabel": "Patent ductus arteriosus",
+            "score": 3.3367608589655537,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1606"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000278",
+            "patientPhenotypeLabel": "Retrognathia",
+            "diseasePhenotypeCurie": "HP:0000278",
+            "diseasePhenotypeLabel": "Retrognathia",
+            "micaCurie": "HP:0000278",
+            "micaLabel": "Retrognathia",
+            "score": 3.3237313586752197,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:2462"
+          }
+        ],
+        "directNormalizedScore": 0.233751,
+        "diseaseSupportScore": 0.147999,
+        "supportingDiseaseCurie": "MONDO:0008426",
+        "supportingDiseaseLabel": "Shprintzen-Goldberg syndrome",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 6,
+        "geneCurie": "NCBIGene:63895",
+        "geneLabel": "PIEZO2",
+        "geneSymbol": "PIEZO2",
+        "geneEntityId": 152236,
+        "bmaScore": 2.1100260165449907,
+        "normalizedScore": 0.23297,
+        "patientAverageScore": 2.6624632720736434,
+        "phenotypeAverageScore": 1.5575887610163384,
+        "directPhenotypeCount": 175,
+        "matchedPhenotypeCount": 26,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000298",
+            "patientPhenotypeLabel": "Mask-like facies",
+            "diseasePhenotypeCurie": "HP:0000298",
+            "diseasePhenotypeLabel": "Mask-like facies",
+            "micaCurie": "HP:0000298",
+            "micaLabel": "Mask-like facies",
+            "score": 5.689776805586491,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:2461"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001845",
+            "patientPhenotypeLabel": "Overlapping toe",
+            "diseasePhenotypeCurie": "HP:0001845",
+            "diseasePhenotypeLabel": "Overlapping toe",
+            "micaCurie": "HP:0001845",
+            "micaLabel": "Overlapping toe",
+            "score": 4.6626234809005265,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:114300"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000411",
+            "patientPhenotypeLabel": "Protruding ear",
+            "diseasePhenotypeCurie": "HP:0000411",
+            "diseasePhenotypeLabel": "Protruding ear",
+            "micaCurie": "HP:0000411",
+            "micaLabel": "Protruding ear",
+            "score": 4.033192114726689,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:108145"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001320",
+            "patientPhenotypeLabel": "Cerebellar vermis hypoplasia",
+            "diseasePhenotypeCurie": "HP:0007068",
+            "diseasePhenotypeLabel": "Inferior cerebellar vermis hypoplasia",
+            "micaCurie": "HP:0001320",
+            "micaLabel": "Cerebellar vermis hypoplasia",
+            "score": 3.5517410996406023,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:248700"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001763",
+            "patientPhenotypeLabel": "Pes planus",
+            "diseasePhenotypeCurie": "HP:0001763",
+            "diseasePhenotypeLabel": "Pes planus",
+            "micaCurie": "HP:0001763",
+            "micaLabel": "Pes planus",
+            "score": 3.4660856550621086,
+            "evidenceCode": "6/7",
+            "referenceText": "OMIM:617146"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000278",
+            "patientPhenotypeLabel": "Retrognathia",
+            "diseasePhenotypeCurie": "HP:0000278",
+            "diseasePhenotypeLabel": "Retrognathia",
+            "micaCurie": "HP:0000278",
+            "micaLabel": "Retrognathia",
+            "score": 3.3237313586752197,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:2461"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0045025",
+            "patientPhenotypeLabel": "Narrow palpebral fissure",
+            "diseasePhenotypeCurie": "HP:0012745",
+            "diseasePhenotypeLabel": "Short palpebral fissure",
+            "micaCurie": "HP:0200007",
+            "micaLabel": "Abnormal size of the palpebral fissures",
+            "score": 3.304499996747332,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:2461"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000470",
+            "patientPhenotypeLabel": "Short neck",
+            "diseasePhenotypeCurie": "HP:0000470",
+            "diseasePhenotypeLabel": "Short neck",
+            "micaCurie": "HP:0000470",
+            "micaLabel": "Short neck",
+            "score": 3.2610148848075933,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:114300"
+          }
+        ],
+        "directNormalizedScore": 0.23297,
+        "diseaseSupportScore": 0.145988,
+        "supportingDiseaseCurie": "MONDO:0009564",
+        "supportingDiseaseLabel": "Marden-Walker syndrome",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 7,
+        "geneCurie": "NCBIGene:2200",
+        "geneLabel": "FBN1",
+        "geneSymbol": "FBN1",
+        "geneEntityId": 148810,
+        "bmaScore": 2.0980052199979657,
+        "normalizedScore": 0.231643,
+        "patientAverageScore": 2.8230544572012706,
+        "phenotypeAverageScore": 1.3729559827946607,
+        "directPhenotypeCount": 312,
+        "matchedPhenotypeCount": 26,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000646",
+            "patientPhenotypeLabel": "Amblyopia",
+            "diseasePhenotypeCurie": "HP:0000646",
+            "diseasePhenotypeLabel": "Amblyopia",
+            "micaCurie": "HP:0000646",
+            "micaLabel": "Amblyopia",
+            "score": 4.579735821094759,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1885"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011003",
+            "patientPhenotypeLabel": "High myopia",
+            "diseasePhenotypeCurie": "HP:0011003",
+            "diseasePhenotypeLabel": "High myopia",
+            "micaCurie": "HP:0011003",
+            "micaLabel": "High myopia",
+            "score": 4.365724753343821,
+            "evidenceCode": "11/11",
+            "referenceText": "OMIM:608328"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001845",
+            "patientPhenotypeLabel": "Overlapping toe",
+            "diseasePhenotypeCurie": "HP:0001765",
+            "diseasePhenotypeLabel": "Hammertoe",
+            "micaCurie": "HP:0034398",
+            "micaLabel": "Toe deformity",
+            "score": 4.0803388931523905,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:154700"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000411",
+            "patientPhenotypeLabel": "Protruding ear",
+            "diseasePhenotypeCurie": "HP:0000411",
+            "diseasePhenotypeLabel": "Protruding ear",
+            "micaCurie": "HP:0000411",
+            "micaLabel": "Protruding ear",
+            "score": 4.033192114726689,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:2462"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000506",
+            "patientPhenotypeLabel": "Telecanthus",
+            "diseasePhenotypeCurie": "HP:0000506",
+            "diseasePhenotypeLabel": "Telecanthus",
+            "micaCurie": "HP:0000506",
+            "micaLabel": "Telecanthus",
+            "score": 3.9095781587595124,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:2462"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000268",
+            "patientPhenotypeLabel": "Dolichocephaly",
+            "diseasePhenotypeCurie": "HP:0030799",
+            "diseasePhenotypeLabel": "Scaphocephaly",
+            "micaCurie": "HP:0000268",
+            "micaLabel": "Dolichocephaly",
+            "score": 3.87528908528088,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:616914"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000405",
+            "patientPhenotypeLabel": "Conductive hearing impairment",
+            "diseasePhenotypeCurie": "HP:0000405",
+            "diseasePhenotypeLabel": "Conductive hearing impairment",
+            "micaCurie": "HP:0000405",
+            "micaLabel": "Conductive hearing impairment",
+            "score": 3.8696868297322102,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:2462"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001763",
+            "patientPhenotypeLabel": "Pes planus",
+            "diseasePhenotypeCurie": "HP:0001763",
+            "diseasePhenotypeLabel": "Pes planus",
+            "micaCurie": "HP:0001763",
+            "micaLabel": "Pes planus",
+            "score": 3.4660856550621086,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:91387"
+          }
+        ],
+        "directNormalizedScore": 0.231643,
+        "diseaseSupportScore": 0.130944,
+        "supportingDiseaseCurie": "MONDO:0014831",
+        "supportingDiseaseLabel": "progeroid and marfanoid aspect-lipodystrophy syndrome",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 8,
+        "geneCurie": "NCBIGene:10025",
+        "geneLabel": "MED16",
+        "geneSymbol": "MED16",
+        "geneEntityId": 150936,
+        "bmaScore": 2.079884369566004,
+        "normalizedScore": 0.229642,
+        "patientAverageScore": 2.6721964602940202,
+        "phenotypeAverageScore": 1.4875722788379873,
+        "directPhenotypeCount": 196,
+        "matchedPhenotypeCount": 26,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001845",
+            "patientPhenotypeLabel": "Overlapping toe",
+            "diseasePhenotypeCurie": "HP:0001845",
+            "diseasePhenotypeLabel": "Overlapping toe",
+            "micaCurie": "HP:0001845",
+            "micaLabel": "Overlapping toe",
+            "score": 4.6626234809005265,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:621220"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000298",
+            "patientPhenotypeLabel": "Mask-like facies",
+            "diseasePhenotypeCurie": "HP:0002058",
+            "diseasePhenotypeLabel": "Myopathic facies",
+            "micaCurie": "HP:0004673",
+            "micaLabel": "Decreased facial expression",
+            "score": 4.329684816860625,
+            "evidenceCode": "1/19",
+            "referenceText": "OMIM:621220"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000405",
+            "patientPhenotypeLabel": "Conductive hearing impairment",
+            "diseasePhenotypeCurie": "HP:0000405",
+            "diseasePhenotypeLabel": "Conductive hearing impairment",
+            "micaCurie": "HP:0000405",
+            "micaLabel": "Conductive hearing impairment",
+            "score": 3.8696868297322102,
+            "evidenceCode": "1/4",
+            "referenceText": "OMIM:621220"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000341",
+            "patientPhenotypeLabel": "Narrow forehead",
+            "diseasePhenotypeCurie": "HP:0000341",
+            "diseasePhenotypeLabel": "Narrow forehead",
+            "micaCurie": "HP:0000341",
+            "micaLabel": "Narrow forehead",
+            "score": 3.778957976342448,
+            "evidenceCode": "1/19",
+            "referenceText": "OMIM:621220"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001320",
+            "patientPhenotypeLabel": "Cerebellar vermis hypoplasia",
+            "diseasePhenotypeCurie": "HP:0001320",
+            "diseasePhenotypeLabel": "Cerebellar vermis hypoplasia",
+            "micaCurie": "HP:0001320",
+            "micaLabel": "Cerebellar vermis hypoplasia",
+            "score": 3.5517410996406023,
+            "evidenceCode": "2/21",
+            "referenceText": "OMIM:621220"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001763",
+            "patientPhenotypeLabel": "Pes planus",
+            "diseasePhenotypeCurie": "HP:0001763",
+            "diseasePhenotypeLabel": "Pes planus",
+            "micaCurie": "HP:0001763",
+            "micaLabel": "Pes planus",
+            "score": 3.4660856550621086,
+            "evidenceCode": "4/4",
+            "referenceText": "OMIM:621220"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000064",
+            "patientPhenotypeLabel": "Hypoplastic labia minora",
+            "diseasePhenotypeCurie": "HP:0000143",
+            "diseasePhenotypeLabel": "Rectovaginal fistula",
+            "micaCurie": "HP:0010460",
+            "micaLabel": "Abnormality of the female genitalia",
+            "score": 3.3400449341667438,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:621220"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001643",
+            "patientPhenotypeLabel": "Patent ductus arteriosus",
+            "diseasePhenotypeCurie": "HP:0001643",
+            "diseasePhenotypeLabel": "Patent ductus arteriosus",
+            "micaCurie": "HP:0001643",
+            "micaLabel": "Patent ductus arteriosus",
+            "score": 3.3367608589655537,
+            "evidenceCode": "1/20",
+            "referenceText": "OMIM:621220"
+          }
+        ],
+        "directNormalizedScore": 0.229642,
+        "diseaseSupportScore": 0.156157,
+        "supportingDiseaseCurie": "MONDO:0979227",
+        "supportingDiseaseLabel": "Guillouet-Gordon syndrome",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 9,
+        "geneCurie": "NCBIGene:7543",
+        "geneLabel": "ZFX",
+        "geneSymbol": "ZFX",
+        "geneEntityId": 150458,
+        "bmaScore": 2.0748577459786457,
+        "normalizedScore": 0.229087,
+        "patientAverageScore": 2.67890574979206,
+        "phenotypeAverageScore": 1.470809742165232,
+        "directPhenotypeCount": 201,
+        "matchedPhenotypeCount": 26,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001845",
+            "patientPhenotypeLabel": "Overlapping toe",
+            "diseasePhenotypeCurie": "HP:0001845",
+            "diseasePhenotypeLabel": "Overlapping toe",
+            "micaCurie": "HP:0001845",
+            "micaLabel": "Overlapping toe",
+            "score": 4.6626234809005265,
+            "evidenceCode": "1/18",
+            "referenceText": "OMIM:301118"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000646",
+            "patientPhenotypeLabel": "Amblyopia",
+            "diseasePhenotypeCurie": "HP:0000646",
+            "diseasePhenotypeLabel": "Amblyopia",
+            "micaCurie": "HP:0000646",
+            "micaLabel": "Amblyopia",
+            "score": 4.579735821094759,
+            "evidenceCode": "1/18",
+            "referenceText": "OMIM:301118"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002033",
+            "patientPhenotypeLabel": "Poor suck",
+            "diseasePhenotypeCurie": "HP:0002033",
+            "diseasePhenotypeLabel": "Poor suck",
+            "micaCurie": "HP:0002033",
+            "micaLabel": "Poor suck",
+            "score": 4.557262965242701,
+            "evidenceCode": "1/18",
+            "referenceText": "OMIM:301118"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011003",
+            "patientPhenotypeLabel": "High myopia",
+            "diseasePhenotypeCurie": "HP:0011003",
+            "diseasePhenotypeLabel": "High myopia",
+            "micaCurie": "HP:0011003",
+            "micaLabel": "High myopia",
+            "score": 4.365724753343821,
+            "evidenceCode": "1/18",
+            "referenceText": "OMIM:301118"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000506",
+            "patientPhenotypeLabel": "Telecanthus",
+            "diseasePhenotypeCurie": "HP:0000506",
+            "diseasePhenotypeLabel": "Telecanthus",
+            "micaCurie": "HP:0000506",
+            "micaLabel": "Telecanthus",
+            "score": 3.9095781587595124,
+            "evidenceCode": "1/18",
+            "referenceText": "OMIM:301118"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000405",
+            "patientPhenotypeLabel": "Conductive hearing impairment",
+            "diseasePhenotypeCurie": "HP:0000405",
+            "diseasePhenotypeLabel": "Conductive hearing impairment",
+            "micaCurie": "HP:0000405",
+            "micaLabel": "Conductive hearing impairment",
+            "score": 3.8696868297322102,
+            "evidenceCode": "5/18",
+            "referenceText": "OMIM:301118"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000341",
+            "patientPhenotypeLabel": "Narrow forehead",
+            "diseasePhenotypeCurie": "HP:0000341",
+            "diseasePhenotypeLabel": "Narrow forehead",
+            "micaCurie": "HP:0000341",
+            "micaLabel": "Narrow forehead",
+            "score": 3.778957976342448,
+            "evidenceCode": "1/18",
+            "referenceText": "OMIM:301118"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001643",
+            "patientPhenotypeLabel": "Patent ductus arteriosus",
+            "diseasePhenotypeCurie": "HP:0001643",
+            "diseasePhenotypeLabel": "Patent ductus arteriosus",
+            "micaCurie": "HP:0001643",
+            "micaLabel": "Patent ductus arteriosus",
+            "score": 3.3367608589655537,
+            "evidenceCode": "5/15",
+            "referenceText": "OMIM:301118"
+          }
+        ],
+        "directNormalizedScore": 0.229087,
+        "diseaseSupportScore": 0.155779,
+        "supportingDiseaseCurie": "MONDO:0958322",
+        "supportingDiseaseLabel": "intellectual developmental disorder, X-linked, syndromic 37",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 10,
+        "geneCurie": "NCBIGene:10664",
+        "geneLabel": "CTCF",
+        "geneSymbol": "CTCF",
+        "geneEntityId": 151095,
+        "bmaScore": 2.0711910601244012,
+        "normalizedScore": 0.228682,
+        "patientAverageScore": 2.606429322692271,
+        "phenotypeAverageScore": 1.5359527975565315,
+        "directPhenotypeCount": 153,
+        "matchedPhenotypeCount": 26,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000064",
+            "patientPhenotypeLabel": "Hypoplastic labia minora",
+            "diseasePhenotypeCurie": "HP:0000059",
+            "diseasePhenotypeLabel": "Hypoplastic labia majora",
+            "micaCurie": "HP:0000066",
+            "micaLabel": "Labial hypoplasia",
+            "score": 5.165252337462339,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:363611"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0045025",
+            "patientPhenotypeLabel": "Narrow palpebral fissure",
+            "diseasePhenotypeCurie": "HP:0045025",
+            "diseasePhenotypeLabel": "Narrow palpebral fissure",
+            "micaCurie": "HP:0045025",
+            "micaLabel": "Narrow palpebral fissure",
+            "score": 4.602725339319457,
+            "evidenceCode": "1/46",
+            "referenceText": "OMIM:615502"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000411",
+            "patientPhenotypeLabel": "Protruding ear",
+            "diseasePhenotypeCurie": "HP:0000411",
+            "diseasePhenotypeLabel": "Protruding ear",
+            "micaCurie": "HP:0000411",
+            "micaLabel": "Protruding ear",
+            "score": 4.033192114726689,
+            "evidenceCode": "2/46",
+            "referenceText": "OMIM:615502"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000341",
+            "patientPhenotypeLabel": "Narrow forehead",
+            "diseasePhenotypeCurie": "HP:0000341",
+            "diseasePhenotypeLabel": "Narrow forehead",
+            "micaCurie": "HP:0000341",
+            "micaLabel": "Narrow forehead",
+            "score": 3.778957976342448,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:363611"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001763",
+            "patientPhenotypeLabel": "Pes planus",
+            "diseasePhenotypeCurie": "HP:0001763",
+            "diseasePhenotypeLabel": "Pes planus",
+            "micaCurie": "HP:0001763",
+            "micaLabel": "Pes planus",
+            "score": 3.4660856550621086,
+            "evidenceCode": "3/46",
+            "referenceText": "OMIM:615502"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001643",
+            "patientPhenotypeLabel": "Patent ductus arteriosus",
+            "diseasePhenotypeCurie": "HP:0001643",
+            "diseasePhenotypeLabel": "Patent ductus arteriosus",
+            "micaCurie": "HP:0001643",
+            "micaLabel": "Patent ductus arteriosus",
+            "score": 3.3367608589655537,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:363611"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000278",
+            "patientPhenotypeLabel": "Retrognathia",
+            "diseasePhenotypeCurie": "HP:0000308",
+            "diseasePhenotypeLabel": "Microretrognathia",
+            "micaCurie": "HP:0000278",
+            "micaLabel": "Retrognathia",
+            "score": 3.3237313586752197,
+            "evidenceCode": "1/46",
+            "referenceText": "OMIM:615502"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002033",
+            "patientPhenotypeLabel": "Poor suck",
+            "diseasePhenotypeCurie": "HP:0011470",
+            "diseasePhenotypeLabel": "Nasogastric tube feeding in infancy",
+            "micaCurie": "HP:0008872",
+            "micaLabel": "Feeding difficulties in infancy",
+            "score": 3.231072528192515,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:363611"
+          }
+        ],
+        "directNormalizedScore": 0.228682,
+        "diseaseSupportScore": 0.150932,
+        "supportingDiseaseCurie": "MONDO:0014213",
+        "supportingDiseaseLabel": "CTCF-related neurodevelopmental disorder",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 11,
+        "geneCurie": "NCBIGene:3190",
+        "geneLabel": "HNRNPK",
+        "geneSymbol": "HNRNPK",
+        "geneEntityId": 149107,
+        "bmaScore": 2.0675360245915098,
+        "normalizedScore": 0.228279,
+        "patientAverageScore": 2.593593093225527,
+        "phenotypeAverageScore": 1.5414789559574928,
+        "directPhenotypeCount": 134,
+        "matchedPhenotypeCount": 26,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001845",
+            "patientPhenotypeLabel": "Overlapping toe",
+            "diseasePhenotypeCurie": "HP:0001845",
+            "diseasePhenotypeLabel": "Overlapping toe",
+            "micaCurie": "HP:0001845",
+            "micaLabel": "Overlapping toe",
+            "score": 4.6626234809005265,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:616580"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000411",
+            "patientPhenotypeLabel": "Protruding ear",
+            "diseasePhenotypeCurie": "HP:0000411",
+            "diseasePhenotypeLabel": "Protruding ear",
+            "micaCurie": "HP:0000411",
+            "micaLabel": "Protruding ear",
+            "score": 4.033192114726689,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:352665"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000268",
+            "patientPhenotypeLabel": "Dolichocephaly",
+            "diseasePhenotypeCurie": "HP:0000268",
+            "diseasePhenotypeLabel": "Dolichocephaly",
+            "micaCurie": "HP:0000268",
+            "micaLabel": "Dolichocephaly",
+            "score": 3.87528908528088,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:616580"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000405",
+            "patientPhenotypeLabel": "Conductive hearing impairment",
+            "diseasePhenotypeCurie": "HP:0000405",
+            "diseasePhenotypeLabel": "Conductive hearing impairment",
+            "micaCurie": "HP:0000405",
+            "micaLabel": "Conductive hearing impairment",
+            "score": 3.8696868297322102,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:352665"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000341",
+            "patientPhenotypeLabel": "Narrow forehead",
+            "diseasePhenotypeCurie": "HP:0000341",
+            "diseasePhenotypeLabel": "Narrow forehead",
+            "micaCurie": "HP:0000341",
+            "micaLabel": "Narrow forehead",
+            "score": 3.778957976342448,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:616580"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001763",
+            "patientPhenotypeLabel": "Pes planus",
+            "diseasePhenotypeCurie": "HP:0001763",
+            "diseasePhenotypeLabel": "Pes planus",
+            "micaCurie": "HP:0001763",
+            "micaLabel": "Pes planus",
+            "score": 3.4660856550621086,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:453504"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000278",
+            "patientPhenotypeLabel": "Retrognathia",
+            "diseasePhenotypeCurie": "HP:0000278",
+            "diseasePhenotypeLabel": "Retrognathia",
+            "micaCurie": "HP:0000278",
+            "micaLabel": "Retrognathia",
+            "score": 3.3237313586752197,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:616580"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0045025",
+            "patientPhenotypeLabel": "Narrow palpebral fissure",
+            "diseasePhenotypeCurie": "HP:0000637",
+            "diseasePhenotypeLabel": "Long palpebral fissure",
+            "micaCurie": "HP:0200007",
+            "micaLabel": "Abnormal size of the palpebral fissures",
+            "score": 3.304499996747332,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:453504"
+          }
+        ],
+        "directNormalizedScore": 0.228279,
+        "diseaseSupportScore": 0.144123,
+        "supportingDiseaseCurie": "MONDO:0014700",
+        "supportingDiseaseLabel": "Au-Kline syndrome",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 12,
+        "geneCurie": "NCBIGene:5718",
+        "geneLabel": "PSMD12",
+        "geneSymbol": "PSMD12",
+        "geneEntityId": 149884,
+        "bmaScore": 2.051419342136077,
+        "normalizedScore": 0.226499,
+        "patientAverageScore": 2.482806035306098,
+        "phenotypeAverageScore": 1.6200326489660555,
+        "directPhenotypeCount": 125,
+        "matchedPhenotypeCount": 26,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0045025",
+            "patientPhenotypeLabel": "Narrow palpebral fissure",
+            "diseasePhenotypeCurie": "HP:0045025",
+            "diseasePhenotypeLabel": "Narrow palpebral fissure",
+            "micaCurie": "HP:0045025",
+            "micaLabel": "Narrow palpebral fissure",
+            "score": 4.602725339319457,
+            "evidenceCode": "1/6",
+            "referenceText": "OMIM:617516"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000405",
+            "patientPhenotypeLabel": "Conductive hearing impairment",
+            "diseasePhenotypeCurie": "HP:0008607",
+            "diseasePhenotypeLabel": "Progressive conductive hearing impairment",
+            "micaCurie": "HP:0000405",
+            "micaLabel": "Conductive hearing impairment",
+            "score": 3.8696868297322102,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:529962"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001763",
+            "patientPhenotypeLabel": "Pes planus",
+            "diseasePhenotypeCurie": "HP:0001763",
+            "diseasePhenotypeLabel": "Pes planus",
+            "micaCurie": "HP:0001763",
+            "micaLabel": "Pes planus",
+            "score": 3.4660856550621086,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:617516"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000064",
+            "patientPhenotypeLabel": "Hypoplastic labia minora",
+            "diseasePhenotypeCurie": "HP:0012226",
+            "diseasePhenotypeLabel": "Ovarian teratoma",
+            "micaCurie": "HP:0010460",
+            "micaLabel": "Abnormality of the female genitalia",
+            "score": 3.3400449341667438,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:617516"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001643",
+            "patientPhenotypeLabel": "Patent ductus arteriosus",
+            "diseasePhenotypeCurie": "HP:0011648",
+            "diseasePhenotypeLabel": "Patent ductus arteriosus after birth at term",
+            "micaCurie": "HP:0001643",
+            "micaLabel": "Patent ductus arteriosus",
+            "score": 3.3367608589655537,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:529962"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000278",
+            "patientPhenotypeLabel": "Retrognathia",
+            "diseasePhenotypeCurie": "HP:0000278",
+            "diseasePhenotypeLabel": "Retrognathia",
+            "micaCurie": "HP:0000278",
+            "micaLabel": "Retrognathia",
+            "score": 3.3237313586752197,
+            "evidenceCode": "2/4",
+            "referenceText": "OMIM:617516"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000470",
+            "patientPhenotypeLabel": "Short neck",
+            "diseasePhenotypeCurie": "HP:0000470",
+            "diseasePhenotypeLabel": "Short neck",
+            "micaCurie": "HP:0000470",
+            "micaLabel": "Short neck",
+            "score": 3.2610148848075933,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:529962"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011003",
+            "patientPhenotypeLabel": "High myopia",
+            "diseasePhenotypeCurie": "HP:0000545",
+            "diseasePhenotypeLabel": "Myopia",
+            "micaCurie": "HP:0000545",
+            "micaLabel": "Myopia",
+            "score": 3.085810795782503,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:529962"
+          }
+        ],
+        "directNormalizedScore": 0.226499,
+        "diseaseSupportScore": 0.144176,
+        "supportingDiseaseCurie": "MONDO:0054591",
+        "supportingDiseaseLabel": "Stankiewicz-Isidor syndrome",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 13,
+        "geneCurie": "NCBIGene:26040",
+        "geneLabel": "SETBP1",
+        "geneSymbol": "SETBP1",
+        "geneEntityId": 151476,
+        "bmaScore": 2.047161029969284,
+        "normalizedScore": 0.226029,
+        "patientAverageScore": 2.603159648442017,
+        "phenotypeAverageScore": 1.4911624114965503,
+        "directPhenotypeCount": 178,
+        "matchedPhenotypeCount": 26,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000064",
+            "patientPhenotypeLabel": "Hypoplastic labia minora",
+            "diseasePhenotypeCurie": "HP:0000064",
+            "diseasePhenotypeLabel": "Hypoplastic labia minora",
+            "micaCurie": "HP:0000064",
+            "micaLabel": "Hypoplastic labia minora",
+            "score": 6.659177362774595,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:269150"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001845",
+            "patientPhenotypeLabel": "Overlapping toe",
+            "diseasePhenotypeCurie": "HP:0001845",
+            "diseasePhenotypeLabel": "Overlapping toe",
+            "micaCurie": "HP:0001845",
+            "micaLabel": "Overlapping toe",
+            "score": 4.6626234809005265,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:798"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000341",
+            "patientPhenotypeLabel": "Narrow forehead",
+            "diseasePhenotypeCurie": "HP:0000341",
+            "diseasePhenotypeLabel": "Narrow forehead",
+            "micaCurie": "HP:0000341",
+            "micaLabel": "Narrow forehead",
+            "score": 3.778957976342448,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:798"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000278",
+            "patientPhenotypeLabel": "Retrognathia",
+            "diseasePhenotypeCurie": "HP:0000278",
+            "diseasePhenotypeLabel": "Retrognathia",
+            "micaCurie": "HP:0000278",
+            "micaLabel": "Retrognathia",
+            "score": 3.3237313586752197,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:798"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0045025",
+            "patientPhenotypeLabel": "Narrow palpebral fissure",
+            "diseasePhenotypeCurie": "HP:0012745",
+            "diseasePhenotypeLabel": "Short palpebral fissure",
+            "micaCurie": "HP:0200007",
+            "micaLabel": "Abnormal size of the palpebral fissures",
+            "score": 3.304499996747332,
+            "evidenceCode": "1/6",
+            "referenceText": "OMIM:616078"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000470",
+            "patientPhenotypeLabel": "Short neck",
+            "diseasePhenotypeCurie": "HP:0000470",
+            "diseasePhenotypeLabel": "Short neck",
+            "micaCurie": "HP:0000470",
+            "micaLabel": "Short neck",
+            "score": 3.2610148848075933,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:269150"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002033",
+            "patientPhenotypeLabel": "Poor suck",
+            "diseasePhenotypeCurie": "HP:0011471",
+            "diseasePhenotypeLabel": "Gastrostomy tube feeding in infancy",
+            "micaCurie": "HP:0008872",
+            "micaLabel": "Feeding difficulties in infancy",
+            "score": 3.231072528192515,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "ORPHA:798"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011003",
+            "patientPhenotypeLabel": "High myopia",
+            "diseasePhenotypeCurie": "HP:0000545",
+            "diseasePhenotypeLabel": "Myopia",
+            "micaCurie": "HP:0000545",
+            "micaLabel": "Myopia",
+            "score": 3.085810795782503,
+            "evidenceCode": "3/29",
+            "referenceText": "OMIM:616078"
+          }
+        ],
+        "directNormalizedScore": 0.226029,
+        "diseaseSupportScore": 0.123529,
+        "supportingDiseaseCurie": "MONDO:0010010",
+        "supportingDiseaseLabel": "Schinzel-Giedion syndrome",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 14,
+        "geneCurie": "NCBIGene:145173",
+        "geneLabel": "B3GLCT",
+        "geneSymbol": "B3GLCT",
+        "geneEntityId": 152917,
+        "bmaScore": 2.0424187895014825,
+        "normalizedScore": 0.225505,
+        "patientAverageScore": 2.455637376114576,
+        "phenotypeAverageScore": 1.6292002028883883,
+        "directPhenotypeCount": 134,
+        "matchedPhenotypeCount": 26,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000064",
+            "patientPhenotypeLabel": "Hypoplastic labia minora",
+            "diseasePhenotypeCurie": "HP:0000059",
+            "diseasePhenotypeLabel": "Hypoplastic labia majora",
+            "micaCurie": "HP:0000066",
+            "micaLabel": "Labial hypoplasia",
+            "score": 5.165252337462339,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:261540"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0045025",
+            "patientPhenotypeLabel": "Narrow palpebral fissure",
+            "diseasePhenotypeCurie": "HP:0045025",
+            "diseasePhenotypeLabel": "Narrow palpebral fissure",
+            "micaCurie": "HP:0045025",
+            "micaLabel": "Narrow palpebral fissure",
+            "score": 4.602725339319457,
+            "evidenceCode": "38/49",
+            "referenceText": "OMIM:261540"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000411",
+            "patientPhenotypeLabel": "Protruding ear",
+            "diseasePhenotypeCurie": "HP:0000411",
+            "diseasePhenotypeLabel": "Protruding ear",
+            "micaCurie": "HP:0000411",
+            "micaLabel": "Protruding ear",
+            "score": 4.033192114726689,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:261540"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000405",
+            "patientPhenotypeLabel": "Conductive hearing impairment",
+            "diseasePhenotypeCurie": "HP:0000405",
+            "diseasePhenotypeLabel": "Conductive hearing impairment",
+            "micaCurie": "HP:0000405",
+            "micaLabel": "Conductive hearing impairment",
+            "score": 3.8696868297322102,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:709"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001643",
+            "patientPhenotypeLabel": "Patent ductus arteriosus",
+            "diseasePhenotypeCurie": "HP:0001643",
+            "diseasePhenotypeLabel": "Patent ductus arteriosus",
+            "micaCurie": "HP:0001643",
+            "micaLabel": "Patent ductus arteriosus",
+            "score": 3.3367608589655537,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:261540"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000470",
+            "patientPhenotypeLabel": "Short neck",
+            "diseasePhenotypeCurie": "HP:0000470",
+            "diseasePhenotypeLabel": "Short neck",
+            "micaCurie": "HP:0000470",
+            "micaLabel": "Short neck",
+            "score": 3.2610148848075933,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:709"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002033",
+            "patientPhenotypeLabel": "Poor suck",
+            "diseasePhenotypeCurie": "HP:0008872",
+            "diseasePhenotypeLabel": "Feeding difficulties in infancy",
+            "micaCurie": "HP:0008872",
+            "micaLabel": "Feeding difficulties in infancy",
+            "score": 3.231072528192515,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:709"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011003",
+            "patientPhenotypeLabel": "High myopia",
+            "diseasePhenotypeCurie": "HP:0000545",
+            "diseasePhenotypeLabel": "Myopia",
+            "micaCurie": "HP:0000545",
+            "micaLabel": "Myopia",
+            "score": 3.085810795782503,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:261540"
+          }
+        ],
+        "directNormalizedScore": 0.225505,
+        "diseaseSupportScore": 0.151529,
+        "supportingDiseaseCurie": "MONDO:0009856",
+        "supportingDiseaseLabel": "Peters plus syndrome",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 15,
+        "geneCurie": "NCBIGene:652",
+        "geneLabel": "BMP4",
+        "geneSymbol": "BMP4",
+        "geneEntityId": 148293,
+        "bmaScore": 2.0419628150139064,
+        "normalizedScore": 0.225455,
+        "patientAverageScore": 2.4963870896461624,
+        "phenotypeAverageScore": 1.5875385403816504,
+        "directPhenotypeCount": 157,
+        "matchedPhenotypeCount": 26,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002033",
+            "patientPhenotypeLabel": "Poor suck",
+            "diseasePhenotypeCurie": "HP:0002033",
+            "diseasePhenotypeLabel": "Poor suck",
+            "micaCurie": "HP:0002033",
+            "micaLabel": "Poor suck",
+            "score": 4.557262965242701,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011003",
+            "patientPhenotypeLabel": "High myopia",
+            "diseasePhenotypeCurie": "HP:0011003",
+            "diseasePhenotypeLabel": "High myopia",
+            "micaCurie": "HP:0011003",
+            "micaLabel": "High myopia",
+            "score": 4.365724753343821,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:828"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000411",
+            "patientPhenotypeLabel": "Protruding ear",
+            "diseasePhenotypeCurie": "HP:0000411",
+            "diseasePhenotypeLabel": "Protruding ear",
+            "micaCurie": "HP:0000411",
+            "micaLabel": "Protruding ear",
+            "score": 4.033192114726689,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:607932"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000506",
+            "patientPhenotypeLabel": "Telecanthus",
+            "diseasePhenotypeCurie": "HP:0000506",
+            "diseasePhenotypeLabel": "Telecanthus",
+            "micaCurie": "HP:0000506",
+            "micaLabel": "Telecanthus",
+            "score": 3.9095781587595124,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:828"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000405",
+            "patientPhenotypeLabel": "Conductive hearing impairment",
+            "diseasePhenotypeCurie": "HP:0000405",
+            "diseasePhenotypeLabel": "Conductive hearing impairment",
+            "micaCurie": "HP:0000405",
+            "micaLabel": "Conductive hearing impairment",
+            "score": 3.8696868297322102,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001320",
+            "patientPhenotypeLabel": "Cerebellar vermis hypoplasia",
+            "diseasePhenotypeCurie": "HP:0007068",
+            "diseasePhenotypeLabel": "Inferior cerebellar vermis hypoplasia",
+            "micaCurie": "HP:0001320",
+            "micaLabel": "Cerebellar vermis hypoplasia",
+            "score": 3.5517410996406023,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:607932"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000278",
+            "patientPhenotypeLabel": "Retrognathia",
+            "diseasePhenotypeCurie": "HP:0000308",
+            "diseasePhenotypeLabel": "Microretrognathia",
+            "micaCurie": "HP:0000278",
+            "micaLabel": "Retrognathia",
+            "score": 3.3237313586752197,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:828"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000064",
+            "patientPhenotypeLabel": "Hypoplastic labia minora",
+            "diseasePhenotypeCurie": "HP:0000046",
+            "diseasePhenotypeLabel": "Small scrotum",
+            "micaCurie": "HP:0003241",
+            "micaLabel": "External genital hypoplasia",
+            "score": 3.1962864121070993,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:607932"
+          }
+        ],
+        "directNormalizedScore": 0.225455,
+        "diseaseSupportScore": 0.135058,
+        "supportingDiseaseCurie": "MONDO:0011936",
+        "supportingDiseaseLabel": "microphthalmia with brain and digit anomalies",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 16,
+        "geneCurie": "NCBIGene:2033",
+        "geneLabel": "EP300",
+        "geneSymbol": "EP300",
+        "geneEntityId": 148746,
+        "bmaScore": 2.041416290522582,
+        "normalizedScore": 0.225395,
+        "patientAverageScore": 2.6620831730466117,
+        "phenotypeAverageScore": 1.420749407998552,
+        "directPhenotypeCount": 247,
+        "matchedPhenotypeCount": 26,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001845",
+            "patientPhenotypeLabel": "Overlapping toe",
+            "diseasePhenotypeCurie": "HP:0001845",
+            "diseasePhenotypeLabel": "Overlapping toe",
+            "micaCurie": "HP:0001845",
+            "micaLabel": "Overlapping toe",
+            "score": 4.6626234809005265,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:618333"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000298",
+            "patientPhenotypeLabel": "Mask-like facies",
+            "diseasePhenotypeCurie": "HP:0000273",
+            "diseasePhenotypeLabel": "Facial grimacing",
+            "micaCurie": "HP:0005346",
+            "micaLabel": "Abnormal facial expression",
+            "score": 4.2128855491143735,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:180849"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000405",
+            "patientPhenotypeLabel": "Conductive hearing impairment",
+            "diseasePhenotypeCurie": "HP:0000405",
+            "diseasePhenotypeLabel": "Conductive hearing impairment",
+            "micaCurie": "HP:0000405",
+            "micaLabel": "Conductive hearing impairment",
+            "score": 3.8696868297322102,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:353284"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001763",
+            "patientPhenotypeLabel": "Pes planus",
+            "diseasePhenotypeCurie": "HP:0001763",
+            "diseasePhenotypeLabel": "Pes planus",
+            "micaCurie": "HP:0001763",
+            "micaLabel": "Pes planus",
+            "score": 3.4660856550621086,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:180849"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000064",
+            "patientPhenotypeLabel": "Hypoplastic labia minora",
+            "diseasePhenotypeCurie": "HP:0002891",
+            "diseasePhenotypeLabel": "Uterine leiomyosarcoma",
+            "micaCurie": "HP:0010460",
+            "micaLabel": "Abnormality of the female genitalia",
+            "score": 3.3400449341667438,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:114500"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001643",
+            "patientPhenotypeLabel": "Patent ductus arteriosus",
+            "diseasePhenotypeCurie": "HP:0001643",
+            "diseasePhenotypeLabel": "Patent ductus arteriosus",
+            "micaCurie": "HP:0001643",
+            "micaLabel": "Patent ductus arteriosus",
+            "score": 3.3367608589655537,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:353284"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000278",
+            "patientPhenotypeLabel": "Retrognathia",
+            "diseasePhenotypeCurie": "HP:0000278",
+            "diseasePhenotypeLabel": "Retrognathia",
+            "micaCurie": "HP:0000278",
+            "micaLabel": "Retrognathia",
+            "score": 3.3237313586752197,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:180849"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0045025",
+            "patientPhenotypeLabel": "Narrow palpebral fissure",
+            "diseasePhenotypeCurie": "HP:0012745",
+            "diseasePhenotypeLabel": "Short palpebral fissure",
+            "micaCurie": "HP:0200007",
+            "micaLabel": "Abnormal size of the palpebral fissures",
+            "score": 3.304499996747332,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:618333"
+          }
+        ],
+        "directNormalizedScore": 0.225395,
+        "diseaseSupportScore": 0.140442,
+        "supportingDiseaseCurie": "MONDO:0008393",
+        "supportingDiseaseLabel": "Rubinstein-Taybi syndrome due to CREBBP mutations",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 17,
+        "geneCurie": "NCBIGene:23126",
+        "geneLabel": "POGZ",
+        "geneSymbol": "POGZ",
+        "geneEntityId": 151294,
+        "bmaScore": 2.036090427521698,
+        "normalizedScore": 0.224807,
+        "patientAverageScore": 2.559185073696658,
+        "phenotypeAverageScore": 1.5129957813467383,
+        "directPhenotypeCount": 161,
+        "matchedPhenotypeCount": 26,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002033",
+            "patientPhenotypeLabel": "Poor suck",
+            "diseasePhenotypeCurie": "HP:0002033",
+            "diseasePhenotypeLabel": "Poor suck",
+            "micaCurie": "HP:0002033",
+            "micaLabel": "Poor suck",
+            "score": 4.557262965242701,
+            "evidenceCode": "1/5",
+            "referenceText": "OMIM:616364"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000341",
+            "patientPhenotypeLabel": "Narrow forehead",
+            "diseasePhenotypeCurie": "HP:0000341",
+            "diseasePhenotypeLabel": "Narrow forehead",
+            "micaCurie": "HP:0000341",
+            "micaLabel": "Narrow forehead",
+            "score": 3.778957976342448,
+            "evidenceCode": "2/12",
+            "referenceText": "OMIM:616364"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001320",
+            "patientPhenotypeLabel": "Cerebellar vermis hypoplasia",
+            "diseasePhenotypeCurie": "HP:0001305",
+            "diseasePhenotypeLabel": "Dandy-Walker malformation",
+            "micaCurie": "HP:0001320",
+            "micaLabel": "Cerebellar vermis hypoplasia",
+            "score": 3.5517410996406023,
+            "evidenceCode": "3/9",
+            "referenceText": "OMIM:616364"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001643",
+            "patientPhenotypeLabel": "Patent ductus arteriosus",
+            "diseasePhenotypeCurie": "HP:0001643",
+            "diseasePhenotypeLabel": "Patent ductus arteriosus",
+            "micaCurie": "HP:0001643",
+            "micaLabel": "Patent ductus arteriosus",
+            "score": 3.3367608589655537,
+            "evidenceCode": "3/19",
+            "referenceText": "OMIM:616364"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000278",
+            "patientPhenotypeLabel": "Retrognathia",
+            "diseasePhenotypeCurie": "HP:0000278",
+            "diseasePhenotypeLabel": "Retrognathia",
+            "micaCurie": "HP:0000278",
+            "micaLabel": "Retrognathia",
+            "score": 3.3237313586752197,
+            "evidenceCode": "4/12",
+            "referenceText": "OMIM:616364"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000470",
+            "patientPhenotypeLabel": "Short neck",
+            "diseasePhenotypeCurie": "HP:0000470",
+            "diseasePhenotypeLabel": "Short neck",
+            "micaCurie": "HP:0000470",
+            "micaLabel": "Short neck",
+            "score": 3.2610148848075933,
+            "evidenceCode": "11/20",
+            "referenceText": "OMIM:616364"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000064",
+            "patientPhenotypeLabel": "Hypoplastic labia minora",
+            "diseasePhenotypeCurie": "HP:0000054",
+            "diseasePhenotypeLabel": "Micropenis",
+            "micaCurie": "HP:0003241",
+            "micaLabel": "External genital hypoplasia",
+            "score": 3.1962864121070993,
+            "evidenceCode": "2/8",
+            "referenceText": "OMIM:616364"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011003",
+            "patientPhenotypeLabel": "High myopia",
+            "diseasePhenotypeCurie": "HP:0025573",
+            "diseasePhenotypeLabel": "Mild myopia",
+            "micaCurie": "HP:0000545",
+            "micaLabel": "Myopia",
+            "score": 3.085810795782503,
+            "evidenceCode": "1/5",
+            "referenceText": "OMIM:616364"
+          }
+        ],
+        "directNormalizedScore": 0.224807,
+        "diseaseSupportScore": 0.152869,
+        "supportingDiseaseCurie": "MONDO:0014606",
+        "supportingDiseaseLabel": "intellectual disability-microcephaly-strabismus-behavioral abnormalities syndrome",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 18,
+        "geneCurie": "HGNC:18801",
+        "geneLabel": "POGZ",
+        "geneSymbol": "POGZ",
+        "geneEntityId": 207344,
+        "bmaScore": 0,
+        "normalizedScore": 0.224807,
+        "patientAverageScore": 0,
+        "phenotypeAverageScore": 0,
+        "directPhenotypeCount": 0,
+        "matchedPhenotypeCount": 0,
+        "trace": [],
+        "directNormalizedScore": 0,
+        "diseaseSupportScore": 0.224807,
+        "supportingDiseaseCurie": "MONDO:0014606",
+        "supportingDiseaseLabel": "intellectual disability-microcephaly-strabismus-behavioral abnormalities syndrome",
+        "supportingDiseaseClassification": "Definitive"
+      },
+      {
+        "rank": 19,
+        "geneCurie": "NCBIGene:4784",
+        "geneLabel": "NFIX",
+        "geneSymbol": "NFIX",
+        "geneEntityId": 149593,
+        "bmaScore": 2.0292224841667186,
+        "normalizedScore": 0.224048,
+        "patientAverageScore": 2.5936224302624193,
+        "phenotypeAverageScore": 1.464822538071018,
+        "directPhenotypeCount": 202,
+        "matchedPhenotypeCount": 26,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000646",
+            "patientPhenotypeLabel": "Amblyopia",
+            "diseasePhenotypeCurie": "HP:0000646",
+            "diseasePhenotypeLabel": "Amblyopia",
+            "micaCurie": "HP:0000646",
+            "micaLabel": "Amblyopia",
+            "score": 4.579735821094759,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:447980"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011003",
+            "patientPhenotypeLabel": "High myopia",
+            "diseasePhenotypeCurie": "HP:0011003",
+            "diseasePhenotypeLabel": "High myopia",
+            "micaCurie": "HP:0011003",
+            "micaLabel": "High myopia",
+            "score": 4.365724753343821,
+            "evidenceCode": "3/9",
+            "referenceText": "OMIM:602535"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000506",
+            "patientPhenotypeLabel": "Telecanthus",
+            "diseasePhenotypeCurie": "HP:0000506",
+            "diseasePhenotypeLabel": "Telecanthus",
+            "micaCurie": "HP:0000506",
+            "micaLabel": "Telecanthus",
+            "score": 3.9095781587595124,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:447980"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000268",
+            "patientPhenotypeLabel": "Dolichocephaly",
+            "diseasePhenotypeCurie": "HP:0030799",
+            "diseasePhenotypeLabel": "Scaphocephaly",
+            "micaCurie": "HP:0000268",
+            "micaLabel": "Dolichocephaly",
+            "score": 3.87528908528088,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:420179"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000405",
+            "patientPhenotypeLabel": "Conductive hearing impairment",
+            "diseasePhenotypeCurie": "HP:0008513",
+            "diseasePhenotypeLabel": "Bilateral conductive hearing impairment",
+            "micaCurie": "HP:0000405",
+            "micaLabel": "Conductive hearing impairment",
+            "score": 3.8696868297322102,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:602535"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001643",
+            "patientPhenotypeLabel": "Patent ductus arteriosus",
+            "diseasePhenotypeCurie": "HP:0001643",
+            "diseasePhenotypeLabel": "Patent ductus arteriosus",
+            "micaCurie": "HP:0001643",
+            "micaLabel": "Patent ductus arteriosus",
+            "score": 3.3367608589655537,
+            "evidenceCode": "1/17",
+            "referenceText": "OMIM:602535"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000278",
+            "patientPhenotypeLabel": "Retrognathia",
+            "diseasePhenotypeCurie": "HP:0000308",
+            "diseasePhenotypeLabel": "Microretrognathia",
+            "micaCurie": "HP:0000278",
+            "micaLabel": "Retrognathia",
+            "score": 3.3237313586752197,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:602535"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002033",
+            "patientPhenotypeLabel": "Poor suck",
+            "diseasePhenotypeCurie": "HP:0008872",
+            "diseasePhenotypeLabel": "Feeding difficulties in infancy",
+            "micaCurie": "HP:0008872",
+            "micaLabel": "Feeding difficulties in infancy",
+            "score": 3.231072528192515,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:420179"
+          }
+        ],
+        "directNormalizedScore": 0.224048,
+        "diseaseSupportScore": 0.137839,
+        "supportingDiseaseCurie": "MONDO:0011244",
+        "supportingDiseaseLabel": "Marshall-Smith syndrome",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 20,
+        "geneCurie": "NCBIGene:9742",
+        "geneLabel": "IFT140",
+        "geneSymbol": "IFT140",
+        "geneEntityId": 150870,
+        "bmaScore": 2.0275726666992777,
+        "normalizedScore": 0.223866,
+        "patientAverageScore": 2.692005632487998,
+        "phenotypeAverageScore": 1.3631397009105577,
+        "directPhenotypeCount": 245,
+        "matchedPhenotypeCount": 26,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001845",
+            "patientPhenotypeLabel": "Overlapping toe",
+            "diseasePhenotypeCurie": "HP:0001845",
+            "diseasePhenotypeLabel": "Overlapping toe",
+            "micaCurie": "HP:0001845",
+            "micaLabel": "Overlapping toe",
+            "score": 4.6626234809005265,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:621180"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000411",
+            "patientPhenotypeLabel": "Protruding ear",
+            "diseasePhenotypeCurie": "HP:0000411",
+            "diseasePhenotypeLabel": "Protruding ear",
+            "micaCurie": "HP:0000411",
+            "micaLabel": "Protruding ear",
+            "score": 4.033192114726689,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:621180"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000506",
+            "patientPhenotypeLabel": "Telecanthus",
+            "diseasePhenotypeCurie": "HP:0000506",
+            "diseasePhenotypeLabel": "Telecanthus",
+            "micaCurie": "HP:0000506",
+            "micaLabel": "Telecanthus",
+            "score": 3.9095781587595124,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:621180"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000268",
+            "patientPhenotypeLabel": "Dolichocephaly",
+            "diseasePhenotypeCurie": "HP:0030799",
+            "diseasePhenotypeLabel": "Scaphocephaly",
+            "micaCurie": "HP:0000268",
+            "micaLabel": "Dolichocephaly",
+            "score": 3.87528908528088,
+            "evidenceCode": "1/11",
+            "referenceText": "OMIM:266920"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000405",
+            "patientPhenotypeLabel": "Conductive hearing impairment",
+            "diseasePhenotypeCurie": "HP:0000405",
+            "diseasePhenotypeLabel": "Conductive hearing impairment",
+            "micaCurie": "HP:0000405",
+            "micaLabel": "Conductive hearing impairment",
+            "score": 3.8696868297322102,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:791"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000341",
+            "patientPhenotypeLabel": "Narrow forehead",
+            "diseasePhenotypeCurie": "HP:0000341",
+            "diseasePhenotypeLabel": "Narrow forehead",
+            "micaCurie": "HP:0000341",
+            "micaLabel": "Narrow forehead",
+            "score": 3.778957976342448,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:266920"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001320",
+            "patientPhenotypeLabel": "Cerebellar vermis hypoplasia",
+            "diseasePhenotypeCurie": "HP:0006817",
+            "diseasePhenotypeLabel": "Aplasia/Hypoplasia of the cerebellar vermis",
+            "micaCurie": "HP:0006817",
+            "micaLabel": "Aplasia/Hypoplasia of the cerebellar vermis",
+            "score": 3.481123532426649,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:65"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000278",
+            "patientPhenotypeLabel": "Retrognathia",
+            "diseasePhenotypeCurie": "HP:0000308",
+            "diseasePhenotypeLabel": "Microretrognathia",
+            "micaCurie": "HP:0000278",
+            "micaLabel": "Retrognathia",
+            "score": 3.3237313586752197,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:621180"
+          }
+        ],
+        "directNormalizedScore": 0.223866,
+        "diseaseSupportScore": 0.134293,
+        "supportingDiseaseCurie": "MONDO:0976269",
+        "supportingDiseaseLabel": "cranioectodermal dysplasia 5",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 21,
+        "geneCurie": "NCBIGene:27245",
+        "geneLabel": "AHDC1",
+        "geneSymbol": "AHDC1",
+        "geneEntityId": 151564,
+        "bmaScore": 2.0258025185407136,
+        "normalizedScore": 0.223671,
+        "patientAverageScore": 2.636873111383856,
+        "phenotypeAverageScore": 1.414731925697571,
+        "directPhenotypeCount": 199,
+        "matchedPhenotypeCount": 26,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0045025",
+            "patientPhenotypeLabel": "Narrow palpebral fissure",
+            "diseasePhenotypeCurie": "HP:0045025",
+            "diseasePhenotypeLabel": "Narrow palpebral fissure",
+            "micaCurie": "HP:0045025",
+            "micaLabel": "Narrow palpebral fissure",
+            "score": 4.602725339319457,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:615829"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000646",
+            "patientPhenotypeLabel": "Amblyopia",
+            "diseasePhenotypeCurie": "HP:0000646",
+            "diseasePhenotypeLabel": "Amblyopia",
+            "micaCurie": "HP:0000646",
+            "micaLabel": "Amblyopia",
+            "score": 4.579735821094759,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:615829"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000411",
+            "patientPhenotypeLabel": "Protruding ear",
+            "diseasePhenotypeCurie": "HP:0000411",
+            "diseasePhenotypeLabel": "Protruding ear",
+            "micaCurie": "HP:0000411",
+            "micaLabel": "Protruding ear",
+            "score": 4.033192114726689,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:412069"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000268",
+            "patientPhenotypeLabel": "Dolichocephaly",
+            "diseasePhenotypeCurie": "HP:0000268",
+            "diseasePhenotypeLabel": "Dolichocephaly",
+            "micaCurie": "HP:0000268",
+            "micaLabel": "Dolichocephaly",
+            "score": 3.87528908528088,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:615829"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000341",
+            "patientPhenotypeLabel": "Narrow forehead",
+            "diseasePhenotypeCurie": "HP:0000341",
+            "diseasePhenotypeLabel": "Narrow forehead",
+            "micaCurie": "HP:0000341",
+            "micaLabel": "Narrow forehead",
+            "score": 3.778957976342448,
+            "evidenceCode": "2/16",
+            "referenceText": "OMIM:615829"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001763",
+            "patientPhenotypeLabel": "Pes planus",
+            "diseasePhenotypeCurie": "HP:0001763",
+            "diseasePhenotypeLabel": "Pes planus",
+            "micaCurie": "HP:0001763",
+            "micaLabel": "Pes planus",
+            "score": 3.4660856550621086,
+            "evidenceCode": "3/11",
+            "referenceText": "OMIM:615829"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000470",
+            "patientPhenotypeLabel": "Short neck",
+            "diseasePhenotypeCurie": "HP:0000470",
+            "diseasePhenotypeLabel": "Short neck",
+            "micaCurie": "HP:0000470",
+            "micaLabel": "Short neck",
+            "score": 3.2610148848075933,
+            "evidenceCode": "1/4",
+            "referenceText": "OMIM:615829"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000064",
+            "patientPhenotypeLabel": "Hypoplastic labia minora",
+            "diseasePhenotypeCurie": "HP:0000054",
+            "diseasePhenotypeLabel": "Micropenis",
+            "micaCurie": "HP:0003241",
+            "micaLabel": "External genital hypoplasia",
+            "score": 3.1962864121070993,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:615829"
+          }
+        ],
+        "directNormalizedScore": 0.223671,
+        "diseaseSupportScore": 0.151314,
+        "supportingDiseaseCurie": "MONDO:0014358",
+        "supportingDiseaseLabel": "AHDC1-related intellectual disability - obstructive sleep apnea - mild dysmorphism syndrome",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 22,
+        "geneCurie": "NCBIGene:26834",
+        "geneLabel": "RNU4-2",
+        "geneSymbol": "RNU4-2",
+        "geneEntityId": 151526,
+        "bmaScore": 2.0253796327386393,
+        "normalizedScore": 0.223624,
+        "patientAverageScore": 2.655093141161144,
+        "phenotypeAverageScore": 1.3956661243161348,
+        "directPhenotypeCount": 211,
+        "matchedPhenotypeCount": 26,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0045025",
+            "patientPhenotypeLabel": "Narrow palpebral fissure",
+            "diseasePhenotypeCurie": "HP:0045025",
+            "diseasePhenotypeLabel": "Narrow palpebral fissure",
+            "micaCurie": "HP:0045025",
+            "micaLabel": "Narrow palpebral fissure",
+            "score": 4.602725339319457,
+            "evidenceCode": "1/49",
+            "referenceText": "OMIM:620851"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001845",
+            "patientPhenotypeLabel": "Overlapping toe",
+            "diseasePhenotypeCurie": "HP:0034397",
+            "diseasePhenotypeLabel": "Claw toe deformity",
+            "micaCurie": "HP:0034398",
+            "micaLabel": "Toe deformity",
+            "score": 4.0803388931523905,
+            "evidenceCode": "1/11",
+            "referenceText": "OMIM:620851"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000411",
+            "patientPhenotypeLabel": "Protruding ear",
+            "diseasePhenotypeCurie": "HP:0000411",
+            "diseasePhenotypeLabel": "Protruding ear",
+            "micaCurie": "HP:0000411",
+            "micaLabel": "Protruding ear",
+            "score": 4.033192114726689,
+            "evidenceCode": "1/50",
+            "referenceText": "OMIM:620851"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000506",
+            "patientPhenotypeLabel": "Telecanthus",
+            "diseasePhenotypeCurie": "HP:0000506",
+            "diseasePhenotypeLabel": "Telecanthus",
+            "micaCurie": "HP:0000506",
+            "micaLabel": "Telecanthus",
+            "score": 3.9095781587595124,
+            "evidenceCode": "1/49",
+            "referenceText": "OMIM:620851"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000268",
+            "patientPhenotypeLabel": "Dolichocephaly",
+            "diseasePhenotypeCurie": "HP:0030799",
+            "diseasePhenotypeLabel": "Scaphocephaly",
+            "micaCurie": "HP:0000268",
+            "micaLabel": "Dolichocephaly",
+            "score": 3.87528908528088,
+            "evidenceCode": "1/49",
+            "referenceText": "OMIM:620851"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000341",
+            "patientPhenotypeLabel": "Narrow forehead",
+            "diseasePhenotypeCurie": "HP:0000341",
+            "diseasePhenotypeLabel": "Narrow forehead",
+            "micaCurie": "HP:0000341",
+            "micaLabel": "Narrow forehead",
+            "score": 3.778957976342448,
+            "evidenceCode": "5/60",
+            "referenceText": "OMIM:620851"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001763",
+            "patientPhenotypeLabel": "Pes planus",
+            "diseasePhenotypeCurie": "HP:0001763",
+            "diseasePhenotypeLabel": "Pes planus",
+            "micaCurie": "HP:0001763",
+            "micaLabel": "Pes planus",
+            "score": 3.4660856550621086,
+            "evidenceCode": "1/11",
+            "referenceText": "OMIM:620851"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000278",
+            "patientPhenotypeLabel": "Retrognathia",
+            "diseasePhenotypeCurie": "HP:0000278",
+            "diseasePhenotypeLabel": "Retrognathia",
+            "micaCurie": "HP:0000278",
+            "micaLabel": "Retrognathia",
+            "score": 3.3237313586752197,
+            "evidenceCode": "6/49",
+            "referenceText": "OMIM:620851"
+          }
+        ],
+        "directNormalizedScore": 0.223624,
+        "diseaseSupportScore": 0.152064,
+        "supportingDiseaseCurie": "MONDO:0971172",
+        "supportingDiseaseLabel": "neurodevelopmental disorder with hypotonia, brain anomalies, distinctive facies, and absent language",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 23,
+        "geneCurie": "NCBIGene:253738",
+        "geneLabel": "EBF3",
+        "geneSymbol": "EBF3",
+        "geneEntityId": 153086,
+        "bmaScore": 2.021881688656663,
+        "normalizedScore": 0.223238,
+        "patientAverageScore": 2.54297192449098,
+        "phenotypeAverageScore": 1.500791452822346,
+        "directPhenotypeCount": 142,
+        "matchedPhenotypeCount": 26,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000298",
+            "patientPhenotypeLabel": "Mask-like facies",
+            "diseasePhenotypeCurie": "HP:0002058",
+            "diseasePhenotypeLabel": "Myopathic facies",
+            "micaCurie": "HP:0004673",
+            "micaLabel": "Decreased facial expression",
+            "score": 4.329684816860625,
+            "evidenceCode": "1/8",
+            "referenceText": "OMIM:617330"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000411",
+            "patientPhenotypeLabel": "Protruding ear",
+            "diseasePhenotypeCurie": "HP:0000411",
+            "diseasePhenotypeLabel": "Protruding ear",
+            "micaCurie": "HP:0000411",
+            "micaLabel": "Protruding ear",
+            "score": 4.033192114726689,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "ORPHA:96148"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000268",
+            "patientPhenotypeLabel": "Dolichocephaly",
+            "diseasePhenotypeCurie": "HP:0000268",
+            "diseasePhenotypeLabel": "Dolichocephaly",
+            "micaCurie": "HP:0000268",
+            "micaLabel": "Dolichocephaly",
+            "score": 3.87528908528088,
+            "evidenceCode": "1/8",
+            "referenceText": "OMIM:617330"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000341",
+            "patientPhenotypeLabel": "Narrow forehead",
+            "diseasePhenotypeCurie": "HP:0000341",
+            "diseasePhenotypeLabel": "Narrow forehead",
+            "micaCurie": "HP:0000341",
+            "micaLabel": "Narrow forehead",
+            "score": 3.778957976342448,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "ORPHA:96148"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001320",
+            "patientPhenotypeLabel": "Cerebellar vermis hypoplasia",
+            "diseasePhenotypeCurie": "HP:0007068",
+            "diseasePhenotypeLabel": "Inferior cerebellar vermis hypoplasia",
+            "micaCurie": "HP:0001320",
+            "micaLabel": "Cerebellar vermis hypoplasia",
+            "score": 3.5517410996406023,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:96148"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001763",
+            "patientPhenotypeLabel": "Pes planus",
+            "diseasePhenotypeCurie": "HP:0001763",
+            "diseasePhenotypeLabel": "Pes planus",
+            "micaCurie": "HP:0001763",
+            "micaLabel": "Pes planus",
+            "score": 3.4660856550621086,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:96148"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001643",
+            "patientPhenotypeLabel": "Patent ductus arteriosus",
+            "diseasePhenotypeCurie": "HP:0001643",
+            "diseasePhenotypeLabel": "Patent ductus arteriosus",
+            "micaCurie": "HP:0001643",
+            "micaLabel": "Patent ductus arteriosus",
+            "score": 3.3367608589655537,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:96148"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000064",
+            "patientPhenotypeLabel": "Hypoplastic labia minora",
+            "diseasePhenotypeCurie": "HP:0000054",
+            "diseasePhenotypeLabel": "Micropenis",
+            "micaCurie": "HP:0003241",
+            "micaLabel": "External genital hypoplasia",
+            "score": 3.1962864121070993,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:617330"
+          }
+        ],
+        "directNormalizedScore": 0.223238,
+        "diseaseSupportScore": 0.126794,
+        "supportingDiseaseCurie": "MONDO:0015021",
+        "supportingDiseaseLabel": "hypotonia, ataxia, and delayed development syndrome",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 24,
+        "geneCurie": "NCBIGene:2316",
+        "geneLabel": "FLNA",
+        "geneSymbol": "FLNA",
+        "geneEntityId": 148857,
+        "bmaScore": 2.0190465666455832,
+        "normalizedScore": 0.222925,
+        "patientAverageScore": 2.6653294265129395,
+        "phenotypeAverageScore": 1.3727637067782268,
+        "directPhenotypeCount": 356,
+        "matchedPhenotypeCount": 26,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000646",
+            "patientPhenotypeLabel": "Amblyopia",
+            "diseasePhenotypeCurie": "HP:0000646",
+            "diseasePhenotypeLabel": "Amblyopia",
+            "micaCurie": "HP:0000646",
+            "micaLabel": "Amblyopia",
+            "score": 4.579735821094759,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1826"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000411",
+            "patientPhenotypeLabel": "Protruding ear",
+            "diseasePhenotypeCurie": "HP:0000411",
+            "diseasePhenotypeLabel": "Protruding ear",
+            "micaCurie": "HP:0000411",
+            "micaLabel": "Protruding ear",
+            "score": 4.033192114726689,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:300321"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000506",
+            "patientPhenotypeLabel": "Telecanthus",
+            "diseasePhenotypeCurie": "HP:0000506",
+            "diseasePhenotypeLabel": "Telecanthus",
+            "micaCurie": "HP:0000506",
+            "micaLabel": "Telecanthus",
+            "score": 3.9095781587595124,
+            "evidenceCode": "4/6",
+            "referenceText": "OMIM:300244"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000405",
+            "patientPhenotypeLabel": "Conductive hearing impairment",
+            "diseasePhenotypeCurie": "HP:0000410",
+            "diseasePhenotypeLabel": "Mixed hearing impairment",
+            "micaCurie": "HP:0000405",
+            "micaLabel": "Conductive hearing impairment",
+            "score": 3.8696868297322102,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1826"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001763",
+            "patientPhenotypeLabel": "Pes planus",
+            "diseasePhenotypeCurie": "HP:0001763",
+            "diseasePhenotypeLabel": "Pes planus",
+            "micaCurie": "HP:0001763",
+            "micaLabel": "Pes planus",
+            "score": 3.4660856550621086,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:309350"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001643",
+            "patientPhenotypeLabel": "Patent ductus arteriosus",
+            "diseasePhenotypeCurie": "HP:0001643",
+            "diseasePhenotypeLabel": "Patent ductus arteriosus",
+            "micaCurie": "HP:0001643",
+            "micaLabel": "Patent ductus arteriosus",
+            "score": 3.3367608589655537,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:98892"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000470",
+            "patientPhenotypeLabel": "Short neck",
+            "diseasePhenotypeCurie": "HP:0000470",
+            "diseasePhenotypeLabel": "Short neck",
+            "micaCurie": "HP:0000470",
+            "micaLabel": "Short neck",
+            "score": 3.2610148848075933,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:304120"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002033",
+            "patientPhenotypeLabel": "Poor suck",
+            "diseasePhenotypeCurie": "HP:0008872",
+            "diseasePhenotypeLabel": "Feeding difficulties in infancy",
+            "micaCurie": "HP:0008872",
+            "micaLabel": "Feeding difficulties in infancy",
+            "score": 3.231072528192515,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:300048"
+          }
+        ],
+        "directNormalizedScore": 0.222925,
+        "diseaseSupportScore": 0.124298,
+        "supportingDiseaseCurie": "MONDO:0010571",
+        "supportingDiseaseLabel": "otopalatodigital syndrome type 2",
+        "supportingDiseaseClassification": ""
+      },
+      {
+        "rank": 25,
+        "geneCurie": "HGNC:20207",
+        "geneLabel": "B3GLCT",
+        "geneSymbol": "B3GLCT",
+        "geneEntityId": 207480,
+        "bmaScore": 0,
+        "normalizedScore": 0.222837,
+        "patientAverageScore": 0,
+        "phenotypeAverageScore": 0,
+        "directPhenotypeCount": 0,
+        "matchedPhenotypeCount": 0,
+        "trace": [],
+        "directNormalizedScore": 0,
+        "diseaseSupportScore": 0.222837,
+        "supportingDiseaseCurie": "MONDO:0009856",
+        "supportingDiseaseLabel": "Peters plus syndrome",
+        "supportingDiseaseClassification": "Definitive"
+      }
+    ],
+    "engineSummary": {
+      "diseaseCount": 8579,
+      "geneCount": 5256,
+      "phenotypeCount": 19389,
+      "sourceMode": {
+        "disease": "relationship_fallback",
+        "gene": "relationship_fallback"
+      },
+      "generatedAt": "2026-03-15T21:25:30.675Z"
+    }
+  }
+}

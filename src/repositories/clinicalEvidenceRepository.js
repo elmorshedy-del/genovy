@@ -33,6 +33,35 @@ export async function upsertClinicalPhenotypeAssertionsBatch(client, rows) {
           NULLIF(value->>'provenanceUrl', '') AS provenance_url,
           COALESCE(value->'payload', '{}'::jsonb) AS payload_json
         FROM jsonb_array_elements($1::jsonb) AS value
+      ),
+      updated AS (
+        UPDATE clinical_phenotype_assertions target
+        SET
+          sync_run_id = input.sync_run_id,
+          evidence_code = COALESCE(input.evidence_code, target.evidence_code),
+          confidence_score = COALESCE(input.confidence_score, target.confidence_score),
+          onset_entity_id = COALESCE(input.onset_entity_id, target.onset_entity_id),
+          frequency_entity_id = COALESCE(input.frequency_entity_id, target.frequency_entity_id),
+          modifier_entity_id = COALESCE(input.modifier_entity_id, target.modifier_entity_id),
+          sex = COALESCE(input.sex, target.sex),
+          aspect = COALESCE(input.aspect, target.aspect),
+          reference_text = COALESCE(input.reference_text, target.reference_text),
+          provenance_url = COALESCE(input.provenance_url, target.provenance_url),
+          payload_json = target.payload_json || input.payload_json,
+          observed_at = NOW(),
+          updated_at = NOW()
+        FROM input
+        WHERE target.source_key = input.source_key
+          AND target.source_record_key = input.source_record_key
+          AND target.subject_entity_id = input.subject_entity_id
+          AND target.phenotype_entity_id = input.phenotype_entity_id
+          AND target.presence_status = input.presence_status
+        RETURNING
+          target.source_key,
+          target.source_record_key,
+          target.subject_entity_id,
+          target.phenotype_entity_id,
+          target.presence_status
       )
       INSERT INTO clinical_phenotype_assertions (
         subject_entity_id,
@@ -70,21 +99,15 @@ export async function upsertClinicalPhenotypeAssertionsBatch(client, rows) {
         provenance_url,
         payload_json
       FROM input
-      ON CONFLICT (source_key, source_record_key, subject_entity_id, phenotype_entity_id, presence_status)
-      DO UPDATE SET
-        sync_run_id = EXCLUDED.sync_run_id,
-        evidence_code = COALESCE(EXCLUDED.evidence_code, clinical_phenotype_assertions.evidence_code),
-        confidence_score = COALESCE(EXCLUDED.confidence_score, clinical_phenotype_assertions.confidence_score),
-        onset_entity_id = COALESCE(EXCLUDED.onset_entity_id, clinical_phenotype_assertions.onset_entity_id),
-        frequency_entity_id = COALESCE(EXCLUDED.frequency_entity_id, clinical_phenotype_assertions.frequency_entity_id),
-        modifier_entity_id = COALESCE(EXCLUDED.modifier_entity_id, clinical_phenotype_assertions.modifier_entity_id),
-        sex = COALESCE(EXCLUDED.sex, clinical_phenotype_assertions.sex),
-        aspect = COALESCE(EXCLUDED.aspect, clinical_phenotype_assertions.aspect),
-        reference_text = COALESCE(EXCLUDED.reference_text, clinical_phenotype_assertions.reference_text),
-        provenance_url = COALESCE(EXCLUDED.provenance_url, clinical_phenotype_assertions.provenance_url),
-        payload_json = clinical_phenotype_assertions.payload_json || EXCLUDED.payload_json,
-        observed_at = NOW(),
-        updated_at = NOW()
+      WHERE NOT EXISTS (
+        SELECT 1
+        FROM updated
+        WHERE updated.source_key = input.source_key
+          AND updated.source_record_key = input.source_record_key
+          AND updated.subject_entity_id = input.subject_entity_id
+          AND updated.phenotype_entity_id = input.phenotype_entity_id
+          AND updated.presence_status = input.presence_status
+      )
     `,
     [JSON.stringify(rows)]
   );

@@ -1,0 +1,964 @@
+{
+  "success": true,
+  "engine": "genovy-dx-sim",
+  "analysisType": "gene",
+  "input": {
+    "presentPhenotypeCuries": [
+      "HP:0001155",
+      "HP:0004322"
+    ],
+    "excludedPhenotypeCuries": [
+      "HP:0000252"
+    ],
+    "sourceFormat": "phenopacket"
+  },
+  "ranking": {
+    "queryPhenotypes": [
+      {
+        "phenotypeCurie": "HP:0001155",
+        "phenotypeLabel": "Abnormality of the hand"
+      },
+      {
+        "phenotypeCurie": "HP:0004322",
+        "phenotypeLabel": "Short stature"
+      }
+    ],
+    "results": [
+      {
+        "rank": 1,
+        "geneCurie": "NCBIGene:8200",
+        "geneLabel": "GDF5",
+        "geneSymbol": "GDF5",
+        "geneEntityId": 150527,
+        "bmaScore": 1.4022749966999064,
+        "normalizedScore": 0.154827,
+        "patientAverageScore": 1.7163586389850687,
+        "phenotypeAverageScore": 1.0881913544147443,
+        "directPhenotypeCount": 160,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0004322",
+            "patientPhenotypeLabel": "Short stature",
+            "diseasePhenotypeCurie": "HP:0008905",
+            "diseasePhenotypeLabel": "Rhizomelia",
+            "micaCurie": "HP:0004322",
+            "micaLabel": "Short stature",
+            "score": 1.858889058471022,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "OMIM:228900"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001155",
+            "patientPhenotypeLabel": "Abnormality of the hand",
+            "diseasePhenotypeCurie": "HP:0100490",
+            "diseasePhenotypeLabel": "Camptodactyly of finger",
+            "micaCurie": "HP:0001155",
+            "micaLabel": "Abnormality of the hand",
+            "score": 1.5738282194991153,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:3250"
+          }
+        ]
+      },
+      {
+        "rank": 2,
+        "geneCurie": "NCBIGene:658",
+        "geneLabel": "BMPR1B",
+        "geneSymbol": "BMPR1B",
+        "geneEntityId": 148296,
+        "bmaScore": 1.374426020970022,
+        "normalizedScore": 0.151752,
+        "patientAverageScore": 1.7163586389850687,
+        "phenotypeAverageScore": 1.0324934029549755,
+        "directPhenotypeCount": 90,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0004322",
+            "patientPhenotypeLabel": "Short stature",
+            "diseasePhenotypeCurie": "HP:0008873",
+            "diseasePhenotypeLabel": "Disproportionate short-limb short stature",
+            "micaCurie": "HP:0004322",
+            "micaLabel": "Short stature",
+            "score": 1.858889058471022,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:2098"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001155",
+            "patientPhenotypeLabel": "Abnormality of the hand",
+            "diseasePhenotypeCurie": "HP:0010241",
+            "diseasePhenotypeLabel": "Short proximal phalanx of finger",
+            "micaCurie": "HP:0001155",
+            "micaLabel": "Abnormality of the hand",
+            "score": 1.5738282194991153,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:616849"
+          }
+        ]
+      },
+      {
+        "rank": 3,
+        "geneCurie": "NCBIGene:64327",
+        "geneLabel": "LMBR1",
+        "geneSymbol": "LMBR1",
+        "geneEntityId": 152274,
+        "bmaScore": 1.3539746467423563,
+        "normalizedScore": 0.149494,
+        "patientAverageScore": 1.7163586389850687,
+        "phenotypeAverageScore": 0.9915906544996441,
+        "directPhenotypeCount": 75,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0004322",
+            "patientPhenotypeLabel": "Short stature",
+            "diseasePhenotypeCurie": "HP:0004322",
+            "diseasePhenotypeLabel": "Short stature",
+            "micaCurie": "HP:0004322",
+            "micaLabel": "Short stature",
+            "score": 1.858889058471022,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:988"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001155",
+            "patientPhenotypeLabel": "Abnormality of the hand",
+            "diseasePhenotypeCurie": "HP:0100490",
+            "diseasePhenotypeLabel": "Camptodactyly of finger",
+            "micaCurie": "HP:0001155",
+            "micaLabel": "Abnormality of the hand",
+            "score": 1.5738282194991153,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:93405"
+          }
+        ]
+      },
+      {
+        "rank": 4,
+        "geneCurie": "NCBIGene:3549",
+        "geneLabel": "IHH",
+        "geneSymbol": "IHH",
+        "geneEntityId": 149174,
+        "bmaScore": 1.339221508308594,
+        "normalizedScore": 0.147865,
+        "patientAverageScore": 1.7163586389850687,
+        "phenotypeAverageScore": 0.9620843776321194,
+        "directPhenotypeCount": 75,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0004322",
+            "patientPhenotypeLabel": "Short stature",
+            "diseasePhenotypeCurie": "HP:0008873",
+            "diseasePhenotypeLabel": "Disproportionate short-limb short stature",
+            "micaCurie": "HP:0004322",
+            "micaLabel": "Short stature",
+            "score": 1.858889058471022,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:607778"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001155",
+            "patientPhenotypeLabel": "Abnormality of the hand",
+            "diseasePhenotypeCurie": "HP:0030033",
+            "diseasePhenotypeLabel": "Small finger",
+            "micaCurie": "HP:0001155",
+            "micaLabel": "Abnormality of the hand",
+            "score": 1.5738282194991153,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:607778"
+          }
+        ]
+      },
+      {
+        "rank": 5,
+        "geneCurie": "NCBIGene:6473",
+        "geneLabel": "SHOX",
+        "geneSymbol": "SHOX",
+        "geneEntityId": 150084,
+        "bmaScore": 1.3226708995851295,
+        "normalizedScore": 0.146037,
+        "patientAverageScore": 1.7163586389850687,
+        "phenotypeAverageScore": 0.9289831601851901,
+        "directPhenotypeCount": 76,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0004322",
+            "patientPhenotypeLabel": "Short stature",
+            "diseasePhenotypeCurie": "HP:0008873",
+            "diseasePhenotypeLabel": "Disproportionate short-limb short stature",
+            "micaCurie": "HP:0004322",
+            "micaLabel": "Short stature",
+            "score": 1.858889058471022,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:127300"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001155",
+            "patientPhenotypeLabel": "Abnormality of the hand",
+            "diseasePhenotypeCurie": "HP:0010044",
+            "diseasePhenotypeLabel": "Short 4th metacarpal",
+            "micaCurie": "HP:0001155",
+            "micaLabel": "Abnormality of the hand",
+            "score": 1.5738282194991153,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:127300"
+          }
+        ]
+      },
+      {
+        "rank": 6,
+        "geneCurie": "NCBIGene:1300",
+        "geneLabel": "COL10A1",
+        "geneSymbol": "COL10A1",
+        "geneEntityId": 148507,
+        "bmaScore": 1.3122548082911283,
+        "normalizedScore": 0.144887,
+        "patientAverageScore": 1.7163586389850687,
+        "phenotypeAverageScore": 0.908150977597188,
+        "directPhenotypeCount": 50,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0004322",
+            "patientPhenotypeLabel": "Short stature",
+            "diseasePhenotypeCurie": "HP:0008873",
+            "diseasePhenotypeLabel": "Disproportionate short-limb short stature",
+            "micaCurie": "HP:0004322",
+            "micaLabel": "Short stature",
+            "score": 1.858889058471022,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:174"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001155",
+            "patientPhenotypeLabel": "Abnormality of the hand",
+            "diseasePhenotypeCurie": "HP:0009882",
+            "diseasePhenotypeLabel": "Short distal phalanx of finger",
+            "micaCurie": "HP:0001155",
+            "micaLabel": "Abnormality of the hand",
+            "score": 1.5738282194991153,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:156500"
+          }
+        ]
+      },
+      {
+        "rank": 7,
+        "geneCurie": "NCBIGene:50515",
+        "geneLabel": "CHST11",
+        "geneSymbol": "CHST11",
+        "geneEntityId": 151645,
+        "bmaScore": 1.308132100953391,
+        "normalizedScore": 0.144432,
+        "patientAverageScore": 1.7163586389850687,
+        "phenotypeAverageScore": 0.8999055629217135,
+        "directPhenotypeCount": 22,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0004322",
+            "patientPhenotypeLabel": "Short stature",
+            "diseasePhenotypeCurie": "HP:0003502",
+            "diseasePhenotypeLabel": "Mild short stature",
+            "micaCurie": "HP:0004322",
+            "micaLabel": "Short stature",
+            "score": 1.858889058471022,
+            "evidenceCode": "10/10",
+            "referenceText": "OMIM:618167"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001155",
+            "patientPhenotypeLabel": "Abnormality of the hand",
+            "diseasePhenotypeCurie": "HP:0010557",
+            "diseasePhenotypeLabel": "Overlapping fingers",
+            "micaCurie": "HP:0001155",
+            "micaLabel": "Abnormality of the hand",
+            "score": 1.5738282194991153,
+            "evidenceCode": "5/10",
+            "referenceText": "OMIM:618167"
+          }
+        ]
+      },
+      {
+        "rank": 8,
+        "geneCurie": "NCBIGene:5139",
+        "geneLabel": "PDE3A",
+        "geneSymbol": "PDE3A",
+        "geneEntityId": 149695,
+        "bmaScore": 1.3039196536956408,
+        "normalizedScore": 0.143967,
+        "patientAverageScore": 1.7163586389850687,
+        "phenotypeAverageScore": 0.8914806684062131,
+        "directPhenotypeCount": 8,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0004322",
+            "patientPhenotypeLabel": "Short stature",
+            "diseasePhenotypeCurie": "HP:0004322",
+            "diseasePhenotypeLabel": "Short stature",
+            "micaCurie": "HP:0004322",
+            "micaLabel": "Short stature",
+            "score": 1.858889058471022,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:1276"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001155",
+            "patientPhenotypeLabel": "Abnormality of the hand",
+            "diseasePhenotypeCurie": "HP:0010049",
+            "diseasePhenotypeLabel": "Short metacarpal",
+            "micaCurie": "HP:0001155",
+            "micaLabel": "Abnormality of the hand",
+            "score": 1.5738282194991153,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:1276"
+          }
+        ]
+      },
+      {
+        "rank": 9,
+        "geneCurie": "NCBIGene:4318",
+        "geneLabel": "MMP9",
+        "geneSymbol": "MMP9",
+        "geneEntityId": 149443,
+        "bmaScore": 1.2955719513092299,
+        "normalizedScore": 0.143045,
+        "patientAverageScore": 1.6617977827620956,
+        "phenotypeAverageScore": 0.929346119856364,
+        "directPhenotypeCount": 17,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0004322",
+            "patientPhenotypeLabel": "Short stature",
+            "diseasePhenotypeCurie": "HP:0004322",
+            "diseasePhenotypeLabel": "Short stature",
+            "micaCurie": "HP:0004322",
+            "micaLabel": "Short stature",
+            "score": 1.858889058471022,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:1040"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001155",
+            "patientPhenotypeLabel": "Abnormality of the hand",
+            "diseasePhenotypeCurie": "HP:0040071",
+            "diseasePhenotypeLabel": "Abnormal morphology of ulna",
+            "micaCurie": "HP:0002817",
+            "micaLabel": "Abnormality of the upper limb",
+            "score": 1.4647065070531693,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:1040"
+          }
+        ]
+      },
+      {
+        "rank": 10,
+        "geneCurie": "NCBIGene:8540",
+        "geneLabel": "AGPS",
+        "geneSymbol": "AGPS",
+        "geneEntityId": 150593,
+        "bmaScore": 1.2955619497025146,
+        "normalizedScore": 0.143044,
+        "patientAverageScore": 1.6617977827620956,
+        "phenotypeAverageScore": 0.9293261166429337,
+        "directPhenotypeCount": 8,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0004322",
+            "patientPhenotypeLabel": "Short stature",
+            "diseasePhenotypeCurie": "HP:0008905",
+            "diseasePhenotypeLabel": "Rhizomelia",
+            "micaCurie": "HP:0004322",
+            "micaLabel": "Short stature",
+            "score": 1.858889058471022,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:600121"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001155",
+            "patientPhenotypeLabel": "Abnormality of the hand",
+            "diseasePhenotypeCurie": "HP:0005792",
+            "diseasePhenotypeLabel": "Short humerus",
+            "micaCurie": "HP:0002817",
+            "micaLabel": "Abnormality of the upper limb",
+            "score": 1.4647065070531693,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:600121"
+          }
+        ]
+      },
+      {
+        "rank": 11,
+        "geneCurie": "NCBIGene:9241",
+        "geneLabel": "NOG",
+        "geneSymbol": "NOG",
+        "geneEntityId": 150753,
+        "bmaScore": 1.2727209413503286,
+        "normalizedScore": 0.140522,
+        "patientAverageScore": 1.7163586389850687,
+        "phenotypeAverageScore": 0.8290832437155887,
+        "directPhenotypeCount": 105,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0004322",
+            "patientPhenotypeLabel": "Short stature",
+            "diseasePhenotypeCurie": "HP:0004322",
+            "diseasePhenotypeLabel": "Short stature",
+            "micaCurie": "HP:0004322",
+            "micaLabel": "Short stature",
+            "score": 1.858889058471022,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:1412"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001155",
+            "patientPhenotypeLabel": "Abnormality of the hand",
+            "diseasePhenotypeCurie": "HP:0100490",
+            "diseasePhenotypeLabel": "Camptodactyly of finger",
+            "micaCurie": "HP:0001155",
+            "micaLabel": "Abnormality of the hand",
+            "score": 1.5738282194991153,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:3250"
+          }
+        ]
+      },
+      {
+        "rank": 12,
+        "geneCurie": "NCBIGene:4883",
+        "geneLabel": "NPR3",
+        "geneSymbol": "NPR3",
+        "geneEntityId": 149622,
+        "bmaScore": 1.243976976743715,
+        "normalizedScore": 0.137349,
+        "patientAverageScore": 1.67579100982873,
+        "phenotypeAverageScore": 0.8121629436586998,
+        "directPhenotypeCount": 21,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0004322",
+            "patientPhenotypeLabel": "Short stature",
+            "diseasePhenotypeCurie": "HP:0000098",
+            "diseasePhenotypeLabel": "Tall stature",
+            "micaCurie": "HP:0000002",
+            "micaLabel": "Abnormality of body height",
+            "score": 1.777753800158345,
+            "evidenceCode": "4/4",
+            "referenceText": "OMIM:619543"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001155",
+            "patientPhenotypeLabel": "Abnormality of the hand",
+            "diseasePhenotypeCurie": "HP:0100807",
+            "diseasePhenotypeLabel": "Long fingers",
+            "micaCurie": "HP:0001155",
+            "micaLabel": "Abnormality of the hand",
+            "score": 1.5738282194991153,
+            "evidenceCode": "2/4",
+            "referenceText": "OMIM:619543"
+          }
+        ]
+      },
+      {
+        "rank": 13,
+        "geneCurie": "NCBIGene:5744",
+        "geneLabel": "PTHLH",
+        "geneSymbol": "PTHLH",
+        "geneEntityId": 149892,
+        "bmaScore": 1.241194298036757,
+        "normalizedScore": 0.137041,
+        "patientAverageScore": 1.7163586389850687,
+        "phenotypeAverageScore": 0.7660299570884453,
+        "directPhenotypeCount": 14,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0004322",
+            "patientPhenotypeLabel": "Short stature",
+            "diseasePhenotypeCurie": "HP:0004322",
+            "diseasePhenotypeLabel": "Short stature",
+            "micaCurie": "HP:0004322",
+            "micaLabel": "Short stature",
+            "score": 1.858889058471022,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:613382"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001155",
+            "patientPhenotypeLabel": "Abnormality of the hand",
+            "diseasePhenotypeCurie": "HP:0010049",
+            "diseasePhenotypeLabel": "Short metacarpal",
+            "micaCurie": "HP:0001155",
+            "micaLabel": "Abnormality of the hand",
+            "score": 1.5738282194991153,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:613382"
+          }
+        ]
+      },
+      {
+        "rank": 14,
+        "geneCurie": "NCBIGene:83452",
+        "geneLabel": "RAB33B",
+        "geneSymbol": "RAB33B",
+        "geneEntityId": 152514,
+        "bmaScore": 1.232616823294223,
+        "normalizedScore": 0.136094,
+        "patientAverageScore": 1.7163586389850687,
+        "phenotypeAverageScore": 0.7488750076033772,
+        "directPhenotypeCount": 29,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0004322",
+            "patientPhenotypeLabel": "Short stature",
+            "diseasePhenotypeCurie": "HP:0004322",
+            "diseasePhenotypeLabel": "Short stature",
+            "micaCurie": "HP:0004322",
+            "micaLabel": "Short stature",
+            "score": 1.858889058471022,
+            "evidenceCode": "4/4",
+            "referenceText": "OMIM:615222"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001155",
+            "patientPhenotypeLabel": "Abnormality of the hand",
+            "diseasePhenotypeCurie": "HP:0010049",
+            "diseasePhenotypeLabel": "Short metacarpal",
+            "micaCurie": "HP:0001155",
+            "micaLabel": "Abnormality of the hand",
+            "score": 1.5738282194991153,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:615222"
+          }
+        ]
+      },
+      {
+        "rank": 15,
+        "geneCurie": "NCBIGene:6137",
+        "geneLabel": "RPL13",
+        "geneSymbol": "RPL13",
+        "geneEntityId": 149999,
+        "bmaScore": 1.2212503016579697,
+        "normalizedScore": 0.134839,
+        "patientAverageScore": 1.6617977827620956,
+        "phenotypeAverageScore": 0.780702820553844,
+        "directPhenotypeCount": 13,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0004322",
+            "patientPhenotypeLabel": "Short stature",
+            "diseasePhenotypeCurie": "HP:0003510",
+            "diseasePhenotypeLabel": "Severe short stature",
+            "micaCurie": "HP:0004322",
+            "micaLabel": "Short stature",
+            "score": 1.858889058471022,
+            "evidenceCode": "4/4",
+            "referenceText": "OMIM:618728"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001155",
+            "patientPhenotypeLabel": "Abnormality of the hand",
+            "diseasePhenotypeCurie": "HP:0003850",
+            "diseasePhenotypeLabel": "Upper-limb metaphyseal irregularity",
+            "micaCurie": "HP:0002817",
+            "micaLabel": "Abnormality of the upper limb",
+            "score": 1.4647065070531693,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:618728"
+          }
+        ]
+      },
+      {
+        "rank": 16,
+        "geneCurie": "NCBIGene:7140",
+        "geneLabel": "TNNT3",
+        "geneSymbol": "TNNT3",
+        "geneEntityId": 150335,
+        "bmaScore": 1.213321077041475,
+        "normalizedScore": 0.133964,
+        "patientAverageScore": 1.7163586389850687,
+        "phenotypeAverageScore": 0.7102835150978813,
+        "directPhenotypeCount": 38,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0004322",
+            "patientPhenotypeLabel": "Short stature",
+            "diseasePhenotypeCurie": "HP:0004322",
+            "diseasePhenotypeLabel": "Short stature",
+            "micaCurie": "HP:0004322",
+            "micaLabel": "Short stature",
+            "score": 1.858889058471022,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:1147"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001155",
+            "patientPhenotypeLabel": "Abnormality of the hand",
+            "diseasePhenotypeCurie": "HP:0100490",
+            "diseasePhenotypeLabel": "Camptodactyly of finger",
+            "micaCurie": "HP:0001155",
+            "micaLabel": "Abnormality of the hand",
+            "score": 1.5738282194991153,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:1146"
+          }
+        ]
+      },
+      {
+        "rank": 17,
+        "geneCurie": "NCBIGene:3239",
+        "geneLabel": "HOXD13",
+        "geneSymbol": "HOXD13",
+        "geneEntityId": 149117,
+        "bmaScore": 1.20235438500041,
+        "normalizedScore": 0.132753,
+        "patientAverageScore": 1.7163586389850687,
+        "phenotypeAverageScore": 0.688350131015751,
+        "directPhenotypeCount": 97,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0004322",
+            "patientPhenotypeLabel": "Short stature",
+            "diseasePhenotypeCurie": "HP:0008848",
+            "diseasePhenotypeLabel": "Moderately short stature",
+            "micaCurie": "HP:0004322",
+            "micaLabel": "Short stature",
+            "score": 1.858889058471022,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:113300"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001155",
+            "patientPhenotypeLabel": "Abnormality of the hand",
+            "diseasePhenotypeCurie": "HP:0100490",
+            "diseasePhenotypeLabel": "Camptodactyly of finger",
+            "micaCurie": "HP:0001155",
+            "micaLabel": "Abnormality of the hand",
+            "score": 1.5738282194991153,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:186300"
+          }
+        ]
+      },
+      {
+        "rank": 18,
+        "geneCurie": "NCBIGene:1749",
+        "geneLabel": "DLX5",
+        "geneSymbol": "DLX5",
+        "geneEntityId": 148660,
+        "bmaScore": 1.19965562069499,
+        "normalizedScore": 0.132455,
+        "patientAverageScore": 1.7163586389850687,
+        "phenotypeAverageScore": 0.6829526024049113,
+        "directPhenotypeCount": 29,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0004322",
+            "patientPhenotypeLabel": "Short stature",
+            "diseasePhenotypeCurie": "HP:0003510",
+            "diseasePhenotypeLabel": "Severe short stature",
+            "micaCurie": "HP:0004322",
+            "micaLabel": "Short stature",
+            "score": 1.858889058471022,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:220600"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001155",
+            "patientPhenotypeLabel": "Abnormality of the hand",
+            "diseasePhenotypeCurie": "HP:0009380",
+            "diseasePhenotypeLabel": "Finger aplasia",
+            "micaCurie": "HP:0001155",
+            "micaLabel": "Abnormality of the hand",
+            "score": 1.5738282194991153,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "OMIM:183600"
+          }
+        ]
+      },
+      {
+        "rank": 19,
+        "geneCurie": "NCBIGene:5307",
+        "geneLabel": "PITX1",
+        "geneSymbol": "PITX1",
+        "geneEntityId": 149760,
+        "bmaScore": 1.1896463194930722,
+        "normalizedScore": 0.13135,
+        "patientAverageScore": 1.7163586389850687,
+        "phenotypeAverageScore": 0.6629340000010756,
+        "directPhenotypeCount": 30,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0004322",
+            "patientPhenotypeLabel": "Short stature",
+            "diseasePhenotypeCurie": "HP:0004322",
+            "diseasePhenotypeLabel": "Short stature",
+            "micaCurie": "HP:0004322",
+            "micaLabel": "Short stature",
+            "score": 1.858889058471022,
+            "evidenceCode": "3/3",
+            "referenceText": "OMIM:119800"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001155",
+            "patientPhenotypeLabel": "Abnormality of the hand",
+            "diseasePhenotypeCurie": "HP:0009832",
+            "diseasePhenotypeLabel": "Abnormal distal phalanx morphology of finger",
+            "micaCurie": "HP:0001155",
+            "micaLabel": "Abnormality of the hand",
+            "score": 1.5738282194991153,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:1275"
+          }
+        ]
+      },
+      {
+        "rank": 20,
+        "geneCurie": "NCBIGene:23233",
+        "geneLabel": "EXOC6B",
+        "geneSymbol": "EXOC6B",
+        "geneEntityId": 151323,
+        "bmaScore": 1.186745308825106,
+        "normalizedScore": 0.13103,
+        "patientAverageScore": 1.7163586389850687,
+        "phenotypeAverageScore": 0.6571319786651433,
+        "directPhenotypeCount": 26,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0004322",
+            "patientPhenotypeLabel": "Short stature",
+            "diseasePhenotypeCurie": "HP:0004322",
+            "diseasePhenotypeLabel": "Short stature",
+            "micaCurie": "HP:0004322",
+            "micaLabel": "Short stature",
+            "score": 1.858889058471022,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:618395"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001155",
+            "patientPhenotypeLabel": "Abnormality of the hand",
+            "diseasePhenotypeCurie": "HP:0001498",
+            "diseasePhenotypeLabel": "Carpal bone hypoplasia",
+            "micaCurie": "HP:0001155",
+            "micaLabel": "Abnormality of the hand",
+            "score": 1.5738282194991153,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:618395"
+          }
+        ]
+      },
+      {
+        "rank": 21,
+        "geneCurie": "NCBIGene:7476",
+        "geneLabel": "WNT7A",
+        "geneSymbol": "WNT7A",
+        "geneEntityId": 150437,
+        "bmaScore": 1.183827458340354,
+        "normalizedScore": 0.130708,
+        "patientAverageScore": 1.7163586389850687,
+        "phenotypeAverageScore": 0.6512962776956394,
+        "directPhenotypeCount": 101,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0004322",
+            "patientPhenotypeLabel": "Short stature",
+            "diseasePhenotypeCurie": "HP:0004322",
+            "diseasePhenotypeLabel": "Short stature",
+            "micaCurie": "HP:0004322",
+            "micaLabel": "Short stature",
+            "score": 1.858889058471022,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:613005"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001155",
+            "patientPhenotypeLabel": "Abnormality of the hand",
+            "diseasePhenotypeCurie": "HP:0009767",
+            "diseasePhenotypeLabel": "Aplasia/Hypoplasia of the phalanges of the hand",
+            "micaCurie": "HP:0001155",
+            "micaLabel": "Abnormality of the hand",
+            "score": 1.5738282194991153,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "OMIM:276820"
+          }
+        ]
+      },
+      {
+        "rank": 22,
+        "geneCurie": "NCBIGene:54928",
+        "geneLabel": "BPNT2",
+        "geneSymbol": "BPNT2",
+        "geneEntityId": 151888,
+        "bmaScore": 1.1760719361549703,
+        "normalizedScore": 0.129851,
+        "patientAverageScore": 1.7163586389850687,
+        "phenotypeAverageScore": 0.635785233324872,
+        "directPhenotypeCount": 31,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0004322",
+            "patientPhenotypeLabel": "Short stature",
+            "diseasePhenotypeCurie": "HP:0004322",
+            "diseasePhenotypeLabel": "Short stature",
+            "micaCurie": "HP:0004322",
+            "micaLabel": "Short stature",
+            "score": 1.858889058471022,
+            "evidenceCode": "4/8",
+            "referenceText": "OMIM:614078"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001155",
+            "patientPhenotypeLabel": "Abnormality of the hand",
+            "diseasePhenotypeCurie": "HP:6000865",
+            "diseasePhenotypeLabel": "Hyperphalangy of the 4th finger",
+            "micaCurie": "HP:0001155",
+            "micaLabel": "Abnormality of the hand",
+            "score": 1.5738282194991153,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:614078"
+          }
+        ]
+      },
+      {
+        "rank": 23,
+        "geneCurie": "NCBIGene:124583",
+        "geneLabel": "CANT1",
+        "geneSymbol": "CANT1",
+        "geneEntityId": 152837,
+        "bmaScore": 1.171561194004631,
+        "normalizedScore": 0.129353,
+        "patientAverageScore": 1.7163586389850687,
+        "phenotypeAverageScore": 0.6267637490241933,
+        "directPhenotypeCount": 86,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0004322",
+            "patientPhenotypeLabel": "Short stature",
+            "diseasePhenotypeCurie": "HP:0008873",
+            "diseasePhenotypeLabel": "Disproportionate short-limb short stature",
+            "micaCurie": "HP:0004322",
+            "micaLabel": "Short stature",
+            "score": 1.858889058471022,
+            "evidenceCode": "7/7",
+            "referenceText": "OMIM:251450"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001155",
+            "patientPhenotypeLabel": "Abnormality of the hand",
+            "diseasePhenotypeCurie": "HP:0200055",
+            "diseasePhenotypeLabel": "Small hand",
+            "micaCurie": "HP:0001155",
+            "micaLabel": "Abnormality of the hand",
+            "score": 1.5738282194991153,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:1425"
+          }
+        ]
+      },
+      {
+        "rank": 24,
+        "geneCurie": "NCBIGene:1311",
+        "geneLabel": "COMP",
+        "geneSymbol": "COMP",
+        "geneEntityId": 148513,
+        "bmaScore": 1.1701718174287776,
+        "normalizedScore": 0.1292,
+        "patientAverageScore": 1.7163586389850687,
+        "phenotypeAverageScore": 0.6239849958724866,
+        "directPhenotypeCount": 93,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0004322",
+            "patientPhenotypeLabel": "Short stature",
+            "diseasePhenotypeCurie": "HP:0011405",
+            "diseasePhenotypeLabel": "Childhood onset short-limb short stature",
+            "micaCurie": "HP:0004322",
+            "micaLabel": "Short stature",
+            "score": 1.858889058471022,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:177170"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001155",
+            "patientPhenotypeLabel": "Abnormality of the hand",
+            "diseasePhenotypeCurie": "HP:0010236",
+            "diseasePhenotypeLabel": "Small epiphyses of the phalanges of the hand",
+            "micaCurie": "HP:0001155",
+            "micaLabel": "Abnormality of the hand",
+            "score": 1.5738282194991153,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:177170"
+          }
+        ]
+      },
+      {
+        "rank": 25,
+        "geneCurie": "NCBIGene:6926",
+        "geneLabel": "TBX3",
+        "geneSymbol": "TBX3",
+        "geneEntityId": 150263,
+        "bmaScore": 1.1651640600661457,
+        "normalizedScore": 0.128647,
+        "patientAverageScore": 1.7163586389850687,
+        "phenotypeAverageScore": 0.6139694811472227,
+        "directPhenotypeCount": 73,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0004322",
+            "patientPhenotypeLabel": "Short stature",
+            "diseasePhenotypeCurie": "HP:0004322",
+            "diseasePhenotypeLabel": "Short stature",
+            "micaCurie": "HP:0004322",
+            "micaLabel": "Short stature",
+            "score": 1.858889058471022,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:3138"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001155",
+            "patientPhenotypeLabel": "Abnormality of the hand",
+            "diseasePhenotypeCurie": "HP:0100490",
+            "diseasePhenotypeLabel": "Camptodactyly of finger",
+            "micaCurie": "HP:0001155",
+            "micaLabel": "Abnormality of the hand",
+            "score": 1.5738282194991153,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:3138"
+          }
+        ]
+      }
+    ],
+    "engineSummary": {
+      "diseaseCount": 8579,
+      "geneCount": 5256,
+      "phenotypeCount": 19389,
+      "sourceMode": {
+        "disease": "relationship_fallback",
+        "gene": "relationship_fallback"
+      },
+      "generatedAt": "2026-03-15T21:00:39.457Z"
+    }
+  }
+}

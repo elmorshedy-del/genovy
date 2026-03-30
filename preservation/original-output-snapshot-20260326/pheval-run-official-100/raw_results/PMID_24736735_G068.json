@@ -1,0 +1,972 @@
+{
+  "success": true,
+  "engine": "genovy-dx-sim",
+  "analysisType": "gene",
+  "input": {
+    "presentPhenotypeCuries": [
+      "HP:0001159",
+      "HP:0001841"
+    ],
+    "excludedPhenotypeCuries": [
+      "HP:0000256",
+      "HP:0000316",
+      "HP:0006042",
+      "HP:0010567",
+      "HP:0002023",
+      "HP:0002164",
+      "HP:0001162",
+      "HP:0001830",
+      "HP:0001177"
+    ],
+    "sourceFormat": "phenopacket"
+  },
+  "ranking": {
+    "queryPhenotypes": [
+      {
+        "phenotypeCurie": "HP:0001159",
+        "phenotypeLabel": "Syndactyly"
+      },
+      {
+        "phenotypeCurie": "HP:0001841",
+        "phenotypeLabel": "Preaxial foot polydactyly"
+      }
+    ],
+    "results": [
+      {
+        "rank": 1,
+        "geneCurie": "NCBIGene:105804841",
+        "geneLabel": "ZRS",
+        "geneSymbol": "ZRS",
+        "geneEntityId": 153325,
+        "bmaScore": 3.569333873851837,
+        "normalizedScore": 0.394094,
+        "patientAverageScore": 4.405977622769934,
+        "phenotypeAverageScore": 2.7326901249337396,
+        "directPhenotypeCount": 16,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001841",
+            "patientPhenotypeLabel": "Preaxial foot polydactyly",
+            "diseasePhenotypeCurie": "HP:0001841",
+            "diseasePhenotypeLabel": "Preaxial foot polydactyly",
+            "micaCurie": "HP:0001841",
+            "micaLabel": "Preaxial foot polydactyly",
+            "score": 5.7612357695686365,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "OMIM:174500"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001159",
+            "patientPhenotypeLabel": "Syndactyly",
+            "diseasePhenotypeCurie": "HP:0001159",
+            "diseasePhenotypeLabel": "Syndactyly",
+            "micaCurie": "HP:0001159",
+            "micaLabel": "Syndactyly",
+            "score": 3.0507194759712326,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "OMIM:174500"
+          }
+        ]
+      },
+      {
+        "rank": 2,
+        "geneCurie": "NCBIGene:23288",
+        "geneLabel": "IQCE",
+        "geneSymbol": "IQCE",
+        "geneEntityId": 151337,
+        "bmaScore": 3.0583782520863494,
+        "normalizedScore": 0.337678,
+        "patientAverageScore": 3.8691721295385886,
+        "phenotypeAverageScore": 2.2475843746341098,
+        "directPhenotypeCount": 6,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001841",
+            "patientPhenotypeLabel": "Preaxial foot polydactyly",
+            "diseasePhenotypeCurie": "HP:0001830",
+            "diseasePhenotypeLabel": "Postaxial foot polydactyly",
+            "micaCurie": "HP:0001829",
+            "micaLabel": "Foot polydactyly",
+            "score": 4.687624783105944,
+            "evidenceCode": "4/4",
+            "referenceText": "OMIM:617642"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001159",
+            "patientPhenotypeLabel": "Syndactyly",
+            "diseasePhenotypeCurie": "HP:0005709",
+            "diseasePhenotypeLabel": "2-3 toe cutaneous syndactyly",
+            "micaCurie": "HP:0001159",
+            "micaLabel": "Syndactyly",
+            "score": 3.0507194759712326,
+            "evidenceCode": "1/4",
+            "referenceText": "OMIM:617642"
+          }
+        ]
+      },
+      {
+        "rank": 3,
+        "geneCurie": "NCBIGene:64327",
+        "geneLabel": "LMBR1",
+        "geneSymbol": "LMBR1",
+        "geneEntityId": 152274,
+        "bmaScore": 3.0311578563315758,
+        "normalizedScore": 0.334673,
+        "patientAverageScore": 4.405977622769934,
+        "phenotypeAverageScore": 1.656338089893217,
+        "directPhenotypeCount": 75,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001841",
+            "patientPhenotypeLabel": "Preaxial foot polydactyly",
+            "diseasePhenotypeCurie": "HP:0001841",
+            "diseasePhenotypeLabel": "Preaxial foot polydactyly",
+            "micaCurie": "HP:0001841",
+            "micaLabel": "Preaxial foot polydactyly",
+            "score": 5.7612357695686365,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:2378"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001159",
+            "patientPhenotypeLabel": "Syndactyly",
+            "diseasePhenotypeCurie": "HP:0010708",
+            "diseasePhenotypeLabel": "1-5 finger cutaneous syndactyly",
+            "micaCurie": "HP:0001159",
+            "micaLabel": "Syndactyly",
+            "score": 3.0507194759712326,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:186200"
+          }
+        ]
+      },
+      {
+        "rank": 4,
+        "geneCurie": "NCBIGene:137392",
+        "geneLabel": "CIBAR1",
+        "geneSymbol": "CIBAR1",
+        "geneEntityId": 152892,
+        "bmaScore": 2.9280771632520315,
+        "normalizedScore": 0.323292,
+        "patientAverageScore": 3.1540400767223415,
+        "phenotypeAverageScore": 2.702114249781721,
+        "directPhenotypeCount": 3,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001841",
+            "patientPhenotypeLabel": "Preaxial foot polydactyly",
+            "diseasePhenotypeCurie": "HP:0001830",
+            "diseasePhenotypeLabel": "Postaxial foot polydactyly",
+            "micaCurie": "HP:0001829",
+            "micaLabel": "Foot polydactyly",
+            "score": 4.687624783105944,
+            "evidenceCode": "1/3",
+            "referenceText": "OMIM:618219"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001159",
+            "patientPhenotypeLabel": "Syndactyly",
+            "diseasePhenotypeCurie": "HP:0001830",
+            "diseasePhenotypeLabel": "Postaxial foot polydactyly",
+            "micaCurie": "HP:0011297",
+            "micaLabel": "Abnormal digit morphology",
+            "score": 1.620455370338739,
+            "evidenceCode": "1/3",
+            "referenceText": "OMIM:618219"
+          }
+        ]
+      },
+      {
+        "rank": 5,
+        "geneCurie": "NCBIGene:727857",
+        "geneLabel": "BHLHA9",
+        "geneSymbol": "BHLHA9",
+        "geneEntityId": 153292,
+        "bmaScore": 2.885584813553216,
+        "normalizedScore": 0.3186,
+        "patientAverageScore": 3.9225561172514416,
+        "phenotypeAverageScore": 1.8486135098549907,
+        "directPhenotypeCount": 46,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001841",
+            "patientPhenotypeLabel": "Preaxial foot polydactyly",
+            "diseasePhenotypeCurie": "HP:0001177",
+            "diseasePhenotypeLabel": "Preaxial hand polydactyly",
+            "micaCurie": "HP:0100258",
+            "micaLabel": "Preaxial polydactyly",
+            "score": 4.79439275853165,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:3329"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001159",
+            "patientPhenotypeLabel": "Syndactyly",
+            "diseasePhenotypeCurie": "HP:0012725",
+            "diseasePhenotypeLabel": "Cutaneous syndactyly",
+            "micaCurie": "HP:0001159",
+            "micaLabel": "Syndactyly",
+            "score": 3.0507194759712326,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:607539"
+          }
+        ]
+      },
+      {
+        "rank": 6,
+        "geneCurie": "NCBIGene:3239",
+        "geneLabel": "HOXD13",
+        "geneSymbol": "HOXD13",
+        "geneEntityId": 149117,
+        "bmaScore": 2.821014131295163,
+        "normalizedScore": 0.311471,
+        "patientAverageScore": 4.405977622769934,
+        "phenotypeAverageScore": 1.2360506398203923,
+        "directPhenotypeCount": 97,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001841",
+            "patientPhenotypeLabel": "Preaxial foot polydactyly",
+            "diseasePhenotypeCurie": "HP:0001841",
+            "diseasePhenotypeLabel": "Preaxial foot polydactyly",
+            "micaCurie": "HP:0001841",
+            "micaLabel": "Preaxial foot polydactyly",
+            "score": 5.7612357695686365,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "OMIM:186000"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001159",
+            "patientPhenotypeLabel": "Syndactyly",
+            "diseasePhenotypeCurie": "HP:0011939",
+            "diseasePhenotypeLabel": "3-4 finger cutaneous syndactyly",
+            "micaCurie": "HP:0001159",
+            "micaLabel": "Syndactyly",
+            "score": 3.0507194759712326,
+            "evidenceCode": "5/20",
+            "referenceText": "OMIM:186000"
+          }
+        ]
+      },
+      {
+        "rank": 7,
+        "geneCurie": "NCBIGene:285600",
+        "geneLabel": "KIAA0825",
+        "geneSymbol": "KIAA0825",
+        "geneEntityId": 153150,
+        "bmaScore": 2.7295261099196093,
+        "normalizedScore": 0.30137,
+        "patientAverageScore": 3.1540400767223415,
+        "phenotypeAverageScore": 2.3050121431168766,
+        "directPhenotypeCount": 5,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001841",
+            "patientPhenotypeLabel": "Preaxial foot polydactyly",
+            "diseasePhenotypeCurie": "HP:0001830",
+            "diseasePhenotypeLabel": "Postaxial foot polydactyly",
+            "micaCurie": "HP:0001829",
+            "micaLabel": "Foot polydactyly",
+            "score": 4.687624783105944,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:618498"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001159",
+            "patientPhenotypeLabel": "Syndactyly",
+            "diseasePhenotypeCurie": "HP:0005696",
+            "diseasePhenotypeLabel": "Postaxial polydactyly type A",
+            "micaCurie": "HP:0011297",
+            "micaLabel": "Abnormal digit morphology",
+            "score": 1.620455370338739,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:618498"
+          }
+        ]
+      },
+      {
+        "rank": 8,
+        "geneCurie": "NCBIGene:51176",
+        "geneLabel": "LEF1",
+        "geneSymbol": "LEF1",
+        "geneEntityId": 151707,
+        "bmaScore": 2.65055837398182,
+        "normalizedScore": 0.292651,
+        "patientAverageScore": 4.405977622769934,
+        "phenotypeAverageScore": 0.8951391251937054,
+        "directPhenotypeCount": 57,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001841",
+            "patientPhenotypeLabel": "Preaxial foot polydactyly",
+            "diseasePhenotypeCurie": "HP:0001841",
+            "diseasePhenotypeLabel": "Preaxial foot polydactyly",
+            "micaCurie": "HP:0001841",
+            "micaLabel": "Preaxial foot polydactyly",
+            "score": 5.7612357695686365,
+            "evidenceCode": "0/1",
+            "referenceText": "OMIM:621224"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001159",
+            "patientPhenotypeLabel": "Syndactyly",
+            "diseasePhenotypeCurie": "HP:0010714",
+            "diseasePhenotypeLabel": "2-4 toe syndactyly",
+            "micaCurie": "HP:0001159",
+            "micaLabel": "Syndactyly",
+            "score": 3.0507194759712326,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:621224"
+          }
+        ]
+      },
+      {
+        "rank": 9,
+        "geneCurie": "NCBIGene:2737",
+        "geneLabel": "GLI3",
+        "geneSymbol": "GLI3",
+        "geneEntityId": 148969,
+        "bmaScore": 2.6417637114740433,
+        "normalizedScore": 0.29168,
+        "patientAverageScore": 4.405977622769934,
+        "phenotypeAverageScore": 0.8775498001781522,
+        "directPhenotypeCount": 201,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001841",
+            "patientPhenotypeLabel": "Preaxial foot polydactyly",
+            "diseasePhenotypeCurie": "HP:0001841",
+            "diseasePhenotypeLabel": "Preaxial foot polydactyly",
+            "micaCurie": "HP:0001841",
+            "micaLabel": "Preaxial foot polydactyly",
+            "score": 5.7612357695686365,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:380"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001159",
+            "patientPhenotypeLabel": "Syndactyly",
+            "diseasePhenotypeCurie": "HP:0011939",
+            "diseasePhenotypeLabel": "3-4 finger cutaneous syndactyly",
+            "micaCurie": "HP:0001159",
+            "micaLabel": "Syndactyly",
+            "score": 3.0507194759712326,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:672"
+          }
+        ]
+      },
+      {
+        "rank": 10,
+        "geneCurie": "NCBIGene:51715",
+        "geneLabel": "RAB23",
+        "geneSymbol": "RAB23",
+        "geneEntityId": 151782,
+        "bmaScore": 2.6048738682653476,
+        "normalizedScore": 0.287607,
+        "patientAverageScore": 4.405977622769934,
+        "phenotypeAverageScore": 0.8037701137607606,
+        "directPhenotypeCount": 94,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001841",
+            "patientPhenotypeLabel": "Preaxial foot polydactyly",
+            "diseasePhenotypeCurie": "HP:0001841",
+            "diseasePhenotypeLabel": "Preaxial foot polydactyly",
+            "micaCurie": "HP:0001841",
+            "micaLabel": "Preaxial foot polydactyly",
+            "score": 5.7612357695686365,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:65759"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001159",
+            "patientPhenotypeLabel": "Syndactyly",
+            "diseasePhenotypeCurie": "HP:0006101",
+            "diseasePhenotypeLabel": "Finger syndactyly",
+            "micaCurie": "HP:0001159",
+            "micaLabel": "Syndactyly",
+            "score": 3.0507194759712326,
+            "evidenceCode": "HP:0040280",
+            "referenceText": "ORPHA:65759"
+          }
+        ]
+      },
+      {
+        "rank": 11,
+        "geneCurie": "NCBIGene:1954",
+        "geneLabel": "MEGF8",
+        "geneSymbol": "MEGF8",
+        "geneEntityId": 148725,
+        "bmaScore": 2.5588339773986326,
+        "normalizedScore": 0.282523,
+        "patientAverageScore": 4.405977622769934,
+        "phenotypeAverageScore": 0.7116903320273311,
+        "directPhenotypeCount": 103,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001841",
+            "patientPhenotypeLabel": "Preaxial foot polydactyly",
+            "diseasePhenotypeCurie": "HP:0001841",
+            "diseasePhenotypeLabel": "Preaxial foot polydactyly",
+            "micaCurie": "HP:0001841",
+            "micaLabel": "Preaxial foot polydactyly",
+            "score": 5.7612357695686365,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:65759"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001159",
+            "patientPhenotypeLabel": "Syndactyly",
+            "diseasePhenotypeCurie": "HP:0010554",
+            "diseasePhenotypeLabel": "Cutaneous finger syndactyly",
+            "micaCurie": "HP:0001159",
+            "micaLabel": "Syndactyly",
+            "score": 3.0507194759712326,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:614976"
+          }
+        ]
+      },
+      {
+        "rank": 12,
+        "geneCurie": "NCBIGene:65250",
+        "geneLabel": "CPLANE1",
+        "geneSymbol": "CPLANE1",
+        "geneEntityId": 152319,
+        "bmaScore": 2.529044951156947,
+        "normalizedScore": 0.279234,
+        "patientAverageScore": 4.405977622769934,
+        "phenotypeAverageScore": 0.6521122795439592,
+        "directPhenotypeCount": 110,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001841",
+            "patientPhenotypeLabel": "Preaxial foot polydactyly",
+            "diseasePhenotypeCurie": "HP:0001841",
+            "diseasePhenotypeLabel": "Preaxial foot polydactyly",
+            "micaCurie": "HP:0001841",
+            "micaLabel": "Preaxial foot polydactyly",
+            "score": 5.7612357695686365,
+            "evidenceCode": "12/12",
+            "referenceText": "OMIM:277170"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001159",
+            "patientPhenotypeLabel": "Syndactyly",
+            "diseasePhenotypeCurie": "HP:0011939",
+            "diseasePhenotypeLabel": "3-4 finger cutaneous syndactyly",
+            "micaCurie": "HP:0001159",
+            "micaLabel": "Syndactyly",
+            "score": 3.0507194759712326,
+            "evidenceCode": "1/10",
+            "referenceText": "OMIM:614615"
+          }
+        ]
+      },
+      {
+        "rank": 13,
+        "geneCurie": "NCBIGene:7476",
+        "geneLabel": "WNT7A",
+        "geneSymbol": "WNT7A",
+        "geneEntityId": 150437,
+        "bmaScore": 2.5235547489063705,
+        "normalizedScore": 0.278628,
+        "patientAverageScore": 3.9225561172514416,
+        "phenotypeAverageScore": 1.1245533805612995,
+        "directPhenotypeCount": 101,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001841",
+            "patientPhenotypeLabel": "Preaxial foot polydactyly",
+            "diseasePhenotypeCurie": "HP:0100258",
+            "diseasePhenotypeLabel": "Preaxial polydactyly",
+            "micaCurie": "HP:0100258",
+            "micaLabel": "Preaxial polydactyly",
+            "score": 4.79439275853165,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:613005"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001159",
+            "patientPhenotypeLabel": "Syndactyly",
+            "diseasePhenotypeCurie": "HP:0006101",
+            "diseasePhenotypeLabel": "Finger syndactyly",
+            "micaCurie": "HP:0001159",
+            "micaLabel": "Syndactyly",
+            "score": 3.0507194759712326,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "OMIM:228930"
+          }
+        ]
+      },
+      {
+        "rank": 14,
+        "geneCurie": "NCBIGene:2263",
+        "geneLabel": "FGFR2",
+        "geneSymbol": "FGFR2",
+        "geneEntityId": 148838,
+        "bmaScore": 2.5210832620888413,
+        "normalizedScore": 0.278355,
+        "patientAverageScore": 4.405977622769934,
+        "phenotypeAverageScore": 0.6361889014077485,
+        "directPhenotypeCount": 369,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001841",
+            "patientPhenotypeLabel": "Preaxial foot polydactyly",
+            "diseasePhenotypeCurie": "HP:0001841",
+            "diseasePhenotypeLabel": "Preaxial foot polydactyly",
+            "micaCurie": "HP:0001841",
+            "micaLabel": "Preaxial foot polydactyly",
+            "score": 5.7612357695686365,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1540"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001159",
+            "patientPhenotypeLabel": "Syndactyly",
+            "diseasePhenotypeCurie": "HP:6000648",
+            "diseasePhenotypeLabel": "3-4 toe cutaneous syndactyly",
+            "micaCurie": "HP:0001159",
+            "micaLabel": "Syndactyly",
+            "score": 3.0507194759712326,
+            "evidenceCode": "1/5",
+            "referenceText": "OMIM:101600"
+          }
+        ]
+      },
+      {
+        "rank": 15,
+        "geneCurie": "NCBIGene:4750",
+        "geneLabel": "NEK1",
+        "geneSymbol": "NEK1",
+        "geneEntityId": 149581,
+        "bmaScore": 2.511917069168672,
+        "normalizedScore": 0.277343,
+        "patientAverageScore": 4.405977622769934,
+        "phenotypeAverageScore": 0.6178565155674098,
+        "directPhenotypeCount": 161,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001841",
+            "patientPhenotypeLabel": "Preaxial foot polydactyly",
+            "diseasePhenotypeCurie": "HP:0005873",
+            "diseasePhenotypeLabel": "Polysyndactyly of hallux",
+            "micaCurie": "HP:0001841",
+            "micaLabel": "Preaxial foot polydactyly",
+            "score": 5.7612357695686365,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:263520"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001159",
+            "patientPhenotypeLabel": "Syndactyly",
+            "diseasePhenotypeCurie": "HP:0006101",
+            "diseasePhenotypeLabel": "Finger syndactyly",
+            "micaCurie": "HP:0001159",
+            "micaLabel": "Syndactyly",
+            "score": 3.0507194759712326,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:2751"
+          }
+        ]
+      },
+      {
+        "rank": 16,
+        "geneCurie": "NCBIGene:374654",
+        "geneLabel": "KIF7",
+        "geneSymbol": "KIF7",
+        "geneEntityId": 153215,
+        "bmaScore": 2.4777779594731486,
+        "normalizedScore": 0.273574,
+        "patientAverageScore": 4.405977622769934,
+        "phenotypeAverageScore": 0.5495782961763632,
+        "directPhenotypeCount": 172,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001841",
+            "patientPhenotypeLabel": "Preaxial foot polydactyly",
+            "diseasePhenotypeCurie": "HP:0001841",
+            "diseasePhenotypeLabel": "Preaxial foot polydactyly",
+            "micaCurie": "HP:0001841",
+            "micaLabel": "Preaxial foot polydactyly",
+            "score": 5.7612357695686365,
+            "evidenceCode": "3/4",
+            "referenceText": "OMIM:614120"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001159",
+            "patientPhenotypeLabel": "Syndactyly",
+            "diseasePhenotypeCurie": "HP:0012725",
+            "diseasePhenotypeLabel": "Cutaneous syndactyly",
+            "micaCurie": "HP:0001159",
+            "micaLabel": "Syndactyly",
+            "score": 3.0507194759712326,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:166024"
+          }
+        ]
+      },
+      {
+        "rank": 17,
+        "geneCurie": "NCBIGene:8233",
+        "geneLabel": "ZRSR2",
+        "geneSymbol": "ZRSR2",
+        "geneEntityId": 150533,
+        "bmaScore": 2.4412748601198397,
+        "normalizedScore": 0.269543,
+        "patientAverageScore": 4.405977622769934,
+        "phenotypeAverageScore": 0.4765720974697451,
+        "directPhenotypeCount": 91,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001841",
+            "patientPhenotypeLabel": "Preaxial foot polydactyly",
+            "diseasePhenotypeCurie": "HP:0001841",
+            "diseasePhenotypeLabel": "Preaxial foot polydactyly",
+            "micaCurie": "HP:0001841",
+            "micaLabel": "Preaxial foot polydactyly",
+            "score": 5.7612357695686365,
+            "evidenceCode": "5/7",
+            "referenceText": "OMIM:301132"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001159",
+            "patientPhenotypeLabel": "Syndactyly",
+            "diseasePhenotypeCurie": "HP:0005709",
+            "diseasePhenotypeLabel": "2-3 toe cutaneous syndactyly",
+            "micaCurie": "HP:0001159",
+            "micaLabel": "Syndactyly",
+            "score": 3.0507194759712326,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:301132"
+          }
+        ]
+      },
+      {
+        "rank": 18,
+        "geneCurie": "NCBIGene:79809",
+        "geneLabel": "TTC21B",
+        "geneSymbol": "TTC21B",
+        "geneEntityId": 152402,
+        "bmaScore": 2.428086982678494,
+        "normalizedScore": 0.268087,
+        "patientAverageScore": 3.8691721295385886,
+        "phenotypeAverageScore": 0.9870018358183997,
+        "directPhenotypeCount": 31,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001841",
+            "patientPhenotypeLabel": "Preaxial foot polydactyly",
+            "diseasePhenotypeCurie": "HP:0001830",
+            "diseasePhenotypeLabel": "Postaxial foot polydactyly",
+            "micaCurie": "HP:0001829",
+            "micaLabel": "Foot polydactyly",
+            "score": 4.687624783105944,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:474"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001159",
+            "patientPhenotypeLabel": "Syndactyly",
+            "diseasePhenotypeCurie": "HP:0001770",
+            "diseasePhenotypeLabel": "Toe syndactyly",
+            "micaCurie": "HP:0001159",
+            "micaLabel": "Syndactyly",
+            "score": 3.0507194759712326,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:474"
+          }
+        ]
+      },
+      {
+        "rank": 19,
+        "geneCurie": "NCBIGene:658",
+        "geneLabel": "BMPR1B",
+        "geneSymbol": "BMPR1B",
+        "geneEntityId": 148296,
+        "bmaScore": 2.4180011310263483,
+        "normalizedScore": 0.266974,
+        "patientAverageScore": 3.399762207071497,
+        "phenotypeAverageScore": 1.4362400549811996,
+        "directPhenotypeCount": 90,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001841",
+            "patientPhenotypeLabel": "Preaxial foot polydactyly",
+            "diseasePhenotypeCurie": "HP:0010109",
+            "diseasePhenotypeLabel": "Short hallux",
+            "micaCurie": "HP:0001844",
+            "micaLabel": "Abnormal hallux morphology",
+            "score": 3.7488049381717605,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:112600"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001159",
+            "patientPhenotypeLabel": "Syndactyly",
+            "diseasePhenotypeCurie": "HP:0004691",
+            "diseasePhenotypeLabel": "2-3 toe syndactyly",
+            "micaCurie": "HP:0001159",
+            "micaLabel": "Syndactyly",
+            "score": 3.0507194759712326,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:112600"
+          }
+        ]
+      },
+      {
+        "rank": 20,
+        "geneCurie": "NCBIGene:8200",
+        "geneLabel": "GDF5",
+        "geneSymbol": "GDF5",
+        "geneEntityId": 150527,
+        "bmaScore": 2.4024465752452056,
+        "normalizedScore": 0.265256,
+        "patientAverageScore": 3.399762207071497,
+        "phenotypeAverageScore": 1.405130943418914,
+        "directPhenotypeCount": 160,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001841",
+            "patientPhenotypeLabel": "Preaxial foot polydactyly",
+            "diseasePhenotypeCurie": "HP:0010109",
+            "diseasePhenotypeLabel": "Short hallux",
+            "micaCurie": "HP:0001844",
+            "micaLabel": "Abnormal hallux morphology",
+            "score": 3.7488049381717605,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:93388"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001159",
+            "patientPhenotypeLabel": "Syndactyly",
+            "diseasePhenotypeCurie": "HP:0006101",
+            "diseasePhenotypeLabel": "Finger syndactyly",
+            "micaCurie": "HP:0001159",
+            "micaLabel": "Syndactyly",
+            "score": 3.0507194759712326,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:3250"
+          }
+        ]
+      },
+      {
+        "rank": 21,
+        "geneCurie": "NCBIGene:5307",
+        "geneLabel": "PITX1",
+        "geneSymbol": "PITX1",
+        "geneEntityId": 149760,
+        "bmaScore": 2.3870090800505963,
+        "normalizedScore": 0.263552,
+        "patientAverageScore": 3.6908455699536877,
+        "phenotypeAverageScore": 1.0831725901475044,
+        "directPhenotypeCount": 30,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001841",
+            "patientPhenotypeLabel": "Preaxial foot polydactyly",
+            "diseasePhenotypeCurie": "HP:0001841",
+            "diseasePhenotypeLabel": "Preaxial foot polydactyly",
+            "micaCurie": "HP:0001841",
+            "micaLabel": "Preaxial foot polydactyly",
+            "score": 5.7612357695686365,
+            "evidenceCode": "1/6",
+            "referenceText": "OMIM:119800"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001159",
+            "patientPhenotypeLabel": "Syndactyly",
+            "diseasePhenotypeCurie": "HP:0010691",
+            "diseasePhenotypeLabel": "Mirror image foot polydactyly",
+            "micaCurie": "HP:0011297",
+            "micaLabel": "Abnormal digit morphology",
+            "score": 1.620455370338739,
+            "evidenceCode": "2/3",
+            "referenceText": "OMIM:119800"
+          }
+        ]
+      },
+      {
+        "rank": 22,
+        "geneCurie": "NCBIGene:6608",
+        "geneLabel": "SMO",
+        "geneSymbol": "SMO",
+        "geneEntityId": 150145,
+        "bmaScore": 2.380526612500355,
+        "normalizedScore": 0.262836,
+        "patientAverageScore": 4.405977622769934,
+        "phenotypeAverageScore": 0.3550756022307755,
+        "directPhenotypeCount": 165,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001841",
+            "patientPhenotypeLabel": "Preaxial foot polydactyly",
+            "diseasePhenotypeCurie": "HP:0001841",
+            "diseasePhenotypeLabel": "Preaxial foot polydactyly",
+            "micaCurie": "HP:0001841",
+            "micaLabel": "Preaxial foot polydactyly",
+            "score": 5.7612357695686365,
+            "evidenceCode": "3/10",
+            "referenceText": "OMIM:601707"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001159",
+            "patientPhenotypeLabel": "Syndactyly",
+            "diseasePhenotypeCurie": "HP:0025770",
+            "diseasePhenotypeLabel": "2-3 finger osseus syndactyly",
+            "micaCurie": "HP:0001159",
+            "micaLabel": "Syndactyly",
+            "score": 3.0507194759712326,
+            "evidenceCode": "8/10",
+            "referenceText": "OMIM:601707"
+          }
+        ]
+      },
+      {
+        "rank": 23,
+        "geneCurie": "NCBIGene:26160",
+        "geneLabel": "IFT172",
+        "geneSymbol": "IFT172",
+        "geneEntityId": 151496,
+        "bmaScore": 2.365352549020773,
+        "normalizedScore": 0.261161,
+        "patientAverageScore": 4.405977622769934,
+        "phenotypeAverageScore": 0.3247274752716114,
+        "directPhenotypeCount": 182,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001841",
+            "patientPhenotypeLabel": "Preaxial foot polydactyly",
+            "diseasePhenotypeCurie": "HP:0001841",
+            "diseasePhenotypeLabel": "Preaxial foot polydactyly",
+            "micaCurie": "HP:0001841",
+            "micaLabel": "Preaxial foot polydactyly",
+            "score": 5.7612357695686365,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:619471"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001159",
+            "patientPhenotypeLabel": "Syndactyly",
+            "diseasePhenotypeCurie": "HP:0006101",
+            "diseasePhenotypeLabel": "Finger syndactyly",
+            "micaCurie": "HP:0001159",
+            "micaLabel": "Syndactyly",
+            "score": 3.0507194759712326,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:110"
+          }
+        ]
+      },
+      {
+        "rank": 24,
+        "geneCurie": "NCBIGene:64093",
+        "geneLabel": "SMOC1",
+        "geneSymbol": "SMOC1",
+        "geneEntityId": 152254,
+        "bmaScore": 2.360777872693836,
+        "normalizedScore": 0.260656,
+        "patientAverageScore": 3.8691721295385886,
+        "phenotypeAverageScore": 0.8523836158490836,
+        "directPhenotypeCount": 82,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001841",
+            "patientPhenotypeLabel": "Preaxial foot polydactyly",
+            "diseasePhenotypeCurie": "HP:0001830",
+            "diseasePhenotypeLabel": "Postaxial foot polydactyly",
+            "micaCurie": "HP:0001829",
+            "micaLabel": "Foot polydactyly",
+            "score": 4.687624783105944,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:206920"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001159",
+            "patientPhenotypeLabel": "Syndactyly",
+            "diseasePhenotypeCurie": "HP:0010715",
+            "diseasePhenotypeLabel": "2-5 toe syndactyly",
+            "micaCurie": "HP:0001159",
+            "micaLabel": "Syndactyly",
+            "score": 3.0507194759712326,
+            "evidenceCode": "1/4",
+            "referenceText": "OMIM:206920"
+          }
+        ]
+      },
+      {
+        "rank": 25,
+        "geneCurie": "NCBIGene:57688",
+        "geneLabel": "ZSWIM6",
+        "geneSymbol": "ZSWIM6",
+        "geneEntityId": 152188,
+        "bmaScore": 2.357335942353223,
+        "normalizedScore": 0.260276,
+        "patientAverageScore": 4.405977622769934,
+        "phenotypeAverageScore": 0.3086942619365118,
+        "directPhenotypeCount": 111,
+        "matchedPhenotypeCount": 2,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001841",
+            "patientPhenotypeLabel": "Preaxial foot polydactyly",
+            "diseasePhenotypeCurie": "HP:0001841",
+            "diseasePhenotypeLabel": "Preaxial foot polydactyly",
+            "micaCurie": "HP:0001841",
+            "micaLabel": "Preaxial foot polydactyly",
+            "score": 5.7612357695686365,
+            "evidenceCode": "5/6",
+            "referenceText": "OMIM:603671"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001159",
+            "patientPhenotypeLabel": "Syndactyly",
+            "diseasePhenotypeCurie": "HP:0001159",
+            "diseasePhenotypeLabel": "Syndactyly",
+            "micaCurie": "HP:0001159",
+            "micaLabel": "Syndactyly",
+            "score": 3.0507194759712326,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:603671"
+          }
+        ]
+      }
+    ],
+    "engineSummary": {
+      "diseaseCount": 8579,
+      "geneCount": 5256,
+      "phenotypeCount": 19389,
+      "sourceMode": {
+        "disease": "relationship_fallback",
+        "gene": "relationship_fallback"
+      },
+      "generatedAt": "2026-03-15T21:00:39.457Z"
+    }
+  }
+}

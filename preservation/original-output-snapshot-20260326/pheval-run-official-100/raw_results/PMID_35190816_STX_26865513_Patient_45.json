@@ -1,0 +1,2657 @@
+{
+  "success": true,
+  "engine": "genovy-dx-sim",
+  "analysisType": "gene",
+  "input": {
+    "presentPhenotypeCuries": [
+      "HP:0001263",
+      "HP:0010864",
+      "HP:0001290",
+      "HP:0002066",
+      "HP:0002078",
+      "HP:0002346",
+      "HP:0002345",
+      "HP:0011203",
+      "HP:0000712",
+      "HP:0000718",
+      "HP:0001344"
+    ],
+    "excludedPhenotypeCuries": [],
+    "sourceFormat": "phenopacket"
+  },
+  "ranking": {
+    "queryPhenotypes": [
+      {
+        "phenotypeCurie": "HP:0001263",
+        "phenotypeLabel": "Global developmental delay"
+      },
+      {
+        "phenotypeCurie": "HP:0010864",
+        "phenotypeLabel": "Severe intellectual disability"
+      },
+      {
+        "phenotypeCurie": "HP:0001290",
+        "phenotypeLabel": "Generalized hypotonia"
+      },
+      {
+        "phenotypeCurie": "HP:0002066",
+        "phenotypeLabel": "Gait ataxia"
+      },
+      {
+        "phenotypeCurie": "HP:0002078",
+        "phenotypeLabel": "Truncal ataxia"
+      },
+      {
+        "phenotypeCurie": "HP:0002346",
+        "phenotypeLabel": "Head tremor"
+      },
+      {
+        "phenotypeCurie": "HP:0002345",
+        "phenotypeLabel": "Action tremor"
+      },
+      {
+        "phenotypeCurie": "HP:0011203",
+        "phenotypeLabel": "EEG with abnormally slow frequencies"
+      },
+      {
+        "phenotypeCurie": "HP:0000712",
+        "phenotypeLabel": "Emotional lability"
+      },
+      {
+        "phenotypeCurie": "HP:0000718",
+        "phenotypeLabel": "Aggressive behavior"
+      },
+      {
+        "phenotypeCurie": "HP:0001344",
+        "phenotypeLabel": "Absent speech"
+      }
+    ],
+    "results": [
+      {
+        "rank": 1,
+        "geneCurie": "NCBIGene:54664",
+        "geneLabel": "TMEM106B",
+        "geneSymbol": "TMEM106B",
+        "geneEntityId": 151842,
+        "bmaScore": 2.2733884568920977,
+        "normalizedScore": 0.251007,
+        "patientAverageScore": 3.154911196458461,
+        "phenotypeAverageScore": 1.3918657173257347,
+        "directPhenotypeCount": 96,
+        "matchedPhenotypeCount": 11,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011203",
+            "patientPhenotypeLabel": "EEG with abnormally slow frequencies",
+            "diseasePhenotypeCurie": "HP:0011204",
+            "diseasePhenotypeLabel": "EEG with continuous slow activity",
+            "micaCurie": "HP:0011203",
+            "micaLabel": "EEG with abnormally slow frequencies",
+            "score": 6.572165985784965,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:100070"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000712",
+            "patientPhenotypeLabel": "Emotional lability",
+            "diseasePhenotypeCurie": "HP:0000751",
+            "diseasePhenotypeLabel": "Personality changes",
+            "micaCurie": "HP:0031466",
+            "micaLabel": "Impairment in personality functioning",
+            "score": 4.384243801111059,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:100070"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002345",
+            "patientPhenotypeLabel": "Action tremor",
+            "diseasePhenotypeCurie": "HP:0002080",
+            "diseasePhenotypeLabel": "Intention tremor",
+            "micaCurie": "HP:0002345",
+            "micaLabel": "Action tremor",
+            "score": 3.957206207748767,
+            "evidenceCode": "2/4",
+            "referenceText": "OMIM:617964"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002066",
+            "patientPhenotypeLabel": "Gait ataxia",
+            "diseasePhenotypeCurie": "HP:0002066",
+            "diseasePhenotypeLabel": "Gait ataxia",
+            "micaCurie": "HP:0002066",
+            "micaLabel": "Gait ataxia",
+            "score": 3.645426583717925,
+            "evidenceCode": "2/4",
+            "referenceText": "OMIM:617964"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000718",
+            "patientPhenotypeLabel": "Aggressive behavior",
+            "diseasePhenotypeCurie": "HP:0000718",
+            "diseasePhenotypeLabel": "Aggressive behavior",
+            "micaCurie": "HP:0000718",
+            "micaLabel": "Aggressive behavior",
+            "score": 3.477342809586743,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:275864"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001344",
+            "patientPhenotypeLabel": "Absent speech",
+            "diseasePhenotypeCurie": "HP:0001344",
+            "diseasePhenotypeLabel": "Absent speech",
+            "micaCurie": "HP:0001344",
+            "micaLabel": "Absent speech",
+            "score": 2.9909645454692173,
+            "evidenceCode": "1/4",
+            "referenceText": "OMIM:617964"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002346",
+            "patientPhenotypeLabel": "Head tremor",
+            "diseasePhenotypeCurie": "HP:0002080",
+            "diseasePhenotypeLabel": "Intention tremor",
+            "micaCurie": "HP:0001337",
+            "micaLabel": "Tremor",
+            "score": 2.9817266044842814,
+            "evidenceCode": "2/4",
+            "referenceText": "OMIM:617964"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002078",
+            "patientPhenotypeLabel": "Truncal ataxia",
+            "diseasePhenotypeCurie": "HP:0002066",
+            "diseasePhenotypeLabel": "Gait ataxia",
+            "micaCurie": "HP:0001251",
+            "micaLabel": "Ataxia",
+            "score": 2.2828487492153506,
+            "evidenceCode": "2/4",
+            "referenceText": "OMIM:617964"
+          }
+        ]
+      },
+      {
+        "rank": 2,
+        "geneCurie": "NCBIGene:6323",
+        "geneLabel": "SCN1A",
+        "geneSymbol": "SCN1A",
+        "geneEntityId": 150045,
+        "bmaScore": 2.2617308804996368,
+        "normalizedScore": 0.24972,
+        "patientAverageScore": 3.4365917617190007,
+        "phenotypeAverageScore": 1.0868699992802728,
+        "directPhenotypeCount": 228,
+        "matchedPhenotypeCount": 11,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011203",
+            "patientPhenotypeLabel": "EEG with abnormally slow frequencies",
+            "diseasePhenotypeCurie": "HP:0010845",
+            "diseasePhenotypeLabel": "EEG with generalized slow activity",
+            "micaCurie": "HP:0011203",
+            "micaLabel": "EEG with abnormally slow frequencies",
+            "score": 6.572165985784965,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1942"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000712",
+            "patientPhenotypeLabel": "Emotional lability",
+            "diseasePhenotypeCurie": "HP:0012075",
+            "diseasePhenotypeLabel": "Personality disorder",
+            "micaCurie": "HP:0031466",
+            "micaLabel": "Impairment in personality functioning",
+            "score": 4.384243801111059,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:2382"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002345",
+            "patientPhenotypeLabel": "Action tremor",
+            "diseasePhenotypeCurie": "HP:0002345",
+            "diseasePhenotypeLabel": "Action tremor",
+            "micaCurie": "HP:0002345",
+            "micaLabel": "Action tremor",
+            "score": 3.957206207748767,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:33069"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002066",
+            "patientPhenotypeLabel": "Gait ataxia",
+            "diseasePhenotypeCurie": "HP:0007240",
+            "diseasePhenotypeLabel": "Progressive gait ataxia",
+            "micaCurie": "HP:0002066",
+            "micaLabel": "Gait ataxia",
+            "score": 3.645426583717925,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:33069"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000718",
+            "patientPhenotypeLabel": "Aggressive behavior",
+            "diseasePhenotypeCurie": "HP:0000718",
+            "diseasePhenotypeLabel": "Aggressive behavior",
+            "micaCurie": "HP:0000718",
+            "micaLabel": "Aggressive behavior",
+            "score": 3.477342809586743,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:2382"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0010864",
+            "patientPhenotypeLabel": "Severe intellectual disability",
+            "diseasePhenotypeCurie": "HP:0010864",
+            "diseasePhenotypeLabel": "Severe intellectual disability",
+            "micaCurie": "HP:0010864",
+            "micaLabel": "Severe intellectual disability",
+            "score": 3.397590419813344,
+            "evidenceCode": "3/7",
+            "referenceText": "OMIM:607208"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001344",
+            "patientPhenotypeLabel": "Absent speech",
+            "diseasePhenotypeCurie": "HP:0001344",
+            "diseasePhenotypeLabel": "Absent speech",
+            "micaCurie": "HP:0001344",
+            "micaLabel": "Absent speech",
+            "score": 2.9909645454692173,
+            "evidenceCode": "8/9",
+            "referenceText": "OMIM:619317"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002346",
+            "patientPhenotypeLabel": "Head tremor",
+            "diseasePhenotypeCurie": "HP:0002345",
+            "diseasePhenotypeLabel": "Action tremor",
+            "micaCurie": "HP:0001337",
+            "micaLabel": "Tremor",
+            "score": 2.9817266044842814,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:33069"
+          }
+        ]
+      },
+      {
+        "rank": 3,
+        "geneCurie": "NCBIGene:2903",
+        "geneLabel": "GRIN2A",
+        "geneSymbol": "GRIN2A",
+        "geneEntityId": 149013,
+        "bmaScore": 2.242154707374947,
+        "normalizedScore": 0.247558,
+        "patientAverageScore": 3.0823969304742715,
+        "phenotypeAverageScore": 1.4019124842756219,
+        "directPhenotypeCount": 109,
+        "matchedPhenotypeCount": 11,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011203",
+            "patientPhenotypeLabel": "EEG with abnormally slow frequencies",
+            "diseasePhenotypeCurie": "HP:0010844",
+            "diseasePhenotypeLabel": "EEG with multifocal slow activity",
+            "micaCurie": "HP:0011203",
+            "micaLabel": "EEG with abnormally slow frequencies",
+            "score": 6.572165985784965,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:289266"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000712",
+            "patientPhenotypeLabel": "Emotional lability",
+            "diseasePhenotypeCurie": "HP:0000712",
+            "diseasePhenotypeLabel": "Emotional lability",
+            "micaCurie": "HP:0000712",
+            "micaLabel": "Emotional lability",
+            "score": 4.929938250527874,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1945"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002066",
+            "patientPhenotypeLabel": "Gait ataxia",
+            "diseasePhenotypeCurie": "HP:0002066",
+            "diseasePhenotypeLabel": "Gait ataxia",
+            "micaCurie": "HP:0002066",
+            "micaLabel": "Gait ataxia",
+            "score": 3.645426583717925,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:98818"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000718",
+            "patientPhenotypeLabel": "Aggressive behavior",
+            "diseasePhenotypeCurie": "HP:0000718",
+            "diseasePhenotypeLabel": "Aggressive behavior",
+            "micaCurie": "HP:0000718",
+            "micaLabel": "Aggressive behavior",
+            "score": 3.477342809586743,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:725"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0010864",
+            "patientPhenotypeLabel": "Severe intellectual disability",
+            "diseasePhenotypeCurie": "HP:0010864",
+            "diseasePhenotypeLabel": "Severe intellectual disability",
+            "micaCurie": "HP:0010864",
+            "micaLabel": "Severe intellectual disability",
+            "score": 3.397590419813344,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:289266"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002078",
+            "patientPhenotypeLabel": "Truncal ataxia",
+            "diseasePhenotypeCurie": "HP:0002066",
+            "diseasePhenotypeLabel": "Gait ataxia",
+            "micaCurie": "HP:0001251",
+            "micaLabel": "Ataxia",
+            "score": 2.2828487492153506,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:98818"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002346",
+            "patientPhenotypeLabel": "Head tremor",
+            "diseasePhenotypeCurie": "HP:0001336",
+            "diseasePhenotypeLabel": "Myoclonus",
+            "micaCurie": "HP:0004305",
+            "micaLabel": "Involuntary movements",
+            "score": 2.264728208102156,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:289266"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002345",
+            "patientPhenotypeLabel": "Action tremor",
+            "diseasePhenotypeCurie": "HP:0001336",
+            "diseasePhenotypeLabel": "Myoclonus",
+            "micaCurie": "HP:0004305",
+            "micaLabel": "Involuntary movements",
+            "score": 2.264728208102156,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:289266"
+          }
+        ]
+      },
+      {
+        "rank": 4,
+        "geneCurie": "NCBIGene:773",
+        "geneLabel": "CACNA1A",
+        "geneSymbol": "CACNA1A",
+        "geneEntityId": 148337,
+        "bmaScore": 2.2233103069987745,
+        "normalizedScore": 0.245478,
+        "patientAverageScore": 3.4454782660062873,
+        "phenotypeAverageScore": 1.001142347991262,
+        "directPhenotypeCount": 216,
+        "matchedPhenotypeCount": 11,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011203",
+            "patientPhenotypeLabel": "EEG with abnormally slow frequencies",
+            "diseasePhenotypeCurie": "HP:0010844",
+            "diseasePhenotypeLabel": "EEG with multifocal slow activity",
+            "micaCurie": "HP:0011203",
+            "micaLabel": "EEG with abnormally slow frequencies",
+            "score": 6.572165985784965,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:442835"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000712",
+            "patientPhenotypeLabel": "Emotional lability",
+            "diseasePhenotypeCurie": "HP:0000712",
+            "diseasePhenotypeLabel": "Emotional lability",
+            "micaCurie": "HP:0000712",
+            "micaLabel": "Emotional lability",
+            "score": 4.929938250527874,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:2131"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002078",
+            "patientPhenotypeLabel": "Truncal ataxia",
+            "diseasePhenotypeCurie": "HP:0002078",
+            "diseasePhenotypeLabel": "Truncal ataxia",
+            "micaCurie": "HP:0002078",
+            "micaLabel": "Truncal ataxia",
+            "score": 4.753007542368795,
+            "evidenceCode": "1/5",
+            "referenceText": "OMIM:183086"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002345",
+            "patientPhenotypeLabel": "Action tremor",
+            "diseasePhenotypeCurie": "HP:0002080",
+            "diseasePhenotypeLabel": "Intention tremor",
+            "micaCurie": "HP:0002345",
+            "micaLabel": "Action tremor",
+            "score": 3.957206207748767,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:98758"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002066",
+            "patientPhenotypeLabel": "Gait ataxia",
+            "diseasePhenotypeCurie": "HP:0007240",
+            "diseasePhenotypeLabel": "Progressive gait ataxia",
+            "micaCurie": "HP:0002066",
+            "micaLabel": "Gait ataxia",
+            "score": 3.645426583717925,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:569"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000718",
+            "patientPhenotypeLabel": "Aggressive behavior",
+            "diseasePhenotypeCurie": "HP:0000718",
+            "diseasePhenotypeLabel": "Aggressive behavior",
+            "micaCurie": "HP:0000718",
+            "micaLabel": "Aggressive behavior",
+            "score": 3.477342809586743,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:2382"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002346",
+            "patientPhenotypeLabel": "Head tremor",
+            "diseasePhenotypeCurie": "HP:0002080",
+            "diseasePhenotypeLabel": "Intention tremor",
+            "micaCurie": "HP:0001337",
+            "micaLabel": "Tremor",
+            "score": 2.9817266044842814,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:98758"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001290",
+            "patientPhenotypeLabel": "Generalized hypotonia",
+            "diseasePhenotypeCurie": "HP:0001290",
+            "diseasePhenotypeLabel": "Generalized hypotonia",
+            "micaCurie": "HP:0001290",
+            "micaLabel": "Generalized hypotonia",
+            "score": 2.661811037457516,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:442835"
+          }
+        ]
+      },
+      {
+        "rank": 5,
+        "geneCurie": "NCBIGene:7337",
+        "geneLabel": "UBE3A",
+        "geneSymbol": "UBE3A",
+        "geneEntityId": 150390,
+        "bmaScore": 2.2179095504628568,
+        "normalizedScore": 0.244882,
+        "patientAverageScore": 3.253159269268696,
+        "phenotypeAverageScore": 1.1826598316570176,
+        "directPhenotypeCount": 98,
+        "matchedPhenotypeCount": 11,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011203",
+            "patientPhenotypeLabel": "EEG with abnormally slow frequencies",
+            "diseasePhenotypeCurie": "HP:0011203",
+            "diseasePhenotypeLabel": "EEG with abnormally slow frequencies",
+            "micaCurie": "HP:0011203",
+            "micaLabel": "EEG with abnormally slow frequencies",
+            "score": 6.572165985784965,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:98794"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002346",
+            "patientPhenotypeLabel": "Head tremor",
+            "diseasePhenotypeCurie": "HP:0200085",
+            "diseasePhenotypeLabel": "Limb tremor",
+            "micaCurie": "HP:0030188",
+            "micaLabel": "Tremor by anatomical site",
+            "score": 4.766613194424574,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:105830"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002066",
+            "patientPhenotypeLabel": "Gait ataxia",
+            "diseasePhenotypeCurie": "HP:0007240",
+            "diseasePhenotypeLabel": "Progressive gait ataxia",
+            "micaCurie": "HP:0002066",
+            "micaLabel": "Gait ataxia",
+            "score": 3.645426583717925,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:105830"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0010864",
+            "patientPhenotypeLabel": "Severe intellectual disability",
+            "diseasePhenotypeCurie": "HP:0010864",
+            "diseasePhenotypeLabel": "Severe intellectual disability",
+            "micaCurie": "HP:0010864",
+            "micaLabel": "Severe intellectual disability",
+            "score": 3.397590419813344,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:98794"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001344",
+            "patientPhenotypeLabel": "Absent speech",
+            "diseasePhenotypeCurie": "HP:0001344",
+            "diseasePhenotypeLabel": "Absent speech",
+            "micaCurie": "HP:0001344",
+            "micaLabel": "Absent speech",
+            "score": 2.9909645454692173,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:98794"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002345",
+            "patientPhenotypeLabel": "Action tremor",
+            "diseasePhenotypeCurie": "HP:0200085",
+            "diseasePhenotypeLabel": "Limb tremor",
+            "micaCurie": "HP:0001337",
+            "micaLabel": "Tremor",
+            "score": 2.9817266044842814,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:105830"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000718",
+            "patientPhenotypeLabel": "Aggressive behavior",
+            "diseasePhenotypeCurie": "HP:0007018",
+            "diseasePhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "micaCurie": "HP:0000734",
+            "micaLabel": "Disinhibition",
+            "score": 2.7618066341333187,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:238446"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001290",
+            "patientPhenotypeLabel": "Generalized hypotonia",
+            "diseasePhenotypeCurie": "HP:0001290",
+            "diseasePhenotypeLabel": "Generalized hypotonia",
+            "micaCurie": "HP:0001290",
+            "micaLabel": "Generalized hypotonia",
+            "score": 2.661811037457516,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:105830"
+          }
+        ]
+      },
+      {
+        "rank": 6,
+        "geneCurie": "NCBIGene:2566",
+        "geneLabel": "GABRG2",
+        "geneSymbol": "GABRG2",
+        "geneEntityId": 148902,
+        "bmaScore": 2.212736967716657,
+        "normalizedScore": 0.24431,
+        "patientAverageScore": 3.2400503904340394,
+        "phenotypeAverageScore": 1.1854235449992747,
+        "directPhenotypeCount": 143,
+        "matchedPhenotypeCount": 11,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011203",
+            "patientPhenotypeLabel": "EEG with abnormally slow frequencies",
+            "diseasePhenotypeCurie": "HP:0010844",
+            "diseasePhenotypeLabel": "EEG with multifocal slow activity",
+            "micaCurie": "HP:0011203",
+            "micaLabel": "EEG with abnormally slow frequencies",
+            "score": 6.572165985784965,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:442835"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000712",
+            "patientPhenotypeLabel": "Emotional lability",
+            "diseasePhenotypeCurie": "HP:0000712",
+            "diseasePhenotypeLabel": "Emotional lability",
+            "micaCurie": "HP:0000712",
+            "micaLabel": "Emotional lability",
+            "score": 4.929938250527874,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1945"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002345",
+            "patientPhenotypeLabel": "Action tremor",
+            "diseasePhenotypeCurie": "HP:0002345",
+            "diseasePhenotypeLabel": "Action tremor",
+            "micaCurie": "HP:0002345",
+            "micaLabel": "Action tremor",
+            "score": 3.957206207748767,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:33069"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002066",
+            "patientPhenotypeLabel": "Gait ataxia",
+            "diseasePhenotypeCurie": "HP:0007240",
+            "diseasePhenotypeLabel": "Progressive gait ataxia",
+            "micaCurie": "HP:0002066",
+            "micaLabel": "Gait ataxia",
+            "score": 3.645426583717925,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:33069"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001344",
+            "patientPhenotypeLabel": "Absent speech",
+            "diseasePhenotypeCurie": "HP:0001344",
+            "diseasePhenotypeLabel": "Absent speech",
+            "micaCurie": "HP:0001344",
+            "micaLabel": "Absent speech",
+            "score": 2.9909645454692173,
+            "evidenceCode": "8/8",
+            "referenceText": "OMIM:618396"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002346",
+            "patientPhenotypeLabel": "Head tremor",
+            "diseasePhenotypeCurie": "HP:0002345",
+            "diseasePhenotypeLabel": "Action tremor",
+            "micaCurie": "HP:0001337",
+            "micaLabel": "Tremor",
+            "score": 2.9817266044842814,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:33069"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000718",
+            "patientPhenotypeLabel": "Aggressive behavior",
+            "diseasePhenotypeCurie": "HP:0100710",
+            "diseasePhenotypeLabel": "Impulsivity",
+            "micaCurie": "HP:0000734",
+            "micaLabel": "Disinhibition",
+            "score": 2.7618066341333187,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:33069"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001290",
+            "patientPhenotypeLabel": "Generalized hypotonia",
+            "diseasePhenotypeCurie": "HP:0001290",
+            "diseasePhenotypeLabel": "Generalized hypotonia",
+            "micaCurie": "HP:0001290",
+            "micaLabel": "Generalized hypotonia",
+            "score": 2.661811037457516,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:442835"
+          }
+        ]
+      },
+      {
+        "rank": 7,
+        "geneCurie": "NCBIGene:4204",
+        "geneLabel": "MECP2",
+        "geneSymbol": "MECP2",
+        "geneEntityId": 149415,
+        "bmaScore": 2.2098099692459634,
+        "normalizedScore": 0.243987,
+        "patientAverageScore": 3.521500923495166,
+        "phenotypeAverageScore": 0.8981190149967602,
+        "directPhenotypeCount": 255,
+        "matchedPhenotypeCount": 11,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011203",
+            "patientPhenotypeLabel": "EEG with abnormally slow frequencies",
+            "diseasePhenotypeCurie": "HP:0010845",
+            "diseasePhenotypeLabel": "EEG with generalized slow activity",
+            "micaCurie": "HP:0011203",
+            "micaLabel": "EEG with abnormally slow frequencies",
+            "score": 6.572165985784965,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:300055"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000712",
+            "patientPhenotypeLabel": "Emotional lability",
+            "diseasePhenotypeCurie": "HP:0000712",
+            "diseasePhenotypeLabel": "Emotional lability",
+            "micaCurie": "HP:0000712",
+            "micaLabel": "Emotional lability",
+            "score": 4.929938250527874,
+            "evidenceCode": "1/5",
+            "referenceText": "OMIM:300055"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002078",
+            "patientPhenotypeLabel": "Truncal ataxia",
+            "diseasePhenotypeCurie": "HP:0002078",
+            "diseasePhenotypeLabel": "Truncal ataxia",
+            "micaCurie": "HP:0002078",
+            "micaLabel": "Truncal ataxia",
+            "score": 4.753007542368795,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:312750"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002066",
+            "patientPhenotypeLabel": "Gait ataxia",
+            "diseasePhenotypeCurie": "HP:0002066",
+            "diseasePhenotypeLabel": "Gait ataxia",
+            "micaCurie": "HP:0002066",
+            "micaLabel": "Gait ataxia",
+            "score": 3.645426583717925,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:312750"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000718",
+            "patientPhenotypeLabel": "Aggressive behavior",
+            "diseasePhenotypeCurie": "HP:0000718",
+            "diseasePhenotypeLabel": "Aggressive behavior",
+            "micaCurie": "HP:0000718",
+            "micaLabel": "Aggressive behavior",
+            "score": 3.477342809586743,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:3077"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0010864",
+            "patientPhenotypeLabel": "Severe intellectual disability",
+            "diseasePhenotypeCurie": "HP:0010864",
+            "diseasePhenotypeLabel": "Severe intellectual disability",
+            "micaCurie": "HP:0010864",
+            "micaLabel": "Severe intellectual disability",
+            "score": 3.397590419813344,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:1762"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001344",
+            "patientPhenotypeLabel": "Absent speech",
+            "diseasePhenotypeCurie": "HP:0001344",
+            "diseasePhenotypeLabel": "Absent speech",
+            "micaCurie": "HP:0001344",
+            "micaLabel": "Absent speech",
+            "score": 2.9909645454692173,
+            "evidenceCode": "3/3",
+            "referenceText": "OMIM:300055"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002346",
+            "patientPhenotypeLabel": "Head tremor",
+            "diseasePhenotypeCurie": "HP:0025387",
+            "diseasePhenotypeLabel": "Pill-rolling tremor",
+            "micaCurie": "HP:0001337",
+            "micaLabel": "Tremor",
+            "score": 2.9817266044842814,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:3095"
+          }
+        ]
+      },
+      {
+        "rank": 8,
+        "geneCurie": "NCBIGene:1173",
+        "geneLabel": "AP2M1",
+        "geneSymbol": "AP2M1",
+        "geneEntityId": 148463,
+        "bmaScore": 2.200346573451868,
+        "normalizedScore": 0.242942,
+        "patientAverageScore": 3.0501747699780632,
+        "phenotypeAverageScore": 1.350518376925673,
+        "directPhenotypeCount": 57,
+        "matchedPhenotypeCount": 11,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011203",
+            "patientPhenotypeLabel": "EEG with abnormally slow frequencies",
+            "diseasePhenotypeCurie": "HP:0010845",
+            "diseasePhenotypeLabel": "EEG with generalized slow activity",
+            "micaCurie": "HP:0011203",
+            "micaLabel": "EEG with abnormally slow frequencies",
+            "score": 6.572165985784965,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1942"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002078",
+            "patientPhenotypeLabel": "Truncal ataxia",
+            "diseasePhenotypeCurie": "HP:0002078",
+            "diseasePhenotypeLabel": "Truncal ataxia",
+            "micaCurie": "HP:0002078",
+            "micaLabel": "Truncal ataxia",
+            "score": 4.753007542368795,
+            "evidenceCode": "3/4",
+            "referenceText": "OMIM:618587"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002066",
+            "patientPhenotypeLabel": "Gait ataxia",
+            "diseasePhenotypeCurie": "HP:0002066",
+            "diseasePhenotypeLabel": "Gait ataxia",
+            "micaCurie": "HP:0002066",
+            "micaLabel": "Gait ataxia",
+            "score": 3.645426583717925,
+            "evidenceCode": "3/4",
+            "referenceText": "OMIM:618587"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002346",
+            "patientPhenotypeLabel": "Head tremor",
+            "diseasePhenotypeCurie": "HP:0001337",
+            "diseasePhenotypeLabel": "Tremor",
+            "micaCurie": "HP:0001337",
+            "micaLabel": "Tremor",
+            "score": 2.9817266044842814,
+            "evidenceCode": "1/4",
+            "referenceText": "OMIM:618587"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002345",
+            "patientPhenotypeLabel": "Action tremor",
+            "diseasePhenotypeCurie": "HP:0001337",
+            "diseasePhenotypeLabel": "Tremor",
+            "micaCurie": "HP:0001337",
+            "micaLabel": "Tremor",
+            "score": 2.9817266044842814,
+            "evidenceCode": "1/4",
+            "referenceText": "OMIM:618587"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000718",
+            "patientPhenotypeLabel": "Aggressive behavior",
+            "diseasePhenotypeCurie": "HP:0007018",
+            "diseasePhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "micaCurie": "HP:0000734",
+            "micaLabel": "Disinhibition",
+            "score": 2.7618066341333187,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:1942"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001290",
+            "patientPhenotypeLabel": "Generalized hypotonia",
+            "diseasePhenotypeCurie": "HP:0001290",
+            "diseasePhenotypeLabel": "Generalized hypotonia",
+            "micaCurie": "HP:0001290",
+            "micaLabel": "Generalized hypotonia",
+            "score": 2.661811037457516,
+            "evidenceCode": "4/4",
+            "referenceText": "OMIM:618587"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000712",
+            "patientPhenotypeLabel": "Emotional lability",
+            "diseasePhenotypeCurie": "HP:0100851",
+            "diseasePhenotypeLabel": "Abnormal emotional state",
+            "micaCurie": "HP:0025766",
+            "micaLabel": "Abnormal affect",
+            "score": 2.272615572935322,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1942"
+          }
+        ]
+      },
+      {
+        "rank": 9,
+        "geneCurie": "NCBIGene:10479",
+        "geneLabel": "SLC9A6",
+        "geneSymbol": "SLC9A6",
+        "geneEntityId": 151044,
+        "bmaScore": 2.191188278229915,
+        "normalizedScore": 0.241931,
+        "patientAverageScore": 3.2753021354867484,
+        "phenotypeAverageScore": 1.1070744209730818,
+        "directPhenotypeCount": 92,
+        "matchedPhenotypeCount": 11,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002078",
+            "patientPhenotypeLabel": "Truncal ataxia",
+            "diseasePhenotypeCurie": "HP:0002078",
+            "diseasePhenotypeLabel": "Truncal ataxia",
+            "micaCurie": "HP:0002078",
+            "micaLabel": "Truncal ataxia",
+            "score": 4.753007542368795,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:300243"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000712",
+            "patientPhenotypeLabel": "Emotional lability",
+            "diseasePhenotypeCurie": "HP:0000751",
+            "diseasePhenotypeLabel": "Personality changes",
+            "micaCurie": "HP:0031466",
+            "micaLabel": "Impairment in personality functioning",
+            "score": 4.384243801111059,
+            "evidenceCode": "0/2",
+            "referenceText": "OMIM:301142"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002345",
+            "patientPhenotypeLabel": "Action tremor",
+            "diseasePhenotypeCurie": "HP:0002174",
+            "diseasePhenotypeLabel": "Postural tremor",
+            "micaCurie": "HP:0002345",
+            "micaLabel": "Action tremor",
+            "score": 3.957206207748767,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:301142"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002066",
+            "patientPhenotypeLabel": "Gait ataxia",
+            "diseasePhenotypeCurie": "HP:0002066",
+            "diseasePhenotypeLabel": "Gait ataxia",
+            "micaCurie": "HP:0002066",
+            "micaLabel": "Gait ataxia",
+            "score": 3.645426583717925,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:85278"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0010864",
+            "patientPhenotypeLabel": "Severe intellectual disability",
+            "diseasePhenotypeCurie": "HP:0010864",
+            "diseasePhenotypeLabel": "Severe intellectual disability",
+            "micaCurie": "HP:0010864",
+            "micaLabel": "Severe intellectual disability",
+            "score": 3.397590419813344,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:300243"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011203",
+            "patientPhenotypeLabel": "EEG with abnormally slow frequencies",
+            "diseasePhenotypeCurie": "HP:0011182",
+            "diseasePhenotypeLabel": "Interictal epileptiform activity",
+            "micaCurie": "HP:0002353",
+            "micaLabel": "EEG abnormality",
+            "score": 3.0433574795301634,
+            "evidenceCode": "11/11",
+            "referenceText": "OMIM:300243"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001344",
+            "patientPhenotypeLabel": "Absent speech",
+            "diseasePhenotypeCurie": "HP:0001344",
+            "diseasePhenotypeLabel": "Absent speech",
+            "micaCurie": "HP:0001344",
+            "micaLabel": "Absent speech",
+            "score": 2.9909645454692173,
+            "evidenceCode": "11/11",
+            "referenceText": "OMIM:300243"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002346",
+            "patientPhenotypeLabel": "Head tremor",
+            "diseasePhenotypeCurie": "HP:0002322",
+            "diseasePhenotypeLabel": "Resting tremor",
+            "micaCurie": "HP:0001337",
+            "micaLabel": "Tremor",
+            "score": 2.9817266044842814,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:301142"
+          }
+        ]
+      },
+      {
+        "rank": 10,
+        "geneCurie": "NCBIGene:9568",
+        "geneLabel": "GABBR2",
+        "geneSymbol": "GABBR2",
+        "geneEntityId": 150830,
+        "bmaScore": 2.1759420891413814,
+        "normalizedScore": 0.240248,
+        "patientAverageScore": 3.090896852001396,
+        "phenotypeAverageScore": 1.260987326281367,
+        "directPhenotypeCount": 114,
+        "matchedPhenotypeCount": 11,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011203",
+            "patientPhenotypeLabel": "EEG with abnormally slow frequencies",
+            "diseasePhenotypeCurie": "HP:0010844",
+            "diseasePhenotypeLabel": "EEG with multifocal slow activity",
+            "micaCurie": "HP:0011203",
+            "micaLabel": "EEG with abnormally slow frequencies",
+            "score": 6.572165985784965,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:442835"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002066",
+            "patientPhenotypeLabel": "Gait ataxia",
+            "diseasePhenotypeCurie": "HP:0002066",
+            "diseasePhenotypeLabel": "Gait ataxia",
+            "micaCurie": "HP:0002066",
+            "micaLabel": "Gait ataxia",
+            "score": 3.645426583717925,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:3095"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0010864",
+            "patientPhenotypeLabel": "Severe intellectual disability",
+            "diseasePhenotypeCurie": "HP:0010864",
+            "diseasePhenotypeLabel": "Severe intellectual disability",
+            "micaCurie": "HP:0010864",
+            "micaLabel": "Severe intellectual disability",
+            "score": 3.397590419813344,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:617903"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001344",
+            "patientPhenotypeLabel": "Absent speech",
+            "diseasePhenotypeCurie": "HP:0001344",
+            "diseasePhenotypeLabel": "Absent speech",
+            "micaCurie": "HP:0001344",
+            "micaLabel": "Absent speech",
+            "score": 2.9909645454692173,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:617904"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002346",
+            "patientPhenotypeLabel": "Head tremor",
+            "diseasePhenotypeCurie": "HP:0025387",
+            "diseasePhenotypeLabel": "Pill-rolling tremor",
+            "micaCurie": "HP:0001337",
+            "micaLabel": "Tremor",
+            "score": 2.9817266044842814,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:3095"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002345",
+            "patientPhenotypeLabel": "Action tremor",
+            "diseasePhenotypeCurie": "HP:0025387",
+            "diseasePhenotypeLabel": "Pill-rolling tremor",
+            "micaCurie": "HP:0001337",
+            "micaLabel": "Tremor",
+            "score": 2.9817266044842814,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:3095"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000718",
+            "patientPhenotypeLabel": "Aggressive behavior",
+            "diseasePhenotypeCurie": "HP:0100710",
+            "diseasePhenotypeLabel": "Impulsivity",
+            "micaCurie": "HP:0000734",
+            "micaLabel": "Disinhibition",
+            "score": 2.7618066341333187,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:442835"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001290",
+            "patientPhenotypeLabel": "Generalized hypotonia",
+            "diseasePhenotypeCurie": "HP:0001290",
+            "diseasePhenotypeLabel": "Generalized hypotonia",
+            "micaCurie": "HP:0001290",
+            "micaLabel": "Generalized hypotonia",
+            "score": 2.661811037457516,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:617904"
+          }
+        ]
+      },
+      {
+        "rank": 11,
+        "geneCurie": "NCBIGene:478",
+        "geneLabel": "ATP1A3",
+        "geneSymbol": "ATP1A3",
+        "geneEntityId": 148233,
+        "bmaScore": 2.1628508350275255,
+        "normalizedScore": 0.238802,
+        "patientAverageScore": 3.3567983020731518,
+        "phenotypeAverageScore": 0.9689033679818989,
+        "directPhenotypeCount": 171,
+        "matchedPhenotypeCount": 11,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011203",
+            "patientPhenotypeLabel": "EEG with abnormally slow frequencies",
+            "diseasePhenotypeCurie": "HP:0010844",
+            "diseasePhenotypeLabel": "EEG with multifocal slow activity",
+            "micaCurie": "HP:0011203",
+            "micaLabel": "EEG with abnormally slow frequencies",
+            "score": 6.572165985784965,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:442835"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000712",
+            "patientPhenotypeLabel": "Emotional lability",
+            "diseasePhenotypeCurie": "HP:0000712",
+            "diseasePhenotypeLabel": "Emotional lability",
+            "micaCurie": "HP:0000712",
+            "micaLabel": "Emotional lability",
+            "score": 4.929938250527874,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:71517"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002078",
+            "patientPhenotypeLabel": "Truncal ataxia",
+            "diseasePhenotypeCurie": "HP:0002078",
+            "diseasePhenotypeLabel": "Truncal ataxia",
+            "micaCurie": "HP:0002078",
+            "micaLabel": "Truncal ataxia",
+            "score": 4.753007542368795,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:601338"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002066",
+            "patientPhenotypeLabel": "Gait ataxia",
+            "diseasePhenotypeCurie": "HP:0002066",
+            "diseasePhenotypeLabel": "Gait ataxia",
+            "micaCurie": "HP:0002066",
+            "micaLabel": "Gait ataxia",
+            "score": 3.645426583717925,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:71517"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000718",
+            "patientPhenotypeLabel": "Aggressive behavior",
+            "diseasePhenotypeCurie": "HP:0000718",
+            "diseasePhenotypeLabel": "Aggressive behavior",
+            "micaCurie": "HP:0000718",
+            "micaLabel": "Aggressive behavior",
+            "score": 3.477342809586743,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:2131"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002346",
+            "patientPhenotypeLabel": "Head tremor",
+            "diseasePhenotypeCurie": "HP:0002322",
+            "diseasePhenotypeLabel": "Resting tremor",
+            "micaCurie": "HP:0001337",
+            "micaLabel": "Tremor",
+            "score": 2.9817266044842814,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:71517"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002345",
+            "patientPhenotypeLabel": "Action tremor",
+            "diseasePhenotypeCurie": "HP:0002322",
+            "diseasePhenotypeLabel": "Resting tremor",
+            "micaCurie": "HP:0001337",
+            "micaLabel": "Tremor",
+            "score": 2.9817266044842814,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:71517"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001290",
+            "patientPhenotypeLabel": "Generalized hypotonia",
+            "diseasePhenotypeCurie": "HP:0006852",
+            "diseasePhenotypeLabel": "Episodic generalized hypotonia",
+            "micaCurie": "HP:0001290",
+            "micaLabel": "Generalized hypotonia",
+            "score": 2.661811037457516,
+            "evidenceCode": "3/10",
+            "referenceText": "OMIM:601338"
+          }
+        ]
+      },
+      {
+        "rank": 12,
+        "geneCurie": "NCBIGene:5354",
+        "geneLabel": "PLP1",
+        "geneSymbol": "PLP1",
+        "geneEntityId": 149788,
+        "bmaScore": 2.1497073477537043,
+        "normalizedScore": 0.237351,
+        "patientAverageScore": 3.159270590095843,
+        "phenotypeAverageScore": 1.140144105411565,
+        "directPhenotypeCount": 128,
+        "matchedPhenotypeCount": 11,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011203",
+            "patientPhenotypeLabel": "EEG with abnormally slow frequencies",
+            "diseasePhenotypeCurie": "HP:0011203",
+            "diseasePhenotypeLabel": "EEG with abnormally slow frequencies",
+            "micaCurie": "HP:0011203",
+            "micaLabel": "EEG with abnormally slow frequencies",
+            "score": 6.572165985784965,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:280219"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002346",
+            "patientPhenotypeLabel": "Head tremor",
+            "diseasePhenotypeCurie": "HP:0002599",
+            "diseasePhenotypeLabel": "Head titubation",
+            "micaCurie": "HP:0002346",
+            "micaLabel": "Head tremor",
+            "score": 5.591336732773239,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:312080"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002345",
+            "patientPhenotypeLabel": "Action tremor",
+            "diseasePhenotypeCurie": "HP:0030187",
+            "diseasePhenotypeLabel": "Titubation",
+            "micaCurie": "HP:0002345",
+            "micaLabel": "Action tremor",
+            "score": 3.957206207748767,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:280210"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0010864",
+            "patientPhenotypeLabel": "Severe intellectual disability",
+            "diseasePhenotypeCurie": "HP:0010864",
+            "diseasePhenotypeLabel": "Severe intellectual disability",
+            "micaCurie": "HP:0010864",
+            "micaLabel": "Severe intellectual disability",
+            "score": 3.397590419813344,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:280210"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001344",
+            "patientPhenotypeLabel": "Absent speech",
+            "diseasePhenotypeCurie": "HP:0001344",
+            "diseasePhenotypeLabel": "Absent speech",
+            "micaCurie": "HP:0001344",
+            "micaLabel": "Absent speech",
+            "score": 2.9909645454692173,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:280210"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000718",
+            "patientPhenotypeLabel": "Aggressive behavior",
+            "diseasePhenotypeCurie": "HP:0000741",
+            "diseasePhenotypeLabel": "Apathy",
+            "micaCurie": "HP:0025780",
+            "micaLabel": "Abnormal volitional state",
+            "score": 2.397778715889328,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:312080"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002066",
+            "patientPhenotypeLabel": "Gait ataxia",
+            "diseasePhenotypeCurie": "HP:0001310",
+            "diseasePhenotypeLabel": "Dysmetria",
+            "micaCurie": "HP:0001251",
+            "micaLabel": "Ataxia",
+            "score": 2.2828487492153506,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:312920"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002078",
+            "patientPhenotypeLabel": "Truncal ataxia",
+            "diseasePhenotypeCurie": "HP:0001310",
+            "diseasePhenotypeLabel": "Dysmetria",
+            "micaCurie": "HP:0001251",
+            "micaLabel": "Ataxia",
+            "score": 2.2828487492153506,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:312920"
+          }
+        ]
+      },
+      {
+        "rank": 13,
+        "geneCurie": "NCBIGene:79876",
+        "geneLabel": "UBA5",
+        "geneSymbol": "UBA5",
+        "geneEntityId": 152414,
+        "bmaScore": 2.1263786797142696,
+        "normalizedScore": 0.234775,
+        "patientAverageScore": 3.090896852001396,
+        "phenotypeAverageScore": 1.1618605074271429,
+        "directPhenotypeCount": 75,
+        "matchedPhenotypeCount": 11,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011203",
+            "patientPhenotypeLabel": "EEG with abnormally slow frequencies",
+            "diseasePhenotypeCurie": "HP:0010844",
+            "diseasePhenotypeLabel": "EEG with multifocal slow activity",
+            "micaCurie": "HP:0011203",
+            "micaLabel": "EEG with abnormally slow frequencies",
+            "score": 6.572165985784965,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:442835"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002066",
+            "patientPhenotypeLabel": "Gait ataxia",
+            "diseasePhenotypeCurie": "HP:0002066",
+            "diseasePhenotypeLabel": "Gait ataxia",
+            "micaCurie": "HP:0002066",
+            "micaLabel": "Gait ataxia",
+            "score": 3.645426583717925,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:617133"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0010864",
+            "patientPhenotypeLabel": "Severe intellectual disability",
+            "diseasePhenotypeCurie": "HP:0010864",
+            "diseasePhenotypeLabel": "Severe intellectual disability",
+            "micaCurie": "HP:0010864",
+            "micaLabel": "Severe intellectual disability",
+            "score": 3.397590419813344,
+            "evidenceCode": "7/8",
+            "referenceText": "OMIM:617132"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001344",
+            "patientPhenotypeLabel": "Absent speech",
+            "diseasePhenotypeCurie": "HP:0001344",
+            "diseasePhenotypeLabel": "Absent speech",
+            "micaCurie": "HP:0001344",
+            "micaLabel": "Absent speech",
+            "score": 2.9909645454692173,
+            "evidenceCode": "8/9",
+            "referenceText": "OMIM:617132"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002346",
+            "patientPhenotypeLabel": "Head tremor",
+            "diseasePhenotypeCurie": "HP:0001337",
+            "diseasePhenotypeLabel": "Tremor",
+            "micaCurie": "HP:0001337",
+            "micaLabel": "Tremor",
+            "score": 2.9817266044842814,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:442835"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002345",
+            "patientPhenotypeLabel": "Action tremor",
+            "diseasePhenotypeCurie": "HP:0001337",
+            "diseasePhenotypeLabel": "Tremor",
+            "micaCurie": "HP:0001337",
+            "micaLabel": "Tremor",
+            "score": 2.9817266044842814,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:442835"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000718",
+            "patientPhenotypeLabel": "Aggressive behavior",
+            "diseasePhenotypeCurie": "HP:0100710",
+            "diseasePhenotypeLabel": "Impulsivity",
+            "micaCurie": "HP:0000734",
+            "micaLabel": "Disinhibition",
+            "score": 2.7618066341333187,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:442835"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001290",
+            "patientPhenotypeLabel": "Generalized hypotonia",
+            "diseasePhenotypeCurie": "HP:0001290",
+            "diseasePhenotypeLabel": "Generalized hypotonia",
+            "micaCurie": "HP:0001290",
+            "micaLabel": "Generalized hypotonia",
+            "score": 2.661811037457516,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:442835"
+          }
+        ]
+      },
+      {
+        "rank": 14,
+        "geneCurie": "NCBIGene:8398",
+        "geneLabel": "PLA2G6",
+        "geneSymbol": "PLA2G6",
+        "geneEntityId": 150563,
+        "bmaScore": 2.1247163562192384,
+        "normalizedScore": 0.234592,
+        "patientAverageScore": 3.0516971711964427,
+        "phenotypeAverageScore": 1.197735541242034,
+        "directPhenotypeCount": 133,
+        "matchedPhenotypeCount": 11,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000712",
+            "patientPhenotypeLabel": "Emotional lability",
+            "diseasePhenotypeCurie": "HP:0000712",
+            "diseasePhenotypeLabel": "Emotional lability",
+            "micaCurie": "HP:0000712",
+            "micaLabel": "Emotional lability",
+            "score": 4.929938250527874,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:610217"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002346",
+            "patientPhenotypeLabel": "Head tremor",
+            "diseasePhenotypeCurie": "HP:0007351",
+            "diseasePhenotypeLabel": "Upper limb postural tremor",
+            "micaCurie": "HP:0030188",
+            "micaLabel": "Tremor by anatomical site",
+            "score": 4.766613194424574,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:612953"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002345",
+            "patientPhenotypeLabel": "Action tremor",
+            "diseasePhenotypeCurie": "HP:0007351",
+            "diseasePhenotypeLabel": "Upper limb postural tremor",
+            "micaCurie": "HP:0002345",
+            "micaLabel": "Action tremor",
+            "score": 3.957206207748767,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:612953"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002066",
+            "patientPhenotypeLabel": "Gait ataxia",
+            "diseasePhenotypeCurie": "HP:0002066",
+            "diseasePhenotypeLabel": "Gait ataxia",
+            "micaCurie": "HP:0002066",
+            "micaLabel": "Gait ataxia",
+            "score": 3.645426583717925,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:610217"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000718",
+            "patientPhenotypeLabel": "Aggressive behavior",
+            "diseasePhenotypeCurie": "HP:0000718",
+            "diseasePhenotypeLabel": "Aggressive behavior",
+            "micaCurie": "HP:0000718",
+            "micaLabel": "Aggressive behavior",
+            "score": 3.477342809586743,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:612953"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011203",
+            "patientPhenotypeLabel": "EEG with abnormally slow frequencies",
+            "diseasePhenotypeCurie": "HP:0000649",
+            "diseasePhenotypeLabel": "Abnormality of visual evoked potentials",
+            "micaCurie": "HP:0030178",
+            "micaLabel": "Abnormality of central nervous system electrophysiology",
+            "score": 2.9258461460898246,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:256600"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001290",
+            "patientPhenotypeLabel": "Generalized hypotonia",
+            "diseasePhenotypeCurie": "HP:0001290",
+            "diseasePhenotypeLabel": "Generalized hypotonia",
+            "micaCurie": "HP:0001290",
+            "micaLabel": "Generalized hypotonia",
+            "score": 2.661811037457516,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:256600"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002078",
+            "patientPhenotypeLabel": "Truncal ataxia",
+            "diseasePhenotypeCurie": "HP:0002075",
+            "diseasePhenotypeLabel": "Dysdiadochokinesis",
+            "micaCurie": "HP:0001251",
+            "micaLabel": "Ataxia",
+            "score": 2.2828487492153506,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:610217"
+          }
+        ]
+      },
+      {
+        "rank": 15,
+        "geneCurie": "NCBIGene:3708",
+        "geneLabel": "ITPR1",
+        "geneSymbol": "ITPR1",
+        "geneEntityId": 149233,
+        "bmaScore": 2.1013327005101705,
+        "normalizedScore": 0.23201,
+        "patientAverageScore": 3.2045901895535738,
+        "phenotypeAverageScore": 0.9980752114667675,
+        "directPhenotypeCount": 187,
+        "matchedPhenotypeCount": 11,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002346",
+            "patientPhenotypeLabel": "Head tremor",
+            "diseasePhenotypeCurie": "HP:0002346",
+            "diseasePhenotypeLabel": "Head tremor",
+            "micaCurie": "HP:0002346",
+            "micaLabel": "Head tremor",
+            "score": 5.591336732773239,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:98769"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002078",
+            "patientPhenotypeLabel": "Truncal ataxia",
+            "diseasePhenotypeCurie": "HP:0002078",
+            "diseasePhenotypeLabel": "Truncal ataxia",
+            "micaCurie": "HP:0002078",
+            "micaLabel": "Truncal ataxia",
+            "score": 4.753007542368795,
+            "evidenceCode": "5/5",
+            "referenceText": "OMIM:606658"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002345",
+            "patientPhenotypeLabel": "Action tremor",
+            "diseasePhenotypeCurie": "HP:0030147",
+            "diseasePhenotypeLabel": "Truncal titubation",
+            "micaCurie": "HP:0002345",
+            "micaLabel": "Action tremor",
+            "score": 3.957206207748767,
+            "evidenceCode": "2/4",
+            "referenceText": "OMIM:117360"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002066",
+            "patientPhenotypeLabel": "Gait ataxia",
+            "diseasePhenotypeCurie": "HP:0002066",
+            "diseasePhenotypeLabel": "Gait ataxia",
+            "micaCurie": "HP:0002066",
+            "micaLabel": "Gait ataxia",
+            "score": 3.645426583717925,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:208513"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0010864",
+            "patientPhenotypeLabel": "Severe intellectual disability",
+            "diseasePhenotypeCurie": "HP:0010864",
+            "diseasePhenotypeLabel": "Severe intellectual disability",
+            "micaCurie": "HP:0010864",
+            "micaLabel": "Severe intellectual disability",
+            "score": 3.397590419813344,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:206700"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011203",
+            "patientPhenotypeLabel": "EEG with abnormally slow frequencies",
+            "diseasePhenotypeCurie": "HP:0031491",
+            "diseasePhenotypeLabel": "Continuous spike and waves during slow sleep",
+            "micaCurie": "HP:0002353",
+            "micaLabel": "EEG abnormality",
+            "score": 3.0433574795301634,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:117360"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001290",
+            "patientPhenotypeLabel": "Generalized hypotonia",
+            "diseasePhenotypeCurie": "HP:0001290",
+            "diseasePhenotypeLabel": "Generalized hypotonia",
+            "micaCurie": "HP:0001290",
+            "micaLabel": "Generalized hypotonia",
+            "score": 2.661811037457516,
+            "evidenceCode": "7/7",
+            "referenceText": "OMIM:206700"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000718",
+            "patientPhenotypeLabel": "Aggressive behavior",
+            "diseasePhenotypeCurie": "HP:0003763",
+            "diseasePhenotypeLabel": "Bruxism",
+            "micaCurie": "HP:5200241",
+            "micaLabel": "Recurrent maladaptive behavior",
+            "score": 2.4119816660673212,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:117360"
+          }
+        ]
+      },
+      {
+        "rank": 16,
+        "geneCurie": "NCBIGene:3747",
+        "geneLabel": "KCNC2",
+        "geneSymbol": "KCNC2",
+        "geneEntityId": 149251,
+        "bmaScore": 2.1006664663453583,
+        "normalizedScore": 0.231937,
+        "patientAverageScore": 2.96702613977389,
+        "phenotypeAverageScore": 1.2343067929168265,
+        "directPhenotypeCount": 78,
+        "matchedPhenotypeCount": 11,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011203",
+            "patientPhenotypeLabel": "EEG with abnormally slow frequencies",
+            "diseasePhenotypeCurie": "HP:0010844",
+            "diseasePhenotypeLabel": "EEG with multifocal slow activity",
+            "micaCurie": "HP:0011203",
+            "micaLabel": "EEG with abnormally slow frequencies",
+            "score": 6.572165985784965,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:442835"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0010864",
+            "patientPhenotypeLabel": "Severe intellectual disability",
+            "diseasePhenotypeCurie": "HP:0010864",
+            "diseasePhenotypeLabel": "Severe intellectual disability",
+            "micaCurie": "HP:0010864",
+            "micaLabel": "Severe intellectual disability",
+            "score": 3.397590419813344,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:619913"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001344",
+            "patientPhenotypeLabel": "Absent speech",
+            "diseasePhenotypeCurie": "HP:0001344",
+            "diseasePhenotypeLabel": "Absent speech",
+            "micaCurie": "HP:0001344",
+            "micaLabel": "Absent speech",
+            "score": 2.9909645454692173,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:619913"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002346",
+            "patientPhenotypeLabel": "Head tremor",
+            "diseasePhenotypeCurie": "HP:0001337",
+            "diseasePhenotypeLabel": "Tremor",
+            "micaCurie": "HP:0001337",
+            "micaLabel": "Tremor",
+            "score": 2.9817266044842814,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:442835"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002345",
+            "patientPhenotypeLabel": "Action tremor",
+            "diseasePhenotypeCurie": "HP:0001337",
+            "diseasePhenotypeLabel": "Tremor",
+            "micaCurie": "HP:0001337",
+            "micaLabel": "Tremor",
+            "score": 2.9817266044842814,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:442835"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000718",
+            "patientPhenotypeLabel": "Aggressive behavior",
+            "diseasePhenotypeCurie": "HP:0100710",
+            "diseasePhenotypeLabel": "Impulsivity",
+            "micaCurie": "HP:0000734",
+            "micaLabel": "Disinhibition",
+            "score": 2.7618066341333187,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:442835"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001290",
+            "patientPhenotypeLabel": "Generalized hypotonia",
+            "diseasePhenotypeCurie": "HP:0001290",
+            "diseasePhenotypeLabel": "Generalized hypotonia",
+            "micaCurie": "HP:0001290",
+            "micaLabel": "Generalized hypotonia",
+            "score": 2.661811037457516,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:442835"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002066",
+            "patientPhenotypeLabel": "Gait ataxia",
+            "diseasePhenotypeCurie": "HP:0001251",
+            "diseasePhenotypeLabel": "Ataxia",
+            "micaCurie": "HP:0001251",
+            "micaLabel": "Ataxia",
+            "score": 2.2828487492153506,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:442835"
+          }
+        ]
+      },
+      {
+        "rank": 17,
+        "geneCurie": "NCBIGene:1106",
+        "geneLabel": "CHD2",
+        "geneSymbol": "CHD2",
+        "geneEntityId": 148437,
+        "bmaScore": 2.0978401801248316,
+        "normalizedScore": 0.231625,
+        "patientAverageScore": 2.8581797623603515,
+        "phenotypeAverageScore": 1.3375005978893117,
+        "directPhenotypeCount": 74,
+        "matchedPhenotypeCount": 11,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011203",
+            "patientPhenotypeLabel": "EEG with abnormally slow frequencies",
+            "diseasePhenotypeCurie": "HP:0010845",
+            "diseasePhenotypeLabel": "EEG with generalized slow activity",
+            "micaCurie": "HP:0011203",
+            "micaLabel": "EEG with abnormally slow frequencies",
+            "score": 6.572165985784965,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1942"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000712",
+            "patientPhenotypeLabel": "Emotional lability",
+            "diseasePhenotypeCurie": "HP:0012075",
+            "diseasePhenotypeLabel": "Personality disorder",
+            "micaCurie": "HP:0031466",
+            "micaLabel": "Impairment in personality functioning",
+            "score": 4.384243801111059,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:2382"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000718",
+            "patientPhenotypeLabel": "Aggressive behavior",
+            "diseasePhenotypeCurie": "HP:0000718",
+            "diseasePhenotypeLabel": "Aggressive behavior",
+            "micaCurie": "HP:0000718",
+            "micaLabel": "Aggressive behavior",
+            "score": 3.477342809586743,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:2382"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002346",
+            "patientPhenotypeLabel": "Head tremor",
+            "diseasePhenotypeCurie": "HP:0001337",
+            "diseasePhenotypeLabel": "Tremor",
+            "micaCurie": "HP:0001337",
+            "micaLabel": "Tremor",
+            "score": 2.9817266044842814,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1942"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002345",
+            "patientPhenotypeLabel": "Action tremor",
+            "diseasePhenotypeCurie": "HP:0001337",
+            "diseasePhenotypeLabel": "Tremor",
+            "micaCurie": "HP:0001337",
+            "micaLabel": "Tremor",
+            "score": 2.9817266044842814,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1942"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002066",
+            "patientPhenotypeLabel": "Gait ataxia",
+            "diseasePhenotypeCurie": "HP:0001251",
+            "diseasePhenotypeLabel": "Ataxia",
+            "micaCurie": "HP:0001251",
+            "micaLabel": "Ataxia",
+            "score": 2.2828487492153506,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1942"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002078",
+            "patientPhenotypeLabel": "Truncal ataxia",
+            "diseasePhenotypeCurie": "HP:0001251",
+            "diseasePhenotypeLabel": "Ataxia",
+            "micaCurie": "HP:0001251",
+            "micaLabel": "Ataxia",
+            "score": 2.2828487492153506,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1942"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001344",
+            "patientPhenotypeLabel": "Absent speech",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "ORPHA:1942"
+          }
+        ]
+      },
+      {
+        "rank": 18,
+        "geneCurie": "NCBIGene:388662",
+        "geneLabel": "SLC6A17",
+        "geneSymbol": "SLC6A17",
+        "geneEntityId": 153237,
+        "bmaScore": 2.088539886846932,
+        "normalizedScore": 0.230598,
+        "patientAverageScore": 2.827936544565301,
+        "phenotypeAverageScore": 1.3491432291285623,
+        "directPhenotypeCount": 39,
+        "matchedPhenotypeCount": 11,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000712",
+            "patientPhenotypeLabel": "Emotional lability",
+            "diseasePhenotypeCurie": "HP:0000712",
+            "diseasePhenotypeLabel": "Emotional lability",
+            "micaCurie": "HP:0000712",
+            "micaLabel": "Emotional lability",
+            "score": 4.929938250527874,
+            "evidenceCode": "3/5",
+            "referenceText": "OMIM:616269"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002346",
+            "patientPhenotypeLabel": "Head tremor",
+            "diseasePhenotypeCurie": "HP:0002378",
+            "diseasePhenotypeLabel": "Hand tremor",
+            "micaCurie": "HP:0030188",
+            "micaLabel": "Tremor by anatomical site",
+            "score": 4.766613194424574,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:457212"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000718",
+            "patientPhenotypeLabel": "Aggressive behavior",
+            "diseasePhenotypeCurie": "HP:0000718",
+            "diseasePhenotypeLabel": "Aggressive behavior",
+            "micaCurie": "HP:0000718",
+            "micaLabel": "Aggressive behavior",
+            "score": 3.477342809586743,
+            "evidenceCode": "5/5",
+            "referenceText": "OMIM:616269"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0010864",
+            "patientPhenotypeLabel": "Severe intellectual disability",
+            "diseasePhenotypeCurie": "HP:0010864",
+            "diseasePhenotypeLabel": "Severe intellectual disability",
+            "micaCurie": "HP:0010864",
+            "micaLabel": "Severe intellectual disability",
+            "score": 3.397590419813344,
+            "evidenceCode": "3/3",
+            "referenceText": "OMIM:616269"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011203",
+            "patientPhenotypeLabel": "EEG with abnormally slow frequencies",
+            "diseasePhenotypeCurie": "HP:0025373",
+            "diseasePhenotypeLabel": "Interictal EEG abnormality",
+            "micaCurie": "HP:0002353",
+            "micaLabel": "EEG abnormality",
+            "score": 3.0433574795301634,
+            "evidenceCode": "0/1",
+            "referenceText": "OMIM:616269"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001344",
+            "patientPhenotypeLabel": "Absent speech",
+            "diseasePhenotypeCurie": "HP:0001344",
+            "diseasePhenotypeLabel": "Absent speech",
+            "micaCurie": "HP:0001344",
+            "micaLabel": "Absent speech",
+            "score": 2.9909645454692173,
+            "evidenceCode": "2/5",
+            "referenceText": "OMIM:616269"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002345",
+            "patientPhenotypeLabel": "Action tremor",
+            "diseasePhenotypeCurie": "HP:0002378",
+            "diseasePhenotypeLabel": "Hand tremor",
+            "micaCurie": "HP:0001337",
+            "micaLabel": "Tremor",
+            "score": 2.9817266044842814,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:457212"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002066",
+            "patientPhenotypeLabel": "Gait ataxia",
+            "diseasePhenotypeCurie": "HP:0006915",
+            "diseasePhenotypeLabel": "Inability to walk by childhood/adolescence",
+            "micaCurie": "HP:0001288",
+            "micaLabel": "Gait disturbance",
+            "score": 2.089163433771081,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:616269"
+          }
+        ]
+      },
+      {
+        "rank": 19,
+        "geneCurie": "NCBIGene:6513",
+        "geneLabel": "SLC2A1",
+        "geneSymbol": "SLC2A1",
+        "geneEntityId": 150099,
+        "bmaScore": 2.086930142233593,
+        "normalizedScore": 0.23042,
+        "patientAverageScore": 3.296941033208489,
+        "phenotypeAverageScore": 0.876919251258697,
+        "directPhenotypeCount": 195,
+        "matchedPhenotypeCount": 11,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011203",
+            "patientPhenotypeLabel": "EEG with abnormally slow frequencies",
+            "diseasePhenotypeCurie": "HP:0010845",
+            "diseasePhenotypeLabel": "EEG with generalized slow activity",
+            "micaCurie": "HP:0011203",
+            "micaLabel": "EEG with abnormally slow frequencies",
+            "score": 6.572165985784965,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1942"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000712",
+            "patientPhenotypeLabel": "Emotional lability",
+            "diseasePhenotypeCurie": "HP:0000712",
+            "diseasePhenotypeLabel": "Emotional lability",
+            "micaCurie": "HP:0000712",
+            "micaLabel": "Emotional lability",
+            "score": 4.929938250527874,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:2131"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002066",
+            "patientPhenotypeLabel": "Gait ataxia",
+            "diseasePhenotypeCurie": "HP:0002066",
+            "diseasePhenotypeLabel": "Gait ataxia",
+            "micaCurie": "HP:0002066",
+            "micaLabel": "Gait ataxia",
+            "score": 3.645426583717925,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:606777"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000718",
+            "patientPhenotypeLabel": "Aggressive behavior",
+            "diseasePhenotypeCurie": "HP:0000718",
+            "diseasePhenotypeLabel": "Aggressive behavior",
+            "micaCurie": "HP:0000718",
+            "micaLabel": "Aggressive behavior",
+            "score": 3.477342809586743,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:2131"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0010864",
+            "patientPhenotypeLabel": "Severe intellectual disability",
+            "diseasePhenotypeCurie": "HP:0010864",
+            "diseasePhenotypeLabel": "Severe intellectual disability",
+            "micaCurie": "HP:0010864",
+            "micaLabel": "Severe intellectual disability",
+            "score": 3.397590419813344,
+            "evidenceCode": "1/3",
+            "referenceText": "OMIM:606777"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001344",
+            "patientPhenotypeLabel": "Absent speech",
+            "diseasePhenotypeCurie": "HP:0001344",
+            "diseasePhenotypeLabel": "Absent speech",
+            "micaCurie": "HP:0001344",
+            "micaLabel": "Absent speech",
+            "score": 2.9909645454692173,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:608885"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002346",
+            "patientPhenotypeLabel": "Head tremor",
+            "diseasePhenotypeCurie": "HP:0001337",
+            "diseasePhenotypeLabel": "Tremor",
+            "micaCurie": "HP:0001337",
+            "micaLabel": "Tremor",
+            "score": 2.9817266044842814,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:2131"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002345",
+            "patientPhenotypeLabel": "Action tremor",
+            "diseasePhenotypeCurie": "HP:0001337",
+            "diseasePhenotypeLabel": "Tremor",
+            "micaCurie": "HP:0001337",
+            "micaLabel": "Tremor",
+            "score": 2.9817266044842814,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:2131"
+          }
+        ]
+      },
+      {
+        "rank": 20,
+        "geneCurie": "NCBIGene:51343",
+        "geneLabel": "FZR1",
+        "geneSymbol": "FZR1",
+        "geneEntityId": 151737,
+        "bmaScore": 2.0824539534281064,
+        "normalizedScore": 0.229926,
+        "patientAverageScore": 3.0067160940639295,
+        "phenotypeAverageScore": 1.1581918127922828,
+        "directPhenotypeCount": 73,
+        "matchedPhenotypeCount": 11,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011203",
+            "patientPhenotypeLabel": "EEG with abnormally slow frequencies",
+            "diseasePhenotypeCurie": "HP:0010844",
+            "diseasePhenotypeLabel": "EEG with multifocal slow activity",
+            "micaCurie": "HP:0011203",
+            "micaLabel": "EEG with abnormally slow frequencies",
+            "score": 6.572165985784965,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:442835"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002066",
+            "patientPhenotypeLabel": "Gait ataxia",
+            "diseasePhenotypeCurie": "HP:0002066",
+            "diseasePhenotypeLabel": "Gait ataxia",
+            "micaCurie": "HP:0002066",
+            "micaLabel": "Gait ataxia",
+            "score": 3.645426583717925,
+            "evidenceCode": "3/3",
+            "referenceText": "OMIM:620145"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0010864",
+            "patientPhenotypeLabel": "Severe intellectual disability",
+            "diseasePhenotypeCurie": "HP:0010864",
+            "diseasePhenotypeLabel": "Severe intellectual disability",
+            "micaCurie": "HP:0010864",
+            "micaLabel": "Severe intellectual disability",
+            "score": 3.397590419813344,
+            "evidenceCode": "2/3",
+            "referenceText": "OMIM:620145"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002346",
+            "patientPhenotypeLabel": "Head tremor",
+            "diseasePhenotypeCurie": "HP:0001337",
+            "diseasePhenotypeLabel": "Tremor",
+            "micaCurie": "HP:0001337",
+            "micaLabel": "Tremor",
+            "score": 2.9817266044842814,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:442835"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002345",
+            "patientPhenotypeLabel": "Action tremor",
+            "diseasePhenotypeCurie": "HP:0001337",
+            "diseasePhenotypeLabel": "Tremor",
+            "micaCurie": "HP:0001337",
+            "micaLabel": "Tremor",
+            "score": 2.9817266044842814,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:442835"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000718",
+            "patientPhenotypeLabel": "Aggressive behavior",
+            "diseasePhenotypeCurie": "HP:0100710",
+            "diseasePhenotypeLabel": "Impulsivity",
+            "micaCurie": "HP:0000734",
+            "micaLabel": "Disinhibition",
+            "score": 2.7618066341333187,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:442835"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001290",
+            "patientPhenotypeLabel": "Generalized hypotonia",
+            "diseasePhenotypeCurie": "HP:0001290",
+            "diseasePhenotypeLabel": "Generalized hypotonia",
+            "micaCurie": "HP:0001290",
+            "micaLabel": "Generalized hypotonia",
+            "score": 2.661811037457516,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:442835"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002078",
+            "patientPhenotypeLabel": "Truncal ataxia",
+            "diseasePhenotypeCurie": "HP:0002066",
+            "diseasePhenotypeLabel": "Gait ataxia",
+            "micaCurie": "HP:0001251",
+            "micaLabel": "Ataxia",
+            "score": 2.2828487492153506,
+            "evidenceCode": "3/3",
+            "referenceText": "OMIM:620145"
+          }
+        ]
+      },
+      {
+        "rank": 21,
+        "geneCurie": "NCBIGene:1814",
+        "geneLabel": "DRD3",
+        "geneSymbol": "DRD3",
+        "geneEntityId": 148691,
+        "bmaScore": 2.0809567250622374,
+        "normalizedScore": 0.22976,
+        "patientAverageScore": 2.0540389659331795,
+        "phenotypeAverageScore": 2.1078744841912953,
+        "directPhenotypeCount": 12,
+        "matchedPhenotypeCount": 11,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002346",
+            "patientPhenotypeLabel": "Head tremor",
+            "diseasePhenotypeCurie": "HP:0002378",
+            "diseasePhenotypeLabel": "Hand tremor",
+            "micaCurie": "HP:0030188",
+            "micaLabel": "Tremor by anatomical site",
+            "score": 4.766613194424574,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:190300"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002345",
+            "patientPhenotypeLabel": "Action tremor",
+            "diseasePhenotypeCurie": "HP:0002345",
+            "diseasePhenotypeLabel": "Action tremor",
+            "micaCurie": "HP:0002345",
+            "micaLabel": "Action tremor",
+            "score": 3.957206207748767,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:190300"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011203",
+            "patientPhenotypeLabel": "EEG with abnormally slow frequencies",
+            "diseasePhenotypeCurie": "HP:0002353",
+            "diseasePhenotypeLabel": "EEG abnormality",
+            "micaCurie": "HP:0002353",
+            "micaLabel": "EEG abnormality",
+            "score": 3.0433574795301634,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:181500"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000718",
+            "patientPhenotypeLabel": "Aggressive behavior",
+            "diseasePhenotypeCurie": "HP:0410291",
+            "diseasePhenotypeLabel": "Negativism",
+            "micaCurie": "HP:0025780",
+            "micaLabel": "Abnormal volitional state",
+            "score": 2.397778715889328,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:181500"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000712",
+            "patientPhenotypeLabel": "Emotional lability",
+            "diseasePhenotypeCurie": "HP:0410291",
+            "diseasePhenotypeLabel": "Negativism",
+            "micaCurie": "HP:0025766",
+            "micaLabel": "Abnormal affect",
+            "score": 2.272615572935322,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:181500"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001344",
+            "patientPhenotypeLabel": "Absent speech",
+            "diseasePhenotypeCurie": "HP:0001260",
+            "diseasePhenotypeLabel": "Dysarthria",
+            "micaCurie": "HP:0002167",
+            "micaLabel": "Abnormal speech pattern",
+            "score": 1.6855833403586882,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:190300"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002066",
+            "patientPhenotypeLabel": "Gait ataxia",
+            "diseasePhenotypeCurie": "HP:0002378",
+            "diseasePhenotypeLabel": "Hand tremor",
+            "micaCurie": "HP:0011442",
+            "micaLabel": "Abnormal central motor function",
+            "score": 1.465210920683032,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:190300"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002078",
+            "patientPhenotypeLabel": "Truncal ataxia",
+            "diseasePhenotypeCurie": "HP:0002378",
+            "diseasePhenotypeLabel": "Hand tremor",
+            "micaCurie": "HP:0011442",
+            "micaLabel": "Abnormal central motor function",
+            "score": 1.465210920683032,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:190300"
+          }
+        ]
+      },
+      {
+        "rank": 22,
+        "geneCurie": "NCBIGene:4915",
+        "geneLabel": "NTRK2",
+        "geneSymbol": "NTRK2",
+        "geneEntityId": 149634,
+        "bmaScore": 2.0807382244233477,
+        "normalizedScore": 0.229736,
+        "patientAverageScore": 2.96702613977389,
+        "phenotypeAverageScore": 1.1944503090728051,
+        "directPhenotypeCount": 71,
+        "matchedPhenotypeCount": 11,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011203",
+            "patientPhenotypeLabel": "EEG with abnormally slow frequencies",
+            "diseasePhenotypeCurie": "HP:0010844",
+            "diseasePhenotypeLabel": "EEG with multifocal slow activity",
+            "micaCurie": "HP:0011203",
+            "micaLabel": "EEG with abnormally slow frequencies",
+            "score": 6.572165985784965,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:442835"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0010864",
+            "patientPhenotypeLabel": "Severe intellectual disability",
+            "diseasePhenotypeCurie": "HP:0010864",
+            "diseasePhenotypeLabel": "Severe intellectual disability",
+            "micaCurie": "HP:0010864",
+            "micaLabel": "Severe intellectual disability",
+            "score": 3.397590419813344,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:617830"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001344",
+            "patientPhenotypeLabel": "Absent speech",
+            "diseasePhenotypeCurie": "HP:0001344",
+            "diseasePhenotypeLabel": "Absent speech",
+            "micaCurie": "HP:0001344",
+            "micaLabel": "Absent speech",
+            "score": 2.9909645454692173,
+            "evidenceCode": "2/4",
+            "referenceText": "OMIM:617830"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002346",
+            "patientPhenotypeLabel": "Head tremor",
+            "diseasePhenotypeCurie": "HP:0001337",
+            "diseasePhenotypeLabel": "Tremor",
+            "micaCurie": "HP:0001337",
+            "micaLabel": "Tremor",
+            "score": 2.9817266044842814,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:442835"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002345",
+            "patientPhenotypeLabel": "Action tremor",
+            "diseasePhenotypeCurie": "HP:0001337",
+            "diseasePhenotypeLabel": "Tremor",
+            "micaCurie": "HP:0001337",
+            "micaLabel": "Tremor",
+            "score": 2.9817266044842814,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:442835"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000718",
+            "patientPhenotypeLabel": "Aggressive behavior",
+            "diseasePhenotypeCurie": "HP:0100710",
+            "diseasePhenotypeLabel": "Impulsivity",
+            "micaCurie": "HP:0000734",
+            "micaLabel": "Disinhibition",
+            "score": 2.7618066341333187,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:442835"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001290",
+            "patientPhenotypeLabel": "Generalized hypotonia",
+            "diseasePhenotypeCurie": "HP:0001290",
+            "diseasePhenotypeLabel": "Generalized hypotonia",
+            "micaCurie": "HP:0001290",
+            "micaLabel": "Generalized hypotonia",
+            "score": 2.661811037457516,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:442835"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002066",
+            "patientPhenotypeLabel": "Gait ataxia",
+            "diseasePhenotypeCurie": "HP:0001251",
+            "diseasePhenotypeLabel": "Ataxia",
+            "micaCurie": "HP:0001251",
+            "micaLabel": "Ataxia",
+            "score": 2.2828487492153506,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:442835"
+          }
+        ]
+      },
+      {
+        "rank": 23,
+        "geneCurie": "NCBIGene:1759",
+        "geneLabel": "DNM1",
+        "geneSymbol": "DNM1",
+        "geneEntityId": 148665,
+        "bmaScore": 2.079494584529683,
+        "normalizedScore": 0.229599,
+        "patientAverageScore": 3.0429398711858155,
+        "phenotypeAverageScore": 1.1160492978735497,
+        "directPhenotypeCount": 107,
+        "matchedPhenotypeCount": 11,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011203",
+            "patientPhenotypeLabel": "EEG with abnormally slow frequencies",
+            "diseasePhenotypeCurie": "HP:0010844",
+            "diseasePhenotypeLabel": "EEG with multifocal slow activity",
+            "micaCurie": "HP:0011203",
+            "micaLabel": "EEG with abnormally slow frequencies",
+            "score": 6.572165985784965,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:442835"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000712",
+            "patientPhenotypeLabel": "Emotional lability",
+            "diseasePhenotypeCurie": "HP:0012075",
+            "diseasePhenotypeLabel": "Personality disorder",
+            "micaCurie": "HP:0031466",
+            "micaLabel": "Impairment in personality functioning",
+            "score": 4.384243801111059,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:2382"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000718",
+            "patientPhenotypeLabel": "Aggressive behavior",
+            "diseasePhenotypeCurie": "HP:0000718",
+            "diseasePhenotypeLabel": "Aggressive behavior",
+            "micaCurie": "HP:0000718",
+            "micaLabel": "Aggressive behavior",
+            "score": 3.477342809586743,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:2382"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001344",
+            "patientPhenotypeLabel": "Absent speech",
+            "diseasePhenotypeCurie": "HP:0001344",
+            "diseasePhenotypeLabel": "Absent speech",
+            "micaCurie": "HP:0001344",
+            "micaLabel": "Absent speech",
+            "score": 2.9909645454692173,
+            "evidenceCode": "5/5",
+            "referenceText": "OMIM:616346"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002346",
+            "patientPhenotypeLabel": "Head tremor",
+            "diseasePhenotypeCurie": "HP:0001337",
+            "diseasePhenotypeLabel": "Tremor",
+            "micaCurie": "HP:0001337",
+            "micaLabel": "Tremor",
+            "score": 2.9817266044842814,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:442835"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002345",
+            "patientPhenotypeLabel": "Action tremor",
+            "diseasePhenotypeCurie": "HP:0001337",
+            "diseasePhenotypeLabel": "Tremor",
+            "micaCurie": "HP:0001337",
+            "micaLabel": "Tremor",
+            "score": 2.9817266044842814,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:442835"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001290",
+            "patientPhenotypeLabel": "Generalized hypotonia",
+            "diseasePhenotypeCurie": "HP:0001290",
+            "diseasePhenotypeLabel": "Generalized hypotonia",
+            "micaCurie": "HP:0001290",
+            "micaLabel": "Generalized hypotonia",
+            "score": 2.661811037457516,
+            "evidenceCode": "2/5",
+            "referenceText": "OMIM:616346"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002066",
+            "patientPhenotypeLabel": "Gait ataxia",
+            "diseasePhenotypeCurie": "HP:0001251",
+            "diseasePhenotypeLabel": "Ataxia",
+            "micaCurie": "HP:0001251",
+            "micaLabel": "Ataxia",
+            "score": 2.2828487492153506,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:442835"
+          }
+        ]
+      },
+      {
+        "rank": 24,
+        "geneCurie": "NCBIGene:3064",
+        "geneLabel": "HTT",
+        "geneSymbol": "HTT",
+        "geneEntityId": 149062,
+        "bmaScore": 2.0745712219640993,
+        "normalizedScore": 0.229055,
+        "patientAverageScore": 2.7051110037415005,
+        "phenotypeAverageScore": 1.4440314401866983,
+        "directPhenotypeCount": 93,
+        "matchedPhenotypeCount": 11,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000712",
+            "patientPhenotypeLabel": "Emotional lability",
+            "diseasePhenotypeCurie": "HP:0000751",
+            "diseasePhenotypeLabel": "Personality changes",
+            "micaCurie": "HP:0031466",
+            "micaLabel": "Impairment in personality functioning",
+            "score": 4.384243801111059,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:143100"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002066",
+            "patientPhenotypeLabel": "Gait ataxia",
+            "diseasePhenotypeCurie": "HP:0002066",
+            "diseasePhenotypeLabel": "Gait ataxia",
+            "micaCurie": "HP:0002066",
+            "micaLabel": "Gait ataxia",
+            "score": 3.645426583717925,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:143100"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000718",
+            "patientPhenotypeLabel": "Aggressive behavior",
+            "diseasePhenotypeCurie": "HP:0000718",
+            "diseasePhenotypeLabel": "Aggressive behavior",
+            "micaCurie": "HP:0000718",
+            "micaLabel": "Aggressive behavior",
+            "score": 3.477342809586743,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:399"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0010864",
+            "patientPhenotypeLabel": "Severe intellectual disability",
+            "diseasePhenotypeCurie": "HP:0010864",
+            "diseasePhenotypeLabel": "Severe intellectual disability",
+            "micaCurie": "HP:0010864",
+            "micaLabel": "Severe intellectual disability",
+            "score": 3.397590419813344,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:617435"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001344",
+            "patientPhenotypeLabel": "Absent speech",
+            "diseasePhenotypeCurie": "HP:0001344",
+            "diseasePhenotypeLabel": "Absent speech",
+            "micaCurie": "HP:0001344",
+            "micaLabel": "Absent speech",
+            "score": 2.9909645454692173,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:617435"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002346",
+            "patientPhenotypeLabel": "Head tremor",
+            "diseasePhenotypeCurie": "HP:0001337",
+            "diseasePhenotypeLabel": "Tremor",
+            "micaCurie": "HP:0001337",
+            "micaLabel": "Tremor",
+            "score": 2.9817266044842814,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:617435"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002345",
+            "patientPhenotypeLabel": "Action tremor",
+            "diseasePhenotypeCurie": "HP:0001337",
+            "diseasePhenotypeLabel": "Tremor",
+            "micaCurie": "HP:0001337",
+            "micaLabel": "Tremor",
+            "score": 2.9817266044842814,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:617435"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002078",
+            "patientPhenotypeLabel": "Truncal ataxia",
+            "diseasePhenotypeCurie": "HP:0002073",
+            "diseasePhenotypeLabel": "Progressive cerebellar ataxia",
+            "micaCurie": "HP:0001251",
+            "micaLabel": "Ataxia",
+            "score": 2.2828487492153506,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:248111"
+          }
+        ]
+      },
+      {
+        "rank": 25,
+        "geneCurie": "NCBIGene:6506",
+        "geneLabel": "SLC1A2",
+        "geneSymbol": "SLC1A2",
+        "geneEntityId": 150095,
+        "bmaScore": 2.0704942558607744,
+        "normalizedScore": 0.228605,
+        "patientAverageScore": 2.96702613977389,
+        "phenotypeAverageScore": 1.173962371947659,
+        "directPhenotypeCount": 75,
+        "matchedPhenotypeCount": 11,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011203",
+            "patientPhenotypeLabel": "EEG with abnormally slow frequencies",
+            "diseasePhenotypeCurie": "HP:0010844",
+            "diseasePhenotypeLabel": "EEG with multifocal slow activity",
+            "micaCurie": "HP:0011203",
+            "micaLabel": "EEG with abnormally slow frequencies",
+            "score": 6.572165985784965,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:442835"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0010864",
+            "patientPhenotypeLabel": "Severe intellectual disability",
+            "diseasePhenotypeCurie": "HP:0010864",
+            "diseasePhenotypeLabel": "Severe intellectual disability",
+            "micaCurie": "HP:0010864",
+            "micaLabel": "Severe intellectual disability",
+            "score": 3.397590419813344,
+            "evidenceCode": "1/3",
+            "referenceText": "OMIM:617105"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001344",
+            "patientPhenotypeLabel": "Absent speech",
+            "diseasePhenotypeCurie": "HP:0001344",
+            "diseasePhenotypeLabel": "Absent speech",
+            "micaCurie": "HP:0001344",
+            "micaLabel": "Absent speech",
+            "score": 2.9909645454692173,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:617105"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002346",
+            "patientPhenotypeLabel": "Head tremor",
+            "diseasePhenotypeCurie": "HP:0001337",
+            "diseasePhenotypeLabel": "Tremor",
+            "micaCurie": "HP:0001337",
+            "micaLabel": "Tremor",
+            "score": 2.9817266044842814,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:442835"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002345",
+            "patientPhenotypeLabel": "Action tremor",
+            "diseasePhenotypeCurie": "HP:0001337",
+            "diseasePhenotypeLabel": "Tremor",
+            "micaCurie": "HP:0001337",
+            "micaLabel": "Tremor",
+            "score": 2.9817266044842814,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:442835"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000718",
+            "patientPhenotypeLabel": "Aggressive behavior",
+            "diseasePhenotypeCurie": "HP:0100710",
+            "diseasePhenotypeLabel": "Impulsivity",
+            "micaCurie": "HP:0000734",
+            "micaLabel": "Disinhibition",
+            "score": 2.7618066341333187,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:442835"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001290",
+            "patientPhenotypeLabel": "Generalized hypotonia",
+            "diseasePhenotypeCurie": "HP:0001290",
+            "diseasePhenotypeLabel": "Generalized hypotonia",
+            "micaCurie": "HP:0001290",
+            "micaLabel": "Generalized hypotonia",
+            "score": 2.661811037457516,
+            "evidenceCode": "1/3",
+            "referenceText": "OMIM:617105"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002066",
+            "patientPhenotypeLabel": "Gait ataxia",
+            "diseasePhenotypeCurie": "HP:0001251",
+            "diseasePhenotypeLabel": "Ataxia",
+            "micaCurie": "HP:0001251",
+            "micaLabel": "Ataxia",
+            "score": 2.2828487492153506,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:442835"
+          }
+        ]
+      }
+    ],
+    "engineSummary": {
+      "diseaseCount": 8579,
+      "geneCount": 5256,
+      "phenotypeCount": 19389,
+      "sourceMode": {
+        "disease": "relationship_fallback",
+        "gene": "relationship_fallback"
+      },
+      "generatedAt": "2026-03-15T21:00:39.457Z"
+    }
+  }
+}

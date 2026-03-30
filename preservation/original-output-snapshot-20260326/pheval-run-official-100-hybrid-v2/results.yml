@@ -1,0 +1,8 @@
+tool: Genovy DX
+tool_version: 0.1.0
+config: output/pheval-input-local-gene
+run_timestamp: 1773609782.905439
+corpus: output/pheval-official-sample-100
+mondo_download_date: '2025-06-09T18:46:34.249845Z'
+hgnc_download_date: '2025-06-09T18:46:49.610643Z'
+tool_specific_configuration_options: null

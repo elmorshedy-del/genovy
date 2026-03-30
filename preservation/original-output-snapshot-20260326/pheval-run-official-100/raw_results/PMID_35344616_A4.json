@@ -1,0 +1,2803 @@
+{
+  "success": true,
+  "engine": "genovy-dx-sim",
+  "analysisType": "gene",
+  "input": {
+    "presentPhenotypeCuries": [
+      "HP:0000954",
+      "HP:0002164",
+      "HP:0001156",
+      "HP:0030084",
+      "HP:0003027",
+      "HP:0011304",
+      "HP:0002937",
+      "HP:0010055",
+      "HP:0004279",
+      "HP:0001159",
+      "HP:0002650",
+      "HP:0000902",
+      "HP:0009804",
+      "HP:0000212",
+      "HP:0000431",
+      "HP:0000202",
+      "HP:0011800",
+      "HP:0000343",
+      "HP:0000189",
+      "HP:0000470",
+      "HP:0005280",
+      "HP:0011220",
+      "HP:0000278",
+      "HP:0003196",
+      "HP:0000637",
+      "HP:0000527",
+      "HP:0000463",
+      "HP:0000520",
+      "HP:0000508",
+      "HP:0000316",
+      "HP:0000054",
+      "HP:0000028",
+      "HP:0004322",
+      "HP:0000369",
+      "HP:0000023",
+      "HP:0006394"
+    ],
+    "excludedPhenotypeCuries": [
+      "HP:0000960",
+      "HP:0000995",
+      "HP:0012385",
+      "HP:0002827",
+      "HP:0000767",
+      "HP:0000322",
+      "HP:0000347",
+      "HP:0002714",
+      "HP:0000219",
+      "HP:0000207",
+      "HP:0000286",
+      "HP:0010297",
+      "HP:0000486",
+      "HP:0000047",
+      "HP:0000365",
+      "HP:0008551",
+      "HP:0001627",
+      "HP:0000582",
+      "HP:0000494",
+      "HP:0000171"
+    ],
+    "sourceFormat": "phenopacket"
+  },
+  "ranking": {
+    "queryPhenotypes": [
+      {
+        "phenotypeCurie": "HP:0000954",
+        "phenotypeLabel": "Single transverse palmar crease"
+      },
+      {
+        "phenotypeCurie": "HP:0002164",
+        "phenotypeLabel": "Nail dysplasia"
+      },
+      {
+        "phenotypeCurie": "HP:0001156",
+        "phenotypeLabel": "Brachydactyly"
+      },
+      {
+        "phenotypeCurie": "HP:0030084",
+        "phenotypeLabel": "Clinodactyly"
+      },
+      {
+        "phenotypeCurie": "HP:0003027",
+        "phenotypeLabel": "Mesomelia"
+      },
+      {
+        "phenotypeCurie": "HP:0011304",
+        "phenotypeLabel": "Broad thumb"
+      },
+      {
+        "phenotypeCurie": "HP:0002937",
+        "phenotypeLabel": "Hemivertebrae"
+      },
+      {
+        "phenotypeCurie": "HP:0010055",
+        "phenotypeLabel": "Broad hallux"
+      },
+      {
+        "phenotypeCurie": "HP:0004279",
+        "phenotypeLabel": "Short palm"
+      },
+      {
+        "phenotypeCurie": "HP:0001159",
+        "phenotypeLabel": "Syndactyly"
+      },
+      {
+        "phenotypeCurie": "HP:0002650",
+        "phenotypeLabel": "Scoliosis"
+      },
+      {
+        "phenotypeCurie": "HP:0000902",
+        "phenotypeLabel": "Rib fusion"
+      },
+      {
+        "phenotypeCurie": "HP:0009804",
+        "phenotypeLabel": "Tooth agenesis"
+      },
+      {
+        "phenotypeCurie": "HP:0000212",
+        "phenotypeLabel": "Gingival overgrowth"
+      },
+      {
+        "phenotypeCurie": "HP:0000431",
+        "phenotypeLabel": "Wide nasal bridge"
+      },
+      {
+        "phenotypeCurie": "HP:0000202",
+        "phenotypeLabel": "Orofacial cleft"
+      },
+      {
+        "phenotypeCurie": "HP:0011800",
+        "phenotypeLabel": "Midface retrusion"
+      },
+      {
+        "phenotypeCurie": "HP:0000343",
+        "phenotypeLabel": "Long philtrum"
+      },
+      {
+        "phenotypeCurie": "HP:0000189",
+        "phenotypeLabel": "Narrow palate"
+      },
+      {
+        "phenotypeCurie": "HP:0000470",
+        "phenotypeLabel": "Short neck"
+      },
+      {
+        "phenotypeCurie": "HP:0005280",
+        "phenotypeLabel": "Depressed nasal bridge"
+      },
+      {
+        "phenotypeCurie": "HP:0011220",
+        "phenotypeLabel": "Prominent forehead"
+      },
+      {
+        "phenotypeCurie": "HP:0000278",
+        "phenotypeLabel": "Retrognathia"
+      },
+      {
+        "phenotypeCurie": "HP:0003196",
+        "phenotypeLabel": "Short nose"
+      },
+      {
+        "phenotypeCurie": "HP:0000637",
+        "phenotypeLabel": "Long palpebral fissure"
+      },
+      {
+        "phenotypeCurie": "HP:0000527",
+        "phenotypeLabel": "Long eyelashes"
+      },
+      {
+        "phenotypeCurie": "HP:0000463",
+        "phenotypeLabel": "Anteverted nares"
+      },
+      {
+        "phenotypeCurie": "HP:0000520",
+        "phenotypeLabel": "Proptosis"
+      },
+      {
+        "phenotypeCurie": "HP:0000508",
+        "phenotypeLabel": "Ptosis"
+      },
+      {
+        "phenotypeCurie": "HP:0000316",
+        "phenotypeLabel": "Hypertelorism"
+      },
+      {
+        "phenotypeCurie": "HP:0000054",
+        "phenotypeLabel": "Micropenis"
+      },
+      {
+        "phenotypeCurie": "HP:0000028",
+        "phenotypeLabel": "Cryptorchidism"
+      },
+      {
+        "phenotypeCurie": "HP:0004322",
+        "phenotypeLabel": "Short stature"
+      },
+      {
+        "phenotypeCurie": "HP:0000369",
+        "phenotypeLabel": "Low-set ears"
+      },
+      {
+        "phenotypeCurie": "HP:0000023",
+        "phenotypeLabel": "Inguinal hernia"
+      },
+      {
+        "phenotypeCurie": "HP:0006394",
+        "phenotypeLabel": "Limited pronation/supination of forearm"
+      }
+    ],
+    "results": [
+      {
+        "rank": 1,
+        "geneCurie": "NCBIGene:4920",
+        "geneLabel": "ROR2",
+        "geneSymbol": "ROR2",
+        "geneEntityId": 149636,
+        "bmaScore": 3.053138876863532,
+        "normalizedScore": 0.3371,
+        "patientAverageScore": 3.6457615259701317,
+        "phenotypeAverageScore": 2.4605162277569326,
+        "directPhenotypeCount": 155,
+        "matchedPhenotypeCount": 36,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0006394",
+            "patientPhenotypeLabel": "Limited pronation/supination of forearm",
+            "diseasePhenotypeCurie": "HP:0006394",
+            "diseasePhenotypeLabel": "Limited pronation/supination of forearm",
+            "micaCurie": "HP:0006394",
+            "micaLabel": "Limited pronation/supination of forearm",
+            "score": 6.859848058236746,
+            "evidenceCode": "13/20",
+            "referenceText": "OMIM:268310"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000902",
+            "patientPhenotypeLabel": "Rib fusion",
+            "diseasePhenotypeCurie": "HP:0000902",
+            "diseasePhenotypeLabel": "Rib fusion",
+            "micaCurie": "HP:0000902",
+            "micaLabel": "Rib fusion",
+            "score": 5.7612357695686365,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:1507"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003027",
+            "patientPhenotypeLabel": "Mesomelia",
+            "diseasePhenotypeCurie": "HP:0005011",
+            "diseasePhenotypeLabel": "Mesomelic arm shortening",
+            "micaCurie": "HP:0003027",
+            "micaLabel": "Mesomelia",
+            "score": 5.250410145802645,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:268310"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002937",
+            "patientPhenotypeLabel": "Hemivertebrae",
+            "diseasePhenotypeCurie": "HP:0008467",
+            "diseasePhenotypeLabel": "Thoracic hemivertebrae",
+            "micaCurie": "HP:0002937",
+            "micaLabel": "Hemivertebrae",
+            "score": 4.979535191667246,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:268310"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000637",
+            "patientPhenotypeLabel": "Long palpebral fissure",
+            "diseasePhenotypeCurie": "HP:0000637",
+            "diseasePhenotypeLabel": "Long palpebral fissure",
+            "micaCurie": "HP:0000637",
+            "micaLabel": "Long palpebral fissure",
+            "score": 4.766613194424574,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:1507"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0010055",
+            "patientPhenotypeLabel": "Broad hallux",
+            "diseasePhenotypeCurie": "HP:0010055",
+            "diseasePhenotypeLabel": "Broad hallux",
+            "micaCurie": "HP:0010055",
+            "micaLabel": "Broad hallux",
+            "score": 4.650353388308712,
+            "evidenceCode": "8/17",
+            "referenceText": "OMIM:268310"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000212",
+            "patientPhenotypeLabel": "Gingival overgrowth",
+            "diseasePhenotypeCurie": "HP:0000212",
+            "diseasePhenotypeLabel": "Gingival overgrowth",
+            "micaCurie": "HP:0000212",
+            "micaLabel": "Gingival overgrowth",
+            "score": 4.614421379082649,
+            "evidenceCode": "17/22",
+            "referenceText": "OMIM:268310"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0004279",
+            "patientPhenotypeLabel": "Short palm",
+            "diseasePhenotypeCurie": "HP:0004279",
+            "diseasePhenotypeLabel": "Short palm",
+            "micaCurie": "HP:0004279",
+            "micaLabel": "Short palm",
+            "score": 4.557262965242701,
+            "evidenceCode": "19/22",
+            "referenceText": "OMIM:268310"
+          }
+        ]
+      },
+      {
+        "rank": 2,
+        "geneCurie": "NCBIGene:7474",
+        "geneLabel": "WNT5A",
+        "geneSymbol": "WNT5A",
+        "geneEntityId": 150436,
+        "bmaScore": 2.9907492196493397,
+        "normalizedScore": 0.330211,
+        "patientAverageScore": 3.4381114305819374,
+        "phenotypeAverageScore": 2.5433870087167425,
+        "directPhenotypeCount": 116,
+        "matchedPhenotypeCount": 36,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0003027",
+            "patientPhenotypeLabel": "Mesomelia",
+            "diseasePhenotypeCurie": "HP:0003027",
+            "diseasePhenotypeLabel": "Mesomelia",
+            "micaCurie": "HP:0003027",
+            "micaLabel": "Mesomelia",
+            "score": 5.250410145802645,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:180700"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002937",
+            "patientPhenotypeLabel": "Hemivertebrae",
+            "diseasePhenotypeCurie": "HP:0002937",
+            "diseasePhenotypeLabel": "Hemivertebrae",
+            "micaCurie": "HP:0002937",
+            "micaLabel": "Hemivertebrae",
+            "score": 4.979535191667246,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:3107"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000637",
+            "patientPhenotypeLabel": "Long palpebral fissure",
+            "diseasePhenotypeCurie": "HP:0000637",
+            "diseasePhenotypeLabel": "Long palpebral fissure",
+            "micaCurie": "HP:0000637",
+            "micaLabel": "Long palpebral fissure",
+            "score": 4.766613194424574,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:3107"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000212",
+            "patientPhenotypeLabel": "Gingival overgrowth",
+            "diseasePhenotypeCurie": "HP:0000212",
+            "diseasePhenotypeLabel": "Gingival overgrowth",
+            "micaCurie": "HP:0000212",
+            "micaLabel": "Gingival overgrowth",
+            "score": 4.614421379082649,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:3107"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0004279",
+            "patientPhenotypeLabel": "Short palm",
+            "diseasePhenotypeCurie": "HP:0004279",
+            "diseasePhenotypeLabel": "Short palm",
+            "micaCurie": "HP:0004279",
+            "micaLabel": "Short palm",
+            "score": 4.557262965242701,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:3107"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011304",
+            "patientPhenotypeLabel": "Broad thumb",
+            "diseasePhenotypeCurie": "HP:0011304",
+            "diseasePhenotypeLabel": "Broad thumb",
+            "micaCurie": "HP:0011304",
+            "micaLabel": "Broad thumb",
+            "score": 4.546213129056115,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:180700"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0010055",
+            "patientPhenotypeLabel": "Broad hallux",
+            "diseasePhenotypeCurie": "HP:0001837",
+            "diseasePhenotypeLabel": "Broad toe",
+            "micaCurie": "HP:0001837",
+            "micaLabel": "Broad toe",
+            "score": 4.461952785438375,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:180700"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000527",
+            "patientPhenotypeLabel": "Long eyelashes",
+            "diseasePhenotypeCurie": "HP:0000527",
+            "diseasePhenotypeLabel": "Long eyelashes",
+            "micaCurie": "HP:0000527",
+            "micaLabel": "Long eyelashes",
+            "score": 4.151797857134536,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:180700"
+          }
+        ]
+      },
+      {
+        "rank": 3,
+        "geneCurie": "NCBIGene:1855",
+        "geneLabel": "DVL1",
+        "geneSymbol": "DVL1",
+        "geneEntityId": 148707,
+        "bmaScore": 2.9306050825867525,
+        "normalizedScore": 0.323571,
+        "patientAverageScore": 3.443344780661669,
+        "phenotypeAverageScore": 2.4178653845118356,
+        "directPhenotypeCount": 146,
+        "matchedPhenotypeCount": 36,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0003027",
+            "patientPhenotypeLabel": "Mesomelia",
+            "diseasePhenotypeCurie": "HP:0003027",
+            "diseasePhenotypeLabel": "Mesomelia",
+            "micaCurie": "HP:0003027",
+            "micaLabel": "Mesomelia",
+            "score": 5.250410145802645,
+            "evidenceCode": "10/15",
+            "referenceText": "OMIM:616331"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002937",
+            "patientPhenotypeLabel": "Hemivertebrae",
+            "diseasePhenotypeCurie": "HP:0002937",
+            "diseasePhenotypeLabel": "Hemivertebrae",
+            "micaCurie": "HP:0002937",
+            "micaLabel": "Hemivertebrae",
+            "score": 4.979535191667246,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:3107"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000637",
+            "patientPhenotypeLabel": "Long palpebral fissure",
+            "diseasePhenotypeCurie": "HP:0000637",
+            "diseasePhenotypeLabel": "Long palpebral fissure",
+            "micaCurie": "HP:0000637",
+            "micaLabel": "Long palpebral fissure",
+            "score": 4.766613194424574,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:3107"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0010055",
+            "patientPhenotypeLabel": "Broad hallux",
+            "diseasePhenotypeCurie": "HP:0010055",
+            "diseasePhenotypeLabel": "Broad hallux",
+            "micaCurie": "HP:0010055",
+            "micaLabel": "Broad hallux",
+            "score": 4.650353388308712,
+            "evidenceCode": "9/11",
+            "referenceText": "OMIM:616331"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000212",
+            "patientPhenotypeLabel": "Gingival overgrowth",
+            "diseasePhenotypeCurie": "HP:0000212",
+            "diseasePhenotypeLabel": "Gingival overgrowth",
+            "micaCurie": "HP:0000212",
+            "micaLabel": "Gingival overgrowth",
+            "score": 4.614421379082649,
+            "evidenceCode": "3/6",
+            "referenceText": "OMIM:180700"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0004279",
+            "patientPhenotypeLabel": "Short palm",
+            "diseasePhenotypeCurie": "HP:0004279",
+            "diseasePhenotypeLabel": "Short palm",
+            "micaCurie": "HP:0004279",
+            "micaLabel": "Short palm",
+            "score": 4.557262965242701,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:180700"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011304",
+            "patientPhenotypeLabel": "Broad thumb",
+            "diseasePhenotypeCurie": "HP:0011304",
+            "diseasePhenotypeLabel": "Broad thumb",
+            "micaCurie": "HP:0011304",
+            "micaLabel": "Broad thumb",
+            "score": 4.546213129056115,
+            "evidenceCode": "15/21",
+            "referenceText": "OMIM:616331"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000527",
+            "patientPhenotypeLabel": "Long eyelashes",
+            "diseasePhenotypeCurie": "HP:0000527",
+            "diseasePhenotypeLabel": "Long eyelashes",
+            "micaCurie": "HP:0000527",
+            "micaLabel": "Long eyelashes",
+            "score": 4.151797857134536,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:180700"
+          }
+        ]
+      },
+      {
+        "rank": 4,
+        "geneCurie": "NCBIGene:2535",
+        "geneLabel": "FZD2",
+        "geneSymbol": "FZD2",
+        "geneEntityId": 148887,
+        "bmaScore": 2.9255287949075717,
+        "normalizedScore": 0.32301,
+        "patientAverageScore": 3.2915912884482617,
+        "phenotypeAverageScore": 2.559466301366882,
+        "directPhenotypeCount": 110,
+        "matchedPhenotypeCount": 36,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002937",
+            "patientPhenotypeLabel": "Hemivertebrae",
+            "diseasePhenotypeCurie": "HP:0002937",
+            "diseasePhenotypeLabel": "Hemivertebrae",
+            "micaCurie": "HP:0002937",
+            "micaLabel": "Hemivertebrae",
+            "score": 4.979535191667246,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:3107"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000637",
+            "patientPhenotypeLabel": "Long palpebral fissure",
+            "diseasePhenotypeCurie": "HP:0000637",
+            "diseasePhenotypeLabel": "Long palpebral fissure",
+            "micaCurie": "HP:0000637",
+            "micaLabel": "Long palpebral fissure",
+            "score": 4.766613194424574,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:3107"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000212",
+            "patientPhenotypeLabel": "Gingival overgrowth",
+            "diseasePhenotypeCurie": "HP:0000212",
+            "diseasePhenotypeLabel": "Gingival overgrowth",
+            "micaCurie": "HP:0000212",
+            "micaLabel": "Gingival overgrowth",
+            "score": 4.614421379082649,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:3107"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0004279",
+            "patientPhenotypeLabel": "Short palm",
+            "diseasePhenotypeCurie": "HP:0004279",
+            "diseasePhenotypeLabel": "Short palm",
+            "micaCurie": "HP:0004279",
+            "micaLabel": "Short palm",
+            "score": 4.557262965242701,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:3107"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000527",
+            "patientPhenotypeLabel": "Long eyelashes",
+            "diseasePhenotypeCurie": "HP:0000527",
+            "diseasePhenotypeLabel": "Long eyelashes",
+            "micaCurie": "HP:0000527",
+            "micaLabel": "Long eyelashes",
+            "score": 4.151797857134536,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:3107"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002164",
+            "patientPhenotypeLabel": "Nail dysplasia",
+            "diseasePhenotypeCurie": "HP:0100798",
+            "diseasePhenotypeLabel": "Fingernail dysplasia",
+            "micaCurie": "HP:0002164",
+            "micaLabel": "Nail dysplasia",
+            "score": 4.101245577971705,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:3107"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000189",
+            "patientPhenotypeLabel": "Narrow palate",
+            "diseasePhenotypeCurie": "HP:0002705",
+            "diseasePhenotypeLabel": "High, narrow palate",
+            "micaCurie": "HP:0000189",
+            "micaLabel": "Narrow palate",
+            "score": 4.026634714180529,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:3107"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0006394",
+            "patientPhenotypeLabel": "Limited pronation/supination of forearm",
+            "diseasePhenotypeCurie": "HP:0006376",
+            "diseasePhenotypeLabel": "Limited elbow flexion",
+            "micaCurie": "HP:0002996",
+            "micaLabel": "Limited elbow movement",
+            "score": 3.957206207748767,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:164745"
+          }
+        ]
+      },
+      {
+        "rank": 5,
+        "geneCurie": "NCBIGene:1857",
+        "geneLabel": "DVL3",
+        "geneSymbol": "DVL3",
+        "geneEntityId": 148708,
+        "bmaScore": 2.904678605933018,
+        "normalizedScore": 0.320708,
+        "patientAverageScore": 3.352181177227729,
+        "phenotypeAverageScore": 2.457176034638308,
+        "directPhenotypeCount": 106,
+        "matchedPhenotypeCount": 36,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0003027",
+            "patientPhenotypeLabel": "Mesomelia",
+            "diseasePhenotypeCurie": "HP:0003027",
+            "diseasePhenotypeLabel": "Mesomelia",
+            "micaCurie": "HP:0003027",
+            "micaLabel": "Mesomelia",
+            "score": 5.250410145802645,
+            "evidenceCode": "4/4",
+            "referenceText": "OMIM:616894"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002937",
+            "patientPhenotypeLabel": "Hemivertebrae",
+            "diseasePhenotypeCurie": "HP:0002937",
+            "diseasePhenotypeLabel": "Hemivertebrae",
+            "micaCurie": "HP:0002937",
+            "micaLabel": "Hemivertebrae",
+            "score": 4.979535191667246,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:3107"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000637",
+            "patientPhenotypeLabel": "Long palpebral fissure",
+            "diseasePhenotypeCurie": "HP:0000637",
+            "diseasePhenotypeLabel": "Long palpebral fissure",
+            "micaCurie": "HP:0000637",
+            "micaLabel": "Long palpebral fissure",
+            "score": 4.766613194424574,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:3107"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000212",
+            "patientPhenotypeLabel": "Gingival overgrowth",
+            "diseasePhenotypeCurie": "HP:0000212",
+            "diseasePhenotypeLabel": "Gingival overgrowth",
+            "micaCurie": "HP:0000212",
+            "micaLabel": "Gingival overgrowth",
+            "score": 4.614421379082649,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:3107"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0004279",
+            "patientPhenotypeLabel": "Short palm",
+            "diseasePhenotypeCurie": "HP:0004279",
+            "diseasePhenotypeLabel": "Short palm",
+            "micaCurie": "HP:0004279",
+            "micaLabel": "Short palm",
+            "score": 4.557262965242701,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:3107"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011304",
+            "patientPhenotypeLabel": "Broad thumb",
+            "diseasePhenotypeCurie": "HP:0011304",
+            "diseasePhenotypeLabel": "Broad thumb",
+            "micaCurie": "HP:0011304",
+            "micaLabel": "Broad thumb",
+            "score": 4.546213129056115,
+            "evidenceCode": "1/4",
+            "referenceText": "OMIM:616894"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000527",
+            "patientPhenotypeLabel": "Long eyelashes",
+            "diseasePhenotypeCurie": "HP:0000527",
+            "diseasePhenotypeLabel": "Long eyelashes",
+            "micaCurie": "HP:0000527",
+            "micaLabel": "Long eyelashes",
+            "score": 4.151797857134536,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:3107"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002164",
+            "patientPhenotypeLabel": "Nail dysplasia",
+            "diseasePhenotypeCurie": "HP:0100798",
+            "diseasePhenotypeLabel": "Fingernail dysplasia",
+            "micaCurie": "HP:0002164",
+            "micaLabel": "Nail dysplasia",
+            "score": 4.101245577971705,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:3107"
+          }
+        ]
+      },
+      {
+        "rank": 6,
+        "geneCurie": "NCBIGene:64359",
+        "geneLabel": "NXN",
+        "geneSymbol": "NXN",
+        "geneEntityId": 152275,
+        "bmaScore": 2.805437987583497,
+        "normalizedScore": 0.309751,
+        "patientAverageScore": 3.3568637060490447,
+        "phenotypeAverageScore": 2.25401226911795,
+        "directPhenotypeCount": 99,
+        "matchedPhenotypeCount": 36,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000902",
+            "patientPhenotypeLabel": "Rib fusion",
+            "diseasePhenotypeCurie": "HP:0000902",
+            "diseasePhenotypeLabel": "Rib fusion",
+            "micaCurie": "HP:0000902",
+            "micaLabel": "Rib fusion",
+            "score": 5.7612357695686365,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:1507"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003027",
+            "patientPhenotypeLabel": "Mesomelia",
+            "diseasePhenotypeCurie": "HP:0003027",
+            "diseasePhenotypeLabel": "Mesomelia",
+            "micaCurie": "HP:0003027",
+            "micaLabel": "Mesomelia",
+            "score": 5.250410145802645,
+            "evidenceCode": "3/3",
+            "referenceText": "OMIM:618529"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000637",
+            "patientPhenotypeLabel": "Long palpebral fissure",
+            "diseasePhenotypeCurie": "HP:0000637",
+            "diseasePhenotypeLabel": "Long palpebral fissure",
+            "micaCurie": "HP:0000637",
+            "micaLabel": "Long palpebral fissure",
+            "score": 4.766613194424574,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:1507"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0010055",
+            "patientPhenotypeLabel": "Broad hallux",
+            "diseasePhenotypeCurie": "HP:0010055",
+            "diseasePhenotypeLabel": "Broad hallux",
+            "micaCurie": "HP:0010055",
+            "micaLabel": "Broad hallux",
+            "score": 4.650353388308712,
+            "evidenceCode": "3/3",
+            "referenceText": "OMIM:618529"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000212",
+            "patientPhenotypeLabel": "Gingival overgrowth",
+            "diseasePhenotypeCurie": "HP:0000212",
+            "diseasePhenotypeLabel": "Gingival overgrowth",
+            "micaCurie": "HP:0000212",
+            "micaLabel": "Gingival overgrowth",
+            "score": 4.614421379082649,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:1507"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011304",
+            "patientPhenotypeLabel": "Broad thumb",
+            "diseasePhenotypeCurie": "HP:0011304",
+            "diseasePhenotypeLabel": "Broad thumb",
+            "micaCurie": "HP:0011304",
+            "micaLabel": "Broad thumb",
+            "score": 4.546213129056115,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:1507"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002937",
+            "patientPhenotypeLabel": "Hemivertebrae",
+            "diseasePhenotypeCurie": "HP:0003422",
+            "diseasePhenotypeLabel": "Vertebral segmentation defect",
+            "micaCurie": "HP:0003422",
+            "micaLabel": "Vertebral segmentation defect",
+            "score": 4.1895381851173825,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:1507"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000527",
+            "patientPhenotypeLabel": "Long eyelashes",
+            "diseasePhenotypeCurie": "HP:0000527",
+            "diseasePhenotypeLabel": "Long eyelashes",
+            "micaCurie": "HP:0000527",
+            "micaLabel": "Long eyelashes",
+            "score": 4.151797857134536,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:1507"
+          }
+        ]
+      },
+      {
+        "rank": 7,
+        "geneCurie": "NCBIGene:2263",
+        "geneLabel": "FGFR2",
+        "geneSymbol": "FGFR2",
+        "geneEntityId": 148838,
+        "bmaScore": 2.536275397515554,
+        "normalizedScore": 0.280033,
+        "patientAverageScore": 3.2116569537127164,
+        "phenotypeAverageScore": 1.8608938413183918,
+        "directPhenotypeCount": 369,
+        "matchedPhenotypeCount": 36,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0010055",
+            "patientPhenotypeLabel": "Broad hallux",
+            "diseasePhenotypeCurie": "HP:0010055",
+            "diseasePhenotypeLabel": "Broad hallux",
+            "micaCurie": "HP:0010055",
+            "micaLabel": "Broad hallux",
+            "score": 4.650353388308712,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:101600"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000212",
+            "patientPhenotypeLabel": "Gingival overgrowth",
+            "diseasePhenotypeCurie": "HP:0000212",
+            "diseasePhenotypeLabel": "Gingival overgrowth",
+            "micaCurie": "HP:0000212",
+            "micaLabel": "Gingival overgrowth",
+            "score": 4.614421379082649,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:614592"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0004279",
+            "patientPhenotypeLabel": "Short palm",
+            "diseasePhenotypeCurie": "HP:0004279",
+            "diseasePhenotypeLabel": "Short palm",
+            "micaCurie": "HP:0004279",
+            "micaLabel": "Short palm",
+            "score": 4.557262965242701,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:93258"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011304",
+            "patientPhenotypeLabel": "Broad thumb",
+            "diseasePhenotypeCurie": "HP:0011304",
+            "diseasePhenotypeLabel": "Broad thumb",
+            "micaCurie": "HP:0011304",
+            "micaLabel": "Broad thumb",
+            "score": 4.546213129056115,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:794"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002937",
+            "patientPhenotypeLabel": "Hemivertebrae",
+            "diseasePhenotypeCurie": "HP:6000807",
+            "diseasePhenotypeLabel": "Cervical C6/C7 vertebrae fusion",
+            "micaCurie": "HP:0003422",
+            "micaLabel": "Vertebral segmentation defect",
+            "score": 4.1895381851173825,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:101200"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002164",
+            "patientPhenotypeLabel": "Nail dysplasia",
+            "diseasePhenotypeCurie": "HP:0002164",
+            "diseasePhenotypeLabel": "Nail dysplasia",
+            "micaCurie": "HP:0002164",
+            "micaLabel": "Nail dysplasia",
+            "score": 4.101245577971705,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "ORPHA:2363"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000189",
+            "patientPhenotypeLabel": "Narrow palate",
+            "diseasePhenotypeCurie": "HP:0000189",
+            "diseasePhenotypeLabel": "Narrow palate",
+            "micaCurie": "HP:0000189",
+            "micaLabel": "Narrow palate",
+            "score": 4.026634714180529,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:794"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0006394",
+            "patientPhenotypeLabel": "Limited pronation/supination of forearm",
+            "diseasePhenotypeCurie": "HP:0002996",
+            "diseasePhenotypeLabel": "Limited elbow movement",
+            "micaCurie": "HP:0002996",
+            "micaLabel": "Limited elbow movement",
+            "score": 3.957206207748767,
+            "evidenceCode": "13/36",
+            "referenceText": "OMIM:101200"
+          }
+        ]
+      },
+      {
+        "rank": 8,
+        "geneCurie": "NCBIGene:2316",
+        "geneLabel": "FLNA",
+        "geneSymbol": "FLNA",
+        "geneEntityId": 148857,
+        "bmaScore": 2.466950556927591,
+        "normalizedScore": 0.272378,
+        "patientAverageScore": 3.179683700906681,
+        "phenotypeAverageScore": 1.7542174129485013,
+        "directPhenotypeCount": 356,
+        "matchedPhenotypeCount": 36,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0003027",
+            "patientPhenotypeLabel": "Mesomelia",
+            "diseasePhenotypeCurie": "HP:0005011",
+            "diseasePhenotypeLabel": "Mesomelic arm shortening",
+            "micaCurie": "HP:0003027",
+            "micaLabel": "Mesomelia",
+            "score": 5.250410145802645,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "OMIM:300244"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0010055",
+            "patientPhenotypeLabel": "Broad hallux",
+            "diseasePhenotypeCurie": "HP:0010055",
+            "diseasePhenotypeLabel": "Broad hallux",
+            "micaCurie": "HP:0010055",
+            "micaLabel": "Broad hallux",
+            "score": 4.650353388308712,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:300321"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0004279",
+            "patientPhenotypeLabel": "Short palm",
+            "diseasePhenotypeCurie": "HP:0004279",
+            "diseasePhenotypeLabel": "Short palm",
+            "micaCurie": "HP:0004279",
+            "micaLabel": "Short palm",
+            "score": 4.557262965242701,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:90650"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011304",
+            "patientPhenotypeLabel": "Broad thumb",
+            "diseasePhenotypeCurie": "HP:0011304",
+            "diseasePhenotypeLabel": "Broad thumb",
+            "micaCurie": "HP:0011304",
+            "micaLabel": "Broad thumb",
+            "score": 4.546213129056115,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:304120"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002937",
+            "patientPhenotypeLabel": "Hemivertebrae",
+            "diseasePhenotypeCurie": "HP:0005640",
+            "diseasePhenotypeLabel": "Abnormal vertebral segmentation and fusion",
+            "micaCurie": "HP:0003422",
+            "micaLabel": "Vertebral segmentation defect",
+            "score": 4.1895381851173825,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:90652"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002164",
+            "patientPhenotypeLabel": "Nail dysplasia",
+            "diseasePhenotypeCurie": "HP:0002164",
+            "diseasePhenotypeLabel": "Nail dysplasia",
+            "micaCurie": "HP:0002164",
+            "micaLabel": "Nail dysplasia",
+            "score": 4.101245577971705,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:311300"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000189",
+            "patientPhenotypeLabel": "Narrow palate",
+            "diseasePhenotypeCurie": "HP:0000189",
+            "diseasePhenotypeLabel": "Narrow palate",
+            "micaCurie": "HP:0000189",
+            "micaLabel": "Narrow palate",
+            "score": 4.026634714180529,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:555877"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0006394",
+            "patientPhenotypeLabel": "Limited pronation/supination of forearm",
+            "diseasePhenotypeCurie": "HP:0002996",
+            "diseasePhenotypeLabel": "Limited elbow movement",
+            "micaCurie": "HP:0002996",
+            "micaLabel": "Limited elbow movement",
+            "score": 3.957206207748767,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:1826"
+          }
+        ]
+      },
+      {
+        "rank": 9,
+        "geneCurie": "NCBIGene:2239",
+        "geneLabel": "GPC4",
+        "geneSymbol": "GPC4",
+        "geneEntityId": 148823,
+        "bmaScore": 2.436922110958174,
+        "normalizedScore": 0.269063,
+        "patientAverageScore": 3.0568378281671156,
+        "phenotypeAverageScore": 1.817006393749232,
+        "directPhenotypeCount": 169,
+        "matchedPhenotypeCount": 36,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0010055",
+            "patientPhenotypeLabel": "Broad hallux",
+            "diseasePhenotypeCurie": "HP:0010055",
+            "diseasePhenotypeLabel": "Broad hallux",
+            "micaCurie": "HP:0010055",
+            "micaLabel": "Broad hallux",
+            "score": 4.650353388308712,
+            "evidenceCode": "7/9",
+            "referenceText": "OMIM:301026"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000212",
+            "patientPhenotypeLabel": "Gingival overgrowth",
+            "diseasePhenotypeCurie": "HP:0000212",
+            "diseasePhenotypeLabel": "Gingival overgrowth",
+            "micaCurie": "HP:0000212",
+            "micaLabel": "Gingival overgrowth",
+            "score": 4.614421379082649,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:312870"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0004279",
+            "patientPhenotypeLabel": "Short palm",
+            "diseasePhenotypeCurie": "HP:0004279",
+            "diseasePhenotypeLabel": "Short palm",
+            "micaCurie": "HP:0004279",
+            "micaLabel": "Short palm",
+            "score": 4.557262965242701,
+            "evidenceCode": "1/6",
+            "referenceText": "OMIM:312870"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011304",
+            "patientPhenotypeLabel": "Broad thumb",
+            "diseasePhenotypeCurie": "HP:0011304",
+            "diseasePhenotypeLabel": "Broad thumb",
+            "micaCurie": "HP:0011304",
+            "micaLabel": "Broad thumb",
+            "score": 4.546213129056115,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:312870"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002937",
+            "patientPhenotypeLabel": "Hemivertebrae",
+            "diseasePhenotypeCurie": "HP:0003422",
+            "diseasePhenotypeLabel": "Vertebral segmentation defect",
+            "micaCurie": "HP:0003422",
+            "micaLabel": "Vertebral segmentation defect",
+            "score": 4.1895381851173825,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:312870"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002164",
+            "patientPhenotypeLabel": "Nail dysplasia",
+            "diseasePhenotypeCurie": "HP:0002164",
+            "diseasePhenotypeLabel": "Nail dysplasia",
+            "micaCurie": "HP:0002164",
+            "micaLabel": "Nail dysplasia",
+            "score": 4.101245577971705,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:373"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000189",
+            "patientPhenotypeLabel": "Narrow palate",
+            "diseasePhenotypeCurie": "HP:0002705",
+            "diseasePhenotypeLabel": "High, narrow palate",
+            "micaCurie": "HP:0000189",
+            "micaLabel": "Narrow palate",
+            "score": 4.026634714180529,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:373"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000054",
+            "patientPhenotypeLabel": "Micropenis",
+            "diseasePhenotypeCurie": "HP:0008736",
+            "diseasePhenotypeLabel": "Hypoplasia of penis",
+            "micaCurie": "HP:0008736",
+            "micaLabel": "Hypoplasia of penis",
+            "score": 3.5197383685544286,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:373"
+          }
+        ]
+      },
+      {
+        "rank": 10,
+        "geneCurie": "NCBIGene:9241",
+        "geneLabel": "NOG",
+        "geneSymbol": "NOG",
+        "geneEntityId": 150753,
+        "bmaScore": 2.434604062239359,
+        "normalizedScore": 0.268807,
+        "patientAverageScore": 2.316804513668619,
+        "phenotypeAverageScore": 2.5524036108100994,
+        "directPhenotypeCount": 105,
+        "matchedPhenotypeCount": 36,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0010055",
+            "patientPhenotypeLabel": "Broad hallux",
+            "diseasePhenotypeCurie": "HP:0010055",
+            "diseasePhenotypeLabel": "Broad hallux",
+            "micaCurie": "HP:0010055",
+            "micaLabel": "Broad hallux",
+            "score": 4.650353388308712,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "OMIM:184460"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0004279",
+            "patientPhenotypeLabel": "Short palm",
+            "diseasePhenotypeCurie": "HP:0004279",
+            "diseasePhenotypeLabel": "Short palm",
+            "micaCurie": "HP:0004279",
+            "micaLabel": "Short palm",
+            "score": 4.557262965242701,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:3237"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011304",
+            "patientPhenotypeLabel": "Broad thumb",
+            "diseasePhenotypeCurie": "HP:0011304",
+            "diseasePhenotypeLabel": "Broad thumb",
+            "micaCurie": "HP:0011304",
+            "micaLabel": "Broad thumb",
+            "score": 4.546213129056115,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "OMIM:184460"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002937",
+            "patientPhenotypeLabel": "Hemivertebrae",
+            "diseasePhenotypeCurie": "HP:0002949",
+            "diseasePhenotypeLabel": "Fused cervical vertebrae",
+            "micaCurie": "HP:0003422",
+            "micaLabel": "Vertebral segmentation defect",
+            "score": 4.1895381851173825,
+            "evidenceCode": "2/5",
+            "referenceText": "OMIM:184460"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000954",
+            "patientPhenotypeLabel": "Single transverse palmar crease",
+            "diseasePhenotypeCurie": "HP:0007598",
+            "diseasePhenotypeLabel": "Bilateral single transverse palmar creases",
+            "micaCurie": "HP:0000954",
+            "micaLabel": "Single transverse palmar crease",
+            "score": 3.7195345558716473,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:3237"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0006394",
+            "patientPhenotypeLabel": "Limited pronation/supination of forearm",
+            "diseasePhenotypeCurie": "HP:0003083",
+            "diseasePhenotypeLabel": "Dislocated radial head",
+            "micaCurie": "HP:0020301",
+            "micaLabel": "Abnormal elbow physiology",
+            "score": 3.705214502096899,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:186500"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003027",
+            "patientPhenotypeLabel": "Mesomelia",
+            "diseasePhenotypeCurie": "HP:0009816",
+            "diseasePhenotypeLabel": "Lower limb undergrowth",
+            "micaCurie": "HP:0009826",
+            "micaLabel": "Limb undergrowth",
+            "score": 3.515809090414539,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:186500"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000902",
+            "patientPhenotypeLabel": "Rib fusion",
+            "diseasePhenotypeCurie": "HP:0000920",
+            "diseasePhenotypeLabel": "Enlargement of the costochondral junction",
+            "micaCurie": "HP:0000772",
+            "micaLabel": "Abnormal rib morphology",
+            "score": 3.3941121554370195,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:186500"
+          }
+        ]
+      },
+      {
+        "rank": 11,
+        "geneCurie": "NCBIGene:2317",
+        "geneLabel": "FLNB",
+        "geneSymbol": "FLNB",
+        "geneEntityId": 148858,
+        "bmaScore": 2.4255256177292166,
+        "normalizedScore": 0.267805,
+        "patientAverageScore": 2.7833974905498136,
+        "phenotypeAverageScore": 2.0676537449086196,
+        "directPhenotypeCount": 199,
+        "matchedPhenotypeCount": 36,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011304",
+            "patientPhenotypeLabel": "Broad thumb",
+            "diseasePhenotypeCurie": "HP:0011304",
+            "diseasePhenotypeLabel": "Broad thumb",
+            "micaCurie": "HP:0011304",
+            "micaLabel": "Broad thumb",
+            "score": 4.546213129056115,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:503"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002937",
+            "patientPhenotypeLabel": "Hemivertebrae",
+            "diseasePhenotypeCurie": "HP:0004632",
+            "diseasePhenotypeLabel": "Cervical segmentation defect",
+            "micaCurie": "HP:0003422",
+            "micaLabel": "Vertebral segmentation defect",
+            "score": 4.1895381851173825,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:108721"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0006394",
+            "patientPhenotypeLabel": "Limited pronation/supination of forearm",
+            "diseasePhenotypeCurie": "HP:0001377",
+            "diseasePhenotypeLabel": "Limited elbow extension",
+            "micaCurie": "HP:0002996",
+            "micaLabel": "Limited elbow movement",
+            "score": 3.957206207748767,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:272460"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000520",
+            "patientPhenotypeLabel": "Proptosis",
+            "diseasePhenotypeCurie": "HP:0000586",
+            "diseasePhenotypeLabel": "Shallow orbits",
+            "micaCurie": "HP:0000520",
+            "micaLabel": "Proptosis",
+            "score": 3.700486360900953,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:150250"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009804",
+            "patientPhenotypeLabel": "Tooth agenesis",
+            "diseasePhenotypeCurie": "HP:0000668",
+            "diseasePhenotypeLabel": "Hypodontia",
+            "micaCurie": "HP:0009804",
+            "micaLabel": "Tooth agenesis",
+            "score": 3.69578046986354,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:150250"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003027",
+            "patientPhenotypeLabel": "Mesomelia",
+            "diseasePhenotypeCurie": "HP:0009826",
+            "diseasePhenotypeLabel": "Limb undergrowth",
+            "micaCurie": "HP:0009826",
+            "micaLabel": "Limb undergrowth",
+            "score": 3.515809090414539,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:1190"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011220",
+            "patientPhenotypeLabel": "Prominent forehead",
+            "diseasePhenotypeCurie": "HP:0011220",
+            "diseasePhenotypeLabel": "Prominent forehead",
+            "micaCurie": "HP:0011220",
+            "micaLabel": "Prominent forehead",
+            "score": 3.4963910045574376,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:503"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003196",
+            "patientPhenotypeLabel": "Short nose",
+            "diseasePhenotypeCurie": "HP:0003196",
+            "diseasePhenotypeLabel": "Short nose",
+            "micaCurie": "HP:0003196",
+            "micaLabel": "Short nose",
+            "score": 3.440301537906394,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:108720"
+          }
+        ]
+      },
+      {
+        "rank": 12,
+        "geneCurie": "NCBIGene:3636",
+        "geneLabel": "INPPL1",
+        "geneSymbol": "INPPL1",
+        "geneEntityId": 149204,
+        "bmaScore": 2.3871416028615355,
+        "normalizedScore": 0.263567,
+        "patientAverageScore": 2.656258284621274,
+        "phenotypeAverageScore": 2.1180249211017967,
+        "directPhenotypeCount": 86,
+        "matchedPhenotypeCount": 36,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000637",
+            "patientPhenotypeLabel": "Long palpebral fissure",
+            "diseasePhenotypeCurie": "HP:0000637",
+            "diseasePhenotypeLabel": "Long palpebral fissure",
+            "micaCurie": "HP:0000637",
+            "micaLabel": "Long palpebral fissure",
+            "score": 4.766613194424574,
+            "evidenceCode": "2/5",
+            "referenceText": "OMIM:258480"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0004279",
+            "patientPhenotypeLabel": "Short palm",
+            "diseasePhenotypeCurie": "HP:0004279",
+            "diseasePhenotypeLabel": "Short palm",
+            "micaCurie": "HP:0004279",
+            "micaLabel": "Short palm",
+            "score": 4.557262965242701,
+            "evidenceCode": "9/9",
+            "referenceText": "OMIM:258480"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011304",
+            "patientPhenotypeLabel": "Broad thumb",
+            "diseasePhenotypeCurie": "HP:0011304",
+            "diseasePhenotypeLabel": "Broad thumb",
+            "micaCurie": "HP:0011304",
+            "micaLabel": "Broad thumb",
+            "score": 4.546213129056115,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:2746"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000520",
+            "patientPhenotypeLabel": "Proptosis",
+            "diseasePhenotypeCurie": "HP:0000586",
+            "diseasePhenotypeLabel": "Shallow orbits",
+            "micaCurie": "HP:0000520",
+            "micaLabel": "Proptosis",
+            "score": 3.700486360900953,
+            "evidenceCode": "7/8",
+            "referenceText": "OMIM:258480"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003027",
+            "patientPhenotypeLabel": "Mesomelia",
+            "diseasePhenotypeCurie": "HP:0008905",
+            "diseasePhenotypeLabel": "Rhizomelia",
+            "micaCurie": "HP:0009826",
+            "micaLabel": "Limb undergrowth",
+            "score": 3.515809090414539,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:258480"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011220",
+            "patientPhenotypeLabel": "Prominent forehead",
+            "diseasePhenotypeCurie": "HP:0011220",
+            "diseasePhenotypeLabel": "Prominent forehead",
+            "micaCurie": "HP:0011220",
+            "micaLabel": "Prominent forehead",
+            "score": 3.4963910045574376,
+            "evidenceCode": "7/9",
+            "referenceText": "OMIM:258480"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003196",
+            "patientPhenotypeLabel": "Short nose",
+            "diseasePhenotypeCurie": "HP:0003196",
+            "diseasePhenotypeLabel": "Short nose",
+            "micaCurie": "HP:0003196",
+            "micaLabel": "Short nose",
+            "score": 3.440301537906394,
+            "evidenceCode": "9/9",
+            "referenceText": "OMIM:258480"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000902",
+            "patientPhenotypeLabel": "Rib fusion",
+            "diseasePhenotypeCurie": "HP:0000922",
+            "diseasePhenotypeLabel": "Posterior rib cupping",
+            "micaCurie": "HP:0000772",
+            "micaLabel": "Abnormal rib morphology",
+            "score": 3.3941121554370195,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:258480"
+          }
+        ]
+      },
+      {
+        "rank": 13,
+        "geneCurie": "NCBIGene:57539",
+        "geneLabel": "WDR35",
+        "geneSymbol": "WDR35",
+        "geneEntityId": 152166,
+        "bmaScore": 2.3687984740902106,
+        "normalizedScore": 0.261541,
+        "patientAverageScore": 2.8830854382189783,
+        "phenotypeAverageScore": 1.8545115099614424,
+        "directPhenotypeCount": 149,
+        "matchedPhenotypeCount": 36,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0003027",
+            "patientPhenotypeLabel": "Mesomelia",
+            "diseasePhenotypeCurie": "HP:0003027",
+            "diseasePhenotypeLabel": "Mesomelia",
+            "micaCurie": "HP:0003027",
+            "micaLabel": "Mesomelia",
+            "score": 5.250410145802645,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:614091"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0004279",
+            "patientPhenotypeLabel": "Short palm",
+            "diseasePhenotypeCurie": "HP:0004279",
+            "diseasePhenotypeLabel": "Short palm",
+            "micaCurie": "HP:0004279",
+            "micaLabel": "Short palm",
+            "score": 4.557262965242701,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:93271"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002164",
+            "patientPhenotypeLabel": "Nail dysplasia",
+            "diseasePhenotypeCurie": "HP:0002164",
+            "diseasePhenotypeLabel": "Nail dysplasia",
+            "micaCurie": "HP:0002164",
+            "micaLabel": "Nail dysplasia",
+            "score": 4.101245577971705,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:614091"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009804",
+            "patientPhenotypeLabel": "Tooth agenesis",
+            "diseasePhenotypeCurie": "HP:0006349",
+            "diseasePhenotypeLabel": "Agenesis of permanent teeth",
+            "micaCurie": "HP:0009804",
+            "micaLabel": "Tooth agenesis",
+            "score": 3.69578046986354,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:614091"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000054",
+            "patientPhenotypeLabel": "Micropenis",
+            "diseasePhenotypeCurie": "HP:0008736",
+            "diseasePhenotypeLabel": "Hypoplasia of penis",
+            "micaCurie": "HP:0008736",
+            "micaLabel": "Hypoplasia of penis",
+            "score": 3.5197383685544286,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:93271"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000023",
+            "patientPhenotypeLabel": "Inguinal hernia",
+            "diseasePhenotypeCurie": "HP:0000023",
+            "diseasePhenotypeLabel": "Inguinal hernia",
+            "micaCurie": "HP:0000023",
+            "micaLabel": "Inguinal hernia",
+            "score": 3.436671769855815,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:613610"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000902",
+            "patientPhenotypeLabel": "Rib fusion",
+            "diseasePhenotypeCurie": "HP:0000888",
+            "diseasePhenotypeLabel": "Horizontal ribs",
+            "micaCurie": "HP:0000772",
+            "micaLabel": "Abnormal rib morphology",
+            "score": 3.3941121554370195,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:613610"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000527",
+            "patientPhenotypeLabel": "Long eyelashes",
+            "diseasePhenotypeCurie": "HP:0000653",
+            "diseasePhenotypeLabel": "Sparse eyelashes",
+            "micaCurie": "HP:0000499",
+            "micaLabel": "Abnormal eyelash morphology",
+            "score": 3.363340496770266,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:613610"
+          }
+        ]
+      },
+      {
+        "rank": 14,
+        "geneCurie": "NCBIGene:2254",
+        "geneLabel": "FGF9",
+        "geneSymbol": "FGF9",
+        "geneEntityId": 148831,
+        "bmaScore": 2.3600071816043746,
+        "normalizedScore": 0.260571,
+        "patientAverageScore": 1.797485127217881,
+        "phenotypeAverageScore": 2.9225292359908686,
+        "directPhenotypeCount": 21,
+        "matchedPhenotypeCount": 36,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0010055",
+            "patientPhenotypeLabel": "Broad hallux",
+            "diseasePhenotypeCurie": "HP:0010055",
+            "diseasePhenotypeLabel": "Broad hallux",
+            "micaCurie": "HP:0010055",
+            "micaLabel": "Broad hallux",
+            "score": 4.650353388308712,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "OMIM:612961"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0004279",
+            "patientPhenotypeLabel": "Short palm",
+            "diseasePhenotypeCurie": "HP:0004279",
+            "diseasePhenotypeLabel": "Short palm",
+            "micaCurie": "HP:0004279",
+            "micaLabel": "Short palm",
+            "score": 4.557262965242701,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:3237"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011304",
+            "patientPhenotypeLabel": "Broad thumb",
+            "diseasePhenotypeCurie": "HP:0011304",
+            "diseasePhenotypeLabel": "Broad thumb",
+            "micaCurie": "HP:0011304",
+            "micaLabel": "Broad thumb",
+            "score": 4.546213129056115,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "OMIM:612961"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000954",
+            "patientPhenotypeLabel": "Single transverse palmar crease",
+            "diseasePhenotypeCurie": "HP:0007598",
+            "diseasePhenotypeLabel": "Bilateral single transverse palmar creases",
+            "micaCurie": "HP:0000954",
+            "micaLabel": "Single transverse palmar crease",
+            "score": 3.7195345558716473,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:3237"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000520",
+            "patientPhenotypeLabel": "Proptosis",
+            "diseasePhenotypeCurie": "HP:0000520",
+            "diseasePhenotypeLabel": "Proptosis",
+            "micaCurie": "HP:0000520",
+            "micaLabel": "Proptosis",
+            "score": 3.700486360900953,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "OMIM:612961"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0006394",
+            "patientPhenotypeLabel": "Limited pronation/supination of forearm",
+            "diseasePhenotypeCurie": "HP:0003041",
+            "diseasePhenotypeLabel": "Humeroradial synostosis",
+            "micaCurie": "HP:0009811",
+            "micaLabel": "Abnormality of the elbow",
+            "score": 3.4476008403880054,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:612961"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001156",
+            "patientPhenotypeLabel": "Brachydactyly",
+            "diseasePhenotypeCurie": "HP:0001156",
+            "diseasePhenotypeLabel": "Brachydactyly",
+            "micaCurie": "HP:0001156",
+            "micaLabel": "Brachydactyly",
+            "score": 3.17096860412281,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:3237"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001159",
+            "patientPhenotypeLabel": "Syndactyly",
+            "diseasePhenotypeCurie": "HP:0010621",
+            "diseasePhenotypeLabel": "Cutaneous syndactyly of toes",
+            "micaCurie": "HP:0001159",
+            "micaLabel": "Syndactyly",
+            "score": 3.0507194759712326,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "OMIM:612961"
+          }
+        ]
+      },
+      {
+        "rank": 15,
+        "geneCurie": "NCBIGene:1280",
+        "geneLabel": "COL2A1",
+        "geneSymbol": "COL2A1",
+        "geneEntityId": 148489,
+        "bmaScore": 2.3525519132023844,
+        "normalizedScore": 0.259747,
+        "patientAverageScore": 2.7689796276465213,
+        "phenotypeAverageScore": 1.9361241987582478,
+        "directPhenotypeCount": 360,
+        "matchedPhenotypeCount": 36,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0010055",
+            "patientPhenotypeLabel": "Broad hallux",
+            "diseasePhenotypeCurie": "HP:0010055",
+            "diseasePhenotypeLabel": "Broad hallux",
+            "micaCurie": "HP:0010055",
+            "micaLabel": "Broad hallux",
+            "score": 4.650353388308712,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1856"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0004279",
+            "patientPhenotypeLabel": "Short palm",
+            "diseasePhenotypeCurie": "HP:0004279",
+            "diseasePhenotypeLabel": "Short palm",
+            "micaCurie": "HP:0004279",
+            "micaLabel": "Short palm",
+            "score": 4.557262965242701,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:85166"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011304",
+            "patientPhenotypeLabel": "Broad thumb",
+            "diseasePhenotypeCurie": "HP:0011304",
+            "diseasePhenotypeLabel": "Broad thumb",
+            "micaCurie": "HP:0011304",
+            "micaLabel": "Broad thumb",
+            "score": 4.546213129056115,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:271700"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002937",
+            "patientPhenotypeLabel": "Hemivertebrae",
+            "diseasePhenotypeCurie": "HP:0004557",
+            "diseasePhenotypeLabel": "Anterior vertebral fusion",
+            "micaCurie": "HP:0003422",
+            "micaLabel": "Vertebral segmentation defect",
+            "score": 4.1895381851173825,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:485"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0006394",
+            "patientPhenotypeLabel": "Limited pronation/supination of forearm",
+            "diseasePhenotypeCurie": "HP:0002996",
+            "diseasePhenotypeLabel": "Limited elbow movement",
+            "micaCurie": "HP:0002996",
+            "micaLabel": "Limited elbow movement",
+            "score": 3.957206207748767,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:183900"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000520",
+            "patientPhenotypeLabel": "Proptosis",
+            "diseasePhenotypeCurie": "HP:0000520",
+            "diseasePhenotypeLabel": "Proptosis",
+            "micaCurie": "HP:0000520",
+            "micaLabel": "Proptosis",
+            "score": 3.700486360900953,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:93315"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003027",
+            "patientPhenotypeLabel": "Mesomelia",
+            "diseasePhenotypeCurie": "HP:0200083",
+            "diseasePhenotypeLabel": "Severe limb shortening",
+            "micaCurie": "HP:0009826",
+            "micaLabel": "Limb undergrowth",
+            "score": 3.515809090414539,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:151210"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011220",
+            "patientPhenotypeLabel": "Prominent forehead",
+            "diseasePhenotypeCurie": "HP:0011220",
+            "diseasePhenotypeLabel": "Prominent forehead",
+            "micaCurie": "HP:0011220",
+            "micaLabel": "Prominent forehead",
+            "score": 3.4963910045574376,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:85166"
+          }
+        ]
+      },
+      {
+        "rank": 16,
+        "geneCurie": "NCBIGene:4621",
+        "geneLabel": "MYH3",
+        "geneSymbol": "MYH3",
+        "geneEntityId": 149525,
+        "bmaScore": 2.349495215387516,
+        "normalizedScore": 0.25941,
+        "patientAverageScore": 2.8275700591033153,
+        "phenotypeAverageScore": 1.8714203716717166,
+        "directPhenotypeCount": 173,
+        "matchedPhenotypeCount": 36,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000902",
+            "patientPhenotypeLabel": "Rib fusion",
+            "diseasePhenotypeCurie": "HP:0000902",
+            "diseasePhenotypeLabel": "Rib fusion",
+            "micaCurie": "HP:0000902",
+            "micaLabel": "Rib fusion",
+            "score": 5.7612357695686365,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:2990"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002937",
+            "patientPhenotypeLabel": "Hemivertebrae",
+            "diseasePhenotypeCurie": "HP:0002937",
+            "diseasePhenotypeLabel": "Hemivertebrae",
+            "micaCurie": "HP:0002937",
+            "micaLabel": "Hemivertebrae",
+            "score": 4.979535191667246,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:178110"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0006394",
+            "patientPhenotypeLabel": "Limited pronation/supination of forearm",
+            "diseasePhenotypeCurie": "HP:0002987",
+            "diseasePhenotypeLabel": "Elbow flexion contracture",
+            "micaCurie": "HP:0002996",
+            "micaLabel": "Limited elbow movement",
+            "score": 3.957206207748767,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:178110"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0010055",
+            "patientPhenotypeLabel": "Broad hallux",
+            "diseasePhenotypeCurie": "HP:0001822",
+            "diseasePhenotypeLabel": "Hallux valgus",
+            "micaCurie": "HP:0001844",
+            "micaLabel": "Abnormal hallux morphology",
+            "score": 3.7488049381717605,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:618436"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000954",
+            "patientPhenotypeLabel": "Single transverse palmar crease",
+            "diseasePhenotypeCurie": "HP:0007598",
+            "diseasePhenotypeLabel": "Bilateral single transverse palmar creases",
+            "micaCurie": "HP:0000954",
+            "micaLabel": "Single transverse palmar crease",
+            "score": 3.7195345558716473,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:1147"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000054",
+            "patientPhenotypeLabel": "Micropenis",
+            "diseasePhenotypeCurie": "HP:0008736",
+            "diseasePhenotypeLabel": "Hypoplasia of penis",
+            "micaCurie": "HP:0008736",
+            "micaLabel": "Hypoplasia of penis",
+            "score": 3.5197383685544286,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:2990"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011220",
+            "patientPhenotypeLabel": "Prominent forehead",
+            "diseasePhenotypeCurie": "HP:0011220",
+            "diseasePhenotypeLabel": "Prominent forehead",
+            "micaCurie": "HP:0011220",
+            "micaLabel": "Prominent forehead",
+            "score": 3.4963910045574376,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:193700"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003196",
+            "patientPhenotypeLabel": "Short nose",
+            "diseasePhenotypeCurie": "HP:0003196",
+            "diseasePhenotypeLabel": "Short nose",
+            "micaCurie": "HP:0003196",
+            "micaLabel": "Short nose",
+            "score": 3.440301537906394,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:193700"
+          }
+        ]
+      },
+      {
+        "rank": 17,
+        "geneCurie": "NCBIGene:2245",
+        "geneLabel": "FGD1",
+        "geneSymbol": "FGD1",
+        "geneEntityId": 148826,
+        "bmaScore": 2.347911722677976,
+        "normalizedScore": 0.259235,
+        "patientAverageScore": 2.689864192781309,
+        "phenotypeAverageScore": 2.0059592525746432,
+        "directPhenotypeCount": 94,
+        "matchedPhenotypeCount": 36,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0004279",
+            "patientPhenotypeLabel": "Short palm",
+            "diseasePhenotypeCurie": "HP:0004279",
+            "diseasePhenotypeLabel": "Short palm",
+            "micaCurie": "HP:0004279",
+            "micaLabel": "Short palm",
+            "score": 4.557262965242701,
+            "evidenceCode": "11/11",
+            "referenceText": "OMIM:305400"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002937",
+            "patientPhenotypeLabel": "Hemivertebrae",
+            "diseasePhenotypeCurie": "HP:0005640",
+            "diseasePhenotypeLabel": "Abnormal vertebral segmentation and fusion",
+            "micaCurie": "HP:0003422",
+            "micaLabel": "Vertebral segmentation defect",
+            "score": 4.1895381851173825,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:915"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000954",
+            "patientPhenotypeLabel": "Single transverse palmar crease",
+            "diseasePhenotypeCurie": "HP:0000954",
+            "diseasePhenotypeLabel": "Single transverse palmar crease",
+            "micaCurie": "HP:0000954",
+            "micaLabel": "Single transverse palmar crease",
+            "score": 3.7195345558716473,
+            "evidenceCode": "6/13",
+            "referenceText": "OMIM:305400"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009804",
+            "patientPhenotypeLabel": "Tooth agenesis",
+            "diseasePhenotypeCurie": "HP:0000668",
+            "diseasePhenotypeLabel": "Hypodontia",
+            "micaCurie": "HP:0009804",
+            "micaLabel": "Tooth agenesis",
+            "score": 3.69578046986354,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:305400"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003196",
+            "patientPhenotypeLabel": "Short nose",
+            "diseasePhenotypeCurie": "HP:0003196",
+            "diseasePhenotypeLabel": "Short nose",
+            "micaCurie": "HP:0003196",
+            "micaLabel": "Short nose",
+            "score": 3.440301537906394,
+            "evidenceCode": "14/16",
+            "referenceText": "OMIM:305400"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000023",
+            "patientPhenotypeLabel": "Inguinal hernia",
+            "diseasePhenotypeCurie": "HP:0000023",
+            "diseasePhenotypeLabel": "Inguinal hernia",
+            "micaCurie": "HP:0000023",
+            "micaLabel": "Inguinal hernia",
+            "score": 3.436671769855815,
+            "evidenceCode": "4/14",
+            "referenceText": "OMIM:305400"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011800",
+            "patientPhenotypeLabel": "Midface retrusion",
+            "diseasePhenotypeCurie": "HP:0011800",
+            "diseasePhenotypeLabel": "Midface retrusion",
+            "micaCurie": "HP:0011800",
+            "micaLabel": "Midface retrusion",
+            "score": 3.3566290621822787,
+            "evidenceCode": "4/11",
+            "referenceText": "OMIM:305400"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000470",
+            "patientPhenotypeLabel": "Short neck",
+            "diseasePhenotypeCurie": "HP:0000470",
+            "diseasePhenotypeLabel": "Short neck",
+            "micaCurie": "HP:0000470",
+            "micaLabel": "Short neck",
+            "score": 3.2610148848075933,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:915"
+          }
+        ]
+      },
+      {
+        "rank": 18,
+        "geneCurie": "NCBIGene:10082",
+        "geneLabel": "GPC6",
+        "geneSymbol": "GPC6",
+        "geneEntityId": 150950,
+        "bmaScore": 2.3413601568184332,
+        "normalizedScore": 0.258512,
+        "patientAverageScore": 2.171498503942296,
+        "phenotypeAverageScore": 2.5112218096945704,
+        "directPhenotypeCount": 52,
+        "matchedPhenotypeCount": 36,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0003027",
+            "patientPhenotypeLabel": "Mesomelia",
+            "diseasePhenotypeCurie": "HP:0003027",
+            "diseasePhenotypeLabel": "Mesomelia",
+            "micaCurie": "HP:0003027",
+            "micaLabel": "Mesomelia",
+            "score": 5.250410145802645,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:93329"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011304",
+            "patientPhenotypeLabel": "Broad thumb",
+            "diseasePhenotypeCurie": "HP:0012107",
+            "diseasePhenotypeLabel": "Increased fibular diameter",
+            "micaCurie": "HP:0005622",
+            "micaLabel": "Broad long bones",
+            "score": 4.144417749836913,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:258315"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0006394",
+            "patientPhenotypeLabel": "Limited pronation/supination of forearm",
+            "diseasePhenotypeCurie": "HP:0006376",
+            "diseasePhenotypeLabel": "Limited elbow flexion",
+            "micaCurie": "HP:0002996",
+            "micaLabel": "Limited elbow movement",
+            "score": 3.957206207748767,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:258315"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003196",
+            "patientPhenotypeLabel": "Short nose",
+            "diseasePhenotypeCurie": "HP:0003196",
+            "diseasePhenotypeLabel": "Short nose",
+            "micaCurie": "HP:0003196",
+            "micaLabel": "Short nose",
+            "score": 3.440301537906394,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:258315"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000637",
+            "patientPhenotypeLabel": "Long palpebral fissure",
+            "diseasePhenotypeCurie": "HP:0045025",
+            "diseasePhenotypeLabel": "Narrow palpebral fissure",
+            "micaCurie": "HP:0200007",
+            "micaLabel": "Abnormal size of the palpebral fissures",
+            "score": 3.304499996747332,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:258315"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000470",
+            "patientPhenotypeLabel": "Short neck",
+            "diseasePhenotypeCurie": "HP:0000470",
+            "diseasePhenotypeLabel": "Short neck",
+            "micaCurie": "HP:0000470",
+            "micaLabel": "Short neck",
+            "score": 3.2610148848075933,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:258315"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000343",
+            "patientPhenotypeLabel": "Long philtrum",
+            "diseasePhenotypeCurie": "HP:0000343",
+            "diseasePhenotypeLabel": "Long philtrum",
+            "micaCurie": "HP:0000343",
+            "micaLabel": "Long philtrum",
+            "score": 3.1381787812998185,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:258315"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000023",
+            "patientPhenotypeLabel": "Inguinal hernia",
+            "diseasePhenotypeCurie": "HP:0001537",
+            "diseasePhenotypeLabel": "Umbilical hernia",
+            "micaCurie": "HP:0004299",
+            "micaLabel": "Hernia of the abdominal wall",
+            "score": 3.0433574795301634,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:258315"
+          }
+        ]
+      },
+      {
+        "rank": 19,
+        "geneCurie": "NCBIGene:2261",
+        "geneLabel": "FGFR3",
+        "geneSymbol": "FGFR3",
+        "geneEntityId": 148837,
+        "bmaScore": 2.327364104261523,
+        "normalizedScore": 0.256966,
+        "patientAverageScore": 2.991677136428933,
+        "phenotypeAverageScore": 1.6630510720941134,
+        "directPhenotypeCount": 338,
+        "matchedPhenotypeCount": 36,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0003027",
+            "patientPhenotypeLabel": "Mesomelia",
+            "diseasePhenotypeCurie": "HP:0003027",
+            "diseasePhenotypeLabel": "Mesomelia",
+            "micaCurie": "HP:0003027",
+            "micaLabel": "Mesomelia",
+            "score": 5.250410145802645,
+            "evidenceCode": "1/4",
+            "referenceText": "OMIM:616482"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0010055",
+            "patientPhenotypeLabel": "Broad hallux",
+            "diseasePhenotypeCurie": "HP:0010055",
+            "diseasePhenotypeLabel": "Broad hallux",
+            "micaCurie": "HP:0010055",
+            "micaLabel": "Broad hallux",
+            "score": 4.650353388308712,
+            "evidenceCode": "45/104",
+            "referenceText": "OMIM:602849"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0004279",
+            "patientPhenotypeLabel": "Short palm",
+            "diseasePhenotypeCurie": "HP:0004279",
+            "diseasePhenotypeLabel": "Short palm",
+            "micaCurie": "HP:0004279",
+            "micaLabel": "Short palm",
+            "score": 4.557262965242701,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:53271"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011304",
+            "patientPhenotypeLabel": "Broad thumb",
+            "diseasePhenotypeCurie": "HP:0011304",
+            "diseasePhenotypeLabel": "Broad thumb",
+            "micaCurie": "HP:0011304",
+            "micaLabel": "Broad thumb",
+            "score": 4.546213129056115,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:794"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002164",
+            "patientPhenotypeLabel": "Nail dysplasia",
+            "diseasePhenotypeCurie": "HP:0002164",
+            "diseasePhenotypeLabel": "Nail dysplasia",
+            "micaCurie": "HP:0002164",
+            "micaLabel": "Nail dysplasia",
+            "score": 4.101245577971705,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "ORPHA:2363"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000189",
+            "patientPhenotypeLabel": "Narrow palate",
+            "diseasePhenotypeCurie": "HP:0002705",
+            "diseasePhenotypeLabel": "High, narrow palate",
+            "micaCurie": "HP:0000189",
+            "micaLabel": "Narrow palate",
+            "score": 4.026634714180529,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:53271"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0006394",
+            "patientPhenotypeLabel": "Limited pronation/supination of forearm",
+            "diseasePhenotypeCurie": "HP:0001377",
+            "diseasePhenotypeLabel": "Limited elbow extension",
+            "micaCurie": "HP:0002996",
+            "micaLabel": "Limited elbow movement",
+            "score": 3.957206207748767,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:146000"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000954",
+            "patientPhenotypeLabel": "Single transverse palmar crease",
+            "diseasePhenotypeCurie": "HP:0007598",
+            "diseasePhenotypeLabel": "Bilateral single transverse palmar creases",
+            "micaCurie": "HP:0000954",
+            "micaLabel": "Single transverse palmar crease",
+            "score": 3.7195345558716473,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:794"
+          }
+        ]
+      },
+      {
+        "rank": 20,
+        "geneCurie": "NCBIGene:1954",
+        "geneLabel": "MEGF8",
+        "geneSymbol": "MEGF8",
+        "geneEntityId": 148725,
+        "bmaScore": 2.3211157205524087,
+        "normalizedScore": 0.256277,
+        "patientAverageScore": 2.719616099321457,
+        "phenotypeAverageScore": 1.9226153417833598,
+        "directPhenotypeCount": 103,
+        "matchedPhenotypeCount": 36,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0004279",
+            "patientPhenotypeLabel": "Short palm",
+            "diseasePhenotypeCurie": "HP:0004279",
+            "diseasePhenotypeLabel": "Short palm",
+            "micaCurie": "HP:0004279",
+            "micaLabel": "Short palm",
+            "score": 4.557262965242701,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:65759"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011304",
+            "patientPhenotypeLabel": "Broad thumb",
+            "diseasePhenotypeCurie": "HP:0011304",
+            "diseasePhenotypeLabel": "Broad thumb",
+            "micaCurie": "HP:0011304",
+            "micaLabel": "Broad thumb",
+            "score": 4.546213129056115,
+            "evidenceCode": "1/5",
+            "referenceText": "OMIM:614976"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000189",
+            "patientPhenotypeLabel": "Narrow palate",
+            "diseasePhenotypeCurie": "HP:0002705",
+            "diseasePhenotypeLabel": "High, narrow palate",
+            "micaCurie": "HP:0000189",
+            "micaLabel": "Narrow palate",
+            "score": 4.026634714180529,
+            "evidenceCode": "1/5",
+            "referenceText": "OMIM:614976"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0010055",
+            "patientPhenotypeLabel": "Broad hallux",
+            "diseasePhenotypeCurie": "HP:0001841",
+            "diseasePhenotypeLabel": "Preaxial foot polydactyly",
+            "micaCurie": "HP:0001844",
+            "micaLabel": "Abnormal hallux morphology",
+            "score": 3.7488049381717605,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:65759"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000954",
+            "patientPhenotypeLabel": "Single transverse palmar crease",
+            "diseasePhenotypeCurie": "HP:0000954",
+            "diseasePhenotypeLabel": "Single transverse palmar crease",
+            "micaCurie": "HP:0000954",
+            "micaLabel": "Single transverse palmar crease",
+            "score": 3.7195345558716473,
+            "evidenceCode": "1/5",
+            "referenceText": "OMIM:614976"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000054",
+            "patientPhenotypeLabel": "Micropenis",
+            "diseasePhenotypeCurie": "HP:0000054",
+            "diseasePhenotypeLabel": "Micropenis",
+            "micaCurie": "HP:0000054",
+            "micaLabel": "Micropenis",
+            "score": 3.5806090836414546,
+            "evidenceCode": "1/4",
+            "referenceText": "OMIM:614976"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011220",
+            "patientPhenotypeLabel": "Prominent forehead",
+            "diseasePhenotypeCurie": "HP:0011220",
+            "diseasePhenotypeLabel": "Prominent forehead",
+            "micaCurie": "HP:0011220",
+            "micaLabel": "Prominent forehead",
+            "score": 3.4963910045574376,
+            "evidenceCode": "1/5",
+            "referenceText": "OMIM:614976"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011800",
+            "patientPhenotypeLabel": "Midface retrusion",
+            "diseasePhenotypeCurie": "HP:0011800",
+            "diseasePhenotypeLabel": "Midface retrusion",
+            "micaCurie": "HP:0011800",
+            "micaLabel": "Midface retrusion",
+            "score": 3.3566290621822787,
+            "evidenceCode": "2/5",
+            "referenceText": "OMIM:614976"
+          }
+        ]
+      },
+      {
+        "rank": 21,
+        "geneCurie": "NCBIGene:526",
+        "geneLabel": "ATP6V1B2",
+        "geneSymbol": "ATP6V1B2",
+        "geneEntityId": 148249,
+        "bmaScore": 2.3184080239056772,
+        "normalizedScore": 0.255978,
+        "patientAverageScore": 2.8264369536307687,
+        "phenotypeAverageScore": 1.8103790941805862,
+        "directPhenotypeCount": 165,
+        "matchedPhenotypeCount": 36,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002937",
+            "patientPhenotypeLabel": "Hemivertebrae",
+            "diseasePhenotypeCurie": "HP:0002937",
+            "diseasePhenotypeLabel": "Hemivertebrae",
+            "micaCurie": "HP:0002937",
+            "micaLabel": "Hemivertebrae",
+            "score": 4.979535191667246,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "ORPHA:79500"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000212",
+            "patientPhenotypeLabel": "Gingival overgrowth",
+            "diseasePhenotypeCurie": "HP:0000212",
+            "diseasePhenotypeLabel": "Gingival overgrowth",
+            "micaCurie": "HP:0000212",
+            "micaLabel": "Gingival overgrowth",
+            "score": 4.614421379082649,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:79500"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000527",
+            "patientPhenotypeLabel": "Long eyelashes",
+            "diseasePhenotypeCurie": "HP:0000527",
+            "diseasePhenotypeLabel": "Long eyelashes",
+            "micaCurie": "HP:0000527",
+            "micaLabel": "Long eyelashes",
+            "score": 4.151797857134536,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:3473"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002164",
+            "patientPhenotypeLabel": "Nail dysplasia",
+            "diseasePhenotypeCurie": "HP:0100797",
+            "diseasePhenotypeLabel": "Toenail dysplasia",
+            "micaCurie": "HP:0002164",
+            "micaLabel": "Nail dysplasia",
+            "score": 4.101245577971705,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:79500"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000189",
+            "patientPhenotypeLabel": "Narrow palate",
+            "diseasePhenotypeCurie": "HP:0000189",
+            "diseasePhenotypeLabel": "Narrow palate",
+            "micaCurie": "HP:0000189",
+            "micaLabel": "Narrow palate",
+            "score": 4.026634714180529,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:79500"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011304",
+            "patientPhenotypeLabel": "Broad thumb",
+            "diseasePhenotypeCurie": "HP:0005707",
+            "diseasePhenotypeLabel": "Bilateral triphalangeal thumbs",
+            "micaCurie": "HP:0009602",
+            "micaLabel": "Abnormality of thumb phalanx",
+            "score": 3.8475864827315442,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:124480"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0010055",
+            "patientPhenotypeLabel": "Broad hallux",
+            "diseasePhenotypeCurie": "HP:0001822",
+            "diseasePhenotypeLabel": "Hallux valgus",
+            "micaCurie": "HP:0001844",
+            "micaLabel": "Abnormal hallux morphology",
+            "score": 3.7488049381717605,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:3473"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009804",
+            "patientPhenotypeLabel": "Tooth agenesis",
+            "diseasePhenotypeCurie": "HP:0001592",
+            "diseasePhenotypeLabel": "Selective tooth agenesis",
+            "micaCurie": "HP:0009804",
+            "micaLabel": "Tooth agenesis",
+            "score": 3.69578046986354,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "OMIM:124480"
+          }
+        ]
+      },
+      {
+        "rank": 22,
+        "geneCurie": "NCBIGene:6885",
+        "geneLabel": "MAP3K7",
+        "geneSymbol": "MAP3K7",
+        "geneEntityId": 150240,
+        "bmaScore": 2.3151298449449347,
+        "normalizedScore": 0.255616,
+        "patientAverageScore": 2.8222057026364245,
+        "phenotypeAverageScore": 1.8080539872534447,
+        "directPhenotypeCount": 154,
+        "matchedPhenotypeCount": 36,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000902",
+            "patientPhenotypeLabel": "Rib fusion",
+            "diseasePhenotypeCurie": "HP:0000902",
+            "diseasePhenotypeLabel": "Rib fusion",
+            "micaCurie": "HP:0000902",
+            "micaLabel": "Rib fusion",
+            "score": 5.7612357695686365,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:157800"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0004279",
+            "patientPhenotypeLabel": "Short palm",
+            "diseasePhenotypeCurie": "HP:0004279",
+            "diseasePhenotypeLabel": "Short palm",
+            "micaCurie": "HP:0004279",
+            "micaLabel": "Short palm",
+            "score": 4.557262965242701,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:3238"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011304",
+            "patientPhenotypeLabel": "Broad thumb",
+            "diseasePhenotypeCurie": "HP:0011304",
+            "diseasePhenotypeLabel": "Broad thumb",
+            "micaCurie": "HP:0011304",
+            "micaLabel": "Broad thumb",
+            "score": 4.546213129056115,
+            "evidenceCode": "15/16",
+            "referenceText": "OMIM:617137"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002937",
+            "patientPhenotypeLabel": "Hemivertebrae",
+            "diseasePhenotypeCurie": "HP:0002949",
+            "diseasePhenotypeLabel": "Fused cervical vertebrae",
+            "micaCurie": "HP:0003422",
+            "micaLabel": "Vertebral segmentation defect",
+            "score": 4.1895381851173825,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:1826"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000189",
+            "patientPhenotypeLabel": "Narrow palate",
+            "diseasePhenotypeCurie": "HP:0002705",
+            "diseasePhenotypeLabel": "High, narrow palate",
+            "micaCurie": "HP:0000189",
+            "micaLabel": "Narrow palate",
+            "score": 4.026634714180529,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:3238"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0006394",
+            "patientPhenotypeLabel": "Limited pronation/supination of forearm",
+            "diseasePhenotypeCurie": "HP:0002996",
+            "diseasePhenotypeLabel": "Limited elbow movement",
+            "micaCurie": "HP:0002996",
+            "micaLabel": "Limited elbow movement",
+            "score": 3.957206207748767,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:1826"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000954",
+            "patientPhenotypeLabel": "Single transverse palmar crease",
+            "diseasePhenotypeCurie": "HP:0000954",
+            "diseasePhenotypeLabel": "Single transverse palmar crease",
+            "micaCurie": "HP:0000954",
+            "micaLabel": "Single transverse palmar crease",
+            "score": 3.7195345558716473,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1826"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009804",
+            "patientPhenotypeLabel": "Tooth agenesis",
+            "diseasePhenotypeCurie": "HP:0000677",
+            "diseasePhenotypeLabel": "Oligodontia",
+            "micaCurie": "HP:0009804",
+            "micaLabel": "Tooth agenesis",
+            "score": 3.69578046986354,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1826"
+          }
+        ]
+      },
+      {
+        "rank": 23,
+        "geneCurie": "NCBIGene:8200",
+        "geneLabel": "GDF5",
+        "geneSymbol": "GDF5",
+        "geneEntityId": 150527,
+        "bmaScore": 2.3135846023516535,
+        "normalizedScore": 0.255445,
+        "patientAverageScore": 2.165197140750534,
+        "phenotypeAverageScore": 2.4619720639527736,
+        "directPhenotypeCount": 160,
+        "matchedPhenotypeCount": 36,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0003027",
+            "patientPhenotypeLabel": "Mesomelia",
+            "diseasePhenotypeCurie": "HP:0003086",
+            "diseasePhenotypeLabel": "Acromesomelia",
+            "micaCurie": "HP:0003027",
+            "micaLabel": "Mesomelia",
+            "score": 5.250410145802645,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:201250"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0010055",
+            "patientPhenotypeLabel": "Broad hallux",
+            "diseasePhenotypeCurie": "HP:0010055",
+            "diseasePhenotypeLabel": "Broad hallux",
+            "micaCurie": "HP:0010055",
+            "micaLabel": "Broad hallux",
+            "score": 4.650353388308712,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:112600"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0004279",
+            "patientPhenotypeLabel": "Short palm",
+            "diseasePhenotypeCurie": "HP:0004279",
+            "diseasePhenotypeLabel": "Short palm",
+            "micaCurie": "HP:0004279",
+            "micaLabel": "Short palm",
+            "score": 4.557262965242701,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:3237"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011304",
+            "patientPhenotypeLabel": "Broad thumb",
+            "diseasePhenotypeCurie": "HP:0011304",
+            "diseasePhenotypeLabel": "Broad thumb",
+            "micaCurie": "HP:0011304",
+            "micaLabel": "Broad thumb",
+            "score": 4.546213129056115,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:3237"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002937",
+            "patientPhenotypeLabel": "Hemivertebrae",
+            "diseasePhenotypeCurie": "HP:0002948",
+            "diseasePhenotypeLabel": "Vertebral fusion",
+            "micaCurie": "HP:0003422",
+            "micaLabel": "Vertebral segmentation defect",
+            "score": 4.1895381851173825,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:610017"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000954",
+            "patientPhenotypeLabel": "Single transverse palmar crease",
+            "diseasePhenotypeCurie": "HP:0007598",
+            "diseasePhenotypeLabel": "Bilateral single transverse palmar creases",
+            "micaCurie": "HP:0000954",
+            "micaLabel": "Single transverse palmar crease",
+            "score": 3.7195345558716473,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:968"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0006394",
+            "patientPhenotypeLabel": "Limited pronation/supination of forearm",
+            "diseasePhenotypeCurie": "HP:0003042",
+            "diseasePhenotypeLabel": "Elbow dislocation",
+            "micaCurie": "HP:0020301",
+            "micaLabel": "Abnormal elbow physiology",
+            "score": 3.705214502096899,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:201250"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009804",
+            "patientPhenotypeLabel": "Tooth agenesis",
+            "diseasePhenotypeCurie": "HP:0000668",
+            "diseasePhenotypeLabel": "Hypodontia",
+            "micaCurie": "HP:0009804",
+            "micaLabel": "Tooth agenesis",
+            "score": 3.69578046986354,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:63442"
+          }
+        ]
+      },
+      {
+        "rank": 24,
+        "geneCurie": "NCBIGene:22827",
+        "geneLabel": "PUF60",
+        "geneSymbol": "PUF60",
+        "geneEntityId": 151223,
+        "bmaScore": 2.3133850558190323,
+        "normalizedScore": 0.255423,
+        "patientAverageScore": 3.0123933906928593,
+        "phenotypeAverageScore": 1.6143767209452053,
+        "directPhenotypeCount": 168,
+        "matchedPhenotypeCount": 36,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002937",
+            "patientPhenotypeLabel": "Hemivertebrae",
+            "diseasePhenotypeCurie": "HP:0025481",
+            "diseasePhenotypeLabel": "Cervical hemivertebrae",
+            "micaCurie": "HP:0002937",
+            "micaLabel": "Hemivertebrae",
+            "score": 4.979535191667246,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:508498"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0010055",
+            "patientPhenotypeLabel": "Broad hallux",
+            "diseasePhenotypeCurie": "HP:0010055",
+            "diseasePhenotypeLabel": "Broad hallux",
+            "micaCurie": "HP:0010055",
+            "micaLabel": "Broad hallux",
+            "score": 4.650353388308712,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:508498"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0004279",
+            "patientPhenotypeLabel": "Short palm",
+            "diseasePhenotypeCurie": "HP:0004279",
+            "diseasePhenotypeLabel": "Short palm",
+            "micaCurie": "HP:0004279",
+            "micaLabel": "Short palm",
+            "score": 4.557262965242701,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:508498"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011304",
+            "patientPhenotypeLabel": "Broad thumb",
+            "diseasePhenotypeCurie": "HP:0011304",
+            "diseasePhenotypeLabel": "Broad thumb",
+            "micaCurie": "HP:0011304",
+            "micaLabel": "Broad thumb",
+            "score": 4.546213129056115,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:508498"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000527",
+            "patientPhenotypeLabel": "Long eyelashes",
+            "diseasePhenotypeCurie": "HP:0000527",
+            "diseasePhenotypeLabel": "Long eyelashes",
+            "micaCurie": "HP:0000527",
+            "micaLabel": "Long eyelashes",
+            "score": 4.151797857134536,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:508488"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000954",
+            "patientPhenotypeLabel": "Single transverse palmar crease",
+            "diseasePhenotypeCurie": "HP:0000954",
+            "diseasePhenotypeLabel": "Single transverse palmar crease",
+            "micaCurie": "HP:0000954",
+            "micaLabel": "Single transverse palmar crease",
+            "score": 3.7195345558716473,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:508488"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009804",
+            "patientPhenotypeLabel": "Tooth agenesis",
+            "diseasePhenotypeCurie": "HP:0011067",
+            "diseasePhenotypeLabel": "Mesiodens",
+            "micaCurie": "HP:0006483",
+            "micaLabel": "Abnormal number of teeth",
+            "score": 3.564011192232417,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:508488"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003027",
+            "patientPhenotypeLabel": "Mesomelia",
+            "diseasePhenotypeCurie": "HP:0002983",
+            "diseasePhenotypeLabel": "Micromelia",
+            "micaCurie": "HP:0009826",
+            "micaLabel": "Limb undergrowth",
+            "score": 3.515809090414539,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:508488"
+          }
+        ]
+      },
+      {
+        "rank": 25,
+        "geneCurie": "NCBIGene:54101",
+        "geneLabel": "RIPK4",
+        "geneSymbol": "RIPK4",
+        "geneEntityId": 151809,
+        "bmaScore": 2.3104918233508815,
+        "normalizedScore": 0.255104,
+        "patientAverageScore": 2.5785639831200884,
+        "phenotypeAverageScore": 2.042419663581675,
+        "directPhenotypeCount": 103,
+        "matchedPhenotypeCount": 36,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002164",
+            "patientPhenotypeLabel": "Nail dysplasia",
+            "diseasePhenotypeCurie": "HP:0002164",
+            "diseasePhenotypeLabel": "Nail dysplasia",
+            "micaCurie": "HP:0002164",
+            "micaLabel": "Nail dysplasia",
+            "score": 4.101245577971705,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:214350"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009804",
+            "patientPhenotypeLabel": "Tooth agenesis",
+            "diseasePhenotypeCurie": "HP:0200160",
+            "diseasePhenotypeLabel": "Agenesis of maxillary incisor",
+            "micaCurie": "HP:0009804",
+            "micaLabel": "Tooth agenesis",
+            "score": 3.69578046986354,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:1401"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000054",
+            "patientPhenotypeLabel": "Micropenis",
+            "diseasePhenotypeCurie": "HP:0000054",
+            "diseasePhenotypeLabel": "Micropenis",
+            "micaCurie": "HP:0000054",
+            "micaLabel": "Micropenis",
+            "score": 3.5806090836414546,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:263650"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000954",
+            "patientPhenotypeLabel": "Single transverse palmar crease",
+            "diseasePhenotypeCurie": "HP:0010489",
+            "diseasePhenotypeLabel": "Absent palmar crease",
+            "micaCurie": "HP:0010490",
+            "micaLabel": "Abnormality of the palmar creases",
+            "score": 3.5722757020823104,
+            "evidenceCode": "3/3",
+            "referenceText": "OMIM:263650"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003027",
+            "patientPhenotypeLabel": "Mesomelia",
+            "diseasePhenotypeCurie": "HP:0009826",
+            "diseasePhenotypeLabel": "Limb undergrowth",
+            "micaCurie": "HP:0009826",
+            "micaLabel": "Limb undergrowth",
+            "score": 3.515809090414539,
+            "evidenceCode": "4/4",
+            "referenceText": "OMIM:263650"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000212",
+            "patientPhenotypeLabel": "Gingival overgrowth",
+            "diseasePhenotypeCurie": "HP:0010285",
+            "diseasePhenotypeLabel": "Oral synechia",
+            "micaCurie": "HP:0011830",
+            "micaLabel": "Abnormal oral mucosa morphology",
+            "score": 3.481123532426649,
+            "evidenceCode": "4/4",
+            "referenceText": "OMIM:263650"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003196",
+            "patientPhenotypeLabel": "Short nose",
+            "diseasePhenotypeCurie": "HP:0003196",
+            "diseasePhenotypeLabel": "Short nose",
+            "micaCurie": "HP:0003196",
+            "micaLabel": "Short nose",
+            "score": 3.440301537906394,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:263650"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000023",
+            "patientPhenotypeLabel": "Inguinal hernia",
+            "diseasePhenotypeCurie": "HP:0000023",
+            "diseasePhenotypeLabel": "Inguinal hernia",
+            "micaCurie": "HP:0000023",
+            "micaLabel": "Inguinal hernia",
+            "score": 3.436671769855815,
+            "evidenceCode": "1/3",
+            "referenceText": "OMIM:263650"
+          }
+        ]
+      }
+    ],
+    "engineSummary": {
+      "diseaseCount": 8579,
+      "geneCount": 5256,
+      "phenotypeCount": 19389,
+      "sourceMode": {
+        "disease": "relationship_fallback",
+        "gene": "relationship_fallback"
+      },
+      "generatedAt": "2026-03-15T21:00:39.457Z"
+    }
+  }
+}

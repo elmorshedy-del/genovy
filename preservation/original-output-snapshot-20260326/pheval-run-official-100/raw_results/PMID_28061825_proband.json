@@ -1,0 +1,2651 @@
+{
+  "success": true,
+  "engine": "genovy-dx-sim",
+  "analysisType": "gene",
+  "input": {
+    "presentPhenotypeCuries": [
+      "HP:0008070",
+      "HP:0007401",
+      "HP:0011509",
+      "HP:0007663",
+      "HP:0003777",
+      "HP:0007502",
+      "HP:0200040",
+      "HP:0410400",
+      "HP:0000980"
+    ],
+    "excludedPhenotypeCuries": [
+      "HP:0006482",
+      "HP:0001155",
+      "HP:0001760"
+    ],
+    "sourceFormat": "phenopacket"
+  },
+  "ranking": {
+    "queryPhenotypes": [
+      {
+        "phenotypeCurie": "HP:0008070",
+        "phenotypeLabel": "Sparse hair"
+      },
+      {
+        "phenotypeCurie": "HP:0007401",
+        "phenotypeLabel": "Macular atrophy"
+      },
+      {
+        "phenotypeCurie": "HP:0011509",
+        "phenotypeLabel": "Macular hyperpigmentation"
+      },
+      {
+        "phenotypeCurie": "HP:0007663",
+        "phenotypeLabel": "Reduced visual acuity"
+      },
+      {
+        "phenotypeCurie": "HP:0003777",
+        "phenotypeLabel": "Pili torti"
+      },
+      {
+        "phenotypeCurie": "HP:0007502",
+        "phenotypeLabel": "Follicular hyperkeratosis"
+      },
+      {
+        "phenotypeCurie": "HP:0200040",
+        "phenotypeLabel": "Epidermoid cyst"
+      },
+      {
+        "phenotypeCurie": "HP:0410400",
+        "phenotypeLabel": "Absent sebaceous glands"
+      },
+      {
+        "phenotypeCurie": "HP:0000980",
+        "phenotypeLabel": "Pallor"
+      }
+    ],
+    "results": [
+      {
+        "rank": 1,
+        "geneCurie": "NCBIGene:1001",
+        "geneLabel": "CDH3",
+        "geneSymbol": "CDH3",
+        "geneEntityId": 148411,
+        "bmaScore": 3.8426779696740887,
+        "normalizedScore": 0.424274,
+        "patientAverageScore": 5.80293132758828,
+        "phenotypeAverageScore": 1.882424611759897,
+        "directPhenotypeCount": 61,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0410400",
+            "patientPhenotypeLabel": "Absent sebaceous glands",
+            "diseasePhenotypeCurie": "HP:0410400",
+            "diseasePhenotypeLabel": "Absent sebaceous glands",
+            "micaCurie": "HP:0410400",
+            "micaLabel": "Absent sebaceous glands",
+            "score": 9.057072635572965,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:601553"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011509",
+            "patientPhenotypeLabel": "Macular hyperpigmentation",
+            "diseasePhenotypeCurie": "HP:0011509",
+            "diseasePhenotypeLabel": "Macular hyperpigmentation",
+            "micaCurie": "HP:0011509",
+            "micaLabel": "Macular hyperpigmentation",
+            "score": 7.958460346904856,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:601553"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0200040",
+            "patientPhenotypeLabel": "Epidermoid cyst",
+            "diseasePhenotypeCurie": "HP:0200040",
+            "diseasePhenotypeLabel": "Epidermoid cyst",
+            "micaCurie": "HP:0200040",
+            "micaLabel": "Epidermoid cyst",
+            "score": 6.859848058236746,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:601553"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003777",
+            "patientPhenotypeLabel": "Pili torti",
+            "diseasePhenotypeCurie": "HP:0003777",
+            "diseasePhenotypeLabel": "Pili torti",
+            "micaCurie": "HP:0003777",
+            "micaLabel": "Pili torti",
+            "score": 6.284483913333184,
+            "evidenceCode": "12/12",
+            "referenceText": "OMIM:601553"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007502",
+            "patientPhenotypeLabel": "Follicular hyperkeratosis",
+            "diseasePhenotypeCurie": "HP:0007502",
+            "diseasePhenotypeLabel": "Follicular hyperkeratosis",
+            "micaCurie": "HP:0007502",
+            "micaLabel": "Follicular hyperkeratosis",
+            "score": 5.560565074106485,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:601553"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007401",
+            "patientPhenotypeLabel": "Macular atrophy",
+            "diseasePhenotypeCurie": "HP:0007401",
+            "diseasePhenotypeLabel": "Macular atrophy",
+            "micaCurie": "HP:0007401",
+            "micaLabel": "Macular atrophy",
+            "score": 5.206925033862906,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:601553"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000980",
+            "patientPhenotypeLabel": "Pallor",
+            "diseasePhenotypeCurie": "HP:0000980",
+            "diseasePhenotypeLabel": "Pallor",
+            "micaCurie": "HP:0000980",
+            "micaLabel": "Pallor",
+            "score": 5.185871624665074,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:601553"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008070",
+            "patientPhenotypeLabel": "Sparse hair",
+            "diseasePhenotypeCurie": "HP:0008070",
+            "diseasePhenotypeLabel": "Sparse hair",
+            "micaCurie": "HP:0008070",
+            "micaLabel": "Sparse hair",
+            "score": 3.2340267400899463,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:601553"
+          }
+        ]
+      },
+      {
+        "rank": 2,
+        "geneCurie": "NCBIGene:84839",
+        "geneLabel": "RAX2",
+        "geneSymbol": "RAX2",
+        "geneEntityId": 152633,
+        "bmaScore": 2.503094012665199,
+        "normalizedScore": 0.276369,
+        "patientAverageScore": 2.7757406133131317,
+        "phenotypeAverageScore": 2.2304474120172664,
+        "directPhenotypeCount": 29,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011509",
+            "patientPhenotypeLabel": "Macular hyperpigmentation",
+            "diseasePhenotypeCurie": "HP:0011504",
+            "diseasePhenotypeLabel": "Bull's eye maculopathy",
+            "micaCurie": "HP:0008002",
+            "micaLabel": "Abnormal macular pigmentation",
+            "score": 5.530712110956804,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:610381"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007401",
+            "patientPhenotypeLabel": "Macular atrophy",
+            "diseasePhenotypeCurie": "HP:0007401",
+            "diseasePhenotypeLabel": "Macular atrophy",
+            "micaCurie": "HP:0007401",
+            "micaLabel": "Macular atrophy",
+            "score": 5.206925033862906,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:610381"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000980",
+            "patientPhenotypeLabel": "Pallor",
+            "diseasePhenotypeCurie": "HP:0000980",
+            "diseasePhenotypeLabel": "Pallor",
+            "micaCurie": "HP:0000980",
+            "micaLabel": "Pallor",
+            "score": 5.185871624665074,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:610381"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007663",
+            "patientPhenotypeLabel": "Reduced visual acuity",
+            "diseasePhenotypeCurie": "HP:0007663",
+            "diseasePhenotypeLabel": "Reduced visual acuity",
+            "micaCurie": "HP:0007663",
+            "micaLabel": "Reduced visual acuity",
+            "score": 2.879128521522365,
+            "evidenceCode": "6/6",
+            "referenceText": "OMIM:620102"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007502",
+            "patientPhenotypeLabel": "Follicular hyperkeratosis",
+            "diseasePhenotypeCurie": "HP:0000980",
+            "diseasePhenotypeLabel": "Pallor",
+            "micaCurie": "HP:0011121",
+            "micaLabel": "Abnormal skin morphology",
+            "score": 1.4662205118843843,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:610381"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0200040",
+            "patientPhenotypeLabel": "Epidermoid cyst",
+            "diseasePhenotypeCurie": "HP:0000980",
+            "diseasePhenotypeLabel": "Pallor",
+            "micaCurie": "HP:0011121",
+            "micaLabel": "Abnormal skin morphology",
+            "score": 1.4662205118843843,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:610381"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008070",
+            "patientPhenotypeLabel": "Sparse hair",
+            "diseasePhenotypeCurie": "HP:0000980",
+            "diseasePhenotypeLabel": "Pallor",
+            "micaCurie": "HP:0001574",
+            "micaLabel": "Abnormality of the integument",
+            "score": 1.0821957350140894,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:610381"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003777",
+            "patientPhenotypeLabel": "Pili torti",
+            "diseasePhenotypeCurie": "HP:0000980",
+            "diseasePhenotypeLabel": "Pallor",
+            "micaCurie": "HP:0001574",
+            "micaLabel": "Abnormality of the integument",
+            "score": 1.0821957350140894,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:610381"
+          }
+        ]
+      },
+      {
+        "rank": 3,
+        "geneCurie": "NCBIGene:6768",
+        "geneLabel": "ST14",
+        "geneSymbol": "ST14",
+        "geneEntityId": 150197,
+        "bmaScore": 2.276884585699065,
+        "normalizedScore": 0.251393,
+        "patientAverageScore": 2.4549025177102006,
+        "phenotypeAverageScore": 2.0988666536879292,
+        "directPhenotypeCount": 20,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0003777",
+            "patientPhenotypeLabel": "Pili torti",
+            "diseasePhenotypeCurie": "HP:0003777",
+            "diseasePhenotypeLabel": "Pili torti",
+            "micaCurie": "HP:0003777",
+            "micaLabel": "Pili torti",
+            "score": 6.284483913333184,
+            "evidenceCode": "3/3",
+            "referenceText": "OMIM:602400"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007502",
+            "patientPhenotypeLabel": "Follicular hyperkeratosis",
+            "diseasePhenotypeCurie": "HP:0000962",
+            "diseasePhenotypeLabel": "Hyperkeratosis",
+            "micaCurie": "HP:0000962",
+            "micaLabel": "Hyperkeratosis",
+            "score": 3.593240830547355,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:602400"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008070",
+            "patientPhenotypeLabel": "Sparse hair",
+            "diseasePhenotypeCurie": "HP:0008070",
+            "diseasePhenotypeLabel": "Sparse hair",
+            "micaCurie": "HP:0008070",
+            "micaLabel": "Sparse hair",
+            "score": 3.2340267400899463,
+            "evidenceCode": "4/4",
+            "referenceText": "OMIM:602400"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007663",
+            "patientPhenotypeLabel": "Reduced visual acuity",
+            "diseasePhenotypeCurie": "HP:0000613",
+            "diseasePhenotypeLabel": "Photophobia",
+            "micaCurie": "HP:0000504",
+            "micaLabel": "Abnormality of vision",
+            "score": 2.0705061761665386,
+            "evidenceCode": "3/4",
+            "referenceText": "OMIM:602400"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0410400",
+            "patientPhenotypeLabel": "Absent sebaceous glands",
+            "diseasePhenotypeCurie": "HP:0045075",
+            "diseasePhenotypeLabel": "Sparse eyebrow",
+            "micaCurie": "HP:0011138",
+            "micaLabel": "Abnormal skin adnexa morphology",
+            "score": 1.7220907567011512,
+            "evidenceCode": "4/4",
+            "referenceText": "OMIM:602400"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0200040",
+            "patientPhenotypeLabel": "Epidermoid cyst",
+            "diseasePhenotypeCurie": "HP:0008064",
+            "diseasePhenotypeLabel": "Ichthyosis",
+            "micaCurie": "HP:0011121",
+            "micaLabel": "Abnormal skin morphology",
+            "score": 1.4662205118843843,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:91132"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000980",
+            "patientPhenotypeLabel": "Pallor",
+            "diseasePhenotypeCurie": "HP:0008064",
+            "diseasePhenotypeLabel": "Ichthyosis",
+            "micaCurie": "HP:0011121",
+            "micaLabel": "Abnormal skin morphology",
+            "score": 1.4662205118843843,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:91132"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007401",
+            "patientPhenotypeLabel": "Macular atrophy",
+            "diseasePhenotypeCurie": "HP:0007957",
+            "diseasePhenotypeLabel": "Corneal opacity",
+            "micaCurie": "HP:0012372",
+            "micaLabel": "Abnormal eye morphology",
+            "score": 1.1286666093924305,
+            "evidenceCode": "1/3",
+            "referenceText": "OMIM:602400"
+          }
+        ]
+      },
+      {
+        "rank": 4,
+        "geneCurie": "NCBIGene:147409",
+        "geneLabel": "DSG4",
+        "geneSymbol": "DSG4",
+        "geneEntityId": 152936,
+        "bmaScore": 2.236003732533637,
+        "normalizedScore": 0.246879,
+        "patientAverageScore": 2.5379972888420603,
+        "phenotypeAverageScore": 1.9340101762252138,
+        "directPhenotypeCount": 24,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0003777",
+            "patientPhenotypeLabel": "Pili torti",
+            "diseasePhenotypeCurie": "HP:0003777",
+            "diseasePhenotypeLabel": "Pili torti",
+            "micaCurie": "HP:0003777",
+            "micaLabel": "Pili torti",
+            "score": 6.284483913333184,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "OMIM:607903"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007502",
+            "patientPhenotypeLabel": "Follicular hyperkeratosis",
+            "diseasePhenotypeCurie": "HP:0007502",
+            "diseasePhenotypeLabel": "Follicular hyperkeratosis",
+            "micaCurie": "HP:0007502",
+            "micaLabel": "Follicular hyperkeratosis",
+            "score": 5.560565074106485,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:573"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008070",
+            "patientPhenotypeLabel": "Sparse hair",
+            "diseasePhenotypeCurie": "HP:0008070",
+            "diseasePhenotypeLabel": "Sparse hair",
+            "micaCurie": "HP:0008070",
+            "micaLabel": "Sparse hair",
+            "score": 3.2340267400899463,
+            "evidenceCode": "6/6",
+            "referenceText": "OMIM:607903"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0410400",
+            "patientPhenotypeLabel": "Absent sebaceous glands",
+            "diseasePhenotypeCurie": "HP:0045075",
+            "diseasePhenotypeLabel": "Sparse eyebrow",
+            "micaCurie": "HP:0011138",
+            "micaLabel": "Abnormal skin adnexa morphology",
+            "score": 1.7220907567011512,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:55654"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0200040",
+            "patientPhenotypeLabel": "Epidermoid cyst",
+            "diseasePhenotypeCurie": "HP:0010783",
+            "diseasePhenotypeLabel": "Erythema",
+            "micaCurie": "HP:0011121",
+            "micaLabel": "Abnormal skin morphology",
+            "score": 1.4662205118843843,
+            "evidenceCode": "1/6",
+            "referenceText": "OMIM:607903"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000980",
+            "patientPhenotypeLabel": "Pallor",
+            "diseasePhenotypeCurie": "HP:0010783",
+            "diseasePhenotypeLabel": "Erythema",
+            "micaCurie": "HP:0011121",
+            "micaLabel": "Abnormal skin morphology",
+            "score": 1.4662205118843843,
+            "evidenceCode": "1/6",
+            "referenceText": "OMIM:607903"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007401",
+            "patientPhenotypeLabel": "Macular atrophy",
+            "diseasePhenotypeCurie": "HP:0000518",
+            "diseasePhenotypeLabel": "Cataract",
+            "micaCurie": "HP:0012372",
+            "micaLabel": "Abnormal eye morphology",
+            "score": 1.1286666093924305,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:573"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011509",
+            "patientPhenotypeLabel": "Macular hyperpigmentation",
+            "diseasePhenotypeCurie": "HP:0000518",
+            "diseasePhenotypeLabel": "Cataract",
+            "micaCurie": "HP:0012372",
+            "micaLabel": "Abnormal eye morphology",
+            "score": 1.1286666093924305,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:573"
+          }
+        ]
+      },
+      {
+        "rank": 5,
+        "geneCurie": "NCBIGene:51151",
+        "geneLabel": "SLC45A2",
+        "geneSymbol": "SLC45A2",
+        "geneEntityId": 151703,
+        "bmaScore": 2.2308359546276413,
+        "normalizedScore": 0.246309,
+        "patientAverageScore": 2.5201736155442136,
+        "phenotypeAverageScore": 1.941498293711069,
+        "directPhenotypeCount": 21,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0007401",
+            "patientPhenotypeLabel": "Macular atrophy",
+            "diseasePhenotypeCurie": "HP:0007750",
+            "diseasePhenotypeLabel": "Hypoplasia of the fovea",
+            "micaCurie": "HP:0001103",
+            "micaLabel": "Abnormal macular morphology",
+            "score": 3.6634450892206036,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:79435"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011509",
+            "patientPhenotypeLabel": "Macular hyperpigmentation",
+            "diseasePhenotypeCurie": "HP:0007750",
+            "diseasePhenotypeLabel": "Hypoplasia of the fovea",
+            "micaCurie": "HP:0001103",
+            "micaLabel": "Abnormal macular morphology",
+            "score": 3.6634450892206036,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:79435"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007502",
+            "patientPhenotypeLabel": "Follicular hyperkeratosis",
+            "diseasePhenotypeCurie": "HP:0001072",
+            "diseasePhenotypeLabel": "Thickened skin",
+            "micaCurie": "HP:0001072",
+            "micaLabel": "Thickened skin",
+            "score": 3.103829301285181,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:79435"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007663",
+            "patientPhenotypeLabel": "Reduced visual acuity",
+            "diseasePhenotypeCurie": "HP:0007663",
+            "diseasePhenotypeLabel": "Reduced visual acuity",
+            "micaCurie": "HP:0007663",
+            "micaLabel": "Reduced visual acuity",
+            "score": 2.879128521522365,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:79435"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0200040",
+            "patientPhenotypeLabel": "Epidermoid cyst",
+            "diseasePhenotypeCurie": "HP:0003764",
+            "diseasePhenotypeLabel": "Nevus",
+            "micaCurie": "HP:0011355",
+            "micaLabel": "Localized skin lesion",
+            "score": 2.436999429042609,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "ORPHA:79435"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008070",
+            "patientPhenotypeLabel": "Sparse hair",
+            "diseasePhenotypeCurie": "HP:0011364",
+            "diseasePhenotypeLabel": "White hair",
+            "micaCurie": "HP:0001595",
+            "micaLabel": "Abnormal hair morphology",
+            "score": 1.8732019205105126,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:79435"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003777",
+            "patientPhenotypeLabel": "Pili torti",
+            "diseasePhenotypeCurie": "HP:0011364",
+            "diseasePhenotypeLabel": "White hair",
+            "micaCurie": "HP:0001595",
+            "micaLabel": "Abnormal hair morphology",
+            "score": 1.8732019205105126,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:79435"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0410400",
+            "patientPhenotypeLabel": "Absent sebaceous glands",
+            "diseasePhenotypeCurie": "HP:0011364",
+            "diseasePhenotypeLabel": "White hair",
+            "micaCurie": "HP:0011138",
+            "micaLabel": "Abnormal skin adnexa morphology",
+            "score": 1.7220907567011512,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:79435"
+          }
+        ]
+      },
+      {
+        "rank": 6,
+        "geneCurie": "NCBIGene:83872",
+        "geneLabel": "HMCN1",
+        "geneSymbol": "HMCN1",
+        "geneEntityId": 152538,
+        "bmaScore": 2.224637360648775,
+        "normalizedScore": 0.245624,
+        "patientAverageScore": 1.3664687910024005,
+        "phenotypeAverageScore": 3.0828059302951494,
+        "directPhenotypeCount": 9,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011509",
+            "patientPhenotypeLabel": "Macular hyperpigmentation",
+            "diseasePhenotypeCurie": "HP:0012643",
+            "diseasePhenotypeLabel": "Foveal hypopigmentation",
+            "micaCurie": "HP:0008002",
+            "micaLabel": "Abnormal macular pigmentation",
+            "score": 5.530712110956804,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:603075"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007401",
+            "patientPhenotypeLabel": "Macular atrophy",
+            "diseasePhenotypeCurie": "HP:0000608",
+            "diseasePhenotypeLabel": "Macular degeneration",
+            "micaCurie": "HP:0000608",
+            "micaLabel": "Macular degeneration",
+            "score": 4.546213129056115,
+            "evidenceCode": "18/20",
+            "referenceText": "OMIM:603075"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007663",
+            "patientPhenotypeLabel": "Reduced visual acuity",
+            "diseasePhenotypeCurie": "HP:0000529",
+            "diseasePhenotypeLabel": "Progressive visual loss",
+            "micaCurie": "HP:0000505",
+            "micaLabel": "Visual impairment",
+            "score": 2.2058877080792225,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:603075"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008070",
+            "patientPhenotypeLabel": "Sparse hair",
+            "diseasePhenotypeCurie": "HP:0031609",
+            "diseasePhenotypeLabel": "Macular geographic atrophy",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "5/10",
+            "referenceText": "OMIM:603075"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003777",
+            "patientPhenotypeLabel": "Pili torti",
+            "diseasePhenotypeCurie": "HP:0031609",
+            "diseasePhenotypeLabel": "Macular geographic atrophy",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "5/10",
+            "referenceText": "OMIM:603075"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007502",
+            "patientPhenotypeLabel": "Follicular hyperkeratosis",
+            "diseasePhenotypeCurie": "HP:0031609",
+            "diseasePhenotypeLabel": "Macular geographic atrophy",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "5/10",
+            "referenceText": "OMIM:603075"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0200040",
+            "patientPhenotypeLabel": "Epidermoid cyst",
+            "diseasePhenotypeCurie": "HP:0031609",
+            "diseasePhenotypeLabel": "Macular geographic atrophy",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "5/10",
+            "referenceText": "OMIM:603075"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0410400",
+            "patientPhenotypeLabel": "Absent sebaceous glands",
+            "diseasePhenotypeCurie": "HP:0031609",
+            "diseasePhenotypeLabel": "Macular geographic atrophy",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "5/10",
+            "referenceText": "OMIM:603075"
+          }
+        ]
+      },
+      {
+        "rank": 7,
+        "geneCurie": "NCBIGene:60509",
+        "geneLabel": "AGBL5",
+        "geneSymbol": "AGBL5",
+        "geneEntityId": 152223,
+        "bmaScore": 2.1744938961168305,
+        "normalizedScore": 0.240088,
+        "patientAverageScore": 2.486619846791274,
+        "phenotypeAverageScore": 1.8623679454423872,
+        "directPhenotypeCount": 37,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000980",
+            "patientPhenotypeLabel": "Pallor",
+            "diseasePhenotypeCurie": "HP:0000980",
+            "diseasePhenotypeLabel": "Pallor",
+            "micaCurie": "HP:0000980",
+            "micaLabel": "Pallor",
+            "score": 5.185871624665074,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:617023"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007401",
+            "patientPhenotypeLabel": "Macular atrophy",
+            "diseasePhenotypeCurie": "HP:0001105",
+            "diseasePhenotypeLabel": "Retinal atrophy",
+            "micaCurie": "HP:0001105",
+            "micaLabel": "Retinal atrophy",
+            "score": 4.472105156902393,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:791"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011509",
+            "patientPhenotypeLabel": "Macular hyperpigmentation",
+            "diseasePhenotypeCurie": "HP:0011505",
+            "diseasePhenotypeLabel": "Cystoid macular edema",
+            "micaCurie": "HP:0001103",
+            "micaLabel": "Abnormal macular morphology",
+            "score": 3.6634450892206036,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:791"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007663",
+            "patientPhenotypeLabel": "Reduced visual acuity",
+            "diseasePhenotypeCurie": "HP:0007663",
+            "diseasePhenotypeLabel": "Reduced visual acuity",
+            "micaCurie": "HP:0007663",
+            "micaLabel": "Reduced visual acuity",
+            "score": 2.879128521522365,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:791"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007502",
+            "patientPhenotypeLabel": "Follicular hyperkeratosis",
+            "diseasePhenotypeCurie": "HP:0000980",
+            "diseasePhenotypeLabel": "Pallor",
+            "micaCurie": "HP:0011121",
+            "micaLabel": "Abnormal skin morphology",
+            "score": 1.4662205118843843,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:617023"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0200040",
+            "patientPhenotypeLabel": "Epidermoid cyst",
+            "diseasePhenotypeCurie": "HP:0000980",
+            "diseasePhenotypeLabel": "Pallor",
+            "micaCurie": "HP:0011121",
+            "micaLabel": "Abnormal skin morphology",
+            "score": 1.4662205118843843,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:617023"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008070",
+            "patientPhenotypeLabel": "Sparse hair",
+            "diseasePhenotypeCurie": "HP:0000980",
+            "diseasePhenotypeLabel": "Pallor",
+            "micaCurie": "HP:0001574",
+            "micaLabel": "Abnormality of the integument",
+            "score": 1.0821957350140894,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:617023"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003777",
+            "patientPhenotypeLabel": "Pili torti",
+            "diseasePhenotypeCurie": "HP:0000980",
+            "diseasePhenotypeLabel": "Pallor",
+            "micaCurie": "HP:0001574",
+            "micaLabel": "Abnormality of the integument",
+            "score": 1.0821957350140894,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:617023"
+          }
+        ]
+      },
+      {
+        "rank": 8,
+        "geneCurie": "NCBIGene:778",
+        "geneLabel": "CACNA1F",
+        "geneSymbol": "CACNA1F",
+        "geneEntityId": 148342,
+        "bmaScore": 2.167842815122222,
+        "normalizedScore": 0.239354,
+        "patientAverageScore": 2.2807993922307754,
+        "phenotypeAverageScore": 2.0548862380136685,
+        "directPhenotypeCount": 36,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011509",
+            "patientPhenotypeLabel": "Macular hyperpigmentation",
+            "diseasePhenotypeCurie": "HP:0008002",
+            "diseasePhenotypeLabel": "Abnormal macular pigmentation",
+            "micaCurie": "HP:0008002",
+            "micaLabel": "Abnormal macular pigmentation",
+            "score": 5.530712110956804,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:300476"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007401",
+            "patientPhenotypeLabel": "Macular atrophy",
+            "diseasePhenotypeCurie": "HP:0001105",
+            "diseasePhenotypeLabel": "Retinal atrophy",
+            "micaCurie": "HP:0001105",
+            "micaLabel": "Retinal atrophy",
+            "score": 4.472105156902393,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:1872"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007663",
+            "patientPhenotypeLabel": "Reduced visual acuity",
+            "diseasePhenotypeCurie": "HP:0007663",
+            "diseasePhenotypeLabel": "Reduced visual acuity",
+            "micaCurie": "HP:0007663",
+            "micaLabel": "Reduced visual acuity",
+            "score": 2.879128521522365,
+            "evidenceCode": "7/7",
+            "referenceText": "OMIM:300071"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007502",
+            "patientPhenotypeLabel": "Follicular hyperkeratosis",
+            "diseasePhenotypeCurie": "HP:0005592",
+            "diseasePhenotypeLabel": "Giant melanosomes in melanocytes",
+            "micaCurie": "HP:0011121",
+            "micaLabel": "Abnormal skin morphology",
+            "score": 1.4662205118843843,
+            "evidenceCode": "0/1",
+            "referenceText": "OMIM:300600"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0200040",
+            "patientPhenotypeLabel": "Epidermoid cyst",
+            "diseasePhenotypeCurie": "HP:0005592",
+            "diseasePhenotypeLabel": "Giant melanosomes in melanocytes",
+            "micaCurie": "HP:0011121",
+            "micaLabel": "Abnormal skin morphology",
+            "score": 1.4662205118843843,
+            "evidenceCode": "0/1",
+            "referenceText": "OMIM:300600"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000980",
+            "patientPhenotypeLabel": "Pallor",
+            "diseasePhenotypeCurie": "HP:0005592",
+            "diseasePhenotypeLabel": "Giant melanosomes in melanocytes",
+            "micaCurie": "HP:0011121",
+            "micaLabel": "Abnormal skin morphology",
+            "score": 1.4662205118843843,
+            "evidenceCode": "0/1",
+            "referenceText": "OMIM:300600"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008070",
+            "patientPhenotypeLabel": "Sparse hair",
+            "diseasePhenotypeCurie": "HP:0005592",
+            "diseasePhenotypeLabel": "Giant melanosomes in melanocytes",
+            "micaCurie": "HP:0001574",
+            "micaLabel": "Abnormality of the integument",
+            "score": 1.0821957350140894,
+            "evidenceCode": "0/1",
+            "referenceText": "OMIM:300600"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003777",
+            "patientPhenotypeLabel": "Pili torti",
+            "diseasePhenotypeCurie": "HP:0005592",
+            "diseasePhenotypeLabel": "Giant melanosomes in melanocytes",
+            "micaCurie": "HP:0001574",
+            "micaLabel": "Abnormality of the integument",
+            "score": 1.0821957350140894,
+            "evidenceCode": "0/1",
+            "referenceText": "OMIM:300600"
+          }
+        ]
+      },
+      {
+        "rank": 9,
+        "geneCurie": "NCBIGene:147183",
+        "geneLabel": "KRT25",
+        "geneSymbol": "KRT25",
+        "geneEntityId": 152934,
+        "bmaScore": 2.1672202251274753,
+        "normalizedScore": 0.239285,
+        "patientAverageScore": 2.1622381386530147,
+        "phenotypeAverageScore": 2.1722023116019358,
+        "directPhenotypeCount": 18,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0003777",
+            "patientPhenotypeLabel": "Pili torti",
+            "diseasePhenotypeCurie": "HP:0009886",
+            "diseasePhenotypeLabel": "Trichorrhexis nodosa",
+            "micaCurie": "HP:0003328",
+            "micaLabel": "Abnormal hairshaft morphology",
+            "score": 5.419486475846579,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:616760"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008070",
+            "patientPhenotypeLabel": "Sparse hair",
+            "diseasePhenotypeCurie": "HP:0008070",
+            "diseasePhenotypeLabel": "Sparse hair",
+            "micaCurie": "HP:0008070",
+            "micaLabel": "Sparse hair",
+            "score": 3.2340267400899463,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:616760"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007401",
+            "patientPhenotypeLabel": "Macular atrophy",
+            "diseasePhenotypeCurie": "HP:0000479",
+            "diseasePhenotypeLabel": "Abnormal retinal morphology",
+            "micaCurie": "HP:0000479",
+            "micaLabel": "Abnormal retinal morphology",
+            "score": 2.3368524804376705,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:170"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011509",
+            "patientPhenotypeLabel": "Macular hyperpigmentation",
+            "diseasePhenotypeCurie": "HP:0000479",
+            "diseasePhenotypeLabel": "Abnormal retinal morphology",
+            "micaCurie": "HP:0000479",
+            "micaLabel": "Abnormal retinal morphology",
+            "score": 2.3368524804376705,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:170"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0410400",
+            "patientPhenotypeLabel": "Absent sebaceous glands",
+            "diseasePhenotypeCurie": "HP:0010719",
+            "diseasePhenotypeLabel": "Abnormality of hair texture",
+            "micaCurie": "HP:0011138",
+            "micaLabel": "Abnormal skin adnexa morphology",
+            "score": 1.7220907567011512,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:170"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007663",
+            "patientPhenotypeLabel": "Reduced visual acuity",
+            "diseasePhenotypeCurie": "HP:0000486",
+            "diseasePhenotypeLabel": "Strabismus",
+            "micaCurie": "HP:0012373",
+            "micaLabel": "Abnormal eye physiology",
+            "score": 1.1642471093218474,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:170"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007502",
+            "patientPhenotypeLabel": "Follicular hyperkeratosis",
+            "diseasePhenotypeCurie": "HP:0010719",
+            "diseasePhenotypeLabel": "Abnormality of hair texture",
+            "micaCurie": "HP:0001574",
+            "micaLabel": "Abnormality of the integument",
+            "score": 1.0821957350140894,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:170"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0200040",
+            "patientPhenotypeLabel": "Epidermoid cyst",
+            "diseasePhenotypeCurie": "HP:0010719",
+            "diseasePhenotypeLabel": "Abnormality of hair texture",
+            "micaCurie": "HP:0001574",
+            "micaLabel": "Abnormality of the integument",
+            "score": 1.0821957350140894,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:170"
+          }
+        ]
+      },
+      {
+        "rank": 10,
+        "geneCurie": "NCBIGene:3889",
+        "geneLabel": "KRT83",
+        "geneSymbol": "KRT83",
+        "geneEntityId": 149305,
+        "bmaScore": 2.138595020189385,
+        "normalizedScore": 0.236124,
+        "patientAverageScore": 2.5497507865833513,
+        "phenotypeAverageScore": 1.7274392537954182,
+        "directPhenotypeCount": 30,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0007502",
+            "patientPhenotypeLabel": "Follicular hyperkeratosis",
+            "diseasePhenotypeCurie": "HP:0007502",
+            "diseasePhenotypeLabel": "Follicular hyperkeratosis",
+            "micaCurie": "HP:0007502",
+            "micaLabel": "Follicular hyperkeratosis",
+            "score": 5.560565074106485,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:621170"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003777",
+            "patientPhenotypeLabel": "Pili torti",
+            "diseasePhenotypeCurie": "HP:0032470",
+            "diseasePhenotypeLabel": "Monilethrix",
+            "micaCurie": "HP:0003328",
+            "micaLabel": "Abnormal hairshaft morphology",
+            "score": 5.419486475846579,
+            "evidenceCode": "3/3",
+            "referenceText": "OMIM:621170"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008070",
+            "patientPhenotypeLabel": "Sparse hair",
+            "diseasePhenotypeCurie": "HP:0008070",
+            "diseasePhenotypeLabel": "Sparse hair",
+            "micaCurie": "HP:0008070",
+            "micaLabel": "Sparse hair",
+            "score": 3.2340267400899463,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:573"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0200040",
+            "patientPhenotypeLabel": "Epidermoid cyst",
+            "diseasePhenotypeCurie": "HP:0200035",
+            "diseasePhenotypeLabel": "Skin plaque",
+            "micaCurie": "HP:0011355",
+            "micaLabel": "Localized skin lesion",
+            "score": 2.436999429042609,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:316"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0410400",
+            "patientPhenotypeLabel": "Absent sebaceous glands",
+            "diseasePhenotypeCurie": "HP:0032470",
+            "diseasePhenotypeLabel": "Monilethrix",
+            "micaCurie": "HP:0011138",
+            "micaLabel": "Abnormal skin adnexa morphology",
+            "score": 1.7220907567011512,
+            "evidenceCode": "3/3",
+            "referenceText": "OMIM:621170"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000980",
+            "patientPhenotypeLabel": "Pallor",
+            "diseasePhenotypeCurie": "HP:0200035",
+            "diseasePhenotypeLabel": "Skin plaque",
+            "micaCurie": "HP:0011121",
+            "micaLabel": "Abnormal skin morphology",
+            "score": 1.4662205118843843,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:316"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007401",
+            "patientPhenotypeLabel": "Macular atrophy",
+            "diseasePhenotypeCurie": "HP:0000518",
+            "diseasePhenotypeLabel": "Cataract",
+            "micaCurie": "HP:0012372",
+            "micaLabel": "Abnormal eye morphology",
+            "score": 1.1286666093924305,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:573"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011509",
+            "patientPhenotypeLabel": "Macular hyperpigmentation",
+            "diseasePhenotypeCurie": "HP:0000518",
+            "diseasePhenotypeLabel": "Cataract",
+            "micaCurie": "HP:0012372",
+            "micaLabel": "Abnormal eye morphology",
+            "score": 1.1286666093924305,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:573"
+          }
+        ]
+      },
+      {
+        "rank": 11,
+        "geneCurie": "NCBIGene:5950",
+        "geneLabel": "RBP4",
+        "geneSymbol": "RBP4",
+        "geneEntityId": 149948,
+        "bmaScore": 2.132842222704665,
+        "normalizedScore": 0.235489,
+        "patientAverageScore": 2.5282524522847645,
+        "phenotypeAverageScore": 1.7374319931245654,
+        "directPhenotypeCount": 21,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0007502",
+            "patientPhenotypeLabel": "Follicular hyperkeratosis",
+            "diseasePhenotypeCurie": "HP:0007502",
+            "diseasePhenotypeLabel": "Follicular hyperkeratosis",
+            "micaCurie": "HP:0007502",
+            "micaLabel": "Follicular hyperkeratosis",
+            "score": 5.560565074106485,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:615147"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007401",
+            "patientPhenotypeLabel": "Macular atrophy",
+            "diseasePhenotypeCurie": "HP:0200070",
+            "diseasePhenotypeLabel": "Peripheral retinal atrophy",
+            "micaCurie": "HP:0001105",
+            "micaLabel": "Retinal atrophy",
+            "score": 4.472105156902393,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:615147"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011509",
+            "patientPhenotypeLabel": "Macular hyperpigmentation",
+            "diseasePhenotypeCurie": "HP:0030825",
+            "diseasePhenotypeLabel": "Absent foveal reflex",
+            "micaCurie": "HP:0001103",
+            "micaLabel": "Abnormal macular morphology",
+            "score": 3.6634450892206036,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:615147"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007663",
+            "patientPhenotypeLabel": "Reduced visual acuity",
+            "diseasePhenotypeCurie": "HP:0007663",
+            "diseasePhenotypeLabel": "Reduced visual acuity",
+            "micaCurie": "HP:0007663",
+            "micaLabel": "Reduced visual acuity",
+            "score": 2.879128521522365,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:615147"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0200040",
+            "patientPhenotypeLabel": "Epidermoid cyst",
+            "diseasePhenotypeCurie": "HP:0007502",
+            "diseasePhenotypeLabel": "Follicular hyperkeratosis",
+            "micaCurie": "HP:0011121",
+            "micaLabel": "Abnormal skin morphology",
+            "score": 1.4662205118843843,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:615147"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000980",
+            "patientPhenotypeLabel": "Pallor",
+            "diseasePhenotypeCurie": "HP:0007502",
+            "diseasePhenotypeLabel": "Follicular hyperkeratosis",
+            "micaCurie": "HP:0011121",
+            "micaLabel": "Abnormal skin morphology",
+            "score": 1.4662205118843843,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:615147"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008070",
+            "patientPhenotypeLabel": "Sparse hair",
+            "diseasePhenotypeCurie": "HP:0040137",
+            "diseasePhenotypeLabel": "Comedonal acne",
+            "micaCurie": "HP:0001574",
+            "micaLabel": "Abnormality of the integument",
+            "score": 1.0821957350140894,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:615147"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003777",
+            "patientPhenotypeLabel": "Pili torti",
+            "diseasePhenotypeCurie": "HP:0040137",
+            "diseasePhenotypeLabel": "Comedonal acne",
+            "micaCurie": "HP:0001574",
+            "micaLabel": "Abnormality of the integument",
+            "score": 1.0821957350140894,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:615147"
+          }
+        ]
+      },
+      {
+        "rank": 12,
+        "geneCurie": "NCBIGene:3854",
+        "geneLabel": "KRT6B",
+        "geneSymbol": "KRT6B",
+        "geneEntityId": 149295,
+        "bmaScore": 2.132501226938843,
+        "normalizedScore": 0.235451,
+        "patientAverageScore": 2.302628460777106,
+        "phenotypeAverageScore": 1.9623739931005795,
+        "directPhenotypeCount": 35,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0200040",
+            "patientPhenotypeLabel": "Epidermoid cyst",
+            "diseasePhenotypeCurie": "HP:0200040",
+            "diseasePhenotypeLabel": "Epidermoid cyst",
+            "micaCurie": "HP:0200040",
+            "micaLabel": "Epidermoid cyst",
+            "score": 6.859848058236746,
+            "evidenceCode": "4/4",
+            "referenceText": "OMIM:167210"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007502",
+            "patientPhenotypeLabel": "Follicular hyperkeratosis",
+            "diseasePhenotypeCurie": "HP:0007502",
+            "diseasePhenotypeLabel": "Follicular hyperkeratosis",
+            "micaCurie": "HP:0007502",
+            "micaLabel": "Follicular hyperkeratosis",
+            "score": 5.560565074106485,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:2309"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008070",
+            "patientPhenotypeLabel": "Sparse hair",
+            "diseasePhenotypeCurie": "HP:0002209",
+            "diseasePhenotypeLabel": "Sparse scalp hair",
+            "micaCurie": "HP:0008070",
+            "micaLabel": "Sparse hair",
+            "score": 3.2340267400899463,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:167210"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003777",
+            "patientPhenotypeLabel": "Pili torti",
+            "diseasePhenotypeCurie": "HP:0045075",
+            "diseasePhenotypeLabel": "Sparse eyebrow",
+            "micaCurie": "HP:0001595",
+            "micaLabel": "Abnormal hair morphology",
+            "score": 1.8732019205105126,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:167210"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0410400",
+            "patientPhenotypeLabel": "Absent sebaceous glands",
+            "diseasePhenotypeCurie": "HP:0100798",
+            "diseasePhenotypeLabel": "Fingernail dysplasia",
+            "micaCurie": "HP:0011138",
+            "micaLabel": "Abnormal skin adnexa morphology",
+            "score": 1.7220907567011512,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:2309"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000980",
+            "patientPhenotypeLabel": "Pallor",
+            "diseasePhenotypeCurie": "HP:0200040",
+            "diseasePhenotypeLabel": "Epidermoid cyst",
+            "micaCurie": "HP:0011121",
+            "micaLabel": "Abnormal skin morphology",
+            "score": 1.4662205118843843,
+            "evidenceCode": "4/4",
+            "referenceText": "OMIM:167210"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007401",
+            "patientPhenotypeLabel": "Macular atrophy",
+            "diseasePhenotypeCurie": "HP:0200040",
+            "diseasePhenotypeLabel": "Epidermoid cyst",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "4/4",
+            "referenceText": "OMIM:167210"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011509",
+            "patientPhenotypeLabel": "Macular hyperpigmentation",
+            "diseasePhenotypeCurie": "HP:0200040",
+            "diseasePhenotypeLabel": "Epidermoid cyst",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "4/4",
+            "referenceText": "OMIM:167210"
+          }
+        ]
+      },
+      {
+        "rank": 13,
+        "geneCurie": "NCBIGene:2202",
+        "geneLabel": "EFEMP1",
+        "geneSymbol": "EFEMP1",
+        "geneEntityId": 148812,
+        "bmaScore": 2.1236713205915247,
+        "normalizedScore": 0.234477,
+        "patientAverageScore": 2.986938772535965,
+        "phenotypeAverageScore": 1.2604038686470849,
+        "directPhenotypeCount": 88,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011509",
+            "patientPhenotypeLabel": "Macular hyperpigmentation",
+            "diseasePhenotypeCurie": "HP:0011509",
+            "diseasePhenotypeLabel": "Macular hyperpigmentation",
+            "micaCurie": "HP:0011509",
+            "micaLabel": "Macular hyperpigmentation",
+            "score": 7.958460346904856,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:75376"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007401",
+            "patientPhenotypeLabel": "Macular atrophy",
+            "diseasePhenotypeCurie": "HP:0007401",
+            "diseasePhenotypeLabel": "Macular atrophy",
+            "micaCurie": "HP:0007401",
+            "micaLabel": "Macular atrophy",
+            "score": 5.206925033862906,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:75376"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007663",
+            "patientPhenotypeLabel": "Reduced visual acuity",
+            "diseasePhenotypeCurie": "HP:0007663",
+            "diseasePhenotypeLabel": "Reduced visual acuity",
+            "micaCurie": "HP:0007663",
+            "micaLabel": "Reduced visual acuity",
+            "score": 2.879128521522365,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:611276"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0200040",
+            "patientPhenotypeLabel": "Epidermoid cyst",
+            "diseasePhenotypeCurie": "HP:0000963",
+            "diseasePhenotypeLabel": "Thin skin",
+            "micaCurie": "HP:0011355",
+            "micaLabel": "Localized skin lesion",
+            "score": 2.436999429042609,
+            "evidenceCode": "1/4",
+            "referenceText": "OMIM:620780"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008070",
+            "patientPhenotypeLabel": "Sparse hair",
+            "diseasePhenotypeCurie": "HP:0009890",
+            "diseasePhenotypeLabel": "High anterior hairline",
+            "micaCurie": "HP:0001595",
+            "micaLabel": "Abnormal hair morphology",
+            "score": 1.8732019205105126,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:620780"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003777",
+            "patientPhenotypeLabel": "Pili torti",
+            "diseasePhenotypeCurie": "HP:0009890",
+            "diseasePhenotypeLabel": "High anterior hairline",
+            "micaCurie": "HP:0001595",
+            "micaLabel": "Abnormal hair morphology",
+            "score": 1.8732019205105126,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:620780"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0410400",
+            "patientPhenotypeLabel": "Absent sebaceous glands",
+            "diseasePhenotypeCurie": "HP:0009890",
+            "diseasePhenotypeLabel": "High anterior hairline",
+            "micaCurie": "HP:0011138",
+            "micaLabel": "Abnormal skin adnexa morphology",
+            "score": 1.7220907567011512,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:620780"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007502",
+            "patientPhenotypeLabel": "Follicular hyperkeratosis",
+            "diseasePhenotypeCurie": "HP:0010648",
+            "diseasePhenotypeLabel": "Dermal translucency",
+            "micaCurie": "HP:0011121",
+            "micaLabel": "Abnormal skin morphology",
+            "score": 1.4662205118843843,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:620780"
+          }
+        ]
+      },
+      {
+        "rank": 14,
+        "geneCurie": "NCBIGene:9227",
+        "geneLabel": "LRAT",
+        "geneSymbol": "LRAT",
+        "geneEntityId": 150750,
+        "bmaScore": 2.1228052833184003,
+        "normalizedScore": 0.234381,
+        "patientAverageScore": 2.694093960317519,
+        "phenotypeAverageScore": 1.5515166063192818,
+        "directPhenotypeCount": 78,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011509",
+            "patientPhenotypeLabel": "Macular hyperpigmentation",
+            "diseasePhenotypeCurie": "HP:0007793",
+            "diseasePhenotypeLabel": "Granular macular appearance",
+            "micaCurie": "HP:0008002",
+            "micaLabel": "Abnormal macular pigmentation",
+            "score": 5.530712110956804,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:364055"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000980",
+            "patientPhenotypeLabel": "Pallor",
+            "diseasePhenotypeCurie": "HP:0000980",
+            "diseasePhenotypeLabel": "Pallor",
+            "micaCurie": "HP:0000980",
+            "micaLabel": "Pallor",
+            "score": 5.185871624665074,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:613341"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007401",
+            "patientPhenotypeLabel": "Macular atrophy",
+            "diseasePhenotypeCurie": "HP:0007722",
+            "diseasePhenotypeLabel": "Retinal pigment epithelial atrophy",
+            "micaCurie": "HP:0001105",
+            "micaLabel": "Retinal atrophy",
+            "score": 4.472105156902393,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:364055"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007663",
+            "patientPhenotypeLabel": "Reduced visual acuity",
+            "diseasePhenotypeCurie": "HP:0007875",
+            "diseasePhenotypeLabel": "Congenital blindness",
+            "micaCurie": "HP:0007663",
+            "micaLabel": "Reduced visual acuity",
+            "score": 2.879128521522365,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:613341"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007502",
+            "patientPhenotypeLabel": "Follicular hyperkeratosis",
+            "diseasePhenotypeCurie": "HP:0000980",
+            "diseasePhenotypeLabel": "Pallor",
+            "micaCurie": "HP:0011121",
+            "micaLabel": "Abnormal skin morphology",
+            "score": 1.4662205118843843,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:613341"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0200040",
+            "patientPhenotypeLabel": "Epidermoid cyst",
+            "diseasePhenotypeCurie": "HP:0000980",
+            "diseasePhenotypeLabel": "Pallor",
+            "micaCurie": "HP:0011121",
+            "micaLabel": "Abnormal skin morphology",
+            "score": 1.4662205118843843,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:613341"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008070",
+            "patientPhenotypeLabel": "Sparse hair",
+            "diseasePhenotypeCurie": "HP:0000980",
+            "diseasePhenotypeLabel": "Pallor",
+            "micaCurie": "HP:0001574",
+            "micaLabel": "Abnormality of the integument",
+            "score": 1.0821957350140894,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:613341"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003777",
+            "patientPhenotypeLabel": "Pili torti",
+            "diseasePhenotypeCurie": "HP:0000980",
+            "diseasePhenotypeLabel": "Pallor",
+            "micaCurie": "HP:0001574",
+            "micaLabel": "Abnormality of the integument",
+            "score": 1.0821957350140894,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:613341"
+          }
+        ]
+      },
+      {
+        "rank": 15,
+        "geneCurie": "NCBIGene:283652",
+        "geneLabel": "SLC24A5",
+        "geneSymbol": "SLC24A5",
+        "geneEntityId": 153120,
+        "bmaScore": 2.111796985681205,
+        "normalizedScore": 0.233166,
+        "patientAverageScore": 2.230352759259878,
+        "phenotypeAverageScore": 1.993241212102532,
+        "directPhenotypeCount": 12,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0007401",
+            "patientPhenotypeLabel": "Macular atrophy",
+            "diseasePhenotypeCurie": "HP:0008059",
+            "diseasePhenotypeLabel": "Aplasia/Hypoplasia of the macula",
+            "micaCurie": "HP:0001103",
+            "micaLabel": "Abnormal macular morphology",
+            "score": 3.6634450892206036,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:370097"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011509",
+            "patientPhenotypeLabel": "Macular hyperpigmentation",
+            "diseasePhenotypeCurie": "HP:0008059",
+            "diseasePhenotypeLabel": "Aplasia/Hypoplasia of the macula",
+            "micaCurie": "HP:0001103",
+            "micaLabel": "Abnormal macular morphology",
+            "score": 3.6634450892206036,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:370097"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007663",
+            "patientPhenotypeLabel": "Reduced visual acuity",
+            "diseasePhenotypeCurie": "HP:0007663",
+            "diseasePhenotypeLabel": "Reduced visual acuity",
+            "micaCurie": "HP:0007663",
+            "micaLabel": "Reduced visual acuity",
+            "score": 2.879128521522365,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:113750"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008070",
+            "patientPhenotypeLabel": "Sparse hair",
+            "diseasePhenotypeCurie": "HP:0002286",
+            "diseasePhenotypeLabel": "Fair hair",
+            "micaCurie": "HP:0001595",
+            "micaLabel": "Abnormal hair morphology",
+            "score": 1.8732019205105126,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:113750"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003777",
+            "patientPhenotypeLabel": "Pili torti",
+            "diseasePhenotypeCurie": "HP:0002286",
+            "diseasePhenotypeLabel": "Fair hair",
+            "micaCurie": "HP:0001595",
+            "micaLabel": "Abnormal hair morphology",
+            "score": 1.8732019205105126,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:113750"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0410400",
+            "patientPhenotypeLabel": "Absent sebaceous glands",
+            "diseasePhenotypeCurie": "HP:0002286",
+            "diseasePhenotypeLabel": "Fair hair",
+            "micaCurie": "HP:0011138",
+            "micaLabel": "Abnormal skin adnexa morphology",
+            "score": 1.7220907567011512,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:113750"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007502",
+            "patientPhenotypeLabel": "Follicular hyperkeratosis",
+            "diseasePhenotypeCurie": "HP:0007513",
+            "diseasePhenotypeLabel": "Generalized hypopigmentation",
+            "micaCurie": "HP:0011121",
+            "micaLabel": "Abnormal skin morphology",
+            "score": 1.4662205118843843,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:113750"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0200040",
+            "patientPhenotypeLabel": "Epidermoid cyst",
+            "diseasePhenotypeCurie": "HP:0007513",
+            "diseasePhenotypeLabel": "Generalized hypopigmentation",
+            "micaCurie": "HP:0011121",
+            "micaLabel": "Abnormal skin morphology",
+            "score": 1.4662205118843843,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:113750"
+          }
+        ]
+      },
+      {
+        "rank": 16,
+        "geneCurie": "NCBIGene:3872",
+        "geneLabel": "KRT17",
+        "geneSymbol": "KRT17",
+        "geneEntityId": 149302,
+        "bmaScore": 2.0975551065684366,
+        "normalizedScore": 0.231593,
+        "patientAverageScore": 2.302628460777106,
+        "phenotypeAverageScore": 1.8924817523597672,
+        "directPhenotypeCount": 37,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0200040",
+            "patientPhenotypeLabel": "Epidermoid cyst",
+            "diseasePhenotypeCurie": "HP:0200040",
+            "diseasePhenotypeLabel": "Epidermoid cyst",
+            "micaCurie": "HP:0200040",
+            "micaLabel": "Epidermoid cyst",
+            "score": 6.859848058236746,
+            "evidenceCode": "4/4",
+            "referenceText": "OMIM:167210"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007502",
+            "patientPhenotypeLabel": "Follicular hyperkeratosis",
+            "diseasePhenotypeCurie": "HP:0007502",
+            "diseasePhenotypeLabel": "Follicular hyperkeratosis",
+            "micaCurie": "HP:0007502",
+            "micaLabel": "Follicular hyperkeratosis",
+            "score": 5.560565074106485,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:2309"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008070",
+            "patientPhenotypeLabel": "Sparse hair",
+            "diseasePhenotypeCurie": "HP:0002209",
+            "diseasePhenotypeLabel": "Sparse scalp hair",
+            "micaCurie": "HP:0008070",
+            "micaLabel": "Sparse hair",
+            "score": 3.2340267400899463,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:167210"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003777",
+            "patientPhenotypeLabel": "Pili torti",
+            "diseasePhenotypeCurie": "HP:0045075",
+            "diseasePhenotypeLabel": "Sparse eyebrow",
+            "micaCurie": "HP:0001595",
+            "micaLabel": "Abnormal hair morphology",
+            "score": 1.8732019205105126,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:167210"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0410400",
+            "patientPhenotypeLabel": "Absent sebaceous glands",
+            "diseasePhenotypeCurie": "HP:0100798",
+            "diseasePhenotypeLabel": "Fingernail dysplasia",
+            "micaCurie": "HP:0011138",
+            "micaLabel": "Abnormal skin adnexa morphology",
+            "score": 1.7220907567011512,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:2309"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000980",
+            "patientPhenotypeLabel": "Pallor",
+            "diseasePhenotypeCurie": "HP:0200040",
+            "diseasePhenotypeLabel": "Epidermoid cyst",
+            "micaCurie": "HP:0011121",
+            "micaLabel": "Abnormal skin morphology",
+            "score": 1.4662205118843843,
+            "evidenceCode": "4/4",
+            "referenceText": "OMIM:167210"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007401",
+            "patientPhenotypeLabel": "Macular atrophy",
+            "diseasePhenotypeCurie": "HP:0200040",
+            "diseasePhenotypeLabel": "Epidermoid cyst",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "4/4",
+            "referenceText": "OMIM:167210"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011509",
+            "patientPhenotypeLabel": "Macular hyperpigmentation",
+            "diseasePhenotypeCurie": "HP:0200040",
+            "diseasePhenotypeLabel": "Epidermoid cyst",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "4/4",
+            "referenceText": "OMIM:167210"
+          }
+        ]
+      },
+      {
+        "rank": 17,
+        "geneCurie": "NCBIGene:3122",
+        "geneLabel": "HLA-DRA",
+        "geneSymbol": "HLA-DRA",
+        "geneEntityId": 149085,
+        "bmaScore": 2.0612252717460855,
+        "normalizedScore": 0.227582,
+        "patientAverageScore": 1.4847449285647183,
+        "phenotypeAverageScore": 2.6377056149274525,
+        "directPhenotypeCount": 7,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0007502",
+            "patientPhenotypeLabel": "Follicular hyperkeratosis",
+            "diseasePhenotypeCurie": "HP:0007468",
+            "diseasePhenotypeLabel": "Perifollicular hyperkeratosis",
+            "micaCurie": "HP:0000962",
+            "micaLabel": "Hyperkeratosis",
+            "score": 3.593240830547355,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:505"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008070",
+            "patientPhenotypeLabel": "Sparse hair",
+            "diseasePhenotypeCurie": "HP:0002225",
+            "diseasePhenotypeLabel": "Sparse pubic hair",
+            "micaCurie": "HP:0008070",
+            "micaLabel": "Sparse hair",
+            "score": 3.2340267400899463,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:505"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003777",
+            "patientPhenotypeLabel": "Pili torti",
+            "diseasePhenotypeCurie": "HP:0002225",
+            "diseasePhenotypeLabel": "Sparse pubic hair",
+            "micaCurie": "HP:0001595",
+            "micaLabel": "Abnormal hair morphology",
+            "score": 1.8732019205105126,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:505"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0410400",
+            "patientPhenotypeLabel": "Absent sebaceous glands",
+            "diseasePhenotypeCurie": "HP:0002225",
+            "diseasePhenotypeLabel": "Sparse pubic hair",
+            "micaCurie": "HP:0011138",
+            "micaLabel": "Abnormal skin adnexa morphology",
+            "score": 1.7220907567011512,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:505"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0200040",
+            "patientPhenotypeLabel": "Epidermoid cyst",
+            "diseasePhenotypeCurie": "HP:0100725",
+            "diseasePhenotypeLabel": "Lichenification",
+            "micaCurie": "HP:0011121",
+            "micaLabel": "Abnormal skin morphology",
+            "score": 1.4662205118843843,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:505"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000980",
+            "patientPhenotypeLabel": "Pallor",
+            "diseasePhenotypeCurie": "HP:0100725",
+            "diseasePhenotypeLabel": "Lichenification",
+            "micaCurie": "HP:0011121",
+            "micaLabel": "Abnormal skin morphology",
+            "score": 1.4662205118843843,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:505"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007401",
+            "patientPhenotypeLabel": "Macular atrophy",
+            "diseasePhenotypeCurie": "HP:0100725",
+            "diseasePhenotypeLabel": "Lichenification",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:505"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011509",
+            "patientPhenotypeLabel": "Macular hyperpigmentation",
+            "diseasePhenotypeCurie": "HP:0100725",
+            "diseasePhenotypeLabel": "Lichenification",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:505"
+          }
+        ]
+      },
+      {
+        "rank": 18,
+        "geneCurie": "NCBIGene:3887",
+        "geneLabel": "KRT81",
+        "geneSymbol": "KRT81",
+        "geneEntityId": 149304,
+        "bmaScore": 2.05943840907163,
+        "normalizedScore": 0.227385,
+        "patientAverageScore": 2.44188646245466,
+        "phenotypeAverageScore": 1.6769903556885999,
+        "directPhenotypeCount": 20,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0007502",
+            "patientPhenotypeLabel": "Follicular hyperkeratosis",
+            "diseasePhenotypeCurie": "HP:0007502",
+            "diseasePhenotypeLabel": "Follicular hyperkeratosis",
+            "micaCurie": "HP:0007502",
+            "micaLabel": "Follicular hyperkeratosis",
+            "score": 5.560565074106485,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:573"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003777",
+            "patientPhenotypeLabel": "Pili torti",
+            "diseasePhenotypeCurie": "HP:0032470",
+            "diseasePhenotypeLabel": "Monilethrix",
+            "micaCurie": "HP:0003328",
+            "micaLabel": "Abnormal hairshaft morphology",
+            "score": 5.419486475846579,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:621169"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008070",
+            "patientPhenotypeLabel": "Sparse hair",
+            "diseasePhenotypeCurie": "HP:0008070",
+            "diseasePhenotypeLabel": "Sparse hair",
+            "micaCurie": "HP:0008070",
+            "micaLabel": "Sparse hair",
+            "score": 3.2340267400899463,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:573"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0410400",
+            "patientPhenotypeLabel": "Absent sebaceous glands",
+            "diseasePhenotypeCurie": "HP:0032470",
+            "diseasePhenotypeLabel": "Monilethrix",
+            "micaCurie": "HP:0011138",
+            "micaLabel": "Abnormal skin adnexa morphology",
+            "score": 1.7220907567011512,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:621169"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0200040",
+            "patientPhenotypeLabel": "Epidermoid cyst",
+            "diseasePhenotypeCurie": "HP:0007502",
+            "diseasePhenotypeLabel": "Follicular hyperkeratosis",
+            "micaCurie": "HP:0011121",
+            "micaLabel": "Abnormal skin morphology",
+            "score": 1.4662205118843843,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:573"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000980",
+            "patientPhenotypeLabel": "Pallor",
+            "diseasePhenotypeCurie": "HP:0007502",
+            "diseasePhenotypeLabel": "Follicular hyperkeratosis",
+            "micaCurie": "HP:0011121",
+            "micaLabel": "Abnormal skin morphology",
+            "score": 1.4662205118843843,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:573"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007401",
+            "patientPhenotypeLabel": "Macular atrophy",
+            "diseasePhenotypeCurie": "HP:0000518",
+            "diseasePhenotypeLabel": "Cataract",
+            "micaCurie": "HP:0012372",
+            "micaLabel": "Abnormal eye morphology",
+            "score": 1.1286666093924305,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:573"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011509",
+            "patientPhenotypeLabel": "Macular hyperpigmentation",
+            "diseasePhenotypeCurie": "HP:0000518",
+            "diseasePhenotypeLabel": "Cataract",
+            "micaCurie": "HP:0012372",
+            "micaLabel": "Abnormal eye morphology",
+            "score": 1.1286666093924305,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:573"
+          }
+        ]
+      },
+      {
+        "rank": 19,
+        "geneCurie": "NCBIGene:4157",
+        "geneLabel": "MC1R",
+        "geneSymbol": "MC1R",
+        "geneEntityId": 149399,
+        "bmaScore": 2.0361078157440056,
+        "normalizedScore": 0.224809,
+        "patientAverageScore": 2.545691196914814,
+        "phenotypeAverageScore": 1.526524434573197,
+        "directPhenotypeCount": 43,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011509",
+            "patientPhenotypeLabel": "Macular hyperpigmentation",
+            "diseasePhenotypeCurie": "HP:0007988",
+            "diseasePhenotypeLabel": "Macular hypopigmentation",
+            "micaCurie": "HP:0008002",
+            "micaLabel": "Abnormal macular pigmentation",
+            "score": 5.530712110956804,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:79432"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007401",
+            "patientPhenotypeLabel": "Macular atrophy",
+            "diseasePhenotypeCurie": "HP:0007988",
+            "diseasePhenotypeLabel": "Macular hypopigmentation",
+            "micaCurie": "HP:0001103",
+            "micaLabel": "Abnormal macular morphology",
+            "score": 3.6634450892206036,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:79432"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007663",
+            "patientPhenotypeLabel": "Reduced visual acuity",
+            "diseasePhenotypeCurie": "HP:0007663",
+            "diseasePhenotypeLabel": "Reduced visual acuity",
+            "micaCurie": "HP:0007663",
+            "micaLabel": "Reduced visual acuity",
+            "score": 2.879128521522365,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:203200"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0200040",
+            "patientPhenotypeLabel": "Epidermoid cyst",
+            "diseasePhenotypeCurie": "HP:0007481",
+            "diseasePhenotypeLabel": "Hyperpigmented nevi",
+            "micaCurie": "HP:0011355",
+            "micaLabel": "Localized skin lesion",
+            "score": 2.436999429042609,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "ORPHA:79432"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008070",
+            "patientPhenotypeLabel": "Sparse hair",
+            "diseasePhenotypeCurie": "HP:0011364",
+            "diseasePhenotypeLabel": "White hair",
+            "micaCurie": "HP:0001595",
+            "micaLabel": "Abnormal hair morphology",
+            "score": 1.8732019205105126,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:79432"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003777",
+            "patientPhenotypeLabel": "Pili torti",
+            "diseasePhenotypeCurie": "HP:0011364",
+            "diseasePhenotypeLabel": "White hair",
+            "micaCurie": "HP:0001595",
+            "micaLabel": "Abnormal hair morphology",
+            "score": 1.8732019205105126,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:79432"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0410400",
+            "patientPhenotypeLabel": "Absent sebaceous glands",
+            "diseasePhenotypeCurie": "HP:0011364",
+            "diseasePhenotypeLabel": "White hair",
+            "micaCurie": "HP:0011138",
+            "micaLabel": "Abnormal skin adnexa morphology",
+            "score": 1.7220907567011512,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:79432"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007502",
+            "patientPhenotypeLabel": "Follicular hyperkeratosis",
+            "diseasePhenotypeCurie": "HP:0200098",
+            "diseasePhenotypeLabel": "Absent skin pigmentation",
+            "micaCurie": "HP:0011121",
+            "micaLabel": "Abnormal skin morphology",
+            "score": 1.4662205118843843,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:79432"
+          }
+        ]
+      },
+      {
+        "rank": 20,
+        "geneCurie": "NCBIGene:6897",
+        "geneLabel": "TARS1",
+        "geneSymbol": "TARS1",
+        "geneEntityId": 150247,
+        "bmaScore": 1.9883667550869788,
+        "normalizedScore": 0.219537,
+        "patientAverageScore": 3.238752718328465,
+        "phenotypeAverageScore": 0.7379807918454924,
+        "directPhenotypeCount": 94,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0007502",
+            "patientPhenotypeLabel": "Follicular hyperkeratosis",
+            "diseasePhenotypeCurie": "HP:0007502",
+            "diseasePhenotypeLabel": "Follicular hyperkeratosis",
+            "micaCurie": "HP:0007502",
+            "micaLabel": "Follicular hyperkeratosis",
+            "score": 5.560565074106485,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:618546"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003777",
+            "patientPhenotypeLabel": "Pili torti",
+            "diseasePhenotypeCurie": "HP:0045055",
+            "diseasePhenotypeLabel": "Tiger tail banding",
+            "micaCurie": "HP:0003328",
+            "micaLabel": "Abnormal hairshaft morphology",
+            "score": 5.419486475846579,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:618546"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007401",
+            "patientPhenotypeLabel": "Macular atrophy",
+            "diseasePhenotypeCurie": "HP:0000608",
+            "diseasePhenotypeLabel": "Macular degeneration",
+            "micaCurie": "HP:0000608",
+            "micaLabel": "Macular degeneration",
+            "score": 4.546213129056115,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:33364"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011509",
+            "patientPhenotypeLabel": "Macular hyperpigmentation",
+            "diseasePhenotypeCurie": "HP:0000608",
+            "diseasePhenotypeLabel": "Macular degeneration",
+            "micaCurie": "HP:0001103",
+            "micaLabel": "Abnormal macular morphology",
+            "score": 3.6634450892206036,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:33364"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008070",
+            "patientPhenotypeLabel": "Sparse hair",
+            "diseasePhenotypeCurie": "HP:0002209",
+            "diseasePhenotypeLabel": "Sparse scalp hair",
+            "micaCurie": "HP:0008070",
+            "micaLabel": "Sparse hair",
+            "score": 3.2340267400899463,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:33364"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007663",
+            "patientPhenotypeLabel": "Reduced visual acuity",
+            "diseasePhenotypeCurie": "HP:0000613",
+            "diseasePhenotypeLabel": "Photophobia",
+            "micaCurie": "HP:0000504",
+            "micaLabel": "Abnormality of vision",
+            "score": 2.0705061761665386,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:33364"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0410400",
+            "patientPhenotypeLabel": "Absent sebaceous glands",
+            "diseasePhenotypeCurie": "HP:0045055",
+            "diseasePhenotypeLabel": "Tiger tail banding",
+            "micaCurie": "HP:0011138",
+            "micaLabel": "Abnormal skin adnexa morphology",
+            "score": 1.7220907567011512,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:618546"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0200040",
+            "patientPhenotypeLabel": "Epidermoid cyst",
+            "diseasePhenotypeCurie": "HP:0008064",
+            "diseasePhenotypeLabel": "Ichthyosis",
+            "micaCurie": "HP:0011121",
+            "micaLabel": "Abnormal skin morphology",
+            "score": 1.4662205118843843,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:33364"
+          }
+        ]
+      },
+      {
+        "rank": 21,
+        "geneCurie": "NCBIGene:2068",
+        "geneLabel": "ERCC2",
+        "geneSymbol": "ERCC2",
+        "geneEntityId": 148763,
+        "bmaScore": 1.987814120746013,
+        "normalizedScore": 0.219476,
+        "patientAverageScore": 3.2391786786616183,
+        "phenotypeAverageScore": 0.7364495628304077,
+        "directPhenotypeCount": 206,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0003777",
+            "patientPhenotypeLabel": "Pili torti",
+            "diseasePhenotypeCurie": "HP:0003777",
+            "diseasePhenotypeLabel": "Pili torti",
+            "micaCurie": "HP:0003777",
+            "micaLabel": "Pili torti",
+            "score": 6.284483913333184,
+            "evidenceCode": "11/11",
+            "referenceText": "OMIM:601675"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007401",
+            "patientPhenotypeLabel": "Macular atrophy",
+            "diseasePhenotypeCurie": "HP:0000608",
+            "diseasePhenotypeLabel": "Macular degeneration",
+            "micaCurie": "HP:0000608",
+            "micaLabel": "Macular degeneration",
+            "score": 4.546213129056115,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:33364"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011509",
+            "patientPhenotypeLabel": "Macular hyperpigmentation",
+            "diseasePhenotypeCurie": "HP:0000608",
+            "diseasePhenotypeLabel": "Macular degeneration",
+            "micaCurie": "HP:0001103",
+            "micaLabel": "Abnormal macular morphology",
+            "score": 3.6634450892206036,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:33364"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007502",
+            "patientPhenotypeLabel": "Follicular hyperkeratosis",
+            "diseasePhenotypeCurie": "HP:0000962",
+            "diseasePhenotypeLabel": "Hyperkeratosis",
+            "micaCurie": "HP:0000962",
+            "micaLabel": "Hyperkeratosis",
+            "score": 3.593240830547355,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:601675"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008070",
+            "patientPhenotypeLabel": "Sparse hair",
+            "diseasePhenotypeCurie": "HP:0008070",
+            "diseasePhenotypeLabel": "Sparse hair",
+            "micaCurie": "HP:0008070",
+            "micaLabel": "Sparse hair",
+            "score": 3.2340267400899463,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:610756"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0200040",
+            "patientPhenotypeLabel": "Epidermoid cyst",
+            "diseasePhenotypeCurie": "HP:0012733",
+            "diseasePhenotypeLabel": "Macule",
+            "micaCurie": "HP:0011355",
+            "micaLabel": "Localized skin lesion",
+            "score": 2.436999429042609,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:910"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007663",
+            "patientPhenotypeLabel": "Reduced visual acuity",
+            "diseasePhenotypeCurie": "HP:0000505",
+            "diseasePhenotypeLabel": "Visual impairment",
+            "micaCurie": "HP:0000505",
+            "micaLabel": "Visual impairment",
+            "score": 2.2058877080792225,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:1466"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0410400",
+            "patientPhenotypeLabel": "Absent sebaceous glands",
+            "diseasePhenotypeCurie": "HP:0045055",
+            "diseasePhenotypeLabel": "Tiger tail banding",
+            "micaCurie": "HP:0011138",
+            "micaLabel": "Abnormal skin adnexa morphology",
+            "score": 1.7220907567011512,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:601675"
+          }
+        ]
+      },
+      {
+        "rank": 22,
+        "geneCurie": "NCBIGene:3868",
+        "geneLabel": "KRT16",
+        "geneSymbol": "KRT16",
+        "geneEntityId": 149301,
+        "bmaScore": 1.982180548281812,
+        "normalizedScore": 0.218854,
+        "patientAverageScore": 2.2062066405620455,
+        "phenotypeAverageScore": 1.7581544560015783,
+        "directPhenotypeCount": 47,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0200040",
+            "patientPhenotypeLabel": "Epidermoid cyst",
+            "diseasePhenotypeCurie": "HP:0200040",
+            "diseasePhenotypeLabel": "Epidermoid cyst",
+            "micaCurie": "HP:0200040",
+            "micaLabel": "Epidermoid cyst",
+            "score": 6.859848058236746,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:2309"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007502",
+            "patientPhenotypeLabel": "Follicular hyperkeratosis",
+            "diseasePhenotypeCurie": "HP:0007502",
+            "diseasePhenotypeLabel": "Follicular hyperkeratosis",
+            "micaCurie": "HP:0007502",
+            "micaLabel": "Follicular hyperkeratosis",
+            "score": 5.560565074106485,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:2309"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008070",
+            "patientPhenotypeLabel": "Sparse hair",
+            "diseasePhenotypeCurie": "HP:0001596",
+            "diseasePhenotypeLabel": "Alopecia",
+            "micaCurie": "HP:0011362",
+            "micaLabel": "Abnormal hair quantity",
+            "score": 2.366230358154402,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "ORPHA:2309"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003777",
+            "patientPhenotypeLabel": "Pili torti",
+            "diseasePhenotypeCurie": "HP:0001596",
+            "diseasePhenotypeLabel": "Alopecia",
+            "micaCurie": "HP:0001595",
+            "micaLabel": "Abnormal hair morphology",
+            "score": 1.8732019205105126,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "ORPHA:2309"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0410400",
+            "patientPhenotypeLabel": "Absent sebaceous glands",
+            "diseasePhenotypeCurie": "HP:0100798",
+            "diseasePhenotypeLabel": "Fingernail dysplasia",
+            "micaCurie": "HP:0011138",
+            "micaLabel": "Abnormal skin adnexa morphology",
+            "score": 1.7220907567011512,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:2309"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000980",
+            "patientPhenotypeLabel": "Pallor",
+            "diseasePhenotypeCurie": "HP:0200040",
+            "diseasePhenotypeLabel": "Epidermoid cyst",
+            "micaCurie": "HP:0011121",
+            "micaLabel": "Abnormal skin morphology",
+            "score": 1.4662205118843843,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:2309"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007401",
+            "patientPhenotypeLabel": "Macular atrophy",
+            "diseasePhenotypeCurie": "HP:0200040",
+            "diseasePhenotypeLabel": "Epidermoid cyst",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:2309"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011509",
+            "patientPhenotypeLabel": "Macular hyperpigmentation",
+            "diseasePhenotypeCurie": "HP:0200040",
+            "diseasePhenotypeLabel": "Epidermoid cyst",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:2309"
+          }
+        ]
+      },
+      {
+        "rank": 23,
+        "geneCurie": "NCBIGene:3853",
+        "geneLabel": "KRT6A",
+        "geneSymbol": "KRT6A",
+        "geneEntityId": 149294,
+        "bmaScore": 1.981051757627479,
+        "normalizedScore": 0.21873,
+        "patientAverageScore": 2.2062066405620455,
+        "phenotypeAverageScore": 1.7558968746929127,
+        "directPhenotypeCount": 35,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0200040",
+            "patientPhenotypeLabel": "Epidermoid cyst",
+            "diseasePhenotypeCurie": "HP:0200040",
+            "diseasePhenotypeLabel": "Epidermoid cyst",
+            "micaCurie": "HP:0200040",
+            "micaLabel": "Epidermoid cyst",
+            "score": 6.859848058236746,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:2309"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007502",
+            "patientPhenotypeLabel": "Follicular hyperkeratosis",
+            "diseasePhenotypeCurie": "HP:0007502",
+            "diseasePhenotypeLabel": "Follicular hyperkeratosis",
+            "micaCurie": "HP:0007502",
+            "micaLabel": "Follicular hyperkeratosis",
+            "score": 5.560565074106485,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:2309"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008070",
+            "patientPhenotypeLabel": "Sparse hair",
+            "diseasePhenotypeCurie": "HP:0001596",
+            "diseasePhenotypeLabel": "Alopecia",
+            "micaCurie": "HP:0011362",
+            "micaLabel": "Abnormal hair quantity",
+            "score": 2.366230358154402,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "ORPHA:2309"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003777",
+            "patientPhenotypeLabel": "Pili torti",
+            "diseasePhenotypeCurie": "HP:0001596",
+            "diseasePhenotypeLabel": "Alopecia",
+            "micaCurie": "HP:0001595",
+            "micaLabel": "Abnormal hair morphology",
+            "score": 1.8732019205105126,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "ORPHA:2309"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0410400",
+            "patientPhenotypeLabel": "Absent sebaceous glands",
+            "diseasePhenotypeCurie": "HP:0100798",
+            "diseasePhenotypeLabel": "Fingernail dysplasia",
+            "micaCurie": "HP:0011138",
+            "micaLabel": "Abnormal skin adnexa morphology",
+            "score": 1.7220907567011512,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:2309"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000980",
+            "patientPhenotypeLabel": "Pallor",
+            "diseasePhenotypeCurie": "HP:0200040",
+            "diseasePhenotypeLabel": "Epidermoid cyst",
+            "micaCurie": "HP:0011121",
+            "micaLabel": "Abnormal skin morphology",
+            "score": 1.4662205118843843,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:2309"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007401",
+            "patientPhenotypeLabel": "Macular atrophy",
+            "diseasePhenotypeCurie": "HP:0200040",
+            "diseasePhenotypeLabel": "Epidermoid cyst",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:2309"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011509",
+            "patientPhenotypeLabel": "Macular hyperpigmentation",
+            "diseasePhenotypeCurie": "HP:0200040",
+            "diseasePhenotypeLabel": "Epidermoid cyst",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:2309"
+          }
+        ]
+      },
+      {
+        "rank": 24,
+        "geneCurie": "NCBIGene:7299",
+        "geneLabel": "TYR",
+        "geneSymbol": "TYR",
+        "geneEntityId": 150383,
+        "bmaScore": 1.9802833947879255,
+        "normalizedScore": 0.218645,
+        "patientAverageScore": 2.5745526743511213,
+        "phenotypeAverageScore": 1.3860141152247296,
+        "directPhenotypeCount": 43,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0007401",
+            "patientPhenotypeLabel": "Macular atrophy",
+            "diseasePhenotypeCurie": "HP:0007750",
+            "diseasePhenotypeLabel": "Hypoplasia of the fovea",
+            "micaCurie": "HP:0001103",
+            "micaLabel": "Abnormal macular morphology",
+            "score": 3.6634450892206036,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:79431"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011509",
+            "patientPhenotypeLabel": "Macular hyperpigmentation",
+            "diseasePhenotypeCurie": "HP:0007750",
+            "diseasePhenotypeLabel": "Hypoplasia of the fovea",
+            "micaCurie": "HP:0001103",
+            "micaLabel": "Abnormal macular morphology",
+            "score": 3.6634450892206036,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:79431"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007502",
+            "patientPhenotypeLabel": "Follicular hyperkeratosis",
+            "diseasePhenotypeCurie": "HP:0000962",
+            "diseasePhenotypeLabel": "Hyperkeratosis",
+            "micaCurie": "HP:0000962",
+            "micaLabel": "Hyperkeratosis",
+            "score": 3.593240830547355,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:79431"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007663",
+            "patientPhenotypeLabel": "Reduced visual acuity",
+            "diseasePhenotypeCurie": "HP:0007663",
+            "diseasePhenotypeLabel": "Reduced visual acuity",
+            "micaCurie": "HP:0007663",
+            "micaLabel": "Reduced visual acuity",
+            "score": 2.879128521522365,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:203100"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0200040",
+            "patientPhenotypeLabel": "Epidermoid cyst",
+            "diseasePhenotypeCurie": "HP:0001053",
+            "diseasePhenotypeLabel": "Hypopigmented skin patches",
+            "micaCurie": "HP:0011355",
+            "micaLabel": "Localized skin lesion",
+            "score": 2.436999429042609,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:895"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008070",
+            "patientPhenotypeLabel": "Sparse hair",
+            "diseasePhenotypeCurie": "HP:0011364",
+            "diseasePhenotypeLabel": "White hair",
+            "micaCurie": "HP:0001595",
+            "micaLabel": "Abnormal hair morphology",
+            "score": 1.8732019205105126,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:203100"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003777",
+            "patientPhenotypeLabel": "Pili torti",
+            "diseasePhenotypeCurie": "HP:0011364",
+            "diseasePhenotypeLabel": "White hair",
+            "micaCurie": "HP:0001595",
+            "micaLabel": "Abnormal hair morphology",
+            "score": 1.8732019205105126,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:203100"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0410400",
+            "patientPhenotypeLabel": "Absent sebaceous glands",
+            "diseasePhenotypeCurie": "HP:0011364",
+            "diseasePhenotypeLabel": "White hair",
+            "micaCurie": "HP:0011138",
+            "micaLabel": "Abnormal skin adnexa morphology",
+            "score": 1.7220907567011512,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:203100"
+          }
+        ]
+      },
+      {
+        "rank": 25,
+        "geneCurie": "NCBIGene:23509",
+        "geneLabel": "POFUT1",
+        "geneSymbol": "POFUT1",
+        "geneEntityId": 151392,
+        "bmaScore": 1.9586220249504431,
+        "normalizedScore": 0.216253,
+        "patientAverageScore": 2.1178454444217554,
+        "phenotypeAverageScore": 1.7993986054791309,
+        "directPhenotypeCount": 29,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0200040",
+            "patientPhenotypeLabel": "Epidermoid cyst",
+            "diseasePhenotypeCurie": "HP:0200040",
+            "diseasePhenotypeLabel": "Epidermoid cyst",
+            "micaCurie": "HP:0200040",
+            "micaLabel": "Epidermoid cyst",
+            "score": 6.859848058236746,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "ORPHA:79145"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007502",
+            "patientPhenotypeLabel": "Follicular hyperkeratosis",
+            "diseasePhenotypeCurie": "HP:0007502",
+            "diseasePhenotypeLabel": "Follicular hyperkeratosis",
+            "micaCurie": "HP:0007502",
+            "micaLabel": "Follicular hyperkeratosis",
+            "score": 5.560565074106485,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:615327"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008070",
+            "patientPhenotypeLabel": "Sparse hair",
+            "diseasePhenotypeCurie": "HP:0001231",
+            "diseasePhenotypeLabel": "Abnormal fingernail morphology",
+            "micaCurie": "HP:0011138",
+            "micaLabel": "Abnormal skin adnexa morphology",
+            "score": 1.7220907567011512,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:79145"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003777",
+            "patientPhenotypeLabel": "Pili torti",
+            "diseasePhenotypeCurie": "HP:0001231",
+            "diseasePhenotypeLabel": "Abnormal fingernail morphology",
+            "micaCurie": "HP:0011138",
+            "micaLabel": "Abnormal skin adnexa morphology",
+            "score": 1.7220907567011512,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:79145"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0410400",
+            "patientPhenotypeLabel": "Absent sebaceous glands",
+            "diseasePhenotypeCurie": "HP:0001231",
+            "diseasePhenotypeLabel": "Abnormal fingernail morphology",
+            "micaCurie": "HP:0011138",
+            "micaLabel": "Abnormal skin adnexa morphology",
+            "score": 1.7220907567011512,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:79145"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000980",
+            "patientPhenotypeLabel": "Pallor",
+            "diseasePhenotypeCurie": "HP:0200040",
+            "diseasePhenotypeLabel": "Epidermoid cyst",
+            "micaCurie": "HP:0011121",
+            "micaLabel": "Abnormal skin morphology",
+            "score": 1.4662205118843843,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "ORPHA:79145"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007401",
+            "patientPhenotypeLabel": "Macular atrophy",
+            "diseasePhenotypeCurie": "HP:0200040",
+            "diseasePhenotypeLabel": "Epidermoid cyst",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "ORPHA:79145"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011509",
+            "patientPhenotypeLabel": "Macular hyperpigmentation",
+            "diseasePhenotypeCurie": "HP:0200040",
+            "diseasePhenotypeLabel": "Epidermoid cyst",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "ORPHA:79145"
+          }
+        ]
+      }
+    ],
+    "engineSummary": {
+      "diseaseCount": 8579,
+      "geneCount": 5256,
+      "phenotypeCount": 19389,
+      "sourceMode": {
+        "disease": "relationship_fallback",
+        "gene": "relationship_fallback"
+      },
+      "generatedAt": "2026-03-15T21:00:39.457Z"
+    }
+  }
+}

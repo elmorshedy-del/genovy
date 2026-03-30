@@ -1,0 +1,2647 @@
+{
+  "success": true,
+  "engine": "genovy-dx-sim",
+  "analysisType": "gene",
+  "input": {
+    "presentPhenotypeCuries": [
+      "HP:0001249",
+      "HP:0001263",
+      "HP:0001572",
+      "HP:0000343",
+      "HP:0001155",
+      "HP:0000750",
+      "HP:0011968",
+      "HP:0000316",
+      "HP:0000414"
+    ],
+    "excludedPhenotypeCuries": [],
+    "sourceFormat": "phenopacket"
+  },
+  "ranking": {
+    "queryPhenotypes": [
+      {
+        "phenotypeCurie": "HP:0001249",
+        "phenotypeLabel": "Intellectual disability"
+      },
+      {
+        "phenotypeCurie": "HP:0001263",
+        "phenotypeLabel": "Global developmental delay"
+      },
+      {
+        "phenotypeCurie": "HP:0001572",
+        "phenotypeLabel": "Macrodontia"
+      },
+      {
+        "phenotypeCurie": "HP:0000343",
+        "phenotypeLabel": "Long philtrum"
+      },
+      {
+        "phenotypeCurie": "HP:0001155",
+        "phenotypeLabel": "Abnormality of the hand"
+      },
+      {
+        "phenotypeCurie": "HP:0000750",
+        "phenotypeLabel": "Delayed speech and language development"
+      },
+      {
+        "phenotypeCurie": "HP:0011968",
+        "phenotypeLabel": "Feeding difficulties"
+      },
+      {
+        "phenotypeCurie": "HP:0000316",
+        "phenotypeLabel": "Hypertelorism"
+      },
+      {
+        "phenotypeCurie": "HP:0000414",
+        "phenotypeLabel": "Bulbous nose"
+      }
+    ],
+    "results": [
+      {
+        "rank": 1,
+        "geneCurie": "NCBIGene:55777",
+        "geneLabel": "MBD5",
+        "geneSymbol": "MBD5",
+        "geneEntityId": 152031,
+        "bmaScore": 1.7825194066413346,
+        "normalizedScore": 0.19681,
+        "patientAverageScore": 2.5222929111313723,
+        "phenotypeAverageScore": 1.0427459021512966,
+        "directPhenotypeCount": 96,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001572",
+            "patientPhenotypeLabel": "Macrodontia",
+            "diseasePhenotypeCurie": "HP:0001572",
+            "diseasePhenotypeLabel": "Macrodontia",
+            "micaCurie": "HP:0001572",
+            "micaLabel": "Macrodontia",
+            "score": 5.65587525391081,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:228402"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000414",
+            "patientPhenotypeLabel": "Bulbous nose",
+            "diseasePhenotypeCurie": "HP:0000414",
+            "diseasePhenotypeLabel": "Bulbous nose",
+            "micaCurie": "HP:0000414",
+            "micaLabel": "Bulbous nose",
+            "score": 3.7738689068349767,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:156200"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0000316",
+            "diseasePhenotypeLabel": "Hypertelorism",
+            "micaCurie": "HP:0000316",
+            "micaLabel": "Hypertelorism",
+            "score": 2.385039690111898,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:156200"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011968",
+            "patientPhenotypeLabel": "Feeding difficulties",
+            "diseasePhenotypeCurie": "HP:0011968",
+            "diseasePhenotypeLabel": "Feeding difficulties",
+            "micaCurie": "HP:0011968",
+            "micaLabel": "Feeding difficulties",
+            "score": 2.2218880494256634,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:156200"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000343",
+            "patientPhenotypeLabel": "Long philtrum",
+            "diseasePhenotypeCurie": "HP:0010804",
+            "diseasePhenotypeLabel": "Tented upper lip vermilion",
+            "micaCurie": "HP:0000177",
+            "micaLabel": "Abnormal upper lip morphology",
+            "score": 2.168500176007602,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:228402"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:228402"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001155",
+            "patientPhenotypeLabel": "Abnormality of the hand",
+            "diseasePhenotypeCurie": "HP:0005819",
+            "diseasePhenotypeLabel": "Short middle phalanx of finger",
+            "micaCurie": "HP:0001155",
+            "micaLabel": "Abnormality of the hand",
+            "score": 1.5738282194991153,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:156200"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:156200"
+          }
+        ]
+      },
+      {
+        "rank": 2,
+        "geneCurie": "NCBIGene:10664",
+        "geneLabel": "CTCF",
+        "geneSymbol": "CTCF",
+        "geneEntityId": 151095,
+        "bmaScore": 1.7710607286942865,
+        "normalizedScore": 0.195544,
+        "patientAverageScore": 2.55762492651033,
+        "phenotypeAverageScore": 0.9844965308782431,
+        "directPhenotypeCount": 153,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001572",
+            "patientPhenotypeLabel": "Macrodontia",
+            "diseasePhenotypeCurie": "HP:0011081",
+            "diseasePhenotypeLabel": "Incisor macrodontia",
+            "micaCurie": "HP:0001572",
+            "micaLabel": "Macrodontia",
+            "score": 5.65587525391081,
+            "evidenceCode": "1/4",
+            "referenceText": "OMIM:615502"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000343",
+            "patientPhenotypeLabel": "Long philtrum",
+            "diseasePhenotypeCurie": "HP:0000343",
+            "diseasePhenotypeLabel": "Long philtrum",
+            "micaCurie": "HP:0000343",
+            "micaLabel": "Long philtrum",
+            "score": 3.1381787812998185,
+            "evidenceCode": "7/50",
+            "referenceText": "OMIM:615502"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000414",
+            "patientPhenotypeLabel": "Bulbous nose",
+            "diseasePhenotypeCurie": "HP:0000455",
+            "diseasePhenotypeLabel": "Broad nasal tip",
+            "micaCurie": "HP:0000436",
+            "micaLabel": "Abnormal nasal tip morphology",
+            "score": 3.1221784399533776,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:363611"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0000316",
+            "diseasePhenotypeLabel": "Hypertelorism",
+            "micaCurie": "HP:0000316",
+            "micaLabel": "Hypertelorism",
+            "score": 2.385039690111898,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:363611"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011968",
+            "patientPhenotypeLabel": "Feeding difficulties",
+            "diseasePhenotypeCurie": "HP:0011968",
+            "diseasePhenotypeLabel": "Feeding difficulties",
+            "micaCurie": "HP:0011968",
+            "micaLabel": "Feeding difficulties",
+            "score": 2.2218880494256634,
+            "evidenceCode": "35/47",
+            "referenceText": "OMIM:615502"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:363611"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001155",
+            "patientPhenotypeLabel": "Abnormality of the hand",
+            "diseasePhenotypeCurie": "HP:0200055",
+            "diseasePhenotypeLabel": "Small hand",
+            "micaCurie": "HP:0001155",
+            "micaLabel": "Abnormality of the hand",
+            "score": 1.5738282194991153,
+            "evidenceCode": "1/46",
+            "referenceText": "OMIM:615502"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "50/50",
+            "referenceText": "OMIM:615502"
+          }
+        ]
+      },
+      {
+        "rank": 3,
+        "geneCurie": "NCBIGene:9330",
+        "geneLabel": "GTF3C3",
+        "geneSymbol": "GTF3C3",
+        "geneEntityId": 150768,
+        "bmaScore": 1.7648625494533396,
+        "normalizedScore": 0.19486,
+        "patientAverageScore": 2.533494985334896,
+        "phenotypeAverageScore": 0.9962301135717831,
+        "directPhenotypeCount": 111,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001572",
+            "patientPhenotypeLabel": "Macrodontia",
+            "diseasePhenotypeCurie": "HP:0001572",
+            "diseasePhenotypeLabel": "Macrodontia",
+            "micaCurie": "HP:0001572",
+            "micaLabel": "Macrodontia",
+            "score": 5.65587525391081,
+            "evidenceCode": "1/12",
+            "referenceText": "OMIM:621201"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000414",
+            "patientPhenotypeLabel": "Bulbous nose",
+            "diseasePhenotypeCurie": "HP:0000414",
+            "diseasePhenotypeLabel": "Bulbous nose",
+            "micaCurie": "HP:0000414",
+            "micaLabel": "Bulbous nose",
+            "score": 3.7738689068349767,
+            "evidenceCode": "2/12",
+            "referenceText": "OMIM:621201"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000343",
+            "patientPhenotypeLabel": "Long philtrum",
+            "diseasePhenotypeCurie": "HP:0000343",
+            "diseasePhenotypeLabel": "Long philtrum",
+            "micaCurie": "HP:0000343",
+            "micaLabel": "Long philtrum",
+            "score": 3.1381787812998185,
+            "evidenceCode": "1/12",
+            "referenceText": "OMIM:621201"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0000316",
+            "diseasePhenotypeLabel": "Hypertelorism",
+            "micaCurie": "HP:0000316",
+            "micaLabel": "Hypertelorism",
+            "score": 2.385039690111898,
+            "evidenceCode": "3/3",
+            "referenceText": "OMIM:621201"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011968",
+            "patientPhenotypeLabel": "Feeding difficulties",
+            "diseasePhenotypeCurie": "HP:0033454",
+            "diseasePhenotypeLabel": "Tube feeding",
+            "micaCurie": "HP:0011968",
+            "micaLabel": "Feeding difficulties",
+            "score": 2.2218880494256634,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:621201"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001155",
+            "patientPhenotypeLabel": "Abnormality of the hand",
+            "diseasePhenotypeCurie": "HP:0001238",
+            "diseasePhenotypeLabel": "Slender finger",
+            "micaCurie": "HP:0001155",
+            "micaLabel": "Abnormality of the hand",
+            "score": 1.5738282194991153,
+            "evidenceCode": "1/12",
+            "referenceText": "OMIM:621201"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "4/4",
+            "referenceText": "OMIM:621201"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001249",
+            "patientPhenotypeLabel": "Intellectual disability",
+            "diseasePhenotypeCurie": "HP:0010864",
+            "diseasePhenotypeLabel": "Severe intellectual disability",
+            "micaCurie": "HP:0001249",
+            "micaLabel": "Intellectual disability",
+            "score": 1.4054770617153647,
+            "evidenceCode": "8/14",
+            "referenceText": "OMIM:621201"
+          }
+        ]
+      },
+      {
+        "rank": 4,
+        "geneCurie": "NCBIGene:1748",
+        "geneLabel": "DLX4",
+        "geneSymbol": "DLX4",
+        "geneEntityId": 148659,
+        "bmaScore": 1.7566939842932654,
+        "normalizedScore": 0.193958,
+        "patientAverageScore": 2.2200847150891074,
+        "phenotypeAverageScore": 1.2933032534974236,
+        "directPhenotypeCount": 41,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000414",
+            "patientPhenotypeLabel": "Bulbous nose",
+            "diseasePhenotypeCurie": "HP:0000414",
+            "diseasePhenotypeLabel": "Bulbous nose",
+            "micaCurie": "HP:0000414",
+            "micaLabel": "Bulbous nose",
+            "score": 3.7738689068349767,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:616788"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001572",
+            "patientPhenotypeLabel": "Macrodontia",
+            "diseasePhenotypeCurie": "HP:0006342",
+            "diseasePhenotypeLabel": "Peg-shaped maxillary lateral incisors",
+            "micaCurie": "HP:0006482",
+            "micaLabel": "Abnormal dental morphology",
+            "score": 3.6277270066185245,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0000316",
+            "diseasePhenotypeLabel": "Hypertelorism",
+            "micaCurie": "HP:0000316",
+            "micaLabel": "Hypertelorism",
+            "score": 2.385039690111898,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:616788"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011968",
+            "patientPhenotypeLabel": "Feeding difficulties",
+            "diseasePhenotypeCurie": "HP:0008872",
+            "diseasePhenotypeLabel": "Feeding difficulties in infancy",
+            "micaCurie": "HP:0011968",
+            "micaLabel": "Feeding difficulties",
+            "score": 2.2218880494256634,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000343",
+            "patientPhenotypeLabel": "Long philtrum",
+            "diseasePhenotypeCurie": "HP:0100336",
+            "diseasePhenotypeLabel": "Bilateral cleft lip",
+            "micaCurie": "HP:0000177",
+            "micaLabel": "Abnormal upper lip morphology",
+            "score": 2.168500176007602,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:616788"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001155",
+            "patientPhenotypeLabel": "Abnormality of the hand",
+            "diseasePhenotypeCurie": "HP:0000954",
+            "diseasePhenotypeLabel": "Single transverse palmar crease",
+            "micaCurie": "HP:0001155",
+            "micaLabel": "Abnormality of the hand",
+            "score": 1.5738282194991153,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:616788"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0012758",
+            "micaLabel": "Neurodevelopmental delay",
+            "score": 1.1961162706965762,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:199306"
+          }
+        ]
+      },
+      {
+        "rank": 5,
+        "geneCurie": "NCBIGene:526",
+        "geneLabel": "ATP6V1B2",
+        "geneSymbol": "ATP6V1B2",
+        "geneEntityId": 148249,
+        "bmaScore": 1.7549400452738995,
+        "normalizedScore": 0.193765,
+        "patientAverageScore": 2.587880215297353,
+        "phenotypeAverageScore": 0.9219998752504459,
+        "directPhenotypeCount": 165,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001572",
+            "patientPhenotypeLabel": "Macrodontia",
+            "diseasePhenotypeCurie": "HP:0000675",
+            "diseasePhenotypeLabel": "Macrodontia of permanent maxillary central incisor",
+            "micaCurie": "HP:0001572",
+            "micaLabel": "Macrodontia",
+            "score": 5.65587525391081,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:79500"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000414",
+            "patientPhenotypeLabel": "Bulbous nose",
+            "diseasePhenotypeCurie": "HP:0000414",
+            "diseasePhenotypeLabel": "Bulbous nose",
+            "micaCurie": "HP:0000414",
+            "micaLabel": "Bulbous nose",
+            "score": 3.7738689068349767,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:79500"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000343",
+            "patientPhenotypeLabel": "Long philtrum",
+            "diseasePhenotypeCurie": "HP:0000343",
+            "diseasePhenotypeLabel": "Long philtrum",
+            "micaCurie": "HP:0000343",
+            "micaLabel": "Long philtrum",
+            "score": 3.1381787812998185,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:79500"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0000316",
+            "diseasePhenotypeLabel": "Hypertelorism",
+            "micaCurie": "HP:0000316",
+            "micaLabel": "Hypertelorism",
+            "score": 2.385039690111898,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:79500"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011968",
+            "patientPhenotypeLabel": "Feeding difficulties",
+            "diseasePhenotypeCurie": "HP:0011968",
+            "diseasePhenotypeLabel": "Feeding difficulties",
+            "micaCurie": "HP:0011968",
+            "micaLabel": "Feeding difficulties",
+            "score": 2.2218880494256634,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:79500"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0002465",
+            "diseasePhenotypeLabel": "Poor speech",
+            "micaCurie": "HP:0002167",
+            "micaLabel": "Abnormal speech pattern",
+            "score": 1.6855833403586882,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:79499"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001155",
+            "patientPhenotypeLabel": "Abnormality of the hand",
+            "diseasePhenotypeCurie": "HP:0009882",
+            "diseasePhenotypeLabel": "Short distal phalanx of finger",
+            "micaCurie": "HP:0001155",
+            "micaLabel": "Abnormality of the hand",
+            "score": 1.5738282194991153,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:79500"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:616455"
+          }
+        ]
+      },
+      {
+        "rank": 6,
+        "geneCurie": "NCBIGene:23314",
+        "geneLabel": "SATB2",
+        "geneSymbol": "SATB2",
+        "geneEntityId": 151344,
+        "bmaScore": 1.7145258526263816,
+        "normalizedScore": 0.189302,
+        "patientAverageScore": 2.3676011649322053,
+        "phenotypeAverageScore": 1.061450540320558,
+        "directPhenotypeCount": 151,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000414",
+            "patientPhenotypeLabel": "Bulbous nose",
+            "diseasePhenotypeCurie": "HP:0000414",
+            "diseasePhenotypeLabel": "Bulbous nose",
+            "micaCurie": "HP:0000414",
+            "micaLabel": "Bulbous nose",
+            "score": 3.7738689068349767,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:612313"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001572",
+            "patientPhenotypeLabel": "Macrodontia",
+            "diseasePhenotypeCurie": "HP:0000698",
+            "diseasePhenotypeLabel": "Conical tooth",
+            "micaCurie": "HP:0006482",
+            "micaLabel": "Abnormal dental morphology",
+            "score": 3.6277270066185245,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:612313"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000343",
+            "patientPhenotypeLabel": "Long philtrum",
+            "diseasePhenotypeCurie": "HP:0000343",
+            "diseasePhenotypeLabel": "Long philtrum",
+            "micaCurie": "HP:0000343",
+            "micaLabel": "Long philtrum",
+            "score": 3.1381787812998185,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:251028"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011968",
+            "patientPhenotypeLabel": "Feeding difficulties",
+            "diseasePhenotypeCurie": "HP:0011968",
+            "diseasePhenotypeLabel": "Feeding difficulties",
+            "micaCurie": "HP:0011968",
+            "micaLabel": "Feeding difficulties",
+            "score": 2.2218880494256634,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:251019"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0001344",
+            "diseasePhenotypeLabel": "Absent speech",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:576283"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0100886",
+            "diseasePhenotypeLabel": "Abnormality of globe location",
+            "micaCurie": "HP:0100886",
+            "micaLabel": "Abnormality of globe location",
+            "score": 2.0512836163194628,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:576283"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001155",
+            "patientPhenotypeLabel": "Abnormality of the hand",
+            "diseasePhenotypeCurie": "HP:0200055",
+            "diseasePhenotypeLabel": "Small hand",
+            "micaCurie": "HP:0001155",
+            "micaLabel": "Abnormality of the hand",
+            "score": 1.5738282194991153,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:251028"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0011344",
+            "diseasePhenotypeLabel": "Severe global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:251028"
+          }
+        ]
+      },
+      {
+        "rank": 7,
+        "geneCurie": "NCBIGene:6595",
+        "geneLabel": "SMARCA2",
+        "geneSymbol": "SMARCA2",
+        "geneEntityId": 150135,
+        "bmaScore": 1.689564486714374,
+        "normalizedScore": 0.186546,
+        "patientAverageScore": 2.4046851731313645,
+        "phenotypeAverageScore": 0.9744438002973835,
+        "directPhenotypeCount": 154,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000414",
+            "patientPhenotypeLabel": "Bulbous nose",
+            "diseasePhenotypeCurie": "HP:0000414",
+            "diseasePhenotypeLabel": "Bulbous nose",
+            "micaCurie": "HP:0000414",
+            "micaLabel": "Bulbous nose",
+            "score": 3.7738689068349767,
+            "evidenceCode": "1/3",
+            "referenceText": "OMIM:601358"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001572",
+            "patientPhenotypeLabel": "Macrodontia",
+            "diseasePhenotypeCurie": "HP:0000691",
+            "diseasePhenotypeLabel": "Microdontia",
+            "micaCurie": "HP:0006482",
+            "micaLabel": "Abnormal dental morphology",
+            "score": 3.6277270066185245,
+            "evidenceCode": "1/12",
+            "referenceText": "OMIM:619293"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000343",
+            "patientPhenotypeLabel": "Long philtrum",
+            "diseasePhenotypeCurie": "HP:0000343",
+            "diseasePhenotypeLabel": "Long philtrum",
+            "micaCurie": "HP:0000343",
+            "micaLabel": "Long philtrum",
+            "score": 3.1381787812998185,
+            "evidenceCode": "30/39",
+            "referenceText": "OMIM:601358"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0000316",
+            "diseasePhenotypeLabel": "Hypertelorism",
+            "micaCurie": "HP:0000316",
+            "micaLabel": "Hypertelorism",
+            "score": 2.385039690111898,
+            "evidenceCode": "8/14",
+            "referenceText": "OMIM:619293"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011968",
+            "patientPhenotypeLabel": "Feeding difficulties",
+            "diseasePhenotypeCurie": "HP:0011968",
+            "diseasePhenotypeLabel": "Feeding difficulties",
+            "micaCurie": "HP:0011968",
+            "micaLabel": "Feeding difficulties",
+            "score": 2.2218880494256634,
+            "evidenceCode": "2/3",
+            "referenceText": "OMIM:601358"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0001344",
+            "diseasePhenotypeLabel": "Absent speech",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:601358"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001155",
+            "patientPhenotypeLabel": "Abnormality of the hand",
+            "diseasePhenotypeCurie": "HP:0100807",
+            "diseasePhenotypeLabel": "Long fingers",
+            "micaCurie": "HP:0001155",
+            "micaLabel": "Abnormality of the hand",
+            "score": 1.5738282194991153,
+            "evidenceCode": "1/3",
+            "referenceText": "OMIM:601358"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "14/14",
+            "referenceText": "OMIM:619293"
+          }
+        ]
+      },
+      {
+        "rank": 8,
+        "geneCurie": "NCBIGene:7204",
+        "geneLabel": "TRIO",
+        "geneSymbol": "TRIO",
+        "geneEntityId": 150355,
+        "bmaScore": 1.6881606794007396,
+        "normalizedScore": 0.186391,
+        "patientAverageScore": 2.249682057454849,
+        "phenotypeAverageScore": 1.12663930134663,
+        "directPhenotypeCount": 110,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000414",
+            "patientPhenotypeLabel": "Bulbous nose",
+            "diseasePhenotypeCurie": "HP:0000414",
+            "diseasePhenotypeLabel": "Bulbous nose",
+            "micaCurie": "HP:0000414",
+            "micaLabel": "Bulbous nose",
+            "score": 3.7738689068349767,
+            "evidenceCode": "1/14",
+            "referenceText": "OMIM:617061"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000343",
+            "patientPhenotypeLabel": "Long philtrum",
+            "diseasePhenotypeCurie": "HP:0000343",
+            "diseasePhenotypeLabel": "Long philtrum",
+            "micaCurie": "HP:0000343",
+            "micaLabel": "Long philtrum",
+            "score": 3.1381787812998185,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:476126"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0000316",
+            "diseasePhenotypeLabel": "Hypertelorism",
+            "micaCurie": "HP:0000316",
+            "micaLabel": "Hypertelorism",
+            "score": 2.385039690111898,
+            "evidenceCode": "1/7",
+            "referenceText": "OMIM:618825"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001572",
+            "patientPhenotypeLabel": "Macrodontia",
+            "diseasePhenotypeCurie": "HP:0000706",
+            "diseasePhenotypeLabel": "Eruption failure",
+            "micaCurie": "HP:0000164",
+            "micaLabel": "Abnormality of the dentition",
+            "score": 2.2326989655298792,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:476126"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011968",
+            "patientPhenotypeLabel": "Feeding difficulties",
+            "diseasePhenotypeCurie": "HP:0011968",
+            "diseasePhenotypeLabel": "Feeding difficulties",
+            "micaCurie": "HP:0011968",
+            "micaLabel": "Feeding difficulties",
+            "score": 2.2218880494256634,
+            "evidenceCode": "10/16",
+            "referenceText": "OMIM:617061"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0001344",
+            "diseasePhenotypeLabel": "Absent speech",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:476126"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001155",
+            "patientPhenotypeLabel": "Abnormality of the hand",
+            "diseasePhenotypeCurie": "HP:0010035",
+            "diseasePhenotypeLabel": "Aplasia of the 1st metacarpal",
+            "micaCurie": "HP:0001155",
+            "micaLabel": "Abnormality of the hand",
+            "score": 1.5738282194991153,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:476126"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:476126"
+          }
+        ]
+      },
+      {
+        "rank": 9,
+        "geneCurie": "NCBIGene:29123",
+        "geneLabel": "ANKRD11",
+        "geneSymbol": "ANKRD11",
+        "geneEntityId": 151600,
+        "bmaScore": 1.6881507011056216,
+        "normalizedScore": 0.18639,
+        "patientAverageScore": 2.4609893349055483,
+        "phenotypeAverageScore": 0.9153120673056949,
+        "directPhenotypeCount": 102,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001572",
+            "patientPhenotypeLabel": "Macrodontia",
+            "diseasePhenotypeCurie": "HP:0001572",
+            "diseasePhenotypeLabel": "Macrodontia",
+            "micaCurie": "HP:0001572",
+            "micaLabel": "Macrodontia",
+            "score": 5.65587525391081,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:2332"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000343",
+            "patientPhenotypeLabel": "Long philtrum",
+            "diseasePhenotypeCurie": "HP:0000343",
+            "diseasePhenotypeLabel": "Long philtrum",
+            "micaCurie": "HP:0000343",
+            "micaLabel": "Long philtrum",
+            "score": 3.1381787812998185,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:2332"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0000316",
+            "diseasePhenotypeLabel": "Hypertelorism",
+            "micaCurie": "HP:0000316",
+            "micaLabel": "Hypertelorism",
+            "score": 2.385039690111898,
+            "evidenceCode": "6/7",
+            "referenceText": "OMIM:148050"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000414",
+            "patientPhenotypeLabel": "Bulbous nose",
+            "diseasePhenotypeCurie": "HP:0000463",
+            "diseasePhenotypeLabel": "Anteverted nares",
+            "micaCurie": "HP:0010938",
+            "micaLabel": "Abnormal external nose morphology",
+            "score": 2.2524581155103416,
+            "evidenceCode": "7/7",
+            "referenceText": "OMIM:148050"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011968",
+            "patientPhenotypeLabel": "Feeding difficulties",
+            "diseasePhenotypeCurie": "HP:0011968",
+            "diseasePhenotypeLabel": "Feeding difficulties",
+            "micaCurie": "HP:0011968",
+            "micaLabel": "Feeding difficulties",
+            "score": 2.2218880494256634,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:2332"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:261250"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001155",
+            "patientPhenotypeLabel": "Abnormality of the hand",
+            "diseasePhenotypeCurie": "HP:0040019",
+            "diseasePhenotypeLabel": "Finger clinodactyly",
+            "micaCurie": "HP:0001155",
+            "micaLabel": "Abnormality of the hand",
+            "score": 1.5738282194991153,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:2332"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:148050"
+          }
+        ]
+      },
+      {
+        "rank": 10,
+        "geneCurie": "NCBIGene:57465",
+        "geneLabel": "TBC1D24",
+        "geneSymbol": "TBC1D24",
+        "geneEntityId": 152149,
+        "bmaScore": 1.6878806347238422,
+        "normalizedScore": 0.186361,
+        "patientAverageScore": 2.630034978386063,
+        "phenotypeAverageScore": 0.7457262910616211,
+        "directPhenotypeCount": 200,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001572",
+            "patientPhenotypeLabel": "Macrodontia",
+            "diseasePhenotypeCurie": "HP:0000675",
+            "diseasePhenotypeLabel": "Macrodontia of permanent maxillary central incisor",
+            "micaCurie": "HP:0001572",
+            "micaLabel": "Macrodontia",
+            "score": 5.65587525391081,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:79500"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000414",
+            "patientPhenotypeLabel": "Bulbous nose",
+            "diseasePhenotypeCurie": "HP:0000414",
+            "diseasePhenotypeLabel": "Bulbous nose",
+            "micaCurie": "HP:0000414",
+            "micaLabel": "Bulbous nose",
+            "score": 3.7738689068349767,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:79500"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000343",
+            "patientPhenotypeLabel": "Long philtrum",
+            "diseasePhenotypeCurie": "HP:0000343",
+            "diseasePhenotypeLabel": "Long philtrum",
+            "micaCurie": "HP:0000343",
+            "micaLabel": "Long philtrum",
+            "score": 3.1381787812998185,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:79500"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0000316",
+            "diseasePhenotypeLabel": "Hypertelorism",
+            "micaCurie": "HP:0000316",
+            "micaLabel": "Hypertelorism",
+            "score": 2.385039690111898,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:79500"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011968",
+            "patientPhenotypeLabel": "Feeding difficulties",
+            "diseasePhenotypeCurie": "HP:0011968",
+            "diseasePhenotypeLabel": "Feeding difficulties",
+            "micaCurie": "HP:0011968",
+            "micaLabel": "Feeding difficulties",
+            "score": 2.2218880494256634,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:352596"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:352582"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001155",
+            "patientPhenotypeLabel": "Abnormality of the hand",
+            "diseasePhenotypeCurie": "HP:0032524",
+            "diseasePhenotypeLabel": "Long thumb",
+            "micaCurie": "HP:0001155",
+            "micaLabel": "Abnormality of the hand",
+            "score": 1.5738282194991153,
+            "evidenceCode": "17/28",
+            "referenceText": "OMIM:220500"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:352596"
+          }
+        ]
+      },
+      {
+        "rank": 11,
+        "geneCurie": "NCBIGene:4487",
+        "geneLabel": "MSX1",
+        "geneSymbol": "MSX1",
+        "geneEntityId": 149468,
+        "bmaScore": 1.675893233488445,
+        "normalizedScore": 0.185037,
+        "patientAverageScore": 1.899566562261477,
+        "phenotypeAverageScore": 1.4522199047154132,
+        "directPhenotypeCount": 88,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001572",
+            "patientPhenotypeLabel": "Macrodontia",
+            "diseasePhenotypeCurie": "HP:0001572",
+            "diseasePhenotypeLabel": "Macrodontia",
+            "micaCurie": "HP:0001572",
+            "micaLabel": "Macrodontia",
+            "score": 5.65587525391081,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:199302"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011968",
+            "patientPhenotypeLabel": "Feeding difficulties",
+            "diseasePhenotypeCurie": "HP:0008872",
+            "diseasePhenotypeLabel": "Feeding difficulties in infancy",
+            "micaCurie": "HP:0011968",
+            "micaLabel": "Feeding difficulties",
+            "score": 2.2218880494256634,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000343",
+            "patientPhenotypeLabel": "Long philtrum",
+            "diseasePhenotypeCurie": "HP:0100336",
+            "diseasePhenotypeLabel": "Bilateral cleft lip",
+            "micaCurie": "HP:0000177",
+            "micaLabel": "Abnormal upper lip morphology",
+            "score": 2.168500176007602,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:199302"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000414",
+            "patientPhenotypeLabel": "Bulbous nose",
+            "diseasePhenotypeCurie": "HP:0005105",
+            "diseasePhenotypeLabel": "Abnormal nasal morphology",
+            "micaCurie": "HP:0005105",
+            "micaLabel": "Abnormal nasal morphology",
+            "score": 1.7572752688148046,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:141291"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0012758",
+            "micaLabel": "Neurodevelopmental delay",
+            "score": 1.1961162706965762,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001155",
+            "patientPhenotypeLabel": "Abnormality of the hand",
+            "diseasePhenotypeCurie": "HP:0001762",
+            "diseasePhenotypeLabel": "Talipes equinovarus",
+            "micaCurie": "HP:0040064",
+            "micaLabel": "Abnormality of limbs",
+            "score": 1.0600822297353154,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "ORPHA:199302"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001249",
+            "patientPhenotypeLabel": "Intellectual disability",
+            "diseasePhenotypeCurie": "HP:0001328",
+            "diseasePhenotypeLabel": "Specific learning disability",
+            "micaCurie": "HP:0012759",
+            "micaLabel": "Neurodevelopmental abnormality",
+            "score": 0.9688179084505344,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "ORPHA:199302"
+          }
+        ]
+      },
+      {
+        "rank": 12,
+        "geneCurie": "NCBIGene:1009",
+        "geneLabel": "CDH11",
+        "geneSymbol": "CDH11",
+        "geneEntityId": 148412,
+        "bmaScore": 1.673039499075152,
+        "normalizedScore": 0.184722,
+        "patientAverageScore": 2.1824723811455127,
+        "phenotypeAverageScore": 1.1636066170047912,
+        "directPhenotypeCount": 118,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000414",
+            "patientPhenotypeLabel": "Bulbous nose",
+            "diseasePhenotypeCurie": "HP:0000414",
+            "diseasePhenotypeLabel": "Bulbous nose",
+            "micaCurie": "HP:0000414",
+            "micaLabel": "Bulbous nose",
+            "score": 3.7738689068349767,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:211380"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001572",
+            "patientPhenotypeLabel": "Macrodontia",
+            "diseasePhenotypeCurie": "HP:0011072",
+            "diseasePhenotypeLabel": "Rootless teeth",
+            "micaCurie": "HP:0006482",
+            "micaLabel": "Abnormal dental morphology",
+            "score": 3.6277270066185245,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:1299"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000343",
+            "patientPhenotypeLabel": "Long philtrum",
+            "diseasePhenotypeCurie": "HP:0000343",
+            "diseasePhenotypeLabel": "Long philtrum",
+            "micaCurie": "HP:0000343",
+            "micaLabel": "Long philtrum",
+            "score": 3.1381787812998185,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:211380"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0000316",
+            "diseasePhenotypeLabel": "Hypertelorism",
+            "micaCurie": "HP:0000316",
+            "micaLabel": "Hypertelorism",
+            "score": 2.385039690111898,
+            "evidenceCode": "19/19",
+            "referenceText": "OMIM:619736"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001155",
+            "patientPhenotypeLabel": "Abnormality of the hand",
+            "diseasePhenotypeCurie": "HP:0011910",
+            "diseasePhenotypeLabel": "Shortening of all phalanges of fingers",
+            "micaCurie": "HP:0001155",
+            "micaLabel": "Abnormality of the hand",
+            "score": 1.5738282194991153,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:211380"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:211380"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001249",
+            "patientPhenotypeLabel": "Intellectual disability",
+            "diseasePhenotypeCurie": "HP:0002342",
+            "diseasePhenotypeLabel": "Moderate intellectual disability",
+            "micaCurie": "HP:0001249",
+            "micaLabel": "Intellectual disability",
+            "score": 1.4054770617153647,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:1299"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0010862",
+            "diseasePhenotypeLabel": "Delayed fine motor development",
+            "micaCurie": "HP:0012758",
+            "micaLabel": "Neurodevelopmental delay",
+            "score": 1.1961162706965762,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:211380"
+          }
+        ]
+      },
+      {
+        "rank": 13,
+        "geneCurie": "NCBIGene:51305",
+        "geneLabel": "KCNK9",
+        "geneSymbol": "KCNK9",
+        "geneEntityId": 151726,
+        "bmaScore": 1.6681696227368494,
+        "normalizedScore": 0.184184,
+        "patientAverageScore": 2.1288546000975375,
+        "phenotypeAverageScore": 1.2074846453761616,
+        "directPhenotypeCount": 45,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001572",
+            "patientPhenotypeLabel": "Macrodontia",
+            "diseasePhenotypeCurie": "HP:0011081",
+            "diseasePhenotypeLabel": "Incisor macrodontia",
+            "micaCurie": "HP:0001572",
+            "micaLabel": "Macrodontia",
+            "score": 5.65587525391081,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:166108"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000414",
+            "patientPhenotypeLabel": "Bulbous nose",
+            "diseasePhenotypeCurie": "HP:0000455",
+            "diseasePhenotypeLabel": "Broad nasal tip",
+            "micaCurie": "HP:0000436",
+            "micaLabel": "Abnormal nasal tip morphology",
+            "score": 3.1221784399533776,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:166108"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000343",
+            "patientPhenotypeLabel": "Long philtrum",
+            "diseasePhenotypeCurie": "HP:0000322",
+            "diseasePhenotypeLabel": "Short philtrum",
+            "micaCurie": "HP:0000288",
+            "micaLabel": "Abnormality of the philtrum",
+            "score": 2.530577776002175,
+            "evidenceCode": "13/19",
+            "referenceText": "OMIM:612292"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011968",
+            "patientPhenotypeLabel": "Feeding difficulties",
+            "diseasePhenotypeCurie": "HP:0040288",
+            "diseasePhenotypeLabel": "Nasogastric tube feeding",
+            "micaCurie": "HP:0011968",
+            "micaLabel": "Feeding difficulties",
+            "score": 2.2218880494256634,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:166108"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001155",
+            "patientPhenotypeLabel": "Abnormality of the hand",
+            "diseasePhenotypeCurie": "HP:0005879",
+            "diseasePhenotypeLabel": "Congenital finger flexion contractures",
+            "micaCurie": "HP:0001155",
+            "micaLabel": "Abnormality of the hand",
+            "score": 1.5738282194991153,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:166108"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:166108"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001249",
+            "patientPhenotypeLabel": "Intellectual disability",
+            "diseasePhenotypeCurie": "HP:0001249",
+            "diseasePhenotypeLabel": "Intellectual disability",
+            "micaCurie": "HP:0001249",
+            "micaLabel": "Intellectual disability",
+            "score": 1.4054770617153647,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:612292"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0012758",
+            "micaLabel": "Neurodevelopmental delay",
+            "score": 1.1961162706965762,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:166108"
+          }
+        ]
+      },
+      {
+        "rank": 14,
+        "geneCurie": "NCBIGene:10973",
+        "geneLabel": "ASCC3",
+        "geneSymbol": "ASCC3",
+        "geneEntityId": 151147,
+        "bmaScore": 1.6536558778237578,
+        "normalizedScore": 0.182582,
+        "patientAverageScore": 2.3002804256586504,
+        "phenotypeAverageScore": 1.007031329988865,
+        "directPhenotypeCount": 55,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001572",
+            "patientPhenotypeLabel": "Macrodontia",
+            "diseasePhenotypeCurie": "HP:0001572",
+            "diseasePhenotypeLabel": "Macrodontia",
+            "micaCurie": "HP:0001572",
+            "micaLabel": "Macrodontia",
+            "score": 5.65587525391081,
+            "evidenceCode": "3/9",
+            "referenceText": "OMIM:620700"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0000316",
+            "diseasePhenotypeLabel": "Hypertelorism",
+            "micaCurie": "HP:0000316",
+            "micaLabel": "Hypertelorism",
+            "score": 2.385039690111898,
+            "evidenceCode": "1/11",
+            "referenceText": "OMIM:620700"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000414",
+            "patientPhenotypeLabel": "Bulbous nose",
+            "diseasePhenotypeCurie": "HP:0000463",
+            "diseasePhenotypeLabel": "Anteverted nares",
+            "micaCurie": "HP:0010938",
+            "micaLabel": "Abnormal external nose morphology",
+            "score": 2.2524581155103416,
+            "evidenceCode": "1/11",
+            "referenceText": "OMIM:620700"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000343",
+            "patientPhenotypeLabel": "Long philtrum",
+            "diseasePhenotypeCurie": "HP:0000219",
+            "diseasePhenotypeLabel": "Thin upper lip vermilion",
+            "micaCurie": "HP:0000177",
+            "micaLabel": "Abnormal upper lip morphology",
+            "score": 2.168500176007602,
+            "evidenceCode": "2/11",
+            "referenceText": "OMIM:620700"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "1/11",
+            "referenceText": "OMIM:620700"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011968",
+            "patientPhenotypeLabel": "Feeding difficulties",
+            "diseasePhenotypeCurie": "HP:0002019",
+            "diseasePhenotypeLabel": "Constipation",
+            "micaCurie": "HP:0011458",
+            "micaLabel": "Abdominal symptom",
+            "score": 1.7451864714958005,
+            "evidenceCode": "2/9",
+            "referenceText": "OMIM:620700"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001155",
+            "patientPhenotypeLabel": "Abnormality of the hand",
+            "diseasePhenotypeCurie": "HP:0009882",
+            "diseasePhenotypeLabel": "Short distal phalanx of finger",
+            "micaCurie": "HP:0001155",
+            "micaLabel": "Abnormality of the hand",
+            "score": 1.5738282194991153,
+            "evidenceCode": "1/11",
+            "referenceText": "OMIM:620700"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "3/4",
+            "referenceText": "OMIM:620700"
+          }
+        ]
+      },
+      {
+        "rank": 15,
+        "geneCurie": "NCBIGene:116931",
+        "geneLabel": "MED12L",
+        "geneSymbol": "MED12L",
+        "geneEntityId": 152800,
+        "bmaScore": 1.6525395520961288,
+        "normalizedScore": 0.182458,
+        "patientAverageScore": 2.0507710538819115,
+        "phenotypeAverageScore": 1.254308050310346,
+        "directPhenotypeCount": 45,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000414",
+            "patientPhenotypeLabel": "Bulbous nose",
+            "diseasePhenotypeCurie": "HP:0000414",
+            "diseasePhenotypeLabel": "Bulbous nose",
+            "micaCurie": "HP:0000414",
+            "micaLabel": "Bulbous nose",
+            "score": 3.7738689068349767,
+            "evidenceCode": "2/7",
+            "referenceText": "OMIM:618872"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000343",
+            "patientPhenotypeLabel": "Long philtrum",
+            "diseasePhenotypeCurie": "HP:0000322",
+            "diseasePhenotypeLabel": "Short philtrum",
+            "micaCurie": "HP:0000288",
+            "micaLabel": "Abnormality of the philtrum",
+            "score": 2.530577776002175,
+            "evidenceCode": "1/7",
+            "referenceText": "OMIM:618872"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0000316",
+            "diseasePhenotypeLabel": "Hypertelorism",
+            "micaCurie": "HP:0000316",
+            "micaLabel": "Hypertelorism",
+            "score": 2.385039690111898,
+            "evidenceCode": "1/7",
+            "referenceText": "OMIM:618872"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011968",
+            "patientPhenotypeLabel": "Feeding difficulties",
+            "diseasePhenotypeCurie": "HP:0008872",
+            "diseasePhenotypeLabel": "Feeding difficulties in infancy",
+            "micaCurie": "HP:0011968",
+            "micaLabel": "Feeding difficulties",
+            "score": 2.2218880494256634,
+            "evidenceCode": "1/7",
+            "referenceText": "OMIM:618872"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "7/7",
+            "referenceText": "OMIM:618872"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001155",
+            "patientPhenotypeLabel": "Abnormality of the hand",
+            "diseasePhenotypeCurie": "HP:0100807",
+            "diseasePhenotypeLabel": "Long fingers",
+            "micaCurie": "HP:0001155",
+            "micaLabel": "Abnormality of the hand",
+            "score": 1.5738282194991153,
+            "evidenceCode": "2/7",
+            "referenceText": "OMIM:618872"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001249",
+            "patientPhenotypeLabel": "Intellectual disability",
+            "diseasePhenotypeCurie": "HP:0001249",
+            "diseasePhenotypeLabel": "Intellectual disability",
+            "micaCurie": "HP:0001249",
+            "micaLabel": "Intellectual disability",
+            "score": 1.4054770617153647,
+            "evidenceCode": "7/7",
+            "referenceText": "OMIM:618872"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001572",
+            "patientPhenotypeLabel": "Macrodontia",
+            "diseasePhenotypeCurie": "HP:0002714",
+            "diseasePhenotypeLabel": "Downturned corners of mouth",
+            "micaCurie": "HP:0000163",
+            "micaLabel": "Abnormal oral cavity morphology",
+            "score": 1.3051673024943553,
+            "evidenceCode": "1/7",
+            "referenceText": "OMIM:618872"
+          }
+        ]
+      },
+      {
+        "rank": 16,
+        "geneCurie": "NCBIGene:738",
+        "geneLabel": "VPS51",
+        "geneSymbol": "VPS51",
+        "geneEntityId": 148329,
+        "bmaScore": 1.6516022030559565,
+        "normalizedScore": 0.182355,
+        "patientAverageScore": 2.2484204353474393,
+        "phenotypeAverageScore": 1.0547839707644737,
+        "directPhenotypeCount": 40,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001572",
+            "patientPhenotypeLabel": "Macrodontia",
+            "diseasePhenotypeCurie": "HP:0001572",
+            "diseasePhenotypeLabel": "Macrodontia",
+            "micaCurie": "HP:0001572",
+            "micaLabel": "Macrodontia",
+            "score": 5.65587525391081,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:618606"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000343",
+            "patientPhenotypeLabel": "Long philtrum",
+            "diseasePhenotypeCurie": "HP:0000322",
+            "diseasePhenotypeLabel": "Short philtrum",
+            "micaCurie": "HP:0000288",
+            "micaLabel": "Abnormality of the philtrum",
+            "score": 2.530577776002175,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:618606"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0000316",
+            "diseasePhenotypeLabel": "Hypertelorism",
+            "micaCurie": "HP:0000316",
+            "micaLabel": "Hypertelorism",
+            "score": 2.385039690111898,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:618606"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000414",
+            "patientPhenotypeLabel": "Bulbous nose",
+            "diseasePhenotypeCurie": "HP:0000463",
+            "diseasePhenotypeLabel": "Anteverted nares",
+            "micaCurie": "HP:0010938",
+            "micaLabel": "Abnormal external nose morphology",
+            "score": 2.2524581155103416,
+            "evidenceCode": "3/3",
+            "referenceText": "OMIM:618606"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011968",
+            "patientPhenotypeLabel": "Feeding difficulties",
+            "diseasePhenotypeCurie": "HP:0011968",
+            "diseasePhenotypeLabel": "Feeding difficulties",
+            "micaCurie": "HP:0011968",
+            "micaLabel": "Feeding difficulties",
+            "score": 2.2218880494256634,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:618606"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001155",
+            "patientPhenotypeLabel": "Abnormality of the hand",
+            "diseasePhenotypeCurie": "HP:0000954",
+            "diseasePhenotypeLabel": "Single transverse palmar crease",
+            "micaCurie": "HP:0001155",
+            "micaLabel": "Abnormality of the hand",
+            "score": 1.5738282194991153,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:618606"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0011344",
+            "diseasePhenotypeLabel": "Severe global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "3/3",
+            "referenceText": "OMIM:618606"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0025336",
+            "diseasePhenotypeLabel": "Delayed ability to sit",
+            "micaCurie": "HP:0012758",
+            "micaLabel": "Neurodevelopmental delay",
+            "score": 1.1961162706965762,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:618606"
+          }
+        ]
+      },
+      {
+        "rank": 17,
+        "geneCurie": "NCBIGene:57589",
+        "geneLabel": "RIC1",
+        "geneSymbol": "RIC1",
+        "geneEntityId": 152175,
+        "bmaScore": 1.6451253278788394,
+        "normalizedScore": 0.18164,
+        "patientAverageScore": 1.9214580179771081,
+        "phenotypeAverageScore": 1.3687926377805704,
+        "directPhenotypeCount": 43,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001572",
+            "patientPhenotypeLabel": "Macrodontia",
+            "diseasePhenotypeCurie": "HP:0006342",
+            "diseasePhenotypeLabel": "Peg-shaped maxillary lateral incisors",
+            "micaCurie": "HP:0006482",
+            "micaLabel": "Abnormal dental morphology",
+            "score": 3.6277270066185245,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000343",
+            "patientPhenotypeLabel": "Long philtrum",
+            "diseasePhenotypeCurie": "HP:0000343",
+            "diseasePhenotypeLabel": "Long philtrum",
+            "micaCurie": "HP:0000343",
+            "micaLabel": "Long philtrum",
+            "score": 3.1381787812998185,
+            "evidenceCode": "3/8",
+            "referenceText": "OMIM:618761"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000414",
+            "patientPhenotypeLabel": "Bulbous nose",
+            "diseasePhenotypeCurie": "HP:0000463",
+            "diseasePhenotypeLabel": "Anteverted nares",
+            "micaCurie": "HP:0010938",
+            "micaLabel": "Abnormal external nose morphology",
+            "score": 2.2524581155103416,
+            "evidenceCode": "5/8",
+            "referenceText": "OMIM:618761"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011968",
+            "patientPhenotypeLabel": "Feeding difficulties",
+            "diseasePhenotypeCurie": "HP:0008872",
+            "diseasePhenotypeLabel": "Feeding difficulties in infancy",
+            "micaCurie": "HP:0011968",
+            "micaLabel": "Feeding difficulties",
+            "score": 2.2218880494256634,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "10/10",
+            "referenceText": "OMIM:618761"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001249",
+            "patientPhenotypeLabel": "Intellectual disability",
+            "diseasePhenotypeCurie": "HP:0001249",
+            "diseasePhenotypeLabel": "Intellectual disability",
+            "micaCurie": "HP:0001249",
+            "micaLabel": "Intellectual disability",
+            "score": 1.4054770617153647,
+            "evidenceCode": "8/8",
+            "referenceText": "OMIM:618761"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0000519",
+            "diseasePhenotypeLabel": "Developmental cataract",
+            "micaCurie": "HP:0012372",
+            "micaLabel": "Abnormal eye morphology",
+            "score": 1.1286666093924305,
+            "evidenceCode": "7/8",
+            "referenceText": "OMIM:618761"
+          }
+        ]
+      },
+      {
+        "rank": 18,
+        "geneCurie": "NCBIGene:8558",
+        "geneLabel": "CDK10",
+        "geneSymbol": "CDK10",
+        "geneEntityId": 150601,
+        "bmaScore": 1.6379642556964717,
+        "normalizedScore": 0.180849,
+        "patientAverageScore": 2.3110337760358015,
+        "phenotypeAverageScore": 0.9648947353571421,
+        "directPhenotypeCount": 56,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001572",
+            "patientPhenotypeLabel": "Macrodontia",
+            "diseasePhenotypeCurie": "HP:0001572",
+            "diseasePhenotypeLabel": "Macrodontia",
+            "micaCurie": "HP:0001572",
+            "micaLabel": "Macrodontia",
+            "score": 5.65587525391081,
+            "evidenceCode": "2/9",
+            "referenceText": "OMIM:617694"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000343",
+            "patientPhenotypeLabel": "Long philtrum",
+            "diseasePhenotypeCurie": "HP:0000343",
+            "diseasePhenotypeLabel": "Long philtrum",
+            "micaCurie": "HP:0000343",
+            "micaLabel": "Long philtrum",
+            "score": 3.1381787812998185,
+            "evidenceCode": "9/9",
+            "referenceText": "OMIM:617694"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000414",
+            "patientPhenotypeLabel": "Bulbous nose",
+            "diseasePhenotypeCurie": "HP:0000455",
+            "diseasePhenotypeLabel": "Broad nasal tip",
+            "micaCurie": "HP:0000436",
+            "micaLabel": "Abnormal nasal tip morphology",
+            "score": 3.1221784399533776,
+            "evidenceCode": "9/9",
+            "referenceText": "OMIM:617694"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0000316",
+            "diseasePhenotypeLabel": "Hypertelorism",
+            "micaCurie": "HP:0000316",
+            "micaLabel": "Hypertelorism",
+            "score": 2.385039690111898,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:617694"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "9/9",
+            "referenceText": "OMIM:617694"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001155",
+            "patientPhenotypeLabel": "Abnormality of the hand",
+            "diseasePhenotypeCurie": "HP:0200055",
+            "diseasePhenotypeLabel": "Small hand",
+            "micaCurie": "HP:0001155",
+            "micaLabel": "Abnormality of the hand",
+            "score": 1.5738282194991153,
+            "evidenceCode": "8/9",
+            "referenceText": "OMIM:617694"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "9/9",
+            "referenceText": "OMIM:617694"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001249",
+            "patientPhenotypeLabel": "Intellectual disability",
+            "diseasePhenotypeCurie": "HP:0001249",
+            "diseasePhenotypeLabel": "Intellectual disability",
+            "micaCurie": "HP:0001249",
+            "micaLabel": "Intellectual disability",
+            "score": 1.4054770617153647,
+            "evidenceCode": "9/9",
+            "referenceText": "OMIM:617694"
+          }
+        ]
+      },
+      {
+        "rank": 19,
+        "geneCurie": "NCBIGene:10847",
+        "geneLabel": "SRCAP",
+        "geneSymbol": "SRCAP",
+        "geneEntityId": 151132,
+        "bmaScore": 1.6376193516582276,
+        "normalizedScore": 0.180811,
+        "patientAverageScore": 2.339260457840731,
+        "phenotypeAverageScore": 0.9359782454757241,
+        "directPhenotypeCount": 129,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000414",
+            "patientPhenotypeLabel": "Bulbous nose",
+            "diseasePhenotypeCurie": "HP:0000414",
+            "diseasePhenotypeLabel": "Bulbous nose",
+            "micaCurie": "HP:0000414",
+            "micaLabel": "Bulbous nose",
+            "score": 3.7738689068349767,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:136140"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001572",
+            "patientPhenotypeLabel": "Macrodontia",
+            "diseasePhenotypeCurie": "HP:0000691",
+            "diseasePhenotypeLabel": "Microdontia",
+            "micaCurie": "HP:0006482",
+            "micaLabel": "Abnormal dental morphology",
+            "score": 3.6277270066185245,
+            "evidenceCode": "2/5",
+            "referenceText": "OMIM:136140"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000343",
+            "patientPhenotypeLabel": "Long philtrum",
+            "diseasePhenotypeCurie": "HP:0000343",
+            "diseasePhenotypeLabel": "Long philtrum",
+            "micaCurie": "HP:0000343",
+            "micaLabel": "Long philtrum",
+            "score": 3.1381787812998185,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:619595"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011968",
+            "patientPhenotypeLabel": "Feeding difficulties",
+            "diseasePhenotypeCurie": "HP:0040288",
+            "diseasePhenotypeLabel": "Nasogastric tube feeding",
+            "micaCurie": "HP:0011968",
+            "micaLabel": "Feeding difficulties",
+            "score": 2.2218880494256634,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:2044"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0002474",
+            "diseasePhenotypeLabel": "Expressive language delay",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "13/13",
+            "referenceText": "OMIM:136140"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0000490",
+            "diseasePhenotypeLabel": "Deeply set eye",
+            "micaCurie": "HP:0100886",
+            "micaLabel": "Abnormality of globe location",
+            "score": 2.0512836163194628,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:136140"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001155",
+            "patientPhenotypeLabel": "Abnormality of the hand",
+            "diseasePhenotypeCurie": "HP:0011304",
+            "diseasePhenotypeLabel": "Broad thumb",
+            "micaCurie": "HP:0001155",
+            "micaLabel": "Abnormality of the hand",
+            "score": 1.5738282194991153,
+            "evidenceCode": "7/10",
+            "referenceText": "OMIM:136140"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001249",
+            "patientPhenotypeLabel": "Intellectual disability",
+            "diseasePhenotypeCurie": "HP:0002342",
+            "diseasePhenotypeLabel": "Moderate intellectual disability",
+            "micaCurie": "HP:0001249",
+            "micaLabel": "Intellectual disability",
+            "score": 1.4054770617153647,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:2044"
+          }
+        ]
+      },
+      {
+        "rank": 20,
+        "geneCurie": "NCBIGene:3664",
+        "geneLabel": "IRF6",
+        "geneSymbol": "IRF6",
+        "geneEntityId": 149216,
+        "bmaScore": 1.6372097079880004,
+        "normalizedScore": 0.180766,
+        "patientAverageScore": 1.95664945001301,
+        "phenotypeAverageScore": 1.3177699659629907,
+        "directPhenotypeCount": 101,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001572",
+            "patientPhenotypeLabel": "Macrodontia",
+            "diseasePhenotypeCurie": "HP:0001572",
+            "diseasePhenotypeLabel": "Macrodontia",
+            "micaCurie": "HP:0001572",
+            "micaLabel": "Macrodontia",
+            "score": 5.65587525391081,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:199302"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011968",
+            "patientPhenotypeLabel": "Feeding difficulties",
+            "diseasePhenotypeCurie": "HP:0008872",
+            "diseasePhenotypeLabel": "Feeding difficulties in infancy",
+            "micaCurie": "HP:0011968",
+            "micaLabel": "Feeding difficulties",
+            "score": 2.2218880494256634,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000343",
+            "patientPhenotypeLabel": "Long philtrum",
+            "diseasePhenotypeCurie": "HP:0100336",
+            "diseasePhenotypeLabel": "Bilateral cleft lip",
+            "micaCurie": "HP:0000177",
+            "micaLabel": "Abnormal upper lip morphology",
+            "score": 2.168500176007602,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:199302"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000414",
+            "patientPhenotypeLabel": "Bulbous nose",
+            "diseasePhenotypeCurie": "HP:0005105",
+            "diseasePhenotypeLabel": "Abnormal nasal morphology",
+            "micaCurie": "HP:0005105",
+            "micaLabel": "Abnormal nasal morphology",
+            "score": 1.7572752688148046,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:141291"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001155",
+            "patientPhenotypeLabel": "Abnormality of the hand",
+            "diseasePhenotypeCurie": "HP:0001171",
+            "diseasePhenotypeLabel": "Split hand",
+            "micaCurie": "HP:0001155",
+            "micaLabel": "Abnormality of the hand",
+            "score": 1.5738282194991153,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1300"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0012758",
+            "micaLabel": "Neurodevelopmental delay",
+            "score": 1.1961162706965762,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:199306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001249",
+            "patientPhenotypeLabel": "Intellectual disability",
+            "diseasePhenotypeCurie": "HP:0001328",
+            "diseasePhenotypeLabel": "Specific learning disability",
+            "micaCurie": "HP:0012759",
+            "micaLabel": "Neurodevelopmental abnormality",
+            "score": 0.9688179084505344,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1300"
+          }
+        ]
+      },
+      {
+        "rank": 21,
+        "geneCurie": "NCBIGene:26855",
+        "geneLabel": "RNU2-2",
+        "geneSymbol": "RNU2-2",
+        "geneEntityId": 151527,
+        "bmaScore": 1.631791747051353,
+        "normalizedScore": 0.180168,
+        "patientAverageScore": 2.4239053267063886,
+        "phenotypeAverageScore": 0.8396781673963174,
+        "directPhenotypeCount": 183,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001572",
+            "patientPhenotypeLabel": "Macrodontia",
+            "diseasePhenotypeCurie": "HP:0001572",
+            "diseasePhenotypeLabel": "Macrodontia",
+            "micaCurie": "HP:0001572",
+            "micaLabel": "Macrodontia",
+            "score": 5.65587525391081,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:621304"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000343",
+            "patientPhenotypeLabel": "Long philtrum",
+            "diseasePhenotypeCurie": "HP:0000343",
+            "diseasePhenotypeLabel": "Long philtrum",
+            "micaCurie": "HP:0000343",
+            "micaLabel": "Long philtrum",
+            "score": 3.1381787812998185,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:621304"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000414",
+            "patientPhenotypeLabel": "Bulbous nose",
+            "diseasePhenotypeCurie": "HP:0000463",
+            "diseasePhenotypeLabel": "Anteverted nares",
+            "micaCurie": "HP:0010938",
+            "micaLabel": "Abnormal external nose morphology",
+            "score": 2.2524581155103416,
+            "evidenceCode": "3/3",
+            "referenceText": "OMIM:621304"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011968",
+            "patientPhenotypeLabel": "Feeding difficulties",
+            "diseasePhenotypeCurie": "HP:0011968",
+            "diseasePhenotypeLabel": "Feeding difficulties",
+            "micaCurie": "HP:0011968",
+            "micaLabel": "Feeding difficulties",
+            "score": 2.2218880494256634,
+            "evidenceCode": "3/11",
+            "referenceText": "OMIM:621304"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0001344",
+            "diseasePhenotypeLabel": "Absent speech",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "16/19",
+            "referenceText": "OMIM:621304"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0000601",
+            "diseasePhenotypeLabel": "Hypotelorism",
+            "micaCurie": "HP:0100886",
+            "micaLabel": "Abnormality of globe location",
+            "score": 2.0512836163194628,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:621304"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001155",
+            "patientPhenotypeLabel": "Abnormality of the hand",
+            "diseasePhenotypeCurie": "HP:0200055",
+            "diseasePhenotypeLabel": "Small hand",
+            "micaCurie": "HP:0001155",
+            "micaLabel": "Abnormality of the hand",
+            "score": 1.5738282194991153,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:621304"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0011344",
+            "diseasePhenotypeLabel": "Severe global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "4/4",
+            "referenceText": "OMIM:621304"
+          }
+        ]
+      },
+      {
+        "rank": 22,
+        "geneCurie": "NCBIGene:23394",
+        "geneLabel": "ADNP",
+        "geneSymbol": "ADNP",
+        "geneEntityId": 151362,
+        "bmaScore": 1.629419478361649,
+        "normalizedScore": 0.179906,
+        "patientAverageScore": 2.3322751212556314,
+        "phenotypeAverageScore": 0.9265638354676663,
+        "directPhenotypeCount": 168,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001572",
+            "patientPhenotypeLabel": "Macrodontia",
+            "diseasePhenotypeCurie": "HP:0000691",
+            "diseasePhenotypeLabel": "Microdontia",
+            "micaCurie": "HP:0006482",
+            "micaLabel": "Abnormal dental morphology",
+            "score": 3.6277270066185245,
+            "evidenceCode": "1/10",
+            "referenceText": "OMIM:615873"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000343",
+            "patientPhenotypeLabel": "Long philtrum",
+            "diseasePhenotypeCurie": "HP:0000343",
+            "diseasePhenotypeLabel": "Long philtrum",
+            "micaCurie": "HP:0000343",
+            "micaLabel": "Long philtrum",
+            "score": 3.1381787812998185,
+            "evidenceCode": "22/56",
+            "referenceText": "OMIM:615873"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000414",
+            "patientPhenotypeLabel": "Bulbous nose",
+            "diseasePhenotypeCurie": "HP:0000455",
+            "diseasePhenotypeLabel": "Broad nasal tip",
+            "micaCurie": "HP:0000436",
+            "micaLabel": "Abnormal nasal tip morphology",
+            "score": 3.1221784399533776,
+            "evidenceCode": "15/57",
+            "referenceText": "OMIM:615873"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0000316",
+            "diseasePhenotypeLabel": "Hypertelorism",
+            "micaCurie": "HP:0000316",
+            "micaLabel": "Hypertelorism",
+            "score": 2.385039690111898,
+            "evidenceCode": "1/10",
+            "referenceText": "OMIM:615873"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011968",
+            "patientPhenotypeLabel": "Feeding difficulties",
+            "diseasePhenotypeCurie": "HP:0011968",
+            "diseasePhenotypeLabel": "Feeding difficulties",
+            "micaCurie": "HP:0011968",
+            "micaLabel": "Feeding difficulties",
+            "score": 2.2218880494256634,
+            "evidenceCode": "2/10",
+            "referenceText": "OMIM:615873"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0001344",
+            "diseasePhenotypeLabel": "Absent speech",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "1/10",
+            "referenceText": "OMIM:615873"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001155",
+            "patientPhenotypeLabel": "Abnormality of the hand",
+            "diseasePhenotypeCurie": "HP:0200055",
+            "diseasePhenotypeLabel": "Small hand",
+            "micaCurie": "HP:0001155",
+            "micaLabel": "Abnormality of the hand",
+            "score": 1.5738282194991153,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:615873"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0011344",
+            "diseasePhenotypeLabel": "Severe global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:404448"
+          }
+        ]
+      },
+      {
+        "rank": 23,
+        "geneCurie": "NCBIGene:9968",
+        "geneLabel": "MED12",
+        "geneSymbol": "MED12",
+        "geneEntityId": 150918,
+        "bmaScore": 1.6253419483966496,
+        "normalizedScore": 0.179456,
+        "patientAverageScore": 2.4046851731313645,
+        "phenotypeAverageScore": 0.8459987236619345,
+        "directPhenotypeCount": 264,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000414",
+            "patientPhenotypeLabel": "Bulbous nose",
+            "diseasePhenotypeCurie": "HP:0000414",
+            "diseasePhenotypeLabel": "Bulbous nose",
+            "micaCurie": "HP:0000414",
+            "micaLabel": "Bulbous nose",
+            "score": 3.7738689068349767,
+            "evidenceCode": "5/5",
+            "referenceText": "OMIM:300895"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001572",
+            "patientPhenotypeLabel": "Macrodontia",
+            "diseasePhenotypeCurie": "HP:0011090",
+            "diseasePhenotypeLabel": "Fused teeth",
+            "micaCurie": "HP:0006482",
+            "micaLabel": "Abnormal dental morphology",
+            "score": 3.6277270066185245,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:93932"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000343",
+            "patientPhenotypeLabel": "Long philtrum",
+            "diseasePhenotypeCurie": "HP:0000343",
+            "diseasePhenotypeLabel": "Long philtrum",
+            "micaCurie": "HP:0000343",
+            "micaLabel": "Long philtrum",
+            "score": 3.1381787812998185,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:300895"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0000316",
+            "diseasePhenotypeLabel": "Hypertelorism",
+            "micaCurie": "HP:0000316",
+            "micaLabel": "Hypertelorism",
+            "score": 2.385039690111898,
+            "evidenceCode": "4/6",
+            "referenceText": "OMIM:305450"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011968",
+            "patientPhenotypeLabel": "Feeding difficulties",
+            "diseasePhenotypeCurie": "HP:0011968",
+            "diseasePhenotypeLabel": "Feeding difficulties",
+            "micaCurie": "HP:0011968",
+            "micaLabel": "Feeding difficulties",
+            "score": 2.2218880494256634,
+            "evidenceCode": "4/5",
+            "referenceText": "OMIM:300895"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0001344",
+            "diseasePhenotypeLabel": "Absent speech",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "3/5",
+            "referenceText": "OMIM:300895"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001155",
+            "patientPhenotypeLabel": "Abnormality of the hand",
+            "diseasePhenotypeCurie": "HP:0100490",
+            "diseasePhenotypeLabel": "Camptodactyly of finger",
+            "micaCurie": "HP:0001155",
+            "micaLabel": "Abnormality of the hand",
+            "score": 1.5738282194991153,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:776"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:93932"
+          }
+        ]
+      },
+      {
+        "rank": 24,
+        "geneCurie": "NCBIGene:23135",
+        "geneLabel": "KDM6B",
+        "geneSymbol": "KDM6B",
+        "geneEntityId": 151297,
+        "bmaScore": 1.6245732846498444,
+        "normalizedScore": 0.179371,
+        "patientAverageScore": 2.4609893349055483,
+        "phenotypeAverageScore": 0.7881572343941408,
+        "directPhenotypeCount": 233,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001572",
+            "patientPhenotypeLabel": "Macrodontia",
+            "diseasePhenotypeCurie": "HP:0001572",
+            "diseasePhenotypeLabel": "Macrodontia",
+            "micaCurie": "HP:0001572",
+            "micaLabel": "Macrodontia",
+            "score": 5.65587525391081,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:618505"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000343",
+            "patientPhenotypeLabel": "Long philtrum",
+            "diseasePhenotypeCurie": "HP:0000343",
+            "diseasePhenotypeLabel": "Long philtrum",
+            "micaCurie": "HP:0000343",
+            "micaLabel": "Long philtrum",
+            "score": 3.1381787812998185,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:618505"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0000316",
+            "diseasePhenotypeLabel": "Hypertelorism",
+            "micaCurie": "HP:0000316",
+            "micaLabel": "Hypertelorism",
+            "score": 2.385039690111898,
+            "evidenceCode": "5/5",
+            "referenceText": "OMIM:618505"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000414",
+            "patientPhenotypeLabel": "Bulbous nose",
+            "diseasePhenotypeCurie": "HP:0000463",
+            "diseasePhenotypeLabel": "Anteverted nares",
+            "micaCurie": "HP:0010938",
+            "micaLabel": "Abnormal external nose morphology",
+            "score": 2.2524581155103416,
+            "evidenceCode": "4/4",
+            "referenceText": "OMIM:618505"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011968",
+            "patientPhenotypeLabel": "Feeding difficulties",
+            "diseasePhenotypeCurie": "HP:0011968",
+            "diseasePhenotypeLabel": "Feeding difficulties",
+            "micaCurie": "HP:0011968",
+            "micaLabel": "Feeding difficulties",
+            "score": 2.2218880494256634,
+            "evidenceCode": "6/6",
+            "referenceText": "OMIM:618505"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "72/77",
+            "referenceText": "OMIM:618505"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001155",
+            "patientPhenotypeLabel": "Abnormality of the hand",
+            "diseasePhenotypeCurie": "HP:0200055",
+            "diseasePhenotypeLabel": "Small hand",
+            "micaCurie": "HP:0001155",
+            "micaLabel": "Abnormality of the hand",
+            "score": 1.5738282194991153,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:618505"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "14/28",
+            "referenceText": "OMIM:618505"
+          }
+        ]
+      },
+      {
+        "rank": 25,
+        "geneCurie": "NCBIGene:8621",
+        "geneLabel": "CDK13",
+        "geneSymbol": "CDK13",
+        "geneEntityId": 150611,
+        "bmaScore": 1.6231520658131846,
+        "normalizedScore": 0.179214,
+        "patientAverageScore": 2.280091062568982,
+        "phenotypeAverageScore": 0.966213069057387,
+        "directPhenotypeCount": 67,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000414",
+            "patientPhenotypeLabel": "Bulbous nose",
+            "diseasePhenotypeCurie": "HP:0000414",
+            "diseasePhenotypeLabel": "Bulbous nose",
+            "micaCurie": "HP:0000414",
+            "micaLabel": "Bulbous nose",
+            "score": 3.7738689068349767,
+            "evidenceCode": "1/7",
+            "referenceText": "OMIM:617360"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001572",
+            "patientPhenotypeLabel": "Macrodontia",
+            "diseasePhenotypeCurie": "HP:0000691",
+            "diseasePhenotypeLabel": "Microdontia",
+            "micaCurie": "HP:0006482",
+            "micaLabel": "Abnormal dental morphology",
+            "score": 3.6277270066185245,
+            "evidenceCode": "1/7",
+            "referenceText": "OMIM:617360"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000343",
+            "patientPhenotypeLabel": "Long philtrum",
+            "diseasePhenotypeCurie": "HP:0000322",
+            "diseasePhenotypeLabel": "Short philtrum",
+            "micaCurie": "HP:0000288",
+            "micaLabel": "Abnormality of the philtrum",
+            "score": 2.530577776002175,
+            "evidenceCode": "1/7",
+            "referenceText": "OMIM:617360"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0000316",
+            "diseasePhenotypeLabel": "Hypertelorism",
+            "micaCurie": "HP:0000316",
+            "micaLabel": "Hypertelorism",
+            "score": 2.385039690111898,
+            "evidenceCode": "4/7",
+            "referenceText": "OMIM:617360"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011968",
+            "patientPhenotypeLabel": "Feeding difficulties",
+            "diseasePhenotypeCurie": "HP:0011968",
+            "diseasePhenotypeLabel": "Feeding difficulties",
+            "micaCurie": "HP:0011968",
+            "micaLabel": "Feeding difficulties",
+            "score": 2.2218880494256634,
+            "evidenceCode": "3/7",
+            "referenceText": "OMIM:617360"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "4/5",
+            "referenceText": "OMIM:617360"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "7/7",
+            "referenceText": "OMIM:617360"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001249",
+            "patientPhenotypeLabel": "Intellectual disability",
+            "diseasePhenotypeCurie": "HP:0001249",
+            "diseasePhenotypeLabel": "Intellectual disability",
+            "micaCurie": "HP:0001249",
+            "micaLabel": "Intellectual disability",
+            "score": 1.4054770617153647,
+            "evidenceCode": "5/5",
+            "referenceText": "OMIM:617360"
+          }
+        ]
+      }
+    ],
+    "engineSummary": {
+      "diseaseCount": 8579,
+      "geneCount": 5256,
+      "phenotypeCount": 19389,
+      "sourceMode": {
+        "disease": "relationship_fallback",
+        "gene": "relationship_fallback"
+      },
+      "generatedAt": "2026-03-15T21:00:39.457Z"
+    }
+  }
+}

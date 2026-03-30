@@ -1,0 +1,2092 @@
+{
+  "success": true,
+  "engine": "genovy-dx-sim",
+  "analysisType": "gene",
+  "input": {
+    "presentPhenotypeCuries": [
+      "HP:0002758",
+      "HP:0008419",
+      "HP:0000023",
+      "HP:0001537",
+      "HP:0000193",
+      "HP:0000977"
+    ],
+    "excludedPhenotypeCuries": [
+      "HP:0010886",
+      "HP:0002650",
+      "HP:0001382",
+      "HP:0005116",
+      "HP:0004942",
+      "HP:0001263",
+      "HP:0001363",
+      "HP:0000316",
+      "HP:0002619"
+    ],
+    "sourceFormat": "phenopacket"
+  },
+  "ranking": {
+    "queryPhenotypes": [
+      {
+        "phenotypeCurie": "HP:0002758",
+        "phenotypeLabel": "Osteoarthritis"
+      },
+      {
+        "phenotypeCurie": "HP:0008419",
+        "phenotypeLabel": "Intervertebral disk degeneration"
+      },
+      {
+        "phenotypeCurie": "HP:0000023",
+        "phenotypeLabel": "Inguinal hernia"
+      },
+      {
+        "phenotypeCurie": "HP:0001537",
+        "phenotypeLabel": "Umbilical hernia"
+      },
+      {
+        "phenotypeCurie": "HP:0000193",
+        "phenotypeLabel": "Bifid uvula"
+      },
+      {
+        "phenotypeCurie": "HP:0000977",
+        "phenotypeLabel": "Soft skin"
+      }
+    ],
+    "results": [
+      {
+        "rank": 1,
+        "geneCurie": "NCBIGene:4088",
+        "geneLabel": "SMAD3",
+        "geneSymbol": "SMAD3",
+        "geneEntityId": 149376,
+        "bmaScore": 2.877203193903376,
+        "normalizedScore": 0.317675,
+        "patientAverageScore": 4.878345361583536,
+        "phenotypeAverageScore": 0.8760610262232168,
+        "directPhenotypeCount": 118,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0008419",
+            "patientPhenotypeLabel": "Intervertebral disk degeneration",
+            "diseasePhenotypeCurie": "HP:0008419",
+            "diseasePhenotypeLabel": "Intervertebral disk degeneration",
+            "micaCurie": "HP:0008419",
+            "micaLabel": "Intervertebral disk degeneration",
+            "score": 7.670778274453075,
+            "evidenceCode": "94/128",
+            "referenceText": "OMIM:613795"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000977",
+            "patientPhenotypeLabel": "Soft skin",
+            "diseasePhenotypeCurie": "HP:0000977",
+            "diseasePhenotypeLabel": "Soft skin",
+            "micaCurie": "HP:0000977",
+            "micaLabel": "Soft skin",
+            "score": 5.206925033862906,
+            "evidenceCode": "60/111",
+            "referenceText": "OMIM:613795"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002758",
+            "patientPhenotypeLabel": "Osteoarthritis",
+            "diseasePhenotypeCurie": "HP:0008843",
+            "diseasePhenotypeLabel": "Hip osteoarthritis",
+            "micaCurie": "HP:0002758",
+            "micaLabel": "Osteoarthritis",
+            "score": 4.913937909181432,
+            "evidenceCode": "4/26",
+            "referenceText": "OMIM:613795"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000193",
+            "patientPhenotypeLabel": "Bifid uvula",
+            "diseasePhenotypeCurie": "HP:0000193",
+            "diseasePhenotypeLabel": "Bifid uvula",
+            "micaCurie": "HP:0000193",
+            "micaLabel": "Bifid uvula",
+            "score": 4.205042371653348,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:284984"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001537",
+            "patientPhenotypeLabel": "Umbilical hernia",
+            "diseasePhenotypeCurie": "HP:0001537",
+            "diseasePhenotypeLabel": "Umbilical hernia",
+            "micaCurie": "HP:0001537",
+            "micaLabel": "Umbilical hernia",
+            "score": 3.8367168104946403,
+            "evidenceCode": "12/39",
+            "referenceText": "OMIM:613795"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000023",
+            "patientPhenotypeLabel": "Inguinal hernia",
+            "diseasePhenotypeCurie": "HP:0000023",
+            "diseasePhenotypeLabel": "Inguinal hernia",
+            "micaCurie": "HP:0000023",
+            "micaLabel": "Inguinal hernia",
+            "score": 3.436671769855815,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:284984"
+          }
+        ]
+      },
+      {
+        "rank": 2,
+        "geneCurie": "NCBIGene:4087",
+        "geneLabel": "SMAD2",
+        "geneSymbol": "SMAD2",
+        "geneEntityId": 149375,
+        "bmaScore": 2.79062003405886,
+        "normalizedScore": 0.308115,
+        "patientAverageScore": 4.878345361583536,
+        "phenotypeAverageScore": 0.7028947065341835,
+        "directPhenotypeCount": 148,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0008419",
+            "patientPhenotypeLabel": "Intervertebral disk degeneration",
+            "diseasePhenotypeCurie": "HP:0008419",
+            "diseasePhenotypeLabel": "Intervertebral disk degeneration",
+            "micaCurie": "HP:0008419",
+            "micaLabel": "Intervertebral disk degeneration",
+            "score": 7.670778274453075,
+            "evidenceCode": "3/4",
+            "referenceText": "OMIM:619656"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000977",
+            "patientPhenotypeLabel": "Soft skin",
+            "diseasePhenotypeCurie": "HP:0000977",
+            "diseasePhenotypeLabel": "Soft skin",
+            "micaCurie": "HP:0000977",
+            "micaLabel": "Soft skin",
+            "score": 5.206925033862906,
+            "evidenceCode": "0/4",
+            "referenceText": "OMIM:619656"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002758",
+            "patientPhenotypeLabel": "Osteoarthritis",
+            "diseasePhenotypeCurie": "HP:0008843",
+            "diseasePhenotypeLabel": "Hip osteoarthritis",
+            "micaCurie": "HP:0002758",
+            "micaLabel": "Osteoarthritis",
+            "score": 4.913937909181432,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:619656"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000193",
+            "patientPhenotypeLabel": "Bifid uvula",
+            "diseasePhenotypeCurie": "HP:0000193",
+            "diseasePhenotypeLabel": "Bifid uvula",
+            "micaCurie": "HP:0000193",
+            "micaLabel": "Bifid uvula",
+            "score": 4.205042371653348,
+            "evidenceCode": "1/14",
+            "referenceText": "OMIM:619656"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001537",
+            "patientPhenotypeLabel": "Umbilical hernia",
+            "diseasePhenotypeCurie": "HP:0001537",
+            "diseasePhenotypeLabel": "Umbilical hernia",
+            "micaCurie": "HP:0001537",
+            "micaLabel": "Umbilical hernia",
+            "score": 3.8367168104946403,
+            "evidenceCode": "2/4",
+            "referenceText": "OMIM:619656"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000023",
+            "patientPhenotypeLabel": "Inguinal hernia",
+            "diseasePhenotypeCurie": "HP:0000023",
+            "diseasePhenotypeLabel": "Inguinal hernia",
+            "micaCurie": "HP:0000023",
+            "micaLabel": "Inguinal hernia",
+            "score": 3.436671769855815,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:91387"
+          }
+        ]
+      },
+      {
+        "rank": 3,
+        "geneCurie": "NCBIGene:165",
+        "geneLabel": "AEBP1",
+        "geneSymbol": "AEBP1",
+        "geneEntityId": 148129,
+        "bmaScore": 2.525400854955452,
+        "normalizedScore": 0.278832,
+        "patientAverageScore": 3.8703415267706602,
+        "phenotypeAverageScore": 1.1804601831402441,
+        "directPhenotypeCount": 95,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000977",
+            "patientPhenotypeLabel": "Soft skin",
+            "diseasePhenotypeCurie": "HP:0001027",
+            "diseasePhenotypeLabel": "Soft, doughy skin",
+            "micaCurie": "HP:0000977",
+            "micaLabel": "Soft skin",
+            "score": 5.206925033862906,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:618000"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002758",
+            "patientPhenotypeLabel": "Osteoarthritis",
+            "diseasePhenotypeCurie": "HP:0002758",
+            "diseasePhenotypeLabel": "Osteoarthritis",
+            "micaCurie": "HP:0002758",
+            "micaLabel": "Osteoarthritis",
+            "score": 4.913937909181432,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:618000"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000193",
+            "patientPhenotypeLabel": "Bifid uvula",
+            "diseasePhenotypeCurie": "HP:0010810",
+            "diseasePhenotypeLabel": "Long uvula",
+            "micaCurie": "HP:0000172",
+            "micaLabel": "Abnormal uvula morphology",
+            "score": 4.108312745194797,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:618000"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001537",
+            "patientPhenotypeLabel": "Umbilical hernia",
+            "diseasePhenotypeCurie": "HP:0001537",
+            "diseasePhenotypeLabel": "Umbilical hernia",
+            "micaCurie": "HP:0001537",
+            "micaLabel": "Umbilical hernia",
+            "score": 3.8367168104946403,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:536532"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000023",
+            "patientPhenotypeLabel": "Inguinal hernia",
+            "diseasePhenotypeCurie": "HP:0000023",
+            "diseasePhenotypeLabel": "Inguinal hernia",
+            "micaCurie": "HP:0000023",
+            "micaLabel": "Inguinal hernia",
+            "score": 3.436671769855815,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:536532"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008419",
+            "patientPhenotypeLabel": "Intervertebral disk degeneration",
+            "diseasePhenotypeCurie": "HP:0030871",
+            "diseasePhenotypeLabel": "Facet joint arthrosis",
+            "micaCurie": "HP:0000925",
+            "micaLabel": "Abnormality of the vertebral column",
+            "score": 1.7194848920343693,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:618000"
+          }
+        ]
+      },
+      {
+        "rank": 4,
+        "geneCurie": "NCBIGene:1280",
+        "geneLabel": "COL2A1",
+        "geneSymbol": "COL2A1",
+        "geneEntityId": 148489,
+        "bmaScore": 2.4299322478513377,
+        "normalizedScore": 0.268291,
+        "patientAverageScore": 3.9494643639623974,
+        "phenotypeAverageScore": 0.9104001317402779,
+        "directPhenotypeCount": 360,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0008419",
+            "patientPhenotypeLabel": "Intervertebral disk degeneration",
+            "diseasePhenotypeCurie": "HP:0002945",
+            "diseasePhenotypeLabel": "Intervertebral space narrowing",
+            "micaCurie": "HP:0005108",
+            "micaLabel": "Abnormal intervertebral disk morphology",
+            "score": 5.838196810704765,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:609162"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002758",
+            "patientPhenotypeLabel": "Osteoarthritis",
+            "diseasePhenotypeCurie": "HP:0008843",
+            "diseasePhenotypeLabel": "Hip osteoarthritis",
+            "micaCurie": "HP:0002758",
+            "micaLabel": "Osteoarthritis",
+            "score": 4.913937909181432,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:86820"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000193",
+            "patientPhenotypeLabel": "Bifid uvula",
+            "diseasePhenotypeCurie": "HP:0000193",
+            "diseasePhenotypeLabel": "Bifid uvula",
+            "micaCurie": "HP:0000193",
+            "micaLabel": "Bifid uvula",
+            "score": 4.205042371653348,
+            "evidenceCode": "11/47",
+            "referenceText": "OMIM:108300"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001537",
+            "patientPhenotypeLabel": "Umbilical hernia",
+            "diseasePhenotypeCurie": "HP:0001537",
+            "diseasePhenotypeLabel": "Umbilical hernia",
+            "micaCurie": "HP:0001537",
+            "micaLabel": "Umbilical hernia",
+            "score": 3.8367168104946403,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:156550"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000023",
+            "patientPhenotypeLabel": "Inguinal hernia",
+            "diseasePhenotypeCurie": "HP:0000023",
+            "diseasePhenotypeLabel": "Inguinal hernia",
+            "micaCurie": "HP:0000023",
+            "micaLabel": "Inguinal hernia",
+            "score": 3.436671769855815,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:184250"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000977",
+            "patientPhenotypeLabel": "Soft skin",
+            "diseasePhenotypeCurie": "HP:0200041",
+            "diseasePhenotypeLabel": "Skin erosion",
+            "micaCurie": "HP:0011121",
+            "micaLabel": "Abnormal skin morphology",
+            "score": 1.4662205118843843,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:85198"
+          }
+        ]
+      },
+      {
+        "rank": 5,
+        "geneCurie": "NCBIGene:1836",
+        "geneLabel": "SLC26A2",
+        "geneSymbol": "SLC26A2",
+        "geneEntityId": 148702,
+        "bmaScore": 2.4214647608820252,
+        "normalizedScore": 0.267356,
+        "patientAverageScore": 3.9695460304180714,
+        "phenotypeAverageScore": 0.8733834913459786,
+        "directPhenotypeCount": 202,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0008419",
+            "patientPhenotypeLabel": "Intervertebral disk degeneration",
+            "diseasePhenotypeCurie": "HP:0030320",
+            "diseasePhenotypeLabel": "Increased intervertebral space",
+            "micaCurie": "HP:0005108",
+            "micaLabel": "Abnormal intervertebral disk morphology",
+            "score": 5.838196810704765,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:256050"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002758",
+            "patientPhenotypeLabel": "Osteoarthritis",
+            "diseasePhenotypeCurie": "HP:0003088",
+            "diseasePhenotypeLabel": "Premature osteoarthritis",
+            "micaCurie": "HP:0002758",
+            "micaLabel": "Osteoarthritis",
+            "score": 4.913937909181432,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:93307"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001537",
+            "patientPhenotypeLabel": "Umbilical hernia",
+            "diseasePhenotypeCurie": "HP:0001537",
+            "diseasePhenotypeLabel": "Umbilical hernia",
+            "micaCurie": "HP:0001537",
+            "micaLabel": "Umbilical hernia",
+            "score": 3.8367168104946403,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:600972"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000977",
+            "patientPhenotypeLabel": "Soft skin",
+            "diseasePhenotypeCurie": "HP:0000974",
+            "diseasePhenotypeLabel": "Hyperextensible skin",
+            "micaCurie": "HP:0010647",
+            "micaLabel": "Abnormal elasticity of skin",
+            "score": 3.763767810848473,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:628"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000023",
+            "patientPhenotypeLabel": "Inguinal hernia",
+            "diseasePhenotypeCurie": "HP:0000023",
+            "diseasePhenotypeLabel": "Inguinal hernia",
+            "micaCurie": "HP:0000023",
+            "micaLabel": "Inguinal hernia",
+            "score": 3.436671769855815,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:600972"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000193",
+            "patientPhenotypeLabel": "Bifid uvula",
+            "diseasePhenotypeCurie": "HP:0100337",
+            "diseasePhenotypeLabel": "Bilateral cleft palate",
+            "micaCurie": "HP:0000174",
+            "micaLabel": "Abnormal palate morphology",
+            "score": 2.0279850714233034,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:56304"
+          }
+        ]
+      },
+      {
+        "rank": 6,
+        "geneCurie": "NCBIGene:4000",
+        "geneLabel": "LMNA",
+        "geneSymbol": "LMNA",
+        "geneEntityId": 149345,
+        "bmaScore": 2.4025407378850194,
+        "normalizedScore": 0.265267,
+        "patientAverageScore": 4.195372136483639,
+        "phenotypeAverageScore": 0.6097093392863991,
+        "directPhenotypeCount": 520,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0008419",
+            "patientPhenotypeLabel": "Intervertebral disk degeneration",
+            "diseasePhenotypeCurie": "HP:0008419",
+            "diseasePhenotypeLabel": "Intervertebral disk degeneration",
+            "micaCurie": "HP:0008419",
+            "micaLabel": "Intervertebral disk degeneration",
+            "score": 7.670778274453075,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:79474"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002758",
+            "patientPhenotypeLabel": "Osteoarthritis",
+            "diseasePhenotypeCurie": "HP:0002758",
+            "diseasePhenotypeLabel": "Osteoarthritis",
+            "micaCurie": "HP:0002758",
+            "micaLabel": "Osteoarthritis",
+            "score": 4.913937909181432,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:740"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001537",
+            "patientPhenotypeLabel": "Umbilical hernia",
+            "diseasePhenotypeCurie": "HP:0001544",
+            "diseasePhenotypeLabel": "Prominent umbilicus",
+            "micaCurie": "HP:0001551",
+            "micaLabel": "Abnormal umbilicus morphology",
+            "score": 3.8047992075263353,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:740"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000977",
+            "patientPhenotypeLabel": "Soft skin",
+            "diseasePhenotypeCurie": "HP:0100679",
+            "diseasePhenotypeLabel": "Lack of skin elasticity",
+            "micaCurie": "HP:0010647",
+            "micaLabel": "Abnormal elasticity of skin",
+            "score": 3.763767810848473,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:79474"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000023",
+            "patientPhenotypeLabel": "Inguinal hernia",
+            "diseasePhenotypeCurie": "HP:0001544",
+            "diseasePhenotypeLabel": "Prominent umbilicus",
+            "micaCurie": "HP:0004298",
+            "micaLabel": "Abnormal abdominal wall morphology",
+            "score": 2.9909645454692173,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:740"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000193",
+            "patientPhenotypeLabel": "Bifid uvula",
+            "diseasePhenotypeCurie": "HP:0000218",
+            "diseasePhenotypeLabel": "High palate",
+            "micaCurie": "HP:0000174",
+            "micaLabel": "Abnormal palate morphology",
+            "score": 2.0279850714233034,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:740"
+          }
+        ]
+      },
+      {
+        "rank": 7,
+        "geneCurie": "NCBIGene:6885",
+        "geneLabel": "MAP3K7",
+        "geneSymbol": "MAP3K7",
+        "geneEntityId": 150240,
+        "bmaScore": 2.3295036776368203,
+        "normalizedScore": 0.257203,
+        "patientAverageScore": 3.8244130396973244,
+        "phenotypeAverageScore": 0.8345943155763159,
+        "directPhenotypeCount": 154,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0008419",
+            "patientPhenotypeLabel": "Intervertebral disk degeneration",
+            "diseasePhenotypeCurie": "HP:0008441",
+            "diseasePhenotypeLabel": "Herniation of intervertebral nuclei",
+            "micaCurie": "HP:0005108",
+            "micaLabel": "Abnormal intervertebral disk morphology",
+            "score": 5.838196810704765,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:157800"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000977",
+            "patientPhenotypeLabel": "Soft skin",
+            "diseasePhenotypeCurie": "HP:0000977",
+            "diseasePhenotypeLabel": "Soft skin",
+            "micaCurie": "HP:0000977",
+            "micaLabel": "Soft skin",
+            "score": 5.206925033862906,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:157800"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000193",
+            "patientPhenotypeLabel": "Bifid uvula",
+            "diseasePhenotypeCurie": "HP:0000193",
+            "diseasePhenotypeLabel": "Bifid uvula",
+            "micaCurie": "HP:0000193",
+            "micaLabel": "Bifid uvula",
+            "score": 4.205042371653348,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1826"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000023",
+            "patientPhenotypeLabel": "Inguinal hernia",
+            "diseasePhenotypeCurie": "HP:0000776",
+            "diseasePhenotypeLabel": "Congenital diaphragmatic hernia",
+            "micaCurie": "HP:0100790",
+            "micaLabel": "Hernia",
+            "score": 2.8688085124903755,
+            "evidenceCode": "1/6",
+            "referenceText": "OMIM:157800"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001537",
+            "patientPhenotypeLabel": "Umbilical hernia",
+            "diseasePhenotypeCurie": "HP:0000776",
+            "diseasePhenotypeLabel": "Congenital diaphragmatic hernia",
+            "micaCurie": "HP:0100790",
+            "micaLabel": "Hernia",
+            "score": 2.8688085124903755,
+            "evidenceCode": "1/6",
+            "referenceText": "OMIM:157800"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002758",
+            "patientPhenotypeLabel": "Osteoarthritis",
+            "diseasePhenotypeCurie": "HP:0100490",
+            "diseasePhenotypeLabel": "Camptodactyly of finger",
+            "micaCurie": "HP:0001367",
+            "micaLabel": "Abnormal joint morphology",
+            "score": 1.9586969969821784,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:1826"
+          }
+        ]
+      },
+      {
+        "rank": 8,
+        "geneCurie": "NCBIGene:6899",
+        "geneLabel": "TBX1",
+        "geneSymbol": "TBX1",
+        "geneEntityId": 150249,
+        "bmaScore": 2.3230665484127853,
+        "normalizedScore": 0.256492,
+        "patientAverageScore": 4.095439324348338,
+        "phenotypeAverageScore": 0.5506937724772321,
+        "directPhenotypeCount": 218,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0008419",
+            "patientPhenotypeLabel": "Intervertebral disk degeneration",
+            "diseasePhenotypeCurie": "HP:0008419",
+            "diseasePhenotypeLabel": "Intervertebral disk degeneration",
+            "micaCurie": "HP:0008419",
+            "micaLabel": "Intervertebral disk degeneration",
+            "score": 7.670778274453075,
+            "evidenceCode": "6/78",
+            "referenceText": "OMIM:188400"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000193",
+            "patientPhenotypeLabel": "Bifid uvula",
+            "diseasePhenotypeCurie": "HP:0000193",
+            "diseasePhenotypeLabel": "Bifid uvula",
+            "micaCurie": "HP:0000193",
+            "micaLabel": "Bifid uvula",
+            "score": 4.205042371653348,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:188400"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002758",
+            "patientPhenotypeLabel": "Osteoarthritis",
+            "diseasePhenotypeCurie": "HP:0001369",
+            "diseasePhenotypeLabel": "Arthritis",
+            "micaCurie": "HP:0001369",
+            "micaLabel": "Arthritis",
+            "score": 3.957206207748767,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:567"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001537",
+            "patientPhenotypeLabel": "Umbilical hernia",
+            "diseasePhenotypeCurie": "HP:0001537",
+            "diseasePhenotypeLabel": "Umbilical hernia",
+            "micaCurie": "HP:0001537",
+            "micaLabel": "Umbilical hernia",
+            "score": 3.8367168104946403,
+            "evidenceCode": "2/38",
+            "referenceText": "OMIM:192430"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000023",
+            "patientPhenotypeLabel": "Inguinal hernia",
+            "diseasePhenotypeCurie": "HP:0000023",
+            "diseasePhenotypeLabel": "Inguinal hernia",
+            "micaCurie": "HP:0000023",
+            "micaLabel": "Inguinal hernia",
+            "score": 3.436671769855815,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:567"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000977",
+            "patientPhenotypeLabel": "Soft skin",
+            "diseasePhenotypeCurie": "HP:0004467",
+            "diseasePhenotypeLabel": "Preauricular pit",
+            "micaCurie": "HP:0011121",
+            "micaLabel": "Abnormal skin morphology",
+            "score": 1.4662205118843843,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:187500"
+          }
+        ]
+      },
+      {
+        "rank": 9,
+        "geneCurie": "NCBIGene:1290",
+        "geneLabel": "COL5A2",
+        "geneSymbol": "COL5A2",
+        "geneEntityId": 148498,
+        "bmaScore": 2.3185004010571744,
+        "normalizedScore": 0.255988,
+        "patientAverageScore": 3.40315061965392,
+        "phenotypeAverageScore": 1.2338501824604287,
+        "directPhenotypeCount": 74,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000977",
+            "patientPhenotypeLabel": "Soft skin",
+            "diseasePhenotypeCurie": "HP:0001027",
+            "diseasePhenotypeLabel": "Soft, doughy skin",
+            "micaCurie": "HP:0000977",
+            "micaLabel": "Soft skin",
+            "score": 5.206925033862906,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:287"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002758",
+            "patientPhenotypeLabel": "Osteoarthritis",
+            "diseasePhenotypeCurie": "HP:0002758",
+            "diseasePhenotypeLabel": "Osteoarthritis",
+            "micaCurie": "HP:0002758",
+            "micaLabel": "Osteoarthritis",
+            "score": 4.913937909181432,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:287"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001537",
+            "patientPhenotypeLabel": "Umbilical hernia",
+            "diseasePhenotypeCurie": "HP:0001537",
+            "diseasePhenotypeLabel": "Umbilical hernia",
+            "micaCurie": "HP:0001537",
+            "micaLabel": "Umbilical hernia",
+            "score": 3.8367168104946403,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:287"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000023",
+            "patientPhenotypeLabel": "Inguinal hernia",
+            "diseasePhenotypeCurie": "HP:0000023",
+            "diseasePhenotypeLabel": "Inguinal hernia",
+            "micaCurie": "HP:0000023",
+            "micaLabel": "Inguinal hernia",
+            "score": 3.436671769855815,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:287"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008419",
+            "patientPhenotypeLabel": "Intervertebral disk degeneration",
+            "diseasePhenotypeCurie": "HP:0002650",
+            "diseasePhenotypeLabel": "Scoliosis",
+            "micaCurie": "HP:0000925",
+            "micaLabel": "Abnormality of the vertebral column",
+            "score": 1.7194848920343693,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:287"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000193",
+            "patientPhenotypeLabel": "Bifid uvula",
+            "diseasePhenotypeCurie": "HP:0003771",
+            "diseasePhenotypeLabel": "Pulp calcification",
+            "micaCurie": "HP:0000163",
+            "micaLabel": "Abnormal oral cavity morphology",
+            "score": 1.3051673024943553,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:287"
+          }
+        ]
+      },
+      {
+        "rank": 10,
+        "geneCurie": "NCBIGene:11117",
+        "geneLabel": "EMILIN1",
+        "geneSymbol": "EMILIN1",
+        "geneEntityId": 151172,
+        "bmaScore": 2.2723704285961586,
+        "normalizedScore": 0.250895,
+        "patientAverageScore": 3.8864631311804185,
+        "phenotypeAverageScore": 0.6582777260118984,
+        "directPhenotypeCount": 132,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000977",
+            "patientPhenotypeLabel": "Soft skin",
+            "diseasePhenotypeCurie": "HP:0000977",
+            "diseasePhenotypeLabel": "Soft skin",
+            "micaCurie": "HP:0000977",
+            "micaLabel": "Soft skin",
+            "score": 5.206925033862906,
+            "evidenceCode": "3/5",
+            "referenceText": "OMIM:620908"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002758",
+            "patientPhenotypeLabel": "Osteoarthritis",
+            "diseasePhenotypeCurie": "HP:0002758",
+            "diseasePhenotypeLabel": "Osteoarthritis",
+            "micaCurie": "HP:0002758",
+            "micaLabel": "Osteoarthritis",
+            "score": 4.913937909181432,
+            "evidenceCode": "1/3",
+            "referenceText": "OMIM:620080"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000193",
+            "patientPhenotypeLabel": "Bifid uvula",
+            "diseasePhenotypeCurie": "HP:0000193",
+            "diseasePhenotypeLabel": "Bifid uvula",
+            "micaCurie": "HP:0000193",
+            "micaLabel": "Bifid uvula",
+            "score": 4.205042371653348,
+            "evidenceCode": "0/5",
+            "referenceText": "OMIM:620908"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001537",
+            "patientPhenotypeLabel": "Umbilical hernia",
+            "diseasePhenotypeCurie": "HP:0001537",
+            "diseasePhenotypeLabel": "Umbilical hernia",
+            "micaCurie": "HP:0001537",
+            "micaLabel": "Umbilical hernia",
+            "score": 3.8367168104946403,
+            "evidenceCode": "0/6",
+            "referenceText": "OMIM:620908"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000023",
+            "patientPhenotypeLabel": "Inguinal hernia",
+            "diseasePhenotypeCurie": "HP:0000023",
+            "diseasePhenotypeLabel": "Inguinal hernia",
+            "micaCurie": "HP:0000023",
+            "micaLabel": "Inguinal hernia",
+            "score": 3.436671769855815,
+            "evidenceCode": "1/6",
+            "referenceText": "OMIM:620908"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008419",
+            "patientPhenotypeLabel": "Intervertebral disk degeneration",
+            "diseasePhenotypeCurie": "HP:0002650",
+            "diseasePhenotypeLabel": "Scoliosis",
+            "micaCurie": "HP:0000925",
+            "micaLabel": "Abnormality of the vertebral column",
+            "score": 1.7194848920343693,
+            "evidenceCode": "0/6",
+            "referenceText": "OMIM:620908"
+          }
+        ]
+      },
+      {
+        "rank": 11,
+        "geneCurie": "NCBIGene:1289",
+        "geneLabel": "COL5A1",
+        "geneSymbol": "COL5A1",
+        "geneEntityId": 148497,
+        "bmaScore": 2.272092359927793,
+        "normalizedScore": 0.250864,
+        "patientAverageScore": 3.523620247808745,
+        "phenotypeAverageScore": 1.0205644720468416,
+        "directPhenotypeCount": 106,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000977",
+            "patientPhenotypeLabel": "Soft skin",
+            "diseasePhenotypeCurie": "HP:0001027",
+            "diseasePhenotypeLabel": "Soft, doughy skin",
+            "micaCurie": "HP:0000977",
+            "micaLabel": "Soft skin",
+            "score": 5.206925033862906,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:287"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002758",
+            "patientPhenotypeLabel": "Osteoarthritis",
+            "diseasePhenotypeCurie": "HP:0002758",
+            "diseasePhenotypeLabel": "Osteoarthritis",
+            "micaCurie": "HP:0002758",
+            "micaLabel": "Osteoarthritis",
+            "score": 4.913937909181432,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:287"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001537",
+            "patientPhenotypeLabel": "Umbilical hernia",
+            "diseasePhenotypeCurie": "HP:0001537",
+            "diseasePhenotypeLabel": "Umbilical hernia",
+            "micaCurie": "HP:0001537",
+            "micaLabel": "Umbilical hernia",
+            "score": 3.8367168104946403,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:287"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000023",
+            "patientPhenotypeLabel": "Inguinal hernia",
+            "diseasePhenotypeCurie": "HP:0000023",
+            "diseasePhenotypeLabel": "Inguinal hernia",
+            "micaCurie": "HP:0000023",
+            "micaLabel": "Inguinal hernia",
+            "score": 3.436671769855815,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:287"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000193",
+            "patientPhenotypeLabel": "Bifid uvula",
+            "diseasePhenotypeCurie": "HP:0000218",
+            "diseasePhenotypeLabel": "High palate",
+            "micaCurie": "HP:0000174",
+            "micaLabel": "Abnormal palate morphology",
+            "score": 2.0279850714233034,
+            "evidenceCode": "1/6",
+            "referenceText": "OMIM:619329"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008419",
+            "patientPhenotypeLabel": "Intervertebral disk degeneration",
+            "diseasePhenotypeCurie": "HP:0002650",
+            "diseasePhenotypeLabel": "Scoliosis",
+            "micaCurie": "HP:0000925",
+            "micaLabel": "Abnormality of the vertebral column",
+            "score": 1.7194848920343693,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:287"
+          }
+        ]
+      },
+      {
+        "rank": 12,
+        "geneCurie": "NCBIGene:1277",
+        "geneLabel": "COL1A1",
+        "geneSymbol": "COL1A1",
+        "geneEntityId": 148487,
+        "bmaScore": 2.1748682781965636,
+        "normalizedScore": 0.240129,
+        "patientAverageScore": 3.40315061965392,
+        "phenotypeAverageScore": 0.9465859367392073,
+        "directPhenotypeCount": 186,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000977",
+            "patientPhenotypeLabel": "Soft skin",
+            "diseasePhenotypeCurie": "HP:0001027",
+            "diseasePhenotypeLabel": "Soft, doughy skin",
+            "micaCurie": "HP:0000977",
+            "micaLabel": "Soft skin",
+            "score": 5.206925033862906,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:130060"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002758",
+            "patientPhenotypeLabel": "Osteoarthritis",
+            "diseasePhenotypeCurie": "HP:0003088",
+            "diseasePhenotypeLabel": "Premature osteoarthritis",
+            "micaCurie": "HP:0002758",
+            "micaLabel": "Osteoarthritis",
+            "score": 4.913937909181432,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:130060"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001537",
+            "patientPhenotypeLabel": "Umbilical hernia",
+            "diseasePhenotypeCurie": "HP:0001537",
+            "diseasePhenotypeLabel": "Umbilical hernia",
+            "micaCurie": "HP:0001537",
+            "micaLabel": "Umbilical hernia",
+            "score": 3.8367168104946403,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:287"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000023",
+            "patientPhenotypeLabel": "Inguinal hernia",
+            "diseasePhenotypeCurie": "HP:0000023",
+            "diseasePhenotypeLabel": "Inguinal hernia",
+            "micaCurie": "HP:0000023",
+            "micaLabel": "Inguinal hernia",
+            "score": 3.436671769855815,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:619115"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008419",
+            "patientPhenotypeLabel": "Intervertebral disk degeneration",
+            "diseasePhenotypeCurie": "HP:6001053",
+            "diseasePhenotypeLabel": "Vertebra plana",
+            "micaCurie": "HP:0000925",
+            "micaLabel": "Abnormality of the vertebral column",
+            "score": 1.7194848920343693,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:166200"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000193",
+            "patientPhenotypeLabel": "Bifid uvula",
+            "diseasePhenotypeCurie": "HP:0003771",
+            "diseasePhenotypeLabel": "Pulp calcification",
+            "micaCurie": "HP:0000163",
+            "micaLabel": "Abnormal oral cavity morphology",
+            "score": 1.3051673024943553,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:287"
+          }
+        ]
+      },
+      {
+        "rank": 13,
+        "geneCurie": "NCBIGene:715",
+        "geneLabel": "C1R",
+        "geneSymbol": "C1R",
+        "geneEntityId": 148316,
+        "bmaScore": 2.165997880499898,
+        "normalizedScore": 0.23915,
+        "patientAverageScore": 2.9106104676207107,
+        "phenotypeAverageScore": 1.4213852933790854,
+        "directPhenotypeCount": 40,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000977",
+            "patientPhenotypeLabel": "Soft skin",
+            "diseasePhenotypeCurie": "HP:0000977",
+            "diseasePhenotypeLabel": "Soft skin",
+            "micaCurie": "HP:0000977",
+            "micaLabel": "Soft skin",
+            "score": 5.206925033862906,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:130080"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001537",
+            "patientPhenotypeLabel": "Umbilical hernia",
+            "diseasePhenotypeCurie": "HP:0001537",
+            "diseasePhenotypeLabel": "Umbilical hernia",
+            "micaCurie": "HP:0001537",
+            "micaLabel": "Umbilical hernia",
+            "score": 3.8367168104946403,
+            "evidenceCode": "2/20",
+            "referenceText": "OMIM:130080"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000023",
+            "patientPhenotypeLabel": "Inguinal hernia",
+            "diseasePhenotypeCurie": "HP:0000023",
+            "diseasePhenotypeLabel": "Inguinal hernia",
+            "micaCurie": "HP:0000023",
+            "micaLabel": "Inguinal hernia",
+            "score": 3.436671769855815,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:130080"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002758",
+            "patientPhenotypeLabel": "Osteoarthritis",
+            "diseasePhenotypeCurie": "HP:0001373",
+            "diseasePhenotypeLabel": "Joint dislocation",
+            "micaCurie": "HP:0001367",
+            "micaLabel": "Abnormal joint morphology",
+            "score": 1.9586969969821784,
+            "evidenceCode": "2/25",
+            "referenceText": "OMIM:130080"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008419",
+            "patientPhenotypeLabel": "Intervertebral disk degeneration",
+            "diseasePhenotypeCurie": "HP:0002650",
+            "diseasePhenotypeLabel": "Scoliosis",
+            "micaCurie": "HP:0000925",
+            "micaLabel": "Abnormality of the vertebral column",
+            "score": 1.7194848920343693,
+            "evidenceCode": "9/27",
+            "referenceText": "OMIM:130080"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000193",
+            "patientPhenotypeLabel": "Bifid uvula",
+            "diseasePhenotypeCurie": "HP:0410027",
+            "diseasePhenotypeLabel": "Alveolar bone loss around teeth",
+            "micaCurie": "HP:0000163",
+            "micaLabel": "Abnormal oral cavity morphology",
+            "score": 1.3051673024943553,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:130080"
+          }
+        ]
+      },
+      {
+        "rank": 14,
+        "geneCurie": "NCBIGene:81031",
+        "geneLabel": "SLC2A10",
+        "geneSymbol": "SLC2A10",
+        "geneEntityId": 152483,
+        "bmaScore": 2.140678080774591,
+        "normalizedScore": 0.236354,
+        "patientAverageScore": 3.3939229791472094,
+        "phenotypeAverageScore": 0.8874331824019726,
+        "directPhenotypeCount": 95,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000977",
+            "patientPhenotypeLabel": "Soft skin",
+            "diseasePhenotypeCurie": "HP:0001027",
+            "diseasePhenotypeLabel": "Soft, doughy skin",
+            "micaCurie": "HP:0000977",
+            "micaLabel": "Soft skin",
+            "score": 5.206925033862906,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:208050"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000193",
+            "patientPhenotypeLabel": "Bifid uvula",
+            "diseasePhenotypeCurie": "HP:0000193",
+            "diseasePhenotypeLabel": "Bifid uvula",
+            "micaCurie": "HP:0000193",
+            "micaLabel": "Bifid uvula",
+            "score": 4.205042371653348,
+            "evidenceCode": "0/14",
+            "referenceText": "OMIM:208050"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001537",
+            "patientPhenotypeLabel": "Umbilical hernia",
+            "diseasePhenotypeCurie": "HP:0001537",
+            "diseasePhenotypeLabel": "Umbilical hernia",
+            "micaCurie": "HP:0001537",
+            "micaLabel": "Umbilical hernia",
+            "score": 3.8367168104946403,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:208050"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000023",
+            "patientPhenotypeLabel": "Inguinal hernia",
+            "diseasePhenotypeCurie": "HP:0000023",
+            "diseasePhenotypeLabel": "Inguinal hernia",
+            "micaCurie": "HP:0000023",
+            "micaLabel": "Inguinal hernia",
+            "score": 3.436671769855815,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:3342"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002758",
+            "patientPhenotypeLabel": "Osteoarthritis",
+            "diseasePhenotypeCurie": "HP:0002827",
+            "diseasePhenotypeLabel": "Hip dislocation",
+            "micaCurie": "HP:0001367",
+            "micaLabel": "Abnormal joint morphology",
+            "score": 1.9586969969821784,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:3342"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008419",
+            "patientPhenotypeLabel": "Intervertebral disk degeneration",
+            "diseasePhenotypeCurie": "HP:0002650",
+            "diseasePhenotypeLabel": "Scoliosis",
+            "micaCurie": "HP:0000925",
+            "micaLabel": "Abnormality of the vertebral column",
+            "score": 1.7194848920343693,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:3342"
+          }
+        ]
+      },
+      {
+        "rank": 15,
+        "geneCurie": "NCBIGene:9469",
+        "geneLabel": "CHST3",
+        "geneSymbol": "CHST3",
+        "geneEntityId": 150806,
+        "bmaScore": 2.139802565297507,
+        "normalizedScore": 0.236258,
+        "patientAverageScore": 3.3447793232241168,
+        "phenotypeAverageScore": 0.9348258073708973,
+        "directPhenotypeCount": 148,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0008419",
+            "patientPhenotypeLabel": "Intervertebral disk degeneration",
+            "diseasePhenotypeCurie": "HP:0002945",
+            "diseasePhenotypeLabel": "Intervertebral space narrowing",
+            "micaCurie": "HP:0005108",
+            "micaLabel": "Abnormal intervertebral disk morphology",
+            "score": 5.838196810704765,
+            "evidenceCode": "9/9",
+            "referenceText": "OMIM:143095"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000977",
+            "patientPhenotypeLabel": "Soft skin",
+            "diseasePhenotypeCurie": "HP:0000974",
+            "diseasePhenotypeLabel": "Hyperextensible skin",
+            "micaCurie": "HP:0010647",
+            "micaLabel": "Abnormal elasticity of skin",
+            "score": 3.763767810848473,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "OMIM:245600"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000023",
+            "patientPhenotypeLabel": "Inguinal hernia",
+            "diseasePhenotypeCurie": "HP:0000023",
+            "diseasePhenotypeLabel": "Inguinal hernia",
+            "micaCurie": "HP:0000023",
+            "micaLabel": "Inguinal hernia",
+            "score": 3.436671769855815,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "OMIM:245600"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001537",
+            "patientPhenotypeLabel": "Umbilical hernia",
+            "diseasePhenotypeCurie": "HP:0000023",
+            "diseasePhenotypeLabel": "Inguinal hernia",
+            "micaCurie": "HP:0004299",
+            "micaLabel": "Hernia of the abdominal wall",
+            "score": 3.0433574795301634,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "OMIM:245600"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000193",
+            "patientPhenotypeLabel": "Bifid uvula",
+            "diseasePhenotypeCurie": "HP:0000218",
+            "diseasePhenotypeLabel": "High palate",
+            "micaCurie": "HP:0000174",
+            "micaLabel": "Abnormal palate morphology",
+            "score": 2.0279850714233034,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:143095"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002758",
+            "patientPhenotypeLabel": "Osteoarthritis",
+            "diseasePhenotypeCurie": "HP:0100490",
+            "diseasePhenotypeLabel": "Camptodactyly of finger",
+            "micaCurie": "HP:0001367",
+            "micaLabel": "Abnormal joint morphology",
+            "score": 1.9586969969821784,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:143095"
+          }
+        ]
+      },
+      {
+        "rank": 16,
+        "geneCurie": "NCBIGene:7043",
+        "geneLabel": "TGFB3",
+        "geneSymbol": "TGFB3",
+        "geneEntityId": 150295,
+        "bmaScore": 2.0899340137097737,
+        "normalizedScore": 0.230752,
+        "patientAverageScore": 3.5137103721839336,
+        "phenotypeAverageScore": 0.6661576552356138,
+        "directPhenotypeCount": 122,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002758",
+            "patientPhenotypeLabel": "Osteoarthritis",
+            "diseasePhenotypeCurie": "HP:0002758",
+            "diseasePhenotypeLabel": "Osteoarthritis",
+            "micaCurie": "HP:0002758",
+            "micaLabel": "Osteoarthritis",
+            "score": 4.913937909181432,
+            "evidenceCode": "2/43",
+            "referenceText": "OMIM:615582"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000193",
+            "patientPhenotypeLabel": "Bifid uvula",
+            "diseasePhenotypeCurie": "HP:0000193",
+            "diseasePhenotypeLabel": "Bifid uvula",
+            "micaCurie": "HP:0000193",
+            "micaLabel": "Bifid uvula",
+            "score": 4.205042371653348,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:60030"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000977",
+            "patientPhenotypeLabel": "Soft skin",
+            "diseasePhenotypeCurie": "HP:0001065",
+            "diseasePhenotypeLabel": "Striae distensae",
+            "micaCurie": "HP:0010647",
+            "micaLabel": "Abnormal elasticity of skin",
+            "score": 3.763767810848473,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:60030"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000023",
+            "patientPhenotypeLabel": "Inguinal hernia",
+            "diseasePhenotypeCurie": "HP:0000023",
+            "diseasePhenotypeLabel": "Inguinal hernia",
+            "micaCurie": "HP:0000023",
+            "micaLabel": "Inguinal hernia",
+            "score": 3.436671769855815,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:91387"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001537",
+            "patientPhenotypeLabel": "Umbilical hernia",
+            "diseasePhenotypeCurie": "HP:0000023",
+            "diseasePhenotypeLabel": "Inguinal hernia",
+            "micaCurie": "HP:0004299",
+            "micaLabel": "Hernia of the abdominal wall",
+            "score": 3.0433574795301634,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:91387"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008419",
+            "patientPhenotypeLabel": "Intervertebral disk degeneration",
+            "diseasePhenotypeCurie": "HP:0010646",
+            "diseasePhenotypeLabel": "Cervical spine instability",
+            "micaCurie": "HP:0000925",
+            "micaLabel": "Abnormality of the vertebral column",
+            "score": 1.7194848920343693,
+            "evidenceCode": "1/43",
+            "referenceText": "OMIM:615582"
+          }
+        ]
+      },
+      {
+        "rank": 17,
+        "geneCurie": "NCBIGene:2263",
+        "geneLabel": "FGFR2",
+        "geneSymbol": "FGFR2",
+        "geneEntityId": 148838,
+        "bmaScore": 2.0862783902987254,
+        "normalizedScore": 0.230348,
+        "patientAverageScore": 3.420929262051627,
+        "phenotypeAverageScore": 0.7516275185458238,
+        "directPhenotypeCount": 369,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000193",
+            "patientPhenotypeLabel": "Bifid uvula",
+            "diseasePhenotypeCurie": "HP:0000193",
+            "diseasePhenotypeLabel": "Bifid uvula",
+            "micaCurie": "HP:0000193",
+            "micaLabel": "Bifid uvula",
+            "score": 4.205042371653348,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:87"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002758",
+            "patientPhenotypeLabel": "Osteoarthritis",
+            "diseasePhenotypeCurie": "HP:0001369",
+            "diseasePhenotypeLabel": "Arthritis",
+            "micaCurie": "HP:0001369",
+            "micaLabel": "Arthritis",
+            "score": 3.957206207748767,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "ORPHA:2363"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001537",
+            "patientPhenotypeLabel": "Umbilical hernia",
+            "diseasePhenotypeCurie": "HP:0001537",
+            "diseasePhenotypeLabel": "Umbilical hernia",
+            "micaCurie": "HP:0001537",
+            "micaLabel": "Umbilical hernia",
+            "score": 3.8367168104946403,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1555"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000977",
+            "patientPhenotypeLabel": "Soft skin",
+            "diseasePhenotypeCurie": "HP:0007517",
+            "diseasePhenotypeLabel": "Palmoplantar cutis laxa",
+            "micaCurie": "HP:0010647",
+            "micaLabel": "Abnormal elasticity of skin",
+            "score": 3.763767810848473,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:123790"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000023",
+            "patientPhenotypeLabel": "Inguinal hernia",
+            "diseasePhenotypeCurie": "HP:0001537",
+            "diseasePhenotypeLabel": "Umbilical hernia",
+            "micaCurie": "HP:0004299",
+            "micaLabel": "Hernia of the abdominal wall",
+            "score": 3.0433574795301634,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1555"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008419",
+            "patientPhenotypeLabel": "Intervertebral disk degeneration",
+            "diseasePhenotypeCurie": "HP:6000807",
+            "diseasePhenotypeLabel": "Cervical C6/C7 vertebrae fusion",
+            "micaCurie": "HP:0000925",
+            "micaLabel": "Abnormality of the vertebral column",
+            "score": 1.7194848920343693,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:101200"
+          }
+        ]
+      },
+      {
+        "rank": 18,
+        "geneCurie": "NCBIGene:8036",
+        "geneLabel": "SHOC2",
+        "geneSymbol": "SHOC2",
+        "geneEntityId": 150508,
+        "bmaScore": 2.071578883170462,
+        "normalizedScore": 0.228725,
+        "patientAverageScore": 3.3447793232241168,
+        "phenotypeAverageScore": 0.7983784431168072,
+        "directPhenotypeCount": 80,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0008419",
+            "patientPhenotypeLabel": "Intervertebral disk degeneration",
+            "diseasePhenotypeCurie": "HP:0005108",
+            "diseasePhenotypeLabel": "Abnormal intervertebral disk morphology",
+            "micaCurie": "HP:0005108",
+            "micaLabel": "Abnormal intervertebral disk morphology",
+            "score": 5.838196810704765,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:2701"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000977",
+            "patientPhenotypeLabel": "Soft skin",
+            "diseasePhenotypeCurie": "HP:0000974",
+            "diseasePhenotypeLabel": "Hyperextensible skin",
+            "micaCurie": "HP:0010647",
+            "micaLabel": "Abnormal elasticity of skin",
+            "score": 3.763767810848473,
+            "evidenceCode": "5/8",
+            "referenceText": "OMIM:607721"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000023",
+            "patientPhenotypeLabel": "Inguinal hernia",
+            "diseasePhenotypeCurie": "HP:0000023",
+            "diseasePhenotypeLabel": "Inguinal hernia",
+            "micaCurie": "HP:0000023",
+            "micaLabel": "Inguinal hernia",
+            "score": 3.436671769855815,
+            "evidenceCode": "1/4",
+            "referenceText": "OMIM:607721"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001537",
+            "patientPhenotypeLabel": "Umbilical hernia",
+            "diseasePhenotypeCurie": "HP:0000023",
+            "diseasePhenotypeLabel": "Inguinal hernia",
+            "micaCurie": "HP:0004299",
+            "micaLabel": "Hernia of the abdominal wall",
+            "score": 3.0433574795301634,
+            "evidenceCode": "1/4",
+            "referenceText": "OMIM:607721"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000193",
+            "patientPhenotypeLabel": "Bifid uvula",
+            "diseasePhenotypeCurie": "HP:0000218",
+            "diseasePhenotypeLabel": "High palate",
+            "micaCurie": "HP:0000174",
+            "micaLabel": "Abnormal palate morphology",
+            "score": 2.0279850714233034,
+            "evidenceCode": "6/8",
+            "referenceText": "OMIM:607721"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002758",
+            "patientPhenotypeLabel": "Osteoarthritis",
+            "diseasePhenotypeCurie": "HP:0009811",
+            "diseasePhenotypeLabel": "Abnormality of the elbow",
+            "micaCurie": "HP:0001367",
+            "micaLabel": "Abnormal joint morphology",
+            "score": 1.9586969969821784,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:2701"
+          }
+        ]
+      },
+      {
+        "rank": 19,
+        "geneCurie": "NCBIGene:9509",
+        "geneLabel": "ADAMTS2",
+        "geneSymbol": "ADAMTS2",
+        "geneEntityId": 150815,
+        "bmaScore": 2.0519434535623065,
+        "normalizedScore": 0.226557,
+        "patientAverageScore": 2.9106104676207107,
+        "phenotypeAverageScore": 1.1932764395039024,
+        "directPhenotypeCount": 72,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000977",
+            "patientPhenotypeLabel": "Soft skin",
+            "diseasePhenotypeCurie": "HP:0001027",
+            "diseasePhenotypeLabel": "Soft, doughy skin",
+            "micaCurie": "HP:0000977",
+            "micaLabel": "Soft skin",
+            "score": 5.206925033862906,
+            "evidenceCode": "5/5",
+            "referenceText": "OMIM:225410"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001537",
+            "patientPhenotypeLabel": "Umbilical hernia",
+            "diseasePhenotypeCurie": "HP:0001537",
+            "diseasePhenotypeLabel": "Umbilical hernia",
+            "micaCurie": "HP:0001537",
+            "micaLabel": "Umbilical hernia",
+            "score": 3.8367168104946403,
+            "evidenceCode": "5/5",
+            "referenceText": "OMIM:225410"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000023",
+            "patientPhenotypeLabel": "Inguinal hernia",
+            "diseasePhenotypeCurie": "HP:0000023",
+            "diseasePhenotypeLabel": "Inguinal hernia",
+            "micaCurie": "HP:0000023",
+            "micaLabel": "Inguinal hernia",
+            "score": 3.436671769855815,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:225410"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002758",
+            "patientPhenotypeLabel": "Osteoarthritis",
+            "diseasePhenotypeCurie": "HP:0005332",
+            "diseasePhenotypeLabel": "Recurrent mandibular subluxations",
+            "micaCurie": "HP:0001367",
+            "micaLabel": "Abnormal joint morphology",
+            "score": 1.9586969969821784,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:225410"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008419",
+            "patientPhenotypeLabel": "Intervertebral disk degeneration",
+            "diseasePhenotypeCurie": "HP:0002650",
+            "diseasePhenotypeLabel": "Scoliosis",
+            "micaCurie": "HP:0000925",
+            "micaLabel": "Abnormality of the vertebral column",
+            "score": 1.7194848920343693,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:1901"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000193",
+            "patientPhenotypeLabel": "Bifid uvula",
+            "diseasePhenotypeCurie": "HP:0200094",
+            "diseasePhenotypeLabel": "Frontal open bite",
+            "micaCurie": "HP:0000163",
+            "micaLabel": "Abnormal oral cavity morphology",
+            "score": 1.3051673024943553,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:225410"
+          }
+        ]
+      },
+      {
+        "rank": 20,
+        "geneCurie": "NCBIGene:633",
+        "geneLabel": "BGN",
+        "geneSymbol": "BGN",
+        "geneEntityId": 148286,
+        "bmaScore": 2.0334468471283142,
+        "normalizedScore": 0.224515,
+        "patientAverageScore": 3.087844393590529,
+        "phenotypeAverageScore": 0.9790493006660993,
+        "directPhenotypeCount": 77,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000193",
+            "patientPhenotypeLabel": "Bifid uvula",
+            "diseasePhenotypeCurie": "HP:0000193",
+            "diseasePhenotypeLabel": "Bifid uvula",
+            "micaCurie": "HP:0000193",
+            "micaLabel": "Bifid uvula",
+            "score": 4.205042371653348,
+            "evidenceCode": "1/7",
+            "referenceText": "OMIM:300989"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001537",
+            "patientPhenotypeLabel": "Umbilical hernia",
+            "diseasePhenotypeCurie": "HP:0001537",
+            "diseasePhenotypeLabel": "Umbilical hernia",
+            "micaCurie": "HP:0001537",
+            "micaLabel": "Umbilical hernia",
+            "score": 3.8367168104946403,
+            "evidenceCode": "1/6",
+            "referenceText": "OMIM:300989"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000977",
+            "patientPhenotypeLabel": "Soft skin",
+            "diseasePhenotypeCurie": "HP:0001065",
+            "diseasePhenotypeLabel": "Striae distensae",
+            "micaCurie": "HP:0010647",
+            "micaLabel": "Abnormal elasticity of skin",
+            "score": 3.763767810848473,
+            "evidenceCode": "4/9",
+            "referenceText": "OMIM:300989"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000023",
+            "patientPhenotypeLabel": "Inguinal hernia",
+            "diseasePhenotypeCurie": "HP:0001537",
+            "diseasePhenotypeLabel": "Umbilical hernia",
+            "micaCurie": "HP:0004299",
+            "micaLabel": "Hernia of the abdominal wall",
+            "score": 3.0433574795301634,
+            "evidenceCode": "1/6",
+            "referenceText": "OMIM:300989"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002758",
+            "patientPhenotypeLabel": "Osteoarthritis",
+            "diseasePhenotypeCurie": "HP:0003180",
+            "diseasePhenotypeLabel": "Flat acetabular roof",
+            "micaCurie": "HP:0001367",
+            "micaLabel": "Abnormal joint morphology",
+            "score": 1.9586969969821784,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:300106"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008419",
+            "patientPhenotypeLabel": "Intervertebral disk degeneration",
+            "diseasePhenotypeCurie": "HP:0011940",
+            "diseasePhenotypeLabel": "Anterior wedging of T12",
+            "micaCurie": "HP:0000925",
+            "micaLabel": "Abnormality of the vertebral column",
+            "score": 1.7194848920343693,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:300106"
+          }
+        ]
+      },
+      {
+        "rank": 21,
+        "geneCurie": "NCBIGene:64131",
+        "geneLabel": "XYLT1",
+        "geneSymbol": "XYLT1",
+        "geneEntityId": 152259,
+        "bmaScore": 2.007792478388759,
+        "normalizedScore": 0.221682,
+        "patientAverageScore": 3.1786797309118726,
+        "phenotypeAverageScore": 0.8369052258656453,
+        "directPhenotypeCount": 118,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000977",
+            "patientPhenotypeLabel": "Soft skin",
+            "diseasePhenotypeCurie": "HP:0001027",
+            "diseasePhenotypeLabel": "Soft, doughy skin",
+            "micaCurie": "HP:0000977",
+            "micaLabel": "Soft skin",
+            "score": 5.206925033862906,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:370930"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000193",
+            "patientPhenotypeLabel": "Bifid uvula",
+            "diseasePhenotypeCurie": "HP:0000193",
+            "diseasePhenotypeLabel": "Bifid uvula",
+            "micaCurie": "HP:0000193",
+            "micaLabel": "Bifid uvula",
+            "score": 4.205042371653348,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "OMIM:615777"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000023",
+            "patientPhenotypeLabel": "Inguinal hernia",
+            "diseasePhenotypeCurie": "HP:0010318",
+            "diseasePhenotypeLabel": "Aplasia/Hypoplasia of the abdominal wall musculature",
+            "micaCurie": "HP:0004298",
+            "micaLabel": "Abnormal abdominal wall morphology",
+            "score": 2.9909645454692173,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:1425"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001537",
+            "patientPhenotypeLabel": "Umbilical hernia",
+            "diseasePhenotypeCurie": "HP:0010318",
+            "diseasePhenotypeLabel": "Aplasia/Hypoplasia of the abdominal wall musculature",
+            "micaCurie": "HP:0004298",
+            "micaLabel": "Abnormal abdominal wall morphology",
+            "score": 2.9909645454692173,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:1425"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002758",
+            "patientPhenotypeLabel": "Osteoarthritis",
+            "diseasePhenotypeCurie": "HP:0100490",
+            "diseasePhenotypeLabel": "Camptodactyly of finger",
+            "micaCurie": "HP:0001367",
+            "micaLabel": "Abnormal joint morphology",
+            "score": 1.9586969969821784,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:1425"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008419",
+            "patientPhenotypeLabel": "Intervertebral disk degeneration",
+            "diseasePhenotypeCurie": "HP:0002938",
+            "diseasePhenotypeLabel": "Lumbar hyperlordosis",
+            "micaCurie": "HP:0000925",
+            "micaLabel": "Abnormality of the vertebral column",
+            "score": 1.7194848920343693,
+            "evidenceCode": "1/7",
+            "referenceText": "OMIM:615777"
+          }
+        ]
+      },
+      {
+        "rank": 22,
+        "geneCurie": "NCBIGene:55033",
+        "geneLabel": "FKBP14",
+        "geneSymbol": "FKBP14",
+        "geneEntityId": 151906,
+        "bmaScore": 2.004126897425287,
+        "normalizedScore": 0.221278,
+        "patientAverageScore": 3.139371722218836,
+        "phenotypeAverageScore": 0.8688820726317378,
+        "directPhenotypeCount": 55,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000977",
+            "patientPhenotypeLabel": "Soft skin",
+            "diseasePhenotypeCurie": "HP:0000977",
+            "diseasePhenotypeLabel": "Soft skin",
+            "micaCurie": "HP:0000977",
+            "micaLabel": "Soft skin",
+            "score": 5.206925033862906,
+            "evidenceCode": "6/6",
+            "referenceText": "OMIM:614557"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000193",
+            "patientPhenotypeLabel": "Bifid uvula",
+            "diseasePhenotypeCurie": "HP:0000185",
+            "diseasePhenotypeLabel": "Cleft soft palate",
+            "micaCurie": "HP:0100736",
+            "micaLabel": "Abnormal soft palate morphology",
+            "score": 3.8641157846827547,
+            "evidenceCode": "2/7",
+            "referenceText": "OMIM:614557"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001537",
+            "patientPhenotypeLabel": "Umbilical hernia",
+            "diseasePhenotypeCurie": "HP:0001537",
+            "diseasePhenotypeLabel": "Umbilical hernia",
+            "micaCurie": "HP:0001537",
+            "micaLabel": "Umbilical hernia",
+            "score": 3.8367168104946403,
+            "evidenceCode": "3/7",
+            "referenceText": "OMIM:614557"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000023",
+            "patientPhenotypeLabel": "Inguinal hernia",
+            "diseasePhenotypeCurie": "HP:0000023",
+            "diseasePhenotypeLabel": "Inguinal hernia",
+            "micaCurie": "HP:0000023",
+            "micaLabel": "Inguinal hernia",
+            "score": 3.436671769855815,
+            "evidenceCode": "1/7",
+            "referenceText": "OMIM:614557"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008419",
+            "patientPhenotypeLabel": "Intervertebral disk degeneration",
+            "diseasePhenotypeCurie": "HP:0003467",
+            "diseasePhenotypeLabel": "Atlantoaxial instability",
+            "micaCurie": "HP:0000925",
+            "micaLabel": "Abnormality of the vertebral column",
+            "score": 1.7194848920343693,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "OMIM:614557"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002758",
+            "patientPhenotypeLabel": "Osteoarthritis",
+            "diseasePhenotypeCurie": "HP:0003467",
+            "diseasePhenotypeLabel": "Atlantoaxial instability",
+            "micaCurie": "HP:0011842",
+            "micaLabel": "Abnormal skeletal morphology",
+            "score": 0.7723160423825302,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "OMIM:614557"
+          }
+        ]
+      },
+      {
+        "rank": 23,
+        "geneCurie": "NCBIGene:4621",
+        "geneLabel": "MYH3",
+        "geneSymbol": "MYH3",
+        "geneEntityId": 149525,
+        "bmaScore": 2.004091247715646,
+        "normalizedScore": 0.221274,
+        "patientAverageScore": 3.094081328557514,
+        "phenotypeAverageScore": 0.914101166873778,
+        "directPhenotypeCount": 173,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0008419",
+            "patientPhenotypeLabel": "Intervertebral disk degeneration",
+            "diseasePhenotypeCurie": "HP:0002945",
+            "diseasePhenotypeLabel": "Intervertebral space narrowing",
+            "micaCurie": "HP:0005108",
+            "micaLabel": "Abnormal intervertebral disk morphology",
+            "score": 5.838196810704765,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:3275"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001537",
+            "patientPhenotypeLabel": "Umbilical hernia",
+            "diseasePhenotypeCurie": "HP:0001537",
+            "diseasePhenotypeLabel": "Umbilical hernia",
+            "micaCurie": "HP:0001537",
+            "micaLabel": "Umbilical hernia",
+            "score": 3.8367168104946403,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:2990"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000023",
+            "patientPhenotypeLabel": "Inguinal hernia",
+            "diseasePhenotypeCurie": "HP:0000023",
+            "diseasePhenotypeLabel": "Inguinal hernia",
+            "micaCurie": "HP:0000023",
+            "micaLabel": "Inguinal hernia",
+            "score": 3.436671769855815,
+            "evidenceCode": "1/7",
+            "referenceText": "OMIM:178110"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000193",
+            "patientPhenotypeLabel": "Bifid uvula",
+            "diseasePhenotypeCurie": "HP:0000218",
+            "diseasePhenotypeLabel": "High palate",
+            "micaCurie": "HP:0000174",
+            "micaLabel": "Abnormal palate morphology",
+            "score": 2.0279850714233034,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:1147"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002758",
+            "patientPhenotypeLabel": "Osteoarthritis",
+            "diseasePhenotypeCurie": "HP:0100490",
+            "diseasePhenotypeLabel": "Camptodactyly of finger",
+            "micaCurie": "HP:0001367",
+            "micaLabel": "Abnormal joint morphology",
+            "score": 1.9586969969821784,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:2053"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000977",
+            "patientPhenotypeLabel": "Soft skin",
+            "diseasePhenotypeCurie": "HP:0010489",
+            "diseasePhenotypeLabel": "Absent palmar crease",
+            "micaCurie": "HP:0011121",
+            "micaLabel": "Abnormal skin morphology",
+            "score": 1.4662205118843843,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:2053"
+          }
+        ]
+      },
+      {
+        "rank": 24,
+        "geneCurie": "NCBIGene:8788",
+        "geneLabel": "DLK1",
+        "geneSymbol": "DLK1",
+        "geneEntityId": 150645,
+        "bmaScore": 1.9871257730381338,
+        "normalizedScore": 0.2194,
+        "patientAverageScore": 3.153396775311471,
+        "phenotypeAverageScore": 0.8208547707647964,
+        "directPhenotypeCount": 169,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000193",
+            "patientPhenotypeLabel": "Bifid uvula",
+            "diseasePhenotypeCurie": "HP:0000193",
+            "diseasePhenotypeLabel": "Bifid uvula",
+            "micaCurie": "HP:0000193",
+            "micaLabel": "Bifid uvula",
+            "score": 4.205042371653348,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:96184"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001537",
+            "patientPhenotypeLabel": "Umbilical hernia",
+            "diseasePhenotypeCurie": "HP:0001537",
+            "diseasePhenotypeLabel": "Umbilical hernia",
+            "micaCurie": "HP:0001537",
+            "micaLabel": "Umbilical hernia",
+            "score": 3.8367168104946403,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:254534"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000977",
+            "patientPhenotypeLabel": "Soft skin",
+            "diseasePhenotypeCurie": "HP:0005989",
+            "diseasePhenotypeLabel": "Redundant neck skin",
+            "micaCurie": "HP:0010647",
+            "micaLabel": "Abnormal elasticity of skin",
+            "score": 3.763767810848473,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:96334"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000023",
+            "patientPhenotypeLabel": "Inguinal hernia",
+            "diseasePhenotypeCurie": "HP:0000023",
+            "diseasePhenotypeLabel": "Inguinal hernia",
+            "micaCurie": "HP:0000023",
+            "micaLabel": "Inguinal hernia",
+            "score": 3.436671769855815,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:254528"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002758",
+            "patientPhenotypeLabel": "Osteoarthritis",
+            "diseasePhenotypeCurie": "HP:0012785",
+            "diseasePhenotypeLabel": "Flexion contracture of finger",
+            "micaCurie": "HP:0001367",
+            "micaLabel": "Abnormal joint morphology",
+            "score": 1.9586969969821784,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:254528"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008419",
+            "patientPhenotypeLabel": "Intervertebral disk degeneration",
+            "diseasePhenotypeCurie": "HP:0002937",
+            "diseasePhenotypeLabel": "Hemivertebrae",
+            "micaCurie": "HP:0000925",
+            "micaLabel": "Abnormality of the vertebral column",
+            "score": 1.7194848920343693,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:96334"
+          }
+        ]
+      },
+      {
+        "rank": 25,
+        "geneCurie": "NCBIGene:55384",
+        "geneLabel": "MEG3",
+        "geneSymbol": "MEG3",
+        "geneEntityId": 151973,
+        "bmaScore": 1.9871257730381338,
+        "normalizedScore": 0.2194,
+        "patientAverageScore": 3.153396775311471,
+        "phenotypeAverageScore": 0.8208547707647964,
+        "directPhenotypeCount": 169,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000193",
+            "patientPhenotypeLabel": "Bifid uvula",
+            "diseasePhenotypeCurie": "HP:0000193",
+            "diseasePhenotypeLabel": "Bifid uvula",
+            "micaCurie": "HP:0000193",
+            "micaLabel": "Bifid uvula",
+            "score": 4.205042371653348,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:96184"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001537",
+            "patientPhenotypeLabel": "Umbilical hernia",
+            "diseasePhenotypeCurie": "HP:0001537",
+            "diseasePhenotypeLabel": "Umbilical hernia",
+            "micaCurie": "HP:0001537",
+            "micaLabel": "Umbilical hernia",
+            "score": 3.8367168104946403,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:254528"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000977",
+            "patientPhenotypeLabel": "Soft skin",
+            "diseasePhenotypeCurie": "HP:0005989",
+            "diseasePhenotypeLabel": "Redundant neck skin",
+            "micaCurie": "HP:0010647",
+            "micaLabel": "Abnormal elasticity of skin",
+            "score": 3.763767810848473,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:254528"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000023",
+            "patientPhenotypeLabel": "Inguinal hernia",
+            "diseasePhenotypeCurie": "HP:0000023",
+            "diseasePhenotypeLabel": "Inguinal hernia",
+            "micaCurie": "HP:0000023",
+            "micaLabel": "Inguinal hernia",
+            "score": 3.436671769855815,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:254528"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002758",
+            "patientPhenotypeLabel": "Osteoarthritis",
+            "diseasePhenotypeCurie": "HP:0012785",
+            "diseasePhenotypeLabel": "Flexion contracture of finger",
+            "micaCurie": "HP:0001367",
+            "micaLabel": "Abnormal joint morphology",
+            "score": 1.9586969969821784,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:254528"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008419",
+            "patientPhenotypeLabel": "Intervertebral disk degeneration",
+            "diseasePhenotypeCurie": "HP:0002937",
+            "diseasePhenotypeLabel": "Hemivertebrae",
+            "micaCurie": "HP:0000925",
+            "micaLabel": "Abnormality of the vertebral column",
+            "score": 1.7194848920343693,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:96334"
+          }
+        ]
+      }
+    ],
+    "engineSummary": {
+      "diseaseCount": 8579,
+      "geneCount": 5256,
+      "phenotypeCount": 19389,
+      "sourceMode": {
+        "disease": "relationship_fallback",
+        "gene": "relationship_fallback"
+      },
+      "generatedAt": "2026-03-15T21:00:39.457Z"
+    }
+  }
+}

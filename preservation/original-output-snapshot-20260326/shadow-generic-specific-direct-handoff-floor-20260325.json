@@ -1,0 +1,1893 @@
+{
+  "experiment": "shadow-generic-specific-direct-handoff-floor",
+  "title": "Shadow Generic Specific Direct Handoff Floor",
+  "created_at": "2026-03-25T14:46:53.292Z",
+  "metadata_lines": [
+    "Support handoff floor: 0.9",
+    "Support candidates with override: 149646",
+    "Genes with override-applied winning support: 117181"
+  ],
+  "baseline_summary": {
+    "case_count": 100,
+    "found_count": 82,
+    "found_pct": 82,
+    "top1_count": 34,
+    "top1_pct": 34,
+    "top3_count": 43,
+    "top3_pct": 43,
+    "top5_count": 46,
+    "top5_pct": 46,
+    "top10_count": 57,
+    "top10_pct": 57,
+    "median_rank": 3,
+    "mrr": 0.409646
+  },
+  "shadow_summary": {
+    "case_count": 100,
+    "found_count": 83,
+    "found_pct": 83,
+    "top1_count": 36,
+    "top1_pct": 36,
+    "top3_count": 47,
+    "top3_pct": 47,
+    "top5_count": 51,
+    "top5_pct": 51,
+    "top10_count": 60,
+    "top10_pct": 60,
+    "median_rank": 2,
+    "mrr": 0.437917
+  },
+  "delta_vs_baseline": {
+    "improved": 9,
+    "worsened": 2,
+    "unchanged": 89,
+    "recovered_from_miss": 1,
+    "regressed_to_miss": 0
+  },
+  "top_improvements": [
+    {
+      "case_id": "PMID_35190816_STX_27159321_LD_0358",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000136854",
+        "hgnc:11444",
+        "ncbigene:6812",
+        "symbol:STXBP1"
+      ],
+      "baseline_rank": null,
+      "shadow_rank": 96,
+      "movement": 999903
+    },
+    {
+      "case_id": "PMID_33731876_fam163",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000136531",
+        "hgnc:10588",
+        "ncbigene:6326",
+        "symbol:SCN2A"
+      ],
+      "baseline_rank": 92,
+      "shadow_rank": 52,
+      "movement": 40
+    },
+    {
+      "case_id": "PMID_24369382_Family1II4",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000186153",
+        "hgnc:12799",
+        "ncbigene:51741",
+        "symbol:WWOX"
+      ],
+      "baseline_rank": 33,
+      "shadow_rank": 2,
+      "movement": 31
+    },
+    {
+      "case_id": "PMID_18551513_3",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000160789",
+        "hgnc:6636",
+        "ncbigene:4000",
+        "symbol:LMNA"
+      ],
+      "baseline_rank": 17,
+      "shadow_rank": 4,
+      "movement": 13
+    },
+    {
+      "case_id": "PMID_21683322_25",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000166147",
+        "hgnc:3603",
+        "ncbigene:2200",
+        "symbol:FBN1"
+      ],
+      "baseline_rank": 10,
+      "shadow_rank": 1,
+      "movement": 9
+    },
+    {
+      "case_id": "PMID_10939567_EMD2_III-7",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000160789",
+        "hgnc:6636",
+        "ncbigene:4000",
+        "symbol:LMNA"
+      ],
+      "baseline_rank": 7,
+      "shadow_rank": 2,
+      "movement": 5
+    },
+    {
+      "case_id": "PMID_24736735_G068",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000106571",
+        "hgnc:4319",
+        "ncbigene:2737",
+        "symbol:GLI3"
+      ],
+      "baseline_rank": 9,
+      "shadow_rank": 5,
+      "movement": 4
+    },
+    {
+      "case_id": "PMID_30356099_Patient7",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000186153",
+        "hgnc:12799",
+        "ncbigene:51741",
+        "symbol:WWOX"
+      ],
+      "baseline_rank": 11,
+      "shadow_rank": 7,
+      "movement": 4
+    },
+    {
+      "case_id": "PMID_35484142_F6P7",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000122566",
+        "hgnc:5033",
+        "ncbigene:3181",
+        "symbol:HNRNPA2B1"
+      ],
+      "baseline_rank": 4,
+      "shadow_rank": 1,
+      "movement": 3
+    },
+    {
+      "case_id": "PMID_11050011_II-2",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000131269",
+        "hgnc:48",
+        "ncbigene:22",
+        "symbol:ABCB7"
+      ],
+      "baseline_rank": 1,
+      "shadow_rank": 1,
+      "movement": 0
+    }
+  ],
+  "top_regressions": [
+    {
+      "case_id": "PMID_31021519_individualfromTrakadisetal",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000119042",
+        "hgnc:21637",
+        "ncbigene:23314",
+        "symbol:SATB2"
+      ],
+      "baseline_rank": 65,
+      "shadow_rank": 67,
+      "movement": -2
+    },
+    {
+      "case_id": "PMID_37761890_22",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000105568",
+        "hgnc:9302",
+        "ncbigene:5518",
+        "symbol:PPP2R1A"
+      ],
+      "baseline_rank": 79,
+      "shadow_rank": 80,
+      "movement": -1
+    },
+    {
+      "case_id": "PMID_11050011_II-2",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000131269",
+        "hgnc:48",
+        "ncbigene:22",
+        "symbol:ABCB7"
+      ],
+      "baseline_rank": 1,
+      "shadow_rank": 1,
+      "movement": 0
+    },
+    {
+      "case_id": "PMID_12189163_V6",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000140092",
+        "hgnc:3602",
+        "ncbigene:10516",
+        "symbol:FBLN5"
+      ],
+      "baseline_rank": 2,
+      "shadow_rank": 2,
+      "movement": 0
+    },
+    {
+      "case_id": "PMID_12789647_K16IV-1",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000089225",
+        "hgnc:11604",
+        "ncbigene:6910",
+        "symbol:TBX5"
+      ],
+      "baseline_rank": 1,
+      "shadow_rank": 1,
+      "movement": 0
+    },
+    {
+      "case_id": "PMID_15210538_15210538_P1",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000284194",
+        "hgnc:10604",
+        "ncbigene:9997",
+        "symbol:SCO2"
+      ],
+      "baseline_rank": 3,
+      "shadow_rank": 3,
+      "movement": 0
+    },
+    {
+      "case_id": "PMID_16965330_patient6",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000160224",
+        "hgnc:360",
+        "ncbigene:326",
+        "symbol:AIRE"
+      ],
+      "baseline_rank": 1,
+      "shadow_rank": 1,
+      "movement": 0
+    },
+    {
+      "case_id": "PMID_18256394_1",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000160789",
+        "hgnc:6636",
+        "ncbigene:4000",
+        "symbol:LMNA"
+      ],
+      "baseline_rank": 2,
+      "shadow_rank": 2,
+      "movement": 0
+    },
+    {
+      "case_id": "PMID_19776401_Patient2-1",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000107099",
+        "hgnc:19191",
+        "ncbigene:81704",
+        "symbol:DOCK8"
+      ],
+      "baseline_rank": 1,
+      "shadow_rank": 1,
+      "movement": 0
+    },
+    {
+      "case_id": "PMID_19949040_Patient1",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000030304",
+        "hgnc:7525",
+        "ncbigene:4593",
+        "symbol:MUSK"
+      ],
+      "baseline_rank": 8,
+      "shadow_rank": 8,
+      "movement": 0
+    }
+  ],
+  "per_case": [
+    {
+      "case_id": "PMID_10939567_EMD2_III-7",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000160789",
+        "hgnc:6636",
+        "ncbigene:4000",
+        "symbol:LMNA"
+      ],
+      "baseline_rank": 7,
+      "shadow_rank": 2,
+      "exomiser_rank": 2,
+      "reference_current_genovy_rank": 7,
+      "baseline_supporting_disease_curie": "MONDO:0021569",
+      "shadow_supporting_disease_curie": "MONDO:0021569",
+      "override_applied": true
+    },
+    {
+      "case_id": "PMID_11050011_II-2",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000131269",
+        "hgnc:48",
+        "ncbigene:22",
+        "symbol:ABCB7"
+      ],
+      "baseline_rank": 1,
+      "shadow_rank": 1,
+      "exomiser_rank": 1,
+      "reference_current_genovy_rank": 1,
+      "baseline_supporting_disease_curie": "MONDO:0010524",
+      "shadow_supporting_disease_curie": "MONDO:0010524",
+      "override_applied": true
+    },
+    {
+      "case_id": "PMID_12189163_V6",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000140092",
+        "hgnc:3602",
+        "ncbigene:10516",
+        "symbol:FBLN5"
+      ],
+      "baseline_rank": 2,
+      "shadow_rank": 2,
+      "exomiser_rank": 1,
+      "reference_current_genovy_rank": 2,
+      "baseline_supporting_disease_curie": "MONDO:0009052",
+      "shadow_supporting_disease_curie": "MONDO:0009052",
+      "override_applied": true
+    },
+    {
+      "case_id": "PMID_12789647_K16IV-1",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000089225",
+        "hgnc:11604",
+        "ncbigene:6910",
+        "symbol:TBX5"
+      ],
+      "baseline_rank": 1,
+      "shadow_rank": 1,
+      "exomiser_rank": 1,
+      "reference_current_genovy_rank": 1,
+      "baseline_supporting_disease_curie": "MONDO:0007732",
+      "shadow_supporting_disease_curie": "MONDO:0007732",
+      "override_applied": false
+    },
+    {
+      "case_id": "PMID_15210538_15210538_P1",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000284194",
+        "hgnc:10604",
+        "ncbigene:9997",
+        "symbol:SCO2"
+      ],
+      "baseline_rank": 3,
+      "shadow_rank": 3,
+      "exomiser_rank": 10,
+      "reference_current_genovy_rank": 3,
+      "baseline_supporting_disease_curie": "MONDO:0011451",
+      "shadow_supporting_disease_curie": "MONDO:0011451",
+      "override_applied": true
+    },
+    {
+      "case_id": "PMID_16965330_patient6",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000160224",
+        "hgnc:360",
+        "ncbigene:326",
+        "symbol:AIRE"
+      ],
+      "baseline_rank": 1,
+      "shadow_rank": 1,
+      "exomiser_rank": 1,
+      "reference_current_genovy_rank": 1,
+      "baseline_supporting_disease_curie": "MONDO:0009411",
+      "shadow_supporting_disease_curie": "MONDO:0009411",
+      "override_applied": false
+    },
+    {
+      "case_id": "PMID_18256394_1",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000160789",
+        "hgnc:6636",
+        "ncbigene:4000",
+        "symbol:LMNA"
+      ],
+      "baseline_rank": 2,
+      "shadow_rank": 2,
+      "exomiser_rank": 2,
+      "reference_current_genovy_rank": 2,
+      "baseline_supporting_disease_curie": "MONDO:0009557",
+      "shadow_supporting_disease_curie": "MONDO:0009557",
+      "override_applied": true
+    },
+    {
+      "case_id": "PMID_18551513_3",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000160789",
+        "hgnc:6636",
+        "ncbigene:4000",
+        "symbol:LMNA"
+      ],
+      "baseline_rank": 17,
+      "shadow_rank": 4,
+      "exomiser_rank": 1,
+      "reference_current_genovy_rank": 17,
+      "baseline_supporting_disease_curie": "MONDO:0013178",
+      "shadow_supporting_disease_curie": "MONDO:0013178",
+      "override_applied": true
+    },
+    {
+      "case_id": "PMID_19776401_Patient2-1",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000107099",
+        "hgnc:19191",
+        "ncbigene:81704",
+        "symbol:DOCK8"
+      ],
+      "baseline_rank": 1,
+      "shadow_rank": 1,
+      "exomiser_rank": 1,
+      "reference_current_genovy_rank": 1,
+      "baseline_supporting_disease_curie": "MONDO:0009478",
+      "shadow_supporting_disease_curie": "MONDO:0009478",
+      "override_applied": false
+    },
+    {
+      "case_id": "PMID_19949040_Patient1",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000030304",
+        "hgnc:7525",
+        "ncbigene:4593",
+        "symbol:MUSK"
+      ],
+      "baseline_rank": 8,
+      "shadow_rank": 8,
+      "exomiser_rank": 14,
+      "reference_current_genovy_rank": 8,
+      "baseline_supporting_disease_curie": "MONDO:0014587",
+      "shadow_supporting_disease_curie": "MONDO:0014587",
+      "override_applied": true
+    },
+    {
+      "case_id": "PMID_20082460_case8",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000102302",
+        "hgnc:3663",
+        "ncbigene:2245",
+        "symbol:FGD1"
+      ],
+      "baseline_rank": 1,
+      "shadow_rank": 1,
+      "exomiser_rank": 1,
+      "reference_current_genovy_rank": 1,
+      "baseline_supporting_disease_curie": "MONDO:0010589",
+      "shadow_supporting_disease_curie": "MONDO:0010589",
+      "override_applied": false
+    },
+    {
+      "case_id": "PMID_21217753_Fam1IV-1",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000166949",
+        "hgnc:6769",
+        "ncbigene:4088",
+        "symbol:SMAD3"
+      ],
+      "baseline_rank": 2,
+      "shadow_rank": 2,
+      "exomiser_rank": 2,
+      "reference_current_genovy_rank": 2,
+      "baseline_supporting_disease_curie": "MONDO:0013426",
+      "shadow_supporting_disease_curie": "MONDO:0013426",
+      "override_applied": false
+    },
+    {
+      "case_id": "PMID_21217753_Fam1IV-6",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000166949",
+        "hgnc:6769",
+        "ncbigene:4088",
+        "symbol:SMAD3"
+      ],
+      "baseline_rank": 2,
+      "shadow_rank": 2,
+      "exomiser_rank": 2,
+      "reference_current_genovy_rank": 2,
+      "baseline_supporting_disease_curie": "MONDO:0013426",
+      "shadow_supporting_disease_curie": "MONDO:0013426",
+      "override_applied": false
+    },
+    {
+      "case_id": "PMID_21683322_25",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000166147",
+        "hgnc:3603",
+        "ncbigene:2200",
+        "symbol:FBN1"
+      ],
+      "baseline_rank": 10,
+      "shadow_rank": 1,
+      "exomiser_rank": 1,
+      "reference_current_genovy_rank": 10,
+      "baseline_supporting_disease_curie": "MONDO:0007055",
+      "shadow_supporting_disease_curie": "MONDO:0007055",
+      "override_applied": true
+    },
+    {
+      "case_id": "PMID_22772371_MS239III16",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000092969",
+        "hgnc:11768",
+        "ncbigene:7042",
+        "symbol:TGFB2"
+      ],
+      "baseline_rank": 3,
+      "shadow_rank": 3,
+      "exomiser_rank": 1,
+      "reference_current_genovy_rank": 3,
+      "baseline_supporting_disease_curie": "MONDO:0013897",
+      "shadow_supporting_disease_curie": "MONDO:0013897",
+      "override_applied": true
+    },
+    {
+      "case_id": "PMID_23086397_Patient2",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000107147",
+        "hgnc:18865",
+        "ncbigene:57582",
+        "symbol:KCNT1"
+      ],
+      "baseline_rank": 1,
+      "shadow_rank": 1,
+      "exomiser_rank": 2,
+      "reference_current_genovy_rank": 1,
+      "baseline_supporting_disease_curie": "MONDO:0013989",
+      "shadow_supporting_disease_curie": "MONDO:0013989",
+      "override_applied": true
+    },
+    {
+      "case_id": "PMID_23714749_23714749_P11",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000115204",
+        "hgnc:7224",
+        "ncbigene:4358",
+        "symbol:MPV17"
+      ],
+      "baseline_rank": 3,
+      "shadow_rank": 3,
+      "exomiser_rank": 27,
+      "reference_current_genovy_rank": 3,
+      "baseline_supporting_disease_curie": "MONDO:0009747",
+      "shadow_supporting_disease_curie": "MONDO:0009747",
+      "override_applied": true
+    },
+    {
+      "case_id": "PMID_24369382_Family1II4",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000186153",
+        "hgnc:12799",
+        "ncbigene:51741",
+        "symbol:WWOX"
+      ],
+      "baseline_rank": 33,
+      "shadow_rank": 2,
+      "exomiser_rank": 1,
+      "reference_current_genovy_rank": 17,
+      "baseline_supporting_disease_curie": "MONDO:0013687",
+      "shadow_supporting_disease_curie": "MONDO:0013687",
+      "override_applied": true
+    },
+    {
+      "case_id": "PMID_24736735_G068",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000106571",
+        "hgnc:4319",
+        "ncbigene:2737",
+        "symbol:GLI3"
+      ],
+      "baseline_rank": 9,
+      "shadow_rank": 5,
+      "exomiser_rank": 1,
+      "reference_current_genovy_rank": 11,
+      "baseline_supporting_disease_curie": "MONDO:0008266",
+      "shadow_supporting_disease_curie": "MONDO:0008266",
+      "override_applied": true
+    },
+    {
+      "case_id": "PMID_25142838_P9",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000167548",
+        "hgnc:7133",
+        "ncbigene:8085",
+        "symbol:KMT2D"
+      ],
+      "baseline_rank": 1,
+      "shadow_rank": 1,
+      "exomiser_rank": 15,
+      "reference_current_genovy_rank": 1,
+      "baseline_supporting_disease_curie": "MONDO:0007843",
+      "shadow_supporting_disease_curie": "MONDO:0007843",
+      "override_applied": false
+    },
+    {
+      "case_id": "PMID_25480986_individualB1",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000032444",
+        "hgnc:16268",
+        "ncbigene:10908",
+        "symbol:PNPLA6"
+      ],
+      "baseline_rank": 1,
+      "shadow_rank": 1,
+      "exomiser_rank": 1,
+      "reference_current_genovy_rank": 1,
+      "baseline_supporting_disease_curie": "MONDO:0010152",
+      "shadow_supporting_disease_curie": "MONDO:0010152",
+      "override_applied": true
+    },
+    {
+      "case_id": "PMID_25835445_1-III13",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000119699",
+        "hgnc:11769",
+        "ncbigene:7043",
+        "symbol:TGFB3"
+      ],
+      "baseline_rank": 7,
+      "shadow_rank": 7,
+      "exomiser_rank": 19,
+      "reference_current_genovy_rank": 7,
+      "baseline_supporting_disease_curie": "MONDO:0014262",
+      "shadow_supporting_disease_curie": "MONDO:0014262",
+      "override_applied": true
+    },
+    {
+      "case_id": "PMID_26008899_patient",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000092098",
+        "hgnc:16031",
+        "ncbigene:55072",
+        "symbol:RNF31"
+      ],
+      "baseline_rank": 1,
+      "shadow_rank": 1,
+      "exomiser_rank": 1,
+      "reference_current_genovy_rank": 1,
+      "baseline_supporting_disease_curie": "MONDO:0957981",
+      "shadow_supporting_disease_curie": "MONDO:0957981",
+      "override_applied": true
+    },
+    {
+      "case_id": "PMID_26247899_P2-1",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000175387",
+        "hgnc:6768",
+        "ncbigene:4087",
+        "symbol:SMAD2"
+      ],
+      "baseline_rank": 1,
+      "shadow_rank": 1,
+      "exomiser_rank": 1,
+      "reference_current_genovy_rank": 1,
+      "baseline_supporting_disease_curie": "MONDO:0030500",
+      "shadow_supporting_disease_curie": "MONDO:0030500",
+      "override_applied": false
+    },
+    {
+      "case_id": "PMID_27495153_Patient1",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000186153",
+        "hgnc:12799",
+        "ncbigene:51741",
+        "symbol:WWOX"
+      ],
+      "baseline_rank": null,
+      "shadow_rank": null,
+      "exomiser_rank": 84,
+      "reference_current_genovy_rank": null,
+      "baseline_supporting_disease_curie": "",
+      "shadow_supporting_disease_curie": "",
+      "override_applied": false
+    },
+    {
+      "case_id": "PMID_28007986_AVI1",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000137055",
+        "hgnc:9043",
+        "ncbigene:9373",
+        "symbol:PLAA"
+      ],
+      "baseline_rank": 1,
+      "shadow_rank": 1,
+      "exomiser_rank": 1,
+      "reference_current_genovy_rank": 1,
+      "baseline_supporting_disease_curie": "MONDO:0060502",
+      "shadow_supporting_disease_curie": "MONDO:0060502",
+      "override_applied": true
+    },
+    {
+      "case_id": "PMID_28061825_proband",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000062038",
+        "hgnc:1762",
+        "ncbigene:1001",
+        "symbol:CDH3"
+      ],
+      "baseline_rank": 1,
+      "shadow_rank": 1,
+      "exomiser_rank": 1,
+      "reference_current_genovy_rank": 1,
+      "baseline_supporting_disease_curie": "MONDO:0011107",
+      "shadow_supporting_disease_curie": "MONDO:0011107",
+      "override_applied": true
+    },
+    {
+      "case_id": "PMID_28074573_GB3",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000179295",
+        "hgnc:9644",
+        "ncbigene:5781",
+        "symbol:PTPN11"
+      ],
+      "baseline_rank": 16,
+      "shadow_rank": 16,
+      "exomiser_rank": 9,
+      "reference_current_genovy_rank": 16,
+      "baseline_supporting_disease_curie": "MONDO:0008104",
+      "shadow_supporting_disease_curie": "MONDO:0008104",
+      "override_applied": true
+    },
+    {
+      "case_id": "PMID_28074573_MA1",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000179295",
+        "hgnc:9644",
+        "ncbigene:5781",
+        "symbol:PTPN11"
+      ],
+      "baseline_rank": 15,
+      "shadow_rank": 15,
+      "exomiser_rank": 20,
+      "reference_current_genovy_rank": 15,
+      "baseline_supporting_disease_curie": "MONDO:0100082",
+      "shadow_supporting_disease_curie": "MONDO:0009026",
+      "override_applied": true
+    },
+    {
+      "case_id": "PMID_28318500_1-II-1",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000070269",
+        "hgnc:20185",
+        "ncbigene:54916",
+        "symbol:TMEM260"
+      ],
+      "baseline_rank": 1,
+      "shadow_rank": 1,
+      "exomiser_rank": 1,
+      "reference_current_genovy_rank": 1,
+      "baseline_supporting_disease_curie": "MONDO:0044321",
+      "shadow_supporting_disease_curie": "MONDO:0044321",
+      "override_applied": true
+    },
+    {
+      "case_id": "PMID_28851325_Case1",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000176165",
+        "hgnc:3811",
+        "ncbigene:2290",
+        "symbol:FOXG1"
+      ],
+      "baseline_rank": 1,
+      "shadow_rank": 1,
+      "exomiser_rank": 1,
+      "reference_current_genovy_rank": 1,
+      "baseline_supporting_disease_curie": "MONDO:0100040",
+      "shadow_supporting_disease_curie": "MONDO:0100040",
+      "override_applied": false
+    },
+    {
+      "case_id": "PMID_28940506_Family14Individual18",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000112234",
+        "hgnc:13601",
+        "ncbigene:26235",
+        "symbol:FBXL4"
+      ],
+      "baseline_rank": 1,
+      "shadow_rank": 1,
+      "exomiser_rank": 1,
+      "reference_current_genovy_rank": 1,
+      "baseline_supporting_disease_curie": "MONDO:0009723",
+      "shadow_supporting_disease_curie": "MONDO:0014198",
+      "override_applied": true
+    },
+    {
+      "case_id": "PMID_28971234_child",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000060718",
+        "hgnc:2186",
+        "ncbigene:1301",
+        "symbol:COL11A1"
+      ],
+      "baseline_rank": 1,
+      "shadow_rank": 1,
+      "exomiser_rank": 1,
+      "reference_current_genovy_rank": 1,
+      "baseline_supporting_disease_curie": "MONDO:0011493",
+      "shadow_supporting_disease_curie": "MONDO:0011493",
+      "override_applied": true
+    },
+    {
+      "case_id": "PMID_29058101_Patient1",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000107099",
+        "hgnc:19191",
+        "ncbigene:81704",
+        "symbol:DOCK8"
+      ],
+      "baseline_rank": 15,
+      "shadow_rank": 15,
+      "exomiser_rank": 73,
+      "reference_current_genovy_rank": 15,
+      "baseline_supporting_disease_curie": "MONDO:0009478",
+      "shadow_supporting_disease_curie": "MONDO:0009478",
+      "override_applied": false
+    },
+    {
+      "case_id": "PMID_29122497_29122497_P1",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000165898",
+        "hgnc:19857",
+        "ncbigene:122961",
+        "symbol:ISCA2"
+      ],
+      "baseline_rank": 75,
+      "shadow_rank": 75,
+      "exomiser_rank": 54,
+      "reference_current_genovy_rank": 75,
+      "baseline_supporting_disease_curie": "MONDO:0014611",
+      "shadow_supporting_disease_curie": "MONDO:0014611",
+      "override_applied": true
+    },
+    {
+      "case_id": "PMID_29330883_Subject9",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000142599",
+        "hgnc:9965",
+        "ncbigene:473",
+        "symbol:RERE"
+      ],
+      "baseline_rank": null,
+      "shadow_rank": null,
+      "exomiser_rank": 3,
+      "reference_current_genovy_rank": null,
+      "baseline_supporting_disease_curie": "",
+      "shadow_supporting_disease_curie": "",
+      "override_applied": false
+    },
+    {
+      "case_id": "PMID_29914387_patient",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000167548",
+        "hgnc:7133",
+        "ncbigene:8085",
+        "symbol:KMT2D"
+      ],
+      "baseline_rank": 1,
+      "shadow_rank": 1,
+      "exomiser_rank": 16,
+      "reference_current_genovy_rank": 1,
+      "baseline_supporting_disease_curie": "MONDO:0007843",
+      "shadow_supporting_disease_curie": "MONDO:0007843",
+      "override_applied": false
+    },
+    {
+      "case_id": "PMID_30356099_Patient7",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000186153",
+        "hgnc:12799",
+        "ncbigene:51741",
+        "symbol:WWOX"
+      ],
+      "baseline_rank": 11,
+      "shadow_rank": 7,
+      "exomiser_rank": 1,
+      "reference_current_genovy_rank": 11,
+      "baseline_supporting_disease_curie": "MONDO:0014533",
+      "shadow_supporting_disease_curie": "MONDO:0014533",
+      "override_applied": true
+    },
+    {
+      "case_id": "PMID_30451291_IV4",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000165194",
+        "hgnc:14270",
+        "ncbigene:57526",
+        "symbol:PCDH19"
+      ],
+      "baseline_rank": 4,
+      "shadow_rank": 4,
+      "exomiser_rank": 7,
+      "reference_current_genovy_rank": 4,
+      "baseline_supporting_disease_curie": "MONDO:0010246",
+      "shadow_supporting_disease_curie": "MONDO:0010246",
+      "override_applied": true
+    },
+    {
+      "case_id": "PMID_30580808_Lo_twin_2-Fam-52",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000139613",
+        "hgnc:11105",
+        "ncbigene:6601",
+        "symbol:SMARCC2"
+      ],
+      "baseline_rank": null,
+      "shadow_rank": null,
+      "exomiser_rank": 927,
+      "reference_current_genovy_rank": null,
+      "baseline_supporting_disease_curie": "",
+      "shadow_supporting_disease_curie": "",
+      "override_applied": false
+    },
+    {
+      "case_id": "PMID_30690882_nan",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000213380",
+        "hgnc:18623",
+        "ncbigene:84342",
+        "symbol:COG8"
+      ],
+      "baseline_rank": 1,
+      "shadow_rank": 1,
+      "exomiser_rank": 1686,
+      "reference_current_genovy_rank": 1,
+      "baseline_supporting_disease_curie": "MONDO:0012635",
+      "shadow_supporting_disease_curie": "MONDO:0012635",
+      "override_applied": true
+    },
+    {
+      "case_id": "PMID_31021519_Patient2fromKikuirietal",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000119042",
+        "hgnc:21637",
+        "ncbigene:23314",
+        "symbol:SATB2"
+      ],
+      "baseline_rank": 32,
+      "shadow_rank": 32,
+      "exomiser_rank": 72,
+      "reference_current_genovy_rank": 32,
+      "baseline_supporting_disease_curie": "MONDO:0012864",
+      "shadow_supporting_disease_curie": "MONDO:0012864",
+      "override_applied": true
+    },
+    {
+      "case_id": "PMID_31021519_SATB2-29fromZarateetal2018aScottetal",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000119042",
+        "hgnc:21637",
+        "ncbigene:23314",
+        "symbol:SATB2"
+      ],
+      "baseline_rank": 24,
+      "shadow_rank": 24,
+      "exomiser_rank": 1,
+      "reference_current_genovy_rank": 24,
+      "baseline_supporting_disease_curie": "MONDO:0012864",
+      "shadow_supporting_disease_curie": "MONDO:0012864",
+      "override_applied": true
+    },
+    {
+      "case_id": "PMID_31021519_individualfromTrakadisetal",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000119042",
+        "hgnc:21637",
+        "ncbigene:23314",
+        "symbol:SATB2"
+      ],
+      "baseline_rank": 65,
+      "shadow_rank": 67,
+      "exomiser_rank": 244,
+      "reference_current_genovy_rank": 65,
+      "baseline_supporting_disease_curie": "MONDO:0012864",
+      "shadow_supporting_disease_curie": "MONDO:0012864",
+      "override_applied": true
+    },
+    {
+      "case_id": "PMID_31239556_individual29",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000102974",
+        "hgnc:13723",
+        "ncbigene:10664",
+        "symbol:CTCF"
+      ],
+      "baseline_rank": 1,
+      "shadow_rank": 1,
+      "exomiser_rank": 41,
+      "reference_current_genovy_rank": 1,
+      "baseline_supporting_disease_curie": "MONDO:0014213",
+      "shadow_supporting_disease_curie": "MONDO:0014213",
+      "override_applied": true
+    },
+    {
+      "case_id": "PMID_31239556_individual2Gregoretal",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000102974",
+        "hgnc:13723",
+        "ncbigene:10664",
+        "symbol:CTCF"
+      ],
+      "baseline_rank": 49,
+      "shadow_rank": 49,
+      "exomiser_rank": 56,
+      "reference_current_genovy_rank": 49,
+      "baseline_supporting_disease_curie": "MONDO:0014213",
+      "shadow_supporting_disease_curie": "MONDO:0014213",
+      "override_applied": true
+    },
+    {
+      "case_id": "PMID_31239556_individual30",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000102974",
+        "hgnc:13723",
+        "ncbigene:10664",
+        "symbol:CTCF"
+      ],
+      "baseline_rank": 1,
+      "shadow_rank": 1,
+      "exomiser_rank": 38,
+      "reference_current_genovy_rank": 1,
+      "baseline_supporting_disease_curie": "MONDO:0014213",
+      "shadow_supporting_disease_curie": "MONDO:0014213",
+      "override_applied": true
+    },
+    {
+      "case_id": "PMID_31332438_CIII2",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000197694",
+        "hgnc:11273",
+        "ncbigene:6709",
+        "symbol:SPTAN1"
+      ],
+      "baseline_rank": 10,
+      "shadow_rank": 10,
+      "exomiser_rank": 1,
+      "reference_current_genovy_rank": 10,
+      "baseline_supporting_disease_curie": "MONDO:0957875",
+      "shadow_supporting_disease_curie": "MONDO:0957875",
+      "override_applied": true
+    },
+    {
+      "case_id": "PMID_31548836_Family_A_II1",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000124813",
+        "hgnc:10472",
+        "ncbigene:860",
+        "symbol:RUNX2"
+      ],
+      "baseline_rank": 1,
+      "shadow_rank": 1,
+      "exomiser_rank": 1,
+      "reference_current_genovy_rank": 1,
+      "baseline_supporting_disease_curie": "MONDO:0007340",
+      "shadow_supporting_disease_curie": "MONDO:0007340",
+      "override_applied": true
+    },
+    {
+      "case_id": "PMID_31548836_Family_G_III1",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000124813",
+        "hgnc:10472",
+        "ncbigene:860",
+        "symbol:RUNX2"
+      ],
+      "baseline_rank": 1,
+      "shadow_rank": 1,
+      "exomiser_rank": 1,
+      "reference_current_genovy_rank": 1,
+      "baseline_supporting_disease_curie": "MONDO:0007340",
+      "shadow_supporting_disease_curie": "MONDO:0007340",
+      "override_applied": true
+    },
+    {
+      "case_id": "PMID_32083401_Patient4",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000167548",
+        "hgnc:7133",
+        "ncbigene:8085",
+        "symbol:KMT2D"
+      ],
+      "baseline_rank": 1,
+      "shadow_rank": 1,
+      "exomiser_rank": 16,
+      "reference_current_genovy_rank": 1,
+      "baseline_supporting_disease_curie": "MONDO:0007843",
+      "shadow_supporting_disease_curie": "MONDO:0007843",
+      "override_applied": false
+    },
+    {
+      "case_id": "PMID_32154675_Family4Patient11",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000166949",
+        "hgnc:6769",
+        "ncbigene:4088",
+        "symbol:SMAD3"
+      ],
+      "baseline_rank": 33,
+      "shadow_rank": 33,
+      "exomiser_rank": 1,
+      "reference_current_genovy_rank": 33,
+      "baseline_supporting_disease_curie": "MONDO:0013426",
+      "shadow_supporting_disease_curie": "MONDO:0013426",
+      "override_applied": false
+    },
+    {
+      "case_id": "PMID_32376980_11",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000131653",
+        "hgnc:20456",
+        "ncbigene:84231",
+        "symbol:TRAF7"
+      ],
+      "baseline_rank": null,
+      "shadow_rank": null,
+      "exomiser_rank": 19,
+      "reference_current_genovy_rank": null,
+      "baseline_supporting_disease_curie": "",
+      "shadow_supporting_disease_curie": "",
+      "override_applied": false
+    },
+    {
+      "case_id": "PMID_33731876_fam115",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000136531",
+        "hgnc:10588",
+        "ncbigene:6326",
+        "symbol:SCN2A"
+      ],
+      "baseline_rank": 6,
+      "shadow_rank": 6,
+      "exomiser_rank": 7,
+      "reference_current_genovy_rank": 6,
+      "baseline_supporting_disease_curie": "MONDO:0030064",
+      "shadow_supporting_disease_curie": "MONDO:0013388",
+      "override_applied": true
+    },
+    {
+      "case_id": "PMID_33731876_fam163",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000136531",
+        "hgnc:10588",
+        "ncbigene:6326",
+        "symbol:SCN2A"
+      ],
+      "baseline_rank": 92,
+      "shadow_rank": 52,
+      "exomiser_rank": 8,
+      "reference_current_genovy_rank": 93,
+      "baseline_supporting_disease_curie": "MONDO:0013388",
+      "shadow_supporting_disease_curie": "MONDO:0013388",
+      "override_applied": true
+    },
+    {
+      "case_id": "PMID_33731876_fam175",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000136531",
+        "hgnc:10588",
+        "ncbigene:6326",
+        "symbol:SCN2A"
+      ],
+      "baseline_rank": 11,
+      "shadow_rank": 11,
+      "exomiser_rank": 41,
+      "reference_current_genovy_rank": 11,
+      "baseline_supporting_disease_curie": "MONDO:0011904",
+      "shadow_supporting_disease_curie": "MONDO:0013388",
+      "override_applied": true
+    },
+    {
+      "case_id": "PMID_33731876_fam220",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000136531",
+        "hgnc:10588",
+        "ncbigene:6326",
+        "symbol:SCN2A"
+      ],
+      "baseline_rank": 13,
+      "shadow_rank": 13,
+      "exomiser_rank": 19,
+      "reference_current_genovy_rank": 13,
+      "baseline_supporting_disease_curie": "MONDO:0013388",
+      "shadow_supporting_disease_curie": "MONDO:0013388",
+      "override_applied": true
+    },
+    {
+      "case_id": "PMID_33731876_fam341",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000136531",
+        "hgnc:10588",
+        "ncbigene:6326",
+        "symbol:SCN2A"
+      ],
+      "baseline_rank": 5,
+      "shadow_rank": 5,
+      "exomiser_rank": 21,
+      "reference_current_genovy_rank": 5,
+      "baseline_supporting_disease_curie": "MONDO:0013388",
+      "shadow_supporting_disease_curie": "MONDO:0013388",
+      "override_applied": true
+    },
+    {
+      "case_id": "PMID_33731876_fam415",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000136531",
+        "hgnc:10588",
+        "ncbigene:6326",
+        "symbol:SCN2A"
+      ],
+      "baseline_rank": 6,
+      "shadow_rank": 6,
+      "exomiser_rank": 46,
+      "reference_current_genovy_rank": 6,
+      "baseline_supporting_disease_curie": "MONDO:0013388",
+      "shadow_supporting_disease_curie": "MONDO:0013388",
+      "override_applied": true
+    },
+    {
+      "case_id": "PMID_33731876_fam421",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000136531",
+        "hgnc:10588",
+        "ncbigene:6326",
+        "symbol:SCN2A"
+      ],
+      "baseline_rank": null,
+      "shadow_rank": null,
+      "exomiser_rank": 4248,
+      "reference_current_genovy_rank": null,
+      "baseline_supporting_disease_curie": "",
+      "shadow_supporting_disease_curie": "",
+      "override_applied": false
+    },
+    {
+      "case_id": "PMID_33731876_fam9",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000136531",
+        "hgnc:10588",
+        "ncbigene:6326",
+        "symbol:SCN2A"
+      ],
+      "baseline_rank": 57,
+      "shadow_rank": 57,
+      "exomiser_rank": 31,
+      "reference_current_genovy_rank": 57,
+      "baseline_supporting_disease_curie": "MONDO:0011904",
+      "shadow_supporting_disease_curie": "MONDO:0011904",
+      "override_applied": false
+    },
+    {
+      "case_id": "PMID_33766796_16",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000181555",
+        "hgnc:18420",
+        "ncbigene:29072",
+        "symbol:SETD2"
+      ],
+      "baseline_rank": null,
+      "shadow_rank": null,
+      "exomiser_rank": 20,
+      "reference_current_genovy_rank": null,
+      "baseline_supporting_disease_curie": "",
+      "shadow_supporting_disease_curie": "",
+      "override_applied": false
+    },
+    {
+      "case_id": "PMID_33898683_43-year-oldman",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000179295",
+        "hgnc:9644",
+        "ncbigene:5781",
+        "symbol:PTPN11"
+      ],
+      "baseline_rank": 2,
+      "shadow_rank": 2,
+      "exomiser_rank": 12,
+      "reference_current_genovy_rank": 2,
+      "baseline_supporting_disease_curie": "MONDO:0100082",
+      "shadow_supporting_disease_curie": "MONDO:0100082",
+      "override_applied": true
+    },
+    {
+      "case_id": "PMID_34521999_32",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000159140",
+        "hgnc:11183",
+        "ncbigene:6651",
+        "symbol:SON"
+      ],
+      "baseline_rank": 12,
+      "shadow_rank": 12,
+      "exomiser_rank": 25,
+      "reference_current_genovy_rank": 12,
+      "baseline_supporting_disease_curie": "MONDO:0014936",
+      "shadow_supporting_disease_curie": "MONDO:0014936",
+      "override_applied": false
+    },
+    {
+      "case_id": "PMID_34521999_43",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000159140",
+        "hgnc:11183",
+        "ncbigene:6651",
+        "symbol:SON"
+      ],
+      "baseline_rank": 1,
+      "shadow_rank": 1,
+      "exomiser_rank": 25,
+      "reference_current_genovy_rank": 1,
+      "baseline_supporting_disease_curie": "MONDO:0014936",
+      "shadow_supporting_disease_curie": "MONDO:0014936",
+      "override_applied": false
+    },
+    {
+      "case_id": "PMID_34521999_50",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000159140",
+        "hgnc:11183",
+        "ncbigene:6651",
+        "symbol:SON"
+      ],
+      "baseline_rank": 10,
+      "shadow_rank": 10,
+      "exomiser_rank": 25,
+      "reference_current_genovy_rank": 10,
+      "baseline_supporting_disease_curie": "MONDO:0014936",
+      "shadow_supporting_disease_curie": "MONDO:0014936",
+      "override_applied": false
+    },
+    {
+      "case_id": "PMID_34722527_individual_individual_1_Shiyuan_Wang1_Clinicalandge",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000092200",
+        "hgnc:13436",
+        "ncbigene:57096",
+        "symbol:RPGRIP1"
+      ],
+      "baseline_rank": 1,
+      "shadow_rank": 1,
+      "exomiser_rank": 441,
+      "reference_current_genovy_rank": 1,
+      "baseline_supporting_disease_curie": "MONDO:0013446",
+      "shadow_supporting_disease_curie": "MONDO:0013446",
+      "override_applied": true
+    },
+    {
+      "case_id": "PMID_35190816_STX_20887364_Subject_2103",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000136854",
+        "hgnc:11444",
+        "ncbigene:6812",
+        "symbol:STXBP1"
+      ],
+      "baseline_rank": 34,
+      "shadow_rank": 34,
+      "exomiser_rank": 22,
+      "reference_current_genovy_rank": 34,
+      "baseline_supporting_disease_curie": "MONDO:0012812",
+      "shadow_supporting_disease_curie": "MONDO:0012812",
+      "override_applied": true
+    },
+    {
+      "case_id": "PMID_35190816_STX_23934111_dl",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000136854",
+        "hgnc:11444",
+        "ncbigene:6812",
+        "symbol:STXBP1"
+      ],
+      "baseline_rank": 10,
+      "shadow_rank": 10,
+      "exomiser_rank": 53,
+      "reference_current_genovy_rank": 10,
+      "baseline_supporting_disease_curie": "MONDO:0012812",
+      "shadow_supporting_disease_curie": "MONDO:0012812",
+      "override_applied": true
+    },
+    {
+      "case_id": "PMID_35190816_STX_23934111_fh",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000136854",
+        "hgnc:11444",
+        "ncbigene:6812",
+        "symbol:STXBP1"
+      ],
+      "baseline_rank": 28,
+      "shadow_rank": 28,
+      "exomiser_rank": 5,
+      "reference_current_genovy_rank": 28,
+      "baseline_supporting_disease_curie": "MONDO:0012812",
+      "shadow_supporting_disease_curie": "MONDO:0012812",
+      "override_applied": true
+    },
+    {
+      "case_id": "PMID_35190816_STX_25818041_Patient_20",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000136854",
+        "hgnc:11444",
+        "ncbigene:6812",
+        "symbol:STXBP1"
+      ],
+      "baseline_rank": 66,
+      "shadow_rank": 66,
+      "exomiser_rank": 29,
+      "reference_current_genovy_rank": 66,
+      "baseline_supporting_disease_curie": "MONDO:0012812",
+      "shadow_supporting_disease_curie": "MONDO:0012812",
+      "override_applied": true
+    },
+    {
+      "case_id": "PMID_35190816_STX_26865513_Patient_45",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000136854",
+        "hgnc:11444",
+        "ncbigene:6812",
+        "symbol:STXBP1"
+      ],
+      "baseline_rank": null,
+      "shadow_rank": null,
+      "exomiser_rank": 21,
+      "reference_current_genovy_rank": null,
+      "baseline_supporting_disease_curie": "",
+      "shadow_supporting_disease_curie": "",
+      "override_applied": false
+    },
+    {
+      "case_id": "PMID_35190816_STX_27159321_LD_0358",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000136854",
+        "hgnc:11444",
+        "ncbigene:6812",
+        "symbol:STXBP1"
+      ],
+      "baseline_rank": null,
+      "shadow_rank": 96,
+      "exomiser_rank": 74,
+      "reference_current_genovy_rank": null,
+      "baseline_supporting_disease_curie": "",
+      "shadow_supporting_disease_curie": "MONDO:0012812",
+      "override_applied": true
+    },
+    {
+      "case_id": "PMID_35190816_STX_28944233_270001",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000136854",
+        "hgnc:11444",
+        "ncbigene:6812",
+        "symbol:STXBP1"
+      ],
+      "baseline_rank": null,
+      "shadow_rank": null,
+      "exomiser_rank": 2713,
+      "reference_current_genovy_rank": null,
+      "baseline_supporting_disease_curie": "",
+      "shadow_supporting_disease_curie": "",
+      "override_applied": false
+    },
+    {
+      "case_id": "PMID_35190816_STX_EG0598P",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000136854",
+        "hgnc:11444",
+        "ncbigene:6812",
+        "symbol:STXBP1"
+      ],
+      "baseline_rank": 26,
+      "shadow_rank": 26,
+      "exomiser_rank": 57,
+      "reference_current_genovy_rank": 26,
+      "baseline_supporting_disease_curie": "MONDO:0012812",
+      "shadow_supporting_disease_curie": "MONDO:0012812",
+      "override_applied": true
+    },
+    {
+      "case_id": "PMID_35190816_STX_P_20",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000136854",
+        "hgnc:11444",
+        "ncbigene:6812",
+        "symbol:STXBP1"
+      ],
+      "baseline_rank": 39,
+      "shadow_rank": 39,
+      "exomiser_rank": 8,
+      "reference_current_genovy_rank": 39,
+      "baseline_supporting_disease_curie": "MONDO:0012812",
+      "shadow_supporting_disease_curie": "MONDO:0012812",
+      "override_applied": true
+    },
+    {
+      "case_id": "PMID_35190816_STX_Syrbe_6",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000136854",
+        "hgnc:11444",
+        "ncbigene:6812",
+        "symbol:STXBP1"
+      ],
+      "baseline_rank": null,
+      "shadow_rank": null,
+      "exomiser_rank": 216,
+      "reference_current_genovy_rank": null,
+      "baseline_supporting_disease_curie": "",
+      "shadow_supporting_disease_curie": "",
+      "override_applied": false
+    },
+    {
+      "case_id": "PMID_35344616_A21",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000169071",
+        "hgnc:10257",
+        "ncbigene:4920",
+        "symbol:ROR2"
+      ],
+      "baseline_rank": 1,
+      "shadow_rank": 1,
+      "exomiser_rank": 1,
+      "reference_current_genovy_rank": 1,
+      "baseline_supporting_disease_curie": "MONDO:0009999",
+      "shadow_supporting_disease_curie": "MONDO:0009999",
+      "override_applied": true
+    },
+    {
+      "case_id": "PMID_35344616_A4",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000169071",
+        "hgnc:10257",
+        "ncbigene:4920",
+        "symbol:ROR2"
+      ],
+      "baseline_rank": 1,
+      "shadow_rank": 1,
+      "exomiser_rank": 1,
+      "reference_current_genovy_rank": 1,
+      "baseline_supporting_disease_curie": "MONDO:0009999",
+      "shadow_supporting_disease_curie": "MONDO:0009999",
+      "override_applied": true
+    },
+    {
+      "case_id": "PMID_35344616_A8",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000169071",
+        "hgnc:10257",
+        "ncbigene:4920",
+        "symbol:ROR2"
+      ],
+      "baseline_rank": 1,
+      "shadow_rank": 1,
+      "exomiser_rank": 1,
+      "reference_current_genovy_rank": 1,
+      "baseline_supporting_disease_curie": "MONDO:0009999",
+      "shadow_supporting_disease_curie": "MONDO:0009999",
+      "override_applied": true
+    },
+    {
+      "case_id": "PMID_35484142_F6P7",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000122566",
+        "hgnc:5033",
+        "ncbigene:3181",
+        "symbol:HNRNPA2B1"
+      ],
+      "baseline_rank": 4,
+      "shadow_rank": 1,
+      "exomiser_rank": 1,
+      "reference_current_genovy_rank": 4,
+      "baseline_supporting_disease_curie": "MONDO:0958195",
+      "shadow_supporting_disease_curie": "MONDO:0958195",
+      "override_applied": true
+    },
+    {
+      "case_id": "PMID_35904126_Proband4",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000130699",
+        "hgnc:11537",
+        "ncbigene:6874",
+        "symbol:TAF4"
+      ],
+      "baseline_rank": 1,
+      "shadow_rank": 1,
+      "exomiser_rank": 1,
+      "reference_current_genovy_rank": 1,
+      "baseline_supporting_disease_curie": "MONDO:0957536",
+      "shadow_supporting_disease_curie": "MONDO:0957536",
+      "override_applied": true
+    },
+    {
+      "case_id": "PMID_35977029_82847",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000143569",
+        "hgnc:29877",
+        "ncbigene:9898",
+        "symbol:UBAP2L"
+      ],
+      "baseline_rank": 1,
+      "shadow_rank": 1,
+      "exomiser_rank": 1,
+      "reference_current_genovy_rank": 1,
+      "baseline_supporting_disease_curie": "MONDO:0957588",
+      "shadow_supporting_disease_curie": "MONDO:0957588",
+      "override_applied": true
+    },
+    {
+      "case_id": "PMID_36331550_Family16Patient21",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000197694",
+        "hgnc:11273",
+        "ncbigene:6709",
+        "symbol:SPTAN1"
+      ],
+      "baseline_rank": null,
+      "shadow_rank": null,
+      "exomiser_rank": 1,
+      "reference_current_genovy_rank": null,
+      "baseline_supporting_disease_curie": "",
+      "shadow_supporting_disease_curie": "",
+      "override_applied": false
+    },
+    {
+      "case_id": "PMID_36440963_III-4",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000170325",
+        "hgnc:13995",
+        "ncbigene:56980",
+        "symbol:PRDM10"
+      ],
+      "baseline_rank": 1,
+      "shadow_rank": 1,
+      "exomiser_rank": 1,
+      "reference_current_genovy_rank": 1,
+      "baseline_supporting_disease_curie": "MONDO:0800455",
+      "shadow_supporting_disease_curie": "MONDO:0800455",
+      "override_applied": true
+    },
+    {
+      "case_id": "PMID_36446582_Gnazzo2020_P1",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000167522",
+        "hgnc:21316",
+        "ncbigene:29123",
+        "symbol:ANKRD11"
+      ],
+      "baseline_rank": 10,
+      "shadow_rank": 10,
+      "exomiser_rank": 3,
+      "reference_current_genovy_rank": 10,
+      "baseline_supporting_disease_curie": "MONDO:0007846",
+      "shadow_supporting_disease_curie": "MONDO:0007846",
+      "override_applied": false
+    },
+    {
+      "case_id": "PMID_36446582_Goldenberg2016_P13",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000167522",
+        "hgnc:21316",
+        "ncbigene:29123",
+        "symbol:ANKRD11"
+      ],
+      "baseline_rank": null,
+      "shadow_rank": null,
+      "exomiser_rank": 217,
+      "reference_current_genovy_rank": null,
+      "baseline_supporting_disease_curie": "",
+      "shadow_supporting_disease_curie": "",
+      "override_applied": false
+    },
+    {
+      "case_id": "PMID_36446582_Goldenberg2016_P24",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000167522",
+        "hgnc:21316",
+        "ncbigene:29123",
+        "symbol:ANKRD11"
+      ],
+      "baseline_rank": 11,
+      "shadow_rank": 11,
+      "exomiser_rank": 4,
+      "reference_current_genovy_rank": 10,
+      "baseline_supporting_disease_curie": "MONDO:0007846",
+      "shadow_supporting_disease_curie": "MONDO:0007846",
+      "override_applied": false
+    },
+    {
+      "case_id": "PMID_36446582_Miyatake2017_P1",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000167522",
+        "hgnc:21316",
+        "ncbigene:29123",
+        "symbol:ANKRD11"
+      ],
+      "baseline_rank": null,
+      "shadow_rank": null,
+      "exomiser_rank": 1,
+      "reference_current_genovy_rank": null,
+      "baseline_supporting_disease_curie": "",
+      "shadow_supporting_disease_curie": "",
+      "override_applied": false
+    },
+    {
+      "case_id": "PMID_36446582_Murray2017_P313",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000167522",
+        "hgnc:21316",
+        "ncbigene:29123",
+        "symbol:ANKRD11"
+      ],
+      "baseline_rank": 1,
+      "shadow_rank": 1,
+      "exomiser_rank": 1,
+      "reference_current_genovy_rank": 1,
+      "baseline_supporting_disease_curie": "MONDO:0007846",
+      "shadow_supporting_disease_curie": "MONDO:0007846",
+      "override_applied": false
+    },
+    {
+      "case_id": "PMID_36446582_Willemsen2010_P2",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000167522",
+        "hgnc:21316",
+        "ncbigene:29123",
+        "symbol:ANKRD11"
+      ],
+      "baseline_rank": 49,
+      "shadow_rank": 49,
+      "exomiser_rank": 520,
+      "reference_current_genovy_rank": 49,
+      "baseline_supporting_disease_curie": "MONDO:0007846",
+      "shadow_supporting_disease_curie": "MONDO:0007846",
+      "override_applied": false
+    },
+    {
+      "case_id": "PMID_36528028_Individual14",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000156976",
+        "hgnc:3284",
+        "ncbigene:1974",
+        "symbol:EIF4A2"
+      ],
+      "baseline_rank": 1,
+      "shadow_rank": 1,
+      "exomiser_rank": 1,
+      "reference_current_genovy_rank": 1,
+      "baseline_supporting_disease_curie": "MONDO:0957541",
+      "shadow_supporting_disease_curie": "MONDO:0957541",
+      "override_applied": true
+    },
+    {
+      "case_id": "PMID_36553465_P5",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000164175",
+        "hgnc:16472",
+        "ncbigene:51151",
+        "symbol:SLC45A2"
+      ],
+      "baseline_rank": 3,
+      "shadow_rank": 3,
+      "exomiser_rank": 9,
+      "reference_current_genovy_rank": 3,
+      "baseline_supporting_disease_curie": "MONDO:0011683",
+      "shadow_supporting_disease_curie": "MONDO:0011683",
+      "override_applied": true
+    },
+    {
+      "case_id": "PMID_36747105_proband",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000063244",
+        "hgnc:23156",
+        "ncbigene:11338",
+        "symbol:U2AF2"
+      ],
+      "baseline_rank": null,
+      "shadow_rank": null,
+      "exomiser_rank": 1,
+      "reference_current_genovy_rank": 30,
+      "baseline_supporting_disease_curie": "",
+      "shadow_supporting_disease_curie": "",
+      "override_applied": false
+    },
+    {
+      "case_id": "PMID_37156989_P1",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000185338",
+        "hgnc:19383",
+        "ncbigene:8651",
+        "symbol:SOCS1"
+      ],
+      "baseline_rank": null,
+      "shadow_rank": null,
+      "exomiser_rank": 455,
+      "reference_current_genovy_rank": null,
+      "baseline_supporting_disease_curie": "",
+      "shadow_supporting_disease_curie": "",
+      "override_applied": false
+    },
+    {
+      "case_id": "PMID_37582359_F1-II-4",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000103126",
+        "hgnc:903",
+        "ncbigene:8312",
+        "symbol:AXIN1"
+      ],
+      "baseline_rank": 1,
+      "shadow_rank": 1,
+      "exomiser_rank": 1,
+      "reference_current_genovy_rank": 1,
+      "baseline_supporting_disease_curie": "MONDO:0957832",
+      "shadow_supporting_disease_curie": "MONDO:0957832",
+      "override_applied": true
+    },
+    {
+      "case_id": "PMID_37761890_22",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000105568",
+        "hgnc:9302",
+        "ncbigene:5518",
+        "symbol:PPP2R1A"
+      ],
+      "baseline_rank": 79,
+      "shadow_rank": 80,
+      "exomiser_rank": 231,
+      "reference_current_genovy_rank": 79,
+      "baseline_supporting_disease_curie": "MONDO:0014605",
+      "shadow_supporting_disease_curie": "MONDO:0014605",
+      "override_applied": true
+    },
+    {
+      "case_id": "PMID_37761890_41",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000105568",
+        "hgnc:9302",
+        "ncbigene:5518",
+        "symbol:PPP2R1A"
+      ],
+      "baseline_rank": null,
+      "shadow_rank": null,
+      "exomiser_rank": 399,
+      "reference_current_genovy_rank": null,
+      "baseline_supporting_disease_curie": "",
+      "shadow_supporting_disease_curie": "",
+      "override_applied": false
+    },
+    {
+      "case_id": "PMID_37761890_43",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000105568",
+        "hgnc:9302",
+        "ncbigene:5518",
+        "symbol:PPP2R1A"
+      ],
+      "baseline_rank": null,
+      "shadow_rank": null,
+      "exomiser_rank": 39,
+      "reference_current_genovy_rank": null,
+      "baseline_supporting_disease_curie": "",
+      "shadow_supporting_disease_curie": "",
+      "override_applied": false
+    },
+    {
+      "case_id": "PMID_37962958_43",
+      "truth_gene_keys": [
+        "ensembl:ENSG00000063244",
+        "hgnc:23156",
+        "ncbigene:11338",
+        "symbol:U2AF2"
+      ],
+      "baseline_rank": null,
+      "shadow_rank": null,
+      "exomiser_rank": 1374,
+      "reference_current_genovy_rank": null,
+      "baseline_supporting_disease_curie": "",
+      "shadow_supporting_disease_curie": "",
+      "override_applied": false
+    }
+  ]
+}

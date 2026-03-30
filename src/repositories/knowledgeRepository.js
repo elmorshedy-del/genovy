@@ -62,6 +62,92 @@ export async function upsertEntity(client, entity) {
   return result.rows[0];
 }
 
+export async function upsertEntitiesBatch(client, entities) {
+  if (!entities.length) {
+    return [];
+  }
+
+  const prepared = entities
+    .map((entity) => {
+      const canonicalCurie = normalizeCurie(entity.canonicalCurie);
+      if (!canonicalCurie) {
+        return null;
+      }
+
+      const canonicalLabel = String(entity.canonicalLabel || canonicalCurie);
+      return {
+        entityType: entity.entityType,
+        canonicalCurie,
+        canonicalLabel,
+        normalizedLabel: normalizeLabel(canonicalLabel),
+        description: entity.description || null,
+        primarySourceKey: entity.primarySourceKey || null,
+        metadata: entity.metadata || {},
+        isPlaceholder: Boolean(entity.isPlaceholder)
+      };
+    })
+    .filter(Boolean);
+
+  if (!prepared.length) {
+    return [];
+  }
+
+  const result = await client.query(
+    `
+      WITH input AS (
+        SELECT DISTINCT ON (canonical_curie)
+          value->>'entityType' AS entity_type,
+          value->>'canonicalCurie' AS canonical_curie,
+          value->>'canonicalLabel' AS canonical_label,
+          value->>'normalizedLabel' AS normalized_label,
+          NULLIF(value->>'description', '') AS description,
+          NULLIF(value->>'primarySourceKey', '') AS primary_source_key,
+          COALESCE(value->'metadata', '{}'::jsonb) AS metadata_json,
+          COALESCE((value->>'isPlaceholder')::BOOLEAN, FALSE) AS is_placeholder
+        FROM jsonb_array_elements($1::jsonb) AS value
+        ORDER BY canonical_curie
+      )
+      INSERT INTO entities (
+        entity_type,
+        canonical_curie,
+        canonical_label,
+        normalized_label,
+        description,
+        primary_source_key,
+        metadata_json,
+        is_placeholder
+      )
+      SELECT
+        entity_type,
+        canonical_curie,
+        canonical_label,
+        normalized_label,
+        description,
+        primary_source_key,
+        metadata_json,
+        is_placeholder
+      FROM input
+      ON CONFLICT (canonical_curie)
+      DO UPDATE SET
+        entity_type = EXCLUDED.entity_type,
+        canonical_label = EXCLUDED.canonical_label,
+        normalized_label = EXCLUDED.normalized_label,
+        description = COALESCE(EXCLUDED.description, entities.description),
+        primary_source_key = COALESCE(entities.primary_source_key, EXCLUDED.primary_source_key),
+        metadata_json = entities.metadata_json || EXCLUDED.metadata_json,
+        is_placeholder = CASE
+          WHEN entities.is_placeholder = FALSE THEN FALSE
+          ELSE EXCLUDED.is_placeholder
+        END,
+        updated_at = NOW()
+      RETURNING entity_id, canonical_curie
+    `,
+    [JSON.stringify(prepared)]
+  );
+
+  return result.rows;
+}
+
 export async function upsertEntityAlias(client, alias) {
   await client.query(
     `
@@ -108,6 +194,60 @@ export async function upsertEntityXref(client, xref) {
   );
 }
 
+export async function upsertEntityXrefsBatch(client, xrefs) {
+  if (!xrefs.length) {
+    return;
+  }
+
+  const prepared = xrefs
+    .map((xref) => {
+      const normalizedXrefCurie = normalizeCurie(xref.xrefCurie);
+      if (!normalizedXrefCurie) {
+        return null;
+      }
+      return {
+        entityId: xref.entityId,
+        xrefCurie: normalizedXrefCurie,
+        sourceKey: xref.sourceKey || null,
+        xrefType: xref.xrefType || 'cross_reference'
+      };
+    })
+    .filter(Boolean);
+
+  if (!prepared.length) {
+    return;
+  }
+
+  await client.query(
+    `
+      WITH input AS (
+        SELECT DISTINCT ON (entity_id, xref_curie)
+          (value->>'entityId')::BIGINT AS entity_id,
+          value->>'xrefCurie' AS xref_curie,
+          NULLIF(value->>'sourceKey', '') AS source_key,
+          value->>'xrefType' AS xref_type
+        FROM jsonb_array_elements($1::jsonb) AS value
+        ORDER BY entity_id, xref_curie
+      )
+      INSERT INTO entity_xrefs (
+        entity_id,
+        xref_curie,
+        source_key,
+        xref_type
+      )
+      SELECT
+        entity_id,
+        xref_curie,
+        source_key,
+        xref_type
+      FROM input
+      ON CONFLICT (entity_id, xref_curie)
+      DO NOTHING
+    `,
+    [JSON.stringify(prepared)]
+  );
+}
+
 export async function upsertSourceRecord(client, sourceRecord) {
   const payloadJson = JSON.stringify(sourceRecord.payload || {});
   const payloadHash = stableHash(payloadJson);
@@ -143,6 +283,68 @@ export async function upsertSourceRecord(client, sourceRecord) {
   );
 }
 
+export async function upsertSourceRecordsBatch(client, sourceRecords) {
+  if (!sourceRecords.length) {
+    return;
+  }
+
+  const prepared = sourceRecords.map((sourceRecord) => {
+    const payloadJson = JSON.stringify(sourceRecord.payload || {});
+    return {
+      sourceKey: sourceRecord.sourceKey,
+      syncRunId: sourceRecord.syncRunId ?? null,
+      recordType: sourceRecord.recordType,
+      sourceRecordKey: sourceRecord.sourceRecordKey,
+      canonicalCurie: sourceRecord.canonicalCurie ? normalizeCurie(sourceRecord.canonicalCurie) : null,
+      payloadJson: sourceRecord.payload || {},
+      payloadHash: stableHash(payloadJson)
+    };
+  });
+
+  await client.query(
+    `
+      WITH input AS (
+        SELECT DISTINCT ON (source_key, source_record_key)
+          value->>'sourceKey' AS source_key,
+          NULLIF(value->>'syncRunId', '')::BIGINT AS sync_run_id,
+          value->>'recordType' AS record_type,
+          value->>'sourceRecordKey' AS source_record_key,
+          NULLIF(value->>'canonicalCurie', '') AS canonical_curie,
+          COALESCE(value->'payloadJson', '{}'::jsonb) AS payload_json,
+          value->>'payloadHash' AS payload_hash
+        FROM jsonb_array_elements($1::jsonb) AS value
+        ORDER BY source_key, source_record_key
+      )
+      INSERT INTO source_records (
+        source_key,
+        sync_run_id,
+        record_type,
+        source_record_key,
+        canonical_curie,
+        payload_json,
+        payload_hash
+      )
+      SELECT
+        source_key,
+        sync_run_id,
+        record_type,
+        source_record_key,
+        canonical_curie,
+        payload_json,
+        payload_hash
+      FROM input
+      ON CONFLICT (source_key, source_record_key)
+      DO UPDATE SET
+        sync_run_id = EXCLUDED.sync_run_id,
+        canonical_curie = EXCLUDED.canonical_curie,
+        payload_json = EXCLUDED.payload_json,
+        payload_hash = EXCLUDED.payload_hash,
+        updated_at = NOW()
+    `,
+    [JSON.stringify(prepared)]
+  );
+}
+
 export async function resolveEntityByCurie(client, curie) {
   const normalizedCurie = normalizeCurie(curie);
   if (!normalizedCurie) return null;
@@ -175,6 +377,52 @@ export async function resolveEntityByCurie(client, curie) {
     return xrefMatch.rows[0];
   }
   return null;
+}
+
+export async function resolveEntitiesByCurieBatch(client, curies) {
+  const normalizedCuries = [...new Set((curies || []).map((curie) => normalizeCurie(curie)).filter(Boolean))];
+  if (!normalizedCuries.length) {
+    return [];
+  }
+
+  const result = await client.query(
+    `
+      WITH input AS (
+        SELECT DISTINCT unnest($1::text[]) AS matched_curie
+      ),
+      candidates AS (
+        SELECT
+          input.matched_curie,
+          e.entity_id,
+          e.canonical_curie,
+          e.is_placeholder,
+          0 AS match_rank
+        FROM input
+        INNER JOIN entities e ON e.canonical_curie = input.matched_curie
+
+        UNION ALL
+
+        SELECT
+          input.matched_curie,
+          e.entity_id,
+          e.canonical_curie,
+          e.is_placeholder,
+          1 AS match_rank
+        FROM input
+        INNER JOIN entity_xrefs x ON x.xref_curie = input.matched_curie
+        INNER JOIN entities e ON e.entity_id = x.entity_id
+      )
+      SELECT DISTINCT ON (matched_curie)
+        matched_curie,
+        entity_id,
+        canonical_curie
+      FROM candidates
+      ORDER BY matched_curie, match_rank ASC, is_placeholder ASC, entity_id ASC
+    `,
+    [normalizedCuries]
+  );
+
+  return result.rows;
 }
 
 export async function resolveEntityByLabel(client, label, entityType = '') {

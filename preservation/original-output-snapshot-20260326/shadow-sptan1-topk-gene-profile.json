@@ -1,0 +1,844 @@
+{
+  "created_at": "2026-03-25T00:38:03.941Z",
+  "case_path": "/Users/ahmedelmorshedy/Genovy/output/pheval-official-sample-100/phenopackets/PMID_36331550_Family16Patient21.json",
+  "top_k_values": [
+    4,
+    8,
+    12,
+    16,
+    24,
+    32,
+    48,
+    64
+  ],
+  "case_id": "PMID_36331550_Family16Patient21",
+  "truth_gene": "SPTAN1",
+  "truth_gene_keys": [
+    "ensembl:ENSG00000197694",
+    "hgnc:11273",
+    "ncbigene:6709",
+    "symbol:SPTAN1"
+  ],
+  "patient_present_phenotype_curies": [
+    "HP:0000750",
+    "HP:0000252"
+  ],
+  "patient_excluded_phenotype_count": 19,
+  "baseline_truth_row": {
+    "rank": 322,
+    "geneCurie": "HGNC:11273",
+    "geneLabel": "SPTAN1",
+    "geneSymbol": "SPTAN1",
+    "geneEntityId": 150181,
+    "bmaScore": 1.2774354728988828,
+    "normalizedScore": 0.135845,
+    "patientAverageScore": 1.944756631272883,
+    "phenotypeAverageScore": 0.6101143145248824,
+    "directPhenotypeCount": 104,
+    "matchedPhenotypeCount": 2,
+    "trace": [
+      {
+        "patientPhenotypeCurie": "HP:0000750",
+        "patientPhenotypeLabel": "Delayed speech and language development",
+        "diseasePhenotypeCurie": "HP:0000750",
+        "diseasePhenotypeLabel": "Delayed speech and language development",
+        "micaCurie": "HP:0000750",
+        "micaLabel": "Delayed speech and language development",
+        "score": 2.042861965750194,
+        "weightedScore": 2.042861965750194,
+        "phenotypeWeight": 1,
+        "evidenceCode": "13/15",
+        "referenceText": "OMIM:620540",
+        "presenceStatus": "present",
+        "frequencyCurie": "",
+        "frequencyLabel": ""
+      },
+      {
+        "patientPhenotypeCurie": "HP:0000252",
+        "patientPhenotypeLabel": "Microcephaly",
+        "diseasePhenotypeCurie": "HP:0000253",
+        "diseasePhenotypeLabel": "Progressive microcephaly",
+        "micaCurie": "HP:0000252",
+        "micaLabel": "Microcephaly",
+        "score": 1.8466512967955722,
+        "weightedScore": 1.8466512967955722,
+        "phenotypeWeight": 1,
+        "evidenceCode": "3/3",
+        "referenceText": "OMIM:613477",
+        "presenceStatus": "present",
+        "frequencyCurie": "",
+        "frequencyLabel": ""
+      }
+    ],
+    "directNormalizedScore": 0.135845,
+    "diseaseSupportScore": 0.108006,
+    "supportingDiseaseEvidenceWeight": 1,
+    "supportingDiseaseCurie": "MONDO:0957815",
+    "supportingDiseaseLabel": "developmental delay with or without epilepsy",
+    "supportingDiseaseClassification": "",
+    "supportingDiseaseDirectPhenotypeCount": 32,
+    "supportingDiseasePropagatedPhenotypeCount": 0
+  },
+  "variants": [
+    {
+      "topK": 4,
+      "truthRank": 242,
+      "truthRow": {
+        "shadowRank": 242,
+        "shadowNormalizedScore": 0.201633,
+        "shadowDirectNormalizedScore": 0.201633,
+        "diseaseSupportScore": 0.108006,
+        "shadowPatientAverageScore": 1.944756631272883,
+        "shadowPhenotypeAverageScore": 1.8473955664729933,
+        "directPhenotypeCount": 104
+      },
+      "topGenes": [
+        {
+          "shadowRank": 1,
+          "geneLabel": "EHMT1",
+          "shadowNormalizedScore": 0.212026,
+          "shadowDirectNormalizedScore": 0.212026,
+          "diseaseSupportScore": 0.103242,
+          "directPhenotypeCount": 147
+        },
+        {
+          "shadowRank": 2,
+          "geneLabel": "KMT2C",
+          "shadowNormalizedScore": 0.211512,
+          "shadowDirectNormalizedScore": 0.211512,
+          "diseaseSupportScore": 0.116828,
+          "directPhenotypeCount": 59
+        },
+        {
+          "shadowRank": 3,
+          "geneLabel": "RAI1",
+          "shadowNormalizedScore": 0.211512,
+          "shadowDirectNormalizedScore": 0.211512,
+          "diseaseSupportScore": 0.116015,
+          "directPhenotypeCount": 201
+        },
+        {
+          "shadowRank": 4,
+          "geneLabel": "CNTNAP2",
+          "shadowNormalizedScore": 0.211512,
+          "shadowDirectNormalizedScore": 0.211512,
+          "diseaseSupportScore": 0.115504,
+          "directPhenotypeCount": 119
+        },
+        {
+          "shadowRank": 5,
+          "geneLabel": "STAG2",
+          "shadowNormalizedScore": 0.211512,
+          "shadowDirectNormalizedScore": 0.211512,
+          "diseaseSupportScore": 0.108922,
+          "directPhenotypeCount": 146
+        },
+        {
+          "shadowRank": 6,
+          "geneLabel": "GRIN2A",
+          "shadowNormalizedScore": 0.210485,
+          "shadowDirectNormalizedScore": 0.210485,
+          "diseaseSupportScore": 0.111824,
+          "directPhenotypeCount": 109
+        },
+        {
+          "shadowRank": 7,
+          "geneLabel": "AHDC1",
+          "shadowNormalizedScore": 0.209418,
+          "shadowDirectNormalizedScore": 0.209418,
+          "diseaseSupportScore": 0.136377,
+          "directPhenotypeCount": 199
+        },
+        {
+          "shadowRank": 8,
+          "geneLabel": "GNB1",
+          "shadowNormalizedScore": 0.209418,
+          "shadowDirectNormalizedScore": 0.209418,
+          "diseaseSupportScore": 0.126304,
+          "directPhenotypeCount": 90
+        },
+        {
+          "shadowRank": 9,
+          "geneLabel": "NSD1",
+          "shadowNormalizedScore": 0.209418,
+          "shadowDirectNormalizedScore": 0.209418,
+          "diseaseSupportScore": 0.125965,
+          "directPhenotypeCount": 194
+        },
+        {
+          "shadowRank": 10,
+          "geneLabel": "ZEB2",
+          "shadowNormalizedScore": 0.209418,
+          "shadowDirectNormalizedScore": 0.209418,
+          "diseaseSupportScore": 0.122516,
+          "directPhenotypeCount": 194
+        }
+      ]
+    },
+    {
+      "topK": 8,
+      "truthRank": 182,
+      "truthRow": {
+        "shadowRank": 182,
+        "shadowNormalizedScore": 0.19118,
+        "shadowDirectNormalizedScore": 0.19118,
+        "diseaseSupportScore": 0.108006,
+        "shadowPatientAverageScore": 1.944756631272883,
+        "shadowPhenotypeAverageScore": 1.650812376845108,
+        "directPhenotypeCount": 104
+      },
+      "topGenes": [
+        {
+          "shadowRank": 1,
+          "geneLabel": "EHMT1",
+          "shadowNormalizedScore": 0.205288,
+          "shadowDirectNormalizedScore": 0.205288,
+          "diseaseSupportScore": 0.103242,
+          "directPhenotypeCount": 147
+        },
+        {
+          "shadowRank": 2,
+          "geneLabel": "GRIN2A",
+          "shadowNormalizedScore": 0.203135,
+          "shadowDirectNormalizedScore": 0.203135,
+          "diseaseSupportScore": 0.111824,
+          "directPhenotypeCount": 109
+        },
+        {
+          "shadowRank": 3,
+          "geneLabel": "ZEB2",
+          "shadowNormalizedScore": 0.202937,
+          "shadowDirectNormalizedScore": 0.202937,
+          "diseaseSupportScore": 0.122516,
+          "directPhenotypeCount": 194
+        },
+        {
+          "shadowRank": 4,
+          "geneLabel": "STAG2",
+          "shadowNormalizedScore": 0.202411,
+          "shadowDirectNormalizedScore": 0.202411,
+          "diseaseSupportScore": 0.108922,
+          "directPhenotypeCount": 146
+        },
+        {
+          "shadowRank": 5,
+          "geneLabel": "RAI1",
+          "shadowNormalizedScore": 0.202365,
+          "shadowDirectNormalizedScore": 0.202365,
+          "diseaseSupportScore": 0.116015,
+          "directPhenotypeCount": 201
+        },
+        {
+          "shadowRank": 6,
+          "geneLabel": "SNRPN",
+          "shadowNormalizedScore": 0.20183,
+          "shadowDirectNormalizedScore": 0.20183,
+          "diseaseSupportScore": 0.092902,
+          "directPhenotypeCount": 185
+        },
+        {
+          "shadowRank": 7,
+          "geneLabel": "GTPBP2",
+          "shadowNormalizedScore": 0.201633,
+          "shadowDirectNormalizedScore": 0.201633,
+          "diseaseSupportScore": 0.138441,
+          "directPhenotypeCount": 139
+        },
+        {
+          "shadowRank": 8,
+          "geneLabel": "CNTNAP2",
+          "shadowNormalizedScore": 0.201562,
+          "shadowDirectNormalizedScore": 0.201562,
+          "diseaseSupportScore": 0.115504,
+          "directPhenotypeCount": 119
+        },
+        {
+          "shadowRank": 9,
+          "geneLabel": "MECP2",
+          "shadowNormalizedScore": 0.20101,
+          "shadowDirectNormalizedScore": 0.20101,
+          "diseaseSupportScore": 0.130325,
+          "directPhenotypeCount": 255
+        },
+        {
+          "shadowRank": 10,
+          "geneLabel": "NOTCH3",
+          "shadowNormalizedScore": 0.200438,
+          "shadowDirectNormalizedScore": 0.200438,
+          "diseaseSupportScore": 0.105922,
+          "directPhenotypeCount": 295
+        }
+      ]
+    },
+    {
+      "topK": 12,
+      "truthRank": 260,
+      "truthRow": {
+        "shadowRank": 260,
+        "shadowNormalizedScore": 0.18064,
+        "shadowDirectNormalizedScore": 0.18064,
+        "diseaseSupportScore": 0.108006,
+        "shadowPatientAverageScore": 1.944756631272883,
+        "shadowPhenotypeAverageScore": 1.4525817263950342,
+        "directPhenotypeCount": 104
+      },
+      "topGenes": [
+        {
+          "shadowRank": 1,
+          "geneLabel": "GRIN2A",
+          "shadowNormalizedScore": 0.198304,
+          "shadowDirectNormalizedScore": 0.198304,
+          "diseaseSupportScore": 0.111824,
+          "directPhenotypeCount": 109
+        },
+        {
+          "shadowRank": 2,
+          "geneLabel": "EHMT1",
+          "shadowNormalizedScore": 0.19828,
+          "shadowDirectNormalizedScore": 0.19828,
+          "diseaseSupportScore": 0.103242,
+          "directPhenotypeCount": 147
+        },
+        {
+          "shadowRank": 3,
+          "geneLabel": "MECP2",
+          "shadowNormalizedScore": 0.196646,
+          "shadowDirectNormalizedScore": 0.196646,
+          "diseaseSupportScore": 0.130325,
+          "directPhenotypeCount": 255
+        },
+        {
+          "shadowRank": 4,
+          "geneLabel": "ZEB2",
+          "shadowNormalizedScore": 0.195983,
+          "shadowDirectNormalizedScore": 0.195983,
+          "diseaseSupportScore": 0.122516,
+          "directPhenotypeCount": 194
+        },
+        {
+          "shadowRank": 5,
+          "geneLabel": "RAI1",
+          "shadowNormalizedScore": 0.195825,
+          "shadowDirectNormalizedScore": 0.195825,
+          "diseaseSupportScore": 0.116015,
+          "directPhenotypeCount": 201
+        },
+        {
+          "shadowRank": 6,
+          "geneLabel": "STAG2",
+          "shadowNormalizedScore": 0.195633,
+          "shadowDirectNormalizedScore": 0.195633,
+          "diseaseSupportScore": 0.108922,
+          "directPhenotypeCount": 146
+        },
+        {
+          "shadowRank": 7,
+          "geneLabel": "NOTCH3",
+          "shadowNormalizedScore": 0.195364,
+          "shadowDirectNormalizedScore": 0.195364,
+          "diseaseSupportScore": 0.105922,
+          "directPhenotypeCount": 295
+        },
+        {
+          "shadowRank": 8,
+          "geneLabel": "SMC1A",
+          "shadowNormalizedScore": 0.195174,
+          "shadowDirectNormalizedScore": 0.195174,
+          "diseaseSupportScore": 0.109786,
+          "directPhenotypeCount": 248
+        },
+        {
+          "shadowRank": 9,
+          "geneLabel": "NSD1",
+          "shadowNormalizedScore": 0.194615,
+          "shadowDirectNormalizedScore": 0.194615,
+          "diseaseSupportScore": 0.125965,
+          "directPhenotypeCount": 194
+        },
+        {
+          "shadowRank": 10,
+          "geneLabel": "LRRC7",
+          "shadowNormalizedScore": 0.194501,
+          "shadowDirectNormalizedScore": 0.194501,
+          "diseaseSupportScore": 0.108758,
+          "directPhenotypeCount": 160
+        }
+      ]
+    },
+    {
+      "topK": 16,
+      "truthRank": 268,
+      "truthRow": {
+        "shadowRank": 268,
+        "shadowNormalizedScore": 0.173988,
+        "shadowDirectNormalizedScore": 0.173988,
+        "diseaseSupportScore": 0.108006,
+        "shadowPatientAverageScore": 1.944756631272883,
+        "shadowPhenotypeAverageScore": 1.3274665999856794,
+        "directPhenotypeCount": 104
+      },
+      "topGenes": [
+        {
+          "shadowRank": 1,
+          "geneLabel": "GRIN2A",
+          "shadowNormalizedScore": 0.193957,
+          "shadowDirectNormalizedScore": 0.193957,
+          "diseaseSupportScore": 0.111824,
+          "directPhenotypeCount": 109
+        },
+        {
+          "shadowRank": 2,
+          "geneLabel": "EHMT1",
+          "shadowNormalizedScore": 0.193008,
+          "shadowDirectNormalizedScore": 0.193008,
+          "diseaseSupportScore": 0.103242,
+          "directPhenotypeCount": 147
+        },
+        {
+          "shadowRank": 3,
+          "geneLabel": "SMC1A",
+          "shadowNormalizedScore": 0.191439,
+          "shadowDirectNormalizedScore": 0.191439,
+          "diseaseSupportScore": 0.109786,
+          "directPhenotypeCount": 248
+        },
+        {
+          "shadowRank": 4,
+          "geneLabel": "MECP2",
+          "shadowNormalizedScore": 0.191283,
+          "shadowDirectNormalizedScore": 0.191283,
+          "diseaseSupportScore": 0.130325,
+          "directPhenotypeCount": 255
+        },
+        {
+          "shadowRank": 5,
+          "geneLabel": "FGFR1",
+          "shadowNormalizedScore": 0.19071,
+          "shadowDirectNormalizedScore": 0.19071,
+          "diseaseSupportScore": 0.107641,
+          "directPhenotypeCount": 399
+        },
+        {
+          "shadowRank": 6,
+          "geneLabel": "ZEB2",
+          "shadowNormalizedScore": 0.190612,
+          "shadowDirectNormalizedScore": 0.190612,
+          "diseaseSupportScore": 0.122516,
+          "directPhenotypeCount": 194
+        },
+        {
+          "shadowRank": 7,
+          "geneLabel": "NOTCH3",
+          "shadowNormalizedScore": 0.190485,
+          "shadowDirectNormalizedScore": 0.190485,
+          "diseaseSupportScore": 0.105922,
+          "directPhenotypeCount": 295
+        },
+        {
+          "shadowRank": 8,
+          "geneLabel": "TUBB3",
+          "shadowNormalizedScore": 0.190425,
+          "shadowDirectNormalizedScore": 0.190425,
+          "diseaseSupportScore": 0.126069,
+          "directPhenotypeCount": 137
+        },
+        {
+          "shadowRank": 9,
+          "geneLabel": "FIG4",
+          "shadowNormalizedScore": 0.18968,
+          "shadowDirectNormalizedScore": 0.18968,
+          "diseaseSupportScore": 0.087947,
+          "directPhenotypeCount": 255
+        },
+        {
+          "shadowRank": 10,
+          "geneLabel": "AHDC1",
+          "shadowNormalizedScore": 0.189376,
+          "shadowDirectNormalizedScore": 0.189376,
+          "diseaseSupportScore": 0.136377,
+          "directPhenotypeCount": 199
+        }
+      ]
+    },
+    {
+      "topK": 24,
+      "truthRank": 260,
+      "truthRow": {
+        "shadowRank": 260,
+        "shadowNormalizedScore": 0.16613,
+        "shadowDirectNormalizedScore": 0.16613,
+        "diseaseSupportScore": 0.108006,
+        "shadowPatientAverageScore": 1.944756631272883,
+        "shadowPhenotypeAverageScore": 1.1796927568938262,
+        "directPhenotypeCount": 104
+      },
+      "topGenes": [
+        {
+          "shadowRank": 1,
+          "geneLabel": "FGFR1",
+          "shadowNormalizedScore": 0.186204,
+          "shadowDirectNormalizedScore": 0.186204,
+          "diseaseSupportScore": 0.107641,
+          "directPhenotypeCount": 399
+        },
+        {
+          "shadowRank": 2,
+          "geneLabel": "NOTCH3",
+          "shadowNormalizedScore": 0.185156,
+          "shadowDirectNormalizedScore": 0.185156,
+          "diseaseSupportScore": 0.105922,
+          "directPhenotypeCount": 295
+        },
+        {
+          "shadowRank": 3,
+          "geneLabel": "TUBB3",
+          "shadowNormalizedScore": 0.185117,
+          "shadowDirectNormalizedScore": 0.185117,
+          "diseaseSupportScore": 0.126069,
+          "directPhenotypeCount": 137
+        },
+        {
+          "shadowRank": 4,
+          "geneLabel": "POMT1",
+          "shadowNormalizedScore": 0.18396,
+          "shadowDirectNormalizedScore": 0.18396,
+          "diseaseSupportScore": 0.115358,
+          "directPhenotypeCount": 201
+        },
+        {
+          "shadowRank": 5,
+          "geneLabel": "ZEB2",
+          "shadowNormalizedScore": 0.183744,
+          "shadowDirectNormalizedScore": 0.183744,
+          "diseaseSupportScore": 0.122516,
+          "directPhenotypeCount": 194
+        },
+        {
+          "shadowRank": 6,
+          "geneLabel": "EHMT1",
+          "shadowNormalizedScore": 0.183461,
+          "shadowDirectNormalizedScore": 0.183461,
+          "diseaseSupportScore": 0.103242,
+          "directPhenotypeCount": 147
+        },
+        {
+          "shadowRank": 7,
+          "geneLabel": "SMC1A",
+          "shadowNormalizedScore": 0.183011,
+          "shadowDirectNormalizedScore": 0.183011,
+          "diseaseSupportScore": 0.109786,
+          "directPhenotypeCount": 248
+        },
+        {
+          "shadowRank": 8,
+          "geneLabel": "POMT2",
+          "shadowNormalizedScore": 0.182846,
+          "shadowDirectNormalizedScore": 0.182846,
+          "diseaseSupportScore": 0.10933,
+          "directPhenotypeCount": 181
+        },
+        {
+          "shadowRank": 9,
+          "geneLabel": "AHDC1",
+          "shadowNormalizedScore": 0.182751,
+          "shadowDirectNormalizedScore": 0.182751,
+          "diseaseSupportScore": 0.136377,
+          "directPhenotypeCount": 199
+        },
+        {
+          "shadowRank": 10,
+          "geneLabel": "MECP2",
+          "shadowNormalizedScore": 0.182738,
+          "shadowDirectNormalizedScore": 0.182738,
+          "diseaseSupportScore": 0.130325,
+          "directPhenotypeCount": 255
+        }
+      ]
+    },
+    {
+      "topK": 32,
+      "truthRank": 279,
+      "truthRow": {
+        "shadowRank": 279,
+        "shadowNormalizedScore": 0.159608,
+        "shadowDirectNormalizedScore": 0.159608,
+        "diseaseSupportScore": 0.108006,
+        "shadowPatientAverageScore": 1.944756631272883,
+        "shadowPhenotypeAverageScore": 1.0570286138504081,
+        "directPhenotypeCount": 104
+      },
+      "topGenes": [
+        {
+          "shadowRank": 1,
+          "geneLabel": "TUBB3",
+          "shadowNormalizedScore": 0.182462,
+          "shadowDirectNormalizedScore": 0.182462,
+          "diseaseSupportScore": 0.126069,
+          "directPhenotypeCount": 137
+        },
+        {
+          "shadowRank": 2,
+          "geneLabel": "FGFR1",
+          "shadowNormalizedScore": 0.181891,
+          "shadowDirectNormalizedScore": 0.181891,
+          "diseaseSupportScore": 0.107641,
+          "directPhenotypeCount": 399
+        },
+        {
+          "shadowRank": 3,
+          "geneLabel": "NOTCH3",
+          "shadowNormalizedScore": 0.181136,
+          "shadowDirectNormalizedScore": 0.181136,
+          "diseaseSupportScore": 0.105922,
+          "directPhenotypeCount": 295
+        },
+        {
+          "shadowRank": 4,
+          "geneLabel": "POMT1",
+          "shadowNormalizedScore": 0.180829,
+          "shadowDirectNormalizedScore": 0.180829,
+          "diseaseSupportScore": 0.115358,
+          "directPhenotypeCount": 201
+        },
+        {
+          "shadowRank": 5,
+          "geneLabel": "FKRP",
+          "shadowNormalizedScore": 0.179824,
+          "shadowDirectNormalizedScore": 0.179824,
+          "diseaseSupportScore": 0.10933,
+          "directPhenotypeCount": 201
+        },
+        {
+          "shadowRank": 6,
+          "geneLabel": "POMT2",
+          "shadowNormalizedScore": 0.179636,
+          "shadowDirectNormalizedScore": 0.179636,
+          "diseaseSupportScore": 0.10933,
+          "directPhenotypeCount": 181
+        },
+        {
+          "shadowRank": 7,
+          "geneLabel": "RNU4-2",
+          "shadowNormalizedScore": 0.178238,
+          "shadowDirectNormalizedScore": 0.178238,
+          "diseaseSupportScore": 0.128562,
+          "directPhenotypeCount": 211
+        },
+        {
+          "shadowRank": 8,
+          "geneLabel": "ZEB2",
+          "shadowNormalizedScore": 0.17805,
+          "shadowDirectNormalizedScore": 0.17805,
+          "diseaseSupportScore": 0.122516,
+          "directPhenotypeCount": 194
+        },
+        {
+          "shadowRank": 9,
+          "geneLabel": "LARGE1",
+          "shadowNormalizedScore": 0.177996,
+          "shadowDirectNormalizedScore": 0.177996,
+          "diseaseSupportScore": 0.09293,
+          "directPhenotypeCount": 161
+        },
+        {
+          "shadowRank": 10,
+          "geneLabel": "AHDC1",
+          "shadowNormalizedScore": 0.177834,
+          "shadowDirectNormalizedScore": 0.177834,
+          "diseaseSupportScore": 0.136377,
+          "directPhenotypeCount": 199
+        }
+      ]
+    },
+    {
+      "topK": 48,
+      "truthRank": 318,
+      "truthRow": {
+        "shadowRank": 318,
+        "shadowNormalizedScore": 0.15071,
+        "shadowDirectNormalizedScore": 0.15071,
+        "diseaseSupportScore": 0.108006,
+        "shadowPatientAverageScore": 1.944756631272883,
+        "shadowPhenotypeAverageScore": 0.8896687367651278,
+        "directPhenotypeCount": 104
+      },
+      "topGenes": [
+        {
+          "shadowRank": 1,
+          "geneLabel": "TUBB3",
+          "shadowNormalizedScore": 0.178051,
+          "shadowDirectNormalizedScore": 0.178051,
+          "diseaseSupportScore": 0.126069,
+          "directPhenotypeCount": 137
+        },
+        {
+          "shadowRank": 2,
+          "geneLabel": "FGFR1",
+          "shadowNormalizedScore": 0.175534,
+          "shadowDirectNormalizedScore": 0.175534,
+          "diseaseSupportScore": 0.107641,
+          "directPhenotypeCount": 399
+        },
+        {
+          "shadowRank": 3,
+          "geneLabel": "NOTCH3",
+          "shadowNormalizedScore": 0.174501,
+          "shadowDirectNormalizedScore": 0.174501,
+          "diseaseSupportScore": 0.105922,
+          "directPhenotypeCount": 295
+        },
+        {
+          "shadowRank": 4,
+          "geneLabel": "POMT1",
+          "shadowNormalizedScore": 0.173944,
+          "shadowDirectNormalizedScore": 0.173944,
+          "diseaseSupportScore": 0.115358,
+          "directPhenotypeCount": 201
+        },
+        {
+          "shadowRank": 5,
+          "geneLabel": "FKRP",
+          "shadowNormalizedScore": 0.173186,
+          "shadowDirectNormalizedScore": 0.173186,
+          "diseaseSupportScore": 0.10933,
+          "directPhenotypeCount": 201
+        },
+        {
+          "shadowRank": 6,
+          "geneLabel": "POMT2",
+          "shadowNormalizedScore": 0.173061,
+          "shadowDirectNormalizedScore": 0.173061,
+          "diseaseSupportScore": 0.10933,
+          "directPhenotypeCount": 181
+        },
+        {
+          "shadowRank": 7,
+          "geneLabel": "RNU4-2",
+          "shadowNormalizedScore": 0.171727,
+          "shadowDirectNormalizedScore": 0.171727,
+          "diseaseSupportScore": 0.128562,
+          "directPhenotypeCount": 211
+        },
+        {
+          "shadowRank": 8,
+          "geneLabel": "AHDC1",
+          "shadowNormalizedScore": 0.171005,
+          "shadowDirectNormalizedScore": 0.171005,
+          "diseaseSupportScore": 0.136377,
+          "directPhenotypeCount": 199
+        },
+        {
+          "shadowRank": 9,
+          "geneLabel": "LARGE1",
+          "shadowNormalizedScore": 0.170855,
+          "shadowDirectNormalizedScore": 0.170855,
+          "diseaseSupportScore": 0.09293,
+          "directPhenotypeCount": 161
+        },
+        {
+          "shadowRank": 10,
+          "geneLabel": "FKTN",
+          "shadowNormalizedScore": 0.170621,
+          "shadowDirectNormalizedScore": 0.170621,
+          "diseaseSupportScore": 0.10933,
+          "directPhenotypeCount": 174
+        }
+      ]
+    },
+    {
+      "topK": 64,
+      "truthRank": 291,
+      "truthRow": {
+        "shadowRank": 291,
+        "shadowNormalizedScore": 0.14626,
+        "shadowDirectNormalizedScore": 0.14626,
+        "diseaseSupportScore": 0.108006,
+        "shadowPatientAverageScore": 1.944756631272883,
+        "shadowPhenotypeAverageScore": 0.8059887982224876,
+        "directPhenotypeCount": 104
+      },
+      "topGenes": [
+        {
+          "shadowRank": 1,
+          "geneLabel": "TUBB3",
+          "shadowNormalizedScore": 0.171719,
+          "shadowDirectNormalizedScore": 0.171719,
+          "diseaseSupportScore": 0.126069,
+          "directPhenotypeCount": 137
+        },
+        {
+          "shadowRank": 2,
+          "geneLabel": "FGFR1",
+          "shadowNormalizedScore": 0.171138,
+          "shadowDirectNormalizedScore": 0.171138,
+          "diseaseSupportScore": 0.107641,
+          "directPhenotypeCount": 399
+        },
+        {
+          "shadowRank": 3,
+          "geneLabel": "NOTCH3",
+          "shadowNormalizedScore": 0.16976,
+          "shadowDirectNormalizedScore": 0.16976,
+          "diseaseSupportScore": 0.105922,
+          "directPhenotypeCount": 295
+        },
+        {
+          "shadowRank": 4,
+          "geneLabel": "POMT1",
+          "shadowNormalizedScore": 0.169086,
+          "shadowDirectNormalizedScore": 0.169086,
+          "diseaseSupportScore": 0.115358,
+          "directPhenotypeCount": 201
+        },
+        {
+          "shadowRank": 5,
+          "geneLabel": "FKRP",
+          "shadowNormalizedScore": 0.168409,
+          "shadowDirectNormalizedScore": 0.168409,
+          "diseaseSupportScore": 0.10933,
+          "directPhenotypeCount": 201
+        },
+        {
+          "shadowRank": 6,
+          "geneLabel": "POMT2",
+          "shadowNormalizedScore": 0.168222,
+          "shadowDirectNormalizedScore": 0.168222,
+          "diseaseSupportScore": 0.10933,
+          "directPhenotypeCount": 181
+        },
+        {
+          "shadowRank": 7,
+          "geneLabel": "RNU4-2",
+          "shadowNormalizedScore": 0.166915,
+          "shadowDirectNormalizedScore": 0.166915,
+          "diseaseSupportScore": 0.128562,
+          "directPhenotypeCount": 211
+        },
+        {
+          "shadowRank": 8,
+          "geneLabel": "AHDC1",
+          "shadowNormalizedScore": 0.165858,
+          "shadowDirectNormalizedScore": 0.165858,
+          "diseaseSupportScore": 0.136377,
+          "directPhenotypeCount": 199
+        },
+        {
+          "shadowRank": 9,
+          "geneLabel": "PTCH1",
+          "shadowNormalizedScore": 0.165305,
+          "shadowDirectNormalizedScore": 0.165305,
+          "diseaseSupportScore": 0.097683,
+          "directPhenotypeCount": 232
+        },
+        {
+          "shadowRank": 10,
+          "geneLabel": "FIG4",
+          "shadowNormalizedScore": 0.164679,
+          "shadowDirectNormalizedScore": 0.164679,
+          "diseaseSupportScore": 0.087947,
+          "directPhenotypeCount": 255
+        }
+      ]
+    }
+  ]
+}

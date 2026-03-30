@@ -1,0 +1,1802 @@
+{
+  "success": true,
+  "engine": "genovy-dx-sim",
+  "analysisType": "gene",
+  "input": {
+    "presentPhenotypeCuries": [
+      "HP:0001250",
+      "HP:0001263",
+      "HP:0000639",
+      "HP:0002188",
+      "HP:0030890"
+    ],
+    "excludedPhenotypeCuries": [],
+    "sourceFormat": "phenopacket"
+  },
+  "ranking": {
+    "queryPhenotypes": [
+      {
+        "phenotypeCurie": "HP:0001250",
+        "phenotypeLabel": "Seizure"
+      },
+      {
+        "phenotypeCurie": "HP:0001263",
+        "phenotypeLabel": "Global developmental delay"
+      },
+      {
+        "phenotypeCurie": "HP:0000639",
+        "phenotypeLabel": "Nystagmus"
+      },
+      {
+        "phenotypeCurie": "HP:0002188",
+        "phenotypeLabel": "Delayed CNS myelination"
+      },
+      {
+        "phenotypeCurie": "HP:0030890",
+        "phenotypeLabel": "Hyperintensity of cerebral white matter on MRI"
+      }
+    ],
+    "results": [
+      {
+        "rank": 1,
+        "geneCurie": "NCBIGene:5917",
+        "geneLabel": "RARS1",
+        "geneSymbol": "RARS1",
+        "geneEntityId": 149938,
+        "bmaScore": 1.8663852458708614,
+        "normalizedScore": 0.206069,
+        "patientAverageScore": 2.6635385403669276,
+        "phenotypeAverageScore": 1.0692319513747952,
+        "directPhenotypeCount": 38,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0030890",
+            "patientPhenotypeLabel": "Hyperintensity of cerebral white matter on MRI",
+            "diseasePhenotypeCurie": "HP:0030890",
+            "diseasePhenotypeLabel": "Hyperintensity of cerebral white matter on MRI",
+            "micaCurie": "HP:0030890",
+            "micaLabel": "Hyperintensity of cerebral white matter on MRI",
+            "score": 5.031720944837816,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:438114"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002188",
+            "patientPhenotypeLabel": "Delayed CNS myelination",
+            "diseasePhenotypeCurie": "HP:0006808",
+            "diseasePhenotypeLabel": "Cerebral hypomyelination",
+            "micaCurie": "HP:0011400",
+            "micaLabel": "Abnormal CNS myelination",
+            "score": 3.0433574795301634,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:438114"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000639",
+            "patientPhenotypeLabel": "Nystagmus",
+            "diseasePhenotypeCurie": "HP:0012043",
+            "diseasePhenotypeLabel": "Pendular nystagmus",
+            "micaCurie": "HP:0000639",
+            "micaLabel": "Nystagmus",
+            "score": 2.304802259431223,
+            "evidenceCode": "1/4",
+            "referenceText": "OMIM:616140"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001250",
+            "patientPhenotypeLabel": "Seizure",
+            "diseasePhenotypeCurie": "HP:0007359",
+            "diseasePhenotypeLabel": "Focal-onset seizure",
+            "micaCurie": "HP:0001250",
+            "micaLabel": "Seizure",
+            "score": 1.4866293835155915,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:438114"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "4/4",
+            "referenceText": "OMIM:616140"
+          }
+        ]
+      },
+      {
+        "rank": 2,
+        "geneCurie": "NCBIGene:27133",
+        "geneLabel": "KCNH5",
+        "geneSymbol": "KCNH5",
+        "geneEntityId": 151549,
+        "bmaScore": 1.8431968944001995,
+        "normalizedScore": 0.203509,
+        "patientAverageScore": 2.7743644687466564,
+        "phenotypeAverageScore": 0.9120293200537428,
+        "directPhenotypeCount": 73,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0030890",
+            "patientPhenotypeLabel": "Hyperintensity of cerebral white matter on MRI",
+            "diseasePhenotypeCurie": "HP:0030890",
+            "diseasePhenotypeLabel": "Hyperintensity of cerebral white matter on MRI",
+            "micaCurie": "HP:0030890",
+            "micaLabel": "Hyperintensity of cerebral white matter on MRI",
+            "score": 5.031720944837816,
+            "evidenceCode": "1/4",
+            "referenceText": "OMIM:620537"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002188",
+            "patientPhenotypeLabel": "Delayed CNS myelination",
+            "diseasePhenotypeCurie": "HP:0002188",
+            "diseasePhenotypeLabel": "Delayed CNS myelination",
+            "micaCurie": "HP:0002188",
+            "micaLabel": "Delayed CNS myelination",
+            "score": 3.5974871214288062,
+            "evidenceCode": "1/15",
+            "referenceText": "OMIM:620537"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000639",
+            "patientPhenotypeLabel": "Nystagmus",
+            "diseasePhenotypeCurie": "HP:0000639",
+            "diseasePhenotypeLabel": "Nystagmus",
+            "micaCurie": "HP:0000639",
+            "micaLabel": "Nystagmus",
+            "score": 2.304802259431223,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:442835"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001250",
+            "patientPhenotypeLabel": "Seizure",
+            "diseasePhenotypeCurie": "HP:0032794",
+            "diseasePhenotypeLabel": "Myoclonic seizure",
+            "micaCurie": "HP:0001250",
+            "micaLabel": "Seizure",
+            "score": 1.4866293835155915,
+            "evidenceCode": "4/22",
+            "referenceText": "OMIM:620537"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:442835"
+          }
+        ]
+      },
+      {
+        "rank": 3,
+        "geneCurie": "NCBIGene:51412",
+        "geneLabel": "ACTL6B",
+        "geneSymbol": "ACTL6B",
+        "geneEntityId": 151745,
+        "bmaScore": 1.7715202299285753,
+        "normalizedScore": 0.195595,
+        "patientAverageScore": 2.7743644687466564,
+        "phenotypeAverageScore": 0.7686759911104942,
+        "directPhenotypeCount": 79,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0030890",
+            "patientPhenotypeLabel": "Hyperintensity of cerebral white matter on MRI",
+            "diseasePhenotypeCurie": "HP:0030891",
+            "diseasePhenotypeLabel": "Periventricular white matter hyperintensities",
+            "micaCurie": "HP:0030890",
+            "micaLabel": "Hyperintensity of cerebral white matter on MRI",
+            "score": 5.031720944837816,
+            "evidenceCode": "2/11",
+            "referenceText": "OMIM:618468"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002188",
+            "patientPhenotypeLabel": "Delayed CNS myelination",
+            "diseasePhenotypeCurie": "HP:0002188",
+            "diseasePhenotypeLabel": "Delayed CNS myelination",
+            "micaCurie": "HP:0002188",
+            "micaLabel": "Delayed CNS myelination",
+            "score": 3.5974871214288062,
+            "evidenceCode": "1/12",
+            "referenceText": "OMIM:618468"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000639",
+            "patientPhenotypeLabel": "Nystagmus",
+            "diseasePhenotypeCurie": "HP:0000639",
+            "diseasePhenotypeLabel": "Nystagmus",
+            "micaCurie": "HP:0000639",
+            "micaLabel": "Nystagmus",
+            "score": 2.304802259431223,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:442835"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001250",
+            "patientPhenotypeLabel": "Seizure",
+            "diseasePhenotypeCurie": "HP:0012469",
+            "diseasePhenotypeLabel": "Infantile spasms",
+            "micaCurie": "HP:0001250",
+            "micaLabel": "Seizure",
+            "score": 1.4866293835155915,
+            "evidenceCode": "1/9",
+            "referenceText": "OMIM:618470"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0011344",
+            "diseasePhenotypeLabel": "Severe global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:618468"
+          }
+        ]
+      },
+      {
+        "rank": 4,
+        "geneCurie": "NCBIGene:84504",
+        "geneLabel": "NKX6-2",
+        "geneSymbol": "NKX6-2",
+        "geneEntityId": 152597,
+        "bmaScore": 1.762997588408658,
+        "normalizedScore": 0.194654,
+        "patientAverageScore": 2.6635385403669276,
+        "phenotypeAverageScore": 0.8624566364503884,
+        "directPhenotypeCount": 56,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0030890",
+            "patientPhenotypeLabel": "Hyperintensity of cerebral white matter on MRI",
+            "diseasePhenotypeCurie": "HP:0030890",
+            "diseasePhenotypeLabel": "Hyperintensity of cerebral white matter on MRI",
+            "micaCurie": "HP:0030890",
+            "micaLabel": "Hyperintensity of cerebral white matter on MRI",
+            "score": 5.031720944837816,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:527497"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002188",
+            "patientPhenotypeLabel": "Delayed CNS myelination",
+            "diseasePhenotypeCurie": "HP:0003429",
+            "diseasePhenotypeLabel": "CNS hypomyelination",
+            "micaCurie": "HP:0011400",
+            "micaLabel": "Abnormal CNS myelination",
+            "score": 3.0433574795301634,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:527497"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000639",
+            "patientPhenotypeLabel": "Nystagmus",
+            "diseasePhenotypeCurie": "HP:0000639",
+            "diseasePhenotypeLabel": "Nystagmus",
+            "micaCurie": "HP:0000639",
+            "micaLabel": "Nystagmus",
+            "score": 2.304802259431223,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:527497"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001250",
+            "patientPhenotypeLabel": "Seizure",
+            "diseasePhenotypeCurie": "HP:0001250",
+            "diseasePhenotypeLabel": "Seizure",
+            "micaCurie": "HP:0001250",
+            "micaLabel": "Seizure",
+            "score": 1.4866293835155915,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:527497"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0011344",
+            "diseasePhenotypeLabel": "Severe global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "2/7",
+            "referenceText": "OMIM:617560"
+          }
+        ]
+      },
+      {
+        "rank": 5,
+        "geneCurie": "NCBIGene:5354",
+        "geneLabel": "PLP1",
+        "geneSymbol": "PLP1",
+        "geneEntityId": 149788,
+        "bmaScore": 1.7607745841619638,
+        "normalizedScore": 0.194409,
+        "patientAverageScore": 2.6635385403669276,
+        "phenotypeAverageScore": 0.8580106279570001,
+        "directPhenotypeCount": 128,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0030890",
+            "patientPhenotypeLabel": "Hyperintensity of cerebral white matter on MRI",
+            "diseasePhenotypeCurie": "HP:0040330",
+            "diseasePhenotypeLabel": "Confluent hyperintensity of cerebral white matter on MRI",
+            "micaCurie": "HP:0030890",
+            "micaLabel": "Hyperintensity of cerebral white matter on MRI",
+            "score": 5.031720944837816,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:280219"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002188",
+            "patientPhenotypeLabel": "Delayed CNS myelination",
+            "diseasePhenotypeCurie": "HP:0011400",
+            "diseasePhenotypeLabel": "Abnormal CNS myelination",
+            "micaCurie": "HP:0011400",
+            "micaLabel": "Abnormal CNS myelination",
+            "score": 3.0433574795301634,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "OMIM:312080"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000639",
+            "patientPhenotypeLabel": "Nystagmus",
+            "diseasePhenotypeCurie": "HP:0012043",
+            "diseasePhenotypeLabel": "Pendular nystagmus",
+            "micaCurie": "HP:0000639",
+            "micaLabel": "Nystagmus",
+            "score": 2.304802259431223,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:280210"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001250",
+            "patientPhenotypeLabel": "Seizure",
+            "diseasePhenotypeCurie": "HP:0002197",
+            "diseasePhenotypeLabel": "Generalized-onset seizure",
+            "micaCurie": "HP:0001250",
+            "micaLabel": "Seizure",
+            "score": 1.4866293835155915,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:280229"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0011343",
+            "diseasePhenotypeLabel": "Moderate global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:280229"
+          }
+        ]
+      },
+      {
+        "rank": 6,
+        "geneCurie": "NCBIGene:5058",
+        "geneLabel": "PAK1",
+        "geneSymbol": "PAK1",
+        "geneEntityId": 149668,
+        "bmaScore": 1.7559370759744872,
+        "normalizedScore": 0.193875,
+        "patientAverageScore": 2.6150665478727726,
+        "phenotypeAverageScore": 0.8968076040762017,
+        "directPhenotypeCount": 24,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0030890",
+            "patientPhenotypeLabel": "Hyperintensity of cerebral white matter on MRI",
+            "diseasePhenotypeCurie": "HP:0030891",
+            "diseasePhenotypeLabel": "Periventricular white matter hyperintensities",
+            "micaCurie": "HP:0030890",
+            "micaLabel": "Hyperintensity of cerebral white matter on MRI",
+            "score": 5.031720944837816,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:618158"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002188",
+            "patientPhenotypeLabel": "Delayed CNS myelination",
+            "diseasePhenotypeCurie": "HP:0012448",
+            "diseasePhenotypeLabel": "Delayed myelination",
+            "micaCurie": "HP:0012448",
+            "micaLabel": "Delayed myelination",
+            "score": 3.4258608537515998,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "OMIM:618158"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000639",
+            "patientPhenotypeLabel": "Nystagmus",
+            "diseasePhenotypeCurie": "HP:0020045",
+            "diseasePhenotypeLabel": "Esodeviation",
+            "micaCurie": "HP:0000496",
+            "micaLabel": "Abnormality of eye movement",
+            "score": 1.679938922739011,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:618158"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001250",
+            "patientPhenotypeLabel": "Seizure",
+            "diseasePhenotypeCurie": "HP:0001250",
+            "diseasePhenotypeLabel": "Seizure",
+            "micaCurie": "HP:0001250",
+            "micaLabel": "Seizure",
+            "score": 1.4866293835155915,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:618158"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:618158"
+          }
+        ]
+      },
+      {
+        "rank": 7,
+        "geneCurie": "NCBIGene:4761",
+        "geneLabel": "NEUROD2",
+        "geneSymbol": "NEUROD2",
+        "geneEntityId": 149585,
+        "bmaScore": 1.7558286213233902,
+        "normalizedScore": 0.193863,
+        "patientAverageScore": 2.649391801408213,
+        "phenotypeAverageScore": 0.8622654412385675,
+        "directPhenotypeCount": 77,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0030890",
+            "patientPhenotypeLabel": "Hyperintensity of cerebral white matter on MRI",
+            "diseasePhenotypeCurie": "HP:0030891",
+            "diseasePhenotypeLabel": "Periventricular white matter hyperintensities",
+            "micaCurie": "HP:0030890",
+            "micaLabel": "Hyperintensity of cerebral white matter on MRI",
+            "score": 5.031720944837816,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:618374"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002188",
+            "patientPhenotypeLabel": "Delayed CNS myelination",
+            "diseasePhenotypeCurie": "HP:0002188",
+            "diseasePhenotypeLabel": "Delayed CNS myelination",
+            "micaCurie": "HP:0002188",
+            "micaLabel": "Delayed CNS myelination",
+            "score": 3.5974871214288062,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:618374"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000639",
+            "patientPhenotypeLabel": "Nystagmus",
+            "diseasePhenotypeCurie": "HP:0000565",
+            "diseasePhenotypeLabel": "Esotropia",
+            "micaCurie": "HP:0000496",
+            "micaLabel": "Abnormality of eye movement",
+            "score": 1.679938922739011,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:618374"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001250",
+            "patientPhenotypeLabel": "Seizure",
+            "diseasePhenotypeCurie": "HP:0012469",
+            "diseasePhenotypeLabel": "Infantile spasms",
+            "micaCurie": "HP:0001250",
+            "micaLabel": "Seizure",
+            "score": 1.4866293835155915,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:618374"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:618374"
+          }
+        ]
+      },
+      {
+        "rank": 8,
+        "geneCurie": "NCBIGene:22866",
+        "geneLabel": "CNKSR2",
+        "geneSymbol": "CNKSR2",
+        "geneEntityId": 151232,
+        "bmaScore": 1.731504937754449,
+        "normalizedScore": 0.191177,
+        "patientAverageScore": 2.6024879488262007,
+        "phenotypeAverageScore": 0.860521926682697,
+        "directPhenotypeCount": 57,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0030890",
+            "patientPhenotypeLabel": "Hyperintensity of cerebral white matter on MRI",
+            "diseasePhenotypeCurie": "HP:0030891",
+            "diseasePhenotypeLabel": "Periventricular white matter hyperintensities",
+            "micaCurie": "HP:0030890",
+            "micaLabel": "Hyperintensity of cerebral white matter on MRI",
+            "score": 5.031720944837816,
+            "evidenceCode": "1/6",
+            "referenceText": "OMIM:301008"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002188",
+            "patientPhenotypeLabel": "Delayed CNS myelination",
+            "diseasePhenotypeCurie": "HP:0012447",
+            "diseasePhenotypeLabel": "Abnormal myelination",
+            "micaCurie": "HP:0012447",
+            "micaLabel": "Abnormal myelination",
+            "score": 2.7381045218265307,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:442835"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000639",
+            "patientPhenotypeLabel": "Nystagmus",
+            "diseasePhenotypeCurie": "HP:0000639",
+            "diseasePhenotypeLabel": "Nystagmus",
+            "micaCurie": "HP:0000639",
+            "micaLabel": "Nystagmus",
+            "score": 2.304802259431223,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:442835"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001250",
+            "patientPhenotypeLabel": "Seizure",
+            "diseasePhenotypeCurie": "HP:0002373",
+            "diseasePhenotypeLabel": "Febrile seizure (within the age range of 3 months to 6 years)",
+            "micaCurie": "HP:0001250",
+            "micaLabel": "Seizure",
+            "score": 1.4866293835155915,
+            "evidenceCode": "1/4",
+            "referenceText": "OMIM:301008"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:442835"
+          }
+        ]
+      },
+      {
+        "rank": 9,
+        "geneCurie": "NCBIGene:54973",
+        "geneLabel": "INTS11",
+        "geneSymbol": "INTS11",
+        "geneEntityId": 151897,
+        "bmaScore": 1.7177283788522297,
+        "normalizedScore": 0.189656,
+        "patientAverageScore": 2.649391801408213,
+        "phenotypeAverageScore": 0.7860649562962462,
+        "directPhenotypeCount": 47,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0030890",
+            "patientPhenotypeLabel": "Hyperintensity of cerebral white matter on MRI",
+            "diseasePhenotypeCurie": "HP:0030890",
+            "diseasePhenotypeLabel": "Hyperintensity of cerebral white matter on MRI",
+            "micaCurie": "HP:0030890",
+            "micaLabel": "Hyperintensity of cerebral white matter on MRI",
+            "score": 5.031720944837816,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:620428"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002188",
+            "patientPhenotypeLabel": "Delayed CNS myelination",
+            "diseasePhenotypeCurie": "HP:0002188",
+            "diseasePhenotypeLabel": "Delayed CNS myelination",
+            "micaCurie": "HP:0002188",
+            "micaLabel": "Delayed CNS myelination",
+            "score": 3.5974871214288062,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:620428"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000639",
+            "patientPhenotypeLabel": "Nystagmus",
+            "diseasePhenotypeCurie": "HP:0000486",
+            "diseasePhenotypeLabel": "Strabismus",
+            "micaCurie": "HP:0000496",
+            "micaLabel": "Abnormality of eye movement",
+            "score": 1.679938922739011,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:620428"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001250",
+            "patientPhenotypeLabel": "Seizure",
+            "diseasePhenotypeCurie": "HP:0001250",
+            "diseasePhenotypeLabel": "Seizure",
+            "micaCurie": "HP:0001250",
+            "micaLabel": "Seizure",
+            "score": 1.4866293835155915,
+            "evidenceCode": "4/4",
+            "referenceText": "OMIM:620428"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0011344",
+            "diseasePhenotypeLabel": "Severe global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "15/15",
+            "referenceText": "OMIM:620428"
+          }
+        ]
+      },
+      {
+        "rank": 10,
+        "geneCurie": "NCBIGene:114971",
+        "geneLabel": "PTPMT1",
+        "geneSymbol": "PTPMT1",
+        "geneEntityId": 152785,
+        "bmaScore": 1.7093228106981406,
+        "normalizedScore": 0.188728,
+        "patientAverageScore": 2.6635385403669276,
+        "phenotypeAverageScore": 0.7551070810293535,
+        "directPhenotypeCount": 62,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0030890",
+            "patientPhenotypeLabel": "Hyperintensity of cerebral white matter on MRI",
+            "diseasePhenotypeCurie": "HP:0030892",
+            "diseasePhenotypeLabel": "Deep cerebral white matter hyperintensities",
+            "micaCurie": "HP:0030890",
+            "micaLabel": "Hyperintensity of cerebral white matter on MRI",
+            "score": 5.031720944837816,
+            "evidenceCode": "1/5",
+            "referenceText": "OMIM:621199"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002188",
+            "patientPhenotypeLabel": "Delayed CNS myelination",
+            "diseasePhenotypeCurie": "HP:0003429",
+            "diseasePhenotypeLabel": "CNS hypomyelination",
+            "micaCurie": "HP:0011400",
+            "micaLabel": "Abnormal CNS myelination",
+            "score": 3.0433574795301634,
+            "evidenceCode": "1/5",
+            "referenceText": "OMIM:621199"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000639",
+            "patientPhenotypeLabel": "Nystagmus",
+            "diseasePhenotypeCurie": "HP:0000639",
+            "diseasePhenotypeLabel": "Nystagmus",
+            "micaCurie": "HP:0000639",
+            "micaLabel": "Nystagmus",
+            "score": 2.304802259431223,
+            "evidenceCode": "4/4",
+            "referenceText": "OMIM:621199"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001250",
+            "patientPhenotypeLabel": "Seizure",
+            "diseasePhenotypeCurie": "HP:0025190",
+            "diseasePhenotypeLabel": "Bilateral tonic-clonic seizure with generalized onset",
+            "micaCurie": "HP:0001250",
+            "micaLabel": "Seizure",
+            "score": 1.4866293835155915,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:621199"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0011344",
+            "diseasePhenotypeLabel": "Severe global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "1/6",
+            "referenceText": "OMIM:621199"
+          }
+        ]
+      },
+      {
+        "rank": 11,
+        "geneCurie": "NCBIGene:1436",
+        "geneLabel": "CSF1R",
+        "geneSymbol": "CSF1R",
+        "geneEntityId": 148558,
+        "bmaScore": 1.6741205670232917,
+        "normalizedScore": 0.184841,
+        "patientAverageScore": 2.6635385403669276,
+        "phenotypeAverageScore": 0.6847025936796557,
+        "directPhenotypeCount": 79,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0030890",
+            "patientPhenotypeLabel": "Hyperintensity of cerebral white matter on MRI",
+            "diseasePhenotypeCurie": "HP:0030890",
+            "diseasePhenotypeLabel": "Hyperintensity of cerebral white matter on MRI",
+            "micaCurie": "HP:0030890",
+            "micaLabel": "Hyperintensity of cerebral white matter on MRI",
+            "score": 5.031720944837816,
+            "evidenceCode": "2/4",
+            "referenceText": "OMIM:618476"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002188",
+            "patientPhenotypeLabel": "Delayed CNS myelination",
+            "diseasePhenotypeCurie": "HP:0007305",
+            "diseasePhenotypeLabel": "CNS demyelination",
+            "micaCurie": "HP:0011400",
+            "micaLabel": "Abnormal CNS myelination",
+            "score": 3.0433574795301634,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:221820"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000639",
+            "patientPhenotypeLabel": "Nystagmus",
+            "diseasePhenotypeCurie": "HP:0000639",
+            "diseasePhenotypeLabel": "Nystagmus",
+            "micaCurie": "HP:0000639",
+            "micaLabel": "Nystagmus",
+            "score": 2.304802259431223,
+            "evidenceCode": "1/4",
+            "referenceText": "OMIM:618476"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001250",
+            "patientPhenotypeLabel": "Seizure",
+            "diseasePhenotypeCurie": "HP:0007359",
+            "diseasePhenotypeLabel": "Focal-onset seizure",
+            "micaCurie": "HP:0001250",
+            "micaLabel": "Seizure",
+            "score": 1.4866293835155915,
+            "evidenceCode": "2/4",
+            "referenceText": "OMIM:618476"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "1/4",
+            "referenceText": "OMIM:618476"
+          }
+        ]
+      },
+      {
+        "rank": 12,
+        "geneCurie": "NCBIGene:80208",
+        "geneLabel": "SPG11",
+        "geneSymbol": "SPG11",
+        "geneEntityId": 152451,
+        "bmaScore": 1.673451015051165,
+        "normalizedScore": 0.184767,
+        "patientAverageScore": 2.6635385403669276,
+        "phenotypeAverageScore": 0.6833634897354023,
+        "directPhenotypeCount": 136,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0030890",
+            "patientPhenotypeLabel": "Hyperintensity of cerebral white matter on MRI",
+            "diseasePhenotypeCurie": "HP:0030890",
+            "diseasePhenotypeLabel": "Hyperintensity of cerebral white matter on MRI",
+            "micaCurie": "HP:0030890",
+            "micaLabel": "Hyperintensity of cerebral white matter on MRI",
+            "score": 5.031720944837816,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:2822"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002188",
+            "patientPhenotypeLabel": "Delayed CNS myelination",
+            "diseasePhenotypeCurie": "HP:0003429",
+            "diseasePhenotypeLabel": "CNS hypomyelination",
+            "micaCurie": "HP:0011400",
+            "micaLabel": "Abnormal CNS myelination",
+            "score": 3.0433574795301634,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:300605"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000639",
+            "patientPhenotypeLabel": "Nystagmus",
+            "diseasePhenotypeCurie": "HP:0000640",
+            "diseasePhenotypeLabel": "Gaze-evoked nystagmus",
+            "micaCurie": "HP:0000639",
+            "micaLabel": "Nystagmus",
+            "score": 2.304802259431223,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:604360"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001250",
+            "patientPhenotypeLabel": "Seizure",
+            "diseasePhenotypeCurie": "HP:0001250",
+            "diseasePhenotypeLabel": "Seizure",
+            "micaCurie": "HP:0001250",
+            "micaLabel": "Seizure",
+            "score": 1.4866293835155915,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:2822"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:300605"
+          }
+        ]
+      },
+      {
+        "rank": 13,
+        "geneCurie": "NCBIGene:64857",
+        "geneLabel": "PLEKHG2",
+        "geneSymbol": "PLEKHG2",
+        "geneEntityId": 152303,
+        "bmaScore": 1.6706137564574823,
+        "normalizedScore": 0.184454,
+        "patientAverageScore": 2.0908943866008847,
+        "phenotypeAverageScore": 1.2503331263140798,
+        "directPhenotypeCount": 13,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002188",
+            "patientPhenotypeLabel": "Delayed CNS myelination",
+            "diseasePhenotypeCurie": "HP:0002415",
+            "diseasePhenotypeLabel": "Leukodystrophy",
+            "micaCurie": "HP:0011400",
+            "micaLabel": "Abnormal CNS myelination",
+            "score": 3.0433574795301634,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:616763"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000639",
+            "patientPhenotypeLabel": "Nystagmus",
+            "diseasePhenotypeCurie": "HP:0000639",
+            "diseasePhenotypeLabel": "Nystagmus",
+            "micaCurie": "HP:0000639",
+            "micaLabel": "Nystagmus",
+            "score": 2.304802259431223,
+            "evidenceCode": "2/5",
+            "referenceText": "OMIM:616763"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0030890",
+            "patientPhenotypeLabel": "Hyperintensity of cerebral white matter on MRI",
+            "diseasePhenotypeCurie": "HP:0007204",
+            "diseasePhenotypeLabel": "Diffuse white matter abnormalities",
+            "micaCurie": "HP:0002500",
+            "micaLabel": "Abnormal cerebral white matter morphology",
+            "score": 2.168500176007602,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:616763"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001250",
+            "patientPhenotypeLabel": "Seizure",
+            "diseasePhenotypeCurie": "HP:0001250",
+            "diseasePhenotypeLabel": "Seizure",
+            "micaCurie": "HP:0001250",
+            "micaLabel": "Seizure",
+            "score": 1.4866293835155915,
+            "evidenceCode": "1/4",
+            "referenceText": "OMIM:616763"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0012736",
+            "diseasePhenotypeLabel": "Profound global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:616763"
+          }
+        ]
+      },
+      {
+        "rank": 14,
+        "geneCurie": "NCBIGene:85365",
+        "geneLabel": "ALG2",
+        "geneSymbol": "ALG2",
+        "geneEntityId": 152667,
+        "bmaScore": 1.6635426615653623,
+        "normalizedScore": 0.183673,
+        "patientAverageScore": 2.7743644687466564,
+        "phenotypeAverageScore": 0.5527208543840681,
+        "directPhenotypeCount": 100,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0030890",
+            "patientPhenotypeLabel": "Hyperintensity of cerebral white matter on MRI",
+            "diseasePhenotypeCurie": "HP:0030890",
+            "diseasePhenotypeLabel": "Hyperintensity of cerebral white matter on MRI",
+            "micaCurie": "HP:0030890",
+            "micaLabel": "Hyperintensity of cerebral white matter on MRI",
+            "score": 5.031720944837816,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:79326"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002188",
+            "patientPhenotypeLabel": "Delayed CNS myelination",
+            "diseasePhenotypeCurie": "HP:0002188",
+            "diseasePhenotypeLabel": "Delayed CNS myelination",
+            "micaCurie": "HP:0002188",
+            "micaLabel": "Delayed CNS myelination",
+            "score": 3.5974871214288062,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:607906"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000639",
+            "patientPhenotypeLabel": "Nystagmus",
+            "diseasePhenotypeCurie": "HP:0000639",
+            "diseasePhenotypeLabel": "Nystagmus",
+            "micaCurie": "HP:0000639",
+            "micaLabel": "Nystagmus",
+            "score": 2.304802259431223,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:607906"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001250",
+            "patientPhenotypeLabel": "Seizure",
+            "diseasePhenotypeCurie": "HP:0012469",
+            "diseasePhenotypeLabel": "Infantile spasms",
+            "micaCurie": "HP:0001250",
+            "micaLabel": "Seizure",
+            "score": 1.4866293835155915,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:607906"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0011344",
+            "diseasePhenotypeLabel": "Severe global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "4/4",
+            "referenceText": "OMIM:607906"
+          }
+        ]
+      },
+      {
+        "rank": 15,
+        "geneCurie": "NCBIGene:29920",
+        "geneLabel": "PYCR2",
+        "geneSymbol": "PYCR2",
+        "geneEntityId": 151615,
+        "bmaScore": 1.6619381186569617,
+        "normalizedScore": 0.183496,
+        "patientAverageScore": 2.6635385403669276,
+        "phenotypeAverageScore": 0.660337696946996,
+        "directPhenotypeCount": 91,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0030890",
+            "patientPhenotypeLabel": "Hyperintensity of cerebral white matter on MRI",
+            "diseasePhenotypeCurie": "HP:0030890",
+            "diseasePhenotypeLabel": "Hyperintensity of cerebral white matter on MRI",
+            "micaCurie": "HP:0030890",
+            "micaLabel": "Hyperintensity of cerebral white matter on MRI",
+            "score": 5.031720944837816,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:481152"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002188",
+            "patientPhenotypeLabel": "Delayed CNS myelination",
+            "diseasePhenotypeCurie": "HP:0007258",
+            "diseasePhenotypeLabel": "Severe demyelination of the white matter",
+            "micaCurie": "HP:0011400",
+            "micaLabel": "Abnormal CNS myelination",
+            "score": 3.0433574795301634,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:481152"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000639",
+            "patientPhenotypeLabel": "Nystagmus",
+            "diseasePhenotypeCurie": "HP:0000639",
+            "diseasePhenotypeLabel": "Nystagmus",
+            "micaCurie": "HP:0000639",
+            "micaLabel": "Nystagmus",
+            "score": 2.304802259431223,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "OMIM:616420"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001250",
+            "patientPhenotypeLabel": "Seizure",
+            "diseasePhenotypeCurie": "HP:0011166",
+            "diseasePhenotypeLabel": "Focal myoclonic seizure",
+            "micaCurie": "HP:0001250",
+            "micaLabel": "Seizure",
+            "score": 1.4866293835155915,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:481152"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0011344",
+            "diseasePhenotypeLabel": "Severe global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:481152"
+          }
+        ]
+      },
+      {
+        "rank": 16,
+        "geneCurie": "NCBIGene:23503",
+        "geneLabel": "ZFYVE26",
+        "geneSymbol": "ZFYVE26",
+        "geneEntityId": 151391,
+        "bmaScore": 1.644821019618669,
+        "normalizedScore": 0.181606,
+        "patientAverageScore": 2.506015003612339,
+        "phenotypeAverageScore": 0.7836270356249989,
+        "directPhenotypeCount": 56,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0030890",
+            "patientPhenotypeLabel": "Hyperintensity of cerebral white matter on MRI",
+            "diseasePhenotypeCurie": "HP:0030892",
+            "diseasePhenotypeLabel": "Deep cerebral white matter hyperintensities",
+            "micaCurie": "HP:0030890",
+            "micaLabel": "Hyperintensity of cerebral white matter on MRI",
+            "score": 5.031720944837816,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:100996"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002188",
+            "patientPhenotypeLabel": "Delayed CNS myelination",
+            "diseasePhenotypeCurie": "HP:0007108",
+            "diseasePhenotypeLabel": "Demyelinating peripheral neuropathy",
+            "micaCurie": "HP:0012447",
+            "micaLabel": "Abnormal myelination",
+            "score": 2.7381045218265307,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:100996"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000639",
+            "patientPhenotypeLabel": "Nystagmus",
+            "diseasePhenotypeCurie": "HP:0000639",
+            "diseasePhenotypeLabel": "Nystagmus",
+            "micaCurie": "HP:0000639",
+            "micaLabel": "Nystagmus",
+            "score": 2.304802259431223,
+            "evidenceCode": "4/10",
+            "referenceText": "OMIM:270700"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001250",
+            "patientPhenotypeLabel": "Seizure",
+            "diseasePhenotypeCurie": "HP:0001250",
+            "diseasePhenotypeLabel": "Seizure",
+            "micaCurie": "HP:0001250",
+            "micaLabel": "Seizure",
+            "score": 1.4866293835155915,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:100996"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001328",
+            "diseasePhenotypeLabel": "Specific learning disability",
+            "micaCurie": "HP:0012759",
+            "micaLabel": "Neurodevelopmental abnormality",
+            "score": 0.9688179084505344,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:100996"
+          }
+        ]
+      },
+      {
+        "rank": 17,
+        "geneCurie": "NCBIGene:5660",
+        "geneLabel": "PSAP",
+        "geneSymbol": "PSAP",
+        "geneEntityId": 149873,
+        "bmaScore": 1.6334946363434872,
+        "normalizedScore": 0.180356,
+        "patientAverageScore": 2.6635385403669276,
+        "phenotypeAverageScore": 0.6034507323200468,
+        "directPhenotypeCount": 180,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0030890",
+            "patientPhenotypeLabel": "Hyperintensity of cerebral white matter on MRI",
+            "diseasePhenotypeCurie": "HP:0030890",
+            "diseasePhenotypeLabel": "Hyperintensity of cerebral white matter on MRI",
+            "micaCurie": "HP:0030890",
+            "micaLabel": "Hyperintensity of cerebral white matter on MRI",
+            "score": 5.031720944837816,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:611722"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002188",
+            "patientPhenotypeLabel": "Delayed CNS myelination",
+            "diseasePhenotypeCurie": "HP:0007305",
+            "diseasePhenotypeLabel": "CNS demyelination",
+            "micaCurie": "HP:0011400",
+            "micaLabel": "Abnormal CNS myelination",
+            "score": 3.0433574795301634,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:249900"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000639",
+            "patientPhenotypeLabel": "Nystagmus",
+            "diseasePhenotypeCurie": "HP:0000666",
+            "diseasePhenotypeLabel": "Horizontal nystagmus",
+            "micaCurie": "HP:0000639",
+            "micaLabel": "Nystagmus",
+            "score": 2.304802259431223,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:610539"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001250",
+            "patientPhenotypeLabel": "Seizure",
+            "diseasePhenotypeCurie": "HP:0032792",
+            "diseasePhenotypeLabel": "Tonic seizure",
+            "micaCurie": "HP:0001250",
+            "micaLabel": "Seizure",
+            "score": 1.4866293835155915,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:611722"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:206436"
+          }
+        ]
+      },
+      {
+        "rank": 18,
+        "geneCurie": "NCBIGene:26834",
+        "geneLabel": "RNU4-2",
+        "geneSymbol": "RNU4-2",
+        "geneEntityId": 151526,
+        "bmaScore": 1.6332689541774477,
+        "normalizedScore": 0.180331,
+        "patientAverageScore": 2.7743644687466564,
+        "phenotypeAverageScore": 0.4921734396082387,
+        "directPhenotypeCount": 211,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0030890",
+            "patientPhenotypeLabel": "Hyperintensity of cerebral white matter on MRI",
+            "diseasePhenotypeCurie": "HP:0030890",
+            "diseasePhenotypeLabel": "Hyperintensity of cerebral white matter on MRI",
+            "micaCurie": "HP:0030890",
+            "micaLabel": "Hyperintensity of cerebral white matter on MRI",
+            "score": 5.031720944837816,
+            "evidenceCode": "1/45",
+            "referenceText": "OMIM:620851"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002188",
+            "patientPhenotypeLabel": "Delayed CNS myelination",
+            "diseasePhenotypeCurie": "HP:0002188",
+            "diseasePhenotypeLabel": "Delayed CNS myelination",
+            "micaCurie": "HP:0002188",
+            "micaLabel": "Delayed CNS myelination",
+            "score": 3.5974871214288062,
+            "evidenceCode": "4/57",
+            "referenceText": "OMIM:620851"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000639",
+            "patientPhenotypeLabel": "Nystagmus",
+            "diseasePhenotypeCurie": "HP:0000639",
+            "diseasePhenotypeLabel": "Nystagmus",
+            "micaCurie": "HP:0000639",
+            "micaLabel": "Nystagmus",
+            "score": 2.304802259431223,
+            "evidenceCode": "25/51",
+            "referenceText": "OMIM:620851"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001250",
+            "patientPhenotypeLabel": "Seizure",
+            "diseasePhenotypeCurie": "HP:0001250",
+            "diseasePhenotypeLabel": "Seizure",
+            "micaCurie": "HP:0001250",
+            "micaLabel": "Seizure",
+            "score": 1.4866293835155915,
+            "evidenceCode": "45/60",
+            "referenceText": "OMIM:620851"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0011344",
+            "diseasePhenotypeLabel": "Severe global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "35/45",
+            "referenceText": "OMIM:620851"
+          }
+        ]
+      },
+      {
+        "rank": 19,
+        "geneCurie": "NCBIGene:5654",
+        "geneLabel": "HTRA1",
+        "geneSymbol": "HTRA1",
+        "geneEntityId": 149871,
+        "bmaScore": 1.6311359201152738,
+        "normalizedScore": 0.180095,
+        "patientAverageScore": 2.494848035675939,
+        "phenotypeAverageScore": 0.7674238045546085,
+        "directPhenotypeCount": 71,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0030890",
+            "patientPhenotypeLabel": "Hyperintensity of cerebral white matter on MRI",
+            "diseasePhenotypeCurie": "HP:0030892",
+            "diseasePhenotypeLabel": "Deep cerebral white matter hyperintensities",
+            "micaCurie": "HP:0030890",
+            "micaLabel": "Hyperintensity of cerebral white matter on MRI",
+            "score": 5.031720944837816,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:199354"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002188",
+            "patientPhenotypeLabel": "Delayed CNS myelination",
+            "diseasePhenotypeCurie": "HP:0007162",
+            "diseasePhenotypeLabel": "Diffuse demyelination of the cerebral white matter",
+            "micaCurie": "HP:0011400",
+            "micaLabel": "Abnormal CNS myelination",
+            "score": 3.0433574795301634,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:600142"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000639",
+            "patientPhenotypeLabel": "Nystagmus",
+            "diseasePhenotypeCurie": "HP:0000639",
+            "diseasePhenotypeLabel": "Nystagmus",
+            "micaCurie": "HP:0000639",
+            "micaLabel": "Nystagmus",
+            "score": 2.304802259431223,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "OMIM:600142"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001250",
+            "patientPhenotypeLabel": "Seizure",
+            "diseasePhenotypeCurie": "HP:0002069",
+            "diseasePhenotypeLabel": "Bilateral tonic-clonic seizure",
+            "micaCurie": "HP:0001250",
+            "micaLabel": "Seizure",
+            "score": 1.4866293835155915,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "ORPHA:199354"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0100543",
+            "diseasePhenotypeLabel": "Cognitive impairment",
+            "micaCurie": "HP:0012638",
+            "micaLabel": "Abnormal nervous system physiology",
+            "score": 0.6077301110649022,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:199354"
+          }
+        ]
+      },
+      {
+        "rank": 20,
+        "geneCurie": "NCBIGene:1593",
+        "geneLabel": "CYP27A1",
+        "geneSymbol": "CYP27A1",
+        "geneEntityId": 148610,
+        "bmaScore": 1.5966389885175916,
+        "normalizedScore": 0.176286,
+        "patientAverageScore": 2.612525267602274,
+        "phenotypeAverageScore": 0.5807527094329092,
+        "directPhenotypeCount": 115,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0030890",
+            "patientPhenotypeLabel": "Hyperintensity of cerebral white matter on MRI",
+            "diseasePhenotypeCurie": "HP:0030890",
+            "diseasePhenotypeLabel": "Hyperintensity of cerebral white matter on MRI",
+            "micaCurie": "HP:0030890",
+            "micaLabel": "Hyperintensity of cerebral white matter on MRI",
+            "score": 5.031720944837816,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:909"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002188",
+            "patientPhenotypeLabel": "Delayed CNS myelination",
+            "diseasePhenotypeCurie": "HP:0007305",
+            "diseasePhenotypeLabel": "CNS demyelination",
+            "micaCurie": "HP:0011400",
+            "micaLabel": "Abnormal CNS myelination",
+            "score": 3.0433574795301634,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:909"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000639",
+            "patientPhenotypeLabel": "Nystagmus",
+            "diseasePhenotypeCurie": "HP:0000639",
+            "diseasePhenotypeLabel": "Nystagmus",
+            "micaCurie": "HP:0000639",
+            "micaLabel": "Nystagmus",
+            "score": 2.304802259431223,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:909"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001250",
+            "patientPhenotypeLabel": "Seizure",
+            "diseasePhenotypeCurie": "HP:0001250",
+            "diseasePhenotypeLabel": "Seizure",
+            "micaCurie": "HP:0001250",
+            "micaLabel": "Seizure",
+            "score": 1.4866293835155915,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:909"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0012758",
+            "diseasePhenotypeLabel": "Neurodevelopmental delay",
+            "micaCurie": "HP:0012758",
+            "micaLabel": "Neurodevelopmental delay",
+            "score": 1.1961162706965762,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:909"
+          }
+        ]
+      },
+      {
+        "rank": 21,
+        "geneCurie": "NCBIGene:4854",
+        "geneLabel": "NOTCH3",
+        "geneSymbol": "NOTCH3",
+        "geneEntityId": 149612,
+        "bmaScore": 1.589151050529599,
+        "normalizedScore": 0.17546,
+        "patientAverageScore": 2.6635385403669276,
+        "phenotypeAverageScore": 0.5147635606922703,
+        "directPhenotypeCount": 295,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0030890",
+            "patientPhenotypeLabel": "Hyperintensity of cerebral white matter on MRI",
+            "diseasePhenotypeCurie": "HP:0040329",
+            "diseasePhenotypeLabel": "Multifocal hyperintensity of cerebral white matter on MRI",
+            "micaCurie": "HP:0030890",
+            "micaLabel": "Hyperintensity of cerebral white matter on MRI",
+            "score": 5.031720944837816,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:136"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002188",
+            "patientPhenotypeLabel": "Delayed CNS myelination",
+            "diseasePhenotypeCurie": "HP:0002415",
+            "diseasePhenotypeLabel": "Leukodystrophy",
+            "micaCurie": "HP:0011400",
+            "micaLabel": "Abnormal CNS myelination",
+            "score": 3.0433574795301634,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:621295"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000639",
+            "patientPhenotypeLabel": "Nystagmus",
+            "diseasePhenotypeCurie": "HP:0000666",
+            "diseasePhenotypeLabel": "Horizontal nystagmus",
+            "micaCurie": "HP:0000639",
+            "micaLabel": "Nystagmus",
+            "score": 2.304802259431223,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:621295"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001250",
+            "patientPhenotypeLabel": "Seizure",
+            "diseasePhenotypeCurie": "HP:0011171",
+            "diseasePhenotypeLabel": "Simple febrile seizure",
+            "micaCurie": "HP:0001250",
+            "micaLabel": "Seizure",
+            "score": 1.4866293835155915,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:621295"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0011342",
+            "diseasePhenotypeLabel": "Mild global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:621295"
+          }
+        ]
+      },
+      {
+        "rank": 22,
+        "geneCurie": "NCBIGene:84065",
+        "geneLabel": "TMEM222",
+        "geneSymbol": "TMEM222",
+        "geneEntityId": 152552,
+        "bmaScore": 1.5869594355138992,
+        "normalizedScore": 0.175218,
+        "patientAverageScore": 2.133800267213306,
+        "phenotypeAverageScore": 1.0401186038144923,
+        "directPhenotypeCount": 23,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0030890",
+            "patientPhenotypeLabel": "Hyperintensity of cerebral white matter on MRI",
+            "diseasePhenotypeCurie": "HP:0030891",
+            "diseasePhenotypeLabel": "Periventricular white matter hyperintensities",
+            "micaCurie": "HP:0030890",
+            "micaLabel": "Hyperintensity of cerebral white matter on MRI",
+            "score": 5.031720944837816,
+            "evidenceCode": "1/17",
+            "referenceText": "OMIM:619470"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000639",
+            "patientPhenotypeLabel": "Nystagmus",
+            "diseasePhenotypeCurie": "HP:0020045",
+            "diseasePhenotypeLabel": "Esodeviation",
+            "micaCurie": "HP:0000496",
+            "micaLabel": "Abnormality of eye movement",
+            "score": 1.679938922739011,
+            "evidenceCode": "1/17",
+            "referenceText": "OMIM:619470"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001250",
+            "patientPhenotypeLabel": "Seizure",
+            "diseasePhenotypeCurie": "HP:0001250",
+            "diseasePhenotypeLabel": "Seizure",
+            "micaCurie": "HP:0001250",
+            "micaLabel": "Seizure",
+            "score": 1.4866293835155915,
+            "evidenceCode": "7/17",
+            "referenceText": "OMIM:619470"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "17/17",
+            "referenceText": "OMIM:619470"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002188",
+            "patientPhenotypeLabel": "Delayed CNS myelination",
+            "diseasePhenotypeCurie": "HP:0030891",
+            "diseasePhenotypeLabel": "Periventricular white matter hyperintensities",
+            "micaCurie": "HP:0002011",
+            "micaLabel": "Morphological central nervous system abnormality",
+            "score": 1.0195294504542687,
+            "evidenceCode": "1/17",
+            "referenceText": "OMIM:619470"
+          }
+        ]
+      },
+      {
+        "rank": 23,
+        "geneCurie": "NCBIGene:63899",
+        "geneLabel": "NSUN3",
+        "geneSymbol": "NSUN3",
+        "geneEntityId": 152237,
+        "bmaScore": 1.5860951749886563,
+        "normalizedScore": 0.175122,
+        "patientAverageScore": 2.258772934551749,
+        "phenotypeAverageScore": 0.9134174154255637,
+        "directPhenotypeCount": 17,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0030890",
+            "patientPhenotypeLabel": "Hyperintensity of cerebral white matter on MRI",
+            "diseasePhenotypeCurie": "HP:0030890",
+            "diseasePhenotypeLabel": "Hyperintensity of cerebral white matter on MRI",
+            "micaCurie": "HP:0030890",
+            "micaLabel": "Hyperintensity of cerebral white matter on MRI",
+            "score": 5.031720944837816,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:619012"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000639",
+            "patientPhenotypeLabel": "Nystagmus",
+            "diseasePhenotypeCurie": "HP:0000639",
+            "diseasePhenotypeLabel": "Nystagmus",
+            "micaCurie": "HP:0000639",
+            "micaLabel": "Nystagmus",
+            "score": 2.304802259431223,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:619012"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001250",
+            "patientPhenotypeLabel": "Seizure",
+            "diseasePhenotypeCurie": "HP:0001250",
+            "diseasePhenotypeLabel": "Seizure",
+            "micaCurie": "HP:0001250",
+            "micaLabel": "Seizure",
+            "score": 1.4866293835155915,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:619012"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:619012"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002188",
+            "patientPhenotypeLabel": "Delayed CNS myelination",
+            "diseasePhenotypeCurie": "HP:0030890",
+            "diseasePhenotypeLabel": "Hyperintensity of cerebral white matter on MRI",
+            "micaCurie": "HP:0002011",
+            "micaLabel": "Morphological central nervous system abnormality",
+            "score": 1.0195294504542687,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:619012"
+          }
+        ]
+      },
+      {
+        "rank": 24,
+        "geneCurie": "NCBIGene:85465",
+        "geneLabel": "SELENOI",
+        "geneSymbol": "SELENOI",
+        "geneEntityId": 152674,
+        "bmaScore": 1.5842757185929792,
+        "normalizedScore": 0.174921,
+        "patientAverageScore": 2.3233636460396725,
+        "phenotypeAverageScore": 0.845187791146286,
+        "directPhenotypeCount": 37,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0030890",
+            "patientPhenotypeLabel": "Hyperintensity of cerebral white matter on MRI",
+            "diseasePhenotypeCurie": "HP:0030891",
+            "diseasePhenotypeLabel": "Periventricular white matter hyperintensities",
+            "micaCurie": "HP:0030890",
+            "micaLabel": "Hyperintensity of cerebral white matter on MRI",
+            "score": 5.031720944837816,
+            "evidenceCode": "4/4",
+            "referenceText": "OMIM:618768"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002188",
+            "patientPhenotypeLabel": "Delayed CNS myelination",
+            "diseasePhenotypeCurie": "HP:0007220",
+            "diseasePhenotypeLabel": "Demyelinating motor neuropathy",
+            "micaCurie": "HP:0012447",
+            "micaLabel": "Abnormal myelination",
+            "score": 2.7381045218265307,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:506353"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001250",
+            "patientPhenotypeLabel": "Seizure",
+            "diseasePhenotypeCurie": "HP:0001250",
+            "diseasePhenotypeLabel": "Seizure",
+            "micaCurie": "HP:0001250",
+            "micaLabel": "Seizure",
+            "score": 1.4866293835155915,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:506353"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0002194",
+            "diseasePhenotypeLabel": "Delayed gross motor development",
+            "micaCurie": "HP:0012758",
+            "micaLabel": "Neurodevelopmental delay",
+            "score": 1.1961162706965762,
+            "evidenceCode": "HP:0040280",
+            "referenceText": "ORPHA:506353"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000639",
+            "patientPhenotypeLabel": "Nystagmus",
+            "diseasePhenotypeCurie": "HP:0100704",
+            "diseasePhenotypeLabel": "Cerebral visual impairment",
+            "micaCurie": "HP:0012373",
+            "micaLabel": "Abnormal eye physiology",
+            "score": 1.1642471093218474,
+            "evidenceCode": "1/4",
+            "referenceText": "OMIM:618768"
+          }
+        ]
+      },
+      {
+        "rank": 25,
+        "geneCurie": "NCBIGene:3912",
+        "geneLabel": "LAMB1",
+        "geneSymbol": "LAMB1",
+        "geneEntityId": 149314,
+        "bmaScore": 1.5814213006476088,
+        "normalizedScore": 0.174606,
+        "patientAverageScore": 2.3117344714987866,
+        "phenotypeAverageScore": 0.8511081297964307,
+        "directPhenotypeCount": 63,
+        "matchedPhenotypeCount": 5,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0030890",
+            "patientPhenotypeLabel": "Hyperintensity of cerebral white matter on MRI",
+            "diseasePhenotypeCurie": "HP:0030890",
+            "diseasePhenotypeLabel": "Hyperintensity of cerebral white matter on MRI",
+            "micaCurie": "HP:0030890",
+            "micaLabel": "Hyperintensity of cerebral white matter on MRI",
+            "score": 5.031720944837816,
+            "evidenceCode": "6/6",
+            "referenceText": "OMIM:621424"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002188",
+            "patientPhenotypeLabel": "Delayed CNS myelination",
+            "diseasePhenotypeCurie": "HP:0012447",
+            "diseasePhenotypeLabel": "Abnormal myelination",
+            "micaCurie": "HP:0012447",
+            "micaLabel": "Abnormal myelination",
+            "score": 2.7381045218265307,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:352682"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001250",
+            "patientPhenotypeLabel": "Seizure",
+            "diseasePhenotypeCurie": "HP:0025190",
+            "diseasePhenotypeLabel": "Bilateral tonic-clonic seizure with generalized onset",
+            "micaCurie": "HP:0001250",
+            "micaLabel": "Seizure",
+            "score": 1.4866293835155915,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:621424"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001263",
+            "patientPhenotypeLabel": "Global developmental delay",
+            "diseasePhenotypeCurie": "HP:0011344",
+            "diseasePhenotypeLabel": "Severe global developmental delay",
+            "micaCurie": "HP:0001263",
+            "micaLabel": "Global developmental delay",
+            "score": 1.4511826345198438,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:615191"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000639",
+            "patientPhenotypeLabel": "Nystagmus",
+            "diseasePhenotypeCurie": "HP:0001095",
+            "diseasePhenotypeLabel": "Hypertensive retinopathy",
+            "micaCurie": "HP:0000478",
+            "micaLabel": "Abnormality of the eye",
+            "score": 0.8510348727941508,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:621424"
+          }
+        ]
+      }
+    ],
+    "engineSummary": {
+      "diseaseCount": 8579,
+      "geneCount": 5256,
+      "phenotypeCount": 19389,
+      "sourceMode": {
+        "disease": "relationship_fallback",
+        "gene": "relationship_fallback"
+      },
+      "generatedAt": "2026-03-15T21:00:39.457Z"
+    }
+  }
+}

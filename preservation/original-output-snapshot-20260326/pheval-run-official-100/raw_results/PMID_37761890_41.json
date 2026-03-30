@@ -1,0 +1,2647 @@
+{
+  "success": true,
+  "engine": "genovy-dx-sim",
+  "analysisType": "gene",
+  "input": {
+    "presentPhenotypeCuries": [
+      "HP:0001511",
+      "HP:0000252",
+      "HP:0002342",
+      "HP:0000750",
+      "HP:0001270",
+      "HP:0001250",
+      "HP:0002079",
+      "HP:0007018",
+      "HP:0011968"
+    ],
+    "excludedPhenotypeCuries": [],
+    "sourceFormat": "phenopacket"
+  },
+  "ranking": {
+    "queryPhenotypes": [
+      {
+        "phenotypeCurie": "HP:0001511",
+        "phenotypeLabel": "Intrauterine growth retardation"
+      },
+      {
+        "phenotypeCurie": "HP:0000252",
+        "phenotypeLabel": "Microcephaly"
+      },
+      {
+        "phenotypeCurie": "HP:0002342",
+        "phenotypeLabel": "Moderate intellectual disability"
+      },
+      {
+        "phenotypeCurie": "HP:0000750",
+        "phenotypeLabel": "Delayed speech and language development"
+      },
+      {
+        "phenotypeCurie": "HP:0001270",
+        "phenotypeLabel": "Motor delay"
+      },
+      {
+        "phenotypeCurie": "HP:0001250",
+        "phenotypeLabel": "Seizure"
+      },
+      {
+        "phenotypeCurie": "HP:0002079",
+        "phenotypeLabel": "Hypoplasia of the corpus callosum"
+      },
+      {
+        "phenotypeCurie": "HP:0007018",
+        "phenotypeLabel": "Attention deficit hyperactivity disorder"
+      },
+      {
+        "phenotypeCurie": "HP:0011968",
+        "phenotypeLabel": "Feeding difficulties"
+      }
+    ],
+    "results": [
+      {
+        "rank": 1,
+        "geneCurie": "NCBIGene:3183",
+        "geneLabel": "HNRNPC",
+        "geneSymbol": "HNRNPC",
+        "geneEntityId": 149104,
+        "bmaScore": 1.9009722085180214,
+        "normalizedScore": 0.209888,
+        "patientAverageScore": 2.4282951359919758,
+        "phenotypeAverageScore": 1.3736492810440668,
+        "directPhenotypeCount": 33,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002342",
+            "patientPhenotypeLabel": "Moderate intellectual disability",
+            "diseasePhenotypeCurie": "HP:0002342",
+            "diseasePhenotypeLabel": "Moderate intellectual disability",
+            "micaCurie": "HP:0002342",
+            "micaLabel": "Moderate intellectual disability",
+            "score": 4.101245577971705,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:620688"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007018",
+            "patientPhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "diseasePhenotypeCurie": "HP:0031987",
+            "diseasePhenotypeLabel": "Diminished ability to concentrate",
+            "micaCurie": "HP:5200044",
+            "micaLabel": "Reduced attention regulation",
+            "score": 3.363340496770266,
+            "evidenceCode": "5/13",
+            "referenceText": "OMIM:620688"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001511",
+            "patientPhenotypeLabel": "Intrauterine growth retardation",
+            "diseasePhenotypeCurie": "HP:0001511",
+            "diseasePhenotypeLabel": "Intrauterine growth retardation",
+            "micaCurie": "HP:0001511",
+            "micaLabel": "Intrauterine growth retardation",
+            "score": 2.9022145415565475,
+            "evidenceCode": "1/12",
+            "referenceText": "OMIM:620688"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011968",
+            "patientPhenotypeLabel": "Feeding difficulties",
+            "diseasePhenotypeCurie": "HP:0011968",
+            "diseasePhenotypeLabel": "Feeding difficulties",
+            "micaCurie": "HP:0011968",
+            "micaLabel": "Feeding difficulties",
+            "score": 2.2218880494256634,
+            "evidenceCode": "9/12",
+            "referenceText": "OMIM:620688"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001270",
+            "patientPhenotypeLabel": "Motor delay",
+            "diseasePhenotypeCurie": "HP:0031936",
+            "diseasePhenotypeLabel": "Delayed ability to walk",
+            "micaCurie": "HP:0001270",
+            "micaLabel": "Motor delay",
+            "score": 2.1246247440004566,
+            "evidenceCode": "8/12",
+            "referenceText": "OMIM:620688"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0001344",
+            "diseasePhenotypeLabel": "Absent speech",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "3/11",
+            "referenceText": "OMIM:620688"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000252",
+            "patientPhenotypeLabel": "Microcephaly",
+            "diseasePhenotypeCurie": "HP:0000252",
+            "diseasePhenotypeLabel": "Microcephaly",
+            "micaCurie": "HP:0000252",
+            "micaLabel": "Microcephaly",
+            "score": 1.8946751382172473,
+            "evidenceCode": "3/13",
+            "referenceText": "OMIM:620688"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002079",
+            "patientPhenotypeLabel": "Hypoplasia of the corpus callosum",
+            "diseasePhenotypeCurie": "HP:0000252",
+            "diseasePhenotypeLabel": "Microcephaly",
+            "micaCurie": "HP:0007364",
+            "micaLabel": "Aplasia/Hypoplasia of the cerebrum",
+            "score": 1.6950620843132318,
+            "evidenceCode": "3/13",
+            "referenceText": "OMIM:620688"
+          }
+        ]
+      },
+      {
+        "rank": 2,
+        "geneCurie": "NCBIGene:26523",
+        "geneLabel": "AGO1",
+        "geneSymbol": "AGO1",
+        "geneEntityId": 151517,
+        "bmaScore": 1.8365706040336969,
+        "normalizedScore": 0.202778,
+        "patientAverageScore": 2.2778222657850784,
+        "phenotypeAverageScore": 1.3953189422823153,
+        "directPhenotypeCount": 37,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002342",
+            "patientPhenotypeLabel": "Moderate intellectual disability",
+            "diseasePhenotypeCurie": "HP:0002342",
+            "diseasePhenotypeLabel": "Moderate intellectual disability",
+            "micaCurie": "HP:0002342",
+            "micaLabel": "Moderate intellectual disability",
+            "score": 4.101245577971705,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:620292"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007018",
+            "patientPhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "diseasePhenotypeCurie": "HP:0007018",
+            "diseasePhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "micaCurie": "HP:0007018",
+            "micaLabel": "Attention deficit hyperactivity disorder",
+            "score": 3.5197383685544286,
+            "evidenceCode": "15/22",
+            "referenceText": "OMIM:620292"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011968",
+            "patientPhenotypeLabel": "Feeding difficulties",
+            "diseasePhenotypeCurie": "HP:0011968",
+            "diseasePhenotypeLabel": "Feeding difficulties",
+            "micaCurie": "HP:0011968",
+            "micaLabel": "Feeding difficulties",
+            "score": 2.2218880494256634,
+            "evidenceCode": "10/23",
+            "referenceText": "OMIM:620292"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001270",
+            "patientPhenotypeLabel": "Motor delay",
+            "diseasePhenotypeCurie": "HP:0031936",
+            "diseasePhenotypeLabel": "Delayed ability to walk",
+            "micaCurie": "HP:0001270",
+            "micaLabel": "Motor delay",
+            "score": 2.1246247440004566,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:620292"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002079",
+            "patientPhenotypeLabel": "Hypoplasia of the corpus callosum",
+            "diseasePhenotypeCurie": "HP:0031627",
+            "diseasePhenotypeLabel": "Globus pallidus calcification",
+            "micaCurie": "HP:0010993",
+            "micaLabel": "Abnormal cerebral subcortex morphology",
+            "score": 2.0816587081170135,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:620292"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "32/32",
+            "referenceText": "OMIM:620292"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001511",
+            "patientPhenotypeLabel": "Intrauterine growth retardation",
+            "diseasePhenotypeCurie": "HP:0003502",
+            "diseasePhenotypeLabel": "Mild short stature",
+            "micaCurie": "HP:0001510",
+            "micaLabel": "Growth delay",
+            "score": 1.5148591723795624,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:620292"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001250",
+            "patientPhenotypeLabel": "Seizure",
+            "diseasePhenotypeCurie": "HP:0002384",
+            "diseasePhenotypeLabel": "Focal impaired awareness seizure",
+            "micaCurie": "HP:0001250",
+            "micaLabel": "Seizure",
+            "score": 1.4866293835155915,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:620292"
+          }
+        ]
+      },
+      {
+        "rank": 3,
+        "geneCurie": "NCBIGene:23040",
+        "geneLabel": "MYT1L",
+        "geneSymbol": "MYT1L",
+        "geneEntityId": 151274,
+        "bmaScore": 1.8030354905802422,
+        "normalizedScore": 0.199075,
+        "patientAverageScore": 2.5246103081535503,
+        "phenotypeAverageScore": 1.0814606730069338,
+        "directPhenotypeCount": 85,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002342",
+            "patientPhenotypeLabel": "Moderate intellectual disability",
+            "diseasePhenotypeCurie": "HP:0002342",
+            "diseasePhenotypeLabel": "Moderate intellectual disability",
+            "micaCurie": "HP:0002342",
+            "micaLabel": "Moderate intellectual disability",
+            "score": 4.101245577971705,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:647799"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007018",
+            "patientPhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "diseasePhenotypeCurie": "HP:0007018",
+            "diseasePhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "micaCurie": "HP:0007018",
+            "micaLabel": "Attention deficit hyperactivity disorder",
+            "score": 3.5197383685544286,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:647799"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001511",
+            "patientPhenotypeLabel": "Intrauterine growth retardation",
+            "diseasePhenotypeCurie": "HP:0001511",
+            "diseasePhenotypeLabel": "Intrauterine growth retardation",
+            "micaCurie": "HP:0001511",
+            "micaLabel": "Intrauterine growth retardation",
+            "score": 2.9022145415565475,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:647799"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002079",
+            "patientPhenotypeLabel": "Hypoplasia of the corpus callosum",
+            "diseasePhenotypeCurie": "HP:0033725",
+            "diseasePhenotypeLabel": "Thin corpus callosum",
+            "micaCurie": "HP:0033725",
+            "micaLabel": "Thin corpus callosum",
+            "score": 2.4055007619832383,
+            "evidenceCode": "1/9",
+            "referenceText": "OMIM:616521"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011968",
+            "patientPhenotypeLabel": "Feeding difficulties",
+            "diseasePhenotypeCurie": "HP:0008872",
+            "diseasePhenotypeLabel": "Feeding difficulties in infancy",
+            "micaCurie": "HP:0011968",
+            "micaLabel": "Feeding difficulties",
+            "score": 2.2218880494256634,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:647799"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001270",
+            "patientPhenotypeLabel": "Motor delay",
+            "diseasePhenotypeCurie": "HP:0031936",
+            "diseasePhenotypeLabel": "Delayed ability to walk",
+            "micaCurie": "HP:0001270",
+            "micaLabel": "Motor delay",
+            "score": 2.1246247440004566,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:616521"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:647799"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000252",
+            "patientPhenotypeLabel": "Microcephaly",
+            "diseasePhenotypeCurie": "HP:0000252",
+            "diseasePhenotypeLabel": "Microcephaly",
+            "micaCurie": "HP:0000252",
+            "micaLabel": "Microcephaly",
+            "score": 1.8946751382172473,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:647799"
+          }
+        ]
+      },
+      {
+        "rank": 4,
+        "geneCurie": "NCBIGene:27352",
+        "geneLabel": "SGSM3",
+        "geneSymbol": "SGSM3",
+        "geneEntityId": 151576,
+        "bmaScore": 1.7971596775807182,
+        "normalizedScore": 0.198426,
+        "patientAverageScore": 2.4373306469514153,
+        "phenotypeAverageScore": 1.156988708210021,
+        "directPhenotypeCount": 58,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002342",
+            "patientPhenotypeLabel": "Moderate intellectual disability",
+            "diseasePhenotypeCurie": "HP:0002342",
+            "diseasePhenotypeLabel": "Moderate intellectual disability",
+            "micaCurie": "HP:0002342",
+            "micaLabel": "Moderate intellectual disability",
+            "score": 4.101245577971705,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:620401"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007018",
+            "patientPhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "diseasePhenotypeCurie": "HP:0007018",
+            "diseasePhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "micaCurie": "HP:0007018",
+            "micaLabel": "Attention deficit hyperactivity disorder",
+            "score": 3.5197383685544286,
+            "evidenceCode": "1/13",
+            "referenceText": "OMIM:620401"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002079",
+            "patientPhenotypeLabel": "Hypoplasia of the corpus callosum",
+            "diseasePhenotypeCurie": "HP:0002079",
+            "diseasePhenotypeLabel": "Hypoplasia of the corpus callosum",
+            "micaCurie": "HP:0002079",
+            "micaLabel": "Hypoplasia of the corpus callosum",
+            "score": 3.0073391803410074,
+            "evidenceCode": "1/5",
+            "referenceText": "OMIM:620401"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011968",
+            "patientPhenotypeLabel": "Feeding difficulties",
+            "diseasePhenotypeCurie": "HP:0002033",
+            "diseasePhenotypeLabel": "Poor suck",
+            "micaCurie": "HP:0011968",
+            "micaLabel": "Feeding difficulties",
+            "score": 2.2218880494256634,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:620401"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001270",
+            "patientPhenotypeLabel": "Motor delay",
+            "diseasePhenotypeCurie": "HP:0031936",
+            "diseasePhenotypeLabel": "Delayed ability to walk",
+            "micaCurie": "HP:0001270",
+            "micaLabel": "Motor delay",
+            "score": 2.1246247440004566,
+            "evidenceCode": "11/11",
+            "referenceText": "OMIM:620401"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "4/4",
+            "referenceText": "OMIM:620401"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000252",
+            "patientPhenotypeLabel": "Microcephaly",
+            "diseasePhenotypeCurie": "HP:0000252",
+            "diseasePhenotypeLabel": "Microcephaly",
+            "micaCurie": "HP:0000252",
+            "micaLabel": "Microcephaly",
+            "score": 1.8946751382172473,
+            "evidenceCode": "1/8",
+            "referenceText": "OMIM:620401"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001511",
+            "patientPhenotypeLabel": "Intrauterine growth retardation",
+            "diseasePhenotypeCurie": "HP:0004322",
+            "diseasePhenotypeLabel": "Short stature",
+            "micaCurie": "HP:0001510",
+            "micaLabel": "Growth delay",
+            "score": 1.5148591723795624,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:620401"
+          }
+        ]
+      },
+      {
+        "rank": 5,
+        "geneCurie": "NCBIGene:26047",
+        "geneLabel": "CNTNAP2",
+        "geneSymbol": "CNTNAP2",
+        "geneEntityId": 151477,
+        "bmaScore": 1.7767043417793813,
+        "normalizedScore": 0.196168,
+        "patientAverageScore": 2.3340205467698363,
+        "phenotypeAverageScore": 1.2193881367889263,
+        "directPhenotypeCount": 119,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002342",
+            "patientPhenotypeLabel": "Moderate intellectual disability",
+            "diseasePhenotypeCurie": "HP:0002342",
+            "diseasePhenotypeLabel": "Moderate intellectual disability",
+            "micaCurie": "HP:0002342",
+            "micaLabel": "Moderate intellectual disability",
+            "score": 4.101245577971705,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:163681"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007018",
+            "patientPhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "diseasePhenotypeCurie": "HP:0007018",
+            "diseasePhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "micaCurie": "HP:0007018",
+            "micaLabel": "Attention deficit hyperactivity disorder",
+            "score": 3.5197383685544286,
+            "evidenceCode": "8/9",
+            "referenceText": "OMIM:610042"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002079",
+            "patientPhenotypeLabel": "Hypoplasia of the corpus callosum",
+            "diseasePhenotypeCurie": "HP:0033725",
+            "diseasePhenotypeLabel": "Thin corpus callosum",
+            "micaCurie": "HP:0033725",
+            "micaLabel": "Thin corpus callosum",
+            "score": 2.4055007619832383,
+            "evidenceCode": "4/38",
+            "referenceText": "OMIM:610042"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011968",
+            "patientPhenotypeLabel": "Feeding difficulties",
+            "diseasePhenotypeCurie": "HP:0011968",
+            "diseasePhenotypeLabel": "Feeding difficulties",
+            "micaCurie": "HP:0011968",
+            "micaLabel": "Feeding difficulties",
+            "score": 2.2218880494256634,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:163681"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001270",
+            "patientPhenotypeLabel": "Motor delay",
+            "diseasePhenotypeCurie": "HP:0031936",
+            "diseasePhenotypeLabel": "Delayed ability to walk",
+            "micaCurie": "HP:0001270",
+            "micaLabel": "Motor delay",
+            "score": 2.1246247440004566,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:163681"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0010863",
+            "diseasePhenotypeLabel": "Receptive language delay",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:163681"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000252",
+            "patientPhenotypeLabel": "Microcephaly",
+            "diseasePhenotypeCurie": "HP:0000252",
+            "diseasePhenotypeLabel": "Microcephaly",
+            "micaCurie": "HP:0000252",
+            "micaLabel": "Microcephaly",
+            "score": 1.8946751382172473,
+            "evidenceCode": "5/9",
+            "referenceText": "OMIM:610042"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001250",
+            "patientPhenotypeLabel": "Seizure",
+            "diseasePhenotypeCurie": "HP:0032792",
+            "diseasePhenotypeLabel": "Tonic seizure",
+            "micaCurie": "HP:0001250",
+            "micaLabel": "Seizure",
+            "score": 1.4866293835155915,
+            "evidenceCode": "11/38",
+            "referenceText": "OMIM:610042"
+          }
+        ]
+      },
+      {
+        "rank": 6,
+        "geneCurie": "NCBIGene:26834",
+        "geneLabel": "RNU4-2",
+        "geneSymbol": "RNU4-2",
+        "geneEntityId": 151526,
+        "bmaScore": 1.7715827929737522,
+        "normalizedScore": 0.195602,
+        "patientAverageScore": 2.577909249222071,
+        "phenotypeAverageScore": 0.9652563367254333,
+        "directPhenotypeCount": 211,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002342",
+            "patientPhenotypeLabel": "Moderate intellectual disability",
+            "diseasePhenotypeCurie": "HP:0002342",
+            "diseasePhenotypeLabel": "Moderate intellectual disability",
+            "micaCurie": "HP:0002342",
+            "micaLabel": "Moderate intellectual disability",
+            "score": 4.101245577971705,
+            "evidenceCode": "1/5",
+            "referenceText": "OMIM:620851"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007018",
+            "patientPhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "diseasePhenotypeCurie": "HP:0000736",
+            "diseasePhenotypeLabel": "Short attention span",
+            "micaCurie": "HP:0000736",
+            "micaLabel": "Short attention span",
+            "score": 3.397590419813344,
+            "evidenceCode": "10/11",
+            "referenceText": "OMIM:620851"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002079",
+            "patientPhenotypeLabel": "Hypoplasia of the corpus callosum",
+            "diseasePhenotypeCurie": "HP:0002079",
+            "diseasePhenotypeLabel": "Hypoplasia of the corpus callosum",
+            "micaCurie": "HP:0002079",
+            "micaLabel": "Hypoplasia of the corpus callosum",
+            "score": 3.0073391803410074,
+            "evidenceCode": "9/55",
+            "referenceText": "OMIM:620851"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001511",
+            "patientPhenotypeLabel": "Intrauterine growth retardation",
+            "diseasePhenotypeCurie": "HP:0001511",
+            "diseasePhenotypeLabel": "Intrauterine growth retardation",
+            "micaCurie": "HP:0001511",
+            "micaLabel": "Intrauterine growth retardation",
+            "score": 2.9022145415565475,
+            "evidenceCode": "17/44",
+            "referenceText": "OMIM:620851"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011968",
+            "patientPhenotypeLabel": "Feeding difficulties",
+            "diseasePhenotypeCurie": "HP:0033454",
+            "diseasePhenotypeLabel": "Tube feeding",
+            "micaCurie": "HP:0011968",
+            "micaLabel": "Feeding difficulties",
+            "score": 2.2218880494256634,
+            "evidenceCode": "15/53",
+            "referenceText": "OMIM:620851"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001270",
+            "patientPhenotypeLabel": "Motor delay",
+            "diseasePhenotypeCurie": "HP:0031936",
+            "diseasePhenotypeLabel": "Delayed ability to walk",
+            "micaCurie": "HP:0001270",
+            "micaLabel": "Motor delay",
+            "score": 2.1246247440004566,
+            "evidenceCode": "46/47",
+            "referenceText": "OMIM:620851"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0001344",
+            "diseasePhenotypeLabel": "Absent speech",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "49/59",
+            "referenceText": "OMIM:620851"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000252",
+            "patientPhenotypeLabel": "Microcephaly",
+            "diseasePhenotypeCurie": "HP:0011451",
+            "diseasePhenotypeLabel": "Primary microcephaly",
+            "micaCurie": "HP:0000252",
+            "micaLabel": "Microcephaly",
+            "score": 1.8946751382172473,
+            "evidenceCode": "20/39",
+            "referenceText": "OMIM:620851"
+          }
+        ]
+      },
+      {
+        "rank": 7,
+        "geneCurie": "NCBIGene:10458",
+        "geneLabel": "BAIAP2",
+        "geneSymbol": "BAIAP2",
+        "geneEntityId": 151037,
+        "bmaScore": 1.7650793364215935,
+        "normalizedScore": 0.194884,
+        "patientAverageScore": 2.0766267400698357,
+        "phenotypeAverageScore": 1.4535319327733514,
+        "directPhenotypeCount": 43,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002342",
+            "patientPhenotypeLabel": "Moderate intellectual disability",
+            "diseasePhenotypeCurie": "HP:0002342",
+            "diseasePhenotypeLabel": "Moderate intellectual disability",
+            "micaCurie": "HP:0002342",
+            "micaLabel": "Moderate intellectual disability",
+            "score": 4.101245577971705,
+            "evidenceCode": "3/6",
+            "referenceText": "OMIM:621468"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007018",
+            "patientPhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "diseasePhenotypeCurie": "HP:0000752",
+            "diseasePhenotypeLabel": "Hyperactivity",
+            "micaCurie": "HP:0000752",
+            "micaLabel": "Hyperactivity",
+            "score": 3.1012352661081346,
+            "evidenceCode": "1/6",
+            "referenceText": "OMIM:621468"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002079",
+            "patientPhenotypeLabel": "Hypoplasia of the corpus callosum",
+            "diseasePhenotypeCurie": "HP:0034295",
+            "diseasePhenotypeLabel": "Reduced cerebral white matter volume",
+            "micaCurie": "HP:0002500",
+            "micaLabel": "Abnormal cerebral white matter morphology",
+            "score": 2.168500176007602,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:621468"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001270",
+            "patientPhenotypeLabel": "Motor delay",
+            "diseasePhenotypeCurie": "HP:0031936",
+            "diseasePhenotypeLabel": "Delayed ability to walk",
+            "micaCurie": "HP:0001270",
+            "micaLabel": "Motor delay",
+            "score": 2.1246247440004566,
+            "evidenceCode": "3/6",
+            "referenceText": "OMIM:621468"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0001344",
+            "diseasePhenotypeLabel": "Absent speech",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "4/6",
+            "referenceText": "OMIM:621468"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000252",
+            "patientPhenotypeLabel": "Microcephaly",
+            "diseasePhenotypeCurie": "HP:0000252",
+            "diseasePhenotypeLabel": "Microcephaly",
+            "micaCurie": "HP:0000252",
+            "micaLabel": "Microcephaly",
+            "score": 1.8946751382172473,
+            "evidenceCode": "0/6",
+            "referenceText": "OMIM:621468"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011968",
+            "patientPhenotypeLabel": "Feeding difficulties",
+            "diseasePhenotypeCurie": "HP:0012450",
+            "diseasePhenotypeLabel": "Chronic constipation",
+            "micaCurie": "HP:0011458",
+            "micaLabel": "Abdominal symptom",
+            "score": 1.7451864714958005,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:621468"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001250",
+            "patientPhenotypeLabel": "Seizure",
+            "diseasePhenotypeCurie": "HP:0032794",
+            "diseasePhenotypeLabel": "Myoclonic seizure",
+            "micaCurie": "HP:0001250",
+            "micaLabel": "Seizure",
+            "score": 1.4866293835155915,
+            "evidenceCode": "3/3",
+            "referenceText": "OMIM:621468"
+          }
+        ]
+      },
+      {
+        "rank": 8,
+        "geneCurie": "NCBIGene:196528",
+        "geneLabel": "ARID2",
+        "geneSymbol": "ARID2",
+        "geneEntityId": 153019,
+        "bmaScore": 1.7505810352557225,
+        "normalizedScore": 0.193283,
+        "patientAverageScore": 2.5460807070696543,
+        "phenotypeAverageScore": 0.9550813634417907,
+        "directPhenotypeCount": 103,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002342",
+            "patientPhenotypeLabel": "Moderate intellectual disability",
+            "diseasePhenotypeCurie": "HP:0002342",
+            "diseasePhenotypeLabel": "Moderate intellectual disability",
+            "micaCurie": "HP:0002342",
+            "micaLabel": "Moderate intellectual disability",
+            "score": 4.101245577971705,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:1465"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007018",
+            "patientPhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "diseasePhenotypeCurie": "HP:0007018",
+            "diseasePhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "micaCurie": "HP:0007018",
+            "micaLabel": "Attention deficit hyperactivity disorder",
+            "score": 3.5197383685544286,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:617808"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001511",
+            "patientPhenotypeLabel": "Intrauterine growth retardation",
+            "diseasePhenotypeCurie": "HP:0001511",
+            "diseasePhenotypeLabel": "Intrauterine growth retardation",
+            "micaCurie": "HP:0001511",
+            "micaLabel": "Intrauterine growth retardation",
+            "score": 2.9022145415565475,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "ORPHA:1465"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002079",
+            "patientPhenotypeLabel": "Hypoplasia of the corpus callosum",
+            "diseasePhenotypeCurie": "HP:0001274",
+            "diseasePhenotypeLabel": "Agenesis of corpus callosum",
+            "micaCurie": "HP:0007370",
+            "micaLabel": "Aplasia/Hypoplasia of the corpus callosum",
+            "score": 2.5987343522281754,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1465"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011968",
+            "patientPhenotypeLabel": "Feeding difficulties",
+            "diseasePhenotypeCurie": "HP:0011968",
+            "diseasePhenotypeLabel": "Feeding difficulties",
+            "micaCurie": "HP:0011968",
+            "micaLabel": "Feeding difficulties",
+            "score": 2.2218880494256634,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:1465"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001270",
+            "patientPhenotypeLabel": "Motor delay",
+            "diseasePhenotypeCurie": "HP:0001270",
+            "diseasePhenotypeLabel": "Motor delay",
+            "micaCurie": "HP:0001270",
+            "micaLabel": "Motor delay",
+            "score": 2.1246247440004566,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:617808"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0001344",
+            "diseasePhenotypeLabel": "Absent speech",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1465"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000252",
+            "patientPhenotypeLabel": "Microcephaly",
+            "diseasePhenotypeCurie": "HP:0000252",
+            "diseasePhenotypeLabel": "Microcephaly",
+            "micaCurie": "HP:0000252",
+            "micaLabel": "Microcephaly",
+            "score": 1.8946751382172473,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "ORPHA:1465"
+          }
+        ]
+      },
+      {
+        "rank": 9,
+        "geneCurie": "NCBIGene:2902",
+        "geneLabel": "GRIN1",
+        "geneSymbol": "GRIN1",
+        "geneEntityId": 149012,
+        "bmaScore": 1.7492552533945003,
+        "normalizedScore": 0.193137,
+        "patientAverageScore": 2.3908303022351607,
+        "phenotypeAverageScore": 1.1076802045538399,
+        "directPhenotypeCount": 134,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002342",
+            "patientPhenotypeLabel": "Moderate intellectual disability",
+            "diseasePhenotypeCurie": "HP:0002342",
+            "diseasePhenotypeLabel": "Moderate intellectual disability",
+            "micaCurie": "HP:0002342",
+            "micaLabel": "Moderate intellectual disability",
+            "score": 4.101245577971705,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:208447"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007018",
+            "patientPhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "diseasePhenotypeCurie": "HP:0000752",
+            "diseasePhenotypeLabel": "Hyperactivity",
+            "micaCurie": "HP:0000752",
+            "micaLabel": "Hyperactivity",
+            "score": 3.1012352661081346,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1934"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002079",
+            "patientPhenotypeLabel": "Hypoplasia of the corpus callosum",
+            "diseasePhenotypeCurie": "HP:0002079",
+            "diseasePhenotypeLabel": "Hypoplasia of the corpus callosum",
+            "micaCurie": "HP:0002079",
+            "micaLabel": "Hypoplasia of the corpus callosum",
+            "score": 3.0073391803410074,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1934"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011968",
+            "patientPhenotypeLabel": "Feeding difficulties",
+            "diseasePhenotypeCurie": "HP:0040288",
+            "diseasePhenotypeLabel": "Nasogastric tube feeding",
+            "micaCurie": "HP:0011968",
+            "micaLabel": "Feeding difficulties",
+            "score": 2.2218880494256634,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:208447"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001270",
+            "patientPhenotypeLabel": "Motor delay",
+            "diseasePhenotypeCurie": "HP:0031936",
+            "diseasePhenotypeLabel": "Delayed ability to walk",
+            "micaCurie": "HP:0001270",
+            "micaLabel": "Motor delay",
+            "score": 2.1246247440004566,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:208447"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0001344",
+            "diseasePhenotypeLabel": "Absent speech",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:617820"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000252",
+            "patientPhenotypeLabel": "Microcephaly",
+            "diseasePhenotypeCurie": "HP:0000252",
+            "diseasePhenotypeLabel": "Microcephaly",
+            "micaCurie": "HP:0000252",
+            "micaLabel": "Microcephaly",
+            "score": 1.8946751382172473,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:208447"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001511",
+            "patientPhenotypeLabel": "Intrauterine growth retardation",
+            "diseasePhenotypeCurie": "HP:0004322",
+            "diseasePhenotypeLabel": "Short stature",
+            "micaCurie": "HP:0001510",
+            "micaLabel": "Growth delay",
+            "score": 1.5148591723795624,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:208447"
+          }
+        ]
+      },
+      {
+        "rank": 10,
+        "geneCurie": "NCBIGene:288",
+        "geneLabel": "ANK3",
+        "geneSymbol": "ANK3",
+        "geneEntityId": 148177,
+        "bmaScore": 1.7413331374338603,
+        "normalizedScore": 0.192262,
+        "patientAverageScore": 1.8588238125819545,
+        "phenotypeAverageScore": 1.623842462285766,
+        "directPhenotypeCount": 18,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002342",
+            "patientPhenotypeLabel": "Moderate intellectual disability",
+            "diseasePhenotypeCurie": "HP:0002342",
+            "diseasePhenotypeLabel": "Moderate intellectual disability",
+            "micaCurie": "HP:0002342",
+            "micaLabel": "Moderate intellectual disability",
+            "score": 4.101245577971705,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:356996"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007018",
+            "patientPhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "diseasePhenotypeCurie": "HP:0000752",
+            "diseasePhenotypeLabel": "Hyperactivity",
+            "micaCurie": "HP:0000752",
+            "micaLabel": "Hyperactivity",
+            "score": 3.1012352661081346,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:356996"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:356996"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000252",
+            "patientPhenotypeLabel": "Microcephaly",
+            "diseasePhenotypeCurie": "HP:0000252",
+            "diseasePhenotypeLabel": "Microcephaly",
+            "micaCurie": "HP:0000252",
+            "micaLabel": "Microcephaly",
+            "score": 1.8946751382172473,
+            "evidenceCode": "0/2",
+            "referenceText": "OMIM:615493"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002079",
+            "patientPhenotypeLabel": "Hypoplasia of the corpus callosum",
+            "diseasePhenotypeCurie": "HP:0000252",
+            "diseasePhenotypeLabel": "Microcephaly",
+            "micaCurie": "HP:0007364",
+            "micaLabel": "Aplasia/Hypoplasia of the cerebrum",
+            "score": 1.6950620843132318,
+            "evidenceCode": "0/2",
+            "referenceText": "OMIM:615493"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001250",
+            "patientPhenotypeLabel": "Seizure",
+            "diseasePhenotypeCurie": "HP:0001250",
+            "diseasePhenotypeLabel": "Seizure",
+            "micaCurie": "HP:0001250",
+            "micaLabel": "Seizure",
+            "score": 1.4866293835155915,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:356996"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001270",
+            "patientPhenotypeLabel": "Motor delay",
+            "diseasePhenotypeCurie": "HP:0001263",
+            "diseasePhenotypeLabel": "Global developmental delay",
+            "micaCurie": "HP:0012758",
+            "micaLabel": "Neurodevelopmental delay",
+            "score": 1.1961162706965762,
+            "evidenceCode": "3/3",
+            "referenceText": "OMIM:615493"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001511",
+            "patientPhenotypeLabel": "Intrauterine growth retardation",
+            "diseasePhenotypeCurie": "HP:0001520",
+            "diseasePhenotypeLabel": "Large for gestational age",
+            "micaCurie": "HP:0001507",
+            "micaLabel": "Growth abnormality",
+            "score": 1.18690668910312,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:356996"
+          }
+        ]
+      },
+      {
+        "rank": 11,
+        "geneCurie": "NCBIGene:51343",
+        "geneLabel": "FZR1",
+        "geneSymbol": "FZR1",
+        "geneEntityId": 151737,
+        "bmaScore": 1.7411847926810013,
+        "normalizedScore": 0.192246,
+        "patientAverageScore": 2.4155713131892997,
+        "phenotypeAverageScore": 1.0667982721727032,
+        "directPhenotypeCount": 73,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002342",
+            "patientPhenotypeLabel": "Moderate intellectual disability",
+            "diseasePhenotypeCurie": "HP:0002342",
+            "diseasePhenotypeLabel": "Moderate intellectual disability",
+            "micaCurie": "HP:0002342",
+            "micaLabel": "Moderate intellectual disability",
+            "score": 4.101245577971705,
+            "evidenceCode": "1/3",
+            "referenceText": "OMIM:620145"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007018",
+            "patientPhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "diseasePhenotypeCurie": "HP:0007018",
+            "diseasePhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "micaCurie": "HP:0007018",
+            "micaLabel": "Attention deficit hyperactivity disorder",
+            "score": 3.5197383685544286,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:442835"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001511",
+            "patientPhenotypeLabel": "Intrauterine growth retardation",
+            "diseasePhenotypeCurie": "HP:0001511",
+            "diseasePhenotypeLabel": "Intrauterine growth retardation",
+            "micaCurie": "HP:0001511",
+            "micaLabel": "Intrauterine growth retardation",
+            "score": 2.9022145415565475,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:620145"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002079",
+            "patientPhenotypeLabel": "Hypoplasia of the corpus callosum",
+            "diseasePhenotypeCurie": "HP:0001273",
+            "diseasePhenotypeLabel": "Abnormal corpus callosum morphology",
+            "micaCurie": "HP:0001273",
+            "micaLabel": "Abnormal corpus callosum morphology",
+            "score": 2.3526582806088583,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:442835"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011968",
+            "patientPhenotypeLabel": "Feeding difficulties",
+            "diseasePhenotypeCurie": "HP:0011968",
+            "diseasePhenotypeLabel": "Feeding difficulties",
+            "micaCurie": "HP:0011968",
+            "micaLabel": "Feeding difficulties",
+            "score": 2.2218880494256634,
+            "evidenceCode": "1/3",
+            "referenceText": "OMIM:620145"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "3/3",
+            "referenceText": "OMIM:620145"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000252",
+            "patientPhenotypeLabel": "Microcephaly",
+            "diseasePhenotypeCurie": "HP:0011451",
+            "diseasePhenotypeLabel": "Primary microcephaly",
+            "micaCurie": "HP:0000252",
+            "micaLabel": "Microcephaly",
+            "score": 1.8946751382172473,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:620145"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001250",
+            "patientPhenotypeLabel": "Seizure",
+            "diseasePhenotypeCurie": "HP:0032794",
+            "diseasePhenotypeLabel": "Myoclonic seizure",
+            "micaCurie": "HP:0001250",
+            "micaLabel": "Seizure",
+            "score": 1.4866293835155915,
+            "evidenceCode": "2/3",
+            "referenceText": "OMIM:620145"
+          }
+        ]
+      },
+      {
+        "rank": 12,
+        "geneCurie": "NCBIGene:54496",
+        "geneLabel": "PRMT7",
+        "geneSymbol": "PRMT7",
+        "geneEntityId": 151829,
+        "bmaScore": 1.7392564416266723,
+        "normalizedScore": 0.192033,
+        "patientAverageScore": 2.577909249222071,
+        "phenotypeAverageScore": 0.9006036340312737,
+        "directPhenotypeCount": 89,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002342",
+            "patientPhenotypeLabel": "Moderate intellectual disability",
+            "diseasePhenotypeCurie": "HP:0002342",
+            "diseasePhenotypeLabel": "Moderate intellectual disability",
+            "micaCurie": "HP:0002342",
+            "micaLabel": "Moderate intellectual disability",
+            "score": 4.101245577971705,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:464288"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007018",
+            "patientPhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "diseasePhenotypeCurie": "HP:0000736",
+            "diseasePhenotypeLabel": "Short attention span",
+            "micaCurie": "HP:0000736",
+            "micaLabel": "Short attention span",
+            "score": 3.397590419813344,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:617157"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002079",
+            "patientPhenotypeLabel": "Hypoplasia of the corpus callosum",
+            "diseasePhenotypeCurie": "HP:0002079",
+            "diseasePhenotypeLabel": "Hypoplasia of the corpus callosum",
+            "micaCurie": "HP:0002079",
+            "micaLabel": "Hypoplasia of the corpus callosum",
+            "score": 3.0073391803410074,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:464288"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001511",
+            "patientPhenotypeLabel": "Intrauterine growth retardation",
+            "diseasePhenotypeCurie": "HP:0001511",
+            "diseasePhenotypeLabel": "Intrauterine growth retardation",
+            "micaCurie": "HP:0001511",
+            "micaLabel": "Intrauterine growth retardation",
+            "score": 2.9022145415565475,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:617157"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011968",
+            "patientPhenotypeLabel": "Feeding difficulties",
+            "diseasePhenotypeCurie": "HP:0011968",
+            "diseasePhenotypeLabel": "Feeding difficulties",
+            "micaCurie": "HP:0011968",
+            "micaLabel": "Feeding difficulties",
+            "score": 2.2218880494256634,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:464288"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001270",
+            "patientPhenotypeLabel": "Motor delay",
+            "diseasePhenotypeCurie": "HP:0031936",
+            "diseasePhenotypeLabel": "Delayed ability to walk",
+            "micaCurie": "HP:0001270",
+            "micaLabel": "Motor delay",
+            "score": 2.1246247440004566,
+            "evidenceCode": "6/6",
+            "referenceText": "OMIM:617157"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "4/4",
+            "referenceText": "OMIM:617157"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000252",
+            "patientPhenotypeLabel": "Microcephaly",
+            "diseasePhenotypeCurie": "HP:0000252",
+            "diseasePhenotypeLabel": "Microcephaly",
+            "micaCurie": "HP:0000252",
+            "micaLabel": "Microcephaly",
+            "score": 1.8946751382172473,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:464288"
+          }
+        ]
+      },
+      {
+        "rank": 13,
+        "geneCurie": "NCBIGene:57554",
+        "geneLabel": "LRRC7",
+        "geneSymbol": "LRRC7",
+        "geneEntityId": 152169,
+        "bmaScore": 1.7372029491491638,
+        "normalizedScore": 0.191806,
+        "patientAverageScore": 2.4373306469514153,
+        "phenotypeAverageScore": 1.0370752513469124,
+        "directPhenotypeCount": 160,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002342",
+            "patientPhenotypeLabel": "Moderate intellectual disability",
+            "diseasePhenotypeCurie": "HP:0002342",
+            "diseasePhenotypeLabel": "Moderate intellectual disability",
+            "micaCurie": "HP:0002342",
+            "micaLabel": "Moderate intellectual disability",
+            "score": 4.101245577971705,
+            "evidenceCode": "7/7",
+            "referenceText": "OMIM:621415"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007018",
+            "patientPhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "diseasePhenotypeCurie": "HP:0007018",
+            "diseasePhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "micaCurie": "HP:0007018",
+            "micaLabel": "Attention deficit hyperactivity disorder",
+            "score": 3.5197383685544286,
+            "evidenceCode": "10/10",
+            "referenceText": "OMIM:621415"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002079",
+            "patientPhenotypeLabel": "Hypoplasia of the corpus callosum",
+            "diseasePhenotypeCurie": "HP:0002079",
+            "diseasePhenotypeLabel": "Hypoplasia of the corpus callosum",
+            "micaCurie": "HP:0002079",
+            "micaLabel": "Hypoplasia of the corpus callosum",
+            "score": 3.0073391803410074,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:621415"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011968",
+            "patientPhenotypeLabel": "Feeding difficulties",
+            "diseasePhenotypeCurie": "HP:0011968",
+            "diseasePhenotypeLabel": "Feeding difficulties",
+            "micaCurie": "HP:0011968",
+            "micaLabel": "Feeding difficulties",
+            "score": 2.2218880494256634,
+            "evidenceCode": "5/6",
+            "referenceText": "OMIM:621415"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001270",
+            "patientPhenotypeLabel": "Motor delay",
+            "diseasePhenotypeCurie": "HP:0031936",
+            "diseasePhenotypeLabel": "Delayed ability to walk",
+            "micaCurie": "HP:0001270",
+            "micaLabel": "Motor delay",
+            "score": 2.1246247440004566,
+            "evidenceCode": "6/14",
+            "referenceText": "OMIM:621415"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0011351",
+            "diseasePhenotypeLabel": "Moderate receptive language delay",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:621415"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000252",
+            "patientPhenotypeLabel": "Microcephaly",
+            "diseasePhenotypeCurie": "HP:0000252",
+            "diseasePhenotypeLabel": "Microcephaly",
+            "micaCurie": "HP:0000252",
+            "micaLabel": "Microcephaly",
+            "score": 1.8946751382172473,
+            "evidenceCode": "5/11",
+            "referenceText": "OMIM:621415"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001511",
+            "patientPhenotypeLabel": "Intrauterine growth retardation",
+            "diseasePhenotypeCurie": "HP:0008897",
+            "diseasePhenotypeLabel": "Postnatal growth retardation",
+            "micaCurie": "HP:0001510",
+            "micaLabel": "Growth delay",
+            "score": 1.5148591723795624,
+            "evidenceCode": "0/17",
+            "referenceText": "OMIM:621415"
+          }
+        ]
+      },
+      {
+        "rank": 14,
+        "geneCurie": "NCBIGene:7528",
+        "geneLabel": "YY1",
+        "geneSymbol": "YY1",
+        "geneEntityId": 150454,
+        "bmaScore": 1.7370570164234682,
+        "normalizedScore": 0.19179,
+        "patientAverageScore": 2.569302015315079,
+        "phenotypeAverageScore": 0.9048120175318574,
+        "directPhenotypeCount": 121,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002342",
+            "patientPhenotypeLabel": "Moderate intellectual disability",
+            "diseasePhenotypeCurie": "HP:0002342",
+            "diseasePhenotypeLabel": "Moderate intellectual disability",
+            "micaCurie": "HP:0002342",
+            "micaLabel": "Moderate intellectual disability",
+            "score": 4.101245577971705,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:506358"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007018",
+            "patientPhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "diseasePhenotypeCurie": "HP:0007018",
+            "diseasePhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "micaCurie": "HP:0007018",
+            "micaLabel": "Attention deficit hyperactivity disorder",
+            "score": 3.5197383685544286,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:506358"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002079",
+            "patientPhenotypeLabel": "Hypoplasia of the corpus callosum",
+            "diseasePhenotypeCurie": "HP:0002079",
+            "diseasePhenotypeLabel": "Hypoplasia of the corpus callosum",
+            "micaCurie": "HP:0002079",
+            "micaLabel": "Hypoplasia of the corpus callosum",
+            "score": 3.0073391803410074,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:506358"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001511",
+            "patientPhenotypeLabel": "Intrauterine growth retardation",
+            "diseasePhenotypeCurie": "HP:0001511",
+            "diseasePhenotypeLabel": "Intrauterine growth retardation",
+            "micaCurie": "HP:0001511",
+            "micaLabel": "Intrauterine growth retardation",
+            "score": 2.9022145415565475,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:617557"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011968",
+            "patientPhenotypeLabel": "Feeding difficulties",
+            "diseasePhenotypeCurie": "HP:0011968",
+            "diseasePhenotypeLabel": "Feeding difficulties",
+            "micaCurie": "HP:0011968",
+            "micaLabel": "Feeding difficulties",
+            "score": 2.2218880494256634,
+            "evidenceCode": "9/10",
+            "referenceText": "OMIM:617557"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001270",
+            "patientPhenotypeLabel": "Motor delay",
+            "diseasePhenotypeCurie": "HP:0031936",
+            "diseasePhenotypeLabel": "Delayed ability to walk",
+            "micaCurie": "HP:0001270",
+            "micaLabel": "Motor delay",
+            "score": 2.1246247440004566,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:506358"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0001344",
+            "diseasePhenotypeLabel": "Absent speech",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:506358"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000252",
+            "patientPhenotypeLabel": "Microcephaly",
+            "diseasePhenotypeCurie": "HP:0002079",
+            "diseasePhenotypeLabel": "Hypoplasia of the corpus callosum",
+            "micaCurie": "HP:0007364",
+            "micaLabel": "Aplasia/Hypoplasia of the cerebrum",
+            "score": 1.6950620843132318,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:506358"
+          }
+        ]
+      },
+      {
+        "rank": 15,
+        "geneCurie": "NCBIGene:10079",
+        "geneLabel": "ATP9A",
+        "geneSymbol": "ATP9A",
+        "geneEntityId": 150949,
+        "bmaScore": 1.7353170823792041,
+        "normalizedScore": 0.191598,
+        "patientAverageScore": 2.084833969819615,
+        "phenotypeAverageScore": 1.3858001949387933,
+        "directPhenotypeCount": 40,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0007018",
+            "patientPhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "diseasePhenotypeCurie": "HP:0007018",
+            "diseasePhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "micaCurie": "HP:0007018",
+            "micaLabel": "Attention deficit hyperactivity disorder",
+            "score": 3.5197383685544286,
+            "evidenceCode": "5/5",
+            "referenceText": "OMIM:620242"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002079",
+            "patientPhenotypeLabel": "Hypoplasia of the corpus callosum",
+            "diseasePhenotypeCurie": "HP:0002079",
+            "diseasePhenotypeLabel": "Hypoplasia of the corpus callosum",
+            "micaCurie": "HP:0002079",
+            "micaLabel": "Hypoplasia of the corpus callosum",
+            "score": 3.0073391803410074,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:620242"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001270",
+            "patientPhenotypeLabel": "Motor delay",
+            "diseasePhenotypeCurie": "HP:0001270",
+            "diseasePhenotypeLabel": "Motor delay",
+            "micaCurie": "HP:0001270",
+            "micaLabel": "Motor delay",
+            "score": 2.1246247440004566,
+            "evidenceCode": "6/6",
+            "referenceText": "OMIM:620242"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0010863",
+            "diseasePhenotypeLabel": "Receptive language delay",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "3/3",
+            "referenceText": "OMIM:620242"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000252",
+            "patientPhenotypeLabel": "Microcephaly",
+            "diseasePhenotypeCurie": "HP:0005484",
+            "diseasePhenotypeLabel": "Secondary microcephaly",
+            "micaCurie": "HP:0000252",
+            "micaLabel": "Microcephaly",
+            "score": 1.8946751382172473,
+            "evidenceCode": "5/9",
+            "referenceText": "OMIM:620242"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011968",
+            "patientPhenotypeLabel": "Feeding difficulties",
+            "diseasePhenotypeCurie": "HP:0002017",
+            "diseasePhenotypeLabel": "Nausea and vomiting",
+            "micaCurie": "HP:0011458",
+            "micaLabel": "Abdominal symptom",
+            "score": 1.7451864714958005,
+            "evidenceCode": "3/3",
+            "referenceText": "OMIM:620242"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001511",
+            "patientPhenotypeLabel": "Intrauterine growth retardation",
+            "diseasePhenotypeCurie": "HP:0008897",
+            "diseasePhenotypeLabel": "Postnatal growth retardation",
+            "micaCurie": "HP:0001510",
+            "micaLabel": "Growth delay",
+            "score": 1.5148591723795624,
+            "evidenceCode": "3/3",
+            "referenceText": "OMIM:620242"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001250",
+            "patientPhenotypeLabel": "Seizure",
+            "diseasePhenotypeCurie": "HP:0001250",
+            "diseasePhenotypeLabel": "Seizure",
+            "micaCurie": "HP:0001250",
+            "micaLabel": "Seizure",
+            "score": 1.4866293835155915,
+            "evidenceCode": "1/3",
+            "referenceText": "OMIM:620242"
+          }
+        ]
+      },
+      {
+        "rank": 16,
+        "geneCurie": "NCBIGene:144577",
+        "geneLabel": "KICS2",
+        "geneSymbol": "KICS2",
+        "geneEntityId": 152915,
+        "bmaScore": 1.7314990564968455,
+        "normalizedScore": 0.191176,
+        "patientAverageScore": 2.254720306335892,
+        "phenotypeAverageScore": 1.208277806657799,
+        "directPhenotypeCount": 61,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002342",
+            "patientPhenotypeLabel": "Moderate intellectual disability",
+            "diseasePhenotypeCurie": "HP:0002342",
+            "diseasePhenotypeLabel": "Moderate intellectual disability",
+            "micaCurie": "HP:0002342",
+            "micaLabel": "Moderate intellectual disability",
+            "score": 4.101245577971705,
+            "evidenceCode": "4/4",
+            "referenceText": "OMIM:621100"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007018",
+            "patientPhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "diseasePhenotypeCurie": "HP:0007018",
+            "diseasePhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "micaCurie": "HP:0007018",
+            "micaLabel": "Attention deficit hyperactivity disorder",
+            "score": 3.5197383685544286,
+            "evidenceCode": "2/5",
+            "referenceText": "OMIM:621100"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002079",
+            "patientPhenotypeLabel": "Hypoplasia of the corpus callosum",
+            "diseasePhenotypeCurie": "HP:0030891",
+            "diseasePhenotypeLabel": "Periventricular white matter hyperintensities",
+            "micaCurie": "HP:0002500",
+            "micaLabel": "Abnormal cerebral white matter morphology",
+            "score": 2.168500176007602,
+            "evidenceCode": "1/3",
+            "referenceText": "OMIM:621100"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001270",
+            "patientPhenotypeLabel": "Motor delay",
+            "diseasePhenotypeCurie": "HP:0031936",
+            "diseasePhenotypeLabel": "Delayed ability to walk",
+            "micaCurie": "HP:0001270",
+            "micaLabel": "Motor delay",
+            "score": 2.1246247440004566,
+            "evidenceCode": "5/8",
+            "referenceText": "OMIM:621100"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0010863",
+            "diseasePhenotypeLabel": "Receptive language delay",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "4/4",
+            "referenceText": "OMIM:621100"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000252",
+            "patientPhenotypeLabel": "Microcephaly",
+            "diseasePhenotypeCurie": "HP:0011451",
+            "diseasePhenotypeLabel": "Primary microcephaly",
+            "micaCurie": "HP:0000252",
+            "micaLabel": "Microcephaly",
+            "score": 1.8946751382172473,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:621100"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011968",
+            "patientPhenotypeLabel": "Feeding difficulties",
+            "diseasePhenotypeCurie": "HP:0002013",
+            "diseasePhenotypeLabel": "Vomiting",
+            "micaCurie": "HP:0011458",
+            "micaLabel": "Abdominal symptom",
+            "score": 1.7451864714958005,
+            "evidenceCode": "1/7",
+            "referenceText": "OMIM:621100"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001250",
+            "patientPhenotypeLabel": "Seizure",
+            "diseasePhenotypeCurie": "HP:0011154",
+            "diseasePhenotypeLabel": "Focal autonomic seizure",
+            "micaCurie": "HP:0001250",
+            "micaLabel": "Seizure",
+            "score": 1.4866293835155915,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:621100"
+          }
+        ]
+      },
+      {
+        "rank": 17,
+        "geneCurie": "NCBIGene:80816",
+        "geneLabel": "ASXL3",
+        "geneSymbol": "ASXL3",
+        "geneEntityId": 152479,
+        "bmaScore": 1.7223926690257811,
+        "normalizedScore": 0.190171,
+        "patientAverageScore": 2.468397165472513,
+        "phenotypeAverageScore": 0.9763881725790491,
+        "directPhenotypeCount": 107,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002342",
+            "patientPhenotypeLabel": "Moderate intellectual disability",
+            "diseasePhenotypeCurie": "HP:0002342",
+            "diseasePhenotypeLabel": "Moderate intellectual disability",
+            "micaCurie": "HP:0002342",
+            "micaLabel": "Moderate intellectual disability",
+            "score": 4.101245577971705,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:352577"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002079",
+            "patientPhenotypeLabel": "Hypoplasia of the corpus callosum",
+            "diseasePhenotypeCurie": "HP:0002079",
+            "diseasePhenotypeLabel": "Hypoplasia of the corpus callosum",
+            "micaCurie": "HP:0002079",
+            "micaLabel": "Hypoplasia of the corpus callosum",
+            "score": 3.0073391803410074,
+            "evidenceCode": "1/3",
+            "referenceText": "OMIM:615485"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001511",
+            "patientPhenotypeLabel": "Intrauterine growth retardation",
+            "diseasePhenotypeCurie": "HP:0001511",
+            "diseasePhenotypeLabel": "Intrauterine growth retardation",
+            "micaCurie": "HP:0001511",
+            "micaLabel": "Intrauterine growth retardation",
+            "score": 2.9022145415565475,
+            "evidenceCode": "2/3",
+            "referenceText": "OMIM:615485"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007018",
+            "patientPhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "diseasePhenotypeCurie": "HP:0100716",
+            "diseasePhenotypeLabel": "Self-injurious behavior",
+            "micaCurie": "HP:5200241",
+            "micaLabel": "Recurrent maladaptive behavior",
+            "score": 2.4119816660673212,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:615485"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011968",
+            "patientPhenotypeLabel": "Feeding difficulties",
+            "diseasePhenotypeCurie": "HP:0040288",
+            "diseasePhenotypeLabel": "Nasogastric tube feeding",
+            "micaCurie": "HP:0011968",
+            "micaLabel": "Feeding difficulties",
+            "score": 2.2218880494256634,
+            "evidenceCode": "3/3",
+            "referenceText": "OMIM:615485"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001270",
+            "patientPhenotypeLabel": "Motor delay",
+            "diseasePhenotypeCurie": "HP:0031936",
+            "diseasePhenotypeLabel": "Delayed ability to walk",
+            "micaCurie": "HP:0001270",
+            "micaLabel": "Motor delay",
+            "score": 2.1246247440004566,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:615485"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0001344",
+            "diseasePhenotypeLabel": "Absent speech",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "5/8",
+            "referenceText": "OMIM:615485"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000252",
+            "patientPhenotypeLabel": "Microcephaly",
+            "diseasePhenotypeCurie": "HP:0000252",
+            "diseasePhenotypeLabel": "Microcephaly",
+            "micaCurie": "HP:0000252",
+            "micaLabel": "Microcephaly",
+            "score": 1.8946751382172473,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:352577"
+          }
+        ]
+      },
+      {
+        "rank": 18,
+        "geneCurie": "NCBIGene:27245",
+        "geneLabel": "AHDC1",
+        "geneSymbol": "AHDC1",
+        "geneEntityId": 151564,
+        "bmaScore": 1.7194874468538806,
+        "normalizedScore": 0.18985,
+        "patientAverageScore": 2.5449808988103815,
+        "phenotypeAverageScore": 0.8939939948973799,
+        "directPhenotypeCount": 199,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002342",
+            "patientPhenotypeLabel": "Moderate intellectual disability",
+            "diseasePhenotypeCurie": "HP:0002342",
+            "diseasePhenotypeLabel": "Moderate intellectual disability",
+            "micaCurie": "HP:0002342",
+            "micaLabel": "Moderate intellectual disability",
+            "score": 4.101245577971705,
+            "evidenceCode": "8/13",
+            "referenceText": "OMIM:615829"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007018",
+            "patientPhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "diseasePhenotypeCurie": "HP:0000752",
+            "diseasePhenotypeLabel": "Hyperactivity",
+            "micaCurie": "HP:0000752",
+            "micaLabel": "Hyperactivity",
+            "score": 3.1012352661081346,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:615829"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002079",
+            "patientPhenotypeLabel": "Hypoplasia of the corpus callosum",
+            "diseasePhenotypeCurie": "HP:0002079",
+            "diseasePhenotypeLabel": "Hypoplasia of the corpus callosum",
+            "micaCurie": "HP:0002079",
+            "micaLabel": "Hypoplasia of the corpus callosum",
+            "score": 3.0073391803410074,
+            "evidenceCode": "7/9",
+            "referenceText": "OMIM:615829"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001511",
+            "patientPhenotypeLabel": "Intrauterine growth retardation",
+            "diseasePhenotypeCurie": "HP:0001511",
+            "diseasePhenotypeLabel": "Intrauterine growth retardation",
+            "micaCurie": "HP:0001511",
+            "micaLabel": "Intrauterine growth retardation",
+            "score": 2.9022145415565475,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:615829"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011968",
+            "patientPhenotypeLabel": "Feeding difficulties",
+            "diseasePhenotypeCurie": "HP:0033454",
+            "diseasePhenotypeLabel": "Tube feeding",
+            "micaCurie": "HP:0011968",
+            "micaLabel": "Feeding difficulties",
+            "score": 2.2218880494256634,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:615829"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001270",
+            "patientPhenotypeLabel": "Motor delay",
+            "diseasePhenotypeCurie": "HP:0031936",
+            "diseasePhenotypeLabel": "Delayed ability to walk",
+            "micaCurie": "HP:0001270",
+            "micaLabel": "Motor delay",
+            "score": 2.1246247440004566,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:412069"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0002474",
+            "diseasePhenotypeLabel": "Expressive language delay",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:412069"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000252",
+            "patientPhenotypeLabel": "Microcephaly",
+            "diseasePhenotypeCurie": "HP:0000252",
+            "diseasePhenotypeLabel": "Microcephaly",
+            "micaCurie": "HP:0000252",
+            "micaLabel": "Microcephaly",
+            "score": 1.8946751382172473,
+            "evidenceCode": "4/10",
+            "referenceText": "OMIM:615829"
+          }
+        ]
+      },
+      {
+        "rank": 19,
+        "geneCurie": "NCBIGene:26832",
+        "geneLabel": "RNU5B-1",
+        "geneSymbol": "RNU5B-1",
+        "geneEntityId": 151525,
+        "bmaScore": 1.710522172398858,
+        "normalizedScore": 0.18886,
+        "patientAverageScore": 2.4995803623533996,
+        "phenotypeAverageScore": 0.9214639824443162,
+        "directPhenotypeCount": 153,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002342",
+            "patientPhenotypeLabel": "Moderate intellectual disability",
+            "diseasePhenotypeCurie": "HP:0002342",
+            "diseasePhenotypeLabel": "Moderate intellectual disability",
+            "micaCurie": "HP:0002342",
+            "micaLabel": "Moderate intellectual disability",
+            "score": 4.101245577971705,
+            "evidenceCode": "6/14",
+            "referenceText": "OMIM:621302"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007018",
+            "patientPhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "diseasePhenotypeCurie": "HP:0000752",
+            "diseasePhenotypeLabel": "Hyperactivity",
+            "micaCurie": "HP:0000752",
+            "micaLabel": "Hyperactivity",
+            "score": 3.1012352661081346,
+            "evidenceCode": "2/6",
+            "referenceText": "OMIM:621302"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001511",
+            "patientPhenotypeLabel": "Intrauterine growth retardation",
+            "diseasePhenotypeCurie": "HP:0001511",
+            "diseasePhenotypeLabel": "Intrauterine growth retardation",
+            "micaCurie": "HP:0001511",
+            "micaLabel": "Intrauterine growth retardation",
+            "score": 2.9022145415565475,
+            "evidenceCode": "3/10",
+            "referenceText": "OMIM:621302"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002079",
+            "patientPhenotypeLabel": "Hypoplasia of the corpus callosum",
+            "diseasePhenotypeCurie": "HP:0001338",
+            "diseasePhenotypeLabel": "Partial agenesis of the corpus callosum",
+            "micaCurie": "HP:0007370",
+            "micaLabel": "Aplasia/Hypoplasia of the corpus callosum",
+            "score": 2.5987343522281754,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:621302"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011968",
+            "patientPhenotypeLabel": "Feeding difficulties",
+            "diseasePhenotypeCurie": "HP:0011968",
+            "diseasePhenotypeLabel": "Feeding difficulties",
+            "micaCurie": "HP:0011968",
+            "micaLabel": "Feeding difficulties",
+            "score": 2.2218880494256634,
+            "evidenceCode": "10/16",
+            "referenceText": "OMIM:621302"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001270",
+            "patientPhenotypeLabel": "Motor delay",
+            "diseasePhenotypeCurie": "HP:0032989",
+            "diseasePhenotypeLabel": "Delayed ability to roll over",
+            "micaCurie": "HP:0001270",
+            "micaLabel": "Motor delay",
+            "score": 2.1246247440004566,
+            "evidenceCode": "3/3",
+            "referenceText": "OMIM:621302"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0001344",
+            "diseasePhenotypeLabel": "Absent speech",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "6/15",
+            "referenceText": "OMIM:621302"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000252",
+            "patientPhenotypeLabel": "Microcephaly",
+            "diseasePhenotypeCurie": "HP:0011451",
+            "diseasePhenotypeLabel": "Primary microcephaly",
+            "micaCurie": "HP:0000252",
+            "micaLabel": "Microcephaly",
+            "score": 1.8946751382172473,
+            "evidenceCode": "0/10",
+            "referenceText": "OMIM:621302"
+          }
+        ]
+      },
+      {
+        "rank": 20,
+        "geneCurie": "NCBIGene:80055",
+        "geneLabel": "PGAP1",
+        "geneSymbol": "PGAP1",
+        "geneEntityId": 152435,
+        "bmaScore": 1.7103930162119183,
+        "normalizedScore": 0.188846,
+        "patientAverageScore": 2.353116009793514,
+        "phenotypeAverageScore": 1.0676700226303226,
+        "directPhenotypeCount": 70,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002342",
+            "patientPhenotypeLabel": "Moderate intellectual disability",
+            "diseasePhenotypeCurie": "HP:0002342",
+            "diseasePhenotypeLabel": "Moderate intellectual disability",
+            "micaCurie": "HP:0002342",
+            "micaLabel": "Moderate intellectual disability",
+            "score": 4.101245577971705,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:615802"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002079",
+            "patientPhenotypeLabel": "Hypoplasia of the corpus callosum",
+            "diseasePhenotypeCurie": "HP:0002079",
+            "diseasePhenotypeLabel": "Hypoplasia of the corpus callosum",
+            "micaCurie": "HP:0002079",
+            "micaLabel": "Hypoplasia of the corpus callosum",
+            "score": 3.0073391803410074,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:615802"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007018",
+            "patientPhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "diseasePhenotypeCurie": "HP:0000748",
+            "diseasePhenotypeLabel": "Inappropriate laughter",
+            "micaCurie": "HP:0000734",
+            "micaLabel": "Disinhibition",
+            "score": 2.7618066341333187,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:615802"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011968",
+            "patientPhenotypeLabel": "Feeding difficulties",
+            "diseasePhenotypeCurie": "HP:0011968",
+            "diseasePhenotypeLabel": "Feeding difficulties",
+            "micaCurie": "HP:0011968",
+            "micaLabel": "Feeding difficulties",
+            "score": 2.2218880494256634,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:615802"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001270",
+            "patientPhenotypeLabel": "Motor delay",
+            "diseasePhenotypeCurie": "HP:0033128",
+            "diseasePhenotypeLabel": "Delayed ability to crawl",
+            "micaCurie": "HP:0001270",
+            "micaLabel": "Motor delay",
+            "score": 2.1246247440004566,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:615802"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0001344",
+            "diseasePhenotypeLabel": "Absent speech",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:615802"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000252",
+            "patientPhenotypeLabel": "Microcephaly",
+            "diseasePhenotypeCurie": "HP:0000252",
+            "diseasePhenotypeLabel": "Microcephaly",
+            "micaCurie": "HP:0000252",
+            "micaLabel": "Microcephaly",
+            "score": 1.8946751382172473,
+            "evidenceCode": "3/4",
+            "referenceText": "OMIM:615802"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001511",
+            "patientPhenotypeLabel": "Intrauterine growth retardation",
+            "diseasePhenotypeCurie": "HP:0004322",
+            "diseasePhenotypeLabel": "Short stature",
+            "micaCurie": "HP:0001510",
+            "micaLabel": "Growth delay",
+            "score": 1.5148591723795624,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:615802"
+          }
+        ]
+      },
+      {
+        "rank": 21,
+        "geneCurie": "NCBIGene:26855",
+        "geneLabel": "RNU2-2",
+        "geneSymbol": "RNU2-2",
+        "geneEntityId": 151527,
+        "bmaScore": 1.7053208054214113,
+        "normalizedScore": 0.188286,
+        "patientAverageScore": 2.3704597115783295,
+        "phenotypeAverageScore": 1.040181899264493,
+        "directPhenotypeCount": 183,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002342",
+            "patientPhenotypeLabel": "Moderate intellectual disability",
+            "diseasePhenotypeCurie": "HP:0002342",
+            "diseasePhenotypeLabel": "Moderate intellectual disability",
+            "micaCurie": "HP:0002342",
+            "micaLabel": "Moderate intellectual disability",
+            "score": 4.101245577971705,
+            "evidenceCode": "2/6",
+            "referenceText": "OMIM:621304"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007018",
+            "patientPhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "diseasePhenotypeCurie": "HP:0007018",
+            "diseasePhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "micaCurie": "HP:0007018",
+            "micaLabel": "Attention deficit hyperactivity disorder",
+            "score": 3.5197383685544286,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:621304"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002079",
+            "patientPhenotypeLabel": "Hypoplasia of the corpus callosum",
+            "diseasePhenotypeCurie": "HP:0033725",
+            "diseasePhenotypeLabel": "Thin corpus callosum",
+            "micaCurie": "HP:0033725",
+            "micaLabel": "Thin corpus callosum",
+            "score": 2.4055007619832383,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:621304"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011968",
+            "patientPhenotypeLabel": "Feeding difficulties",
+            "diseasePhenotypeCurie": "HP:0011968",
+            "diseasePhenotypeLabel": "Feeding difficulties",
+            "micaCurie": "HP:0011968",
+            "micaLabel": "Feeding difficulties",
+            "score": 2.2218880494256634,
+            "evidenceCode": "3/11",
+            "referenceText": "OMIM:621304"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001270",
+            "patientPhenotypeLabel": "Motor delay",
+            "diseasePhenotypeCurie": "HP:0032989",
+            "diseasePhenotypeLabel": "Delayed ability to roll over",
+            "micaCurie": "HP:0001270",
+            "micaLabel": "Motor delay",
+            "score": 2.1246247440004566,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:621304"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0001344",
+            "diseasePhenotypeLabel": "Absent speech",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "16/19",
+            "referenceText": "OMIM:621304"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000252",
+            "patientPhenotypeLabel": "Microcephaly",
+            "diseasePhenotypeCurie": "HP:0005484",
+            "diseasePhenotypeLabel": "Secondary microcephaly",
+            "micaCurie": "HP:0000252",
+            "micaLabel": "Microcephaly",
+            "score": 1.8946751382172473,
+            "evidenceCode": "4/4",
+            "referenceText": "OMIM:621304"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001511",
+            "patientPhenotypeLabel": "Intrauterine growth retardation",
+            "diseasePhenotypeCurie": "HP:0004322",
+            "diseasePhenotypeLabel": "Short stature",
+            "micaCurie": "HP:0001510",
+            "micaLabel": "Growth delay",
+            "score": 1.5148591723795624,
+            "evidenceCode": "8/21",
+            "referenceText": "OMIM:621304"
+          }
+        ]
+      },
+      {
+        "rank": 22,
+        "geneCurie": "NCBIGene:8831",
+        "geneLabel": "SYNGAP1",
+        "geneSymbol": "SYNGAP1",
+        "geneEntityId": 150659,
+        "bmaScore": 1.7026010028000145,
+        "normalizedScore": 0.187986,
+        "patientAverageScore": 2.3645883247589543,
+        "phenotypeAverageScore": 1.0406136808410749,
+        "directPhenotypeCount": 121,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002342",
+            "patientPhenotypeLabel": "Moderate intellectual disability",
+            "diseasePhenotypeCurie": "HP:0002342",
+            "diseasePhenotypeLabel": "Moderate intellectual disability",
+            "micaCurie": "HP:0002342",
+            "micaLabel": "Moderate intellectual disability",
+            "score": 4.101245577971705,
+            "evidenceCode": "6/6",
+            "referenceText": "OMIM:612621"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007018",
+            "patientPhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "diseasePhenotypeCurie": "HP:0007018",
+            "diseasePhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "micaCurie": "HP:0007018",
+            "micaLabel": "Attention deficit hyperactivity disorder",
+            "score": 3.5197383685544286,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:442835"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002079",
+            "patientPhenotypeLabel": "Hypoplasia of the corpus callosum",
+            "diseasePhenotypeCurie": "HP:0001273",
+            "diseasePhenotypeLabel": "Abnormal corpus callosum morphology",
+            "micaCurie": "HP:0001273",
+            "micaLabel": "Abnormal corpus callosum morphology",
+            "score": 2.3526582806088583,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:442835"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011968",
+            "patientPhenotypeLabel": "Feeding difficulties",
+            "diseasePhenotypeCurie": "HP:0011968",
+            "diseasePhenotypeLabel": "Feeding difficulties",
+            "micaCurie": "HP:0011968",
+            "micaLabel": "Feeding difficulties",
+            "score": 2.2218880494256634,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:442835"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001270",
+            "patientPhenotypeLabel": "Motor delay",
+            "diseasePhenotypeCurie": "HP:0001270",
+            "diseasePhenotypeLabel": "Motor delay",
+            "micaCurie": "HP:0001270",
+            "micaLabel": "Motor delay",
+            "score": 2.1246247440004566,
+            "evidenceCode": "3/3",
+            "referenceText": "OMIM:612621"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0001344",
+            "diseasePhenotypeLabel": "Absent speech",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:544254"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000252",
+            "patientPhenotypeLabel": "Microcephaly",
+            "diseasePhenotypeCurie": "HP:0000252",
+            "diseasePhenotypeLabel": "Microcephaly",
+            "micaCurie": "HP:0000252",
+            "micaLabel": "Microcephaly",
+            "score": 1.8946751382172473,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "ORPHA:1942"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001511",
+            "patientPhenotypeLabel": "Intrauterine growth retardation",
+            "diseasePhenotypeCurie": "HP:0004322",
+            "diseasePhenotypeLabel": "Short stature",
+            "micaCurie": "HP:0001510",
+            "micaLabel": "Growth delay",
+            "score": 1.5148591723795624,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:442835"
+          }
+        ]
+      },
+      {
+        "rank": 23,
+        "geneCurie": "NCBIGene:6334",
+        "geneLabel": "SCN8A",
+        "geneSymbol": "SCN8A",
+        "geneEntityId": 150053,
+        "bmaScore": 1.7025632043983823,
+        "normalizedScore": 0.187982,
+        "patientAverageScore": 2.3645883247589543,
+        "phenotypeAverageScore": 1.0405380840378102,
+        "directPhenotypeCount": 126,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002342",
+            "patientPhenotypeLabel": "Moderate intellectual disability",
+            "diseasePhenotypeCurie": "HP:0002342",
+            "diseasePhenotypeLabel": "Moderate intellectual disability",
+            "micaCurie": "HP:0002342",
+            "micaLabel": "Moderate intellectual disability",
+            "score": 4.101245577971705,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:352582"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007018",
+            "patientPhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "diseasePhenotypeCurie": "HP:0007018",
+            "diseasePhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "micaCurie": "HP:0007018",
+            "micaLabel": "Attention deficit hyperactivity disorder",
+            "score": 3.5197383685544286,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:442835"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002079",
+            "patientPhenotypeLabel": "Hypoplasia of the corpus callosum",
+            "diseasePhenotypeCurie": "HP:0001273",
+            "diseasePhenotypeLabel": "Abnormal corpus callosum morphology",
+            "micaCurie": "HP:0001273",
+            "micaLabel": "Abnormal corpus callosum morphology",
+            "score": 2.3526582806088583,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:442835"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011968",
+            "patientPhenotypeLabel": "Feeding difficulties",
+            "diseasePhenotypeCurie": "HP:0011968",
+            "diseasePhenotypeLabel": "Feeding difficulties",
+            "micaCurie": "HP:0011968",
+            "micaLabel": "Feeding difficulties",
+            "score": 2.2218880494256634,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:442835"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001270",
+            "patientPhenotypeLabel": "Motor delay",
+            "diseasePhenotypeCurie": "HP:0031936",
+            "diseasePhenotypeLabel": "Delayed ability to walk",
+            "micaCurie": "HP:0001270",
+            "micaLabel": "Motor delay",
+            "score": 2.1246247440004566,
+            "evidenceCode": "1/2",
+            "referenceText": "OMIM:618364"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0000750",
+            "diseasePhenotypeLabel": "Delayed speech and language development",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "2/3",
+            "referenceText": "OMIM:614306"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000252",
+            "patientPhenotypeLabel": "Microcephaly",
+            "diseasePhenotypeCurie": "HP:0000253",
+            "diseasePhenotypeLabel": "Progressive microcephaly",
+            "micaCurie": "HP:0000252",
+            "micaLabel": "Microcephaly",
+            "score": 1.8946751382172473,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:614558"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001511",
+            "patientPhenotypeLabel": "Intrauterine growth retardation",
+            "diseasePhenotypeCurie": "HP:0004322",
+            "diseasePhenotypeLabel": "Short stature",
+            "micaCurie": "HP:0001510",
+            "micaLabel": "Growth delay",
+            "score": 1.5148591723795624,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:442835"
+          }
+        ]
+      },
+      {
+        "rank": 24,
+        "geneCurie": "NCBIGene:1183",
+        "geneLabel": "CLCN4",
+        "geneSymbol": "CLCN4",
+        "geneEntityId": 148469,
+        "bmaScore": 1.6989813115615255,
+        "normalizedScore": 0.187586,
+        "patientAverageScore": 2.1196303077319905,
+        "phenotypeAverageScore": 1.2783323153910606,
+        "directPhenotypeCount": 57,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002342",
+            "patientPhenotypeLabel": "Moderate intellectual disability",
+            "diseasePhenotypeCurie": "HP:0002342",
+            "diseasePhenotypeLabel": "Moderate intellectual disability",
+            "micaCurie": "HP:0002342",
+            "micaLabel": "Moderate intellectual disability",
+            "score": 4.101245577971705,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:485350"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007018",
+            "patientPhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "diseasePhenotypeCurie": "HP:0000752",
+            "diseasePhenotypeLabel": "Hyperactivity",
+            "micaCurie": "HP:0000752",
+            "micaLabel": "Hyperactivity",
+            "score": 3.1012352661081346,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:485350"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002079",
+            "patientPhenotypeLabel": "Hypoplasia of the corpus callosum",
+            "diseasePhenotypeCurie": "HP:0002079",
+            "diseasePhenotypeLabel": "Hypoplasia of the corpus callosum",
+            "micaCurie": "HP:0002079",
+            "micaLabel": "Hypoplasia of the corpus callosum",
+            "score": 3.0073391803410074,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:485350"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011968",
+            "patientPhenotypeLabel": "Feeding difficulties",
+            "diseasePhenotypeCurie": "HP:0011968",
+            "diseasePhenotypeLabel": "Feeding difficulties",
+            "micaCurie": "HP:0011968",
+            "micaLabel": "Feeding difficulties",
+            "score": 2.2218880494256634,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:485350"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0001344",
+            "diseasePhenotypeLabel": "Absent speech",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:300114"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000252",
+            "patientPhenotypeLabel": "Microcephaly",
+            "diseasePhenotypeCurie": "HP:0000252",
+            "diseasePhenotypeLabel": "Microcephaly",
+            "micaCurie": "HP:0000252",
+            "micaLabel": "Microcephaly",
+            "score": 1.8946751382172473,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:300114"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001250",
+            "patientPhenotypeLabel": "Seizure",
+            "diseasePhenotypeCurie": "HP:0012469",
+            "diseasePhenotypeLabel": "Infantile spasms",
+            "micaCurie": "HP:0001250",
+            "micaLabel": "Seizure",
+            "score": 1.4866293835155915,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:485350"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001270",
+            "patientPhenotypeLabel": "Motor delay",
+            "diseasePhenotypeCurie": "HP:0001344",
+            "diseasePhenotypeLabel": "Absent speech",
+            "micaCurie": "HP:0012758",
+            "micaLabel": "Neurodevelopmental delay",
+            "score": 1.1961162706965762,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:300114"
+          }
+        ]
+      },
+      {
+        "rank": 25,
+        "geneCurie": "NCBIGene:6602",
+        "geneLabel": "SMARCD1",
+        "geneSymbol": "SMARCD1",
+        "geneEntityId": 150140,
+        "bmaScore": 1.6948443509436206,
+        "normalizedScore": 0.187129,
+        "patientAverageScore": 2.4995803623533996,
+        "phenotypeAverageScore": 0.8901083395338418,
+        "directPhenotypeCount": 85,
+        "matchedPhenotypeCount": 9,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002342",
+            "patientPhenotypeLabel": "Moderate intellectual disability",
+            "diseasePhenotypeCurie": "HP:0002342",
+            "diseasePhenotypeLabel": "Moderate intellectual disability",
+            "micaCurie": "HP:0002342",
+            "micaLabel": "Moderate intellectual disability",
+            "score": 4.101245577971705,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:1465"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0007018",
+            "patientPhenotypeLabel": "Attention deficit hyperactivity disorder",
+            "diseasePhenotypeCurie": "HP:0000752",
+            "diseasePhenotypeLabel": "Hyperactivity",
+            "micaCurie": "HP:0000752",
+            "micaLabel": "Hyperactivity",
+            "score": 3.1012352661081346,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1465"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001511",
+            "patientPhenotypeLabel": "Intrauterine growth retardation",
+            "diseasePhenotypeCurie": "HP:0001511",
+            "diseasePhenotypeLabel": "Intrauterine growth retardation",
+            "micaCurie": "HP:0001511",
+            "micaLabel": "Intrauterine growth retardation",
+            "score": 2.9022145415565475,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "ORPHA:1465"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002079",
+            "patientPhenotypeLabel": "Hypoplasia of the corpus callosum",
+            "diseasePhenotypeCurie": "HP:0001274",
+            "diseasePhenotypeLabel": "Agenesis of corpus callosum",
+            "micaCurie": "HP:0007370",
+            "micaLabel": "Aplasia/Hypoplasia of the corpus callosum",
+            "score": 2.5987343522281754,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1465"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011968",
+            "patientPhenotypeLabel": "Feeding difficulties",
+            "diseasePhenotypeCurie": "HP:0011968",
+            "diseasePhenotypeLabel": "Feeding difficulties",
+            "micaCurie": "HP:0011968",
+            "micaLabel": "Feeding difficulties",
+            "score": 2.2218880494256634,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:1465"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001270",
+            "patientPhenotypeLabel": "Motor delay",
+            "diseasePhenotypeCurie": "HP:0031936",
+            "diseasePhenotypeLabel": "Delayed ability to walk",
+            "micaCurie": "HP:0001270",
+            "micaLabel": "Motor delay",
+            "score": 2.1246247440004566,
+            "evidenceCode": "4/5",
+            "referenceText": "OMIM:618779"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000750",
+            "patientPhenotypeLabel": "Delayed speech and language development",
+            "diseasePhenotypeCurie": "HP:0001344",
+            "diseasePhenotypeLabel": "Absent speech",
+            "micaCurie": "HP:0000750",
+            "micaLabel": "Delayed speech and language development",
+            "score": 2.0649762081570775,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1465"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000252",
+            "patientPhenotypeLabel": "Microcephaly",
+            "diseasePhenotypeCurie": "HP:0000252",
+            "diseasePhenotypeLabel": "Microcephaly",
+            "micaCurie": "HP:0000252",
+            "micaLabel": "Microcephaly",
+            "score": 1.8946751382172473,
+            "evidenceCode": "HP:0040284",
+            "referenceText": "ORPHA:1465"
+          }
+        ]
+      }
+    ],
+    "engineSummary": {
+      "diseaseCount": 8579,
+      "geneCount": 5256,
+      "phenotypeCount": 19389,
+      "sourceMode": {
+        "disease": "relationship_fallback",
+        "gene": "relationship_fallback"
+      },
+      "generatedAt": "2026-03-15T21:00:39.457Z"
+    }
+  }
+}

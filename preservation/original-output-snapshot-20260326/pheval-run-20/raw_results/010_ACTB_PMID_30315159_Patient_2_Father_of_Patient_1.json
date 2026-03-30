@@ -1,0 +1,2075 @@
+{
+  "success": true,
+  "engine": "genovy-dx-sim",
+  "input": {
+    "presentPhenotypeCuries": [
+      "HP:0011229",
+      "HP:0011228",
+      "HP:0000431",
+      "HP:0000455",
+      "HP:0000664",
+      "HP:0001873"
+    ],
+    "excludedPhenotypeCuries": [
+      "HP:0000286",
+      "HP:0000527",
+      "HP:0000490",
+      "HP:0000218",
+      "HP:0000307",
+      "HP:0000506",
+      "HP:0000582",
+      "HP:0000219",
+      "HP:0000414",
+      "HP:0000154",
+      "HP:0000303",
+      "HP:0000396",
+      "HP:0008551",
+      "HP:0000365",
+      "HP:0001643",
+      "HP:0011342",
+      "HP:0001250",
+      "HP:0002061",
+      "HP:0011800",
+      "HP:0000358",
+      "HP:0001537",
+      "HP:0001845"
+    ],
+    "sourceFormat": "phenopacket"
+  },
+  "ranking": {
+    "queryPhenotypes": [
+      {
+        "phenotypeCurie": "HP:0011229",
+        "phenotypeLabel": "Broad eyebrow"
+      },
+      {
+        "phenotypeCurie": "HP:0011228",
+        "phenotypeLabel": "Horizontal eyebrow"
+      },
+      {
+        "phenotypeCurie": "HP:0000431",
+        "phenotypeLabel": "Wide nasal bridge"
+      },
+      {
+        "phenotypeCurie": "HP:0000455",
+        "phenotypeLabel": "Broad nasal tip"
+      },
+      {
+        "phenotypeCurie": "HP:0000664",
+        "phenotypeLabel": "Synophrys"
+      },
+      {
+        "phenotypeCurie": "HP:0001873",
+        "phenotypeLabel": "Thrombocytopenia"
+      }
+    ],
+    "results": [
+      {
+        "rank": 1,
+        "diseaseCurie": "MONDO:0100433",
+        "diseaseLabel": "ACTB-associated syndromic thrombocytopenia",
+        "diseaseEntityId": 86659,
+        "bmaScore": 2.791123290110091,
+        "normalizedScore": 0.308171,
+        "patientAverageScore": 4.301870266651055,
+        "diseaseAverageScore": 1.2803763135691266,
+        "directPhenotypeCount": 38,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011228",
+            "patientPhenotypeLabel": "Horizontal eyebrow",
+            "diseasePhenotypeCurie": "HP:0011228",
+            "diseasePhenotypeLabel": "Horizontal eyebrow",
+            "micaCurie": "HP:0011228",
+            "micaLabel": "Horizontal eyebrow",
+            "score": 5.9660301822146495,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:30315159"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011229",
+            "patientPhenotypeLabel": "Broad eyebrow",
+            "diseasePhenotypeCurie": "HP:0011229",
+            "diseasePhenotypeLabel": "Broad eyebrow",
+            "micaCurie": "HP:0011229",
+            "micaLabel": "Broad eyebrow",
+            "score": 5.724868125397761,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:30315159"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000455",
+            "patientPhenotypeLabel": "Broad nasal tip",
+            "diseasePhenotypeCurie": "HP:0000455",
+            "diseasePhenotypeLabel": "Broad nasal tip",
+            "micaCurie": "HP:0000455",
+            "micaLabel": "Broad nasal tip",
+            "score": 4.115430212963661,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:30315159"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000664",
+            "patientPhenotypeLabel": "Synophrys",
+            "diseasePhenotypeCurie": "HP:0000664",
+            "diseasePhenotypeLabel": "Synophrys",
+            "micaCurie": "HP:0000664",
+            "micaLabel": "Synophrys",
+            "score": 3.7195345558716473,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:30315159"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001873",
+            "patientPhenotypeLabel": "Thrombocytopenia",
+            "diseasePhenotypeCurie": "HP:0001873",
+            "diseasePhenotypeLabel": "Thrombocytopenia",
+            "micaCurie": "HP:0001873",
+            "micaLabel": "Thrombocytopenia",
+            "score": 3.3013304219860533,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:30315159"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000431",
+            "patientPhenotypeLabel": "Wide nasal bridge",
+            "diseasePhenotypeCurie": "HP:0000431",
+            "diseasePhenotypeLabel": "Wide nasal bridge",
+            "micaCurie": "HP:0000431",
+            "micaLabel": "Wide nasal bridge",
+            "score": 2.9840281014725605,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:30315159;PMID:30733661"
+          }
+        ]
+      },
+      {
+        "rank": 2,
+        "diseaseCurie": "MONDO:0978301",
+        "diseaseLabel": "neurodevelopmental disorder with dysmorphic facies, brain anomalies, and seizures",
+        "diseaseEntityId": 88758,
+        "bmaScore": 2.5082126163875063,
+        "normalizedScore": 0.276934,
+        "patientAverageScore": 4.301870266651055,
+        "diseaseAverageScore": 0.7145549661239576,
+        "directPhenotypeCount": 111,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011228",
+            "patientPhenotypeLabel": "Horizontal eyebrow",
+            "diseasePhenotypeCurie": "HP:0011228",
+            "diseasePhenotypeLabel": "Horizontal eyebrow",
+            "micaCurie": "HP:0011228",
+            "micaLabel": "Horizontal eyebrow",
+            "score": 5.9660301822146495,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:39636576"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011229",
+            "patientPhenotypeLabel": "Broad eyebrow",
+            "diseasePhenotypeCurie": "HP:0011229",
+            "diseasePhenotypeLabel": "Broad eyebrow",
+            "micaCurie": "HP:0011229",
+            "micaLabel": "Broad eyebrow",
+            "score": 5.724868125397761,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:39636576"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000455",
+            "patientPhenotypeLabel": "Broad nasal tip",
+            "diseasePhenotypeCurie": "HP:0000455",
+            "diseasePhenotypeLabel": "Broad nasal tip",
+            "micaCurie": "HP:0000455",
+            "micaLabel": "Broad nasal tip",
+            "score": 4.115430212963661,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:39636576"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000664",
+            "patientPhenotypeLabel": "Synophrys",
+            "diseasePhenotypeCurie": "HP:0000664",
+            "diseasePhenotypeLabel": "Synophrys",
+            "micaCurie": "HP:0000664",
+            "micaLabel": "Synophrys",
+            "score": 3.7195345558716473,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:39636576;PMID:40040844"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001873",
+            "patientPhenotypeLabel": "Thrombocytopenia",
+            "diseasePhenotypeCurie": "HP:0001873",
+            "diseasePhenotypeLabel": "Thrombocytopenia",
+            "micaCurie": "HP:0001873",
+            "micaLabel": "Thrombocytopenia",
+            "score": 3.3013304219860533,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:40040844"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000431",
+            "patientPhenotypeLabel": "Wide nasal bridge",
+            "diseasePhenotypeCurie": "HP:0000431",
+            "diseasePhenotypeLabel": "Wide nasal bridge",
+            "micaCurie": "HP:0000431",
+            "micaLabel": "Wide nasal bridge",
+            "score": 2.9840281014725605,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:39636576;PMID:40040844"
+          }
+        ]
+      },
+      {
+        "rank": 3,
+        "diseaseCurie": "MONDO:0010887",
+        "diseaseLabel": "isolated anterior cervical hypertrichosis",
+        "diseaseEntityId": 72173,
+        "bmaScore": 2.3029572576661543,
+        "normalizedScore": 0.254272,
+        "patientAverageScore": 1.1942887774025808,
+        "diseaseAverageScore": 3.4116257379297275,
+        "directPhenotypeCount": 1,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000664",
+            "patientPhenotypeLabel": "Synophrys",
+            "diseasePhenotypeCurie": "HP:0004535",
+            "diseasePhenotypeLabel": "Anterior cervical hypertrichosis",
+            "micaCurie": "HP:0000998",
+            "micaLabel": "Hypertrichosis",
+            "score": 3.4116257379297275,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:600457"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011229",
+            "patientPhenotypeLabel": "Broad eyebrow",
+            "diseasePhenotypeCurie": "HP:0004535",
+            "diseasePhenotypeLabel": "Anterior cervical hypertrichosis",
+            "micaCurie": "HP:0001595",
+            "micaLabel": "Abnormal hair morphology",
+            "score": 1.8732019205105126,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:600457"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011228",
+            "patientPhenotypeLabel": "Horizontal eyebrow",
+            "diseasePhenotypeCurie": "HP:0004535",
+            "diseasePhenotypeLabel": "Anterior cervical hypertrichosis",
+            "micaCurie": "HP:0001595",
+            "micaLabel": "Abnormal hair morphology",
+            "score": 1.8732019205105126,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:600457"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000431",
+            "patientPhenotypeLabel": "Wide nasal bridge",
+            "diseasePhenotypeCurie": "HP:0004535",
+            "diseasePhenotypeLabel": "Anterior cervical hypertrichosis",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:600457"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000455",
+            "patientPhenotypeLabel": "Broad nasal tip",
+            "diseasePhenotypeCurie": "HP:0004535",
+            "diseasePhenotypeLabel": "Anterior cervical hypertrichosis",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:600457"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001873",
+            "patientPhenotypeLabel": "Thrombocytopenia",
+            "diseasePhenotypeCurie": "HP:0004535",
+            "diseasePhenotypeLabel": "Anterior cervical hypertrichosis",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:600457"
+          }
+        ]
+      },
+      {
+        "rank": 4,
+        "diseaseCurie": "MONDO:0859169",
+        "diseaseLabel": "White-Kernohan syndrome",
+        "diseaseEntityId": 87832,
+        "bmaScore": 2.113539208679417,
+        "normalizedScore": 0.233358,
+        "patientAverageScore": 3.312244171181469,
+        "diseaseAverageScore": 0.9148342461773648,
+        "directPhenotypeCount": 49,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011228",
+            "patientPhenotypeLabel": "Horizontal eyebrow",
+            "diseasePhenotypeCurie": "HP:0011228",
+            "diseasePhenotypeLabel": "Horizontal eyebrow",
+            "micaCurie": "HP:0011228",
+            "micaLabel": "Horizontal eyebrow",
+            "score": 5.9660301822146495,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:33743206"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011229",
+            "patientPhenotypeLabel": "Broad eyebrow",
+            "diseasePhenotypeCurie": "HP:0034003",
+            "diseasePhenotypeLabel": "Broad medial eyebrow",
+            "micaCurie": "HP:0011229",
+            "micaLabel": "Broad eyebrow",
+            "score": 5.724868125397761,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:33743206"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000664",
+            "patientPhenotypeLabel": "Synophrys",
+            "diseasePhenotypeCurie": "HP:0000664",
+            "diseasePhenotypeLabel": "Synophrys",
+            "micaCurie": "HP:0000664",
+            "micaLabel": "Synophrys",
+            "score": 3.7195345558716473,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:33743206"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000455",
+            "patientPhenotypeLabel": "Broad nasal tip",
+            "diseasePhenotypeCurie": "HP:0000463",
+            "diseasePhenotypeLabel": "Anteverted nares",
+            "micaCurie": "HP:0010938",
+            "micaLabel": "Abnormal external nose morphology",
+            "score": 2.2524581155103416,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:33743206"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000431",
+            "patientPhenotypeLabel": "Wide nasal bridge",
+            "diseasePhenotypeCurie": "HP:0005280",
+            "diseasePhenotypeLabel": "Depressed nasal bridge",
+            "micaCurie": "HP:0000422",
+            "micaLabel": "Abnormal nasal bridge morphology",
+            "score": 2.2080063529395075,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:33743206"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001873",
+            "patientPhenotypeLabel": "Thrombocytopenia",
+            "diseasePhenotypeCurie": "HP:0034003",
+            "diseasePhenotypeLabel": "Broad medial eyebrow",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:33743206"
+          }
+        ]
+      },
+      {
+        "rank": 5,
+        "diseaseCurie": "MONDO:0014078",
+        "diseaseLabel": "platelet-type bleeding disorder 15",
+        "diseaseEntityId": 75364,
+        "bmaScore": 2.034904289208569,
+        "normalizedScore": 0.224676,
+        "patientAverageScore": 1.5323826317115696,
+        "diseaseAverageScore": 2.537425946705569,
+        "directPhenotypeCount": 7,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001873",
+            "patientPhenotypeLabel": "Thrombocytopenia",
+            "diseasePhenotypeCurie": "HP:0001873",
+            "diseasePhenotypeLabel": "Thrombocytopenia",
+            "micaCurie": "HP:0001873",
+            "micaLabel": "Thrombocytopenia",
+            "score": 3.3013304219860533,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:23434115"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000431",
+            "patientPhenotypeLabel": "Wide nasal bridge",
+            "diseasePhenotypeCurie": "HP:0000421",
+            "diseasePhenotypeLabel": "Epistaxis",
+            "micaCurie": "HP:0000366",
+            "micaLabel": "Abnormality of the nose",
+            "score": 1.585709547385868,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:23434115"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000455",
+            "patientPhenotypeLabel": "Broad nasal tip",
+            "diseasePhenotypeCurie": "HP:0000421",
+            "diseasePhenotypeLabel": "Epistaxis",
+            "micaCurie": "HP:0000366",
+            "micaLabel": "Abnormality of the nose",
+            "score": 1.585709547385868,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:23434115"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011229",
+            "patientPhenotypeLabel": "Broad eyebrow",
+            "diseasePhenotypeCurie": "HP:0000421",
+            "diseasePhenotypeLabel": "Epistaxis",
+            "micaCurie": "HP:0000271",
+            "micaLabel": "Abnormality of the face",
+            "score": 0.9071820911705433,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:23434115"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011228",
+            "patientPhenotypeLabel": "Horizontal eyebrow",
+            "diseasePhenotypeCurie": "HP:0000421",
+            "diseasePhenotypeLabel": "Epistaxis",
+            "micaCurie": "HP:0000271",
+            "micaLabel": "Abnormality of the face",
+            "score": 0.9071820911705433,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:23434115"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000664",
+            "patientPhenotypeLabel": "Synophrys",
+            "diseasePhenotypeCurie": "HP:0000421",
+            "diseasePhenotypeLabel": "Epistaxis",
+            "micaCurie": "HP:0000271",
+            "micaLabel": "Abnormality of the face",
+            "score": 0.9071820911705433,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:23434115"
+          }
+        ]
+      },
+      {
+        "rank": 6,
+        "diseaseCurie": "MONDO:0007610",
+        "diseaseLabel": "gingival fibromatosis-hypertrichosis syndrome",
+        "diseaseEntityId": 68896,
+        "bmaScore": 2.0343996426307687,
+        "normalizedScore": 0.22462,
+        "patientAverageScore": 2.0066751638123073,
+        "diseaseAverageScore": 2.0621241214492296,
+        "directPhenotypeCount": 10,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000664",
+            "patientPhenotypeLabel": "Synophrys",
+            "diseasePhenotypeCurie": "HP:0004540",
+            "diseasePhenotypeLabel": "Congenital, generalized hypertrichosis",
+            "micaCurie": "HP:0000998",
+            "micaLabel": "Hypertrichosis",
+            "score": 3.4116257379297275,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:19463983"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000455",
+            "patientPhenotypeLabel": "Broad nasal tip",
+            "diseasePhenotypeCurie": "HP:0000414",
+            "diseasePhenotypeLabel": "Bulbous nose",
+            "micaCurie": "HP:0000436",
+            "micaLabel": "Abnormal nasal tip morphology",
+            "score": 3.1221784399533776,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:19463983"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011229",
+            "patientPhenotypeLabel": "Broad eyebrow",
+            "diseasePhenotypeCurie": "HP:0004540",
+            "diseasePhenotypeLabel": "Congenital, generalized hypertrichosis",
+            "micaCurie": "HP:0001595",
+            "micaLabel": "Abnormal hair morphology",
+            "score": 1.8732019205105126,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:19463983"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011228",
+            "patientPhenotypeLabel": "Horizontal eyebrow",
+            "diseasePhenotypeCurie": "HP:0004540",
+            "diseasePhenotypeLabel": "Congenital, generalized hypertrichosis",
+            "micaCurie": "HP:0001595",
+            "micaLabel": "Abnormal hair morphology",
+            "score": 1.8732019205105126,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:19463983"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000431",
+            "patientPhenotypeLabel": "Wide nasal bridge",
+            "diseasePhenotypeCurie": "HP:0012810",
+            "diseasePhenotypeLabel": "Wide nasal base",
+            "micaCurie": "HP:0005105",
+            "micaLabel": "Abnormal nasal morphology",
+            "score": 1.7572752688148046,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:19463983"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001873",
+            "patientPhenotypeLabel": "Thrombocytopenia",
+            "diseasePhenotypeCurie": "HP:0012810",
+            "diseasePhenotypeLabel": "Wide nasal base",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:19463983"
+          }
+        ]
+      },
+      {
+        "rank": 7,
+        "diseaseCurie": "MONDO:0009341",
+        "diseaseLabel": "Mowat-Wilson syndrome",
+        "diseaseEntityId": 70627,
+        "bmaScore": 1.998788105939316,
+        "normalizedScore": 0.220688,
+        "patientAverageScore": 3.703338014627225,
+        "diseaseAverageScore": 0.2942381972514074,
+        "directPhenotypeCount": 166,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011228",
+            "patientPhenotypeLabel": "Horizontal eyebrow",
+            "diseasePhenotypeCurie": "HP:0011228",
+            "diseasePhenotypeLabel": "Horizontal eyebrow",
+            "micaCurie": "HP:0011228",
+            "micaLabel": "Horizontal eyebrow",
+            "score": 5.9660301822146495,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:2152"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011229",
+            "patientPhenotypeLabel": "Broad eyebrow",
+            "diseasePhenotypeCurie": "HP:0011229",
+            "diseasePhenotypeLabel": "Broad eyebrow",
+            "micaCurie": "HP:0011229",
+            "micaLabel": "Broad eyebrow",
+            "score": 5.724868125397761,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:2152"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000455",
+            "patientPhenotypeLabel": "Broad nasal tip",
+            "diseasePhenotypeCurie": "HP:0005274",
+            "diseasePhenotypeLabel": "Prominent nasal tip",
+            "micaCurie": "HP:0000436",
+            "micaLabel": "Abnormal nasal tip morphology",
+            "score": 3.1221784399533776,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:2152"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000431",
+            "patientPhenotypeLabel": "Wide nasal bridge",
+            "diseasePhenotypeCurie": "HP:0000431",
+            "diseasePhenotypeLabel": "Wide nasal bridge",
+            "micaCurie": "HP:0000431",
+            "micaLabel": "Wide nasal bridge",
+            "score": 2.9840281014725605,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:2152"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000664",
+            "patientPhenotypeLabel": "Synophrys",
+            "diseasePhenotypeCurie": "HP:0011229",
+            "diseasePhenotypeLabel": "Broad eyebrow",
+            "micaCurie": "HP:0000534",
+            "micaLabel": "Abnormal eyebrow morphology",
+            "score": 2.6193209858365636,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:2152"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001873",
+            "patientPhenotypeLabel": "Thrombocytopenia",
+            "diseasePhenotypeCurie": "HP:0004313",
+            "diseasePhenotypeLabel": "Decreased circulating immunoglobulin concentration",
+            "micaCurie": "HP:0001871",
+            "micaLabel": "Abnormality of blood and blood-forming tissues",
+            "score": 1.803602252888438,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:2152"
+          }
+        ]
+      },
+      {
+        "rank": 8,
+        "diseaseCurie": "MONDO:0011518",
+        "diseaseLabel": "Wiedemann-Steiner syndrome",
+        "diseaseEntityId": 72804,
+        "bmaScore": 1.9969730683893245,
+        "normalizedScore": 0.220488,
+        "patientAverageScore": 3.1942916127828505,
+        "diseaseAverageScore": 0.7996545239957984,
+        "directPhenotypeCount": 104,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011229",
+            "patientPhenotypeLabel": "Broad eyebrow",
+            "diseasePhenotypeCurie": "HP:0007933",
+            "diseasePhenotypeLabel": "Broad lateral eyebrow",
+            "micaCurie": "HP:0011229",
+            "micaLabel": "Broad eyebrow",
+            "score": 5.724868125397761,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:25810209;PMID:22795537"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000455",
+            "patientPhenotypeLabel": "Broad nasal tip",
+            "diseasePhenotypeCurie": "HP:0000455",
+            "diseasePhenotypeLabel": "Broad nasal tip",
+            "micaCurie": "HP:0000455",
+            "micaLabel": "Broad nasal tip",
+            "score": 4.115430212963661,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:25810209;PMID:22795537;PMID:36291481"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000664",
+            "patientPhenotypeLabel": "Synophrys",
+            "diseasePhenotypeCurie": "HP:0000664",
+            "diseasePhenotypeLabel": "Synophrys",
+            "micaCurie": "HP:0000664",
+            "micaLabel": "Synophrys",
+            "score": 3.7195345558716473,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:36291481"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000431",
+            "patientPhenotypeLabel": "Wide nasal bridge",
+            "diseasePhenotypeCurie": "HP:0000431",
+            "diseasePhenotypeLabel": "Wide nasal bridge",
+            "micaCurie": "HP:0000431",
+            "micaLabel": "Wide nasal bridge",
+            "score": 2.9840281014725605,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:25810209;PMID:22795537"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011228",
+            "patientPhenotypeLabel": "Horizontal eyebrow",
+            "diseasePhenotypeCurie": "HP:0031623",
+            "diseasePhenotypeLabel": "Brow ptosis",
+            "micaCurie": "HP:0000534",
+            "micaLabel": "Abnormal eyebrow morphology",
+            "score": 2.6193209858365636,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:25810209"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001873",
+            "patientPhenotypeLabel": "Thrombocytopenia",
+            "diseasePhenotypeCurie": "HP:0200055",
+            "diseasePhenotypeLabel": "Small hand",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:25810209"
+          }
+        ]
+      },
+      {
+        "rank": 9,
+        "diseaseCurie": "MONDO:0958322",
+        "diseaseLabel": "intellectual developmental disorder, X-linked, syndromic 37",
+        "diseaseEntityId": 88459,
+        "bmaScore": 1.9565470823145468,
+        "normalizedScore": 0.216024,
+        "patientAverageScore": 3.36512708098293,
+        "diseaseAverageScore": 0.5479670836461639,
+        "directPhenotypeCount": 201,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011229",
+            "patientPhenotypeLabel": "Broad eyebrow",
+            "diseasePhenotypeCurie": "HP:0011229",
+            "diseasePhenotypeLabel": "Broad eyebrow",
+            "micaCurie": "HP:0011229",
+            "micaLabel": "Broad eyebrow",
+            "score": 5.724868125397761,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:38325380"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000455",
+            "patientPhenotypeLabel": "Broad nasal tip",
+            "diseasePhenotypeCurie": "HP:0000455",
+            "diseasePhenotypeLabel": "Broad nasal tip",
+            "micaCurie": "HP:0000455",
+            "micaLabel": "Broad nasal tip",
+            "score": 4.115430212963661,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:38325380"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000664",
+            "patientPhenotypeLabel": "Synophrys",
+            "diseasePhenotypeCurie": "HP:0000664",
+            "diseasePhenotypeLabel": "Synophrys",
+            "micaCurie": "HP:0000664",
+            "micaLabel": "Synophrys",
+            "score": 3.7195345558716473,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:38325380"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011228",
+            "patientPhenotypeLabel": "Horizontal eyebrow",
+            "diseasePhenotypeCurie": "HP:0011229",
+            "diseasePhenotypeLabel": "Broad eyebrow",
+            "micaCurie": "HP:0000534",
+            "micaLabel": "Abnormal eyebrow morphology",
+            "score": 2.6193209858365636,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:38325380"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000431",
+            "patientPhenotypeLabel": "Wide nasal bridge",
+            "diseasePhenotypeCurie": "HP:0005280",
+            "diseasePhenotypeLabel": "Depressed nasal bridge",
+            "micaCurie": "HP:0000422",
+            "micaLabel": "Abnormal nasal bridge morphology",
+            "score": 2.2080063529395075,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:38325380"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001873",
+            "patientPhenotypeLabel": "Thrombocytopenia",
+            "diseasePhenotypeCurie": "HP:0100309",
+            "diseasePhenotypeLabel": "Subdural hemorrhage",
+            "micaCurie": "HP:0001871",
+            "micaLabel": "Abnormality of blood and blood-forming tissues",
+            "score": 1.803602252888438,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:38325380"
+          }
+        ]
+      },
+      {
+        "rank": 10,
+        "diseaseCurie": "MONDO:0014430",
+        "diseaseLabel": "intellectual disability, autosomal recessive 45",
+        "diseaseEntityId": 75716,
+        "bmaScore": 1.9516058024082874,
+        "normalizedScore": 0.215479,
+        "patientAverageScore": 2.511158460687604,
+        "diseaseAverageScore": 1.3920531441289707,
+        "directPhenotypeCount": 20,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000664",
+            "patientPhenotypeLabel": "Synophrys",
+            "diseasePhenotypeCurie": "HP:0000664",
+            "diseasePhenotypeLabel": "Synophrys",
+            "micaCurie": "HP:0000664",
+            "micaLabel": "Synophrys",
+            "score": 3.7195345558716473,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:24623383"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000455",
+            "patientPhenotypeLabel": "Broad nasal tip",
+            "diseasePhenotypeCurie": "HP:0000414",
+            "diseasePhenotypeLabel": "Bulbous nose",
+            "micaCurie": "HP:0000436",
+            "micaLabel": "Abnormal nasal tip morphology",
+            "score": 3.1221784399533776,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:24623383"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000431",
+            "patientPhenotypeLabel": "Wide nasal bridge",
+            "diseasePhenotypeCurie": "HP:0000431",
+            "diseasePhenotypeLabel": "Wide nasal bridge",
+            "micaCurie": "HP:0000431",
+            "micaLabel": "Wide nasal bridge",
+            "score": 2.9840281014725605,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:24623383"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011229",
+            "patientPhenotypeLabel": "Broad eyebrow",
+            "diseasePhenotypeCurie": "HP:0002553",
+            "diseasePhenotypeLabel": "Highly arched eyebrow",
+            "micaCurie": "HP:0000534",
+            "micaLabel": "Abnormal eyebrow morphology",
+            "score": 2.6193209858365636,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:24623383"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011228",
+            "patientPhenotypeLabel": "Horizontal eyebrow",
+            "diseasePhenotypeCurie": "HP:0002553",
+            "diseasePhenotypeLabel": "Highly arched eyebrow",
+            "micaCurie": "HP:0000534",
+            "micaLabel": "Abnormal eyebrow morphology",
+            "score": 2.6193209858365636,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:24623383"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001873",
+            "patientPhenotypeLabel": "Thrombocytopenia",
+            "diseasePhenotypeCurie": "HP:0012471",
+            "diseasePhenotypeLabel": "Thick vermilion border",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:24623383"
+          }
+        ]
+      },
+      {
+        "rank": 11,
+        "diseaseCurie": "MONDO:0008258",
+        "diseaseLabel": "platelet signal processing defect",
+        "diseaseEntityId": 69544,
+        "bmaScore": 1.9332801599677145,
+        "normalizedScore": 0.213455,
+        "patientAverageScore": 1.5323826317115696,
+        "diseaseAverageScore": 2.3341776882238596,
+        "directPhenotypeCount": 7,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001873",
+            "patientPhenotypeLabel": "Thrombocytopenia",
+            "diseasePhenotypeCurie": "HP:0001873",
+            "diseasePhenotypeLabel": "Thrombocytopenia",
+            "micaCurie": "HP:0001873",
+            "micaLabel": "Thrombocytopenia",
+            "score": 3.3013304219860533,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:173590"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000431",
+            "patientPhenotypeLabel": "Wide nasal bridge",
+            "diseasePhenotypeCurie": "HP:0000421",
+            "diseasePhenotypeLabel": "Epistaxis",
+            "micaCurie": "HP:0000366",
+            "micaLabel": "Abnormality of the nose",
+            "score": 1.585709547385868,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:173590"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000455",
+            "patientPhenotypeLabel": "Broad nasal tip",
+            "diseasePhenotypeCurie": "HP:0000421",
+            "diseasePhenotypeLabel": "Epistaxis",
+            "micaCurie": "HP:0000366",
+            "micaLabel": "Abnormality of the nose",
+            "score": 1.585709547385868,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:173590"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011229",
+            "patientPhenotypeLabel": "Broad eyebrow",
+            "diseasePhenotypeCurie": "HP:0000421",
+            "diseasePhenotypeLabel": "Epistaxis",
+            "micaCurie": "HP:0000271",
+            "micaLabel": "Abnormality of the face",
+            "score": 0.9071820911705433,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:173590"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011228",
+            "patientPhenotypeLabel": "Horizontal eyebrow",
+            "diseasePhenotypeCurie": "HP:0000421",
+            "diseasePhenotypeLabel": "Epistaxis",
+            "micaCurie": "HP:0000271",
+            "micaLabel": "Abnormality of the face",
+            "score": 0.9071820911705433,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:173590"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000664",
+            "patientPhenotypeLabel": "Synophrys",
+            "diseasePhenotypeCurie": "HP:0000421",
+            "diseasePhenotypeLabel": "Epistaxis",
+            "micaCurie": "HP:0000271",
+            "micaLabel": "Abnormality of the face",
+            "score": 0.9071820911705433,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:173590"
+          }
+        ]
+      },
+      {
+        "rank": 12,
+        "diseaseCurie": "MONDO:0032854",
+        "diseaseLabel": "Zimmermann-Laband syndrome 3",
+        "diseaseEntityId": 84696,
+        "bmaScore": 1.8973145465361505,
+        "normalizedScore": 0.209484,
+        "patientAverageScore": 2.676700422855984,
+        "diseaseAverageScore": 1.1179286702163171,
+        "directPhenotypeCount": 31,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000455",
+            "patientPhenotypeLabel": "Broad nasal tip",
+            "diseasePhenotypeCurie": "HP:0000455",
+            "diseasePhenotypeLabel": "Broad nasal tip",
+            "micaCurie": "HP:0000455",
+            "micaLabel": "Broad nasal tip",
+            "score": 4.115430212963661,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31155282"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000664",
+            "patientPhenotypeLabel": "Synophrys",
+            "diseasePhenotypeCurie": "HP:0000664",
+            "diseasePhenotypeLabel": "Synophrys",
+            "micaCurie": "HP:0000664",
+            "micaLabel": "Synophrys",
+            "score": 3.7195345558716473,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31155282"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000431",
+            "patientPhenotypeLabel": "Wide nasal bridge",
+            "diseasePhenotypeCurie": "HP:0000431",
+            "diseasePhenotypeLabel": "Wide nasal bridge",
+            "micaCurie": "HP:0000431",
+            "micaLabel": "Wide nasal bridge",
+            "score": 2.9840281014725605,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31155282"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011229",
+            "patientPhenotypeLabel": "Broad eyebrow",
+            "diseasePhenotypeCurie": "HP:0000664",
+            "diseasePhenotypeLabel": "Synophrys",
+            "micaCurie": "HP:0000534",
+            "micaLabel": "Abnormal eyebrow morphology",
+            "score": 2.6193209858365636,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31155282"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011228",
+            "patientPhenotypeLabel": "Horizontal eyebrow",
+            "diseasePhenotypeCurie": "HP:0000664",
+            "diseasePhenotypeLabel": "Synophrys",
+            "micaCurie": "HP:0000534",
+            "micaLabel": "Abnormal eyebrow morphology",
+            "score": 2.6193209858365636,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31155282"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001873",
+            "patientPhenotypeLabel": "Thrombocytopenia",
+            "diseasePhenotypeCurie": "HP:0100874",
+            "diseasePhenotypeLabel": "Thick hair",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31155282"
+          }
+        ]
+      },
+      {
+        "rank": 13,
+        "diseaseCurie": "MONDO:0033669",
+        "diseaseLabel": "Noonan syndrome 13",
+        "diseaseEntityId": 84934,
+        "bmaScore": 1.8944537922387856,
+        "normalizedScore": 0.209168,
+        "patientAverageScore": 3.1326505531725655,
+        "diseaseAverageScore": 0.656257031305006,
+        "directPhenotypeCount": 69,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011229",
+            "patientPhenotypeLabel": "Broad eyebrow",
+            "diseasePhenotypeCurie": "HP:0011229",
+            "diseasePhenotypeLabel": "Broad eyebrow",
+            "micaCurie": "HP:0011229",
+            "micaLabel": "Broad eyebrow",
+            "score": 5.724868125397761,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:32721402"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000664",
+            "patientPhenotypeLabel": "Synophrys",
+            "diseasePhenotypeCurie": "HP:0000998",
+            "diseasePhenotypeLabel": "Hypertrichosis",
+            "micaCurie": "HP:0000998",
+            "micaLabel": "Hypertrichosis",
+            "score": 3.4116257379297275,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:32721402"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000431",
+            "patientPhenotypeLabel": "Wide nasal bridge",
+            "diseasePhenotypeCurie": "HP:0000431",
+            "diseasePhenotypeLabel": "Wide nasal bridge",
+            "micaCurie": "HP:0000431",
+            "micaLabel": "Wide nasal bridge",
+            "score": 2.9840281014725605,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:32721402"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011228",
+            "patientPhenotypeLabel": "Horizontal eyebrow",
+            "diseasePhenotypeCurie": "HP:0011229",
+            "diseasePhenotypeLabel": "Broad eyebrow",
+            "micaCurie": "HP:0000534",
+            "micaLabel": "Abnormal eyebrow morphology",
+            "score": 2.6193209858365636,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:32721402"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000455",
+            "patientPhenotypeLabel": "Broad nasal tip",
+            "diseasePhenotypeCurie": "HP:0000463",
+            "diseasePhenotypeLabel": "Anteverted nares",
+            "micaCurie": "HP:0010938",
+            "micaLabel": "Abnormal external nose morphology",
+            "score": 2.2524581155103416,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:32721402"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001873",
+            "patientPhenotypeLabel": "Thrombocytopenia",
+            "diseasePhenotypeCurie": "HP:0000978",
+            "diseasePhenotypeLabel": "Bruising susceptibility",
+            "micaCurie": "HP:0001871",
+            "micaLabel": "Abnormality of blood and blood-forming tissues",
+            "score": 1.803602252888438,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:32721402"
+          }
+        ]
+      },
+      {
+        "rank": 14,
+        "diseaseCurie": "MONDO:0008671",
+        "diseaseLabel": "Waardenburg syndrome type 2A",
+        "diseaseEntityId": 69957,
+        "bmaScore": 1.8911106698477511,
+        "normalizedScore": 0.208799,
+        "patientAverageScore": 2.366205073280431,
+        "diseaseAverageScore": 1.4160162664150713,
+        "directPhenotypeCount": 15,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000664",
+            "patientPhenotypeLabel": "Synophrys",
+            "diseasePhenotypeCurie": "HP:0000664",
+            "diseasePhenotypeLabel": "Synophrys",
+            "micaCurie": "HP:0000664",
+            "micaLabel": "Synophrys",
+            "score": 3.7195345558716473,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:193510"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000431",
+            "patientPhenotypeLabel": "Wide nasal bridge",
+            "diseasePhenotypeCurie": "HP:0000431",
+            "diseasePhenotypeLabel": "Wide nasal bridge",
+            "micaCurie": "HP:0000431",
+            "micaLabel": "Wide nasal bridge",
+            "score": 2.9840281014725605,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:193510"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011229",
+            "patientPhenotypeLabel": "Broad eyebrow",
+            "diseasePhenotypeCurie": "HP:0002226",
+            "diseasePhenotypeLabel": "White eyebrow",
+            "micaCurie": "HP:0000534",
+            "micaLabel": "Abnormal eyebrow morphology",
+            "score": 2.6193209858365636,
+            "evidenceCode": "PCS",
+            "referenceText": "OMIM:193510"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011228",
+            "patientPhenotypeLabel": "Horizontal eyebrow",
+            "diseasePhenotypeCurie": "HP:0002226",
+            "diseasePhenotypeLabel": "White eyebrow",
+            "micaCurie": "HP:0000534",
+            "micaLabel": "Abnormal eyebrow morphology",
+            "score": 2.6193209858365636,
+            "evidenceCode": "PCS",
+            "referenceText": "OMIM:193510"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000455",
+            "patientPhenotypeLabel": "Broad nasal tip",
+            "diseasePhenotypeCurie": "HP:0000430",
+            "diseasePhenotypeLabel": "Underdeveloped nasal alae",
+            "micaCurie": "HP:0010938",
+            "micaLabel": "Abnormal external nose morphology",
+            "score": 2.2524581155103416,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:193510"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001873",
+            "patientPhenotypeLabel": "Thrombocytopenia",
+            "diseasePhenotypeCurie": "HP:0007990",
+            "diseasePhenotypeLabel": "Hypoplastic iris stroma",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:193510"
+          }
+        ]
+      },
+      {
+        "rank": 15,
+        "diseaseCurie": "MONDO:0016381",
+        "diseaseLabel": "hypertrichosis lanuginosa congenita",
+        "diseaseEntityId": 77667,
+        "bmaScore": 1.8774244195526197,
+        "normalizedScore": 0.207288,
+        "patientAverageScore": 1.7445332645164753,
+        "diseaseAverageScore": 2.010315574588764,
+        "directPhenotypeCount": 3,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000664",
+            "patientPhenotypeLabel": "Synophrys",
+            "diseasePhenotypeCurie": "HP:0004540",
+            "diseasePhenotypeLabel": "Congenital, generalized hypertrichosis",
+            "micaCurie": "HP:0000998",
+            "micaLabel": "Hypertrichosis",
+            "score": 3.4116257379297275,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:145700"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011229",
+            "patientPhenotypeLabel": "Broad eyebrow",
+            "diseasePhenotypeCurie": "HP:0010730",
+            "diseasePhenotypeLabel": "Double eyebrow",
+            "micaCurie": "HP:0000534",
+            "micaLabel": "Abnormal eyebrow morphology",
+            "score": 2.6193209858365636,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:145700"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011228",
+            "patientPhenotypeLabel": "Horizontal eyebrow",
+            "diseasePhenotypeCurie": "HP:0010730",
+            "diseasePhenotypeLabel": "Double eyebrow",
+            "micaCurie": "HP:0000534",
+            "micaLabel": "Abnormal eyebrow morphology",
+            "score": 2.6193209858365636,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:145700"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000431",
+            "patientPhenotypeLabel": "Wide nasal bridge",
+            "diseasePhenotypeCurie": "HP:0010730",
+            "diseasePhenotypeLabel": "Double eyebrow",
+            "micaCurie": "HP:0000271",
+            "micaLabel": "Abnormality of the face",
+            "score": 0.9071820911705433,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:145700"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000455",
+            "patientPhenotypeLabel": "Broad nasal tip",
+            "diseasePhenotypeCurie": "HP:0010730",
+            "diseasePhenotypeLabel": "Double eyebrow",
+            "micaCurie": "HP:0000271",
+            "micaLabel": "Abnormality of the face",
+            "score": 0.9071820911705433,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:145700"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001873",
+            "patientPhenotypeLabel": "Thrombocytopenia",
+            "diseasePhenotypeCurie": "HP:0010730",
+            "diseasePhenotypeLabel": "Double eyebrow",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:145700"
+          }
+        ]
+      },
+      {
+        "rank": 16,
+        "diseaseCurie": "MONDO:0013624",
+        "diseaseLabel": "Rafiq syndrome",
+        "diseaseEntityId": 74910,
+        "bmaScore": 1.8631782280715288,
+        "normalizedScore": 0.205715,
+        "patientAverageScore": 2.845380722275289,
+        "diseaseAverageScore": 0.8809757338677685,
+        "directPhenotypeCount": 44,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011229",
+            "patientPhenotypeLabel": "Broad eyebrow",
+            "diseasePhenotypeCurie": "HP:0011229",
+            "diseasePhenotypeLabel": "Broad eyebrow",
+            "micaCurie": "HP:0011229",
+            "micaLabel": "Broad eyebrow",
+            "score": 5.724868125397761,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:21763484"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000455",
+            "patientPhenotypeLabel": "Broad nasal tip",
+            "diseasePhenotypeCurie": "HP:0000414",
+            "diseasePhenotypeLabel": "Bulbous nose",
+            "micaCurie": "HP:0000436",
+            "micaLabel": "Abnormal nasal tip morphology",
+            "score": 3.1221784399533776,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:24566669"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000431",
+            "patientPhenotypeLabel": "Wide nasal bridge",
+            "diseasePhenotypeCurie": "HP:0000431",
+            "diseasePhenotypeLabel": "Wide nasal bridge",
+            "micaCurie": "HP:0000431",
+            "micaLabel": "Wide nasal bridge",
+            "score": 2.9840281014725605,
+            "evidenceCode": "PCS",
+            "referenceText": "OMIM:614202;PMID:21763484"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011228",
+            "patientPhenotypeLabel": "Horizontal eyebrow",
+            "diseasePhenotypeCurie": "HP:0045075",
+            "diseasePhenotypeLabel": "Sparse eyebrow",
+            "micaCurie": "HP:0000534",
+            "micaLabel": "Abnormal eyebrow morphology",
+            "score": 2.6193209858365636,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:21763484"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000664",
+            "patientPhenotypeLabel": "Synophrys",
+            "diseasePhenotypeCurie": "HP:0045075",
+            "diseasePhenotypeLabel": "Sparse eyebrow",
+            "micaCurie": "HP:0000534",
+            "micaLabel": "Abnormal eyebrow morphology",
+            "score": 2.6193209858365636,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:21763484"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001873",
+            "patientPhenotypeLabel": "Thrombocytopenia",
+            "diseasePhenotypeCurie": "HP:0045075",
+            "diseasePhenotypeLabel": "Sparse eyebrow",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:21763484"
+          }
+        ]
+      },
+      {
+        "rank": 17,
+        "diseaseCurie": "MONDO:0030993",
+        "diseaseLabel": "Tessadori-Van Haaften neurodevelopmental syndrome 3",
+        "diseaseEntityId": 84351,
+        "bmaScore": 1.859673288641235,
+        "normalizedScore": 0.205328,
+        "patientAverageScore": 3.0511163605798175,
+        "diseaseAverageScore": 0.6682302167026527,
+        "directPhenotypeCount": 118,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011228",
+            "patientPhenotypeLabel": "Horizontal eyebrow",
+            "diseasePhenotypeCurie": "HP:0011228",
+            "diseasePhenotypeLabel": "Horizontal eyebrow",
+            "micaCurie": "HP:0011228",
+            "micaLabel": "Horizontal eyebrow",
+            "score": 5.9660301822146495,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:35202563"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000455",
+            "patientPhenotypeLabel": "Broad nasal tip",
+            "diseasePhenotypeCurie": "HP:0000455",
+            "diseasePhenotypeLabel": "Broad nasal tip",
+            "micaCurie": "HP:0000455",
+            "micaLabel": "Broad nasal tip",
+            "score": 4.115430212963661,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:35202563"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000431",
+            "patientPhenotypeLabel": "Wide nasal bridge",
+            "diseasePhenotypeCurie": "HP:0000431",
+            "diseasePhenotypeLabel": "Wide nasal bridge",
+            "micaCurie": "HP:0000431",
+            "micaLabel": "Wide nasal bridge",
+            "score": 2.9840281014725605,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:35202563"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011229",
+            "patientPhenotypeLabel": "Broad eyebrow",
+            "diseasePhenotypeCurie": "HP:0011228",
+            "diseasePhenotypeLabel": "Horizontal eyebrow",
+            "micaCurie": "HP:0000534",
+            "micaLabel": "Abnormal eyebrow morphology",
+            "score": 2.6193209858365636,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:35202563"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000664",
+            "patientPhenotypeLabel": "Synophrys",
+            "diseasePhenotypeCurie": "HP:0011228",
+            "diseasePhenotypeLabel": "Horizontal eyebrow",
+            "micaCurie": "HP:0000534",
+            "micaLabel": "Abnormal eyebrow morphology",
+            "score": 2.6193209858365636,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:35202563"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001873",
+            "patientPhenotypeLabel": "Thrombocytopenia",
+            "diseasePhenotypeCurie": "HP:0500011",
+            "diseasePhenotypeLabel": "Moon facies",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:35202563"
+          }
+        ]
+      },
+      {
+        "rank": 18,
+        "diseaseCurie": "MONDO:0015021",
+        "diseaseLabel": "hypotonia, ataxia, and delayed development syndrome",
+        "diseaseEntityId": 76307,
+        "bmaScore": 1.853535286033838,
+        "normalizedScore": 0.204651,
+        "patientAverageScore": 3.1051483308301564,
+        "diseaseAverageScore": 0.6019222412375199,
+        "directPhenotypeCount": 70,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011228",
+            "patientPhenotypeLabel": "Horizontal eyebrow",
+            "diseasePhenotypeCurie": "HP:0011228",
+            "diseasePhenotypeLabel": "Horizontal eyebrow",
+            "micaCurie": "HP:0011228",
+            "micaLabel": "Horizontal eyebrow",
+            "score": 5.9660301822146495,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:28017373"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000455",
+            "patientPhenotypeLabel": "Broad nasal tip",
+            "diseasePhenotypeCurie": "HP:0000455",
+            "diseasePhenotypeLabel": "Broad nasal tip",
+            "micaCurie": "HP:0000455",
+            "micaLabel": "Broad nasal tip",
+            "score": 4.115430212963661,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:28017370"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000664",
+            "patientPhenotypeLabel": "Synophrys",
+            "diseasePhenotypeCurie": "HP:0000664",
+            "diseasePhenotypeLabel": "Synophrys",
+            "micaCurie": "HP:0000664",
+            "micaLabel": "Synophrys",
+            "score": 3.7195345558716473,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:28017370"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011229",
+            "patientPhenotypeLabel": "Broad eyebrow",
+            "diseasePhenotypeCurie": "HP:0011228",
+            "diseasePhenotypeLabel": "Horizontal eyebrow",
+            "micaCurie": "HP:0000534",
+            "micaLabel": "Abnormal eyebrow morphology",
+            "score": 2.6193209858365636,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:28017373"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000431",
+            "patientPhenotypeLabel": "Wide nasal bridge",
+            "diseasePhenotypeCurie": "HP:0000426",
+            "diseasePhenotypeLabel": "Prominent nasal bridge",
+            "micaCurie": "HP:0000422",
+            "micaLabel": "Abnormal nasal bridge morphology",
+            "score": 2.2080063529395075,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:28017373"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001873",
+            "patientPhenotypeLabel": "Thrombocytopenia",
+            "diseasePhenotypeCurie": "HP:0031936",
+            "diseasePhenotypeLabel": "Delayed ability to walk",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:28017370"
+          }
+        ]
+      },
+      {
+        "rank": 19,
+        "diseaseCurie": "MONDO:0008393",
+        "diseaseLabel": "Rubinstein-Taybi syndrome due to CREBBP mutations",
+        "diseaseEntityId": 69679,
+        "bmaScore": 1.851605205602981,
+        "normalizedScore": 0.204437,
+        "patientAverageScore": 3.1769088105230288,
+        "diseaseAverageScore": 0.5263016006829331,
+        "directPhenotypeCount": 141,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011229",
+            "patientPhenotypeLabel": "Broad eyebrow",
+            "diseasePhenotypeCurie": "HP:0011229",
+            "diseasePhenotypeLabel": "Broad eyebrow",
+            "micaCurie": "HP:0011229",
+            "micaLabel": "Broad eyebrow",
+            "score": 5.724868125397761,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:34795756"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000664",
+            "patientPhenotypeLabel": "Synophrys",
+            "diseasePhenotypeCurie": "HP:0002219",
+            "diseasePhenotypeLabel": "Facial hypertrichosis",
+            "micaCurie": "HP:0002219",
+            "micaLabel": "Facial hypertrichosis",
+            "score": 3.6771752820325054,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:10573006"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000431",
+            "patientPhenotypeLabel": "Wide nasal bridge",
+            "diseasePhenotypeCurie": "HP:0000431",
+            "diseasePhenotypeLabel": "Wide nasal bridge",
+            "micaCurie": "HP:0000431",
+            "micaLabel": "Wide nasal bridge",
+            "score": 2.9840281014725605,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:17942008;PMID:22991675"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011228",
+            "patientPhenotypeLabel": "Horizontal eyebrow",
+            "diseasePhenotypeCurie": "HP:0011229",
+            "diseasePhenotypeLabel": "Broad eyebrow",
+            "micaCurie": "HP:0000534",
+            "micaLabel": "Abnormal eyebrow morphology",
+            "score": 2.6193209858365636,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:34795756"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000455",
+            "patientPhenotypeLabel": "Broad nasal tip",
+            "diseasePhenotypeCurie": "HP:0009765",
+            "diseasePhenotypeLabel": "Low hanging columella",
+            "micaCurie": "HP:0010938",
+            "micaLabel": "Abnormal external nose morphology",
+            "score": 2.2524581155103416,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:19204439;PMID:10573006;PMID:22991675"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001873",
+            "patientPhenotypeLabel": "Thrombocytopenia",
+            "diseasePhenotypeCurie": "HP:0001909",
+            "diseasePhenotypeLabel": "Leukemia",
+            "micaCurie": "HP:0001871",
+            "micaLabel": "Abnormality of blood and blood-forming tissues",
+            "score": 1.803602252888438,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:180849"
+          }
+        ]
+      },
+      {
+        "rank": 20,
+        "diseaseCurie": "MONDO:0011022",
+        "diseaseLabel": "Potocki-Shaffer syndrome",
+        "diseaseEntityId": 72308,
+        "bmaScore": 1.848282897075324,
+        "normalizedScore": 0.204071,
+        "patientAverageScore": 2.793503920805725,
+        "diseaseAverageScore": 0.9030618733449232,
+        "directPhenotypeCount": 41,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000455",
+            "patientPhenotypeLabel": "Broad nasal tip",
+            "diseasePhenotypeCurie": "HP:0000455",
+            "diseasePhenotypeLabel": "Broad nasal tip",
+            "micaCurie": "HP:0000455",
+            "micaLabel": "Broad nasal tip",
+            "score": 4.115430212963661,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:52022"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000431",
+            "patientPhenotypeLabel": "Wide nasal bridge",
+            "diseasePhenotypeCurie": "HP:0000431",
+            "diseasePhenotypeLabel": "Wide nasal bridge",
+            "micaCurie": "HP:0000431",
+            "micaLabel": "Wide nasal bridge",
+            "score": 2.9840281014725605,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:8644736"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011229",
+            "patientPhenotypeLabel": "Broad eyebrow",
+            "diseasePhenotypeCurie": "HP:0005338",
+            "diseasePhenotypeLabel": "Sparse lateral eyebrow",
+            "micaCurie": "HP:0000534",
+            "micaLabel": "Abnormal eyebrow morphology",
+            "score": 2.6193209858365636,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:15852040"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011228",
+            "patientPhenotypeLabel": "Horizontal eyebrow",
+            "diseasePhenotypeCurie": "HP:0005338",
+            "diseasePhenotypeLabel": "Sparse lateral eyebrow",
+            "micaCurie": "HP:0000534",
+            "micaLabel": "Abnormal eyebrow morphology",
+            "score": 2.6193209858365636,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:15852040"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000664",
+            "patientPhenotypeLabel": "Synophrys",
+            "diseasePhenotypeCurie": "HP:0005338",
+            "diseasePhenotypeLabel": "Sparse lateral eyebrow",
+            "micaCurie": "HP:0000534",
+            "micaLabel": "Abnormal eyebrow morphology",
+            "score": 2.6193209858365636,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:15852040"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001873",
+            "patientPhenotypeLabel": "Thrombocytopenia",
+            "diseasePhenotypeCurie": "HP:0001903",
+            "diseasePhenotypeLabel": "Anemia",
+            "micaCurie": "HP:0001871",
+            "micaLabel": "Abnormality of blood and blood-forming tissues",
+            "score": 1.803602252888438,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:52022"
+          }
+        ]
+      },
+      {
+        "rank": 21,
+        "diseaseCurie": "MONDO:0031009",
+        "diseaseLabel": "Glanzmann thrombasthenia 2",
+        "diseaseEntityId": 84366,
+        "bmaScore": 1.846352445806633,
+        "normalizedScore": 0.203858,
+        "patientAverageScore": 1.5935959882914499,
+        "diseaseAverageScore": 2.099108903321816,
+        "directPhenotypeCount": 15,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001873",
+            "patientPhenotypeLabel": "Thrombocytopenia",
+            "diseasePhenotypeCurie": "HP:0031126",
+            "diseasePhenotypeLabel": "Impaired clot retraction",
+            "micaCurie": "HP:0001872",
+            "micaLabel": "Abnormality of thrombocytes",
+            "score": 3.143569629934695,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:16463284"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000431",
+            "patientPhenotypeLabel": "Wide nasal bridge",
+            "diseasePhenotypeCurie": "HP:0000421",
+            "diseasePhenotypeLabel": "Epistaxis",
+            "micaCurie": "HP:0000366",
+            "micaLabel": "Abnormality of the nose",
+            "score": 1.585709547385868,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:21917754"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000455",
+            "patientPhenotypeLabel": "Broad nasal tip",
+            "diseasePhenotypeCurie": "HP:0000421",
+            "diseasePhenotypeLabel": "Epistaxis",
+            "micaCurie": "HP:0000366",
+            "micaLabel": "Abnormality of the nose",
+            "score": 1.585709547385868,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:21917754"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011229",
+            "patientPhenotypeLabel": "Broad eyebrow",
+            "diseasePhenotypeCurie": "HP:0000978",
+            "diseasePhenotypeLabel": "Bruising susceptibility",
+            "micaCurie": "HP:0001574",
+            "micaLabel": "Abnormality of the integument",
+            "score": 1.0821957350140894,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:21917754;PMID:9845537"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011228",
+            "patientPhenotypeLabel": "Horizontal eyebrow",
+            "diseasePhenotypeCurie": "HP:0000978",
+            "diseasePhenotypeLabel": "Bruising susceptibility",
+            "micaCurie": "HP:0001574",
+            "micaLabel": "Abnormality of the integument",
+            "score": 1.0821957350140894,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:21917754;PMID:9845537"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000664",
+            "patientPhenotypeLabel": "Synophrys",
+            "diseasePhenotypeCurie": "HP:0000978",
+            "diseasePhenotypeLabel": "Bruising susceptibility",
+            "micaCurie": "HP:0001574",
+            "micaLabel": "Abnormality of the integument",
+            "score": 1.0821957350140894,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:21917754;PMID:9845537"
+          }
+        ]
+      },
+      {
+        "rank": 22,
+        "diseaseCurie": "MONDO:0100083",
+        "diseaseLabel": "hereditary thrombocytopenia and hematological cancer predisposition syndrome associated with RUNX1",
+        "diseaseEntityId": 86311,
+        "bmaScore": 1.8449224340561183,
+        "normalizedScore": 0.2037,
+        "patientAverageScore": 1.619889453633343,
+        "diseaseAverageScore": 2.0699554144788936,
+        "directPhenotypeCount": 21,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001873",
+            "patientPhenotypeLabel": "Thrombocytopenia",
+            "diseasePhenotypeCurie": "HP:0001873",
+            "diseasePhenotypeLabel": "Thrombocytopenia",
+            "micaCurie": "HP:0001873",
+            "micaLabel": "Thrombocytopenia",
+            "score": 3.3013304219860533,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:601399"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000431",
+            "patientPhenotypeLabel": "Wide nasal bridge",
+            "diseasePhenotypeCurie": "HP:0000421",
+            "diseasePhenotypeLabel": "Epistaxis",
+            "micaCurie": "HP:0000366",
+            "micaLabel": "Abnormality of the nose",
+            "score": 1.585709547385868,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:601399"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000455",
+            "patientPhenotypeLabel": "Broad nasal tip",
+            "diseasePhenotypeCurie": "HP:0000421",
+            "diseasePhenotypeLabel": "Epistaxis",
+            "micaCurie": "HP:0000366",
+            "micaLabel": "Abnormality of the nose",
+            "score": 1.585709547385868,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:601399"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011229",
+            "patientPhenotypeLabel": "Broad eyebrow",
+            "diseasePhenotypeCurie": "HP:0031364",
+            "diseasePhenotypeLabel": "Ecchymosis",
+            "micaCurie": "HP:0001574",
+            "micaLabel": "Abnormality of the integument",
+            "score": 1.0821957350140894,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:18478040"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011228",
+            "patientPhenotypeLabel": "Horizontal eyebrow",
+            "diseasePhenotypeCurie": "HP:0031364",
+            "diseasePhenotypeLabel": "Ecchymosis",
+            "micaCurie": "HP:0001574",
+            "micaLabel": "Abnormality of the integument",
+            "score": 1.0821957350140894,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:18478040"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000664",
+            "patientPhenotypeLabel": "Synophrys",
+            "diseasePhenotypeCurie": "HP:0031364",
+            "diseasePhenotypeLabel": "Ecchymosis",
+            "micaCurie": "HP:0001574",
+            "micaLabel": "Abnormality of the integument",
+            "score": 1.0821957350140894,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:18478040"
+          }
+        ]
+      },
+      {
+        "rank": 23,
+        "diseaseCurie": "MONDO:0060760",
+        "diseaseLabel": "intellectual developmental disorder with dysmorphic facies and behavioral abnormalities",
+        "diseaseEntityId": 86214,
+        "bmaScore": 1.8404036569506044,
+        "normalizedScore": 0.203201,
+        "patientAverageScore": 3.01092268444367,
+        "diseaseAverageScore": 0.6698846294575386,
+        "directPhenotypeCount": 123,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011229",
+            "patientPhenotypeLabel": "Broad eyebrow",
+            "diseasePhenotypeCurie": "HP:0011229",
+            "diseasePhenotypeLabel": "Broad eyebrow",
+            "micaCurie": "HP:0011229",
+            "micaLabel": "Broad eyebrow",
+            "score": 5.724868125397761,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:30057029"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000455",
+            "patientPhenotypeLabel": "Broad nasal tip",
+            "diseasePhenotypeCurie": "HP:0000455",
+            "diseasePhenotypeLabel": "Broad nasal tip",
+            "micaCurie": "HP:0000455",
+            "micaLabel": "Broad nasal tip",
+            "score": 4.115430212963661,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:30057029"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000431",
+            "patientPhenotypeLabel": "Wide nasal bridge",
+            "diseasePhenotypeCurie": "HP:0000431",
+            "diseasePhenotypeLabel": "Wide nasal bridge",
+            "micaCurie": "HP:0000431",
+            "micaLabel": "Wide nasal bridge",
+            "score": 2.9840281014725605,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:30057029"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011228",
+            "patientPhenotypeLabel": "Horizontal eyebrow",
+            "diseasePhenotypeCurie": "HP:0045075",
+            "diseasePhenotypeLabel": "Sparse eyebrow",
+            "micaCurie": "HP:0000534",
+            "micaLabel": "Abnormal eyebrow morphology",
+            "score": 2.6193209858365636,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:30057029"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000664",
+            "patientPhenotypeLabel": "Synophrys",
+            "diseasePhenotypeCurie": "HP:0045075",
+            "diseasePhenotypeLabel": "Sparse eyebrow",
+            "micaCurie": "HP:0000534",
+            "micaLabel": "Abnormal eyebrow morphology",
+            "score": 2.6193209858365636,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:30057029"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001873",
+            "patientPhenotypeLabel": "Thrombocytopenia",
+            "diseasePhenotypeCurie": "HP:0410030",
+            "diseasePhenotypeLabel": "Cleft lip",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:30057029"
+          }
+        ]
+      },
+      {
+        "rank": 24,
+        "diseaseCurie": "MONDO:0060596",
+        "diseaseLabel": "neurodevelopmental disorder with dysmorphic facies and distal limb anomalies",
+        "diseaseEntityId": 86173,
+        "bmaScore": 1.8389568360577773,
+        "normalizedScore": 0.203041,
+        "patientAverageScore": 2.8815857263548277,
+        "diseaseAverageScore": 0.796327945760727,
+        "directPhenotypeCount": 28,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011229",
+            "patientPhenotypeLabel": "Broad eyebrow",
+            "diseasePhenotypeCurie": "HP:0011229",
+            "diseasePhenotypeLabel": "Broad eyebrow",
+            "micaCurie": "HP:0011229",
+            "micaLabel": "Broad eyebrow",
+            "score": 5.724868125397761,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:28942966"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000455",
+            "patientPhenotypeLabel": "Broad nasal tip",
+            "diseasePhenotypeCurie": "HP:0000455",
+            "diseasePhenotypeLabel": "Broad nasal tip",
+            "micaCurie": "HP:0000455",
+            "micaLabel": "Broad nasal tip",
+            "score": 4.115430212963661,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:28942966"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011228",
+            "patientPhenotypeLabel": "Horizontal eyebrow",
+            "diseasePhenotypeCurie": "HP:0011229",
+            "diseasePhenotypeLabel": "Broad eyebrow",
+            "micaCurie": "HP:0000534",
+            "micaLabel": "Abnormal eyebrow morphology",
+            "score": 2.6193209858365636,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:28942966"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000664",
+            "patientPhenotypeLabel": "Synophrys",
+            "diseasePhenotypeCurie": "HP:0011229",
+            "diseasePhenotypeLabel": "Broad eyebrow",
+            "micaCurie": "HP:0000534",
+            "micaLabel": "Abnormal eyebrow morphology",
+            "score": 2.6193209858365636,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:28942966"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000431",
+            "patientPhenotypeLabel": "Wide nasal bridge",
+            "diseasePhenotypeCurie": "HP:0033142",
+            "diseasePhenotypeLabel": "Long nasal bridge",
+            "micaCurie": "HP:0000422",
+            "micaLabel": "Abnormal nasal bridge morphology",
+            "score": 2.2080063529395075,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:28942966"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001873",
+            "patientPhenotypeLabel": "Thrombocytopenia",
+            "diseasePhenotypeCurie": "HP:0200055",
+            "diseasePhenotypeLabel": "Small hand",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:28942966"
+          }
+        ]
+      },
+      {
+        "rank": 25,
+        "diseaseCurie": "MONDO:0957580",
+        "diseaseLabel": "bleeding disorder, platelet-type, 25",
+        "diseaseEntityId": 88261,
+        "bmaScore": 1.8349436811080329,
+        "normalizedScore": 0.202598,
+        "patientAverageScore": 1.619889453633343,
+        "diseaseAverageScore": 2.0499979085827227,
+        "directPhenotypeCount": 14,
+        "matchedPhenotypeCount": 6,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001873",
+            "patientPhenotypeLabel": "Thrombocytopenia",
+            "diseasePhenotypeCurie": "HP:0040185",
+            "diseasePhenotypeLabel": "Macrothrombocytopenia",
+            "micaCurie": "HP:0001873",
+            "micaLabel": "Thrombocytopenia",
+            "score": 3.3013304219860533,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:28134622"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000431",
+            "patientPhenotypeLabel": "Wide nasal bridge",
+            "diseasePhenotypeCurie": "HP:0004406",
+            "diseasePhenotypeLabel": "Spontaneous, recurrent epistaxis",
+            "micaCurie": "HP:0000366",
+            "micaLabel": "Abnormality of the nose",
+            "score": 1.585709547385868,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:34758189"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000455",
+            "patientPhenotypeLabel": "Broad nasal tip",
+            "diseasePhenotypeCurie": "HP:0004406",
+            "diseasePhenotypeLabel": "Spontaneous, recurrent epistaxis",
+            "micaCurie": "HP:0000366",
+            "micaLabel": "Abnormality of the nose",
+            "score": 1.585709547385868,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:34758189"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011229",
+            "patientPhenotypeLabel": "Broad eyebrow",
+            "diseasePhenotypeCurie": "HP:0000978",
+            "diseasePhenotypeLabel": "Bruising susceptibility",
+            "micaCurie": "HP:0001574",
+            "micaLabel": "Abnormality of the integument",
+            "score": 1.0821957350140894,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:34758189"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011228",
+            "patientPhenotypeLabel": "Horizontal eyebrow",
+            "diseasePhenotypeCurie": "HP:0000978",
+            "diseasePhenotypeLabel": "Bruising susceptibility",
+            "micaCurie": "HP:0001574",
+            "micaLabel": "Abnormality of the integument",
+            "score": 1.0821957350140894,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:34758189"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000664",
+            "patientPhenotypeLabel": "Synophrys",
+            "diseasePhenotypeCurie": "HP:0000978",
+            "diseasePhenotypeLabel": "Bruising susceptibility",
+            "micaCurie": "HP:0001574",
+            "micaLabel": "Abnormality of the integument",
+            "score": 1.0821957350140894,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:34758189"
+          }
+        ]
+      }
+    ],
+    "engineSummary": {
+      "diseaseCount": 8579,
+      "phenotypeCount": 19389,
+      "sourceMode": "relationship_fallback",
+      "generatedAt": "2026-03-15T20:43:58.513Z"
+    }
+  }
+}

@@ -207,3 +207,89 @@ test('rankDiseasesByPhenotypeSimilarity surfaces contradictions from excluded pa
   assert.equal(withExclusion.results[0].contradictionPenalty > 0, true);
   assert.equal(withExclusion.results[0].normalizedScore, withoutExclusion.results[0].normalizedScore);
 });
+
+test('rankGenesByPhenotypeSimilarity applies the specific direct handoff override for exact direct disease matches', () => {
+  const index = buildDxSimilarityIndex({
+    ontologyRows: [
+      { child_curie: 'HP:0001', child_label: 'Seizures', parent_curie: 'HP:0000', parent_label: 'Neurologic finding' },
+      { child_curie: 'HP:0002', child_label: 'Macrocephaly', parent_curie: 'HP:0000', parent_label: 'Neurologic finding' },
+      { child_curie: 'HP:0003', child_label: 'Ataxia', parent_curie: 'HP:0000', parent_label: 'Neurologic finding' }
+    ],
+    diseasePhenotypeRows: [
+      {
+        disease_entity_id: 1,
+        disease_curie: 'MONDO:1',
+        disease_label: 'Disease A',
+        phenotype_entity_id: 11,
+        phenotype_curie: 'HP:0001',
+        phenotype_label: 'Seizures',
+        evidence_code: 'TAS',
+        reference_text: 'PMID:1',
+        presence_status: 'present'
+      },
+      {
+        disease_entity_id: 1,
+        disease_curie: 'MONDO:1',
+        disease_label: 'Disease A',
+        phenotype_entity_id: 12,
+        phenotype_curie: 'HP:0002',
+        phenotype_label: 'Macrocephaly',
+        evidence_code: 'TAS',
+        reference_text: 'PMID:1',
+        presence_status: 'present'
+      },
+      {
+        disease_entity_id: 2,
+        disease_curie: 'MONDO:2',
+        disease_label: 'Disease B',
+        phenotype_entity_id: 13,
+        phenotype_curie: 'HP:0003',
+        phenotype_label: 'Ataxia',
+        evidence_code: 'TAS',
+        reference_text: 'PMID:2',
+        presence_status: 'present'
+      }
+    ],
+    genePhenotypeRows: [
+      {
+        gene_entity_id: 101,
+        gene_curie: 'HGNC:GENEA',
+        gene_label: 'GENEA',
+        phenotype_entity_id: 13,
+        phenotype_curie: 'HP:0003',
+        phenotype_label: 'Ataxia',
+        evidence_code: 'Frequent',
+        reference_context: 'MONDO:1'
+      }
+    ],
+    geneDiseaseSupportRows: [
+      {
+        gene_entity_id: 101,
+        gene_curie: 'HGNC:GENEA',
+        gene_label: 'GENEA',
+        disease_curie: 'MONDO:1',
+        disease_label: 'Disease A',
+        classification: '',
+        evidence_code: ''
+      }
+    ]
+  });
+
+  const diseaseResult = rankDiseasesByPhenotypeSimilarity(index, {
+    phenotypeCuries: ['HP:0001'],
+    limit: 1
+  }).results[0];
+  const geneResult = rankGenesByPhenotypeSimilarity(index, {
+    phenotypeCuries: ['HP:0001'],
+    limit: 1
+  }).results[0];
+
+  assert.equal(geneResult.geneCurie, 'HGNC:GENEA');
+  assert.equal(geneResult.supportingDiseaseCurie, 'MONDO:1');
+  assert.equal(geneResult.supportingDiseaseEvidenceWeight, 1);
+  assert.equal(geneResult.diseaseSupportScore, diseaseResult.normalizedScore);
+  assert.notEqual(
+    geneResult.diseaseSupportScore,
+    Number((diseaseResult.normalizedScore * 0.68).toFixed(6))
+  );
+});

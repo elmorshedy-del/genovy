@@ -1,5 +1,6 @@
 import { parseCsv } from '../../lib/csv.js';
-import { fetchSourceText } from '../../lib/sourceFetch.js';
+import { fetchSourceTextWithMetadata } from '../../lib/sourceFetch.js';
+import { extractClinGenFileCreated, pickSourceVersion } from '../../lib/sourceVersion.js';
 
 const CLINGEN_HEADER_MARKER = '"GENE SYMBOL"';
 
@@ -25,7 +26,7 @@ function isDividerValue(rawValue) {
 }
 
 export async function fetchClinGenGeneDiseaseValidityDataset(source) {
-  const text = await fetchSourceText(source.accessUrl);
+  const { text, sourceVersion: headerSourceVersion } = await fetchSourceTextWithMetadata(source.accessUrl);
   const rows = parseCsv(stripClinGenCsvPreamble(text)).filter((row) => {
     if (!row['GENE SYMBOL'] || !row['GENE ID (HGNC)'] || !row['DISEASE ID (MONDO)']) {
       return false;
@@ -123,7 +124,7 @@ export async function fetchClinGenGeneDiseaseValidityDataset(source) {
   }
 
   return {
-    sourceVersion: '',
+    sourceVersion: pickSourceVersion(extractClinGenFileCreated(text), headerSourceVersion),
     entities,
     aliases: [],
     xrefs: [],

@@ -9,16 +9,21 @@ import {
   listActiveSourceKeys,
   listSuccessfulSourceKeys,
   markSourceSyncState,
+  updateSyncRunProgress,
   supersedeRunningSyncRunsForSource
 } from '../repositories/sourceRepository.js';
 import {
   resolveOrCreateEntity,
+  resolveEntitiesByCurieBatch,
   upsertEntity,
+  upsertEntitiesBatch,
   upsertEntityAlias,
   upsertEntityXref,
+  upsertEntityXrefsBatch,
   upsertRelationshipEvidenceBatch,
   upsertResolvedRelationships,
-  upsertSourceRecord
+  upsertSourceRecord,
+  upsertSourceRecordsBatch
 } from '../repositories/knowledgeRepository.js';
 import {
   replaceClinicalNaturalHistoryTerms,
@@ -35,7 +40,10 @@ import { fetchHpoGeneDiseaseDataset } from './sources/hpoGeneDiseaseSource.js';
 import { fetchHpoGenePhenotypeDataset } from './sources/hpoGenePhenotypeSource.js';
 import { fetchClinGenGeneDiseaseValidityDataset } from './sources/clingenGeneDiseaseValiditySource.js';
 import { fetchClinvarGeneDiseaseDataset } from './sources/clinvarGeneDiseaseSource.js';
-import { fetchClinVarVariantSummaryDataset } from './sources/clinvarVariantSummarySource.js';
+import {
+  fetchClinVarVariantSummaryDataset,
+  streamClinVarVariantSummaryBatches
+} from './sources/clinvarVariantSummarySource.js';
 import { fetchClinicalTrialsDataset } from './sources/clinicalTrialsSource.js';
 import { normalizeCurie, normalizeLabel, stableHash } from '../lib/curies.js';
 import { filterBootstrapSourceKeys, shouldSkipCompletedSources } from '../lib/bootstrapSources.js';
@@ -67,6 +75,43 @@ const BOOTSTRAP_DEFAULTS = Object.freeze({
 const RELATIONSHIP_BATCH_SIZE = 500;
 const CLINICAL_ASSERTION_BATCH_SIZE = 500;
 const ACTIVE_SOURCE_SYNCS = new Map();
+const CLINVAR_STREAM_PROGRESS_STATUS = 'running';
+
+function createEmptySyncCounters() {
+  return {
+    entities: 0,
+    aliases: 0,
+    xrefs: 0,
+    relationships: 0,
+    sourceRecords: 0,
+    clinicalPhenotypeAssertions: 0,
+    clinicalNaturalHistoryAssertions: 0,
+    clinicalGeneDiseaseValidityAssertions: 0,
+    clinicalVariantDiseaseAssertions: 0
+  };
+}
+
+function buildClinVarProgressSummary(counters, streamSummary = {}, extra = {}) {
+  return {
+    ...counters,
+    ...(streamSummary || {}),
+    ...extra
+  };
+}
+
+function resolveResumeSkippedRows(options = {}) {
+  const parsed = Number(options.skipRows || 0);
+  if (!Number.isFinite(parsed) || parsed < 0) {
+    return 0;
+  }
+  return Math.floor(parsed);
+}
+
+function mergeSyncCounters(target, delta) {
+  for (const key of Object.keys(target)) {
+    target[key] += Number(delta?.[key] || 0);
+  }
+}
 
 function dedupeRowsByKey(rows, buildKey) {
   const deduped = new Map();
@@ -74,6 +119,69 @@ function dedupeRowsByKey(rows, buildKey) {
     deduped.set(buildKey(row), row);
   }
   return [...deduped.values()];
+}
+
+function addRefCurie(target, ref) {
+  const normalizedCurie = normalizeCurie(ref?.curie || '');
+  if (normalizedCurie) {
+    target.add(normalizedCurie);
+  }
+}
+
+function collectDatasetReferenceCuries(dataset) {
+  const curies = new Set();
+
+  for (const relationship of dataset.relationships || []) {
+    addRefCurie(curies, relationship.subjectRef);
+    addRefCurie(curies, relationship.objectRef);
+  }
+
+  for (const assertion of dataset.clinicalPhenotypeAssertions || []) {
+    addRefCurie(curies, assertion.subjectRef);
+    addRefCurie(curies, assertion.phenotypeRef);
+    addRefCurie(curies, assertion.onsetRef);
+    addRefCurie(curies, assertion.frequencyRef);
+    addRefCurie(curies, assertion.modifierRef);
+  }
+
+  for (const assertion of dataset.clinicalNaturalHistoryAssertions || []) {
+    addRefCurie(curies, assertion.diseaseRef);
+    for (const termEntry of assertion.termRefs || []) {
+      addRefCurie(curies, termEntry.termRef);
+    }
+  }
+
+  for (const assertion of dataset.geneDiseaseValidityAssertions || []) {
+    addRefCurie(curies, assertion.geneRef);
+    addRefCurie(curies, assertion.diseaseRef);
+  }
+
+  for (const assertion of dataset.clinicalVariantDiseaseAssertions || []) {
+    addRefCurie(curies, assertion.variantRef);
+    addRefCurie(curies, assertion.diseaseRef);
+    addRefCurie(curies, assertion.geneRef);
+  }
+
+  return [...curies];
+}
+
+async function preloadEntityResolutionCache(client, dataset, entityIdByCurie) {
+  const pendingCuries = collectDatasetReferenceCuries(dataset).filter((curie) => !entityIdByCurie.has(curie));
+  if (!pendingCuries.length) {
+    return;
+  }
+
+  const resolvedEntities = await resolveEntitiesByCurieBatch(client, pendingCuries);
+  for (const resolved of resolvedEntities) {
+    const matchedCurie = normalizeCurie(resolved.matched_curie || '');
+    const canonicalCurie = normalizeCurie(resolved.canonical_curie || '');
+    if (matchedCurie) {
+      entityIdByCurie.set(matchedCurie, resolved.entity_id);
+    }
+    if (canonicalCurie) {
+      entityIdByCurie.set(canonicalCurie, resolved.entity_id);
+    }
+  }
 }
 
 function resolveSourceOrThrow(sourceKey) {
@@ -95,24 +203,31 @@ function buildDisabledSourceResult(sourceKey) {
 async function applyDataset(client, source, syncRunId, dataset) {
   const entityIdByCurie = new Map();
   const entityIdByLabel = new Map();
-  const counters = {
-    entities: 0,
-    aliases: 0,
-    xrefs: 0,
-    relationships: 0,
-    sourceRecords: 0,
-    clinicalPhenotypeAssertions: 0,
-    clinicalNaturalHistoryAssertions: 0,
-    clinicalGeneDiseaseValidityAssertions: 0,
-    clinicalVariantDiseaseAssertions: 0
-  };
+  const counters = createEmptySyncCounters();
 
-  for (const entity of dataset.entities || []) {
-    const persisted = await upsertEntity(client, entity);
-    const canonicalCurie = normalizeCurie(entity.canonicalCurie);
-    entityIdByCurie.set(canonicalCurie, persisted.entity_id);
-    entityIdByLabel.set(`${entity.entityType}|${normalizeLabel(entity.canonicalLabel || canonicalCurie)}`, persisted.entity_id);
-    counters.entities += 1;
+  const dedupedEntities = dedupeRowsByKey(
+    (dataset.entities || []).filter((entity) => normalizeCurie(entity.canonicalCurie)),
+    (entity) => normalizeCurie(entity.canonicalCurie)
+  );
+
+  if (dedupedEntities.length) {
+    const persistedEntities = await upsertEntitiesBatch(client, dedupedEntities);
+    const entityByCurie = new Map(
+      dedupedEntities.map((entity) => [normalizeCurie(entity.canonicalCurie), entity])
+    );
+
+    for (const persisted of persistedEntities) {
+      const sourceEntity = entityByCurie.get(persisted.canonical_curie);
+      if (!sourceEntity) {
+        continue;
+      }
+      entityIdByCurie.set(persisted.canonical_curie, persisted.entity_id);
+      entityIdByLabel.set(
+        `${sourceEntity.entityType}|${normalizeLabel(sourceEntity.canonicalLabel || persisted.canonical_curie)}`,
+        persisted.entity_id
+      );
+    }
+    counters.entities += dedupedEntities.length;
   }
 
   for (const alias of dataset.aliases || []) {
@@ -138,6 +253,7 @@ async function applyDataset(client, source, syncRunId, dataset) {
     counters.aliases += 1;
   }
 
+  const pendingXrefs = [];
   for (const xref of dataset.xrefs || []) {
     const canonicalCurie = normalizeCurie(xref.canonicalCurie);
     let entityId = entityIdByCurie.get(canonicalCurie);
@@ -152,7 +268,7 @@ async function applyDataset(client, source, syncRunId, dataset) {
       entityId = persisted.entity_id;
       entityIdByCurie.set(canonicalCurie, entityId);
     }
-    await upsertEntityXref(client, {
+    pendingXrefs.push({
       entityId,
       xrefCurie: xref.xrefCurie,
       xrefType: xref.xrefType,
@@ -161,14 +277,28 @@ async function applyDataset(client, source, syncRunId, dataset) {
     counters.xrefs += 1;
   }
 
-  for (const sourceRecord of dataset.sourceRecords || []) {
-    await upsertSourceRecord(client, {
-      ...sourceRecord,
-      sourceKey: source.sourceKey,
-      syncRunId
-    });
-    counters.sourceRecords += 1;
+  if (pendingXrefs.length) {
+    await upsertEntityXrefsBatch(client, pendingXrefs);
   }
+
+  const dedupedSourceRecords = dedupeRowsByKey(
+    dataset.sourceRecords || [],
+    (sourceRecord) => sourceRecord.sourceRecordKey
+  );
+
+  if (dedupedSourceRecords.length) {
+    await upsertSourceRecordsBatch(
+      client,
+      dedupedSourceRecords.map((sourceRecord) => ({
+        ...sourceRecord,
+        sourceKey: source.sourceKey,
+        syncRunId
+      }))
+    );
+    counters.sourceRecords += dedupedSourceRecords.length;
+  }
+
+  await preloadEntityResolutionCache(client, dataset, entityIdByCurie);
 
   const pendingRelationships = [];
   const pendingEvidence = [];
@@ -278,6 +408,26 @@ async function applyDataset(client, source, syncRunId, dataset) {
   }
 
   return counters;
+}
+
+async function applyDatasetInTransaction(client, source, syncRunId, dataset) {
+  await client.query('BEGIN');
+  try {
+    const counters = await applyDataset(client, source, syncRunId, dataset);
+    await client.query('COMMIT');
+    return counters;
+  } catch (error) {
+    try {
+      await client.query('ROLLBACK');
+    } catch (rollbackError) {
+      console.error('[genovy] streamed source sync rollback failed', {
+        sourceKey: source.sourceKey,
+        syncRunId,
+        error: rollbackError.message || String(rollbackError)
+      });
+    }
+    throw error;
+  }
 }
 
 function buildResolvedRelationshipKey(subjectEntityId, predicateKey, objectEntityId, qualifiers) {
@@ -660,18 +810,105 @@ async function createSourceSyncRun(sourceKey, options, requestedBy) {
   });
 }
 
-async function markSyncRunFailed(syncRunId, error) {
+async function markSyncRunFailed(syncRunId, error, { sourceVersion = '', summary = {} } = {}) {
   return withClient((client) =>
     finalizeSyncRun(client, syncRunId, {
       status: 'failed',
+      sourceVersion,
       errorMessage: error.message || String(error),
-      summary: {}
+      summary
     })
   );
 }
 
 async function executeSourceSync(sourceKey, options, syncRunId) {
   const { source, handler } = resolveSourceOrThrow(sourceKey);
+  if (sourceKey === SOURCE_KEYS.CLINVAR_VARIANT_SUMMARY) {
+    const counters = createEmptySyncCounters();
+    let latestSourceVersion = '';
+    let latestSummary = buildClinVarProgressSummary(counters);
+    let batchesApplied = 0;
+    const resumeSkippedRows = resolveResumeSkippedRows(options);
+
+    try {
+      if (resumeSkippedRows > 0) {
+        latestSummary = buildClinVarProgressSummary(counters, {
+          acceptedRowsSeen: resumeSkippedRows,
+          resumeSkippedRows,
+          variantRowsProcessed: 0,
+          variantDiseaseAssertions: 0
+        }, {
+          batchesApplied,
+          progressStatus: CLINVAR_STREAM_PROGRESS_STATUS
+        });
+        await withClient((client) =>
+          updateSyncRunProgress(client, syncRunId, {
+            sourceVersion: latestSourceVersion,
+            summary: latestSummary
+          })
+        );
+      }
+
+      const streamResult = await streamClinVarVariantSummaryBatches(source, options, async (dataset, progress) => {
+        const batchCounters = await withClient((client) =>
+          applyDatasetInTransaction(client, source, syncRunId, dataset)
+        );
+        mergeSyncCounters(counters, batchCounters);
+        batchesApplied += 1;
+        latestSourceVersion = progress?.sourceVersion || latestSourceVersion;
+        latestSummary = buildClinVarProgressSummary(counters, progress, {
+          batchesApplied,
+          progressStatus: CLINVAR_STREAM_PROGRESS_STATUS
+        });
+        await withClient((client) =>
+          updateSyncRunProgress(client, syncRunId, {
+            sourceVersion: latestSourceVersion,
+            summary: latestSummary
+          })
+        );
+      });
+
+      latestSourceVersion = streamResult.sourceVersion || latestSourceVersion;
+      const summary = buildClinVarProgressSummary(counters, streamResult.summary, {
+        batchesApplied,
+        progressStatus: 'completed'
+      });
+
+      await withClient(async (client) => {
+        await finalizeSyncRun(client, syncRunId, {
+          status: 'completed',
+          sourceVersion: latestSourceVersion,
+          summary
+        });
+        await markSourceSyncState(client, sourceKey, syncRunId, latestSourceVersion, summary);
+      });
+
+      return {
+        syncRunId,
+        sourceKey,
+        sourceVersion: latestSourceVersion,
+        summary
+      };
+    } catch (error) {
+      latestSummary = buildClinVarProgressSummary(latestSummary, null, {
+        batchesApplied,
+        progressStatus: 'failed'
+      });
+      await withClient((client) =>
+        finalizeSyncRun(client, syncRunId, {
+          status: 'failed',
+          sourceVersion: latestSourceVersion,
+          errorMessage: error.message || String(error),
+          summary: latestSummary
+        })
+      );
+      error.syncRunAlreadyFinalized = true;
+      error.syncRunFailureSummary = latestSummary;
+      error.syncRunSourceVersion = latestSourceVersion;
+      throw error;
+    }
+  }
+
   const dataset = await handler(source, options);
 
   return withClient(async (client) => {
@@ -721,14 +958,19 @@ async function runRegisteredSourceSync(sourceKey, options, syncRunId) {
   try {
     return await executeSourceSync(sourceKey, options, syncRunId);
   } catch (error) {
-    try {
-      await markSyncRunFailed(syncRunId, error);
-    } catch (finalizeError) {
-      console.error('[genovy] source sync finalize failed', {
-        sourceKey,
-        syncRunId,
-        error: finalizeError.message || String(finalizeError)
-      });
+    if (!error.syncRunAlreadyFinalized) {
+      try {
+        await markSyncRunFailed(syncRunId, error, {
+          sourceVersion: error.syncRunSourceVersion || '',
+          summary: error.syncRunFailureSummary || {}
+        });
+      } catch (finalizeError) {
+        console.error('[genovy] source sync finalize failed', {
+          sourceKey,
+          syncRunId,
+          error: finalizeError.message || String(finalizeError)
+        });
+      }
     }
     throw error;
   } finally {

@@ -1,0 +1,2672 @@
+{
+  "success": true,
+  "engine": "genovy-dx-sim",
+  "input": {
+    "presentPhenotypeCuries": [
+      "HP:0003396",
+      "HP:0002007",
+      "HP:0002645",
+      "HP:0011069",
+      "HP:0006297",
+      "HP:0005280",
+      "HP:0000680",
+      "HP:0011800",
+      "HP:0000347",
+      "HP:0000242",
+      "HP:0000270",
+      "HP:0000894",
+      "HP:0008788",
+      "HP:0002866",
+      "HP:0005259",
+      "HP:0000774",
+      "HP:0002650",
+      "HP:0006040",
+      "HP:0004322",
+      "HP:0000316"
+    ],
+    "excludedPhenotypeCuries": [],
+    "sourceFormat": "phenopacket"
+  },
+  "ranking": {
+    "queryPhenotypes": [
+      {
+        "phenotypeCurie": "HP:0003396",
+        "phenotypeLabel": "Syringomyelia"
+      },
+      {
+        "phenotypeCurie": "HP:0002007",
+        "phenotypeLabel": "Frontal bossing"
+      },
+      {
+        "phenotypeCurie": "HP:0002645",
+        "phenotypeLabel": "Wormian bones"
+      },
+      {
+        "phenotypeCurie": "HP:0011069",
+        "phenotypeLabel": "Supernumerary tooth"
+      },
+      {
+        "phenotypeCurie": "HP:0006297",
+        "phenotypeLabel": "Enamel hypoplasia"
+      },
+      {
+        "phenotypeCurie": "HP:0005280",
+        "phenotypeLabel": "Depressed nasal bridge"
+      },
+      {
+        "phenotypeCurie": "HP:0000680",
+        "phenotypeLabel": "Delayed eruption of primary teeth"
+      },
+      {
+        "phenotypeCurie": "HP:0011800",
+        "phenotypeLabel": "Midface retrusion"
+      },
+      {
+        "phenotypeCurie": "HP:0000347",
+        "phenotypeLabel": "Micrognathia"
+      },
+      {
+        "phenotypeCurie": "HP:0000242",
+        "phenotypeLabel": "Parietal bossing"
+      },
+      {
+        "phenotypeCurie": "HP:0000270",
+        "phenotypeLabel": "Delayed cranial suture closure"
+      },
+      {
+        "phenotypeCurie": "HP:0000894",
+        "phenotypeLabel": "Short clavicles"
+      },
+      {
+        "phenotypeCurie": "HP:0008788",
+        "phenotypeLabel": "Delayed pubic bone ossification"
+      },
+      {
+        "phenotypeCurie": "HP:0002866",
+        "phenotypeLabel": "Hypoplastic iliac wing"
+      },
+      {
+        "phenotypeCurie": "HP:0005259",
+        "phenotypeLabel": "Abnormal facility in opposing the shoulders"
+      },
+      {
+        "phenotypeCurie": "HP:0000774",
+        "phenotypeLabel": "Narrow chest"
+      },
+      {
+        "phenotypeCurie": "HP:0002650",
+        "phenotypeLabel": "Scoliosis"
+      },
+      {
+        "phenotypeCurie": "HP:0006040",
+        "phenotypeLabel": "Long second metacarpal"
+      },
+      {
+        "phenotypeCurie": "HP:0004322",
+        "phenotypeLabel": "Short stature"
+      },
+      {
+        "phenotypeCurie": "HP:0000316",
+        "phenotypeLabel": "Hypertelorism"
+      }
+    ],
+    "results": [
+      {
+        "rank": 1,
+        "diseaseCurie": "MONDO:0007340",
+        "diseaseLabel": "cleidocranial dysplasia 1",
+        "diseaseEntityId": 68626,
+        "bmaScore": 3.7464216642540253,
+        "normalizedScore": 0.413646,
+        "patientAverageScore": 4.852812984857577,
+        "diseaseAverageScore": 2.6400303436504737,
+        "directPhenotypeCount": 95,
+        "matchedPhenotypeCount": 20,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0005259",
+            "patientPhenotypeLabel": "Abnormal facility in opposing the shoulders",
+            "diseasePhenotypeCurie": "HP:0005259",
+            "diseasePhenotypeLabel": "Abnormal facility in opposing the shoulders",
+            "micaCurie": "HP:0005259",
+            "micaLabel": "Abnormal facility in opposing the shoulders",
+            "score": 9.057072635572965,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:20931042"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0006040",
+            "patientPhenotypeLabel": "Long second metacarpal",
+            "diseasePhenotypeCurie": "HP:0006040",
+            "diseasePhenotypeLabel": "Long second metacarpal",
+            "micaCurie": "HP:0006040",
+            "micaLabel": "Long second metacarpal",
+            "score": 9.057072635572965,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:119600"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008788",
+            "patientPhenotypeLabel": "Delayed pubic bone ossification",
+            "diseasePhenotypeCurie": "HP:0008788",
+            "diseasePhenotypeLabel": "Delayed pubic bone ossification",
+            "micaCurie": "HP:0008788",
+            "micaLabel": "Delayed pubic bone ossification",
+            "score": 7.26531316634491,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:119600"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000242",
+            "patientPhenotypeLabel": "Parietal bossing",
+            "diseasePhenotypeCurie": "HP:0000242",
+            "diseasePhenotypeLabel": "Parietal bossing",
+            "micaCurie": "HP:0000242",
+            "micaLabel": "Parietal bossing",
+            "score": 6.572165985784965,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:20931042"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000680",
+            "patientPhenotypeLabel": "Delayed eruption of primary teeth",
+            "diseasePhenotypeCurie": "HP:0000680",
+            "diseasePhenotypeLabel": "Delayed eruption of primary teeth",
+            "micaCurie": "HP:0000680",
+            "micaLabel": "Delayed eruption of primary teeth",
+            "score": 6.223859291516749,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:119600"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011069",
+            "patientPhenotypeLabel": "Supernumerary tooth",
+            "diseasePhenotypeCurie": "HP:0011069",
+            "diseasePhenotypeLabel": "Supernumerary tooth",
+            "micaCurie": "HP:0011069",
+            "micaLabel": "Supernumerary tooth",
+            "score": 5.798976097551483,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:28878609"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003396",
+            "patientPhenotypeLabel": "Syringomyelia",
+            "diseasePhenotypeCurie": "HP:0003396",
+            "diseasePhenotypeLabel": "Syringomyelia",
+            "micaCurie": "HP:0003396",
+            "micaLabel": "Syringomyelia",
+            "score": 5.591336732773239,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:119600"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002866",
+            "patientPhenotypeLabel": "Hypoplastic iliac wing",
+            "diseasePhenotypeCurie": "HP:0002866",
+            "diseasePhenotypeLabel": "Hypoplastic iliac wing",
+            "micaCurie": "HP:0002866",
+            "micaLabel": "Hypoplastic iliac wing",
+            "score": 5.560565074106485,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:119600"
+          }
+        ]
+      },
+      {
+        "rank": 2,
+        "diseaseCurie": "MONDO:0009940",
+        "diseaseLabel": "pycnodysostosis",
+        "diseaseEntityId": 71226,
+        "bmaScore": 2.714150149062948,
+        "normalizedScore": 0.299672,
+        "patientAverageScore": 3.3500991867626646,
+        "diseaseAverageScore": 2.078201111363231,
+        "directPhenotypeCount": 73,
+        "matchedPhenotypeCount": 20,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000680",
+            "patientPhenotypeLabel": "Delayed eruption of primary teeth",
+            "diseasePhenotypeCurie": "HP:0000680",
+            "diseasePhenotypeLabel": "Delayed eruption of primary teeth",
+            "micaCurie": "HP:0000680",
+            "micaLabel": "Delayed eruption of primary teeth",
+            "score": 6.223859291516749,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:763"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002866",
+            "patientPhenotypeLabel": "Hypoplastic iliac wing",
+            "diseasePhenotypeCurie": "HP:0002866",
+            "diseasePhenotypeLabel": "Hypoplastic iliac wing",
+            "micaCurie": "HP:0002866",
+            "micaLabel": "Hypoplastic iliac wing",
+            "score": 5.560565074106485,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:763"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000894",
+            "patientPhenotypeLabel": "Short clavicles",
+            "diseasePhenotypeCurie": "HP:0006660",
+            "diseasePhenotypeLabel": "Aplastic clavicle",
+            "micaCurie": "HP:0006710",
+            "micaLabel": "Aplasia/Hypoplasia of the clavicles",
+            "score": 5.250410145802645,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:265800"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002645",
+            "patientPhenotypeLabel": "Wormian bones",
+            "diseasePhenotypeCurie": "HP:0002645",
+            "diseasePhenotypeLabel": "Wormian bones",
+            "micaCurie": "HP:0002645",
+            "micaLabel": "Wormian bones",
+            "score": 4.8674178935465395,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:763"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000270",
+            "patientPhenotypeLabel": "Delayed cranial suture closure",
+            "diseasePhenotypeCurie": "HP:0004474",
+            "diseasePhenotypeLabel": "Persistent open anterior fontanelle",
+            "micaCurie": "HP:0000270",
+            "micaLabel": "Delayed cranial suture closure",
+            "score": 4.766613194424574,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:763"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0006297",
+            "patientPhenotypeLabel": "Enamel hypoplasia",
+            "diseasePhenotypeCurie": "HP:0006297",
+            "diseasePhenotypeLabel": "Enamel hypoplasia",
+            "micaCurie": "HP:0006297",
+            "micaLabel": "Enamel hypoplasia",
+            "score": 4.591164516918381,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:763"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000774",
+            "patientPhenotypeLabel": "Narrow chest",
+            "diseasePhenotypeCurie": "HP:0000774",
+            "diseasePhenotypeLabel": "Narrow chest",
+            "micaCurie": "HP:0000774",
+            "micaLabel": "Narrow chest",
+            "score": 4.197260231211293,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:763"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011069",
+            "patientPhenotypeLabel": "Supernumerary tooth",
+            "diseasePhenotypeCurie": "HP:0000668",
+            "diseasePhenotypeLabel": "Hypodontia",
+            "micaCurie": "HP:0006483",
+            "micaLabel": "Abnormal number of teeth",
+            "score": 3.564011192232417,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:763"
+          }
+        ]
+      },
+      {
+        "rank": 3,
+        "diseaseCurie": "MONDO:0859307",
+        "diseaseLabel": "cleidocranial dysplasia 2",
+        "diseaseEntityId": 87960,
+        "bmaScore": 2.576971137815897,
+        "normalizedScore": 0.284526,
+        "patientAverageScore": 2.7202644011802266,
+        "diseaseAverageScore": 2.4336778744515666,
+        "directPhenotypeCount": 27,
+        "matchedPhenotypeCount": 20,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0008788",
+            "patientPhenotypeLabel": "Delayed pubic bone ossification",
+            "diseasePhenotypeCurie": "HP:0008788",
+            "diseasePhenotypeLabel": "Delayed pubic bone ossification",
+            "micaCurie": "HP:0008788",
+            "micaLabel": "Delayed pubic bone ossification",
+            "score": 7.26531316634491,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:36241386"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000680",
+            "patientPhenotypeLabel": "Delayed eruption of primary teeth",
+            "diseasePhenotypeCurie": "HP:0000680",
+            "diseasePhenotypeLabel": "Delayed eruption of primary teeth",
+            "micaCurie": "HP:0000680",
+            "micaLabel": "Delayed eruption of primary teeth",
+            "score": 6.223859291516749,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:36241386"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011069",
+            "patientPhenotypeLabel": "Supernumerary tooth",
+            "diseasePhenotypeCurie": "HP:0011069",
+            "diseasePhenotypeLabel": "Supernumerary tooth",
+            "micaCurie": "HP:0011069",
+            "micaLabel": "Supernumerary tooth",
+            "score": 5.798976097551483,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:36241386"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000894",
+            "patientPhenotypeLabel": "Short clavicles",
+            "diseasePhenotypeCurie": "HP:0000894",
+            "diseasePhenotypeLabel": "Short clavicles",
+            "micaCurie": "HP:0000894",
+            "micaLabel": "Short clavicles",
+            "score": 5.393510989443318,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:36241386"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002645",
+            "patientPhenotypeLabel": "Wormian bones",
+            "diseasePhenotypeCurie": "HP:0000260",
+            "diseasePhenotypeLabel": "Wide anterior fontanel",
+            "micaCurie": "HP:0000235",
+            "micaLabel": "Abnormal cranial suture/fontanelle morphology",
+            "score": 2.9932874268853573,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:36241386"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000270",
+            "patientPhenotypeLabel": "Delayed cranial suture closure",
+            "diseasePhenotypeCurie": "HP:0000260",
+            "diseasePhenotypeLabel": "Wide anterior fontanel",
+            "micaCurie": "HP:0000235",
+            "micaLabel": "Abnormal cranial suture/fontanelle morphology",
+            "score": 2.9932874268853573,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:36241386"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0006040",
+            "patientPhenotypeLabel": "Long second metacarpal",
+            "diseasePhenotypeCurie": "HP:0011304",
+            "diseasePhenotypeLabel": "Broad thumb",
+            "micaCurie": "HP:0040070",
+            "micaLabel": "Abnormal upper limb bone morphology",
+            "score": 2.8729237446354823,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:36241386"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002866",
+            "patientPhenotypeLabel": "Hypoplastic iliac wing",
+            "diseasePhenotypeCurie": "HP:0008788",
+            "diseasePhenotypeLabel": "Delayed pubic bone ossification",
+            "micaCurie": "HP:0003272",
+            "micaLabel": "Abnormal hip bone morphology",
+            "score": 2.8708640116724715,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:36241386"
+          }
+        ]
+      },
+      {
+        "rank": 4,
+        "diseaseCurie": "MONDO:0010077",
+        "diseaseLabel": "spondyloepimetaphyseal dysplasia-short limb-abnormal calcification syndrome",
+        "diseaseEntityId": 71363,
+        "bmaScore": 2.5722352110859292,
+        "normalizedScore": 0.284003,
+        "patientAverageScore": 3.016778040851641,
+        "diseaseAverageScore": 2.127692381320217,
+        "directPhenotypeCount": 65,
+        "matchedPhenotypeCount": 20,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0003396",
+            "patientPhenotypeLabel": "Syringomyelia",
+            "diseasePhenotypeCurie": "HP:0003396",
+            "diseasePhenotypeLabel": "Syringomyelia",
+            "micaCurie": "HP:0003396",
+            "micaLabel": "Syringomyelia",
+            "score": 5.591336732773239,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:271665"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002866",
+            "patientPhenotypeLabel": "Hypoplastic iliac wing",
+            "diseasePhenotypeCurie": "HP:0002869",
+            "diseasePhenotypeLabel": "Flared iliac wing",
+            "micaCurie": "HP:0011867",
+            "micaLabel": "Abnormal iliac wing morphology",
+            "score": 4.808577393523606,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:271665"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000774",
+            "patientPhenotypeLabel": "Narrow chest",
+            "diseasePhenotypeCurie": "HP:0000774",
+            "diseasePhenotypeLabel": "Narrow chest",
+            "micaCurie": "HP:0000774",
+            "micaLabel": "Narrow chest",
+            "score": 4.197260231211293,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:19110212;PMID:20223752"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008788",
+            "patientPhenotypeLabel": "Delayed pubic bone ossification",
+            "diseasePhenotypeCurie": "HP:0010655",
+            "diseasePhenotypeLabel": "Epiphyseal stippling",
+            "micaCurie": "HP:0003336",
+            "micaLabel": "Abnormal enchondral ossification",
+            "score": 4.144417749836913,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:271665"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0006040",
+            "patientPhenotypeLabel": "Long second metacarpal",
+            "diseasePhenotypeCurie": "HP:0010049",
+            "diseasePhenotypeLabel": "Short metacarpal",
+            "micaCurie": "HP:0005914",
+            "micaLabel": "Aplasia/Hypoplasia involving the metacarpal bones",
+            "score": 3.892286661649451,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:271665"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000894",
+            "patientPhenotypeLabel": "Short clavicles",
+            "diseasePhenotypeCurie": "HP:0000773",
+            "diseasePhenotypeLabel": "Short ribs",
+            "micaCurie": "HP:0006711",
+            "micaLabel": "Aplasia/Hypoplasia involving bones of the thorax",
+            "score": 3.810048563412479,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:271665"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011800",
+            "patientPhenotypeLabel": "Midface retrusion",
+            "diseasePhenotypeCurie": "HP:0011800",
+            "diseasePhenotypeLabel": "Midface retrusion",
+            "micaCurie": "HP:0011800",
+            "micaLabel": "Midface retrusion",
+            "score": 3.3566290621822787,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:271665"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0005259",
+            "patientPhenotypeLabel": "Abnormal facility in opposing the shoulders",
+            "diseasePhenotypeCurie": "HP:0006600",
+            "diseasePhenotypeLabel": "Progressive calcification of costochondral cartilage",
+            "micaCurie": "HP:0001547",
+            "micaLabel": "Abnormal rib cage morphology",
+            "score": 3.1821419047209347,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:271665"
+          }
+        ]
+      },
+      {
+        "rank": 5,
+        "diseaseCurie": "MONDO:0009138",
+        "diseaseLabel": "dysosteosclerosis",
+        "diseaseEntityId": 70424,
+        "bmaScore": 2.563700402997564,
+        "normalizedScore": 0.283061,
+        "patientAverageScore": 3.115141142841612,
+        "diseaseAverageScore": 2.012259663153516,
+        "directPhenotypeCount": 60,
+        "matchedPhenotypeCount": 20,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000242",
+            "patientPhenotypeLabel": "Parietal bossing",
+            "diseasePhenotypeCurie": "HP:0000242",
+            "diseasePhenotypeLabel": "Parietal bossing",
+            "micaCurie": "HP:0000242",
+            "micaLabel": "Parietal bossing",
+            "score": 6.572165985784965,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:224300"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002866",
+            "patientPhenotypeLabel": "Hypoplastic iliac wing",
+            "diseasePhenotypeCurie": "HP:0002868",
+            "diseasePhenotypeLabel": "Narrow iliac wing",
+            "micaCurie": "HP:0011867",
+            "micaLabel": "Abnormal iliac wing morphology",
+            "score": 4.808577393523606,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:224300"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000270",
+            "patientPhenotypeLabel": "Delayed cranial suture closure",
+            "diseasePhenotypeCurie": "HP:0001476",
+            "diseasePhenotypeLabel": "Delayed closure of the anterior fontanelle",
+            "micaCurie": "HP:0000270",
+            "micaLabel": "Delayed cranial suture closure",
+            "score": 4.766613194424574,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:224300"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000894",
+            "patientPhenotypeLabel": "Short clavicles",
+            "diseasePhenotypeCurie": "HP:0100923",
+            "diseasePhenotypeLabel": "Clavicular sclerosis",
+            "micaCurie": "HP:0000889",
+            "micaLabel": "Abnormal clavicle morphology",
+            "score": 4.503195743972425,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:224300"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000680",
+            "patientPhenotypeLabel": "Delayed eruption of primary teeth",
+            "diseasePhenotypeCurie": "HP:0000684",
+            "diseasePhenotypeLabel": "Delayed eruption of teeth",
+            "micaCurie": "HP:0000684",
+            "micaLabel": "Delayed eruption of teeth",
+            "score": 4.220790728621488,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:1782"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0006297",
+            "patientPhenotypeLabel": "Enamel hypoplasia",
+            "diseasePhenotypeCurie": "HP:0000682",
+            "diseasePhenotypeLabel": "Abnormal dental enamel morphology",
+            "micaCurie": "HP:0000682",
+            "micaLabel": "Abnormal dental enamel morphology",
+            "score": 4.212885549114374,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:1782"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000774",
+            "patientPhenotypeLabel": "Narrow chest",
+            "diseasePhenotypeCurie": "HP:0000774",
+            "diseasePhenotypeLabel": "Narrow chest",
+            "micaCurie": "HP:0000774",
+            "micaLabel": "Narrow chest",
+            "score": 4.197260231211293,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:224300"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011069",
+            "patientPhenotypeLabel": "Supernumerary tooth",
+            "diseasePhenotypeCurie": "HP:0000677",
+            "diseasePhenotypeLabel": "Oligodontia",
+            "micaCurie": "HP:0006483",
+            "micaLabel": "Abnormal number of teeth",
+            "score": 3.564011192232417,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:224300"
+          }
+        ]
+      },
+      {
+        "rank": 6,
+        "diseaseCurie": "MONDO:0010571",
+        "diseaseLabel": "otopalatodigital syndrome type 2",
+        "diseaseEntityId": 71857,
+        "bmaScore": 2.525540280741171,
+        "normalizedScore": 0.278847,
+        "patientAverageScore": 3.147502750627769,
+        "diseaseAverageScore": 1.9035778108545727,
+        "directPhenotypeCount": 71,
+        "matchedPhenotypeCount": 20,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002866",
+            "patientPhenotypeLabel": "Hypoplastic iliac wing",
+            "diseasePhenotypeCurie": "HP:0000946",
+            "diseasePhenotypeLabel": "Hypoplastic ilia",
+            "micaCurie": "HP:0000946",
+            "micaLabel": "Hypoplastic ilia",
+            "score": 4.929938250527874,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:304120"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002645",
+            "patientPhenotypeLabel": "Wormian bones",
+            "diseasePhenotypeCurie": "HP:0002645",
+            "diseasePhenotypeLabel": "Wormian bones",
+            "micaCurie": "HP:0002645",
+            "micaLabel": "Wormian bones",
+            "score": 4.8674178935465395,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:17264970"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000270",
+            "patientPhenotypeLabel": "Delayed cranial suture closure",
+            "diseasePhenotypeCurie": "HP:0001476",
+            "diseasePhenotypeLabel": "Delayed closure of the anterior fontanelle",
+            "micaCurie": "HP:0000270",
+            "micaLabel": "Delayed cranial suture closure",
+            "score": 4.766613194424574,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:304120"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000894",
+            "patientPhenotypeLabel": "Short clavicles",
+            "diseasePhenotypeCurie": "HP:0010560",
+            "diseasePhenotypeLabel": "Undulate clavicles",
+            "micaCurie": "HP:0000889",
+            "micaLabel": "Abnormal clavicle morphology",
+            "score": 4.503195743972425,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:304120"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000774",
+            "patientPhenotypeLabel": "Narrow chest",
+            "diseasePhenotypeCurie": "HP:0000774",
+            "diseasePhenotypeLabel": "Narrow chest",
+            "micaCurie": "HP:0000774",
+            "micaLabel": "Narrow chest",
+            "score": 4.197260231211293,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:304120"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008788",
+            "patientPhenotypeLabel": "Delayed pubic bone ossification",
+            "diseasePhenotypeCurie": "HP:0008087",
+            "diseasePhenotypeLabel": "Nonossified fifth metatarsal",
+            "micaCurie": "HP:0003336",
+            "micaLabel": "Abnormal enchondral ossification",
+            "score": 4.144417749836913,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:304120"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0006040",
+            "patientPhenotypeLabel": "Long second metacarpal",
+            "diseasePhenotypeCurie": "HP:0010049",
+            "diseasePhenotypeLabel": "Short metacarpal",
+            "micaCurie": "HP:0005914",
+            "micaLabel": "Aplasia/Hypoplasia involving the metacarpal bones",
+            "score": 3.892286661649451,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:304120"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003396",
+            "patientPhenotypeLabel": "Syringomyelia",
+            "diseasePhenotypeCurie": "HP:0002414",
+            "diseasePhenotypeLabel": "Spina bifida",
+            "micaCurie": "HP:0002143",
+            "micaLabel": "Abnormal spinal cord morphology",
+            "score": 3.743866656531178,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:17264970"
+          }
+        ]
+      },
+      {
+        "rank": 7,
+        "diseaseCurie": "MONDO:0007251",
+        "diseaseLabel": "campomelic dysplasia",
+        "diseaseEntityId": 68537,
+        "bmaScore": 2.355677493416725,
+        "normalizedScore": 0.260093,
+        "patientAverageScore": 3.140792288999972,
+        "diseaseAverageScore": 1.5705626978334775,
+        "directPhenotypeCount": 109,
+        "matchedPhenotypeCount": 20,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002866",
+            "patientPhenotypeLabel": "Hypoplastic iliac wing",
+            "diseasePhenotypeCurie": "HP:0002866",
+            "diseasePhenotypeLabel": "Hypoplastic iliac wing",
+            "micaCurie": "HP:0002866",
+            "micaLabel": "Hypoplastic iliac wing",
+            "score": 5.560565074106485,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:114290"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000774",
+            "patientPhenotypeLabel": "Narrow chest",
+            "diseasePhenotypeCurie": "HP:0000774",
+            "diseasePhenotypeLabel": "Narrow chest",
+            "micaCurie": "HP:0000774",
+            "micaLabel": "Narrow chest",
+            "score": 4.197260231211293,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:140"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008788",
+            "patientPhenotypeLabel": "Delayed pubic bone ossification",
+            "diseasePhenotypeCurie": "HP:0008477",
+            "diseasePhenotypeLabel": "Poorly ossified cervical vertebrae",
+            "micaCurie": "HP:0003336",
+            "micaLabel": "Abnormal enchondral ossification",
+            "score": 4.144417749836913,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:114290"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0006040",
+            "patientPhenotypeLabel": "Long second metacarpal",
+            "diseasePhenotypeCurie": "HP:0010034",
+            "diseasePhenotypeLabel": "Short 1st metacarpal",
+            "micaCurie": "HP:0005914",
+            "micaLabel": "Aplasia/Hypoplasia involving the metacarpal bones",
+            "score": 3.892286661649451,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:12161603"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000894",
+            "patientPhenotypeLabel": "Short clavicles",
+            "diseasePhenotypeCurie": "HP:0006628",
+            "diseasePhenotypeLabel": "Absent sternal ossification",
+            "micaCurie": "HP:0006711",
+            "micaLabel": "Aplasia/Hypoplasia involving bones of the thorax",
+            "score": 3.810048563412479,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:114290"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003396",
+            "patientPhenotypeLabel": "Syringomyelia",
+            "diseasePhenotypeCurie": "HP:0010301",
+            "diseasePhenotypeLabel": "Spinal dysraphism",
+            "micaCurie": "HP:0002143",
+            "micaLabel": "Abnormal spinal cord morphology",
+            "score": 3.743866656531178,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:12161603"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0006297",
+            "patientPhenotypeLabel": "Enamel hypoplasia",
+            "diseasePhenotypeCurie": "HP:0000670",
+            "diseasePhenotypeLabel": "Carious teeth",
+            "micaCurie": "HP:0011061",
+            "micaLabel": "Abnormality of dental structure",
+            "score": 3.4963910045574376,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:12161603"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011800",
+            "patientPhenotypeLabel": "Midface retrusion",
+            "diseasePhenotypeCurie": "HP:0011800",
+            "diseasePhenotypeLabel": "Midface retrusion",
+            "micaCurie": "HP:0011800",
+            "micaLabel": "Midface retrusion",
+            "score": 3.3566290621822787,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:16555077"
+          }
+        ]
+      },
+      {
+        "rank": 8,
+        "diseaseCurie": "MONDO:0012374",
+        "diseaseLabel": "brachyphalangy, polydactyly, and tibial aplasia/hypoplasia",
+        "diseaseEntityId": 73660,
+        "bmaScore": 2.3258862250928476,
+        "normalizedScore": 0.256803,
+        "patientAverageScore": 2.854413937612598,
+        "diseaseAverageScore": 1.7973585125730973,
+        "directPhenotypeCount": 72,
+        "matchedPhenotypeCount": 20,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000242",
+            "patientPhenotypeLabel": "Parietal bossing",
+            "diseasePhenotypeCurie": "HP:0002697",
+            "diseasePhenotypeLabel": "Parietal foramina",
+            "micaCurie": "HP:0002696",
+            "micaLabel": "Abnormal parietal bone morphology",
+            "score": 5.798976097551483,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:609945"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002866",
+            "patientPhenotypeLabel": "Hypoplastic iliac wing",
+            "diseasePhenotypeCurie": "HP:0002866",
+            "diseasePhenotypeLabel": "Hypoplastic iliac wing",
+            "micaCurie": "HP:0002866",
+            "micaLabel": "Hypoplastic iliac wing",
+            "score": 5.560565074106485,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:609945"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008788",
+            "patientPhenotypeLabel": "Delayed pubic bone ossification",
+            "diseasePhenotypeCurie": "HP:0008830",
+            "diseasePhenotypeLabel": "Hypoplastic pubic ramus",
+            "micaCurie": "HP:0003172",
+            "micaLabel": "Abnormal pubic bone morphology",
+            "score": 5.530712110956804,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:609945"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000894",
+            "patientPhenotypeLabel": "Short clavicles",
+            "diseasePhenotypeCurie": "HP:0000894",
+            "diseasePhenotypeLabel": "Short clavicles",
+            "micaCurie": "HP:0000894",
+            "micaLabel": "Short clavicles",
+            "score": 5.393510989443318,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:609945"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0006040",
+            "patientPhenotypeLabel": "Long second metacarpal",
+            "diseasePhenotypeCurie": "HP:0010049",
+            "diseasePhenotypeLabel": "Short metacarpal",
+            "micaCurie": "HP:0005914",
+            "micaLabel": "Aplasia/Hypoplasia involving the metacarpal bones",
+            "score": 3.892286661649451,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:609945"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002645",
+            "patientPhenotypeLabel": "Wormian bones",
+            "diseasePhenotypeCurie": "HP:0001363",
+            "diseasePhenotypeLabel": "Craniosynostosis",
+            "micaCurie": "HP:0011329",
+            "micaLabel": "Abnormality of cranial sutures",
+            "score": 3.2135282185416054,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:609945"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000270",
+            "patientPhenotypeLabel": "Delayed cranial suture closure",
+            "diseasePhenotypeCurie": "HP:0001363",
+            "diseasePhenotypeLabel": "Craniosynostosis",
+            "micaCurie": "HP:0011329",
+            "micaLabel": "Abnormality of cranial sutures",
+            "score": 3.2135282185416054,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:609945"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0005259",
+            "patientPhenotypeLabel": "Abnormal facility in opposing the shoulders",
+            "diseasePhenotypeCurie": "HP:0010561",
+            "diseasePhenotypeLabel": "Undulate ribs",
+            "micaCurie": "HP:0001547",
+            "micaLabel": "Abnormal rib cage morphology",
+            "score": 3.1821419047209347,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:609945"
+          }
+        ]
+      },
+      {
+        "rank": 9,
+        "diseaseCurie": "MONDO:0009318",
+        "diseaseLabel": "Hallermann-Streiff syndrome",
+        "diseaseEntityId": 70604,
+        "bmaScore": 2.318754150743599,
+        "normalizedScore": 0.256016,
+        "patientAverageScore": 3.1605618582996304,
+        "diseaseAverageScore": 1.4769464431875683,
+        "directPhenotypeCount": 96,
+        "matchedPhenotypeCount": 20,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000242",
+            "patientPhenotypeLabel": "Parietal bossing",
+            "diseasePhenotypeCurie": "HP:0000242",
+            "diseasePhenotypeLabel": "Parietal bossing",
+            "micaCurie": "HP:0000242",
+            "micaLabel": "Parietal bossing",
+            "score": 6.572165985784965,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:234100"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011069",
+            "patientPhenotypeLabel": "Supernumerary tooth",
+            "diseasePhenotypeCurie": "HP:0011069",
+            "diseasePhenotypeLabel": "Supernumerary tooth",
+            "micaCurie": "HP:0011069",
+            "micaLabel": "Supernumerary tooth",
+            "score": 5.798976097551483,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:2108"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002645",
+            "patientPhenotypeLabel": "Wormian bones",
+            "diseasePhenotypeCurie": "HP:0002645",
+            "diseasePhenotypeLabel": "Wormian bones",
+            "micaCurie": "HP:0002645",
+            "micaLabel": "Wormian bones",
+            "score": 4.8674178935465395,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:234100"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008788",
+            "patientPhenotypeLabel": "Delayed pubic bone ossification",
+            "diseasePhenotypeCurie": "HP:0006611",
+            "diseasePhenotypeLabel": "Decreased number of sternal ossification centers",
+            "micaCurie": "HP:0003336",
+            "micaLabel": "Abnormal enchondral ossification",
+            "score": 4.144417749836913,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:234100"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000894",
+            "patientPhenotypeLabel": "Short clavicles",
+            "diseasePhenotypeCurie": "HP:0000773",
+            "diseasePhenotypeLabel": "Short ribs",
+            "micaCurie": "HP:0006711",
+            "micaLabel": "Aplasia/Hypoplasia involving bones of the thorax",
+            "score": 3.810048563412479,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:2108"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000680",
+            "patientPhenotypeLabel": "Delayed eruption of primary teeth",
+            "diseasePhenotypeCurie": "HP:0000695",
+            "diseasePhenotypeLabel": "Natal tooth",
+            "micaCurie": "HP:0006292",
+            "micaLabel": "Abnormality of dental eruption",
+            "score": 3.7840730770092184,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:234100"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003396",
+            "patientPhenotypeLabel": "Syringomyelia",
+            "diseasePhenotypeCurie": "HP:0002414",
+            "diseasePhenotypeLabel": "Spina bifida",
+            "micaCurie": "HP:0002143",
+            "micaLabel": "Abnormal spinal cord morphology",
+            "score": 3.743866656531178,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:234100"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000270",
+            "patientPhenotypeLabel": "Delayed cranial suture closure",
+            "diseasePhenotypeCurie": "HP:0002645",
+            "diseasePhenotypeLabel": "Wormian bones",
+            "micaCurie": "HP:0011329",
+            "micaLabel": "Abnormality of cranial sutures",
+            "score": 3.2135282185416054,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:234100"
+          }
+        ]
+      },
+      {
+        "rank": 10,
+        "diseaseCurie": "MONDO:0008995",
+        "diseaseLabel": "Yunis-Varon syndrome",
+        "diseaseEntityId": 70281,
+        "bmaScore": 2.318149748325299,
+        "normalizedScore": 0.255949,
+        "patientAverageScore": 3.1420162837243515,
+        "diseaseAverageScore": 1.4942832129262469,
+        "directPhenotypeCount": 156,
+        "matchedPhenotypeCount": 20,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0008788",
+            "patientPhenotypeLabel": "Delayed pubic bone ossification",
+            "diseasePhenotypeCurie": "HP:0008785",
+            "diseasePhenotypeLabel": "Delayed ossification of pubic rami",
+            "micaCurie": "HP:0009105",
+            "micaLabel": "Abnormal ossification of the pubic bone",
+            "score": 6.859848058236746,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:8411078"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000242",
+            "patientPhenotypeLabel": "Parietal bossing",
+            "diseasePhenotypeCurie": "HP:0000242",
+            "diseasePhenotypeLabel": "Parietal bossing",
+            "micaCurie": "HP:0000242",
+            "micaLabel": "Parietal bossing",
+            "score": 6.572165985784965,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:8411078"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000894",
+            "patientPhenotypeLabel": "Short clavicles",
+            "diseasePhenotypeCurie": "HP:0000894",
+            "diseasePhenotypeLabel": "Short clavicles",
+            "micaCurie": "HP:0000894",
+            "micaLabel": "Short clavicles",
+            "score": 5.393510989443318,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:20932945"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000680",
+            "patientPhenotypeLabel": "Delayed eruption of primary teeth",
+            "diseasePhenotypeCurie": "HP:0006323",
+            "diseasePhenotypeLabel": "Premature loss of primary teeth",
+            "micaCurie": "HP:0006481",
+            "micaLabel": "Abnormality of primary teeth",
+            "score": 5.014021367738415,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:216340"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0006040",
+            "patientPhenotypeLabel": "Long second metacarpal",
+            "diseasePhenotypeCurie": "HP:0010035",
+            "diseasePhenotypeLabel": "Aplasia of the 1st metacarpal",
+            "micaCurie": "HP:0005914",
+            "micaLabel": "Aplasia/Hypoplasia involving the metacarpal bones",
+            "score": 3.892286661649451,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:3472"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0006297",
+            "patientPhenotypeLabel": "Enamel hypoplasia",
+            "diseasePhenotypeCurie": "HP:0011061",
+            "diseasePhenotypeLabel": "Abnormality of dental structure",
+            "micaCurie": "HP:0011061",
+            "micaLabel": "Abnormality of dental structure",
+            "score": 3.4963910045574376,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:3472"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002645",
+            "patientPhenotypeLabel": "Wormian bones",
+            "diseasePhenotypeCurie": "HP:0010537",
+            "diseasePhenotypeLabel": "Wide cranial sutures",
+            "micaCurie": "HP:0011329",
+            "micaLabel": "Abnormality of cranial sutures",
+            "score": 3.2135282185416054,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:3472"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000270",
+            "patientPhenotypeLabel": "Delayed cranial suture closure",
+            "diseasePhenotypeCurie": "HP:0010537",
+            "diseasePhenotypeLabel": "Wide cranial sutures",
+            "micaCurie": "HP:0011329",
+            "micaLabel": "Abnormality of cranial sutures",
+            "score": 3.2135282185416054,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:3472"
+          }
+        ]
+      },
+      {
+        "rank": 11,
+        "diseaseCurie": "MONDO:0010704",
+        "diseaseLabel": "otopalatodigital syndrome type 1",
+        "diseaseEntityId": 71990,
+        "bmaScore": 2.3143499332548023,
+        "normalizedScore": 0.25553,
+        "patientAverageScore": 2.6752184036699718,
+        "diseaseAverageScore": 1.953481462839633,
+        "directPhenotypeCount": 48,
+        "matchedPhenotypeCount": 20,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000270",
+            "patientPhenotypeLabel": "Delayed cranial suture closure",
+            "diseasePhenotypeCurie": "HP:0001476",
+            "diseasePhenotypeLabel": "Delayed closure of the anterior fontanelle",
+            "micaCurie": "HP:0000270",
+            "micaLabel": "Delayed cranial suture closure",
+            "score": 4.766613194424574,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:311300"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0006040",
+            "patientPhenotypeLabel": "Long second metacarpal",
+            "diseasePhenotypeCurie": "HP:0010047",
+            "diseasePhenotypeLabel": "Short 5th metacarpal",
+            "micaCurie": "HP:0005914",
+            "micaLabel": "Aplasia/Hypoplasia involving the metacarpal bones",
+            "score": 3.892286661649451,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:311300"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000680",
+            "patientPhenotypeLabel": "Delayed eruption of primary teeth",
+            "diseasePhenotypeCurie": "HP:0001571",
+            "diseasePhenotypeLabel": "Multiple impacted teeth",
+            "micaCurie": "HP:0006292",
+            "micaLabel": "Abnormality of dental eruption",
+            "score": 3.7840730770092184,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:311300"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011069",
+            "patientPhenotypeLabel": "Supernumerary tooth",
+            "diseasePhenotypeCurie": "HP:0001592",
+            "diseasePhenotypeLabel": "Selective tooth agenesis",
+            "micaCurie": "HP:0006483",
+            "micaLabel": "Abnormal number of teeth",
+            "score": 3.564011192232417,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:311300"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002645",
+            "patientPhenotypeLabel": "Wormian bones",
+            "diseasePhenotypeCurie": "HP:0001476",
+            "diseasePhenotypeLabel": "Delayed closure of the anterior fontanelle",
+            "micaCurie": "HP:0011329",
+            "micaLabel": "Abnormality of cranial sutures",
+            "score": 3.2135282185416054,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:311300"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002007",
+            "patientPhenotypeLabel": "Frontal bossing",
+            "diseasePhenotypeCurie": "HP:0002007",
+            "diseasePhenotypeLabel": "Frontal bossing",
+            "micaCurie": "HP:0002007",
+            "micaLabel": "Frontal bossing",
+            "score": 3.1012352661081346,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:311300"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008788",
+            "patientPhenotypeLabel": "Delayed pubic bone ossification",
+            "diseasePhenotypeCurie": "HP:0002827",
+            "diseasePhenotypeLabel": "Hip dislocation",
+            "micaCurie": "HP:0003272",
+            "micaLabel": "Abnormal hip bone morphology",
+            "score": 2.8708640116724715,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:311300"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002866",
+            "patientPhenotypeLabel": "Hypoplastic iliac wing",
+            "diseasePhenotypeCurie": "HP:0002827",
+            "diseasePhenotypeLabel": "Hip dislocation",
+            "micaCurie": "HP:0003272",
+            "micaLabel": "Abnormal hip bone morphology",
+            "score": 2.8708640116724715,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:311300"
+          }
+        ]
+      },
+      {
+        "rank": 12,
+        "diseaseCurie": "MONDO:0011911",
+        "diseaseLabel": "craniolenticulosutural dysplasia",
+        "diseaseEntityId": 73197,
+        "bmaScore": 2.2947582606216055,
+        "normalizedScore": 0.253366,
+        "patientAverageScore": 2.8233241091406676,
+        "diseaseAverageScore": 1.7661924121025432,
+        "directPhenotypeCount": 54,
+        "matchedPhenotypeCount": 20,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002866",
+            "patientPhenotypeLabel": "Hypoplastic iliac wing",
+            "diseasePhenotypeCurie": "HP:0008808",
+            "diseasePhenotypeLabel": "High iliac wing",
+            "micaCurie": "HP:0011867",
+            "micaLabel": "Abnormal iliac wing morphology",
+            "score": 4.808577393523606,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:50814"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000270",
+            "patientPhenotypeLabel": "Delayed cranial suture closure",
+            "diseasePhenotypeCurie": "HP:0001476",
+            "diseasePhenotypeLabel": "Delayed closure of the anterior fontanelle",
+            "micaCurie": "HP:0000270",
+            "micaLabel": "Delayed cranial suture closure",
+            "score": 4.766613194424574,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:16980979"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0006297",
+            "patientPhenotypeLabel": "Enamel hypoplasia",
+            "diseasePhenotypeCurie": "HP:0000685",
+            "diseasePhenotypeLabel": "Hypoplasia of teeth",
+            "micaCurie": "HP:0000685",
+            "micaLabel": "Hypoplasia of teeth",
+            "score": 4.393633541460898,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:607812"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000680",
+            "patientPhenotypeLabel": "Delayed eruption of primary teeth",
+            "diseasePhenotypeCurie": "HP:0000684",
+            "diseasePhenotypeLabel": "Delayed eruption of teeth",
+            "micaCurie": "HP:0000684",
+            "micaLabel": "Delayed eruption of teeth",
+            "score": 4.220790728621488,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:50814"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000774",
+            "patientPhenotypeLabel": "Narrow chest",
+            "diseasePhenotypeCurie": "HP:0000774",
+            "diseasePhenotypeLabel": "Narrow chest",
+            "micaCurie": "HP:0000774",
+            "micaLabel": "Narrow chest",
+            "score": 4.197260231211293,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:50814"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011800",
+            "patientPhenotypeLabel": "Midface retrusion",
+            "diseasePhenotypeCurie": "HP:0011800",
+            "diseasePhenotypeLabel": "Midface retrusion",
+            "micaCurie": "HP:0011800",
+            "micaLabel": "Midface retrusion",
+            "score": 3.3566290621822787,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:16980979"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002645",
+            "patientPhenotypeLabel": "Wormian bones",
+            "diseasePhenotypeCurie": "HP:0001476",
+            "diseasePhenotypeLabel": "Delayed closure of the anterior fontanelle",
+            "micaCurie": "HP:0011329",
+            "micaLabel": "Abnormality of cranial sutures",
+            "score": 3.2135282185416054,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:16980979"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002007",
+            "patientPhenotypeLabel": "Frontal bossing",
+            "diseasePhenotypeCurie": "HP:0002007",
+            "diseasePhenotypeLabel": "Frontal bossing",
+            "micaCurie": "HP:0002007",
+            "micaLabel": "Frontal bossing",
+            "score": 3.1012352661081346,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:50814"
+          }
+        ]
+      },
+      {
+        "rank": 13,
+        "diseaseCurie": "MONDO:0014573",
+        "diseaseLabel": "Cole-Carpenter syndrome 2",
+        "diseaseEntityId": 75859,
+        "bmaScore": 2.28564858605595,
+        "normalizedScore": 0.252361,
+        "patientAverageScore": 2.6570279039782627,
+        "diseaseAverageScore": 1.9142692681336373,
+        "directPhenotypeCount": 33,
+        "matchedPhenotypeCount": 20,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002645",
+            "patientPhenotypeLabel": "Wormian bones",
+            "diseasePhenotypeCurie": "HP:0002645",
+            "diseasePhenotypeLabel": "Wormian bones",
+            "micaCurie": "HP:0002645",
+            "micaLabel": "Wormian bones",
+            "score": 4.8674178935465395,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:25683121"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002866",
+            "patientPhenotypeLabel": "Hypoplastic iliac wing",
+            "diseasePhenotypeCurie": "HP:0002868",
+            "diseasePhenotypeLabel": "Narrow iliac wing",
+            "micaCurie": "HP:0011867",
+            "micaLabel": "Abnormal iliac wing morphology",
+            "score": 4.808577393523606,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:25683121"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0006297",
+            "patientPhenotypeLabel": "Enamel hypoplasia",
+            "diseasePhenotypeCurie": "HP:0000703",
+            "diseasePhenotypeLabel": "Dentinogenesis imperfecta",
+            "micaCurie": "HP:3000050",
+            "micaLabel": "Abnormal odontoid tissue morphology",
+            "score": 4.026634714180529,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:616294"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011800",
+            "patientPhenotypeLabel": "Midface retrusion",
+            "diseasePhenotypeCurie": "HP:0011800",
+            "diseasePhenotypeLabel": "Midface retrusion",
+            "micaCurie": "HP:0011800",
+            "micaLabel": "Midface retrusion",
+            "score": 3.3566290621822787,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:25683121"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000270",
+            "patientPhenotypeLabel": "Delayed cranial suture closure",
+            "diseasePhenotypeCurie": "HP:0010537",
+            "diseasePhenotypeLabel": "Wide cranial sutures",
+            "micaCurie": "HP:0011329",
+            "micaLabel": "Abnormality of cranial sutures",
+            "score": 3.2135282185416054,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:25683121"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0005259",
+            "patientPhenotypeLabel": "Abnormal facility in opposing the shoulders",
+            "diseasePhenotypeCurie": "HP:0000883",
+            "diseasePhenotypeLabel": "Thin ribs",
+            "micaCurie": "HP:0001547",
+            "micaLabel": "Abnormal rib cage morphology",
+            "score": 3.1821419047209347,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:616294"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002007",
+            "patientPhenotypeLabel": "Frontal bossing",
+            "diseasePhenotypeCurie": "HP:0002007",
+            "diseasePhenotypeLabel": "Frontal bossing",
+            "micaCurie": "HP:0002007",
+            "micaLabel": "Frontal bossing",
+            "score": 3.1012352661081346,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:25683121"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008788",
+            "patientPhenotypeLabel": "Delayed pubic bone ossification",
+            "diseasePhenotypeCurie": "HP:0002868",
+            "diseasePhenotypeLabel": "Narrow iliac wing",
+            "micaCurie": "HP:0003272",
+            "micaLabel": "Abnormal hip bone morphology",
+            "score": 2.8708640116724715,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:25683121"
+          }
+        ]
+      },
+      {
+        "rank": 14,
+        "diseaseCurie": "MONDO:0010803",
+        "diseaseLabel": "Eiken syndrome",
+        "diseaseEntityId": 72089,
+        "bmaScore": 2.2840462258632437,
+        "normalizedScore": 0.252184,
+        "patientAverageScore": 2.526298823212471,
+        "diseaseAverageScore": 2.0417936285140166,
+        "directPhenotypeCount": 57,
+        "matchedPhenotypeCount": 20,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000680",
+            "patientPhenotypeLabel": "Delayed eruption of primary teeth",
+            "diseasePhenotypeCurie": "HP:0006335",
+            "diseasePhenotypeLabel": "Persistence of primary teeth",
+            "micaCurie": "HP:0006481",
+            "micaLabel": "Abnormality of primary teeth",
+            "score": 5.014021367738415,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:29987841"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002866",
+            "patientPhenotypeLabel": "Hypoplastic iliac wing",
+            "diseasePhenotypeCurie": "HP:0008808",
+            "diseasePhenotypeLabel": "High iliac wing",
+            "micaCurie": "HP:0011867",
+            "micaLabel": "Abnormal iliac wing morphology",
+            "score": 4.808577393523606,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:79106"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008788",
+            "patientPhenotypeLabel": "Delayed pubic bone ossification",
+            "diseasePhenotypeCurie": "HP:0008103",
+            "diseasePhenotypeLabel": "Delayed tarsal ossification",
+            "micaCurie": "HP:0003336",
+            "micaLabel": "Abnormal enchondral ossification",
+            "score": 4.144417749836913,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31297790;PMID:29987841"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011069",
+            "patientPhenotypeLabel": "Supernumerary tooth",
+            "diseasePhenotypeCurie": "HP:0000677",
+            "diseasePhenotypeLabel": "Oligodontia",
+            "micaCurie": "HP:0006483",
+            "micaLabel": "Abnormal number of teeth",
+            "score": 3.564011192232417,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:29987841"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011800",
+            "patientPhenotypeLabel": "Midface retrusion",
+            "diseasePhenotypeCurie": "HP:0011800",
+            "diseasePhenotypeLabel": "Midface retrusion",
+            "micaCurie": "HP:0011800",
+            "micaLabel": "Midface retrusion",
+            "score": 3.3566290621822787,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31297790;PMID:29987841"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0005259",
+            "patientPhenotypeLabel": "Abnormal facility in opposing the shoulders",
+            "diseasePhenotypeCurie": "HP:0000885",
+            "diseasePhenotypeLabel": "Broad ribs",
+            "micaCurie": "HP:0001547",
+            "micaLabel": "Abnormal rib cage morphology",
+            "score": 3.1821419047209347,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31297790"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0006040",
+            "patientPhenotypeLabel": "Long second metacarpal",
+            "diseasePhenotypeCurie": "HP:0005819",
+            "diseasePhenotypeLabel": "Short middle phalanx of finger",
+            "micaCurie": "HP:0005927",
+            "micaLabel": "Aplasia/hypoplasia involving bones of the hand",
+            "score": 2.6906021878415274,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:29987841"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000316",
+            "patientPhenotypeLabel": "Hypertelorism",
+            "diseasePhenotypeCurie": "HP:0000316",
+            "diseasePhenotypeLabel": "Hypertelorism",
+            "micaCurie": "HP:0000316",
+            "micaLabel": "Hypertelorism",
+            "score": 2.385039690111898,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31297790"
+          }
+        ]
+      },
+      {
+        "rank": 15,
+        "diseaseCurie": "MONDO:0010650",
+        "diseaseLabel": "Melnick-Needles syndrome",
+        "diseaseEntityId": 71936,
+        "bmaScore": 2.2787728329901196,
+        "normalizedScore": 0.251601,
+        "patientAverageScore": 2.945800028611277,
+        "diseaseAverageScore": 1.6117456373689618,
+        "directPhenotypeCount": 65,
+        "matchedPhenotypeCount": 20,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0008788",
+            "patientPhenotypeLabel": "Delayed pubic bone ossification",
+            "diseasePhenotypeCurie": "HP:0003172",
+            "diseasePhenotypeLabel": "Abnormal pubic bone morphology",
+            "micaCurie": "HP:0003172",
+            "micaLabel": "Abnormal pubic bone morphology",
+            "score": 5.530712110956804,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:2484"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000894",
+            "patientPhenotypeLabel": "Short clavicles",
+            "diseasePhenotypeCurie": "HP:0000894",
+            "diseasePhenotypeLabel": "Short clavicles",
+            "micaCurie": "HP:0000894",
+            "micaLabel": "Short clavicles",
+            "score": 5.393510989443318,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:309350"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000270",
+            "patientPhenotypeLabel": "Delayed cranial suture closure",
+            "diseasePhenotypeCurie": "HP:0000270",
+            "diseasePhenotypeLabel": "Delayed cranial suture closure",
+            "micaCurie": "HP:0000270",
+            "micaLabel": "Delayed cranial suture closure",
+            "score": 4.766613194424574,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:309350"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000680",
+            "patientPhenotypeLabel": "Delayed eruption of primary teeth",
+            "diseasePhenotypeCurie": "HP:0000684",
+            "diseasePhenotypeLabel": "Delayed eruption of teeth",
+            "micaCurie": "HP:0000684",
+            "micaLabel": "Delayed eruption of teeth",
+            "score": 4.220790728621488,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:2484"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000774",
+            "patientPhenotypeLabel": "Narrow chest",
+            "diseasePhenotypeCurie": "HP:0000774",
+            "diseasePhenotypeLabel": "Narrow chest",
+            "micaCurie": "HP:0000774",
+            "micaLabel": "Narrow chest",
+            "score": 4.197260231211293,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:2484"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002645",
+            "patientPhenotypeLabel": "Wormian bones",
+            "diseasePhenotypeCurie": "HP:0000270",
+            "diseasePhenotypeLabel": "Delayed cranial suture closure",
+            "micaCurie": "HP:0011329",
+            "micaLabel": "Abnormality of cranial sutures",
+            "score": 3.2135282185416054,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:309350"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0005259",
+            "patientPhenotypeLabel": "Abnormal facility in opposing the shoulders",
+            "diseasePhenotypeCurie": "HP:0000772",
+            "diseasePhenotypeLabel": "Abnormal rib morphology",
+            "micaCurie": "HP:0001547",
+            "micaLabel": "Abnormal rib cage morphology",
+            "score": 3.1821419047209347,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:2484"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002007",
+            "patientPhenotypeLabel": "Frontal bossing",
+            "diseasePhenotypeCurie": "HP:0002007",
+            "diseasePhenotypeLabel": "Frontal bossing",
+            "micaCurie": "HP:0002007",
+            "micaLabel": "Frontal bossing",
+            "score": 3.1012352661081346,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:2484"
+          }
+        ]
+      },
+      {
+        "rank": 16,
+        "diseaseCurie": "MONDO:0007204",
+        "diseaseLabel": "Cole-Carpenter syndrome 1",
+        "diseaseEntityId": 68490,
+        "bmaScore": 2.2552247000390544,
+        "normalizedScore": 0.249002,
+        "patientAverageScore": 2.36474189644672,
+        "diseaseAverageScore": 2.145707503631389,
+        "directPhenotypeCount": 23,
+        "matchedPhenotypeCount": 20,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002645",
+            "patientPhenotypeLabel": "Wormian bones",
+            "diseasePhenotypeCurie": "HP:0002645",
+            "diseasePhenotypeLabel": "Wormian bones",
+            "micaCurie": "HP:0002645",
+            "micaLabel": "Wormian bones",
+            "score": 4.8674178935465395,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:25683117"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008788",
+            "patientPhenotypeLabel": "Delayed pubic bone ossification",
+            "diseasePhenotypeCurie": "HP:6000871",
+            "diseasePhenotypeLabel": "Popcorn calcification",
+            "micaCurie": "HP:0003336",
+            "micaLabel": "Abnormal enchondral ossification",
+            "score": 4.144417749836913,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:25683117"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0006297",
+            "patientPhenotypeLabel": "Enamel hypoplasia",
+            "diseasePhenotypeCurie": "HP:0000703",
+            "diseasePhenotypeLabel": "Dentinogenesis imperfecta",
+            "micaCurie": "HP:3000050",
+            "micaLabel": "Abnormal odontoid tissue morphology",
+            "score": 4.026634714180529,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:25683117"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011800",
+            "patientPhenotypeLabel": "Midface retrusion",
+            "diseasePhenotypeCurie": "HP:0011800",
+            "diseasePhenotypeLabel": "Midface retrusion",
+            "micaCurie": "HP:0011800",
+            "micaLabel": "Midface retrusion",
+            "score": 3.3566290621822787,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:25683117"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000270",
+            "patientPhenotypeLabel": "Delayed cranial suture closure",
+            "diseasePhenotypeCurie": "HP:0005472",
+            "diseasePhenotypeLabel": "Orbital craniosynostosis",
+            "micaCurie": "HP:0011329",
+            "micaLabel": "Abnormality of cranial sutures",
+            "score": 3.2135282185416054,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:112240"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002007",
+            "patientPhenotypeLabel": "Frontal bossing",
+            "diseasePhenotypeCurie": "HP:0002007",
+            "diseasePhenotypeLabel": "Frontal bossing",
+            "micaCurie": "HP:0002007",
+            "micaLabel": "Frontal bossing",
+            "score": 3.1012352661081346,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:25683117"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000347",
+            "patientPhenotypeLabel": "Micrognathia",
+            "diseasePhenotypeCurie": "HP:0000347",
+            "diseasePhenotypeLabel": "Micrognathia",
+            "micaCurie": "HP:0000347",
+            "micaLabel": "Micrognathia",
+            "score": 2.4599269336863134,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:25683117"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000894",
+            "patientPhenotypeLabel": "Short clavicles",
+            "diseasePhenotypeCurie": "HP:0000347",
+            "diseasePhenotypeLabel": "Micrognathia",
+            "micaCurie": "HP:0009122",
+            "micaLabel": "Aplasia/hypoplasia affecting bones of the axial skeleton",
+            "score": 2.262486054696466,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:25683117"
+          }
+        ]
+      },
+      {
+        "rank": 17,
+        "diseaseCurie": "MONDO:0013815",
+        "diseaseLabel": "bent bone dysplasia syndrome 1",
+        "diseaseEntityId": 75101,
+        "bmaScore": 2.254636780368574,
+        "normalizedScore": 0.248937,
+        "patientAverageScore": 2.5157309570258524,
+        "diseaseAverageScore": 1.9935426037112953,
+        "directPhenotypeCount": 20,
+        "matchedPhenotypeCount": 20,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0008788",
+            "patientPhenotypeLabel": "Delayed pubic bone ossification",
+            "diseasePhenotypeCurie": "HP:0003173",
+            "diseasePhenotypeLabel": "Hypoplastic pubic bone",
+            "micaCurie": "HP:0003172",
+            "micaLabel": "Abnormal pubic bone morphology",
+            "score": 5.530712110956804,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:22387015"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000894",
+            "patientPhenotypeLabel": "Short clavicles",
+            "diseasePhenotypeCurie": "HP:0000894",
+            "diseasePhenotypeLabel": "Short clavicles",
+            "micaCurie": "HP:0000894",
+            "micaLabel": "Short clavicles",
+            "score": 5.393510989443318,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:22387015;OMIM:614592"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000680",
+            "patientPhenotypeLabel": "Delayed eruption of primary teeth",
+            "diseasePhenotypeCurie": "HP:0000695",
+            "diseasePhenotypeLabel": "Natal tooth",
+            "micaCurie": "HP:0006292",
+            "micaLabel": "Abnormality of dental eruption",
+            "score": 3.7840730770092184,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:22387015"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011800",
+            "patientPhenotypeLabel": "Midface retrusion",
+            "diseasePhenotypeCurie": "HP:0011800",
+            "diseasePhenotypeLabel": "Midface retrusion",
+            "micaCurie": "HP:0011800",
+            "micaLabel": "Midface retrusion",
+            "score": 3.3566290621822787,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:614592"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002645",
+            "patientPhenotypeLabel": "Wormian bones",
+            "diseasePhenotypeCurie": "HP:0004440",
+            "diseasePhenotypeLabel": "Coronal craniosynostosis",
+            "micaCurie": "HP:0011329",
+            "micaLabel": "Abnormality of cranial sutures",
+            "score": 3.2135282185416054,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:22387015"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000270",
+            "patientPhenotypeLabel": "Delayed cranial suture closure",
+            "diseasePhenotypeCurie": "HP:0004440",
+            "diseasePhenotypeLabel": "Coronal craniosynostosis",
+            "micaCurie": "HP:0011329",
+            "micaLabel": "Abnormality of cranial sutures",
+            "score": 3.2135282185416054,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:22387015"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0005259",
+            "patientPhenotypeLabel": "Abnormal facility in opposing the shoulders",
+            "diseasePhenotypeCurie": "HP:0001591",
+            "diseasePhenotypeLabel": "Bell-shaped thorax",
+            "micaCurie": "HP:0001547",
+            "micaLabel": "Abnormal rib cage morphology",
+            "score": 3.1821419047209347,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:614592"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002866",
+            "patientPhenotypeLabel": "Hypoplastic iliac wing",
+            "diseasePhenotypeCurie": "HP:0003173",
+            "diseasePhenotypeLabel": "Hypoplastic pubic bone",
+            "micaCurie": "HP:0003272",
+            "micaLabel": "Abnormal hip bone morphology",
+            "score": 2.8708640116724715,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:22387015"
+          }
+        ]
+      },
+      {
+        "rank": 18,
+        "diseaseCurie": "MONDO:0030019",
+        "diseaseLabel": "anauxetic dysplasia 3",
+        "diseaseEntityId": 83972,
+        "bmaScore": 2.2544985725560185,
+        "normalizedScore": 0.248921,
+        "patientAverageScore": 2.7147819558471022,
+        "diseaseAverageScore": 1.7942151892649347,
+        "directPhenotypeCount": 36,
+        "matchedPhenotypeCount": 20,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002866",
+            "patientPhenotypeLabel": "Hypoplastic iliac wing",
+            "diseasePhenotypeCurie": "HP:0003177",
+            "diseasePhenotypeLabel": "Squared iliac bones",
+            "micaCurie": "HP:0002867",
+            "micaLabel": "Abnormal ilium morphology",
+            "score": 4.3034824444666,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31250547"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000774",
+            "patientPhenotypeLabel": "Narrow chest",
+            "diseasePhenotypeCurie": "HP:0000774",
+            "diseasePhenotypeLabel": "Narrow chest",
+            "micaCurie": "HP:0000774",
+            "micaLabel": "Narrow chest",
+            "score": 4.197260231211293,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31250547"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0006040",
+            "patientPhenotypeLabel": "Long second metacarpal",
+            "diseasePhenotypeCurie": "HP:0010049",
+            "diseasePhenotypeLabel": "Short metacarpal",
+            "micaCurie": "HP:0005914",
+            "micaLabel": "Aplasia/Hypoplasia involving the metacarpal bones",
+            "score": 3.892286661649451,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31250547"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003396",
+            "patientPhenotypeLabel": "Syringomyelia",
+            "diseasePhenotypeCurie": "HP:0002176",
+            "diseasePhenotypeLabel": "Spinal cord compression",
+            "micaCurie": "HP:0002143",
+            "micaLabel": "Abnormal spinal cord morphology",
+            "score": 3.743866656531178,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31250547"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011069",
+            "patientPhenotypeLabel": "Supernumerary tooth",
+            "diseasePhenotypeCurie": "HP:0000677",
+            "diseasePhenotypeLabel": "Oligodontia",
+            "micaCurie": "HP:0006483",
+            "micaLabel": "Abnormal number of teeth",
+            "score": 3.564011192232417,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31250547"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011800",
+            "patientPhenotypeLabel": "Midface retrusion",
+            "diseasePhenotypeCurie": "HP:0011800",
+            "diseasePhenotypeLabel": "Midface retrusion",
+            "micaCurie": "HP:0011800",
+            "micaLabel": "Midface retrusion",
+            "score": 3.3566290621822787,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31250547"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002645",
+            "patientPhenotypeLabel": "Wormian bones",
+            "diseasePhenotypeCurie": "HP:0000260",
+            "diseasePhenotypeLabel": "Wide anterior fontanel",
+            "micaCurie": "HP:0000235",
+            "micaLabel": "Abnormal cranial suture/fontanelle morphology",
+            "score": 2.9932874268853573,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31250547"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000270",
+            "patientPhenotypeLabel": "Delayed cranial suture closure",
+            "diseasePhenotypeCurie": "HP:0000260",
+            "diseasePhenotypeLabel": "Wide anterior fontanel",
+            "micaCurie": "HP:0000235",
+            "micaLabel": "Abnormal cranial suture/fontanelle morphology",
+            "score": 2.9932874268853573,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31250547"
+          }
+        ]
+      },
+      {
+        "rank": 19,
+        "diseaseCurie": "MONDO:0009467",
+        "diseaseLabel": "natal teeth-intestinal pseudoobstruction-patent ductus syndrome",
+        "diseaseEntityId": 70753,
+        "bmaScore": 2.2443117452738974,
+        "normalizedScore": 0.247797,
+        "patientAverageScore": 0.7045504135385764,
+        "diseaseAverageScore": 3.7840730770092184,
+        "directPhenotypeCount": 1,
+        "matchedPhenotypeCount": 20,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000680",
+            "patientPhenotypeLabel": "Delayed eruption of primary teeth",
+            "diseasePhenotypeCurie": "HP:0000695",
+            "diseasePhenotypeLabel": "Natal tooth",
+            "micaCurie": "HP:0006292",
+            "micaLabel": "Abnormality of dental eruption",
+            "score": 3.7840730770092184,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:243185"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011069",
+            "patientPhenotypeLabel": "Supernumerary tooth",
+            "diseasePhenotypeCurie": "HP:0000695",
+            "diseasePhenotypeLabel": "Natal tooth",
+            "micaCurie": "HP:0000164",
+            "micaLabel": "Abnormality of the dentition",
+            "score": 2.2326989655298792,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:243185"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0006297",
+            "patientPhenotypeLabel": "Enamel hypoplasia",
+            "diseasePhenotypeCurie": "HP:0000695",
+            "diseasePhenotypeLabel": "Natal tooth",
+            "micaCurie": "HP:0000164",
+            "micaLabel": "Abnormality of the dentition",
+            "score": 2.2326989655298792,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:243185"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002007",
+            "patientPhenotypeLabel": "Frontal bossing",
+            "diseasePhenotypeCurie": "HP:0000695",
+            "diseasePhenotypeLabel": "Natal tooth",
+            "micaCurie": "HP:0000271",
+            "micaLabel": "Abnormality of the face",
+            "score": 0.9071820911705433,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:243185"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0005280",
+            "patientPhenotypeLabel": "Depressed nasal bridge",
+            "diseasePhenotypeCurie": "HP:0000695",
+            "diseasePhenotypeLabel": "Natal tooth",
+            "micaCurie": "HP:0000271",
+            "micaLabel": "Abnormality of the face",
+            "score": 0.9071820911705433,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:243185"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011800",
+            "patientPhenotypeLabel": "Midface retrusion",
+            "diseasePhenotypeCurie": "HP:0000695",
+            "diseasePhenotypeLabel": "Natal tooth",
+            "micaCurie": "HP:0000271",
+            "micaLabel": "Abnormality of the face",
+            "score": 0.9071820911705433,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:243185"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002645",
+            "patientPhenotypeLabel": "Wormian bones",
+            "diseasePhenotypeCurie": "HP:0000695",
+            "diseasePhenotypeLabel": "Natal tooth",
+            "micaCurie": "HP:0000234",
+            "micaLabel": "Abnormality of the head",
+            "score": 0.7735785094104541,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:243185"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000347",
+            "patientPhenotypeLabel": "Micrognathia",
+            "diseasePhenotypeCurie": "HP:0000695",
+            "diseasePhenotypeLabel": "Natal tooth",
+            "micaCurie": "HP:0000234",
+            "micaLabel": "Abnormality of the head",
+            "score": 0.7735785094104541,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:243185"
+          }
+        ]
+      },
+      {
+        "rank": 20,
+        "diseaseCurie": "MONDO:0013615",
+        "diseaseLabel": "craniosynostosis and dental anomalies",
+        "diseaseEntityId": 74901,
+        "bmaScore": 2.2385627850827983,
+        "normalizedScore": 0.247162,
+        "patientAverageScore": 2.521679048987097,
+        "diseaseAverageScore": 1.9554465211785,
+        "directPhenotypeCount": 49,
+        "matchedPhenotypeCount": 20,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011069",
+            "patientPhenotypeLabel": "Supernumerary tooth",
+            "diseasePhenotypeCurie": "HP:0011069",
+            "diseasePhenotypeLabel": "Supernumerary tooth",
+            "micaCurie": "HP:0011069",
+            "micaLabel": "Supernumerary tooth",
+            "score": 5.798976097551483,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:21741611"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003396",
+            "patientPhenotypeLabel": "Syringomyelia",
+            "diseasePhenotypeCurie": "HP:0003396",
+            "diseasePhenotypeLabel": "Syringomyelia",
+            "micaCurie": "HP:0003396",
+            "micaLabel": "Syringomyelia",
+            "score": 5.591336732773239,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:30811827"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000680",
+            "patientPhenotypeLabel": "Delayed eruption of primary teeth",
+            "diseasePhenotypeCurie": "HP:0000684",
+            "diseasePhenotypeLabel": "Delayed eruption of teeth",
+            "micaCurie": "HP:0000684",
+            "micaLabel": "Delayed eruption of teeth",
+            "score": 4.220790728621488,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:21741611"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011800",
+            "patientPhenotypeLabel": "Midface retrusion",
+            "diseasePhenotypeCurie": "HP:0011800",
+            "diseasePhenotypeLabel": "Midface retrusion",
+            "micaCurie": "HP:0011800",
+            "micaLabel": "Midface retrusion",
+            "score": 3.3566290621822787,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:30811827"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002645",
+            "patientPhenotypeLabel": "Wormian bones",
+            "diseasePhenotypeCurie": "HP:0011330",
+            "diseasePhenotypeLabel": "Metopic synostosis",
+            "micaCurie": "HP:0011329",
+            "micaLabel": "Abnormality of cranial sutures",
+            "score": 3.2135282185416054,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:21741611"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000270",
+            "patientPhenotypeLabel": "Delayed cranial suture closure",
+            "diseasePhenotypeCurie": "HP:0011330",
+            "diseasePhenotypeLabel": "Metopic synostosis",
+            "micaCurie": "HP:0011329",
+            "micaLabel": "Abnormality of cranial sutures",
+            "score": 3.2135282185416054,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:21741611"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002007",
+            "patientPhenotypeLabel": "Frontal bossing",
+            "diseasePhenotypeCurie": "HP:0002007",
+            "diseasePhenotypeLabel": "Frontal bossing",
+            "micaCurie": "HP:0002007",
+            "micaLabel": "Frontal bossing",
+            "score": 3.1012352661081346,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:30811827"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0005280",
+            "patientPhenotypeLabel": "Depressed nasal bridge",
+            "diseasePhenotypeCurie": "HP:0005280",
+            "diseasePhenotypeLabel": "Depressed nasal bridge",
+            "micaCurie": "HP:0005280",
+            "micaLabel": "Depressed nasal bridge",
+            "score": 2.8167967904021958,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:21741611"
+          }
+        ]
+      },
+      {
+        "rank": 21,
+        "diseaseCurie": "MONDO:0007322",
+        "diseaseLabel": "chondrodysplasia punctata, tibial-metacarpal type",
+        "diseaseEntityId": 68608,
+        "bmaScore": 2.237683435814655,
+        "normalizedScore": 0.247065,
+        "patientAverageScore": 1.6959506145355128,
+        "diseaseAverageScore": 2.7794162570937977,
+        "directPhenotypeCount": 14,
+        "matchedPhenotypeCount": 20,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0006040",
+            "patientPhenotypeLabel": "Long second metacarpal",
+            "diseasePhenotypeCurie": "HP:0010038",
+            "diseasePhenotypeLabel": "Short 2nd metacarpal",
+            "micaCurie": "HP:0010036",
+            "micaLabel": "Aplasia/Hypoplasia of the 2nd metacarpal",
+            "score": 8.36392545501302,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:118651"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008788",
+            "patientPhenotypeLabel": "Delayed pubic bone ossification",
+            "diseasePhenotypeCurie": "HP:0010655",
+            "diseasePhenotypeLabel": "Epiphyseal stippling",
+            "micaCurie": "HP:0003336",
+            "micaLabel": "Abnormal enchondral ossification",
+            "score": 4.144417749836913,
+            "evidenceCode": "TAS",
+            "referenceText": "PMID:9719382"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011800",
+            "patientPhenotypeLabel": "Midface retrusion",
+            "diseasePhenotypeCurie": "HP:0011800",
+            "diseasePhenotypeLabel": "Midface retrusion",
+            "micaCurie": "HP:0011800",
+            "micaLabel": "Midface retrusion",
+            "score": 3.3566290621822787,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:118651"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000347",
+            "patientPhenotypeLabel": "Micrognathia",
+            "diseasePhenotypeCurie": "HP:0000272",
+            "diseasePhenotypeLabel": "Malar flattening",
+            "micaCurie": "HP:0011821",
+            "micaLabel": "Abnormal facial skeleton morphology",
+            "score": 1.8724434828556507,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:118651"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000894",
+            "patientPhenotypeLabel": "Short clavicles",
+            "diseasePhenotypeCurie": "HP:0010044",
+            "diseasePhenotypeLabel": "Short 4th metacarpal",
+            "micaCurie": "HP:0009115",
+            "micaLabel": "Aplasia/hypoplasia involving the skeleton",
+            "score": 1.8323192298049942,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:118651"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0005280",
+            "patientPhenotypeLabel": "Depressed nasal bridge",
+            "diseasePhenotypeCurie": "HP:0000457",
+            "diseasePhenotypeLabel": "Depressed nasal ridge",
+            "micaCurie": "HP:0005105",
+            "micaLabel": "Abnormal nasal morphology",
+            "score": 1.7572752688148046,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:118651"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002650",
+            "patientPhenotypeLabel": "Scoliosis",
+            "diseasePhenotypeCurie": "HP:0003417",
+            "diseasePhenotypeLabel": "Coronal cleft vertebrae",
+            "micaCurie": "HP:0000925",
+            "micaLabel": "Abnormality of the vertebral column",
+            "score": 1.7194848920343693,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:118651"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002866",
+            "patientPhenotypeLabel": "Hypoplastic iliac wing",
+            "diseasePhenotypeCurie": "HP:0010655",
+            "diseasePhenotypeLabel": "Epiphyseal stippling",
+            "micaCurie": "HP:0011844",
+            "micaLabel": "Abnormal appendicular skeleton morphology",
+            "score": 1.379672205058158,
+            "evidenceCode": "TAS",
+            "referenceText": "PMID:9719382"
+          }
+        ]
+      },
+      {
+        "rank": 22,
+        "diseaseCurie": "MONDO:0013795",
+        "diseaseLabel": "fibrochondrogenesis 2",
+        "diseaseEntityId": 75081,
+        "bmaScore": 2.2309924501014606,
+        "normalizedScore": 0.246326,
+        "patientAverageScore": 2.150662254038955,
+        "diseaseAverageScore": 2.3113226461639664,
+        "directPhenotypeCount": 21,
+        "matchedPhenotypeCount": 20,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0008788",
+            "patientPhenotypeLabel": "Delayed pubic bone ossification",
+            "diseasePhenotypeCurie": "HP:0003173",
+            "diseasePhenotypeLabel": "Hypoplastic pubic bone",
+            "micaCurie": "HP:0003172",
+            "micaLabel": "Abnormal pubic bone morphology",
+            "score": 5.530712110956804,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:22246659"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002866",
+            "patientPhenotypeLabel": "Hypoplastic iliac wing",
+            "diseasePhenotypeCurie": "HP:0000946",
+            "diseasePhenotypeLabel": "Hypoplastic ilia",
+            "micaCurie": "HP:0000946",
+            "micaLabel": "Hypoplastic ilia",
+            "score": 4.929938250527874,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:22246659"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000774",
+            "patientPhenotypeLabel": "Narrow chest",
+            "diseasePhenotypeCurie": "HP:0005257",
+            "diseasePhenotypeLabel": "Thoracic hypoplasia",
+            "micaCurie": "HP:0005257",
+            "micaLabel": "Thoracic hypoplasia",
+            "score": 3.9944776025459987,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:22246659"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000894",
+            "patientPhenotypeLabel": "Short clavicles",
+            "diseasePhenotypeCurie": "HP:0000773",
+            "diseasePhenotypeLabel": "Short ribs",
+            "micaCurie": "HP:0006711",
+            "micaLabel": "Aplasia/Hypoplasia involving bones of the thorax",
+            "score": 3.810048563412479,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:22246659"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011800",
+            "patientPhenotypeLabel": "Midface retrusion",
+            "diseasePhenotypeCurie": "HP:0011800",
+            "diseasePhenotypeLabel": "Midface retrusion",
+            "micaCurie": "HP:0011800",
+            "micaLabel": "Midface retrusion",
+            "score": 3.3566290621822787,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:22246659"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0005259",
+            "patientPhenotypeLabel": "Abnormal facility in opposing the shoulders",
+            "diseasePhenotypeCurie": "HP:0001591",
+            "diseasePhenotypeLabel": "Bell-shaped thorax",
+            "micaCurie": "HP:0001547",
+            "micaLabel": "Abnormal rib cage morphology",
+            "score": 3.1821419047209347,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:22246659"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002007",
+            "patientPhenotypeLabel": "Frontal bossing",
+            "diseasePhenotypeCurie": "HP:0002007",
+            "diseasePhenotypeLabel": "Frontal bossing",
+            "micaCurie": "HP:0002007",
+            "micaLabel": "Frontal bossing",
+            "score": 3.1012352661081346,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:22246659"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000347",
+            "patientPhenotypeLabel": "Micrognathia",
+            "diseasePhenotypeCurie": "HP:0000347",
+            "diseasePhenotypeLabel": "Micrognathia",
+            "micaCurie": "HP:0000347",
+            "micaLabel": "Micrognathia",
+            "score": 2.4599269336863134,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:22246659"
+          }
+        ]
+      },
+      {
+        "rank": 23,
+        "diseaseCurie": "MONDO:0007875",
+        "diseaseLabel": "Larsen syndrome",
+        "diseaseEntityId": 69161,
+        "bmaScore": 2.2222875446212886,
+        "normalizedScore": 0.245365,
+        "patientAverageScore": 2.8034298607562684,
+        "diseaseAverageScore": 1.6411452284863088,
+        "directPhenotypeCount": 63,
+        "matchedPhenotypeCount": 20,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0008788",
+            "patientPhenotypeLabel": "Delayed pubic bone ossification",
+            "diseasePhenotypeCurie": "HP:0006067",
+            "diseasePhenotypeLabel": "Multiple carpal ossification centers",
+            "micaCurie": "HP:0003336",
+            "micaLabel": "Abnormal enchondral ossification",
+            "score": 4.144417749836913,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:150250"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0006040",
+            "patientPhenotypeLabel": "Long second metacarpal",
+            "diseasePhenotypeCurie": "HP:0010049",
+            "diseasePhenotypeLabel": "Short metacarpal",
+            "micaCurie": "HP:0005914",
+            "micaLabel": "Aplasia/Hypoplasia involving the metacarpal bones",
+            "score": 3.892286661649451,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:150250"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003396",
+            "patientPhenotypeLabel": "Syringomyelia",
+            "diseasePhenotypeCurie": "HP:0003298",
+            "diseasePhenotypeLabel": "Spina bifida occulta",
+            "micaCurie": "HP:0002143",
+            "micaLabel": "Abnormal spinal cord morphology",
+            "score": 3.743866656531178,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:150250"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011069",
+            "patientPhenotypeLabel": "Supernumerary tooth",
+            "diseasePhenotypeCurie": "HP:0000668",
+            "diseasePhenotypeLabel": "Hypodontia",
+            "micaCurie": "HP:0006483",
+            "micaLabel": "Abnormal number of teeth",
+            "score": 3.564011192232417,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:150250"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011800",
+            "patientPhenotypeLabel": "Midface retrusion",
+            "diseasePhenotypeCurie": "HP:0011800",
+            "diseasePhenotypeLabel": "Midface retrusion",
+            "micaCurie": "HP:0011800",
+            "micaLabel": "Midface retrusion",
+            "score": 3.3566290621822787,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:16801345"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002645",
+            "patientPhenotypeLabel": "Wormian bones",
+            "diseasePhenotypeCurie": "HP:0001363",
+            "diseasePhenotypeLabel": "Craniosynostosis",
+            "micaCurie": "HP:0011329",
+            "micaLabel": "Abnormality of cranial sutures",
+            "score": 3.2135282185416054,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:503"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000270",
+            "patientPhenotypeLabel": "Delayed cranial suture closure",
+            "diseasePhenotypeCurie": "HP:0001363",
+            "diseasePhenotypeLabel": "Craniosynostosis",
+            "micaCurie": "HP:0011329",
+            "micaLabel": "Abnormality of cranial sutures",
+            "score": 3.2135282185416054,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:503"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002007",
+            "patientPhenotypeLabel": "Frontal bossing",
+            "diseasePhenotypeCurie": "HP:0002007",
+            "diseasePhenotypeLabel": "Frontal bossing",
+            "micaCurie": "HP:0002007",
+            "micaLabel": "Frontal bossing",
+            "score": 3.1012352661081346,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:150250"
+          }
+        ]
+      },
+      {
+        "rank": 24,
+        "diseaseCurie": "MONDO:0009226",
+        "diseaseLabel": "fibrochondrogenesis 1",
+        "diseaseEntityId": 70512,
+        "bmaScore": 2.218943490467922,
+        "normalizedScore": 0.244996,
+        "patientAverageScore": 2.47933361500428,
+        "diseaseAverageScore": 1.9585533659315644,
+        "directPhenotypeCount": 50,
+        "matchedPhenotypeCount": 20,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000894",
+            "patientPhenotypeLabel": "Short clavicles",
+            "diseasePhenotypeCurie": "HP:0006645",
+            "diseasePhenotypeLabel": "Thin clavicles",
+            "micaCurie": "HP:0000889",
+            "micaLabel": "Abnormal clavicle morphology",
+            "score": 4.503195743972425,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:228520"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000774",
+            "patientPhenotypeLabel": "Narrow chest",
+            "diseasePhenotypeCurie": "HP:0005257",
+            "diseasePhenotypeLabel": "Thoracic hypoplasia",
+            "micaCurie": "HP:0005257",
+            "micaLabel": "Thoracic hypoplasia",
+            "score": 3.9944776025459987,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:21035103"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002645",
+            "patientPhenotypeLabel": "Wormian bones",
+            "diseasePhenotypeCurie": "HP:0005476",
+            "diseasePhenotypeLabel": "Widely patent sagittal suture",
+            "micaCurie": "HP:0011329",
+            "micaLabel": "Abnormality of cranial sutures",
+            "score": 3.2135282185416054,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:228520"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000270",
+            "patientPhenotypeLabel": "Delayed cranial suture closure",
+            "diseasePhenotypeCurie": "HP:0005476",
+            "diseasePhenotypeLabel": "Widely patent sagittal suture",
+            "micaCurie": "HP:0011329",
+            "micaLabel": "Abnormality of cranial sutures",
+            "score": 3.2135282185416054,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:228520"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0005259",
+            "patientPhenotypeLabel": "Abnormal facility in opposing the shoulders",
+            "diseasePhenotypeCurie": "HP:0000922",
+            "diseasePhenotypeLabel": "Posterior rib cupping",
+            "micaCurie": "HP:0001547",
+            "micaLabel": "Abnormal rib cage morphology",
+            "score": 3.1821419047209347,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:21035103"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002007",
+            "patientPhenotypeLabel": "Frontal bossing",
+            "diseasePhenotypeCurie": "HP:0002007",
+            "diseasePhenotypeLabel": "Frontal bossing",
+            "micaCurie": "HP:0002007",
+            "micaLabel": "Frontal bossing",
+            "score": 3.1012352661081346,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:228520"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008788",
+            "patientPhenotypeLabel": "Delayed pubic bone ossification",
+            "diseasePhenotypeCurie": "HP:0100865",
+            "diseasePhenotypeLabel": "Broad ischia",
+            "micaCurie": "HP:0003272",
+            "micaLabel": "Abnormal hip bone morphology",
+            "score": 2.8708640116724715,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:228520"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002866",
+            "patientPhenotypeLabel": "Hypoplastic iliac wing",
+            "diseasePhenotypeCurie": "HP:0100865",
+            "diseasePhenotypeLabel": "Broad ischia",
+            "micaCurie": "HP:0003272",
+            "micaLabel": "Abnormal hip bone morphology",
+            "score": 2.8708640116724715,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:228520"
+          }
+        ]
+      },
+      {
+        "rank": 25,
+        "diseaseCurie": "MONDO:0009999",
+        "diseaseLabel": "autosomal recessive Robinow syndrome",
+        "diseaseEntityId": 71285,
+        "bmaScore": 2.2099316786281458,
+        "normalizedScore": 0.244001,
+        "patientAverageScore": 2.8870177301079516,
+        "diseaseAverageScore": 1.5328456271483404,
+        "directPhenotypeCount": 107,
+        "matchedPhenotypeCount": 20,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000270",
+            "patientPhenotypeLabel": "Delayed cranial suture closure",
+            "diseasePhenotypeCurie": "HP:0000270",
+            "diseasePhenotypeLabel": "Delayed cranial suture closure",
+            "micaCurie": "HP:0000270",
+            "micaLabel": "Delayed cranial suture closure",
+            "score": 4.766613194424574,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:268310"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000680",
+            "patientPhenotypeLabel": "Delayed eruption of primary teeth",
+            "diseasePhenotypeCurie": "HP:0000696",
+            "diseasePhenotypeLabel": "Delayed eruption of permanent teeth",
+            "micaCurie": "HP:0000684",
+            "micaLabel": "Delayed eruption of teeth",
+            "score": 4.220790728621488,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:268310"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0006040",
+            "patientPhenotypeLabel": "Long second metacarpal",
+            "diseasePhenotypeCurie": "HP:0005914",
+            "diseasePhenotypeLabel": "Aplasia/Hypoplasia involving the metacarpal bones",
+            "micaCurie": "HP:0005914",
+            "micaLabel": "Aplasia/Hypoplasia involving the metacarpal bones",
+            "score": 3.892286661649451,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:268310"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000894",
+            "patientPhenotypeLabel": "Short clavicles",
+            "diseasePhenotypeCurie": "HP:0000921",
+            "diseasePhenotypeLabel": "Missing ribs",
+            "micaCurie": "HP:0006711",
+            "micaLabel": "Aplasia/Hypoplasia involving bones of the thorax",
+            "score": 3.810048563412479,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:268310"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011069",
+            "patientPhenotypeLabel": "Supernumerary tooth",
+            "diseasePhenotypeCurie": "HP:0009804",
+            "diseasePhenotypeLabel": "Tooth agenesis",
+            "micaCurie": "HP:0006483",
+            "micaLabel": "Abnormal number of teeth",
+            "score": 3.564011192232417,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:35344616"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011800",
+            "patientPhenotypeLabel": "Midface retrusion",
+            "diseasePhenotypeCurie": "HP:0011800",
+            "diseasePhenotypeLabel": "Midface retrusion",
+            "micaCurie": "HP:0011800",
+            "micaLabel": "Midface retrusion",
+            "score": 3.3566290621822787,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:35344616"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002645",
+            "patientPhenotypeLabel": "Wormian bones",
+            "diseasePhenotypeCurie": "HP:0000270",
+            "diseasePhenotypeLabel": "Delayed cranial suture closure",
+            "micaCurie": "HP:0011329",
+            "micaLabel": "Abnormality of cranial sutures",
+            "score": 3.2135282185416054,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:268310"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0005259",
+            "patientPhenotypeLabel": "Abnormal facility in opposing the shoulders",
+            "diseasePhenotypeCurie": "HP:0000921",
+            "diseasePhenotypeLabel": "Missing ribs",
+            "micaCurie": "HP:0001547",
+            "micaLabel": "Abnormal rib cage morphology",
+            "score": 3.1821419047209347,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:268310"
+          }
+        ]
+      }
+    ],
+    "engineSummary": {
+      "diseaseCount": 8579,
+      "phenotypeCount": 19389,
+      "sourceMode": "relationship_fallback",
+      "generatedAt": "2026-03-15T20:43:58.513Z"
+    }
+  }
+}

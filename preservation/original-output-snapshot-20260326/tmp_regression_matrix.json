@@ -1,0 +1,1363 @@
+[
+  {
+    "case_id": "PMID_10939567_EMD2_III-7",
+    "truth_gene": "LMNA",
+    "rank_before": 6,
+    "rank_after": 13,
+    "pre_top1_gene": "COL6A2",
+    "pre_top1_score": 0.37814,
+    "pre_top1_disease": "MONDO:0009714",
+    "pre_top1_disease_label": "myosclerosis",
+    "pre_top1_after_rank": 1,
+    "post_top1_gene": "COL6A2",
+    "post_top1_score": 0.32221,
+    "post_top1_disease": "MONDO:0100225",
+    "post_top1_disease_label": "collagen 6-related myopathy",
+    "post_top1_pre_rank": 1,
+    "post_top1_has_propagated_edges": true,
+    "post_top1_propagation_types": [
+      "C"
+    ],
+    "matched_propagated_terms": [
+      {
+        "patientPhenotypeCurie": "HP:0034677",
+        "patientPhenotypeLabel": "Ankle contracture",
+        "diseasePhenotypeCurie": "HP:0034677",
+        "diseasePhenotypeLabel": "Ankle contracture",
+        "propagationCode": "C",
+        "reference": "HGNC:2211",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0100225:HP:0034677:HGNC:2211"
+      },
+      {
+        "patientPhenotypeCurie": "HP:0003306",
+        "patientPhenotypeLabel": "Spinal rigidity",
+        "diseasePhenotypeCurie": "HP:0003306",
+        "diseasePhenotypeLabel": "Spinal rigidity",
+        "propagationCode": "C",
+        "reference": "HGNC:2211",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0100225:HP:0003306:HGNC:2211"
+      },
+      {
+        "patientPhenotypeCurie": "HP:0008994",
+        "patientPhenotypeLabel": "Proximal lower limb muscle weakness",
+        "diseasePhenotypeCurie": "HP:0003731",
+        "diseasePhenotypeLabel": "Quadriceps muscle weakness",
+        "propagationCode": "C",
+        "reference": "HGNC:2211",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0100225:HP:0003731:HGNC:2211"
+      },
+      {
+        "patientPhenotypeCurie": "HP:0003700",
+        "patientPhenotypeLabel": "Generalized amyotrophy",
+        "diseasePhenotypeCurie": "HP:0003700",
+        "diseasePhenotypeLabel": "Generalized amyotrophy",
+        "propagationCode": "C",
+        "reference": "HGNC:2211",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0100225:HP:0003700:HGNC:2211"
+      },
+      {
+        "patientPhenotypeCurie": "HP:0025258",
+        "patientPhenotypeLabel": "Stiff neck",
+        "diseasePhenotypeCurie": "HP:0005997",
+        "diseasePhenotypeLabel": "Neck joint contracture",
+        "propagationCode": "C",
+        "reference": "HGNC:2212",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0100225:HP:0005997:HGNC:2212"
+      },
+      {
+        "patientPhenotypeCurie": "HP:0034391",
+        "patientPhenotypeLabel": "Elbow contracture",
+        "diseasePhenotypeCurie": "HP:0034391",
+        "diseasePhenotypeLabel": "Elbow contracture",
+        "propagationCode": "C",
+        "reference": "HGNC:2211",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0100225:HP:0034391:HGNC:2211"
+      },
+      {
+        "patientPhenotypeCurie": "HP:0008997",
+        "patientPhenotypeLabel": "Proximal upper limb muscle weakness",
+        "diseasePhenotypeCurie": "HP:0009073",
+        "diseasePhenotypeLabel": "Progressive proximal muscle weakness",
+        "propagationCode": "C",
+        "reference": "HGNC:2211",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0100225:HP:0009073:HGNC:2211"
+      }
+    ],
+    "post_top1_direct_score": 0.32221,
+    "post_top1_disease_support_score": 0.306068
+  },
+  {
+    "case_id": "PMID_18551513_3",
+    "truth_gene": "LMNA",
+    "rank_before": 17,
+    "rank_after": 32,
+    "pre_top1_gene": "SELENON",
+    "pre_top1_score": 0.29691,
+    "pre_top1_disease": "MONDO:0011271",
+    "pre_top1_disease_label": "rigid spine muscular dystrophy 1",
+    "pre_top1_after_rank": 1,
+    "post_top1_gene": "SELENON",
+    "post_top1_score": 0.263074,
+    "post_top1_disease": "MONDO:0100100",
+    "post_top1_disease_label": "SELENON-related myopathy",
+    "post_top1_pre_rank": 1,
+    "post_top1_has_propagated_edges": true,
+    "post_top1_propagation_types": [
+      "C"
+    ],
+    "matched_propagated_terms": [
+      {
+        "patientPhenotypeCurie": "HP:0003327",
+        "patientPhenotypeLabel": "Axial muscle weakness",
+        "diseasePhenotypeCurie": "HP:0003327",
+        "diseasePhenotypeLabel": "Axial muscle weakness",
+        "propagationCode": "C",
+        "reference": "HGNC:15999",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0100100:HP:0003327:HGNC:15999"
+      },
+      {
+        "patientPhenotypeCurie": "HP:0100295",
+        "patientPhenotypeLabel": "Muscle fiber atrophy",
+        "diseasePhenotypeCurie": "HP:0100295",
+        "diseasePhenotypeLabel": "Muscle fiber atrophy",
+        "propagationCode": "C",
+        "reference": "HGNC:15999",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0100100:HP:0100295:HGNC:15999"
+      },
+      {
+        "patientPhenotypeCurie": "HP:0003560",
+        "patientPhenotypeLabel": "Muscular dystrophy",
+        "diseasePhenotypeCurie": "HP:0003560",
+        "diseasePhenotypeLabel": "Muscular dystrophy",
+        "propagationCode": "C",
+        "reference": "HGNC:15999",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0100100:HP:0003560:HGNC:15999"
+      },
+      {
+        "patientPhenotypeCurie": "HP:0002747",
+        "patientPhenotypeLabel": "Respiratory insufficiency due to muscle weakness",
+        "diseasePhenotypeCurie": "HP:0004889",
+        "diseasePhenotypeLabel": "Intermittent episodes of respiratory insufficiency due to muscle weakness",
+        "propagationCode": "C",
+        "reference": "HGNC:15999",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0100100:HP:0004889:HGNC:15999"
+      },
+      {
+        "patientPhenotypeCurie": "HP:0002421",
+        "patientPhenotypeLabel": "Poor head control",
+        "diseasePhenotypeCurie": "HP:0002421",
+        "diseasePhenotypeLabel": "Poor head control",
+        "propagationCode": "C",
+        "reference": "HGNC:15999",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0100100:HP:0002421:HGNC:15999"
+      },
+      {
+        "patientPhenotypeCurie": "HP:0031936",
+        "patientPhenotypeLabel": "Delayed ability to walk",
+        "diseasePhenotypeCurie": "HP:0031936",
+        "diseasePhenotypeLabel": "Delayed ability to walk",
+        "propagationCode": "C",
+        "reference": "HGNC:15999",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0100100:HP:0031936:HGNC:15999"
+      },
+      {
+        "patientPhenotypeCurie": "HP:0001558",
+        "patientPhenotypeLabel": "Decreased fetal movement",
+        "diseasePhenotypeCurie": "HP:0001558",
+        "diseasePhenotypeLabel": "Decreased fetal movement",
+        "propagationCode": "C",
+        "reference": "HGNC:15999",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0100100:HP:0001558:HGNC:15999"
+      },
+      {
+        "patientPhenotypeCurie": "HP:0003701",
+        "patientPhenotypeLabel": "Proximal muscle weakness",
+        "diseasePhenotypeCurie": "HP:0003391",
+        "diseasePhenotypeLabel": "Gowers sign",
+        "propagationCode": "C",
+        "reference": "HGNC:15999",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0100100:HP:0003391:HGNC:15999"
+      }
+    ],
+    "post_top1_direct_score": 0.263074,
+    "post_top1_disease_support_score": 0.263074
+  },
+  {
+    "case_id": "PMID_21683322_25",
+    "truth_gene": "FBN1",
+    "rank_before": 7,
+    "rank_after": 8,
+    "pre_top1_gene": "RNU4ATAC",
+    "pre_top1_score": 0.268512,
+    "pre_top1_disease": "MONDO:0008871",
+    "pre_top1_disease_label": "microcephalic osteodysplastic primordial dwarfism type I",
+    "pre_top1_after_rank": 2,
+    "post_top1_gene": "COL9A3",
+    "post_top1_score": 0.247458,
+    "post_top1_disease": "MONDO:0019354",
+    "post_top1_disease_label": "Stickler syndrome",
+    "post_top1_pre_rank": null,
+    "post_top1_has_propagated_edges": true,
+    "post_top1_propagation_types": [
+      "A",
+      "C"
+    ],
+    "matched_propagated_terms": [
+      {
+        "patientPhenotypeCurie": "HP:0031027",
+        "patientPhenotypeLabel": "Internal notch of the femoral head",
+        "diseasePhenotypeCurie": "HP:0010665",
+        "diseasePhenotypeLabel": "Bilateral coxa valga",
+        "propagationCode": "C",
+        "reference": "HGNC:2217",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0019354:HP:0010665:HGNC:2217"
+      },
+      {
+        "patientPhenotypeCurie": "HP:0001387",
+        "patientPhenotypeLabel": "Joint stiffness",
+        "diseasePhenotypeCurie": "HP:0003066",
+        "diseasePhenotypeLabel": "Limited knee extension",
+        "propagationCode": "C",
+        "reference": "HGNC:2219",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0019354:HP:0003066:HGNC:2219"
+      },
+      {
+        "patientPhenotypeCurie": "HP:0000311",
+        "patientPhenotypeLabel": "Round face",
+        "diseasePhenotypeCurie": "HP:0012368",
+        "diseasePhenotypeLabel": "Flat face",
+        "propagationCode": "C",
+        "reference": "HGNC:2217",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0019354:HP:0012368:HGNC:2217"
+      },
+      {
+        "patientPhenotypeCurie": "HP:0000527",
+        "patientPhenotypeLabel": "Long eyelashes",
+        "diseasePhenotypeCurie": "HP:0000494",
+        "diseasePhenotypeLabel": "Downslanted palpebral fissures",
+        "propagationCode": "C",
+        "reference": "HGNC:2219",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0019354:HP:0000494:HGNC:2219"
+      },
+      {
+        "patientPhenotypeCurie": "HP:0000414",
+        "patientPhenotypeLabel": "Bulbous nose",
+        "diseasePhenotypeCurie": "HP:0005280",
+        "diseasePhenotypeLabel": "Depressed nasal bridge",
+        "propagationCode": "A",
+        "reference": "ORPHA:828",
+        "sourceRecordKey": "phenotype-propagation:A:MONDO:0019354:HP:0005280:ORPHA:828"
+      }
+    ],
+    "post_top1_direct_score": 0.179038,
+    "post_top1_disease_support_score": 0.247458
+  },
+  {
+    "case_id": "PMID_26247899_P2-1",
+    "truth_gene": "SMAD2",
+    "rank_before": 1,
+    "rank_after": 2,
+    "pre_top1_gene": "SMAD2",
+    "pre_top1_score": 0.327149,
+    "pre_top1_disease": "MONDO:0030500",
+    "pre_top1_disease_label": "Loeys-Dietz syndrome 6",
+    "pre_top1_after_rank": 2,
+    "post_top1_gene": "SMAD3",
+    "post_top1_score": 0.257741,
+    "post_top1_disease": "MONDO:0019625",
+    "post_top1_disease_label": "familial thoracic aortic aneurysm and aortic dissection",
+    "post_top1_pre_rank": 2,
+    "post_top1_has_propagated_edges": true,
+    "post_top1_propagation_types": [
+      "A",
+      "C"
+    ],
+    "matched_propagated_terms": [
+      {
+        "patientPhenotypeCurie": "HP:0012432",
+        "patientPhenotypeLabel": "Chronic fatigue",
+        "diseasePhenotypeCurie": "HP:0012432",
+        "diseasePhenotypeLabel": "Chronic fatigue",
+        "propagationCode": "C",
+        "reference": "HGNC:6769",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0019625:HP:0012432:HGNC:6769"
+      },
+      {
+        "patientPhenotypeCurie": "HP:0001166",
+        "patientPhenotypeLabel": "Arachnodactyly",
+        "diseasePhenotypeCurie": "HP:0001166",
+        "diseasePhenotypeLabel": "Arachnodactyly",
+        "propagationCode": "A",
+        "reference": "ORPHA:91387",
+        "sourceRecordKey": "phenotype-propagation:A:MONDO:0019625:HP:0001166:ORPHA:91387"
+      }
+    ],
+    "post_top1_direct_score": 0.257741,
+    "post_top1_disease_support_score": 0.153429
+  },
+  {
+    "case_id": "PMID_28074573_MA1",
+    "truth_gene": "PTPN11",
+    "rank_before": 14,
+    "rank_after": 16,
+    "pre_top1_gene": "RAF1",
+    "pre_top1_score": 0.24793,
+    "pre_top1_disease": "MONDO:0012690",
+    "pre_top1_disease_label": "Noonan syndrome 5",
+    "pre_top1_after_rank": 1,
+    "post_top1_gene": "RAF1",
+    "post_top1_score": 0.222187,
+    "post_top1_disease": "MONDO:0018997",
+    "post_top1_disease_label": "Noonan syndrome",
+    "post_top1_pre_rank": 1,
+    "post_top1_has_propagated_edges": true,
+    "post_top1_propagation_types": [
+      "A",
+      "C"
+    ],
+    "matched_propagated_terms": [
+      {
+        "patientPhenotypeCurie": "HP:0005164",
+        "patientPhenotypeLabel": "Dysplastic pulmonary valve",
+        "diseasePhenotypeCurie": "HP:0001641",
+        "diseasePhenotypeLabel": "Abnormal pulmonary valve morphology",
+        "propagationCode": "A",
+        "reference": "ORPHA:648",
+        "sourceRecordKey": "phenotype-propagation:A:MONDO:0018997:HP:0001641:ORPHA:648"
+      },
+      {
+        "patientPhenotypeCurie": "HP:0001631",
+        "patientPhenotypeLabel": "Atrial septal defect",
+        "diseasePhenotypeCurie": "HP:0001631",
+        "diseasePhenotypeLabel": "Atrial septal defect",
+        "propagationCode": "A",
+        "reference": "ORPHA:648",
+        "sourceRecordKey": "phenotype-propagation:A:MONDO:0018997:HP:0001631:ORPHA:648"
+      }
+    ],
+    "post_top1_direct_score": 0.222187,
+    "post_top1_disease_support_score": 0.209204
+  },
+  {
+    "case_id": "PMID_29058101_Patient1",
+    "truth_gene": "DOCK8",
+    "rank_before": 15,
+    "rank_after": 21,
+    "pre_top1_gene": "DOCK11",
+    "pre_top1_score": 0.381905,
+    "pre_top1_disease": "MONDO:0957494",
+    "pre_top1_disease_label": "autoinflammatory disease, multisystem, with immune dysregulation, X-linked",
+    "pre_top1_after_rank": 1,
+    "post_top1_gene": "DOCK11",
+    "post_top1_score": 0.34263,
+    "post_top1_disease": "",
+    "post_top1_disease_label": "",
+    "post_top1_pre_rank": 1,
+    "post_top1_has_propagated_edges": false,
+    "post_top1_propagation_types": [],
+    "matched_propagated_terms": [],
+    "post_top1_direct_score": 0.34263,
+    "post_top1_disease_support_score": 0
+  },
+  {
+    "case_id": "PMID_29122497_29122497_P1",
+    "truth_gene": "ISCA2",
+    "rank_before": 78,
+    "rank_after": null,
+    "pre_top1_gene": "SELENOI",
+    "pre_top1_score": 0.272058,
+    "pre_top1_disease": "MONDO:0032905",
+    "pre_top1_disease_label": "spastic paraplegia 81, autosomal recessive",
+    "pre_top1_after_rank": 2,
+    "post_top1_gene": "PLP1",
+    "post_top1_score": 0.259279,
+    "post_top1_disease": "",
+    "post_top1_disease_label": "",
+    "post_top1_pre_rank": 3,
+    "post_top1_has_propagated_edges": false,
+    "post_top1_propagation_types": [],
+    "matched_propagated_terms": [],
+    "post_top1_direct_score": 0.259279,
+    "post_top1_disease_support_score": 0
+  },
+  {
+    "case_id": "PMID_30356099_Patient7",
+    "truth_gene": "WWOX",
+    "rank_before": 10,
+    "rank_after": 12,
+    "pre_top1_gene": "FRRS1L",
+    "pre_top1_score": 0.260958,
+    "pre_top1_disease": "MONDO:0014859",
+    "pre_top1_disease_label": "developmental and epileptic encephalopathy, 37",
+    "pre_top1_after_rank": 1,
+    "post_top1_gene": "FRRS1L",
+    "post_top1_score": 0.247959,
+    "post_top1_disease": "MONDO:0100062",
+    "post_top1_disease_label": "genetic developmental and epileptic encephalopathy",
+    "post_top1_pre_rank": 1,
+    "post_top1_has_propagated_edges": true,
+    "post_top1_propagation_types": [
+      "C"
+    ],
+    "matched_propagated_terms": [
+      {
+        "patientPhenotypeCurie": "HP:0002069",
+        "patientPhenotypeLabel": "Bilateral tonic-clonic seizure",
+        "diseasePhenotypeCurie": "HP:0002069",
+        "diseasePhenotypeLabel": "Bilateral tonic-clonic seizure",
+        "propagationCode": "C",
+        "reference": "HGNC:1392",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0100062:HP:0002069:HGNC:1392"
+      },
+      {
+        "patientPhenotypeCurie": "HP:0002353",
+        "patientPhenotypeLabel": "EEG abnormality",
+        "diseasePhenotypeCurie": "HP:0031491",
+        "diseasePhenotypeLabel": "Continuous spike and waves during slow sleep",
+        "propagationCode": "C",
+        "reference": "HGNC:6234",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0100062:HP:0031491:HGNC:6234"
+      },
+      {
+        "patientPhenotypeCurie": "HP:0002059",
+        "patientPhenotypeLabel": "Cerebral atrophy",
+        "diseasePhenotypeCurie": "HP:0002059",
+        "diseasePhenotypeLabel": "Cerebral atrophy",
+        "propagationCode": "C",
+        "reference": "HGNC:2972",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0100062:HP:0002059:HGNC:2972"
+      }
+    ],
+    "post_top1_direct_score": 0.247959,
+    "post_top1_disease_support_score": 0.221795
+  },
+  {
+    "case_id": "PMID_31021519_SATB2-29fromZarateetal2018aScottetal",
+    "truth_gene": "SATB2",
+    "rank_before": 24,
+    "rank_after": 25,
+    "pre_top1_gene": "ARHGAP29",
+    "pre_top1_score": 0.204735,
+    "pre_top1_disease": "",
+    "pre_top1_disease_label": "",
+    "pre_top1_after_rank": 1,
+    "post_top1_gene": "ARHGAP29",
+    "post_top1_score": 0.173451,
+    "post_top1_disease": "MONDO:0000358",
+    "post_top1_disease_label": "orofacial cleft",
+    "post_top1_pre_rank": 4,
+    "post_top1_has_propagated_edges": true,
+    "post_top1_propagation_types": [
+      "C"
+    ],
+    "matched_propagated_terms": [
+      {
+        "patientPhenotypeCurie": "HP:0008872",
+        "patientPhenotypeLabel": "Feeding difficulties in infancy",
+        "diseasePhenotypeCurie": "HP:0008872",
+        "diseasePhenotypeLabel": "Feeding difficulties in infancy",
+        "propagationCode": "C",
+        "reference": "HGNC:30207",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0000358:HP:0008872:HGNC:30207"
+      },
+      {
+        "patientPhenotypeCurie": "HP:0000164",
+        "patientPhenotypeLabel": "Abnormality of the dentition",
+        "diseasePhenotypeCurie": "HP:0200153",
+        "diseasePhenotypeLabel": "Agenesis of lateral incisor",
+        "propagationCode": "C",
+        "reference": "HGNC:30207",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0000358:HP:0200153:HGNC:30207"
+      },
+      {
+        "patientPhenotypeCurie": "HP:0001263",
+        "patientPhenotypeLabel": "Global developmental delay",
+        "diseasePhenotypeCurie": "HP:0000750",
+        "diseasePhenotypeLabel": "Delayed speech and language development",
+        "propagationCode": "C",
+        "reference": "HGNC:30207",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0000358:HP:0000750:HGNC:30207"
+      }
+    ],
+    "post_top1_direct_score": 0.173451,
+    "post_top1_disease_support_score": 0.173451
+  },
+  {
+    "case_id": "PMID_31239556_individual2Gregoretal",
+    "truth_gene": "CTCF",
+    "rank_before": 53,
+    "rank_after": 55,
+    "pre_top1_gene": "CHAMP1",
+    "pre_top1_score": 0.175533,
+    "pre_top1_disease": "MONDO:0014699",
+    "pre_top1_disease_label": "intellectual disability, autosomal dominant 40",
+    "pre_top1_after_rank": 1,
+    "post_top1_gene": "CHAMP1",
+    "post_top1_score": 0.169339,
+    "post_top1_disease": "MONDO:0100038",
+    "post_top1_disease_label": "complex neurodevelopmental disorder",
+    "post_top1_pre_rank": 1,
+    "post_top1_has_propagated_edges": true,
+    "post_top1_propagation_types": [
+      "C"
+    ],
+    "matched_propagated_terms": [
+      {
+        "patientPhenotypeCurie": "HP:0000750",
+        "patientPhenotypeLabel": "Delayed speech and language development",
+        "diseasePhenotypeCurie": "HP:0001344",
+        "diseasePhenotypeLabel": "Absent speech",
+        "propagationCode": "C",
+        "reference": "HGNC:1460",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0100038:HP:0001344:HGNC:1460"
+      }
+    ],
+    "post_top1_direct_score": 0.169339,
+    "post_top1_disease_support_score": 0.14513
+  },
+  {
+    "case_id": "PMID_32154675_Family4Patient11",
+    "truth_gene": "SMAD3",
+    "rank_before": 32,
+    "rank_after": 94,
+    "pre_top1_gene": "BGN",
+    "pre_top1_score": 0.218198,
+    "pre_top1_disease": "MONDO:0010515",
+    "pre_top1_disease_label": "Meester-Loeys syndrome",
+    "pre_top1_after_rank": 1,
+    "post_top1_gene": "BGN",
+    "post_top1_score": 0.198834,
+    "post_top1_disease": "MONDO:0019625",
+    "post_top1_disease_label": "familial thoracic aortic aneurysm and aortic dissection",
+    "post_top1_pre_rank": 1,
+    "post_top1_has_propagated_edges": true,
+    "post_top1_propagation_types": [
+      "A",
+      "C"
+    ],
+    "matched_propagated_terms": [
+      {
+        "patientPhenotypeCurie": "HP:0001166",
+        "patientPhenotypeLabel": "Arachnodactyly",
+        "diseasePhenotypeCurie": "HP:0001166",
+        "diseasePhenotypeLabel": "Arachnodactyly",
+        "propagationCode": "A",
+        "reference": "ORPHA:91387",
+        "sourceRecordKey": "phenotype-propagation:A:MONDO:0019625:HP:0001166:ORPHA:91387"
+      }
+    ],
+    "post_top1_direct_score": 0.198834,
+    "post_top1_disease_support_score": 0.134916
+  },
+  {
+    "case_id": "PMID_33731876_fam115",
+    "truth_gene": "SCN2A",
+    "rank_before": 6,
+    "rank_after": 11,
+    "pre_top1_gene": "SCN1A",
+    "pre_top1_score": 0.309711,
+    "pre_top1_disease": "MONDO:0030268",
+    "pre_top1_disease_label": "developmental and epileptic encephalopathy 6B",
+    "pre_top1_after_rank": 1,
+    "post_top1_gene": "SCN1A",
+    "post_top1_score": 0.276944,
+    "post_top1_disease": "MONDO:0100135",
+    "post_top1_disease_label": "Dravet syndrome",
+    "post_top1_pre_rank": 1,
+    "post_top1_has_propagated_edges": true,
+    "post_top1_propagation_types": [
+      "C"
+    ],
+    "matched_propagated_terms": [
+      {
+        "patientPhenotypeCurie": "HP:0025101",
+        "patientPhenotypeLabel": "Dysgenesis of the hippocampus",
+        "diseasePhenotypeCurie": "HP:0025101",
+        "diseasePhenotypeLabel": "Dysgenesis of the hippocampus",
+        "propagationCode": "C",
+        "reference": "HGNC:10585",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0100135:HP:0025101:HGNC:10585"
+      },
+      {
+        "patientPhenotypeCurie": "HP:0010818",
+        "patientPhenotypeLabel": "Generalized tonic seizure",
+        "diseasePhenotypeCurie": "HP:0010818",
+        "diseasePhenotypeLabel": "Generalized tonic seizure",
+        "propagationCode": "C",
+        "reference": "HGNC:10585",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0100135:HP:0010818:HGNC:10585"
+      },
+      {
+        "patientPhenotypeCurie": "HP:0200134",
+        "patientPhenotypeLabel": "Epileptic encephalopathy",
+        "diseasePhenotypeCurie": "HP:0200134",
+        "diseasePhenotypeLabel": "Epileptic encephalopathy",
+        "propagationCode": "C",
+        "reference": "HGNC:10585",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0100135:HP:0200134:HGNC:10585"
+      },
+      {
+        "patientPhenotypeCurie": "HP:0010819",
+        "patientPhenotypeLabel": "Atonic seizure",
+        "diseasePhenotypeCurie": "HP:0010819",
+        "diseasePhenotypeLabel": "Atonic seizure",
+        "propagationCode": "C",
+        "reference": "HGNC:10585",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0100135:HP:0010819:HGNC:10585"
+      },
+      {
+        "patientPhenotypeCurie": "HP:0002187",
+        "patientPhenotypeLabel": "Profound intellectual disability",
+        "diseasePhenotypeCurie": "HP:0002187",
+        "diseasePhenotypeLabel": "Profound intellectual disability",
+        "propagationCode": "C",
+        "reference": "HGNC:10585",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0100135:HP:0002187:HGNC:10585"
+      },
+      {
+        "patientPhenotypeCurie": "HP:0100660",
+        "patientPhenotypeLabel": "Dyskinesia",
+        "diseasePhenotypeCurie": "HP:0100660",
+        "diseasePhenotypeLabel": "Dyskinesia",
+        "propagationCode": "C",
+        "reference": "HGNC:10585",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0100135:HP:0100660:HGNC:10585"
+      },
+      {
+        "patientPhenotypeCurie": "HP:0002353",
+        "patientPhenotypeLabel": "EEG abnormality",
+        "diseasePhenotypeCurie": "HP:0011199",
+        "diseasePhenotypeLabel": "EEG with generalized sharp slow waves",
+        "propagationCode": "C",
+        "reference": "HGNC:10585",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0100135:HP:0011199:HGNC:10585"
+      },
+      {
+        "patientPhenotypeCurie": "HP:0002500",
+        "patientPhenotypeLabel": "Abnormal cerebral white matter morphology",
+        "diseasePhenotypeCurie": "HP:0001273",
+        "diseasePhenotypeLabel": "Abnormal corpus callosum morphology",
+        "propagationCode": "C",
+        "reference": "HGNC:10585",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0100135:HP:0001273:HGNC:10585"
+      }
+    ],
+    "post_top1_direct_score": 0.276944,
+    "post_top1_disease_support_score": 0.276944
+  },
+  {
+    "case_id": "PMID_33731876_fam175",
+    "truth_gene": "SCN2A",
+    "rank_before": 11,
+    "rank_after": 19,
+    "pre_top1_gene": "KCNQ2",
+    "pre_top1_score": 0.325663,
+    "pre_top1_disease": "MONDO:0013387",
+    "pre_top1_disease_label": "developmental and epileptic encephalopathy, 7",
+    "pre_top1_after_rank": 1,
+    "post_top1_gene": "KCNQ2",
+    "post_top1_score": 0.298512,
+    "post_top1_disease": "MONDO:0100456",
+    "post_top1_disease_label": "neonatal encephalopathy with non-epileptic myoclonus",
+    "post_top1_pre_rank": 1,
+    "post_top1_has_propagated_edges": true,
+    "post_top1_propagation_types": [
+      "C"
+    ],
+    "matched_propagated_terms": [
+      {
+        "patientPhenotypeCurie": "HP:0011167",
+        "patientPhenotypeLabel": "Focal tonic seizure",
+        "diseasePhenotypeCurie": "HP:0011167",
+        "diseasePhenotypeLabel": "Focal tonic seizure",
+        "propagationCode": "C",
+        "reference": "HGNC:6296",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0100456:HP:0011167:HGNC:6296"
+      },
+      {
+        "patientPhenotypeCurie": "HP:0010818",
+        "patientPhenotypeLabel": "Generalized tonic seizure",
+        "diseasePhenotypeCurie": "HP:0010818",
+        "diseasePhenotypeLabel": "Generalized tonic seizure",
+        "propagationCode": "C",
+        "reference": "HGNC:6296",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0100456:HP:0010818:HGNC:6296"
+      },
+      {
+        "patientPhenotypeCurie": "HP:0010851",
+        "patientPhenotypeLabel": "EEG with burst suppression",
+        "diseasePhenotypeCurie": "HP:0010851",
+        "diseasePhenotypeLabel": "EEG with burst suppression",
+        "propagationCode": "C",
+        "reference": "HGNC:6296",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0100456:HP:0010851:HGNC:6296"
+      },
+      {
+        "patientPhenotypeCurie": "HP:0010841",
+        "patientPhenotypeLabel": "Multifocal epileptiform discharges",
+        "diseasePhenotypeCurie": "HP:0010841",
+        "diseasePhenotypeLabel": "Multifocal epileptiform discharges",
+        "propagationCode": "C",
+        "reference": "HGNC:6296",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0100456:HP:0010841:HGNC:6296"
+      },
+      {
+        "patientPhenotypeCurie": "HP:0200134",
+        "patientPhenotypeLabel": "Epileptic encephalopathy",
+        "diseasePhenotypeCurie": "HP:0200134",
+        "diseasePhenotypeLabel": "Epileptic encephalopathy",
+        "propagationCode": "C",
+        "reference": "HGNC:6296",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0100456:HP:0200134:HGNC:6296"
+      },
+      {
+        "patientPhenotypeCurie": "HP:0002521",
+        "patientPhenotypeLabel": "Hypsarrhythmia",
+        "diseasePhenotypeCurie": "HP:0002521",
+        "diseasePhenotypeLabel": "Hypsarrhythmia",
+        "propagationCode": "C",
+        "reference": "HGNC:6296",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0100456:HP:0002521:HGNC:6296"
+      },
+      {
+        "patientPhenotypeCurie": "HP:0012469",
+        "patientPhenotypeLabel": "Infantile spasms",
+        "diseasePhenotypeCurie": "HP:0011097",
+        "diseasePhenotypeLabel": "Epileptic spasm",
+        "propagationCode": "C",
+        "reference": "HGNC:6296",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0100456:HP:0011097:HGNC:6296"
+      },
+      {
+        "patientPhenotypeCurie": "HP:0011199",
+        "patientPhenotypeLabel": "EEG with generalized sharp slow waves",
+        "diseasePhenotypeCurie": "HP:0010851",
+        "diseasePhenotypeLabel": "EEG with burst suppression",
+        "propagationCode": "C",
+        "reference": "HGNC:6296",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0100456:HP:0010851:HGNC:6296"
+      }
+    ],
+    "post_top1_direct_score": 0.298512,
+    "post_top1_disease_support_score": 0.298512
+  },
+  {
+    "case_id": "PMID_33731876_fam220",
+    "truth_gene": "SCN2A",
+    "rank_before": 12,
+    "rank_after": 13,
+    "pre_top1_gene": "GNAO1",
+    "pre_top1_score": 0.258269,
+    "pre_top1_disease": "MONDO:0060491",
+    "pre_top1_disease_label": "neurodevelopmental disorder with involuntary movements",
+    "pre_top1_after_rank": 1,
+    "post_top1_gene": "GNAO1",
+    "post_top1_score": 0.243225,
+    "post_top1_disease": "MONDO:0005395",
+    "post_top1_disease_label": "movement disorder",
+    "post_top1_pre_rank": 1,
+    "post_top1_has_propagated_edges": true,
+    "post_top1_propagation_types": [
+      "C"
+    ],
+    "matched_propagated_terms": [
+      {
+        "patientPhenotypeCurie": "HP:0002521",
+        "patientPhenotypeLabel": "Hypsarrhythmia",
+        "diseasePhenotypeCurie": "HP:0002521",
+        "diseasePhenotypeLabel": "Hypsarrhythmia",
+        "propagationCode": "C",
+        "reference": "HGNC:4389",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0005395:HP:0002521:HGNC:4389"
+      },
+      {
+        "patientPhenotypeCurie": "HP:0012469",
+        "patientPhenotypeLabel": "Infantile spasms",
+        "diseasePhenotypeCurie": "HP:0012469",
+        "diseasePhenotypeLabel": "Infantile spasms",
+        "propagationCode": "C",
+        "reference": "HGNC:4389",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0005395:HP:0012469:HGNC:4389"
+      },
+      {
+        "patientPhenotypeCurie": "HP:0100660",
+        "patientPhenotypeLabel": "Dyskinesia",
+        "diseasePhenotypeCurie": "HP:0100660",
+        "diseasePhenotypeLabel": "Dyskinesia",
+        "propagationCode": "C",
+        "reference": "HGNC:4389",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0005395:HP:0100660:HGNC:4389"
+      },
+      {
+        "patientPhenotypeCurie": "HP:0002072",
+        "patientPhenotypeLabel": "Chorea",
+        "diseasePhenotypeCurie": "HP:0002072",
+        "diseasePhenotypeLabel": "Chorea",
+        "propagationCode": "C",
+        "reference": "HGNC:4389",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0005395:HP:0002072:HGNC:4389"
+      },
+      {
+        "patientPhenotypeCurie": "HP:0002079",
+        "patientPhenotypeLabel": "Hypoplasia of the corpus callosum",
+        "diseasePhenotypeCurie": "HP:0002079",
+        "diseasePhenotypeLabel": "Hypoplasia of the corpus callosum",
+        "propagationCode": "C",
+        "reference": "HGNC:4389",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0005395:HP:0002079:HGNC:4389"
+      },
+      {
+        "patientPhenotypeCurie": "HP:0002059",
+        "patientPhenotypeLabel": "Cerebral atrophy",
+        "diseasePhenotypeCurie": "HP:0002506",
+        "diseasePhenotypeLabel": "Diffuse cerebral atrophy",
+        "propagationCode": "C",
+        "reference": "HGNC:4389",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0005395:HP:0002506:HGNC:4389"
+      },
+      {
+        "patientPhenotypeCurie": "HP:0001263",
+        "patientPhenotypeLabel": "Global developmental delay",
+        "diseasePhenotypeCurie": "HP:0001263",
+        "diseasePhenotypeLabel": "Global developmental delay",
+        "propagationCode": "C",
+        "reference": "HGNC:4389",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0005395:HP:0001263:HGNC:4389"
+      },
+      {
+        "patientPhenotypeCurie": "HP:0001249",
+        "patientPhenotypeLabel": "Intellectual disability",
+        "diseasePhenotypeCurie": "HP:0010864",
+        "diseasePhenotypeLabel": "Severe intellectual disability",
+        "propagationCode": "C",
+        "reference": "HGNC:4389",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0005395:HP:0010864:HGNC:4389"
+      }
+    ],
+    "post_top1_direct_score": 0.243225,
+    "post_top1_disease_support_score": 0.243225
+  },
+  {
+    "case_id": "PMID_33731876_fam341",
+    "truth_gene": "SCN2A",
+    "rank_before": 4,
+    "rank_after": 30,
+    "pre_top1_gene": "GABRA1",
+    "pre_top1_score": 0.281004,
+    "pre_top1_disease": "MONDO:0014328",
+    "pre_top1_disease_label": "developmental and epileptic encephalopathy, 19",
+    "pre_top1_after_rank": 1,
+    "post_top1_gene": "GABRA1",
+    "post_top1_score": 0.256123,
+    "post_top1_disease": "MONDO:0005027",
+    "post_top1_disease_label": "epilepsy",
+    "post_top1_pre_rank": 1,
+    "post_top1_has_propagated_edges": true,
+    "post_top1_propagation_types": [
+      "C"
+    ],
+    "matched_propagated_terms": [
+      {
+        "patientPhenotypeCurie": "HP:0200134",
+        "patientPhenotypeLabel": "Epileptic encephalopathy",
+        "diseasePhenotypeCurie": "HP:0200134",
+        "diseasePhenotypeLabel": "Epileptic encephalopathy",
+        "propagationCode": "C",
+        "reference": "HGNC:4075",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0005027:HP:0200134:HGNC:4075"
+      },
+      {
+        "patientPhenotypeCurie": "HP:0002104",
+        "patientPhenotypeLabel": "Apnea",
+        "diseasePhenotypeCurie": "HP:0002104",
+        "diseasePhenotypeLabel": "Apnea",
+        "propagationCode": "C",
+        "reference": "HGNC:4075",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0005027:HP:0002104:HGNC:4075"
+      },
+      {
+        "patientPhenotypeCurie": "HP:0007371",
+        "patientPhenotypeLabel": "Corpus callosum atrophy",
+        "diseasePhenotypeCurie": "HP:0002059",
+        "diseasePhenotypeLabel": "Cerebral atrophy",
+        "propagationCode": "C",
+        "reference": "HGNC:4075",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0005027:HP:0002059:HGNC:4075"
+      },
+      {
+        "patientPhenotypeCurie": "HP:0001257",
+        "patientPhenotypeLabel": "Spasticity",
+        "diseasePhenotypeCurie": "HP:0002396",
+        "diseasePhenotypeLabel": "Cogwheel rigidity",
+        "propagationCode": "C",
+        "reference": "HGNC:4075",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0005027:HP:0002396:HGNC:4075"
+      }
+    ],
+    "post_top1_direct_score": 0.256123,
+    "post_top1_disease_support_score": 0.216638
+  },
+  {
+    "case_id": "PMID_33731876_fam415",
+    "truth_gene": "SCN2A",
+    "rank_before": 6,
+    "rank_after": 32,
+    "pre_top1_gene": "SCN1A",
+    "pre_top1_score": 0.326948,
+    "pre_top1_disease": "MONDO:0030268",
+    "pre_top1_disease_label": "developmental and epileptic encephalopathy 6B",
+    "pre_top1_after_rank": 1,
+    "post_top1_gene": "SCN1A",
+    "post_top1_score": 0.285448,
+    "post_top1_disease": "MONDO:0100135",
+    "post_top1_disease_label": "Dravet syndrome",
+    "post_top1_pre_rank": 1,
+    "post_top1_has_propagated_edges": true,
+    "post_top1_propagation_types": [
+      "C"
+    ],
+    "matched_propagated_terms": [
+      {
+        "patientPhenotypeCurie": "HP:0011290",
+        "patientPhenotypeLabel": "EEG with frontal sharp slow waves",
+        "diseasePhenotypeCurie": "HP:0011195",
+        "diseasePhenotypeLabel": "EEG with focal sharp slow waves",
+        "propagationCode": "C",
+        "reference": "HGNC:10585",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0100135:HP:0011195:HGNC:10585"
+      },
+      {
+        "patientPhenotypeCurie": "HP:0007270",
+        "patientPhenotypeLabel": "Atypical absence seizure",
+        "diseasePhenotypeCurie": "HP:0007270",
+        "diseasePhenotypeLabel": "Atypical absence seizure",
+        "propagationCode": "C",
+        "reference": "HGNC:10585",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0100135:HP:0007270:HGNC:10585"
+      },
+      {
+        "patientPhenotypeCurie": "HP:0002487",
+        "patientPhenotypeLabel": "Hyperkinetic movements",
+        "diseasePhenotypeCurie": "HP:0002487",
+        "diseasePhenotypeLabel": "Hyperkinetic movements",
+        "propagationCode": "C",
+        "reference": "HGNC:10585",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0100135:HP:0002487:HGNC:10585"
+      },
+      {
+        "patientPhenotypeCurie": "HP:0200134",
+        "patientPhenotypeLabel": "Epileptic encephalopathy",
+        "diseasePhenotypeCurie": "HP:0200134",
+        "diseasePhenotypeLabel": "Epileptic encephalopathy",
+        "propagationCode": "C",
+        "reference": "HGNC:10585",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0100135:HP:0200134:HGNC:10585"
+      },
+      {
+        "patientPhenotypeCurie": "HP:0011203",
+        "patientPhenotypeLabel": "EEG with abnormally slow frequencies",
+        "diseasePhenotypeCurie": "HP:0010845",
+        "diseasePhenotypeLabel": "EEG with generalized slow activity",
+        "propagationCode": "C",
+        "reference": "HGNC:10585",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0100135:HP:0010845:HGNC:10585"
+      },
+      {
+        "patientPhenotypeCurie": "HP:0002187",
+        "patientPhenotypeLabel": "Profound intellectual disability",
+        "diseasePhenotypeCurie": "HP:0002187",
+        "diseasePhenotypeLabel": "Profound intellectual disability",
+        "propagationCode": "C",
+        "reference": "HGNC:10585",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0100135:HP:0002187:HGNC:10585"
+      },
+      {
+        "patientPhenotypeCurie": "HP:0011471",
+        "patientPhenotypeLabel": "Gastrostomy tube feeding in infancy",
+        "diseasePhenotypeCurie": "HP:0011471",
+        "diseasePhenotypeLabel": "Gastrostomy tube feeding in infancy",
+        "propagationCode": "C",
+        "reference": "HGNC:10585",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0100135:HP:0011471:HGNC:10585"
+      }
+    ],
+    "post_top1_direct_score": 0.285448,
+    "post_top1_disease_support_score": 0.285448
+  },
+  {
+    "case_id": "PMID_33898683_43-year-oldman",
+    "truth_gene": "PTPN11",
+    "rank_before": 5,
+    "rank_after": 11,
+    "pre_top1_gene": "RANGRF",
+    "pre_top1_score": 0.22974,
+    "pre_top1_disease": "",
+    "pre_top1_disease_label": "",
+    "pre_top1_after_rank": null,
+    "post_top1_gene": "RYR2",
+    "post_top1_score": 0.211707,
+    "post_top1_disease": "MONDO:0017990",
+    "post_top1_disease_label": "catecholaminergic polymorphic ventricular tachycardia",
+    "post_top1_pre_rank": 16,
+    "post_top1_has_propagated_edges": true,
+    "post_top1_propagation_types": [
+      "A",
+      "B",
+      "C"
+    ],
+    "matched_propagated_terms": [
+      {
+        "patientPhenotypeCurie": "HP:0011707",
+        "patientPhenotypeLabel": "Mobitz I atrioventricular block",
+        "diseasePhenotypeCurie": "HP:0001678",
+        "diseasePhenotypeLabel": "Atrioventricular block",
+        "propagationCode": "C",
+        "reference": "HGNC:1513",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0017990:HP:0001678:HGNC:1513"
+      },
+      {
+        "patientPhenotypeCurie": "HP:0000407",
+        "patientPhenotypeLabel": "Sensorineural hearing impairment",
+        "diseasePhenotypeCurie": "HP:0002321",
+        "diseasePhenotypeLabel": "Vertigo",
+        "propagationCode": "A",
+        "reference": "ORPHA:3286",
+        "sourceRecordKey": "phenotype-propagation:A:MONDO:0017990:HP:0002321:ORPHA:3286"
+      },
+      {
+        "patientPhenotypeCurie": "HP:0000369",
+        "patientPhenotypeLabel": "Low-set ears",
+        "diseasePhenotypeCurie": "HP:0002321",
+        "diseasePhenotypeLabel": "Vertigo",
+        "propagationCode": "A",
+        "reference": "ORPHA:3286",
+        "sourceRecordKey": "phenotype-propagation:A:MONDO:0017990:HP:0002321:ORPHA:3286"
+      },
+      {
+        "patientPhenotypeCurie": "HP:0000358",
+        "patientPhenotypeLabel": "Posteriorly rotated ears",
+        "diseasePhenotypeCurie": "HP:0002321",
+        "diseasePhenotypeLabel": "Vertigo",
+        "propagationCode": "A",
+        "reference": "ORPHA:3286",
+        "sourceRecordKey": "phenotype-propagation:A:MONDO:0017990:HP:0002321:ORPHA:3286"
+      },
+      {
+        "patientPhenotypeCurie": "HP:0000316",
+        "patientPhenotypeLabel": "Hypertelorism",
+        "diseasePhenotypeCurie": "HP:0034040",
+        "diseasePhenotypeLabel": "Bidirectional ventricular tachycardia",
+        "propagationCode": "C",
+        "reference": "HGNC:1513",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0017990:HP:0034040:HGNC:1513"
+      },
+      {
+        "patientPhenotypeCurie": "HP:0000431",
+        "patientPhenotypeLabel": "Wide nasal bridge",
+        "diseasePhenotypeCurie": "HP:0034040",
+        "diseasePhenotypeLabel": "Bidirectional ventricular tachycardia",
+        "propagationCode": "C",
+        "reference": "HGNC:1513",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0017990:HP:0034040:HGNC:1513"
+      },
+      {
+        "patientPhenotypeCurie": "HP:0000767",
+        "patientPhenotypeLabel": "Pectus excavatum",
+        "diseasePhenotypeCurie": "HP:0034040",
+        "diseasePhenotypeLabel": "Bidirectional ventricular tachycardia",
+        "propagationCode": "C",
+        "reference": "HGNC:1513",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0017990:HP:0034040:HGNC:1513"
+      }
+    ],
+    "post_top1_direct_score": 0.159044,
+    "post_top1_disease_support_score": 0.211707
+  },
+  {
+    "case_id": "PMID_34521999_32",
+    "truth_gene": "SON",
+    "rank_before": 11,
+    "rank_after": null,
+    "pre_top1_gene": "RNU4-2",
+    "pre_top1_score": 0.236444,
+    "pre_top1_disease": "MONDO:0971172",
+    "pre_top1_disease_label": "neurodevelopmental disorder with hypotonia, brain anomalies, distinctive facies, and absent language",
+    "pre_top1_after_rank": 1,
+    "post_top1_gene": "RNU4-2",
+    "post_top1_score": 0.211999,
+    "post_top1_disease": "",
+    "post_top1_disease_label": "",
+    "post_top1_pre_rank": 1,
+    "post_top1_has_propagated_edges": false,
+    "post_top1_propagation_types": [],
+    "matched_propagated_terms": [],
+    "post_top1_direct_score": 0.211999,
+    "post_top1_disease_support_score": 0
+  },
+  {
+    "case_id": "PMID_34521999_43",
+    "truth_gene": "SON",
+    "rank_before": 1,
+    "rank_after": 84,
+    "pre_top1_gene": "SON",
+    "pre_top1_score": 0.236285,
+    "pre_top1_disease": "MONDO:0014936",
+    "pre_top1_disease_label": "ZTTK syndrome",
+    "pre_top1_after_rank": 84,
+    "post_top1_gene": "DYRK1A",
+    "post_top1_score": 0.217315,
+    "post_top1_disease": "MONDO:0100038",
+    "post_top1_disease_label": "complex neurodevelopmental disorder",
+    "post_top1_pre_rank": 20,
+    "post_top1_has_propagated_edges": true,
+    "post_top1_propagation_types": [
+      "C"
+    ],
+    "matched_propagated_terms": [
+      {
+        "patientPhenotypeCurie": "HP:0002126",
+        "patientPhenotypeLabel": "Polymicrogyria",
+        "diseasePhenotypeCurie": "HP:0002269",
+        "diseasePhenotypeLabel": "Abnormality of neuronal migration",
+        "propagationCode": "C",
+        "reference": "HGNC:3091",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0100038:HP:0002269:HGNC:3091"
+      }
+    ],
+    "post_top1_direct_score": 0.187594,
+    "post_top1_disease_support_score": 0.217315
+  },
+  {
+    "case_id": "PMID_34521999_50",
+    "truth_gene": "SON",
+    "rank_before": 10,
+    "rank_after": 91,
+    "pre_top1_gene": "SATB1",
+    "pre_top1_score": 0.221715,
+    "pre_top1_disease": "MONDO:0030990",
+    "pre_top1_disease_label": "Kohlschutter-Tonz syndrome-like",
+    "pre_top1_after_rank": 1,
+    "post_top1_gene": "SATB1",
+    "post_top1_score": 0.193542,
+    "post_top1_disease": "MONDO:0100038",
+    "post_top1_disease_label": "complex neurodevelopmental disorder",
+    "post_top1_pre_rank": 1,
+    "post_top1_has_propagated_edges": true,
+    "post_top1_propagation_types": [
+      "C"
+    ],
+    "matched_propagated_terms": [
+      {
+        "patientPhenotypeCurie": "HP:0000729",
+        "patientPhenotypeLabel": "Autistic behavior",
+        "diseasePhenotypeCurie": "HP:0000717",
+        "diseasePhenotypeLabel": "Autism",
+        "propagationCode": "C",
+        "reference": "HGNC:1915",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0100038:HP:0000717:HGNC:1915"
+      },
+      {
+        "patientPhenotypeCurie": "HP:0000750",
+        "patientPhenotypeLabel": "Delayed speech and language development",
+        "diseasePhenotypeCurie": "HP:0001344",
+        "diseasePhenotypeLabel": "Absent speech",
+        "propagationCode": "C",
+        "reference": "HGNC:1460",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0100038:HP:0001344:HGNC:1460"
+      },
+      {
+        "patientPhenotypeCurie": "HP:0000505",
+        "patientPhenotypeLabel": "Visual impairment",
+        "diseasePhenotypeCurie": "HP:0000504",
+        "diseasePhenotypeLabel": "Abnormality of vision",
+        "propagationCode": "C",
+        "reference": "HGNC:3091",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0100038:HP:0000504:HGNC:3091"
+      }
+    ],
+    "post_top1_direct_score": 0.193542,
+    "post_top1_disease_support_score": 0.173947
+  },
+  {
+    "case_id": "PMID_35190816_STX_23934111_fh",
+    "truth_gene": "STXBP1",
+    "rank_before": 30,
+    "rank_after": null,
+    "pre_top1_gene": "GABRG2",
+    "pre_top1_score": 0.294247,
+    "pre_top1_disease": "MONDO:0032725",
+    "pre_top1_disease_label": "developmental and epileptic encephalopathy, 74",
+    "pre_top1_after_rank": 1,
+    "post_top1_gene": "GABRG2",
+    "post_top1_score": 0.275688,
+    "post_top1_disease": "MONDO:0005027",
+    "post_top1_disease_label": "epilepsy",
+    "post_top1_pre_rank": 1,
+    "post_top1_has_propagated_edges": true,
+    "post_top1_propagation_types": [
+      "C"
+    ],
+    "matched_propagated_terms": [
+      {
+        "patientPhenotypeCurie": "HP:0001344",
+        "patientPhenotypeLabel": "Absent speech",
+        "diseasePhenotypeCurie": "HP:0001344",
+        "diseasePhenotypeLabel": "Absent speech",
+        "propagationCode": "C",
+        "reference": "HGNC:4084",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0005027:HP:0001344:HGNC:4084"
+      },
+      {
+        "patientPhenotypeCurie": "HP:0002267",
+        "patientPhenotypeLabel": "Exaggerated startle response",
+        "diseasePhenotypeCurie": "HP:0002067",
+        "diseasePhenotypeLabel": "Bradykinesia",
+        "propagationCode": "C",
+        "reference": "HGNC:4075",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0005027:HP:0002067:HGNC:4075"
+      }
+    ],
+    "post_top1_direct_score": 0.275688,
+    "post_top1_disease_support_score": 0.240007
+  },
+  {
+    "case_id": "PMID_36446582_Gnazzo2020_P1",
+    "truth_gene": "ANKRD11",
+    "rank_before": 9,
+    "rank_after": 58,
+    "pre_top1_gene": "MBD5",
+    "pre_top1_score": 0.19681,
+    "pre_top1_disease": "MONDO:0007974",
+    "pre_top1_disease_label": "intellectual disability, autosomal dominant 1",
+    "pre_top1_after_rank": 1,
+    "post_top1_gene": "MBD5",
+    "post_top1_score": 0.18452,
+    "post_top1_disease": "MONDO:0100038",
+    "post_top1_disease_label": "complex neurodevelopmental disorder",
+    "post_top1_pre_rank": 1,
+    "post_top1_has_propagated_edges": true,
+    "post_top1_propagation_types": [
+      "C"
+    ],
+    "matched_propagated_terms": [],
+    "post_top1_direct_score": 0.18452,
+    "post_top1_disease_support_score": 0.171341
+  },
+  {
+    "case_id": "PMID_36446582_Willemsen2010_P2",
+    "truth_gene": "ANKRD11",
+    "rank_before": 45,
+    "rank_after": null,
+    "pre_top1_gene": "SIN3A",
+    "pre_top1_score": 0.224639,
+    "pre_top1_disease": "MONDO:0013256",
+    "pre_top1_disease_label": "chromosome 15q24 deletion syndrome",
+    "pre_top1_after_rank": 2,
+    "post_top1_gene": "INTS1",
+    "post_top1_score": 0.205233,
+    "post_top1_disease": "",
+    "post_top1_disease_label": "",
+    "post_top1_pre_rank": 3,
+    "post_top1_has_propagated_edges": false,
+    "post_top1_propagation_types": [],
+    "matched_propagated_terms": [],
+    "post_top1_direct_score": 0.205233,
+    "post_top1_disease_support_score": 0
+  },
+  {
+    "case_id": "PMID_36553465_P5",
+    "truth_gene": "SLC45A2",
+    "rank_before": 3,
+    "rank_after": 4,
+    "pre_top1_gene": "TYRP1",
+    "pre_top1_score": 0.422636,
+    "pre_top1_disease": "MONDO:0044276",
+    "pre_top1_disease_label": "obsolete skin/hair/eye pigmentation, variation in, 11",
+    "pre_top1_after_rank": 2,
+    "post_top1_gene": "MC1R",
+    "post_top1_score": 0.37697,
+    "post_top1_disease": "MONDO:0013133",
+    "post_top1_disease_label": "melanoma, cutaneous malignant, susceptibility to, 5",
+    "post_top1_pre_rank": 2,
+    "post_top1_has_propagated_edges": true,
+    "post_top1_propagation_types": [
+      "C"
+    ],
+    "matched_propagated_terms": [
+      {
+        "patientPhenotypeCurie": "HP:0002227",
+        "patientPhenotypeLabel": "White eyelashes",
+        "diseasePhenotypeCurie": "HP:0002227",
+        "diseasePhenotypeLabel": "White eyelashes",
+        "propagationCode": "C",
+        "reference": "NCBIGene:4157",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0013133:HP:0002227:NCBIGene:4157"
+      },
+      {
+        "patientPhenotypeCurie": "HP:0002226",
+        "patientPhenotypeLabel": "White eyebrow",
+        "diseasePhenotypeCurie": "HP:0002226",
+        "diseasePhenotypeLabel": "White eyebrow",
+        "propagationCode": "C",
+        "reference": "NCBIGene:4157",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0013133:HP:0002226:NCBIGene:4157"
+      },
+      {
+        "patientPhenotypeCurie": "HP:0012805",
+        "patientPhenotypeLabel": "Iris transillumination defect",
+        "diseasePhenotypeCurie": "HP:0012805",
+        "diseasePhenotypeLabel": "Iris transillumination defect",
+        "propagationCode": "C",
+        "reference": "NCBIGene:4157",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0013133:HP:0012805:NCBIGene:4157"
+      },
+      {
+        "patientPhenotypeCurie": "HP:0007750",
+        "patientPhenotypeLabel": "Hypoplasia of the fovea",
+        "diseasePhenotypeCurie": "HP:0007750",
+        "diseasePhenotypeLabel": "Hypoplasia of the fovea",
+        "propagationCode": "C",
+        "reference": "NCBIGene:4157",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0013133:HP:0007750:NCBIGene:4157"
+      },
+      {
+        "patientPhenotypeCurie": "HP:0007730",
+        "patientPhenotypeLabel": "Iris hypopigmentation",
+        "diseasePhenotypeCurie": "HP:0007730",
+        "diseasePhenotypeLabel": "Iris hypopigmentation",
+        "propagationCode": "C",
+        "reference": "NCBIGene:4157",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0013133:HP:0007730:NCBIGene:4157"
+      },
+      {
+        "patientPhenotypeCurie": "HP:0005599",
+        "patientPhenotypeLabel": "Hypopigmentation of hair",
+        "diseasePhenotypeCurie": "HP:0011364",
+        "diseasePhenotypeLabel": "White hair",
+        "propagationCode": "C",
+        "reference": "NCBIGene:4157",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0013133:HP:0011364:NCBIGene:4157"
+      },
+      {
+        "patientPhenotypeCurie": "HP:0003764",
+        "patientPhenotypeLabel": "Nevus",
+        "diseasePhenotypeCurie": "HP:0007481",
+        "diseasePhenotypeLabel": "Hyperpigmented nevi",
+        "propagationCode": "C",
+        "reference": "NCBIGene:4157",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0013133:HP:0007481:NCBIGene:4157"
+      },
+      {
+        "patientPhenotypeCurie": "HP:0007663",
+        "patientPhenotypeLabel": "Reduced visual acuity",
+        "diseasePhenotypeCurie": "HP:0007663",
+        "diseasePhenotypeLabel": "Reduced visual acuity",
+        "propagationCode": "C",
+        "reference": "NCBIGene:4157",
+        "sourceRecordKey": "phenotype-propagation:C:MONDO:0013133:HP:0007663:NCBIGene:4157"
+      }
+    ],
+    "post_top1_direct_score": 0.37697,
+    "post_top1_disease_support_score": 0.25634
+  }
+]

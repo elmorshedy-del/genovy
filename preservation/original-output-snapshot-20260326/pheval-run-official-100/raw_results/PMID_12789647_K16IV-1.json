@@ -1,0 +1,1532 @@
+{
+  "success": true,
+  "engine": "genovy-dx-sim",
+  "analysisType": "gene",
+  "input": {
+    "presentPhenotypeCuries": [
+      "HP:0011623",
+      "HP:0009777",
+      "HP:0009778",
+      "HP:0002984"
+    ],
+    "excludedPhenotypeCuries": [
+      "HP:0001684",
+      "HP:0011682",
+      "HP:0001674",
+      "HP:0001655",
+      "HP:0001199",
+      "HP:0003974",
+      "HP:0003022",
+      "HP:0005792",
+      "HP:0009813"
+    ],
+    "sourceFormat": "phenopacket"
+  },
+  "ranking": {
+    "queryPhenotypes": [
+      {
+        "phenotypeCurie": "HP:0011623",
+        "phenotypeLabel": "Muscular ventricular septal defect"
+      },
+      {
+        "phenotypeCurie": "HP:0009777",
+        "phenotypeLabel": "Absent thumb"
+      },
+      {
+        "phenotypeCurie": "HP:0009778",
+        "phenotypeLabel": "Short thumb"
+      },
+      {
+        "phenotypeCurie": "HP:0002984",
+        "phenotypeLabel": "Hypoplasia of the radius"
+      }
+    ],
+    "results": [
+      {
+        "rank": 1,
+        "geneCurie": "NCBIGene:6910",
+        "geneLabel": "TBX5",
+        "geneSymbol": "TBX5",
+        "geneEntityId": 150257,
+        "bmaScore": 3.5835318302912094,
+        "normalizedScore": 0.395661,
+        "patientAverageScore": 5.1925687170473225,
+        "phenotypeAverageScore": 1.9744949435350962,
+        "directPhenotypeCount": 131,
+        "matchedPhenotypeCount": 4,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011623",
+            "patientPhenotypeLabel": "Muscular ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0011623",
+            "diseasePhenotypeLabel": "Muscular ventricular septal defect",
+            "micaCurie": "HP:0011623",
+            "micaLabel": "Muscular ventricular septal defect",
+            "score": 5.921578419643816,
+            "evidenceCode": "14/80",
+            "referenceText": "OMIM:142900"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009777",
+            "patientPhenotypeLabel": "Absent thumb",
+            "diseasePhenotypeCurie": "HP:0009777",
+            "diseasePhenotypeLabel": "Absent thumb",
+            "micaCurie": "HP:0009777",
+            "micaLabel": "Absent thumb",
+            "score": 5.319403017289597,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:392"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002984",
+            "patientPhenotypeLabel": "Hypoplasia of the radius",
+            "diseasePhenotypeCurie": "HP:0002984",
+            "diseasePhenotypeLabel": "Hypoplasia of the radius",
+            "micaCurie": "HP:0002984",
+            "micaLabel": "Hypoplasia of the radius",
+            "score": 5.145049630144819,
+            "evidenceCode": "64/144",
+            "referenceText": "OMIM:142900"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009778",
+            "patientPhenotypeLabel": "Short thumb",
+            "diseasePhenotypeCurie": "HP:0010034",
+            "diseasePhenotypeLabel": "Short 1st metacarpal",
+            "micaCurie": "HP:0009778",
+            "micaLabel": "Short thumb",
+            "score": 4.384243801111059,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:142900"
+          }
+        ]
+      },
+      {
+        "rank": 2,
+        "geneCurie": "NCBIGene:9939",
+        "geneLabel": "RBM8A",
+        "geneSymbol": "RBM8A",
+        "geneEntityId": 150913,
+        "bmaScore": 2.8223631094175863,
+        "normalizedScore": 0.31162,
+        "patientAverageScore": 4.446917971519273,
+        "phenotypeAverageScore": 1.1978082473159,
+        "directPhenotypeCount": 95,
+        "matchedPhenotypeCount": 4,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0009777",
+            "patientPhenotypeLabel": "Absent thumb",
+            "diseasePhenotypeCurie": "HP:0009777",
+            "diseasePhenotypeLabel": "Absent thumb",
+            "micaCurie": "HP:0009777",
+            "micaLabel": "Absent thumb",
+            "score": 5.319403017289597,
+            "evidenceCode": "0/27",
+            "referenceText": "OMIM:274000"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002984",
+            "patientPhenotypeLabel": "Hypoplasia of the radius",
+            "diseasePhenotypeCurie": "HP:0002984",
+            "diseasePhenotypeLabel": "Hypoplasia of the radius",
+            "micaCurie": "HP:0002984",
+            "micaLabel": "Hypoplasia of the radius",
+            "score": 5.145049630144819,
+            "evidenceCode": "8/26",
+            "referenceText": "OMIM:274000"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009778",
+            "patientPhenotypeLabel": "Short thumb",
+            "diseasePhenotypeCurie": "HP:0009778",
+            "diseasePhenotypeLabel": "Short thumb",
+            "micaCurie": "HP:0009778",
+            "micaLabel": "Short thumb",
+            "score": 4.384243801111059,
+            "evidenceCode": "25/26",
+            "referenceText": "OMIM:274000"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011623",
+            "patientPhenotypeLabel": "Muscular ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0001629",
+            "diseasePhenotypeLabel": "Ventricular septal defect",
+            "micaCurie": "HP:0001629",
+            "micaLabel": "Ventricular septal defect",
+            "score": 2.9389754375316173,
+            "evidenceCode": "5/61",
+            "referenceText": "OMIM:274000"
+          }
+        ]
+      },
+      {
+        "rank": 3,
+        "geneCurie": "NCBIGene:10262",
+        "geneLabel": "SF3B4",
+        "geneSymbol": "SF3B4",
+        "geneEntityId": 150992,
+        "bmaScore": 2.7875612123746465,
+        "normalizedScore": 0.307777,
+        "patientAverageScore": 4.446917971519273,
+        "phenotypeAverageScore": 1.1282044532300202,
+        "directPhenotypeCount": 110,
+        "matchedPhenotypeCount": 4,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0009777",
+            "patientPhenotypeLabel": "Absent thumb",
+            "diseasePhenotypeCurie": "HP:0009777",
+            "diseasePhenotypeLabel": "Absent thumb",
+            "micaCurie": "HP:0009777",
+            "micaLabel": "Absent thumb",
+            "score": 5.319403017289597,
+            "evidenceCode": "7/22",
+            "referenceText": "OMIM:154400"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002984",
+            "patientPhenotypeLabel": "Hypoplasia of the radius",
+            "diseasePhenotypeCurie": "HP:0002984",
+            "diseasePhenotypeLabel": "Hypoplasia of the radius",
+            "micaCurie": "HP:0002984",
+            "micaLabel": "Hypoplasia of the radius",
+            "score": 5.145049630144819,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:245"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009778",
+            "patientPhenotypeLabel": "Short thumb",
+            "diseasePhenotypeCurie": "HP:0010034",
+            "diseasePhenotypeLabel": "Short 1st metacarpal",
+            "micaCurie": "HP:0009778",
+            "micaLabel": "Short thumb",
+            "score": 4.384243801111059,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:154400"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011623",
+            "patientPhenotypeLabel": "Muscular ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0001629",
+            "diseasePhenotypeLabel": "Ventricular septal defect",
+            "micaCurie": "HP:0001629",
+            "micaLabel": "Ventricular septal defect",
+            "score": 2.9389754375316173,
+            "evidenceCode": "2/9",
+            "referenceText": "OMIM:154400"
+          }
+        ]
+      },
+      {
+        "rank": 4,
+        "geneCurie": "NCBIGene:157570",
+        "geneLabel": "ESCO2",
+        "geneSymbol": "ESCO2",
+        "geneEntityId": 152974,
+        "bmaScore": 2.7631122304058686,
+        "normalizedScore": 0.305078,
+        "patientAverageScore": 4.446917971519273,
+        "phenotypeAverageScore": 1.079306489292464,
+        "directPhenotypeCount": 122,
+        "matchedPhenotypeCount": 4,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0009777",
+            "patientPhenotypeLabel": "Absent thumb",
+            "diseasePhenotypeCurie": "HP:0009777",
+            "diseasePhenotypeLabel": "Absent thumb",
+            "micaCurie": "HP:0009777",
+            "micaLabel": "Absent thumb",
+            "score": 5.319403017289597,
+            "evidenceCode": "4/7",
+            "referenceText": "OMIM:268300"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002984",
+            "patientPhenotypeLabel": "Hypoplasia of the radius",
+            "diseasePhenotypeCurie": "HP:0002984",
+            "diseasePhenotypeLabel": "Hypoplasia of the radius",
+            "micaCurie": "HP:0002984",
+            "micaLabel": "Hypoplasia of the radius",
+            "score": 5.145049630144819,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:2319"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009778",
+            "patientPhenotypeLabel": "Short thumb",
+            "diseasePhenotypeCurie": "HP:0009778",
+            "diseasePhenotypeLabel": "Short thumb",
+            "micaCurie": "HP:0009778",
+            "micaLabel": "Short thumb",
+            "score": 4.384243801111059,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:2319"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011623",
+            "patientPhenotypeLabel": "Muscular ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0001629",
+            "diseasePhenotypeLabel": "Ventricular septal defect",
+            "micaCurie": "HP:0001629",
+            "micaLabel": "Ventricular septal defect",
+            "score": 2.9389754375316173,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:268300"
+          }
+        ]
+      },
+      {
+        "rank": 5,
+        "geneCurie": "NCBIGene:658",
+        "geneLabel": "BMPR1B",
+        "geneSymbol": "BMPR1B",
+        "geneEntityId": 148296,
+        "bmaScore": 2.7293013462765083,
+        "normalizedScore": 0.301345,
+        "patientAverageScore": 3.429888714932381,
+        "phenotypeAverageScore": 2.0287139776206353,
+        "directPhenotypeCount": 90,
+        "matchedPhenotypeCount": 4,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002984",
+            "patientPhenotypeLabel": "Hypoplasia of the radius",
+            "diseasePhenotypeCurie": "HP:0003022",
+            "diseasePhenotypeLabel": "Hypoplasia of the ulna",
+            "micaCurie": "HP:0009821",
+            "micaLabel": "Forearm undergrowth",
+            "score": 4.753007542368795,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:609441"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009777",
+            "patientPhenotypeLabel": "Absent thumb",
+            "diseasePhenotypeCurie": "HP:0009596",
+            "diseasePhenotypeLabel": "Aplasia of the proximal phalanx of the 2nd finger",
+            "micaCurie": "HP:0009380",
+            "micaLabel": "Finger aplasia",
+            "score": 4.579735821094759,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:609441"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009778",
+            "patientPhenotypeLabel": "Short thumb",
+            "diseasePhenotypeCurie": "HP:0010034",
+            "diseasePhenotypeLabel": "Short 1st metacarpal",
+            "micaCurie": "HP:0009778",
+            "micaLabel": "Short thumb",
+            "score": 4.384243801111059,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:609441"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011623",
+            "patientPhenotypeLabel": "Muscular ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0100864",
+            "diseasePhenotypeLabel": "Short femoral neck",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:609441"
+          }
+        ]
+      },
+      {
+        "rank": 6,
+        "geneCurie": "NCBIGene:374969",
+        "geneLabel": "SVBP",
+        "geneSymbol": "SVBP",
+        "geneEntityId": 153217,
+        "bmaScore": 2.7207213368402687,
+        "normalizedScore": 0.300397,
+        "patientAverageScore": 4.416352657104438,
+        "phenotypeAverageScore": 1.0250900165760994,
+        "directPhenotypeCount": 33,
+        "matchedPhenotypeCount": 4,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011623",
+            "patientPhenotypeLabel": "Muscular ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0011623",
+            "diseasePhenotypeLabel": "Muscular ventricular septal defect",
+            "micaCurie": "HP:0011623",
+            "micaLabel": "Muscular ventricular septal defect",
+            "score": 5.921578419643816,
+            "evidenceCode": "1/8",
+            "referenceText": "OMIM:618569"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009778",
+            "patientPhenotypeLabel": "Short thumb",
+            "diseasePhenotypeCurie": "HP:0009778",
+            "diseasePhenotypeLabel": "Short thumb",
+            "micaCurie": "HP:0009778",
+            "micaLabel": "Short thumb",
+            "score": 4.384243801111059,
+            "evidenceCode": "1/8",
+            "referenceText": "OMIM:618569"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009777",
+            "patientPhenotypeLabel": "Absent thumb",
+            "diseasePhenotypeCurie": "HP:0009778",
+            "diseasePhenotypeLabel": "Short thumb",
+            "micaCurie": "HP:0009601",
+            "micaLabel": "Aplasia/Hypoplasia of the thumb",
+            "score": 4.122598702442273,
+            "evidenceCode": "1/8",
+            "referenceText": "OMIM:618569"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002984",
+            "patientPhenotypeLabel": "Hypoplasia of the radius",
+            "diseasePhenotypeCurie": "HP:0010047",
+            "diseasePhenotypeLabel": "Short 5th metacarpal",
+            "micaCurie": "HP:0003026",
+            "micaLabel": "Short long bone",
+            "score": 3.2369897052206036,
+            "evidenceCode": "2/8",
+            "referenceText": "OMIM:618569"
+          }
+        ]
+      },
+      {
+        "rank": 7,
+        "geneCurie": "NCBIGene:3549",
+        "geneLabel": "IHH",
+        "geneSymbol": "IHH",
+        "geneEntityId": 149174,
+        "bmaScore": 2.706439433313302,
+        "normalizedScore": 0.298821,
+        "patientAverageScore": 3.413614957213265,
+        "phenotypeAverageScore": 1.9992639094133389,
+        "directPhenotypeCount": 75,
+        "matchedPhenotypeCount": 4,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002984",
+            "patientPhenotypeLabel": "Hypoplasia of the radius",
+            "diseasePhenotypeCurie": "HP:0002984",
+            "diseasePhenotypeLabel": "Hypoplasia of the radius",
+            "micaCurie": "HP:0002984",
+            "micaLabel": "Hypoplasia of the radius",
+            "score": 5.145049630144819,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:607778"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009778",
+            "patientPhenotypeLabel": "Short thumb",
+            "diseasePhenotypeCurie": "HP:0009778",
+            "diseasePhenotypeLabel": "Short thumb",
+            "micaCurie": "HP:0009778",
+            "micaLabel": "Short thumb",
+            "score": 4.384243801111059,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:93388"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009777",
+            "patientPhenotypeLabel": "Absent thumb",
+            "diseasePhenotypeCurie": "HP:0009778",
+            "diseasePhenotypeLabel": "Short thumb",
+            "micaCurie": "HP:0009601",
+            "micaLabel": "Aplasia/Hypoplasia of the thumb",
+            "score": 4.122598702442273,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:93388"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011623",
+            "patientPhenotypeLabel": "Muscular ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:6000884",
+            "diseasePhenotypeLabel": "Enlarged humeral head",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "1/4",
+            "referenceText": "OMIM:607778"
+          }
+        ]
+      },
+      {
+        "rank": 8,
+        "geneCurie": "NCBIGene:57167",
+        "geneLabel": "SALL4",
+        "geneSymbol": "SALL4",
+        "geneEntityId": 152127,
+        "bmaScore": 2.705970074330111,
+        "normalizedScore": 0.298769,
+        "patientAverageScore": 4.446917971519273,
+        "phenotypeAverageScore": 0.9650221771409495,
+        "directPhenotypeCount": 151,
+        "matchedPhenotypeCount": 4,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0009777",
+            "patientPhenotypeLabel": "Absent thumb",
+            "diseasePhenotypeCurie": "HP:0009777",
+            "diseasePhenotypeLabel": "Absent thumb",
+            "micaCurie": "HP:0009777",
+            "micaLabel": "Absent thumb",
+            "score": 5.319403017289597,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:607323"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002984",
+            "patientPhenotypeLabel": "Hypoplasia of the radius",
+            "diseasePhenotypeCurie": "HP:0002984",
+            "diseasePhenotypeLabel": "Hypoplasia of the radius",
+            "micaCurie": "HP:0002984",
+            "micaLabel": "Hypoplasia of the radius",
+            "score": 5.145049630144819,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:147750"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009778",
+            "patientPhenotypeLabel": "Short thumb",
+            "diseasePhenotypeCurie": "HP:0010034",
+            "diseasePhenotypeLabel": "Short 1st metacarpal",
+            "micaCurie": "HP:0009778",
+            "micaLabel": "Short thumb",
+            "score": 4.384243801111059,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:147750"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011623",
+            "patientPhenotypeLabel": "Muscular ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0001629",
+            "diseasePhenotypeLabel": "Ventricular septal defect",
+            "micaCurie": "HP:0001629",
+            "micaLabel": "Ventricular septal defect",
+            "score": 2.9389754375316173,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:607323"
+          }
+        ]
+      },
+      {
+        "rank": 9,
+        "geneCurie": "NCBIGene:6885",
+        "geneLabel": "MAP3K7",
+        "geneSymbol": "MAP3K7",
+        "geneEntityId": 150240,
+        "bmaScore": 2.68481078317608,
+        "normalizedScore": 0.296433,
+        "patientAverageScore": 4.554408849926697,
+        "phenotypeAverageScore": 0.8152127164254638,
+        "directPhenotypeCount": 154,
+        "matchedPhenotypeCount": 4,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011623",
+            "patientPhenotypeLabel": "Muscular ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0011623",
+            "diseasePhenotypeLabel": "Muscular ventricular septal defect",
+            "micaCurie": "HP:0011623",
+            "micaLabel": "Muscular ventricular septal defect",
+            "score": 5.921578419643816,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:157800"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009778",
+            "patientPhenotypeLabel": "Short thumb",
+            "diseasePhenotypeCurie": "HP:0009650",
+            "diseasePhenotypeLabel": "Short distal phalanx of the thumb",
+            "micaCurie": "HP:0009778",
+            "micaLabel": "Short thumb",
+            "score": 4.384243801111059,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:1826"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009777",
+            "patientPhenotypeLabel": "Absent thumb",
+            "diseasePhenotypeCurie": "HP:0009650",
+            "diseasePhenotypeLabel": "Short distal phalanx of the thumb",
+            "micaCurie": "HP:0009601",
+            "micaLabel": "Aplasia/Hypoplasia of the thumb",
+            "score": 4.122598702442273,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:1826"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002984",
+            "patientPhenotypeLabel": "Hypoplasia of the radius",
+            "diseasePhenotypeCurie": "HP:0003083",
+            "diseasePhenotypeLabel": "Dislocated radial head",
+            "micaCurie": "HP:0002818",
+            "micaLabel": "Abnormal morphology of the radius",
+            "score": 3.789214476509637,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:1826"
+          }
+        ]
+      },
+      {
+        "rank": 10,
+        "geneCurie": "NCBIGene:6926",
+        "geneLabel": "TBX3",
+        "geneSymbol": "TBX3",
+        "geneEntityId": 150263,
+        "bmaScore": 2.674276301696605,
+        "normalizedScore": 0.295269,
+        "patientAverageScore": 3.994457584133669,
+        "phenotypeAverageScore": 1.3540950192595405,
+        "directPhenotypeCount": 73,
+        "matchedPhenotypeCount": 4,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002984",
+            "patientPhenotypeLabel": "Hypoplasia of the radius",
+            "diseasePhenotypeCurie": "HP:0002984",
+            "diseasePhenotypeLabel": "Hypoplasia of the radius",
+            "micaCurie": "HP:0002984",
+            "micaLabel": "Hypoplasia of the radius",
+            "score": 5.145049630144819,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:181450"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009777",
+            "patientPhenotypeLabel": "Absent thumb",
+            "diseasePhenotypeCurie": "HP:0009460",
+            "diseasePhenotypeLabel": "Aplasia of the 3rd finger",
+            "micaCurie": "HP:0009380",
+            "micaLabel": "Finger aplasia",
+            "score": 4.579735821094759,
+            "evidenceCode": "1/3",
+            "referenceText": "OMIM:181450"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009778",
+            "patientPhenotypeLabel": "Short thumb",
+            "diseasePhenotypeCurie": "HP:0009882",
+            "diseasePhenotypeLabel": "Short distal phalanx of finger",
+            "micaCurie": "HP:0009381",
+            "micaLabel": "Short finger",
+            "score": 3.3140694477634827,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:3138"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011623",
+            "patientPhenotypeLabel": "Muscular ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0001629",
+            "diseasePhenotypeLabel": "Ventricular septal defect",
+            "micaCurie": "HP:0001629",
+            "micaLabel": "Ventricular septal defect",
+            "score": 2.9389754375316173,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:181450"
+          }
+        ]
+      },
+      {
+        "rank": 11,
+        "geneCurie": "NCBIGene:8200",
+        "geneLabel": "GDF5",
+        "geneSymbol": "GDF5",
+        "geneEntityId": 150527,
+        "bmaScore": 2.6731773783707675,
+        "normalizedScore": 0.295148,
+        "patientAverageScore": 3.413614957213265,
+        "phenotypeAverageScore": 1.9327397995282698,
+        "directPhenotypeCount": 160,
+        "matchedPhenotypeCount": 4,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002984",
+            "patientPhenotypeLabel": "Hypoplasia of the radius",
+            "diseasePhenotypeCurie": "HP:0002984",
+            "diseasePhenotypeLabel": "Hypoplasia of the radius",
+            "micaCurie": "HP:0002984",
+            "micaLabel": "Hypoplasia of the radius",
+            "score": 5.145049630144819,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:200700"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009778",
+            "patientPhenotypeLabel": "Short thumb",
+            "diseasePhenotypeCurie": "HP:0010034",
+            "diseasePhenotypeLabel": "Short 1st metacarpal",
+            "micaCurie": "HP:0009778",
+            "micaLabel": "Short thumb",
+            "score": 4.384243801111059,
+            "evidenceCode": "1/3",
+            "referenceText": "OMIM:113100"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009777",
+            "patientPhenotypeLabel": "Absent thumb",
+            "diseasePhenotypeCurie": "HP:0010034",
+            "diseasePhenotypeLabel": "Short 1st metacarpal",
+            "micaCurie": "HP:0009601",
+            "micaLabel": "Aplasia/Hypoplasia of the thumb",
+            "score": 4.122598702442273,
+            "evidenceCode": "1/3",
+            "referenceText": "OMIM:113100"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011623",
+            "patientPhenotypeLabel": "Muscular ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:6001052",
+            "diseasePhenotypeLabel": "Tibiotalar synostosis",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:200700"
+          }
+        ]
+      },
+      {
+        "rank": 12,
+        "geneCurie": "NCBIGene:100151683",
+        "geneLabel": "RNU4ATAC",
+        "geneSymbol": "RNU4ATAC",
+        "geneEntityId": 153311,
+        "bmaScore": 2.652721141101725,
+        "normalizedScore": 0.292889,
+        "patientAverageScore": 4.554408849926697,
+        "phenotypeAverageScore": 0.7510334322767535,
+        "directPhenotypeCount": 227,
+        "matchedPhenotypeCount": 4,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0011623",
+            "patientPhenotypeLabel": "Muscular ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0011623",
+            "diseasePhenotypeLabel": "Muscular ventricular septal defect",
+            "micaCurie": "HP:0011623",
+            "micaLabel": "Muscular ventricular septal defect",
+            "score": 5.921578419643816,
+            "evidenceCode": "1/10",
+            "referenceText": "OMIM:210710"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009778",
+            "patientPhenotypeLabel": "Short thumb",
+            "diseasePhenotypeCurie": "HP:0009778",
+            "diseasePhenotypeLabel": "Short thumb",
+            "micaCurie": "HP:0009778",
+            "micaLabel": "Short thumb",
+            "score": 4.384243801111059,
+            "evidenceCode": "1/10",
+            "referenceText": "OMIM:210710"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009777",
+            "patientPhenotypeLabel": "Absent thumb",
+            "diseasePhenotypeCurie": "HP:0009778",
+            "diseasePhenotypeLabel": "Short thumb",
+            "micaCurie": "HP:0009601",
+            "micaLabel": "Aplasia/Hypoplasia of the thumb",
+            "score": 4.122598702442273,
+            "evidenceCode": "1/10",
+            "referenceText": "OMIM:210710"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002984",
+            "patientPhenotypeLabel": "Hypoplasia of the radius",
+            "diseasePhenotypeCurie": "HP:0003083",
+            "diseasePhenotypeLabel": "Dislocated radial head",
+            "micaCurie": "HP:0002818",
+            "micaLabel": "Abnormal morphology of the radius",
+            "score": 3.789214476509637,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1824"
+          }
+        ]
+      },
+      {
+        "rank": 13,
+        "geneCurie": "NCBIGene:6154",
+        "geneLabel": "RPL26",
+        "geneSymbol": "RPL26",
+        "geneEntityId": 150004,
+        "bmaScore": 2.6364493676614833,
+        "normalizedScore": 0.291093,
+        "patientAverageScore": 4.446917971519273,
+        "phenotypeAverageScore": 0.8259807638036936,
+        "directPhenotypeCount": 76,
+        "matchedPhenotypeCount": 4,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0009777",
+            "patientPhenotypeLabel": "Absent thumb",
+            "diseasePhenotypeCurie": "HP:0009777",
+            "diseasePhenotypeLabel": "Absent thumb",
+            "micaCurie": "HP:0009777",
+            "micaLabel": "Absent thumb",
+            "score": 5.319403017289597,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:124"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002984",
+            "patientPhenotypeLabel": "Hypoplasia of the radius",
+            "diseasePhenotypeCurie": "HP:0002984",
+            "diseasePhenotypeLabel": "Hypoplasia of the radius",
+            "micaCurie": "HP:0002984",
+            "micaLabel": "Hypoplasia of the radius",
+            "score": 5.145049630144819,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:614900"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009778",
+            "patientPhenotypeLabel": "Short thumb",
+            "diseasePhenotypeCurie": "HP:0009778",
+            "diseasePhenotypeLabel": "Short thumb",
+            "micaCurie": "HP:0009778",
+            "micaLabel": "Short thumb",
+            "score": 4.384243801111059,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:124"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011623",
+            "patientPhenotypeLabel": "Muscular ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0001629",
+            "diseasePhenotypeLabel": "Ventricular septal defect",
+            "micaCurie": "HP:0001629",
+            "micaLabel": "Ventricular septal defect",
+            "score": 2.9389754375316173,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:124"
+          }
+        ]
+      },
+      {
+        "rank": 14,
+        "geneCurie": "NCBIGene:727857",
+        "geneLabel": "BHLHA9",
+        "geneSymbol": "BHLHA9",
+        "geneEntityId": 153292,
+        "bmaScore": 2.611779583067989,
+        "normalizedScore": 0.288369,
+        "patientAverageScore": 3.3472227411760143,
+        "phenotypeAverageScore": 1.8763364249599639,
+        "directPhenotypeCount": 46,
+        "matchedPhenotypeCount": 4,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0009777",
+            "patientPhenotypeLabel": "Absent thumb",
+            "diseasePhenotypeCurie": "HP:0004058",
+            "diseasePhenotypeLabel": "Hand monodactyly",
+            "micaCurie": "HP:0009380",
+            "micaLabel": "Finger aplasia",
+            "score": 4.579735821094759,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:1986"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002984",
+            "patientPhenotypeLabel": "Hypoplasia of the radius",
+            "diseasePhenotypeCurie": "HP:0006495",
+            "diseasePhenotypeLabel": "Aplasia/Hypoplasia of the ulna",
+            "micaCurie": "HP:0006503",
+            "micaLabel": "Aplasia/hypoplasia involving forearm bones",
+            "score": 4.42234364734333,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:3329"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009778",
+            "patientPhenotypeLabel": "Short thumb",
+            "diseasePhenotypeCurie": "HP:0009778",
+            "diseasePhenotypeLabel": "Short thumb",
+            "micaCurie": "HP:0009778",
+            "micaLabel": "Short thumb",
+            "score": 4.384243801111059,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:157801"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011623",
+            "patientPhenotypeLabel": "Muscular ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0100797",
+            "diseasePhenotypeLabel": "Toenail dysplasia",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:607539"
+          }
+        ]
+      },
+      {
+        "rank": 15,
+        "geneCurie": "NCBIGene:64327",
+        "geneLabel": "LMBR1",
+        "geneSymbol": "LMBR1",
+        "geneEntityId": 152274,
+        "bmaScore": 2.5906175016171673,
+        "normalizedScore": 0.286033,
+        "patientAverageScore": 3.3388139017501635,
+        "phenotypeAverageScore": 1.8424211014841714,
+        "directPhenotypeCount": 75,
+        "matchedPhenotypeCount": 4,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002984",
+            "patientPhenotypeLabel": "Hypoplasia of the radius",
+            "diseasePhenotypeCurie": "HP:0006501",
+            "diseasePhenotypeLabel": "Aplasia/Hypoplasia of the radius",
+            "micaCurie": "HP:0006501",
+            "micaLabel": "Aplasia/Hypoplasia of the radius",
+            "score": 4.650353388308712,
+            "evidenceCode": "HP:0040280",
+            "referenceText": "ORPHA:93321"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009777",
+            "patientPhenotypeLabel": "Absent thumb",
+            "diseasePhenotypeCurie": "HP:0010035",
+            "diseasePhenotypeLabel": "Aplasia of the 1st metacarpal",
+            "micaCurie": "HP:0009380",
+            "micaLabel": "Finger aplasia",
+            "score": 4.579735821094759,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:93321"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009778",
+            "patientPhenotypeLabel": "Short thumb",
+            "diseasePhenotypeCurie": "HP:0010035",
+            "diseasePhenotypeLabel": "Aplasia of the 1st metacarpal",
+            "micaCurie": "HP:0009601",
+            "micaLabel": "Aplasia/Hypoplasia of the thumb",
+            "score": 4.122598702442273,
+            "evidenceCode": "HP:0040281",
+            "referenceText": "ORPHA:93321"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011623",
+            "patientPhenotypeLabel": "Muscular ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0100524",
+            "diseasePhenotypeLabel": "Limb duplication",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:2378"
+          }
+        ]
+      },
+      {
+        "rank": 16,
+        "geneCurie": "NCBIGene:2263",
+        "geneLabel": "FGFR2",
+        "geneSymbol": "FGFR2",
+        "geneEntityId": 148838,
+        "bmaScore": 2.5886541592064702,
+        "normalizedScore": 0.285816,
+        "patientAverageScore": 4.446917971519273,
+        "phenotypeAverageScore": 0.7303903468936671,
+        "directPhenotypeCount": 369,
+        "matchedPhenotypeCount": 4,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0009777",
+            "patientPhenotypeLabel": "Absent thumb",
+            "diseasePhenotypeCurie": "HP:0009777",
+            "diseasePhenotypeLabel": "Absent thumb",
+            "micaCurie": "HP:0009777",
+            "micaLabel": "Absent thumb",
+            "score": 5.319403017289597,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:2363"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002984",
+            "patientPhenotypeLabel": "Hypoplasia of the radius",
+            "diseasePhenotypeCurie": "HP:0002984",
+            "diseasePhenotypeLabel": "Hypoplasia of the radius",
+            "micaCurie": "HP:0002984",
+            "micaLabel": "Hypoplasia of the radius",
+            "score": 5.145049630144819,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:149730"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009778",
+            "patientPhenotypeLabel": "Short thumb",
+            "diseasePhenotypeCurie": "HP:0009778",
+            "diseasePhenotypeLabel": "Short thumb",
+            "micaCurie": "HP:0009778",
+            "micaLabel": "Short thumb",
+            "score": 4.384243801111059,
+            "evidenceCode": "3/4",
+            "referenceText": "OMIM:149730"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011623",
+            "patientPhenotypeLabel": "Muscular ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0001629",
+            "diseasePhenotypeLabel": "Ventricular septal defect",
+            "micaCurie": "HP:0001629",
+            "micaLabel": "Ventricular septal defect",
+            "score": 2.9389754375316173,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:101200"
+          }
+        ]
+      },
+      {
+        "rank": 17,
+        "geneCurie": "NCBIGene:55215",
+        "geneLabel": "FANCI",
+        "geneSymbol": "FANCI",
+        "geneEntityId": 151948,
+        "bmaScore": 2.549200446471348,
+        "normalizedScore": 0.28146,
+        "patientAverageScore": 4.446917971519273,
+        "phenotypeAverageScore": 0.6514829214234226,
+        "directPhenotypeCount": 140,
+        "matchedPhenotypeCount": 4,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0009777",
+            "patientPhenotypeLabel": "Absent thumb",
+            "diseasePhenotypeCurie": "HP:0009777",
+            "diseasePhenotypeLabel": "Absent thumb",
+            "micaCurie": "HP:0009777",
+            "micaLabel": "Absent thumb",
+            "score": 5.319403017289597,
+            "evidenceCode": "3/4",
+            "referenceText": "OMIM:609053"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002984",
+            "patientPhenotypeLabel": "Hypoplasia of the radius",
+            "diseasePhenotypeCurie": "HP:0002984",
+            "diseasePhenotypeLabel": "Hypoplasia of the radius",
+            "micaCurie": "HP:0002984",
+            "micaLabel": "Hypoplasia of the radius",
+            "score": 5.145049630144819,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:609053"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009778",
+            "patientPhenotypeLabel": "Short thumb",
+            "diseasePhenotypeCurie": "HP:0010034",
+            "diseasePhenotypeLabel": "Short 1st metacarpal",
+            "micaCurie": "HP:0009778",
+            "micaLabel": "Short thumb",
+            "score": 4.384243801111059,
+            "evidenceCode": "1/3",
+            "referenceText": "OMIM:609053"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011623",
+            "patientPhenotypeLabel": "Muscular ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0001629",
+            "diseasePhenotypeLabel": "Ventricular septal defect",
+            "micaCurie": "HP:0001629",
+            "micaLabel": "Ventricular septal defect",
+            "score": 2.9389754375316173,
+            "evidenceCode": "3/3",
+            "referenceText": "OMIM:609053"
+          }
+        ]
+      },
+      {
+        "rank": 18,
+        "geneCurie": "NCBIGene:29980",
+        "geneLabel": "DONSON",
+        "geneSymbol": "DONSON",
+        "geneEntityId": 151630,
+        "bmaScore": 2.542223867407966,
+        "normalizedScore": 0.280689,
+        "patientAverageScore": 3.6474047612579,
+        "phenotypeAverageScore": 1.437042973558031,
+        "directPhenotypeCount": 46,
+        "matchedPhenotypeCount": 4,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0009777",
+            "patientPhenotypeLabel": "Absent thumb",
+            "diseasePhenotypeCurie": "HP:0009777",
+            "diseasePhenotypeLabel": "Absent thumb",
+            "micaCurie": "HP:0009777",
+            "micaLabel": "Absent thumb",
+            "score": 5.319403017289597,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:251230"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002984",
+            "patientPhenotypeLabel": "Hypoplasia of the radius",
+            "diseasePhenotypeCurie": "HP:0002984",
+            "diseasePhenotypeLabel": "Hypoplasia of the radius",
+            "micaCurie": "HP:0002984",
+            "micaLabel": "Hypoplasia of the radius",
+            "score": 5.145049630144819,
+            "evidenceCode": "1/29",
+            "referenceText": "OMIM:617604"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009778",
+            "patientPhenotypeLabel": "Short thumb",
+            "diseasePhenotypeCurie": "HP:0009777",
+            "diseasePhenotypeLabel": "Absent thumb",
+            "micaCurie": "HP:0009601",
+            "micaLabel": "Aplasia/Hypoplasia of the thumb",
+            "score": 4.122598702442273,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:251230"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011623",
+            "patientPhenotypeLabel": "Muscular ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0012745",
+            "diseasePhenotypeLabel": "Short palpebral fissure",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:251230"
+          }
+        ]
+      },
+      {
+        "rank": 19,
+        "geneCurie": "NCBIGene:2261",
+        "geneLabel": "FGFR3",
+        "geneSymbol": "FGFR3",
+        "geneEntityId": 148837,
+        "bmaScore": 2.528933252116374,
+        "normalizedScore": 0.279222,
+        "patientAverageScore": 4.329554767323411,
+        "phenotypeAverageScore": 0.728311736909337,
+        "directPhenotypeCount": 338,
+        "matchedPhenotypeCount": 4,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0009777",
+            "patientPhenotypeLabel": "Absent thumb",
+            "diseasePhenotypeCurie": "HP:0009777",
+            "diseasePhenotypeLabel": "Absent thumb",
+            "micaCurie": "HP:0009777",
+            "micaLabel": "Absent thumb",
+            "score": 5.319403017289597,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:2363"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002984",
+            "patientPhenotypeLabel": "Hypoplasia of the radius",
+            "diseasePhenotypeCurie": "HP:0002984",
+            "diseasePhenotypeLabel": "Hypoplasia of the radius",
+            "micaCurie": "HP:0002984",
+            "micaLabel": "Hypoplasia of the radius",
+            "score": 5.145049630144819,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:2363"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009778",
+            "patientPhenotypeLabel": "Short thumb",
+            "diseasePhenotypeCurie": "HP:0009778",
+            "diseasePhenotypeLabel": "Short thumb",
+            "micaCurie": "HP:0009778",
+            "micaLabel": "Short thumb",
+            "score": 4.384243801111059,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:2363"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011623",
+            "patientPhenotypeLabel": "Muscular ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0001631",
+            "diseasePhenotypeLabel": "Atrial septal defect",
+            "micaCurie": "HP:0001671",
+            "micaLabel": "Abnormal cardiac septum morphology",
+            "score": 2.469522620748169,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1860"
+          }
+        ]
+      },
+      {
+        "rank": 20,
+        "geneCurie": "NCBIGene:9401",
+        "geneLabel": "RECQL4",
+        "geneSymbol": "RECQL4",
+        "geneEntityId": 150787,
+        "bmaScore": 2.524492652238571,
+        "normalizedScore": 0.278732,
+        "patientAverageScore": 4.329554767323411,
+        "phenotypeAverageScore": 0.7194305371537312,
+        "directPhenotypeCount": 215,
+        "matchedPhenotypeCount": 4,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0009777",
+            "patientPhenotypeLabel": "Absent thumb",
+            "diseasePhenotypeCurie": "HP:0009777",
+            "diseasePhenotypeLabel": "Absent thumb",
+            "micaCurie": "HP:0009777",
+            "micaLabel": "Absent thumb",
+            "score": 5.319403017289597,
+            "evidenceCode": "3/6",
+            "referenceText": "OMIM:218600"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002984",
+            "patientPhenotypeLabel": "Hypoplasia of the radius",
+            "diseasePhenotypeCurie": "HP:0002984",
+            "diseasePhenotypeLabel": "Hypoplasia of the radius",
+            "micaCurie": "HP:0002984",
+            "micaLabel": "Hypoplasia of the radius",
+            "score": 5.145049630144819,
+            "evidenceCode": "2/6",
+            "referenceText": "OMIM:218600"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009778",
+            "patientPhenotypeLabel": "Short thumb",
+            "diseasePhenotypeCurie": "HP:0009778",
+            "diseasePhenotypeLabel": "Short thumb",
+            "micaCurie": "HP:0009778",
+            "micaLabel": "Short thumb",
+            "score": 4.384243801111059,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:268400"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011623",
+            "patientPhenotypeLabel": "Muscular ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0001671",
+            "diseasePhenotypeLabel": "Abnormal cardiac septum morphology",
+            "micaCurie": "HP:0001671",
+            "micaLabel": "Abnormal cardiac septum morphology",
+            "score": 2.469522620748169,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:1225"
+          }
+        ]
+      },
+      {
+        "rank": 21,
+        "geneCurie": "NCBIGene:2187",
+        "geneLabel": "FANCB",
+        "geneSymbol": "FANCB",
+        "geneEntityId": 148804,
+        "bmaScore": 2.5216289688881837,
+        "normalizedScore": 0.278415,
+        "patientAverageScore": 4.381506696852076,
+        "phenotypeAverageScore": 0.6617512409242913,
+        "directPhenotypeCount": 167,
+        "matchedPhenotypeCount": 4,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0009777",
+            "patientPhenotypeLabel": "Absent thumb",
+            "diseasePhenotypeCurie": "HP:0009777",
+            "diseasePhenotypeLabel": "Absent thumb",
+            "micaCurie": "HP:0009777",
+            "micaLabel": "Absent thumb",
+            "score": 5.319403017289597,
+            "evidenceCode": "5/6",
+            "referenceText": "OMIM:300514"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002984",
+            "patientPhenotypeLabel": "Hypoplasia of the radius",
+            "diseasePhenotypeCurie": "HP:0002984",
+            "diseasePhenotypeLabel": "Hypoplasia of the radius",
+            "micaCurie": "HP:0002984",
+            "micaLabel": "Hypoplasia of the radius",
+            "score": 5.145049630144819,
+            "evidenceCode": "HP:0040282",
+            "referenceText": "ORPHA:3412"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009778",
+            "patientPhenotypeLabel": "Short thumb",
+            "diseasePhenotypeCurie": "HP:0009777",
+            "diseasePhenotypeLabel": "Absent thumb",
+            "micaCurie": "HP:0009601",
+            "micaLabel": "Aplasia/Hypoplasia of the thumb",
+            "score": 4.122598702442273,
+            "evidenceCode": "5/6",
+            "referenceText": "OMIM:300514"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011623",
+            "patientPhenotypeLabel": "Muscular ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0001629",
+            "diseasePhenotypeLabel": "Ventricular septal defect",
+            "micaCurie": "HP:0001629",
+            "micaLabel": "Ventricular septal defect",
+            "score": 2.9389754375316173,
+            "evidenceCode": "1/6",
+            "referenceText": "OMIM:300514"
+          }
+        ]
+      },
+      {
+        "rank": 22,
+        "geneCurie": "NCBIGene:90459",
+        "geneLabel": "ERI1",
+        "geneSymbol": "ERI1",
+        "geneEntityId": 152699,
+        "bmaScore": 2.521167690046192,
+        "normalizedScore": 0.278365,
+        "patientAverageScore": 3.923042384061768,
+        "phenotypeAverageScore": 1.1192929960306155,
+        "directPhenotypeCount": 102,
+        "matchedPhenotypeCount": 4,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0009777",
+            "patientPhenotypeLabel": "Absent thumb",
+            "diseasePhenotypeCurie": "HP:0009380",
+            "diseasePhenotypeLabel": "Finger aplasia",
+            "micaCurie": "HP:0009380",
+            "micaLabel": "Finger aplasia",
+            "score": 4.579735821094759,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:620663"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009778",
+            "patientPhenotypeLabel": "Short thumb",
+            "diseasePhenotypeCurie": "HP:0009638",
+            "diseasePhenotypeLabel": "Short proximal phalanx of thumb",
+            "micaCurie": "HP:0009778",
+            "micaLabel": "Short thumb",
+            "score": 4.384243801111059,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:620662"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002984",
+            "patientPhenotypeLabel": "Hypoplasia of the radius",
+            "diseasePhenotypeCurie": "HP:0003083",
+            "diseasePhenotypeLabel": "Dislocated radial head",
+            "micaCurie": "HP:0002818",
+            "micaLabel": "Abnormal morphology of the radius",
+            "score": 3.789214476509637,
+            "evidenceCode": "2/2",
+            "referenceText": "OMIM:620663"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011623",
+            "patientPhenotypeLabel": "Muscular ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0011682",
+            "diseasePhenotypeLabel": "Perimembranous ventricular septal defect",
+            "micaCurie": "HP:0001629",
+            "micaLabel": "Ventricular septal defect",
+            "score": 2.9389754375316173,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:620662"
+          }
+        ]
+      },
+      {
+        "rank": 23,
+        "geneCurie": "NCBIGene:6223",
+        "geneLabel": "RPS19",
+        "geneSymbol": "RPS19",
+        "geneEntityId": 150015,
+        "bmaScore": 2.5110221959840215,
+        "normalizedScore": 0.277244,
+        "patientAverageScore": 4.446917971519273,
+        "phenotypeAverageScore": 0.5751264204487703,
+        "directPhenotypeCount": 94,
+        "matchedPhenotypeCount": 4,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0009777",
+            "patientPhenotypeLabel": "Absent thumb",
+            "diseasePhenotypeCurie": "HP:0009777",
+            "diseasePhenotypeLabel": "Absent thumb",
+            "micaCurie": "HP:0009777",
+            "micaLabel": "Absent thumb",
+            "score": 5.319403017289597,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:124"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002984",
+            "patientPhenotypeLabel": "Hypoplasia of the radius",
+            "diseasePhenotypeCurie": "HP:0002984",
+            "diseasePhenotypeLabel": "Hypoplasia of the radius",
+            "micaCurie": "HP:0002984",
+            "micaLabel": "Hypoplasia of the radius",
+            "score": 5.145049630144819,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:105650"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009778",
+            "patientPhenotypeLabel": "Short thumb",
+            "diseasePhenotypeCurie": "HP:0009778",
+            "diseasePhenotypeLabel": "Short thumb",
+            "micaCurie": "HP:0009778",
+            "micaLabel": "Short thumb",
+            "score": 4.384243801111059,
+            "evidenceCode": "-",
+            "referenceText": "OMIM:105650"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011623",
+            "patientPhenotypeLabel": "Muscular ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0001629",
+            "diseasePhenotypeLabel": "Ventricular septal defect",
+            "micaCurie": "HP:0001629",
+            "micaLabel": "Ventricular septal defect",
+            "score": 2.9389754375316173,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:124"
+          }
+        ]
+      },
+      {
+        "rank": 24,
+        "geneCurie": "NCBIGene:51176",
+        "geneLabel": "LEF1",
+        "geneSymbol": "LEF1",
+        "geneEntityId": 151707,
+        "bmaScore": 2.4879063843304445,
+        "normalizedScore": 0.274692,
+        "patientAverageScore": 3.9905959789146155,
+        "phenotypeAverageScore": 0.9852167897462736,
+        "directPhenotypeCount": 57,
+        "matchedPhenotypeCount": 4,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0009777",
+            "patientPhenotypeLabel": "Absent thumb",
+            "diseasePhenotypeCurie": "HP:0009777",
+            "diseasePhenotypeLabel": "Absent thumb",
+            "micaCurie": "HP:0009777",
+            "micaLabel": "Absent thumb",
+            "score": 5.319403017289597,
+            "evidenceCode": "1/12",
+            "referenceText": "OMIM:621224"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009778",
+            "patientPhenotypeLabel": "Short thumb",
+            "diseasePhenotypeCurie": "HP:0010034",
+            "diseasePhenotypeLabel": "Short 1st metacarpal",
+            "micaCurie": "HP:0009778",
+            "micaLabel": "Short thumb",
+            "score": 4.384243801111059,
+            "evidenceCode": "1/5",
+            "referenceText": "OMIM:621224"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002984",
+            "patientPhenotypeLabel": "Hypoplasia of the radius",
+            "diseasePhenotypeCurie": "HP:0006433",
+            "diseasePhenotypeLabel": "Radial ray deficiency",
+            "micaCurie": "HP:0002818",
+            "micaLabel": "Abnormal morphology of the radius",
+            "score": 3.789214476509637,
+            "evidenceCode": "1/12",
+            "referenceText": "OMIM:621224"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011623",
+            "patientPhenotypeLabel": "Muscular ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0001631",
+            "diseasePhenotypeLabel": "Atrial septal defect",
+            "micaCurie": "HP:0001671",
+            "micaLabel": "Abnormal cardiac septum morphology",
+            "score": 2.469522620748169,
+            "evidenceCode": "1/12",
+            "referenceText": "OMIM:621224"
+          }
+        ]
+      },
+      {
+        "rank": 25,
+        "geneCurie": "NCBIGene:2176",
+        "geneLabel": "FANCC",
+        "geneSymbol": "FANCC",
+        "geneEntityId": 148798,
+        "bmaScore": 2.4846887071386554,
+        "normalizedScore": 0.274337,
+        "patientAverageScore": 4.348907449575267,
+        "phenotypeAverageScore": 0.6204699647020436,
+        "directPhenotypeCount": 137,
+        "matchedPhenotypeCount": 4,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0009777",
+            "patientPhenotypeLabel": "Absent thumb",
+            "diseasePhenotypeCurie": "HP:0009777",
+            "diseasePhenotypeLabel": "Absent thumb",
+            "micaCurie": "HP:0009777",
+            "micaLabel": "Absent thumb",
+            "score": 5.319403017289597,
+            "evidenceCode": "2/4",
+            "referenceText": "OMIM:227645"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002984",
+            "patientPhenotypeLabel": "Hypoplasia of the radius",
+            "diseasePhenotypeCurie": "HP:0003022",
+            "diseasePhenotypeLabel": "Hypoplasia of the ulna",
+            "micaCurie": "HP:0009821",
+            "micaLabel": "Forearm undergrowth",
+            "score": 4.753007542368795,
+            "evidenceCode": "HP:0040283",
+            "referenceText": "ORPHA:84"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0009778",
+            "patientPhenotypeLabel": "Short thumb",
+            "diseasePhenotypeCurie": "HP:0009778",
+            "diseasePhenotypeLabel": "Short thumb",
+            "micaCurie": "HP:0009778",
+            "micaLabel": "Short thumb",
+            "score": 4.384243801111059,
+            "evidenceCode": "0/2",
+            "referenceText": "OMIM:227645"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0011623",
+            "patientPhenotypeLabel": "Muscular ventricular septal defect",
+            "diseasePhenotypeCurie": "HP:0001629",
+            "diseasePhenotypeLabel": "Ventricular septal defect",
+            "micaCurie": "HP:0001629",
+            "micaLabel": "Ventricular septal defect",
+            "score": 2.9389754375316173,
+            "evidenceCode": "1/1",
+            "referenceText": "OMIM:227645"
+          }
+        ]
+      }
+    ],
+    "engineSummary": {
+      "diseaseCount": 8579,
+      "geneCount": 5256,
+      "phenotypeCount": 19389,
+      "sourceMode": {
+        "disease": "relationship_fallback",
+        "gene": "relationship_fallback"
+      },
+      "generatedAt": "2026-03-15T21:00:39.457Z"
+    }
+  }
+}

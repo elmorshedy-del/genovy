@@ -99,6 +99,22 @@ export async function finalizeSyncRun(client, syncRunId, { status, sourceVersion
   return result.rows[0];
 }
 
+export async function updateSyncRunProgress(client, syncRunId, { sourceVersion = '', summary = {} }) {
+  const result = await client.query(
+    `
+      UPDATE sync_runs
+      SET
+        source_version = COALESCE(NULLIF($2, ''), source_version),
+        summary_json = $3::jsonb
+      WHERE sync_run_id = $1
+        AND status = 'running'
+      RETURNING *
+    `,
+    [syncRunId, sourceVersion, JSON.stringify(summary)]
+  );
+  return result.rows[0];
+}
+
 export async function markSourceSyncState(client, sourceKey, syncRunId, sourceVersion, summary) {
   await client.query(
     `

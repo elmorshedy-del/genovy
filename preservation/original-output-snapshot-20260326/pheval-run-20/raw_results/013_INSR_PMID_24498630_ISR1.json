@@ -1,0 +1,2700 @@
+{
+  "success": true,
+  "engine": "genovy-dx-sim",
+  "input": {
+    "presentPhenotypeCuries": [
+      "HP:0000998",
+      "HP:0000956",
+      "HP:0030796",
+      "HP:0000842",
+      "HP:0001988",
+      "HP:0001508",
+      "HP:0008897",
+      "HP:0001511",
+      "HP:0012471",
+      "HP:0000280",
+      "HP:0003270",
+      "HP:0001007",
+      "HP:0008665",
+      "HP:0000065",
+      "HP:0000138",
+      "HP:0000105",
+      "HP:0012408",
+      "HP:0002035",
+      "HP:0004405",
+      "HP:0000520",
+      "HP:0001712",
+      "HP:0001639",
+      "HP:0000403",
+      "HP:0002908",
+      "HP:0030948"
+    ],
+    "excludedPhenotypeCuries": [
+      "HP:0002240",
+      "HP:0001744"
+    ],
+    "sourceFormat": "phenopacket"
+  },
+  "ranking": {
+    "queryPhenotypes": [
+      {
+        "phenotypeCurie": "HP:0000998",
+        "phenotypeLabel": "Hypertrichosis"
+      },
+      {
+        "phenotypeCurie": "HP:0000956",
+        "phenotypeLabel": "Acanthosis nigricans"
+      },
+      {
+        "phenotypeCurie": "HP:0030796",
+        "phenotypeLabel": "Increased C-peptide level"
+      },
+      {
+        "phenotypeCurie": "HP:0000842",
+        "phenotypeLabel": "Hyperinsulinemia"
+      },
+      {
+        "phenotypeCurie": "HP:0001988",
+        "phenotypeLabel": "Recurrent hypoglycemia"
+      },
+      {
+        "phenotypeCurie": "HP:0001508",
+        "phenotypeLabel": "Failure to thrive"
+      },
+      {
+        "phenotypeCurie": "HP:0008897",
+        "phenotypeLabel": "Postnatal growth retardation"
+      },
+      {
+        "phenotypeCurie": "HP:0001511",
+        "phenotypeLabel": "Intrauterine growth retardation"
+      },
+      {
+        "phenotypeCurie": "HP:0012471",
+        "phenotypeLabel": "Thick vermilion border"
+      },
+      {
+        "phenotypeCurie": "HP:0000280",
+        "phenotypeLabel": "Coarse facial features"
+      },
+      {
+        "phenotypeCurie": "HP:0003270",
+        "phenotypeLabel": "Abdominal distention"
+      },
+      {
+        "phenotypeCurie": "HP:0001007",
+        "phenotypeLabel": "Hirsutism"
+      },
+      {
+        "phenotypeCurie": "HP:0008665",
+        "phenotypeLabel": "Clitoral hypertrophy"
+      },
+      {
+        "phenotypeCurie": "HP:0000065",
+        "phenotypeLabel": "Labial hypertrophy"
+      },
+      {
+        "phenotypeCurie": "HP:0000138",
+        "phenotypeLabel": "Ovarian cyst"
+      },
+      {
+        "phenotypeCurie": "HP:0000105",
+        "phenotypeLabel": "Enlarged kidney"
+      },
+      {
+        "phenotypeCurie": "HP:0012408",
+        "phenotypeLabel": "Medullary nephrocalcinosis"
+      },
+      {
+        "phenotypeCurie": "HP:0002035",
+        "phenotypeLabel": "Rectal prolapse"
+      },
+      {
+        "phenotypeCurie": "HP:0004405",
+        "phenotypeLabel": "Prominent nipples"
+      },
+      {
+        "phenotypeCurie": "HP:0000520",
+        "phenotypeLabel": "Proptosis"
+      },
+      {
+        "phenotypeCurie": "HP:0001712",
+        "phenotypeLabel": "Left ventricular hypertrophy"
+      },
+      {
+        "phenotypeCurie": "HP:0001639",
+        "phenotypeLabel": "Hypertrophic cardiomyopathy"
+      },
+      {
+        "phenotypeCurie": "HP:0000403",
+        "phenotypeLabel": "Recurrent otitis media"
+      },
+      {
+        "phenotypeCurie": "HP:0002908",
+        "phenotypeLabel": "Conjugated hyperbilirubinemia"
+      },
+      {
+        "phenotypeCurie": "HP:0030948",
+        "phenotypeLabel": "Elevated gamma-glutamyltransferase level"
+      }
+    ],
+    "results": [
+      {
+        "rank": 1,
+        "diseaseCurie": "MONDO:0009517",
+        "diseaseLabel": "Donohue syndrome",
+        "diseaseEntityId": 70803,
+        "bmaScore": 3.906122296857554,
+        "normalizedScore": 0.431279,
+        "patientAverageScore": 4.9846982569790805,
+        "diseaseAverageScore": 2.8275463367360274,
+        "directPhenotypeCount": 80,
+        "matchedPhenotypeCount": 25,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0004405",
+            "patientPhenotypeLabel": "Prominent nipples",
+            "diseasePhenotypeCurie": "HP:0004405",
+            "diseasePhenotypeLabel": "Prominent nipples",
+            "micaCurie": "HP:0004405",
+            "micaLabel": "Prominent nipples",
+            "score": 8.36392545501302,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:508"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0030796",
+            "patientPhenotypeLabel": "Increased C-peptide level",
+            "diseasePhenotypeCurie": "HP:0030796",
+            "diseasePhenotypeLabel": "Increased C-peptide level",
+            "micaCurie": "HP:0030796",
+            "micaLabel": "Increased C-peptide level",
+            "score": 7.958460346904856,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:24498630"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000065",
+            "patientPhenotypeLabel": "Labial hypertrophy",
+            "diseasePhenotypeCurie": "HP:0000065",
+            "diseasePhenotypeLabel": "Labial hypertrophy",
+            "micaCurie": "HP:0000065",
+            "micaLabel": "Labial hypertrophy",
+            "score": 7.111162486517652,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:508"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0012408",
+            "patientPhenotypeLabel": "Medullary nephrocalcinosis",
+            "diseasePhenotypeCurie": "HP:0012408",
+            "diseasePhenotypeLabel": "Medullary nephrocalcinosis",
+            "micaCurie": "HP:0012408",
+            "micaLabel": "Medullary nephrocalcinosis",
+            "score": 6.572165985784965,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:24498630"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001988",
+            "patientPhenotypeLabel": "Recurrent hypoglycemia",
+            "diseasePhenotypeCurie": "HP:0004914",
+            "diseasePhenotypeLabel": "Recurrent infantile hypoglycemia",
+            "micaCurie": "HP:0001988",
+            "micaLabel": "Recurrent hypoglycemia",
+            "score": 6.492123278111428,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:508"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002035",
+            "patientPhenotypeLabel": "Rectal prolapse",
+            "diseasePhenotypeCurie": "HP:0002035",
+            "diseasePhenotypeLabel": "Rectal prolapse",
+            "micaCurie": "HP:0002035",
+            "micaLabel": "Rectal prolapse",
+            "score": 6.061340362018974,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:24498630"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000138",
+            "patientPhenotypeLabel": "Ovarian cyst",
+            "diseasePhenotypeCurie": "HP:0000138",
+            "diseasePhenotypeLabel": "Ovarian cyst",
+            "micaCurie": "HP:0000138",
+            "micaLabel": "Ovarian cyst",
+            "score": 5.623085431087819,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:24498630"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002908",
+            "patientPhenotypeLabel": "Conjugated hyperbilirubinemia",
+            "diseasePhenotypeCurie": "HP:0002908",
+            "diseasePhenotypeLabel": "Conjugated hyperbilirubinemia",
+            "micaCurie": "HP:0002908",
+            "micaLabel": "Conjugated hyperbilirubinemia",
+            "score": 5.473553697116856,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:24498630"
+          }
+        ]
+      },
+      {
+        "rank": 2,
+        "diseaseCurie": "MONDO:0012520",
+        "diseaseLabel": "insulin-resistance syndrome type A",
+        "diseaseEntityId": 73806,
+        "bmaScore": 2.4092923043636993,
+        "normalizedScore": 0.266012,
+        "patientAverageScore": 1.5429972451186575,
+        "diseaseAverageScore": 3.2755873636087407,
+        "directPhenotypeCount": 12,
+        "matchedPhenotypeCount": 25,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000138",
+            "patientPhenotypeLabel": "Ovarian cyst",
+            "diseasePhenotypeCurie": "HP:0000147",
+            "diseasePhenotypeLabel": "Polycystic ovaries",
+            "micaCurie": "HP:0000138",
+            "micaLabel": "Ovarian cyst",
+            "score": 5.623085431087819,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:8288049"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000842",
+            "patientPhenotypeLabel": "Hyperinsulinemia",
+            "diseasePhenotypeCurie": "HP:0008283",
+            "diseasePhenotypeLabel": "Fasting hyperinsulinemia",
+            "micaCurie": "HP:0000842",
+            "micaLabel": "Hyperinsulinemia",
+            "score": 5.368193181459029,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:8288049;PMID:2544998"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000956",
+            "patientPhenotypeLabel": "Acanthosis nigricans",
+            "diseasePhenotypeCurie": "HP:0000956",
+            "diseasePhenotypeLabel": "Acanthosis nigricans",
+            "micaCurie": "HP:0000956",
+            "micaLabel": "Acanthosis nigricans",
+            "score": 5.145049630144819,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:8288049;PMID:2544998"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001007",
+            "patientPhenotypeLabel": "Hirsutism",
+            "diseasePhenotypeCurie": "HP:0001007",
+            "diseasePhenotypeLabel": "Hirsutism",
+            "micaCurie": "HP:0001007",
+            "micaLabel": "Hirsutism",
+            "score": 4.033192114726689,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:8288049"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001988",
+            "patientPhenotypeLabel": "Recurrent hypoglycemia",
+            "diseasePhenotypeCurie": "HP:0025691",
+            "diseasePhenotypeLabel": "Impaired fasting glucose",
+            "micaCurie": "HP:0011015",
+            "micaLabel": "Abnormal blood glucose concentration",
+            "score": 3.6103352639066553,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:2544998"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008665",
+            "patientPhenotypeLabel": "Clitoral hypertrophy",
+            "diseasePhenotypeCurie": "HP:0000147",
+            "diseasePhenotypeLabel": "Polycystic ovaries",
+            "micaCurie": "HP:0010460",
+            "micaLabel": "Abnormality of the female genitalia",
+            "score": 3.3400449341667438,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:8288049"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000065",
+            "patientPhenotypeLabel": "Labial hypertrophy",
+            "diseasePhenotypeCurie": "HP:0000147",
+            "diseasePhenotypeLabel": "Polycystic ovaries",
+            "micaCurie": "HP:0010460",
+            "micaLabel": "Abnormality of the female genitalia",
+            "score": 3.3400449341667438,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:8288049"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000998",
+            "patientPhenotypeLabel": "Hypertrichosis",
+            "diseasePhenotypeCurie": "HP:0001007",
+            "diseasePhenotypeLabel": "Hirsutism",
+            "micaCurie": "HP:0011362",
+            "micaLabel": "Abnormal hair quantity",
+            "score": 2.366230358154402,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:8288049"
+          }
+        ]
+      },
+      {
+        "rank": 3,
+        "diseaseCurie": "MONDO:0009479",
+        "diseaseLabel": "Johanson-Blizzard syndrome",
+        "diseaseEntityId": 70765,
+        "bmaScore": 2.3143216060418528,
+        "normalizedScore": 0.255526,
+        "patientAverageScore": 2.847213733018789,
+        "diseaseAverageScore": 1.781429479064916,
+        "directPhenotypeCount": 92,
+        "matchedPhenotypeCount": 25,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002908",
+            "patientPhenotypeLabel": "Conjugated hyperbilirubinemia",
+            "diseasePhenotypeCurie": "HP:0002908",
+            "diseasePhenotypeLabel": "Conjugated hyperbilirubinemia",
+            "micaCurie": "HP:0002908",
+            "micaLabel": "Conjugated hyperbilirubinemia",
+            "score": 5.473553697116856,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:18553553"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0030948",
+            "patientPhenotypeLabel": "Elevated gamma-glutamyltransferase level",
+            "diseasePhenotypeCurie": "HP:0030948",
+            "diseasePhenotypeLabel": "Elevated gamma-glutamyltransferase level",
+            "micaCurie": "HP:0030948",
+            "micaLabel": "Elevated gamma-glutamyltransferase level",
+            "score": 5.343500568868658,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:18553553"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008665",
+            "patientPhenotypeLabel": "Clitoral hypertrophy",
+            "diseasePhenotypeCurie": "HP:0008665",
+            "diseasePhenotypeLabel": "Clitoral hypertrophy",
+            "micaCurie": "HP:0008665",
+            "micaLabel": "Clitoral hypertrophy",
+            "score": 5.319403017289597,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:243800"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002035",
+            "patientPhenotypeLabel": "Rectal prolapse",
+            "diseasePhenotypeCurie": "HP:0000143",
+            "diseasePhenotypeLabel": "Rectovaginal fistula",
+            "micaCurie": "HP:0002034",
+            "micaLabel": "Abnormal rectum morphology",
+            "score": 4.8674178935465395,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:243800"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000065",
+            "patientPhenotypeLabel": "Labial hypertrophy",
+            "diseasePhenotypeCurie": "HP:0008665",
+            "diseasePhenotypeLabel": "Clitoral hypertrophy",
+            "micaCurie": "HP:0000055",
+            "micaLabel": "Abnormal female external genitalia morphology",
+            "score": 4.393633541460898,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:243800"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0004405",
+            "patientPhenotypeLabel": "Prominent nipples",
+            "diseasePhenotypeCurie": "HP:0002557",
+            "diseasePhenotypeLabel": "Hypoplastic nipples",
+            "micaCurie": "HP:0004404",
+            "micaLabel": "Abnormal nipple morphology",
+            "score": 3.654395253700686,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:243800"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000138",
+            "patientPhenotypeLabel": "Ovarian cyst",
+            "diseasePhenotypeCurie": "HP:0008716",
+            "diseasePhenotypeLabel": "Urethrovaginal fistula",
+            "micaCurie": "HP:0000008",
+            "micaLabel": "Abnormal morphology of female internal genitalia",
+            "score": 3.593240830547355,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:243800"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001639",
+            "patientPhenotypeLabel": "Hypertrophic cardiomyopathy",
+            "diseasePhenotypeCurie": "HP:0001644",
+            "diseasePhenotypeLabel": "Dilated cardiomyopathy",
+            "micaCurie": "HP:0001638",
+            "micaLabel": "Cardiomyopathy",
+            "score": 3.0120673215369536,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:243800"
+          }
+        ]
+      },
+      {
+        "rank": 4,
+        "diseaseCurie": "MONDO:0013253",
+        "diseaseLabel": "breast-ovarian cancer, familial, susceptibility to, 3",
+        "diseaseEntityId": 74539,
+        "bmaScore": 2.3105755283920635,
+        "normalizedScore": 0.255113,
+        "patientAverageScore": 0.6782930621668488,
+        "diseaseAverageScore": 3.9428579946172784,
+        "directPhenotypeCount": 2,
+        "matchedPhenotypeCount": 25,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000138",
+            "patientPhenotypeLabel": "Ovarian cyst",
+            "diseasePhenotypeCurie": "HP:0025318",
+            "diseasePhenotypeLabel": "Ovarian carcinoma",
+            "micaCurie": "HP:0000137",
+            "micaLabel": "Abnormality of the ovary",
+            "score": 4.568436265840825,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:22538716"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008665",
+            "patientPhenotypeLabel": "Clitoral hypertrophy",
+            "diseasePhenotypeCurie": "HP:0025318",
+            "diseasePhenotypeLabel": "Ovarian carcinoma",
+            "micaCurie": "HP:0010460",
+            "micaLabel": "Abnormality of the female genitalia",
+            "score": 3.3400449341667438,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:22538716"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000065",
+            "patientPhenotypeLabel": "Labial hypertrophy",
+            "diseasePhenotypeCurie": "HP:0025318",
+            "diseasePhenotypeLabel": "Ovarian carcinoma",
+            "micaCurie": "HP:0010460",
+            "micaLabel": "Abnormality of the female genitalia",
+            "score": 3.3400449341667438,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:22538716"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0004405",
+            "patientPhenotypeLabel": "Prominent nipples",
+            "diseasePhenotypeCurie": "HP:0003002",
+            "diseasePhenotypeLabel": "Breast carcinoma",
+            "micaCurie": "HP:0031093",
+            "micaLabel": "Abnormal breast morphology",
+            "score": 3.3172797233937312,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:20400964"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000105",
+            "patientPhenotypeLabel": "Enlarged kidney",
+            "diseasePhenotypeCurie": "HP:0025318",
+            "diseasePhenotypeLabel": "Ovarian carcinoma",
+            "micaCurie": "HP:0000119",
+            "micaLabel": "Abnormality of the genitourinary system",
+            "score": 1.1713672443299454,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:22538716"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0012408",
+            "patientPhenotypeLabel": "Medullary nephrocalcinosis",
+            "diseasePhenotypeCurie": "HP:0025318",
+            "diseasePhenotypeLabel": "Ovarian carcinoma",
+            "micaCurie": "HP:0000119",
+            "micaLabel": "Abnormality of the genitourinary system",
+            "score": 1.1713672443299454,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:22538716"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000998",
+            "patientPhenotypeLabel": "Hypertrichosis",
+            "diseasePhenotypeCurie": "HP:0025318",
+            "diseasePhenotypeLabel": "Ovarian carcinoma",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:22538716"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000956",
+            "patientPhenotypeLabel": "Acanthosis nigricans",
+            "diseasePhenotypeCurie": "HP:0025318",
+            "diseasePhenotypeLabel": "Ovarian carcinoma",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:22538716"
+          }
+        ]
+      },
+      {
+        "rank": 5,
+        "diseaseCurie": "MONDO:0009874",
+        "diseaseLabel": "Rabson-Mendenhall syndrome",
+        "diseaseEntityId": 71160,
+        "bmaScore": 2.3073023107032973,
+        "normalizedScore": 0.254751,
+        "patientAverageScore": 1.960558208076084,
+        "diseaseAverageScore": 2.654046413330511,
+        "directPhenotypeCount": 22,
+        "matchedPhenotypeCount": 25,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000842",
+            "patientPhenotypeLabel": "Hyperinsulinemia",
+            "diseasePhenotypeCurie": "HP:0000842",
+            "diseasePhenotypeLabel": "Hyperinsulinemia",
+            "micaCurie": "HP:0000842",
+            "micaLabel": "Hyperinsulinemia",
+            "score": 5.368193181459029,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:262190"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008665",
+            "patientPhenotypeLabel": "Clitoral hypertrophy",
+            "diseasePhenotypeCurie": "HP:0008665",
+            "diseasePhenotypeLabel": "Clitoral hypertrophy",
+            "micaCurie": "HP:0008665",
+            "micaLabel": "Clitoral hypertrophy",
+            "score": 5.319403017289597,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:262190"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000956",
+            "patientPhenotypeLabel": "Acanthosis nigricans",
+            "diseasePhenotypeCurie": "HP:0000956",
+            "diseasePhenotypeLabel": "Acanthosis nigricans",
+            "micaCurie": "HP:0000956",
+            "micaLabel": "Acanthosis nigricans",
+            "score": 5.145049630144819,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:262190"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000065",
+            "patientPhenotypeLabel": "Labial hypertrophy",
+            "diseasePhenotypeCurie": "HP:0008665",
+            "diseasePhenotypeLabel": "Clitoral hypertrophy",
+            "micaCurie": "HP:0000055",
+            "micaLabel": "Abnormal female external genitalia morphology",
+            "score": 4.393633541460898,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:262190"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001988",
+            "patientPhenotypeLabel": "Recurrent hypoglycemia",
+            "diseasePhenotypeCurie": "HP:0003162",
+            "diseasePhenotypeLabel": "Fasting hypoglycemia",
+            "micaCurie": "HP:0001943",
+            "micaLabel": "Hypoglycemia",
+            "score": 3.789214476509637,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:262190"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000280",
+            "patientPhenotypeLabel": "Coarse facial features",
+            "diseasePhenotypeCurie": "HP:0000280",
+            "diseasePhenotypeLabel": "Coarse facial features",
+            "micaCurie": "HP:0000280",
+            "micaLabel": "Coarse facial features",
+            "score": 3.7243538423075964,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:262190"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000998",
+            "patientPhenotypeLabel": "Hypertrichosis",
+            "diseasePhenotypeCurie": "HP:0000998",
+            "diseasePhenotypeLabel": "Hypertrichosis",
+            "micaCurie": "HP:0000998",
+            "micaLabel": "Hypertrichosis",
+            "score": 3.4116257379297275,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:262190"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000138",
+            "patientPhenotypeLabel": "Ovarian cyst",
+            "diseasePhenotypeCurie": "HP:0008665",
+            "diseasePhenotypeLabel": "Clitoral hypertrophy",
+            "micaCurie": "HP:0010460",
+            "micaLabel": "Abnormality of the female genitalia",
+            "score": 3.3400449341667438,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:262190"
+          }
+        ]
+      },
+      {
+        "rank": 6,
+        "diseaseCurie": "MONDO:0010020",
+        "diseaseLabel": "congenital generalized lipodystrophy type 2",
+        "diseaseEntityId": 71306,
+        "bmaScore": 2.25573797816667,
+        "normalizedScore": 0.249058,
+        "patientAverageScore": 2.693809525630738,
+        "diseaseAverageScore": 1.817666430702603,
+        "directPhenotypeCount": 42,
+        "matchedPhenotypeCount": 25,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000065",
+            "patientPhenotypeLabel": "Labial hypertrophy",
+            "diseasePhenotypeCurie": "HP:0000065",
+            "diseasePhenotypeLabel": "Labial hypertrophy",
+            "micaCurie": "HP:0000065",
+            "micaLabel": "Labial hypertrophy",
+            "score": 7.111162486517652,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:269700"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000138",
+            "patientPhenotypeLabel": "Ovarian cyst",
+            "diseasePhenotypeCurie": "HP:0000147",
+            "diseasePhenotypeLabel": "Polycystic ovaries",
+            "micaCurie": "HP:0000138",
+            "micaLabel": "Ovarian cyst",
+            "score": 5.623085431087819,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:269700"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000842",
+            "patientPhenotypeLabel": "Hyperinsulinemia",
+            "diseasePhenotypeCurie": "HP:0000842",
+            "diseasePhenotypeLabel": "Hyperinsulinemia",
+            "micaCurie": "HP:0000842",
+            "micaLabel": "Hyperinsulinemia",
+            "score": 5.368193181459029,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:269700"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008665",
+            "patientPhenotypeLabel": "Clitoral hypertrophy",
+            "diseasePhenotypeCurie": "HP:0008665",
+            "diseasePhenotypeLabel": "Clitoral hypertrophy",
+            "micaCurie": "HP:0008665",
+            "micaLabel": "Clitoral hypertrophy",
+            "score": 5.319403017289597,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:269700"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000956",
+            "patientPhenotypeLabel": "Acanthosis nigricans",
+            "diseasePhenotypeCurie": "HP:0000956",
+            "diseasePhenotypeLabel": "Acanthosis nigricans",
+            "micaCurie": "HP:0000956",
+            "micaLabel": "Acanthosis nigricans",
+            "score": 5.145049630144819,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:11479539"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001007",
+            "patientPhenotypeLabel": "Hirsutism",
+            "diseasePhenotypeCurie": "HP:0001007",
+            "diseasePhenotypeLabel": "Hirsutism",
+            "micaCurie": "HP:0001007",
+            "micaLabel": "Hirsutism",
+            "score": 4.033192114726689,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:269700"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001639",
+            "patientPhenotypeLabel": "Hypertrophic cardiomyopathy",
+            "diseasePhenotypeCurie": "HP:0001639",
+            "diseasePhenotypeLabel": "Hypertrophic cardiomyopathy",
+            "micaCurie": "HP:0001639",
+            "micaLabel": "Hypertrophic cardiomyopathy",
+            "score": 3.898017336358436,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:269700"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001988",
+            "patientPhenotypeLabel": "Recurrent hypoglycemia",
+            "diseasePhenotypeCurie": "HP:0005978",
+            "diseasePhenotypeLabel": "Type II diabetes mellitus",
+            "micaCurie": "HP:0011014",
+            "micaLabel": "Abnormal glucose homeostasis",
+            "score": 3.0026332893035947,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:11479539"
+          }
+        ]
+      },
+      {
+        "rank": 7,
+        "diseaseCurie": "MONDO:0002697",
+        "diseaseLabel": "ovarian gonadoblastoma",
+        "diseaseEntityId": 63983,
+        "bmaScore": 2.228631212024168,
+        "normalizedScore": 0.246065,
+        "patientAverageScore": 1.3769946725127964,
+        "diseaseAverageScore": 3.0802677515355397,
+        "directPhenotypeCount": 14,
+        "matchedPhenotypeCount": 25,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000138",
+            "patientPhenotypeLabel": "Ovarian cyst",
+            "diseasePhenotypeCurie": "HP:0100621",
+            "diseasePhenotypeLabel": "Dysgerminoma",
+            "micaCurie": "HP:0000137",
+            "micaLabel": "Abnormality of the ovary",
+            "score": 4.568436265840825,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:206484"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003270",
+            "patientPhenotypeLabel": "Abdominal distention",
+            "diseasePhenotypeCurie": "HP:0003270",
+            "diseasePhenotypeLabel": "Abdominal distention",
+            "micaCurie": "HP:0003270",
+            "micaLabel": "Abdominal distention",
+            "score": 4.461952785438375,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:206484"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001007",
+            "patientPhenotypeLabel": "Hirsutism",
+            "diseasePhenotypeCurie": "HP:0001007",
+            "diseasePhenotypeLabel": "Hirsutism",
+            "micaCurie": "HP:0001007",
+            "micaLabel": "Hirsutism",
+            "score": 4.033192114726689,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:206484"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008665",
+            "patientPhenotypeLabel": "Clitoral hypertrophy",
+            "diseasePhenotypeCurie": "HP:0100621",
+            "diseasePhenotypeLabel": "Dysgerminoma",
+            "micaCurie": "HP:0010460",
+            "micaLabel": "Abnormality of the female genitalia",
+            "score": 3.3400449341667438,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:206484"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000065",
+            "patientPhenotypeLabel": "Labial hypertrophy",
+            "diseasePhenotypeCurie": "HP:0100621",
+            "diseasePhenotypeLabel": "Dysgerminoma",
+            "micaCurie": "HP:0010460",
+            "micaLabel": "Abnormality of the female genitalia",
+            "score": 3.3400449341667438,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:206484"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000842",
+            "patientPhenotypeLabel": "Hyperinsulinemia",
+            "diseasePhenotypeCurie": "HP:0030088",
+            "diseasePhenotypeLabel": "Increased serum testosterone level",
+            "micaCurie": "HP:0003117",
+            "micaLabel": "Abnormal circulating hormone concentration",
+            "score": 3.273247453243228,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:206484"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000998",
+            "patientPhenotypeLabel": "Hypertrichosis",
+            "diseasePhenotypeCurie": "HP:0001007",
+            "diseasePhenotypeLabel": "Hirsutism",
+            "micaCurie": "HP:0011362",
+            "micaLabel": "Abnormal hair quantity",
+            "score": 2.366230358154402,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:206484"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000105",
+            "patientPhenotypeLabel": "Enlarged kidney",
+            "diseasePhenotypeCurie": "HP:0100621",
+            "diseasePhenotypeLabel": "Dysgerminoma",
+            "micaCurie": "HP:0000119",
+            "micaLabel": "Abnormality of the genitourinary system",
+            "score": 1.1713672443299454,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:206484"
+          }
+        ]
+      },
+      {
+        "rank": 8,
+        "diseaseCurie": "MONDO:0007906",
+        "diseaseLabel": "familial partial lipodystrophy, Dunnigan type",
+        "diseaseEntityId": 69192,
+        "bmaScore": 2.2151794085975776,
+        "normalizedScore": 0.24458,
+        "patientAverageScore": 2.8098383648314083,
+        "diseaseAverageScore": 1.6205204523637469,
+        "directPhenotypeCount": 81,
+        "matchedPhenotypeCount": 25,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000065",
+            "patientPhenotypeLabel": "Labial hypertrophy",
+            "diseasePhenotypeCurie": "HP:0008739",
+            "diseasePhenotypeLabel": "Labial pseudohypertrophy",
+            "micaCurie": "HP:0000065",
+            "micaLabel": "Labial hypertrophy",
+            "score": 7.111162486517652,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:151660"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000138",
+            "patientPhenotypeLabel": "Ovarian cyst",
+            "diseasePhenotypeCurie": "HP:0000147",
+            "diseasePhenotypeLabel": "Polycystic ovaries",
+            "micaCurie": "HP:0000138",
+            "micaLabel": "Ovarian cyst",
+            "score": 5.623085431087819,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:151660"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000842",
+            "patientPhenotypeLabel": "Hyperinsulinemia",
+            "diseasePhenotypeCurie": "HP:0000842",
+            "diseasePhenotypeLabel": "Hyperinsulinemia",
+            "micaCurie": "HP:0000842",
+            "micaLabel": "Hyperinsulinemia",
+            "score": 5.368193181459029,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:37303127"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000956",
+            "patientPhenotypeLabel": "Acanthosis nigricans",
+            "diseasePhenotypeCurie": "HP:0000956",
+            "diseasePhenotypeLabel": "Acanthosis nigricans",
+            "micaCurie": "HP:0000956",
+            "micaLabel": "Acanthosis nigricans",
+            "score": 5.145049630144819,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:17250669;PMID:11344241"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008665",
+            "patientPhenotypeLabel": "Clitoral hypertrophy",
+            "diseasePhenotypeCurie": "HP:0008739",
+            "diseasePhenotypeLabel": "Labial pseudohypertrophy",
+            "micaCurie": "HP:0000055",
+            "micaLabel": "Abnormal female external genitalia morphology",
+            "score": 4.393633541460898,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:151660"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001007",
+            "patientPhenotypeLabel": "Hirsutism",
+            "diseasePhenotypeCurie": "HP:0001007",
+            "diseasePhenotypeLabel": "Hirsutism",
+            "micaCurie": "HP:0001007",
+            "micaLabel": "Hirsutism",
+            "score": 4.033192114726689,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:151660"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000520",
+            "patientPhenotypeLabel": "Proptosis",
+            "diseasePhenotypeCurie": "HP:0000520",
+            "diseasePhenotypeLabel": "Proptosis",
+            "micaCurie": "HP:0000520",
+            "micaLabel": "Proptosis",
+            "score": 3.700486360900953,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:17250669"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001988",
+            "patientPhenotypeLabel": "Recurrent hypoglycemia",
+            "diseasePhenotypeCurie": "HP:0003074",
+            "diseasePhenotypeLabel": "Hyperglycemia",
+            "micaCurie": "HP:0011015",
+            "micaLabel": "Abnormal blood glucose concentration",
+            "score": 3.6103352639066553,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:37303127;PMID:17250669"
+          }
+        ]
+      },
+      {
+        "rank": 9,
+        "diseaseCurie": "MONDO:0014148",
+        "diseaseLabel": "estrogen resistance syndrome",
+        "diseaseEntityId": 75434,
+        "bmaScore": 2.2117827184787062,
+        "normalizedScore": 0.244205,
+        "patientAverageScore": 1.8063645103708206,
+        "diseaseAverageScore": 2.617200926586592,
+        "directPhenotypeCount": 17,
+        "matchedPhenotypeCount": 25,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000138",
+            "patientPhenotypeLabel": "Ovarian cyst",
+            "diseasePhenotypeCurie": "HP:0000147",
+            "diseasePhenotypeLabel": "Polycystic ovaries",
+            "micaCurie": "HP:0000138",
+            "micaLabel": "Ovarian cyst",
+            "score": 5.623085431087819,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:23841731"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000842",
+            "patientPhenotypeLabel": "Hyperinsulinemia",
+            "diseasePhenotypeCurie": "HP:0000842",
+            "diseasePhenotypeLabel": "Hyperinsulinemia",
+            "micaCurie": "HP:0000842",
+            "micaLabel": "Hyperinsulinemia",
+            "score": 5.368193181459029,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:615363"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000956",
+            "patientPhenotypeLabel": "Acanthosis nigricans",
+            "diseasePhenotypeCurie": "HP:0000956",
+            "diseasePhenotypeLabel": "Acanthosis nigricans",
+            "micaCurie": "HP:0000956",
+            "micaLabel": "Acanthosis nigricans",
+            "score": 5.145049630144819,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:615363"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008665",
+            "patientPhenotypeLabel": "Clitoral hypertrophy",
+            "diseasePhenotypeCurie": "HP:0000147",
+            "diseasePhenotypeLabel": "Polycystic ovaries",
+            "micaCurie": "HP:0010460",
+            "micaLabel": "Abnormality of the female genitalia",
+            "score": 3.3400449341667438,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:23841731"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000065",
+            "patientPhenotypeLabel": "Labial hypertrophy",
+            "diseasePhenotypeCurie": "HP:0000147",
+            "diseasePhenotypeLabel": "Polycystic ovaries",
+            "micaCurie": "HP:0010460",
+            "micaLabel": "Abnormality of the female genitalia",
+            "score": 3.3400449341667438,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:23841731"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0004405",
+            "patientPhenotypeLabel": "Prominent nipples",
+            "diseasePhenotypeCurie": "HP:0100783",
+            "diseasePhenotypeLabel": "Breast aplasia",
+            "micaCurie": "HP:0031093",
+            "micaLabel": "Abnormal breast morphology",
+            "score": 3.3172797233937312,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:23841731"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001988",
+            "patientPhenotypeLabel": "Recurrent hypoglycemia",
+            "diseasePhenotypeCurie": "HP:0040270",
+            "diseasePhenotypeLabel": "Impaired glucose tolerance",
+            "micaCurie": "HP:0011014",
+            "micaLabel": "Abnormal glucose homeostasis",
+            "score": 3.0026332893035947,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:615363"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0030948",
+            "patientPhenotypeLabel": "Elevated gamma-glutamyltransferase level",
+            "diseasePhenotypeCurie": "HP:0010639",
+            "diseasePhenotypeLabel": "Elevated alkaline phosphatase of bone origin",
+            "micaCurie": "HP:0012379",
+            "micaLabel": "Abnormal circulating enzyme concentration or activity",
+            "score": 2.904339940868861,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:23841731"
+          }
+        ]
+      },
+      {
+        "rank": 10,
+        "diseaseCurie": "MONDO:0012071",
+        "diseaseLabel": "congenital generalized lipodystrophy type 1",
+        "diseaseEntityId": 73357,
+        "bmaScore": 2.2007516451871965,
+        "normalizedScore": 0.242987,
+        "patientAverageScore": 2.625490900441361,
+        "diseaseAverageScore": 1.776012389933032,
+        "directPhenotypeCount": 40,
+        "matchedPhenotypeCount": 25,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000065",
+            "patientPhenotypeLabel": "Labial hypertrophy",
+            "diseasePhenotypeCurie": "HP:0000065",
+            "diseasePhenotypeLabel": "Labial hypertrophy",
+            "micaCurie": "HP:0000065",
+            "micaLabel": "Labial hypertrophy",
+            "score": 7.111162486517652,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:608594"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000138",
+            "patientPhenotypeLabel": "Ovarian cyst",
+            "diseasePhenotypeCurie": "HP:0000147",
+            "diseasePhenotypeLabel": "Polycystic ovaries",
+            "micaCurie": "HP:0000138",
+            "micaLabel": "Ovarian cyst",
+            "score": 5.623085431087819,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:608594"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000842",
+            "patientPhenotypeLabel": "Hyperinsulinemia",
+            "diseasePhenotypeCurie": "HP:0000842",
+            "diseasePhenotypeLabel": "Hyperinsulinemia",
+            "micaCurie": "HP:0000842",
+            "micaLabel": "Hyperinsulinemia",
+            "score": 5.368193181459029,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:608594"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008665",
+            "patientPhenotypeLabel": "Clitoral hypertrophy",
+            "diseasePhenotypeCurie": "HP:0008665",
+            "diseasePhenotypeLabel": "Clitoral hypertrophy",
+            "micaCurie": "HP:0008665",
+            "micaLabel": "Clitoral hypertrophy",
+            "score": 5.319403017289597,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:608594"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000956",
+            "patientPhenotypeLabel": "Acanthosis nigricans",
+            "diseasePhenotypeCurie": "HP:0000956",
+            "diseasePhenotypeLabel": "Acanthosis nigricans",
+            "micaCurie": "HP:0000956",
+            "micaLabel": "Acanthosis nigricans",
+            "score": 5.145049630144819,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:15181077"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001007",
+            "patientPhenotypeLabel": "Hirsutism",
+            "diseasePhenotypeCurie": "HP:0001007",
+            "diseasePhenotypeLabel": "Hirsutism",
+            "micaCurie": "HP:0001007",
+            "micaLabel": "Hirsutism",
+            "score": 4.033192114726689,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:608594"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001639",
+            "patientPhenotypeLabel": "Hypertrophic cardiomyopathy",
+            "diseasePhenotypeCurie": "HP:0001638",
+            "diseasePhenotypeLabel": "Cardiomyopathy",
+            "micaCurie": "HP:0001638",
+            "micaLabel": "Cardiomyopathy",
+            "score": 3.0120673215369536,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:608594"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001988",
+            "patientPhenotypeLabel": "Recurrent hypoglycemia",
+            "diseasePhenotypeCurie": "HP:0000877",
+            "diseasePhenotypeLabel": "Insulin-resistant diabetes mellitus at puberty",
+            "micaCurie": "HP:0011014",
+            "micaLabel": "Abnormal glucose homeostasis",
+            "score": 3.0026332893035947,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:608594"
+          }
+        ]
+      },
+      {
+        "rank": 11,
+        "diseaseCurie": "MONDO:0859273",
+        "diseaseLabel": "liver disease, severe congenital",
+        "diseaseEntityId": 87930,
+        "bmaScore": 2.086068517605027,
+        "normalizedScore": 0.230325,
+        "patientAverageScore": 2.617967782164511,
+        "diseaseAverageScore": 1.5541692530455429,
+        "directPhenotypeCount": 105,
+        "matchedPhenotypeCount": 25,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000842",
+            "patientPhenotypeLabel": "Hyperinsulinemia",
+            "diseasePhenotypeCurie": "HP:0000825",
+            "diseasePhenotypeLabel": "Hyperinsulinemic hypoglycemia",
+            "micaCurie": "HP:0000842",
+            "micaLabel": "Hyperinsulinemia",
+            "score": 5.368193181459029,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:35864190"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003270",
+            "patientPhenotypeLabel": "Abdominal distention",
+            "diseasePhenotypeCurie": "HP:0003270",
+            "diseasePhenotypeLabel": "Abdominal distention",
+            "micaCurie": "HP:0003270",
+            "micaLabel": "Abdominal distention",
+            "score": 4.461952785438375,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:35864190"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001712",
+            "patientPhenotypeLabel": "Left ventricular hypertrophy",
+            "diseasePhenotypeCurie": "HP:0001682",
+            "diseasePhenotypeLabel": "Subvalvular aortic stenosis",
+            "micaCurie": "HP:0001711",
+            "micaLabel": "Abnormal left ventricle morphology",
+            "score": 4.441952118731706,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:35864190"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002908",
+            "patientPhenotypeLabel": "Conjugated hyperbilirubinemia",
+            "diseasePhenotypeCurie": "HP:0002904",
+            "diseasePhenotypeLabel": "Hyperbilirubinemia",
+            "micaCurie": "HP:0002904",
+            "micaLabel": "Hyperbilirubinemia",
+            "score": 4.294898700775209,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:35864190"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000403",
+            "patientPhenotypeLabel": "Recurrent otitis media",
+            "diseasePhenotypeCurie": "HP:0000403",
+            "diseasePhenotypeLabel": "Recurrent otitis media",
+            "micaCurie": "HP:0000403",
+            "micaLabel": "Recurrent otitis media",
+            "score": 3.7488049381717605,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:35864190"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000520",
+            "patientPhenotypeLabel": "Proptosis",
+            "diseasePhenotypeCurie": "HP:0000520",
+            "diseasePhenotypeLabel": "Proptosis",
+            "micaCurie": "HP:0000520",
+            "micaLabel": "Proptosis",
+            "score": 3.700486360900953,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:35864190"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001988",
+            "patientPhenotypeLabel": "Recurrent hypoglycemia",
+            "diseasePhenotypeCurie": "HP:0000825",
+            "diseasePhenotypeLabel": "Hyperinsulinemic hypoglycemia",
+            "micaCurie": "HP:0011014",
+            "micaLabel": "Abnormal glucose homeostasis",
+            "score": 3.0026332893035947,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:35864190"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002035",
+            "patientPhenotypeLabel": "Rectal prolapse",
+            "diseasePhenotypeCurie": "HP:0002243",
+            "diseasePhenotypeLabel": "Protein-losing enteropathy",
+            "micaCurie": "HP:0002242",
+            "micaLabel": "Abnormal intestine morphology",
+            "score": 2.9411805100899313,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:35864190"
+          }
+        ]
+      },
+      {
+        "rank": 12,
+        "diseaseCurie": "MONDO:0011972",
+        "diseaseLabel": "ovarian hyperstimulation syndrome",
+        "diseaseEntityId": 73258,
+        "bmaScore": 2.065396405823834,
+        "normalizedScore": 0.228042,
+        "patientAverageScore": 1.538411122872227,
+        "diseaseAverageScore": 2.592381688775441,
+        "directPhenotypeCount": 19,
+        "matchedPhenotypeCount": 25,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000138",
+            "patientPhenotypeLabel": "Ovarian cyst",
+            "diseasePhenotypeCurie": "HP:0012886",
+            "diseasePhenotypeLabel": "Hemorrhagic ovarian cyst",
+            "micaCurie": "HP:0000138",
+            "micaLabel": "Ovarian cyst",
+            "score": 5.623085431087819,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:64739"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003270",
+            "patientPhenotypeLabel": "Abdominal distention",
+            "diseasePhenotypeCurie": "HP:0003270",
+            "diseasePhenotypeLabel": "Abdominal distention",
+            "micaCurie": "HP:0003270",
+            "micaLabel": "Abdominal distention",
+            "score": 4.461952785438375,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:64739"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001007",
+            "patientPhenotypeLabel": "Hirsutism",
+            "diseasePhenotypeCurie": "HP:0001007",
+            "diseasePhenotypeLabel": "Hirsutism",
+            "micaCurie": "HP:0001007",
+            "micaLabel": "Hirsutism",
+            "score": 4.033192114726689,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:64739"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008665",
+            "patientPhenotypeLabel": "Clitoral hypertrophy",
+            "diseasePhenotypeCurie": "HP:0012886",
+            "diseasePhenotypeLabel": "Hemorrhagic ovarian cyst",
+            "micaCurie": "HP:0010460",
+            "micaLabel": "Abnormality of the female genitalia",
+            "score": 3.3400449341667438,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:64739"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000065",
+            "patientPhenotypeLabel": "Labial hypertrophy",
+            "diseasePhenotypeCurie": "HP:0012886",
+            "diseasePhenotypeLabel": "Hemorrhagic ovarian cyst",
+            "micaCurie": "HP:0010460",
+            "micaLabel": "Abnormality of the female genitalia",
+            "score": 3.3400449341667438,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:64739"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000842",
+            "patientPhenotypeLabel": "Hyperinsulinemia",
+            "diseasePhenotypeCurie": "HP:0030088",
+            "diseasePhenotypeLabel": "Increased serum testosterone level",
+            "micaCurie": "HP:0003117",
+            "micaLabel": "Abnormal circulating hormone concentration",
+            "score": 3.273247453243228,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:64739"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000998",
+            "patientPhenotypeLabel": "Hypertrichosis",
+            "diseasePhenotypeCurie": "HP:0001007",
+            "diseasePhenotypeLabel": "Hirsutism",
+            "micaCurie": "HP:0011362",
+            "micaLabel": "Abnormal hair quantity",
+            "score": 2.366230358154402,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:64739"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001988",
+            "patientPhenotypeLabel": "Recurrent hypoglycemia",
+            "diseasePhenotypeCurie": "HP:0100598",
+            "diseasePhenotypeLabel": "Pulmonary edema",
+            "micaCurie": "HP:0012337",
+            "micaLabel": "Abnormal homeostasis",
+            "score": 1.911876500575794,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:64739"
+          }
+        ]
+      },
+      {
+        "rank": 13,
+        "diseaseCurie": "MONDO:0007534",
+        "diseaseLabel": "Beckwith-Wiedemann syndrome",
+        "diseaseEntityId": 68820,
+        "bmaScore": 2.0378913386815367,
+        "normalizedScore": 0.225006,
+        "patientAverageScore": 2.556323287030949,
+        "diseaseAverageScore": 1.5194593903321245,
+        "directPhenotypeCount": 93,
+        "matchedPhenotypeCount": 25,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000105",
+            "patientPhenotypeLabel": "Enlarged kidney",
+            "diseasePhenotypeCurie": "HP:0000105",
+            "diseasePhenotypeLabel": "Enlarged kidney",
+            "micaCurie": "HP:0000105",
+            "micaLabel": "Enlarged kidney",
+            "score": 5.419486475846579,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:116"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000842",
+            "patientPhenotypeLabel": "Hyperinsulinemia",
+            "diseasePhenotypeCurie": "HP:0000842",
+            "diseasePhenotypeLabel": "Hyperinsulinemia",
+            "micaCurie": "HP:0000842",
+            "micaLabel": "Hyperinsulinemia",
+            "score": 5.368193181459029,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:116"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0012408",
+            "patientPhenotypeLabel": "Medullary nephrocalcinosis",
+            "diseasePhenotypeCurie": "HP:0000121",
+            "diseasePhenotypeLabel": "Nephrocalcinosis",
+            "micaCurie": "HP:0000121",
+            "micaLabel": "Nephrocalcinosis",
+            "score": 4.739584522036655,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:116"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001639",
+            "patientPhenotypeLabel": "Hypertrophic cardiomyopathy",
+            "diseasePhenotypeCurie": "HP:0001639",
+            "diseasePhenotypeLabel": "Hypertrophic cardiomyopathy",
+            "micaCurie": "HP:0001639",
+            "micaLabel": "Hypertrophic cardiomyopathy",
+            "score": 3.898017336358436,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:116"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001988",
+            "patientPhenotypeLabel": "Recurrent hypoglycemia",
+            "diseasePhenotypeCurie": "HP:0001998",
+            "diseasePhenotypeLabel": "Neonatal hypoglycemia",
+            "micaCurie": "HP:0001943",
+            "micaLabel": "Hypoglycemia",
+            "score": 3.789214476509637,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:116"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000280",
+            "patientPhenotypeLabel": "Coarse facial features",
+            "diseasePhenotypeCurie": "HP:0000280",
+            "diseasePhenotypeLabel": "Coarse facial features",
+            "micaCurie": "HP:0000280",
+            "micaLabel": "Coarse facial features",
+            "score": 3.7243538423075964,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:130650"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000520",
+            "patientPhenotypeLabel": "Proptosis",
+            "diseasePhenotypeCurie": "HP:0000520",
+            "diseasePhenotypeLabel": "Proptosis",
+            "micaCurie": "HP:0000520",
+            "micaLabel": "Proptosis",
+            "score": 3.700486360900953,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:116"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000138",
+            "patientPhenotypeLabel": "Ovarian cyst",
+            "diseasePhenotypeCurie": "HP:0000150",
+            "diseasePhenotypeLabel": "Gonadoblastoma",
+            "micaCurie": "HP:0000812",
+            "micaLabel": "Abnormal internal genitalia",
+            "score": 3.440301537906394,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:130650"
+          }
+        ]
+      },
+      {
+        "rank": 14,
+        "diseaseCurie": "MONDO:0012396",
+        "diseaseLabel": "exercise-induced hyperinsulinism",
+        "diseaseEntityId": 73682,
+        "bmaScore": 1.9946052298051664,
+        "normalizedScore": 0.220226,
+        "patientAverageScore": 0.5904200135367517,
+        "diseaseAverageScore": 3.398790446073581,
+        "directPhenotypeCount": 6,
+        "matchedPhenotypeCount": 25,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000842",
+            "patientPhenotypeLabel": "Hyperinsulinemia",
+            "diseasePhenotypeCurie": "HP:0000842",
+            "diseasePhenotypeLabel": "Hyperinsulinemia",
+            "micaCurie": "HP:0000842",
+            "micaLabel": "Hyperinsulinemia",
+            "score": 5.368193181459029,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:17701893"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001988",
+            "patientPhenotypeLabel": "Recurrent hypoglycemia",
+            "diseasePhenotypeCurie": "HP:0002173",
+            "diseasePhenotypeLabel": "Hypoglycemic seizures",
+            "micaCurie": "HP:0001943",
+            "micaLabel": "Hypoglycemia",
+            "score": 3.789214476509637,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:11207177"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0030796",
+            "patientPhenotypeLabel": "Increased C-peptide level",
+            "diseasePhenotypeCurie": "HP:0002173",
+            "diseasePhenotypeLabel": "Hypoglycemic seizures",
+            "micaCurie": "HP:0001939",
+            "micaLabel": "Abnormality of metabolism/homeostasis",
+            "score": 1.1250694832115808,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:11207177"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002908",
+            "patientPhenotypeLabel": "Conjugated hyperbilirubinemia",
+            "diseasePhenotypeCurie": "HP:0002173",
+            "diseasePhenotypeLabel": "Hypoglycemic seizures",
+            "micaCurie": "HP:0001939",
+            "micaLabel": "Abnormality of metabolism/homeostasis",
+            "score": 1.1250694832115808,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:11207177"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0030948",
+            "patientPhenotypeLabel": "Elevated gamma-glutamyltransferase level",
+            "diseasePhenotypeCurie": "HP:0002173",
+            "diseasePhenotypeLabel": "Hypoglycemic seizures",
+            "micaCurie": "HP:0001939",
+            "micaLabel": "Abnormality of metabolism/homeostasis",
+            "score": 1.1250694832115808,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:11207177"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003270",
+            "patientPhenotypeLabel": "Abdominal distention",
+            "diseasePhenotypeCurie": "HP:0004510",
+            "diseasePhenotypeLabel": "Pancreatic islet-cell hyperplasia",
+            "micaCurie": "HP:0025031",
+            "micaLabel": "Abnormality of the digestive system",
+            "score": 1.090832859013498,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:1358043"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002035",
+            "patientPhenotypeLabel": "Rectal prolapse",
+            "diseasePhenotypeCurie": "HP:0004510",
+            "diseasePhenotypeLabel": "Pancreatic islet-cell hyperplasia",
+            "micaCurie": "HP:0025031",
+            "micaLabel": "Abnormality of the digestive system",
+            "score": 1.090832859013498,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:1358043"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000998",
+            "patientPhenotypeLabel": "Hypertrichosis",
+            "diseasePhenotypeCurie": "HP:0004510",
+            "diseasePhenotypeLabel": "Pancreatic islet-cell hyperplasia",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:1358043"
+          }
+        ]
+      },
+      {
+        "rank": 15,
+        "diseaseCurie": "MONDO:0054698",
+        "diseaseLabel": "proteasome-associated autoinflammatory syndrome 1",
+        "diseaseEntityId": 86046,
+        "bmaScore": 1.994089903781101,
+        "normalizedScore": 0.220169,
+        "patientAverageScore": 2.596665169048495,
+        "diseaseAverageScore": 1.3915146385137072,
+        "directPhenotypeCount": 80,
+        "matchedPhenotypeCount": 25,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000956",
+            "patientPhenotypeLabel": "Acanthosis nigricans",
+            "diseasePhenotypeCurie": "HP:0000956",
+            "diseasePhenotypeLabel": "Acanthosis nigricans",
+            "micaCurie": "HP:0000956",
+            "micaLabel": "Acanthosis nigricans",
+            "score": 5.145049630144819,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:21953331"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003270",
+            "patientPhenotypeLabel": "Abdominal distention",
+            "diseasePhenotypeCurie": "HP:0001538",
+            "diseasePhenotypeLabel": "Protuberant abdomen",
+            "micaCurie": "HP:0003270",
+            "micaLabel": "Abdominal distention",
+            "score": 4.461952785438375,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:21953331"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000403",
+            "patientPhenotypeLabel": "Recurrent otitis media",
+            "diseasePhenotypeCurie": "HP:0000403",
+            "diseasePhenotypeLabel": "Recurrent otitis media",
+            "micaCurie": "HP:0000403",
+            "micaLabel": "Recurrent otitis media",
+            "score": 3.7488049381717605,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:21953331"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000520",
+            "patientPhenotypeLabel": "Proptosis",
+            "diseasePhenotypeCurie": "HP:0000520",
+            "diseasePhenotypeLabel": "Proptosis",
+            "micaCurie": "HP:0000520",
+            "micaLabel": "Proptosis",
+            "score": 3.700486360900953,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:21129723"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0012471",
+            "patientPhenotypeLabel": "Thick vermilion border",
+            "diseasePhenotypeCurie": "HP:0000179",
+            "diseasePhenotypeLabel": "Thick lower lip vermilion",
+            "micaCurie": "HP:0012471",
+            "micaLabel": "Thick vermilion border",
+            "score": 3.5197383685544286,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:256040"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000138",
+            "patientPhenotypeLabel": "Ovarian cyst",
+            "diseasePhenotypeCurie": "HP:0000031",
+            "diseasePhenotypeLabel": "Epididymitis",
+            "micaCurie": "HP:0000812",
+            "micaLabel": "Abnormal internal genitalia",
+            "score": 3.440301537906394,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:21953331"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000998",
+            "patientPhenotypeLabel": "Hypertrichosis",
+            "diseasePhenotypeCurie": "HP:0000998",
+            "diseasePhenotypeLabel": "Hypertrichosis",
+            "micaCurie": "HP:0000998",
+            "micaLabel": "Hypertrichosis",
+            "score": 3.4116257379297275,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:21953331"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0004405",
+            "patientPhenotypeLabel": "Prominent nipples",
+            "diseasePhenotypeCurie": "HP:0000771",
+            "diseasePhenotypeLabel": "Gynecomastia",
+            "micaCurie": "HP:0031093",
+            "micaLabel": "Abnormal breast morphology",
+            "score": 3.3172797233937312,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:21129723"
+          }
+        ]
+      },
+      {
+        "rank": 16,
+        "diseaseCurie": "MONDO:0011624",
+        "diseaseLabel": "transaldolase deficiency",
+        "diseaseEntityId": 72910,
+        "bmaScore": 1.9887364810122325,
+        "normalizedScore": 0.219578,
+        "patientAverageScore": 2.241686469917192,
+        "diseaseAverageScore": 1.735786492107273,
+        "directPhenotypeCount": 45,
+        "matchedPhenotypeCount": 25,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0008665",
+            "patientPhenotypeLabel": "Clitoral hypertrophy",
+            "diseasePhenotypeCurie": "HP:0008665",
+            "diseasePhenotypeLabel": "Clitoral hypertrophy",
+            "micaCurie": "HP:0008665",
+            "micaLabel": "Clitoral hypertrophy",
+            "score": 5.319403017289597,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:11283793"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000065",
+            "patientPhenotypeLabel": "Labial hypertrophy",
+            "diseasePhenotypeCurie": "HP:0008665",
+            "diseasePhenotypeLabel": "Clitoral hypertrophy",
+            "micaCurie": "HP:0000055",
+            "micaLabel": "Abnormal female external genitalia morphology",
+            "score": 4.393633541460898,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:11283793"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001712",
+            "patientPhenotypeLabel": "Left ventricular hypertrophy",
+            "diseasePhenotypeCurie": "HP:0200128",
+            "diseasePhenotypeLabel": "Biventricular hypertrophy",
+            "micaCurie": "HP:0001714",
+            "micaLabel": "Ventricular hypertrophy",
+            "score": 4.166723507351211,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:101028"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000998",
+            "patientPhenotypeLabel": "Hypertrichosis",
+            "diseasePhenotypeCurie": "HP:0000664",
+            "diseasePhenotypeLabel": "Synophrys",
+            "micaCurie": "HP:0000998",
+            "micaLabel": "Hypertrichosis",
+            "score": 3.4116257379297275,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:606003"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000138",
+            "patientPhenotypeLabel": "Ovarian cyst",
+            "diseasePhenotypeCurie": "HP:0008665",
+            "diseasePhenotypeLabel": "Clitoral hypertrophy",
+            "micaCurie": "HP:0010460",
+            "micaLabel": "Abnormality of the female genitalia",
+            "score": 3.3400449341667438,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:11283793"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002908",
+            "patientPhenotypeLabel": "Conjugated hyperbilirubinemia",
+            "diseasePhenotypeCurie": "HP:0012202",
+            "diseasePhenotypeLabel": "Increased serum bile acid concentration",
+            "micaCurie": "HP:0004354",
+            "micaLabel": "Abnormal circulating carboxylic acid concentration",
+            "score": 3.2369897052206036,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:101028"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001511",
+            "patientPhenotypeLabel": "Intrauterine growth retardation",
+            "diseasePhenotypeCurie": "HP:0001511",
+            "diseasePhenotypeLabel": "Intrauterine growth retardation",
+            "micaCurie": "HP:0001511",
+            "micaLabel": "Intrauterine growth retardation",
+            "score": 2.9022145415565475,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:606003"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001508",
+            "patientPhenotypeLabel": "Failure to thrive",
+            "diseasePhenotypeCurie": "HP:0001508",
+            "diseasePhenotypeLabel": "Failure to thrive",
+            "micaCurie": "HP:0001508",
+            "micaLabel": "Failure to thrive",
+            "score": 2.4263892499305935,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:606003"
+          }
+        ]
+      },
+      {
+        "rank": 17,
+        "diseaseCurie": "MONDO:0008763",
+        "diseaseLabel": "Alstrom syndrome",
+        "diseaseEntityId": 70049,
+        "bmaScore": 1.9812127533402544,
+        "normalizedScore": 0.218748,
+        "patientAverageScore": 2.3264643066332362,
+        "diseaseAverageScore": 1.6359612000472723,
+        "directPhenotypeCount": 56,
+        "matchedPhenotypeCount": 25,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000842",
+            "patientPhenotypeLabel": "Hyperinsulinemia",
+            "diseasePhenotypeCurie": "HP:0000842",
+            "diseasePhenotypeLabel": "Hyperinsulinemia",
+            "micaCurie": "HP:0000842",
+            "micaLabel": "Hyperinsulinemia",
+            "score": 5.368193181459029,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:203800"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000956",
+            "patientPhenotypeLabel": "Acanthosis nigricans",
+            "diseasePhenotypeCurie": "HP:0000956",
+            "diseasePhenotypeLabel": "Acanthosis nigricans",
+            "micaCurie": "HP:0000956",
+            "micaLabel": "Acanthosis nigricans",
+            "score": 5.145049630144819,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:203800"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001988",
+            "patientPhenotypeLabel": "Recurrent hypoglycemia",
+            "diseasePhenotypeCurie": "HP:0003074",
+            "diseasePhenotypeLabel": "Hyperglycemia",
+            "micaCurie": "HP:0011015",
+            "micaLabel": "Abnormal blood glucose concentration",
+            "score": 3.6103352639066553,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:34148947"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000403",
+            "patientPhenotypeLabel": "Recurrent otitis media",
+            "diseasePhenotypeCurie": "HP:0000388",
+            "diseasePhenotypeLabel": "Otitis media",
+            "micaCurie": "HP:0000388",
+            "micaLabel": "Otitis media",
+            "score": 3.5197383685544286,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:203800"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0004405",
+            "patientPhenotypeLabel": "Prominent nipples",
+            "diseasePhenotypeCurie": "HP:0000771",
+            "diseasePhenotypeLabel": "Gynecomastia",
+            "micaCurie": "HP:0031093",
+            "micaLabel": "Abnormal breast morphology",
+            "score": 3.3172797233937312,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:203800"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001639",
+            "patientPhenotypeLabel": "Hypertrophic cardiomyopathy",
+            "diseasePhenotypeCurie": "HP:0001644",
+            "diseasePhenotypeLabel": "Dilated cardiomyopathy",
+            "micaCurie": "HP:0001638",
+            "micaLabel": "Cardiomyopathy",
+            "score": 3.0120673215369536,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:203800"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0030948",
+            "patientPhenotypeLabel": "Elevated gamma-glutamyltransferase level",
+            "diseasePhenotypeCurie": "HP:0002910",
+            "diseasePhenotypeLabel": "Elevated circulating hepatic transaminase concentration",
+            "micaCurie": "HP:0012379",
+            "micaLabel": "Abnormal circulating enzyme concentration or activity",
+            "score": 2.904339940868861,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:203800"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002908",
+            "patientPhenotypeLabel": "Conjugated hyperbilirubinemia",
+            "diseasePhenotypeCurie": "HP:0003233",
+            "diseasePhenotypeLabel": "Decreased HDL cholesterol concentration",
+            "micaCurie": "HP:0430071",
+            "micaLabel": "Abnormal circulating organic compound concentration",
+            "score": 2.570911846628876,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:203800"
+          }
+        ]
+      },
+      {
+        "rank": 18,
+        "diseaseCurie": "MONDO:0013410",
+        "diseaseLabel": "46,XY sex reversal 6",
+        "diseaseEntityId": 74696,
+        "bmaScore": 1.9799694236314938,
+        "normalizedScore": 0.21861,
+        "patientAverageScore": 0.9963081424449683,
+        "diseaseAverageScore": 2.9636307048180193,
+        "directPhenotypeCount": 10,
+        "matchedPhenotypeCount": 25,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0008665",
+            "patientPhenotypeLabel": "Clitoral hypertrophy",
+            "diseasePhenotypeCurie": "HP:0008665",
+            "diseasePhenotypeLabel": "Clitoral hypertrophy",
+            "micaCurie": "HP:0008665",
+            "micaLabel": "Clitoral hypertrophy",
+            "score": 5.319403017289597,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:21129722"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000138",
+            "patientPhenotypeLabel": "Ovarian cyst",
+            "diseasePhenotypeCurie": "HP:0100621",
+            "diseasePhenotypeLabel": "Dysgerminoma",
+            "micaCurie": "HP:0000137",
+            "micaLabel": "Abnormality of the ovary",
+            "score": 4.568436265840825,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:21129722"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000065",
+            "patientPhenotypeLabel": "Labial hypertrophy",
+            "diseasePhenotypeCurie": "HP:0008665",
+            "diseasePhenotypeLabel": "Clitoral hypertrophy",
+            "micaCurie": "HP:0000055",
+            "micaLabel": "Abnormal female external genitalia morphology",
+            "score": 4.393633541460898,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:21129722"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001007",
+            "patientPhenotypeLabel": "Hirsutism",
+            "diseasePhenotypeCurie": "HP:0001007",
+            "diseasePhenotypeLabel": "Hirsutism",
+            "micaCurie": "HP:0001007",
+            "micaLabel": "Hirsutism",
+            "score": 4.033192114726689,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:613762"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000998",
+            "patientPhenotypeLabel": "Hypertrichosis",
+            "diseasePhenotypeCurie": "HP:0002215",
+            "diseasePhenotypeLabel": "Sparse axillary hair",
+            "micaCurie": "HP:0011362",
+            "micaLabel": "Abnormal hair quantity",
+            "score": 2.366230358154402,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:613762"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000105",
+            "patientPhenotypeLabel": "Enlarged kidney",
+            "diseasePhenotypeCurie": "HP:0000047",
+            "diseasePhenotypeLabel": "Hypospadias",
+            "micaCurie": "HP:0000079",
+            "micaLabel": "Abnormality of the urinary system",
+            "score": 1.5504808555021241,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:21129722"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0012408",
+            "patientPhenotypeLabel": "Medullary nephrocalcinosis",
+            "diseasePhenotypeCurie": "HP:0000047",
+            "diseasePhenotypeLabel": "Hypospadias",
+            "micaCurie": "HP:0000079",
+            "micaLabel": "Abnormality of the urinary system",
+            "score": 1.5504808555021241,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:21129722"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000956",
+            "patientPhenotypeLabel": "Acanthosis nigricans",
+            "diseasePhenotypeCurie": "HP:0002215",
+            "diseasePhenotypeLabel": "Sparse axillary hair",
+            "micaCurie": "HP:0001574",
+            "micaLabel": "Abnormality of the integument",
+            "score": 1.0821957350140894,
+            "evidenceCode": "TAS",
+            "referenceText": "OMIM:613762"
+          }
+        ]
+      },
+      {
+        "rank": 19,
+        "diseaseCurie": "MONDO:0009216",
+        "diseaseLabel": "glycogen storage disease due to GLUT2 deficiency",
+        "diseaseEntityId": 70502,
+        "bmaScore": 1.9533010326353153,
+        "normalizedScore": 0.215666,
+        "patientAverageScore": 1.9889731890711357,
+        "diseaseAverageScore": 1.9176288761994948,
+        "directPhenotypeCount": 54,
+        "matchedPhenotypeCount": 25,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0030948",
+            "patientPhenotypeLabel": "Elevated gamma-glutamyltransferase level",
+            "diseasePhenotypeCurie": "HP:0030948",
+            "diseasePhenotypeLabel": "Elevated gamma-glutamyltransferase level",
+            "micaCurie": "HP:0030948",
+            "micaLabel": "Elevated gamma-glutamyltransferase level",
+            "score": 5.343500568868658,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:11044475"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0012408",
+            "patientPhenotypeLabel": "Medullary nephrocalcinosis",
+            "diseasePhenotypeCurie": "HP:0000121",
+            "diseasePhenotypeLabel": "Nephrocalcinosis",
+            "micaCurie": "HP:0000121",
+            "micaLabel": "Nephrocalcinosis",
+            "score": 4.739584522036655,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:2088"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003270",
+            "patientPhenotypeLabel": "Abdominal distention",
+            "diseasePhenotypeCurie": "HP:0003270",
+            "diseasePhenotypeLabel": "Abdominal distention",
+            "micaCurie": "HP:0003270",
+            "micaLabel": "Abdominal distention",
+            "score": 4.461952785438375,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:227810"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002908",
+            "patientPhenotypeLabel": "Conjugated hyperbilirubinemia",
+            "diseasePhenotypeCurie": "HP:0002904",
+            "diseasePhenotypeLabel": "Hyperbilirubinemia",
+            "micaCurie": "HP:0002904",
+            "micaLabel": "Hyperbilirubinemia",
+            "score": 4.294898700775209,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:11044475"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008897",
+            "patientPhenotypeLabel": "Postnatal growth retardation",
+            "diseasePhenotypeCurie": "HP:0008897",
+            "diseasePhenotypeLabel": "Postnatal growth retardation",
+            "micaCurie": "HP:0008897",
+            "micaLabel": "Postnatal growth retardation",
+            "score": 3.8259640187183788,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:11044475"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001988",
+            "patientPhenotypeLabel": "Recurrent hypoglycemia",
+            "diseasePhenotypeCurie": "HP:0003162",
+            "diseasePhenotypeLabel": "Fasting hypoglycemia",
+            "micaCurie": "HP:0001943",
+            "micaLabel": "Hypoglycemia",
+            "score": 3.789214476509637,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:2088"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000842",
+            "patientPhenotypeLabel": "Hyperinsulinemia",
+            "diseasePhenotypeCurie": "HP:0040270",
+            "diseasePhenotypeLabel": "Impaired glucose tolerance",
+            "micaCurie": "HP:0011014",
+            "micaLabel": "Abnormal glucose homeostasis",
+            "score": 3.0026332893035947,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:2088"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001508",
+            "patientPhenotypeLabel": "Failure to thrive",
+            "diseasePhenotypeCurie": "HP:0001508",
+            "diseasePhenotypeLabel": "Failure to thrive",
+            "micaCurie": "HP:0001508",
+            "micaLabel": "Failure to thrive",
+            "score": 2.4263892499305935,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:11044475"
+          }
+        ]
+      },
+      {
+        "rank": 20,
+        "diseaseCurie": "MONDO:0012831",
+        "diseaseLabel": "inflammatory bowel disease 13",
+        "diseaseEntityId": 74117,
+        "bmaScore": 1.9527685872203677,
+        "normalizedScore": 0.215607,
+        "patientAverageScore": 0.2908822493895638,
+        "diseaseAverageScore": 3.6146549250511715,
+        "directPhenotypeCount": 1,
+        "matchedPhenotypeCount": 25,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002035",
+            "patientPhenotypeLabel": "Rectal prolapse",
+            "diseasePhenotypeCurie": "HP:0002037",
+            "diseasePhenotypeLabel": "Inflammation of the large intestine",
+            "micaCurie": "HP:0002250",
+            "micaLabel": "Abnormal large intestine morphology",
+            "score": 3.6146549250511715,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:612244"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000403",
+            "patientPhenotypeLabel": "Recurrent otitis media",
+            "diseasePhenotypeCurie": "HP:0002037",
+            "diseasePhenotypeLabel": "Inflammation of the large intestine",
+            "micaCurie": "HP:0012649",
+            "micaLabel": "Increased inflammatory response",
+            "score": 2.1265778696213387,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:612244"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003270",
+            "patientPhenotypeLabel": "Abdominal distention",
+            "diseasePhenotypeCurie": "HP:0002037",
+            "diseasePhenotypeLabel": "Inflammation of the large intestine",
+            "micaCurie": "HP:0025032",
+            "micaLabel": "Abnormality of digestive system physiology",
+            "score": 1.474334146658554,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:612244"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000998",
+            "patientPhenotypeLabel": "Hypertrichosis",
+            "diseasePhenotypeCurie": "HP:0002037",
+            "diseasePhenotypeLabel": "Inflammation of the large intestine",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:612244"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000956",
+            "patientPhenotypeLabel": "Acanthosis nigricans",
+            "diseasePhenotypeCurie": "HP:0002037",
+            "diseasePhenotypeLabel": "Inflammation of the large intestine",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:612244"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0030796",
+            "patientPhenotypeLabel": "Increased C-peptide level",
+            "diseasePhenotypeCurie": "HP:0002037",
+            "diseasePhenotypeLabel": "Inflammation of the large intestine",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:612244"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000842",
+            "patientPhenotypeLabel": "Hyperinsulinemia",
+            "diseasePhenotypeCurie": "HP:0002037",
+            "diseasePhenotypeLabel": "Inflammation of the large intestine",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:612244"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001988",
+            "patientPhenotypeLabel": "Recurrent hypoglycemia",
+            "diseasePhenotypeCurie": "HP:0002037",
+            "diseasePhenotypeLabel": "Inflammation of the large intestine",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:612244"
+          }
+        ]
+      },
+      {
+        "rank": 21,
+        "diseaseCurie": "MONDO:0012845",
+        "diseaseLabel": "inflammatory bowel disease 19",
+        "diseaseEntityId": 74131,
+        "bmaScore": 1.9527685872203677,
+        "normalizedScore": 0.215607,
+        "patientAverageScore": 0.2908822493895638,
+        "diseaseAverageScore": 3.6146549250511715,
+        "directPhenotypeCount": 1,
+        "matchedPhenotypeCount": 25,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0002035",
+            "patientPhenotypeLabel": "Rectal prolapse",
+            "diseasePhenotypeCurie": "HP:0002037",
+            "diseasePhenotypeLabel": "Inflammation of the large intestine",
+            "micaCurie": "HP:0002250",
+            "micaLabel": "Abnormal large intestine morphology",
+            "score": 3.6146549250511715,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:612278"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000403",
+            "patientPhenotypeLabel": "Recurrent otitis media",
+            "diseasePhenotypeCurie": "HP:0002037",
+            "diseasePhenotypeLabel": "Inflammation of the large intestine",
+            "micaCurie": "HP:0012649",
+            "micaLabel": "Increased inflammatory response",
+            "score": 2.1265778696213387,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:612278"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003270",
+            "patientPhenotypeLabel": "Abdominal distention",
+            "diseasePhenotypeCurie": "HP:0002037",
+            "diseasePhenotypeLabel": "Inflammation of the large intestine",
+            "micaCurie": "HP:0025032",
+            "micaLabel": "Abnormality of digestive system physiology",
+            "score": 1.474334146658554,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:612278"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000998",
+            "patientPhenotypeLabel": "Hypertrichosis",
+            "diseasePhenotypeCurie": "HP:0002037",
+            "diseasePhenotypeLabel": "Inflammation of the large intestine",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:612278"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000956",
+            "patientPhenotypeLabel": "Acanthosis nigricans",
+            "diseasePhenotypeCurie": "HP:0002037",
+            "diseasePhenotypeLabel": "Inflammation of the large intestine",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:612278"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0030796",
+            "patientPhenotypeLabel": "Increased C-peptide level",
+            "diseasePhenotypeCurie": "HP:0002037",
+            "diseasePhenotypeLabel": "Inflammation of the large intestine",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:612278"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000842",
+            "patientPhenotypeLabel": "Hyperinsulinemia",
+            "diseasePhenotypeCurie": "HP:0002037",
+            "diseasePhenotypeLabel": "Inflammation of the large intestine",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:612278"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001988",
+            "patientPhenotypeLabel": "Recurrent hypoglycemia",
+            "diseasePhenotypeCurie": "HP:0002037",
+            "diseasePhenotypeLabel": "Inflammation of the large intestine",
+            "micaCurie": "HP:0000118",
+            "micaLabel": "Phenotypic abnormality",
+            "score": 0.0025676951549104487,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:612278"
+          }
+        ]
+      },
+      {
+        "rank": 22,
+        "diseaseCurie": "MONDO:0007843",
+        "diseaseLabel": "Kabuki syndrome 1",
+        "diseaseEntityId": 69129,
+        "bmaScore": 1.9420746544978473,
+        "normalizedScore": 0.214426,
+        "patientAverageScore": 2.4873199999559046,
+        "diseaseAverageScore": 1.39682930903979,
+        "directPhenotypeCount": 183,
+        "matchedPhenotypeCount": 25,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0001712",
+            "patientPhenotypeLabel": "Left ventricular hypertrophy",
+            "diseasePhenotypeCurie": "HP:0001667",
+            "diseasePhenotypeLabel": "Right ventricular hypertrophy",
+            "micaCurie": "HP:0001714",
+            "micaLabel": "Ventricular hypertrophy",
+            "score": 4.166723507351211,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:25142838;PMID:35060672;PMID:31949313;PMID:27573763;PMID:24019847;PMID:27991736"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001007",
+            "patientPhenotypeLabel": "Hirsutism",
+            "diseasePhenotypeCurie": "HP:0001007",
+            "diseasePhenotypeLabel": "Hirsutism",
+            "micaCurie": "HP:0001007",
+            "micaLabel": "Hirsutism",
+            "score": 4.033192114726689,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:147920"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008897",
+            "patientPhenotypeLabel": "Postnatal growth retardation",
+            "diseasePhenotypeCurie": "HP:0008897",
+            "diseasePhenotypeLabel": "Postnatal growth retardation",
+            "micaCurie": "HP:0008897",
+            "micaLabel": "Postnatal growth retardation",
+            "score": 3.8259640187183788,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:30509212;PMID:29482518;PMID:29914387;PMID:25896430;PMID:32083401"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001988",
+            "patientPhenotypeLabel": "Recurrent hypoglycemia",
+            "diseasePhenotypeCurie": "HP:0001943",
+            "diseasePhenotypeLabel": "Hypoglycemia",
+            "micaCurie": "HP:0001943",
+            "micaLabel": "Hypoglycemia",
+            "score": 3.789214476509637,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31727177"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000403",
+            "patientPhenotypeLabel": "Recurrent otitis media",
+            "diseasePhenotypeCurie": "HP:0000403",
+            "diseasePhenotypeLabel": "Recurrent otitis media",
+            "micaCurie": "HP:0000403",
+            "micaLabel": "Recurrent otitis media",
+            "score": 3.7488049381717605,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:25142838;PMID:31727177;PMID:24019847"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0004405",
+            "patientPhenotypeLabel": "Prominent nipples",
+            "diseasePhenotypeCurie": "HP:0002561",
+            "diseasePhenotypeLabel": "Absent nipple",
+            "micaCurie": "HP:0004404",
+            "micaLabel": "Abnormal nipple morphology",
+            "score": 3.654395253700686,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31949313;PMID:32083401"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0012471",
+            "patientPhenotypeLabel": "Thick vermilion border",
+            "diseasePhenotypeCurie": "HP:0000215",
+            "diseasePhenotypeLabel": "Thick upper lip vermilion",
+            "micaCurie": "HP:0012471",
+            "micaLabel": "Thick vermilion border",
+            "score": 3.5197383685544286,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31727177"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000842",
+            "patientPhenotypeLabel": "Hyperinsulinemia",
+            "diseasePhenotypeCurie": "HP:0001943",
+            "diseasePhenotypeLabel": "Hypoglycemia",
+            "micaCurie": "HP:0011014",
+            "micaLabel": "Abnormal glucose homeostasis",
+            "score": 3.0026332893035947,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:31727177"
+          }
+        ]
+      },
+      {
+        "rank": 23,
+        "diseaseCurie": "MONDO:0013301",
+        "diseaseLabel": "aromatase deficiency",
+        "diseaseEntityId": 74587,
+        "bmaScore": 1.9347807567450241,
+        "normalizedScore": 0.213621,
+        "patientAverageScore": 1.887349623560882,
+        "diseaseAverageScore": 1.9822118899291663,
+        "directPhenotypeCount": 29,
+        "matchedPhenotypeCount": 25,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000138",
+            "patientPhenotypeLabel": "Ovarian cyst",
+            "diseasePhenotypeCurie": "HP:0008675",
+            "diseasePhenotypeLabel": "Enlarged polycystic ovaries",
+            "micaCurie": "HP:0000138",
+            "micaLabel": "Ovarian cyst",
+            "score": 5.623085431087819,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:91"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000956",
+            "patientPhenotypeLabel": "Acanthosis nigricans",
+            "diseasePhenotypeCurie": "HP:0000956",
+            "diseasePhenotypeLabel": "Acanthosis nigricans",
+            "micaCurie": "HP:0000956",
+            "micaLabel": "Acanthosis nigricans",
+            "score": 5.145049630144819,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:91"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0008665",
+            "patientPhenotypeLabel": "Clitoral hypertrophy",
+            "diseasePhenotypeCurie": "HP:0010458",
+            "diseasePhenotypeLabel": "Female pseudohermaphroditism",
+            "micaCurie": "HP:0000055",
+            "micaLabel": "Abnormal female external genitalia morphology",
+            "score": 4.393633541460898,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:91"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000065",
+            "patientPhenotypeLabel": "Labial hypertrophy",
+            "diseasePhenotypeCurie": "HP:0010458",
+            "diseasePhenotypeLabel": "Female pseudohermaphroditism",
+            "micaCurie": "HP:0000055",
+            "micaLabel": "Abnormal female external genitalia morphology",
+            "score": 4.393633541460898,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:91"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001007",
+            "patientPhenotypeLabel": "Hirsutism",
+            "diseasePhenotypeCurie": "HP:0002230",
+            "diseasePhenotypeLabel": "Generalized hirsutism",
+            "micaCurie": "HP:0001007",
+            "micaLabel": "Hirsutism",
+            "score": 4.033192114726689,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:91"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000842",
+            "patientPhenotypeLabel": "Hyperinsulinemia",
+            "diseasePhenotypeCurie": "HP:0005978",
+            "diseasePhenotypeLabel": "Type II diabetes mellitus",
+            "micaCurie": "HP:0011014",
+            "micaLabel": "Abnormal glucose homeostasis",
+            "score": 3.0026332893035947,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:91"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001988",
+            "patientPhenotypeLabel": "Recurrent hypoglycemia",
+            "diseasePhenotypeCurie": "HP:0005978",
+            "diseasePhenotypeLabel": "Type II diabetes mellitus",
+            "micaCurie": "HP:0011014",
+            "micaLabel": "Abnormal glucose homeostasis",
+            "score": 3.0026332893035947,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:91"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002908",
+            "patientPhenotypeLabel": "Conjugated hyperbilirubinemia",
+            "diseasePhenotypeCurie": "HP:0003077",
+            "diseasePhenotypeLabel": "Hyperlipidemia",
+            "micaCurie": "HP:0430071",
+            "micaLabel": "Abnormal circulating organic compound concentration",
+            "score": 2.570911846628876,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:91"
+          }
+        ]
+      },
+      {
+        "rank": 24,
+        "diseaseCurie": "MONDO:0010035",
+        "diseaseLabel": "Smith-Lemli-Opitz syndrome",
+        "diseaseEntityId": 71321,
+        "bmaScore": 1.93226251500411,
+        "normalizedScore": 0.213343,
+        "patientAverageScore": 2.7511511411105816,
+        "diseaseAverageScore": 1.1133738888976383,
+        "directPhenotypeCount": 181,
+        "matchedPhenotypeCount": 25,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0008665",
+            "patientPhenotypeLabel": "Clitoral hypertrophy",
+            "diseasePhenotypeCurie": "HP:0008665",
+            "diseasePhenotypeLabel": "Clitoral hypertrophy",
+            "micaCurie": "HP:0008665",
+            "micaLabel": "Clitoral hypertrophy",
+            "score": 5.319403017289597,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:818"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003270",
+            "patientPhenotypeLabel": "Abdominal distention",
+            "diseasePhenotypeCurie": "HP:0003270",
+            "diseasePhenotypeLabel": "Abdominal distention",
+            "micaCurie": "HP:0003270",
+            "micaLabel": "Abdominal distention",
+            "score": 4.461952785438375,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:34349606"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000065",
+            "patientPhenotypeLabel": "Labial hypertrophy",
+            "diseasePhenotypeCurie": "HP:0008665",
+            "diseasePhenotypeLabel": "Clitoral hypertrophy",
+            "micaCurie": "HP:0000055",
+            "micaLabel": "Abnormal female external genitalia morphology",
+            "score": 4.393633541460898,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:818"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001639",
+            "patientPhenotypeLabel": "Hypertrophic cardiomyopathy",
+            "diseasePhenotypeCurie": "HP:0001639",
+            "diseasePhenotypeLabel": "Hypertrophic cardiomyopathy",
+            "micaCurie": "HP:0001639",
+            "micaLabel": "Hypertrophic cardiomyopathy",
+            "score": 3.898017336358436,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:34349606"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000403",
+            "patientPhenotypeLabel": "Recurrent otitis media",
+            "diseasePhenotypeCurie": "HP:0000403",
+            "diseasePhenotypeLabel": "Recurrent otitis media",
+            "micaCurie": "HP:0000403",
+            "micaLabel": "Recurrent otitis media",
+            "score": 3.7488049381717605,
+            "evidenceCode": "PCS",
+            "referenceText": "http://www.ncbi.nlm.nih.gov/bookshelf/br.fcgi?book=gene&part=slo"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000520",
+            "patientPhenotypeLabel": "Proptosis",
+            "diseasePhenotypeCurie": "HP:0000520",
+            "diseasePhenotypeLabel": "Proptosis",
+            "micaCurie": "HP:0000520",
+            "micaLabel": "Proptosis",
+            "score": 3.700486360900953,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:818"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0004405",
+            "patientPhenotypeLabel": "Prominent nipples",
+            "diseasePhenotypeCurie": "HP:0006610",
+            "diseasePhenotypeLabel": "Wide intermamillary distance",
+            "micaCurie": "HP:0004404",
+            "micaLabel": "Abnormal nipple morphology",
+            "score": 3.654395253700686,
+            "evidenceCode": "TAS",
+            "referenceText": "ORPHA:818"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002035",
+            "patientPhenotypeLabel": "Rectal prolapse",
+            "diseasePhenotypeCurie": "HP:0002251",
+            "diseasePhenotypeLabel": "Aganglionic megacolon",
+            "micaCurie": "HP:0002250",
+            "micaLabel": "Abnormal large intestine morphology",
+            "score": 3.6146549250511715,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:9024558"
+          }
+        ]
+      },
+      {
+        "rank": 25,
+        "diseaseCurie": "MONDO:0009288",
+        "diseaseLabel": "glycogen storage disease Ib",
+        "diseaseEntityId": 70574,
+        "bmaScore": 1.9264276524680541,
+        "normalizedScore": 0.212699,
+        "patientAverageScore": 2.0162495413198473,
+        "diseaseAverageScore": 1.8366057636162607,
+        "directPhenotypeCount": 46,
+        "matchedPhenotypeCount": 25,
+        "trace": [
+          {
+            "patientPhenotypeCurie": "HP:0000105",
+            "patientPhenotypeLabel": "Enlarged kidney",
+            "diseasePhenotypeCurie": "HP:0000105",
+            "diseasePhenotypeLabel": "Enlarged kidney",
+            "micaCurie": "HP:0000105",
+            "micaLabel": "Enlarged kidney",
+            "score": 5.419486475846579,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:232220"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0003270",
+            "patientPhenotypeLabel": "Abdominal distention",
+            "diseasePhenotypeCurie": "HP:0001538",
+            "diseasePhenotypeLabel": "Protuberant abdomen",
+            "micaCurie": "HP:0003270",
+            "micaLabel": "Abdominal distention",
+            "score": 4.461952785438375,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:232220"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0001988",
+            "patientPhenotypeLabel": "Recurrent hypoglycemia",
+            "diseasePhenotypeCurie": "HP:0001943",
+            "diseasePhenotypeLabel": "Hypoglycemia",
+            "micaCurie": "HP:0001943",
+            "micaLabel": "Hypoglycemia",
+            "score": 3.789214476509637,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:9686363"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002035",
+            "patientPhenotypeLabel": "Rectal prolapse",
+            "diseasePhenotypeCurie": "HP:0002037",
+            "diseasePhenotypeLabel": "Inflammation of the large intestine",
+            "micaCurie": "HP:0002250",
+            "micaLabel": "Abnormal large intestine morphology",
+            "score": 3.6146549250511715,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:32838757"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000842",
+            "patientPhenotypeLabel": "Hyperinsulinemia",
+            "diseasePhenotypeCurie": "HP:0001943",
+            "diseasePhenotypeLabel": "Hypoglycemia",
+            "micaCurie": "HP:0011014",
+            "micaLabel": "Abnormal glucose homeostasis",
+            "score": 3.0026332893035947,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:9686363"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0030948",
+            "patientPhenotypeLabel": "Elevated gamma-glutamyltransferase level",
+            "diseasePhenotypeCurie": "HP:0002910",
+            "diseasePhenotypeLabel": "Elevated circulating hepatic transaminase concentration",
+            "micaCurie": "HP:0012379",
+            "micaLabel": "Abnormal circulating enzyme concentration or activity",
+            "score": 2.904339940868861,
+            "evidenceCode": "PCS",
+            "referenceText": "OMIM:232220"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0002908",
+            "patientPhenotypeLabel": "Conjugated hyperbilirubinemia",
+            "diseasePhenotypeCurie": "HP:0003077",
+            "diseasePhenotypeLabel": "Hyperlipidemia",
+            "micaCurie": "HP:0430071",
+            "micaLabel": "Abnormal circulating organic compound concentration",
+            "score": 2.570911846628876,
+            "evidenceCode": "IEA",
+            "referenceText": "OMIM:232220"
+          },
+          {
+            "patientPhenotypeCurie": "HP:0000403",
+            "patientPhenotypeLabel": "Recurrent otitis media",
+            "diseasePhenotypeCurie": "HP:0002788",
+            "diseasePhenotypeLabel": "Recurrent upper respiratory tract infections",
+            "micaCurie": "HP:0002719",
+            "micaLabel": "Recurrent infections",
+            "score": 2.314191999781062,
+            "evidenceCode": "PCS",
+            "referenceText": "PMID:9686363"
+          }
+        ]
+      }
+    ],
+    "engineSummary": {
+      "diseaseCount": 8579,
+      "phenotypeCount": 19389,
+      "sourceMode": "relationship_fallback",
+      "generatedAt": "2026-03-15T20:43:58.513Z"
+    }
+  }
+}

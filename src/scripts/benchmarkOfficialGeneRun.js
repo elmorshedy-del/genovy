@@ -1,6 +1,6 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import { withClient } from '../db/pool.js';
+import { getPool, withClient } from '../db/pool.js';
 import { extractDxPhenotypeInput, validateDxPhenotypeInput } from '../lib/phenopackets.js';
 import { loadDxSimilarityIndex, rankGenesByPhenotypeSimilarity } from '../services/dx/similarityEngine.js';
 
@@ -254,7 +254,15 @@ async function main() {
   console.log(JSON.stringify({ outputJson: config.outputJson, outputMd: config.outputMd, report }, null, 2));
 }
 
-main().catch((error) => {
-  console.error('[benchmark-official-gene-run] failed:', error);
-  process.exit(1);
-});
+main()
+  .then(async () => {
+    await getPool().end().catch(() => {});
+    process.exit(0);
+  })
+  .catch((error) => {
+    console.error('[benchmark-official-gene-run] failed:', error);
+    getPool()
+      .end()
+      .catch(() => {})
+      .finally(() => process.exit(1));
+  });

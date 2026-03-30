@@ -1,5 +1,6 @@
 import { parseDelimitedText } from '../../lib/parseDelimited.js';
 import { HTTP_CONSTANTS } from '../../constants/http.js';
+import { extractHeaderSourceVersion, pickSourceVersion } from '../../lib/sourceVersion.js';
 
 function buildDiseaseCurie(row) {
   if (row.SourceID && row.SourceID.includes(':')) {
@@ -97,7 +98,7 @@ export async function fetchClinvarGeneDiseaseDataset(source) {
   }
 
   return {
-    sourceVersion: parsed.metadata.version || '',
+    sourceVersion: pickSourceVersion(parsed.metadata.version, extractHeaderSourceVersion(response.headers)),
     entities,
     aliases: [],
     xrefs: [],
