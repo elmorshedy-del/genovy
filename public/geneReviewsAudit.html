@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GeneReviews Audit</title>
+    <meta
+      name="description"
+      content="Hosted human-review interface for GeneReviews phenotype extraction audit, with exact sentence and span highlighting."
+    />
+    <meta name="theme-color" content="#f6f3ee" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/geneReviewsAudit.css" />
+  </head>
+  <body class="gr-audit-body">
+    <div class="gr-shell">
+      <aside class="gr-sidebar">
+        <div class="gr-brand">
+          <a class="gr-home" href="/">Genovy</a>
+          <span class="gr-kicker">GeneReviews Audit</span>
+        </div>
+        <div class="gr-sidebar-head">
+          <h1>Human review</h1>
+          <p id="gr-summary-copy">Loading audit index…</p>
+        </div>
+        <div class="gr-chapter-picker">
+          <label for="gr-chapter-select">Chapter</label>
+          <select id="gr-chapter-select"></select>
+        </div>
+        <div class="gr-filter-row">
+          <button type="button" class="gr-filter is-active" data-filter="all">All</button>
+          <button type="button" class="gr-filter" data-filter="review">Needs review</button>
+          <button type="button" class="gr-filter" data-filter="failed">Failed</button>
+          <button type="button" class="gr-filter" data-filter="flagged">Flagged</button>
+          <button type="button" class="gr-filter" data-filter="eligible">Eligible</button>
+        </div>
+        <div id="gr-assertion-list" class="gr-assertion-list"></div>
+      </aside>
+
+      <main class="gr-main">
+        <header class="gr-main-head">
+          <div>
+            <p class="gr-eyebrow">Evidence-grounded review</p>
+            <h2 id="gr-chapter-title">Choose a chapter</h2>
+            <p id="gr-chapter-meta" class="gr-meta"></p>
+          </div>
+          <div class="gr-head-actions">
+            <a id="gr-source-link" class="gr-link-button" href="#" target="_blank" rel="noreferrer">Open NCBI source</a>
+          </div>
+        </header>
+
+        <section id="gr-chapter-canvas" class="gr-chapter-canvas">
+          <div class="gr-empty">
+            <h3>No chapter selected</h3>
+            <p>Select a chapter from the left to inspect exact sentences and highlights.</p>
+          </div>
+        </section>
+      </main>
+
+      <aside class="gr-detail">
+        <div id="gr-detail-panel" class="gr-detail-panel">
+          <h3>Assertion detail</h3>
+          <p>Pick an assertion to see verifier failures, span texts, and direct evidence.</p>
+        </div>
+      </aside>
+    </div>
+    <script type="module" src="/geneReviewsAudit.js"></script>
+  </body>
+</html>

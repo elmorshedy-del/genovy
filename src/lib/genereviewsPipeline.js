@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import fsp from 'node:fs/promises';
 import path from 'node:path';
+import { createHash } from 'node:crypto';
 
 const GEMINI_API_BASE_URL = 'https://generativelanguage.googleapis.com/v1beta/models';
 const NCBI_BOOKS_URL = 'https://www.ncbi.nlm.nih.gov/books';
@@ -214,12 +215,214 @@ export function stripHtml(text) {
   );
 }
 
+export function extractMetaContentValues(html, metaName) {
+  const pattern = new RegExp(`<meta\\s+name=["']${metaName}["']\\s+content=["']([^"']+)["']`, 'gi');
+  return [...String(html || '').matchAll(pattern)].map((match) => decodeHtmlEntities(match[1]).trim()).filter(Boolean);
+}
+
+const GENE_KEYWORD_CUE_REGEX = /\b(?:protein|factor|gene|receptor|kinase|helicase|hydrolase|assembly|targeting)\b/i;
+const NON_GENE_SYMBOL_BLOCKLIST = new Set([
+  'ATP',
+  'AZF',
+  'AZFA',
+  'AZFB',
+  'AZFC',
+  'CID',
+  'DNA',
+  'ICSI',
+  'IVF',
+  'KABAMAS',
+  'KS',
+  'MRI',
+  'RNA',
+  'SCO',
+  'ZSD',
+  'ZTTK'
+]);
+
+function normalizeGeneSymbolCandidate(value) {
+  const raw = String(value || '').trim().toUpperCase();
+  if (!raw) return '';
+  const normalized = raw.replace(/-+/g, '');
+  if (!/^[A-Z0-9]{2,15}$/.test(normalized)) return '';
+  if (NON_GENE_SYMBOL_BLOCKLIST.has(normalized)) return '';
+  if (!/[A-Z]/.test(normalized)) return '';
+  return normalized;
+}
+
+export function extractGeneSymbolsFromGeneReviewsRawHtml(rawHtml) {
+  const keywords = extractMetaContentValues(rawHtml, 'citation_keywords');
+  const symbols = new Set();
+
+  for (const keyword of keywords) {
+    const rawKeyword = String(keyword || '').trim();
+    if (!rawKeyword) continue;
+    const exact = normalizeGeneSymbolCandidate(rawKeyword);
+    if (exact) {
+      symbols.add(exact);
+    }
+
+    const cueDriven = GENE_KEYWORD_CUE_REGEX.test(rawKeyword);
+    const matches = rawKeyword.match(/\b[A-Z][A-Z0-9-]{1,14}\b/g) || [];
+    for (const match of matches) {
+      const normalized = normalizeGeneSymbolCandidate(match);
+      if (!normalized) continue;
+      if (cueDriven || rawKeyword === match) {
+        symbols.add(normalized);
+      }
+    }
+  }
+
+  return [...symbols];
+}
+
 function extractSectionBlock(html, marker) {
   const start = html.search(marker);
   if (start === -1) return '';
   const rest = html.slice(start);
   const endMatch = rest.slice(1).match(/<div id="[^"]+\.[A-Z][^"]*">/);
   return endMatch ? rest.slice(0, endMatch.index + 1) : rest;
+}
+
+function extractSectionBlockWithIndex(html, marker) {
+  const start = html.search(marker);
+  if (start === -1) return null;
+  return {
+    start,
+    html: extractSectionBlock(html, marker)
+  };
+}
+
+function normalizeSectionHeading(text) {
+  return String(text || '')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+const CHAPTER_DOMAIN_RULES = Object.freeze([
+  { key: 'neurologic', label: 'Neurologic', pattern: /\b(?:neuro|neurolog|brain|cognitive|developmental|behavior|behaviour|psychiatr|seizure|movement)\b/i },
+  { key: 'ophthalmologic', label: 'Ophthalmologic', pattern: /\b(?:ophthalm|ocular|vision|visual|retin|eye)\b/i },
+  { key: 'auditory', label: 'Auditory', pattern: /\b(?:hearing|auditory|otolog|ear)\b/i },
+  { key: 'cardiovascular', label: 'Cardiovascular', pattern: /\b(?:cardio|cardiac|heart|vascular)\b/i },
+  { key: 'respiratory', label: 'Respiratory', pattern: /\b(?:respir|pulmonary|lung|airway)\b/i },
+  { key: 'gastrointestinal', label: 'Gastrointestinal', pattern: /\b(?:gastro|intestinal|hepatic|liver|biliary|gallbladder|bowel|feeding|nutrition)\b/i },
+  { key: 'renal_genitourinary', label: 'Renal / Genitourinary', pattern: /\b(?:renal|kidney|urolog|genitourinary|testicular|ovarian|fertility|reproductive)\b/i },
+  { key: 'musculoskeletal', label: 'Musculoskeletal', pattern: /\b(?:skeletal|musculoskeletal|bone|orthopedic|orthopaedic|joint|limb|spine|growth)\b/i },
+  { key: 'endocrine_metabolic', label: 'Endocrine / Metabolic', pattern: /\b(?:endocr|metabolic|peroxisomal|mitochondrial|glucose|lipid)\b/i },
+  { key: 'hematologic_immunologic', label: 'Hematologic / Immunologic', pattern: /\b(?:hemat|haemat|immune|immun|lymph|infect|thrombocyt|anemia|anaemia)\b/i },
+  { key: 'dermatologic', label: 'Dermatologic', pattern: /\b(?:dermat|skin|hair|nail|eczema)\b/i },
+  { key: 'craniofacial', label: 'Craniofacial', pattern: /\b(?:craniofacial|facial|face|head|neck|dysmorphism)\b/i }
+]);
+
+function extractDomainEvidenceSnippet(text, pattern) {
+  const source = String(text || '');
+  if (!source) return '';
+  const match = source.match(pattern);
+  if (!match || match.index == null) return '';
+  const start = Math.max(0, match.index - 32);
+  const end = Math.min(source.length, match.index + String(match[0] || '').length + 48);
+  return source.slice(start, end).replace(/\s+/g, ' ').trim();
+}
+
+function inferClinicalDomains(values, clinicalText = '') {
+  const domains = new Map();
+  for (const value of values || []) {
+    const text = normalizeSectionHeading(value);
+    if (!text) continue;
+    for (const rule of CHAPTER_DOMAIN_RULES) {
+      if (!rule.pattern.test(text)) continue;
+      if (!domains.has(rule.key)) {
+        domains.set(rule.key, {
+          key: rule.key,
+          label: rule.label,
+          evidence_headings: [],
+          evidence_snippets: []
+        });
+      }
+      const domain = domains.get(rule.key);
+      if (!domain.evidence_headings.includes(text)) {
+        domain.evidence_headings.push(text);
+      }
+    }
+  }
+  const normalizedClinicalText = String(clinicalText || '');
+  for (const rule of CHAPTER_DOMAIN_RULES) {
+    if (!rule.pattern.test(normalizedClinicalText)) continue;
+    if (!domains.has(rule.key)) {
+      domains.set(rule.key, {
+        key: rule.key,
+        label: rule.label,
+        evidence_headings: [],
+        evidence_snippets: []
+      });
+    }
+    const domain = domains.get(rule.key);
+    const snippet = extractDomainEvidenceSnippet(normalizedClinicalText, rule.pattern);
+    if (snippet && !domain.evidence_snippets.includes(snippet)) {
+      domain.evidence_snippets.push(snippet);
+    }
+  }
+  return [...domains.values()];
+}
+
+function annotateParagraphDomainEntries(paragraphs) {
+  return (paragraphs || []).map((paragraph) => {
+    const localClinicalDomains = inferClinicalDomains([paragraph.section_heading || ''], paragraph.text || '');
+    return {
+      ...paragraph,
+      local_clinical_domains: localClinicalDomains
+    };
+  });
+}
+
+function buildSectionDomainSummaries(sections, paragraphEntries) {
+  const paragraphMap = new Map((paragraphEntries || []).map((paragraph) => [paragraph.paragraph_id, paragraph]));
+  return (sections || []).map((section) => {
+    const paragraphs = (section.paragraph_ids || []).map((paragraphId) => paragraphMap.get(paragraphId)).filter(Boolean);
+    const localDomains = inferClinicalDomains(
+      [section.section_heading || '', ...paragraphs.map((paragraph) => paragraph.section_heading || '')],
+      paragraphs.map((paragraph) => paragraph.text || '').join('\n\n')
+    );
+    return {
+      ...section,
+      local_clinical_domains: localDomains
+    };
+  });
+}
+
+function buildSectionKey(sectionHeading, fallbackIndex) {
+  const headingSlug = slugify(sectionHeading);
+  return headingSlug ? `section_${headingSlug}` : `section_${fallbackIndex}`;
+}
+
+function extractSectionAwareProseUnits(sectionHtml, fallbackIndex = 1) {
+  const units = [];
+  const withoutTables = String(sectionHtml || '').replace(/<table[\s\S]*?<\/table>/gi, ' ');
+  const tokenPattern = /<(h[2-6]|p|li|dd)[^>]*>([\s\S]*?)<\/\1>/gi;
+  let currentHeading = '';
+  let currentSectionId = '';
+  let localHeadingCount = 0;
+
+  for (const match of withoutTables.matchAll(tokenPattern)) {
+    const tag = String(match[1] || '').toLowerCase();
+    const text = stripHtml(match[2]);
+    if (!text) continue;
+
+    if (tag.startsWith('h')) {
+      localHeadingCount += 1;
+      currentHeading = normalizeSectionHeading(text);
+      currentSectionId = buildSectionKey(currentHeading, `${fallbackIndex}_${localHeadingCount}`);
+      continue;
+    }
+
+    units.push({
+      section_id: currentSectionId || buildSectionKey('', `${fallbackIndex}_0`),
+      section_heading: currentHeading || null,
+      text
+    });
+  }
+
+  return units;
 }
 
 function parseHtmlTable(tableHtml, index) {
@@ -237,31 +440,107 @@ function parseHtmlTable(tableHtml, index) {
 
 export function extractClinicalSectionsAndTables(html) {
   const blockSources = [
-    extractSectionBlock(html, /<div id="[^"]+\.Clinical_Characteristics">/i),
-    extractSectionBlock(html, /<div id="[^"]+\.Clinical_Description">/i),
-    extractSectionBlock(html, /<div id="[^"]+\.Suggestive_Findings">/i)
-  ].filter(Boolean);
+    extractSectionBlockWithIndex(html, /<div id="[^"]+\.Clinical_Characteristics">/i),
+    extractSectionBlockWithIndex(html, /<div id="[^"]+\.Clinical_Description">/i),
+    extractSectionBlockWithIndex(html, /<div id="[^"]+\.Suggestive_Findings">/i)
+  ]
+    .filter(Boolean)
+    .sort((left, right) => left.start - right.start);
 
   const sourceBlocks = blockSources.length
-    ? blockSources
+    ? blockSources.map((entry) => entry.html)
     : [...html.matchAll(/<(p|li|dd)[^>]*>([\s\S]*?)<\/\1>/gi)].map((match) => match[0]);
 
   const tables = [];
-  const proseSections = sourceBlocks
-    .map((sectionHtml) => {
+  const proseUnits = [];
+  const seenUnits = new Set();
+  const headingInventory = [];
+  const seenHeadings = new Set();
+  sourceBlocks.forEach((sectionHtml, index) => {
+    const localTables = [...sectionHtml.matchAll(/<table[\s\S]*?<\/table>/gi)].map((match, tableIndex) =>
+      parseHtmlTable(match[0], tables.length + tableIndex)
+    );
+    tables.push(...localTables);
+    for (const match of sectionHtml.matchAll(/<(h[2-6])[^>]*>([\s\S]*?)<\/\1>/gi)) {
+      const tag = String(match[1] || '').toLowerCase();
+      const heading = stripHtml(match[2]);
+      const normalizedHeading = normalizeSectionHeading(heading);
+      const dedupeKey = `${tag}::${normalizeText(normalizedHeading)}`;
+      if (!normalizedHeading || seenHeadings.has(dedupeKey)) continue;
+      seenHeadings.add(dedupeKey);
+      headingInventory.push({
+        tag,
+        heading: normalizedHeading
+      });
+    }
+    const units = extractSectionAwareProseUnits(sectionHtml, index + 1);
+    for (const unit of units) {
+      const dedupeKey = `${normalizeText(unit.section_heading || '')}::${normalizeText(unit.text)}`;
+      if (!dedupeKey || seenUnits.has(dedupeKey)) continue;
+      seenUnits.add(dedupeKey);
+      proseUnits.push(unit);
+    }
+  });
+  if (!proseUnits.length) {
+    sourceBlocks
+      .map((sectionHtml) => {
       const localTables = [...sectionHtml.matchAll(/<table[\s\S]*?<\/table>/gi)].map((match, index) =>
         parseHtmlTable(match[0], tables.length + index)
       );
       tables.push(...localTables);
       return sectionHtml.replace(/<table[\s\S]*?<\/table>/gi, ' ');
-    })
-    .map(stripHtml)
-    .filter(Boolean)
-    .filter((text, index, list) => list.indexOf(text) === index);
+      })
+      .map(stripHtml)
+      .filter(Boolean)
+      .forEach((text, index) => {
+        proseUnits.push({
+          section_id: buildSectionKey('', index + 1),
+          section_heading: null,
+          text
+        });
+      });
+  }
 
   return {
-    proseText: proseSections.join('\n\n').trim(),
-    tables
+    proseText: proseUnits.map((unit) => unit.text).join('\n\n').trim(),
+    proseSections: proseUnits,
+    tables,
+    headingInventory,
+    chapterDomains: inferClinicalDomains(
+      headingInventory.map((entry) => entry.heading),
+      proseUnits.map((unit) => unit.text).join('\n\n')
+    )
+  };
+}
+
+export function parseGeneReviewsChapterHtml(entry, rawHtml) {
+  const { proseText, proseSections, tables, headingInventory, chapterDomains } = extractClinicalSectionsAndTables(rawHtml);
+  const resolvedNbkId =
+    rawHtml.match(/meta name="ncbi_acc" content="(NBK\d+)"/i)?.[1] ||
+    rawHtml.match(/\/books\/(NBK\d+)\//i)?.[1] ||
+    String(entry?.nbkId || entry?.nbk_id || '').trim();
+  const chapterTitle =
+    decodeHtmlEntities(
+      rawHtml.match(/<title>(.*?)<\/title>/i)?.[1] ||
+        rawHtml.match(/<h1[^>]*>\s*<span[^>]*>(.*?)<\/span>/i)?.[1] ||
+        entry?.chapterTitle ||
+        entry?.chapter_title ||
+        resolvedNbkId
+    ) ||
+    entry?.chapterTitle ||
+    entry?.chapter_title ||
+    resolvedNbkId;
+
+  return {
+    rawHtml,
+    clinicalText: proseText,
+    clinicalSections: proseSections,
+    tables,
+    headingInventory,
+    chapterDomains,
+    resolvedNbkId,
+    chapterTitle,
+    provenanceUrl: `${NCBI_BOOKS_URL}/${resolvedNbkId}/`
   };
 }
 
@@ -282,33 +561,9 @@ export async function fetchGeneReviewsChapter(entry, delayMs = 400) {
   }
 
   const rawHtml = await response.text();
-  const { proseText, tables } = extractClinicalSectionsAndTables(rawHtml);
-  const resolvedNbkId =
-    rawHtml.match(/meta name="ncbi_acc" content="(NBK\d+)"/i)?.[1] ||
-    rawHtml.match(/\/books\/(NBK\d+)\//i)?.[1] ||
-    nbkId;
-  const chapterTitle =
-    decodeHtmlEntities(
-      rawHtml.match(/<title>(.*?)<\/title>/i)?.[1] ||
-        rawHtml.match(/<h1[^>]*>\s*<span[^>]*>(.*?)<\/span>/i)?.[1] ||
-        entry.chapterTitle ||
-        entry.chapter_title ||
-        resolvedNbkId
-    ) ||
-    entry.chapterTitle ||
-    entry.chapter_title ||
-    resolvedNbkId;
-
+  const parsed = parseGeneReviewsChapterHtml(entry, rawHtml);
   await sleep(delayMs);
-
-  return {
-    rawHtml,
-    clinicalText: proseText,
-    tables,
-    resolvedNbkId,
-    chapterTitle,
-    provenanceUrl: `${NCBI_BOOKS_URL}/${resolvedNbkId}/`
-  };
+  return parsed;
 }
 
 export function splitSentences(text) {
@@ -326,6 +581,152 @@ export function splitParagraphs(text) {
     .filter(Boolean);
 }
 
+export function splitSentenceEntries(text, baseOffset = 0) {
+  const source = String(text || '');
+  const boundaryPattern = /(?<=[.!?])\s+(?=[A-Z0-9])/g;
+  const entries = [];
+  let sentenceIndex = 0;
+  let sliceStart = 0;
+
+  function pushSlice(sliceEnd) {
+    const rawSlice = source.slice(sliceStart, sliceEnd);
+    if (!rawSlice) return;
+    const leadingWhitespace = rawSlice.match(/^\s*/)?.[0].length || 0;
+    const trailingWhitespace = rawSlice.match(/\s*$/)?.[0].length || 0;
+    const trimmedStart = sliceStart + leadingWhitespace;
+    const trimmedEnd = sliceEnd - trailingWhitespace;
+    if (trimmedEnd <= trimmedStart) return;
+    sentenceIndex += 1;
+    entries.push({
+      sentence_id: `s${sentenceIndex}`,
+      sentence_index: sentenceIndex,
+      text: source.slice(trimmedStart, trimmedEnd),
+      char_start: baseOffset + trimmedStart,
+      char_end: baseOffset + trimmedEnd
+    });
+  }
+
+  for (const match of source.matchAll(boundaryPattern)) {
+    pushSlice(match.index);
+    sliceStart = match.index + match[0].length;
+  }
+  pushSlice(source.length);
+
+  return entries;
+}
+
+export function splitParagraphEntries(text) {
+  const normalized = String(text || '').replace(/\r\n/g, '\n').replace(/\r/g, '\n');
+  const paragraphs = splitParagraphs(normalized);
+  const entries = [];
+  let searchStart = 0;
+
+  for (let paragraphIndex = 0; paragraphIndex < paragraphs.length; paragraphIndex += 1) {
+    const paragraphText = paragraphs[paragraphIndex];
+    const paragraphStart = normalized.indexOf(paragraphText, searchStart);
+    if (paragraphStart === -1) continue;
+    const paragraphEnd = paragraphStart + paragraphText.length;
+    const sentences = splitSentenceEntries(paragraphText, paragraphStart).map((sentence) => ({
+      ...sentence,
+      sentence_id: `p${paragraphIndex + 1}_${sentence.sentence_id}`
+    }));
+    entries.push({
+      paragraph_id: `p${paragraphIndex + 1}`,
+      paragraph_index: paragraphIndex + 1,
+      text: paragraphText,
+      char_start: paragraphStart,
+      char_end: paragraphEnd,
+      sentences
+    });
+    searchStart = paragraphEnd;
+  }
+
+  return entries;
+}
+
+export function buildClinicalTextStructure(text) {
+  const normalized = String(text || '').replace(/\r\n/g, '\n').replace(/\r/g, '\n');
+  const paragraphs = annotateParagraphDomainEntries(splitParagraphEntries(normalized));
+  const sentenceCount = paragraphs.reduce((sum, paragraph) => sum + paragraph.sentences.length, 0);
+  return {
+    clinical_text: normalized,
+    text_sha256: createHash('sha256').update(normalized).digest('hex'),
+    paragraph_count: paragraphs.length,
+    sentence_count: sentenceCount,
+    paragraphs
+  };
+}
+
+export function buildClinicalTextStructureFromSections(sections) {
+  const paragraphEntries = [];
+  const sectionIndexByKey = new Map();
+  const sectionsSummary = [];
+  let paragraphCount = 0;
+  let sentenceCount = 0;
+  let clinicalText = '';
+
+  for (const section of Array.isArray(sections) ? sections : []) {
+    const text = String(section?.text || '')
+      .replace(/\r\n/g, '\n')
+      .replace(/\r/g, '\n')
+      .replace(/\n{3,}/g, '\n\n')
+      .trim();
+    if (!text) continue;
+
+    if (clinicalText) clinicalText += '\n\n';
+    const paragraphStart = clinicalText.length;
+    clinicalText += text;
+    const paragraphEnd = clinicalText.length;
+    paragraphCount += 1;
+
+    const sectionHeading = normalizeSectionHeading(section?.section_heading || '');
+    const sectionId = String(section?.section_id || buildSectionKey(sectionHeading, paragraphCount));
+    let summaryIndex = sectionIndexByKey.get(sectionId);
+    if (summaryIndex == null) {
+      summaryIndex = sectionsSummary.length;
+      sectionsSummary.push({
+        section_id: sectionId,
+        section_heading: sectionHeading || null,
+        paragraph_ids: []
+      });
+      sectionIndexByKey.set(sectionId, summaryIndex);
+    }
+
+    const paragraphId = `p${paragraphCount}`;
+    const sentences = splitSentenceEntries(text, paragraphStart).map((sentence) => ({
+      ...sentence,
+      sentence_id: `${paragraphId}_${sentence.sentence_id}`,
+      section_id: sectionId,
+      section_heading: sectionHeading || null
+    }));
+    sentenceCount += sentences.length;
+    sectionsSummary[summaryIndex].paragraph_ids.push(paragraphId);
+    paragraphEntries.push({
+      paragraph_id: paragraphId,
+      paragraph_index: paragraphCount,
+      text,
+      char_start: paragraphStart,
+      char_end: paragraphEnd,
+      section_id: sectionId,
+      section_heading: sectionHeading || null,
+      sentences
+    });
+  }
+
+  const annotatedParagraphs = annotateParagraphDomainEntries(paragraphEntries);
+  const annotatedSections = buildSectionDomainSummaries(sectionsSummary, annotatedParagraphs);
+
+  return {
+    clinical_text: clinicalText,
+    text_sha256: createHash('sha256').update(clinicalText).digest('hex'),
+    section_count: annotatedSections.length,
+    paragraph_count: annotatedParagraphs.length,
+    sentence_count: sentenceCount,
+    sections: annotatedSections,
+    paragraphs: annotatedParagraphs
+  };
+}
+
 export function findBestSentenceForPhrase(paragraph, phrase) {
   const normalizedPhrase = normalizeText(phrase);
   for (const sentence of splitSentences(paragraph)) {
@@ -334,6 +735,38 @@ export function findBestSentenceForPhrase(paragraph, phrase) {
     }
   }
   return splitSentences(paragraph)[0] || paragraph;
+}
+
+export function findBestSentenceEntryForPhrase(paragraphEntry, phrase) {
+  const normalizedPhrase = normalizeText(phrase);
+  for (const sentenceEntry of paragraphEntry?.sentences || []) {
+    if (normalizeText(sentenceEntry.text).includes(normalizedPhrase)) {
+      return sentenceEntry;
+    }
+  }
+  return paragraphEntry?.sentences?.[0] || null;
+}
+
+function coerceParagraphEntries(input) {
+  if (Array.isArray(input) && input.every((entry) => typeof entry === 'object' && entry?.text)) {
+    return input;
+  }
+  if (Array.isArray(input)) {
+    return splitParagraphEntries(input.join('\n\n'));
+  }
+  return splitParagraphEntries(String(input || ''));
+}
+
+function findExactPhraseSpan(text, phrase, baseOffset = 0) {
+  const source = String(text || '');
+  const rawPhrase = String(phrase || '').trim();
+  if (!source || !rawPhrase) return null;
+  const index = source.toLowerCase().indexOf(rawPhrase.toLowerCase());
+  if (index === -1) return null;
+  return {
+    char_start: baseOffset + index,
+    char_end: baseOffset + index + rawPhrase.length
+  };
 }
 
 function buildPhraseCandidates(rows, maxAnchorWords) {
@@ -510,9 +943,11 @@ export async function loadPhenotypeRows(client) {
 export function extractAnchorOccurrences(paragraphs, lexicon, options = {}) {
   const minIc = Number(options.minIc ?? 0);
   const chapterMap = new Map();
+  const paragraphEntries = coerceParagraphEntries(paragraphs);
 
-  for (let paragraphIndex = 0; paragraphIndex < paragraphs.length; paragraphIndex += 1) {
-    const paragraph = paragraphs[paragraphIndex];
+  for (let paragraphIndex = 0; paragraphIndex < paragraphEntries.length; paragraphIndex += 1) {
+    const paragraphEntry = paragraphEntries[paragraphIndex];
+    const paragraph = paragraphEntry.text;
     const normalized = normalizeText(paragraph);
     if (!normalized) continue;
     const words = normalized.split(' ').filter(Boolean);
@@ -526,10 +961,17 @@ export function extractAnchorOccurrences(paragraphs, lexicon, options = {}) {
         if (NON_PHENOTYPE_PHRASES.has(phrase)) continue;
         if ((candidate.icScore || 0) < minIc) continue;
 
-        const sentence = findBestSentenceForPhrase(paragraph, phrase);
-        const existing = chapterMap.get(candidate.hpoId) || {
+        const sentenceEntry = findBestSentenceEntryForPhrase(paragraphEntry, phrase);
+        const sentence = sentenceEntry?.text || findBestSentenceForPhrase(paragraph, phrase);
+        const status = detectExplicitPhenotypeStatus(sentence, phrase);
+        const matchSpan =
+          findExactPhraseSpan(sentenceEntry?.text || '', phrase, sentenceEntry?.char_start || 0) ||
+          findExactPhraseSpan(paragraphEntry.text, phrase, paragraphEntry.char_start);
+        const anchorKey = `${candidate.hpoId}::${status}`;
+        const existing = chapterMap.get(anchorKey) || {
           hpo_id: candidate.hpoId,
           hpo_label: candidate.hpoLabel,
+          status,
           ic_score: candidate.icScore || 0,
           match_types: new Set(),
           occurrences: []
@@ -539,10 +981,23 @@ export function extractAnchorOccurrences(paragraphs, lexicon, options = {}) {
           match_text: phrase,
           sentence,
           paragraph,
+          local_clinical_domains: paragraphEntry.local_clinical_domains || [],
+          status,
           match_type: candidate.matchType,
-          paragraph_index: paragraphIndex + 1
+          section_id: paragraphEntry.section_id || null,
+          section_heading: paragraphEntry.section_heading || null,
+          paragraph_id: paragraphEntry.paragraph_id,
+          paragraph_index: paragraphEntry.paragraph_index,
+          paragraph_char_start: paragraphEntry.char_start,
+          paragraph_char_end: paragraphEntry.char_end,
+          sentence_id: sentenceEntry?.sentence_id || null,
+          sentence_index: sentenceEntry?.sentence_index || null,
+          sentence_char_start: sentenceEntry?.char_start ?? null,
+          sentence_char_end: sentenceEntry?.char_end ?? null,
+          match_char_start: matchSpan?.char_start ?? null,
+          match_char_end: matchSpan?.char_end ?? null
         });
-        chapterMap.set(candidate.hpoId, existing);
+        chapterMap.set(anchorKey, existing);
       }
     }
   }
@@ -551,6 +1006,7 @@ export function extractAnchorOccurrences(paragraphs, lexicon, options = {}) {
     .map((row) => ({
       hpo_id: row.hpo_id,
       hpo_label: row.hpo_label,
+      status: row.status || 'present',
       ic_score: row.ic_score,
       match_types: [...row.match_types].sort(),
       occurrences: row.occurrences
@@ -586,22 +1042,71 @@ export function matchesExistingAnchor(candidateLabel, anchors) {
 }
 
 export function locateCandidateContext(clinicalText, candidateLabel) {
-  const paragraphs = splitParagraphs(clinicalText);
+  const structure =
+    clinicalText && typeof clinicalText === 'object' && Array.isArray(clinicalText.paragraphs)
+      ? clinicalText
+      : buildClinicalTextStructure(clinicalText);
   let best = {
     score: 0,
     sentence: '',
-    paragraph: ''
+    paragraph: '',
+    section_id: null,
+    section_heading: null,
+    paragraph_id: null,
+    paragraph_index: null,
+    paragraph_char_start: null,
+    paragraph_char_end: null,
+    sentence_id: null,
+    sentence_index: null,
+    sentence_char_start: null,
+    sentence_char_end: null,
+    match_char_start: null,
+    match_char_end: null
   };
-  for (const paragraph of paragraphs) {
-    const sentence = findBestSentenceForPhrase(paragraph, candidateLabel);
-    const score = Math.max(diceCoefficient(candidateLabel, paragraph), diceCoefficient(candidateLabel, sentence));
+  for (const paragraphEntry of structure.paragraphs || []) {
+    const sentenceEntry = findBestSentenceEntryForPhrase(paragraphEntry, candidateLabel);
+    const sentence = sentenceEntry?.text || findBestSentenceForPhrase(paragraphEntry.text, candidateLabel);
+    const score = Math.max(diceCoefficient(candidateLabel, paragraphEntry.text), diceCoefficient(candidateLabel, sentence));
     if (score > best.score) {
-      best = { score, sentence, paragraph };
+      const matchSpan =
+        findExactPhraseSpan(sentenceEntry?.text || '', candidateLabel, sentenceEntry?.char_start || 0) ||
+        findExactPhraseSpan(paragraphEntry.text, candidateLabel, paragraphEntry.char_start);
+      best = {
+        score,
+        sentence,
+        paragraph: paragraphEntry.text,
+        local_clinical_domains: paragraphEntry.local_clinical_domains || [],
+        section_id: paragraphEntry.section_id || null,
+        section_heading: paragraphEntry.section_heading || null,
+        paragraph_id: paragraphEntry.paragraph_id,
+        paragraph_index: paragraphEntry.paragraph_index,
+        paragraph_char_start: paragraphEntry.char_start,
+        paragraph_char_end: paragraphEntry.char_end,
+        sentence_id: sentenceEntry?.sentence_id || null,
+        sentence_index: sentenceEntry?.sentence_index || null,
+        sentence_char_start: sentenceEntry?.char_start ?? null,
+        sentence_char_end: sentenceEntry?.char_end ?? null,
+        match_char_start: matchSpan?.char_start ?? null,
+        match_char_end: matchSpan?.char_end ?? null
+      };
     }
   }
   return {
     source_sentence: best.sentence || '',
-    paragraph: best.paragraph || ''
+    paragraph: best.paragraph || '',
+    local_clinical_domains: best.local_clinical_domains || [],
+    section_id: best.section_id,
+    section_heading: best.section_heading,
+    paragraph_id: best.paragraph_id,
+    paragraph_index: best.paragraph_index,
+    paragraph_char_start: best.paragraph_char_start,
+    paragraph_char_end: best.paragraph_char_end,
+    sentence_id: best.sentence_id,
+    sentence_index: best.sentence_index,
+    sentence_char_start: best.sentence_char_start,
+    sentence_char_end: best.sentence_char_end,
+    match_char_start: best.match_char_start,
+    match_char_end: best.match_char_end
   };
 }
 
@@ -660,7 +1165,14 @@ export async function callOpenAiCompatJson({
   temperature = 0.1,
   extraBody = {}
 }) {
-  const response = await fetch(`${String(baseUrl || '').replace(/\/+$/g, '')}/chat/completions`, {
+  const normalizedBaseUrl = String(baseUrl || '').replace(/\/+$/g, '');
+  const requestUrl = normalizedBaseUrl.endsWith('/chat/completions')
+    ? normalizedBaseUrl
+    : normalizedBaseUrl.endsWith('/v1')
+      ? `${normalizedBaseUrl}/chat/completions`
+      : `${normalizedBaseUrl}/v1/chat/completions`;
+
+  const response = await fetch(requestUrl, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -799,6 +1311,42 @@ function escapeRegex(value) {
   return String(value || '').replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
 
+function buildLoosePhrasePattern(phrase) {
+  return normalizeText(phrase)
+    .split(' ')
+    .filter(Boolean)
+    .map(escapeRegex)
+    .join('\\s+');
+}
+
+function phraseCarriesNegativeMeaning(phrase) {
+  const normalized = normalizeText(phrase);
+  return /^(?:absence of|absent|lack of|lacking|without|no)\b/.test(normalized);
+}
+
+function detectExplicitPhenotypeStatus(sentence, matchText) {
+  const normalizedSentence = normalizeText(sentence);
+  const normalizedPhrase = normalizeText(matchText);
+  if (!normalizedSentence || !normalizedPhrase) return 'present';
+  if (phraseCarriesNegativeMeaning(normalizedPhrase)) return 'present';
+
+  const phrasePattern = buildLoosePhrasePattern(normalizedPhrase);
+  if (!phrasePattern) return 'present';
+
+  const patterns = [
+    new RegExp(`\\bno(?:\\s+evidence\\s+of)?\\s+${phrasePattern}\\b`, 'i'),
+    new RegExp(`\\bwithout\\s+${phrasePattern}\\b`, 'i'),
+    new RegExp(`\\babsence\\s+of\\s+${phrasePattern}\\b`, 'i'),
+    new RegExp(`\\black(?:s|ing)?\\s+${phrasePattern}\\b`, 'i'),
+    new RegExp(`\\bnever\\s+had\\s+${phrasePattern}\\b`, 'i'),
+    new RegExp(`\\bdid\\s+not\\s+have\\s+${phrasePattern}\\b`, 'i'),
+    new RegExp(`\\bdoes\\s+not\\s+have\\s+${phrasePattern}\\b`, 'i'),
+    new RegExp(`\\b${phrasePattern}\\s+(?:is|was|were|are)\\s+(?:absent|not\\s+present)\\b`, 'i')
+  ];
+
+  return patterns.some((pattern) => pattern.test(normalizedSentence)) ? 'excluded' : 'present';
+}
+
 function findRawMatchIndex(text, matchText) {
   const source = String(text || '');
   const rawMatch = String(matchText || '').trim();
@@ -827,6 +1375,8 @@ function collectFrequencyCandidates(raw) {
   for (const match of raw.matchAll(/(\d+(?:\.\d+)?)%/g)) {
     candidates.push({
       index: match.index || 0,
+      char_start: match.index || 0,
+      char_end: (match.index || 0) + match[0].length,
       frequency_value: `${match[1]}%`,
       frequency_raw: match[0],
       frequency_trust: 'high'
@@ -835,6 +1385,8 @@ function collectFrequencyCandidates(raw) {
   for (const match of raw.matchAll(/(\d+)\s*\/\s*(\d+)/g)) {
     candidates.push({
       index: match.index || 0,
+      char_start: match.index || 0,
+      char_end: (match.index || 0) + match[0].length,
       frequency_value: `${match[1]}/${match[2]}`,
       frequency_raw: match[0],
       frequency_trust: 'high'
@@ -842,13 +1394,15 @@ function collectFrequencyCandidates(raw) {
   }
   for (const term of ENGLISH_FREQUENCY_TERMS) {
     const regex = new RegExp(`\\b${escapeRegex(term).replace(/\\ /g, '\\\\s+')}\\b`, 'gi');
-    for (const match of raw.matchAll(regex)) {
-      candidates.push({
-        index: match.index || 0,
-        frequency_value: term,
-        frequency_raw: match[0],
-        frequency_trust: 'high'
-      });
+      for (const match of raw.matchAll(regex)) {
+        candidates.push({
+          index: match.index || 0,
+          char_start: match.index || 0,
+          char_end: (match.index || 0) + match[0].length,
+          frequency_value: term,
+          frequency_raw: match[0],
+          frequency_trust: 'high'
+        });
     }
   }
   return candidates;
@@ -862,6 +1416,8 @@ function collectOnsetCandidates(raw) {
       for (const match of raw.matchAll(regex)) {
         candidates.push({
           index: match.index || 0,
+          char_start: match.index || 0,
+          char_end: (match.index || 0) + match[0].length,
           onset_hpo_id: mapping.hpoId,
           onset_label: mapping.label,
           onset_raw: match[0],
@@ -884,6 +1440,27 @@ function pickAdjacentMatch(matchIndex, matchText, matches, { beforeChars = 24, a
     .filter((candidate) => candidate.index < matchIndex && candidate.index >= matchIndex - beforeChars)
     .sort((left, right) => right.index - left.index)[0];
   return before || null;
+}
+
+function hasUnsafeOnsetBridge(raw, matchIndex, matchText, onsetCandidate) {
+  if (!onsetCandidate || matchIndex === -1) return false;
+  const matchLength = String(matchText || '').length;
+  const onsetLength = String(onsetCandidate.onset_raw || '').length;
+  const matchStart = matchIndex;
+  const matchEnd = matchIndex + matchLength;
+  const onsetStart = onsetCandidate.index;
+  const onsetEnd = onsetStart + onsetLength;
+  const between =
+    onsetStart >= matchEnd ? raw.slice(matchEnd, onsetStart) : raw.slice(onsetEnd, matchStart);
+
+  if (!between) return false;
+  if (/[.;:]/.test(between)) return true;
+
+  const normalizedBetween = normalizeText(between);
+  if (!normalizedBetween) return false;
+  if (/\b(?:one|another|other)\s+(?:also\s+)?had\b/i.test(normalizedBetween)) return true;
+  const betweenWords = normalizedBetween.split(' ').filter(Boolean);
+  return betweenWords.length > 6;
 }
 
 function pickPreferredFrequencyMatch(raw, matchIndex, matchText, candidates) {
@@ -1011,8 +1588,9 @@ export function extractDeterministicFrequency(text) {
   };
 }
 
-export function extractScopedFrequency(text, matchText) {
+export function extractScopedFrequency(text, matchText, options = {}) {
   const raw = String(text || '');
+  const baseOffset = Number(options.baseOffset || 0);
   const matchIndex = findRawMatchIndex(raw, matchText);
   const candidates = collectFrequencyCandidates(raw);
 
@@ -1021,13 +1599,17 @@ export function extractScopedFrequency(text, matchText) {
     return {
       frequency_value: null,
       frequency_raw: null,
-      frequency_trust: 'not_extracted_deterministic'
+      frequency_trust: 'not_extracted_deterministic',
+      frequency_char_start: null,
+      frequency_char_end: null
     };
   }
   return {
     frequency_value: adjacent.frequency_value,
     frequency_raw: adjacent.frequency_raw,
-    frequency_trust: adjacent.frequency_trust
+    frequency_trust: adjacent.frequency_trust,
+    frequency_char_start: baseOffset + adjacent.char_start,
+    frequency_char_end: baseOffset + adjacent.char_end
   };
 }
 
@@ -1050,25 +1632,30 @@ export function extractDeterministicOnset(text) {
   };
 }
 
-export function extractScopedOnset(text, matchText) {
+export function extractScopedOnset(text, matchText, options = {}) {
   const raw = String(text || '');
+  const baseOffset = Number(options.baseOffset || 0);
   const matchIndex = findRawMatchIndex(raw, matchText);
   const candidates = collectOnsetCandidates(raw);
   const adjacent = pickAdjacentMatch(matchIndex, matchText, candidates, { beforeChars: 0, afterChars: 24 });
-  const selected = adjacent || null;
+  const selected = adjacent && !hasUnsafeOnsetBridge(raw, matchIndex, matchText, adjacent) ? adjacent : null;
   if (selected) {
     return {
       onset_hpo_id: selected.onset_hpo_id,
       onset_label: selected.onset_label,
       onset_raw: selected.onset_raw,
-      onset_trust: selected.onset_trust
+      onset_trust: selected.onset_trust,
+      onset_char_start: baseOffset + selected.char_start,
+      onset_char_end: baseOffset + selected.char_end
     };
   }
   return {
     onset_hpo_id: null,
     onset_label: null,
     onset_raw: null,
-    onset_trust: 'not_extracted_deterministic'
+    onset_trust: 'not_extracted_deterministic',
+    onset_char_start: null,
+    onset_char_end: null
   };
 }
 

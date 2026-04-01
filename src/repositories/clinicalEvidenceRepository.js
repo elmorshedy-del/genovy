@@ -7,6 +7,86 @@ function logMissingClinicalEvidenceTable(operation, error) {
   }
 }
 
+export async function listCrossSourcePhenotypeConcordance(client, pairs, options = {}) {
+  const normalizedPairs = (pairs || [])
+    .map((pair) => ({
+      diseaseCurie: String(pair.diseaseCurie || '').trim(),
+      phenotypeCurie: String(pair.phenotypeCurie || '').trim(),
+      presenceStatus: String(pair.presenceStatus || '').trim()
+    }))
+    .filter((pair) => pair.diseaseCurie && pair.phenotypeCurie && pair.presenceStatus);
+
+  if (!normalizedPairs.length) {
+    return [];
+  }
+
+  const excludedSourceKeys = Array.isArray(options.excludeSourceKeys)
+    ? [...new Set(options.excludeSourceKeys.map((value) => String(value || '').trim()).filter(Boolean))]
+    : [];
+
+  try {
+    const result = await client.query(
+      `
+        WITH input AS (
+          SELECT
+            value->>'diseaseCurie' AS disease_curie,
+            value->>'phenotypeCurie' AS phenotype_curie,
+            value->>'presenceStatus' AS presence_status
+          FROM jsonb_array_elements($1::jsonb) AS value
+        ),
+        resolved AS (
+          SELECT
+            input.disease_curie,
+            input.phenotype_curie,
+            input.presence_status,
+            disease.entity_id AS disease_entity_id,
+            phenotype.entity_id AS phenotype_entity_id
+          FROM input
+          INNER JOIN entities disease
+            ON disease.canonical_curie = input.disease_curie
+          INNER JOIN entities phenotype
+            ON phenotype.canonical_curie = input.phenotype_curie
+        )
+        SELECT
+          resolved.disease_curie,
+          resolved.phenotype_curie,
+          resolved.presence_status,
+          assertion.source_key
+        FROM resolved
+        INNER JOIN clinical_phenotype_assertions assertion
+          ON assertion.subject_entity_id = resolved.disease_entity_id
+         AND assertion.phenotype_entity_id = resolved.phenotype_entity_id
+         AND assertion.presence_status = resolved.presence_status
+        WHERE NOT (assertion.source_key = ANY($2::text[]))
+        GROUP BY
+          resolved.disease_curie,
+          resolved.phenotype_curie,
+          resolved.presence_status,
+          assertion.source_key
+        ORDER BY
+          resolved.disease_curie ASC,
+          resolved.phenotype_curie ASC,
+          resolved.presence_status ASC,
+          assertion.source_key ASC
+      `,
+      [JSON.stringify(normalizedPairs), excludedSourceKeys]
+    );
+
+    return result.rows.map((row) => ({
+      diseaseCurie: row.disease_curie,
+      phenotypeCurie: row.phenotype_curie,
+      presenceStatus: row.presence_status,
+      sourceKey: row.source_key
+    }));
+  } catch (error) {
+    logMissingClinicalEvidenceTable('listCrossSourcePhenotypeConcordance', error);
+    if (error?.code === '42P01') {
+      return [];
+    }
+    throw error;
+  }
+}
+
 export async function upsertClinicalPhenotypeAssertionsBatch(client, rows) {
   if (!rows.length) {
     return;

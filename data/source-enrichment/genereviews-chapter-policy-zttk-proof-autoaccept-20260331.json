@@ -1,0 +1,34 @@
+{
+  "createdAt": "2026-03-31",
+  "basedOn": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/data/source-enrichment/genereviews-chapter-policy-latest5-20260330.json",
+  "defaults": {
+    "ingestionDecision": "review_required",
+    "chapterScope": "unclassified",
+    "targetingMode": "manual_required",
+    "notes": "Proof policy for deterministic auto-accept contract testing only."
+  },
+  "chapters": [
+    {
+      "chapterKey": "zhu_tokita_takenouchi_kim_syndrome",
+      "nbkId": "",
+      "chapterTitle": "Zhu-Tokita-Takenouchi-Kim Syndrome",
+      "chapterPath": "/sites/books/n/gene/zttk/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/zttk/",
+      "rosterMappingStatus": "exact_label_or_alias",
+      "rosterMappedDiseaseCurie": "MONDO:0014936",
+      "rosterMappedDiseaseLabel": "ZTTK syndrome",
+      "recommendedDecision": "candidate_auto_accept",
+      "recommendedScope": "candidate_disease_specific",
+      "recommendationReason": "Deterministic contract proof policy for Stage 6 routing.",
+      "policy": {
+        "ingestionDecision": "auto_accept",
+        "chapterScope": "disease_specific",
+        "targetingMode": "roster_exact_single_target",
+        "diseaseTargets": [
+          "MONDO:0014936"
+        ],
+        "notes": "Temporary proof policy for validating verifier-gated auto-accept routing."
+      }
+    }
+  ]
+}

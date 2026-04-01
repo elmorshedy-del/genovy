@@ -2613,3 +2613,1490 @@ Status:
   - the negative path is now proven end-to-end on a full-graph import, not just a miss-tail roster slice
   - absent assertions alone do not rescue the current unresolved miss set under the baseline scorer
   - movement was limited to `7` one-rank shifts with no recall gain
+
+## 2026-03-30 Full GitHub + Bucket Read Recovery
+- Purpose:
+  - resolve continuity drift after thread truncation and environment confusion
+  - verify what still exists across GitHub history, working-tree docs, and cold-storage bucket artifacts
+  - convert the raw full read into one durable understanding record
+- Surfaces fully read:
+  - GitHub repo current `main` tracked files: `106`
+  - GitHub reachable blob history: `11457`
+  - bucket objects under:
+    - `gs://ahmed-cold-storage-20260326/genovy-artifacts-march-2026/output/`
+    - `gs://ahmed-cold-storage-20260326/genovy-artifacts-march-2026/downloads-files-4/`
+    - total bucket objects read: `1282`
+- Added:
+  - [full-read-audit-report-20260330.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/full-audit-20260330/full-read-audit-report-20260330.md)
+  - [full-read-understanding-report-20260330.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/full-audit-20260330/full-read-understanding-report-20260330.md)
+  - [github-genovy-main-fullread-manifest.tsv](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/full-audit-20260330/github-genovy-main-fullread-manifest.tsv)
+  - [github-genovy-all-history-blobs.tsv](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/full-audit-20260330/github-genovy-all-history-blobs.tsv)
+  - [gcs-genovy-artifacts-fullread-manifest.tsv](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/full-audit-20260330/gcs-genovy-artifacts-fullread-manifest.tsv)
+- What the recovery established:
+  - the work did not disappear; it fragmented across repo state, enrichment worktree state, and bucket-preserved artifacts
+  - the March `STXBP1` storyline is coherent:
+    - semantic matching was already real
+    - broad enrichment alone was not enough
+    - disease-to-gene handoff was a genuine leak
+  - not all `STXBP1` misses belong to the same class:
+    - some are thin truth-branch cases
+    - some are mimic-heavy ranking geometry problems
+  - the seizure-contradiction branch did not rescue the saved hard STX case and instead exposed scorer-shape limitations
+  - the `RERE` case is not well explained by obvious truth-term absence after symmetric recovery; it remains more about contradiction/frequency/scorer behavior
+  - `U2AF2` in the real working lineage is better treated as a weak-profile enrichment case than as permanent candidate invisibility
+- Durable classification that now best fits the project:
+  - undercovered truth branch
+  - disease-to-gene handoff / scorer geometry leak
+  - genuine ranking / ML problem
+- Read:
+  - the project memory is now materially safer because the artifact surfaces and the scientific storyline are both preserved in one place
+
+## 2026-03-30 March 29-30 Bucket Faithful Reread
+- Purpose:
+  - recover the exact March 29-30 bucket storyline after continuity drift
+  - separate what came from structured global enrichment, manual curated overlays, broad GeneReviews policy work, and March 30 pipeline engineering
+  - make the saved `92%` state traceable to the correct artifact family
+- Evidence surface used:
+  - exact March 29-30 object slice enumeration:
+    - [gcs-march29-30-path-slice.txt](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/full-audit-20260330/gcs-march29-30-path-slice.txt)
+  - durable understanding report:
+    - [march29-30-bucket-understanding-report-20260330.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/full-audit-20260330/march29-30-bucket-understanding-report-20260330.md)
+- What the reread established:
+  - the March 29 bucket contains the real pivot into global GeneReviews work:
+    - `879` chapter roster
+    - `445` exact-mapped chapters
+    - `418` unresolved chapters
+  - the broad honest-symmetric GeneReviews policy state was still conservative and review-first:
+    - seeded pilot accepted `12`
+    - broad shadow accepted `0`
+  - the saved benchmark lift on March 29 came from:
+    - `official-v1-enrich-structured-global-20260329.json` -> `86% found`
+    - `official-v1-enrich-structured-plus-manual-curated-20260329.json` -> `92% found`
+  - the `92%` state came from structured global enrichment plus a provenance-carrying `26`-entry manual curated overlay, not from broad GeneReviews auto-accept
+  - the saved STX March 29 GeneReviews overlay was real but mixed:
+    - `19` STX GeneReviews entries applied
+    - some STX cases improved
+    - some already-good STX cases regressed badly
+    - `Syrbe_6` stayed a `GAMT`-over-`STXBP1` mimic problem even after added GeneReviews text
+  - the March 30 bucket is mostly pipeline engineering, not a new benchmark leap:
+    - `latest5` stayed review-only with `0` manifest rows
+    - `hybrid latest10` stayed review-only with `0` manifest rows and a paused MedGemma endpoint
+    - `autoaccept batch1-20` produced a real `679`-row manifest despite noisy stage error accounting
+    - Qwen candidate generation was much less sparse than GLiNER on the saved `latest5` slice
+- Read:
+  - March 29-30 is now coherent again as three distinct layers:
+    - benchmark-moving manual/structured enrichment
+    - broad GeneReviews extraction/policy infrastructure
+    - March 30 pipeline scaling and model-comparison work
+  - this fixes the earlier mental collapse where those different layers were being remembered as one thing
+
+## 2026-03-30 Benchmark Reconciliation And GeneReviews Runner
+- Purpose:
+  - turn the recovered March 29-30 understanding into one operational bridge file
+  - stop treating the `87%` working line and the saved `92%` line as if they were already the same lineage
+  - make the latest GeneReviews pipeline rerunnable from one durable entrypoint instead of many dated one-off commands
+- Added:
+  - [benchmark-lineage-reconciliation-87-vs-92-20260330.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/benchmark-lineage-reconciliation-87-vs-92-20260330.md)
+  - [genereviews-latest-engineering-pipeline-20260330.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/genereviews-latest-engineering-pipeline-20260330.md)
+  - [genereviewsPipelineProfiles.js](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/lib/genereviewsPipelineProfiles.js)
+  - [runGeneReviewsPipeline.js](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/runGeneReviewsPipeline.js)
+- Reconciliation result:
+  - current real working line:
+    - `87 found`
+    - `42 top-1`
+    - `53 top-5`
+    - `62 top-10`
+    - `MRR 0.4887`
+    - `13` misses
+  - saved March 29 stronger line:
+    - `92 found`
+    - `42 top-1`
+    - `57 top-5`
+    - `65 top-10`
+    - `MRR 0.503832`
+    - `8` misses
+  - the gap is now clearly attributed to:
+    - structured global enrichment
+    - plus the saved `26`-entry manual curated overlay
+  - the gap is not being treated as a scorer-memory mystery anymore
+- Pipeline engineering result:
+  - the GeneReviews stage scripts already committed in git history are now wrapped by durable named profiles:
+    - `latest5-qwen-20260330`
+    - `hybrid-latest10-20260330`
+    - `autoaccept-batch1-20-20260330`
+  - one runner now exposes them:
+    - `npm run gr:pipeline -- --list`
+  - the `hybrid-latest10` profile now derives its own review-first policy slice from the March 29 template instead of relying on thread memory
+- GitHub read:
+  - the latest GeneReviews engineering work is already in committed history, especially:
+    - `4629bcb`
+    - `e46aebd`
+    - `1c044e6`
+- Next move:
+  - verify the new runner on `--list` and `--dryRun`
+  - then use the reconciliation doc to decide which March 29 enrichment layers must be replayed to lift the current safe line toward the saved `92%` state
+
+## 2026-03-30 GitHub GeneReviews Architecture Reread
+- Purpose:
+  - finish the GitHub-side reread for the GeneReviews engineering path specifically
+  - recover the actual model-stack progression and the intended next serious architecture, not just the existence of pipeline code
+- GitHub commits re-read:
+  - `4629bcb` `Add GeneReviews NLP shadow manifest builder`
+  - `e46aebd` `Add GeneReviews global shadow tools`
+  - `1c044e6` `Add GeneReviews enrichment pipeline and archive artifact storage`
+- What the commit reread clarified:
+  - `4629bcb` was the first explicit LLM-extracted GeneReviews shadow layer
+  - `e46aebd` added the global roster plus global shadow-manifest control plane
+  - `1c044e6` is where the real staged architecture lands:
+    - fetch printable GeneReviews chapter text
+    - deterministic anchor extraction
+    - multiple candidate-discovery branches
+      - Gemini
+      - Qwen via OpenAI-compatible endpoint
+      - GLiNER comparison
+    - HPO mapping via BioLORD / embedding path
+    - metadata enrichment
+      - deterministic first
+      - Gemini fallback
+      - MedGemma anchor-level fallback branch
+    - final manifest build under chapter policy
+- Most important architecture read:
+  - the final serious design direction was not “let one model do everything”
+  - it was:
+    - honest policy-first control plane
+    - deterministic anchor layer
+    - model-comparison candidate layer
+    - separate mapper layer
+    - separate metadata layer
+    - review-first by default
+- Model-specific read:
+  - Qwen beat GLiNER clearly on the saved `latest5` candidate-breadth comparison
+  - MedGemma was explicitly treated as promising only for anchor-level metadata fallback, not yet safe as a raw direct pipeline component
+  - the MedGemma prompt doc explicitly says not to plug raw endpoint output directly into the pipeline yet
+- Best read of the “final one to start trying”:
+  - honest review-first GeneReviews pipeline
+  - candidate discovery from the stronger LLM branch rather than GLiNER
+  - BioLORD mapping
+  - deterministic metadata first
+  - MedGemma only as guarded anchor-level metadata fallback
+  - autoaccept only on explicit policy slices like batch1-20
+- Read:
+  - my earlier summary had the chronology right but under-described this model-stack conclusion
+  - after the GitHub reread, the GeneReviews track is now coherent as a real architecture progression, not just several unrelated March 30 experiments
+
+## 2026-03-30 GeneReviews Run-By-Run JSON Recovery
+- Purpose:
+  - recover the exact saved `5` / `10` / `20` GeneReviews run lineage from the bucket JSONs themselves
+  - correct the earlier overstatement that made `Qwen` sound like the main recovered branch
+- New durable outputs:
+  - `docs/genereviews-engineering-progression-recovery-20260330.md`
+  - `output/full-audit-20260330/genereviews-run-json-audit-20260330.json`
+- Primary correction from saved artifacts:
+  - the saved main `latest5` candidate branch is `Gemini 2.5 Flash`
+  - the saved main `hybrid latest10` candidate branch is also `Gemini 2.5 Flash`
+  - `Qwen` and `GLiNER` are real saved comparison branches, but not the recovered main branch
+  - `MedGemma` remains a metadata-fallback experiment and was operationally blocked in the saved hybrid run
+- Run-sheet conclusions:
+  - broad raw `200`-chapter extraction:
+    - real but noisy
+    - `245` errors
+    - parse and quota problems
+  - Gemini flash `pilot10`:
+    - real and broad
+    - `778` extracted features
+    - looked too loose for direct ingestion
+  - Gemini anchor-first branches:
+    - real and more disciplined
+    - explicit thinking vs no-thinking comparisons survived in the summaries
+  - `latest5` main:
+    - review-only
+    - `0` manifest rows
+    - `5` review rows
+    - stage5/stage6 summaries are duplicated by resume/rerun effects
+  - `latest5 Qwen`:
+    - candidate comparison branch only
+  - `latest5 GLiNER`:
+    - much sparser than Gemini and Qwen
+  - `hybrid latest10`:
+    - main Gemini path succeeded through review queue
+    - PhenoTagger failed `404`
+    - MedGemma failed because endpoint was paused
+  - `autoaccept batch1-20`:
+    - authoritative saved batch summary is real
+    - `679` manifest rows
+    - stage3/stage5/stage6 summaries contain later rerun noise and should not be read naively
+- Runner correction:
+  - the durable runner/profile layer now reflects the saved lineage better:
+    - `latest5-gemini-20260330` is the main saved profile
+    - `latest5-qwen-20260330` and `latest5-gliner-20260330` are comparison profiles
+    - `hybrid-latest10-20260330` keeps PhenoTagger and MedGemma as optional side branches, not the default successful path
+- Evidence boundary:
+  - I did not recover saved primary-source evidence for `Gemini Pro` or `Gemini 3.1 Pro` from the inspected March 29-30 GitHub and bucket surfaces
+  - that means they are not safe to treat as recovered project memory right now
+
+## 2026-03-30 Final GeneReviews Architecture Clarification
+- Decision:
+  - the architecture the user wrote is now the right working target, but with two evidence-bound caveats:
+    - `PhenoTagger` is the intended anchor-upgrade path, not yet a proven successful saved run, because the recovered hybrid attempt failed with `404`
+    - `NegEx` / explicit negation handling is still a design requirement, not a recovered successful saved default branch
+- Clean evidence-backed pipeline:
+  - Stage 1:
+    - fetch raw HTML
+    - strip tables into side files
+    - keep clinical prose cache
+  - Stage 2:
+    - deterministic local graph anchors first
+    - PhenoTagger as the intended next anchor supplement
+  - Stage 3:
+    - Gemini candidate discovery
+    - not MedGemma
+    - not GLiNER
+  - Stage 4:
+    - lexical-first HPO grounding plus BioLORD semantic mapping
+  - Stage 5:
+    - deterministic metadata first
+    - MedGemma only as anchor-level fallback metadata extractor with evidence guardrails
+  - Stage 6:
+    - cleanup, collapse, excluded handling, policy gate, manifest vs review queue
+- Why it arrived there:
+  - broad raw extraction was too noisy
+  - GLiNER was too sparse
+  - Qwen was real but remained a comparison branch, not the recovered main path
+  - Gemini `2.5 Flash` is the only model that survives as the main candidate branch across the saved successful `latest5` and `hybrid latest10` runs
+  - MedGemma survived only in the narrow metadata role, and even there the saved hybrid run shows the endpoint was operationally blocked
+
+## 2026-03-30 Hybrid Latest10 Error Clarification
+- Clarified from saved bucket summaries:
+  - there were two blocked side branches in the saved `hybrid latest10` run
+  - `PhenoTagger` branch error:
+    - `HTTP Error 404: Not Found`
+    - repeated across all `10` chapters
+  - the other blocked branch was `MedGemma` metadata:
+    - `OpenAI-compatible API error: 400`
+    - endpoint paused / `BAD_REQUEST`
+- Important distinction:
+  - this was not “two different PhenoTagger errors”
+  - it was:
+    - one PhenoTagger failure mode
+    - and one MedGemma endpoint failure mode
+
+## 2026-03-30 Python-Side Error Clarification
+- Narrow re-check performed on saved March 29-30 GeneReviews pipeline summaries:
+  - `latest5` mapped candidates
+  - `hybrid latest10` mapped candidates
+  - `latest5` GLiNER candidates
+  - `autoaccept batch1-20` mapped candidates
+- Saved result:
+  - `PhenoTagger` is the only clearly saved Python-stage failure in the recovered hybrid branch:
+    - `HTTP Error 404: Not Found`
+  - `GLiNER` saved run shows `0` errors
+  - `BioLORD` mapping summaries for `latest5` and `hybrid latest10` show `0` errors
+  - `autoaccept` mapped-candidate summary shows missing-input bookkeeping noise, not a Python traceback
+  - `MedGemma` failure was endpoint availability, not a recovered Python import/runtime error
+- Interpretation:
+  - if there was a separate Python traceback during live experimentation, it was not recovered as a saved authoritative run error from the bucket summaries re-checked here
+
+## 2026-03-30 Settled GeneReviews Architecture Correction
+- User corrected the architecture split:
+  - `Gemini 2.5 Flash` is the earlier broad candidate-discovery step
+  - the later narrow metadata comparison step is `Gemini preview` vs `MedGemma`
+  - `Flash` is not the late comparison model
+- Live verification performed:
+  - saved the preview key separately from the existing Flash key
+  - confirmed shell env now has:
+    - Flash key
+    - preview key
+    - Hugging Face / MedGemma key
+  - listed live Google models with the preview key and confirmed the currently available preview-capable model name is:
+    - `gemini-3-pro-preview`
+  - Node `fetch` probe against `gemini-3-pro-preview:generateContent` returned `200`
+- Repo corrections made:
+  - settled pipeline profile now uses:
+    - `candidates-gemini-flash`
+    - `metadata-gemini-preview`
+    - `manifest-gemini-preview`
+  - stage scripts now support explicit env-var selection for provider keys instead of collapsing all Gemini calls into one implicit key path
+  - candidate and metadata summaries now record provider/model provenance
+- Important blocker unchanged:
+  - the settled `latest5` profile is correctly wired now, but the full run still cannot proceed until the working Genovy `DATABASE_URL` is restored for anchor extraction
+- Current truthful state:
+  - architecture is corrected in code
+  - preview model is live
+  - MedGemma remains key-present but base-URL/endpoint-not-ready
+
+## 2026-03-30 MedGemma HF Endpoint Control Test
+- User asked for a real MedGemma on/off test using only the HF token.
+- Verified first:
+  - HF token is valid
+  - token scopes include endpoint write/control permissions
+  - existing old MedGemma text endpoints existed, but the useful pipeline-compatible target is a new custom `vLLM OpenAI` endpoint
+- Created the exact endpoint requested:
+  - name: `medgemma-27b-text-it-wgl`
+  - repo: `google/medgemma-27b-text-it`
+  - region/vendor: `aws us-east-1`
+  - compute: `nvidia-a100 x1`
+  - image: `vllm/vllm-openai:v0.16.0`
+  - URL: `https://aro6p9a835d7pnd5.us-east-1.aws.endpoints.huggingface.cloud`
+- Control cycle executed successfully:
+  - create result: `pending`
+  - observed state during startup: `initializing`
+  - pause result: `paused`
+  - resume result: `pending`
+  - final safety pause applied again: `paused`
+- Interpretation:
+  - MedGemma can now be turned on/off from the HF token alone
+  - the endpoint we need for later pipeline comparison now exists
+  - it was left paused intentionally to avoid idle GPU cost
+- Next practical move:
+  - when we are ready to compare `Gemini preview` vs `MedGemma`, export this URL as `MEDGEMMA_BASE_URL`, resume the endpoint, and then run only the metadata branch
+
+## 2026-03-30 Railway Environment Correction For GeneReviews
+- User correctly called out that the GeneReviews/enrichment pipeline should be using the enrichment environment, not the scorer-baseline environment.
+- Verified:
+  - `genovy-v1-working-20260322`
+    - service: `Postgres`
+    - has a valid `DATABASE_URL`
+    - this is the scorer baseline line
+  - `v1-enrich-0328`
+    - service: `Postgres-Enrichment-Symmetry`
+    - has a valid `DATABASE_URL`
+    - this is the right DB lineage for GeneReviews/enrichment work
+- Correction:
+  - future GeneReviews pipeline commands should use:
+    - `railway run -e v1-enrich-0328 -s Postgres-Enrichment-Symmetry -- ...`
+  - keep `genovy-v1-working-20260322` for current scorer-baseline comparisons, not enrichment ingestion work
+
+## 2026-03-30 Settled Latest5 Run Repair And Execution
+- Repaired the settled `latest5` GeneReviews path end to end enough to execute the intended architecture without MedGemma:
+  - fixed `PhenoTagger` by replacing the dead PubTator API stage with a local official `PhenoTagger v1.2` runner
+  - installed and verified the local `pubmedbert` model path under Python `3.10`
+  - kept negation off for the supplement stage to avoid the brittle `NegBio` dependency stack
+  - switched the settled profile to include `phenotagger-local` by default
+- Verified local PhenoTagger directly:
+  - official sample tagging worked after adding required NLTK resources
+  - a real one-chapter settled pipeline run on `v1-enrich-0328` succeeded through:
+    - `fetch`
+    - `phenotagger-local`
+    - `anchors`
+  - real supplement artifact produced:
+    - `stage2b_phenotagger_local/phenotagger_local_summary.json`
+    - `1` chapter processed
+    - `0` errors
+    - `6` supplement anchors for `Y Chromosome Infertility`
+- Fixed the local DB execution path for desktop `railway run` usage:
+  - local CLI runs were getting `DATABASE_URL` with `postgres-*.railway.internal`
+  - patched env selection to prefer `DATABASE_PUBLIC_URL` on local macOS desktop runs
+  - enabled SSL automatically for the Railway proxy host
+  - verified with a live `select 1`
+- Repaired the BioLORD stage:
+  - system `python3` was `3.14.3` and unstable for the mapping path
+  - created a dedicated BioLORD runtime at:
+    - `/Users/ahmedelmorshedy/.cache/biolord/.venv`
+  - patched `mapCandidatesToHPO.js` to use that stable interpreter
+  - removed the unstable `faiss` dependency from `mapCandidatesToHPOBioLORD.py`
+  - replaced nearest-neighbor lookup with normalized `numpy` top-k cosine search
+  - made phenotype-embedding cache writes best-effort instead of fatal
+- Important operational constraint hit during repair:
+  - local disk was effectively full
+  - removed the redundant upstream archive:
+    - `/Users/ahmedelmorshedy/.cache/phenotagger/PhenoTagger_v1.2.zip`
+  - kept the extracted runtime intact
+  - this freed enough space to finish the code and run artifacts
+- Executed the settled latest5 architecture successfully through stage 5:
+  - `fetch`
+  - `phenotagger-local`
+  - `anchors`
+  - `candidates-gemini-flash`
+  - `map` via repaired BioLORD runtime
+  - `metadata-gemini-preview`
+- Preview-model correction discovered during execution:
+  - `gemini-3-pro-preview` rejects `thinkingBudget: 0`
+  - updated the settled preview metadata stage to use:
+    - `thinkingBudget: 128`
+- Stage 4 artifact handling:
+  - completed BioLORD response artifact:
+    - `stage4_mapped_candidates/biolord_response_py310_np.json`
+  - chapter candidate counts:
+    - `1`
+    - `8`
+    - `49`
+    - `8`
+    - `19`
+  - materialized clean mapped chapter files and summary from that finished response
+- Stage 5 output:
+  - five enriched chapter files produced in:
+    - `output/genereviews-pipeline-latest5-settled-20260330/stage5_enriched_gemini_preview`
+  - clean metadata summary written separately because the original summary retained stale pre-fix errors:
+    - `metadata_summary_clean.json`
+  - clean metadata read:
+    - `total_processed: 5`
+    - `total_errors: 0`
+    - `featureCount`: `6`, `41`, `45`, `27`, `139`
+    - `frequencyCovered`: `0`, `2`, `4`, `2`, `29`
+    - `onsetCovered`: `0`, `1`, `1`, `0`, `2`
+- Stage 6 output:
+  - original `stage6_manifest_gemini_preview` directory was polluted by stale errors from the earlier failed manifest attempt
+  - created a clean authoritative rerun directory:
+    - `stage6_manifest_gemini_preview_clean`
+  - clean manifest result:
+    - `total_processed: 5`
+    - `total_errors: 0`
+    - `manifest_rows: 0`
+    - `review_rows: 5`
+  - interpretation:
+    - the settled architecture ran successfully on 5 chapters
+    - all `5` chapters currently land in review queue, not autoaccept manifest
+    - this is a valid review-first outcome, not a pipeline failure
+
+## 2026-03-30 Launch-To-800 Strategy
+- User asked to stop wasting time on repeated full reruns and define the efficient path to the full GeneReviews launch.
+- Locked read:
+  - Stage 1-4 should now be treated as frozen unless a real bug appears
+  - the remaining open decisions are:
+    - Stage 5 default metadata model
+    - stable negation layer
+- Wrote the explicit launch plan to:
+  - `docs/genereviews-launch-to-800-plan-20260330.md`
+- Strategy fixed there:
+  - compare only Stage 5 models on one fixed `20`-chapter slice
+  - then add/test negation on that same slice
+  - then run `100` chapters review-first
+  - then run the full `800` once
+- Important principle:
+  - do not rerun unchanged stages
+  - reuse frozen Stage 1-4 outputs whenever only metadata or negation logic changes
+
+## 2026-03-30 Narrow MedGemma Stage-5 Comparison
+- User corrected the comparison scope:
+  - do not jump to `20` chapters yet
+  - run only the tricky stages on the already repaired settled `latest5` slice
+- Exact execution path:
+  - resumed the Hugging Face endpoint:
+    - `medgemma-27b-text-it-wgl`
+  - discovered the actual Stage-5 blocker was not the model:
+    - the OpenAI-compatible helper was posting to `/chat/completions`
+    - the vLLM endpoint serves chat at `/v1/chat/completions`
+  - fixed in:
+    - `src/lib/genereviewsPipeline.js`
+  - then ran only:
+    - Stage 5 MedGemma metadata
+    - Stage 6 manifest through Railway enrichment env
+- Clean MedGemma outputs:
+  - `stage5_enriched_medgemma_clean/metadata_summary.json`
+  - `stage6_manifest_medgemma_clean/manifest_summary.json`
+- Aggregate comparison against the already repaired Gemini preview branch:
+  - both processed `5/5`
+  - both had `0` errors
+  - both landed:
+    - `0` manifest rows
+    - `5` review rows
+  - MedGemma improved:
+    - frequency coverage: `37 -> 40`
+    - onset coverage: `4 -> 34`
+  - cleaned Stage-6 feature count stayed tied:
+    - `179 -> 179`
+- Strong concrete examples:
+  - `ZAP70`
+    - Gemini onset-covered: `1`
+    - MedGemma onset-covered: `12`
+  - `Zellweger`
+    - Gemini onset-covered: `0`
+    - MedGemma onset-covered: `12`
+- Operational conclusion:
+  - for the repaired settled `latest5` slice, `MedGemma` is now the leading Stage-5 metadata branch
+  - the next real blocker before scale-out is not metadata model choice
+  - it is the explicit negation / excluded-handling layer
+- Endpoint was paused again after the comparison to avoid idle GPU burn.
+
+## 2026-03-30 Zellweger MedGemma Accuracy Spot Check
+- User asked whether MedGemma looked accurate against the true chapter text, not just better than Gemini by counts.
+- Performed a narrow manual source-vs-output audit on:
+  - `Zellweger Spectrum Disorder`
+- Why this chapter:
+  - it had one of the biggest MedGemma onset gains:
+    - `0 -> 12`
+- Main read:
+  - most onset assignments were real and well grounded
+  - several were clearly correct:
+    - `Adrenal insufficiency -> Childhood`
+    - `Osteopenia -> Childhood`
+    - `Feeding difficulties -> Neonatal`
+    - `Retinal dystrophy -> Childhood`
+    - `Sensorineural hearing impairment -> Childhood`
+    - `Neonatal seizure -> Neonatal`, frequency `frequent`
+  - a few were plausible but slightly inferential:
+    - `Decreased liver function -> Neonatal onset`
+    - `Elevated circulating hepatic transaminase concentration -> neonatal`
+  - one clear questionable row surfaced:
+    - `Pigmentary retinopathy -> neonatal`
+    - likely wrong because `neonatal` appears to modify the disease subtype `neonatal adrenoleukodystrophy`, not the phenotype onset itself
+- Operational conclusion:
+  - MedGemma is strong and useful on this chapter
+  - not perfect
+  - still review-first, not autoaccept-safe without a truth-set audit
+
+## 2026-03-30 Latest5 Full Source Audit For MedGemma
+- User asked for truth comparison across all 5 chapters to decide what should be fixed in the prompt.
+- Audited:
+  - all `5` cleaned source chapter texts
+  - all `5` MedGemma enriched outputs from the repaired settled run
+- Aggregate counts:
+  - `75` metadata-bearing rows
+  - `40` frequency rows
+  - `34` onset rows
+  - `3` progression rows
+  - `5` treatment-response rows
+- Important evidence-storage read:
+  - onset/progression/treatment evidence is mostly present and exact when LLM-filled
+  - frequency evidence looks sparse mostly because deterministic extraction wipes evidence fields, not because the rows are necessarily wrong
+- Clear quality read by chapter:
+  - `YIF1B`: looks clean
+  - `Y chromosome infertility`: one questionable schema misuse
+    - `Oligozoospermia -> treatment_response`
+  - `ZAP70`: mostly strong, one clear wrong deterministic onset leak
+    - `Cerebral infarct -> Congenital onset`
+  - `Zellweger`: mostly strong, one questionable onset over-attachment
+    - `Pigmentary retinopathy -> neonatal`
+  - `ZTTK`: strong on percentages, but two likely onset over-attachments from one shared sentence
+    - `Cerebral visual impairment -> childhood onset`
+    - `Visual impairment -> childhood`
+- Main conclusion:
+  - some fixes belong in the MedGemma prompt
+  - but one of the worst observed errors is a deterministic onset-linkage bug, not an LLM hallucination
+- Wrote the full audit to:
+  - `docs/genereviews-latest5-medgemma-source-audit-20260330.md`
+
+## 2026-03-30 Architecture Note Review: Constrained Decoding / Evidence / Verification
+- User brought a separate architecture note about:
+  - constrained decoding
+  - evidence spans
+  - two-pass verification
+- Read after checking current public docs for structured outputs / guided decoding support.
+- Conclusion:
+  - the overall note is mostly right for this pipeline
+  - but the statement that Hugging Face endpoints do not support structured/guided output for custom models is too strong
+  - `vLLM` itself supports guided / structured output, and Hugging Face documents structured outputs in its inference stack
+  - whether we should use it is a separate question from whether it exists
+- Practical read for this project:
+  - constrained decoding is not the main bottleneck right now
+  - our real Stage-5 problems are:
+    - onset linkage
+    - treatment-response overreach
+    - deterministic evidence persistence
+  - evidence-backed extraction remains the right design
+  - global two-pass verification still looks unnecessary, though targeted review on ambiguous rows may still be useful later
+
+## 2026-03-30 Quality Fixes Implemented
+- User asked to implement the three remaining quality fixes rather than keep talking about them:
+  - negation / excluded handling
+  - deterministic metadata evidence + onset-linkage guard
+  - MedGemma prompt tightening
+- Implemented in:
+  - `src/lib/genereviewsPipeline.js`
+  - `src/scripts/extractPhenotypeAnchors.js`
+  - `src/scripts/extractPhenotypeMetadata.js`
+  - `src/scripts/buildEnrichmentManifest.js`
+- Validation results:
+  - syntax checks passed on all touched files
+  - helper-level validation confirmed:
+    - excluded anchors now survive as `status: "excluded"`
+    - `brain infarcts -> congenital onset` deterministic leak is blocked
+    - `generalized hypotonia -> infancy` still works
+  - direct MedGemma prompt probes confirmed:
+    - `Cerebral visual impairment` no longer inherits `childhood onset`
+    - `Pigmentary retinopathy` no longer inherits `neonatal`
+    - `Oligozoospermia` no longer gets fake `treatment_response`
+- Wrote the implementation record to:
+  - `docs/genereviews-quality-fixes-implementation-20260330.md`
+- Endpoint note:
+  - MedGemma endpoint was resumed only for the direct probes
+  - paused again immediately after
+- What remains:
+  - no full `latest5` rerun after the fixes yet
+  - that rerun is the next narrow step before `100`
+
+## 2026-03-30 Tightened Latest5 Validation Complete
+- Ran the full fixed `latest5` slice into:
+  - `output/genereviews-pipeline-latest5-tightened-20260330`
+- Stages rerun:
+  - anchors under Railway enrichment env
+  - Gemini Flash candidates
+  - BioLORD mapping
+  - MedGemma metadata
+  - manifest/review build
+- Operational result:
+  - `Stage 5`: `5/5` processed, `0` errors
+  - `Stage 6`: `5/5` processed, `0` errors
+- Important improvements confirmed on real rerun:
+  - `Y chromosome infertility`
+    - bad `Oligozoospermia -> treatment_response` leak removed
+  - `ZAP70`
+    - bad `Cerebral infarct -> congenital onset` leak removed
+  - `Zellweger`
+    - `Pigmentary retinopathy` no longer inherits `neonatal`
+  - `ZTTK`
+    - `Cerebral visual impairment` no longer inherits `childhood onset`
+- Residual issue still present:
+  - `ZTTK Visual impairment -> childhood`
+- Manifest/readout:
+  - still fully review-first
+  - `0` manifest rows
+  - `5` review rows
+  - only cleaned-feature-count change at manifest level was:
+    - `Y chromosome infertility: 5 -> 4`
+    - this is directionally correct because the earlier bad treatment-response row was removed
+- Decision:
+  - safe to move to `100`-chapter `review-first`
+  - not honest to move to broad `autoaccept` yet
+- Wrote the validation note to:
+  - `docs/genereviews-latest5-tightened-validation-20260330.md`
+
+## 2026-03-30 Efficient Audit Strategy For 100-Chapter Review-First Run
+- User asked for the most efficient audit shape before launching the larger GeneReviews review-first run.
+- Decision:
+  - do not audit the `100` chapters uniformly
+  - audit by failure class and risk bucket instead
+- Recommended audit buckets:
+  - exact known leak checks:
+    - shared-sentence onset over-attachment
+    - treatment-response overreach
+    - excluded/present conflicts
+  - high-yield metadata rows:
+    - rows where onset/frequency/progression/treatment were filled
+  - ambiguity rows:
+    - medium-trust mappings
+    - parent/alias-heavy visual or neurologic phenotypes
+  - spot-check baseline rows:
+    - a small random sample of apparently clean chapters to estimate silent error rate
+- Publication-grade rule remains:
+  - review-first into staging
+  - publish only approved rows with exact evidence provenance
+- Next intended move:
+  - run `100` in review-first mode
+  - audit targeted buckets first rather than linearly reading all output
+
+## 2026-03-31 Deterministic Auto-Accept Design Direction
+- User asked whether auto-accept can be deterministic and then pushed toward a no-human path.
+- Decision:
+  - do not use a second freeform LLM as the publish judge
+  - use:
+    - LLM extraction once
+    - frozen outputs
+    - deterministic verifier / compiler on top
+- Practical publication-safe design:
+  - every extracted row must carry exact provenance:
+    - chapter
+    - paragraph/line anchor
+    - evidence span or exact evidence sentence
+  - deterministic verifier checks:
+    - phenotype alias/exact mention support
+    - negation / excluded status
+    - ontology validity
+    - allowed metadata patterns
+    - same-clause / same-span linkage for onset and treatment-response
+  - if a row cannot be proved by deterministic rules, it should not auto-accept
+- Important consequence:
+  - no-human publish is only honest if recall is sacrificed for precision
+  - simple/provable rows can auto-accept
+  - ambiguous rows should be dropped, not promoted
+
+## 2026-03-31 Candidate Stage-3 Draft Script Read
+- User pasted an older standalone `Stage 3: Candidate Phenotype Discovery via MedGemma` script and asked what it is doing.
+- Read:
+  - this script is a broad candidate-discovery worker
+  - it reads cleaned chapter text
+  - reads anchor labels
+  - asks MedGemma for plain-English phenotype candidates
+  - removes candidates already covered by anchors using crude string overlap
+  - writes leftover candidates to JSON
+- Important architecture read:
+  - this is not the final settled Stage-3 design
+  - the settled pipeline uses `Gemini Flash` for broad candidate discovery, not MedGemma
+  - MedGemma is now the Stage-5 metadata branch
+- Important quality read:
+  - the prompt asks for implied features, which is high-recall but risky for publication use
+  - no exact evidence sentence / page-line provenance is returned
+  - dedupe against anchors is only lexical substring matching
+  - the output is exploratory, not publish-safe
+
+## 2026-03-31 Stage-5 Draft Script Read
+- User pasted an older standalone `Stage 5: Phenotype Metadata Extraction via MedGemma` script and asked for an honest technical read.
+- Verdict:
+  - the overall shape is right:
+    - deterministic pass first
+    - LLM fallback second
+  - but this draft would reintroduce several of the exact metadata bugs we just removed
+- Strong parts worth keeping conceptually:
+  - deterministic-first design
+  - only falling back to the model for missing fields
+  - explicit trust levels
+- Main problems:
+  - deterministic onset/frequency search runs over broad context, not phenotype-local scope
+  - this would recreate shared-sentence leakage like:
+    - `Cerebral infarct -> congenital`
+    - `Pigmentary retinopathy -> neonatal`
+    - `Visual impairment -> childhood`
+  - no exact evidence fields are preserved in the output
+  - LLM output does not return provenance/evidence, only values
+  - severity/progression/treatment are accepted from the model without a deterministic proof gate
+  - excluded rows are not explicitly skipped
+  - LLM onset output is stored only as raw text, without verified normalization/proof
+  - prompt is older and too weak for phenotype-specific attachment
+- Canonical read:
+  - good prototype
+  - not safe as the final publication-path Stage 5
+
+## 2026-03-31 Pre-100 Error Model And Deterministic Audit Design
+- User asked to step back before the `100`-chapter run and think about:
+  - where errors are most likely to happen
+  - whether the pipeline is really sealed
+  - what extra verifier engineering could improve safety
+  - how to make the audit as deterministic as possible
+- Current read:
+  - not fully sealed
+  - sealed enough on the known major leaks to justify a `100`-chapter `review-first` pilot
+  - not sealed enough for broad `autoaccept`
+- Highest-risk failure classes:
+  - shared-sentence metadata attachment drift
+    - especially onset
+  - disease-subtype words being mistaken for phenotype onset
+  - treatment/prognosis language leaking into `treatment_response`
+  - broad parent/alias phenotypes inheriting metadata from a more specific child phrase
+  - negation / excluded status mistakes
+  - medium-trust broad semantic mappings
+- Best next verifier ideas before or alongside `100`:
+  - field-specific proof contracts
+    - phenotype proof
+    - onset proof
+    - frequency proof
+    - treatment-response proof
+    - progression proof
+  - exact provenance per field:
+    - sentence id
+    - paragraph id
+    - char offsets / exact evidence span
+  - alias-shadow guard:
+    - broad parent labels like `visual impairment` should not inherit metadata from a child-only phrase unless separately mentioned
+  - disease-subtype blocker:
+    - words like `neonatal` in disease names should not count as phenotype onset unless clause-local proof exists
+  - frozen challenge set:
+    - keep the known bad sentences as permanent regression tests
+- Deterministic audit design:
+  - freeze the extracted outputs
+  - run a deterministic verifier that emits per-row:
+    - pass/fail
+    - failing rule
+    - evidence span used
+  - audit all rows that:
+    - have onset/progression/treatment metadata
+    - are excluded
+    - have medium-trust mapping
+    - hit alias-shadow / shared-sentence flags
+  - plus a small random sample of apparently safe rows to estimate silent error rate
+
+## 2026-03-31 External Validation-Stack Proposal Review
+- User brought a 7-layer deterministic validation proposal centered on:
+  - cross-source concordance
+  - GeneReviews table parsing
+  - section-aware scoping
+  - dependency-based modifier attachment
+  - expected-count anomaly checks
+  - benchmark regression testing
+  - symmetric impact scoring
+- Best parts:
+  - cross-source concordance as a strong positive signal
+  - deterministic table parsing as a separate source
+  - dependency-based attachment for onset/modifier disambiguation
+  - benchmark regression as a batch safety net
+- Important corrections:
+  - graph absence is not falsity, so concordance should be a positive proof layer, not a negative oracle
+  - section/HPO branch matching should be a soft flag, not a hard reject
+  - expected-count validation should be an anomaly detector, not a truth test
+  - symmetric impact scoring should not control curation acceptance because it risks benchmark overfitting
+- Best integrated read:
+  - adopt:
+    - provenance
+    - cross-source concordance
+    - table parsing
+    - dependency attachment
+    - benchmark regression
+  - use as soft diagnostics:
+    - section mismatch
+    - count outliers
+  - keep separate from curation truth gate:
+    - rank-impact / discrimination scoring
+
+## 2026-03-31 Pre-100 Gate Refinement
+- User pushed back correctly on two ideas:
+  - benchmark regression is not a sensible blocking gate for the first `100`-chapter curation pilot
+  - table matching should not be treated as the main truth oracle because the point is to extract novel prose data too
+- Refined decision:
+  - benchmark regression moves to a later integration / post-apply safety layer, not the pre-`100` blocker
+  - table parsing stays high value, but as:
+    - structured metadata source
+    - high-confidence phenotype/frequency source
+    - disagreement detector when the same phenotype appears in both table and prose
+  - table absence must not reject novel prose-only phenotypes
+- Engineering priority before/alongside `100`:
+  - robust provenance
+  - robust modifier attachment
+  - robust table parser
+  - not benchmark-gated acceptance
+
+## 2026-03-31 Char-Offset Deterministic Verifier Idea
+- User proposed a stronger deterministic verifier centered on storing:
+  - char offsets
+  - section ids
+  - sentence boundaries
+- This is a strong direction.
+- Best parts:
+  - exact mention verification becomes deterministic
+  - frequency/onset evidence checks become deterministic regex/string checks
+  - alias-shadow contamination becomes a simple range-overlap test
+  - clause-local onset checks become much stronger without a second LLM
+- Important limit:
+  - char offsets do not fully solve implicit phenotype interpretation
+  - they also do not fully solve complex progression/treatment attachment in dense prose
+- Best integrated read:
+  - use char offsets as a core verifier substrate
+  - add:
+    - clause boundaries
+    - section ids
+    - evidence spans per field
+    - synonym-normalized lexical match
+  - keep ambiguous semantic rows out of auto-accept
+
+## 2026-03-31 Verifier Spec + Pilot Implemented
+- Moved from design-only discussion into first implementation.
+- Added:
+  - `docs/genereviews-deterministic-verifier-spec-20260331.md`
+  - `src/lib/genereviewsVerification.js`
+  - `src/scripts/verifyGeneReviewsEnrichment.js`
+  - npm script: `gr:verify`
+- Implemented current deterministic checks:
+  - phenotype presence in source sentence
+  - deterministic frequency support
+  - deterministic onset support
+  - clause-boundary onset attachment
+  - alias-shadow flagging
+  - disease-subtype leak flagging
+  - excluded-row lexical marker check
+- Ran verifier pilot on the tightened `latest5` slice.
+- Important result:
+  - the refined verifier correctly leaves:
+    - `ZTTK Cerebral visual impairment` as `VERIFIED`
+  - while flagging:
+    - `ZTTK Visual impairment`
+    - because of alias-shadow inside `cortical visual impairment`
+- This means the verifier is already catching the right residual failure class, not just spraying noise.
+- Wrote durable pilot note to:
+  - `docs/genereviews-deterministic-verifier-pilot-latest5-20260331.md`
+
+## 2026-03-31 Provenance Plumbing Added Through Stage 1-5
+- Continued the next engineering step after the first verifier pilot:
+  - added sentence/paragraph structure and char offsets to the GeneReviews pipeline
+- Added to `src/lib/genereviewsPipeline.js`:
+  - `splitSentenceEntries`
+  - `splitParagraphEntries`
+  - `buildClinicalTextStructure`
+  - `findBestSentenceEntryForPhrase`
+  - upgraded `extractAnchorOccurrences`
+  - upgraded `locateCandidateContext`
+- Stage wiring completed:
+  - `src/scripts/fetchGeneReviewsChapters.js`
+    - now writes `*_clinical_structure.json`
+    - resume logic now requires structure output too
+  - `src/scripts/extractPhenotypeAnchors.js`
+    - now prefers `*_clinical_structure.json`
+  - `src/scripts/extractCandidatePhenotypes.js`
+  - `src/scripts/extractCandidatePhenotypesOpenAiCompat.js`
+  - `src/scripts/mapCandidatesToHPO.js`
+  - `src/scripts/mapCandidatesToHPOBioLORD.py`
+  - `src/scripts/extractPhenotypeMetadata.js`
+    - all now preserve paragraph/sentence ids and char ranges
+- Syntax validation:
+  - `node --check` passed on all touched JS files
+- Narrow proof run completed on one latest5 chapter:
+  - fetch -> anchors -> Gemini candidates -> BioLORD mapping -> Gemini metadata
+  - proof outputs written under:
+    - `output/genereviews-pipeline-provenance-proof-20260331`
+- Concrete proof:
+  - stage1 structure file now carries:
+    - paragraph ids
+    - sentence ids
+    - char offsets
+  - stage2 anchor occurrences carry:
+    - `paragraph_id`
+    - `sentence_id`
+    - `paragraph_char_start/end`
+    - `sentence_char_start/end`
+    - `match_char_start/end`
+  - stage3 candidates preserve the same provenance
+  - stage4 mapped candidates preserve the same provenance
+  - stage5 enriched rows preserve the same provenance
+- Important limitation:
+  - this is still span plumbing, not yet full field-level provenance
+  - frequency/onset/progression/treatment spans are not yet separately stored
+  - verifier can now trust sentence/match location much more, but it is not yet the final publish gate
+
+## 2026-03-31 Span-Aware Verifier Enabled
+- Continued immediately after provenance plumbing:
+  - upgraded the deterministic verifier to use sentence/match spans when present
+- Added/changed in `src/lib/genereviewsVerification.js`:
+  - sentence span resolution
+  - match span verification
+  - explicit `source_span` check
+  - span-preferred phenotype presence proof
+- Ran a one-chapter proof verifier pass on:
+  - `output/genereviews-pipeline-provenance-proof-20260331/stage5_enriched_gemini`
+- First result exposed one verifier bug:
+  - alias-shadow was too eager and falsely flagged `Azoospermia`
+  - tightened the heuristic so a stopword/verb immediately before the phrase no longer counts as a shadow prefix
+- Refined proof result:
+  - totals for the one chapter:
+    - `featureCount: 7`
+    - `verified: 2`
+    - `flagged: 3`
+    - `failed: 2`
+  - `Azoospermia` now verifies correctly from span-backed evidence
+- Best read:
+  - verifier is now using the real provenance we just added, not only loose sentence text
+  - remaining open work is now field-level evidence spans and table support, not basic sentence/match location
+
+## 2026-03-31 Deterministic Metadata Spans Added
+- Continued after the span-aware verifier:
+  - added deterministic char offsets for frequency and onset extraction
+- Implemented in:
+  - `src/lib/genereviewsPipeline.js`
+    - `extractScopedFrequency(..., { baseOffset })`
+    - `extractScopedOnset(..., { baseOffset })`
+    - both now return field-level char ranges when deterministically extracted
+  - `src/scripts/extractPhenotypeMetadata.js`
+    - deterministic metadata now prefers source-sentence extraction when available
+    - stores:
+      - `frequency_char_start/end`
+      - `onset_char_start/end`
+    - LLM-filled metadata explicitly leaves those spans null
+  - `src/lib/genereviewsVerification.js`
+    - frequency/onset checks now verify from field spans when present
+- Ran a second narrow proof on `Zellweger Spectrum Disorder` under:
+  - `output/genereviews-pipeline-provenance-proof-zellweger-20260331`
+- Concrete proof:
+  - `Decreased liver function`
+    - onset verified at recorded span as `neonatal`
+  - `Seizure`
+    - frequency verified at recorded span as `frequent`
+- This is the first real proof that metadata verification is moving from sentence-level heuristics to field-level offsets.
+- Current remaining gap:
+  - progression/treatment spans still do not exist
+  - tables are still not parsed into the verifier path
+
+## 2026-03-31 Progression/Treatment Spans, Table Verifier, And Hard Auto-Accept Contract
+- Continued after the frequency/onset span proof:
+  - finished field-level span plumbing for:
+    - `progression`
+    - `treatment_response`
+  - added GeneReviews table support into the verifier path
+  - encoded the first real hard auto-accept contract in code
+- Code changes:
+  - `src/scripts/extractPhenotypeMetadata.js`
+    - now resolves and stores:
+      - `progression_char_start/end`
+      - `treatment_response_char_start/end`
+  - `src/lib/genereviewsVerification.js`
+    - added:
+      - `verifyProgression`
+      - `verifyTreatmentResponse`
+      - `verifyTableConcordance`
+      - `determineAutoAcceptEligibility`
+    - verifier now returns:
+      - `auto_accept_eligible`
+      - `auto_accept_reasons`
+  - `src/scripts/verifyGeneReviewsEnrichment.js`
+    - now loads stage1 table payloads
+    - verification summaries now count `autoAcceptEligible`
+  - `src/scripts/buildEnrichmentManifest.js`
+    - now accepts `--verificationDir`
+    - auto-accept chapters require verifier proof
+    - eligible rows go to manifest
+    - ineligible rows fall back to review
+- Narrow proof results:
+  - table-backed proof:
+    - `Y Chromosome Infertility -> Azoospermia`
+    - `table_concordance == pass`
+    - `auto_accept_eligible == true`
+  - treatment-response span proof on:
+    - `output/genereviews-pipeline-progress-treatment-proof-20260331/zap70_minimal`
+    - exact spans now recorded for:
+      - `treatment-refractory`
+      - `resistant to therapy`
+  - progression span proof on:
+    - `output/genereviews-pipeline-progress-treatment-proof-20260331-zttk/minimal`
+    - exact span recorded for:
+      - `worsened over time`
+  - Stage 6 positive proof:
+    - `output/genereviews-pipeline-progress-treatment-proof-20260331-zttk/minimal/stage6_manifest_parent_only`
+    - one verifier-approved row entered the manifest
+  - Stage 6 fail-closed proof:
+    - mixed ZTTK proof routed the surviving ineligible row to review
+- Important current boundary:
+  - the contract is now real and enforced
+  - but it is still intentionally conservative
+  - valid rows with alias-shadow ambiguity or cross-sentence onset ambiguity still fail closed into review
+- Durable note written:
+  - `docs/genereviews-hard-autoaccept-contract-20260331.md`
+
+## 2026-03-31 Residual Tightening After Contract Proof
+- Continued after the hard-contract proof to reduce known false-positive review routing.
+- Implemented in `src/lib/genereviewsVerification.js`:
+  - alias-shadow now ignores subject/context prefixes and pure modifiers such as:
+    - `persistent`
+    - `isolated`
+    - `treatment-refractory`
+    - `child`
+    - `individual`
+  - this keeps true nested phenotype phrases review-biased, but stops flagging obvious prose wrappers
+- Re-ran the narrow ZAP70 verifier proof on the existing minimal enriched output:
+  - `Autoimmune thrombocytopenia`
+    - now `VERIFIED`
+    - `auto_accept_eligible == true`
+  - `Eczematoid dermatitis`
+    - now `VERIFIED`
+    - `auto_accept_eligible == true`
+  - `Thrombocytopenia`
+    - still `FLAGGED`
+    - stays review-biased because it remains nested inside the more specific phrase `immune thrombocytopenia`
+- Implemented in `src/scripts/extractPhenotypeMetadata.js`:
+  - evidence-backed metadata can now promote a better supporting sentence when that sentence itself contains the phenotype phrase
+  - evidence-backed `frequency` and `onset` now also compute field spans instead of leaving them null
+- Boundary on proof:
+  - the alias-shadow refinement is re-proven
+  - the evidence-sentence promotion code is implemented but not freshly re-proven end to end yet, because the MedGemma endpoint never finished a usable cold start during the final rerun attempt
+  - endpoint was paused again after the attempt
+
+## 2026-03-31 MedGemma Direct Serving Probe
+- Re-checked whether the remaining MedGemma blockage is integration-side or Hugging Face serving-side.
+- Actions taken:
+  - resumed the private endpoint `medgemma-27b-text-it-wgl`
+  - polled Hugging Face endpoint state for more than a minute
+  - probed the authenticated OpenAI-compatible route directly at:
+    - `https://aro6p9a835d7pnd5.us-east-1.aws.endpoints.huggingface.cloud/v1/chat/completions`
+- Durable result:
+  - Hugging Face control plane advanced from `pending` to repeated `initializing`
+  - control plane never reported a ready replica:
+    - `readyReplica = 0`
+  - authenticated direct inference probe returned:
+    - `503 Service Unavailable`
+- Conclusion:
+  - the current MedGemma blocker is upstream serving readiness, not the pipeline's request format or authentication path
+  - endpoint was paused again after the probe to avoid idle cost
+
+## 2026-03-31 Replacement MedGemma Endpoint Verified Live
+- User provided a second MedGemma Hugging Face endpoint URL:
+  - `https://z2m4kqae0vudzx4y.us-east-1.aws.endpoints.huggingface.cloud`
+- Direct authenticated checks against the new endpoint succeeded:
+  - `GET /health` returned `200`
+  - `POST /v1/chat/completions` returned `200`
+  - minimal test response returned exactly:
+    - `ok`
+- Operational conclusion:
+  - the new endpoint is live and usable for Stage 5 MedGemma work
+  - the earlier failing endpoint remains a separate serving-readiness issue
+  - future narrow proof reruns should target the new endpoint URL
+
+## 2026-03-31 Replacement MedGemma Endpoint Pause Control Verified
+- Confirmed lifecycle control on the replacement endpoint too.
+- Used managed endpoint name:
+  - `medgemma-27b-text-it-hgw`
+- Pause call succeeded through the HF control API.
+- Verification:
+  - control plane status moved to:
+    - `state = paused`
+  - direct authenticated inference probe against:
+    - `https://z2m4kqae0vudzx4y.us-east-1.aws.endpoints.huggingface.cloud/v1/chat/completions`
+    returned:
+    - `400 Bad Request`
+    - `The endpoint is paused, ask a maintainer to restart it`
+- Practical conclusion:
+  - I can both use and pause this new endpoint from my side
+
+## 2026-03-31 Replacement Endpoint Resume Regression
+- After verifying the replacement endpoint was live, I tested the full pause/resume cycle.
+- Result after resume:
+  - HF control plane moved to repeated `initializing`
+  - `readyReplica` stayed at `0`
+  - direct authenticated `/v1/chat/completions` probe returned:
+    - `503 Service Unavailable`
+- Practical implication:
+  - the replacement endpoint is good while already running
+  - after a cold resume, it currently shows the same ready-replica problem as the earlier endpoint
+  - endpoint was paused again after the failed resume probe
+
+## 2026-03-31 MedGemma Replica Log Read
+- Read local replica startup log:
+  - `/Users/ahmedelmorshedy/Downloads/medgemma-27b-text-it-hgw_replica_h1nob8tj-82wrx_full_log.txt`
+- Key finding:
+  - there is no crash, OOM, traceback, or serving error in the replica log
+  - the model actually boots successfully, but it is slow
+- Concrete startup timing from the log:
+  - process begins around `19:09:55`
+  - weights finish loading around `19:10:56`
+  - engine init/warmup completes around `19:11:54`
+  - app startup completes around `19:11:58`
+  - repeated `/health` checks return `200`
+  - first successful `/v1/chat/completions` request appears at `19:14:01`
+- Updated diagnosis:
+  - the current problem is primarily cold-start latency and control-plane/readiness lag
+  - our earlier probe path was too aggressive in treating the endpoint as failed before it had fully warmed
+- Practical operating rule:
+  - after resume, do not assume failure for at least ~3-4 minutes
+  - prefer a readiness loop that waits for successful `/health` and then a successful tiny `/v1/chat/completions` probe
+  - avoid pause/resume churn during active proof work; keep the endpoint warm until the batch finishes
+
+## 2026-03-31 MedGemma Warmup + Batch Engineering
+- Implemented the two overdue MedGemma execution fixes.
+- In `src/scripts/extractPhenotypeMetadata.js`:
+  - added a real MedGemma readiness loop before Stage 5 begins:
+    - checks `/health`
+    - then checks a tiny authenticated `/v1/chat/completions` probe
+    - waits up to a named timeout instead of failing too early
+  - switched MedGemma metadata fallback from one-phenotype-per-call to batched requests
+  - batched prompt now returns a JSON object with ordered `items`
+- In `src/scripts/runGeneReviewsPipeline.js`:
+  - added MedGemma endpoint prewarm before `metadata-medgemma` stage execution
+  - resume target defaults to:
+    - endpoint owner `elmorshedyahmed`
+    - endpoint name `medgemma-27b-text-it-hgw`
+  - still respects environment overrides:
+    - `MEDGEMMA_ENDPOINT_OWNER`
+    - `MEDGEMMA_ENDPOINT_NAME`
+- Validation completed:
+  - `node --check src/scripts/extractPhenotypeMetadata.js`
+  - `node --check src/scripts/runGeneReviewsPipeline.js`
+  - dry-run shows the prewarm call before the Stage 5 MedGemma command
+- Boundary:
+  - this improves execution reliability and throughput
+  - it does not yet prove the evidence-promotion path end to end; that is still the next tiny proof task
+
+## 2026-03-31 Tiny MedGemma Re-Proofs Passed on the Replacement Endpoint
+- Ran the tiny proof slices against the replacement MedGemma endpoint:
+  - base URL:
+    - `https://z2m4kqae0vudzx4y.us-east-1.aws.endpoints.huggingface.cloud`
+- ZTTK proof:
+  - reran Stage 5 into:
+    - `output/genereviews-pipeline-progress-treatment-proof-20260331-zttk/minimal/stage5_enriched_medgemma_v2`
+  - reran verifier into:
+    - `output/genereviews-pipeline-progress-treatment-proof-20260331-zttk/minimal/stage7_verify_v2`
+  - result:
+    - evidence-sentence promotion worked
+    - `Dystonia` now points at the stronger sentence with valid onset + progression spans
+    - generic parent `Abnormality of movement` no longer carries the progression leak
+    - remaining block on `Dystonia` is now only:
+      - `alias_shadow:flag`
+- ZAP70 proof:
+  - reran Stage 5 into:
+    - `output/genereviews-pipeline-progress-treatment-proof-20260331/zap70_minimal/stage5_enriched_medgemma_v4`
+  - reran verifier into:
+    - `output/genereviews-pipeline-progress-treatment-proof-20260331/zap70_minimal/stage7_verify_v4`
+  - result:
+    - `Autoimmune thrombocytopenia` stayed `VERIFIED`
+    - `Eczematoid dermatitis` stayed `VERIFIED`
+    - generic `Thrombocytopenia` stayed review-biased with:
+      - `alias_shadow:flag`
+- Practical conclusion:
+  - the evidence-promotion path is now re-proven end to end
+  - the remaining MedGemma/verification behavior is conservative alias-shadow gating, not missing evidence
+
+## 2026-03-31 Active MedGemma Config Frozen
+- Froze the active MedGemma URL into the pipeline defaults/profiles:
+  - `src/scripts/extractPhenotypeMetadata.js`
+  - `src/lib/genereviewsPipelineProfiles.js`
+- The active base URL is now:
+  - `https://z2m4kqae0vudzx4y.us-east-1.aws.endpoints.huggingface.cloud`
+- The active prewarm endpoint name remains:
+  - `medgemma-27b-text-it-hgw`
+- Endpoint was paused again after the proof run.
+
+## 2026-03-31 Dual Stage 6 Output Track Started
+- Began the next engineering track after the MedGemma proof closure:
+  - conservative ingestion output remains unchanged
+  - new API/export output is now generated beside it in Stage 6
+- Added:
+  - `src/lib/genereviewsApiExports.js`
+- Updated:
+  - `src/scripts/buildEnrichmentManifest.js`
+- New export behavior:
+  - writes per-chapter API export files under:
+    - `api_exports/chapters/*_chapter.json`
+  - writes aggregate assertion exports:
+    - `api_exports/genereviews_api_assertions.json`
+    - `api_exports/genereviews_api_assertions.jsonl`
+  - writes chapter index:
+    - `api_exports/genereviews_api_chapters.json`
+- Export shape now includes:
+  - nested `frequency`, `onset`, `severity`, `progression`, `treatment_response`
+  - `provenance`
+  - `validation`
+  - chapter-level summary stats
+- Validation completed:
+  - `node --check src/lib/genereviewsApiExports.js`
+  - `node --check src/scripts/buildEnrichmentManifest.js`
+  - helper smoke test confirmed assertion + chapter export object shape
+- Boundary:
+  - this is a structural export implementation
+  - it has not yet been exercised by a fresh Stage 6 rerun on real chapter data in this turn
+
+## 2026-03-31 Real Dual Stage 6 Pass Completed
+- Ran a fresh real Stage 6 pass on the settled `latest5` MedGemma outputs through the Railway enrichment env:
+  - verification dir:
+    - `output/genereviews-pipeline-latest5-settled-20260330/stage7_verify_medgemma_clean_20260331`
+  - manifest/export dir:
+    - `output/genereviews-pipeline-latest5-settled-20260330/stage6_manifest_medgemma_dual_20260331`
+- Result:
+  - `5` chapters processed
+  - `0` errors
+  - `0` manifest rows
+  - `5` review rows
+- The new API/export artifacts were populated successfully:
+  - `api_exports/genereviews_api_assertions.json`
+  - `api_exports/genereviews_api_assertions.jsonl`
+  - `api_exports/genereviews_api_chapters.json`
+  - `api_exports/chapters/*_chapter.json`
+- Important reality check:
+  - Stage 6 only exported what the upstream `stage5_enriched_medgemma_clean` + verifier artifacts already carried
+  - the export shape is correct, but some richer provenance fields are still empty in this particular latest5 export because those upstream inputs were created before the newer provenance plumbing was propagated through a full fresh settled run
+- What is populated in the current export:
+  - `source_sentence` on all assertion rows
+  - verification verdicts / reasons
+  - table concordance flags
+  - some `frequency`, `onset`, `progression`, and `treatment_response` fields
+- What is still mostly/null in the current export:
+  - `nbk_id`
+  - `section_heading`
+  - `paragraph_id`
+  - `sentence_id`
+  - sentence/paragraph/match char offsets
+  - `cross_source_concordance`
+  - chapter `genes`
+- Aggregate export counts from the real latest5 dual-output pass:
+  - total assertions: `179`
+  - `source_sentence`: `179`
+  - `frequency_raw`: `25`
+  - `onset_raw`: `26`
+  - `progression_raw`: `2`
+  - `treatment_response_raw`: `3`
+  - `table_concordance = pass`: `20`
+  - `verification_verdict = VERIFIED`: `122`
+  - `auto_accept_eligible = true`: `0`
+
+## 2026-03-31 Stage 6 Wired For Local Snapshot Mode
+- Removed the need for Railway in future Stage 6 runs by wiring local phenotype + ontology snapshots into the manifest/export path.
+- Updated:
+  - `src/scripts/buildEnrichmentManifest.js`
+  - `src/scripts/extractPhenotypeAnchors.js`
+  - `src/lib/genereviewsPipelineProfiles.js`
+- What changed:
+  - Stage 2 now writes:
+    - `phenotype_rows_snapshot.json`
+    - `ontology_rows_snapshot.json`
+  - Stage 6 now accepts:
+    - `--phenotypesJson`
+    - `--ontologyJson`
+  - pipeline manifest stages now pass those snapshot paths by default instead of relying on DB env / Railway
+- Validation:
+  - `node --check src/scripts/buildEnrichmentManifest.js`
+  - `node --check src/scripts/extractPhenotypeAnchors.js`
+  - `node --check src/lib/genereviewsPipelineProfiles.js`
+  - dry run proof:
+    - `node src/scripts/runGeneReviewsPipeline.js --profile latest5-settled-20260330 --stage manifest-medgemma --dryRun`
+  - the dry run now emits a pure local `node src/scripts/buildEnrichmentManifest.js ... --phenotypesJson ... --ontologyJson ...` command
+- Boundary:
+  - current older settled outputs do not yet contain `ontology_rows_snapshot.json`, because they were created before this patch
+  - future runs will stay local automatically once Stage 2 has been rerun on the patched code
+
+## 2026-03-31 Audit-Track Chapter Identity Propagation Tightened
+- Patched downstream stages so they prefer chapter identity from upstream payloads rather than wiping it out with blank policy values.
+- Updated:
+  - `src/scripts/extractCandidatePhenotypes.js`
+  - `src/scripts/extractCandidatePhenotypesOpenAiCompat.js`
+  - `src/scripts/mapCandidatesToHPO.js`
+  - `src/scripts/extractPhenotypeMetadata.js`
+  - `src/scripts/verifyGeneReviewsEnrichment.js`
+  - `src/scripts/buildEnrichmentManifest.js`
+- What changed:
+  - candidate stage now prefers `clinical_structure.nbk_id` / `anchors.nbk_id`
+  - mapping stage now prefers `candidates.nbk_id`
+  - metadata stage now prefers `anchors.nbk_id` / `mapped_candidates.nbk_id`
+  - verifier stage now prefers `enriched.nbk_id` / `tables.nbk_id`
+  - manifest/export stage now prefers `enriched.nbk_id` / `verification.nbk_id`
+- Validation:
+  - `node --check` passed on all touched scripts
+- Net effect:
+  - future reruns will not lose `nbk_id` / chapter title just because the policy file has blank `nbkId` values
+- Remaining audit gap:
+  - `section_heading` still needs true upstream extraction/propagation
+
+## 2026-03-31 Latest5 Audit Path Rebuilt End To End
+- Rebuilt the settled `latest5` audit path from saved raw HTML instead of refetching NCBI.
+- Landed:
+  - section-aware Stage 1 parsing in `src/lib/genereviewsPipeline.js`
+  - `--reuseRaw` support in `src/scripts/fetchGeneReviewsChapters.js`
+  - section/provenance propagation through:
+    - `src/scripts/extractCandidatePhenotypes.js`
+    - `src/scripts/extractCandidatePhenotypesOpenAiCompat.js`
+    - `src/scripts/mapCandidatesToHPO.js`
+    - `src/scripts/mapCandidatesToHPOBioLORD.py`
+    - `src/scripts/extractPhenotypeMetadata.js`
+  - local-first anchor snapshots in `src/scripts/extractPhenotypeAnchors.js`
+  - local verify/manifest stages added to `src/lib/genereviewsPipelineProfiles.js`
+- Operational fixes:
+  - `src/scripts/runGeneReviewsPipeline.js` now treats MedGemma `already running` prewarm as non-fatal
+  - `src/scripts/mapCandidatesToHPO.js` now falls back to `python3` if the deleted BioLORD venv path is missing and reuses existing sibling BioLORD caches
+  - `src/scripts/extractPhenotypeMetadata.js` now retries transient MedGemma `500/503`-style failures
+- Audit result on rebuilt latest5:
+  - verifier summary at `output/genereviews-pipeline-latest5-settled-20260330/stage7_verify_medgemma/verification_summary.json`
+  - `253` features total
+  - `161` verified
+  - `60` flagged
+  - `32` failed
+  - `124` auto-accept eligible under the hard contract
+- Important MedGemma operational boundary:
+  - first four latest5 chapters were regenerated through the live MedGemma path
+  - the final ZTTK chapter could not be resumed from my side because HF endpoint control returned `403 Forbidden: Payment method required`
+  - to avoid stalling the whole audit run, I reconciled the previously clean MedGemma ZTTK output with the fresh Stage 2/4 provenance so the verifier and Stage 6 could still run on a complete latest5 set
+- Human-review audit surface added on top of deterministic verification:
+  - new library: `src/lib/genereviewsHumanReview.js`
+  - Stage 7 now writes local clickable chapter review pages under `stage7_verify_medgemma/review_pages/`
+  - each verification row now includes `human_review` with:
+    - direct local `review_href`
+    - section / paragraph / sentence ids
+    - exact sentence text
+    - exact stored span texts
+    - failed / flagged check lists
+  - Stage 6 review queue now carries `review_page_path` and compact `review_items` so a reviewer can jump straight into the highlighted local page without opening raw JSON or raw HTML manually
+
+## 2026-03-31 Concordance Section Gene Follow-Up
+- Finished the next `latest5` follow-up pass for:
+  - `cross_source_concordance`
+  - `section_branch_consistent`
+  - `gene_symbols`
+- Landed code:
+  - `src/lib/genereviewsPipeline.js`
+    - raw GeneReviews HTML `citation_keywords` parsing for chapter gene extraction
+  - `src/lib/genereviewsVerification.js`
+    - deterministic `section_branch_consistency` check wiring
+  - `src/repositories/clinicalEvidenceRepository.js`
+    - cross-source concordance lookup helper
+  - `src/lib/genereviewsApiExports.js`
+    - API validation block now surfaces concordance and section-branch status
+  - `src/scripts/buildEnrichmentManifest.js`
+    - local chapter gene extraction + concordance map wiring
+  - `src/lib/genereviewsPipelineProfiles.js`
+    - local manifest/verify args now pass `clinicalDir` and `ontologyJson`
+- Reran only the narrow local latest5 path:
+  - `src/scripts/verifyGeneReviewsEnrichment.js ... --noResume`
+  - `src/scripts/buildEnrichmentManifest.js ... --noResume`
+- Result:
+  - `gene_symbols` now populate in chapter and assertion API exports from cached raw HTML
+  - cleaned examples:
+    - `Y Chromosome Infertility -> [DDX3Y, USP9Y]`
+    - `ZAP70 -> [ZAP70]`
+    - `Zellweger -> [PEX1, PEX2, PEX3, PEX5, PEX6, ...]`
+- Honest current limitation on this machine:
+  - `SERVICE_FLAGS.hasDatabase = false`
+  - local `stage2_anchors/ontology_rows_snapshot.json` is empty
+  - because of that:
+    - `cross_source_concordance` stays `[]`
+    - `section_branch_consistent` stays `null`
+  - those code paths are now wired, but they cannot produce real values without a DB-backed concordance source and non-empty ontology ancestry input
+
+## 2026-03-31 DB-Backed Latest5 Trust Rerun
+- Ran a narrow DB-backed refresh only for trust surfaces, not the full pipeline and not the `100` run.
+- Steps:
+  - reran `src/scripts/extractPhenotypeAnchors.js` with Railway-backed DB env to refresh `stage2_anchors/ontology_rows_snapshot.json`
+  - reran `src/scripts/verifyGeneReviewsEnrichment.js --noResume`
+  - reran `src/scripts/buildEnrichmentManifest.js --noResume` with DB env
+- Result:
+  - local ontology snapshot is now real: `23,677` ontology rows in `stage2_anchors/ontology_rows_snapshot.json`
+  - `cross_source_concordance` now populates in API assertions
+    - current latest5 export: `41/180` assertion rows have non-empty concordance
+    - example sources now appearing:
+      - `hpo_disease_phenotype`
+      - `orphadata_hoom`
+      - `orphadata_phenotypes`
+- Important remaining blocker:
+  - `section_branch_consistent` still stays `null` on all current exported rows
+  - reason is no longer ontology ancestry
+  - reason is current stored `section_heading` values are mostly generic:
+    - `Clinical Description`
+    - `Suggestive Findings`
+    - `Table 2.`
+  - the current verifier rules only work when section headings are domain-specific (`Neurologic`, `Cardiac`, `Ophthalmologic`, etc.)
+  - so the next real fix for section-branch consistency is richer subheading extraction/propagation, not more DB work
+
+## 2026-03-31 Chapter Domains Added As Coarse Clinical Signal
+- Added `chapter_domains` and `heading_inventory` so we capture what the chapter is broadly about even when section headings stay generic.
+- Initial heading-only extraction was too weak on latest5, so chapter domains now use:
+  - heading matches first
+  - clinical prose keyword evidence as fallback
+- Landed in:
+  - `src/lib/genereviewsPipeline.js`
+  - `src/scripts/fetchGeneReviewsChapters.js`
+  - `src/scripts/buildEnrichmentManifest.js`
+  - `src/lib/genereviewsApiExports.js`
+- Rebuilt Stage 1 from cached raw HTML with `--reuseRaw` and reran Stage 6.
+- Current latest5 chapter export examples:
+  - `Y Chromosome Infertility -> Renal / Genitourinary`
+  - `ZAP70 -> Neurologic; Hematologic / Immunologic`
+  - `Zellweger -> Neurologic; Ophthalmologic; Auditory; Gastrointestinal; Renal / Genitourinary; Craniofacial`
+  - `ZTTK -> Neurologic; Ophthalmologic; Auditory; Cardiovascular; Gastrointestinal; Renal / Genitourinary; Musculoskeletal; Craniofacial`
+- This is intentionally coarse.
+- It helps:
+  - chapter-level API filtering
+  - future product summaries
+  - human audit context
+- It does **not** replace row-level verification or solve section-branch consistency by itself.
+
+## 2026-03-31 Local Clinical Domains Layer Added
+- Added a new soft row-level / paragraph-level context field:
+  - `local_clinical_domains`
+- Design:
+  - paragraph/block level first
+  - rows inherit from their paragraph when available
+  - soft audit/product metadata only, not a hard truth gate
+- Landed in:
+  - `src/lib/genereviewsPipeline.js`
+  - `src/scripts/extractCandidatePhenotypes.js`
+  - `src/scripts/mapCandidatesToHPO.js`
+  - `src/scripts/extractPhenotypeMetadata.js`
+  - `src/scripts/verifyGeneReviewsEnrichment.js`
+  - `src/scripts/buildEnrichmentManifest.js`
+  - `src/lib/genereviewsApiExports.js`
+  - `src/lib/genereviewsHumanReview.js`
+  - `public/geneReviewsAudit.js`
+- Rebuilt only what was needed:
+  - Stage 1 from cached raw HTML
+  - Stage 7 verify
+  - Stage 6 manifest/export
+- Current latest5 result:
+  - `180` assertion export rows
+  - `98/180` with non-empty `local_clinical_domains`
+  - review queue items now include `local_clinical_domains`
+- Example:
+  - `Azoospermia` in `Y Chromosome Infertility` now carries `Renal / Genitourinary` local domain context
+- This gives:
+  - better reviewer context
+  - better future UI grouping
+  - better API metadata for multisystem chapters
+
+## 2026-03-31 Consultant Readiness Brief Written
+- Wrote a consultant-ready decision brief for the `100` run:
+  - `docs/genereviews-100-run-readiness-consult-20260331.md`
+- Purpose:
+  - ask a narrow question: is `100 review-first` ready now or not
+  - separate that from broader autoaccept / final ingestion readiness
+- Included:
+  - latest5 trust counts
+  - current API/export coverage
+  - real resolved vs unresolved signals
+  - exact consultant questions

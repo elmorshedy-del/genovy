@@ -7,7 +7,7 @@ export function getPool() {
   if (!pool) {
     pool = new Pool({
       connectionString: ENV.databaseUrl,
-      ssl: ENV.nodeEnv === 'production' ? { rejectUnauthorized: false } : false
+      ssl: ENV.databaseUsesSsl ? { rejectUnauthorized: false } : false
     });
   }
   return pool;

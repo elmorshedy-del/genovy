@@ -1,9 +1,13 @@
 import path from 'node:path';
+import fs from 'node:fs';
 import {
+  buildClinicalTextStructureFromSections,
+  buildClinicalTextStructure,
   createStageTracker,
   ensureDir,
   fetchGeneReviewsChapter,
   loadPolicyFile,
+  parseGeneReviewsChapterHtml,
   parseArgs,
   sliceChapters,
   toBaseName,
@@ -28,6 +32,7 @@ async function main() {
   const start = Number.parseInt(flags.start || `${DEFAULTS.start}`, 10) || 0;
   const limit = Number.parseInt(flags.limit || `${DEFAULTS.limit}`, 10) || DEFAULTS.limit;
   const noResume = Boolean(flags.noResume);
+  const reuseRaw = Boolean(flags.reuseRaw);
   await ensureDir(outputDir);
 
   const { chapters } = await loadPolicyFile(policyJson);
@@ -44,11 +49,12 @@ async function main() {
     try {
       const expectedStem = chapter.nbkId || fallbackBase;
       const textPath = path.join(outputDir, `${expectedStem}_clinical_text.txt`);
+      const structurePath = path.join(outputDir, `${expectedStem}_clinical_structure.json`);
       const tablePath = path.join(outputDir, `${expectedStem}_tables.json`);
       const rawPath = path.join(outputDir, `${expectedStem}_raw.html`);
       if (!noResume) {
         const fs = await import('node:fs');
-        if (fs.existsSync(textPath) && fs.existsSync(tablePath) && fs.existsSync(rawPath)) {
+        if (fs.existsSync(textPath) && fs.existsSync(structurePath) && fs.existsSync(tablePath) && fs.existsSync(rawPath)) {
           progress.results.push({
             chapterKey: chapter.chapterKey,
             nbkId: chapter.nbkId || '',
@@ -62,11 +68,27 @@ async function main() {
         }
       }
 
-      const fetched = await fetchGeneReviewsChapter(chapter, DEFAULTS.ncbiDelayMs);
+      const fetched =
+        reuseRaw && fs.existsSync(rawPath)
+          ? parseGeneReviewsChapterHtml(chapter, await fs.promises.readFile(rawPath, 'utf8'))
+          : await fetchGeneReviewsChapter(chapter, DEFAULTS.ncbiDelayMs);
       const fileStem = fetched.resolvedNbkId || expectedStem;
       const stems = [...new Set([fileStem, expectedStem].filter(Boolean))];
+      const clinicalStructure = Array.isArray(fetched.clinicalSections) && fetched.clinicalSections.length
+        ? buildClinicalTextStructureFromSections(fetched.clinicalSections)
+        : buildClinicalTextStructure(fetched.clinicalText);
       for (const stem of stems) {
         await writeText(path.join(outputDir, `${stem}_clinical_text.txt`), fetched.clinicalText);
+        await writeJson(path.join(outputDir, `${stem}_clinical_structure.json`), {
+          created_at: new Date().toISOString(),
+          nbk_id: fetched.resolvedNbkId,
+          chapter_title: fetched.chapterTitle,
+          chapter_key: chapter.chapterKey,
+          provenance_url: fetched.provenanceUrl,
+          heading_inventory: fetched.headingInventory || [],
+          chapter_domains: fetched.chapterDomains || [],
+          ...clinicalStructure
+        });
         await writeJson(path.join(outputDir, `${stem}_tables.json`), {
           created_at: new Date().toISOString(),
           nbk_id: fetched.resolvedNbkId,

@@ -8,6 +8,7 @@ import apiV1Router from './routes/apiV1.js';
 import knowledgeRouter from './routes/knowledge.js';
 import dxRouter from './routes/dx.js';
 import platformRouter from './routes/platform.js';
+import geneReviewsAuditRouter from './routes/geneReviewsAudit.js';
 import { requireFeature } from './middleware/featureGate.js';
 import { createReadOnlyApiAuth } from './middleware/readOnlyApiAuth.js';
 
@@ -21,6 +22,7 @@ export function createApp(runtimeStatus, options = {}) {
 
   app.use('/health', healthRouter);
   app.use('/api/platform', platformRouter);
+  app.use('/api/gene-reviews-audit', geneReviewsAuditRouter);
   app.use(
     '/api/v1',
     requireFeature(
@@ -56,6 +58,9 @@ export function createApp(runtimeStatus, options = {}) {
   );
   app.get('/platform', (_req, res) => {
     res.sendFile(path.join(publicDir, 'platform.html'));
+  });
+  app.get('/audit/genereviews', (_req, res) => {
+    res.sendFile(path.join(publicDir, 'geneReviewsAudit.html'));
   });
   app.use(express.static(publicDir));
 

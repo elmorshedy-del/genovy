@@ -7,10 +7,12 @@ export const SOURCE_KEYS = Object.freeze({
   ORPHADATA_HOOM: 'orphadata_hoom',
   ORPHADATA_NATURAL_HISTORY: 'orphadata_natural_history',
   PRIMEKG: 'primekg',
+  GENEREVIEWS_NLP: 'genereviews_nlp',
   HPO_GENE_DISEASE: 'hpo_gene_disease',
   HPO_GENE_PHENOTYPE: 'hpo_gene_phenotype',
   PHENOTYPE_PROPAGATION: 'phenotype_propagation',
   GENE_IDENTITY_REPAIR: 'gene_identity_repair',
+  MANUAL_CURATED_SOURCE_SHADOW: 'manual_curated_source_shadow',
   CLINGEN_GENE_DISEASE_VALIDITY: 'clingen_gene_disease_validity',
   CLINVAR_GENE_DISEASE: 'clinvar_gene_disease',
   CLINVAR_VARIANT_SUMMARY: 'clinvar_variant_summary',
@@ -102,6 +104,15 @@ export const SOURCE_CATALOG = Object.freeze({
     updateFrequency: 'release-based',
     entityScope: 'disease,phenotype'
   },
+  [SOURCE_KEYS.GENEREVIEWS_NLP]: {
+    sourceKey: SOURCE_KEYS.GENEREVIEWS_NLP,
+    displayName: 'GeneReviews NLP',
+    description: 'GeneReviews chapter phenotypes extracted with an LLM and grounded locally to HPO terms.',
+    homepageUrl: 'https://www.ncbi.nlm.nih.gov/books/NBK1116/',
+    accessUrl: 'https://ftp.ncbi.nlm.nih.gov/pub/litarch/ca/84/gene_NBK1116.tar.gz',
+    updateFrequency: 'manual',
+    entityScope: 'disease,phenotype'
+  },
   [SOURCE_KEYS.HPO_GENE_DISEASE]: {
     sourceKey: SOURCE_KEYS.HPO_GENE_DISEASE,
     displayName: 'HPO Gene Disease Links',
@@ -137,6 +148,16 @@ export const SOURCE_CATALOG = Object.freeze({
     accessUrl: '',
     updateFrequency: 'manual',
     entityScope: 'gene'
+  },
+  [SOURCE_KEYS.MANUAL_CURATED_SOURCE_SHADOW]: {
+    sourceKey: SOURCE_KEYS.MANUAL_CURATED_SOURCE_SHADOW,
+    displayName: 'Manual Curated Source Shadow',
+    description:
+      'Manual disease-phenotype overlay assembled from previously reviewed OMIM, GeneReviews, and PMID shadow enrichments for staging-only attribution experiments.',
+    homepageUrl: 'https://genovy.railway.app/',
+    accessUrl: '',
+    updateFrequency: 'manual',
+    entityScope: 'disease,phenotype'
   },
   [SOURCE_KEYS.CLINGEN_GENE_DISEASE_VALIDITY]: {
     sourceKey: SOURCE_KEYS.CLINGEN_GENE_DISEASE_VALIDITY,

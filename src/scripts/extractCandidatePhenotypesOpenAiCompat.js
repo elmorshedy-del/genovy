@@ -2,6 +2,7 @@ import path from 'node:path';
 import fs from 'node:fs';
 import fsp from 'node:fs/promises';
 import {
+  buildClinicalTextStructure,
   callOpenAiCompatJson,
   createStageTracker,
   ensureDir,
@@ -62,6 +63,7 @@ async function listChapterJobs(clinicalDir, anchorsDir, limit) {
       return {
         stem,
         clinicalPath: path.join(clinicalDir, `${stem}_clinical_text.txt`),
+        structurePath: path.join(clinicalDir, `${stem}_clinical_structure.json`),
         anchorsPath: path.join(anchorsDir, name)
       };
     })
@@ -107,13 +109,21 @@ async function main() {
       }
 
       const clinicalText = await fsp.readFile(job.clinicalPath, 'utf8');
+      const clinicalStructure = fs.existsSync(job.structurePath)
+        ? JSON.parse(await fsp.readFile(job.structurePath, 'utf8'))
+        : buildClinicalTextStructure(clinicalText);
       const anchorPayload = JSON.parse(await fsp.readFile(job.anchorsPath, 'utf8'));
+      const resolvedNbkId = clinicalStructure.nbk_id || anchorPayload.nbk_id || '';
+      const resolvedChapterTitle = clinicalStructure.chapter_title || anchorPayload.chapter_title || job.stem;
       const { parsed, usage, rawOutput } = await callOpenAiCompatJson({
         baseUrl,
         apiKey,
         model,
         systemPrompt: CANDIDATE_DISCOVERY_PROMPT,
-        userPayload: clinicalText,
+        userPayload: {
+          chapter_title: resolvedChapterTitle,
+          clinical_text: clinicalText
+        },
         temperature: 0.1
       });
 
@@ -125,13 +135,25 @@ async function main() {
         const status = String(candidate?.status || 'present').trim().toLowerCase() === 'excluded' ? 'excluded' : 'present';
         if (!label) continue;
         if (matchesExistingAnchor(label, anchors)) continue;
-        const context = locateCandidateContext(clinicalText, label);
+        const context = locateCandidateContext(clinicalStructure, label);
         candidates.push({
           label,
           status,
           source: `${providerName}_candidate`,
           source_sentence: context.source_sentence,
-          paragraph: context.paragraph
+          paragraph: context.paragraph,
+          section_id: context.section_id,
+          section_heading: context.section_heading,
+          paragraph_id: context.paragraph_id,
+          paragraph_index: context.paragraph_index,
+          paragraph_char_start: context.paragraph_char_start,
+          paragraph_char_end: context.paragraph_char_end,
+          sentence_id: context.sentence_id,
+          sentence_index: context.sentence_index,
+          sentence_char_start: context.sentence_char_start,
+          sentence_char_end: context.sentence_char_end,
+          match_char_start: context.match_char_start,
+          match_char_end: context.match_char_end
         });
       }
 
@@ -141,6 +163,8 @@ async function main() {
         provider: providerName,
         model,
         chapter_stem: job.stem,
+        nbk_id: resolvedNbkId,
+        chapter_title: resolvedChapterTitle,
         usage,
         raw_output: rawOutput,
         candidate_count: candidates.length,

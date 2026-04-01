@@ -3,9 +3,9 @@ import argparse
 import hashlib
 import json
 import os
+import sys
 from pathlib import Path
 
-import faiss
 import numpy as np
 from sentence_transformers import SentenceTransformer
 from transformers.utils import logging as transformers_logging
@@ -14,6 +14,8 @@ from transformers.utils import logging as transformers_logging
 os.environ.setdefault("HF_HUB_DISABLE_PROGRESS_BARS", "1")
 os.environ.setdefault("TOKENIZERS_PARALLELISM", "false")
 os.environ.setdefault("TRANSFORMERS_NO_ADVISORY_WARNINGS", "1")
+os.environ.setdefault("OMP_NUM_THREADS", "1")
+os.environ.setdefault("MKL_NUM_THREADS", "1")
 transformers_logging.set_verbosity_error()
 
 
@@ -64,11 +66,14 @@ def fingerprint_rows(rows):
 
 def normalize_embeddings(matrix):
     matrix = np.asarray(matrix, dtype="float32")
-    faiss.normalize_L2(matrix)
-    return matrix
+    if matrix.ndim == 1:
+        matrix = matrix.reshape(1, -1)
+    norms = np.linalg.norm(matrix, axis=1, keepdims=True)
+    norms[norms == 0] = 1.0
+    return matrix / norms
 
 
-def load_or_build_index(model_name, phenotype_rows, cache_dir):
+def load_or_build_embeddings(model_name, phenotype_rows, cache_dir):
     cache_dir.mkdir(parents=True, exist_ok=True)
     metadata_path = cache_dir / "biolord_index_metadata.json"
     embeddings_path = cache_dir / "biolord_embeddings.npy"
@@ -85,21 +90,22 @@ def load_or_build_index(model_name, phenotype_rows, cache_dir):
             embeddings = None
 
     if embeddings is None:
-        model = SentenceTransformer(model_name)
+        model = SentenceTransformer(model_name, device="cpu")
         texts = [build_embedding_text(row) for row in phenotype_rows]
         embeddings = normalize_embeddings(model.encode(texts, batch_size=128, show_progress_bar=False))
-        np.save(embeddings_path, embeddings)
         metadata = {
             "model": model_name,
             "fingerprint": fingerprint,
             "phenotype_count": len(phenotype_rows),
             "embedding_dim": int(embeddings.shape[1]) if len(embeddings.shape) > 1 else 0,
         }
-        metadata_path.write_text(json.dumps(metadata, indent=2) + "\n")
+        try:
+            np.save(embeddings_path, embeddings)
+            metadata_path.write_text(json.dumps(metadata, indent=2) + "\n")
+        except OSError as error:
+            print(f"[mapCandidatesToHPOBioLORD] cache write skipped: {error}", file=sys.stderr)
 
-    index = faiss.IndexFlatIP(embeddings.shape[1])
-    index.add(embeddings)
-    return index, embeddings
+    return embeddings
 
 
 def build_exact_lookup(phenotype_rows):
@@ -123,10 +129,12 @@ def trust_from_score(score):
     return "reject"
 
 
-def top_matches_for_vector(index, query_vector, phenotype_rows):
-    scores, indices = index.search(query_vector.reshape(1, -1), TOP_K)
+def top_matches_for_vector(phenotype_embeddings, query_vector, phenotype_rows):
+    scores = np.dot(phenotype_embeddings, query_vector)
+    top_indices = np.argpartition(scores, -TOP_K)[-TOP_K:]
+    ordered_indices = top_indices[np.argsort(scores[top_indices])[::-1]]
     matches = []
-    for score, row_index in zip(scores[0], indices[0]):
+    for row_index in ordered_indices:
         if row_index < 0:
             continue
         row = phenotype_rows[int(row_index)]
@@ -134,7 +142,7 @@ def top_matches_for_vector(index, query_vector, phenotype_rows):
             {
                 "hpo_id": row["canonical_curie"],
                 "hpo_label": row["canonical_label"],
-                "score": float(score),
+                "score": float(scores[int(row_index)]),
             }
         )
     return matches
@@ -156,8 +164,8 @@ def map_candidates(request, phenotype_rows, cache_dir, model_name):
         }
 
     exact_lookup = build_exact_lookup(phenotype_rows)
-    index, _ = load_or_build_index(model_name, phenotype_rows, cache_dir)
-    model = SentenceTransformer(model_name)
+    phenotype_embeddings = load_or_build_embeddings(model_name, phenotype_rows, cache_dir)
+    model = SentenceTransformer(model_name, device="cpu")
 
     chapter_results = []
     for chapter in request.get("chapters", []):
@@ -175,6 +183,18 @@ def map_candidates(request, phenotype_rows, cache_dir, model_name):
                         "source": candidate.get("source", "llm_candidate"),
                         "source_sentence": candidate.get("source_sentence", ""),
                         "paragraph": candidate.get("paragraph", ""),
+                        "section_id": candidate.get("section_id"),
+                        "section_heading": candidate.get("section_heading"),
+                        "paragraph_id": candidate.get("paragraph_id"),
+                        "paragraph_index": candidate.get("paragraph_index"),
+                        "paragraph_char_start": candidate.get("paragraph_char_start"),
+                        "paragraph_char_end": candidate.get("paragraph_char_end"),
+                        "sentence_id": candidate.get("sentence_id"),
+                        "sentence_index": candidate.get("sentence_index"),
+                        "sentence_char_start": candidate.get("sentence_char_start"),
+                        "sentence_char_end": candidate.get("sentence_char_end"),
+                        "match_char_start": candidate.get("match_char_start"),
+                        "match_char_end": candidate.get("match_char_end"),
                         "top_matches": [
                             {
                                 "hpo_id": exact["canonical_curie"],
@@ -196,7 +216,9 @@ def map_candidates(request, phenotype_rows, cache_dir, model_name):
             query_embeddings = normalize_embeddings(model.encode(to_encode, batch_size=64, show_progress_bar=False))
             for local_index, position in enumerate(to_encode_positions):
                 candidate = chapter["candidates"][position]
-                matches = top_matches_for_vector(index, query_embeddings[local_index], phenotype_rows)
+                matches = top_matches_for_vector(
+                    phenotype_embeddings, query_embeddings[local_index], phenotype_rows
+                )
                 best = matches[0] if matches else None
                 trust = trust_from_score(best["score"]) if best else "reject"
                 mapped_candidates[position] = {
@@ -205,6 +227,18 @@ def map_candidates(request, phenotype_rows, cache_dir, model_name):
                     "source": candidate.get("source", "llm_candidate"),
                     "source_sentence": candidate.get("source_sentence", ""),
                     "paragraph": candidate.get("paragraph", ""),
+                    "section_id": candidate.get("section_id"),
+                    "section_heading": candidate.get("section_heading"),
+                    "paragraph_id": candidate.get("paragraph_id"),
+                    "paragraph_index": candidate.get("paragraph_index"),
+                    "paragraph_char_start": candidate.get("paragraph_char_start"),
+                    "paragraph_char_end": candidate.get("paragraph_char_end"),
+                    "sentence_id": candidate.get("sentence_id"),
+                    "sentence_index": candidate.get("sentence_index"),
+                    "sentence_char_start": candidate.get("sentence_char_start"),
+                    "sentence_char_end": candidate.get("sentence_char_end"),
+                    "match_char_start": candidate.get("match_char_start"),
+                    "match_char_end": candidate.get("match_char_end"),
                     "top_matches": matches,
                     "mapped_hpo_id": None if trust == "reject" or not best else best["hpo_id"],
                     "mapped_hpo_label": None if trust == "reject" or not best else best["hpo_label"],

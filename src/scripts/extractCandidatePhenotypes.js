@@ -2,6 +2,7 @@ import path from 'node:path';
 import fs from 'node:fs';
 import fsp from 'node:fs/promises';
 import {
+  buildClinicalTextStructure,
   callGeminiJson,
   createStageTracker,
   ensureDir,
@@ -28,6 +29,15 @@ const DEFAULTS = Object.freeze({
   limit: 20,
   thinkingBudget: 0
 });
+
+function resolveEnvValue(...names) {
+  for (const name of names) {
+    if (!name) continue;
+    const value = process.env[name];
+    if (value) return value;
+  }
+  return '';
+}
 
 const CANDIDATE_DISCOVERY_PROMPT = `You are a clinical genetics expert reading a GeneReviews chapter.
 
@@ -62,7 +72,7 @@ async function main() {
   const anchorsDir = flags.anchors || DEFAULTS.anchorsDir;
   const outputDir = flags.output || DEFAULTS.outputDir;
   const model = flags.model || DEFAULTS.model;
-  const apiKey = flags.apiKey || process.env.GOOGLE_API_KEY || process.env.GEMINI_API_KEY || '';
+  const apiKey = flags.apiKey || resolveEnvValue(flags.apiKeyEnv, 'GOOGLE_API_KEY', 'GEMINI_API_KEY');
   const thinkingBudget = Number.parseInt(flags.thinkingBudget || `${DEFAULTS.thinkingBudget}`, 10);
   const start = Number.parseInt(flags.start || `${DEFAULTS.start}`, 10) || 0;
   const limit = Number.parseInt(flags.limit || `${DEFAULTS.limit}`, 10) || DEFAULTS.limit;
@@ -82,6 +92,7 @@ async function main() {
     const absoluteIndex = start + offset;
     const fileStem = chapter.nbkId || toBaseName(chapter, `chapter_${absoluteIndex + 1}`);
     const clinicalPath = path.join(clinicalDir, `${fileStem}_clinical_text.txt`);
+    const structurePath = path.join(clinicalDir, `${fileStem}_clinical_structure.json`);
     const anchorsPath = path.join(anchorsDir, `${fileStem}_anchors.json`);
     const outputPath = path.join(outputDir, `${fileStem}_candidates.json`);
     console.log(`[${absoluteIndex + 1}/${chapters.length}] ${chapter.chapterTitle || chapter.chapterKey}`);
@@ -107,7 +118,12 @@ async function main() {
       }
 
       const clinicalText = await fsp.readFile(clinicalPath, 'utf8');
+      const clinicalStructure = fs.existsSync(structurePath)
+        ? JSON.parse(await fsp.readFile(structurePath, 'utf8'))
+        : buildClinicalTextStructure(clinicalText);
       const anchorPayload = JSON.parse(await fsp.readFile(anchorsPath, 'utf8'));
+      const resolvedNbkId = clinicalStructure.nbk_id || anchorPayload.nbk_id || chapter.nbkId || '';
+      const resolvedChapterTitle = clinicalStructure.chapter_title || anchorPayload.chapter_title || chapter.chapterTitle || '';
       const existingAnchors = (anchorPayload.anchors || []).map((anchor) => ({
         hpo_label: anchor.hpo_label,
         match_texts: [...new Set((anchor.occurrences || []).map((occurrence) => occurrence.match_text).filter(Boolean))]
@@ -117,7 +133,7 @@ async function main() {
         model,
         systemPrompt: CANDIDATE_DISCOVERY_PROMPT,
         userPayload: {
-          chapter_title: chapter.chapterTitle || chapter.chapterKey,
+          chapter_title: resolvedChapterTitle || chapter.chapterKey,
           existing_anchors: existingAnchors,
           clinical_text: clinicalText
         },
@@ -132,13 +148,26 @@ async function main() {
         const status = String(candidate?.status || 'present').trim().toLowerCase() === 'excluded' ? 'excluded' : 'present';
         if (!label) continue;
         if (matchesExistingAnchor(label, anchors)) continue;
-        const context = locateCandidateContext(clinicalText, label);
+        const context = locateCandidateContext(clinicalStructure, label);
         candidates.push({
           label,
           status,
           source: 'llm_candidate',
           source_sentence: context.source_sentence,
-          paragraph: context.paragraph
+          paragraph: context.paragraph,
+          local_clinical_domains: context.local_clinical_domains || [],
+          section_id: context.section_id,
+          section_heading: context.section_heading,
+          paragraph_id: context.paragraph_id,
+          paragraph_index: context.paragraph_index,
+          paragraph_char_start: context.paragraph_char_start,
+          paragraph_char_end: context.paragraph_char_end,
+          sentence_id: context.sentence_id,
+          sentence_index: context.sentence_index,
+          sentence_char_start: context.sentence_char_start,
+          sentence_char_end: context.sentence_char_end,
+          match_char_start: context.match_char_start,
+          match_char_end: context.match_char_end
         });
       }
 
@@ -146,8 +175,8 @@ async function main() {
         created_at: new Date().toISOString(),
         stage: 'candidates',
         chapter_key: chapter.chapterKey,
-        nbk_id: chapter.nbkId || '',
-        chapter_title: chapter.chapterTitle || '',
+        nbk_id: resolvedNbkId,
+        chapter_title: resolvedChapterTitle,
         model,
         usage,
         raw_output: rawOutput,
@@ -157,7 +186,7 @@ async function main() {
 
       progress.results.push({
         chapterKey: chapter.chapterKey,
-        nbkId: chapter.nbkId || '',
+        nbkId: resolvedNbkId,
         candidateCount: candidates.length
       });
       progress.total_processed += 1;
@@ -181,6 +210,8 @@ async function main() {
   await writeJson(path.join(outputDir, 'candidates_summary.json'), {
     created_at: new Date().toISOString(),
     stage: 'candidates',
+    provider: 'gemini',
+    model,
     total_processed: progress.total_processed,
     total_errors: progress.total_errors,
     results: progress.results,

@@ -3,15 +3,16 @@ import fs from 'node:fs';
 import fsp from 'node:fs/promises';
 import { withClient } from '../db/pool.js';
 import {
+  buildClinicalTextStructure,
   buildPhenotypeLexicon,
   createStageTracker,
   ensureDir,
   extractAnchorOccurrences,
   loadPhenotypeBaseRows,
+  loadPhenotypeOntologyRows,
   loadPolicyFile,
   parseArgs,
   sliceChapters,
-  splitParagraphs,
   toBaseName,
   writeJson
 } from '../lib/genereviewsPipeline.js';
@@ -31,13 +32,17 @@ const DEFAULTS = Object.freeze({
 
 function mergeAnchorSets(localAnchors, supplementAnchors, phenotypeByCurie) {
   const merged = new Map();
+  const buildAnchorKey = (anchor) => `${anchor.hpo_id}::${anchor.status || 'present'}`;
 
   function upsert(anchor, sourceLabel) {
     const meta = phenotypeByCurie.get(anchor.hpo_id);
     if (!meta) return;
-    const existing = merged.get(anchor.hpo_id) || {
+    const anchorStatus = anchor.status === 'excluded' ? 'excluded' : 'present';
+    const anchorKey = buildAnchorKey({ ...anchor, status: anchorStatus });
+    const existing = merged.get(anchorKey) || {
       hpo_id: anchor.hpo_id,
       hpo_label: meta.canonical_label,
+      status: anchorStatus,
       ic_score: Number(meta.ic_score || 0),
       match_types: new Set(),
       occurrences: []
@@ -52,10 +57,11 @@ function mergeAnchorSets(localAnchors, supplementAnchors, phenotypeByCurie) {
     for (const occurrence of anchor.occurrences || []) {
       existing.occurrences.push({
         ...occurrence,
+        status: occurrence.status === 'excluded' ? 'excluded' : anchorStatus,
         match_type: occurrence.match_type || sourceLabel
       });
     }
-    merged.set(anchor.hpo_id, existing);
+    merged.set(anchorKey, existing);
   }
 
   for (const anchor of localAnchors || []) upsert(anchor, null);
@@ -80,17 +86,37 @@ async function main() {
   const inputDir = flags.input || DEFAULTS.inputDir;
   const outputDir = flags.output || DEFAULTS.outputDir;
   const supplementDir = flags.supplementDir || '';
+  const phenotypesJson = flags.phenotypesJson || path.join(outputDir, 'phenotype_rows_snapshot.json');
+  const ontologyJson = flags.ontologyJson || path.join(outputDir, 'ontology_rows_snapshot.json');
   const start = Number.parseInt(flags.start || `${DEFAULTS.start}`, 10) || 0;
   const limit = Number.parseInt(flags.limit || `${DEFAULTS.limit}`, 10) || DEFAULTS.limit;
   const minIc = Number.parseFloat(flags.minIc || `${DEFAULTS.minIc}`);
   const noResume = Boolean(flags.noResume);
   await ensureDir(outputDir);
 
-  const phenotypeRows = await withClient((client) => loadPhenotypeBaseRows(client));
+  const phenotypeRows = fs.existsSync(phenotypesJson)
+    ? (JSON.parse(await fsp.readFile(phenotypesJson, 'utf8')).phenotype_rows || [])
+    : await withClient((client) => loadPhenotypeBaseRows(client));
+  let ontologyRows = [];
+  if (fs.existsSync(ontologyJson)) {
+    ontologyRows = JSON.parse(await fsp.readFile(ontologyJson, 'utf8')).ontology_rows || [];
+  } else {
+    try {
+      ontologyRows = await withClient((client) => loadPhenotypeOntologyRows(client));
+    } catch (error) {
+      console.warn(`[extractPhenotypeAnchors] ontology snapshot unavailable, continuing without ontology rows: ${error.message}`);
+      ontologyRows = [];
+    }
+  }
   await writeJson(path.join(outputDir, 'phenotype_rows_snapshot.json'), {
     created_at: new Date().toISOString(),
     phenotype_row_count: phenotypeRows.length,
     phenotype_rows: phenotypeRows
+  });
+  await writeJson(path.join(outputDir, 'ontology_rows_snapshot.json'), {
+    created_at: new Date().toISOString(),
+    ontology_row_count: ontologyRows.length,
+    ontology_rows: ontologyRows
   });
   const lexicon = buildPhenotypeLexicon(phenotypeRows, DEFAULTS.maxAnchorWords);
   const phenotypeByCurie = new Map(phenotypeRows.map((row) => [row.canonical_curie, row]));
@@ -105,6 +131,7 @@ async function main() {
     const absoluteIndex = start + offset;
     const fileStem = chapter.nbkId || toBaseName(chapter, `chapter_${absoluteIndex + 1}`);
     const textPath = path.join(inputDir, `${fileStem}_clinical_text.txt`);
+    const structurePath = path.join(inputDir, `${fileStem}_clinical_structure.json`);
     const outputPath = path.join(outputDir, `${fileStem}_anchors.json`);
     console.log(`[${absoluteIndex + 1}/${chapters.length}] ${chapter.chapterTitle || chapter.chapterKey}`);
 
@@ -125,9 +152,12 @@ async function main() {
         continue;
       }
 
-      const clinicalText = await fsp.readFile(textPath, 'utf8');
-      const paragraphs = splitParagraphs(clinicalText);
-      const localAnchors = extractAnchorOccurrences(paragraphs, lexicon, { minIc });
+      const clinicalStructure = fs.existsSync(structurePath)
+        ? JSON.parse(await fsp.readFile(structurePath, 'utf8'))
+        : buildClinicalTextStructure(await fsp.readFile(textPath, 'utf8'));
+      const resolvedNbkId = clinicalStructure.nbk_id || chapter.nbkId || '';
+      const resolvedChapterTitle = clinicalStructure.chapter_title || chapter.chapterTitle || '';
+      const localAnchors = extractAnchorOccurrences(clinicalStructure.paragraphs || [], lexicon, { minIc });
       let supplementAnchors = [];
       if (supplementDir) {
         const supplementPath = path.join(supplementDir, `${fileStem}_phenotagger_anchors.json`);
@@ -142,8 +172,8 @@ async function main() {
         created_at: new Date().toISOString(),
         stage: 'anchors',
         chapter_key: chapter.chapterKey,
-        nbk_id: chapter.nbkId || '',
-        chapter_title: chapter.chapterTitle || '',
+        nbk_id: resolvedNbkId,
+        chapter_title: resolvedChapterTitle,
         chapter_path: chapter.chapterPath || '',
         roster_mapping_status: chapter.rosterMappingStatus || '',
         disease_curie: chapter.rosterMappedDiseaseCurie || '',
@@ -158,7 +188,7 @@ async function main() {
 
       progress.results.push({
         chapterKey: chapter.chapterKey,
-        nbkId: chapter.nbkId || '',
+        nbkId: resolvedNbkId,
         anchorCount: anchors.length
       });
       progress.total_processed += 1;

@@ -40,6 +40,9 @@ const DEFAULTS = Object.freeze({
 
 const BIOLORD_HELPER =
   '/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/mapCandidatesToHPOBioLORD.py';
+const DEFAULT_BIOLORD_PYTHON = '/Users/ahmedelmorshedy/.cache/biolord/.venv/bin/python';
+const BIOLORD_PYTHON =
+  process.env.BIOLORD_PYTHON || (fs.existsSync(DEFAULT_BIOLORD_PYTHON) ? DEFAULT_BIOLORD_PYTHON : 'python3');
 
 function trustFromScore(score) {
   if (score >= 0.92) return 'high';
@@ -148,6 +151,19 @@ function finalizeCandidate(candidate) {
     source: candidate.source,
     source_sentence: candidate.source_sentence,
     paragraph: candidate.paragraph,
+    local_clinical_domains: candidate.local_clinical_domains || [],
+    section_id: candidate.section_id || null,
+    section_heading: candidate.section_heading || null,
+    paragraph_id: candidate.paragraph_id || null,
+    paragraph_index: candidate.paragraph_index || null,
+    paragraph_char_start: candidate.paragraph_char_start ?? null,
+    paragraph_char_end: candidate.paragraph_char_end ?? null,
+    sentence_id: candidate.sentence_id || null,
+    sentence_index: candidate.sentence_index || null,
+    sentence_char_start: candidate.sentence_char_start ?? null,
+    sentence_char_end: candidate.sentence_char_end ?? null,
+    match_char_start: candidate.match_char_start ?? null,
+    match_char_end: candidate.match_char_end ?? null,
     top_matches: candidate.top_matches,
     mapped_hpo_id: trust === 'reject' ? null : best.hpo_id,
     mapped_hpo_label: trust === 'reject' ? null : best.hpo_label,
@@ -164,11 +180,28 @@ function simplifyPhenotypeRows(rows) {
   }));
 }
 
+function resolveBioLordCacheDir(outputDir) {
+  const cacheCandidates = [
+    path.join(outputDir, 'biolord_cache'),
+    path.join(outputDir, 'biolord_cache_py310_np'),
+    path.join(outputDir, 'biolord_cache_py310')
+  ];
+  for (const candidate of cacheCandidates) {
+    if (
+      fs.existsSync(path.join(candidate, 'biolord_embeddings.npy')) &&
+      fs.existsSync(path.join(candidate, 'biolord_index_metadata.json'))
+    ) {
+      return candidate;
+    }
+  }
+  return path.join(outputDir, 'biolord_cache');
+}
+
 async function runBioLordMapper({ outputDir, phenotypeRows, chapterJobs, biolordModel }) {
   const requestPath = path.join(outputDir, 'biolord_request.json');
   const phenotypePath = path.join(outputDir, 'biolord_phenotypes.json');
   const responsePath = path.join(outputDir, 'biolord_response.json');
-  const cacheDir = path.join(outputDir, 'biolord_cache');
+  const cacheDir = resolveBioLordCacheDir(outputDir);
 
   await writeJson(phenotypePath, simplifyPhenotypeRows(phenotypeRows));
   await writeJson(requestPath, {
@@ -180,7 +213,7 @@ async function runBioLordMapper({ outputDir, phenotypeRows, chapterJobs, biolord
     }))
   });
 
-  await execFileAsync('python3', [
+  await execFileAsync(BIOLORD_PYTHON, [
     BIOLORD_HELPER,
     '--request',
     requestPath,
@@ -257,8 +290,13 @@ async function main() {
       }
 
       const payload = JSON.parse(await fsp.readFile(inputPath, 'utf8'));
+      const resolvedChapter = {
+        ...chapter,
+        nbkId: payload.nbk_id || chapter.nbkId || '',
+        chapterTitle: payload.chapter_title || chapter.chapterTitle || ''
+      };
       const chapterJob = {
-        chapter,
+        chapter: resolvedChapter,
         absoluteIndex,
         fileStem,
         outputPath,
@@ -274,6 +312,18 @@ async function main() {
           source: candidate.source || 'llm_candidate',
           source_sentence: candidate.source_sentence || '',
           paragraph: candidate.paragraph || '',
+          section_id: candidate.section_id || null,
+          section_heading: candidate.section_heading || null,
+          paragraph_id: candidate.paragraph_id || null,
+          paragraph_index: candidate.paragraph_index || null,
+          paragraph_char_start: candidate.paragraph_char_start ?? null,
+          paragraph_char_end: candidate.paragraph_char_end ?? null,
+          sentence_id: candidate.sentence_id || null,
+          sentence_index: candidate.sentence_index || null,
+          sentence_char_start: candidate.sentence_char_start ?? null,
+          sentence_char_end: candidate.sentence_char_end ?? null,
+          match_char_start: candidate.match_char_start ?? null,
+          match_char_end: candidate.match_char_end ?? null,
           embedding: [],
           top_matches: []
         });

@@ -28,6 +28,9 @@
     "dx:audit:truth-missed-fill-priority": "bash ./scripts/run-summarize-truth-missed-gaps.sh",
     "dx:audit:truth-missed-source-backed": "bash ./scripts/run-classify-truth-missed-source-backed.sh",
     "dx:audit:ranking-problems": "bash ./scripts/run-audit-ranking-problem-cases.sh",
+    "gr:check": "node src/scripts/checkGeneReviewsModelReadiness.js",
+    "gr:pipeline": "node src/scripts/runGeneReviewsPipeline.js",
+    "gr:verify": "node src/scripts/verifyGeneReviewsEnrichment.js",
     "ml:export-gene-disease": "node src/scripts/exportGeneDiseaseLinkDataset.js",
     "ml:analyze-gene-disease-novelty": "node src/scripts/analyzeGeneDiseaseNovelty.js",
     "test": "node --test"
