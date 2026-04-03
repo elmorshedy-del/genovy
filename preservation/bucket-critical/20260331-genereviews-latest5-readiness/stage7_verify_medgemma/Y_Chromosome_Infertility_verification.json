@@ -1,0 +1,1192 @@
+{
+  "created_at": "2026-04-01T00:28:14.819Z",
+  "stage": "verify",
+  "chapter_key": "y_chromosome_infertility",
+  "nbk_id": "NBK1339",
+  "chapter_title": "Y Chromosome Infertility - GeneReviews® - NCBI Bookshelf",
+  "review_page_path": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/genereviews-pipeline-latest5-settled-20260330/stage7_verify_medgemma/review_pages/Y_Chromosome_Infertility_review.html",
+  "review_data_path": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/genereviews-pipeline-latest5-settled-20260330/stage7_verify_medgemma/review_data/Y_Chromosome_Infertility_review.json",
+  "feature_count": 6,
+  "table_count": 1,
+  "summary": {
+    "total": 6,
+    "verified": 4,
+    "flagged": 1,
+    "failed": 1,
+    "autoAcceptEligible": 4
+  },
+  "verifications": [
+    {
+      "hpo_id": "HP:0000027",
+      "hpo_label": "Azoospermia",
+      "status": "present",
+      "source_sentence": "Males with Y chromosome infertility have azoospermia or severe, moderate, or mild oligozoospermia depending on the location and size of the Y chromosome deletion (see Genotype-Phenotype Correlations ).",
+      "match_text": "azoospermia",
+      "verdict": "VERIFIED",
+      "auto_accept_eligible": true,
+      "auto_accept_reasons": [],
+      "checks": [
+        {
+          "name": "source_span",
+          "status": "pass",
+          "detail": "Sentence span resolves inside cached chapter text.",
+          "span_text": "Males with Y chromosome infertility have azoospermia or severe, moderate, or mild oligozoospermia depending on the location and size of the Y chromosome deletion (see Genotype-Phenotype Correlations )."
+        },
+        {
+          "name": "phenotype_presence",
+          "status": "pass",
+          "detail": "Matched \"azoospermia\" at recorded span.",
+          "matched_phrase": "azoospermia",
+          "evidence_source": "span",
+          "match_span_text": "azoospermia"
+        },
+        {
+          "name": "frequency_support",
+          "status": "skip",
+          "detail": "No frequency claimed."
+        },
+        {
+          "name": "onset_support",
+          "status": "skip",
+          "detail": "No onset claimed."
+        },
+        {
+          "name": "progression_support",
+          "status": "skip",
+          "detail": "No progression claimed."
+        },
+        {
+          "name": "treatment_response_support",
+          "status": "skip",
+          "detail": "No treatment response claimed."
+        },
+        {
+          "name": "clause_attachment",
+          "status": "skip",
+          "detail": "No onset attachment to verify."
+        },
+        {
+          "name": "alias_shadow",
+          "status": "pass",
+          "detail": "No longer enclosing phenotype phrase detected."
+        },
+        {
+          "name": "disease_subtype_leak",
+          "status": "skip",
+          "detail": "No onset claimed."
+        },
+        {
+          "name": "excluded_status",
+          "status": "skip",
+          "detail": "Feature is present, not excluded."
+        },
+        {
+          "name": "table_concordance",
+          "status": "pass",
+          "detail": "Phenotype appears in \"Table 1\".",
+          "table_phenotype": "Azoospermia",
+          "table_frequency": null
+        },
+        {
+          "name": "section_branch_consistency",
+          "status": "skip",
+          "detail": "Section heading does not map to a supported audit branch."
+        }
+      ],
+      "human_review": {
+        "review_id": "review-1-hp-0000027-present",
+        "review_href": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/genereviews-pipeline-latest5-settled-20260330/stage7_verify_medgemma/review_pages/Y_Chromosome_Infertility_review.html#review-1-hp-0000027-present",
+        "hosted_review_href": "/audit/genereviews?chapter=y_chromosome_infertility#review-1-hp-0000027-present",
+        "chapter_key": "y_chromosome_infertility",
+        "nbk_id": "NBK1339",
+        "chapter_title": "Y Chromosome Infertility - GeneReviews® - NCBI Bookshelf",
+        "source_url": "https://www.ncbi.nlm.nih.gov/books/NBK1339/",
+        "hpo_id": "HP:0000027",
+        "hpo_label": "Azoospermia",
+        "status": "present",
+        "verdict": "VERIFIED",
+        "auto_accept_eligible": true,
+        "auto_accept_reasons": [],
+        "local_clinical_domains": [
+          {
+            "key": "renal_genitourinary",
+            "label": "Renal / Genitourinary",
+            "evidence_headings": [],
+            "evidence_snippets": [
+              "osis for finding any sperm with testicular sperm extraction (TESE). Males with AZFc deleti"
+            ]
+          }
+        ],
+        "section_id": "section_Clinical_Description",
+        "section_heading": "Clinical Description",
+        "paragraph_id": "p11",
+        "sentence_id": "p11_s1",
+        "paragraph_char_start": 895,
+        "paragraph_char_end": 1399,
+        "sentence_char_start": 895,
+        "sentence_char_end": 1096,
+        "sentence_text": "Males with Y chromosome infertility have azoospermia or severe, moderate, or mild oligozoospermia depending on the location and size of the Y chromosome deletion (see Genotype-Phenotype Correlations ).",
+        "paragraph_text": "Males with Y chromosome infertility have azoospermia or severe, moderate, or mild oligozoospermia depending on the location and size of the Y chromosome deletion (see Genotype-Phenotype Correlations ). Most males with AZFa or AZFb/c deletions have a very poor prognosis for finding any sperm with testicular sperm extraction (TESE). Males with AZFc deletions (b2/b4 or gr/gr) have an extremely favorable prognosis (87%) for finding sperm sufficient for successful intracytoplasmic sperm injection (ICSI).",
+        "matched_phrase": "azoospermia",
+        "match_span_text": "azoospermia",
+        "frequency_raw": null,
+        "onset_raw": null,
+        "progression_raw": null,
+        "treatment_response_raw": null,
+        "spans": [
+          {
+            "key": "phenotype",
+            "label": "Phenotype",
+            "char_start": 936,
+            "char_end": 947,
+            "text": "azoospermia"
+          }
+        ],
+        "failed_checks": [],
+        "flagged_checks": [],
+        "checks": [
+          {
+            "name": "source_span",
+            "status": "pass",
+            "detail": "Sentence span resolves inside cached chapter text.",
+            "span_text": "Males with Y chromosome infertility have azoospermia or severe, moderate, or mild oligozoospermia depending on the location and size of the Y chromosome deletion (see Genotype-Phenotype Correlations )."
+          },
+          {
+            "name": "phenotype_presence",
+            "status": "pass",
+            "detail": "Matched \"azoospermia\" at recorded span.",
+            "matched_phrase": "azoospermia",
+            "evidence_source": "span",
+            "match_span_text": "azoospermia"
+          },
+          {
+            "name": "frequency_support",
+            "status": "skip",
+            "detail": "No frequency claimed."
+          },
+          {
+            "name": "onset_support",
+            "status": "skip",
+            "detail": "No onset claimed."
+          },
+          {
+            "name": "progression_support",
+            "status": "skip",
+            "detail": "No progression claimed."
+          },
+          {
+            "name": "treatment_response_support",
+            "status": "skip",
+            "detail": "No treatment response claimed."
+          },
+          {
+            "name": "clause_attachment",
+            "status": "skip",
+            "detail": "No onset attachment to verify."
+          },
+          {
+            "name": "alias_shadow",
+            "status": "pass",
+            "detail": "No longer enclosing phenotype phrase detected."
+          },
+          {
+            "name": "disease_subtype_leak",
+            "status": "skip",
+            "detail": "No onset claimed."
+          },
+          {
+            "name": "excluded_status",
+            "status": "skip",
+            "detail": "Feature is present, not excluded."
+          },
+          {
+            "name": "table_concordance",
+            "status": "pass",
+            "detail": "Phenotype appears in \"Table 1\".",
+            "table_phenotype": "Azoospermia",
+            "table_frequency": null
+          },
+          {
+            "name": "section_branch_consistency",
+            "status": "skip",
+            "detail": "Section heading does not map to a supported audit branch."
+          }
+        ]
+      }
+    },
+    {
+      "hpo_id": "HP:0008734",
+      "hpo_label": "Decreased testicular size",
+      "status": "present",
+      "source_sentence": "Small testes in ~70% (males with Sertoli cell-only syndrome)",
+      "match_text": "small testes",
+      "verdict": "VERIFIED",
+      "auto_accept_eligible": true,
+      "auto_accept_reasons": [],
+      "checks": [
+        {
+          "name": "source_span",
+          "status": "pass",
+          "detail": "Sentence span resolves inside cached chapter text.",
+          "span_text": "Small testes in ~70% (males with Sertoli cell-only syndrome)"
+        },
+        {
+          "name": "phenotype_presence",
+          "status": "pass",
+          "detail": "Matched \"small testes\" at recorded span.",
+          "matched_phrase": "small testes",
+          "evidence_source": "span",
+          "match_span_text": "Small testes"
+        },
+        {
+          "name": "frequency_support",
+          "status": "pass",
+          "detail": "Frequency verified at recorded span as \"70%\".",
+          "span_text": "70%"
+        },
+        {
+          "name": "onset_support",
+          "status": "skip",
+          "detail": "No onset claimed."
+        },
+        {
+          "name": "progression_support",
+          "status": "skip",
+          "detail": "No progression claimed."
+        },
+        {
+          "name": "treatment_response_support",
+          "status": "skip",
+          "detail": "No treatment response claimed."
+        },
+        {
+          "name": "clause_attachment",
+          "status": "skip",
+          "detail": "No onset attachment to verify."
+        },
+        {
+          "name": "alias_shadow",
+          "status": "pass",
+          "detail": "No longer enclosing phenotype phrase detected."
+        },
+        {
+          "name": "disease_subtype_leak",
+          "status": "skip",
+          "detail": "No onset claimed."
+        },
+        {
+          "name": "excluded_status",
+          "status": "skip",
+          "detail": "Feature is present, not excluded."
+        },
+        {
+          "name": "table_concordance",
+          "status": "skip",
+          "detail": "No matching table row found for this phenotype."
+        },
+        {
+          "name": "section_branch_consistency",
+          "status": "skip",
+          "detail": "Section heading does not map to a supported audit branch."
+        }
+      ],
+      "human_review": {
+        "review_id": "review-2-hp-0008734-present",
+        "review_href": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/genereviews-pipeline-latest5-settled-20260330/stage7_verify_medgemma/review_pages/Y_Chromosome_Infertility_review.html#review-2-hp-0008734-present",
+        "hosted_review_href": "/audit/genereviews?chapter=y_chromosome_infertility#review-2-hp-0008734-present",
+        "chapter_key": "y_chromosome_infertility",
+        "nbk_id": "NBK1339",
+        "chapter_title": "Y Chromosome Infertility - GeneReviews® - NCBI Bookshelf",
+        "source_url": "https://www.ncbi.nlm.nih.gov/books/NBK1339/",
+        "hpo_id": "HP:0008734",
+        "hpo_label": "Decreased testicular size",
+        "status": "present",
+        "verdict": "VERIFIED",
+        "auto_accept_eligible": true,
+        "auto_accept_reasons": [],
+        "local_clinical_domains": [],
+        "section_id": "section_Suggestive_Findings",
+        "section_heading": "Suggestive Findings",
+        "paragraph_id": "p5",
+        "sentence_id": "p5_s1",
+        "paragraph_char_start": 190,
+        "paragraph_char_end": 250,
+        "sentence_char_start": 190,
+        "sentence_char_end": 250,
+        "sentence_text": "Small testes in ~70% (males with Sertoli cell-only syndrome)",
+        "paragraph_text": "Small testes in ~70% (males with Sertoli cell-only syndrome)",
+        "matched_phrase": "small testes",
+        "match_span_text": "Small testes",
+        "frequency_raw": "70%",
+        "onset_raw": null,
+        "progression_raw": null,
+        "treatment_response_raw": null,
+        "spans": [
+          {
+            "key": "phenotype",
+            "label": "Phenotype",
+            "char_start": 190,
+            "char_end": 202,
+            "text": "Small testes"
+          },
+          {
+            "key": "frequency",
+            "label": "Frequency",
+            "char_start": 207,
+            "char_end": 210,
+            "text": "70%"
+          }
+        ],
+        "failed_checks": [],
+        "flagged_checks": [],
+        "checks": [
+          {
+            "name": "source_span",
+            "status": "pass",
+            "detail": "Sentence span resolves inside cached chapter text.",
+            "span_text": "Small testes in ~70% (males with Sertoli cell-only syndrome)"
+          },
+          {
+            "name": "phenotype_presence",
+            "status": "pass",
+            "detail": "Matched \"small testes\" at recorded span.",
+            "matched_phrase": "small testes",
+            "evidence_source": "span",
+            "match_span_text": "Small testes"
+          },
+          {
+            "name": "frequency_support",
+            "status": "pass",
+            "detail": "Frequency verified at recorded span as \"70%\".",
+            "span_text": "70%"
+          },
+          {
+            "name": "onset_support",
+            "status": "skip",
+            "detail": "No onset claimed."
+          },
+          {
+            "name": "progression_support",
+            "status": "skip",
+            "detail": "No progression claimed."
+          },
+          {
+            "name": "treatment_response_support",
+            "status": "skip",
+            "detail": "No treatment response claimed."
+          },
+          {
+            "name": "clause_attachment",
+            "status": "skip",
+            "detail": "No onset attachment to verify."
+          },
+          {
+            "name": "alias_shadow",
+            "status": "pass",
+            "detail": "No longer enclosing phenotype phrase detected."
+          },
+          {
+            "name": "disease_subtype_leak",
+            "status": "skip",
+            "detail": "No onset claimed."
+          },
+          {
+            "name": "excluded_status",
+            "status": "skip",
+            "detail": "Feature is present, not excluded."
+          },
+          {
+            "name": "table_concordance",
+            "status": "skip",
+            "detail": "No matching table row found for this phenotype."
+          },
+          {
+            "name": "section_branch_consistency",
+            "status": "skip",
+            "detail": "Section heading does not map to a supported audit branch."
+          }
+        ]
+      }
+    },
+    {
+      "hpo_id": "HP:0000789",
+      "hpo_label": "Infertility",
+      "status": "present",
+      "source_sentence": "Y chromosome infertility should be suspected in males with the following clinical and laboratory features.",
+      "match_text": "infertility",
+      "verdict": "FLAGGED",
+      "auto_accept_eligible": false,
+      "auto_accept_reasons": [
+        "alias_shadow:flag"
+      ],
+      "checks": [
+        {
+          "name": "source_span",
+          "status": "pass",
+          "detail": "Sentence span resolves inside cached chapter text.",
+          "span_text": "Y chromosome infertility should be suspected in males with the following clinical and laboratory features."
+        },
+        {
+          "name": "phenotype_presence",
+          "status": "pass",
+          "detail": "Matched \"infertility\" at recorded span.",
+          "matched_phrase": "infertility",
+          "evidence_source": "span",
+          "match_span_text": "infertility"
+        },
+        {
+          "name": "frequency_support",
+          "status": "skip",
+          "detail": "No frequency claimed."
+        },
+        {
+          "name": "onset_support",
+          "status": "skip",
+          "detail": "No onset claimed."
+        },
+        {
+          "name": "progression_support",
+          "status": "skip",
+          "detail": "No progression claimed."
+        },
+        {
+          "name": "treatment_response_support",
+          "status": "skip",
+          "detail": "No treatment response claimed."
+        },
+        {
+          "name": "clause_attachment",
+          "status": "skip",
+          "detail": "No onset attachment to verify."
+        },
+        {
+          "name": "alias_shadow",
+          "status": "flag",
+          "detail": "Potential alias-shadow overlap inside \"Y chromosome infertility\".",
+          "enclosing_phrase": "Y chromosome infertility"
+        },
+        {
+          "name": "disease_subtype_leak",
+          "status": "skip",
+          "detail": "No onset claimed."
+        },
+        {
+          "name": "excluded_status",
+          "status": "skip",
+          "detail": "Feature is present, not excluded."
+        },
+        {
+          "name": "table_concordance",
+          "status": "skip",
+          "detail": "No matching table row found for this phenotype."
+        },
+        {
+          "name": "section_branch_consistency",
+          "status": "skip",
+          "detail": "Section heading does not map to a supported audit branch."
+        }
+      ],
+      "human_review": {
+        "review_id": "review-3-hp-0000789-present",
+        "review_href": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/genereviews-pipeline-latest5-settled-20260330/stage7_verify_medgemma/review_pages/Y_Chromosome_Infertility_review.html#review-3-hp-0000789-present",
+        "hosted_review_href": "/audit/genereviews?chapter=y_chromosome_infertility#review-3-hp-0000789-present",
+        "chapter_key": "y_chromosome_infertility",
+        "nbk_id": "NBK1339",
+        "chapter_title": "Y Chromosome Infertility - GeneReviews® - NCBI Bookshelf",
+        "source_url": "https://www.ncbi.nlm.nih.gov/books/NBK1339/",
+        "hpo_id": "HP:0000789",
+        "hpo_label": "Infertility",
+        "status": "present",
+        "verdict": "FLAGGED",
+        "auto_accept_eligible": false,
+        "auto_accept_reasons": [
+          "alias_shadow:flag"
+        ],
+        "local_clinical_domains": [],
+        "section_id": "section_Suggestive_Findings",
+        "section_heading": "Suggestive Findings",
+        "paragraph_id": "p1",
+        "sentence_id": "p1_s1",
+        "paragraph_char_start": 0,
+        "paragraph_char_end": 106,
+        "sentence_char_start": 0,
+        "sentence_char_end": 106,
+        "sentence_text": "Y chromosome infertility should be suspected in males with the following clinical and laboratory features.",
+        "paragraph_text": "Y chromosome infertility should be suspected in males with the following clinical and laboratory features.",
+        "matched_phrase": "infertility",
+        "match_span_text": "infertility",
+        "frequency_raw": null,
+        "onset_raw": null,
+        "progression_raw": null,
+        "treatment_response_raw": null,
+        "spans": [
+          {
+            "key": "phenotype",
+            "label": "Phenotype",
+            "char_start": 13,
+            "char_end": 24,
+            "text": "infertility"
+          }
+        ],
+        "failed_checks": [],
+        "flagged_checks": [
+          "alias_shadow"
+        ],
+        "checks": [
+          {
+            "name": "source_span",
+            "status": "pass",
+            "detail": "Sentence span resolves inside cached chapter text.",
+            "span_text": "Y chromosome infertility should be suspected in males with the following clinical and laboratory features."
+          },
+          {
+            "name": "phenotype_presence",
+            "status": "pass",
+            "detail": "Matched \"infertility\" at recorded span.",
+            "matched_phrase": "infertility",
+            "evidence_source": "span",
+            "match_span_text": "infertility"
+          },
+          {
+            "name": "frequency_support",
+            "status": "skip",
+            "detail": "No frequency claimed."
+          },
+          {
+            "name": "onset_support",
+            "status": "skip",
+            "detail": "No onset claimed."
+          },
+          {
+            "name": "progression_support",
+            "status": "skip",
+            "detail": "No progression claimed."
+          },
+          {
+            "name": "treatment_response_support",
+            "status": "skip",
+            "detail": "No treatment response claimed."
+          },
+          {
+            "name": "clause_attachment",
+            "status": "skip",
+            "detail": "No onset attachment to verify."
+          },
+          {
+            "name": "alias_shadow",
+            "status": "flag",
+            "detail": "Potential alias-shadow overlap inside \"Y chromosome infertility\".",
+            "enclosing_phrase": "Y chromosome infertility"
+          },
+          {
+            "name": "disease_subtype_leak",
+            "status": "skip",
+            "detail": "No onset claimed."
+          },
+          {
+            "name": "excluded_status",
+            "status": "skip",
+            "detail": "Feature is present, not excluded."
+          },
+          {
+            "name": "table_concordance",
+            "status": "skip",
+            "detail": "No matching table row found for this phenotype."
+          },
+          {
+            "name": "section_branch_consistency",
+            "status": "skip",
+            "detail": "Section heading does not map to a supported audit branch."
+          }
+        ]
+      }
+    },
+    {
+      "hpo_id": "HP:0034816",
+      "hpo_label": "Mild oligozoospermia",
+      "status": "present",
+      "source_sentence": "Males with Y chromosome infertility have azoospermia or severe, moderate, or mild oligozoospermia depending on the location and size of the Y chromosome deletion (see Genotype-Phenotype Correlations ).",
+      "match_text": "mild oligozoospermia",
+      "verdict": "VERIFIED",
+      "auto_accept_eligible": true,
+      "auto_accept_reasons": [],
+      "checks": [
+        {
+          "name": "source_span",
+          "status": "pass",
+          "detail": "Sentence span resolves inside cached chapter text.",
+          "span_text": "Males with Y chromosome infertility have azoospermia or severe, moderate, or mild oligozoospermia depending on the location and size of the Y chromosome deletion (see Genotype-Phenotype Correlations )."
+        },
+        {
+          "name": "phenotype_presence",
+          "status": "pass",
+          "detail": "Matched \"mild oligozoospermia\" at recorded span.",
+          "matched_phrase": "mild oligozoospermia",
+          "evidence_source": "span",
+          "match_span_text": "mild oligozoospermia"
+        },
+        {
+          "name": "frequency_support",
+          "status": "skip",
+          "detail": "No frequency claimed."
+        },
+        {
+          "name": "onset_support",
+          "status": "skip",
+          "detail": "No onset claimed."
+        },
+        {
+          "name": "progression_support",
+          "status": "skip",
+          "detail": "No progression claimed."
+        },
+        {
+          "name": "treatment_response_support",
+          "status": "skip",
+          "detail": "No treatment response claimed."
+        },
+        {
+          "name": "clause_attachment",
+          "status": "skip",
+          "detail": "No onset attachment to verify."
+        },
+        {
+          "name": "alias_shadow",
+          "status": "pass",
+          "detail": "No longer enclosing phenotype phrase detected."
+        },
+        {
+          "name": "disease_subtype_leak",
+          "status": "skip",
+          "detail": "No onset claimed."
+        },
+        {
+          "name": "excluded_status",
+          "status": "skip",
+          "detail": "Feature is present, not excluded."
+        },
+        {
+          "name": "table_concordance",
+          "status": "pass",
+          "detail": "Phenotype appears in \"Table 1\".",
+          "table_phenotype": "Mild oligozoospermia",
+          "table_frequency": null
+        },
+        {
+          "name": "section_branch_consistency",
+          "status": "skip",
+          "detail": "Section heading does not map to a supported audit branch."
+        }
+      ],
+      "human_review": {
+        "review_id": "review-4-hp-0034816-present",
+        "review_href": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/genereviews-pipeline-latest5-settled-20260330/stage7_verify_medgemma/review_pages/Y_Chromosome_Infertility_review.html#review-4-hp-0034816-present",
+        "hosted_review_href": "/audit/genereviews?chapter=y_chromosome_infertility#review-4-hp-0034816-present",
+        "chapter_key": "y_chromosome_infertility",
+        "nbk_id": "NBK1339",
+        "chapter_title": "Y Chromosome Infertility - GeneReviews® - NCBI Bookshelf",
+        "source_url": "https://www.ncbi.nlm.nih.gov/books/NBK1339/",
+        "hpo_id": "HP:0034816",
+        "hpo_label": "Mild oligozoospermia",
+        "status": "present",
+        "verdict": "VERIFIED",
+        "auto_accept_eligible": true,
+        "auto_accept_reasons": [],
+        "local_clinical_domains": [
+          {
+            "key": "renal_genitourinary",
+            "label": "Renal / Genitourinary",
+            "evidence_headings": [],
+            "evidence_snippets": [
+              "osis for finding any sperm with testicular sperm extraction (TESE). Males with AZFc deleti"
+            ]
+          }
+        ],
+        "section_id": "section_Clinical_Description",
+        "section_heading": "Clinical Description",
+        "paragraph_id": "p11",
+        "sentence_id": "p11_s1",
+        "paragraph_char_start": 895,
+        "paragraph_char_end": 1399,
+        "sentence_char_start": 895,
+        "sentence_char_end": 1096,
+        "sentence_text": "Males with Y chromosome infertility have azoospermia or severe, moderate, or mild oligozoospermia depending on the location and size of the Y chromosome deletion (see Genotype-Phenotype Correlations ).",
+        "paragraph_text": "Males with Y chromosome infertility have azoospermia or severe, moderate, or mild oligozoospermia depending on the location and size of the Y chromosome deletion (see Genotype-Phenotype Correlations ). Most males with AZFa or AZFb/c deletions have a very poor prognosis for finding any sperm with testicular sperm extraction (TESE). Males with AZFc deletions (b2/b4 or gr/gr) have an extremely favorable prognosis (87%) for finding sperm sufficient for successful intracytoplasmic sperm injection (ICSI).",
+        "matched_phrase": "mild oligozoospermia",
+        "match_span_text": "mild oligozoospermia",
+        "frequency_raw": null,
+        "onset_raw": null,
+        "progression_raw": null,
+        "treatment_response_raw": null,
+        "spans": [
+          {
+            "key": "phenotype",
+            "label": "Phenotype",
+            "char_start": 972,
+            "char_end": 992,
+            "text": "mild oligozoospermia"
+          }
+        ],
+        "failed_checks": [],
+        "flagged_checks": [],
+        "checks": [
+          {
+            "name": "source_span",
+            "status": "pass",
+            "detail": "Sentence span resolves inside cached chapter text.",
+            "span_text": "Males with Y chromosome infertility have azoospermia or severe, moderate, or mild oligozoospermia depending on the location and size of the Y chromosome deletion (see Genotype-Phenotype Correlations )."
+          },
+          {
+            "name": "phenotype_presence",
+            "status": "pass",
+            "detail": "Matched \"mild oligozoospermia\" at recorded span.",
+            "matched_phrase": "mild oligozoospermia",
+            "evidence_source": "span",
+            "match_span_text": "mild oligozoospermia"
+          },
+          {
+            "name": "frequency_support",
+            "status": "skip",
+            "detail": "No frequency claimed."
+          },
+          {
+            "name": "onset_support",
+            "status": "skip",
+            "detail": "No onset claimed."
+          },
+          {
+            "name": "progression_support",
+            "status": "skip",
+            "detail": "No progression claimed."
+          },
+          {
+            "name": "treatment_response_support",
+            "status": "skip",
+            "detail": "No treatment response claimed."
+          },
+          {
+            "name": "clause_attachment",
+            "status": "skip",
+            "detail": "No onset attachment to verify."
+          },
+          {
+            "name": "alias_shadow",
+            "status": "pass",
+            "detail": "No longer enclosing phenotype phrase detected."
+          },
+          {
+            "name": "disease_subtype_leak",
+            "status": "skip",
+            "detail": "No onset claimed."
+          },
+          {
+            "name": "excluded_status",
+            "status": "skip",
+            "detail": "Feature is present, not excluded."
+          },
+          {
+            "name": "table_concordance",
+            "status": "pass",
+            "detail": "Phenotype appears in \"Table 1\".",
+            "table_phenotype": "Mild oligozoospermia",
+            "table_frequency": null
+          },
+          {
+            "name": "section_branch_consistency",
+            "status": "skip",
+            "detail": "Section heading does not map to a supported audit branch."
+          }
+        ]
+      }
+    },
+    {
+      "hpo_id": "HP:0000798",
+      "hpo_label": "Oligozoospermia",
+      "status": "present",
+      "source_sentence": "Males with Y chromosome infertility have azoospermia or severe, moderate, or mild oligozoospermia depending on the location and size of the Y chromosome deletion (see Genotype-Phenotype Correlations ).",
+      "match_text": "oligozoospermia",
+      "verdict": "VERIFIED",
+      "auto_accept_eligible": true,
+      "auto_accept_reasons": [],
+      "checks": [
+        {
+          "name": "source_span",
+          "status": "pass",
+          "detail": "Sentence span resolves inside cached chapter text.",
+          "span_text": "Males with Y chromosome infertility have azoospermia or severe, moderate, or mild oligozoospermia depending on the location and size of the Y chromosome deletion (see Genotype-Phenotype Correlations )."
+        },
+        {
+          "name": "phenotype_presence",
+          "status": "pass",
+          "detail": "Matched \"oligozoospermia\" at recorded span.",
+          "matched_phrase": "oligozoospermia",
+          "evidence_source": "span",
+          "match_span_text": "oligozoospermia"
+        },
+        {
+          "name": "frequency_support",
+          "status": "skip",
+          "detail": "No frequency claimed."
+        },
+        {
+          "name": "onset_support",
+          "status": "skip",
+          "detail": "No onset claimed."
+        },
+        {
+          "name": "progression_support",
+          "status": "skip",
+          "detail": "No progression claimed."
+        },
+        {
+          "name": "treatment_response_support",
+          "status": "skip",
+          "detail": "No treatment response claimed."
+        },
+        {
+          "name": "clause_attachment",
+          "status": "skip",
+          "detail": "No onset attachment to verify."
+        },
+        {
+          "name": "alias_shadow",
+          "status": "pass",
+          "detail": "No longer enclosing phenotype phrase detected."
+        },
+        {
+          "name": "disease_subtype_leak",
+          "status": "skip",
+          "detail": "No onset claimed."
+        },
+        {
+          "name": "excluded_status",
+          "status": "skip",
+          "detail": "Feature is present, not excluded."
+        },
+        {
+          "name": "table_concordance",
+          "status": "pass",
+          "detail": "Phenotype appears in \"Table 1\".",
+          "table_phenotype": "Severe oligozoospermia",
+          "table_frequency": null
+        },
+        {
+          "name": "section_branch_consistency",
+          "status": "skip",
+          "detail": "Section heading does not map to a supported audit branch."
+        }
+      ],
+      "human_review": {
+        "review_id": "review-5-hp-0000798-present",
+        "review_href": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/genereviews-pipeline-latest5-settled-20260330/stage7_verify_medgemma/review_pages/Y_Chromosome_Infertility_review.html#review-5-hp-0000798-present",
+        "hosted_review_href": "/audit/genereviews?chapter=y_chromosome_infertility#review-5-hp-0000798-present",
+        "chapter_key": "y_chromosome_infertility",
+        "nbk_id": "NBK1339",
+        "chapter_title": "Y Chromosome Infertility - GeneReviews® - NCBI Bookshelf",
+        "source_url": "https://www.ncbi.nlm.nih.gov/books/NBK1339/",
+        "hpo_id": "HP:0000798",
+        "hpo_label": "Oligozoospermia",
+        "status": "present",
+        "verdict": "VERIFIED",
+        "auto_accept_eligible": true,
+        "auto_accept_reasons": [],
+        "local_clinical_domains": [
+          {
+            "key": "renal_genitourinary",
+            "label": "Renal / Genitourinary",
+            "evidence_headings": [],
+            "evidence_snippets": [
+              "osis for finding any sperm with testicular sperm extraction (TESE). Males with AZFc deleti"
+            ]
+          }
+        ],
+        "section_id": "section_Clinical_Description",
+        "section_heading": "Clinical Description",
+        "paragraph_id": "p11",
+        "sentence_id": "p11_s1",
+        "paragraph_char_start": 895,
+        "paragraph_char_end": 1399,
+        "sentence_char_start": 895,
+        "sentence_char_end": 1096,
+        "sentence_text": "Males with Y chromosome infertility have azoospermia or severe, moderate, or mild oligozoospermia depending on the location and size of the Y chromosome deletion (see Genotype-Phenotype Correlations ).",
+        "paragraph_text": "Males with Y chromosome infertility have azoospermia or severe, moderate, or mild oligozoospermia depending on the location and size of the Y chromosome deletion (see Genotype-Phenotype Correlations ). Most males with AZFa or AZFb/c deletions have a very poor prognosis for finding any sperm with testicular sperm extraction (TESE). Males with AZFc deletions (b2/b4 or gr/gr) have an extremely favorable prognosis (87%) for finding sperm sufficient for successful intracytoplasmic sperm injection (ICSI).",
+        "matched_phrase": "oligozoospermia",
+        "match_span_text": "oligozoospermia",
+        "frequency_raw": null,
+        "onset_raw": null,
+        "progression_raw": null,
+        "treatment_response_raw": null,
+        "spans": [
+          {
+            "key": "phenotype",
+            "label": "Phenotype",
+            "char_start": 977,
+            "char_end": 992,
+            "text": "oligozoospermia"
+          }
+        ],
+        "failed_checks": [],
+        "flagged_checks": [],
+        "checks": [
+          {
+            "name": "source_span",
+            "status": "pass",
+            "detail": "Sentence span resolves inside cached chapter text.",
+            "span_text": "Males with Y chromosome infertility have azoospermia or severe, moderate, or mild oligozoospermia depending on the location and size of the Y chromosome deletion (see Genotype-Phenotype Correlations )."
+          },
+          {
+            "name": "phenotype_presence",
+            "status": "pass",
+            "detail": "Matched \"oligozoospermia\" at recorded span.",
+            "matched_phrase": "oligozoospermia",
+            "evidence_source": "span",
+            "match_span_text": "oligozoospermia"
+          },
+          {
+            "name": "frequency_support",
+            "status": "skip",
+            "detail": "No frequency claimed."
+          },
+          {
+            "name": "onset_support",
+            "status": "skip",
+            "detail": "No onset claimed."
+          },
+          {
+            "name": "progression_support",
+            "status": "skip",
+            "detail": "No progression claimed."
+          },
+          {
+            "name": "treatment_response_support",
+            "status": "skip",
+            "detail": "No treatment response claimed."
+          },
+          {
+            "name": "clause_attachment",
+            "status": "skip",
+            "detail": "No onset attachment to verify."
+          },
+          {
+            "name": "alias_shadow",
+            "status": "pass",
+            "detail": "No longer enclosing phenotype phrase detected."
+          },
+          {
+            "name": "disease_subtype_leak",
+            "status": "skip",
+            "detail": "No onset claimed."
+          },
+          {
+            "name": "excluded_status",
+            "status": "skip",
+            "detail": "Feature is present, not excluded."
+          },
+          {
+            "name": "table_concordance",
+            "status": "pass",
+            "detail": "Phenotype appears in \"Table 1\".",
+            "table_phenotype": "Severe oligozoospermia",
+            "table_frequency": null
+          },
+          {
+            "name": "section_branch_consistency",
+            "status": "skip",
+            "detail": "Section heading does not map to a supported audit branch."
+          }
+        ]
+      }
+    },
+    {
+      "hpo_id": "HP:0034299",
+      "hpo_label": "Sertoli cell-only phenotype",
+      "status": "present",
+      "source_sentence": "Small testes in ~70% (males with Sertoli cell-only syndrome)",
+      "match_text": "Sertoli cell-only",
+      "verdict": "FAILED",
+      "auto_accept_eligible": false,
+      "auto_accept_reasons": [
+        "source_span:skip",
+        "frequency_support:fail",
+        "contains_failed_check"
+      ],
+      "checks": [
+        {
+          "name": "source_span",
+          "status": "skip",
+          "detail": "No sentence span recorded."
+        },
+        {
+          "name": "phenotype_presence",
+          "status": "pass",
+          "detail": "Matched \"Sertoli cell-only\" in source sentence.",
+          "matched_phrase": "Sertoli cell-only",
+          "evidence_source": "stored"
+        },
+        {
+          "name": "frequency_support",
+          "status": "fail",
+          "detail": "Frequency span text \"rti\" does not match claimed frequency \"70%\"."
+        },
+        {
+          "name": "onset_support",
+          "status": "skip",
+          "detail": "No onset claimed."
+        },
+        {
+          "name": "progression_support",
+          "status": "skip",
+          "detail": "No progression claimed."
+        },
+        {
+          "name": "treatment_response_support",
+          "status": "skip",
+          "detail": "No treatment response claimed."
+        },
+        {
+          "name": "clause_attachment",
+          "status": "skip",
+          "detail": "No onset attachment to verify."
+        },
+        {
+          "name": "alias_shadow",
+          "status": "pass",
+          "detail": "No longer enclosing phenotype phrase detected."
+        },
+        {
+          "name": "disease_subtype_leak",
+          "status": "skip",
+          "detail": "No onset claimed."
+        },
+        {
+          "name": "excluded_status",
+          "status": "skip",
+          "detail": "Feature is present, not excluded."
+        },
+        {
+          "name": "table_concordance",
+          "status": "skip",
+          "detail": "No matching table row found for this phenotype."
+        },
+        {
+          "name": "section_branch_consistency",
+          "status": "skip",
+          "detail": "Section heading does not map to a supported audit branch."
+        }
+      ],
+      "human_review": {
+        "review_id": "review-6-hp-0034299-present",
+        "review_href": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/genereviews-pipeline-latest5-settled-20260330/stage7_verify_medgemma/review_pages/Y_Chromosome_Infertility_review.html#review-6-hp-0034299-present",
+        "hosted_review_href": "/audit/genereviews?chapter=y_chromosome_infertility#review-6-hp-0034299-present",
+        "chapter_key": "y_chromosome_infertility",
+        "nbk_id": "NBK1339",
+        "chapter_title": "Y Chromosome Infertility - GeneReviews® - NCBI Bookshelf",
+        "source_url": "https://www.ncbi.nlm.nih.gov/books/NBK1339/",
+        "hpo_id": "HP:0034299",
+        "hpo_label": "Sertoli cell-only phenotype",
+        "status": "present",
+        "verdict": "FAILED",
+        "auto_accept_eligible": false,
+        "auto_accept_reasons": [
+          "source_span:skip",
+          "frequency_support:fail",
+          "contains_failed_check"
+        ],
+        "local_clinical_domains": [],
+        "section_id": null,
+        "section_heading": null,
+        "paragraph_id": null,
+        "sentence_id": null,
+        "paragraph_char_start": null,
+        "paragraph_char_end": null,
+        "sentence_char_start": null,
+        "sentence_char_end": null,
+        "sentence_text": "Small testes in ~70% (males with Sertoli cell-only syndrome)",
+        "paragraph_text": "Small testes in ~70% (males with Sertoli cell-only syndrome)",
+        "matched_phrase": "Sertoli cell-only",
+        "match_span_text": null,
+        "frequency_raw": "70%",
+        "onset_raw": null,
+        "progression_raw": null,
+        "treatment_response_raw": null,
+        "spans": [
+          {
+            "key": "frequency",
+            "label": "Frequency",
+            "char_start": 17,
+            "char_end": 20,
+            "text": "rti"
+          }
+        ],
+        "failed_checks": [
+          "frequency_support"
+        ],
+        "flagged_checks": [],
+        "checks": [
+          {
+            "name": "source_span",
+            "status": "skip",
+            "detail": "No sentence span recorded."
+          },
+          {
+            "name": "phenotype_presence",
+            "status": "pass",
+            "detail": "Matched \"Sertoli cell-only\" in source sentence.",
+            "matched_phrase": "Sertoli cell-only",
+            "evidence_source": "stored"
+          },
+          {
+            "name": "frequency_support",
+            "status": "fail",
+            "detail": "Frequency span text \"rti\" does not match claimed frequency \"70%\"."
+          },
+          {
+            "name": "onset_support",
+            "status": "skip",
+            "detail": "No onset claimed."
+          },
+          {
+            "name": "progression_support",
+            "status": "skip",
+            "detail": "No progression claimed."
+          },
+          {
+            "name": "treatment_response_support",
+            "status": "skip",
+            "detail": "No treatment response claimed."
+          },
+          {
+            "name": "clause_attachment",
+            "status": "skip",
+            "detail": "No onset attachment to verify."
+          },
+          {
+            "name": "alias_shadow",
+            "status": "pass",
+            "detail": "No longer enclosing phenotype phrase detected."
+          },
+          {
+            "name": "disease_subtype_leak",
+            "status": "skip",
+            "detail": "No onset claimed."
+          },
+          {
+            "name": "excluded_status",
+            "status": "skip",
+            "detail": "Feature is present, not excluded."
+          },
+          {
+            "name": "table_concordance",
+            "status": "skip",
+            "detail": "No matching table row found for this phenotype."
+          },
+          {
+            "name": "section_branch_consistency",
+            "status": "skip",
+            "detail": "Section heading does not map to a supported audit branch."
+          }
+        ]
+      }
+    }
+  ]
+}

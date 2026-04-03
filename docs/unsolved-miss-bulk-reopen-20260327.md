@@ -10,6 +10,27 @@ Method:
 Skipped from this unresolved batch:
 - PMID_33766796_16 / SETD2: already source-rescued in saved symmetric shadow (140 -> 1), so excluded from this unresolved batch.
 
+## ML / Scorer Problem Crackers
+
+### PMID_35190816_STX_Syrbe_6
+- Truth: `STXBP1`
+- Broad mimic winner: `GAMT`
+- Status: unresolved after whole-graph structured enrichment, manual curated overlay, and STX-specific GeneReviews overlay
+- Why flagged as ML / scorer:
+  - this no longer looks like a primary source-gap problem
+  - `GAMT` keeps the broader exact packet fit
+  - `STXBP1` already carries the same hypotonia family semantically, but loses the exact-match race on `Floppy infant`
+  - seizure contradiction hurts both sides because both the direct and support surfaces contain `Seizure`
+- Current evidence:
+  - `GAMT` direct exacts: `Floppy infant`, `Ataxia`, `Global developmental delay`, `Tremor`, `Absent speech`, `Seizure`
+  - `STXBP1` direct exacts: `Ataxia`, `Global developmental delay`, `Tremor`, `Absent speech`, `Seizure`
+  - `STXBP1` still has `Hypotonia` / `Generalized hypotonia` on the gene and disease surfaces
+  - ontology path confirms `Floppy infant -> Hypotonia`, so the remaining gap is more about score shape than missing ontology reach
+- Best next scorer questions:
+  - exact-match bias on broad packets
+  - `max(direct, support)` gene-score combination
+  - whether parent-child near-equivalence pairs like `Floppy infant <-> Hypotonia` need tighter handling
+
 ## PMID_29330883_Subject9
 - Truth: `RERE` / `neurodevelopmental disorder with or without anomalies of the brain, eye, or heart`
 - Outranker: `MED13` / `intellectual developmental disorder 61`

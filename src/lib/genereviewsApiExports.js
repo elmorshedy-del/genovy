@@ -19,6 +19,17 @@ function normalizeFrequencyValue(rawValue) {
       normalization_method: null
     };
   }
+  const rangeMatch = raw.match(/(\d+(?:\.\d+)?)\s*%\s*(?:-|–|—|\bto\b)\s*(\d+(?:\.\d+)?)\s*%/i);
+  if (rangeMatch) {
+    const minValue = Math.min(Number(rangeMatch[1]), Number(rangeMatch[2])) / 100;
+    const maxValue = Math.max(Number(rangeMatch[1]), Number(rangeMatch[2])) / 100;
+    return {
+      value_numeric: (minValue + maxValue) / 2,
+      value_min: minValue,
+      value_max: maxValue,
+      normalization_method: 'percentage_range'
+    };
+  }
   const percentageMatch = raw.match(/(\d+(?:\.\d+)?)\s*%/);
   if (percentageMatch) {
     const value = Number(percentageMatch[1]) / 100;

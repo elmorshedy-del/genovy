@@ -1,0 +1,419 @@
+{
+  "created_at": "2026-04-01T00:28:14.686Z",
+  "nbk_id": "NBK1339",
+  "chapter_title": "Y Chromosome Infertility - GeneReviews® - NCBI Bookshelf",
+  "chapter_key": "y_chromosome_infertility",
+  "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK1339/",
+  "heading_inventory": [
+    {
+      "tag": "h3",
+      "heading": "Suggestive Findings"
+    },
+    {
+      "tag": "h3",
+      "heading": "Table 1."
+    },
+    {
+      "tag": "h2",
+      "heading": "Clinical Characteristics"
+    },
+    {
+      "tag": "h3",
+      "heading": "Clinical Description"
+    }
+  ],
+  "chapter_domains": [
+    {
+      "key": "renal_genitourinary",
+      "label": "Renal / Genitourinary",
+      "evidence_headings": [],
+      "evidence_snippets": [
+        "osis for finding any sperm with testicular sperm extraction (TESE). Males with AZFc deleti"
+      ]
+    }
+  ],
+  "clinical_text": "Y chromosome infertility should be suspected in males with the following clinical and laboratory features.\n\nClinical features\n\nA history of infertility\n\nNormal physical examination in ~30%\n\nSmall testes in ~70% (males with Sertoli cell-only syndrome)\n\nLaboratory features\n\nSemen analysis. Ejaculate is examined to determine the number, motility, and morphology of sperm. Semen analysis should follow the WHO guidelines, Laboratory Manual for the Examination and Processing of Human Semen [ WHO 2010 ]. The following categories of sperm count are identified ( Table 1 ).\n\nClassification of Sperm Count\n\nView in own window\n\nMales with Y chromosome infertility usually have no symptoms other than infertility. A physical examination may reveal small testes in those with Sertoli cell-only (SCO) syndrome. Physical examination is normal in approximately 30% of males with Y chromosome infertility.\n\nMales with Y chromosome infertility have azoospermia or severe, moderate, or mild oligozoospermia depending on the location and size of the Y chromosome deletion (see Genotype-Phenotype Correlations ). Most males with AZFa or AZFb/c deletions have a very poor prognosis for finding any sperm with testicular sperm extraction (TESE). Males with AZFc deletions (b2/b4 or gr/gr) have an extremely favorable prognosis (87%) for finding sperm sufficient for successful intracytoplasmic sperm injection (ICSI).\n\nOligozoospermia may be compatible with fertility when the female partner is very fertile.",
+  "text_sha256": "0eb15773eece2944955ea576b02ef60b040b2dee2e90bf7c9a7828d85e2c3edf",
+  "section_count": 3,
+  "paragraph_count": 12,
+  "sentence_count": 19,
+  "sections": [
+    {
+      "section_id": "section_Suggestive_Findings",
+      "section_heading": "Suggestive Findings",
+      "paragraph_ids": [
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7"
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "section_id": "section_Table_1",
+      "section_heading": "Table 1.",
+      "paragraph_ids": [
+        "p8",
+        "p9"
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "section_id": "section_Clinical_Description",
+      "section_heading": "Clinical Description",
+      "paragraph_ids": [
+        "p10",
+        "p11",
+        "p12"
+      ],
+      "local_clinical_domains": [
+        {
+          "key": "renal_genitourinary",
+          "label": "Renal / Genitourinary",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "osis for finding any sperm with testicular sperm extraction (TESE). Males with AZFc deleti"
+          ]
+        }
+      ]
+    }
+  ],
+  "paragraphs": [
+    {
+      "paragraph_id": "p1",
+      "paragraph_index": 1,
+      "text": "Y chromosome infertility should be suspected in males with the following clinical and laboratory features.",
+      "char_start": 0,
+      "char_end": 106,
+      "section_id": "section_Suggestive_Findings",
+      "section_heading": "Suggestive Findings",
+      "sentences": [
+        {
+          "sentence_id": "p1_s1",
+          "sentence_index": 1,
+          "text": "Y chromosome infertility should be suspected in males with the following clinical and laboratory features.",
+          "char_start": 0,
+          "char_end": 106,
+          "section_id": "section_Suggestive_Findings",
+          "section_heading": "Suggestive Findings"
+        }
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "paragraph_id": "p2",
+      "paragraph_index": 2,
+      "text": "Clinical features",
+      "char_start": 108,
+      "char_end": 125,
+      "section_id": "section_Suggestive_Findings",
+      "section_heading": "Suggestive Findings",
+      "sentences": [
+        {
+          "sentence_id": "p2_s1",
+          "sentence_index": 1,
+          "text": "Clinical features",
+          "char_start": 108,
+          "char_end": 125,
+          "section_id": "section_Suggestive_Findings",
+          "section_heading": "Suggestive Findings"
+        }
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "paragraph_id": "p3",
+      "paragraph_index": 3,
+      "text": "A history of infertility",
+      "char_start": 127,
+      "char_end": 151,
+      "section_id": "section_Suggestive_Findings",
+      "section_heading": "Suggestive Findings",
+      "sentences": [
+        {
+          "sentence_id": "p3_s1",
+          "sentence_index": 1,
+          "text": "A history of infertility",
+          "char_start": 127,
+          "char_end": 151,
+          "section_id": "section_Suggestive_Findings",
+          "section_heading": "Suggestive Findings"
+        }
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "paragraph_id": "p4",
+      "paragraph_index": 4,
+      "text": "Normal physical examination in ~30%",
+      "char_start": 153,
+      "char_end": 188,
+      "section_id": "section_Suggestive_Findings",
+      "section_heading": "Suggestive Findings",
+      "sentences": [
+        {
+          "sentence_id": "p4_s1",
+          "sentence_index": 1,
+          "text": "Normal physical examination in ~30%",
+          "char_start": 153,
+          "char_end": 188,
+          "section_id": "section_Suggestive_Findings",
+          "section_heading": "Suggestive Findings"
+        }
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "paragraph_id": "p5",
+      "paragraph_index": 5,
+      "text": "Small testes in ~70% (males with Sertoli cell-only syndrome)",
+      "char_start": 190,
+      "char_end": 250,
+      "section_id": "section_Suggestive_Findings",
+      "section_heading": "Suggestive Findings",
+      "sentences": [
+        {
+          "sentence_id": "p5_s1",
+          "sentence_index": 1,
+          "text": "Small testes in ~70% (males with Sertoli cell-only syndrome)",
+          "char_start": 190,
+          "char_end": 250,
+          "section_id": "section_Suggestive_Findings",
+          "section_heading": "Suggestive Findings"
+        }
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "paragraph_id": "p6",
+      "paragraph_index": 6,
+      "text": "Laboratory features",
+      "char_start": 252,
+      "char_end": 271,
+      "section_id": "section_Suggestive_Findings",
+      "section_heading": "Suggestive Findings",
+      "sentences": [
+        {
+          "sentence_id": "p6_s1",
+          "sentence_index": 1,
+          "text": "Laboratory features",
+          "char_start": 252,
+          "char_end": 271,
+          "section_id": "section_Suggestive_Findings",
+          "section_heading": "Suggestive Findings"
+        }
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "paragraph_id": "p7",
+      "paragraph_index": 7,
+      "text": "Semen analysis. Ejaculate is examined to determine the number, motility, and morphology of sperm. Semen analysis should follow the WHO guidelines, Laboratory Manual for the Examination and Processing of Human Semen [ WHO 2010 ]. The following categories of sperm count are identified ( Table 1 ).",
+      "char_start": 273,
+      "char_end": 569,
+      "section_id": "section_Suggestive_Findings",
+      "section_heading": "Suggestive Findings",
+      "sentences": [
+        {
+          "sentence_id": "p7_s1",
+          "sentence_index": 1,
+          "text": "Semen analysis.",
+          "char_start": 273,
+          "char_end": 288,
+          "section_id": "section_Suggestive_Findings",
+          "section_heading": "Suggestive Findings"
+        },
+        {
+          "sentence_id": "p7_s2",
+          "sentence_index": 2,
+          "text": "Ejaculate is examined to determine the number, motility, and morphology of sperm.",
+          "char_start": 289,
+          "char_end": 370,
+          "section_id": "section_Suggestive_Findings",
+          "section_heading": "Suggestive Findings"
+        },
+        {
+          "sentence_id": "p7_s3",
+          "sentence_index": 3,
+          "text": "Semen analysis should follow the WHO guidelines, Laboratory Manual for the Examination and Processing of Human Semen [ WHO 2010 ].",
+          "char_start": 371,
+          "char_end": 501,
+          "section_id": "section_Suggestive_Findings",
+          "section_heading": "Suggestive Findings"
+        },
+        {
+          "sentence_id": "p7_s4",
+          "sentence_index": 4,
+          "text": "The following categories of sperm count are identified ( Table 1 ).",
+          "char_start": 502,
+          "char_end": 569,
+          "section_id": "section_Suggestive_Findings",
+          "section_heading": "Suggestive Findings"
+        }
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "paragraph_id": "p8",
+      "paragraph_index": 8,
+      "text": "Classification of Sperm Count",
+      "char_start": 571,
+      "char_end": 600,
+      "section_id": "section_Table_1",
+      "section_heading": "Table 1.",
+      "sentences": [
+        {
+          "sentence_id": "p8_s1",
+          "sentence_index": 1,
+          "text": "Classification of Sperm Count",
+          "char_start": 571,
+          "char_end": 600,
+          "section_id": "section_Table_1",
+          "section_heading": "Table 1."
+        }
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "paragraph_id": "p9",
+      "paragraph_index": 9,
+      "text": "View in own window",
+      "char_start": 602,
+      "char_end": 620,
+      "section_id": "section_Table_1",
+      "section_heading": "Table 1.",
+      "sentences": [
+        {
+          "sentence_id": "p9_s1",
+          "sentence_index": 1,
+          "text": "View in own window",
+          "char_start": 602,
+          "char_end": 620,
+          "section_id": "section_Table_1",
+          "section_heading": "Table 1."
+        }
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "paragraph_id": "p10",
+      "paragraph_index": 10,
+      "text": "Males with Y chromosome infertility usually have no symptoms other than infertility. A physical examination may reveal small testes in those with Sertoli cell-only (SCO) syndrome. Physical examination is normal in approximately 30% of males with Y chromosome infertility.",
+      "char_start": 622,
+      "char_end": 893,
+      "section_id": "section_Clinical_Description",
+      "section_heading": "Clinical Description",
+      "sentences": [
+        {
+          "sentence_id": "p10_s1",
+          "sentence_index": 1,
+          "text": "Males with Y chromosome infertility usually have no symptoms other than infertility.",
+          "char_start": 622,
+          "char_end": 706,
+          "section_id": "section_Clinical_Description",
+          "section_heading": "Clinical Description"
+        },
+        {
+          "sentence_id": "p10_s2",
+          "sentence_index": 2,
+          "text": "A physical examination may reveal small testes in those with Sertoli cell-only (SCO) syndrome.",
+          "char_start": 707,
+          "char_end": 801,
+          "section_id": "section_Clinical_Description",
+          "section_heading": "Clinical Description"
+        },
+        {
+          "sentence_id": "p10_s3",
+          "sentence_index": 3,
+          "text": "Physical examination is normal in approximately 30% of males with Y chromosome infertility.",
+          "char_start": 802,
+          "char_end": 893,
+          "section_id": "section_Clinical_Description",
+          "section_heading": "Clinical Description"
+        }
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "paragraph_id": "p11",
+      "paragraph_index": 11,
+      "text": "Males with Y chromosome infertility have azoospermia or severe, moderate, or mild oligozoospermia depending on the location and size of the Y chromosome deletion (see Genotype-Phenotype Correlations ). Most males with AZFa or AZFb/c deletions have a very poor prognosis for finding any sperm with testicular sperm extraction (TESE). Males with AZFc deletions (b2/b4 or gr/gr) have an extremely favorable prognosis (87%) for finding sperm sufficient for successful intracytoplasmic sperm injection (ICSI).",
+      "char_start": 895,
+      "char_end": 1399,
+      "section_id": "section_Clinical_Description",
+      "section_heading": "Clinical Description",
+      "sentences": [
+        {
+          "sentence_id": "p11_s1",
+          "sentence_index": 1,
+          "text": "Males with Y chromosome infertility have azoospermia or severe, moderate, or mild oligozoospermia depending on the location and size of the Y chromosome deletion (see Genotype-Phenotype Correlations ).",
+          "char_start": 895,
+          "char_end": 1096,
+          "section_id": "section_Clinical_Description",
+          "section_heading": "Clinical Description"
+        },
+        {
+          "sentence_id": "p11_s2",
+          "sentence_index": 2,
+          "text": "Most males with AZFa or AZFb/c deletions have a very poor prognosis for finding any sperm with testicular sperm extraction (TESE).",
+          "char_start": 1097,
+          "char_end": 1227,
+          "section_id": "section_Clinical_Description",
+          "section_heading": "Clinical Description"
+        },
+        {
+          "sentence_id": "p11_s3",
+          "sentence_index": 3,
+          "text": "Males with AZFc deletions (b2/b4 or gr/gr) have an extremely favorable prognosis (87%) for finding sperm sufficient for successful intracytoplasmic sperm injection (ICSI).",
+          "char_start": 1228,
+          "char_end": 1399,
+          "section_id": "section_Clinical_Description",
+          "section_heading": "Clinical Description"
+        }
+      ],
+      "local_clinical_domains": [
+        {
+          "key": "renal_genitourinary",
+          "label": "Renal / Genitourinary",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "osis for finding any sperm with testicular sperm extraction (TESE). Males with AZFc deleti"
+          ]
+        }
+      ]
+    },
+    {
+      "paragraph_id": "p12",
+      "paragraph_index": 12,
+      "text": "Oligozoospermia may be compatible with fertility when the female partner is very fertile.",
+      "char_start": 1401,
+      "char_end": 1490,
+      "section_id": "section_Clinical_Description",
+      "section_heading": "Clinical Description",
+      "sentences": [
+        {
+          "sentence_id": "p12_s1",
+          "sentence_index": 1,
+          "text": "Oligozoospermia may be compatible with fertility when the female partner is very fertile.",
+          "char_start": 1401,
+          "char_end": 1490,
+          "section_id": "section_Clinical_Description",
+          "section_heading": "Clinical Description"
+        }
+      ],
+      "local_clinical_domains": [
+        {
+          "key": "renal_genitourinary",
+          "label": "Renal / Genitourinary",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "ospermia may be compatible with fertility when the female partner is very fertile."
+          ]
+        }
+      ]
+    }
+  ]
+}

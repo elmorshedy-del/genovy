@@ -1,0 +1,2134 @@
+{
+  "chapter_key": "zap70_related_combined_immunodeficiency",
+  "nbk_id": "NBK20221",
+  "chapter_title": "ZAP70-Related Combined Immunodeficiency",
+  "source_url": "https://www.ncbi.nlm.nih.gov/books/NBK20221/",
+  "diseases": [],
+  "genes": [
+    "ZAP70"
+  ],
+  "chapter_domains": [
+    {
+      "key": "neurologic",
+      "label": "Neurologic",
+      "evidence_headings": [],
+      "evidence_snippets": [
+        "recurrent infections and silent brain infarcts; one also had congenital nephrotic syn"
+      ]
+    },
+    {
+      "key": "hematologic_immunologic",
+      "label": "Hematologic / Immunologic",
+      "evidence_headings": [],
+      "evidence_snippets": [
+        "ty, lymphoproliferation, and/or immune dysregulation with or without evidence of immun"
+      ]
+    }
+  ],
+  "heading_inventory": [
+    {
+      "tag": "h3",
+      "heading": "Suggestive Findings"
+    },
+    {
+      "tag": "h2",
+      "heading": "Clinical Characteristics"
+    },
+    {
+      "tag": "h3",
+      "heading": "Clinical Description"
+    }
+  ],
+  "extraction_date": "2026-04-01",
+  "pipeline_version": "genereviews-api-export-v1-20260331",
+  "total_assertions": 26,
+  "assertions": [
+    {
+      "assertion_id": "GR-NBK20221-unmapped-HP:0001890-present",
+      "disease_curie": null,
+      "disease_label": null,
+      "gene_symbols": [
+        "ZAP70"
+      ],
+      "local_clinical_domains": [
+        {
+          "key": "neurologic",
+          "label": "Neurologic",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "recurrent infections and silent brain infarcts; one also had congenital nephrotic syn"
+          ]
+        },
+        {
+          "key": "hematologic_immunologic",
+          "label": "Hematologic / Immunologic",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "ndrome and autoimmune hemolytic anemia [ Akar et al 2015 ]."
+          ]
+        }
+      ],
+      "phenotype_curie": "HP:0001890",
+      "phenotype_label": "Autoimmune hemolytic anemia",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK20221",
+        "chapter_title": "ZAP70-Related Combined Immunodeficiency",
+        "section_id": "section_Clinical_Description",
+        "section_heading": "Clinical Description",
+        "source_sentence": "Two individuals presented with recurrent infections and silent brain infarcts; one also had congenital nephrotic syndrome and autoimmune hemolytic anemia [ Akar et al 2015 ].",
+        "paragraph_id": "p31",
+        "sentence_id": "p31_s1",
+        "paragraph_char_start": 5429,
+        "paragraph_char_end": 5603,
+        "sentence_char_start": 5429,
+        "sentence_char_end": 5603,
+        "match_char_start": 5555,
+        "match_char_end": 5582,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK20221/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_exact_anchor",
+        "hpo_mapping_method": "graph_exact_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "VERIFIED",
+        "auto_accept_eligible": true,
+        "auto_accept_reasons": [],
+        "alias_shadow": false,
+        "section_branch_consistent": null,
+        "table_concordance": "skip",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK20221-unmapped-HP:0001873-present",
+      "disease_curie": null,
+      "disease_label": null,
+      "gene_symbols": [
+        "ZAP70"
+      ],
+      "local_clinical_domains": [
+        {
+          "key": "hematologic_immunologic",
+          "label": "Hematologic / Immunologic",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "h isolated treatment-refractory immune thrombocytopenia (ITP) has been described [ Cuv"
+          ]
+        }
+      ],
+      "phenotype_curie": "HP:0001873",
+      "phenotype_label": "Thrombocytopenia",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": "treatment-refractory",
+        "trust": "low",
+        "evidence_text": "An individual with isolated treatment-refractory immune thrombocytopenia (ITP) has been described [ Cuvelier et al 2016 ]."
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK20221",
+        "chapter_title": "ZAP70-Related Combined Immunodeficiency",
+        "section_id": "section_Clinical_Description",
+        "section_heading": "Clinical Description",
+        "source_sentence": "An individual with isolated treatment-refractory immune thrombocytopenia (ITP) has been described [ Cuvelier et al 2016 ].",
+        "paragraph_id": "p32",
+        "sentence_id": "p32_s1",
+        "paragraph_char_start": 5605,
+        "paragraph_char_end": 5727,
+        "sentence_char_start": 5605,
+        "sentence_char_end": 5727,
+        "match_char_start": 5661,
+        "match_char_end": 5677,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK20221/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_exact_anchor",
+        "hpo_mapping_method": "graph_exact_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "FLAGGED",
+        "auto_accept_eligible": false,
+        "auto_accept_reasons": [
+          "alias_shadow:flag"
+        ],
+        "alias_shadow": true,
+        "section_branch_consistent": null,
+        "table_concordance": "skip",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK20221-unmapped-HP:0034752-present",
+      "disease_curie": null,
+      "disease_label": null,
+      "gene_symbols": [
+        "ZAP70"
+      ],
+      "local_clinical_domains": [],
+      "phenotype_curie": "HP:0034752",
+      "phenotype_label": "Axillary lymphadenopathy",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK20221",
+        "chapter_title": "ZAP70-Related Combined Immunodeficiency",
+        "section_id": null,
+        "section_heading": null,
+        "source_sentence": "BCG-related complications including axillary lymphadenitis or disseminated mycobacterial disease following BCG vaccination may be presenting features [ Santos et al 2010 , Esenboga et al 2016 ].",
+        "paragraph_id": null,
+        "sentence_id": null,
+        "paragraph_char_start": null,
+        "paragraph_char_end": null,
+        "sentence_char_start": null,
+        "sentence_char_end": null,
+        "match_char_start": null,
+        "match_char_end": null,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK20221/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_alias_anchor",
+        "hpo_mapping_method": "graph_alias_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "FLAGGED",
+        "auto_accept_eligible": false,
+        "auto_accept_reasons": [
+          "source_span:skip",
+          "alias_shadow:flag"
+        ],
+        "alias_shadow": true,
+        "section_branch_consistent": null,
+        "table_concordance": "skip",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK20221-unmapped-HP:0025722-present",
+      "disease_curie": null,
+      "disease_label": null,
+      "gene_symbols": [
+        "ZAP70"
+      ],
+      "local_clinical_domains": [],
+      "phenotype_curie": "HP:0025722",
+      "phenotype_label": "Cerebral infarct",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK20221",
+        "chapter_title": "ZAP70-Related Combined Immunodeficiency",
+        "section_id": null,
+        "section_heading": null,
+        "source_sentence": "Two individuals presented with recurrent infections and silent brain infarcts; one also had congenital nephrotic syndrome and autoimmune hemolytic anemia [ Akar et al 2015 ].",
+        "paragraph_id": null,
+        "sentence_id": null,
+        "paragraph_char_start": null,
+        "paragraph_char_end": null,
+        "sentence_char_start": null,
+        "sentence_char_end": null,
+        "match_char_start": null,
+        "match_char_end": null,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK20221/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_alias_anchor",
+        "hpo_mapping_method": "graph_alias_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "FLAGGED",
+        "auto_accept_eligible": false,
+        "auto_accept_reasons": [
+          "source_span:skip",
+          "alias_shadow:flag"
+        ],
+        "alias_shadow": true,
+        "section_branch_consistent": null,
+        "table_concordance": "skip",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK20221-unmapped-HP:0002028-present",
+      "disease_curie": null,
+      "disease_label": null,
+      "gene_symbols": [
+        "ZAP70"
+      ],
+      "local_clinical_domains": [],
+      "phenotype_curie": "HP:0002028",
+      "phenotype_label": "Chronic diarrhea",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK20221",
+        "chapter_title": "ZAP70-Related Combined Immunodeficiency",
+        "section_id": "section_Suggestive_Findings",
+        "section_heading": "Suggestive Findings",
+        "source_sentence": "Chronic diarrhea and failure to thrive",
+        "paragraph_id": "p3",
+        "sentence_id": "p3_s1",
+        "paragraph_char_start": 233,
+        "paragraph_char_end": 271,
+        "sentence_char_start": 233,
+        "sentence_char_end": 271,
+        "match_char_start": 233,
+        "match_char_end": 249,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK20221/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_alias_anchor",
+        "hpo_mapping_method": "graph_alias_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "VERIFIED",
+        "auto_accept_eligible": true,
+        "auto_accept_reasons": [],
+        "alias_shadow": false,
+        "section_branch_consistent": null,
+        "table_concordance": "skip",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK20221-unmapped-HP:0009098-present",
+      "disease_curie": null,
+      "disease_label": null,
+      "gene_symbols": [
+        "ZAP70"
+      ],
+      "local_clinical_domains": [],
+      "phenotype_curie": "HP:0009098",
+      "phenotype_label": "Chronic oral candidiasis",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": null,
+        "evidence_text": "Oral candidiasis is also common [ Cuvelier et al 2016 , Schroeder et al 2016 ]."
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK20221",
+        "chapter_title": "ZAP70-Related Combined Immunodeficiency",
+        "section_id": null,
+        "section_heading": null,
+        "source_sentence": "Oral candidiasis is also common [ Cuvelier et al 2016 , Schroeder et al 2016 ].",
+        "paragraph_id": null,
+        "sentence_id": null,
+        "paragraph_char_start": null,
+        "paragraph_char_end": null,
+        "sentence_char_start": null,
+        "sentence_char_end": null,
+        "match_char_start": null,
+        "match_char_end": null,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK20221/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_alias_anchor",
+        "hpo_mapping_method": "graph_alias_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "FAILED",
+        "auto_accept_eligible": false,
+        "auto_accept_reasons": [
+          "source_span:skip",
+          "frequency_support:fail",
+          "contains_failed_check"
+        ],
+        "alias_shadow": false,
+        "section_branch_consistent": null,
+        "table_concordance": "skip",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK20221-unmapped-HP:0002583-present",
+      "disease_curie": null,
+      "disease_label": null,
+      "gene_symbols": [
+        "ZAP70"
+      ],
+      "local_clinical_domains": [],
+      "phenotype_curie": "HP:0002583",
+      "phenotype_label": "Colitis",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": "refractory",
+        "trust": "low",
+        "evidence_text": "Two sibs had refractory autoimmune features including nephrotic syndrome/proteinuria, bullous pemphigoid, and colitis; one also developed autoantibodies to factor VIII caused by a hypomorphic and weakly activating ZAP70 pathogenic variant [ Chan et al 2016 ]."
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK20221",
+        "chapter_title": "ZAP70-Related Combined Immunodeficiency",
+        "section_id": "section_Clinical_Description",
+        "section_heading": "Clinical Description",
+        "source_sentence": "Two sibs had refractory autoimmune features including nephrotic syndrome/proteinuria, bullous pemphigoid, and colitis; one also developed autoantibodies to factor VIII caused by a hypomorphic and weakly activating ZAP70 pathogenic variant [ Chan et al 2016 ].",
+        "paragraph_id": "p33",
+        "sentence_id": "p33_s1",
+        "paragraph_char_start": 5729,
+        "paragraph_char_end": 5988,
+        "sentence_char_start": 5729,
+        "sentence_char_end": 5988,
+        "match_char_start": 5839,
+        "match_char_end": 5846,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK20221/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_exact_anchor",
+        "hpo_mapping_method": "graph_exact_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "VERIFIED",
+        "auto_accept_eligible": true,
+        "auto_accept_reasons": [],
+        "alias_shadow": false,
+        "section_branch_consistent": null,
+        "table_concordance": "skip",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK20221-unmapped-HP:0005387-present",
+      "disease_curie": null,
+      "disease_label": null,
+      "gene_symbols": [
+        "ZAP70"
+      ],
+      "local_clinical_domains": [],
+      "phenotype_curie": "HP:0005387",
+      "phenotype_label": "Combined immunodeficiency",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK20221",
+        "chapter_title": "ZAP70-Related Combined Immunodeficiency",
+        "section_id": "section_Suggestive_Findings",
+        "section_heading": "Suggestive Findings",
+        "source_sentence": "ZAP70 -related combined immunodeficiency ( ZAP70 -related CID) should be suspected in individuals who present with the following findings within the first two years of life:",
+        "paragraph_id": "p1",
+        "sentence_id": "p1_s1",
+        "paragraph_char_start": 0,
+        "paragraph_char_end": 173,
+        "sentence_char_start": 0,
+        "sentence_char_end": 173,
+        "match_char_start": 15,
+        "match_char_end": 40,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK20221/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_exact_anchor",
+        "hpo_mapping_method": "graph_exact_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "FLAGGED",
+        "auto_accept_eligible": false,
+        "auto_accept_reasons": [
+          "alias_shadow:flag"
+        ],
+        "alias_shadow": true,
+        "section_branch_consistent": null,
+        "table_concordance": "skip",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK20221-unmapped-HP:0008677-present",
+      "disease_curie": null,
+      "disease_label": null,
+      "gene_symbols": [
+        "ZAP70"
+      ],
+      "local_clinical_domains": [
+        {
+          "key": "neurologic",
+          "label": "Neurologic",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "recurrent infections and silent brain infarcts; one also had congenital nephrotic syn"
+          ]
+        },
+        {
+          "key": "hematologic_immunologic",
+          "label": "Hematologic / Immunologic",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "ndrome and autoimmune hemolytic anemia [ Akar et al 2015 ]."
+          ]
+        }
+      ],
+      "phenotype_curie": "HP:0008677",
+      "phenotype_label": "Congenital nephrotic syndrome",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK20221",
+        "chapter_title": "ZAP70-Related Combined Immunodeficiency",
+        "section_id": "section_Clinical_Description",
+        "section_heading": "Clinical Description",
+        "source_sentence": "Two individuals presented with recurrent infections and silent brain infarcts; one also had congenital nephrotic syndrome and autoimmune hemolytic anemia [ Akar et al 2015 ].",
+        "paragraph_id": "p31",
+        "sentence_id": "p31_s1",
+        "paragraph_char_start": 5429,
+        "paragraph_char_end": 5603,
+        "sentence_char_start": 5429,
+        "sentence_char_end": 5603,
+        "match_char_start": 5521,
+        "match_char_end": 5550,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK20221/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_exact_anchor",
+        "hpo_mapping_method": "graph_exact_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "VERIFIED",
+        "auto_accept_eligible": true,
+        "auto_accept_reasons": [],
+        "alias_shadow": false,
+        "section_branch_consistent": null,
+        "table_concordance": "skip",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK20221-unmapped-HP:0004313-present",
+      "disease_curie": null,
+      "disease_label": null,
+      "gene_symbols": [
+        "ZAP70"
+      ],
+      "local_clinical_domains": [],
+      "phenotype_curie": "HP:0004313",
+      "phenotype_label": "Decreased circulating immunoglobulin concentration",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK20221",
+        "chapter_title": "ZAP70-Related Combined Immunodeficiency",
+        "section_id": "section_Suggestive_Findings",
+        "section_heading": "Suggestive Findings",
+        "source_sentence": "Many affected individuals have severe hypogammaglobulinemia, but normal immunoglobulins or elevated IgA, IgM, and/or IgE can also be seen [ Turul et al 2009 , Cuvelier et al 2016 ].",
+        "paragraph_id": "p22",
+        "sentence_id": "p22_s2",
+        "paragraph_char_start": 2971,
+        "paragraph_char_end": 3194,
+        "sentence_char_start": 3013,
+        "sentence_char_end": 3194,
+        "match_char_start": 3051,
+        "match_char_end": 3072,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK20221/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_alias_anchor",
+        "hpo_mapping_method": "graph_alias_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "FLAGGED",
+        "auto_accept_eligible": false,
+        "auto_accept_reasons": [
+          "alias_shadow:flag"
+        ],
+        "alias_shadow": true,
+        "section_branch_consistent": null,
+        "table_concordance": "skip",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK20221-unmapped-HP:0000964-present",
+      "disease_curie": null,
+      "disease_label": null,
+      "gene_symbols": [
+        "ZAP70"
+      ],
+      "local_clinical_domains": [],
+      "phenotype_curie": "HP:0000964",
+      "phenotype_label": "Eczematoid dermatitis",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": "resistant to therapy",
+        "trust": "low",
+        "evidence_text": "Reports of milder phenotypes in sibs of children who had died from ZAP70 -related CID include a child age five months with recurrent lower-respiratory disease but no severe infections [ Turul et al 2009 ] and a child with persistent dermatitis resistant to therapy [ Katamura et al 1999 ]."
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK20221",
+        "chapter_title": "ZAP70-Related Combined Immunodeficiency",
+        "section_id": "section_Clinical_Description",
+        "section_heading": "Clinical Description",
+        "source_sentence": "Reports of milder phenotypes in sibs of children who had died from ZAP70 -related CID include a child age five months with recurrent lower-respiratory disease but no severe infections [ Turul et al 2009 ] and a child with persistent dermatitis resistant to therapy [ Katamura et al 1999 ].",
+        "paragraph_id": "p27",
+        "sentence_id": "p27_s1",
+        "paragraph_char_start": 4656,
+        "paragraph_char_end": 4945,
+        "sentence_char_start": 4656,
+        "sentence_char_end": 4945,
+        "match_char_start": 4889,
+        "match_char_end": 4899,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK20221/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_alias_anchor",
+        "hpo_mapping_method": "graph_alias_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "VERIFIED",
+        "auto_accept_eligible": true,
+        "auto_accept_reasons": [],
+        "alias_shadow": false,
+        "section_branch_consistent": null,
+        "table_concordance": "skip",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK20221-unmapped-HP:0001508-present",
+      "disease_curie": null,
+      "disease_label": null,
+      "gene_symbols": [
+        "ZAP70"
+      ],
+      "local_clinical_domains": [],
+      "phenotype_curie": "HP:0001508",
+      "phenotype_label": "Failure to thrive",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK20221",
+        "chapter_title": "ZAP70-Related Combined Immunodeficiency",
+        "section_id": "section_Suggestive_Findings",
+        "section_heading": "Suggestive Findings",
+        "source_sentence": "Chronic diarrhea and failure to thrive",
+        "paragraph_id": "p3",
+        "sentence_id": "p3_s1",
+        "paragraph_char_start": 233,
+        "paragraph_char_end": 271,
+        "sentence_char_start": 233,
+        "sentence_char_end": 271,
+        "match_char_start": 254,
+        "match_char_end": 271,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK20221/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_exact_anchor",
+        "hpo_mapping_method": "graph_exact_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "VERIFIED",
+        "auto_accept_eligible": true,
+        "auto_accept_reasons": [],
+        "alias_shadow": false,
+        "section_branch_consistent": null,
+        "table_concordance": "skip",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK20221-unmapped-HP:0002958-present",
+      "disease_curie": null,
+      "disease_label": null,
+      "gene_symbols": [
+        "ZAP70"
+      ],
+      "local_clinical_domains": [
+        {
+          "key": "hematologic_immunologic",
+          "label": "Hematologic / Immunologic",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "ty, lymphoproliferation, and/or immune dysregulation with or without evidence of immun"
+          ]
+        }
+      ],
+      "phenotype_curie": "HP:0002958",
+      "phenotype_label": "Immune dysregulation",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": "older age",
+        "raw": "older age",
+        "trust": "medium",
+        "evidence_text": "Note: Individuals with non-classic ZAP70 -related CID may present at an older age with symptoms of autoimmunity, lymphoproliferation, and/or immune dysregulation with or without evidence of immunodeficiency."
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK20221",
+        "chapter_title": "ZAP70-Related Combined Immunodeficiency",
+        "section_id": "section_Suggestive_Findings",
+        "section_heading": "Suggestive Findings",
+        "source_sentence": "Note: Individuals with non-classic ZAP70 -related CID may present at an older age with symptoms of autoimmunity, lymphoproliferation, and/or immune dysregulation with or without evidence of immunodeficiency.",
+        "paragraph_id": "p5",
+        "sentence_id": "p5_s1",
+        "paragraph_char_start": 461,
+        "paragraph_char_end": 668,
+        "sentence_char_start": 461,
+        "sentence_char_end": 668,
+        "match_char_start": 602,
+        "match_char_end": 622,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK20221/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_alias_anchor",
+        "hpo_mapping_method": "graph_alias_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "VERIFIED",
+        "auto_accept_eligible": true,
+        "auto_accept_reasons": [],
+        "alias_shadow": false,
+        "section_branch_consistent": null,
+        "table_concordance": "skip",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK20221-unmapped-HP:0003261-present",
+      "disease_curie": null,
+      "disease_label": null,
+      "gene_symbols": [
+        "ZAP70"
+      ],
+      "local_clinical_domains": [],
+      "phenotype_curie": "HP:0003261",
+      "phenotype_label": "Increased circulating IgA concentration",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK20221",
+        "chapter_title": "ZAP70-Related Combined Immunodeficiency",
+        "section_id": "section_Suggestive_Findings",
+        "section_heading": "Suggestive Findings",
+        "source_sentence": "Many affected individuals have severe hypogammaglobulinemia, but normal immunoglobulins or elevated IgA, IgM, and/or IgE can also be seen [ Turul et al 2009 , Cuvelier et al 2016 ].",
+        "paragraph_id": "p22",
+        "sentence_id": "p22_s2",
+        "paragraph_char_start": 2971,
+        "paragraph_char_end": 3194,
+        "sentence_char_start": 3013,
+        "sentence_char_end": 3194,
+        "match_char_start": 3104,
+        "match_char_end": 3116,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK20221/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_alias_anchor",
+        "hpo_mapping_method": "graph_alias_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "VERIFIED",
+        "auto_accept_eligible": true,
+        "auto_accept_reasons": [],
+        "alias_shadow": false,
+        "section_branch_consistent": null,
+        "table_concordance": "skip",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK20221-unmapped-HP:0100827-present",
+      "disease_curie": null,
+      "disease_label": null,
+      "gene_symbols": [
+        "ZAP70"
+      ],
+      "local_clinical_domains": [],
+      "phenotype_curie": "HP:0100827",
+      "phenotype_label": "Increased total lymphocyte count",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK20221",
+        "chapter_title": "ZAP70-Related Combined Immunodeficiency",
+        "section_id": "section_Suggestive_Findings",
+        "section_heading": "Suggestive Findings",
+        "source_sentence": "Lymphocyte function.",
+        "paragraph_id": "p13",
+        "sentence_id": "p13_s1",
+        "paragraph_char_start": 1660,
+        "paragraph_char_end": 1786,
+        "sentence_char_start": 1660,
+        "sentence_char_end": 1680,
+        "match_char_start": null,
+        "match_char_end": null,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK20221/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "llm_candidate",
+        "hpo_mapping_method": "llm_candidate",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "FAILED",
+        "auto_accept_eligible": false,
+        "auto_accept_reasons": [
+          "phenotype_presence:fail",
+          "contains_failed_check"
+        ],
+        "alias_shadow": false,
+        "section_branch_consistent": null,
+        "table_concordance": "skip",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK20221-unmapped-HP:0002840-present",
+      "disease_curie": null,
+      "disease_label": null,
+      "gene_symbols": [
+        "ZAP70"
+      ],
+      "local_clinical_domains": [],
+      "phenotype_curie": "HP:0002840",
+      "phenotype_label": "Lymphadenitis",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK20221",
+        "chapter_title": "ZAP70-Related Combined Immunodeficiency",
+        "section_id": "section_Clinical_Description",
+        "section_heading": "Clinical Description",
+        "source_sentence": "BCG-related complications including axillary lymphadenitis or disseminated mycobacterial disease following BCG vaccination may be presenting features [ Santos et al 2010 , Esenboga et al 2016 ].",
+        "paragraph_id": "p30",
+        "sentence_id": "p30_s1",
+        "paragraph_char_start": 5233,
+        "paragraph_char_end": 5427,
+        "sentence_char_start": 5233,
+        "sentence_char_end": 5427,
+        "match_char_start": 5278,
+        "match_char_end": 5291,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK20221/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_exact_anchor",
+        "hpo_mapping_method": "graph_exact_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "FLAGGED",
+        "auto_accept_eligible": false,
+        "auto_accept_reasons": [
+          "alias_shadow:flag"
+        ],
+        "alias_shadow": true,
+        "section_branch_consistent": null,
+        "table_concordance": "skip",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK20221-unmapped-HP:0002665-present",
+      "disease_curie": null,
+      "disease_label": null,
+      "gene_symbols": [
+        "ZAP70"
+      ],
+      "local_clinical_domains": [],
+      "phenotype_curie": "HP:0002665",
+      "phenotype_label": "Lymphoma",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK20221",
+        "chapter_title": "ZAP70-Related Combined Immunodeficiency",
+        "section_id": "section_Clinical_Description",
+        "section_heading": "Clinical Description",
+        "source_sentence": "A child age 11 months with ZAP70 -related CID presented with lymphoma [ Newell et al 2011 ].",
+        "paragraph_id": "p29",
+        "sentence_id": "p29_s1",
+        "paragraph_char_start": 5139,
+        "paragraph_char_end": 5231,
+        "sentence_char_start": 5139,
+        "sentence_char_end": 5231,
+        "match_char_start": 5200,
+        "match_char_end": 5208,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK20221/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_exact_anchor",
+        "hpo_mapping_method": "graph_exact_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "VERIFIED",
+        "auto_accept_eligible": true,
+        "auto_accept_reasons": [],
+        "alias_shadow": false,
+        "section_branch_consistent": null,
+        "table_concordance": "skip",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK20221-unmapped-HP:0005523-present",
+      "disease_curie": null,
+      "disease_label": null,
+      "gene_symbols": [
+        "ZAP70"
+      ],
+      "local_clinical_domains": [],
+      "phenotype_curie": "HP:0005523",
+      "phenotype_label": "Lymphoproliferative disorder",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": "infantile-onset",
+        "raw": "infantile-onset",
+        "trust": "medium",
+        "evidence_text": "An adult with a history of infantile-onset colitis, recurrent respiratory-tract infections, mucocutaneous candidiasis, HSV stomatitis, VZV infection, EBV lymphoproliferative disorder, recurrent CMV viremia, polyomaviremia, and epidermodysplasia verruciformis-like lesions due to HHV-23 was recently reported."
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK20221",
+        "chapter_title": "ZAP70-Related Combined Immunodeficiency",
+        "section_id": "section_Clinical_Description",
+        "section_heading": "Clinical Description",
+        "source_sentence": "An adult with a history of infantile-onset colitis, recurrent respiratory-tract infections, mucocutaneous candidiasis, HSV stomatitis, VZV infection, EBV lymphoproliferative disorder, recurrent CMV viremia, polyomaviremia, and epidermodysplasia verruciformis-like lesions due to HHV-23 was recently reported.",
+        "paragraph_id": "p34",
+        "sentence_id": "p34_s1",
+        "paragraph_char_start": 5990,
+        "paragraph_char_end": 6476,
+        "sentence_char_start": 5990,
+        "sentence_char_end": 6298,
+        "match_char_start": 6144,
+        "match_char_end": 6172,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK20221/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_exact_anchor",
+        "hpo_mapping_method": "graph_exact_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "FLAGGED",
+        "auto_accept_eligible": false,
+        "auto_accept_reasons": [
+          "alias_shadow:flag"
+        ],
+        "alias_shadow": true,
+        "section_branch_consistent": null,
+        "table_concordance": "skip",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK20221-unmapped-HP:0020071-present",
+      "disease_curie": null,
+      "disease_label": null,
+      "gene_symbols": [
+        "ZAP70"
+      ],
+      "local_clinical_domains": [],
+      "phenotype_curie": "HP:0020071",
+      "phenotype_label": "Viremia",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": "infantile",
+        "raw": "infantile-onset",
+        "trust": "medium",
+        "evidence_text": "An adult with a history of infantile-onset colitis, recurrent respiratory-tract infections, mucocutaneous candidiasis, HSV stomatitis, VZV infection, EBV lymphoproliferative disorder, recurrent CMV viremia, polyomaviremia, and epidermodysplasia verruciformis-like lesions due to HHV-23 was recently reported."
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK20221",
+        "chapter_title": "ZAP70-Related Combined Immunodeficiency",
+        "section_id": "section_Clinical_Description",
+        "section_heading": "Clinical Description",
+        "source_sentence": "An adult with a history of infantile-onset colitis, recurrent respiratory-tract infections, mucocutaneous candidiasis, HSV stomatitis, VZV infection, EBV lymphoproliferative disorder, recurrent CMV viremia, polyomaviremia, and epidermodysplasia verruciformis-like lesions due to HHV-23 was recently reported.",
+        "paragraph_id": "p34",
+        "sentence_id": "p34_s1",
+        "paragraph_char_start": 5990,
+        "paragraph_char_end": 6476,
+        "sentence_char_start": 5990,
+        "sentence_char_end": 6298,
+        "match_char_start": 6188,
+        "match_char_end": 6195,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK20221/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_exact_anchor",
+        "hpo_mapping_method": "graph_exact_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "FLAGGED",
+        "auto_accept_eligible": false,
+        "auto_accept_reasons": [
+          "alias_shadow:flag"
+        ],
+        "alias_shadow": true,
+        "section_branch_consistent": null,
+        "table_concordance": "skip",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK20221-unmapped-HP:0020102-present",
+      "disease_curie": null,
+      "disease_label": null,
+      "gene_symbols": [
+        "ZAP70"
+      ],
+      "local_clinical_domains": [],
+      "phenotype_curie": "HP:0020102",
+      "phenotype_label": "Pneumocystis jirovecii pneumonia",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": null,
+        "evidence_text": "Severe lower-respiratory infections are seen, most notably Pneumocystis jiroveci infections and viral infections."
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK20221",
+        "chapter_title": "ZAP70-Related Combined Immunodeficiency",
+        "section_id": null,
+        "section_heading": null,
+        "source_sentence": "Severe lower-respiratory infections are seen, most notably Pneumocystis jiroveci infections and viral infections.",
+        "paragraph_id": null,
+        "sentence_id": null,
+        "paragraph_char_start": null,
+        "paragraph_char_end": null,
+        "sentence_char_start": null,
+        "sentence_char_end": null,
+        "match_char_start": null,
+        "match_char_end": null,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK20221/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_alias_anchor",
+        "hpo_mapping_method": "graph_alias_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "FAILED",
+        "auto_accept_eligible": false,
+        "auto_accept_reasons": [
+          "source_span:skip",
+          "alias_shadow:flag",
+          "frequency_support:fail",
+          "contains_failed_check"
+        ],
+        "alias_shadow": true,
+        "section_branch_consistent": null,
+        "table_concordance": "skip",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK20221-unmapped-HP:0000093-present",
+      "disease_curie": null,
+      "disease_label": null,
+      "gene_symbols": [
+        "ZAP70"
+      ],
+      "local_clinical_domains": [],
+      "phenotype_curie": "HP:0000093",
+      "phenotype_label": "Proteinuria",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK20221",
+        "chapter_title": "ZAP70-Related Combined Immunodeficiency",
+        "section_id": "section_Clinical_Description",
+        "section_heading": "Clinical Description",
+        "source_sentence": "Two sibs had refractory autoimmune features including nephrotic syndrome/proteinuria, bullous pemphigoid, and colitis; one also developed autoantibodies to factor VIII caused by a hypomorphic and weakly activating ZAP70 pathogenic variant [ Chan et al 2016 ].",
+        "paragraph_id": "p33",
+        "sentence_id": "p33_s1",
+        "paragraph_char_start": 5729,
+        "paragraph_char_end": 5988,
+        "sentence_char_start": 5729,
+        "sentence_char_end": 5988,
+        "match_char_start": 5802,
+        "match_char_end": 5813,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK20221/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_exact_anchor",
+        "hpo_mapping_method": "graph_exact_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "VERIFIED",
+        "auto_accept_eligible": true,
+        "auto_accept_reasons": [],
+        "alias_shadow": false,
+        "section_branch_consistent": null,
+        "table_concordance": "skip",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK20221-unmapped-HP:0002719-present",
+      "disease_curie": null,
+      "disease_label": null,
+      "gene_symbols": [
+        "ZAP70"
+      ],
+      "local_clinical_domains": [
+        {
+          "key": "neurologic",
+          "label": "Neurologic",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "recurrent infections and silent brain infarcts; one also had congenital nephrotic syn"
+          ]
+        },
+        {
+          "key": "hematologic_immunologic",
+          "label": "Hematologic / Immunologic",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "ndrome and autoimmune hemolytic anemia [ Akar et al 2015 ]."
+          ]
+        }
+      ],
+      "phenotype_curie": "HP:0002719",
+      "phenotype_label": "Recurrent infections",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK20221",
+        "chapter_title": "ZAP70-Related Combined Immunodeficiency",
+        "section_id": "section_Clinical_Description",
+        "section_heading": "Clinical Description",
+        "source_sentence": "Two individuals presented with recurrent infections and silent brain infarcts; one also had congenital nephrotic syndrome and autoimmune hemolytic anemia [ Akar et al 2015 ].",
+        "paragraph_id": "p31",
+        "sentence_id": "p31_s1",
+        "paragraph_char_start": 5429,
+        "paragraph_char_end": 5603,
+        "sentence_char_start": 5429,
+        "sentence_char_end": 5603,
+        "match_char_start": 5460,
+        "match_char_end": 5480,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK20221/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_alias_anchor",
+        "hpo_mapping_method": "graph_alias_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "VERIFIED",
+        "auto_accept_eligible": true,
+        "auto_accept_reasons": [],
+        "alias_shadow": false,
+        "section_branch_consistent": null,
+        "table_concordance": "skip",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK20221-unmapped-HP:0005390-present",
+      "disease_curie": null,
+      "disease_label": null,
+      "gene_symbols": [
+        "ZAP70"
+      ],
+      "local_clinical_domains": [],
+      "phenotype_curie": "HP:0005390",
+      "phenotype_label": "Recurrent opportunistic infections",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK20221",
+        "chapter_title": "ZAP70-Related Combined Immunodeficiency",
+        "section_id": null,
+        "section_heading": null,
+        "source_sentence": "ZAP70 -related combined immunodeficiency ( ZAP70 -related CID) should be suspected in individuals who present with the following findings within the first two years of life:\n\nRecurrent viral, bacterial, and opportunistic infections\n\nChronic diarrhea and failure to thrive\n\nCharacteristic results of lymphocyte subset analysis of CD3, CD4, and CD8 T cells, lymphocyte functional testing, and ZAP-70 protein expression (See Lymphocyte development and numbers .)\n\nNote: Individuals with non-classic ZAP70 -related CID may present at an older age with symptoms of autoimmunity, lymphoproliferation, and/or immune dysregulation with or without evidence of immunodeficiency.",
+        "paragraph_id": null,
+        "sentence_id": null,
+        "paragraph_char_start": null,
+        "paragraph_char_end": null,
+        "sentence_char_start": null,
+        "sentence_char_end": null,
+        "match_char_start": null,
+        "match_char_end": null,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK20221/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_alias_anchor",
+        "hpo_mapping_method": "graph_alias_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "VERIFIED",
+        "auto_accept_eligible": false,
+        "auto_accept_reasons": [
+          "source_span:skip"
+        ],
+        "alias_shadow": false,
+        "section_branch_consistent": null,
+        "table_concordance": "skip",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK20221-unmapped-HP:0011947-present",
+      "disease_curie": null,
+      "disease_label": null,
+      "gene_symbols": [
+        "ZAP70"
+      ],
+      "local_clinical_domains": [],
+      "phenotype_curie": "HP:0011947",
+      "phenotype_label": "Respiratory tract infection",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": null,
+        "evidence_text": "Severe lower-respiratory infections are seen, most notably Pneumocystis jiroveci infections and viral infections."
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK20221",
+        "chapter_title": "ZAP70-Related Combined Immunodeficiency",
+        "section_id": "section_Clinical_Description",
+        "section_heading": "Clinical Description",
+        "source_sentence": "Severe lower-respiratory infections are seen, most notably Pneumocystis jiroveci infections and viral infections.",
+        "paragraph_id": "p25",
+        "sentence_id": "p25_s2",
+        "paragraph_char_start": 4186,
+        "paragraph_char_end": 4608,
+        "sentence_char_start": 4415,
+        "sentence_char_end": 4528,
+        "match_char_start": 4428,
+        "match_char_end": 4450,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK20221/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_alias_anchor",
+        "hpo_mapping_method": "graph_alias_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "VERIFIED",
+        "auto_accept_eligible": true,
+        "auto_accept_reasons": [],
+        "alias_shadow": false,
+        "section_branch_consistent": null,
+        "table_concordance": "skip",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK20221-unmapped-HP:0010280-present",
+      "disease_curie": null,
+      "disease_label": null,
+      "gene_symbols": [
+        "ZAP70"
+      ],
+      "local_clinical_domains": [],
+      "phenotype_curie": "HP:0010280",
+      "phenotype_label": "Stomatitis",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK20221",
+        "chapter_title": "ZAP70-Related Combined Immunodeficiency",
+        "section_id": "section_Clinical_Description",
+        "section_heading": "Clinical Description",
+        "source_sentence": "An adult with a history of infantile-onset colitis, recurrent respiratory-tract infections, mucocutaneous candidiasis, HSV stomatitis, VZV infection, EBV lymphoproliferative disorder, recurrent CMV viremia, polyomaviremia, and epidermodysplasia verruciformis-like lesions due to HHV-23 was recently reported.",
+        "paragraph_id": "p34",
+        "sentence_id": "p34_s1",
+        "paragraph_char_start": 5990,
+        "paragraph_char_end": 6476,
+        "sentence_char_start": 5990,
+        "sentence_char_end": 6298,
+        "match_char_start": 6113,
+        "match_char_end": 6123,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK20221/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_exact_anchor",
+        "hpo_mapping_method": "graph_exact_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "FLAGGED",
+        "auto_accept_eligible": false,
+        "auto_accept_reasons": [
+          "alias_shadow:flag"
+        ],
+        "alias_shadow": true,
+        "section_branch_consistent": null,
+        "table_concordance": "skip",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK20221-unmapped-HP:0002728-present",
+      "disease_curie": null,
+      "disease_label": null,
+      "gene_symbols": [
+        "ZAP70"
+      ],
+      "local_clinical_domains": [],
+      "phenotype_curie": "HP:0002728",
+      "phenotype_label": "Chronic mucocutaneous candidiasis",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": "infantile-onset",
+        "raw": "infantile-onset",
+        "trust": "medium",
+        "evidence_text": "An adult with a history of infantile-onset colitis, recurrent respiratory-tract infections, mucocutaneous candidiasis, HSV stomatitis, VZV infection, EBV lymphoproliferative disorder, recurrent CMV viremia, polyomaviremia, and epidermodysplasia verruciformis-like lesions due to HHV-23 was recently reported."
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK20221",
+        "chapter_title": "ZAP70-Related Combined Immunodeficiency",
+        "section_id": "section_Clinical_Description",
+        "section_heading": "Clinical Description",
+        "source_sentence": "An adult with a history of infantile-onset colitis, recurrent respiratory-tract infections, mucocutaneous candidiasis, HSV stomatitis, VZV infection, EBV lymphoproliferative disorder, recurrent CMV viremia, polyomaviremia, and epidermodysplasia verruciformis-like lesions due to HHV-23 was recently reported.",
+        "paragraph_id": "p34",
+        "sentence_id": "p34_s1",
+        "paragraph_char_start": 5990,
+        "paragraph_char_end": 6476,
+        "sentence_char_start": 5990,
+        "sentence_char_end": 6298,
+        "match_char_start": 6082,
+        "match_char_end": 6107,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK20221/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_alias_anchor",
+        "hpo_mapping_method": "graph_alias_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "VERIFIED",
+        "auto_accept_eligible": true,
+        "auto_accept_reasons": [],
+        "alias_shadow": false,
+        "section_branch_consistent": null,
+        "table_concordance": "skip",
+        "cross_source_concordance": []
+      }
+    }
+  ],
+  "summary_stats": {
+    "present_count": 26,
+    "excluded_count": 0,
+    "with_frequency": 0,
+    "with_onset": 4,
+    "high_trust": 26,
+    "medium_trust": 0
+  }
+}

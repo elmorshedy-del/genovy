@@ -1,0 +1,460 @@
+{
+  "created_at": "2026-04-02T19:51:24.926Z",
+  "cache_kind": "stage3_real_discovery_audit_latest10",
+  "source_manifest_paths": [
+    "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/test/fixtures/stage3DiscoveryRealHoldoutManifest.json",
+    "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/test/fixtures/stage3DiscoveryRealHoldoutNext5Manifest.json"
+  ],
+  "chapter_count": 10,
+  "chapters": [
+    {
+      "nbk_id": "NBK1339",
+      "chapter_key": "y_chromosome_infertility",
+      "chapter_title": "Y Chromosome Infertility - GeneReviews® - NCBI Bookshelf",
+      "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK1339/",
+      "structure_path": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/preservation/bucket-critical/20260331-genereviews-latest5-readiness/stage1_fetch/NBK1339_clinical_structure.json",
+      "text_sha256": "0eb15773eece2944955ea576b02ef60b040b2dee2e90bf7c9a7828d85e2c3edf",
+      "section_count": 3,
+      "paragraph_count": 12,
+      "sentence_count": 19,
+      "anchors_path": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/genereviews-pipeline-latest5-settled-20260330/stage2_anchors/Y_Chromosome_Infertility_anchors.json",
+      "anchors_cached": true,
+      "anchor_count": 6,
+      "verification_path": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/preservation/bucket-critical/20260331-genereviews-latest5-readiness/stage7_verify_medgemma/Y_Chromosome_Infertility_verification.json",
+      "verification_cached": true,
+      "verification_summary": {
+        "feature_count": 6,
+        "table_count": 1,
+        "summary": {
+          "total": 6,
+          "verified": 4,
+          "flagged": 1,
+          "failed": 1,
+          "autoAcceptEligible": 4
+        }
+      }
+    },
+    {
+      "nbk_id": "NBK1448",
+      "chapter_key": "zellweger_spectrum_disorder",
+      "chapter_title": "Zellweger Spectrum Disorder - GeneReviews® - NCBI Bookshelf",
+      "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK1448/",
+      "structure_path": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/preservation/bucket-critical/20260331-genereviews-latest5-readiness/stage1_fetch/NBK1448_clinical_structure.json",
+      "text_sha256": "afe09084813373dd57cd3aa0d1ac1ee6d4efc451d28ac69aeba48dfb2f784460",
+      "section_count": 2,
+      "paragraph_count": 7,
+      "sentence_count": 22,
+      "anchors_path": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/genereviews-pipeline-latest5-settled-20260330/stage2_anchors/Zellweger_Spectrum_Disorder_anchors.json",
+      "anchors_cached": true,
+      "anchor_count": 26,
+      "verification_path": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/preservation/bucket-critical/20260331-genereviews-latest5-readiness/stage7_verify_medgemma/Zellweger_Spectrum_Disorder_verification.json",
+      "verification_cached": true,
+      "verification_summary": {
+        "feature_count": 27,
+        "table_count": 0,
+        "summary": {
+          "total": 27,
+          "verified": 15,
+          "flagged": 11,
+          "failed": 1,
+          "autoAcceptEligible": 11
+        }
+      }
+    },
+    {
+      "nbk_id": "NBK20221",
+      "chapter_key": "zap70_related_combined_immunodeficiency",
+      "chapter_title": "ZAP70-Related Combined Immunodeficiency - GeneReviews® - NCBI Bookshelf",
+      "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK20221/",
+      "structure_path": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/preservation/bucket-critical/20260331-genereviews-latest5-readiness/stage1_fetch/NBK20221_clinical_structure.json",
+      "text_sha256": "05ca2f692dd94b653eec20f982fcff93b290fbcfee443060a51410244d9a13b9",
+      "section_count": 2,
+      "paragraph_count": 35,
+      "sentence_count": 49,
+      "anchors_path": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/genereviews-pipeline-latest5-settled-20260330/stage2_anchors/ZAP70_Related_Combined_Immunodeficiency_anchors.json",
+      "anchors_cached": true,
+      "anchor_count": 36,
+      "verification_path": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/preservation/bucket-critical/20260331-genereviews-latest5-readiness/stage7_verify_medgemma/ZAP70_Related_Combined_Immunodeficiency_verification.json",
+      "verification_cached": true,
+      "verification_summary": {
+        "feature_count": 41,
+        "table_count": 0,
+        "summary": {
+          "total": 41,
+          "verified": 19,
+          "flagged": 15,
+          "failed": 7,
+          "autoAcceptEligible": 16
+        }
+      }
+    },
+    {
+      "nbk_id": "NBK606999",
+      "chapter_key": "yif1b_related_neurodevelopmental_disorder",
+      "chapter_title": "YIF1B-Related Neurodevelopmental Disorder - GeneReviews® - NCBI Bookshelf",
+      "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK606999/",
+      "structure_path": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/preservation/bucket-critical/20260331-genereviews-latest5-readiness/stage1_fetch/NBK606999_clinical_structure.json",
+      "text_sha256": "8f4564afa48169846a643d98aa1bd08e9caca3a23fc5cd39c7921555b2255d63",
+      "section_count": 3,
+      "paragraph_count": 18,
+      "sentence_count": 23,
+      "anchors_path": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/genereviews-pipeline-latest5-settled-20260330/stage2_anchors/YIF1B_Related_Neurodevelopmental_Disorder_anchors.json",
+      "anchors_cached": true,
+      "anchor_count": 38,
+      "verification_path": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/preservation/bucket-critical/20260331-genereviews-latest5-readiness/stage7_verify_medgemma/YIF1B_Related_Neurodevelopmental_Disorder_verification.json",
+      "verification_cached": true,
+      "verification_summary": {
+        "feature_count": 40,
+        "table_count": 1,
+        "summary": {
+          "total": 40,
+          "verified": 22,
+          "flagged": 15,
+          "failed": 3,
+          "autoAcceptEligible": 17
+        }
+      }
+    },
+    {
+      "nbk_id": "NBK618356",
+      "chapter_key": "zhu_tokita_takenouchi_kim_syndrome",
+      "chapter_title": "Zhu-Tokita-Takenouchi-Kim Syndrome - GeneReviews® - NCBI Bookshelf",
+      "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK618356/",
+      "structure_path": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/preservation/bucket-critical/20260331-genereviews-latest5-readiness/stage1_fetch/NBK618356_clinical_structure.json",
+      "text_sha256": "5f565900f2f4be6f1a72224239666d30b31a7072c68abd828013109bcbe2d2b1",
+      "section_count": 3,
+      "paragraph_count": 44,
+      "sentence_count": 96,
+      "anchors_path": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/genereviews-pipeline-latest5-settled-20260330/stage2_anchors/Zhu_Tokita_Takenouchi_Kim_Syndrome_anchors.json",
+      "anchors_cached": true,
+      "anchor_count": 131,
+      "verification_path": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/preservation/bucket-critical/20260331-genereviews-latest5-readiness/stage7_verify_medgemma/Zhu_Tokita_Takenouchi_Kim_Syndrome_verification.json",
+      "verification_cached": true,
+      "verification_summary": {
+        "feature_count": 139,
+        "table_count": 1,
+        "summary": {
+          "total": 139,
+          "verified": 101,
+          "flagged": 18,
+          "failed": 20,
+          "autoAcceptEligible": 76
+        }
+      }
+    },
+    {
+      "slot_id": "next5_anchor_heavy",
+      "target_profile": "anchor_heavy",
+      "selection_status": "selected",
+      "rationale": "Highest anchor-count chapter in the reusable review-first-50 batch; best stress test for duplicate-anchor leakage.",
+      "nbk_id": "NBK1249",
+      "chapter_key": "williams_syndrome",
+      "chapter_title": "Williams Syndrome - GeneReviews® - NCBI Bookshelf",
+      "provenance_url": null,
+      "structure_path": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/genereviews-pipeline-review-first-50-20260331/stage1_fetch/NBK1249_clinical_structure.json",
+      "text_sha256": "acf3d6e1648da4225590c2d6c7f344365da524629e1e9e8993b2f6530729e846",
+      "section_count": 3,
+      "paragraph_count": 45,
+      "sentence_count": 142,
+      "anchors_path": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/genereviews-pipeline-review-first-50-20260331/stage2_anchors/Williams_Syndrome_anchors.json",
+      "anchors_cached": true,
+      "anchor_count": 157,
+      "verification_path": null,
+      "verification_cached": false,
+      "verification_summary": null,
+      "source_batch": "review_first_50_20260331"
+    },
+    {
+      "slot_id": "next5_narrative_implied",
+      "target_profile": "narrative_implied",
+      "selection_status": "selected",
+      "rationale": "Narrative neurodevelopmental chapter with milestone-age sentences, nonverbal severity phrasing, and implied residual findings.",
+      "nbk_id": "NBK619577",
+      "chapter_key": "usp7_related_hao_fountain_syndrome",
+      "chapter_title": "USP7-Related Hao-Fountain Syndrome - GeneReviews® - NCBI Bookshelf",
+      "provenance_url": null,
+      "structure_path": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/genereviews-pipeline-review-first-50-20260331/stage1_fetch/NBK619577_clinical_structure.json",
+      "text_sha256": "fead61367e5c290097a83da12678b9ff69ae7a1ffd796d9ee2b4f1b2c5ea8e93",
+      "section_count": 3,
+      "paragraph_count": 66,
+      "sentence_count": 111,
+      "anchors_path": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/genereviews-pipeline-review-first-50-20260331/stage2_anchors/USP7_Related_Hao_Fountain_Syndrome_anchors.json",
+      "anchors_cached": true,
+      "anchor_count": 90,
+      "verification_path": null,
+      "verification_cached": false,
+      "verification_summary": null,
+      "source_batch": "review_first_50_20260331"
+    },
+    {
+      "slot_id": "next5_lab_management_junk",
+      "target_profile": "lab_management_junk",
+      "selection_status": "selected",
+      "rationale": "Dense lab/test/treatment leakage surface with biopsy, laboratory findings, hematologic descriptors, and treatment-failure language.",
+      "nbk_id": "NBK614471",
+      "chapter_key": "vexas_syndrome",
+      "chapter_title": "VEXAS Syndrome - GeneReviews® - NCBI Bookshelf",
+      "provenance_url": null,
+      "structure_path": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/genereviews-pipeline-review-first-50-20260331/stage1_fetch/NBK614471_clinical_structure.json",
+      "text_sha256": "a65bbb163bdb61f01f5bcf7c53bdfa8b882185c34f15c57f75622da4b1690dbe",
+      "section_count": 3,
+      "paragraph_count": 32,
+      "sentence_count": 40,
+      "anchors_path": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/genereviews-pipeline-review-first-50-20260331/stage2_anchors/VEXAS_Syndrome_anchors.json",
+      "anchors_cached": true,
+      "anchor_count": 42,
+      "verification_path": null,
+      "verification_cached": false,
+      "verification_summary": null,
+      "source_batch": "review_first_50_20260331"
+    },
+    {
+      "slot_id": "next5_exclusion_normal",
+      "target_profile": "exclusion_normal",
+      "selection_status": "selected",
+      "rationale": "Strong normal/preserved/risk-only surface: asymptomatic newborn-screen positives, normal cognitive outcome, and without-cardiomyopathy language.",
+      "nbk_id": "NBK6816",
+      "chapter_key": "very_long_chain_acyl_coenzyme_a_dehydrogenase_deficiency",
+      "chapter_title": "Very Long-Chain Acyl-Coenzyme A Dehydrogenase Deficiency - GeneReviews® - NCBI Bookshelf",
+      "provenance_url": null,
+      "structure_path": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/genereviews-pipeline-review-first-50-20260331/stage1_fetch/NBK6816_clinical_structure.json",
+      "text_sha256": "2e19f0e074fbf13897301db6b5d610e41ca2fa6eec2eedda869abdedb6efeb1d",
+      "section_count": 1,
+      "paragraph_count": 12,
+      "sentence_count": 20,
+      "anchors_path": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/genereviews-pipeline-review-first-50-20260331/stage2_anchors/Very_Long_Chain_Acyl_Coenzyme_A_Dehydrogenase_Deficiency_anchors.json",
+      "anchors_cached": true,
+      "anchor_count": 25,
+      "verification_path": null,
+      "verification_cached": false,
+      "verification_summary": null,
+      "source_batch": "review_first_50_20260331"
+    },
+    {
+      "slot_id": "next5_morphology_dense",
+      "target_profile": "morphology_dense",
+      "selection_status": "selected",
+      "rationale": "Morphology-heavy craniofacial chapter with dense short phenotype spans and dysmorphology wording.",
+      "nbk_id": "NBK549204",
+      "chapter_key": "weiss_kruszka_syndrome",
+      "chapter_title": "Weiss-Kruszka Syndrome - GeneReviews® - NCBI Bookshelf",
+      "provenance_url": null,
+      "structure_path": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/genereviews-pipeline-review-first-50-20260331/stage1_fetch/NBK549204_clinical_structure.json",
+      "text_sha256": "e2a1fe6c18afadd9b880bfa021d20d48c620f37b7201621fb3297d2f31dba616",
+      "section_count": 2,
+      "paragraph_count": 38,
+      "sentence_count": 52,
+      "anchors_path": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/genereviews-pipeline-review-first-50-20260331/stage2_anchors/Weiss_Kruszka_Syndrome_anchors.json",
+      "anchors_cached": true,
+      "anchor_count": 46,
+      "verification_path": null,
+      "verification_cached": false,
+      "verification_summary": null,
+      "source_batch": "review_first_50_20260331"
+    }
+  ],
+  "cached_outputs": {
+    "latest5_cached_outputs": {
+      "anchors_dir": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/genereviews-pipeline-latest5-settled-20260330/stage2_anchors",
+      "verification_dir": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/preservation/bucket-critical/20260331-genereviews-latest5-readiness/stage7_verify_medgemma",
+      "direct_audit": {
+        "available": true,
+        "summary_path": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/stage3_discovery_latest5_grounded_audit_20260402/latest5_direct_grounded_audit_summary.json",
+        "report_path": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/stage3_discovery_latest5_grounded_audit_20260402/latest5_direct_grounded_audit_report.json",
+        "summary": {
+          "created_at": "2026-04-02T19:04:14.984Z",
+          "model": "gemini-2.5-pro",
+          "chapter_count": 5,
+          "prediction_total": 48,
+          "verified_discovery_target_total": 1,
+          "matched_verified_target_total": 0,
+          "missed_verified_target_total": 1,
+          "duplicate_anchor_leak_total": 21,
+          "overlaps_failed_total": 6,
+          "overlaps_flagged_total": 10,
+          "unmatched_prediction_total": 23,
+          "grounding": {
+            "total": 48,
+            "valid_sentence_id": 48,
+            "valid_evidence_text": 45,
+            "valid_grounding": 45
+          },
+          "by_chapter": [
+            {
+              "chapter_key": "y_chromosome_infertility",
+              "nbk_id": "NBK1339",
+              "prediction_count": 2,
+              "verified_discovery_target_total": 0,
+              "matched_verified_target_total": 0,
+              "missed_verified_target_total": 0,
+              "duplicate_anchor_leak_total": 2,
+              "overlaps_failed_total": 0,
+              "overlaps_flagged_total": 0,
+              "unmatched_prediction_total": 0
+            },
+            {
+              "chapter_key": "zellweger_spectrum_disorder",
+              "nbk_id": "NBK1448",
+              "prediction_count": 6,
+              "verified_discovery_target_total": 1,
+              "matched_verified_target_total": 0,
+              "missed_verified_target_total": 1,
+              "duplicate_anchor_leak_total": 1,
+              "overlaps_failed_total": 0,
+              "overlaps_flagged_total": 1,
+              "unmatched_prediction_total": 5
+            },
+            {
+              "chapter_key": "zap70_related_combined_immunodeficiency",
+              "nbk_id": "NBK20221",
+              "prediction_count": 18,
+              "verified_discovery_target_total": 0,
+              "matched_verified_target_total": 0,
+              "missed_verified_target_total": 0,
+              "duplicate_anchor_leak_total": 9,
+              "overlaps_failed_total": 1,
+              "overlaps_flagged_total": 5,
+              "unmatched_prediction_total": 8
+            },
+            {
+              "chapter_key": "yif1b_related_neurodevelopmental_disorder",
+              "nbk_id": "NBK606999",
+              "prediction_count": 10,
+              "verified_discovery_target_total": 0,
+              "matched_verified_target_total": 0,
+              "missed_verified_target_total": 0,
+              "duplicate_anchor_leak_total": 3,
+              "overlaps_failed_total": 2,
+              "overlaps_flagged_total": 1,
+              "unmatched_prediction_total": 6
+            },
+            {
+              "chapter_key": "zhu_tokita_takenouchi_kim_syndrome",
+              "nbk_id": "NBK618356",
+              "prediction_count": 12,
+              "verified_discovery_target_total": 0,
+              "matched_verified_target_total": 0,
+              "missed_verified_target_total": 0,
+              "duplicate_anchor_leak_total": 6,
+              "overlaps_failed_total": 3,
+              "overlaps_flagged_total": 3,
+              "unmatched_prediction_total": 4
+            }
+          ],
+          "verified_discovery_target_recall": 0,
+          "valid_grounding_rate": 0.9375
+        }
+      }
+    },
+    "next5_raw_direct": {
+      "available": true,
+      "summary_path": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/stage3_discovery_real_next5_grounded_raw_20260402/stage3_real_grounded_raw_summary.json",
+      "report_path": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/stage3_discovery_real_next5_grounded_raw_20260402/stage3_real_grounded_raw_report.json",
+      "summary": {
+        "created_at": "2026-04-02T19:51:10.134Z",
+        "model": "gemini-2.5-pro",
+        "manifest_path": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/test/fixtures/stage3DiscoveryRealHoldoutNext5Manifest.json",
+        "chapter_count": 5,
+        "prediction_total": 70,
+        "duplicate_anchor_leak_total": 15,
+        "nonduplicate_prediction_total": 55,
+        "grounding": {
+          "total": 70,
+          "valid_sentence_id": 70,
+          "valid_evidence_text": 69,
+          "valid_grounding": 69
+        },
+        "by_chapter": [
+          {
+            "nbk_id": "NBK1249",
+            "chapter_key": "williams_syndrome",
+            "prediction_count": 34,
+            "duplicate_anchor_leak_total": 7,
+            "nonduplicate_prediction_total": 27,
+            "valid_grounding": 34,
+            "grounding_total": 34
+          },
+          {
+            "nbk_id": "NBK619577",
+            "chapter_key": "usp7_related_hao_fountain_syndrome",
+            "prediction_count": 21,
+            "duplicate_anchor_leak_total": 2,
+            "nonduplicate_prediction_total": 19,
+            "valid_grounding": 21,
+            "grounding_total": 21
+          },
+          {
+            "nbk_id": "NBK614471",
+            "chapter_key": "vexas_syndrome",
+            "prediction_count": 9,
+            "duplicate_anchor_leak_total": 5,
+            "nonduplicate_prediction_total": 4,
+            "valid_grounding": 9,
+            "grounding_total": 9
+          },
+          {
+            "nbk_id": "NBK6816",
+            "chapter_key": "very_long_chain_acyl_coenzyme_a_dehydrogenase_deficiency",
+            "prediction_count": 3,
+            "duplicate_anchor_leak_total": 0,
+            "nonduplicate_prediction_total": 3,
+            "valid_grounding": 2,
+            "grounding_total": 3
+          },
+          {
+            "nbk_id": "NBK549204",
+            "chapter_key": "weiss_kruszka_syndrome",
+            "prediction_count": 3,
+            "duplicate_anchor_leak_total": 1,
+            "nonduplicate_prediction_total": 2,
+            "valid_grounding": 3,
+            "grounding_total": 3
+          }
+        ],
+        "valid_grounding_rate": 0.9857
+      }
+    }
+  },
+  "selection_summary": [
+    {
+      "slot_id": "next5_anchor_heavy",
+      "target_profile": "anchor_heavy",
+      "chapter_key": "williams_syndrome",
+      "chapter_title": "Williams Syndrome - GeneReviews® - NCBI Bookshelf",
+      "nbk_id": "NBK1249",
+      "notes": "Highest anchor-count chapter in the reusable review-first-50 batch; best stress test for duplicate-anchor leakage."
+    },
+    {
+      "slot_id": "next5_narrative_implied",
+      "target_profile": "narrative_implied",
+      "chapter_key": "usp7_related_hao_fountain_syndrome",
+      "chapter_title": "USP7-Related Hao-Fountain Syndrome - GeneReviews® - NCBI Bookshelf",
+      "nbk_id": "NBK619577",
+      "notes": "Narrative neurodevelopmental chapter with milestone-age sentences, nonverbal severity phrasing, and implied residual findings."
+    },
+    {
+      "slot_id": "next5_lab_management_junk",
+      "target_profile": "lab_management_junk",
+      "chapter_key": "vexas_syndrome",
+      "chapter_title": "VEXAS Syndrome - GeneReviews® - NCBI Bookshelf",
+      "nbk_id": "NBK614471",
+      "notes": "Dense lab/test/treatment leakage surface with biopsy, laboratory findings, hematologic descriptors, and treatment-failure language."
+    },
+    {
+      "slot_id": "next5_exclusion_normal",
+      "target_profile": "exclusion_normal",
+      "chapter_key": "very_long_chain_acyl_coenzyme_a_dehydrogenase_deficiency",
+      "chapter_title": "Very Long-Chain Acyl-Coenzyme A Dehydrogenase Deficiency - GeneReviews® - NCBI Bookshelf",
+      "nbk_id": "NBK6816",
+      "notes": "Strong normal/preserved/risk-only surface: asymptomatic newborn-screen positives, normal cognitive outcome, and without-cardiomyopathy language."
+    },
+    {
+      "slot_id": "next5_morphology_dense",
+      "target_profile": "morphology_dense",
+      "chapter_key": "weiss_kruszka_syndrome",
+      "chapter_title": "Weiss-Kruszka Syndrome - GeneReviews® - NCBI Bookshelf",
+      "nbk_id": "NBK549204",
+      "notes": "Morphology-heavy craniofacial chapter with dense short phenotype spans and dysmorphology wording."
+    }
+  ]
+}

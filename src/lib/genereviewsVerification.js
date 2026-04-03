@@ -103,6 +103,12 @@ function normalizeComparableFrequency(value) {
   const raw = String(value || '').trim();
   if (!raw) return '';
   const normalized = normalizeText(raw);
+  const range = raw.match(/(\d+(?:\.\d+)?)\s*%\s*(?:-|–|—|\bto\b)\s*(\d+(?:\.\d+)?)\s*%/i);
+  if (range) {
+    const minValue = Math.min(Number(range[1]), Number(range[2]));
+    const maxValue = Math.max(Number(range[1]), Number(range[2]));
+    return `${minValue}%-${maxValue}%`;
+  }
   const percent = raw.match(/(\d+(?:\.\d+)?)\s*%/);
   if (percent) return `${percent[1]}%`;
   const fraction = raw.match(/(\d+)\s*\/\s*(\d+)/);

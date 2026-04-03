@@ -1,0 +1,56 @@
+{
+  "created_at": "2026-04-01T00:28:33.989Z",
+  "stage": "manifest",
+  "total_processed": 5,
+  "total_errors": 0,
+  "manifest_rows": 0,
+  "review_rows": 5,
+  "results": [
+    {
+      "chapterKey": "y_chromosome_infertility",
+      "nbkId": "NBK1339",
+      "cleanedFeatureCount": 5,
+      "manifestRowCount": 0,
+      "reviewFeatureCount": 5,
+      "autoAcceptEligibleCount": 3,
+      "reviewDecision": true
+    },
+    {
+      "chapterKey": "yif1b_related_neurodevelopmental_disorder",
+      "nbkId": "NBK606999",
+      "cleanedFeatureCount": 31,
+      "manifestRowCount": 0,
+      "reviewFeatureCount": 31,
+      "autoAcceptEligibleCount": 15,
+      "reviewDecision": true
+    },
+    {
+      "chapterKey": "zap70_related_combined_immunodeficiency",
+      "nbkId": "NBK20221",
+      "cleanedFeatureCount": 26,
+      "manifestRowCount": 0,
+      "reviewFeatureCount": 26,
+      "autoAcceptEligibleCount": 13,
+      "reviewDecision": true
+    },
+    {
+      "chapterKey": "zellweger_spectrum_disorder",
+      "nbkId": "NBK1448",
+      "cleanedFeatureCount": 21,
+      "manifestRowCount": 0,
+      "reviewFeatureCount": 21,
+      "autoAcceptEligibleCount": 8,
+      "reviewDecision": true
+    },
+    {
+      "chapterKey": "zhu_tokita_takenouchi_kim_syndrome",
+      "nbkId": "NBK618356",
+      "cleanedFeatureCount": 97,
+      "manifestRowCount": 0,
+      "reviewFeatureCount": 97,
+      "autoAcceptEligibleCount": 62,
+      "reviewDecision": true
+    }
+  ],
+  "errors": []
+}

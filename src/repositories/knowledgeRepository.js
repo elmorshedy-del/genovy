@@ -314,6 +314,19 @@ export async function upsertSourceRecordsBatch(client, sourceRecords) {
           value->>'payloadHash' AS payload_hash
         FROM jsonb_array_elements($1::jsonb) AS value
         ORDER BY source_key, source_record_key
+      ),
+      updated AS (
+        UPDATE source_records target
+        SET
+          sync_run_id = input.sync_run_id,
+          canonical_curie = input.canonical_curie,
+          payload_json = input.payload_json,
+          payload_hash = input.payload_hash,
+          updated_at = NOW()
+        FROM input
+        WHERE target.source_key = input.source_key
+          AND target.source_record_key = input.source_record_key
+        RETURNING target.source_key, target.source_record_key
       )
       INSERT INTO source_records (
         source_key,
@@ -333,13 +346,12 @@ export async function upsertSourceRecordsBatch(client, sourceRecords) {
         payload_json,
         payload_hash
       FROM input
-      ON CONFLICT (source_key, source_record_key)
-      DO UPDATE SET
-        sync_run_id = EXCLUDED.sync_run_id,
-        canonical_curie = EXCLUDED.canonical_curie,
-        payload_json = EXCLUDED.payload_json,
-        payload_hash = EXCLUDED.payload_hash,
-        updated_at = NOW()
+      WHERE NOT EXISTS (
+        SELECT 1
+        FROM updated
+        WHERE updated.source_key = input.source_key
+          AND updated.source_record_key = input.source_record_key
+      )
     `,
     [JSON.stringify(prepared)]
   );
@@ -558,29 +570,46 @@ export async function upsertResolvedRelationships(client, relationships, sourceK
           COALESCE(value->'qualifiers', '{}'::jsonb) AS qualifiers_json,
           $2::TEXT AS primary_source_key
         FROM jsonb_array_elements($1::jsonb) AS value
+      ),
+      updated AS (
+        UPDATE relationships target
+        SET
+          qualifiers_json = input.qualifiers_json,
+          last_seen_at = NOW(),
+          updated_at = NOW()
+        FROM input
+        WHERE target.relationship_key = input.relationship_key
+        RETURNING target.relationship_id, target.relationship_key
+      ),
+      inserted AS (
+        INSERT INTO relationships (
+          relationship_key,
+          subject_entity_id,
+          predicate_key,
+          object_entity_id,
+          qualifiers_json,
+          primary_source_key
+        )
+        SELECT
+          relationship_key,
+          subject_entity_id,
+          predicate_key,
+          object_entity_id,
+          qualifiers_json,
+          primary_source_key
+        FROM input
+        WHERE NOT EXISTS (
+          SELECT 1
+          FROM updated
+          WHERE updated.relationship_key = input.relationship_key
+        )
+        RETURNING relationship_id, relationship_key
       )
-      INSERT INTO relationships (
-        relationship_key,
-        subject_entity_id,
-        predicate_key,
-        object_entity_id,
-        qualifiers_json,
-        primary_source_key
-      )
-      SELECT
-        relationship_key,
-        subject_entity_id,
-        predicate_key,
-        object_entity_id,
-        qualifiers_json,
-        primary_source_key
-      FROM input
-      ON CONFLICT (relationship_key)
-      DO UPDATE SET
-        qualifiers_json = EXCLUDED.qualifiers_json,
-        last_seen_at = NOW(),
-        updated_at = NOW()
-      RETURNING relationship_id, relationship_key
+    SELECT relationship_id, relationship_key
+    FROM updated
+    UNION ALL
+    SELECT relationship_id, relationship_key
+    FROM inserted
     `,
     [JSON.stringify(relationships), sourceKey]
   );
@@ -588,6 +617,82 @@ export async function upsertResolvedRelationships(client, relationships, sourceK
   return result.rows;
 }
 
+export async function upsertRelationshipEvidenceBatch(client, evidenceRows) {
+  if (!evidenceRows.length) {
+    return;
+  }
+
+  await client.query(
+    `
+      WITH input AS (
+        SELECT
+          (value->>'relationshipId')::BIGINT AS relationship_id,
+          value->>'sourceKey' AS source_key,
+          NULLIF(value->>'syncRunId', '')::BIGINT AS sync_run_id,
+          NULLIF(value->>'sourceRecordKey', '') AS source_record_key,
+          value->>'evidenceType' AS evidence_type,
+          NULLIF(value->>'evidenceCode', '') AS evidence_code,
+          NULLIF(value->>'confidenceScore', '')::NUMERIC(5,4) AS confidence_score,
+          NULLIF(value->>'provenanceUrl', '') AS provenance_url,
+          COALESCE(value->'payload', '{}'::jsonb) AS payload_json
+        FROM jsonb_array_elements($1::jsonb) AS value
+      ),
+      updated AS (
+        UPDATE relationship_evidence target
+        SET
+          sync_run_id = input.sync_run_id,
+          confidence_score = COALESCE(input.confidence_score, target.confidence_score),
+          provenance_url = COALESCE(input.provenance_url, target.provenance_url),
+          payload_json = target.payload_json || input.payload_json,
+          observed_at = NOW()
+        FROM input
+        WHERE target.relationship_id = input.relationship_id
+          AND target.source_key = input.source_key
+          AND COALESCE(target.source_record_key, '') = COALESCE(input.source_record_key, '')
+          AND target.evidence_type = input.evidence_type
+          AND COALESCE(target.evidence_code, '') = COALESCE(input.evidence_code, '')
+        RETURNING
+          target.relationship_id,
+          target.source_key,
+          COALESCE(target.source_record_key, '') AS source_record_key,
+          target.evidence_type,
+          COALESCE(target.evidence_code, '') AS evidence_code
+      )
+      INSERT INTO relationship_evidence (
+        relationship_id,
+        source_key,
+        sync_run_id,
+        source_record_key,
+        evidence_type,
+        evidence_code,
+        confidence_score,
+        provenance_url,
+        payload_json
+      )
+      SELECT
+        relationship_id,
+        source_key,
+        sync_run_id,
+        source_record_key,
+        evidence_type,
+        evidence_code,
+        confidence_score,
+        provenance_url,
+        payload_json
+      FROM input
+      WHERE NOT EXISTS (
+        SELECT 1
+        FROM updated
+        WHERE updated.relationship_id = input.relationship_id
+          AND updated.source_key = input.source_key
+          AND updated.source_record_key = COALESCE(input.source_record_key, '')
+          AND updated.evidence_type = input.evidence_type
+          AND updated.evidence_code = COALESCE(input.evidence_code, '')
+      )
+    `,
+    [JSON.stringify(evidenceRows)]
+  );
+}
 export async function upsertRelationshipEvidence(client, evidence) {
   await client.query(
     `
@@ -625,59 +730,6 @@ export async function upsertRelationshipEvidence(client, evidence) {
   );
 }
 
-export async function upsertRelationshipEvidenceBatch(client, evidenceRows) {
-  if (!evidenceRows.length) {
-    return;
-  }
-
-  await client.query(
-    `
-      WITH input AS (
-        SELECT
-          (value->>'relationshipId')::BIGINT AS relationship_id,
-          value->>'sourceKey' AS source_key,
-          NULLIF(value->>'syncRunId', '')::BIGINT AS sync_run_id,
-          NULLIF(value->>'sourceRecordKey', '') AS source_record_key,
-          value->>'evidenceType' AS evidence_type,
-          NULLIF(value->>'evidenceCode', '') AS evidence_code,
-          NULLIF(value->>'confidenceScore', '')::NUMERIC(5,4) AS confidence_score,
-          NULLIF(value->>'provenanceUrl', '') AS provenance_url,
-          COALESCE(value->'payload', '{}'::jsonb) AS payload_json
-        FROM jsonb_array_elements($1::jsonb) AS value
-      )
-      INSERT INTO relationship_evidence (
-        relationship_id,
-        source_key,
-        sync_run_id,
-        source_record_key,
-        evidence_type,
-        evidence_code,
-        confidence_score,
-        provenance_url,
-        payload_json
-      )
-      SELECT
-        relationship_id,
-        source_key,
-        sync_run_id,
-        source_record_key,
-        evidence_type,
-        evidence_code,
-        confidence_score,
-        provenance_url,
-        payload_json
-      FROM input
-      ON CONFLICT (relationship_id, source_key, source_record_key, evidence_type, evidence_code)
-      DO UPDATE SET
-        sync_run_id = EXCLUDED.sync_run_id,
-        confidence_score = COALESCE(EXCLUDED.confidence_score, relationship_evidence.confidence_score),
-        provenance_url = COALESCE(EXCLUDED.provenance_url, relationship_evidence.provenance_url),
-        payload_json = relationship_evidence.payload_json || EXCLUDED.payload_json,
-        observed_at = NOW()
-    `,
-    [JSON.stringify(evidenceRows)]
-  );
-}
 
 export async function listKnowledgeSummary(client) {
   const entities = await client.query(`

@@ -37,7 +37,26 @@ function mergeDiseasePhenotypeRows(...rowGroups) {
   return [...mergedByPair.values()];
 }
 
-async function loadTypedPhenotypeRows(client) {
+function normalizeSourceKeyFilter(values = []) {
+  return [...new Set((values || []).map((value) => String(value || '').trim()).filter(Boolean))].sort();
+}
+
+function buildDisabledSourceKeyClause(expression, disabledSourceKeys, params) {
+  if (!disabledSourceKeys.length) {
+    return '';
+  }
+  params.push(disabledSourceKeys);
+  return `\n        AND NOT (${expression} = ANY($${params.length}::text[]))`;
+}
+
+async function loadTypedPhenotypeRows(client, { disabledSourceKeys = [] } = {}) {
+  const normalizedDisabledSourceKeys = normalizeSourceKeyFilter(disabledSourceKeys);
+  const params = [SOURCE_KEYS.PHENOTYPE_PROPAGATION];
+  const disabledClause = buildDisabledSourceKeyClause(
+    'clinical_phenotype_assertions.source_key',
+    normalizedDisabledSourceKeys,
+    params
+  );
   const result = await client.query(
     `
       SELECT DISTINCT ON (disease.entity_id, phenotype.entity_id, clinical_phenotype_assertions.presence_status)
@@ -79,6 +98,7 @@ async function loadTypedPhenotypeRows(client) {
         ON modifier.entity_id = clinical_phenotype_assertions.modifier_entity_id
       WHERE disease.entity_type = 'disease'
         AND disease.is_placeholder = FALSE
+${disabledClause}
       ORDER BY disease.entity_id, phenotype.entity_id, clinical_phenotype_assertions.presence_status,
         CASE
           WHEN clinical_phenotype_assertions.source_key = $1
@@ -88,7 +108,7 @@ async function loadTypedPhenotypeRows(client) {
         END ASC,
         clinical_phenotype_assertions.observed_at DESC
     `,
-    [SOURCE_KEYS.PHENOTYPE_PROPAGATION]
+    params
   );
 
   return result.rows.map((row) => ({
@@ -208,7 +228,14 @@ async function loadCanonicalGeneDiseaseSupportRows(client) {
   return result.rows;
 }
 
-async function loadFallbackPhenotypeRows(client) {
+async function loadFallbackPhenotypeRows(client, { disabledSourceKeys = [] } = {}) {
+  const normalizedDisabledSourceKeys = normalizeSourceKeyFilter(disabledSourceKeys);
+  const params = [SOURCE_KEYS.PHENOTYPE_PROPAGATION];
+  const disabledClause = buildDisabledSourceKeyClause(
+    "COALESCE(evidence.source_key, rel.primary_source_key, '')",
+    normalizedDisabledSourceKeys,
+    params
+  );
   const result = await client.query(
     `
       SELECT DISTINCT ON (disease.entity_id, phenotype.entity_id, rel.predicate_key)
@@ -262,9 +289,10 @@ async function loadFallbackPhenotypeRows(client) {
         AND disease.entity_type = 'disease'
         AND disease.is_placeholder = FALSE
         AND phenotype.entity_type = 'phenotype'
+${disabledClause}
       ORDER BY disease.entity_id, phenotype.entity_id, rel.predicate_key, evidence.observed_at DESC NULLS LAST
     `,
-    [SOURCE_KEYS.PHENOTYPE_PROPAGATION]
+    params
   );
 
   return result.rows.map((row) => ({
@@ -273,21 +301,27 @@ async function loadFallbackPhenotypeRows(client) {
   }));
 }
 
-export async function loadDxDiseasePhenotypeRows(client) {
+export async function loadDxDiseasePhenotypeRows(client, { disabledSourceKeys = [] } = {}) {
+  const normalizedDisabledSourceKeys = normalizeSourceKeyFilter(disabledSourceKeys);
   let typedRows = [];
   try {
-    typedRows = await loadTypedPhenotypeRows(client);
+    typedRows = await loadTypedPhenotypeRows(client, {
+      disabledSourceKeys: normalizedDisabledSourceKeys
+    });
   } catch (error) {
     if (!['42P01', '42703'].includes(error?.code)) {
       throw error;
     }
   }
 
-  const fallbackRows = await loadFallbackPhenotypeRows(client);
+  const fallbackRows = await loadFallbackPhenotypeRows(client, {
+    disabledSourceKeys: normalizedDisabledSourceKeys
+  });
   const rows = mergeDiseasePhenotypeRows(typedRows, fallbackRows);
 
   return {
     sourceMode: typedRows.length ? 'typed_plus_relationships' : 'relationship_fallback',
+    disabledSourceKeys: normalizedDisabledSourceKeys,
     rows
   };
 }

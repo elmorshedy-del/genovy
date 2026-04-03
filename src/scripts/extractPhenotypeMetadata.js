@@ -18,6 +18,11 @@ import {
   toBaseName,
   writeJson
 } from '../lib/genereviewsPipeline.js';
+import {
+  runSciSpacyAttachmentValidation,
+  scispaCyValidatorAvailable,
+  SCISPACY_ATTACHMENT_DEFAULTS
+} from '../lib/scispacyAttachmentValidator.js';
 
 const DEFAULTS = Object.freeze({
   policyJson:
@@ -38,7 +43,11 @@ const DEFAULTS = Object.freeze({
   metadataBatchSize: 25,
   medgemmaReadyTimeoutMs: 5 * 60 * 1000,
   medgemmaReadyPollMs: 10 * 1000,
-  medgemmaReadyProbeMaxTokens: 8
+  medgemmaReadyProbeMaxTokens: 8,
+  enableSciSpacyValidation: true,
+  scispacyPythonPath: SCISPACY_ATTACHMENT_DEFAULTS.pythonPath,
+  scispacyPythonModulePath: SCISPACY_ATTACHMENT_DEFAULTS.pythonModulePath,
+  scispacyTimeoutMs: SCISPACY_ATTACHMENT_DEFAULTS.timeoutMs
 });
 
 const METADATA_FALLBACK_PROMPT = `For each phenotype feature below, extract frequency, onset, severity, subtype, progression, and treatment_response only if the metadata clearly applies to that exact feature label.
@@ -131,6 +140,34 @@ const METADATA_CONTEXT_KEYWORDS = [
   'congenital',
   'neonatal'
 ];
+
+const CLAUSE_BOUNDARY_REGEX = /\s*(?:[,;:.!?]|\b(?:but|however|although|whereas|while)\b)\s*/i;
+const SCISPACY_ATTACHMENT_FIELDS = Object.freeze([
+  {
+    field: 'onset_raw',
+    evidenceField: 'onset_evidence',
+    charStartField: 'onset_char_start',
+    charEndField: 'onset_char_end',
+    trustField: 'onset_trust',
+    validationField: 'onset_attachment_validation'
+  },
+  {
+    field: 'progression_raw',
+    evidenceField: 'progression_evidence',
+    charStartField: 'progression_char_start',
+    charEndField: 'progression_char_end',
+    trustField: 'progression_trust',
+    validationField: 'progression_attachment_validation'
+  },
+  {
+    field: 'treatment_response_raw',
+    evidenceField: 'treatment_response_evidence',
+    charStartField: 'treatment_response_char_start',
+    charEndField: 'treatment_response_char_end',
+    trustField: 'treatment_response_trust',
+    validationField: 'treatment_response_attachment_validation'
+  }
+]);
 
 function resolveEnvValue(...names) {
   for (const name of names) {
@@ -334,10 +371,96 @@ function buildMedGemmaContext(feature) {
         score: (hasMatch ? 2 : 0) + (hasKeyword ? 1 : 0)
       };
     })
-    .filter((entry) => entry.score > 0)
+    .filter((entry) => entry.score > 0 && normalizedMatch && normalizeText(entry.sentence).includes(normalizedMatch))
     .sort((left, right) => right.score - left.score);
 
   return uniqueSentences([sourceSentence, ...scored.map((entry) => entry.sentence)]).slice(0, 3);
+}
+
+function hasCompleteFeatureProvenance(feature) {
+  return Boolean(
+    feature?.paragraph_id &&
+      feature?.sentence_id &&
+      Number.isFinite(Number(feature?.paragraph_char_start)) &&
+      Number.isFinite(Number(feature?.paragraph_char_end)) &&
+      Number.isFinite(Number(feature?.sentence_char_start)) &&
+      Number.isFinite(Number(feature?.sentence_char_end)) &&
+      Number.isFinite(Number(feature?.match_char_start)) &&
+      Number.isFinite(Number(feature?.match_char_end))
+  );
+}
+
+function featurePhrases(target) {
+  return uniqueSentences([target?.match_text, target?.hpo_label]);
+}
+
+function sentenceContainsFeaturePhrase(target, sentence) {
+  const normalizedSentence = normalizeText(sentence);
+  if (!normalizedSentence) return false;
+  return featurePhrases(target).some((phrase) => normalizedSentence.includes(normalizeText(phrase)));
+}
+
+function clauseContainsPhrase(clause, phrases) {
+  const normalizedClause = normalizeText(clause);
+  if (!normalizedClause) return false;
+  return phrases.some((phrase) => normalizedClause.includes(normalizeText(phrase)));
+}
+
+function sharesClause(sentence, featurePhraseValues, metadataPhraseValues) {
+  const clauses = String(sentence || '')
+    .split(CLAUSE_BOUNDARY_REGEX)
+    .map((value) => String(value || '').trim())
+    .filter(Boolean);
+  return clauses.some(
+    (clause) => clauseContainsPhrase(clause, featurePhraseValues) && clauseContainsPhrase(clause, metadataPhraseValues)
+  );
+}
+
+function resolveEvidenceSentence(target, evidence, { requireFeaturePhrase = false } = {}) {
+  const rawEvidence = String(evidence || '').trim();
+  if (!hasValidEvidenceSentence(rawEvidence)) return '';
+  if (requireFeaturePhrase && !sentenceContainsFeaturePhrase(target, rawEvidence)) return '';
+  return rawEvidence;
+}
+
+function clearMetadataFieldsForIncompleteProvenance(feature, localContext, trustLabel = 'blocked_missing_provenance') {
+  return {
+    ...feature,
+    local_context: localContext,
+    provenance_complete: false,
+    frequency_value: null,
+    frequency_raw: null,
+    frequency_value_min: null,
+    frequency_value_max: null,
+    frequency_value_type: null,
+    frequency_trust: trustLabel,
+    frequency_evidence: null,
+    frequency_char_start: null,
+    frequency_char_end: null,
+    onset_hpo_id: null,
+    onset_label: null,
+    onset_raw: null,
+    onset_trust: trustLabel,
+    onset_evidence: null,
+    onset_char_start: null,
+    onset_char_end: null,
+    onset_attachment_validation: null,
+    severity_raw: null,
+    severity_trust: trustLabel,
+    subtype_raw: null,
+    progression_raw: null,
+    progression_evidence: null,
+    progression_char_start: null,
+    progression_char_end: null,
+    progression_trust: trustLabel,
+    progression_attachment_validation: null,
+    treatment_response_raw: null,
+    treatment_response_evidence: null,
+    treatment_response_char_start: null,
+    treatment_response_char_end: null,
+    treatment_response_trust: trustLabel,
+    treatment_response_attachment_validation: null
+  };
 }
 
 function hasValidEvidenceSentence(value) {
@@ -408,34 +531,44 @@ function maybePromoteEvidenceSentence(target, evidence) {
 
 function applyEvidenceBackedFrequency(target, llm) {
   if (target.frequency_value) return;
-  if (!hasValidEvidenceSentence(llm.evidence_frequency)) return;
-  maybePromoteEvidenceSentence(target, llm.evidence_frequency);
-  const parsed = extractScopedFrequency(llm.evidence_frequency, target.match_text || target.hpo_label);
+  if (!hasCompleteFeatureProvenance(target)) return;
+  const evidence = resolveEvidenceSentence(target, llm.evidence_frequency, { requireFeaturePhrase: true });
+  if (!evidence) return;
+  maybePromoteEvidenceSentence(target, evidence);
+  const parsed = extractScopedFrequency(evidence, target.match_text || target.hpo_label, {
+    baseOffset: target.sentence_char_start ?? 0
+  });
   if (!parsed.frequency_value) return;
   target.frequency_value = parsed.frequency_value;
-  target.frequency_raw = llm.frequency_raw || parsed.frequency_raw;
+  target.frequency_raw = parsed.frequency_raw;
+  target.frequency_value_min = parsed.frequency_value_min || null;
+  target.frequency_value_max = parsed.frequency_value_max || null;
+  target.frequency_value_type = parsed.frequency_value_type || null;
   target.frequency_trust = 'medium';
-  target.frequency_evidence = llm.evidence_frequency;
-  const span = resolveFieldValueSpan(target, target.frequency_raw || target.frequency_value, llm.evidence_frequency);
-  target.frequency_char_start = span.charStart;
-  target.frequency_char_end = span.charEnd;
+  target.frequency_evidence = evidence;
+  target.frequency_char_start = parsed.frequency_char_start ?? null;
+  target.frequency_char_end = parsed.frequency_char_end ?? null;
 }
 
 function applyEvidenceBackedOnset(target, llm) {
   if (target.onset_hpo_id || target.onset_raw) return;
-  if (!hasValidEvidenceSentence(llm.evidence_onset)) return;
-  maybePromoteEvidenceSentence(target, llm.evidence_onset);
-  const parsed = extractScopedOnset(llm.evidence_onset, target.match_text || target.hpo_label);
-  if (parsed.onset_hpo_id || llm.onset_raw || llm.onset_normalized) {
-    target.onset_hpo_id = parsed.onset_hpo_id || null;
-    target.onset_label = parsed.onset_label || llm.onset_normalized || llm.onset_raw || null;
-    target.onset_raw = llm.onset_raw || parsed.onset_raw || null;
-    target.onset_trust = 'medium';
-    target.onset_evidence = llm.evidence_onset;
-    const span = resolveFieldValueSpan(target, target.onset_raw || target.onset_label, llm.evidence_onset);
-    target.onset_char_start = span.charStart;
-    target.onset_char_end = span.charEnd;
-  }
+  if (!hasCompleteFeatureProvenance(target)) return;
+  const evidence = resolveEvidenceSentence(target, llm.evidence_onset, { requireFeaturePhrase: true });
+  if (!evidence) return;
+  maybePromoteEvidenceSentence(target, evidence);
+  const parsed = extractScopedOnset(evidence, target.match_text || target.hpo_label, {
+    baseOffset: target.sentence_char_start ?? 0
+  });
+  const onsetPhrase = parsed.onset_raw || llm.onset_raw || llm.onset_normalized || '';
+  if (!parsed.onset_hpo_id || !onsetPhrase) return;
+  if (!sharesClause(evidence, featurePhrases(target), [onsetPhrase])) return;
+  target.onset_hpo_id = parsed.onset_hpo_id || null;
+  target.onset_label = parsed.onset_label || null;
+  target.onset_raw = parsed.onset_raw || null;
+  target.onset_trust = 'medium';
+  target.onset_evidence = evidence;
+  target.onset_char_start = parsed.onset_char_start ?? null;
+  target.onset_char_end = parsed.onset_char_end ?? null;
 }
 
 function resolveFieldValueSpan(target, value, evidence) {
@@ -475,14 +608,89 @@ function resolveFieldValueSpan(target, value, evidence) {
 }
 
 function applyEvidenceBackedFreeText(target, field, evidenceField, value, evidence, trust) {
-  if (!value || !hasValidEvidenceSentence(evidence)) return;
-  maybePromoteEvidenceSentence(target, evidence);
+  if (!value || !hasCompleteFeatureProvenance(target)) return;
+  const resolvedEvidence = resolveEvidenceSentence(target, evidence, { requireFeaturePhrase: true });
+  if (!resolvedEvidence) return;
+  if (!sharesClause(resolvedEvidence, featurePhrases(target), [value])) return;
+  maybePromoteEvidenceSentence(target, resolvedEvidence);
   target[field] = value;
-  target[evidenceField] = evidence;
+  target[evidenceField] = resolvedEvidence;
   target[`${field.replace(/_raw$/, '')}_trust`] = trust;
-  const span = resolveFieldValueSpan(target, value, evidence);
+  const span = resolveFieldValueSpan(target, value, resolvedEvidence);
   target[`${field.replace(/_raw$/, '')}_char_start`] = span.charStart;
   target[`${field.replace(/_raw$/, '')}_char_end`] = span.charEnd;
+}
+
+function shouldValidateWithSciSpacy(target, spec) {
+  const value = String(target?.[spec.field] || '').trim();
+  const evidence = String(target?.[spec.evidenceField] || '').trim();
+  const sourceSentence = String(target?.source_sentence || '').trim();
+  const trust = String(target?.[spec.trustField] || '').trim().toLowerCase();
+  if (!value || !evidence || !sourceSentence) return false;
+  if (normalizeText(evidence) !== normalizeText(sourceSentence)) return false;
+  if (spec.field === 'onset_raw') {
+    return trust === 'medium';
+  }
+  return trust === 'low';
+}
+
+function buildSciSpacyValidationItems(batch, merged) {
+  const items = [];
+  for (const targetInfo of batch) {
+    const target = merged[targetInfo.featureIndex];
+    if (!target) continue;
+    for (const spec of SCISPACY_ATTACHMENT_FIELDS) {
+      if (!shouldValidateWithSciSpacy(target, spec)) continue;
+      items.push({
+        id: `${targetInfo.featureIndex}:${spec.field}`,
+        featureIndex: targetInfo.featureIndex,
+        field: spec.field,
+        phenotype_phrase: target.match_text || target.hpo_label || '',
+        sentence: target[spec.evidenceField] || target.source_sentence || '',
+        metadata_phrase: target[spec.field] || ''
+      });
+    }
+  }
+  return items;
+}
+
+function clearSciSpacyRejectedField(target, spec, reason) {
+  target[spec.validationField] = `scispacy_fail:${reason}`;
+  target[spec.field] = null;
+  target[spec.evidenceField] = null;
+  target[spec.charStartField] = null;
+  target[spec.charEndField] = null;
+  target[spec.trustField] = 'blocked_scispacy_attachment';
+  if (spec.field === 'onset_raw') {
+    target.onset_hpo_id = null;
+    target.onset_label = null;
+  }
+}
+
+async function applySciSpacyAttachmentValidation(merged, batch, config) {
+  if (!config?.enabled || !scispaCyValidatorAvailable(config)) return;
+  const items = buildSciSpacyValidationItems(batch, merged);
+  if (!items.length) return;
+  const results = await runSciSpacyAttachmentValidation(items, config);
+  const resultById = new Map(results.map((result) => [String(result.id || ''), result]));
+  for (const item of items) {
+    const target = merged[item.featureIndex];
+    if (!target) continue;
+    const spec = SCISPACY_ATTACHMENT_FIELDS.find((entry) => entry.field === item.field);
+    if (!spec) continue;
+    const result = resultById.get(item.id);
+    if (!result) {
+      target[spec.validationField] = 'scispacy_unknown:missing_result';
+      continue;
+    }
+    const verdict = String(result.verdict || 'unknown');
+    const reason = String(result.reason || 'unknown');
+    if (verdict === 'fail') {
+      clearSciSpacyRejectedField(target, spec, reason);
+      continue;
+    }
+    target[spec.validationField] = `scispacy_${verdict}:${reason}`;
+  }
 }
 
 function buildFeatureKey(feature) {
@@ -536,6 +744,9 @@ function mergeSourceFeatures(anchorPayload, mappedPayload) {
       source_sentence: candidate.source_sentence || '',
       paragraph: candidate.paragraph || '',
       match_text: candidate.label || '',
+      assertion_status_origin: candidate.assertion_status_origin || null,
+      assertion_reason: candidate.assertion_reason || null,
+      assertion_evidence: candidate.assertion_evidence || '',
       local_clinical_domains: candidate.local_clinical_domains || [],
       section_id: candidate.section_id || null,
       section_heading: candidate.section_heading || null,
@@ -556,12 +767,17 @@ function mergeSourceFeatures(anchorPayload, mappedPayload) {
 
 function applyDeterministicMetadata(feature) {
   const localContext = extractLocalMatchWindow(feature.source_sentence || feature.paragraph || '', feature.match_text || feature.hpo_label);
+  const provenanceComplete = hasCompleteFeatureProvenance(feature);
   if (feature.status === 'excluded') {
     return {
       ...feature,
       local_context: localContext,
+      provenance_complete: provenanceComplete,
       frequency_value: null,
       frequency_raw: null,
+      frequency_value_min: null,
+      frequency_value_max: null,
+      frequency_value_type: null,
       frequency_trust: 'not_applicable_excluded',
       frequency_evidence: null,
       frequency_char_start: null,
@@ -573,6 +789,7 @@ function applyDeterministicMetadata(feature) {
       onset_evidence: null,
       onset_char_start: null,
       onset_char_end: null,
+      onset_attachment_validation: null,
       severity_raw: null,
       severity_trust: null,
       subtype_raw: null,
@@ -581,12 +798,17 @@ function applyDeterministicMetadata(feature) {
       progression_char_start: null,
       progression_char_end: null,
       progression_trust: null,
+      progression_attachment_validation: null,
       treatment_response_raw: null,
       treatment_response_evidence: null,
       treatment_response_char_start: null,
       treatment_response_char_end: null,
-      treatment_response_trust: null
+      treatment_response_trust: null,
+      treatment_response_attachment_validation: null
     };
+  }
+  if (!provenanceComplete) {
+    return clearMetadataFieldsForIncompleteProvenance(feature, localContext);
   }
   const deterministicText = localContext || feature.source_sentence || '';
   const sourceSentenceFrequency = extractScopedFrequency(feature.source_sentence || '', feature.match_text || feature.hpo_label, {
@@ -622,6 +844,7 @@ function applyDeterministicMetadata(feature) {
   return {
     ...feature,
     local_context: localContext,
+    provenance_complete: true,
     ...frequency,
     ...onset,
     severity_raw: null,
@@ -638,7 +861,10 @@ function applyDeterministicMetadata(feature) {
     treatment_response_char_end: null,
     treatment_response_trust: null,
     frequency_evidence: frequencyEvidence,
-    onset_evidence: onsetEvidence
+    onset_evidence: onsetEvidence,
+    onset_attachment_validation: null,
+    progression_attachment_validation: null,
+    treatment_response_attachment_validation: null
   };
 }
 
@@ -709,6 +935,23 @@ async function main() {
   const medgemmaReadyProbeMaxTokens =
     Number.parseInt(flags.medgemmaReadyProbeMaxTokens || `${DEFAULTS.medgemmaReadyProbeMaxTokens}`, 10) ||
     DEFAULTS.medgemmaReadyProbeMaxTokens;
+  const enableSciSpacyValidation =
+    String(
+      flags.enableSciSpacyValidation ??
+        process.env.GENEREVIEWS_ENABLE_SCISPACY_VALIDATION ??
+        `${DEFAULTS.enableSciSpacyValidation}`
+    ).toLowerCase() !== 'false';
+  const scispaCyConfig = {
+    enabled: provider === 'medgemma' && enableSciSpacyValidation,
+    pythonPath:
+      flags.scispacyPythonPath || process.env.GENEREVIEWS_SCISPACY_PYTHON || DEFAULTS.scispacyPythonPath,
+    pythonModulePath:
+      flags.scispacyPythonModulePath ||
+      process.env.GENEREVIEWS_SCISPACY_PYTHONPATH ||
+      DEFAULTS.scispacyPythonModulePath,
+    timeoutMs:
+      Number.parseInt(flags.scispacyTimeoutMs || `${DEFAULTS.scispacyTimeoutMs}`, 10) || DEFAULTS.scispacyTimeoutMs
+  };
   const start = Number.parseInt(flags.start || `${DEFAULTS.start}`, 10) || 0;
   const limit = Number.parseInt(flags.limit || `${DEFAULTS.limit}`, 10) || DEFAULTS.limit;
   const noResume = Boolean(flags.noResume);
@@ -771,7 +1014,7 @@ async function main() {
                 feature,
                 text: buildMedGemmaContext(feature)
               }))
-              .filter(({ feature, text }) => feature.status !== 'excluded' && text.length)
+              .filter(({ feature, text }) => feature.status !== 'excluded' && feature.provenance_complete !== false && text.length)
               .map(({ featureIndex, feature, text }) => ({
                 featureIndex,
                 hpo_id: feature.hpo_id,
@@ -788,6 +1031,7 @@ async function main() {
               .filter(
                 ({ feature }) =>
                   feature.status !== 'excluded' &&
+                  feature.provenance_complete !== false &&
                   (!feature.frequency_value || !feature.onset_hpo_id) &&
                   feature.source_sentence
               )
@@ -838,6 +1082,7 @@ async function main() {
                 'low'
               );
             }
+            await applySciSpacyAttachmentValidation(merged, batch, scispaCyConfig);
           }
         } else {
           for (let batchStart = 0; batchStart < fallbackTargets.length; batchStart += metadataBatchSize) {

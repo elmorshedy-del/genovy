@@ -1,5 +1,9 @@
 import express from 'express';
-import { loadGeneReviewsAuditChapter, loadGeneReviewsAuditIndex } from '../services/geneReviewsAuditService.js';
+import {
+  loadGeneReviewsAuditChapter,
+  loadGeneReviewsAuditIndex,
+  loadGeneReviewsRunStatus
+} from '../services/geneReviewsAuditService.js';
 
 const router = express.Router();
 
@@ -23,6 +27,14 @@ router.get('/chapters/:chapterKey', async (req, res) => {
   res.json({
     success: true,
     ...chapter
+  });
+});
+
+router.get('/run-status', async (req, res) => {
+  const payload = await loadGeneReviewsRunStatus(req.query.run);
+  res.json({
+    success: true,
+    ...payload
   });
 });
 

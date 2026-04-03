@@ -1,0 +1,2442 @@
+{
+  "chapter_key": "zellweger_spectrum_disorder",
+  "nbk_id": "NBK1448",
+  "chapter_title": "Zellweger Spectrum Disorder",
+  "source_url": "https://www.ncbi.nlm.nih.gov/books/NBK1448/",
+  "diseases": [
+    "MONDO:0019234"
+  ],
+  "genes": [
+    "PEX13",
+    "PEX14",
+    "PEX16",
+    "PEX1",
+    "PEX10",
+    "PEX11B",
+    "PEX12",
+    "PEX19",
+    "PEX2",
+    "PEX26",
+    "PEX3",
+    "PEX5",
+    "PEX6"
+  ],
+  "chapter_domains": [
+    {
+      "key": "neurologic",
+      "label": "Neurologic",
+      "evidence_headings": [],
+      "evidence_snippets": [
+        "ly sensory deficits and/or mild developmental delay. Recently, individuals with normal intell"
+      ]
+    },
+    {
+      "key": "ophthalmologic",
+      "label": "Ophthalmologic",
+      "evidence_headings": [],
+      "evidence_snippets": [
+        "and severity of the hearing and visual problems vary. A few children with a clinical d"
+      ]
+    },
+    {
+      "key": "auditory",
+      "label": "Auditory",
+      "evidence_headings": [],
+      "evidence_snippets": [
+        "etinal dystrophy, sensorineural hearing loss, developmental delay with hypotonia, and l"
+      ]
+    },
+    {
+      "key": "gastrointestinal",
+      "label": "Gastrointestinal",
+      "evidence_headings": [],
+      "evidence_snippets": [
+        "e hypotonic with resultant poor feeding. Neonatal seizures are frequent and caused by u"
+      ]
+    },
+    {
+      "key": "renal_genitourinary",
+      "label": "Renal / Genitourinary",
+      "evidence_headings": [],
+      "evidence_snippets": [
+        "bones may be noted, as well as renal cysts. Older children manifest retinal dystrop"
+      ]
+    },
+    {
+      "key": "craniofacial",
+      "label": "Craniofacial",
+      "evidence_headings": [],
+      "evidence_snippets": [
+        "ver function tests. Distinctive craniofacial features include flat face, broad nasal bridge,"
+      ]
+    }
+  ],
+  "heading_inventory": [
+    {
+      "tag": "h3",
+      "heading": "Suggestive Findings"
+    },
+    {
+      "tag": "h2",
+      "heading": "Clinical Characteristics"
+    },
+    {
+      "tag": "h3",
+      "heading": "Clinical Description"
+    }
+  ],
+  "extraction_date": "2026-04-01",
+  "pipeline_version": "genereviews-api-export-v1-20260331",
+  "total_assertions": 21,
+  "assertions": [
+    {
+      "assertion_id": "GR-NBK1448-MONDO:0019234-HP:0003256-present",
+      "disease_curie": "MONDO:0019234",
+      "disease_label": "peroxisome biogenesis disorder",
+      "gene_symbols": [
+        "PEX13",
+        "PEX14",
+        "PEX16",
+        "PEX1",
+        "PEX10",
+        "PEX11B",
+        "PEX12",
+        "PEX19",
+        "PEX2",
+        "PEX26",
+        "PEX3",
+        "PEX5",
+        "PEX6"
+      ],
+      "local_clinical_domains": [
+        {
+          "key": "neurologic",
+          "label": "Neurologic",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "hy, sensorineural hearing loss, developmental delay with hypotonia, and liver dysfunction. Ch"
+          ]
+        },
+        {
+          "key": "ophthalmologic",
+          "label": "Ophthalmologic",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "and severity of the hearing and visual problems vary. A few children with a clinical d"
+          ]
+        },
+        {
+          "key": "auditory",
+          "label": "Auditory",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "etinal dystrophy, sensorineural hearing loss, developmental delay with hypotonia, and l"
+          ]
+        },
+        {
+          "key": "gastrointestinal",
+          "label": "Gastrointestinal",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "ental delay with hypotonia, and liver dysfunction. Children may first come to attenti"
+          ]
+        }
+      ],
+      "phenotype_curie": "HP:0003256",
+      "phenotype_label": "Abnormality of the coagulation cascade",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK1448",
+        "chapter_title": "Zellweger Spectrum Disorder",
+        "section_id": "section_Clinical_Description",
+        "section_heading": "Clinical Description",
+        "source_sentence": "Liver dysfunction may be first identified in children with severe bleeding episodes caused by a vitamin K-responsive coagulopathy.",
+        "paragraph_id": "p6",
+        "sentence_id": "p6_s5",
+        "paragraph_char_start": 1939,
+        "paragraph_char_end": 2587,
+        "sentence_char_start": 2348,
+        "sentence_char_end": 2478,
+        "match_char_start": 2465,
+        "match_char_end": 2477,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK1448/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_alias_anchor",
+        "hpo_mapping_method": "graph_alias_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "FLAGGED",
+        "auto_accept_eligible": false,
+        "auto_accept_reasons": [
+          "alias_shadow:flag"
+        ],
+        "alias_shadow": true,
+        "section_branch_consistent": null,
+        "table_concordance": "skip",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK1448-MONDO:0019234-HP:0000846-present",
+      "disease_curie": "MONDO:0019234",
+      "disease_label": "peroxisome biogenesis disorder",
+      "gene_symbols": [
+        "PEX13",
+        "PEX14",
+        "PEX16",
+        "PEX1",
+        "PEX10",
+        "PEX11B",
+        "PEX12",
+        "PEX19",
+        "PEX2",
+        "PEX26",
+        "PEX3",
+        "PEX5",
+        "PEX6"
+      ],
+      "local_clinical_domains": [
+        {
+          "key": "neurologic",
+          "label": "Neurologic",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "hy, sensorineural hearing loss, developmental delay with hypotonia, and liver dysfunction. Ch"
+          ]
+        },
+        {
+          "key": "ophthalmologic",
+          "label": "Ophthalmologic",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "and severity of the hearing and visual problems vary. A few children with a clinical d"
+          ]
+        },
+        {
+          "key": "auditory",
+          "label": "Auditory",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "etinal dystrophy, sensorineural hearing loss, developmental delay with hypotonia, and l"
+          ]
+        },
+        {
+          "key": "gastrointestinal",
+          "label": "Gastrointestinal",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "ental delay with hypotonia, and liver dysfunction. Children may first come to attenti"
+          ]
+        }
+      ],
+      "phenotype_curie": "HP:0000846",
+      "phenotype_label": "Adrenal insufficiency",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK1448",
+        "chapter_title": "Zellweger Spectrum Disorder",
+        "section_id": "section_Clinical_Description",
+        "section_heading": "Clinical Description",
+        "source_sentence": "Older children may develop adrenal insufficiency [ Berendse et al 2014 ] and osteopenia [ Rush et al 2016 ].",
+        "paragraph_id": "p6",
+        "sentence_id": "p6_s6",
+        "paragraph_char_start": 1939,
+        "paragraph_char_end": 2587,
+        "sentence_char_start": 2479,
+        "sentence_char_end": 2587,
+        "match_char_start": 2506,
+        "match_char_end": 2527,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK1448/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_exact_anchor",
+        "hpo_mapping_method": "graph_exact_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "FLAGGED",
+        "auto_accept_eligible": false,
+        "auto_accept_reasons": [
+          "alias_shadow:flag"
+        ],
+        "alias_shadow": true,
+        "section_branch_consistent": null,
+        "table_concordance": "skip",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK1448-MONDO:0019234-HP:0001410-present",
+      "disease_curie": "MONDO:0019234",
+      "disease_label": "peroxisome biogenesis disorder",
+      "gene_symbols": [
+        "PEX13",
+        "PEX14",
+        "PEX16",
+        "PEX1",
+        "PEX10",
+        "PEX11B",
+        "PEX12",
+        "PEX19",
+        "PEX2",
+        "PEX26",
+        "PEX3",
+        "PEX5",
+        "PEX6"
+      ],
+      "local_clinical_domains": [
+        {
+          "key": "gastrointestinal",
+          "label": "Gastrointestinal",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "e hypotonic with resultant poor feeding. Neonatal seizures are frequent and caused by u"
+          ]
+        },
+        {
+          "key": "renal_genitourinary",
+          "label": "Renal / Genitourinary",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "bones may be noted, as well as renal cysts."
+          ]
+        },
+        {
+          "key": "craniofacial",
+          "label": "Craniofacial",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "ver function tests. Distinctive craniofacial features include flat face, broad nasal bridge,"
+          ]
+        }
+      ],
+      "phenotype_curie": "HP:0001410",
+      "phenotype_label": "Decreased liver function",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": "HP:0003623",
+        "label": "Neonatal onset",
+        "raw": "neonatal",
+        "trust": "high",
+        "evidence_text": "Liver dysfunction may be evident as neonatal jaundice and elevation in liver function tests."
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK1448",
+        "chapter_title": "Zellweger Spectrum Disorder",
+        "section_id": "section_Clinical_Description",
+        "section_heading": "Clinical Description",
+        "source_sentence": "Liver dysfunction may be evident as neonatal jaundice and elevation in liver function tests.",
+        "paragraph_id": "p5",
+        "sentence_id": "p5_s3",
+        "paragraph_char_start": 1434,
+        "paragraph_char_end": 1937,
+        "sentence_char_start": 1570,
+        "sentence_char_end": 1662,
+        "match_char_start": 1570,
+        "match_char_end": 1587,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK1448/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_alias_anchor",
+        "hpo_mapping_method": "graph_alias_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "VERIFIED",
+        "auto_accept_eligible": true,
+        "auto_accept_reasons": [],
+        "alias_shadow": false,
+        "section_branch_consistent": null,
+        "table_concordance": "skip",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK1448-MONDO:0019234-HP:0002910-present",
+      "disease_curie": "MONDO:0019234",
+      "disease_label": "peroxisome biogenesis disorder",
+      "gene_symbols": [
+        "PEX13",
+        "PEX14",
+        "PEX16",
+        "PEX1",
+        "PEX10",
+        "PEX11B",
+        "PEX12",
+        "PEX19",
+        "PEX2",
+        "PEX26",
+        "PEX3",
+        "PEX5",
+        "PEX6"
+      ],
+      "local_clinical_domains": [],
+      "phenotype_curie": "HP:0002910",
+      "phenotype_label": "Elevated circulating hepatic transaminase concentration",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": "neonatal",
+        "raw": "neonatal",
+        "trust": "medium",
+        "evidence_text": "Liver dysfunction may be evident as neonatal jaundice and elevation in liver function tests."
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK1448",
+        "chapter_title": "Zellweger Spectrum Disorder",
+        "section_id": null,
+        "section_heading": null,
+        "source_sentence": "Liver dysfunction may be evident as neonatal jaundice and elevation in liver function tests.",
+        "paragraph_id": null,
+        "sentence_id": null,
+        "paragraph_char_start": null,
+        "paragraph_char_end": null,
+        "sentence_char_start": null,
+        "sentence_char_end": null,
+        "match_char_start": null,
+        "match_char_end": null,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK1448/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_alias_anchor",
+        "hpo_mapping_method": "graph_alias_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "VERIFIED",
+        "auto_accept_eligible": false,
+        "auto_accept_reasons": [
+          "source_span:skip"
+        ],
+        "alias_shadow": false,
+        "section_branch_consistent": null,
+        "table_concordance": "skip",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK1448-MONDO:0019234-HP:0011968-present",
+      "disease_curie": "MONDO:0019234",
+      "disease_label": "peroxisome biogenesis disorder",
+      "gene_symbols": [
+        "PEX13",
+        "PEX14",
+        "PEX16",
+        "PEX1",
+        "PEX10",
+        "PEX11B",
+        "PEX12",
+        "PEX19",
+        "PEX2",
+        "PEX26",
+        "PEX3",
+        "PEX5",
+        "PEX6"
+      ],
+      "local_clinical_domains": [
+        {
+          "key": "gastrointestinal",
+          "label": "Gastrointestinal",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "e hypotonic with resultant poor feeding. Neonatal seizures are frequent and caused by u"
+          ]
+        },
+        {
+          "key": "renal_genitourinary",
+          "label": "Renal / Genitourinary",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "bones may be noted, as well as renal cysts."
+          ]
+        },
+        {
+          "key": "craniofacial",
+          "label": "Craniofacial",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "ver function tests. Distinctive craniofacial features include flat face, broad nasal bridge,"
+          ]
+        }
+      ],
+      "phenotype_curie": "HP:0011968",
+      "phenotype_label": "Feeding difficulties",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK1448",
+        "chapter_title": "Zellweger Spectrum Disorder",
+        "section_id": "section_Clinical_Description",
+        "section_heading": "Clinical Description",
+        "source_sentence": "Newborns are hypotonic with resultant poor feeding.",
+        "paragraph_id": "p5",
+        "sentence_id": "p5_s1",
+        "paragraph_char_start": 1434,
+        "paragraph_char_end": 1937,
+        "sentence_char_start": 1434,
+        "sentence_char_end": 1485,
+        "match_char_start": 1472,
+        "match_char_end": 1484,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK1448/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_alias_anchor",
+        "hpo_mapping_method": "graph_alias_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "FLAGGED",
+        "auto_accept_eligible": false,
+        "auto_accept_reasons": [
+          "alias_shadow:flag"
+        ],
+        "alias_shadow": true,
+        "section_branch_consistent": null,
+        "table_concordance": "skip",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK1448-MONDO:0019234-HP:0012368-present",
+      "disease_curie": "MONDO:0019234",
+      "disease_label": "peroxisome biogenesis disorder",
+      "gene_symbols": [
+        "PEX13",
+        "PEX14",
+        "PEX16",
+        "PEX1",
+        "PEX10",
+        "PEX11B",
+        "PEX12",
+        "PEX19",
+        "PEX2",
+        "PEX26",
+        "PEX3",
+        "PEX5",
+        "PEX6"
+      ],
+      "local_clinical_domains": [
+        {
+          "key": "gastrointestinal",
+          "label": "Gastrointestinal",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "e hypotonic with resultant poor feeding. Neonatal seizures are frequent and caused by u"
+          ]
+        },
+        {
+          "key": "renal_genitourinary",
+          "label": "Renal / Genitourinary",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "bones may be noted, as well as renal cysts."
+          ]
+        },
+        {
+          "key": "craniofacial",
+          "label": "Craniofacial",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "ver function tests. Distinctive craniofacial features include flat face, broad nasal bridge,"
+          ]
+        }
+      ],
+      "phenotype_curie": "HP:0012368",
+      "phenotype_label": "Flat face",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK1448",
+        "chapter_title": "Zellweger Spectrum Disorder",
+        "section_id": "section_Clinical_Description",
+        "section_heading": "Clinical Description",
+        "source_sentence": "Distinctive craniofacial features include flat face, broad nasal bridge, large anterior fontanelle, and widely split sutures.",
+        "paragraph_id": "p5",
+        "sentence_id": "p5_s4",
+        "paragraph_char_start": 1434,
+        "paragraph_char_end": 1937,
+        "sentence_char_start": 1663,
+        "sentence_char_end": 1788,
+        "match_char_start": 1705,
+        "match_char_end": 1714,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK1448/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_alias_anchor",
+        "hpo_mapping_method": "graph_alias_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "FLAGGED",
+        "auto_accept_eligible": false,
+        "auto_accept_reasons": [
+          "alias_shadow:flag"
+        ],
+        "alias_shadow": true,
+        "section_branch_consistent": null,
+        "table_concordance": "skip",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK1448-MONDO:0019234-HP:0040282-present",
+      "disease_curie": "MONDO:0019234",
+      "disease_label": "peroxisome biogenesis disorder",
+      "gene_symbols": [
+        "PEX13",
+        "PEX14",
+        "PEX16",
+        "PEX1",
+        "PEX10",
+        "PEX11B",
+        "PEX12",
+        "PEX19",
+        "PEX2",
+        "PEX26",
+        "PEX3",
+        "PEX5",
+        "PEX6"
+      ],
+      "local_clinical_domains": [
+        {
+          "key": "gastrointestinal",
+          "label": "Gastrointestinal",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "e hypotonic with resultant poor feeding. Neonatal seizures are frequent and caused by u"
+          ]
+        },
+        {
+          "key": "renal_genitourinary",
+          "label": "Renal / Genitourinary",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "bones may be noted, as well as renal cysts."
+          ]
+        },
+        {
+          "key": "craniofacial",
+          "label": "Craniofacial",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "ver function tests. Distinctive craniofacial features include flat face, broad nasal bridge,"
+          ]
+        }
+      ],
+      "phenotype_curie": "HP:0040282",
+      "phenotype_label": "Frequent",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK1448",
+        "chapter_title": "Zellweger Spectrum Disorder",
+        "section_id": "section_Clinical_Description",
+        "section_heading": "Clinical Description",
+        "source_sentence": "Neonatal seizures are frequent and caused by underlying neuronal migration defects.",
+        "paragraph_id": "p5",
+        "sentence_id": "p5_s2",
+        "paragraph_char_start": 1434,
+        "paragraph_char_end": 1937,
+        "sentence_char_start": 1486,
+        "sentence_char_end": 1569,
+        "match_char_start": 1508,
+        "match_char_end": 1516,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK1448/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_exact_anchor",
+        "hpo_mapping_method": "graph_exact_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "FLAGGED",
+        "auto_accept_eligible": false,
+        "auto_accept_reasons": [
+          "alias_shadow:flag"
+        ],
+        "alias_shadow": true,
+        "section_branch_consistent": null,
+        "table_concordance": "skip",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK1448-MONDO:0019234-HP:0001252-present",
+      "disease_curie": "MONDO:0019234",
+      "disease_label": "peroxisome biogenesis disorder",
+      "gene_symbols": [
+        "PEX13",
+        "PEX14",
+        "PEX16",
+        "PEX1",
+        "PEX10",
+        "PEX11B",
+        "PEX12",
+        "PEX19",
+        "PEX2",
+        "PEX26",
+        "PEX3",
+        "PEX5",
+        "PEX6"
+      ],
+      "local_clinical_domains": [
+        {
+          "key": "neurologic",
+          "label": "Neurologic",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "hy, sensorineural hearing loss, developmental delay with hypotonia, and liver dysfunction. Ch"
+          ]
+        },
+        {
+          "key": "ophthalmologic",
+          "label": "Ophthalmologic",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "and severity of the hearing and visual problems vary. A few children with a clinical d"
+          ]
+        },
+        {
+          "key": "auditory",
+          "label": "Auditory",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "etinal dystrophy, sensorineural hearing loss, developmental delay with hypotonia, and l"
+          ]
+        },
+        {
+          "key": "gastrointestinal",
+          "label": "Gastrointestinal",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "ental delay with hypotonia, and liver dysfunction. Children may first come to attenti"
+          ]
+        }
+      ],
+      "phenotype_curie": "HP:0001252",
+      "phenotype_label": "Hypotonia",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK1448",
+        "chapter_title": "Zellweger Spectrum Disorder",
+        "section_id": "section_Clinical_Description",
+        "section_heading": "Clinical Description",
+        "source_sentence": "Older children manifest retinal dystrophy, sensorineural hearing loss, developmental delay with hypotonia, and liver dysfunction.",
+        "paragraph_id": "p6",
+        "sentence_id": "p6_s1",
+        "paragraph_char_start": 1939,
+        "paragraph_char_end": 2587,
+        "sentence_char_start": 1939,
+        "sentence_char_end": 2068,
+        "match_char_start": 2035,
+        "match_char_end": 2044,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK1448/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_exact_anchor",
+        "hpo_mapping_method": "graph_exact_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "VERIFIED",
+        "auto_accept_eligible": true,
+        "auto_accept_reasons": [],
+        "alias_shadow": false,
+        "section_branch_consistent": null,
+        "table_concordance": "skip",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK1448-MONDO:0019234-HP:0011342-present",
+      "disease_curie": "MONDO:0019234",
+      "disease_label": "peroxisome biogenesis disorder",
+      "gene_symbols": [
+        "PEX13",
+        "PEX14",
+        "PEX16",
+        "PEX1",
+        "PEX10",
+        "PEX11B",
+        "PEX12",
+        "PEX19",
+        "PEX2",
+        "PEX26",
+        "PEX3",
+        "PEX5",
+        "PEX6"
+      ],
+      "local_clinical_domains": [],
+      "phenotype_curie": "HP:0011342",
+      "phenotype_label": "Mild global developmental delay",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK1448",
+        "chapter_title": "Zellweger Spectrum Disorder",
+        "section_id": null,
+        "section_heading": null,
+        "source_sentence": "The ZSD phenotypic spectrum is broad; some affected individuals have mild manifestations, mainly sensory deficits and/or mild developmental delay.",
+        "paragraph_id": null,
+        "sentence_id": null,
+        "paragraph_char_start": null,
+        "paragraph_char_end": null,
+        "sentence_char_start": null,
+        "sentence_char_end": null,
+        "match_char_start": null,
+        "match_char_end": null,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK1448/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_alias_anchor",
+        "hpo_mapping_method": "graph_alias_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "VERIFIED",
+        "auto_accept_eligible": false,
+        "auto_accept_reasons": [
+          "source_span:skip"
+        ],
+        "alias_shadow": false,
+        "section_branch_consistent": null,
+        "table_concordance": "skip",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK1448-MONDO:0019234-HP:0032807-present",
+      "disease_curie": "MONDO:0019234",
+      "disease_label": "peroxisome biogenesis disorder",
+      "gene_symbols": [
+        "PEX13",
+        "PEX14",
+        "PEX16",
+        "PEX1",
+        "PEX10",
+        "PEX11B",
+        "PEX12",
+        "PEX19",
+        "PEX2",
+        "PEX26",
+        "PEX3",
+        "PEX5",
+        "PEX6"
+      ],
+      "local_clinical_domains": [],
+      "phenotype_curie": "HP:0032807",
+      "phenotype_label": "Neonatal seizure",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": "frequent",
+        "hpo_category": "HP:0040282",
+        "hpo_category_label": "Frequent",
+        "trust": "high",
+        "evidence_text": "Neonatal seizures are frequent and caused by underlying neuronal migration defects."
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": "neonatal",
+        "raw": "neonatal",
+        "trust": "medium",
+        "evidence_text": "Neonatal seizures are frequent and caused by underlying neuronal migration defects."
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK1448",
+        "chapter_title": "Zellweger Spectrum Disorder",
+        "section_id": null,
+        "section_heading": null,
+        "source_sentence": "Neonatal seizures are frequent and caused by underlying neuronal migration defects.",
+        "paragraph_id": null,
+        "sentence_id": null,
+        "paragraph_char_start": null,
+        "paragraph_char_end": null,
+        "sentence_char_start": null,
+        "sentence_char_end": null,
+        "match_char_start": null,
+        "match_char_end": null,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK1448/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_alias_anchor",
+        "hpo_mapping_method": "graph_alias_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "FAILED",
+        "auto_accept_eligible": false,
+        "auto_accept_reasons": [
+          "source_span:skip",
+          "frequency_support:fail",
+          "contains_failed_check"
+        ],
+        "alias_shadow": false,
+        "section_branch_consistent": null,
+        "table_concordance": "skip",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK1448-MONDO:0019234-HP:0000938-present",
+      "disease_curie": "MONDO:0019234",
+      "disease_label": "peroxisome biogenesis disorder",
+      "gene_symbols": [
+        "PEX13",
+        "PEX14",
+        "PEX16",
+        "PEX1",
+        "PEX10",
+        "PEX11B",
+        "PEX12",
+        "PEX19",
+        "PEX2",
+        "PEX26",
+        "PEX3",
+        "PEX5",
+        "PEX6"
+      ],
+      "local_clinical_domains": [
+        {
+          "key": "neurologic",
+          "label": "Neurologic",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "hy, sensorineural hearing loss, developmental delay with hypotonia, and liver dysfunction. Ch"
+          ]
+        },
+        {
+          "key": "ophthalmologic",
+          "label": "Ophthalmologic",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "and severity of the hearing and visual problems vary. A few children with a clinical d"
+          ]
+        },
+        {
+          "key": "auditory",
+          "label": "Auditory",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "etinal dystrophy, sensorineural hearing loss, developmental delay with hypotonia, and l"
+          ]
+        },
+        {
+          "key": "gastrointestinal",
+          "label": "Gastrointestinal",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "ental delay with hypotonia, and liver dysfunction. Children may first come to attenti"
+          ]
+        }
+      ],
+      "phenotype_curie": "HP:0000938",
+      "phenotype_label": "Osteopenia",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK1448",
+        "chapter_title": "Zellweger Spectrum Disorder",
+        "section_id": "section_Clinical_Description",
+        "section_heading": "Clinical Description",
+        "source_sentence": "Older children may develop adrenal insufficiency [ Berendse et al 2014 ] and osteopenia [ Rush et al 2016 ].",
+        "paragraph_id": "p6",
+        "sentence_id": "p6_s6",
+        "paragraph_char_start": 1939,
+        "paragraph_char_end": 2587,
+        "sentence_char_start": 2479,
+        "sentence_char_end": 2587,
+        "match_char_start": 2556,
+        "match_char_end": 2566,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK1448/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_exact_anchor",
+        "hpo_mapping_method": "graph_exact_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "VERIFIED",
+        "auto_accept_eligible": true,
+        "auto_accept_reasons": [],
+        "alias_shadow": false,
+        "section_branch_consistent": null,
+        "table_concordance": "skip",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK1448-MONDO:0019234-HP:0000580-present",
+      "disease_curie": "MONDO:0019234",
+      "disease_label": "peroxisome biogenesis disorder",
+      "gene_symbols": [
+        "PEX13",
+        "PEX14",
+        "PEX16",
+        "PEX1",
+        "PEX10",
+        "PEX11B",
+        "PEX12",
+        "PEX19",
+        "PEX2",
+        "PEX26",
+        "PEX3",
+        "PEX5",
+        "PEX6"
+      ],
+      "local_clinical_domains": [
+        {
+          "key": "neurologic",
+          "label": "Neurologic",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "hy, sensorineural hearing loss, developmental delay with hypotonia, and liver dysfunction. Ch"
+          ]
+        },
+        {
+          "key": "ophthalmologic",
+          "label": "Ophthalmologic",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "and severity of the hearing and visual problems vary. A few children with a clinical d"
+          ]
+        },
+        {
+          "key": "auditory",
+          "label": "Auditory",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "etinal dystrophy, sensorineural hearing loss, developmental delay with hypotonia, and l"
+          ]
+        },
+        {
+          "key": "gastrointestinal",
+          "label": "Gastrointestinal",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "ental delay with hypotonia, and liver dysfunction. Children may first come to attenti"
+          ]
+        }
+      ],
+      "phenotype_curie": "HP:0000580",
+      "phenotype_label": "Pigmentary retinopathy",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK1448",
+        "chapter_title": "Zellweger Spectrum Disorder",
+        "section_id": "section_Clinical_Description",
+        "section_heading": "Clinical Description",
+        "source_sentence": "A few children with a clinical diagnosis of neonatal adrenoleukodystrophy had transient leopard spot pigmentary retinopathy [ Lyons et al 2004 ].",
+        "paragraph_id": "p6",
+        "sentence_id": "p6_s4",
+        "paragraph_char_start": 1939,
+        "paragraph_char_end": 2587,
+        "sentence_char_start": 2202,
+        "sentence_char_end": 2347,
+        "match_char_start": 2303,
+        "match_char_end": 2325,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK1448/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_exact_anchor",
+        "hpo_mapping_method": "graph_exact_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "FLAGGED",
+        "auto_accept_eligible": false,
+        "auto_accept_reasons": [
+          "alias_shadow:flag"
+        ],
+        "alias_shadow": true,
+        "section_branch_consistent": null,
+        "table_concordance": "skip",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK1448-MONDO:0019234-HP:0006579-present",
+      "disease_curie": "MONDO:0019234",
+      "disease_label": "peroxisome biogenesis disorder",
+      "gene_symbols": [
+        "PEX13",
+        "PEX14",
+        "PEX16",
+        "PEX1",
+        "PEX10",
+        "PEX11B",
+        "PEX12",
+        "PEX19",
+        "PEX2",
+        "PEX26",
+        "PEX3",
+        "PEX5",
+        "PEX6"
+      ],
+      "local_clinical_domains": [
+        {
+          "key": "gastrointestinal",
+          "label": "Gastrointestinal",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "e hypotonic with resultant poor feeding. Neonatal seizures are frequent and caused by u"
+          ]
+        },
+        {
+          "key": "renal_genitourinary",
+          "label": "Renal / Genitourinary",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "bones may be noted, as well as renal cysts."
+          ]
+        },
+        {
+          "key": "craniofacial",
+          "label": "Craniofacial",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "ver function tests. Distinctive craniofacial features include flat face, broad nasal bridge,"
+          ]
+        }
+      ],
+      "phenotype_curie": "HP:0006579",
+      "phenotype_label": "Prolonged neonatal jaundice",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": "neonatal",
+        "raw": "neonatal",
+        "trust": "medium",
+        "evidence_text": "Liver dysfunction may be evident as neonatal jaundice and elevation in liver function tests."
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK1448",
+        "chapter_title": "Zellweger Spectrum Disorder",
+        "section_id": "section_Clinical_Description",
+        "section_heading": "Clinical Description",
+        "source_sentence": "Liver dysfunction may be evident as neonatal jaundice and elevation in liver function tests.",
+        "paragraph_id": "p5",
+        "sentence_id": "p5_s3",
+        "paragraph_char_start": 1434,
+        "paragraph_char_end": 1937,
+        "sentence_char_start": 1570,
+        "sentence_char_end": 1662,
+        "match_char_start": 1606,
+        "match_char_end": 1623,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK1448/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_alias_anchor",
+        "hpo_mapping_method": "graph_alias_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "VERIFIED",
+        "auto_accept_eligible": true,
+        "auto_accept_reasons": [],
+        "alias_shadow": false,
+        "section_branch_consistent": null,
+        "table_concordance": "skip",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK1448-MONDO:0019234-HP:0000107-present",
+      "disease_curie": "MONDO:0019234",
+      "disease_label": "peroxisome biogenesis disorder",
+      "gene_symbols": [
+        "PEX13",
+        "PEX14",
+        "PEX16",
+        "PEX1",
+        "PEX10",
+        "PEX11B",
+        "PEX12",
+        "PEX19",
+        "PEX2",
+        "PEX26",
+        "PEX3",
+        "PEX5",
+        "PEX6"
+      ],
+      "local_clinical_domains": [
+        {
+          "key": "gastrointestinal",
+          "label": "Gastrointestinal",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "e hypotonic with resultant poor feeding. Neonatal seizures are frequent and caused by u"
+          ]
+        },
+        {
+          "key": "renal_genitourinary",
+          "label": "Renal / Genitourinary",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "bones may be noted, as well as renal cysts."
+          ]
+        },
+        {
+          "key": "craniofacial",
+          "label": "Craniofacial",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "ver function tests. Distinctive craniofacial features include flat face, broad nasal bridge,"
+          ]
+        }
+      ],
+      "phenotype_curie": "HP:0000107",
+      "phenotype_label": "Renal cyst",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK1448",
+        "chapter_title": "Zellweger Spectrum Disorder",
+        "section_id": "section_Clinical_Description",
+        "section_heading": "Clinical Description",
+        "source_sentence": "In severely affected children, bony stippling (chondrodysplasia punctata) at the patella(e) and the long bones may be noted, as well as renal cysts.",
+        "paragraph_id": "p5",
+        "sentence_id": "p5_s5",
+        "paragraph_char_start": 1434,
+        "paragraph_char_end": 1937,
+        "sentence_char_start": 1789,
+        "sentence_char_end": 1937,
+        "match_char_start": 1925,
+        "match_char_end": 1936,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK1448/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_alias_anchor",
+        "hpo_mapping_method": "graph_alias_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "VERIFIED",
+        "auto_accept_eligible": true,
+        "auto_accept_reasons": [],
+        "alias_shadow": false,
+        "section_branch_consistent": null,
+        "table_concordance": "skip",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK1448-MONDO:0019234-HP:0000556-present",
+      "disease_curie": "MONDO:0019234",
+      "disease_label": "peroxisome biogenesis disorder",
+      "gene_symbols": [
+        "PEX13",
+        "PEX14",
+        "PEX16",
+        "PEX1",
+        "PEX10",
+        "PEX11B",
+        "PEX12",
+        "PEX19",
+        "PEX2",
+        "PEX26",
+        "PEX3",
+        "PEX5",
+        "PEX6"
+      ],
+      "local_clinical_domains": [
+        {
+          "key": "neurologic",
+          "label": "Neurologic",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "hy, sensorineural hearing loss, developmental delay with hypotonia, and liver dysfunction. Ch"
+          ]
+        },
+        {
+          "key": "ophthalmologic",
+          "label": "Ophthalmologic",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "and severity of the hearing and visual problems vary. A few children with a clinical d"
+          ]
+        },
+        {
+          "key": "auditory",
+          "label": "Auditory",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "etinal dystrophy, sensorineural hearing loss, developmental delay with hypotonia, and l"
+          ]
+        },
+        {
+          "key": "gastrointestinal",
+          "label": "Gastrointestinal",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "ental delay with hypotonia, and liver dysfunction. Children may first come to attenti"
+          ]
+        }
+      ],
+      "phenotype_curie": "HP:0000556",
+      "phenotype_label": "Retinal dystrophy",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK1448",
+        "chapter_title": "Zellweger Spectrum Disorder",
+        "section_id": "section_Clinical_Description",
+        "section_heading": "Clinical Description",
+        "source_sentence": "Older children manifest retinal dystrophy, sensorineural hearing loss, developmental delay with hypotonia, and liver dysfunction.",
+        "paragraph_id": "p6",
+        "sentence_id": "p6_s1",
+        "paragraph_char_start": 1939,
+        "paragraph_char_end": 2587,
+        "sentence_char_start": 1939,
+        "sentence_char_end": 2068,
+        "match_char_start": 1963,
+        "match_char_end": 1980,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK1448/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_exact_anchor",
+        "hpo_mapping_method": "graph_exact_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "FLAGGED",
+        "auto_accept_eligible": false,
+        "auto_accept_reasons": [
+          "alias_shadow:flag"
+        ],
+        "alias_shadow": true,
+        "section_branch_consistent": null,
+        "table_concordance": "skip",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK1448-MONDO:0019234-HP:0000488-present",
+      "disease_curie": "MONDO:0019234",
+      "disease_label": "peroxisome biogenesis disorder",
+      "gene_symbols": [
+        "PEX13",
+        "PEX14",
+        "PEX16",
+        "PEX1",
+        "PEX10",
+        "PEX11B",
+        "PEX12",
+        "PEX19",
+        "PEX2",
+        "PEX26",
+        "PEX3",
+        "PEX5",
+        "PEX6"
+      ],
+      "local_clinical_domains": [
+        {
+          "key": "neurologic",
+          "label": "Neurologic",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "hy, sensorineural hearing loss, developmental delay with hypotonia, and liver dysfunction. Ch"
+          ]
+        },
+        {
+          "key": "ophthalmologic",
+          "label": "Ophthalmologic",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "and severity of the hearing and visual problems vary. A few children with a clinical d"
+          ]
+        },
+        {
+          "key": "auditory",
+          "label": "Auditory",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "etinal dystrophy, sensorineural hearing loss, developmental delay with hypotonia, and l"
+          ]
+        },
+        {
+          "key": "gastrointestinal",
+          "label": "Gastrointestinal",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "ental delay with hypotonia, and liver dysfunction. Children may first come to attenti"
+          ]
+        }
+      ],
+      "phenotype_curie": "HP:0000488",
+      "phenotype_label": "Retinopathy",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK1448",
+        "chapter_title": "Zellweger Spectrum Disorder",
+        "section_id": "section_Clinical_Description",
+        "section_heading": "Clinical Description",
+        "source_sentence": "A few children with a clinical diagnosis of neonatal adrenoleukodystrophy had transient leopard spot pigmentary retinopathy [ Lyons et al 2004 ].",
+        "paragraph_id": "p6",
+        "sentence_id": "p6_s4",
+        "paragraph_char_start": 1939,
+        "paragraph_char_end": 2587,
+        "sentence_char_start": 2202,
+        "sentence_char_end": 2347,
+        "match_char_start": 2314,
+        "match_char_end": 2325,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK1448/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_exact_anchor",
+        "hpo_mapping_method": "graph_exact_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "FLAGGED",
+        "auto_accept_eligible": false,
+        "auto_accept_reasons": [
+          "alias_shadow:flag"
+        ],
+        "alias_shadow": true,
+        "section_branch_consistent": null,
+        "table_concordance": "skip",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK1448-MONDO:0019234-HP:0000407-present",
+      "disease_curie": "MONDO:0019234",
+      "disease_label": "peroxisome biogenesis disorder",
+      "gene_symbols": [
+        "PEX13",
+        "PEX14",
+        "PEX16",
+        "PEX1",
+        "PEX10",
+        "PEX11B",
+        "PEX12",
+        "PEX19",
+        "PEX2",
+        "PEX26",
+        "PEX3",
+        "PEX5",
+        "PEX6"
+      ],
+      "local_clinical_domains": [
+        {
+          "key": "neurologic",
+          "label": "Neurologic",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "hy, sensorineural hearing loss, developmental delay with hypotonia, and liver dysfunction. Ch"
+          ]
+        },
+        {
+          "key": "ophthalmologic",
+          "label": "Ophthalmologic",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "and severity of the hearing and visual problems vary. A few children with a clinical d"
+          ]
+        },
+        {
+          "key": "auditory",
+          "label": "Auditory",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "etinal dystrophy, sensorineural hearing loss, developmental delay with hypotonia, and l"
+          ]
+        },
+        {
+          "key": "gastrointestinal",
+          "label": "Gastrointestinal",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "ental delay with hypotonia, and liver dysfunction. Children may first come to attenti"
+          ]
+        }
+      ],
+      "phenotype_curie": "HP:0000407",
+      "phenotype_label": "Sensorineural hearing impairment",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK1448",
+        "chapter_title": "Zellweger Spectrum Disorder",
+        "section_id": "section_Clinical_Description",
+        "section_heading": "Clinical Description",
+        "source_sentence": "Older children manifest retinal dystrophy, sensorineural hearing loss, developmental delay with hypotonia, and liver dysfunction.",
+        "paragraph_id": "p6",
+        "sentence_id": "p6_s1",
+        "paragraph_char_start": 1939,
+        "paragraph_char_end": 2587,
+        "sentence_char_start": 1939,
+        "sentence_char_end": 2068,
+        "match_char_start": 1982,
+        "match_char_end": 2008,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK1448/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_alias_anchor",
+        "hpo_mapping_method": "graph_alias_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "VERIFIED",
+        "auto_accept_eligible": true,
+        "auto_accept_reasons": [],
+        "alias_shadow": false,
+        "section_branch_consistent": null,
+        "table_concordance": "skip",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK1448-MONDO:0019234-HP:0003474-present",
+      "disease_curie": "MONDO:0019234",
+      "disease_label": "peroxisome biogenesis disorder",
+      "gene_symbols": [
+        "PEX13",
+        "PEX14",
+        "PEX16",
+        "PEX1",
+        "PEX10",
+        "PEX11B",
+        "PEX12",
+        "PEX19",
+        "PEX2",
+        "PEX26",
+        "PEX3",
+        "PEX5",
+        "PEX6"
+      ],
+      "local_clinical_domains": [],
+      "phenotype_curie": "HP:0003474",
+      "phenotype_label": "Somatic sensory dysfunction",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK1448",
+        "chapter_title": "Zellweger Spectrum Disorder",
+        "section_id": null,
+        "section_heading": null,
+        "source_sentence": "The ZSD phenotypic spectrum is broad; some affected individuals have mild manifestations, mainly sensory deficits and/or mild developmental delay.",
+        "paragraph_id": null,
+        "sentence_id": null,
+        "paragraph_char_start": null,
+        "paragraph_char_end": null,
+        "sentence_char_start": null,
+        "sentence_char_end": null,
+        "match_char_start": null,
+        "match_char_end": null,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK1448/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_alias_anchor",
+        "hpo_mapping_method": "graph_alias_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "FLAGGED",
+        "auto_accept_eligible": false,
+        "auto_accept_reasons": [
+          "source_span:skip",
+          "alias_shadow:flag"
+        ],
+        "alias_shadow": true,
+        "section_branch_consistent": null,
+        "table_concordance": "skip",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK1448-MONDO:0019234-HP:0000505-present",
+      "disease_curie": "MONDO:0019234",
+      "disease_label": "peroxisome biogenesis disorder",
+      "gene_symbols": [
+        "PEX13",
+        "PEX14",
+        "PEX16",
+        "PEX1",
+        "PEX10",
+        "PEX11B",
+        "PEX12",
+        "PEX19",
+        "PEX2",
+        "PEX26",
+        "PEX3",
+        "PEX5",
+        "PEX6"
+      ],
+      "local_clinical_domains": [],
+      "phenotype_curie": "HP:0000505",
+      "phenotype_label": "Visual impairment",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK1448",
+        "chapter_title": "Zellweger Spectrum Disorder",
+        "section_id": null,
+        "section_heading": null,
+        "source_sentence": "Onset and severity of the hearing and visual problems vary.",
+        "paragraph_id": null,
+        "sentence_id": null,
+        "paragraph_char_start": null,
+        "paragraph_char_end": null,
+        "sentence_char_start": null,
+        "sentence_char_end": null,
+        "match_char_start": null,
+        "match_char_end": null,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK1448/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_alias_anchor",
+        "hpo_mapping_method": "graph_alias_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "VERIFIED",
+        "auto_accept_eligible": false,
+        "auto_accept_reasons": [
+          "source_span:skip"
+        ],
+        "alias_shadow": false,
+        "section_branch_consistent": null,
+        "table_concordance": "skip",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK1448-MONDO:0019234-HP:0000260-present",
+      "disease_curie": "MONDO:0019234",
+      "disease_label": "peroxisome biogenesis disorder",
+      "gene_symbols": [
+        "PEX13",
+        "PEX14",
+        "PEX16",
+        "PEX1",
+        "PEX10",
+        "PEX11B",
+        "PEX12",
+        "PEX19",
+        "PEX2",
+        "PEX26",
+        "PEX3",
+        "PEX5",
+        "PEX6"
+      ],
+      "local_clinical_domains": [
+        {
+          "key": "gastrointestinal",
+          "label": "Gastrointestinal",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "e hypotonic with resultant poor feeding. Neonatal seizures are frequent and caused by u"
+          ]
+        },
+        {
+          "key": "renal_genitourinary",
+          "label": "Renal / Genitourinary",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "bones may be noted, as well as renal cysts."
+          ]
+        },
+        {
+          "key": "craniofacial",
+          "label": "Craniofacial",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "ver function tests. Distinctive craniofacial features include flat face, broad nasal bridge,"
+          ]
+        }
+      ],
+      "phenotype_curie": "HP:0000260",
+      "phenotype_label": "Wide anterior fontanel",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK1448",
+        "chapter_title": "Zellweger Spectrum Disorder",
+        "section_id": "section_Clinical_Description",
+        "section_heading": "Clinical Description",
+        "source_sentence": "Distinctive craniofacial features include flat face, broad nasal bridge, large anterior fontanelle, and widely split sutures.",
+        "paragraph_id": "p5",
+        "sentence_id": "p5_s4",
+        "paragraph_char_start": 1434,
+        "paragraph_char_end": 1937,
+        "sentence_char_start": 1663,
+        "sentence_char_end": 1788,
+        "match_char_start": 1736,
+        "match_char_end": 1761,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK1448/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_alias_anchor",
+        "hpo_mapping_method": "graph_alias_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "VERIFIED",
+        "auto_accept_eligible": true,
+        "auto_accept_reasons": [],
+        "alias_shadow": false,
+        "section_branch_consistent": null,
+        "table_concordance": "skip",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK1448-MONDO:0019234-HP:0000431-present",
+      "disease_curie": "MONDO:0019234",
+      "disease_label": "peroxisome biogenesis disorder",
+      "gene_symbols": [
+        "PEX13",
+        "PEX14",
+        "PEX16",
+        "PEX1",
+        "PEX10",
+        "PEX11B",
+        "PEX12",
+        "PEX19",
+        "PEX2",
+        "PEX26",
+        "PEX3",
+        "PEX5",
+        "PEX6"
+      ],
+      "local_clinical_domains": [
+        {
+          "key": "gastrointestinal",
+          "label": "Gastrointestinal",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "e hypotonic with resultant poor feeding. Neonatal seizures are frequent and caused by u"
+          ]
+        },
+        {
+          "key": "renal_genitourinary",
+          "label": "Renal / Genitourinary",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "bones may be noted, as well as renal cysts."
+          ]
+        },
+        {
+          "key": "craniofacial",
+          "label": "Craniofacial",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "ver function tests. Distinctive craniofacial features include flat face, broad nasal bridge,"
+          ]
+        }
+      ],
+      "phenotype_curie": "HP:0000431",
+      "phenotype_label": "Wide nasal bridge",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK1448",
+        "chapter_title": "Zellweger Spectrum Disorder",
+        "section_id": "section_Clinical_Description",
+        "section_heading": "Clinical Description",
+        "source_sentence": "Distinctive craniofacial features include flat face, broad nasal bridge, large anterior fontanelle, and widely split sutures.",
+        "paragraph_id": "p5",
+        "sentence_id": "p5_s4",
+        "paragraph_char_start": 1434,
+        "paragraph_char_end": 1937,
+        "sentence_char_start": 1663,
+        "sentence_char_end": 1788,
+        "match_char_start": 1716,
+        "match_char_end": 1734,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK1448/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_alias_anchor",
+        "hpo_mapping_method": "graph_alias_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "VERIFIED",
+        "auto_accept_eligible": true,
+        "auto_accept_reasons": [],
+        "alias_shadow": false,
+        "section_branch_consistent": null,
+        "table_concordance": "skip",
+        "cross_source_concordance": []
+      }
+    }
+  ],
+  "summary_stats": {
+    "present_count": 21,
+    "excluded_count": 0,
+    "with_frequency": 1,
+    "with_onset": 4,
+    "high_trust": 21,
+    "medium_trust": 0
+  }
+}

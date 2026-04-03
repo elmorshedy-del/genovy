@@ -30,6 +30,13 @@ function parseArgs(argv) {
   return flags;
 }
 
+function parseSourceKeyList(rawValue) {
+  return [...new Set(String(rawValue || '')
+    .split(',')
+    .map((value) => value.trim())
+    .filter(Boolean))].sort();
+}
+
 function normalizeGeneKey(value) {
   if (value == null) return '';
   const text = String(value).trim();
@@ -142,7 +149,8 @@ async function main() {
     baselineJson: flags['baseline-json'] || DEFAULTS.baselineJson,
     outputJson: flags['output-json'] || DEFAULTS.outputJson,
     outputMd: flags['output-md'] || DEFAULTS.outputMd,
-    limit: Number.parseInt(String(flags.limit || DEFAULTS.limit), 10)
+    limit: Number.parseInt(String(flags.limit || DEFAULTS.limit), 10),
+    disabledSourceKeys: parseSourceKeyList(flags['disable-source-keys'])
   };
   const baseline = JSON.parse(await fs.readFile(config.baselineJson, 'utf8'));
   const baselineRanks = Object.fromEntries(baseline.per_case.map((row) => [row.case_id, row.genovy_rank]));
@@ -152,7 +160,12 @@ async function main() {
     exomiserByCase[caseId] = parseTsvRows(await fs.readFile(path.join(config.exomiserResultsDir, fileName), 'utf8'));
   }
 
-  const index = await withClient((client) => loadDxSimilarityIndex(client, { forceRefresh: true }));
+  const index = await withClient((client) =>
+    loadDxSimilarityIndex(client, {
+      forceRefresh: true,
+      disabledDiseaseSourceKeys: config.disabledSourceKeys
+    })
+  );
   const genovyRanks = {};
   const exomiserRanks = {};
   const perCase = [];
@@ -214,6 +227,7 @@ async function main() {
     },
     phenopacket_dir: config.phenopacketDir,
     exomiser_results_dir: config.exomiserResultsDir,
+    disabled_disease_source_keys: config.disabledSourceKeys,
     genovy_summary: summarizeRun(genovyRanks),
     exomiser_summary: summarizeRun(exomiserRanks),
     head_to_head: compareRuns(genovyRanks, exomiserRanks),

@@ -1,0 +1,66 @@
+{
+  "created_at": "2026-04-01T00:28:15.195Z",
+  "stage": "verify",
+  "total_processed": 5,
+  "total_errors": 0,
+  "results": [
+    {
+      "chapterKey": "y_chromosome_infertility",
+      "nbkId": "NBK1339",
+      "reviewPagePath": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/genereviews-pipeline-latest5-settled-20260330/stage7_verify_medgemma/review_pages/Y_Chromosome_Infertility_review.html",
+      "featureCount": 6,
+      "verified": 4,
+      "flagged": 1,
+      "failed": 1,
+      "autoAcceptEligible": 4
+    },
+    {
+      "chapterKey": "yif1b_related_neurodevelopmental_disorder",
+      "nbkId": "NBK606999",
+      "reviewPagePath": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/genereviews-pipeline-latest5-settled-20260330/stage7_verify_medgemma/review_pages/YIF1B_Related_Neurodevelopmental_Disorder_review.html",
+      "featureCount": 40,
+      "verified": 22,
+      "flagged": 15,
+      "failed": 3,
+      "autoAcceptEligible": 17
+    },
+    {
+      "chapterKey": "zap70_related_combined_immunodeficiency",
+      "nbkId": "NBK20221",
+      "reviewPagePath": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/genereviews-pipeline-latest5-settled-20260330/stage7_verify_medgemma/review_pages/ZAP70_Related_Combined_Immunodeficiency_review.html",
+      "featureCount": 41,
+      "verified": 19,
+      "flagged": 15,
+      "failed": 7,
+      "autoAcceptEligible": 16
+    },
+    {
+      "chapterKey": "zellweger_spectrum_disorder",
+      "nbkId": "NBK1448",
+      "reviewPagePath": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/genereviews-pipeline-latest5-settled-20260330/stage7_verify_medgemma/review_pages/Zellweger_Spectrum_Disorder_review.html",
+      "featureCount": 27,
+      "verified": 15,
+      "flagged": 11,
+      "failed": 1,
+      "autoAcceptEligible": 11
+    },
+    {
+      "chapterKey": "zhu_tokita_takenouchi_kim_syndrome",
+      "nbkId": "NBK618356",
+      "reviewPagePath": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/genereviews-pipeline-latest5-settled-20260330/stage7_verify_medgemma/review_pages/Zhu_Tokita_Takenouchi_Kim_Syndrome_review.html",
+      "featureCount": 139,
+      "verified": 101,
+      "flagged": 18,
+      "failed": 20,
+      "autoAcceptEligible": 76
+    }
+  ],
+  "totals": {
+    "featureCount": 253,
+    "verified": 161,
+    "flagged": 60,
+    "failed": 32,
+    "autoAcceptEligible": 124
+  },
+  "errors": []
+}

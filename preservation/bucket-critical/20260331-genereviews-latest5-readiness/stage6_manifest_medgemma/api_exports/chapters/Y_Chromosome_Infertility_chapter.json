@@ -1,0 +1,463 @@
+{
+  "chapter_key": "y_chromosome_infertility",
+  "nbk_id": "NBK1339",
+  "chapter_title": "Y Chromosome Infertility",
+  "source_url": "https://www.ncbi.nlm.nih.gov/books/NBK1339/",
+  "diseases": [
+    "MONDO:0042605"
+  ],
+  "genes": [
+    "DDX3Y",
+    "USP9Y"
+  ],
+  "chapter_domains": [
+    {
+      "key": "renal_genitourinary",
+      "label": "Renal / Genitourinary",
+      "evidence_headings": [],
+      "evidence_snippets": [
+        "osis for finding any sperm with testicular sperm extraction (TESE). Males with AZFc deleti"
+      ]
+    }
+  ],
+  "heading_inventory": [
+    {
+      "tag": "h3",
+      "heading": "Suggestive Findings"
+    },
+    {
+      "tag": "h3",
+      "heading": "Table 1."
+    },
+    {
+      "tag": "h2",
+      "heading": "Clinical Characteristics"
+    },
+    {
+      "tag": "h3",
+      "heading": "Clinical Description"
+    }
+  ],
+  "extraction_date": "2026-04-01",
+  "pipeline_version": "genereviews-api-export-v1-20260331",
+  "total_assertions": 5,
+  "assertions": [
+    {
+      "assertion_id": "GR-NBK1339-MONDO:0042605-HP:0000027-present",
+      "disease_curie": "MONDO:0042605",
+      "disease_label": "Y chromosome infertility due to DAZ1 deletion",
+      "gene_symbols": [
+        "DDX3Y",
+        "USP9Y"
+      ],
+      "local_clinical_domains": [
+        {
+          "key": "renal_genitourinary",
+          "label": "Renal / Genitourinary",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "osis for finding any sperm with testicular sperm extraction (TESE). Males with AZFc deleti"
+          ]
+        }
+      ],
+      "phenotype_curie": "HP:0000027",
+      "phenotype_label": "Azoospermia",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK1339",
+        "chapter_title": "Y Chromosome Infertility",
+        "section_id": "section_Clinical_Description",
+        "section_heading": "Clinical Description",
+        "source_sentence": "Males with Y chromosome infertility have azoospermia or severe, moderate, or mild oligozoospermia depending on the location and size of the Y chromosome deletion (see Genotype-Phenotype Correlations ).",
+        "paragraph_id": "p11",
+        "sentence_id": "p11_s1",
+        "paragraph_char_start": 895,
+        "paragraph_char_end": 1399,
+        "sentence_char_start": 895,
+        "sentence_char_end": 1096,
+        "match_char_start": 936,
+        "match_char_end": 947,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK1339/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_exact_anchor",
+        "hpo_mapping_method": "graph_exact_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "VERIFIED",
+        "auto_accept_eligible": true,
+        "auto_accept_reasons": [],
+        "alias_shadow": false,
+        "section_branch_consistent": null,
+        "table_concordance": "pass",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK1339-MONDO:0042605-HP:0008734-present",
+      "disease_curie": "MONDO:0042605",
+      "disease_label": "Y chromosome infertility due to DAZ1 deletion",
+      "gene_symbols": [
+        "DDX3Y",
+        "USP9Y"
+      ],
+      "local_clinical_domains": [],
+      "phenotype_curie": "HP:0008734",
+      "phenotype_label": "Decreased testicular size",
+      "status": "present",
+      "frequency": {
+        "value": 0.7,
+        "value_min": 0.7,
+        "value_max": 0.7,
+        "normalization_method": "percentage",
+        "raw": "70%",
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "high",
+        "evidence_text": "Small testes in ~70% (males with Sertoli cell-only syndrome)"
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK1339",
+        "chapter_title": "Y Chromosome Infertility",
+        "section_id": "section_Suggestive_Findings",
+        "section_heading": "Suggestive Findings",
+        "source_sentence": "Small testes in ~70% (males with Sertoli cell-only syndrome)",
+        "paragraph_id": "p5",
+        "sentence_id": "p5_s1",
+        "paragraph_char_start": 190,
+        "paragraph_char_end": 250,
+        "sentence_char_start": 190,
+        "sentence_char_end": 250,
+        "match_char_start": 190,
+        "match_char_end": 202,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK1339/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_alias_anchor",
+        "hpo_mapping_method": "graph_alias_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "VERIFIED",
+        "auto_accept_eligible": true,
+        "auto_accept_reasons": [],
+        "alias_shadow": false,
+        "section_branch_consistent": null,
+        "table_concordance": "skip",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK1339-MONDO:0042605-HP:0000789-present",
+      "disease_curie": "MONDO:0042605",
+      "disease_label": "Y chromosome infertility due to DAZ1 deletion",
+      "gene_symbols": [
+        "DDX3Y",
+        "USP9Y"
+      ],
+      "local_clinical_domains": [],
+      "phenotype_curie": "HP:0000789",
+      "phenotype_label": "Infertility",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK1339",
+        "chapter_title": "Y Chromosome Infertility",
+        "section_id": "section_Suggestive_Findings",
+        "section_heading": "Suggestive Findings",
+        "source_sentence": "Y chromosome infertility should be suspected in males with the following clinical and laboratory features.",
+        "paragraph_id": "p1",
+        "sentence_id": "p1_s1",
+        "paragraph_char_start": 0,
+        "paragraph_char_end": 106,
+        "sentence_char_start": 0,
+        "sentence_char_end": 106,
+        "match_char_start": 13,
+        "match_char_end": 24,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK1339/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_alias_anchor",
+        "hpo_mapping_method": "graph_alias_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "FLAGGED",
+        "auto_accept_eligible": false,
+        "auto_accept_reasons": [
+          "alias_shadow:flag"
+        ],
+        "alias_shadow": true,
+        "section_branch_consistent": null,
+        "table_concordance": "skip",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK1339-MONDO:0042605-HP:0034816-present",
+      "disease_curie": "MONDO:0042605",
+      "disease_label": "Y chromosome infertility due to DAZ1 deletion",
+      "gene_symbols": [
+        "DDX3Y",
+        "USP9Y"
+      ],
+      "local_clinical_domains": [
+        {
+          "key": "renal_genitourinary",
+          "label": "Renal / Genitourinary",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "osis for finding any sperm with testicular sperm extraction (TESE). Males with AZFc deleti"
+          ]
+        }
+      ],
+      "phenotype_curie": "HP:0034816",
+      "phenotype_label": "Mild oligozoospermia",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK1339",
+        "chapter_title": "Y Chromosome Infertility",
+        "section_id": "section_Clinical_Description",
+        "section_heading": "Clinical Description",
+        "source_sentence": "Males with Y chromosome infertility have azoospermia or severe, moderate, or mild oligozoospermia depending on the location and size of the Y chromosome deletion (see Genotype-Phenotype Correlations ).",
+        "paragraph_id": "p11",
+        "sentence_id": "p11_s1",
+        "paragraph_char_start": 895,
+        "paragraph_char_end": 1399,
+        "sentence_char_start": 895,
+        "sentence_char_end": 1096,
+        "match_char_start": 972,
+        "match_char_end": 992,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK1339/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_exact_anchor",
+        "hpo_mapping_method": "graph_exact_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "VERIFIED",
+        "auto_accept_eligible": true,
+        "auto_accept_reasons": [],
+        "alias_shadow": false,
+        "section_branch_consistent": null,
+        "table_concordance": "pass",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK1339-MONDO:0042605-HP:0034299-present",
+      "disease_curie": "MONDO:0042605",
+      "disease_label": "Y chromosome infertility due to DAZ1 deletion",
+      "gene_symbols": [
+        "DDX3Y",
+        "USP9Y"
+      ],
+      "local_clinical_domains": [],
+      "phenotype_curie": "HP:0034299",
+      "phenotype_label": "Sertoli cell-only phenotype",
+      "status": "present",
+      "frequency": {
+        "value": 0.7,
+        "value_min": 0.7,
+        "value_max": 0.7,
+        "normalization_method": "percentage",
+        "raw": "70%",
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "high",
+        "evidence_text": "Small testes in ~70% (males with Sertoli cell-only syndrome)"
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK1339",
+        "chapter_title": "Y Chromosome Infertility",
+        "section_id": null,
+        "section_heading": null,
+        "source_sentence": "Small testes in ~70% (males with Sertoli cell-only syndrome)",
+        "paragraph_id": null,
+        "sentence_id": null,
+        "paragraph_char_start": null,
+        "paragraph_char_end": null,
+        "sentence_char_start": null,
+        "sentence_char_end": null,
+        "match_char_start": null,
+        "match_char_end": null,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK1339/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_alias_anchor",
+        "hpo_mapping_method": "graph_alias_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "FAILED",
+        "auto_accept_eligible": false,
+        "auto_accept_reasons": [
+          "source_span:skip",
+          "frequency_support:fail",
+          "contains_failed_check"
+        ],
+        "alias_shadow": false,
+        "section_branch_consistent": null,
+        "table_concordance": "skip",
+        "cross_source_concordance": []
+      }
+    }
+  ],
+  "summary_stats": {
+    "present_count": 5,
+    "excluded_count": 0,
+    "with_frequency": 2,
+    "with_onset": 0,
+    "high_trust": 5,
+    "medium_trust": 0
+  }
+}

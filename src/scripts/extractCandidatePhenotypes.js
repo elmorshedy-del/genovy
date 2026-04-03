@@ -6,9 +6,8 @@ import {
   callGeminiJson,
   createStageTracker,
   ensureDir,
+  finalizePhenotypeCandidates,
   loadPolicyFile,
-  locateCandidateContext,
-  matchesExistingAnchor,
   parseArgs,
   sliceChapters,
   toBaseName,
@@ -51,13 +50,23 @@ RULES:
 3. Do NOT output:
    - Inheritance patterns (autosomal dominant, X-linked, etc.)
    - Gene names, variant descriptions, molecular findings
-   - Laboratory methods or test procedures
-   - Treatment responses or management recommendations
-   - Normal findings (output these ONLY if they are explicitly contrasted with an abnormality)
-   - Anything already captured by the anchor list, even if phrased slightly differently
-4. Do NOT output HPO IDs or attempt to map to any ontology
-5. If a feature appears multiple times in the text, output it only once
-6. Be specific: "infantile muscular hypotonia" not "hypotonia"
+   - Laboratory methods, test procedures, assay names, imaging studies, or raw analyte names/measurements unless the text states a recognized clinical abnormality rather than just the test
+   - Treatment responses, management recommendations, devices, feeding routes, educational supports, or interventions
+   - Broad disease/disorder labels, gene syndromes, or future risk/complication statements unless the phenotype itself is clearly described as present now
+   - Normal, preserved, intact, or unremarkable findings. Do not convert normal statements into excluded pseudo-features
+   - Anything already captured by the anchor list, including broader/narrower restatements of the same finding
+4. Use "excluded" ONLY when an abnormal clinical feature is explicitly stated as absent / not present / not reported / not a feature. Do NOT emit excluded items for normal tests, normal hearing/vision/cognition, or preserved function.
+5. Prefer standard clinical phenotype names over descriptive wording when the mapping is obvious:
+   - "widely spaced eyes" -> "hypertelorism"
+   - "low-set posteriorly rotated ears" -> "low-set ears"
+   - "never spoke" / "completely nonverbal" -> "absent speech"
+   - "fragmented sleep" / "frequent nighttime awakenings" -> "sleep disturbance"
+   - "no interest in other children" -> "social withdrawal"
+   - "repetitive spinning of objects" -> "repetitive behaviors"
+6. Do NOT output HPO IDs or attempt to map to any ontology
+7. If a feature appears multiple times in the text, output it only once
+8. Be specific, but prefer concise canonical phenotype phrases over long descriptive clauses
+9. When uncertain whether something is a phenotype versus a lab/test/management/risk statement, omit it
 
 OUTPUT FORMAT (JSON array, no other text, no markdown fences):
 [
@@ -142,34 +151,7 @@ async function main() {
       });
       const rawCandidates = Array.isArray(parsed) ? parsed : [];
       const anchors = anchorPayload.anchors || [];
-      const candidates = [];
-      for (const candidate of rawCandidates) {
-        const label = String(candidate?.label || '').trim();
-        const status = String(candidate?.status || 'present').trim().toLowerCase() === 'excluded' ? 'excluded' : 'present';
-        if (!label) continue;
-        if (matchesExistingAnchor(label, anchors)) continue;
-        const context = locateCandidateContext(clinicalStructure, label);
-        candidates.push({
-          label,
-          status,
-          source: 'llm_candidate',
-          source_sentence: context.source_sentence,
-          paragraph: context.paragraph,
-          local_clinical_domains: context.local_clinical_domains || [],
-          section_id: context.section_id,
-          section_heading: context.section_heading,
-          paragraph_id: context.paragraph_id,
-          paragraph_index: context.paragraph_index,
-          paragraph_char_start: context.paragraph_char_start,
-          paragraph_char_end: context.paragraph_char_end,
-          sentence_id: context.sentence_id,
-          sentence_index: context.sentence_index,
-          sentence_char_start: context.sentence_char_start,
-          sentence_char_end: context.sentence_char_end,
-          match_char_start: context.match_char_start,
-          match_char_end: context.match_char_end
-        });
-      }
+      const { candidates, rejectedCandidates } = finalizePhenotypeCandidates(rawCandidates, anchors, clinicalStructure, 'llm_candidate');
 
       await writeJson(outputPath, {
         created_at: new Date().toISOString(),
@@ -180,7 +162,10 @@ async function main() {
         model,
         usage,
         raw_output: rawOutput,
+        raw_candidate_count: rawCandidates.length,
         candidate_count: candidates.length,
+        rejected_candidate_count: rejectedCandidates.length,
+        rejected_candidates: rejectedCandidates,
         candidates
       });
 

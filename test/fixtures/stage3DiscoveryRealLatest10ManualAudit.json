@@ -1,0 +1,631 @@
+{
+  "created_at": "2026-04-02T20:05:00.000Z",
+  "scope": "stage3_real_latest10_manual_nonduplicate_audit_v1",
+  "bucket_definitions": {
+    "useful_new": "Valid residual phenotype discovery that is useful for downstream verification and HPO mapping.",
+    "anchor_covered_semantic": "Real phenotype mention, but semantically already covered by stage2 anchors and therefore not truly novel discovery.",
+    "broad_or_redundant": "Real-ish or clinically adjacent, but too broad, redundant, over-granular, or weakly specified for clean residual discovery.",
+    "junk_or_context_only": "Not a valid residual phenotype output for this stage, including lab-only, support/management, risk-only, fragmentary, or context-only output."
+  },
+  "chapters": [
+    {
+      "chapter_key": "zellweger_spectrum_disorder",
+      "entries": [
+        {
+          "source_tag": "unmatched",
+          "sentence_id": "p5_s2",
+          "evidence_text": "neuronal migration defects",
+          "bucket": "useful_new",
+          "notes": "Clear residual neurologic finding."
+        },
+        {
+          "source_tag": "unmatched",
+          "sentence_id": "p5_s4",
+          "evidence_text": "widely split sutures",
+          "bucket": "useful_new",
+          "notes": "Specific craniofacial residual finding."
+        },
+        {
+          "source_tag": "unmatched",
+          "sentence_id": "p5_s5",
+          "evidence_text": "bony stippling",
+          "bucket": "useful_new",
+          "notes": "Specific skeletal residual finding."
+        },
+        {
+          "source_tag": "unmatched",
+          "sentence_id": "p5_s5",
+          "evidence_text": "chondrodysplasia punctata",
+          "bucket": "broad_or_redundant",
+          "notes": "Parenthetical alternate name for the same stippling finding in the same sentence."
+        },
+        {
+          "source_tag": "unmatched",
+          "sentence_id": "p6_s5",
+          "evidence_text": "severe bleeding episodes",
+          "bucket": "useful_new",
+          "notes": "Residual clinically relevant bleeding manifestation."
+        }
+      ]
+    },
+    {
+      "chapter_key": "zap70_related_combined_immunodeficiency",
+      "entries": [
+        {
+          "source_tag": "unmatched",
+          "sentence_id": "p5_s1",
+          "evidence_text": "lymphoproliferation",
+          "bucket": "anchor_covered_semantic",
+          "notes": "Semantically covered by anchored lymphoproliferative disorder."
+        },
+        {
+          "source_tag": "unmatched",
+          "sentence_id": "p27_s1",
+          "evidence_text": "recurrent lower-respiratory disease",
+          "bucket": "anchor_covered_semantic",
+          "notes": "Semantically covered by anchored recurrent respiratory/infectious findings."
+        },
+        {
+          "source_tag": "unmatched",
+          "sentence_id": "p30_s1",
+          "evidence_text": "disseminated mycobacterial disease",
+          "bucket": "useful_new",
+          "notes": "Specific opportunistic infectious manifestation."
+        },
+        {
+          "source_tag": "unmatched",
+          "sentence_id": "p33_s1",
+          "evidence_text": "refractory autoimmune features",
+          "bucket": "broad_or_redundant",
+          "notes": "Umbrella phrase; not a clean residual phenotype row."
+        },
+        {
+          "source_tag": "unmatched",
+          "sentence_id": "p33_s1",
+          "evidence_text": "bullous pemphigoid",
+          "bucket": "useful_new",
+          "notes": "Specific autoimmune dermatologic phenotype."
+        },
+        {
+          "source_tag": "unmatched",
+          "sentence_id": "p33_s1",
+          "evidence_text": "autoantibodies to factor VIII",
+          "bucket": "junk_or_context_only",
+          "notes": "Serologic/lab-style output, not a phenotype row."
+        },
+        {
+          "source_tag": "unmatched",
+          "sentence_id": "p34_s1",
+          "evidence_text": "VZV infection",
+          "bucket": "useful_new",
+          "notes": "Concrete infectious complication/history item."
+        },
+        {
+          "source_tag": "unmatched",
+          "sentence_id": "p34_s1",
+          "evidence_text": "epidermodysplasia verruciformis-like lesions",
+          "bucket": "useful_new",
+          "notes": "Specific lesion phenotype."
+        },
+        {
+          "source_tag": "failed_unique",
+          "sentence_id": "p25_s2",
+          "evidence_text": "viral infections",
+          "bucket": "anchor_covered_semantic",
+          "notes": "Generic infection category already semantically covered by anchored recurrent/opportunistic infection findings."
+        }
+      ]
+    },
+    {
+      "chapter_key": "yif1b_related_neurodevelopmental_disorder",
+      "entries": [
+        {
+          "source_tag": "unmatched",
+          "sentence_id": "p3_s1",
+          "evidence_text": "do not obtain any developmental milestones",
+          "bucket": "anchor_covered_semantic",
+          "notes": "Semantically covered by anchored profound global developmental delay."
+        },
+        {
+          "source_tag": "unmatched",
+          "sentence_id": "p9_s1",
+          "evidence_text": "Neurobehavioral/psychiatric manifestations",
+          "bucket": "broad_or_redundant",
+          "notes": "Broad category heading, not a clean residual finding."
+        },
+        {
+          "source_tag": "unmatched",
+          "sentence_id": "p11_s1",
+          "evidence_text": "Ophthalmologic involvement",
+          "bucket": "broad_or_redundant",
+          "notes": "Broad category heading, not a specific phenotype."
+        },
+        {
+          "source_tag": "unmatched",
+          "sentence_id": "p12_s1",
+          "evidence_text": "ventilation dependency",
+          "bucket": "junk_or_context_only",
+          "notes": "Support/dependency status rather than a clean phenotype row for this stage."
+        },
+        {
+          "source_tag": "unmatched",
+          "sentence_id": "p13_s2",
+          "evidence_text": "parenchymal volume loss",
+          "bucket": "useful_new",
+          "notes": "Specific imaging/morphologic residual finding."
+        },
+        {
+          "source_tag": "unmatched",
+          "sentence_id": "p15_s1",
+          "evidence_text": "motor abnormalities",
+          "bucket": "broad_or_redundant",
+          "notes": "Too broad; sentence immediately lists the useful specific motor findings."
+        },
+        {
+          "source_tag": "failed_unique",
+          "sentence_id": "p13_s2",
+          "evidence_text": "white matter ... abnormalities",
+          "bucket": "broad_or_redundant",
+          "notes": "Fragmentary broad imaging phrase rather than a clean residual phenotype."
+        }
+      ]
+    },
+    {
+      "chapter_key": "zhu_tokita_takenouchi_kim_syndrome",
+      "entries": [
+        {
+          "source_tag": "unmatched",
+          "sentence_id": "p16_s1",
+          "evidence_text": "Immunoglobulin (Ig) A deficiency",
+          "bucket": "useful_new",
+          "notes": "Specific immunodeficiency subtype beyond anchored generic immunodeficiency."
+        },
+        {
+          "source_tag": "unmatched",
+          "sentence_id": "p31_s3",
+          "evidence_text": "dystonic posturing of limbs",
+          "bucket": "useful_new",
+          "notes": "Specific motor manifestation beyond generic dystonia wording."
+        },
+        {
+          "source_tag": "unmatched",
+          "sentence_id": "p36_s5",
+          "evidence_text": "Weight below the third centile",
+          "bucket": "useful_new",
+          "notes": "Specific growth failure/underweight residual finding."
+        },
+        {
+          "source_tag": "unmatched",
+          "sentence_id": "p41_s1",
+          "evidence_text": "micro- and macronodularity",
+          "bucket": "broad_or_redundant",
+          "notes": "Fragmentary liver-pathology phrase; not clean enough as a standalone residual output."
+        },
+        {
+          "source_tag": "failed_unique",
+          "sentence_id": "p34_s4",
+          "evidence_text": "elbow joints",
+          "bucket": "junk_or_context_only",
+          "notes": "Bare fragment, not a phenotype."
+        },
+        {
+          "source_tag": "failed_unique",
+          "sentence_id": "p42_s2",
+          "evidence_text": "conductive",
+          "bucket": "junk_or_context_only",
+          "notes": "Bare fragment from conductive hearing impairment wording."
+        }
+      ]
+    },
+    {
+      "chapter_key": "williams_syndrome",
+      "entries": [
+        {
+          "source_tag": "raw_nonduplicate",
+          "sentence_id": "p15_s2",
+          "evidence_text": "born post-term",
+          "bucket": "useful_new",
+          "notes": "Specific birth-history phenotype."
+        },
+        {
+          "source_tag": "raw_nonduplicate",
+          "sentence_id": "p15_s3",
+          "evidence_text": "textural aversion",
+          "bucket": "useful_new",
+          "notes": "Specific feeding/sensory phenotype."
+        },
+        {
+          "source_tag": "raw_nonduplicate",
+          "sentence_id": "p15_s4",
+          "evidence_text": "Prolonged colic",
+          "bucket": "useful_new",
+          "notes": "Specific early gastrointestinal/behavioral symptom."
+        },
+        {
+          "source_tag": "raw_nonduplicate",
+          "sentence_id": "p16_s2",
+          "evidence_text": "delayed attainment of motor milestones",
+          "bucket": "anchor_covered_semantic",
+          "notes": "Semantically already covered by anchored developmental delay content."
+        },
+        {
+          "source_tag": "raw_nonduplicate",
+          "sentence_id": "p16_s4",
+          "evidence_text": "Speech is also delayed",
+          "bucket": "anchor_covered_semantic",
+          "notes": "Semantically already covered by anchored developmental/speech delay content."
+        },
+        {
+          "source_tag": "raw_nonduplicate",
+          "sentence_id": "p18_s3",
+          "evidence_text": "Difficulty with writing",
+          "bucket": "broad_or_redundant",
+          "notes": "Over-granular school-skill fragment rather than a stable phenotype label."
+        },
+        {
+          "source_tag": "raw_nonduplicate",
+          "sentence_id": "p18_s3",
+          "evidence_text": "drawing",
+          "bucket": "broad_or_redundant",
+          "notes": "Bare task fragment from the same educational sentence."
+        },
+        {
+          "source_tag": "raw_nonduplicate",
+          "sentence_id": "p18_s3",
+          "evidence_text": "mathematics",
+          "bucket": "broad_or_redundant",
+          "notes": "Bare task fragment from the same educational sentence."
+        },
+        {
+          "source_tag": "raw_nonduplicate",
+          "sentence_id": "p19_s3",
+          "evidence_text": "difficulty with sensory modulation/processing",
+          "bucket": "useful_new",
+          "notes": "Specific sensory-processing phenotype."
+        },
+        {
+          "source_tag": "raw_nonduplicate",
+          "sentence_id": "p19_s3",
+          "evidence_text": "emotional regulation",
+          "bucket": "broad_or_redundant",
+          "notes": "Incomplete broad phrase; extracted without the surrounding difficulty wording."
+        },
+        {
+          "source_tag": "raw_nonduplicate",
+          "sentence_id": "p21_s1",
+          "evidence_text": "decreased sleep efficiency",
+          "bucket": "anchor_covered_semantic",
+          "notes": "Already semantically covered by anchored sleep disturbance content."
+        },
+        {
+          "source_tag": "raw_nonduplicate",
+          "sentence_id": "p23_s2",
+          "evidence_text": "myocardial ischemia",
+          "bucket": "junk_or_context_only",
+          "notes": "Risk/complication wording in a 'may develop' clause, not asserted as present."
+        },
+        {
+          "source_tag": "raw_nonduplicate",
+          "sentence_id": "p23_s2",
+          "evidence_text": "dysrhythmias",
+          "bucket": "junk_or_context_only",
+          "notes": "Risk/complication wording in a 'may develop' clause, not asserted as present."
+        },
+        {
+          "source_tag": "raw_nonduplicate",
+          "sentence_id": "p32_s2",
+          "evidence_text": "excessive buildup of ear wax",
+          "bucket": "useful_new",
+          "notes": "Specific otologic residual finding."
+        },
+        {
+          "source_tag": "raw_nonduplicate",
+          "sentence_id": "p34_s2",
+          "evidence_text": "sensory defensiveness",
+          "bucket": "useful_new",
+          "notes": "Specific sensory phenotype."
+        },
+        {
+          "source_tag": "raw_nonduplicate",
+          "sentence_id": "p34_s2",
+          "evidence_text": "difficulty with food textures",
+          "bucket": "broad_or_redundant",
+          "notes": "Redundant with the cleaner 'textural aversion' output."
+        },
+        {
+          "source_tag": "raw_nonduplicate",
+          "sentence_id": "p35_s1",
+          "evidence_text": "diverticulitis",
+          "bucket": "junk_or_context_only",
+          "notes": "Listed as a possible cause in differential-style context, not asserted as the individual's phenotype."
+        },
+        {
+          "source_tag": "raw_nonduplicate",
+          "sentence_id": "p37_s4",
+          "evidence_text": "Bladder capacity is reduced",
+          "bucket": "useful_new",
+          "notes": "Specific urinary residual finding."
+        },
+        {
+          "source_tag": "raw_nonduplicate",
+          "sentence_id": "p37_s4",
+          "evidence_text": "detrusor overactivity",
+          "bucket": "useful_new",
+          "notes": "Specific urinary residual finding."
+        },
+        {
+          "source_tag": "raw_nonduplicate",
+          "sentence_id": "p38_s7",
+          "evidence_text": "difficulty with tool use",
+          "bucket": "anchor_covered_semantic",
+          "notes": "Semantically covered by anchored poor fine motor coordination."
+        },
+        {
+          "source_tag": "raw_nonduplicate",
+          "sentence_id": "p38_s7",
+          "evidence_text": "handwriting",
+          "bucket": "anchor_covered_semantic",
+          "notes": "Semantically covered by anchored fine motor impairment."
+        },
+        {
+          "source_tag": "raw_nonduplicate",
+          "sentence_id": "p39_s2",
+          "evidence_text": "Reduced brain size",
+          "bucket": "useful_new",
+          "notes": "Specific imaging residual finding."
+        },
+        {
+          "source_tag": "raw_nonduplicate",
+          "sentence_id": "p39_s2",
+          "evidence_text": "reduced gray matter volume",
+          "bucket": "useful_new",
+          "notes": "Specific imaging residual finding."
+        },
+        {
+          "source_tag": "raw_nonduplicate",
+          "sentence_id": "p39_s2",
+          "evidence_text": "increased gyral complexity",
+          "bucket": "useful_new",
+          "notes": "Specific imaging residual finding."
+        },
+        {
+          "source_tag": "raw_nonduplicate",
+          "sentence_id": "p39_s3",
+          "evidence_text": "Reduced posterior fossa size",
+          "bucket": "useful_new",
+          "notes": "Specific imaging residual finding."
+        },
+        {
+          "source_tag": "raw_nonduplicate",
+          "sentence_id": "p44_s4",
+          "evidence_text": "Low bone mineral density",
+          "bucket": "useful_new",
+          "notes": "Specific skeletal residual finding."
+        },
+        {
+          "source_tag": "raw_nonduplicate",
+          "sentence_id": "p44_s4",
+          "evidence_text": "low serum phosphate",
+          "bucket": "junk_or_context_only",
+          "notes": "Lab-value output, not a phenotype row."
+        }
+      ]
+    },
+    {
+      "chapter_key": "usp7_related_hao_fountain_syndrome",
+      "entries": [
+        {
+          "source_tag": "raw_nonduplicate",
+          "sentence_id": "p35_s1",
+          "evidence_text": "Compulsivity",
+          "bucket": "anchor_covered_semantic",
+          "notes": "Semantically covered by anchored compulsive behaviors."
+        },
+        {
+          "source_tag": "raw_nonduplicate",
+          "sentence_id": "p36_s1",
+          "evidence_text": "Stubbornness",
+          "bucket": "useful_new",
+          "notes": "Specific behavioral phenotype not obviously covered by anchors."
+        },
+        {
+          "source_tag": "raw_nonduplicate",
+          "sentence_id": "p37_s1",
+          "evidence_text": "Temper tantrums",
+          "bucket": "useful_new",
+          "notes": "Specific behavioral phenotype."
+        },
+        {
+          "source_tag": "raw_nonduplicate",
+          "sentence_id": "p39_s1",
+          "evidence_text": "manipulative behavior",
+          "bucket": "broad_or_redundant",
+          "notes": "Behavioral trait, but weak and low-priority as a phenotype row."
+        },
+        {
+          "source_tag": "raw_nonduplicate",
+          "sentence_id": "p41_s3",
+          "evidence_text": "increased need for rest during the day",
+          "bucket": "useful_new",
+          "notes": "Specific sleep/fatigue phenotype."
+        },
+        {
+          "source_tag": "raw_nonduplicate",
+          "sentence_id": "p42_s4",
+          "evidence_text": "shallow gyral patterns",
+          "bucket": "useful_new",
+          "notes": "Specific neuroimaging residual finding."
+        },
+        {
+          "source_tag": "raw_nonduplicate",
+          "sentence_id": "p42_s4",
+          "evidence_text": "dysmorphia of the ventricular system",
+          "bucket": "useful_new",
+          "notes": "Specific neuroimaging residual finding."
+        },
+        {
+          "source_tag": "raw_nonduplicate",
+          "sentence_id": "p46_s2",
+          "evidence_text": "gut motility issues",
+          "bucket": "junk_or_context_only",
+          "notes": "Speculative explanatory phrase ('hypothesized to be due to') rather than a stable phenotype."
+        },
+        {
+          "source_tag": "raw_nonduplicate",
+          "sentence_id": "p49_s1",
+          "evidence_text": "food-seeking behavior",
+          "bucket": "useful_new",
+          "notes": "Specific behavioral/eating phenotype."
+        },
+        {
+          "source_tag": "raw_nonduplicate",
+          "sentence_id": "p49_s1",
+          "evidence_text": "obese",
+          "bucket": "useful_new",
+          "notes": "Residual obesity phenotype."
+        },
+        {
+          "source_tag": "raw_nonduplicate",
+          "sentence_id": "p52_s1",
+          "evidence_text": "Refractive errors",
+          "bucket": "useful_new",
+          "notes": "Specific ophthalmologic residual finding."
+        },
+        {
+          "source_tag": "raw_nonduplicate",
+          "sentence_id": "p61_s1",
+          "evidence_text": "Bone age is delayed",
+          "bucket": "useful_new",
+          "notes": "Specific skeletal-development residual finding."
+        },
+        {
+          "source_tag": "raw_nonduplicate",
+          "sentence_id": "p61_s1",
+          "evidence_text": "bone mineralization is impaired",
+          "bucket": "useful_new",
+          "notes": "Specific skeletal residual finding."
+        },
+        {
+          "source_tag": "raw_nonduplicate",
+          "sentence_id": "p62_s1",
+          "evidence_text": "stress fractures",
+          "bucket": "useful_new",
+          "notes": "Specific skeletal residual finding."
+        },
+        {
+          "source_tag": "raw_nonduplicate",
+          "sentence_id": "p62_s1",
+          "evidence_text": "fractures after inadequate trauma",
+          "bucket": "useful_new",
+          "notes": "Specific skeletal fragility residual finding."
+        },
+        {
+          "source_tag": "raw_nonduplicate",
+          "sentence_id": "p63_s3",
+          "evidence_text": "disturbances of sound conduction",
+          "bucket": "useful_new",
+          "notes": "Specific hearing-related residual finding."
+        },
+        {
+          "source_tag": "raw_nonduplicate",
+          "sentence_id": "p63_s3",
+          "evidence_text": "auditory processing issues",
+          "bucket": "useful_new",
+          "notes": "Specific neuro-auditory residual finding."
+        },
+        {
+          "source_tag": "raw_nonduplicate",
+          "sentence_id": "p64_s3",
+          "evidence_text": "decreased stability",
+          "bucket": "junk_or_context_only",
+          "notes": "Fragmentary dental phrase; not a clean phenotype row."
+        },
+        {
+          "source_tag": "raw_nonduplicate",
+          "sentence_id": "p64_s3",
+          "evidence_text": "large frontal teeth",
+          "bucket": "useful_new",
+          "notes": "Specific craniofacial/dental residual finding."
+        }
+      ]
+    },
+    {
+      "chapter_key": "vexas_syndrome",
+      "entries": [
+        {
+          "source_tag": "raw_nonduplicate",
+          "sentence_id": "p9_s1",
+          "evidence_text": "Unprovoked thrombosis",
+          "bucket": "anchor_covered_semantic",
+          "notes": "Semantically covered by anchored venous thrombosis."
+        },
+        {
+          "source_tag": "raw_nonduplicate",
+          "sentence_id": "p20_s1",
+          "evidence_text": "Clonal hematopoiesis",
+          "bucket": "junk_or_context_only",
+          "notes": "Hematologic clone/pathobiology output rather than phenotype row."
+        },
+        {
+          "source_tag": "raw_nonduplicate",
+          "sentence_id": "p21_s1",
+          "evidence_text": "Monoclonal gammopathy of unknown significance",
+          "bucket": "junk_or_context_only",
+          "notes": "Diagnostic hematologic condition rather than phenotype row for this stage."
+        },
+        {
+          "source_tag": "raw_nonduplicate",
+          "sentence_id": "p27_s3",
+          "evidence_text": "vacuoles in myeloid and erythroid precursor cells",
+          "bucket": "junk_or_context_only",
+          "notes": "Pathology/lab-style marrow finding, not a residual phenotype row."
+        }
+      ]
+    },
+    {
+      "chapter_key": "very_long_chain_acyl_coenzyme_a_dehydrogenase_deficiency",
+      "entries": [
+        {
+          "source_tag": "raw_nonduplicate",
+          "sentence_id": "p8_s1",
+          "evidence_text": "multiorgan failure",
+          "bucket": "broad_or_redundant",
+          "notes": "Very broad disease-course phrase rather than a clean phenotype row."
+        },
+        {
+          "source_tag": "raw_nonduplicate",
+          "sentence_id": "p9_s1",
+          "evidence_text": "cardiac dysfunction",
+          "bucket": "anchor_covered_semantic",
+          "notes": "Semantically covered by anchored cardiomyopathy findings."
+        },
+        {
+          "source_tag": "raw_nonduplicate",
+          "sentence_id": "p4_s1",
+          "evidence_text": "motor delays",
+          "bucket": "useful_new",
+          "notes": "Specific developmental residual finding."
+        }
+      ]
+    },
+    {
+      "chapter_key": "weiss_kruszka_syndrome",
+      "entries": [
+        {
+          "source_tag": "raw_nonduplicate",
+          "sentence_id": "p16_s1",
+          "evidence_text": "bulbous tip",
+          "bucket": "useful_new",
+          "notes": "Morphology-dense partial span that is still useful with sentence grounding."
+        },
+        {
+          "source_tag": "raw_nonduplicate",
+          "sentence_id": "p24_s1",
+          "evidence_text": "horizontal crux helix",
+          "bucket": "useful_new",
+          "notes": "Specific auricular morphology residual finding."
+        }
+      ]
+    }
+  ]
+}

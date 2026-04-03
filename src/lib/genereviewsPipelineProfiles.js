@@ -40,6 +40,142 @@ function defineProfile(config) {
 }
 
 export const GENEREVIEWS_PIPELINE_PROFILES = Object.freeze({
+  'review-first-50-20260331': defineProfile({
+    description:
+      'March 31 review-first 50-chapter settled run: local PhenoTagger anchors, Gemini Flash candidate discovery, MedGemma metadata, deterministic verify, and local Stage 6 manifest/api exports.',
+    derivedPolicy: {
+      templateJson: path.join(DATA_ROOT, 'genereviews-chapter-policy-template-20260329.json'),
+      outputJson: path.join(DATA_ROOT, 'genereviews-chapter-policy-review-first-50-20260331.generated.json'),
+      mode: 'tail',
+      limit: 50
+    },
+    defaultStages: [
+      'fetch',
+      'phenotagger-local',
+      'anchors',
+      'candidates-gemini-flash',
+      'map',
+      'metadata-medgemma',
+      'verify-medgemma',
+      'manifest-medgemma'
+    ],
+    stages: {
+      fetch: {
+        command: 'node',
+        script: path.join(SCRIPT_ROOT, 'fetchGeneReviewsChapters.js'),
+        args: buildArgs({
+          policy: POLICY_TOKEN,
+          output: path.join(OUTPUT_ROOT, 'genereviews-pipeline-review-first-50-20260331', 'stage1_fetch'),
+          limit: 50
+        })
+      },
+      'phenotagger-local': {
+        command: PHENOTAGGER_PYTHON,
+        script: path.join(SCRIPT_ROOT, 'extractPhenotypeAnchorsPhenoTaggerLocal.py'),
+        args: buildArgs({
+          policy: POLICY_TOKEN,
+          input: path.join(OUTPUT_ROOT, 'genereviews-pipeline-review-first-50-20260331', 'stage1_fetch'),
+          output: path.join(OUTPUT_ROOT, 'genereviews-pipeline-review-first-50-20260331', 'stage2b_phenotagger_local'),
+          limit: 50,
+          phenotaggerRoot: PHENOTAGGER_HOME
+        })
+      },
+      anchors: {
+        command: 'node',
+        script: path.join(SCRIPT_ROOT, 'extractPhenotypeAnchors.js'),
+        args: buildArgs({
+          policy: POLICY_TOKEN,
+          input: path.join(OUTPUT_ROOT, 'genereviews-pipeline-review-first-50-20260331', 'stage1_fetch'),
+          output: path.join(OUTPUT_ROOT, 'genereviews-pipeline-review-first-50-20260331', 'stage2_anchors'),
+          supplementDir: path.join(
+            OUTPUT_ROOT,
+            'genereviews-pipeline-review-first-50-20260331',
+            'stage2b_phenotagger_local'
+          ),
+          limit: 50
+        })
+      },
+      'candidates-gemini-flash': {
+        command: 'node',
+        script: path.join(SCRIPT_ROOT, 'extractCandidatePhenotypes.js'),
+        args: buildArgs({
+          policy: POLICY_TOKEN,
+          clinical: path.join(OUTPUT_ROOT, 'genereviews-pipeline-review-first-50-20260331', 'stage1_fetch'),
+          anchors: path.join(OUTPUT_ROOT, 'genereviews-pipeline-review-first-50-20260331', 'stage2_anchors'),
+          output: path.join(OUTPUT_ROOT, 'genereviews-pipeline-review-first-50-20260331', 'stage3_candidates'),
+          limit: 50,
+          model: GEMINI_FLASH_MODEL,
+          apiKeyEnv: 'GEMINI_API_KEY',
+          thinkingBudget: 0
+        })
+      },
+      map: {
+        command: 'node',
+        script: path.join(SCRIPT_ROOT, 'mapCandidatesToHPO.js'),
+        args: buildArgs({
+          policy: POLICY_TOKEN,
+          input: path.join(OUTPUT_ROOT, 'genereviews-pipeline-review-first-50-20260331', 'stage3_candidates'),
+          output: path.join(OUTPUT_ROOT, 'genereviews-pipeline-review-first-50-20260331', 'stage4_mapped_candidates'),
+          phenotypesJson: path.join(
+            OUTPUT_ROOT,
+            'genereviews-pipeline-review-first-50-20260331',
+            'stage2_anchors',
+            'phenotype_rows_snapshot.json'
+          ),
+          embeddings: path.join(
+            OUTPUT_ROOT,
+            'genereviews-pipeline-review-first-50-20260331',
+            'stage4_mapped_candidates',
+            'hpo_embeddings.json'
+          ),
+          provider: 'biolord',
+          limit: 50
+        })
+      },
+      'metadata-medgemma': {
+        command: 'node',
+        script: path.join(SCRIPT_ROOT, 'extractPhenotypeMetadata.js'),
+        args: buildArgs({
+          policy: POLICY_TOKEN,
+          anchors: path.join(OUTPUT_ROOT, 'genereviews-pipeline-review-first-50-20260331', 'stage2_anchors'),
+          mapped: path.join(OUTPUT_ROOT, 'genereviews-pipeline-review-first-50-20260331', 'stage4_mapped_candidates'),
+          output: path.join(OUTPUT_ROOT, 'genereviews-pipeline-review-first-50-20260331', 'stage5_enriched_medgemma'),
+          provider: 'medgemma',
+          medgemmaApiKeyEnv: 'MEDGEMMA_API_KEY',
+          baseUrl: ACTIVE_MEDGEMMA_BASE_URL,
+          limit: 50
+        })
+      },
+      'verify-medgemma': {
+        command: 'node',
+        script: path.join(SCRIPT_ROOT, 'verifyGeneReviewsEnrichment.js'),
+        args: buildArgs({
+          policy: POLICY_TOKEN,
+          clinical: path.join(OUTPUT_ROOT, 'genereviews-pipeline-review-first-50-20260331', 'stage1_fetch'),
+          enriched: path.join(OUTPUT_ROOT, 'genereviews-pipeline-review-first-50-20260331', 'stage5_enriched_medgemma'),
+          output: path.join(OUTPUT_ROOT, 'genereviews-pipeline-review-first-50-20260331', 'stage7_verify_medgemma'),
+          ontologyJson: path.join(
+            OUTPUT_ROOT,
+            'genereviews-pipeline-review-first-50-20260331',
+            'stage2_anchors',
+            'ontology_rows_snapshot.json'
+          ),
+          limit: 50
+        })
+      },
+      'manifest-medgemma': {
+        command: 'node',
+        script: path.join(SCRIPT_ROOT, 'buildEnrichmentManifest.js'),
+        args: buildManifestArgs({
+          pipelineDir: 'genereviews-pipeline-review-first-50-20260331',
+          input: path.join(OUTPUT_ROOT, 'genereviews-pipeline-review-first-50-20260331', 'stage5_enriched_medgemma'),
+          verificationDir: path.join(OUTPUT_ROOT, 'genereviews-pipeline-review-first-50-20260331', 'stage7_verify_medgemma'),
+          output: path.join(OUTPUT_ROOT, 'genereviews-pipeline-review-first-50-20260331', 'stage6_manifest_medgemma'),
+          limit: 50
+        })
+      }
+    }
+  }),
   'latest5-settled-20260330': defineProfile({
     description:
       'Fresh latest5 settled-architecture run with Gemini Flash discovery plus Gemini preview or MedGemma metadata branches on new output paths.',

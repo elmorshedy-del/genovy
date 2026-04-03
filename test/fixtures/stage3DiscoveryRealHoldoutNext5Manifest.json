@@ -1,0 +1,63 @@
+{
+  "created_at": "2026-04-02T19:51:24.925Z",
+  "source_dir": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/genereviews-pipeline-review-first-50-20260331/stage1_fetch",
+  "chapter_count": 5,
+  "source_batch": "review_first_50_20260331",
+  "chapters": [
+    {
+      "nbk_id": "NBK1249",
+      "chapter_key": "williams_syndrome",
+      "chapter_title": "Williams Syndrome - GeneReviews® - NCBI Bookshelf",
+      "provenance_url": null,
+      "structure_path": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/genereviews-pipeline-review-first-50-20260331/stage1_fetch/NBK1249_clinical_structure.json",
+      "text_sha256": "acf3d6e1648da4225590c2d6c7f344365da524629e1e9e8993b2f6530729e846",
+      "section_count": 3,
+      "paragraph_count": 45,
+      "sentence_count": 142
+    },
+    {
+      "nbk_id": "NBK619577",
+      "chapter_key": "usp7_related_hao_fountain_syndrome",
+      "chapter_title": "USP7-Related Hao-Fountain Syndrome - GeneReviews® - NCBI Bookshelf",
+      "provenance_url": null,
+      "structure_path": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/genereviews-pipeline-review-first-50-20260331/stage1_fetch/NBK619577_clinical_structure.json",
+      "text_sha256": "fead61367e5c290097a83da12678b9ff69ae7a1ffd796d9ee2b4f1b2c5ea8e93",
+      "section_count": 3,
+      "paragraph_count": 66,
+      "sentence_count": 111
+    },
+    {
+      "nbk_id": "NBK614471",
+      "chapter_key": "vexas_syndrome",
+      "chapter_title": "VEXAS Syndrome - GeneReviews® - NCBI Bookshelf",
+      "provenance_url": null,
+      "structure_path": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/genereviews-pipeline-review-first-50-20260331/stage1_fetch/NBK614471_clinical_structure.json",
+      "text_sha256": "a65bbb163bdb61f01f5bcf7c53bdfa8b882185c34f15c57f75622da4b1690dbe",
+      "section_count": 3,
+      "paragraph_count": 32,
+      "sentence_count": 40
+    },
+    {
+      "nbk_id": "NBK6816",
+      "chapter_key": "very_long_chain_acyl_coenzyme_a_dehydrogenase_deficiency",
+      "chapter_title": "Very Long-Chain Acyl-Coenzyme A Dehydrogenase Deficiency - GeneReviews® - NCBI Bookshelf",
+      "provenance_url": null,
+      "structure_path": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/genereviews-pipeline-review-first-50-20260331/stage1_fetch/NBK6816_clinical_structure.json",
+      "text_sha256": "2e19f0e074fbf13897301db6b5d610e41ca2fa6eec2eedda869abdedb6efeb1d",
+      "section_count": 1,
+      "paragraph_count": 12,
+      "sentence_count": 20
+    },
+    {
+      "nbk_id": "NBK549204",
+      "chapter_key": "weiss_kruszka_syndrome",
+      "chapter_title": "Weiss-Kruszka Syndrome - GeneReviews® - NCBI Bookshelf",
+      "provenance_url": null,
+      "structure_path": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/genereviews-pipeline-review-first-50-20260331/stage1_fetch/NBK549204_clinical_structure.json",
+      "text_sha256": "e2a1fe6c18afadd9b880bfa021d20d48c620f37b7201621fb3297d2f31dba616",
+      "section_count": 2,
+      "paragraph_count": 38,
+      "sentence_count": 52
+    }
+  ]
+}

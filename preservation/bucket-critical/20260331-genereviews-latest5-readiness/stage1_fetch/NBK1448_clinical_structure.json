@@ -1,0 +1,499 @@
+{
+  "created_at": "2026-04-01T00:28:14.780Z",
+  "nbk_id": "NBK1448",
+  "chapter_title": "Zellweger Spectrum Disorder - GeneReviews® - NCBI Bookshelf",
+  "chapter_key": "zellweger_spectrum_disorder",
+  "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK1448/",
+  "heading_inventory": [
+    {
+      "tag": "h3",
+      "heading": "Suggestive Findings"
+    },
+    {
+      "tag": "h2",
+      "heading": "Clinical Characteristics"
+    },
+    {
+      "tag": "h3",
+      "heading": "Clinical Description"
+    }
+  ],
+  "chapter_domains": [
+    {
+      "key": "neurologic",
+      "label": "Neurologic",
+      "evidence_headings": [],
+      "evidence_snippets": [
+        "ly sensory deficits and/or mild developmental delay. Recently, individuals with normal intell"
+      ]
+    },
+    {
+      "key": "ophthalmologic",
+      "label": "Ophthalmologic",
+      "evidence_headings": [],
+      "evidence_snippets": [
+        "and severity of the hearing and visual problems vary. A few children with a clinical d"
+      ]
+    },
+    {
+      "key": "auditory",
+      "label": "Auditory",
+      "evidence_headings": [],
+      "evidence_snippets": [
+        "etinal dystrophy, sensorineural hearing loss, developmental delay with hypotonia, and l"
+      ]
+    },
+    {
+      "key": "gastrointestinal",
+      "label": "Gastrointestinal",
+      "evidence_headings": [],
+      "evidence_snippets": [
+        "e hypotonic with resultant poor feeding. Neonatal seizures are frequent and caused by u"
+      ]
+    },
+    {
+      "key": "renal_genitourinary",
+      "label": "Renal / Genitourinary",
+      "evidence_headings": [],
+      "evidence_snippets": [
+        "bones may be noted, as well as renal cysts. Older children manifest retinal dystrop"
+      ]
+    },
+    {
+      "key": "craniofacial",
+      "label": "Craniofacial",
+      "evidence_headings": [],
+      "evidence_snippets": [
+        "ver function tests. Distinctive craniofacial features include flat face, broad nasal bridge,"
+      ]
+    }
+  ],
+  "clinical_text": "Zellweger spectrum disorder (ZSD) should be suspected in children with the following clinical and laboratory findings.\n\nZellweger spectrum disorder (ZSD) is defined by a continuum of three phenotypes described before the biochemical and molecular bases of these disorders had been fully determined: Zellweger syndrome (ZS), neonatal adrenoleukodystrophy (NALD), and infantile Refsum disease (IRD) [ Braverman et al 2016 ].\n\nThe ZSD phenotypic spectrum is broad; some affected individuals have mild manifestations, mainly sensory deficits and/or mild developmental delay. Recently, individuals with normal intellect have been identified [ Ratbi et al 2015 , Ratbi et al 2016 , Smith et al 2016 ] by genomic testing methods. Nonetheless, all of the peroxisome assembly disorders cause significant morbidity, frequently resulting in death in childhood.\n\nAlthough the phenotypic designations listed above may be useful when evaluating undiagnosed individuals and counseling their families, one should not place too much emphasis on assigning a phenotypic label to an affected individual given that these phenotypes lie on a continuum. Thus, the terms \"severe,\" \"intermediate,\" and \"milder\" ZSD are now preferred. Because of the breadth of the phenotypic spectrum, individuals with ZSD mainly come to clinical attention in the newborn period or later in childhood. Occasionally, the subtlety of symptoms delays diagnosis until adulthood.\n\nNewborns are hypotonic with resultant poor feeding. Neonatal seizures are frequent and caused by underlying neuronal migration defects. Liver dysfunction may be evident as neonatal jaundice and elevation in liver function tests. Distinctive craniofacial features include flat face, broad nasal bridge, large anterior fontanelle, and widely split sutures. In severely affected children, bony stippling (chondrodysplasia punctata) at the patella(e) and the long bones may be noted, as well as renal cysts.\n\nOlder children manifest retinal dystrophy, sensorineural hearing loss, developmental delay with hypotonia, and liver dysfunction. Children may first come to attention because of a failed hearing screen. Onset and severity of the hearing and visual problems vary. A few children with a clinical diagnosis of neonatal adrenoleukodystrophy had transient leopard spot pigmentary retinopathy [ Lyons et al 2004 ]. Liver dysfunction may be first identified in children with severe bleeding episodes caused by a vitamin K-responsive coagulopathy. Older children may develop adrenal insufficiency [ Berendse et al 2014 ] and osteopenia [ Rush et al 2016 ].\n\nAdults are rarely diagnosed with ZSD, but exceptions have been reported. Usually these are individuals with predominantly sensory deficits but normal neurologic development [ Moser et al 1995 , Raas-Rothschild et al 2002 , Majewski et al 2011 , Ratbi et al 2015 , Ratbi et al 2016 , Smith et al 2016 ].",
+  "text_sha256": "afe09084813373dd57cd3aa0d1ac1ee6d4efc451d28ac69aeba48dfb2f784460",
+  "section_count": 2,
+  "paragraph_count": 7,
+  "sentence_count": 22,
+  "sections": [
+    {
+      "section_id": "section_Suggestive_Findings",
+      "section_heading": "Suggestive Findings",
+      "paragraph_ids": [
+        "p1"
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "section_id": "section_Clinical_Description",
+      "section_heading": "Clinical Description",
+      "paragraph_ids": [
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7"
+      ],
+      "local_clinical_domains": [
+        {
+          "key": "neurologic",
+          "label": "Neurologic",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "ly sensory deficits and/or mild developmental delay. Recently, individuals with normal intell"
+          ]
+        },
+        {
+          "key": "ophthalmologic",
+          "label": "Ophthalmologic",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "and severity of the hearing and visual problems vary. A few children with a clinical d"
+          ]
+        },
+        {
+          "key": "auditory",
+          "label": "Auditory",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "etinal dystrophy, sensorineural hearing loss, developmental delay with hypotonia, and l"
+          ]
+        },
+        {
+          "key": "gastrointestinal",
+          "label": "Gastrointestinal",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "e hypotonic with resultant poor feeding. Neonatal seizures are frequent and caused by u"
+          ]
+        },
+        {
+          "key": "renal_genitourinary",
+          "label": "Renal / Genitourinary",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "bones may be noted, as well as renal cysts. Older children manifest retinal dystrop"
+          ]
+        },
+        {
+          "key": "craniofacial",
+          "label": "Craniofacial",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "ver function tests. Distinctive craniofacial features include flat face, broad nasal bridge,"
+          ]
+        }
+      ]
+    }
+  ],
+  "paragraphs": [
+    {
+      "paragraph_id": "p1",
+      "paragraph_index": 1,
+      "text": "Zellweger spectrum disorder (ZSD) should be suspected in children with the following clinical and laboratory findings.",
+      "char_start": 0,
+      "char_end": 118,
+      "section_id": "section_Suggestive_Findings",
+      "section_heading": "Suggestive Findings",
+      "sentences": [
+        {
+          "sentence_id": "p1_s1",
+          "sentence_index": 1,
+          "text": "Zellweger spectrum disorder (ZSD) should be suspected in children with the following clinical and laboratory findings.",
+          "char_start": 0,
+          "char_end": 118,
+          "section_id": "section_Suggestive_Findings",
+          "section_heading": "Suggestive Findings"
+        }
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "paragraph_id": "p2",
+      "paragraph_index": 2,
+      "text": "Zellweger spectrum disorder (ZSD) is defined by a continuum of three phenotypes described before the biochemical and molecular bases of these disorders had been fully determined: Zellweger syndrome (ZS), neonatal adrenoleukodystrophy (NALD), and infantile Refsum disease (IRD) [ Braverman et al 2016 ].",
+      "char_start": 120,
+      "char_end": 422,
+      "section_id": "section_Clinical_Description",
+      "section_heading": "Clinical Description",
+      "sentences": [
+        {
+          "sentence_id": "p2_s1",
+          "sentence_index": 1,
+          "text": "Zellweger spectrum disorder (ZSD) is defined by a continuum of three phenotypes described before the biochemical and molecular bases of these disorders had been fully determined: Zellweger syndrome (ZS), neonatal adrenoleukodystrophy (NALD), and infantile Refsum disease (IRD) [ Braverman et al 2016 ].",
+          "char_start": 120,
+          "char_end": 422,
+          "section_id": "section_Clinical_Description",
+          "section_heading": "Clinical Description"
+        }
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "paragraph_id": "p3",
+      "paragraph_index": 3,
+      "text": "The ZSD phenotypic spectrum is broad; some affected individuals have mild manifestations, mainly sensory deficits and/or mild developmental delay. Recently, individuals with normal intellect have been identified [ Ratbi et al 2015 , Ratbi et al 2016 , Smith et al 2016 ] by genomic testing methods. Nonetheless, all of the peroxisome assembly disorders cause significant morbidity, frequently resulting in death in childhood.",
+      "char_start": 424,
+      "char_end": 849,
+      "section_id": "section_Clinical_Description",
+      "section_heading": "Clinical Description",
+      "sentences": [
+        {
+          "sentence_id": "p3_s1",
+          "sentence_index": 1,
+          "text": "The ZSD phenotypic spectrum is broad; some affected individuals have mild manifestations, mainly sensory deficits and/or mild developmental delay.",
+          "char_start": 424,
+          "char_end": 570,
+          "section_id": "section_Clinical_Description",
+          "section_heading": "Clinical Description"
+        },
+        {
+          "sentence_id": "p3_s2",
+          "sentence_index": 2,
+          "text": "Recently, individuals with normal intellect have been identified [ Ratbi et al 2015 , Ratbi et al 2016 , Smith et al 2016 ] by genomic testing methods.",
+          "char_start": 571,
+          "char_end": 722,
+          "section_id": "section_Clinical_Description",
+          "section_heading": "Clinical Description"
+        },
+        {
+          "sentence_id": "p3_s3",
+          "sentence_index": 3,
+          "text": "Nonetheless, all of the peroxisome assembly disorders cause significant morbidity, frequently resulting in death in childhood.",
+          "char_start": 723,
+          "char_end": 849,
+          "section_id": "section_Clinical_Description",
+          "section_heading": "Clinical Description"
+        }
+      ],
+      "local_clinical_domains": [
+        {
+          "key": "neurologic",
+          "label": "Neurologic",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "ly sensory deficits and/or mild developmental delay. Recently, individuals with normal intell"
+          ]
+        }
+      ]
+    },
+    {
+      "paragraph_id": "p4",
+      "paragraph_index": 4,
+      "text": "Although the phenotypic designations listed above may be useful when evaluating undiagnosed individuals and counseling their families, one should not place too much emphasis on assigning a phenotypic label to an affected individual given that these phenotypes lie on a continuum. Thus, the terms \"severe,\" \"intermediate,\" and \"milder\" ZSD are now preferred. Because of the breadth of the phenotypic spectrum, individuals with ZSD mainly come to clinical attention in the newborn period or later in childhood. Occasionally, the subtlety of symptoms delays diagnosis until adulthood.",
+      "char_start": 851,
+      "char_end": 1432,
+      "section_id": "section_Clinical_Description",
+      "section_heading": "Clinical Description",
+      "sentences": [
+        {
+          "sentence_id": "p4_s1",
+          "sentence_index": 1,
+          "text": "Although the phenotypic designations listed above may be useful when evaluating undiagnosed individuals and counseling their families, one should not place too much emphasis on assigning a phenotypic label to an affected individual given that these phenotypes lie on a continuum.",
+          "char_start": 851,
+          "char_end": 1130,
+          "section_id": "section_Clinical_Description",
+          "section_heading": "Clinical Description"
+        },
+        {
+          "sentence_id": "p4_s2",
+          "sentence_index": 2,
+          "text": "Thus, the terms \"severe,\" \"intermediate,\" and \"milder\" ZSD are now preferred.",
+          "char_start": 1131,
+          "char_end": 1208,
+          "section_id": "section_Clinical_Description",
+          "section_heading": "Clinical Description"
+        },
+        {
+          "sentence_id": "p4_s3",
+          "sentence_index": 3,
+          "text": "Because of the breadth of the phenotypic spectrum, individuals with ZSD mainly come to clinical attention in the newborn period or later in childhood.",
+          "char_start": 1209,
+          "char_end": 1359,
+          "section_id": "section_Clinical_Description",
+          "section_heading": "Clinical Description"
+        },
+        {
+          "sentence_id": "p4_s4",
+          "sentence_index": 4,
+          "text": "Occasionally, the subtlety of symptoms delays diagnosis until adulthood.",
+          "char_start": 1360,
+          "char_end": 1432,
+          "section_id": "section_Clinical_Description",
+          "section_heading": "Clinical Description"
+        }
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "paragraph_id": "p5",
+      "paragraph_index": 5,
+      "text": "Newborns are hypotonic with resultant poor feeding. Neonatal seizures are frequent and caused by underlying neuronal migration defects. Liver dysfunction may be evident as neonatal jaundice and elevation in liver function tests. Distinctive craniofacial features include flat face, broad nasal bridge, large anterior fontanelle, and widely split sutures. In severely affected children, bony stippling (chondrodysplasia punctata) at the patella(e) and the long bones may be noted, as well as renal cysts.",
+      "char_start": 1434,
+      "char_end": 1937,
+      "section_id": "section_Clinical_Description",
+      "section_heading": "Clinical Description",
+      "sentences": [
+        {
+          "sentence_id": "p5_s1",
+          "sentence_index": 1,
+          "text": "Newborns are hypotonic with resultant poor feeding.",
+          "char_start": 1434,
+          "char_end": 1485,
+          "section_id": "section_Clinical_Description",
+          "section_heading": "Clinical Description"
+        },
+        {
+          "sentence_id": "p5_s2",
+          "sentence_index": 2,
+          "text": "Neonatal seizures are frequent and caused by underlying neuronal migration defects.",
+          "char_start": 1486,
+          "char_end": 1569,
+          "section_id": "section_Clinical_Description",
+          "section_heading": "Clinical Description"
+        },
+        {
+          "sentence_id": "p5_s3",
+          "sentence_index": 3,
+          "text": "Liver dysfunction may be evident as neonatal jaundice and elevation in liver function tests.",
+          "char_start": 1570,
+          "char_end": 1662,
+          "section_id": "section_Clinical_Description",
+          "section_heading": "Clinical Description"
+        },
+        {
+          "sentence_id": "p5_s4",
+          "sentence_index": 4,
+          "text": "Distinctive craniofacial features include flat face, broad nasal bridge, large anterior fontanelle, and widely split sutures.",
+          "char_start": 1663,
+          "char_end": 1788,
+          "section_id": "section_Clinical_Description",
+          "section_heading": "Clinical Description"
+        },
+        {
+          "sentence_id": "p5_s5",
+          "sentence_index": 5,
+          "text": "In severely affected children, bony stippling (chondrodysplasia punctata) at the patella(e) and the long bones may be noted, as well as renal cysts.",
+          "char_start": 1789,
+          "char_end": 1937,
+          "section_id": "section_Clinical_Description",
+          "section_heading": "Clinical Description"
+        }
+      ],
+      "local_clinical_domains": [
+        {
+          "key": "gastrointestinal",
+          "label": "Gastrointestinal",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "e hypotonic with resultant poor feeding. Neonatal seizures are frequent and caused by u"
+          ]
+        },
+        {
+          "key": "renal_genitourinary",
+          "label": "Renal / Genitourinary",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "bones may be noted, as well as renal cysts."
+          ]
+        },
+        {
+          "key": "craniofacial",
+          "label": "Craniofacial",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "ver function tests. Distinctive craniofacial features include flat face, broad nasal bridge,"
+          ]
+        }
+      ]
+    },
+    {
+      "paragraph_id": "p6",
+      "paragraph_index": 6,
+      "text": "Older children manifest retinal dystrophy, sensorineural hearing loss, developmental delay with hypotonia, and liver dysfunction. Children may first come to attention because of a failed hearing screen. Onset and severity of the hearing and visual problems vary. A few children with a clinical diagnosis of neonatal adrenoleukodystrophy had transient leopard spot pigmentary retinopathy [ Lyons et al 2004 ]. Liver dysfunction may be first identified in children with severe bleeding episodes caused by a vitamin K-responsive coagulopathy. Older children may develop adrenal insufficiency [ Berendse et al 2014 ] and osteopenia [ Rush et al 2016 ].",
+      "char_start": 1939,
+      "char_end": 2587,
+      "section_id": "section_Clinical_Description",
+      "section_heading": "Clinical Description",
+      "sentences": [
+        {
+          "sentence_id": "p6_s1",
+          "sentence_index": 1,
+          "text": "Older children manifest retinal dystrophy, sensorineural hearing loss, developmental delay with hypotonia, and liver dysfunction.",
+          "char_start": 1939,
+          "char_end": 2068,
+          "section_id": "section_Clinical_Description",
+          "section_heading": "Clinical Description"
+        },
+        {
+          "sentence_id": "p6_s2",
+          "sentence_index": 2,
+          "text": "Children may first come to attention because of a failed hearing screen.",
+          "char_start": 2069,
+          "char_end": 2141,
+          "section_id": "section_Clinical_Description",
+          "section_heading": "Clinical Description"
+        },
+        {
+          "sentence_id": "p6_s3",
+          "sentence_index": 3,
+          "text": "Onset and severity of the hearing and visual problems vary.",
+          "char_start": 2142,
+          "char_end": 2201,
+          "section_id": "section_Clinical_Description",
+          "section_heading": "Clinical Description"
+        },
+        {
+          "sentence_id": "p6_s4",
+          "sentence_index": 4,
+          "text": "A few children with a clinical diagnosis of neonatal adrenoleukodystrophy had transient leopard spot pigmentary retinopathy [ Lyons et al 2004 ].",
+          "char_start": 2202,
+          "char_end": 2347,
+          "section_id": "section_Clinical_Description",
+          "section_heading": "Clinical Description"
+        },
+        {
+          "sentence_id": "p6_s5",
+          "sentence_index": 5,
+          "text": "Liver dysfunction may be first identified in children with severe bleeding episodes caused by a vitamin K-responsive coagulopathy.",
+          "char_start": 2348,
+          "char_end": 2478,
+          "section_id": "section_Clinical_Description",
+          "section_heading": "Clinical Description"
+        },
+        {
+          "sentence_id": "p6_s6",
+          "sentence_index": 6,
+          "text": "Older children may develop adrenal insufficiency [ Berendse et al 2014 ] and osteopenia [ Rush et al 2016 ].",
+          "char_start": 2479,
+          "char_end": 2587,
+          "section_id": "section_Clinical_Description",
+          "section_heading": "Clinical Description"
+        }
+      ],
+      "local_clinical_domains": [
+        {
+          "key": "neurologic",
+          "label": "Neurologic",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "hy, sensorineural hearing loss, developmental delay with hypotonia, and liver dysfunction. Ch"
+          ]
+        },
+        {
+          "key": "ophthalmologic",
+          "label": "Ophthalmologic",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "and severity of the hearing and visual problems vary. A few children with a clinical d"
+          ]
+        },
+        {
+          "key": "auditory",
+          "label": "Auditory",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "etinal dystrophy, sensorineural hearing loss, developmental delay with hypotonia, and l"
+          ]
+        },
+        {
+          "key": "gastrointestinal",
+          "label": "Gastrointestinal",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "ental delay with hypotonia, and liver dysfunction. Children may first come to attenti"
+          ]
+        }
+      ]
+    },
+    {
+      "paragraph_id": "p7",
+      "paragraph_index": 7,
+      "text": "Adults are rarely diagnosed with ZSD, but exceptions have been reported. Usually these are individuals with predominantly sensory deficits but normal neurologic development [ Moser et al 1995 , Raas-Rothschild et al 2002 , Majewski et al 2011 , Ratbi et al 2015 , Ratbi et al 2016 , Smith et al 2016 ].",
+      "char_start": 2589,
+      "char_end": 2891,
+      "section_id": "section_Clinical_Description",
+      "section_heading": "Clinical Description",
+      "sentences": [
+        {
+          "sentence_id": "p7_s1",
+          "sentence_index": 1,
+          "text": "Adults are rarely diagnosed with ZSD, but exceptions have been reported.",
+          "char_start": 2589,
+          "char_end": 2661,
+          "section_id": "section_Clinical_Description",
+          "section_heading": "Clinical Description"
+        },
+        {
+          "sentence_id": "p7_s2",
+          "sentence_index": 2,
+          "text": "Usually these are individuals with predominantly sensory deficits but normal neurologic development [ Moser et al 1995 , Raas-Rothschild et al 2002 , Majewski et al 2011 , Ratbi et al 2015 , Ratbi et al 2016 , Smith et al 2016 ].",
+          "char_start": 2662,
+          "char_end": 2891,
+          "section_id": "section_Clinical_Description",
+          "section_heading": "Clinical Description"
+        }
+      ],
+      "local_clinical_domains": []
+    }
+  ]
+}

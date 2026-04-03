@@ -2,27 +2,19 @@ import { SOURCE_CATALOG } from '../constants/sourceCatalog.js';
 
 export async function ensureSourceCatalog(client) {
   for (const source of Object.values(SOURCE_CATALOG)) {
-    await client.query(
+    const updatedSource = await client.query(
       `
-        INSERT INTO sources (
-          source_key,
-          display_name,
-          description,
-          homepage_url,
-          access_url,
-          update_frequency,
-          entity_scope
-        )
-        VALUES ($1, $2, $3, $4, $5, $6, $7)
-        ON CONFLICT (source_key)
-        DO UPDATE SET
-          display_name = EXCLUDED.display_name,
-          description = EXCLUDED.description,
-          homepage_url = EXCLUDED.homepage_url,
-          access_url = EXCLUDED.access_url,
-          update_frequency = EXCLUDED.update_frequency,
-          entity_scope = EXCLUDED.entity_scope,
+        UPDATE sources
+        SET
+          display_name = $2,
+          description = $3,
+          homepage_url = $4,
+          access_url = $5,
+          update_frequency = $6,
+          entity_scope = $7,
           updated_at = NOW()
+        WHERE source_key = $1
+        RETURNING source_key
       `,
       [
         source.sourceKey,
@@ -35,11 +27,46 @@ export async function ensureSourceCatalog(client) {
       ]
     );
 
+    if (!updatedSource.rowCount) {
+      await client.query(
+        `
+          INSERT INTO sources (
+            source_key,
+            display_name,
+            description,
+            homepage_url,
+            access_url,
+            update_frequency,
+            entity_scope
+          )
+          SELECT $1, $2, $3, $4, $5, $6, $7
+          WHERE NOT EXISTS (
+            SELECT 1
+            FROM sources
+            WHERE source_key = $1
+          )
+        `,
+        [
+          source.sourceKey,
+          source.displayName,
+          source.description,
+          source.homepageUrl,
+          source.accessUrl,
+          source.updateFrequency,
+          source.entityScope
+        ]
+      );
+    }
+
     await client.query(
       `
         INSERT INTO source_sync_state (source_key)
-        VALUES ($1)
-        ON CONFLICT (source_key) DO NOTHING
+        SELECT $1
+        WHERE NOT EXISTS (
+          SELECT 1
+          FROM source_sync_state
+          WHERE source_key = $1
+        )
       `,
       [source.sourceKey]
     );

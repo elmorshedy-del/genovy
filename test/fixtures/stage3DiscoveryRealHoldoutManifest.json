@@ -1,0 +1,62 @@
+{
+  "created_at": "2026-04-02T18:10:11.573Z",
+  "source_dir": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/preservation/bucket-critical/20260331-genereviews-latest5-readiness/stage1_fetch",
+  "chapter_count": 5,
+  "chapters": [
+    {
+      "nbk_id": "NBK1339",
+      "chapter_key": "y_chromosome_infertility",
+      "chapter_title": "Y Chromosome Infertility - GeneReviews® - NCBI Bookshelf",
+      "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK1339/",
+      "structure_path": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/preservation/bucket-critical/20260331-genereviews-latest5-readiness/stage1_fetch/NBK1339_clinical_structure.json",
+      "text_sha256": "0eb15773eece2944955ea576b02ef60b040b2dee2e90bf7c9a7828d85e2c3edf",
+      "section_count": 3,
+      "paragraph_count": 12,
+      "sentence_count": 19
+    },
+    {
+      "nbk_id": "NBK1448",
+      "chapter_key": "zellweger_spectrum_disorder",
+      "chapter_title": "Zellweger Spectrum Disorder - GeneReviews® - NCBI Bookshelf",
+      "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK1448/",
+      "structure_path": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/preservation/bucket-critical/20260331-genereviews-latest5-readiness/stage1_fetch/NBK1448_clinical_structure.json",
+      "text_sha256": "afe09084813373dd57cd3aa0d1ac1ee6d4efc451d28ac69aeba48dfb2f784460",
+      "section_count": 2,
+      "paragraph_count": 7,
+      "sentence_count": 22
+    },
+    {
+      "nbk_id": "NBK20221",
+      "chapter_key": "zap70_related_combined_immunodeficiency",
+      "chapter_title": "ZAP70-Related Combined Immunodeficiency - GeneReviews® - NCBI Bookshelf",
+      "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK20221/",
+      "structure_path": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/preservation/bucket-critical/20260331-genereviews-latest5-readiness/stage1_fetch/NBK20221_clinical_structure.json",
+      "text_sha256": "05ca2f692dd94b653eec20f982fcff93b290fbcfee443060a51410244d9a13b9",
+      "section_count": 2,
+      "paragraph_count": 35,
+      "sentence_count": 49
+    },
+    {
+      "nbk_id": "NBK606999",
+      "chapter_key": "yif1b_related_neurodevelopmental_disorder",
+      "chapter_title": "YIF1B-Related Neurodevelopmental Disorder - GeneReviews® - NCBI Bookshelf",
+      "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK606999/",
+      "structure_path": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/preservation/bucket-critical/20260331-genereviews-latest5-readiness/stage1_fetch/NBK606999_clinical_structure.json",
+      "text_sha256": "8f4564afa48169846a643d98aa1bd08e9caca3a23fc5cd39c7921555b2255d63",
+      "section_count": 3,
+      "paragraph_count": 18,
+      "sentence_count": 23
+    },
+    {
+      "nbk_id": "NBK618356",
+      "chapter_key": "zhu_tokita_takenouchi_kim_syndrome",
+      "chapter_title": "Zhu-Tokita-Takenouchi-Kim Syndrome - GeneReviews® - NCBI Bookshelf",
+      "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK618356/",
+      "structure_path": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/preservation/bucket-critical/20260331-genereviews-latest5-readiness/stage1_fetch/NBK618356_clinical_structure.json",
+      "text_sha256": "5f565900f2f4be6f1a72224239666d30b31a7072c68abd828013109bcbe2d2b1",
+      "section_count": 3,
+      "paragraph_count": 44,
+      "sentence_count": 96
+    }
+  ]
+}

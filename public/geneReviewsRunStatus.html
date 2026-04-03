@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GeneReviews Run Status</title>
+    <meta name="theme-color" content="#f6f3ee" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/geneReviewsRunStatus.css" />
+  </head>
+  <body class="gr-run-body">
+    <main class="gr-run-shell">
+      <header class="gr-run-head">
+        <div>
+          <p class="gr-run-kicker">Live run monitor</p>
+          <h1>GeneReviews Review-First Batch</h1>
+          <p id="gr-run-subtitle">Connecting to live run state…</p>
+        </div>
+        <div class="gr-run-head-actions">
+          <span id="gr-run-refresh" class="gr-run-pill">Auto refresh</span>
+        </div>
+      </header>
+
+      <section class="gr-run-grid">
+        <article class="gr-run-panel">
+          <h2>Run</h2>
+          <dl id="gr-run-meta" class="gr-run-meta"></dl>
+        </article>
+        <article class="gr-run-panel">
+          <h2>MedGemma</h2>
+          <div id="gr-medgemma-state"></div>
+        </article>
+      </section>
+
+      <section class="gr-run-panel">
+        <div class="gr-run-stage-head">
+          <h2>Stages</h2>
+          <p>Each card updates from the current output directories and summaries.</p>
+        </div>
+        <div id="gr-stage-grid" class="gr-stage-grid"></div>
+      </section>
+    </main>
+    <script type="module" src="/geneReviewsRunStatus.js"></script>
+  </body>
+  </html>

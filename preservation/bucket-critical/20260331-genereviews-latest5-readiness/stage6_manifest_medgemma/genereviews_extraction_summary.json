@@ -1,0 +1,62 @@
+[
+  {
+    "chapter_key": "y_chromosome_infertility",
+    "nbk_id": "NBK1339",
+    "chapter_title": "Y Chromosome Infertility - GeneReviews® - NCBI Bookshelf",
+    "feature_count_before_cleanup": 6,
+    "feature_count_after_cleanup": 5,
+    "metadata_frequency_covered": 2,
+    "metadata_onset_covered": 0,
+    "auto_accept_eligible_count": 3,
+    "candidate_count": null,
+    "anchor_count": null
+  },
+  {
+    "chapter_key": "yif1b_related_neurodevelopmental_disorder",
+    "nbk_id": "NBK606999",
+    "chapter_title": "YIF1B-Related Neurodevelopmental Disorder - GeneReviews® - NCBI Bookshelf",
+    "feature_count_before_cleanup": 40,
+    "feature_count_after_cleanup": 31,
+    "metadata_frequency_covered": 0,
+    "metadata_onset_covered": 1,
+    "auto_accept_eligible_count": 15,
+    "candidate_count": null,
+    "anchor_count": null
+  },
+  {
+    "chapter_key": "zap70_related_combined_immunodeficiency",
+    "nbk_id": "NBK20221",
+    "chapter_title": "ZAP70-Related Combined Immunodeficiency - GeneReviews® - NCBI Bookshelf",
+    "feature_count_before_cleanup": 41,
+    "feature_count_after_cleanup": 26,
+    "metadata_frequency_covered": 0,
+    "metadata_onset_covered": 4,
+    "auto_accept_eligible_count": 13,
+    "candidate_count": null,
+    "anchor_count": null
+  },
+  {
+    "chapter_key": "zellweger_spectrum_disorder",
+    "nbk_id": "NBK1448",
+    "chapter_title": "Zellweger Spectrum Disorder - GeneReviews® - NCBI Bookshelf",
+    "feature_count_before_cleanup": 27,
+    "feature_count_after_cleanup": 21,
+    "metadata_frequency_covered": 1,
+    "metadata_onset_covered": 4,
+    "auto_accept_eligible_count": 8,
+    "candidate_count": null,
+    "anchor_count": null
+  },
+  {
+    "chapter_key": "zhu_tokita_takenouchi_kim_syndrome",
+    "nbk_id": "NBK618356",
+    "chapter_title": "Zhu-Tokita-Takenouchi-Kim Syndrome - GeneReviews® - NCBI Bookshelf",
+    "feature_count_before_cleanup": 139,
+    "feature_count_after_cleanup": 97,
+    "metadata_frequency_covered": 24,
+    "metadata_onset_covered": 6,
+    "auto_accept_eligible_count": 62,
+    "candidate_count": null,
+    "anchor_count": null
+  }
+]

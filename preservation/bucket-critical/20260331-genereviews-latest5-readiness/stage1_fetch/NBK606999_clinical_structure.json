@@ -1,0 +1,610 @@
+{
+  "created_at": "2026-04-01T00:28:14.747Z",
+  "nbk_id": "NBK606999",
+  "chapter_title": "YIF1B-Related Neurodevelopmental Disorder - GeneReviews® - NCBI Bookshelf",
+  "chapter_key": "yif1b_related_neurodevelopmental_disorder",
+  "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK606999/",
+  "heading_inventory": [
+    {
+      "tag": "h3",
+      "heading": "Suggestive Findings"
+    },
+    {
+      "tag": "h2",
+      "heading": "Clinical Characteristics"
+    },
+    {
+      "tag": "h3",
+      "heading": "Clinical Description"
+    },
+    {
+      "tag": "h3",
+      "heading": "Table 2."
+    }
+  ],
+  "chapter_domains": [
+    {
+      "key": "neurologic",
+      "label": "Neurologic",
+      "evidence_headings": [],
+      "evidence_snippets": [
+        "al findings Severe-to-profound developmental delay; most individuals do not obtain any devel"
+      ]
+    },
+    {
+      "key": "gastrointestinal",
+      "label": "Gastrointestinal",
+      "evidence_headings": [],
+      "evidence_snippets": [
+        "t peripheral hypertonia Infant feeding difficulties Movement disorders, including dys"
+      ]
+    }
+  ],
+  "clinical_text": "YIF1B -related neurodevelopmental disorder ( YIF1B -NDD) should be considered in probands with the following clinical, imaging, and family history findings.\n\nClinical findings\n\nSevere-to-profound developmental delay; most individuals do not obtain any developmental milestones.\n\nSevere-to-profound intellectual disability, with no speech development or limited speech with subsequent regression\n\nGeneralized axial hypotonia of infancy and concurrent peripheral hypertonia\n\nInfant feeding difficulties\n\nMovement disorders, including dystonia and dyskinesia or tremors\n\nEpilepsy, varying from myoclonic seizures to generalized tonic-clonic seizures and infantile spasms\n\nNeurobehavioral/psychiatric manifestations including autism spectrum disorder and anxiety\n\nPostnatal microcephaly\n\nOphthalmologic involvement, including strabismus, nystagmus, optic atrophy, and cortical blindness\n\nHypoventilation and ventilation dependency in the presence of brain stem atrophy\n\nImaging findings on brain MRI. Nonspecific findings include white matter and myelination abnormalities, corpus callosum hypoplasia, cerebellar atrophy and parenchymal volume loss, cerebellar hypoplasia, and pons and brain stem atrophy (see Figure 1 ).\n\nFamily history is consistent with autosomal recessive inheritance (e.g., affected sibs and/or parental consanguinity). Absence of a known family history does not preclude the diagnosis.\n\nYIF1B -related neurodevelopmental disorder ( YIF1B -NDD) is characterized by severe-to-profound developmental delay / intellectual disability with variable motor abnormalities including axial hypotonia, peripheral hypertonia, dystonia, and dyskinesia; absence of speech in most individuals or very limited speech subject to regression; feeding difficulties; seizures; postnatal microcephaly with nonspecific brain MRI abnormalities; and ophthalmologic involvement (strabismus, nystagmus, optic atrophy, and cortical blindness). Some individuals have hypoventilation. To date, 25 individuals have been identified with biallelic pathogenic variants in YIF1B [ AlMuhaizea et al 2020 , Diaz et al 2020 , Medico Salsench et al 2021 , Sanri et al 2023 ]. The following description of the phenotypic features associated with this condition is based on these reports.\n\nYIF1B -Related Neurodevelopmental Disorder: Frequency of Select Features\n\nView in own window\n\nBased on AlMuhaizea et al [2020] , Diaz et al [2020] , Medico Salsench et al [2021] , Sanri et al [2023]",
+  "text_sha256": "8f4564afa48169846a643d98aa1bd08e9caca3a23fc5cd39c7921555b2255d63",
+  "section_count": 3,
+  "paragraph_count": 18,
+  "sentence_count": 23,
+  "sections": [
+    {
+      "section_id": "section_Suggestive_Findings",
+      "section_heading": "Suggestive Findings",
+      "paragraph_ids": [
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "p11",
+        "p12",
+        "p13",
+        "p14"
+      ],
+      "local_clinical_domains": [
+        {
+          "key": "neurologic",
+          "label": "Neurologic",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "al findings Severe-to-profound developmental delay; most individuals do not obtain any devel"
+          ]
+        },
+        {
+          "key": "gastrointestinal",
+          "label": "Gastrointestinal",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "t peripheral hypertonia Infant feeding difficulties Movement disorders, including dys"
+          ]
+        }
+      ]
+    },
+    {
+      "section_id": "section_Clinical_Description",
+      "section_heading": "Clinical Description",
+      "paragraph_ids": [
+        "p15"
+      ],
+      "local_clinical_domains": [
+        {
+          "key": "neurologic",
+          "label": "Neurologic",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "acterized by severe-to-profound developmental delay / intellectual disability with variable m"
+          ]
+        },
+        {
+          "key": "gastrointestinal",
+          "label": "Gastrointestinal",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "d speech subject to regression; feeding difficulties; seizures; postnatal microcephaly"
+          ]
+        }
+      ]
+    },
+    {
+      "section_id": "section_Table_2",
+      "section_heading": "Table 2.",
+      "paragraph_ids": [
+        "p16",
+        "p17",
+        "p18"
+      ],
+      "local_clinical_domains": []
+    }
+  ],
+  "paragraphs": [
+    {
+      "paragraph_id": "p1",
+      "paragraph_index": 1,
+      "text": "YIF1B -related neurodevelopmental disorder ( YIF1B -NDD) should be considered in probands with the following clinical, imaging, and family history findings.",
+      "char_start": 0,
+      "char_end": 156,
+      "section_id": "section_Suggestive_Findings",
+      "section_heading": "Suggestive Findings",
+      "sentences": [
+        {
+          "sentence_id": "p1_s1",
+          "sentence_index": 1,
+          "text": "YIF1B -related neurodevelopmental disorder ( YIF1B -NDD) should be considered in probands with the following clinical, imaging, and family history findings.",
+          "char_start": 0,
+          "char_end": 156,
+          "section_id": "section_Suggestive_Findings",
+          "section_heading": "Suggestive Findings"
+        }
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "paragraph_id": "p2",
+      "paragraph_index": 2,
+      "text": "Clinical findings",
+      "char_start": 158,
+      "char_end": 175,
+      "section_id": "section_Suggestive_Findings",
+      "section_heading": "Suggestive Findings",
+      "sentences": [
+        {
+          "sentence_id": "p2_s1",
+          "sentence_index": 1,
+          "text": "Clinical findings",
+          "char_start": 158,
+          "char_end": 175,
+          "section_id": "section_Suggestive_Findings",
+          "section_heading": "Suggestive Findings"
+        }
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "paragraph_id": "p3",
+      "paragraph_index": 3,
+      "text": "Severe-to-profound developmental delay; most individuals do not obtain any developmental milestones.",
+      "char_start": 177,
+      "char_end": 277,
+      "section_id": "section_Suggestive_Findings",
+      "section_heading": "Suggestive Findings",
+      "sentences": [
+        {
+          "sentence_id": "p3_s1",
+          "sentence_index": 1,
+          "text": "Severe-to-profound developmental delay; most individuals do not obtain any developmental milestones.",
+          "char_start": 177,
+          "char_end": 277,
+          "section_id": "section_Suggestive_Findings",
+          "section_heading": "Suggestive Findings"
+        }
+      ],
+      "local_clinical_domains": [
+        {
+          "key": "neurologic",
+          "label": "Neurologic",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "Severe-to-profound developmental delay; most individuals do not obtain any devel"
+          ]
+        }
+      ]
+    },
+    {
+      "paragraph_id": "p4",
+      "paragraph_index": 4,
+      "text": "Severe-to-profound intellectual disability, with no speech development or limited speech with subsequent regression",
+      "char_start": 279,
+      "char_end": 394,
+      "section_id": "section_Suggestive_Findings",
+      "section_heading": "Suggestive Findings",
+      "sentences": [
+        {
+          "sentence_id": "p4_s1",
+          "sentence_index": 1,
+          "text": "Severe-to-profound intellectual disability, with no speech development or limited speech with subsequent regression",
+          "char_start": 279,
+          "char_end": 394,
+          "section_id": "section_Suggestive_Findings",
+          "section_heading": "Suggestive Findings"
+        }
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "paragraph_id": "p5",
+      "paragraph_index": 5,
+      "text": "Generalized axial hypotonia of infancy and concurrent peripheral hypertonia",
+      "char_start": 396,
+      "char_end": 471,
+      "section_id": "section_Suggestive_Findings",
+      "section_heading": "Suggestive Findings",
+      "sentences": [
+        {
+          "sentence_id": "p5_s1",
+          "sentence_index": 1,
+          "text": "Generalized axial hypotonia of infancy and concurrent peripheral hypertonia",
+          "char_start": 396,
+          "char_end": 471,
+          "section_id": "section_Suggestive_Findings",
+          "section_heading": "Suggestive Findings"
+        }
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "paragraph_id": "p6",
+      "paragraph_index": 6,
+      "text": "Infant feeding difficulties",
+      "char_start": 473,
+      "char_end": 500,
+      "section_id": "section_Suggestive_Findings",
+      "section_heading": "Suggestive Findings",
+      "sentences": [
+        {
+          "sentence_id": "p6_s1",
+          "sentence_index": 1,
+          "text": "Infant feeding difficulties",
+          "char_start": 473,
+          "char_end": 500,
+          "section_id": "section_Suggestive_Findings",
+          "section_heading": "Suggestive Findings"
+        }
+      ],
+      "local_clinical_domains": [
+        {
+          "key": "gastrointestinal",
+          "label": "Gastrointestinal",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "Infant feeding difficulties"
+          ]
+        }
+      ]
+    },
+    {
+      "paragraph_id": "p7",
+      "paragraph_index": 7,
+      "text": "Movement disorders, including dystonia and dyskinesia or tremors",
+      "char_start": 502,
+      "char_end": 566,
+      "section_id": "section_Suggestive_Findings",
+      "section_heading": "Suggestive Findings",
+      "sentences": [
+        {
+          "sentence_id": "p7_s1",
+          "sentence_index": 1,
+          "text": "Movement disorders, including dystonia and dyskinesia or tremors",
+          "char_start": 502,
+          "char_end": 566,
+          "section_id": "section_Suggestive_Findings",
+          "section_heading": "Suggestive Findings"
+        }
+      ],
+      "local_clinical_domains": [
+        {
+          "key": "neurologic",
+          "label": "Neurologic",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "Movement disorders, including dystonia and dyskinesia or"
+          ]
+        }
+      ]
+    },
+    {
+      "paragraph_id": "p8",
+      "paragraph_index": 8,
+      "text": "Epilepsy, varying from myoclonic seizures to generalized tonic-clonic seizures and infantile spasms",
+      "char_start": 568,
+      "char_end": 667,
+      "section_id": "section_Suggestive_Findings",
+      "section_heading": "Suggestive Findings",
+      "sentences": [
+        {
+          "sentence_id": "p8_s1",
+          "sentence_index": 1,
+          "text": "Epilepsy, varying from myoclonic seizures to generalized tonic-clonic seizures and infantile spasms",
+          "char_start": 568,
+          "char_end": 667,
+          "section_id": "section_Suggestive_Findings",
+          "section_heading": "Suggestive Findings"
+        }
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "paragraph_id": "p9",
+      "paragraph_index": 9,
+      "text": "Neurobehavioral/psychiatric manifestations including autism spectrum disorder and anxiety",
+      "char_start": 669,
+      "char_end": 758,
+      "section_id": "section_Suggestive_Findings",
+      "section_heading": "Suggestive Findings",
+      "sentences": [
+        {
+          "sentence_id": "p9_s1",
+          "sentence_index": 1,
+          "text": "Neurobehavioral/psychiatric manifestations including autism spectrum disorder and anxiety",
+          "char_start": 669,
+          "char_end": 758,
+          "section_id": "section_Suggestive_Findings",
+          "section_heading": "Suggestive Findings"
+        }
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "paragraph_id": "p10",
+      "paragraph_index": 10,
+      "text": "Postnatal microcephaly",
+      "char_start": 760,
+      "char_end": 782,
+      "section_id": "section_Suggestive_Findings",
+      "section_heading": "Suggestive Findings",
+      "sentences": [
+        {
+          "sentence_id": "p10_s1",
+          "sentence_index": 1,
+          "text": "Postnatal microcephaly",
+          "char_start": 760,
+          "char_end": 782,
+          "section_id": "section_Suggestive_Findings",
+          "section_heading": "Suggestive Findings"
+        }
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "paragraph_id": "p11",
+      "paragraph_index": 11,
+      "text": "Ophthalmologic involvement, including strabismus, nystagmus, optic atrophy, and cortical blindness",
+      "char_start": 784,
+      "char_end": 882,
+      "section_id": "section_Suggestive_Findings",
+      "section_heading": "Suggestive Findings",
+      "sentences": [
+        {
+          "sentence_id": "p11_s1",
+          "sentence_index": 1,
+          "text": "Ophthalmologic involvement, including strabismus, nystagmus, optic atrophy, and cortical blindness",
+          "char_start": 784,
+          "char_end": 882,
+          "section_id": "section_Suggestive_Findings",
+          "section_heading": "Suggestive Findings"
+        }
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "paragraph_id": "p12",
+      "paragraph_index": 12,
+      "text": "Hypoventilation and ventilation dependency in the presence of brain stem atrophy",
+      "char_start": 884,
+      "char_end": 964,
+      "section_id": "section_Suggestive_Findings",
+      "section_heading": "Suggestive Findings",
+      "sentences": [
+        {
+          "sentence_id": "p12_s1",
+          "sentence_index": 1,
+          "text": "Hypoventilation and ventilation dependency in the presence of brain stem atrophy",
+          "char_start": 884,
+          "char_end": 964,
+          "section_id": "section_Suggestive_Findings",
+          "section_heading": "Suggestive Findings"
+        }
+      ],
+      "local_clinical_domains": [
+        {
+          "key": "neurologic",
+          "label": "Neurologic",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "n dependency in the presence of brain stem atrophy"
+          ]
+        }
+      ]
+    },
+    {
+      "paragraph_id": "p13",
+      "paragraph_index": 13,
+      "text": "Imaging findings on brain MRI. Nonspecific findings include white matter and myelination abnormalities, corpus callosum hypoplasia, cerebellar atrophy and parenchymal volume loss, cerebellar hypoplasia, and pons and brain stem atrophy (see Figure 1 ).",
+      "char_start": 966,
+      "char_end": 1217,
+      "section_id": "section_Suggestive_Findings",
+      "section_heading": "Suggestive Findings",
+      "sentences": [
+        {
+          "sentence_id": "p13_s1",
+          "sentence_index": 1,
+          "text": "Imaging findings on brain MRI.",
+          "char_start": 966,
+          "char_end": 996,
+          "section_id": "section_Suggestive_Findings",
+          "section_heading": "Suggestive Findings"
+        },
+        {
+          "sentence_id": "p13_s2",
+          "sentence_index": 2,
+          "text": "Nonspecific findings include white matter and myelination abnormalities, corpus callosum hypoplasia, cerebellar atrophy and parenchymal volume loss, cerebellar hypoplasia, and pons and brain stem atrophy (see Figure 1 ).",
+          "char_start": 997,
+          "char_end": 1217,
+          "section_id": "section_Suggestive_Findings",
+          "section_heading": "Suggestive Findings"
+        }
+      ],
+      "local_clinical_domains": [
+        {
+          "key": "neurologic",
+          "label": "Neurologic",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "Imaging findings on brain MRI. Nonspecific findings include white matter"
+          ]
+        }
+      ]
+    },
+    {
+      "paragraph_id": "p14",
+      "paragraph_index": 14,
+      "text": "Family history is consistent with autosomal recessive inheritance (e.g., affected sibs and/or parental consanguinity). Absence of a known family history does not preclude the diagnosis.",
+      "char_start": 1219,
+      "char_end": 1404,
+      "section_id": "section_Suggestive_Findings",
+      "section_heading": "Suggestive Findings",
+      "sentences": [
+        {
+          "sentence_id": "p14_s1",
+          "sentence_index": 1,
+          "text": "Family history is consistent with autosomal recessive inheritance (e.g., affected sibs and/or parental consanguinity).",
+          "char_start": 1219,
+          "char_end": 1337,
+          "section_id": "section_Suggestive_Findings",
+          "section_heading": "Suggestive Findings"
+        },
+        {
+          "sentence_id": "p14_s2",
+          "sentence_index": 2,
+          "text": "Absence of a known family history does not preclude the diagnosis.",
+          "char_start": 1338,
+          "char_end": 1404,
+          "section_id": "section_Suggestive_Findings",
+          "section_heading": "Suggestive Findings"
+        }
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "paragraph_id": "p15",
+      "paragraph_index": 15,
+      "text": "YIF1B -related neurodevelopmental disorder ( YIF1B -NDD) is characterized by severe-to-profound developmental delay / intellectual disability with variable motor abnormalities including axial hypotonia, peripheral hypertonia, dystonia, and dyskinesia; absence of speech in most individuals or very limited speech subject to regression; feeding difficulties; seizures; postnatal microcephaly with nonspecific brain MRI abnormalities; and ophthalmologic involvement (strabismus, nystagmus, optic atrophy, and cortical blindness). Some individuals have hypoventilation. To date, 25 individuals have been identified with biallelic pathogenic variants in YIF1B [ AlMuhaizea et al 2020 , Diaz et al 2020 , Medico Salsench et al 2021 , Sanri et al 2023 ]. The following description of the phenotypic features associated with this condition is based on these reports.",
+      "char_start": 1406,
+      "char_end": 2265,
+      "section_id": "section_Clinical_Description",
+      "section_heading": "Clinical Description",
+      "sentences": [
+        {
+          "sentence_id": "p15_s1",
+          "sentence_index": 1,
+          "text": "YIF1B -related neurodevelopmental disorder ( YIF1B -NDD) is characterized by severe-to-profound developmental delay / intellectual disability with variable motor abnormalities including axial hypotonia, peripheral hypertonia, dystonia, and dyskinesia; absence of speech in most individuals or very limited speech subject to regression; feeding difficulties; seizures; postnatal microcephaly with nonspecific brain MRI abnormalities; and ophthalmologic involvement (strabismus, nystagmus, optic atrophy, and cortical blindness).",
+          "char_start": 1406,
+          "char_end": 1933,
+          "section_id": "section_Clinical_Description",
+          "section_heading": "Clinical Description"
+        },
+        {
+          "sentence_id": "p15_s2",
+          "sentence_index": 2,
+          "text": "Some individuals have hypoventilation.",
+          "char_start": 1934,
+          "char_end": 1972,
+          "section_id": "section_Clinical_Description",
+          "section_heading": "Clinical Description"
+        },
+        {
+          "sentence_id": "p15_s3",
+          "sentence_index": 3,
+          "text": "To date, 25 individuals have been identified with biallelic pathogenic variants in YIF1B [ AlMuhaizea et al 2020 , Diaz et al 2020 , Medico Salsench et al 2021 , Sanri et al 2023 ].",
+          "char_start": 1973,
+          "char_end": 2154,
+          "section_id": "section_Clinical_Description",
+          "section_heading": "Clinical Description"
+        },
+        {
+          "sentence_id": "p15_s4",
+          "sentence_index": 4,
+          "text": "The following description of the phenotypic features associated with this condition is based on these reports.",
+          "char_start": 2155,
+          "char_end": 2265,
+          "section_id": "section_Clinical_Description",
+          "section_heading": "Clinical Description"
+        }
+      ],
+      "local_clinical_domains": [
+        {
+          "key": "neurologic",
+          "label": "Neurologic",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "acterized by severe-to-profound developmental delay / intellectual disability with variable m"
+          ]
+        },
+        {
+          "key": "gastrointestinal",
+          "label": "Gastrointestinal",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "d speech subject to regression; feeding difficulties; seizures; postnatal microcephaly"
+          ]
+        }
+      ]
+    },
+    {
+      "paragraph_id": "p16",
+      "paragraph_index": 16,
+      "text": "YIF1B -Related Neurodevelopmental Disorder: Frequency of Select Features",
+      "char_start": 2267,
+      "char_end": 2339,
+      "section_id": "section_Table_2",
+      "section_heading": "Table 2.",
+      "sentences": [
+        {
+          "sentence_id": "p16_s1",
+          "sentence_index": 1,
+          "text": "YIF1B -Related Neurodevelopmental Disorder: Frequency of Select Features",
+          "char_start": 2267,
+          "char_end": 2339,
+          "section_id": "section_Table_2",
+          "section_heading": "Table 2."
+        }
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "paragraph_id": "p17",
+      "paragraph_index": 17,
+      "text": "View in own window",
+      "char_start": 2341,
+      "char_end": 2359,
+      "section_id": "section_Table_2",
+      "section_heading": "Table 2.",
+      "sentences": [
+        {
+          "sentence_id": "p17_s1",
+          "sentence_index": 1,
+          "text": "View in own window",
+          "char_start": 2341,
+          "char_end": 2359,
+          "section_id": "section_Table_2",
+          "section_heading": "Table 2."
+        }
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "paragraph_id": "p18",
+      "paragraph_index": 18,
+      "text": "Based on AlMuhaizea et al [2020] , Diaz et al [2020] , Medico Salsench et al [2021] , Sanri et al [2023]",
+      "char_start": 2361,
+      "char_end": 2465,
+      "section_id": "section_Table_2",
+      "section_heading": "Table 2.",
+      "sentences": [
+        {
+          "sentence_id": "p18_s1",
+          "sentence_index": 1,
+          "text": "Based on AlMuhaizea et al [2020] , Diaz et al [2020] , Medico Salsench et al [2021] , Sanri et al [2023]",
+          "char_start": 2361,
+          "char_end": 2465,
+          "section_id": "section_Table_2",
+          "section_heading": "Table 2."
+        }
+      ],
+      "local_clinical_domains": []
+    }
+  ]
+}

@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Y Chromosome Infertility - GeneReviews® - NCBI Bookshelf Audit Review</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --bg: #f6f4ee;
+      --panel: #fffdf7;
+      --ink: #1e1b16;
+      --muted: #6f665a;
+      --line: #ddd4c6;
+      --accent: #925c14;
+      --verified: #2e7d32;
+      --flagged: #b26a00;
+      --failed: #b42318;
+      --match: #ffec99;
+      --freq: #c8f7c5;
+      --onset: #cfe8ff;
+      --progression: #ffd6e7;
+      --treatment: #e4d7ff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+    }
+    .layout {
+      display: grid;
+      grid-template-columns: 360px minmax(0, 1fr);
+      min-height: 100vh;
+    }
+    .sidebar, .detail {
+      background: var(--panel);
+      border-right: 1px solid var(--line);
+    }
+    .sidebar {
+      display: grid;
+      grid-template-rows: auto auto minmax(0, 1fr);
+      position: sticky;
+      top: 0;
+      height: 100vh;
+    }
+    .header, .filters, .detail-panel {
+      padding: 16px 18px;
+    }
+    .header h1 {
+      margin: 0 0 6px;
+      font-size: 18px;
+      line-height: 1.3;
+    }
+    .header p, .detail-panel p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.45; }
+    .filters { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); display: flex; gap: 8px; flex-wrap: wrap; }
+    .filters button {
+      border: 1px solid var(--line);
+      background: white;
+      padding: 7px 10px;
+      border-radius: 999px;
+      cursor: pointer;
+      font-size: 12px;
+    }
+    .filters button.active { border-color: var(--accent); color: var(--accent); font-weight: 600; }
+    .review-list { overflow: auto; padding: 10px 10px 16px; }
+    .review-item {
+      display: block;
+      width: 100%;
+      border: 1px solid var(--line);
+      background: white;
+      border-radius: 14px;
+      text-align: left;
+      padding: 12px;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+    .review-item.active { border-color: var(--accent); box-shadow: 0 0 0 2px rgba(146, 92, 20, 0.12); }
+    .review-item h3 { margin: 0 0 6px; font-size: 14px; line-height: 1.35; }
+    .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
+    .chip {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 11px;
+      border: 1px solid var(--line);
+      color: var(--muted);
+    }
+    .chip.verified { color: var(--verified); border-color: rgba(46,125,50,.35); }
+    .chip.flagged { color: var(--flagged); border-color: rgba(178,106,0,.35); }
+    .chip.failed { color: var(--failed); border-color: rgba(180,35,24,.35); }
+    .main {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 360px;
+      min-height: 100vh;
+    }
+    .chapter {
+      padding: 28px 34px 40px;
+      overflow: auto;
+    }
+    .detail {
+      border-left: 1px solid var(--line);
+      border-right: 0;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow: auto;
+    }
+    .section { margin-bottom: 28px; }
+    .section h2 { margin: 0 0 12px; font-size: 20px; }
+    .paragraph {
+      background: rgba(255,255,255,0.6);
+      border: 1px solid transparent;
+      border-radius: 12px;
+      padding: 12px 14px;
+      margin-bottom: 12px;
+    }
+    .paragraph.active { border-color: rgba(146, 92, 20, 0.3); background: #fffaf0; }
+    .sentence { line-height: 1.75; }
+    .sentence.active {
+      background: #fff7d6;
+      border-radius: 8px;
+      padding: 2px 4px;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+    }
+    mark {
+      padding: 0 1px;
+      border-radius: 3px;
+      color: inherit;
+    }
+    mark.match { background: var(--match); }
+    mark.frequency { background: var(--freq); }
+    mark.onset { background: var(--onset); }
+    mark.progression { background: var(--progression); }
+    mark.treatment_response { background: var(--treatment); }
+    .detail-panel h2 { margin: 0 0 10px; font-size: 18px; }
+    .detail-block { margin-top: 18px; }
+    .detail-block h3 { margin: 0 0 8px; font-size: 13px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); }
+    .detail-block pre, .detail-block code {
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-family: ui-monospace, "SFMono-Regular", monospace;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+    .detail-block pre {
+      margin: 0;
+      padding: 10px 12px;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+    }
+    .detail-list { margin: 0; padding-left: 18px; }
+    .detail-list li { margin: 0 0 6px; }
+    .detail-link { color: var(--accent); text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="header">
+        <h1>Y Chromosome Infertility - GeneReviews® - NCBI Bookshelf</h1>
+        <p>NBK1339</p>
+        <p><a class="detail-link" href="https://www.ncbi.nlm.nih.gov/books/NBK1339/" target="_blank" rel="noreferrer">Open source chapter</a></p>
+      </div>
+      <div class="filters">
+        <button data-filter="all" class="active">All</button>
+        <button data-filter="review">Needs review</button>
+        <button data-filter="failed">Failed</button>
+        <button data-filter="flagged">Flagged</button>
+        <button data-filter="eligible">Eligible</button>
+      </div>
+      <div class="review-list" id="review-list"></div>
+    </aside>
+    <main class="main">
+      <section class="chapter" id="chapter"></section>
+      <aside class="detail">
+        <div class="detail-panel" id="detail-panel">
+          <h2>Select an assertion</h2>
+          <p>The page will jump to the exact sentence and highlight the phenotype plus any metadata spans that were recorded.</p>
+        </div>
+      </aside>
+    </main>
+  </div>
+  <script id="audit-payload" type="application/json">{&quot;chapter&quot;:{&quot;chapter_key&quot;:&quot;y_chromosome_infertility&quot;,&quot;nbk_id&quot;:&quot;NBK1339&quot;,&quot;chapter_title&quot;:&quot;Y Chromosome Infertility - GeneReviews® - NCBI Bookshelf&quot;,&quot;source_url&quot;:&quot;https://www.ncbi.nlm.nih.gov/books/NBK1339/&quot;},&quot;sections&quot;:[{&quot;section_id&quot;:&quot;section_Suggestive_Findings&quot;,&quot;section_heading&quot;:&quot;Suggestive Findings&quot;,&quot;paragraphs&quot;:[{&quot;paragraph_id&quot;:&quot;p1&quot;,&quot;paragraph_index&quot;:1,&quot;text&quot;:&quot;Y chromosome infertility should be suspected in males with the following clinical and laboratory features.&quot;,&quot;local_clinical_domains&quot;:[],&quot;section_id&quot;:&quot;section_Suggestive_Findings&quot;,&quot;section_heading&quot;:&quot;Suggestive Findings&quot;,&quot;sentences&quot;:[{&quot;sentence_id&quot;:&quot;p1_s1&quot;,&quot;sentence_index&quot;:1,&quot;text&quot;:&quot;Y chromosome infertility should be suspected in males with the following clinical and laboratory features.&quot;,&quot;char_start&quot;:0,&quot;char_end&quot;:106}]},{&quot;paragraph_id&quot;:&quot;p2&quot;,&quot;paragraph_index&quot;:2,&quot;text&quot;:&quot;Clinical features&quot;,&quot;local_clinical_domains&quot;:[],&quot;section_id&quot;:&quot;section_Suggestive_Findings&quot;,&quot;section_heading&quot;:&quot;Suggestive Findings&quot;,&quot;sentences&quot;:[{&quot;sentence_id&quot;:&quot;p2_s1&quot;,&quot;sentence_index&quot;:1,&quot;text&quot;:&quot;Clinical features&quot;,&quot;char_start&quot;:108,&quot;char_end&quot;:125}]},{&quot;paragraph_id&quot;:&quot;p3&quot;,&quot;paragraph_index&quot;:3,&quot;text&quot;:&quot;A history of infertility&quot;,&quot;local_clinical_domains&quot;:[],&quot;section_id&quot;:&quot;section_Suggestive_Findings&quot;,&quot;section_heading&quot;:&quot;Suggestive Findings&quot;,&quot;sentences&quot;:[{&quot;sentence_id&quot;:&quot;p3_s1&quot;,&quot;sentence_index&quot;:1,&quot;text&quot;:&quot;A history of infertility&quot;,&quot;char_start&quot;:127,&quot;char_end&quot;:151}]},{&quot;paragraph_id&quot;:&quot;p4&quot;,&quot;paragraph_index&quot;:4,&quot;text&quot;:&quot;Normal physical examination in ~30%&quot;,&quot;local_clinical_domains&quot;:[],&quot;section_id&quot;:&quot;section_Suggestive_Findings&quot;,&quot;section_heading&quot;:&quot;Suggestive Findings&quot;,&quot;sentences&quot;:[{&quot;sentence_id&quot;:&quot;p4_s1&quot;,&quot;sentence_index&quot;:1,&quot;text&quot;:&quot;Normal physical examination in ~30%&quot;,&quot;char_start&quot;:153,&quot;char_end&quot;:188}]},{&quot;paragraph_id&quot;:&quot;p5&quot;,&quot;paragraph_index&quot;:5,&quot;text&quot;:&quot;Small testes in ~70% (males with Sertoli cell-only syndrome)&quot;,&quot;local_clinical_domains&quot;:[],&quot;section_id&quot;:&quot;section_Suggestive_Findings&quot;,&quot;section_heading&quot;:&quot;Suggestive Findings&quot;,&quot;sentences&quot;:[{&quot;sentence_id&quot;:&quot;p5_s1&quot;,&quot;sentence_index&quot;:1,&quot;text&quot;:&quot;Small testes in ~70% (males with Sertoli cell-only syndrome)&quot;,&quot;char_start&quot;:190,&quot;char_end&quot;:250}]},{&quot;paragraph_id&quot;:&quot;p6&quot;,&quot;paragraph_index&quot;:6,&quot;text&quot;:&quot;Laboratory features&quot;,&quot;local_clinical_domains&quot;:[],&quot;section_id&quot;:&quot;section_Suggestive_Findings&quot;,&quot;section_heading&quot;:&quot;Suggestive Findings&quot;,&quot;sentences&quot;:[{&quot;sentence_id&quot;:&quot;p6_s1&quot;,&quot;sentence_index&quot;:1,&quot;text&quot;:&quot;Laboratory features&quot;,&quot;char_start&quot;:252,&quot;char_end&quot;:271}]},{&quot;paragraph_id&quot;:&quot;p7&quot;,&quot;paragraph_index&quot;:7,&quot;text&quot;:&quot;Semen analysis. Ejaculate is examined to determine the number, motility, and morphology of sperm. Semen analysis should follow the WHO guidelines, Laboratory Manual for the Examination and Processing of Human Semen [ WHO 2010 ]. The following categories of sperm count are identified ( Table 1 ).&quot;,&quot;local_clinical_domains&quot;:[],&quot;section_id&quot;:&quot;section_Suggestive_Findings&quot;,&quot;section_heading&quot;:&quot;Suggestive Findings&quot;,&quot;sentences&quot;:[{&quot;sentence_id&quot;:&quot;p7_s1&quot;,&quot;sentence_index&quot;:1,&quot;text&quot;:&quot;Semen analysis.&quot;,&quot;char_start&quot;:273,&quot;char_end&quot;:288},{&quot;sentence_id&quot;:&quot;p7_s2&quot;,&quot;sentence_index&quot;:2,&quot;text&quot;:&quot;Ejaculate is examined to determine the number, motility, and morphology of sperm.&quot;,&quot;char_start&quot;:289,&quot;char_end&quot;:370},{&quot;sentence_id&quot;:&quot;p7_s3&quot;,&quot;sentence_index&quot;:3,&quot;text&quot;:&quot;Semen analysis should follow the WHO guidelines, Laboratory Manual for the Examination and Processing of Human Semen [ WHO 2010 ].&quot;,&quot;char_start&quot;:371,&quot;char_end&quot;:501},{&quot;sentence_id&quot;:&quot;p7_s4&quot;,&quot;sentence_index&quot;:4,&quot;text&quot;:&quot;The following categories of sperm count are identified ( Table 1 ).&quot;,&quot;char_start&quot;:502,&quot;char_end&quot;:569}]}]},{&quot;section_id&quot;:&quot;section_Table_1&quot;,&quot;section_heading&quot;:&quot;Table 1.&quot;,&quot;paragraphs&quot;:[{&quot;paragraph_id&quot;:&quot;p8&quot;,&quot;paragraph_index&quot;:8,&quot;text&quot;:&quot;Classification of Sperm Count&quot;,&quot;local_clinical_domains&quot;:[],&quot;section_id&quot;:&quot;section_Table_1&quot;,&quot;section_heading&quot;:&quot;Table 1.&quot;,&quot;sentences&quot;:[{&quot;sentence_id&quot;:&quot;p8_s1&quot;,&quot;sentence_index&quot;:1,&quot;text&quot;:&quot;Classification of Sperm Count&quot;,&quot;char_start&quot;:571,&quot;char_end&quot;:600}]},{&quot;paragraph_id&quot;:&quot;p9&quot;,&quot;paragraph_index&quot;:9,&quot;text&quot;:&quot;View in own window&quot;,&quot;local_clinical_domains&quot;:[],&quot;section_id&quot;:&quot;section_Table_1&quot;,&quot;section_heading&quot;:&quot;Table 1.&quot;,&quot;sentences&quot;:[{&quot;sentence_id&quot;:&quot;p9_s1&quot;,&quot;sentence_index&quot;:1,&quot;text&quot;:&quot;View in own window&quot;,&quot;char_start&quot;:602,&quot;char_end&quot;:620}]}]},{&quot;section_id&quot;:&quot;section_Clinical_Description&quot;,&quot;section_heading&quot;:&quot;Clinical Description&quot;,&quot;paragraphs&quot;:[{&quot;paragraph_id&quot;:&quot;p10&quot;,&quot;paragraph_index&quot;:10,&quot;text&quot;:&quot;Males with Y chromosome infertility usually have no symptoms other than infertility. A physical examination may reveal small testes in those with Sertoli cell-only (SCO) syndrome. Physical examination is normal in approximately 30% of males with Y chromosome infertility.&quot;,&quot;local_clinical_domains&quot;:[],&quot;section_id&quot;:&quot;section_Clinical_Description&quot;,&quot;section_heading&quot;:&quot;Clinical Description&quot;,&quot;sentences&quot;:[{&quot;sentence_id&quot;:&quot;p10_s1&quot;,&quot;sentence_index&quot;:1,&quot;text&quot;:&quot;Males with Y chromosome infertility usually have no symptoms other than infertility.&quot;,&quot;char_start&quot;:622,&quot;char_end&quot;:706},{&quot;sentence_id&quot;:&quot;p10_s2&quot;,&quot;sentence_index&quot;:2,&quot;text&quot;:&quot;A physical examination may reveal small testes in those with Sertoli cell-only (SCO) syndrome.&quot;,&quot;char_start&quot;:707,&quot;char_end&quot;:801},{&quot;sentence_id&quot;:&quot;p10_s3&quot;,&quot;sentence_index&quot;:3,&quot;text&quot;:&quot;Physical examination is normal in approximately 30% of males with Y chromosome infertility.&quot;,&quot;char_start&quot;:802,&quot;char_end&quot;:893}]},{&quot;paragraph_id&quot;:&quot;p11&quot;,&quot;paragraph_index&quot;:11,&quot;text&quot;:&quot;Males with Y chromosome infertility have azoospermia or severe, moderate, or mild oligozoospermia depending on the location and size of the Y chromosome deletion (see Genotype-Phenotype Correlations ). Most males with AZFa or AZFb/c deletions have a very poor prognosis for finding any sperm with testicular sperm extraction (TESE). Males with AZFc deletions (b2/b4 or gr/gr) have an extremely favorable prognosis (87%) for finding sperm sufficient for successful intracytoplasmic sperm injection (ICSI).&quot;,&quot;local_clinical_domains&quot;:[{&quot;key&quot;:&quot;renal_genitourinary&quot;,&quot;label&quot;:&quot;Renal / Genitourinary&quot;,&quot;evidence_headings&quot;:[],&quot;evidence_snippets&quot;:[&quot;osis for finding any sperm with testicular sperm extraction (TESE). Males with AZFc deleti&quot;]}],&quot;section_id&quot;:&quot;section_Clinical_Description&quot;,&quot;section_heading&quot;:&quot;Clinical Description&quot;,&quot;sentences&quot;:[{&quot;sentence_id&quot;:&quot;p11_s1&quot;,&quot;sentence_index&quot;:1,&quot;text&quot;:&quot;Males with Y chromosome infertility have azoospermia or severe, moderate, or mild oligozoospermia depending on the location and size of the Y chromosome deletion (see Genotype-Phenotype Correlations ).&quot;,&quot;char_start&quot;:895,&quot;char_end&quot;:1096},{&quot;sentence_id&quot;:&quot;p11_s2&quot;,&quot;sentence_index&quot;:2,&quot;text&quot;:&quot;Most males with AZFa or AZFb/c deletions have a very poor prognosis for finding any sperm with testicular sperm extraction (TESE).&quot;,&quot;char_start&quot;:1097,&quot;char_end&quot;:1227},{&quot;sentence_id&quot;:&quot;p11_s3&quot;,&quot;sentence_index&quot;:3,&quot;text&quot;:&quot;Males with AZFc deletions (b2/b4 or gr/gr) have an extremely favorable prognosis (87%) for finding sperm sufficient for successful intracytoplasmic sperm injection (ICSI).&quot;,&quot;char_start&quot;:1228,&quot;char_end&quot;:1399}]},{&quot;paragraph_id&quot;:&quot;p12&quot;,&quot;paragraph_index&quot;:12,&quot;text&quot;:&quot;Oligozoospermia may be compatible with fertility when the female partner is very fertile.&quot;,&quot;local_clinical_domains&quot;:[{&quot;key&quot;:&quot;renal_genitourinary&quot;,&quot;label&quot;:&quot;Renal / Genitourinary&quot;,&quot;evidence_headings&quot;:[],&quot;evidence_snippets&quot;:[&quot;ospermia may be compatible with fertility when the female partner is very fertile.&quot;]}],&quot;section_id&quot;:&quot;section_Clinical_Description&quot;,&quot;section_heading&quot;:&quot;Clinical Description&quot;,&quot;sentences&quot;:[{&quot;sentence_id&quot;:&quot;p12_s1&quot;,&quot;sentence_index&quot;:1,&quot;text&quot;:&quot;Oligozoospermia may be compatible with fertility when the female partner is very fertile.&quot;,&quot;char_start&quot;:1401,&quot;char_end&quot;:1490}]}]}],&quot;items&quot;:[{&quot;review_id&quot;:&quot;review-1-hp-0000027-present&quot;,&quot;review_href&quot;:&quot;/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/genereviews-pipeline-latest5-settled-20260330/stage7_verify_medgemma/review_pages/Y_Chromosome_Infertility_review.html#review-1-hp-0000027-present&quot;,&quot;hosted_review_href&quot;:&quot;/audit/genereviews?chapter=y_chromosome_infertility#review-1-hp-0000027-present&quot;,&quot;chapter_key&quot;:&quot;y_chromosome_infertility&quot;,&quot;nbk_id&quot;:&quot;NBK1339&quot;,&quot;chapter_title&quot;:&quot;Y Chromosome Infertility - GeneReviews® - NCBI Bookshelf&quot;,&quot;source_url&quot;:&quot;https://www.ncbi.nlm.nih.gov/books/NBK1339/&quot;,&quot;hpo_id&quot;:&quot;HP:0000027&quot;,&quot;hpo_label&quot;:&quot;Azoospermia&quot;,&quot;status&quot;:&quot;present&quot;,&quot;verdict&quot;:&quot;VERIFIED&quot;,&quot;auto_accept_eligible&quot;:true,&quot;auto_accept_reasons&quot;:[],&quot;local_clinical_domains&quot;:[{&quot;key&quot;:&quot;renal_genitourinary&quot;,&quot;label&quot;:&quot;Renal / Genitourinary&quot;,&quot;evidence_headings&quot;:[],&quot;evidence_snippets&quot;:[&quot;osis for finding any sperm with testicular sperm extraction (TESE). Males with AZFc deleti&quot;]}],&quot;section_id&quot;:&quot;section_Clinical_Description&quot;,&quot;section_heading&quot;:&quot;Clinical Description&quot;,&quot;paragraph_id&quot;:&quot;p11&quot;,&quot;sentence_id&quot;:&quot;p11_s1&quot;,&quot;paragraph_char_start&quot;:895,&quot;paragraph_char_end&quot;:1399,&quot;sentence_char_start&quot;:895,&quot;sentence_char_end&quot;:1096,&quot;sentence_text&quot;:&quot;Males with Y chromosome infertility have azoospermia or severe, moderate, or mild oligozoospermia depending on the location and size of the Y chromosome deletion (see Genotype-Phenotype Correlations ).&quot;,&quot;paragraph_text&quot;:&quot;Males with Y chromosome infertility have azoospermia or severe, moderate, or mild oligozoospermia depending on the location and size of the Y chromosome deletion (see Genotype-Phenotype Correlations ). Most males with AZFa or AZFb/c deletions have a very poor prognosis for finding any sperm with testicular sperm extraction (TESE). Males with AZFc deletions (b2/b4 or gr/gr) have an extremely favorable prognosis (87%) for finding sperm sufficient for successful intracytoplasmic sperm injection (ICSI).&quot;,&quot;matched_phrase&quot;:&quot;azoospermia&quot;,&quot;match_span_text&quot;:&quot;azoospermia&quot;,&quot;frequency_raw&quot;:null,&quot;onset_raw&quot;:null,&quot;progression_raw&quot;:null,&quot;treatment_response_raw&quot;:null,&quot;spans&quot;:[{&quot;key&quot;:&quot;phenotype&quot;,&quot;label&quot;:&quot;Phenotype&quot;,&quot;char_start&quot;:936,&quot;char_end&quot;:947,&quot;text&quot;:&quot;azoospermia&quot;}],&quot;failed_checks&quot;:[],&quot;flagged_checks&quot;:[],&quot;checks&quot;:[{&quot;name&quot;:&quot;source_span&quot;,&quot;status&quot;:&quot;pass&quot;,&quot;detail&quot;:&quot;Sentence span resolves inside cached chapter text.&quot;,&quot;span_text&quot;:&quot;Males with Y chromosome infertility have azoospermia or severe, moderate, or mild oligozoospermia depending on the location and size of the Y chromosome deletion (see Genotype-Phenotype Correlations ).&quot;},{&quot;name&quot;:&quot;phenotype_presence&quot;,&quot;status&quot;:&quot;pass&quot;,&quot;detail&quot;:&quot;Matched \&quot;azoospermia\&quot; at recorded span.&quot;,&quot;matched_phrase&quot;:&quot;azoospermia&quot;,&quot;evidence_source&quot;:&quot;span&quot;,&quot;match_span_text&quot;:&quot;azoospermia&quot;},{&quot;name&quot;:&quot;frequency_support&quot;,&quot;status&quot;:&quot;skip&quot;,&quot;detail&quot;:&quot;No frequency claimed.&quot;},{&quot;name&quot;:&quot;onset_support&quot;,&quot;status&quot;:&quot;skip&quot;,&quot;detail&quot;:&quot;No onset claimed.&quot;},{&quot;name&quot;:&quot;progression_support&quot;,&quot;status&quot;:&quot;skip&quot;,&quot;detail&quot;:&quot;No progression claimed.&quot;},{&quot;name&quot;:&quot;treatment_response_support&quot;,&quot;status&quot;:&quot;skip&quot;,&quot;detail&quot;:&quot;No treatment response claimed.&quot;},{&quot;name&quot;:&quot;clause_attachment&quot;,&quot;status&quot;:&quot;skip&quot;,&quot;detail&quot;:&quot;No onset attachment to verify.&quot;},{&quot;name&quot;:&quot;alias_shadow&quot;,&quot;status&quot;:&quot;pass&quot;,&quot;detail&quot;:&quot;No longer enclosing phenotype phrase detected.&quot;},{&quot;name&quot;:&quot;disease_subtype_leak&quot;,&quot;status&quot;:&quot;skip&quot;,&quot;detail&quot;:&quot;No onset claimed.&quot;},{&quot;name&quot;:&quot;excluded_status&quot;,&quot;status&quot;:&quot;skip&quot;,&quot;detail&quot;:&quot;Feature is present, not excluded.&quot;},{&quot;name&quot;:&quot;table_concordance&quot;,&quot;status&quot;:&quot;pass&quot;,&quot;detail&quot;:&quot;Phenotype appears in \&quot;Table 1\&quot;.&quot;,&quot;table_phenotype&quot;:&quot;Azoospermia&quot;,&quot;table_frequency&quot;:null},{&quot;name&quot;:&quot;section_branch_consistency&quot;,&quot;status&quot;:&quot;skip&quot;,&quot;detail&quot;:&quot;Section heading does not map to a supported audit branch.&quot;}]},{&quot;review_id&quot;:&quot;review-2-hp-0008734-present&quot;,&quot;review_href&quot;:&quot;/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/genereviews-pipeline-latest5-settled-20260330/stage7_verify_medgemma/review_pages/Y_Chromosome_Infertility_review.html#review-2-hp-0008734-present&quot;,&quot;hosted_review_href&quot;:&quot;/audit/genereviews?chapter=y_chromosome_infertility#review-2-hp-0008734-present&quot;,&quot;chapter_key&quot;:&quot;y_chromosome_infertility&quot;,&quot;nbk_id&quot;:&quot;NBK1339&quot;,&quot;chapter_title&quot;:&quot;Y Chromosome Infertility - GeneReviews® - NCBI Bookshelf&quot;,&quot;source_url&quot;:&quot;https://www.ncbi.nlm.nih.gov/books/NBK1339/&quot;,&quot;hpo_id&quot;:&quot;HP:0008734&quot;,&quot;hpo_label&quot;:&quot;Decreased testicular size&quot;,&quot;status&quot;:&quot;present&quot;,&quot;verdict&quot;:&quot;VERIFIED&quot;,&quot;auto_accept_eligible&quot;:true,&quot;auto_accept_reasons&quot;:[],&quot;local_clinical_domains&quot;:[],&quot;section_id&quot;:&quot;section_Suggestive_Findings&quot;,&quot;section_heading&quot;:&quot;Suggestive Findings&quot;,&quot;paragraph_id&quot;:&quot;p5&quot;,&quot;sentence_id&quot;:&quot;p5_s1&quot;,&quot;paragraph_char_start&quot;:190,&quot;paragraph_char_end&quot;:250,&quot;sentence_char_start&quot;:190,&quot;sentence_char_end&quot;:250,&quot;sentence_text&quot;:&quot;Small testes in ~70% (males with Sertoli cell-only syndrome)&quot;,&quot;paragraph_text&quot;:&quot;Small testes in ~70% (males with Sertoli cell-only syndrome)&quot;,&quot;matched_phrase&quot;:&quot;small testes&quot;,&quot;match_span_text&quot;:&quot;Small testes&quot;,&quot;frequency_raw&quot;:&quot;70%&quot;,&quot;onset_raw&quot;:null,&quot;progression_raw&quot;:null,&quot;treatment_response_raw&quot;:null,&quot;spans&quot;:[{&quot;key&quot;:&quot;phenotype&quot;,&quot;label&quot;:&quot;Phenotype&quot;,&quot;char_start&quot;:190,&quot;char_end&quot;:202,&quot;text&quot;:&quot;Small testes&quot;},{&quot;key&quot;:&quot;frequency&quot;,&quot;label&quot;:&quot;Frequency&quot;,&quot;char_start&quot;:207,&quot;char_end&quot;:210,&quot;text&quot;:&quot;70%&quot;}],&quot;failed_checks&quot;:[],&quot;flagged_checks&quot;:[],&quot;checks&quot;:[{&quot;name&quot;:&quot;source_span&quot;,&quot;status&quot;:&quot;pass&quot;,&quot;detail&quot;:&quot;Sentence span resolves inside cached chapter text.&quot;,&quot;span_text&quot;:&quot;Small testes in ~70% (males with Sertoli cell-only syndrome)&quot;},{&quot;name&quot;:&quot;phenotype_presence&quot;,&quot;status&quot;:&quot;pass&quot;,&quot;detail&quot;:&quot;Matched \&quot;small testes\&quot; at recorded span.&quot;,&quot;matched_phrase&quot;:&quot;small testes&quot;,&quot;evidence_source&quot;:&quot;span&quot;,&quot;match_span_text&quot;:&quot;Small testes&quot;},{&quot;name&quot;:&quot;frequency_support&quot;,&quot;status&quot;:&quot;pass&quot;,&quot;detail&quot;:&quot;Frequency verified at recorded span as \&quot;70%\&quot;.&quot;,&quot;span_text&quot;:&quot;70%&quot;},{&quot;name&quot;:&quot;onset_support&quot;,&quot;status&quot;:&quot;skip&quot;,&quot;detail&quot;:&quot;No onset claimed.&quot;},{&quot;name&quot;:&quot;progression_support&quot;,&quot;status&quot;:&quot;skip&quot;,&quot;detail&quot;:&quot;No progression claimed.&quot;},{&quot;name&quot;:&quot;treatment_response_support&quot;,&quot;status&quot;:&quot;skip&quot;,&quot;detail&quot;:&quot;No treatment response claimed.&quot;},{&quot;name&quot;:&quot;clause_attachment&quot;,&quot;status&quot;:&quot;skip&quot;,&quot;detail&quot;:&quot;No onset attachment to verify.&quot;},{&quot;name&quot;:&quot;alias_shadow&quot;,&quot;status&quot;:&quot;pass&quot;,&quot;detail&quot;:&quot;No longer enclosing phenotype phrase detected.&quot;},{&quot;name&quot;:&quot;disease_subtype_leak&quot;,&quot;status&quot;:&quot;skip&quot;,&quot;detail&quot;:&quot;No onset claimed.&quot;},{&quot;name&quot;:&quot;excluded_status&quot;,&quot;status&quot;:&quot;skip&quot;,&quot;detail&quot;:&quot;Feature is present, not excluded.&quot;},{&quot;name&quot;:&quot;table_concordance&quot;,&quot;status&quot;:&quot;skip&quot;,&quot;detail&quot;:&quot;No matching table row found for this phenotype.&quot;},{&quot;name&quot;:&quot;section_branch_consistency&quot;,&quot;status&quot;:&quot;skip&quot;,&quot;detail&quot;:&quot;Section heading does not map to a supported audit branch.&quot;}]},{&quot;review_id&quot;:&quot;review-3-hp-0000789-present&quot;,&quot;review_href&quot;:&quot;/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/genereviews-pipeline-latest5-settled-20260330/stage7_verify_medgemma/review_pages/Y_Chromosome_Infertility_review.html#review-3-hp-0000789-present&quot;,&quot;hosted_review_href&quot;:&quot;/audit/genereviews?chapter=y_chromosome_infertility#review-3-hp-0000789-present&quot;,&quot;chapter_key&quot;:&quot;y_chromosome_infertility&quot;,&quot;nbk_id&quot;:&quot;NBK1339&quot;,&quot;chapter_title&quot;:&quot;Y Chromosome Infertility - GeneReviews® - NCBI Bookshelf&quot;,&quot;source_url&quot;:&quot;https://www.ncbi.nlm.nih.gov/books/NBK1339/&quot;,&quot;hpo_id&quot;:&quot;HP:0000789&quot;,&quot;hpo_label&quot;:&quot;Infertility&quot;,&quot;status&quot;:&quot;present&quot;,&quot;verdict&quot;:&quot;FLAGGED&quot;,&quot;auto_accept_eligible&quot;:false,&quot;auto_accept_reasons&quot;:[&quot;alias_shadow:flag&quot;],&quot;local_clinical_domains&quot;:[],&quot;section_id&quot;:&quot;section_Suggestive_Findings&quot;,&quot;section_heading&quot;:&quot;Suggestive Findings&quot;,&quot;paragraph_id&quot;:&quot;p1&quot;,&quot;sentence_id&quot;:&quot;p1_s1&quot;,&quot;paragraph_char_start&quot;:0,&quot;paragraph_char_end&quot;:106,&quot;sentence_char_start&quot;:0,&quot;sentence_char_end&quot;:106,&quot;sentence_text&quot;:&quot;Y chromosome infertility should be suspected in males with the following clinical and laboratory features.&quot;,&quot;paragraph_text&quot;:&quot;Y chromosome infertility should be suspected in males with the following clinical and laboratory features.&quot;,&quot;matched_phrase&quot;:&quot;infertility&quot;,&quot;match_span_text&quot;:&quot;infertility&quot;,&quot;frequency_raw&quot;:null,&quot;onset_raw&quot;:null,&quot;progression_raw&quot;:null,&quot;treatment_response_raw&quot;:null,&quot;spans&quot;:[{&quot;key&quot;:&quot;phenotype&quot;,&quot;label&quot;:&quot;Phenotype&quot;,&quot;char_start&quot;:13,&quot;char_end&quot;:24,&quot;text&quot;:&quot;infertility&quot;}],&quot;failed_checks&quot;:[],&quot;flagged_checks&quot;:[&quot;alias_shadow&quot;],&quot;checks&quot;:[{&quot;name&quot;:&quot;source_span&quot;,&quot;status&quot;:&quot;pass&quot;,&quot;detail&quot;:&quot;Sentence span resolves inside cached chapter text.&quot;,&quot;span_text&quot;:&quot;Y chromosome infertility should be suspected in males with the following clinical and laboratory features.&quot;},{&quot;name&quot;:&quot;phenotype_presence&quot;,&quot;status&quot;:&quot;pass&quot;,&quot;detail&quot;:&quot;Matched \&quot;infertility\&quot; at recorded span.&quot;,&quot;matched_phrase&quot;:&quot;infertility&quot;,&quot;evidence_source&quot;:&quot;span&quot;,&quot;match_span_text&quot;:&quot;infertility&quot;},{&quot;name&quot;:&quot;frequency_support&quot;,&quot;status&quot;:&quot;skip&quot;,&quot;detail&quot;:&quot;No frequency claimed.&quot;},{&quot;name&quot;:&quot;onset_support&quot;,&quot;status&quot;:&quot;skip&quot;,&quot;detail&quot;:&quot;No onset claimed.&quot;},{&quot;name&quot;:&quot;progression_support&quot;,&quot;status&quot;:&quot;skip&quot;,&quot;detail&quot;:&quot;No progression claimed.&quot;},{&quot;name&quot;:&quot;treatment_response_support&quot;,&quot;status&quot;:&quot;skip&quot;,&quot;detail&quot;:&quot;No treatment response claimed.&quot;},{&quot;name&quot;:&quot;clause_attachment&quot;,&quot;status&quot;:&quot;skip&quot;,&quot;detail&quot;:&quot;No onset attachment to verify.&quot;},{&quot;name&quot;:&quot;alias_shadow&quot;,&quot;status&quot;:&quot;flag&quot;,&quot;detail&quot;:&quot;Potential alias-shadow overlap inside \&quot;Y chromosome infertility\&quot;.&quot;,&quot;enclosing_phrase&quot;:&quot;Y chromosome infertility&quot;},{&quot;name&quot;:&quot;disease_subtype_leak&quot;,&quot;status&quot;:&quot;skip&quot;,&quot;detail&quot;:&quot;No onset claimed.&quot;},{&quot;name&quot;:&quot;excluded_status&quot;,&quot;status&quot;:&quot;skip&quot;,&quot;detail&quot;:&quot;Feature is present, not excluded.&quot;},{&quot;name&quot;:&quot;table_concordance&quot;,&quot;status&quot;:&quot;skip&quot;,&quot;detail&quot;:&quot;No matching table row found for this phenotype.&quot;},{&quot;name&quot;:&quot;section_branch_consistency&quot;,&quot;status&quot;:&quot;skip&quot;,&quot;detail&quot;:&quot;Section heading does not map to a supported audit branch.&quot;}]},{&quot;review_id&quot;:&quot;review-4-hp-0034816-present&quot;,&quot;review_href&quot;:&quot;/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/genereviews-pipeline-latest5-settled-20260330/stage7_verify_medgemma/review_pages/Y_Chromosome_Infertility_review.html#review-4-hp-0034816-present&quot;,&quot;hosted_review_href&quot;:&quot;/audit/genereviews?chapter=y_chromosome_infertility#review-4-hp-0034816-present&quot;,&quot;chapter_key&quot;:&quot;y_chromosome_infertility&quot;,&quot;nbk_id&quot;:&quot;NBK1339&quot;,&quot;chapter_title&quot;:&quot;Y Chromosome Infertility - GeneReviews® - NCBI Bookshelf&quot;,&quot;source_url&quot;:&quot;https://www.ncbi.nlm.nih.gov/books/NBK1339/&quot;,&quot;hpo_id&quot;:&quot;HP:0034816&quot;,&quot;hpo_label&quot;:&quot;Mild oligozoospermia&quot;,&quot;status&quot;:&quot;present&quot;,&quot;verdict&quot;:&quot;VERIFIED&quot;,&quot;auto_accept_eligible&quot;:true,&quot;auto_accept_reasons&quot;:[],&quot;local_clinical_domains&quot;:[{&quot;key&quot;:&quot;renal_genitourinary&quot;,&quot;label&quot;:&quot;Renal / Genitourinary&quot;,&quot;evidence_headings&quot;:[],&quot;evidence_snippets&quot;:[&quot;osis for finding any sperm with testicular sperm extraction (TESE). Males with AZFc deleti&quot;]}],&quot;section_id&quot;:&quot;section_Clinical_Description&quot;,&quot;section_heading&quot;:&quot;Clinical Description&quot;,&quot;paragraph_id&quot;:&quot;p11&quot;,&quot;sentence_id&quot;:&quot;p11_s1&quot;,&quot;paragraph_char_start&quot;:895,&quot;paragraph_char_end&quot;:1399,&quot;sentence_char_start&quot;:895,&quot;sentence_char_end&quot;:1096,&quot;sentence_text&quot;:&quot;Males with Y chromosome infertility have azoospermia or severe, moderate, or mild oligozoospermia depending on the location and size of the Y chromosome deletion (see Genotype-Phenotype Correlations ).&quot;,&quot;paragraph_text&quot;:&quot;Males with Y chromosome infertility have azoospermia or severe, moderate, or mild oligozoospermia depending on the location and size of the Y chromosome deletion (see Genotype-Phenotype Correlations ). Most males with AZFa or AZFb/c deletions have a very poor prognosis for finding any sperm with testicular sperm extraction (TESE). Males with AZFc deletions (b2/b4 or gr/gr) have an extremely favorable prognosis (87%) for finding sperm sufficient for successful intracytoplasmic sperm injection (ICSI).&quot;,&quot;matched_phrase&quot;:&quot;mild oligozoospermia&quot;,&quot;match_span_text&quot;:&quot;mild oligozoospermia&quot;,&quot;frequency_raw&quot;:null,&quot;onset_raw&quot;:null,&quot;progression_raw&quot;:null,&quot;treatment_response_raw&quot;:null,&quot;spans&quot;:[{&quot;key&quot;:&quot;phenotype&quot;,&quot;label&quot;:&quot;Phenotype&quot;,&quot;char_start&quot;:972,&quot;char_end&quot;:992,&quot;text&quot;:&quot;mild oligozoospermia&quot;}],&quot;failed_checks&quot;:[],&quot;flagged_checks&quot;:[],&quot;checks&quot;:[{&quot;name&quot;:&quot;source_span&quot;,&quot;status&quot;:&quot;pass&quot;,&quot;detail&quot;:&quot;Sentence span resolves inside cached chapter text.&quot;,&quot;span_text&quot;:&quot;Males with Y chromosome infertility have azoospermia or severe, moderate, or mild oligozoospermia depending on the location and size of the Y chromosome deletion (see Genotype-Phenotype Correlations ).&quot;},{&quot;name&quot;:&quot;phenotype_presence&quot;,&quot;status&quot;:&quot;pass&quot;,&quot;detail&quot;:&quot;Matched \&quot;mild oligozoospermia\&quot; at recorded span.&quot;,&quot;matched_phrase&quot;:&quot;mild oligozoospermia&quot;,&quot;evidence_source&quot;:&quot;span&quot;,&quot;match_span_text&quot;:&quot;mild oligozoospermia&quot;},{&quot;name&quot;:&quot;frequency_support&quot;,&quot;status&quot;:&quot;skip&quot;,&quot;detail&quot;:&quot;No frequency claimed.&quot;},{&quot;name&quot;:&quot;onset_support&quot;,&quot;status&quot;:&quot;skip&quot;,&quot;detail&quot;:&quot;No onset claimed.&quot;},{&quot;name&quot;:&quot;progression_support&quot;,&quot;status&quot;:&quot;skip&quot;,&quot;detail&quot;:&quot;No progression claimed.&quot;},{&quot;name&quot;:&quot;treatment_response_support&quot;,&quot;status&quot;:&quot;skip&quot;,&quot;detail&quot;:&quot;No treatment response claimed.&quot;},{&quot;name&quot;:&quot;clause_attachment&quot;,&quot;status&quot;:&quot;skip&quot;,&quot;detail&quot;:&quot;No onset attachment to verify.&quot;},{&quot;name&quot;:&quot;alias_shadow&quot;,&quot;status&quot;:&quot;pass&quot;,&quot;detail&quot;:&quot;No longer enclosing phenotype phrase detected.&quot;},{&quot;name&quot;:&quot;disease_subtype_leak&quot;,&quot;status&quot;:&quot;skip&quot;,&quot;detail&quot;:&quot;No onset claimed.&quot;},{&quot;name&quot;:&quot;excluded_status&quot;,&quot;status&quot;:&quot;skip&quot;,&quot;detail&quot;:&quot;Feature is present, not excluded.&quot;},{&quot;name&quot;:&quot;table_concordance&quot;,&quot;status&quot;:&quot;pass&quot;,&quot;detail&quot;:&quot;Phenotype appears in \&quot;Table 1\&quot;.&quot;,&quot;table_phenotype&quot;:&quot;Mild oligozoospermia&quot;,&quot;table_frequency&quot;:null},{&quot;name&quot;:&quot;section_branch_consistency&quot;,&quot;status&quot;:&quot;skip&quot;,&quot;detail&quot;:&quot;Section heading does not map to a supported audit branch.&quot;}]},{&quot;review_id&quot;:&quot;review-5-hp-0000798-present&quot;,&quot;review_href&quot;:&quot;/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/genereviews-pipeline-latest5-settled-20260330/stage7_verify_medgemma/review_pages/Y_Chromosome_Infertility_review.html#review-5-hp-0000798-present&quot;,&quot;hosted_review_href&quot;:&quot;/audit/genereviews?chapter=y_chromosome_infertility#review-5-hp-0000798-present&quot;,&quot;chapter_key&quot;:&quot;y_chromosome_infertility&quot;,&quot;nbk_id&quot;:&quot;NBK1339&quot;,&quot;chapter_title&quot;:&quot;Y Chromosome Infertility - GeneReviews® - NCBI Bookshelf&quot;,&quot;source_url&quot;:&quot;https://www.ncbi.nlm.nih.gov/books/NBK1339/&quot;,&quot;hpo_id&quot;:&quot;HP:0000798&quot;,&quot;hpo_label&quot;:&quot;Oligozoospermia&quot;,&quot;status&quot;:&quot;present&quot;,&quot;verdict&quot;:&quot;VERIFIED&quot;,&quot;auto_accept_eligible&quot;:true,&quot;auto_accept_reasons&quot;:[],&quot;local_clinical_domains&quot;:[{&quot;key&quot;:&quot;renal_genitourinary&quot;,&quot;label&quot;:&quot;Renal / Genitourinary&quot;,&quot;evidence_headings&quot;:[],&quot;evidence_snippets&quot;:[&quot;osis for finding any sperm with testicular sperm extraction (TESE). Males with AZFc deleti&quot;]}],&quot;section_id&quot;:&quot;section_Clinical_Description&quot;,&quot;section_heading&quot;:&quot;Clinical Description&quot;,&quot;paragraph_id&quot;:&quot;p11&quot;,&quot;sentence_id&quot;:&quot;p11_s1&quot;,&quot;paragraph_char_start&quot;:895,&quot;paragraph_char_end&quot;:1399,&quot;sentence_char_start&quot;:895,&quot;sentence_char_end&quot;:1096,&quot;sentence_text&quot;:&quot;Males with Y chromosome infertility have azoospermia or severe, moderate, or mild oligozoospermia depending on the location and size of the Y chromosome deletion (see Genotype-Phenotype Correlations ).&quot;,&quot;paragraph_text&quot;:&quot;Males with Y chromosome infertility have azoospermia or severe, moderate, or mild oligozoospermia depending on the location and size of the Y chromosome deletion (see Genotype-Phenotype Correlations ). Most males with AZFa or AZFb/c deletions have a very poor prognosis for finding any sperm with testicular sperm extraction (TESE). Males with AZFc deletions (b2/b4 or gr/gr) have an extremely favorable prognosis (87%) for finding sperm sufficient for successful intracytoplasmic sperm injection (ICSI).&quot;,&quot;matched_phrase&quot;:&quot;oligozoospermia&quot;,&quot;match_span_text&quot;:&quot;oligozoospermia&quot;,&quot;frequency_raw&quot;:null,&quot;onset_raw&quot;:null,&quot;progression_raw&quot;:null,&quot;treatment_response_raw&quot;:null,&quot;spans&quot;:[{&quot;key&quot;:&quot;phenotype&quot;,&quot;label&quot;:&quot;Phenotype&quot;,&quot;char_start&quot;:977,&quot;char_end&quot;:992,&quot;text&quot;:&quot;oligozoospermia&quot;}],&quot;failed_checks&quot;:[],&quot;flagged_checks&quot;:[],&quot;checks&quot;:[{&quot;name&quot;:&quot;source_span&quot;,&quot;status&quot;:&quot;pass&quot;,&quot;detail&quot;:&quot;Sentence span resolves inside cached chapter text.&quot;,&quot;span_text&quot;:&quot;Males with Y chromosome infertility have azoospermia or severe, moderate, or mild oligozoospermia depending on the location and size of the Y chromosome deletion (see Genotype-Phenotype Correlations ).&quot;},{&quot;name&quot;:&quot;phenotype_presence&quot;,&quot;status&quot;:&quot;pass&quot;,&quot;detail&quot;:&quot;Matched \&quot;oligozoospermia\&quot; at recorded span.&quot;,&quot;matched_phrase&quot;:&quot;oligozoospermia&quot;,&quot;evidence_source&quot;:&quot;span&quot;,&quot;match_span_text&quot;:&quot;oligozoospermia&quot;},{&quot;name&quot;:&quot;frequency_support&quot;,&quot;status&quot;:&quot;skip&quot;,&quot;detail&quot;:&quot;No frequency claimed.&quot;},{&quot;name&quot;:&quot;onset_support&quot;,&quot;status&quot;:&quot;skip&quot;,&quot;detail&quot;:&quot;No onset claimed.&quot;},{&quot;name&quot;:&quot;progression_support&quot;,&quot;status&quot;:&quot;skip&quot;,&quot;detail&quot;:&quot;No progression claimed.&quot;},{&quot;name&quot;:&quot;treatment_response_support&quot;,&quot;status&quot;:&quot;skip&quot;,&quot;detail&quot;:&quot;No treatment response claimed.&quot;},{&quot;name&quot;:&quot;clause_attachment&quot;,&quot;status&quot;:&quot;skip&quot;,&quot;detail&quot;:&quot;No onset attachment to verify.&quot;},{&quot;name&quot;:&quot;alias_shadow&quot;,&quot;status&quot;:&quot;pass&quot;,&quot;detail&quot;:&quot;No longer enclosing phenotype phrase detected.&quot;},{&quot;name&quot;:&quot;disease_subtype_leak&quot;,&quot;status&quot;:&quot;skip&quot;,&quot;detail&quot;:&quot;No onset claimed.&quot;},{&quot;name&quot;:&quot;excluded_status&quot;,&quot;status&quot;:&quot;skip&quot;,&quot;detail&quot;:&quot;Feature is present, not excluded.&quot;},{&quot;name&quot;:&quot;table_concordance&quot;,&quot;status&quot;:&quot;pass&quot;,&quot;detail&quot;:&quot;Phenotype appears in \&quot;Table 1\&quot;.&quot;,&quot;table_phenotype&quot;:&quot;Severe oligozoospermia&quot;,&quot;table_frequency&quot;:null},{&quot;name&quot;:&quot;section_branch_consistency&quot;,&quot;status&quot;:&quot;skip&quot;,&quot;detail&quot;:&quot;Section heading does not map to a supported audit branch.&quot;}]},{&quot;review_id&quot;:&quot;review-6-hp-0034299-present&quot;,&quot;review_href&quot;:&quot;/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/genereviews-pipeline-latest5-settled-20260330/stage7_verify_medgemma/review_pages/Y_Chromosome_Infertility_review.html#review-6-hp-0034299-present&quot;,&quot;hosted_review_href&quot;:&quot;/audit/genereviews?chapter=y_chromosome_infertility#review-6-hp-0034299-present&quot;,&quot;chapter_key&quot;:&quot;y_chromosome_infertility&quot;,&quot;nbk_id&quot;:&quot;NBK1339&quot;,&quot;chapter_title&quot;:&quot;Y Chromosome Infertility - GeneReviews® - NCBI Bookshelf&quot;,&quot;source_url&quot;:&quot;https://www.ncbi.nlm.nih.gov/books/NBK1339/&quot;,&quot;hpo_id&quot;:&quot;HP:0034299&quot;,&quot;hpo_label&quot;:&quot;Sertoli cell-only phenotype&quot;,&quot;status&quot;:&quot;present&quot;,&quot;verdict&quot;:&quot;FAILED&quot;,&quot;auto_accept_eligible&quot;:false,&quot;auto_accept_reasons&quot;:[&quot;source_span:skip&quot;,&quot;frequency_support:fail&quot;,&quot;contains_failed_check&quot;],&quot;local_clinical_domains&quot;:[],&quot;section_id&quot;:null,&quot;section_heading&quot;:null,&quot;paragraph_id&quot;:null,&quot;sentence_id&quot;:null,&quot;paragraph_char_start&quot;:null,&quot;paragraph_char_end&quot;:null,&quot;sentence_char_start&quot;:null,&quot;sentence_char_end&quot;:null,&quot;sentence_text&quot;:&quot;Small testes in ~70% (males with Sertoli cell-only syndrome)&quot;,&quot;paragraph_text&quot;:&quot;Small testes in ~70% (males with Sertoli cell-only syndrome)&quot;,&quot;matched_phrase&quot;:&quot;Sertoli cell-only&quot;,&quot;match_span_text&quot;:null,&quot;frequency_raw&quot;:&quot;70%&quot;,&quot;onset_raw&quot;:null,&quot;progression_raw&quot;:null,&quot;treatment_response_raw&quot;:null,&quot;spans&quot;:[{&quot;key&quot;:&quot;frequency&quot;,&quot;label&quot;:&quot;Frequency&quot;,&quot;char_start&quot;:17,&quot;char_end&quot;:20,&quot;text&quot;:&quot;rti&quot;}],&quot;failed_checks&quot;:[&quot;frequency_support&quot;],&quot;flagged_checks&quot;:[],&quot;checks&quot;:[{&quot;name&quot;:&quot;source_span&quot;,&quot;status&quot;:&quot;skip&quot;,&quot;detail&quot;:&quot;No sentence span recorded.&quot;},{&quot;name&quot;:&quot;phenotype_presence&quot;,&quot;status&quot;:&quot;pass&quot;,&quot;detail&quot;:&quot;Matched \&quot;Sertoli cell-only\&quot; in source sentence.&quot;,&quot;matched_phrase&quot;:&quot;Sertoli cell-only&quot;,&quot;evidence_source&quot;:&quot;stored&quot;},{&quot;name&quot;:&quot;frequency_support&quot;,&quot;status&quot;:&quot;fail&quot;,&quot;detail&quot;:&quot;Frequency span text \&quot;rti\&quot; does not match claimed frequency \&quot;70%\&quot;.&quot;},{&quot;name&quot;:&quot;onset_support&quot;,&quot;status&quot;:&quot;skip&quot;,&quot;detail&quot;:&quot;No onset claimed.&quot;},{&quot;name&quot;:&quot;progression_support&quot;,&quot;status&quot;:&quot;skip&quot;,&quot;detail&quot;:&quot;No progression claimed.&quot;},{&quot;name&quot;:&quot;treatment_response_support&quot;,&quot;status&quot;:&quot;skip&quot;,&quot;detail&quot;:&quot;No treatment response claimed.&quot;},{&quot;name&quot;:&quot;clause_attachment&quot;,&quot;status&quot;:&quot;skip&quot;,&quot;detail&quot;:&quot;No onset attachment to verify.&quot;},{&quot;name&quot;:&quot;alias_shadow&quot;,&quot;status&quot;:&quot;pass&quot;,&quot;detail&quot;:&quot;No longer enclosing phenotype phrase detected.&quot;},{&quot;name&quot;:&quot;disease_subtype_leak&quot;,&quot;status&quot;:&quot;skip&quot;,&quot;detail&quot;:&quot;No onset claimed.&quot;},{&quot;name&quot;:&quot;excluded_status&quot;,&quot;status&quot;:&quot;skip&quot;,&quot;detail&quot;:&quot;Feature is present, not excluded.&quot;},{&quot;name&quot;:&quot;table_concordance&quot;,&quot;status&quot;:&quot;skip&quot;,&quot;detail&quot;:&quot;No matching table row found for this phenotype.&quot;},{&quot;name&quot;:&quot;section_branch_consistency&quot;,&quot;status&quot;:&quot;skip&quot;,&quot;detail&quot;:&quot;Section heading does not map to a supported audit branch.&quot;}]}]}</script>
+  <script>
+    const payload = JSON.parse(document.getElementById('audit-payload').textContent);
+    const state = { filter: 'all', currentId: null };
+    const reviewList = document.getElementById('review-list');
+    const chapterEl = document.getElementById('chapter');
+    const detailPanel = document.getElementById('detail-panel');
+    const paragraphMap = new Map();
+    const sentenceMap = new Map();
+
+    function escapeHtmlJs(value) {
+      return String(value || '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
+
+    function verdictClass(verdict) {
+      return String(verdict || '').toLowerCase();
+    }
+
+    function filteredItems() {
+      return payload.items.filter((item) => {
+        if (state.filter === 'all') return true;
+        if (state.filter === 'review') return !item.auto_accept_eligible;
+        if (state.filter === 'eligible') return item.auto_accept_eligible;
+        if (state.filter === 'failed') return item.verdict === 'FAILED';
+        if (state.filter === 'flagged') return item.verdict === 'FLAGGED';
+        return true;
+      });
+    }
+
+    function renderChapter() {
+      chapterEl.innerHTML = payload.sections.map((section) => {
+        const paragraphs = section.paragraphs.map((paragraph) => {
+          const sentences = paragraph.sentences.map((sentence) =>
+            '<span class="sentence" id="sentence-' + escapeHtmlJs(sentence.sentence_id) + '" data-text="' + escapeHtmlJs(sentence.text) + '" data-sentence-id="' + escapeHtmlJs(sentence.sentence_id) + '">' + escapeHtmlJs(sentence.text) + '</span>'
+          ).join(' ');
+          return '<div class="paragraph" id="paragraph-' + escapeHtmlJs(paragraph.paragraph_id) + '">' + sentences + '</div>';
+        }).join('');
+        return '<section class="section" id="' + escapeHtmlJs(section.section_id) + '"><h2>' + escapeHtmlJs(section.section_heading || 'Section') + '</h2>' + paragraphs + '</section>';
+      }).join('');
+      chapterEl.querySelectorAll('.paragraph').forEach((el) => paragraphMap.set(el.id.replace('paragraph-', ''), el));
+      chapterEl.querySelectorAll('.sentence').forEach((el) => sentenceMap.set(el.dataset.sentenceId, el));
+    }
+
+    function renderReviewList() {
+      const items = filteredItems();
+      reviewList.innerHTML = items.map((item) => {
+        const classes = ['review-item'];
+        if (item.review_id === state.currentId) classes.push('active');
+        const flags = [];
+        if (item.flagged_checks.length) flags.push(item.flagged_checks.join(', '));
+        if (item.failed_checks.length) flags.push(item.failed_checks.join(', '));
+        return '<button class="' + classes.join(' ') + '" data-review-id="' + escapeHtmlJs(item.review_id) + '">' +
+          '<div class="chips">' +
+            '<span class="chip ' + verdictClass(item.verdict) + '">' + escapeHtmlJs(item.verdict) + '</span>' +
+            '<span class="chip">' + escapeHtmlJs(item.status) + '</span>' +
+            '<span class="chip">' + escapeHtmlJs(item.section_heading || 'No section') + '</span>' +
+          '</div>' +
+          '<h3>' + escapeHtmlJs(item.hpo_label || item.hpo_id) + '</h3>' +
+          '<p>' + escapeHtmlJs(flags[0] || (item.auto_accept_eligible ? 'Auto-accept eligible' : 'Verifier requires review')) + '</p>' +
+        '</button>';
+      }).join('');
+      reviewList.querySelectorAll('[data-review-id]').forEach((button) => {
+        button.addEventListener('click', () => selectItem(button.dataset.reviewId));
+      });
+    }
+
+    function resetHighlights() {
+      for (const el of sentenceMap.values()) {
+        el.classList.remove('active');
+        el.innerHTML = escapeHtmlJs(el.dataset.text || '');
+      }
+      for (const el of paragraphMap.values()) {
+        el.classList.remove('active');
+      }
+    }
+
+    function buildHighlightHtml(sentenceText, sentenceStart, spans) {
+      const source = String(sentenceText || '');
+      const intervals = [];
+      for (const span of spans) {
+        const start = Number(span.char_start);
+        const end = Number(span.char_end);
+        if (!Number.isFinite(start) || !Number.isFinite(end)) continue;
+        const localStart = start - sentenceStart;
+        const localEnd = end - sentenceStart;
+        if (localStart < 0 || localEnd > source.length || localEnd <= localStart) continue;
+        intervals.push({ start: localStart, end: localEnd, label: span.key });
+      }
+      if (!intervals.length) return escapeHtmlJs(source);
+      const events = [];
+      for (const interval of intervals) {
+        events.push({ pos: interval.start, type: 'start', label: interval.label });
+        events.push({ pos: interval.end, type: 'end', label: interval.label });
+      }
+      events.sort((a, b) => a.pos - b.pos || (a.type === 'end' ? -1 : 1));
+      let cursor = 0;
+      const active = [];
+      let html = '';
+      for (const event of events) {
+        if (event.pos > cursor) {
+          const text = escapeHtmlJs(source.slice(cursor, event.pos));
+          if (active.length) {
+            html += '<mark class="' + active.join(' ') + '">' + text + '</mark>';
+          } else {
+            html += text;
+          }
+          cursor = event.pos;
+        }
+        if (event.type === 'start') {
+          if (!active.includes(event.label)) active.push(event.label);
+        } else {
+          const index = active.indexOf(event.label);
+          if (index >= 0) active.splice(index, 1);
+        }
+      }
+      if (cursor < source.length) {
+        const text = escapeHtmlJs(source.slice(cursor));
+        if (active.length) {
+          html += '<mark class="' + active.join(' ') + '">' + text + '</mark>';
+        } else {
+          html += text;
+        }
+      }
+      return html;
+    }
+
+    function renderDetail(item) {
+      const chips = [
+        '<span class="chip ' + verdictClass(item.verdict) + '">' + escapeHtmlJs(item.verdict) + '</span>',
+        '<span class="chip">' + escapeHtmlJs(item.status) + '</span>',
+        item.auto_accept_eligible ? '<span class="chip">Auto-accept eligible</span>' : '<span class="chip">Needs review</span>'
+      ].join(' ');
+      const failed = item.failed_checks.length ? '<li>' + item.failed_checks.map(escapeHtmlJs).join('</li><li>') + '</li>' : '<li>None</li>';
+      const flagged = item.flagged_checks.length ? '<li>' + item.flagged_checks.map(escapeHtmlJs).join('</li><li>') + '</li>' : '<li>None</li>';
+      const spans = item.spans.map((span) =>
+        '<li><strong>' + escapeHtmlJs(span.label) + ':</strong> ' + escapeHtmlJs(span.text || 'No stored span text') + '</li>'
+      ).join('');
+      detailPanel.innerHTML =
+        '<h2>' + escapeHtmlJs(item.hpo_label || item.hpo_id) + '</h2>' +
+        '<div class="chips">' + chips + '</div>' +
+        '<p>' + escapeHtmlJs(item.section_heading || 'No section heading') + ' · ' + escapeHtmlJs(item.paragraph_id || 'no paragraph') + ' · ' + escapeHtmlJs(item.sentence_id || 'no sentence') + '</p>' +
+        '<div class="detail-block"><h3>Sentence</h3><pre>' + escapeHtmlJs(item.sentence_text || '') + '</pre></div>' +
+        '<div class="detail-block"><h3>Span texts</h3><ul class="detail-list">' + (spans || '<li>None</li>') + '</ul></div>' +
+        '<div class="detail-block"><h3>Failed checks</h3><ul class="detail-list">' + failed + '</ul></div>' +
+        '<div class="detail-block"><h3>Flagged checks</h3><ul class="detail-list">' + flagged + '</ul></div>' +
+        '<div class="detail-block"><h3>Auto-accept reasons</h3><pre>' + escapeHtmlJs((item.auto_accept_reasons || []).join('\n') || 'None') + '</pre></div>' +
+        '<div class="detail-block"><h3>Open source</h3><p><a class="detail-link" href="' + escapeHtmlJs(item.source_url || '#') + '" target="_blank" rel="noreferrer">NCBI chapter</a></p></div>';
+    }
+
+    function selectItem(reviewId) {
+      const item = payload.items.find((entry) => entry.review_id === reviewId);
+      if (!item) return;
+      state.currentId = reviewId;
+      window.location.hash = reviewId;
+      renderReviewList();
+      resetHighlights();
+      const sentenceEl = sentenceMap.get(item.sentence_id);
+      const paragraphEl = paragraphMap.get(item.paragraph_id);
+      if (paragraphEl) paragraphEl.classList.add('active');
+      if (sentenceEl) {
+        sentenceEl.classList.add('active');
+        sentenceEl.innerHTML = buildHighlightHtml(sentenceEl.dataset.text || '', item.sentence_char_start || 0, item.spans || []);
+        sentenceEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+      renderDetail(item);
+    }
+
+    document.querySelectorAll('.filters button').forEach((button) => {
+      button.addEventListener('click', () => {
+        state.filter = button.dataset.filter;
+        document.querySelectorAll('.filters button').forEach((el) => el.classList.toggle('active', el === button));
+        renderReviewList();
+      });
+    });
+
+    renderChapter();
+    renderReviewList();
+    const initialId = location.hash.replace(/^#/, '') || (payload.items[0] && payload.items[0].review_id);
+    if (initialId) selectItem(initialId);
+  </script>
+</body>
+</html>

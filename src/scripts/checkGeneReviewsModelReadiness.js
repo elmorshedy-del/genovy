@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
+const DEFAULT_MEDGEMMA_BASE_URL = 'https://z2m4kqae0vudzx4y.us-east-1.aws.endpoints.huggingface.cloud';
 const DEFAULT_PHENOTAGGER_HOME =
   process.env.PHENOTAGGER_HOME || '/Users/ahmedelmorshedy/.cache/phenotagger';
 const DEFAULT_PHENOTAGGER_PYTHON =
@@ -66,8 +67,8 @@ async function main() {
     medgemma: {
       apiKeyPresent: Boolean(process.env.MEDGEMMA_API_KEY || process.env.HUGGINGFACE_API_KEY),
       apiKeyPreview: previewSecret(process.env.MEDGEMMA_API_KEY || process.env.HUGGINGFACE_API_KEY),
-      baseUrlPresent: Boolean(process.env.MEDGEMMA_BASE_URL || process.env.HUGGINGFACE_BASE_URL),
-      baseUrl: process.env.MEDGEMMA_BASE_URL || process.env.HUGGINGFACE_BASE_URL || null,
+      baseUrlPresent: Boolean(process.env.MEDGEMMA_BASE_URL || process.env.HUGGINGFACE_BASE_URL || DEFAULT_MEDGEMMA_BASE_URL),
+      baseUrl: process.env.MEDGEMMA_BASE_URL || process.env.HUGGINGFACE_BASE_URL || DEFAULT_MEDGEMMA_BASE_URL,
       model: process.env.MEDGEMMA_MODEL || 'google/medgemma-27b-text-it'
     }
   };

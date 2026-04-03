@@ -60,6 +60,93 @@ const FEATURE_TRUST_WEIGHTS = Object.freeze({
   reject: 0
 });
 
+const CANDIDATE_CONTEXT_STOPWORDS = new Set([
+  'a',
+  'an',
+  'and',
+  'are',
+  'as',
+  'at',
+  'be',
+  'by',
+  'for',
+  'from',
+  'in',
+  'into',
+  'is',
+  'may',
+  'of',
+  'on',
+  'or',
+  'the',
+  'to',
+  'with',
+  'without'
+]);
+
+const CANDIDATE_CONTEXT_LOW_SIGNAL_TOKENS = new Set([
+  'abnormal',
+  'abnormalities',
+  'abnormality',
+  'architecture',
+  'cell',
+  'cells',
+  'clinical',
+  'count',
+  'counts',
+  'deficiency',
+  'disease',
+  'disorder',
+  'finding',
+  'findings',
+  'immune',
+  'immunologic',
+  'immunological',
+  'level',
+  'levels',
+  'number',
+  'numbers',
+  'phenotype',
+  'phenotypes',
+  'response',
+  'responses',
+  'sign',
+  'signs',
+  'symptom',
+  'symptoms',
+  'syndrome',
+  'total',
+  'treatment',
+  'treated'
+]);
+
+const CANDIDATE_CONTEXT_MIN_FUZZY_SCORE = 0.67;
+const CANDIDATE_IMPLIED_FUNCTION_CUE_REGEX = /\b(?:do not obtain|did not obtain|limited developmental milestones|capacity to|unable to|never walked|never sat|never stood|no speech development)\b/i;
+const CANDIDATE_ASSERTION_WINDOW_CHARS = 56;
+const CANDIDATE_ASSERTION_NEGATIVE_PREFIX_PATTERNS = Object.freeze([
+  /\bno\s*$/i,
+  /\bwithout\s*$/i,
+  /\babsence of\s*$/i,
+  /\black of\s*$/i,
+  /\blacking\s*$/i,
+  /\bfree of\s*$/i
+]);
+const CANDIDATE_ASSERTION_NEGATIVE_SUFFIX_PATTERNS = Object.freeze([
+  /^\s*(?:(?:is|are|was|were|remains?|remain)\s+)?(?:not present|absent|not observed|not reported|not seen)\b/i,
+  /^\s*(?:has|have|had)\s+not\s+been\s+(?:reported|observed|seen)\b/i,
+  /^\s*(?:is|are|was|were|has been|have been|remains?|remain)?\s*(?:typically absent|usually absent|rarely present|not typically present)\b/i
+]);
+const CANDIDATE_ASSERTION_NORMAL_OR_PRESERVED_PATTERNS = Object.freeze([
+  /^\s*(?:is|are|was|were|remains?|remain)?\s*(?:usually |generally |typically )?(?:normal|preserved|intact|unaffected)\b/i,
+  /\b(?:usually |generally |typically )?(?:normal|preserved|intact|unaffected)\s*$/
+]);
+const CANDIDATE_ASSERTION_CONDITIONAL_PATTERNS = Object.freeze([
+  /\bif untreated\b/i,
+  /\bat risk (?:for|of)\b/i,
+  /\brisk (?:for|of)\b/i,
+  /\bpredisposition to\b/i
+]);
+
 export function parseArgs(argv) {
   const flags = {};
   for (let index = 0; index < argv.length; index += 1) {
@@ -280,8 +367,26 @@ function extractSectionBlock(html, marker) {
   const start = html.search(marker);
   if (start === -1) return '';
   const rest = html.slice(start);
-  const endMatch = rest.slice(1).match(/<div id="[^"]+\.[A-Z][^"]*">/);
-  return endMatch ? rest.slice(0, endMatch.index + 1) : rest;
+  const divPattern = /<\/?div\b[^>]*>/gi;
+  divPattern.lastIndex = 0;
+  let depth = 0;
+  let started = false;
+
+  for (const match of rest.matchAll(divPattern)) {
+    const token = match[0] || '';
+    if (token.startsWith('</')) {
+      if (!started) continue;
+      depth -= 1;
+      if (depth === 0) {
+        return rest.slice(0, match.index + token.length);
+      }
+      continue;
+    }
+    started = true;
+    depth += 1;
+  }
+
+  return rest;
 }
 
 function extractSectionBlockWithIndex(html, marker) {
@@ -395,6 +500,10 @@ function buildSectionKey(sectionHeading, fallbackIndex) {
   return headingSlug ? `section_${headingSlug}` : `section_${fallbackIndex}`;
 }
 
+function isTableSectionHeading(value) {
+  return /^\s*table\s+[a-z0-9.]+/i.test(String(value || '').trim());
+}
+
 function extractSectionAwareProseUnits(sectionHtml, fallbackIndex = 1) {
   const units = [];
   const withoutTables = String(sectionHtml || '').replace(/<table[\s\S]*?<\/table>/gi, ' ');
@@ -412,6 +521,10 @@ function extractSectionAwareProseUnits(sectionHtml, fallbackIndex = 1) {
       localHeadingCount += 1;
       currentHeading = normalizeSectionHeading(text);
       currentSectionId = buildSectionKey(currentHeading, `${fallbackIndex}_${localHeadingCount}`);
+      continue;
+    }
+
+    if (isTableSectionHeading(currentHeading)) {
       continue;
     }
 
@@ -440,9 +553,9 @@ function parseHtmlTable(tableHtml, index) {
 
 export function extractClinicalSectionsAndTables(html) {
   const blockSources = [
-    extractSectionBlockWithIndex(html, /<div id="[^"]+\.Clinical_Characteristics">/i),
-    extractSectionBlockWithIndex(html, /<div id="[^"]+\.Clinical_Description">/i),
-    extractSectionBlockWithIndex(html, /<div id="[^"]+\.Suggestive_Findings">/i)
+    extractSectionBlockWithIndex(html, /<div id="[^"]+\.Clinical_Characteristics[^"]*">/i),
+    extractSectionBlockWithIndex(html, /<div id="[^"]+\.Clinical_Description[^"]*">/i),
+    extractSectionBlockWithIndex(html, /<div id="[^"]+\.Suggestive_Findings[^"]*">/i)
   ]
     .filter(Boolean)
     .sort((left, right) => left.start - right.start);
@@ -769,6 +882,69 @@ function findExactPhraseSpan(text, phrase, baseOffset = 0) {
   };
 }
 
+function tokenizeCandidateContext(value) {
+  return normalizeText(value).split(' ').filter(Boolean);
+}
+
+function buildCandidateSignalTokens(value) {
+  const allTokens = tokenizeCandidateContext(value).filter((token) => !CANDIDATE_CONTEXT_STOPWORDS.has(token));
+  const signalTokens = allTokens.filter((token) => !CANDIDATE_CONTEXT_LOW_SIGNAL_TOKENS.has(token));
+  return [...new Set(signalTokens.length ? signalTokens : allTokens)];
+}
+
+function scoreCandidateContextText(text, candidateLabel) {
+  const source = String(text || '').trim();
+  const exactSpan = findExactPhraseSpan(source, candidateLabel, 0);
+  const candidateTokens = buildCandidateSignalTokens(candidateLabel);
+  if (!source || !candidateTokens.length) {
+    return {
+      score: 0,
+      matchType: 'none',
+      matchedTokenCount: 0,
+      candidateTokenCount: candidateTokens.length
+    };
+  }
+
+  if (exactSpan) {
+    return {
+      score: 1,
+      matchType: 'exact_phrase',
+      matchedTokenCount: candidateTokens.length,
+      candidateTokenCount: candidateTokens.length
+    };
+  }
+
+  const textTokens = new Set(tokenizeCandidateContext(source));
+  const matchedTokenCount = candidateTokens.filter((token) => textTokens.has(token)).length;
+
+  return {
+    score: matchedTokenCount / candidateTokens.length,
+    matchType: matchedTokenCount ? 'token_overlap' : 'none',
+    matchedTokenCount,
+    candidateTokenCount: candidateTokens.length
+  };
+}
+
+function pickBetterCandidateContextMatch(current, next) {
+  const currentScore = current.score || 0;
+  const nextScore = next.score || 0;
+  const currentMatchType = current.matchType || current.match_type || 'none';
+  const nextMatchType = next.matchType || next.match_type || 'none';
+  const currentMatchedTokenCount = current.matchedTokenCount || current.matched_token_count || 0;
+  const nextMatchedTokenCount = next.matchedTokenCount || next.matched_token_count || 0;
+
+  if (nextScore !== currentScore) {
+    return nextScore > currentScore;
+  }
+  if (nextMatchType === 'exact_phrase' && currentMatchType !== 'exact_phrase') {
+    return true;
+  }
+  if (nextMatchedTokenCount !== currentMatchedTokenCount) {
+    return nextMatchedTokenCount > currentMatchedTokenCount;
+  }
+  return false;
+}
+
 function buildPhraseCandidates(rows, maxAnchorWords) {
   const phraseCandidates = new Map();
   for (const row of rows) {
@@ -1048,6 +1224,9 @@ export function locateCandidateContext(clinicalText, candidateLabel) {
       : buildClinicalTextStructure(clinicalText);
   let best = {
     score: 0,
+    match_type: 'none',
+    matched_token_count: 0,
+    candidate_token_count: 0,
     sentence: '',
     paragraph: '',
     section_id: null,
@@ -1064,16 +1243,42 @@ export function locateCandidateContext(clinicalText, candidateLabel) {
     match_char_end: null
   };
   for (const paragraphEntry of structure.paragraphs || []) {
-    const sentenceEntry = findBestSentenceEntryForPhrase(paragraphEntry, candidateLabel);
-    const sentence = sentenceEntry?.text || findBestSentenceForPhrase(paragraphEntry.text, candidateLabel);
-    const score = Math.max(diceCoefficient(candidateLabel, paragraphEntry.text), diceCoefficient(candidateLabel, sentence));
-    if (score > best.score) {
-      const matchSpan =
-        findExactPhraseSpan(sentenceEntry?.text || '', candidateLabel, sentenceEntry?.char_start || 0) ||
-        findExactPhraseSpan(paragraphEntry.text, candidateLabel, paragraphEntry.char_start);
+    let bestSentenceEntry = null;
+    let bestSentenceMatch = {
+      score: 0,
+      matchType: 'none',
+      matchedTokenCount: 0,
+      candidateTokenCount: 0
+    };
+
+    for (const sentenceEntry of paragraphEntry.sentences || []) {
+      const sentenceMatch = scoreCandidateContextText(sentenceEntry.text, candidateLabel);
+      if (!bestSentenceEntry || pickBetterCandidateContextMatch(bestSentenceMatch, sentenceMatch)) {
+        bestSentenceEntry = sentenceEntry;
+        bestSentenceMatch = sentenceMatch;
+      }
+    }
+
+    const paragraphMatch = scoreCandidateContextText(paragraphEntry.text, candidateLabel);
+    const preferredSentenceEntry = bestSentenceEntry || findBestSentenceEntryForPhrase(paragraphEntry, candidateLabel);
+    const preferredSentenceMatch = bestSentenceEntry ? bestSentenceMatch : scoreCandidateContextText(preferredSentenceEntry?.text || '', candidateLabel);
+    const selectedMatch = pickBetterCandidateContextMatch(paragraphMatch, preferredSentenceMatch) ? paragraphMatch : preferredSentenceMatch;
+    const selectedSentenceEntry = preferredSentenceEntry && selectedMatch !== paragraphMatch ? preferredSentenceEntry : preferredSentenceEntry;
+    const selectedSentenceText =
+      preferredSentenceEntry && selectedMatch !== paragraphMatch
+        ? preferredSentenceEntry.text
+        : preferredSentenceEntry?.text || findBestSentenceForPhrase(paragraphEntry.text, candidateLabel);
+    const matchSpan =
+      findExactPhraseSpan(selectedSentenceText || '', candidateLabel, preferredSentenceEntry?.char_start || 0) ||
+      findExactPhraseSpan(paragraphEntry.text, candidateLabel, paragraphEntry.char_start);
+
+    if (pickBetterCandidateContextMatch(best, selectedMatch)) {
       best = {
-        score,
-        sentence,
+        score: selectedMatch.score || 0,
+        match_type: selectedMatch.matchType || 'none',
+        matched_token_count: selectedMatch.matchedTokenCount || 0,
+        candidate_token_count: selectedMatch.candidateTokenCount || 0,
+        sentence: selectedSentenceText || '',
         paragraph: paragraphEntry.text,
         local_clinical_domains: paragraphEntry.local_clinical_domains || [],
         section_id: paragraphEntry.section_id || null,
@@ -1082,10 +1287,10 @@ export function locateCandidateContext(clinicalText, candidateLabel) {
         paragraph_index: paragraphEntry.paragraph_index,
         paragraph_char_start: paragraphEntry.char_start,
         paragraph_char_end: paragraphEntry.char_end,
-        sentence_id: sentenceEntry?.sentence_id || null,
-        sentence_index: sentenceEntry?.sentence_index || null,
-        sentence_char_start: sentenceEntry?.char_start ?? null,
-        sentence_char_end: sentenceEntry?.char_end ?? null,
+        sentence_id: preferredSentenceEntry?.sentence_id || null,
+        sentence_index: preferredSentenceEntry?.sentence_index || null,
+        sentence_char_start: preferredSentenceEntry?.char_start ?? null,
+        sentence_char_end: preferredSentenceEntry?.char_end ?? null,
         match_char_start: matchSpan?.char_start ?? null,
         match_char_end: matchSpan?.char_end ?? null
       };
@@ -1106,7 +1311,371 @@ export function locateCandidateContext(clinicalText, candidateLabel) {
     sentence_char_start: best.sentence_char_start,
     sentence_char_end: best.sentence_char_end,
     match_char_start: best.match_char_start,
-    match_char_end: best.match_char_end
+    match_char_end: best.match_char_end,
+    context_match_score: best.score || 0,
+    context_match_type: best.match_type || 'none',
+    context_matched_token_count: best.matched_token_count || 0,
+    context_candidate_token_count: best.candidate_token_count || 0
+  };
+}
+
+const CANDIDATE_CHROME_LABELS = new Set([
+  'clinical characteristics',
+  'clinical description',
+  'suggestive findings',
+  'diagnosis',
+  'management',
+  'gene review scope',
+  'view in own window'
+]);
+
+const CANDIDATE_CHROME_PATTERNS = Object.freeze([
+  /\bview in own window\b/i,
+  /^\s*table\s+[a-z0-9.]+\s*$/i,
+  /^\s*clinical characteristics\.?\s*$/i,
+  /^\s*clinical description\.?\s*$/i,
+  /^\s*suggestive findings\b/i
+]);
+
+const CANDIDATE_LABEL_REJECT_RULES = Object.freeze([
+  { reason: 'heading_or_chrome', pattern: /^\s*(clinical characteristics|clinical description|suggestive findings|view in own window)\s*$/i },
+  { reason: 'normal_or_no_symptom_statement', pattern: /^\s*(?:normal\b|normal phenotype\b|normal physical examination\b|no symptoms?\b)/i },
+  { reason: 'management_statement', pattern: /\b(?:management|surveillance|evaluation of relatives|pregnancy management)\b/i },
+  { reason: 'treatment_response_statement', pattern: /\b(?:treatment|treated|therapy|management|respond|responses?|refractory|reversible with)\b/i },
+  { reason: 'disease_course_statement', pattern: /\b(?:asymptomatic(?: at (?:the time of )?diagnosis)?|normal cognitive outcome|clinical subgroups|outcome|prognosis|death from|declining quality of life|survive past|survival)\b/i },
+  { reason: 'phenotype_summary_statement', pattern: /\battenuated (?:clinical|immunologic|immune) phenotype\b/i },
+  { reason: 'onset_statement', pattern: /^\s*(?:onset|adult onset|childhood onset|infancy onset|neonatal onset)\b/i },
+  { reason: 'negated_course_statement', pattern: /\b(?:not present at (?:the time of )?symptom onset)\b/i }
+]);
+
+function hasCandidateChrome(value) {
+  const normalized = normalizeText(value);
+  if (!normalized) return false;
+  if (CANDIDATE_CHROME_LABELS.has(normalized)) return true;
+  return CANDIDATE_CHROME_PATTERNS.some((pattern) => pattern.test(String(value || '')));
+}
+
+function resolveCandidateSentenceMatchSpan(candidateLabel, context = {}) {
+  const sentence = String(context.source_sentence || '').trim();
+  if (!sentence) return null;
+
+  const sentenceCharStart = Number.isFinite(context.sentence_char_start) ? context.sentence_char_start : null;
+  const matchCharStart = Number.isFinite(context.match_char_start) ? context.match_char_start : null;
+  const matchCharEnd = Number.isFinite(context.match_char_end) ? context.match_char_end : null;
+  if (sentenceCharStart != null && matchCharStart != null && matchCharEnd != null) {
+    const localStart = matchCharStart - sentenceCharStart;
+    const localEnd = matchCharEnd - sentenceCharStart;
+    if (localStart >= 0 && localEnd > localStart && localEnd <= sentence.length) {
+      return {
+        char_start: localStart,
+        char_end: localEnd
+      };
+    }
+  }
+
+  return findExactPhraseSpan(sentence, candidateLabel, 0);
+}
+
+function buildCandidateAssertionWindow(candidateLabel, context = {}) {
+  const sentence = String(context.source_sentence || '').trim();
+  if (!sentence) {
+    return {
+      sentence: '',
+      before: '',
+      phrase: '',
+      after: '',
+      around: ''
+    };
+  }
+
+  const span = resolveCandidateSentenceMatchSpan(candidateLabel, context);
+  if (!span) {
+    return {
+      sentence,
+      before: sentence,
+      phrase: '',
+      after: '',
+      around: sentence
+    };
+  }
+
+  const beforeStart = Math.max(0, span.char_start - CANDIDATE_ASSERTION_WINDOW_CHARS);
+  const afterEnd = Math.min(sentence.length, span.char_end + CANDIDATE_ASSERTION_WINDOW_CHARS);
+  const before = sentence.slice(beforeStart, span.char_start);
+  const phrase = sentence.slice(span.char_start, span.char_end);
+  const after = sentence.slice(span.char_end, afterEnd);
+
+  return {
+    sentence,
+    before,
+    phrase,
+    after,
+    around: `${before}${phrase}${after}`.trim()
+  };
+}
+
+function inferCandidateAssertion(candidateLabel, candidateStatus, context = {}) {
+  const status = String(candidateStatus || 'present').trim().toLowerCase() === 'excluded' ? 'excluded' : 'present';
+  const sentence = String(context.source_sentence || '').trim();
+  if (!sentence) {
+    return {
+      keep: true,
+      status,
+      assertion_status_origin: status === 'excluded' ? 'model_excluded' : 'default_present',
+      assertion_reason: null,
+      assertion_evidence: ''
+    };
+  }
+
+  const normalizedSentence = normalizeText(sentence);
+  const normalizedLabel = normalizeText(candidateLabel);
+  if (!normalizedSentence || !normalizedLabel) {
+    return {
+      keep: true,
+      status,
+      assertion_status_origin: status === 'excluded' ? 'model_excluded' : 'default_present',
+      assertion_reason: null,
+      assertion_evidence: sentence
+    };
+  }
+
+  const window = buildCandidateAssertionWindow(candidateLabel, context);
+  const before = String(window.before || '');
+  const after = String(window.after || '');
+  const around = String(window.around || sentence);
+  const labelPattern = new RegExp(`\\b${escapeRegex(normalizedLabel)}\\b`, 'i');
+
+  if (CANDIDATE_ASSERTION_CONDITIONAL_PATTERNS.some((pattern) => pattern.test(around))) {
+    return {
+      keep: false,
+      status,
+      assertion_status_origin: status === 'excluded' ? 'model_excluded' : 'default_present',
+      assertion_reason: 'conditional_or_risk_context',
+      assertion_evidence: around
+    };
+  }
+
+  if (
+    CANDIDATE_ASSERTION_NEGATIVE_PREFIX_PATTERNS.some((pattern) => pattern.test(before)) ||
+    CANDIDATE_ASSERTION_NEGATIVE_SUFFIX_PATTERNS.some((pattern) => pattern.test(after))
+  ) {
+    return {
+      keep: true,
+      status: 'excluded',
+      assertion_status_origin: status === 'excluded' ? 'model_excluded' : 'sentence_negation_inferred',
+      assertion_reason: 'explicit_negative_local_context',
+      assertion_evidence: around
+    };
+  }
+
+  if (
+    labelPattern.test(normalizedSentence) &&
+    CANDIDATE_ASSERTION_NORMAL_OR_PRESERVED_PATTERNS.some((pattern) => pattern.test(after) || pattern.test(before))
+  ) {
+    return {
+      keep: false,
+      status,
+      assertion_status_origin: status === 'excluded' ? 'model_excluded' : 'default_present',
+      assertion_reason: 'normal_or_preserved_context',
+      assertion_evidence: around
+    };
+  }
+
+  return {
+    keep: true,
+    status,
+    assertion_status_origin: status === 'excluded' ? 'model_excluded' : 'default_present',
+    assertion_reason: null,
+    assertion_evidence: around
+  };
+}
+
+function supportsImpliedFunctionalCandidate(candidateLabel, context = {}) {
+  const label = normalizeText(candidateLabel);
+  const sourceSentence = String(context.source_sentence || '').trim();
+  if (!label || !sourceSentence || !CANDIDATE_IMPLIED_FUNCTION_CUE_REGEX.test(sourceSentence)) {
+    return false;
+  }
+
+  if (label === 'no developmental milestones') {
+    return /\bdevelopmental milestones\b/i.test(sourceSentence);
+  }
+
+  const inabilityMatch = label.match(/^inability to (.+)$/);
+  if (!inabilityMatch) {
+    return false;
+  }
+
+  const targetTokens = buildCandidateSignalTokens(
+    inabilityMatch[1]
+      .replace(/\bindependently\b/g, ' ')
+      .replace(/\bachieve\b/g, ' ')
+      .trim()
+  );
+
+  if (!targetTokens.length) {
+    return false;
+  }
+
+  const sentenceTokens = new Set(tokenizeCandidateContext(sourceSentence));
+  return targetTokens.every((token) => sentenceTokens.has(token));
+}
+
+export function evaluatePhenotypeCandidate(candidateLabel, context = {}) {
+  const label = String(candidateLabel || '').trim();
+  const normalizedLabel = normalizeText(label);
+  if (!normalizedLabel) {
+    return {
+      keep: false,
+      reason: 'empty_label'
+    };
+  }
+
+  if (hasCandidateChrome(label)) {
+    return {
+      keep: false,
+      reason: 'heading_or_chrome'
+    };
+  }
+
+  for (const rule of CANDIDATE_LABEL_REJECT_RULES) {
+    if (rule.pattern.test(label)) {
+      return {
+        keep: false,
+        reason: rule.reason
+      };
+    }
+  }
+
+  const textSurfaces = [
+    context.source_sentence,
+    context.paragraph
+  ].filter(Boolean);
+
+  if (textSurfaces.some((surface) => hasCandidateChrome(surface))) {
+    return {
+      keep: false,
+      reason: 'context_chrome'
+    };
+  }
+
+  if (String(context.section_heading || '').trim().toLowerCase().startsWith('table ')) {
+    return {
+      keep: false,
+      reason: 'table_context'
+    };
+  }
+
+  const hasExactMatchSpan =
+    Number.isFinite(context.match_char_start) &&
+    Number.isFinite(context.match_char_end) &&
+    context.match_char_end > context.match_char_start;
+  const contextMatchScore = Number(context.context_match_score || 0);
+  const contextMatchType = String(context.context_match_type || 'none');
+
+  if (!hasExactMatchSpan && /\b(?:asymptomatic|outcome|reversible with|respond|responses?|diagnosis)\b/i.test(label)) {
+    return {
+      keep: false,
+      reason: 'unsupported_statement'
+    };
+  }
+
+  if (!hasExactMatchSpan && supportsImpliedFunctionalCandidate(label, context)) {
+    return {
+      keep: true,
+      reason: null
+    };
+  }
+
+  if (!hasExactMatchSpan && contextMatchType !== 'exact_phrase' && contextMatchScore < CANDIDATE_CONTEXT_MIN_FUZZY_SCORE) {
+    return {
+      keep: false,
+      reason: 'weak_context_match'
+    };
+  }
+
+  return {
+    keep: true,
+    reason: null
+  };
+}
+
+export function finalizePhenotypeCandidates(rawCandidates, anchors, clinicalStructure, sourceTag = 'llm_candidate') {
+  const candidates = [];
+  const rejectedCandidates = [];
+
+  for (const candidate of rawCandidates || []) {
+    const label = String(candidate?.label || '').trim();
+    const status = String(candidate?.status || 'present').trim().toLowerCase() === 'excluded' ? 'excluded' : 'present';
+    if (!label) continue;
+    if (matchesExistingAnchor(label, anchors || [])) continue;
+    const context = locateCandidateContext(clinicalStructure, label);
+    const evaluation = evaluatePhenotypeCandidate(label, context);
+    const assertion = inferCandidateAssertion(label, status, context);
+    const auditFields = {
+      source_sentence: context.source_sentence,
+      section_heading: context.section_heading,
+      context_match_score: context.context_match_score,
+      context_match_type: context.context_match_type,
+      context_matched_token_count: context.context_matched_token_count,
+      context_candidate_token_count: context.context_candidate_token_count,
+      assertion_status_origin: assertion.assertion_status_origin,
+      assertion_reason: assertion.assertion_reason,
+      assertion_evidence: assertion.assertion_evidence
+    };
+
+    if (!evaluation.keep) {
+      rejectedCandidates.push({
+        label,
+        status,
+        reason: evaluation.reason,
+        ...auditFields
+      });
+      continue;
+    }
+
+    if (!assertion.keep) {
+      rejectedCandidates.push({
+        label,
+        status,
+        reason: assertion.assertion_reason,
+        ...auditFields
+      });
+      continue;
+    }
+
+    candidates.push({
+      label,
+      status: assertion.status,
+      source: sourceTag,
+      source_sentence: context.source_sentence,
+      paragraph: context.paragraph,
+      local_clinical_domains: context.local_clinical_domains || [],
+      section_id: context.section_id,
+      section_heading: context.section_heading,
+      paragraph_id: context.paragraph_id,
+      paragraph_index: context.paragraph_index,
+      paragraph_char_start: context.paragraph_char_start,
+      paragraph_char_end: context.paragraph_char_end,
+      sentence_id: context.sentence_id,
+      sentence_index: context.sentence_index,
+      sentence_char_start: context.sentence_char_start,
+      sentence_char_end: context.sentence_char_end,
+      match_char_start: context.match_char_start,
+      match_char_end: context.match_char_end,
+      context_match_score: context.context_match_score,
+      context_match_type: context.context_match_type,
+      context_matched_token_count: context.context_matched_token_count,
+      context_candidate_token_count: context.context_candidate_token_count,
+      assertion_status_origin: assertion.assertion_status_origin,
+      assertion_reason: assertion.assertion_reason,
+      assertion_evidence: assertion.assertion_evidence
+    });
+  }
+
+  return {
+    candidates,
+    rejectedCandidates
   };
 }
 
@@ -1372,13 +1941,40 @@ function pickClosestMatch(matchIndex, matches) {
 
 function collectFrequencyCandidates(raw) {
   const candidates = [];
-  for (const match of raw.matchAll(/(\d+(?:\.\d+)?)%/g)) {
+  const rangeSpans = [];
+  for (const match of raw.matchAll(/(\d+(?:\.\d+)?)\s*%\s*(?:-|–|—|\bto\b)\s*(\d+(?:\.\d+)?)\s*%/gi)) {
+    const leftValue = Number(match[1]);
+    const rightValue = Number(match[2]);
+    const minValue = Math.min(leftValue, rightValue);
+    const maxValue = Math.max(leftValue, rightValue);
+    const start = match.index || 0;
+    const end = start + match[0].length;
+    rangeSpans.push({ start, end });
     candidates.push({
-      index: match.index || 0,
-      char_start: match.index || 0,
-      char_end: (match.index || 0) + match[0].length,
+      index: start,
+      char_start: start,
+      char_end: end,
+      frequency_value: `${minValue}%-${maxValue}%`,
+      frequency_raw: match[0],
+      frequency_value_min: `${minValue}%`,
+      frequency_value_max: `${maxValue}%`,
+      frequency_value_type: 'range',
+      frequency_trust: 'high'
+    });
+  }
+  for (const match of raw.matchAll(/(\d+(?:\.\d+)?)%/g)) {
+    const start = match.index || 0;
+    const end = start + match[0].length;
+    if (rangeSpans.some((range) => start >= range.start && end <= range.end)) continue;
+    candidates.push({
+      index: start,
+      char_start: start,
+      char_end: end,
       frequency_value: `${match[1]}%`,
       frequency_raw: match[0],
+      frequency_value_min: `${match[1]}%`,
+      frequency_value_max: `${match[1]}%`,
+      frequency_value_type: 'scalar',
       frequency_trust: 'high'
     });
   }
@@ -1389,6 +1985,9 @@ function collectFrequencyCandidates(raw) {
       char_end: (match.index || 0) + match[0].length,
       frequency_value: `${match[1]}/${match[2]}`,
       frequency_raw: match[0],
+      frequency_value_min: null,
+      frequency_value_max: null,
+      frequency_value_type: 'fraction',
       frequency_trust: 'high'
     });
   }
@@ -1401,6 +2000,9 @@ function collectFrequencyCandidates(raw) {
           char_end: (match.index || 0) + match[0].length,
           frequency_value: term,
           frequency_raw: match[0],
+          frequency_value_min: null,
+          frequency_value_max: null,
+          frequency_value_type: 'qualitative',
           frequency_trust: 'high'
         });
     }
@@ -1557,11 +2159,29 @@ export function extractLocalMatchWindow(text, matchText, windowWords = 4) {
 
 export function extractDeterministicFrequency(text) {
   const raw = String(text || '');
+  const range = raw.match(/(\d+(?:\.\d+)?)\s*%\s*(?:-|–|—|\bto\b)\s*(\d+(?:\.\d+)?)\s*%/i);
+  if (range) {
+    const leftValue = Number(range[1]);
+    const rightValue = Number(range[2]);
+    const minValue = Math.min(leftValue, rightValue);
+    const maxValue = Math.max(leftValue, rightValue);
+    return {
+      frequency_value: `${minValue}%-${maxValue}%`,
+      frequency_raw: range[0],
+      frequency_value_min: `${minValue}%`,
+      frequency_value_max: `${maxValue}%`,
+      frequency_value_type: 'range',
+      frequency_trust: 'high'
+    };
+  }
   const percent = raw.match(/(\d+(?:\.\d+)?)%/);
   if (percent) {
     return {
       frequency_value: percent[1] + '%',
       frequency_raw: percent[0],
+      frequency_value_min: percent[1] + '%',
+      frequency_value_max: percent[1] + '%',
+      frequency_value_type: 'scalar',
       frequency_trust: 'high'
     };
   }
@@ -1570,6 +2190,9 @@ export function extractDeterministicFrequency(text) {
     return {
       frequency_value: `${fraction[1]}/${fraction[2]}`,
       frequency_raw: fraction[0],
+      frequency_value_min: null,
+      frequency_value_max: null,
+      frequency_value_type: 'fraction',
       frequency_trust: 'high'
     };
   }
@@ -1578,12 +2201,18 @@ export function extractDeterministicFrequency(text) {
     return {
       frequency_value: term,
       frequency_raw: term,
+      frequency_value_min: null,
+      frequency_value_max: null,
+      frequency_value_type: 'qualitative',
       frequency_trust: 'high'
     };
   }
   return {
     frequency_value: null,
     frequency_raw: null,
+    frequency_value_min: null,
+    frequency_value_max: null,
+    frequency_value_type: null,
     frequency_trust: 'not_extracted_deterministic'
   };
 }
@@ -1599,6 +2228,9 @@ export function extractScopedFrequency(text, matchText, options = {}) {
     return {
       frequency_value: null,
       frequency_raw: null,
+      frequency_value_min: null,
+      frequency_value_max: null,
+      frequency_value_type: null,
       frequency_trust: 'not_extracted_deterministic',
       frequency_char_start: null,
       frequency_char_end: null
@@ -1607,6 +2239,9 @@ export function extractScopedFrequency(text, matchText, options = {}) {
   return {
     frequency_value: adjacent.frequency_value,
     frequency_raw: adjacent.frequency_raw,
+    frequency_value_min: adjacent.frequency_value_min || null,
+    frequency_value_max: adjacent.frequency_value_max || null,
+    frequency_value_type: adjacent.frequency_value_type || null,
     frequency_trust: adjacent.frequency_trust,
     frequency_char_start: baseOffset + adjacent.char_start,
     frequency_char_end: baseOffset + adjacent.char_end

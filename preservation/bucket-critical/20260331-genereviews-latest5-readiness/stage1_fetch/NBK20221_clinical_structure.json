@@ -1,0 +1,1019 @@
+{
+  "created_at": "2026-04-01T00:28:14.763Z",
+  "nbk_id": "NBK20221",
+  "chapter_title": "ZAP70-Related Combined Immunodeficiency - GeneReviews® - NCBI Bookshelf",
+  "chapter_key": "zap70_related_combined_immunodeficiency",
+  "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK20221/",
+  "heading_inventory": [
+    {
+      "tag": "h3",
+      "heading": "Suggestive Findings"
+    },
+    {
+      "tag": "h2",
+      "heading": "Clinical Characteristics"
+    },
+    {
+      "tag": "h3",
+      "heading": "Clinical Description"
+    }
+  ],
+  "chapter_domains": [
+    {
+      "key": "neurologic",
+      "label": "Neurologic",
+      "evidence_headings": [],
+      "evidence_snippets": [
+        "recurrent infections and silent brain infarcts; one also had congenital nephrotic syn"
+      ]
+    },
+    {
+      "key": "hematologic_immunologic",
+      "label": "Hematologic / Immunologic",
+      "evidence_headings": [],
+      "evidence_snippets": [
+        "ty, lymphoproliferation, and/or immune dysregulation with or without evidence of immun"
+      ]
+    }
+  ],
+  "clinical_text": "ZAP70 -related combined immunodeficiency ( ZAP70 -related CID) should be suspected in individuals who present with the following findings within the first two years of life:\n\nRecurrent viral, bacterial, and opportunistic infections\n\nChronic diarrhea and failure to thrive\n\nCharacteristic results of lymphocyte subset analysis of CD3, CD4, and CD8 T cells, lymphocyte functional testing, and ZAP-70 protein expression (See Lymphocyte development and numbers .)\n\nNote: Individuals with non-classic ZAP70 -related CID may present at an older age with symptoms of autoimmunity, lymphoproliferation, and/or immune dysregulation with or without evidence of immunodeficiency.\n\nLymphocyte development and numbers. In ZAP70 -related CID, total lymphocyte counts can range from normal to high.\n\nThymic architecture is largely preserved in individuals with ZAP70 -related CID; however, compared to controls, a smaller medullary zone, decreased numbers of AIRE+ medullary thymic epithelial cells, and decreased numbers of dendritic cell numbers may be seen [ Poliani et al 2013 ].\n\nT-cell counts: CD3 cell counts are typically normal.\n\nCD4 cell counts are normal or elevated and may account for 60%-80% of the lymphocytes in individuals with ZAP70 -related CID. Numbers of CD4+ recent thymic emigrants may be decreased [ Hauck et al 2015 ].\n\nCD8 cells are absent or extremely low, often comprising only 0%-2% of the child's total T-cell count in individuals with ZAP70 -related CID [ Arpaia et al 1994 , Noraz et al 2000 ].\n\nNumbers of regulatory T cells may be normal or decreased [ Poliani et al 2013 , Hauck et al 2015 ].\n\nB cell counts and NK cell counts are normal.\n\nLymphocyte function. T-cell responses to stimuli that act through the T-cell receptor (TCR) are absent or severely diminished:\n\nAbsent or decreased proliferation to CD3 antibody [ Roifman et al 2010 ]\n\nAbsent or decreased proliferation of CD4 cells in response to mitogens (e.g., PHA, ConA) [ Roifman et al 2012 ]\n\nIntact proliferative response to mitogenic stimuli that bypass the TCR (e.g., PMA/Ionomycin) [ Elder et al 1994 , Elder 1997 ]\n\nNormal TCR Vβ repertoire in both CD4+ and CD8+ T cells [ Roifman et al 2010 ]\n\nIn CD4 cells: limited differentiation into Th2 cells and resistance to Fas-induced cell death [ Roifman et al 2010 ]\n\nIn regulatory T cells: potentially decreased expression of CTLA4 and TGFB leading to increased risk of autoimmunity [ Roifman et al 2010 ]\n\nZAP-70 protein expression. Testing of CD4 T cells reveals absence or near absence of ZAP-70 protein in most affected individuals. Recent reports suggest that the amount of residual ZAP-70 protein expression influences the clinical phenotype [ Picard et al 2009 , Chan et al 2016 , Gavino et al 2017 ]. Expression of Syk, a related tyrosine kinase important in T-cell signaling, may partially compensate for ZAP-70 signaling in some individuals [ Toyabe et al 2001 , Hauck et al 2015 ].\n\nImmunoglobulin concentrations and function\n\nImmunoglobulin levels vary by individual. Many affected individuals have severe hypogammaglobulinemia, but normal immunoglobulins or elevated IgA, IgM, and/or IgE can also be seen [ Turul et al 2009 , Cuvelier et al 2016 ].\n\nAlthough functional antibody responses to immunization are present in a few persons [ Turul et al 2009 , Hauck et al 2015 ], this finding does not indicate that all specific antigenic responses are intact.\n\nNewborn screening. The utility of TREC screening for individuals with ZAP70 -related CID continues to be controversial. Although some have shown that TREC levels in individuals with confirmed ZAP70 -related CID are very low compared to age-matched controls [ Roifman et al 2010 , Roifman et al 2012 , Aluri et al 2017 ], others have shown that a substantial portion of individuals with ZAP70 -related CID have TREC levels above the cutoffs used for newborn screening and could be missed [ Grazioli et al 2014 , Jilkina et al 2014 , Hauck et al 2015 , Schroeder et al 2016 ]. Therefore, newborn screening results must be interpreted with caution in individuals with clinical findings consistent with ZAP70 -related CID or in populations with a high prevalence of ZAP70 -related CID.\n\nIndividuals with ZAP70 -related CID characteristically present in the first two years of life with recurrent bacterial, viral (including live-virus vaccine strains), and opportunistic infections, diarrhea, and failure to thrive. Severe lower-respiratory infections are seen, most notably Pneumocystis jiroveci infections and viral infections. Oral candidiasis is also common [ Cuvelier et al 2016 , Schroeder et al 2016 ].\n\nOther presentations have also been reported:\n\nReports of milder phenotypes in sibs of children who had died from ZAP70 -related CID include a child age five months with recurrent lower-respiratory disease but no severe infections [ Turul et al 2009 ] and a child with persistent dermatitis resistant to therapy [ Katamura et al 1999 ].\n\nA child age nine years with a ZAP70 hypomorphic intronic pathogenic variant had an attenuated clinical and immunologic phenotype [ Picard et al 2009 ] (see Genotype-Phenotype Correlations ).\n\nA child age 11 months with ZAP70 -related CID presented with lymphoma [ Newell et al 2011 ].\n\nBCG-related complications including axillary lymphadenitis or disseminated mycobacterial disease following BCG vaccination may be presenting features [ Santos et al 2010 , Esenboga et al 2016 ].\n\nTwo individuals presented with recurrent infections and silent brain infarcts; one also had congenital nephrotic syndrome and autoimmune hemolytic anemia [ Akar et al 2015 ].\n\nAn individual with isolated treatment-refractory immune thrombocytopenia (ITP) has been described [ Cuvelier et al 2016 ].\n\nTwo sibs had refractory autoimmune features including nephrotic syndrome/proteinuria, bullous pemphigoid, and colitis; one also developed autoantibodies to factor VIII caused by a hypomorphic and weakly activating ZAP70 pathogenic variant [ Chan et al 2016 ].\n\nAn adult with a history of infantile-onset colitis, recurrent respiratory-tract infections, mucocutaneous candidiasis, HSV stomatitis, VZV infection, EBV lymphoproliferative disorder, recurrent CMV viremia, polyomaviremia, and epidermodysplasia verruciformis-like lesions due to HHV-23 was recently reported. A novel pathogenic variant ( c.1065C>T ) that leads to an altered splice site and low levels of wild-type ZAP-70 protein was identified in this individual [ Gavino et al 2017 ].\n\nThe long-term prognosis of untreated ZAP70 -related CID is death from infection. Affected children have a declining quality of life and usually do not survive past their second year without hematopoietic stem cell transplantation (HSCT).",
+  "text_sha256": "05ca2f692dd94b653eec20f982fcff93b290fbcfee443060a51410244d9a13b9",
+  "section_count": 2,
+  "paragraph_count": 35,
+  "sentence_count": 49,
+  "sections": [
+    {
+      "section_id": "section_Suggestive_Findings",
+      "section_heading": "Suggestive Findings",
+      "paragraph_ids": [
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "p11",
+        "p12",
+        "p13",
+        "p14",
+        "p15",
+        "p16",
+        "p17",
+        "p18",
+        "p19",
+        "p20",
+        "p21",
+        "p22",
+        "p23",
+        "p24"
+      ],
+      "local_clinical_domains": [
+        {
+          "key": "hematologic_immunologic",
+          "label": "Hematologic / Immunologic",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "ty, lymphoproliferation, and/or immune dysregulation with or without evidence of immun"
+          ]
+        }
+      ]
+    },
+    {
+      "section_id": "section_Clinical_Description",
+      "section_heading": "Clinical Description",
+      "paragraph_ids": [
+        "p25",
+        "p26",
+        "p27",
+        "p28",
+        "p29",
+        "p30",
+        "p31",
+        "p32",
+        "p33",
+        "p34",
+        "p35"
+      ],
+      "local_clinical_domains": [
+        {
+          "key": "neurologic",
+          "label": "Neurologic",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "recurrent infections and silent brain infarcts; one also had congenital nephrotic syn"
+          ]
+        },
+        {
+          "key": "hematologic_immunologic",
+          "label": "Hematologic / Immunologic",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "ndrome and autoimmune hemolytic anemia [ Akar et al 2015 ]. An individual with isolat"
+          ]
+        }
+      ]
+    }
+  ],
+  "paragraphs": [
+    {
+      "paragraph_id": "p1",
+      "paragraph_index": 1,
+      "text": "ZAP70 -related combined immunodeficiency ( ZAP70 -related CID) should be suspected in individuals who present with the following findings within the first two years of life:",
+      "char_start": 0,
+      "char_end": 173,
+      "section_id": "section_Suggestive_Findings",
+      "section_heading": "Suggestive Findings",
+      "sentences": [
+        {
+          "sentence_id": "p1_s1",
+          "sentence_index": 1,
+          "text": "ZAP70 -related combined immunodeficiency ( ZAP70 -related CID) should be suspected in individuals who present with the following findings within the first two years of life:",
+          "char_start": 0,
+          "char_end": 173,
+          "section_id": "section_Suggestive_Findings",
+          "section_heading": "Suggestive Findings"
+        }
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "paragraph_id": "p2",
+      "paragraph_index": 2,
+      "text": "Recurrent viral, bacterial, and opportunistic infections",
+      "char_start": 175,
+      "char_end": 231,
+      "section_id": "section_Suggestive_Findings",
+      "section_heading": "Suggestive Findings",
+      "sentences": [
+        {
+          "sentence_id": "p2_s1",
+          "sentence_index": 1,
+          "text": "Recurrent viral, bacterial, and opportunistic infections",
+          "char_start": 175,
+          "char_end": 231,
+          "section_id": "section_Suggestive_Findings",
+          "section_heading": "Suggestive Findings"
+        }
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "paragraph_id": "p3",
+      "paragraph_index": 3,
+      "text": "Chronic diarrhea and failure to thrive",
+      "char_start": 233,
+      "char_end": 271,
+      "section_id": "section_Suggestive_Findings",
+      "section_heading": "Suggestive Findings",
+      "sentences": [
+        {
+          "sentence_id": "p3_s1",
+          "sentence_index": 1,
+          "text": "Chronic diarrhea and failure to thrive",
+          "char_start": 233,
+          "char_end": 271,
+          "section_id": "section_Suggestive_Findings",
+          "section_heading": "Suggestive Findings"
+        }
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "paragraph_id": "p4",
+      "paragraph_index": 4,
+      "text": "Characteristic results of lymphocyte subset analysis of CD3, CD4, and CD8 T cells, lymphocyte functional testing, and ZAP-70 protein expression (See Lymphocyte development and numbers .)",
+      "char_start": 273,
+      "char_end": 459,
+      "section_id": "section_Suggestive_Findings",
+      "section_heading": "Suggestive Findings",
+      "sentences": [
+        {
+          "sentence_id": "p4_s1",
+          "sentence_index": 1,
+          "text": "Characteristic results of lymphocyte subset analysis of CD3, CD4, and CD8 T cells, lymphocyte functional testing, and ZAP-70 protein expression (See Lymphocyte development and numbers .)",
+          "char_start": 273,
+          "char_end": 459,
+          "section_id": "section_Suggestive_Findings",
+          "section_heading": "Suggestive Findings"
+        }
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "paragraph_id": "p5",
+      "paragraph_index": 5,
+      "text": "Note: Individuals with non-classic ZAP70 -related CID may present at an older age with symptoms of autoimmunity, lymphoproliferation, and/or immune dysregulation with or without evidence of immunodeficiency.",
+      "char_start": 461,
+      "char_end": 668,
+      "section_id": "section_Suggestive_Findings",
+      "section_heading": "Suggestive Findings",
+      "sentences": [
+        {
+          "sentence_id": "p5_s1",
+          "sentence_index": 1,
+          "text": "Note: Individuals with non-classic ZAP70 -related CID may present at an older age with symptoms of autoimmunity, lymphoproliferation, and/or immune dysregulation with or without evidence of immunodeficiency.",
+          "char_start": 461,
+          "char_end": 668,
+          "section_id": "section_Suggestive_Findings",
+          "section_heading": "Suggestive Findings"
+        }
+      ],
+      "local_clinical_domains": [
+        {
+          "key": "hematologic_immunologic",
+          "label": "Hematologic / Immunologic",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "ty, lymphoproliferation, and/or immune dysregulation with or without evidence of immun"
+          ]
+        }
+      ]
+    },
+    {
+      "paragraph_id": "p6",
+      "paragraph_index": 6,
+      "text": "Lymphocyte development and numbers. In ZAP70 -related CID, total lymphocyte counts can range from normal to high.",
+      "char_start": 670,
+      "char_end": 783,
+      "section_id": "section_Suggestive_Findings",
+      "section_heading": "Suggestive Findings",
+      "sentences": [
+        {
+          "sentence_id": "p6_s1",
+          "sentence_index": 1,
+          "text": "Lymphocyte development and numbers.",
+          "char_start": 670,
+          "char_end": 705,
+          "section_id": "section_Suggestive_Findings",
+          "section_heading": "Suggestive Findings"
+        },
+        {
+          "sentence_id": "p6_s2",
+          "sentence_index": 2,
+          "text": "In ZAP70 -related CID, total lymphocyte counts can range from normal to high.",
+          "char_start": 706,
+          "char_end": 783,
+          "section_id": "section_Suggestive_Findings",
+          "section_heading": "Suggestive Findings"
+        }
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "paragraph_id": "p7",
+      "paragraph_index": 7,
+      "text": "Thymic architecture is largely preserved in individuals with ZAP70 -related CID; however, compared to controls, a smaller medullary zone, decreased numbers of AIRE+ medullary thymic epithelial cells, and decreased numbers of dendritic cell numbers may be seen [ Poliani et al 2013 ].",
+      "char_start": 785,
+      "char_end": 1068,
+      "section_id": "section_Suggestive_Findings",
+      "section_heading": "Suggestive Findings",
+      "sentences": [
+        {
+          "sentence_id": "p7_s1",
+          "sentence_index": 1,
+          "text": "Thymic architecture is largely preserved in individuals with ZAP70 -related CID; however, compared to controls, a smaller medullary zone, decreased numbers of AIRE+ medullary thymic epithelial cells, and decreased numbers of dendritic cell numbers may be seen [ Poliani et al 2013 ].",
+          "char_start": 785,
+          "char_end": 1068,
+          "section_id": "section_Suggestive_Findings",
+          "section_heading": "Suggestive Findings"
+        }
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "paragraph_id": "p8",
+      "paragraph_index": 8,
+      "text": "T-cell counts: CD3 cell counts are typically normal.",
+      "char_start": 1070,
+      "char_end": 1122,
+      "section_id": "section_Suggestive_Findings",
+      "section_heading": "Suggestive Findings",
+      "sentences": [
+        {
+          "sentence_id": "p8_s1",
+          "sentence_index": 1,
+          "text": "T-cell counts: CD3 cell counts are typically normal.",
+          "char_start": 1070,
+          "char_end": 1122,
+          "section_id": "section_Suggestive_Findings",
+          "section_heading": "Suggestive Findings"
+        }
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "paragraph_id": "p9",
+      "paragraph_index": 9,
+      "text": "CD4 cell counts are normal or elevated and may account for 60%-80% of the lymphocytes in individuals with ZAP70 -related CID. Numbers of CD4+ recent thymic emigrants may be decreased [ Hauck et al 2015 ].",
+      "char_start": 1124,
+      "char_end": 1328,
+      "section_id": "section_Suggestive_Findings",
+      "section_heading": "Suggestive Findings",
+      "sentences": [
+        {
+          "sentence_id": "p9_s1",
+          "sentence_index": 1,
+          "text": "CD4 cell counts are normal or elevated and may account for 60%-80% of the lymphocytes in individuals with ZAP70 -related CID.",
+          "char_start": 1124,
+          "char_end": 1249,
+          "section_id": "section_Suggestive_Findings",
+          "section_heading": "Suggestive Findings"
+        },
+        {
+          "sentence_id": "p9_s2",
+          "sentence_index": 2,
+          "text": "Numbers of CD4+ recent thymic emigrants may be decreased [ Hauck et al 2015 ].",
+          "char_start": 1250,
+          "char_end": 1328,
+          "section_id": "section_Suggestive_Findings",
+          "section_heading": "Suggestive Findings"
+        }
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "paragraph_id": "p10",
+      "paragraph_index": 10,
+      "text": "CD8 cells are absent or extremely low, often comprising only 0%-2% of the child's total T-cell count in individuals with ZAP70 -related CID [ Arpaia et al 1994 , Noraz et al 2000 ].",
+      "char_start": 1330,
+      "char_end": 1511,
+      "section_id": "section_Suggestive_Findings",
+      "section_heading": "Suggestive Findings",
+      "sentences": [
+        {
+          "sentence_id": "p10_s1",
+          "sentence_index": 1,
+          "text": "CD8 cells are absent or extremely low, often comprising only 0%-2% of the child's total T-cell count in individuals with ZAP70 -related CID [ Arpaia et al 1994 , Noraz et al 2000 ].",
+          "char_start": 1330,
+          "char_end": 1511,
+          "section_id": "section_Suggestive_Findings",
+          "section_heading": "Suggestive Findings"
+        }
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "paragraph_id": "p11",
+      "paragraph_index": 11,
+      "text": "Numbers of regulatory T cells may be normal or decreased [ Poliani et al 2013 , Hauck et al 2015 ].",
+      "char_start": 1513,
+      "char_end": 1612,
+      "section_id": "section_Suggestive_Findings",
+      "section_heading": "Suggestive Findings",
+      "sentences": [
+        {
+          "sentence_id": "p11_s1",
+          "sentence_index": 1,
+          "text": "Numbers of regulatory T cells may be normal or decreased [ Poliani et al 2013 , Hauck et al 2015 ].",
+          "char_start": 1513,
+          "char_end": 1612,
+          "section_id": "section_Suggestive_Findings",
+          "section_heading": "Suggestive Findings"
+        }
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "paragraph_id": "p12",
+      "paragraph_index": 12,
+      "text": "B cell counts and NK cell counts are normal.",
+      "char_start": 1614,
+      "char_end": 1658,
+      "section_id": "section_Suggestive_Findings",
+      "section_heading": "Suggestive Findings",
+      "sentences": [
+        {
+          "sentence_id": "p12_s1",
+          "sentence_index": 1,
+          "text": "B cell counts and NK cell counts are normal.",
+          "char_start": 1614,
+          "char_end": 1658,
+          "section_id": "section_Suggestive_Findings",
+          "section_heading": "Suggestive Findings"
+        }
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "paragraph_id": "p13",
+      "paragraph_index": 13,
+      "text": "Lymphocyte function. T-cell responses to stimuli that act through the T-cell receptor (TCR) are absent or severely diminished:",
+      "char_start": 1660,
+      "char_end": 1786,
+      "section_id": "section_Suggestive_Findings",
+      "section_heading": "Suggestive Findings",
+      "sentences": [
+        {
+          "sentence_id": "p13_s1",
+          "sentence_index": 1,
+          "text": "Lymphocyte function.",
+          "char_start": 1660,
+          "char_end": 1680,
+          "section_id": "section_Suggestive_Findings",
+          "section_heading": "Suggestive Findings"
+        },
+        {
+          "sentence_id": "p13_s2",
+          "sentence_index": 2,
+          "text": "T-cell responses to stimuli that act through the T-cell receptor (TCR) are absent or severely diminished:",
+          "char_start": 1681,
+          "char_end": 1786,
+          "section_id": "section_Suggestive_Findings",
+          "section_heading": "Suggestive Findings"
+        }
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "paragraph_id": "p14",
+      "paragraph_index": 14,
+      "text": "Absent or decreased proliferation to CD3 antibody [ Roifman et al 2010 ]",
+      "char_start": 1788,
+      "char_end": 1860,
+      "section_id": "section_Suggestive_Findings",
+      "section_heading": "Suggestive Findings",
+      "sentences": [
+        {
+          "sentence_id": "p14_s1",
+          "sentence_index": 1,
+          "text": "Absent or decreased proliferation to CD3 antibody [ Roifman et al 2010 ]",
+          "char_start": 1788,
+          "char_end": 1860,
+          "section_id": "section_Suggestive_Findings",
+          "section_heading": "Suggestive Findings"
+        }
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "paragraph_id": "p15",
+      "paragraph_index": 15,
+      "text": "Absent or decreased proliferation of CD4 cells in response to mitogens (e.g., PHA, ConA) [ Roifman et al 2012 ]",
+      "char_start": 1862,
+      "char_end": 1973,
+      "section_id": "section_Suggestive_Findings",
+      "section_heading": "Suggestive Findings",
+      "sentences": [
+        {
+          "sentence_id": "p15_s1",
+          "sentence_index": 1,
+          "text": "Absent or decreased proliferation of CD4 cells in response to mitogens (e.g., PHA, ConA) [ Roifman et al 2012 ]",
+          "char_start": 1862,
+          "char_end": 1973,
+          "section_id": "section_Suggestive_Findings",
+          "section_heading": "Suggestive Findings"
+        }
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "paragraph_id": "p16",
+      "paragraph_index": 16,
+      "text": "Intact proliferative response to mitogenic stimuli that bypass the TCR (e.g., PMA/Ionomycin) [ Elder et al 1994 , Elder 1997 ]",
+      "char_start": 1975,
+      "char_end": 2101,
+      "section_id": "section_Suggestive_Findings",
+      "section_heading": "Suggestive Findings",
+      "sentences": [
+        {
+          "sentence_id": "p16_s1",
+          "sentence_index": 1,
+          "text": "Intact proliferative response to mitogenic stimuli that bypass the TCR (e.g., PMA/Ionomycin) [ Elder et al 1994 , Elder 1997 ]",
+          "char_start": 1975,
+          "char_end": 2101,
+          "section_id": "section_Suggestive_Findings",
+          "section_heading": "Suggestive Findings"
+        }
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "paragraph_id": "p17",
+      "paragraph_index": 17,
+      "text": "Normal TCR Vβ repertoire in both CD4+ and CD8+ T cells [ Roifman et al 2010 ]",
+      "char_start": 2103,
+      "char_end": 2180,
+      "section_id": "section_Suggestive_Findings",
+      "section_heading": "Suggestive Findings",
+      "sentences": [
+        {
+          "sentence_id": "p17_s1",
+          "sentence_index": 1,
+          "text": "Normal TCR Vβ repertoire in both CD4+ and CD8+ T cells [ Roifman et al 2010 ]",
+          "char_start": 2103,
+          "char_end": 2180,
+          "section_id": "section_Suggestive_Findings",
+          "section_heading": "Suggestive Findings"
+        }
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "paragraph_id": "p18",
+      "paragraph_index": 18,
+      "text": "In CD4 cells: limited differentiation into Th2 cells and resistance to Fas-induced cell death [ Roifman et al 2010 ]",
+      "char_start": 2182,
+      "char_end": 2298,
+      "section_id": "section_Suggestive_Findings",
+      "section_heading": "Suggestive Findings",
+      "sentences": [
+        {
+          "sentence_id": "p18_s1",
+          "sentence_index": 1,
+          "text": "In CD4 cells: limited differentiation into Th2 cells and resistance to Fas-induced cell death [ Roifman et al 2010 ]",
+          "char_start": 2182,
+          "char_end": 2298,
+          "section_id": "section_Suggestive_Findings",
+          "section_heading": "Suggestive Findings"
+        }
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "paragraph_id": "p19",
+      "paragraph_index": 19,
+      "text": "In regulatory T cells: potentially decreased expression of CTLA4 and TGFB leading to increased risk of autoimmunity [ Roifman et al 2010 ]",
+      "char_start": 2300,
+      "char_end": 2438,
+      "section_id": "section_Suggestive_Findings",
+      "section_heading": "Suggestive Findings",
+      "sentences": [
+        {
+          "sentence_id": "p19_s1",
+          "sentence_index": 1,
+          "text": "In regulatory T cells: potentially decreased expression of CTLA4 and TGFB leading to increased risk of autoimmunity [ Roifman et al 2010 ]",
+          "char_start": 2300,
+          "char_end": 2438,
+          "section_id": "section_Suggestive_Findings",
+          "section_heading": "Suggestive Findings"
+        }
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "paragraph_id": "p20",
+      "paragraph_index": 20,
+      "text": "ZAP-70 protein expression. Testing of CD4 T cells reveals absence or near absence of ZAP-70 protein in most affected individuals. Recent reports suggest that the amount of residual ZAP-70 protein expression influences the clinical phenotype [ Picard et al 2009 , Chan et al 2016 , Gavino et al 2017 ]. Expression of Syk, a related tyrosine kinase important in T-cell signaling, may partially compensate for ZAP-70 signaling in some individuals [ Toyabe et al 2001 , Hauck et al 2015 ].",
+      "char_start": 2440,
+      "char_end": 2925,
+      "section_id": "section_Suggestive_Findings",
+      "section_heading": "Suggestive Findings",
+      "sentences": [
+        {
+          "sentence_id": "p20_s1",
+          "sentence_index": 1,
+          "text": "ZAP-70 protein expression.",
+          "char_start": 2440,
+          "char_end": 2466,
+          "section_id": "section_Suggestive_Findings",
+          "section_heading": "Suggestive Findings"
+        },
+        {
+          "sentence_id": "p20_s2",
+          "sentence_index": 2,
+          "text": "Testing of CD4 T cells reveals absence or near absence of ZAP-70 protein in most affected individuals.",
+          "char_start": 2467,
+          "char_end": 2569,
+          "section_id": "section_Suggestive_Findings",
+          "section_heading": "Suggestive Findings"
+        },
+        {
+          "sentence_id": "p20_s3",
+          "sentence_index": 3,
+          "text": "Recent reports suggest that the amount of residual ZAP-70 protein expression influences the clinical phenotype [ Picard et al 2009 , Chan et al 2016 , Gavino et al 2017 ].",
+          "char_start": 2570,
+          "char_end": 2741,
+          "section_id": "section_Suggestive_Findings",
+          "section_heading": "Suggestive Findings"
+        },
+        {
+          "sentence_id": "p20_s4",
+          "sentence_index": 4,
+          "text": "Expression of Syk, a related tyrosine kinase important in T-cell signaling, may partially compensate for ZAP-70 signaling in some individuals [ Toyabe et al 2001 , Hauck et al 2015 ].",
+          "char_start": 2742,
+          "char_end": 2925,
+          "section_id": "section_Suggestive_Findings",
+          "section_heading": "Suggestive Findings"
+        }
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "paragraph_id": "p21",
+      "paragraph_index": 21,
+      "text": "Immunoglobulin concentrations and function",
+      "char_start": 2927,
+      "char_end": 2969,
+      "section_id": "section_Suggestive_Findings",
+      "section_heading": "Suggestive Findings",
+      "sentences": [
+        {
+          "sentence_id": "p21_s1",
+          "sentence_index": 1,
+          "text": "Immunoglobulin concentrations and function",
+          "char_start": 2927,
+          "char_end": 2969,
+          "section_id": "section_Suggestive_Findings",
+          "section_heading": "Suggestive Findings"
+        }
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "paragraph_id": "p22",
+      "paragraph_index": 22,
+      "text": "Immunoglobulin levels vary by individual. Many affected individuals have severe hypogammaglobulinemia, but normal immunoglobulins or elevated IgA, IgM, and/or IgE can also be seen [ Turul et al 2009 , Cuvelier et al 2016 ].",
+      "char_start": 2971,
+      "char_end": 3194,
+      "section_id": "section_Suggestive_Findings",
+      "section_heading": "Suggestive Findings",
+      "sentences": [
+        {
+          "sentence_id": "p22_s1",
+          "sentence_index": 1,
+          "text": "Immunoglobulin levels vary by individual.",
+          "char_start": 2971,
+          "char_end": 3012,
+          "section_id": "section_Suggestive_Findings",
+          "section_heading": "Suggestive Findings"
+        },
+        {
+          "sentence_id": "p22_s2",
+          "sentence_index": 2,
+          "text": "Many affected individuals have severe hypogammaglobulinemia, but normal immunoglobulins or elevated IgA, IgM, and/or IgE can also be seen [ Turul et al 2009 , Cuvelier et al 2016 ].",
+          "char_start": 3013,
+          "char_end": 3194,
+          "section_id": "section_Suggestive_Findings",
+          "section_heading": "Suggestive Findings"
+        }
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "paragraph_id": "p23",
+      "paragraph_index": 23,
+      "text": "Although functional antibody responses to immunization are present in a few persons [ Turul et al 2009 , Hauck et al 2015 ], this finding does not indicate that all specific antigenic responses are intact.",
+      "char_start": 3196,
+      "char_end": 3401,
+      "section_id": "section_Suggestive_Findings",
+      "section_heading": "Suggestive Findings",
+      "sentences": [
+        {
+          "sentence_id": "p23_s1",
+          "sentence_index": 1,
+          "text": "Although functional antibody responses to immunization are present in a few persons [ Turul et al 2009 , Hauck et al 2015 ], this finding does not indicate that all specific antigenic responses are intact.",
+          "char_start": 3196,
+          "char_end": 3401,
+          "section_id": "section_Suggestive_Findings",
+          "section_heading": "Suggestive Findings"
+        }
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "paragraph_id": "p24",
+      "paragraph_index": 24,
+      "text": "Newborn screening. The utility of TREC screening for individuals with ZAP70 -related CID continues to be controversial. Although some have shown that TREC levels in individuals with confirmed ZAP70 -related CID are very low compared to age-matched controls [ Roifman et al 2010 , Roifman et al 2012 , Aluri et al 2017 ], others have shown that a substantial portion of individuals with ZAP70 -related CID have TREC levels above the cutoffs used for newborn screening and could be missed [ Grazioli et al 2014 , Jilkina et al 2014 , Hauck et al 2015 , Schroeder et al 2016 ]. Therefore, newborn screening results must be interpreted with caution in individuals with clinical findings consistent with ZAP70 -related CID or in populations with a high prevalence of ZAP70 -related CID.",
+      "char_start": 3403,
+      "char_end": 4184,
+      "section_id": "section_Suggestive_Findings",
+      "section_heading": "Suggestive Findings",
+      "sentences": [
+        {
+          "sentence_id": "p24_s1",
+          "sentence_index": 1,
+          "text": "Newborn screening.",
+          "char_start": 3403,
+          "char_end": 3421,
+          "section_id": "section_Suggestive_Findings",
+          "section_heading": "Suggestive Findings"
+        },
+        {
+          "sentence_id": "p24_s2",
+          "sentence_index": 2,
+          "text": "The utility of TREC screening for individuals with ZAP70 -related CID continues to be controversial.",
+          "char_start": 3422,
+          "char_end": 3522,
+          "section_id": "section_Suggestive_Findings",
+          "section_heading": "Suggestive Findings"
+        },
+        {
+          "sentence_id": "p24_s3",
+          "sentence_index": 3,
+          "text": "Although some have shown that TREC levels in individuals with confirmed ZAP70 -related CID are very low compared to age-matched controls [ Roifman et al 2010 , Roifman et al 2012 , Aluri et al 2017 ], others have shown that a substantial portion of individuals with ZAP70 -related CID have TREC levels above the cutoffs used for newborn screening and could be missed [ Grazioli et al 2014 , Jilkina et al 2014 , Hauck et al 2015 , Schroeder et al 2016 ].",
+          "char_start": 3523,
+          "char_end": 3977,
+          "section_id": "section_Suggestive_Findings",
+          "section_heading": "Suggestive Findings"
+        },
+        {
+          "sentence_id": "p24_s4",
+          "sentence_index": 4,
+          "text": "Therefore, newborn screening results must be interpreted with caution in individuals with clinical findings consistent with ZAP70 -related CID or in populations with a high prevalence of ZAP70 -related CID.",
+          "char_start": 3978,
+          "char_end": 4184,
+          "section_id": "section_Suggestive_Findings",
+          "section_heading": "Suggestive Findings"
+        }
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "paragraph_id": "p25",
+      "paragraph_index": 25,
+      "text": "Individuals with ZAP70 -related CID characteristically present in the first two years of life with recurrent bacterial, viral (including live-virus vaccine strains), and opportunistic infections, diarrhea, and failure to thrive. Severe lower-respiratory infections are seen, most notably Pneumocystis jiroveci infections and viral infections. Oral candidiasis is also common [ Cuvelier et al 2016 , Schroeder et al 2016 ].",
+      "char_start": 4186,
+      "char_end": 4608,
+      "section_id": "section_Clinical_Description",
+      "section_heading": "Clinical Description",
+      "sentences": [
+        {
+          "sentence_id": "p25_s1",
+          "sentence_index": 1,
+          "text": "Individuals with ZAP70 -related CID characteristically present in the first two years of life with recurrent bacterial, viral (including live-virus vaccine strains), and opportunistic infections, diarrhea, and failure to thrive.",
+          "char_start": 4186,
+          "char_end": 4414,
+          "section_id": "section_Clinical_Description",
+          "section_heading": "Clinical Description"
+        },
+        {
+          "sentence_id": "p25_s2",
+          "sentence_index": 2,
+          "text": "Severe lower-respiratory infections are seen, most notably Pneumocystis jiroveci infections and viral infections.",
+          "char_start": 4415,
+          "char_end": 4528,
+          "section_id": "section_Clinical_Description",
+          "section_heading": "Clinical Description"
+        },
+        {
+          "sentence_id": "p25_s3",
+          "sentence_index": 3,
+          "text": "Oral candidiasis is also common [ Cuvelier et al 2016 , Schroeder et al 2016 ].",
+          "char_start": 4529,
+          "char_end": 4608,
+          "section_id": "section_Clinical_Description",
+          "section_heading": "Clinical Description"
+        }
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "paragraph_id": "p26",
+      "paragraph_index": 26,
+      "text": "Other presentations have also been reported:",
+      "char_start": 4610,
+      "char_end": 4654,
+      "section_id": "section_Clinical_Description",
+      "section_heading": "Clinical Description",
+      "sentences": [
+        {
+          "sentence_id": "p26_s1",
+          "sentence_index": 1,
+          "text": "Other presentations have also been reported:",
+          "char_start": 4610,
+          "char_end": 4654,
+          "section_id": "section_Clinical_Description",
+          "section_heading": "Clinical Description"
+        }
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "paragraph_id": "p27",
+      "paragraph_index": 27,
+      "text": "Reports of milder phenotypes in sibs of children who had died from ZAP70 -related CID include a child age five months with recurrent lower-respiratory disease but no severe infections [ Turul et al 2009 ] and a child with persistent dermatitis resistant to therapy [ Katamura et al 1999 ].",
+      "char_start": 4656,
+      "char_end": 4945,
+      "section_id": "section_Clinical_Description",
+      "section_heading": "Clinical Description",
+      "sentences": [
+        {
+          "sentence_id": "p27_s1",
+          "sentence_index": 1,
+          "text": "Reports of milder phenotypes in sibs of children who had died from ZAP70 -related CID include a child age five months with recurrent lower-respiratory disease but no severe infections [ Turul et al 2009 ] and a child with persistent dermatitis resistant to therapy [ Katamura et al 1999 ].",
+          "char_start": 4656,
+          "char_end": 4945,
+          "section_id": "section_Clinical_Description",
+          "section_heading": "Clinical Description"
+        }
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "paragraph_id": "p28",
+      "paragraph_index": 28,
+      "text": "A child age nine years with a ZAP70 hypomorphic intronic pathogenic variant had an attenuated clinical and immunologic phenotype [ Picard et al 2009 ] (see Genotype-Phenotype Correlations ).",
+      "char_start": 4947,
+      "char_end": 5137,
+      "section_id": "section_Clinical_Description",
+      "section_heading": "Clinical Description",
+      "sentences": [
+        {
+          "sentence_id": "p28_s1",
+          "sentence_index": 1,
+          "text": "A child age nine years with a ZAP70 hypomorphic intronic pathogenic variant had an attenuated clinical and immunologic phenotype [ Picard et al 2009 ] (see Genotype-Phenotype Correlations ).",
+          "char_start": 4947,
+          "char_end": 5137,
+          "section_id": "section_Clinical_Description",
+          "section_heading": "Clinical Description"
+        }
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "paragraph_id": "p29",
+      "paragraph_index": 29,
+      "text": "A child age 11 months with ZAP70 -related CID presented with lymphoma [ Newell et al 2011 ].",
+      "char_start": 5139,
+      "char_end": 5231,
+      "section_id": "section_Clinical_Description",
+      "section_heading": "Clinical Description",
+      "sentences": [
+        {
+          "sentence_id": "p29_s1",
+          "sentence_index": 1,
+          "text": "A child age 11 months with ZAP70 -related CID presented with lymphoma [ Newell et al 2011 ].",
+          "char_start": 5139,
+          "char_end": 5231,
+          "section_id": "section_Clinical_Description",
+          "section_heading": "Clinical Description"
+        }
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "paragraph_id": "p30",
+      "paragraph_index": 30,
+      "text": "BCG-related complications including axillary lymphadenitis or disseminated mycobacterial disease following BCG vaccination may be presenting features [ Santos et al 2010 , Esenboga et al 2016 ].",
+      "char_start": 5233,
+      "char_end": 5427,
+      "section_id": "section_Clinical_Description",
+      "section_heading": "Clinical Description",
+      "sentences": [
+        {
+          "sentence_id": "p30_s1",
+          "sentence_index": 1,
+          "text": "BCG-related complications including axillary lymphadenitis or disseminated mycobacterial disease following BCG vaccination may be presenting features [ Santos et al 2010 , Esenboga et al 2016 ].",
+          "char_start": 5233,
+          "char_end": 5427,
+          "section_id": "section_Clinical_Description",
+          "section_heading": "Clinical Description"
+        }
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "paragraph_id": "p31",
+      "paragraph_index": 31,
+      "text": "Two individuals presented with recurrent infections and silent brain infarcts; one also had congenital nephrotic syndrome and autoimmune hemolytic anemia [ Akar et al 2015 ].",
+      "char_start": 5429,
+      "char_end": 5603,
+      "section_id": "section_Clinical_Description",
+      "section_heading": "Clinical Description",
+      "sentences": [
+        {
+          "sentence_id": "p31_s1",
+          "sentence_index": 1,
+          "text": "Two individuals presented with recurrent infections and silent brain infarcts; one also had congenital nephrotic syndrome and autoimmune hemolytic anemia [ Akar et al 2015 ].",
+          "char_start": 5429,
+          "char_end": 5603,
+          "section_id": "section_Clinical_Description",
+          "section_heading": "Clinical Description"
+        }
+      ],
+      "local_clinical_domains": [
+        {
+          "key": "neurologic",
+          "label": "Neurologic",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "recurrent infections and silent brain infarcts; one also had congenital nephrotic syn"
+          ]
+        },
+        {
+          "key": "hematologic_immunologic",
+          "label": "Hematologic / Immunologic",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "ndrome and autoimmune hemolytic anemia [ Akar et al 2015 ]."
+          ]
+        }
+      ]
+    },
+    {
+      "paragraph_id": "p32",
+      "paragraph_index": 32,
+      "text": "An individual with isolated treatment-refractory immune thrombocytopenia (ITP) has been described [ Cuvelier et al 2016 ].",
+      "char_start": 5605,
+      "char_end": 5727,
+      "section_id": "section_Clinical_Description",
+      "section_heading": "Clinical Description",
+      "sentences": [
+        {
+          "sentence_id": "p32_s1",
+          "sentence_index": 1,
+          "text": "An individual with isolated treatment-refractory immune thrombocytopenia (ITP) has been described [ Cuvelier et al 2016 ].",
+          "char_start": 5605,
+          "char_end": 5727,
+          "section_id": "section_Clinical_Description",
+          "section_heading": "Clinical Description"
+        }
+      ],
+      "local_clinical_domains": [
+        {
+          "key": "hematologic_immunologic",
+          "label": "Hematologic / Immunologic",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "h isolated treatment-refractory immune thrombocytopenia (ITP) has been described [ Cuv"
+          ]
+        }
+      ]
+    },
+    {
+      "paragraph_id": "p33",
+      "paragraph_index": 33,
+      "text": "Two sibs had refractory autoimmune features including nephrotic syndrome/proteinuria, bullous pemphigoid, and colitis; one also developed autoantibodies to factor VIII caused by a hypomorphic and weakly activating ZAP70 pathogenic variant [ Chan et al 2016 ].",
+      "char_start": 5729,
+      "char_end": 5988,
+      "section_id": "section_Clinical_Description",
+      "section_heading": "Clinical Description",
+      "sentences": [
+        {
+          "sentence_id": "p33_s1",
+          "sentence_index": 1,
+          "text": "Two sibs had refractory autoimmune features including nephrotic syndrome/proteinuria, bullous pemphigoid, and colitis; one also developed autoantibodies to factor VIII caused by a hypomorphic and weakly activating ZAP70 pathogenic variant [ Chan et al 2016 ].",
+          "char_start": 5729,
+          "char_end": 5988,
+          "section_id": "section_Clinical_Description",
+          "section_heading": "Clinical Description"
+        }
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "paragraph_id": "p34",
+      "paragraph_index": 34,
+      "text": "An adult with a history of infantile-onset colitis, recurrent respiratory-tract infections, mucocutaneous candidiasis, HSV stomatitis, VZV infection, EBV lymphoproliferative disorder, recurrent CMV viremia, polyomaviremia, and epidermodysplasia verruciformis-like lesions due to HHV-23 was recently reported. A novel pathogenic variant ( c.1065C>T ) that leads to an altered splice site and low levels of wild-type ZAP-70 protein was identified in this individual [ Gavino et al 2017 ].",
+      "char_start": 5990,
+      "char_end": 6476,
+      "section_id": "section_Clinical_Description",
+      "section_heading": "Clinical Description",
+      "sentences": [
+        {
+          "sentence_id": "p34_s1",
+          "sentence_index": 1,
+          "text": "An adult with a history of infantile-onset colitis, recurrent respiratory-tract infections, mucocutaneous candidiasis, HSV stomatitis, VZV infection, EBV lymphoproliferative disorder, recurrent CMV viremia, polyomaviremia, and epidermodysplasia verruciformis-like lesions due to HHV-23 was recently reported.",
+          "char_start": 5990,
+          "char_end": 6298,
+          "section_id": "section_Clinical_Description",
+          "section_heading": "Clinical Description"
+        },
+        {
+          "sentence_id": "p34_s2",
+          "sentence_index": 2,
+          "text": "A novel pathogenic variant ( c.1065C>T ) that leads to an altered splice site and low levels of wild-type ZAP-70 protein was identified in this individual [ Gavino et al 2017 ].",
+          "char_start": 6299,
+          "char_end": 6476,
+          "section_id": "section_Clinical_Description",
+          "section_heading": "Clinical Description"
+        }
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "paragraph_id": "p35",
+      "paragraph_index": 35,
+      "text": "The long-term prognosis of untreated ZAP70 -related CID is death from infection. Affected children have a declining quality of life and usually do not survive past their second year without hematopoietic stem cell transplantation (HSCT).",
+      "char_start": 6478,
+      "char_end": 6715,
+      "section_id": "section_Clinical_Description",
+      "section_heading": "Clinical Description",
+      "sentences": [
+        {
+          "sentence_id": "p35_s1",
+          "sentence_index": 1,
+          "text": "The long-term prognosis of untreated ZAP70 -related CID is death from infection.",
+          "char_start": 6478,
+          "char_end": 6558,
+          "section_id": "section_Clinical_Description",
+          "section_heading": "Clinical Description"
+        },
+        {
+          "sentence_id": "p35_s2",
+          "sentence_index": 2,
+          "text": "Affected children have a declining quality of life and usually do not survive past their second year without hematopoietic stem cell transplantation (HSCT).",
+          "char_start": 6559,
+          "char_end": 6715,
+          "section_id": "section_Clinical_Description",
+          "section_heading": "Clinical Description"
+        }
+      ],
+      "local_clinical_domains": []
+    }
+  ]
+}

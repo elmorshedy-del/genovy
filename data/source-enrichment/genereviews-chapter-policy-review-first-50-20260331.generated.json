@@ -1,0 +1,1015 @@
+{
+  "createdAt": "2026-04-01",
+  "rosterJson": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/genereviews-global-roster-20260329.json",
+  "defaults": {
+    "ingestionDecision": "review_required",
+    "chapterScope": "unclassified",
+    "targetingMode": "manual_required",
+    "notes": "Do not auto-ingest GeneReviews into the graph until the chapter scope and disease targets are reviewed explicitly."
+  },
+  "chapters": [
+    {
+      "chapterKey": "usp7_related_hao_fountain_syndrome",
+      "nbkId": "",
+      "chapterTitle": "USP7 -Related Hao-Fountain Syndrome",
+      "chapterPath": "/sites/books/n/gene/usp7-ndd/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/usp7-ndd/",
+      "rosterMappingStatus": "unresolved",
+      "rosterMappedDiseaseCurie": "",
+      "rosterMappedDiseaseLabel": "",
+      "recommendedDecision": "review_required",
+      "recommendedScope": "mapping_unresolved",
+      "recommendationReason": "Chapter title does not map cleanly to a disease in the current graph.",
+      "policy": {
+        "ingestionDecision": "",
+        "chapterScope": "",
+        "targetingMode": "",
+        "diseaseTargets": [],
+        "notes": ""
+      }
+    },
+    {
+      "chapterKey": "variegate_porphyria",
+      "nbkId": "",
+      "chapterTitle": "Variegate Porphyria",
+      "chapterPath": "/sites/books/n/gene/porphyria-var/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/porphyria-var/",
+      "rosterMappingStatus": "exact_label_or_alias",
+      "rosterMappedDiseaseCurie": "MONDO:0008297",
+      "rosterMappedDiseaseLabel": "variegate porphyria",
+      "recommendedDecision": "candidate_auto_accept",
+      "recommendedScope": "candidate_disease_specific",
+      "recommendationReason": "Exact disease-label mapping exists, but manual approval is still required before ingestion.",
+      "policy": {
+        "ingestionDecision": "",
+        "chapterScope": "",
+        "targetingMode": "",
+        "diseaseTargets": [],
+        "notes": ""
+      }
+    },
+    {
+      "chapterKey": "vascular_ehlers_danlos_syndrome",
+      "nbkId": "",
+      "chapterTitle": "Vascular Ehlers-Danlos Syndrome",
+      "chapterPath": "/sites/books/n/gene/eds4/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/eds4/",
+      "rosterMappingStatus": "exact_label_or_alias",
+      "rosterMappedDiseaseCurie": "MONDO:0017314",
+      "rosterMappedDiseaseLabel": "Vascular Ehlers-Danlos syndrome",
+      "recommendedDecision": "candidate_auto_accept",
+      "recommendedScope": "candidate_disease_specific",
+      "recommendationReason": "Exact disease-label mapping exists, but manual approval is still required before ingestion.",
+      "policy": {
+        "ingestionDecision": "",
+        "chapterScope": "",
+        "targetingMode": "",
+        "diseaseTargets": [],
+        "notes": ""
+      }
+    },
+    {
+      "chapterKey": "very_long_chain_acyl_coenzyme_a_dehydrogenase_deficiency",
+      "nbkId": "",
+      "chapterTitle": "Very Long-Chain Acyl-Coenzyme A Dehydrogenase Deficiency",
+      "chapterPath": "/sites/books/n/gene/vlcad/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/vlcad/",
+      "rosterMappingStatus": "exact_label_or_alias",
+      "rosterMappedDiseaseCurie": "MONDO:0008723",
+      "rosterMappedDiseaseLabel": "very long chain acyl-CoA dehydrogenase deficiency",
+      "recommendedDecision": "candidate_auto_accept",
+      "recommendedScope": "candidate_disease_specific",
+      "recommendationReason": "Exact disease-label mapping exists, but manual approval is still required before ingestion.",
+      "policy": {
+        "ingestionDecision": "",
+        "chapterScope": "",
+        "targetingMode": "",
+        "diseaseTargets": [],
+        "notes": ""
+      }
+    },
+    {
+      "chapterKey": "vexas_syndrome",
+      "nbkId": "",
+      "chapterTitle": "VEXAS Syndrome",
+      "chapterPath": "/sites/books/n/gene/vexas/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/vexas/",
+      "rosterMappingStatus": "exact_label_or_alias",
+      "rosterMappedDiseaseCurie": "MONDO:0026777",
+      "rosterMappedDiseaseLabel": "VEXAS syndrome",
+      "recommendedDecision": "candidate_auto_accept",
+      "recommendedScope": "candidate_disease_specific",
+      "recommendationReason": "Exact disease-label mapping exists, but manual approval is still required before ingestion.",
+      "policy": {
+        "ingestionDecision": "",
+        "chapterScope": "",
+        "targetingMode": "",
+        "diseaseTargets": [],
+        "notes": ""
+      }
+    },
+    {
+      "chapterKey": "vldlr_cerebellar_hypoplasia",
+      "nbkId": "",
+      "chapterTitle": "VLDLR Cerebellar Hypoplasia",
+      "chapterPath": "/sites/books/n/gene/vldlr-ch/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/vldlr-ch/",
+      "rosterMappingStatus": "unresolved",
+      "rosterMappedDiseaseCurie": "",
+      "rosterMappedDiseaseLabel": "",
+      "recommendedDecision": "review_required",
+      "recommendedScope": "mapping_unresolved",
+      "recommendationReason": "Chapter title does not map cleanly to a disease in the current graph.",
+      "policy": {
+        "ingestionDecision": "",
+        "chapterScope": "",
+        "targetingMode": "",
+        "diseaseTargets": [],
+        "notes": ""
+      }
+    },
+    {
+      "chapterKey": "von_hippel_lindau_syndrome",
+      "nbkId": "",
+      "chapterTitle": "Von Hippel-Lindau Syndrome",
+      "chapterPath": "/sites/books/n/gene/vhl/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/vhl/",
+      "rosterMappingStatus": "exact_label_or_alias",
+      "rosterMappedDiseaseCurie": "MONDO:0008667",
+      "rosterMappedDiseaseLabel": "von Hippel-Lindau disease",
+      "recommendedDecision": "candidate_auto_accept",
+      "recommendedScope": "candidate_disease_specific",
+      "recommendationReason": "Exact disease-label mapping exists, but manual approval is still required before ingestion.",
+      "policy": {
+        "ingestionDecision": "",
+        "chapterScope": "",
+        "targetingMode": "",
+        "diseaseTargets": [],
+        "notes": ""
+      }
+    },
+    {
+      "chapterKey": "von_willebrand_disease",
+      "nbkId": "",
+      "chapterTitle": "Von Willebrand Disease",
+      "chapterPath": "/sites/books/n/gene/von-willebrand/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/von-willebrand/",
+      "rosterMappingStatus": "exact_label_or_alias",
+      "rosterMappedDiseaseCurie": "MONDO:0019565",
+      "rosterMappedDiseaseLabel": "Von Willebrand disease",
+      "recommendedDecision": "candidate_auto_accept",
+      "recommendedScope": "candidate_disease_specific",
+      "recommendationReason": "Exact disease-label mapping exists, but manual approval is still required before ingestion.",
+      "policy": {
+        "ingestionDecision": "",
+        "chapterScope": "",
+        "targetingMode": "",
+        "diseaseTargets": [],
+        "notes": ""
+      }
+    },
+    {
+      "chapterKey": "vps13a_disease",
+      "nbkId": "",
+      "chapterTitle": "VPS13A Disease",
+      "chapterPath": "/sites/books/n/gene/chac/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/chac/",
+      "rosterMappingStatus": "unresolved",
+      "rosterMappedDiseaseCurie": "",
+      "rosterMappedDiseaseLabel": "",
+      "recommendedDecision": "review_required",
+      "recommendedScope": "mapping_unresolved",
+      "recommendationReason": "Chapter title does not map cleanly to a disease in the current graph.",
+      "policy": {
+        "ingestionDecision": "",
+        "chapterScope": "",
+        "targetingMode": "",
+        "diseaseTargets": [],
+        "notes": ""
+      }
+    },
+    {
+      "chapterKey": "vps13d_movement_disorder",
+      "nbkId": "",
+      "chapterTitle": "VPS13D Movement Disorder",
+      "chapterPath": "/sites/books/n/gene/vps13d-md/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/vps13d-md/",
+      "rosterMappingStatus": "unresolved",
+      "rosterMappedDiseaseCurie": "",
+      "rosterMappedDiseaseLabel": "",
+      "recommendedDecision": "review_required",
+      "recommendedScope": "mapping_unresolved",
+      "recommendationReason": "Chapter title does not map cleanly to a disease in the current graph.",
+      "policy": {
+        "ingestionDecision": "",
+        "chapterScope": "",
+        "targetingMode": "",
+        "diseaseTargets": [],
+        "notes": ""
+      }
+    },
+    {
+      "chapterKey": "vps35_related_parkinson_disease",
+      "nbkId": "",
+      "chapterTitle": "VPS35 -Related Parkinson Disease",
+      "chapterPath": "/sites/books/n/gene/vps35-pd/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/vps35-pd/",
+      "rosterMappingStatus": "unresolved",
+      "rosterMappedDiseaseCurie": "",
+      "rosterMappedDiseaseLabel": "",
+      "recommendedDecision": "review_required",
+      "recommendedScope": "mapping_unresolved",
+      "recommendationReason": "Chapter title does not map cleanly to a disease in the current graph.",
+      "policy": {
+        "ingestionDecision": "",
+        "chapterScope": "",
+        "targetingMode": "",
+        "diseaseTargets": [],
+        "notes": ""
+      }
+    },
+    {
+      "chapterKey": "waardenburg_syndrome_type_i",
+      "nbkId": "",
+      "chapterTitle": "Waardenburg Syndrome Type I",
+      "chapterPath": "/sites/books/n/gene/ws1/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/ws1/",
+      "rosterMappingStatus": "exact_label_or_alias",
+      "rosterMappedDiseaseCurie": "MONDO:0008670",
+      "rosterMappedDiseaseLabel": "Waardenburg syndrome type 1",
+      "recommendedDecision": "candidate_auto_accept",
+      "recommendedScope": "candidate_disease_specific",
+      "recommendationReason": "Exact disease-label mapping exists, but manual approval is still required before ingestion.",
+      "policy": {
+        "ingestionDecision": "",
+        "chapterScope": "",
+        "targetingMode": "",
+        "diseaseTargets": [],
+        "notes": ""
+      }
+    },
+    {
+      "chapterKey": "wac_related_intellectual_disability",
+      "nbkId": "",
+      "chapterTitle": "WAC -Related Intellectual Disability",
+      "chapterPath": "/sites/books/n/gene/wac-id/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/wac-id/",
+      "rosterMappingStatus": "unresolved",
+      "rosterMappedDiseaseCurie": "",
+      "rosterMappedDiseaseLabel": "",
+      "recommendedDecision": "review_required",
+      "recommendedScope": "mapping_unresolved",
+      "recommendationReason": "Chapter title does not map cleanly to a disease in the current graph.",
+      "policy": {
+        "ingestionDecision": "",
+        "chapterScope": "",
+        "targetingMode": "",
+        "diseaseTargets": [],
+        "notes": ""
+      }
+    },
+    {
+      "chapterKey": "wagr_spectrum_disorder",
+      "nbkId": "",
+      "chapterTitle": "WAGR Spectrum Disorder",
+      "chapterPath": "/sites/books/n/gene/wagr/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/wagr/",
+      "rosterMappingStatus": "unresolved",
+      "rosterMappedDiseaseCurie": "",
+      "rosterMappedDiseaseLabel": "",
+      "recommendedDecision": "review_required",
+      "recommendedScope": "mapping_unresolved",
+      "recommendationReason": "Chapter title does not map cleanly to a disease in the current graph.",
+      "policy": {
+        "ingestionDecision": "",
+        "chapterScope": "",
+        "targetingMode": "",
+        "diseaseTargets": [],
+        "notes": ""
+      }
+    },
+    {
+      "chapterKey": "wars2_deficiency",
+      "nbkId": "",
+      "chapterTitle": "WARS2 Deficiency",
+      "chapterPath": "/sites/books/n/gene/wars2-def/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/wars2-def/",
+      "rosterMappingStatus": "exact_label_or_alias",
+      "rosterMappedDiseaseCurie": "MONDO:0060578",
+      "rosterMappedDiseaseLabel": "neurodevelopmental disorder, mitochondrial, with abnormal movements and lactic acidosis, with or without seizures",
+      "recommendedDecision": "candidate_auto_accept",
+      "recommendedScope": "candidate_disease_specific",
+      "recommendationReason": "Exact disease-label mapping exists, but manual approval is still required before ingestion.",
+      "policy": {
+        "ingestionDecision": "",
+        "chapterScope": "",
+        "targetingMode": "",
+        "diseaseTargets": [],
+        "notes": ""
+      }
+    },
+    {
+      "chapterKey": "was_related_disorders",
+      "nbkId": "",
+      "chapterTitle": "WAS -Related Disorders",
+      "chapterPath": "/sites/books/n/gene/was/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/was/",
+      "rosterMappingStatus": "unresolved",
+      "rosterMappedDiseaseCurie": "",
+      "rosterMappedDiseaseLabel": "",
+      "recommendedDecision": "review_required",
+      "recommendedScope": "mapping_unresolved",
+      "recommendationReason": "Chapter title does not map cleanly to a disease in the current graph.",
+      "policy": {
+        "ingestionDecision": "",
+        "chapterScope": "",
+        "targetingMode": "",
+        "diseaseTargets": [],
+        "notes": ""
+      }
+    },
+    {
+      "chapterKey": "wdr26_related_intellectual_disability",
+      "nbkId": "",
+      "chapterTitle": "WDR26 -Related Intellectual Disability",
+      "chapterPath": "/sites/books/n/gene/wdr26-id/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/wdr26-id/",
+      "rosterMappingStatus": "unresolved",
+      "rosterMappedDiseaseCurie": "",
+      "rosterMappedDiseaseLabel": "",
+      "recommendedDecision": "review_required",
+      "recommendedScope": "mapping_unresolved",
+      "recommendationReason": "Chapter title does not map cleanly to a disease in the current graph.",
+      "policy": {
+        "ingestionDecision": "",
+        "chapterScope": "",
+        "targetingMode": "",
+        "diseaseTargets": [],
+        "notes": ""
+      }
+    },
+    {
+      "chapterKey": "wdr62_primary_microcephaly",
+      "nbkId": "",
+      "chapterTitle": "WDR62 Primary Microcephaly",
+      "chapterPath": "/sites/books/n/gene/wdr62-pm/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/wdr62-pm/",
+      "rosterMappingStatus": "unresolved",
+      "rosterMappedDiseaseCurie": "",
+      "rosterMappedDiseaseLabel": "",
+      "recommendedDecision": "review_required",
+      "recommendedScope": "mapping_unresolved",
+      "recommendationReason": "Chapter title does not map cleanly to a disease in the current graph.",
+      "policy": {
+        "ingestionDecision": "",
+        "chapterScope": "",
+        "targetingMode": "",
+        "diseaseTargets": [],
+        "notes": ""
+      }
+    },
+    {
+      "chapterKey": "weill_marchesani_syndrome",
+      "nbkId": "",
+      "chapterTitle": "Weill-Marchesani Syndrome",
+      "chapterPath": "/sites/books/n/gene/weill-ms/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/weill-ms/",
+      "rosterMappingStatus": "exact_label_or_alias",
+      "rosterMappedDiseaseCurie": "MONDO:0018096",
+      "rosterMappedDiseaseLabel": "Weill-Marchesani syndrome",
+      "recommendedDecision": "candidate_auto_accept",
+      "recommendedScope": "candidate_disease_specific",
+      "recommendationReason": "Exact disease-label mapping exists, but manual approval is still required before ingestion.",
+      "policy": {
+        "ingestionDecision": "",
+        "chapterScope": "",
+        "targetingMode": "",
+        "diseaseTargets": [],
+        "notes": ""
+      }
+    },
+    {
+      "chapterKey": "weiss_kruszka_syndrome",
+      "nbkId": "",
+      "chapterTitle": "Weiss-Kruszka Syndrome",
+      "chapterPath": "/sites/books/n/gene/weiss-kruszka/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/weiss-kruszka/",
+      "rosterMappingStatus": "exact_label_or_alias",
+      "rosterMappedDiseaseCurie": "MONDO:0032836",
+      "rosterMappedDiseaseLabel": "Weiss-Kruszka syndrome",
+      "recommendedDecision": "candidate_auto_accept",
+      "recommendedScope": "candidate_disease_specific",
+      "recommendationReason": "Exact disease-label mapping exists, but manual approval is still required before ingestion.",
+      "policy": {
+        "ingestionDecision": "",
+        "chapterScope": "",
+        "targetingMode": "",
+        "diseaseTargets": [],
+        "notes": ""
+      }
+    },
+    {
+      "chapterKey": "werner_syndrome",
+      "nbkId": "",
+      "chapterTitle": "Werner Syndrome",
+      "chapterPath": "/sites/books/n/gene/werner/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/werner/",
+      "rosterMappingStatus": "exact_label_or_alias",
+      "rosterMappedDiseaseCurie": "MONDO:0010196",
+      "rosterMappedDiseaseLabel": "Werner syndrome",
+      "recommendedDecision": "candidate_auto_accept",
+      "recommendedScope": "candidate_disease_specific",
+      "recommendationReason": "Exact disease-label mapping exists, but manual approval is still required before ingestion.",
+      "policy": {
+        "ingestionDecision": "",
+        "chapterScope": "",
+        "targetingMode": "",
+        "diseaseTargets": [],
+        "notes": ""
+      }
+    },
+    {
+      "chapterKey": "wfs1_spectrum_disorder",
+      "nbkId": "",
+      "chapterTitle": "WFS1 Spectrum Disorder",
+      "chapterPath": "/sites/books/n/gene/wfs/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/wfs/",
+      "rosterMappingStatus": "unresolved",
+      "rosterMappedDiseaseCurie": "",
+      "rosterMappedDiseaseLabel": "",
+      "recommendedDecision": "review_required",
+      "recommendedScope": "mapping_unresolved",
+      "recommendationReason": "Chapter title does not map cleanly to a disease in the current graph.",
+      "policy": {
+        "ingestionDecision": "",
+        "chapterScope": "",
+        "targetingMode": "",
+        "diseaseTargets": [],
+        "notes": ""
+      }
+    },
+    {
+      "chapterKey": "white_sutton_syndrome",
+      "nbkId": "",
+      "chapterTitle": "White-Sutton Syndrome",
+      "chapterPath": "/sites/books/n/gene/white-sutton/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/white-sutton/",
+      "rosterMappingStatus": "exact_label_or_alias",
+      "rosterMappedDiseaseCurie": "MONDO:0014606",
+      "rosterMappedDiseaseLabel": "intellectual disability-microcephaly-strabismus-behavioral abnormalities syndrome",
+      "recommendedDecision": "candidate_auto_accept",
+      "recommendedScope": "candidate_disease_specific",
+      "recommendationReason": "Exact disease-label mapping exists, but manual approval is still required before ingestion.",
+      "policy": {
+        "ingestionDecision": "",
+        "chapterScope": "",
+        "targetingMode": "",
+        "diseaseTargets": [],
+        "notes": ""
+      }
+    },
+    {
+      "chapterKey": "wiedemann_steiner_syndrome",
+      "nbkId": "",
+      "chapterTitle": "Wiedemann-Steiner Syndrome",
+      "chapterPath": "/sites/books/n/gene/wiedemann-steiner/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/wiedemann-steiner/",
+      "rosterMappingStatus": "exact_label_or_alias",
+      "rosterMappedDiseaseCurie": "MONDO:0011518",
+      "rosterMappedDiseaseLabel": "Wiedemann-Steiner syndrome",
+      "recommendedDecision": "candidate_auto_accept",
+      "recommendedScope": "candidate_disease_specific",
+      "recommendationReason": "Exact disease-label mapping exists, but manual approval is still required before ingestion.",
+      "policy": {
+        "ingestionDecision": "",
+        "chapterScope": "",
+        "targetingMode": "",
+        "diseaseTargets": [],
+        "notes": ""
+      }
+    },
+    {
+      "chapterKey": "williams_syndrome",
+      "nbkId": "",
+      "chapterTitle": "Williams Syndrome",
+      "chapterPath": "/sites/books/n/gene/williams/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/williams/",
+      "rosterMappingStatus": "exact_label_or_alias",
+      "rosterMappedDiseaseCurie": "MONDO:0008678",
+      "rosterMappedDiseaseLabel": "Williams syndrome",
+      "recommendedDecision": "candidate_auto_accept",
+      "recommendedScope": "candidate_disease_specific",
+      "recommendationReason": "Exact disease-label mapping exists, but manual approval is still required before ingestion.",
+      "policy": {
+        "ingestionDecision": "",
+        "chapterScope": "",
+        "targetingMode": "",
+        "diseaseTargets": [],
+        "notes": ""
+      }
+    },
+    {
+      "chapterKey": "wilms_tumor_predisposition",
+      "nbkId": "",
+      "chapterTitle": "Wilms Tumor Predisposition",
+      "chapterPath": "/sites/books/n/gene/wilms-ov/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/wilms-ov/",
+      "rosterMappingStatus": "needs_review",
+      "rosterMappedDiseaseCurie": "",
+      "rosterMappedDiseaseLabel": "",
+      "recommendedDecision": "review_required",
+      "recommendedScope": "mapping_unresolved",
+      "recommendationReason": "Chapter title does not map cleanly to a disease in the current graph.",
+      "policy": {
+        "ingestionDecision": "",
+        "chapterScope": "",
+        "targetingMode": "",
+        "diseaseTargets": [],
+        "notes": ""
+      }
+    },
+    {
+      "chapterKey": "wilson_disease",
+      "nbkId": "",
+      "chapterTitle": "Wilson Disease",
+      "chapterPath": "/sites/books/n/gene/wilson/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/wilson/",
+      "rosterMappingStatus": "exact_label_or_alias",
+      "rosterMappedDiseaseCurie": "MONDO:0010200",
+      "rosterMappedDiseaseLabel": "Wilson disease",
+      "recommendedDecision": "candidate_auto_accept",
+      "recommendedScope": "candidate_disease_specific",
+      "recommendationReason": "Exact disease-label mapping exists, but manual approval is still required before ingestion.",
+      "policy": {
+        "ingestionDecision": "",
+        "chapterScope": "",
+        "targetingMode": "",
+        "diseaseTargets": [],
+        "notes": ""
+      }
+    },
+    {
+      "chapterKey": "woodhouse_sakati_syndrome",
+      "nbkId": "",
+      "chapterTitle": "Woodhouse-Sakati Syndrome",
+      "chapterPath": "/sites/books/n/gene/wss/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/wss/",
+      "rosterMappingStatus": "exact_label_or_alias",
+      "rosterMappedDiseaseCurie": "MONDO:0009419",
+      "rosterMappedDiseaseLabel": "Woodhouse-Sakati syndrome",
+      "recommendedDecision": "candidate_auto_accept",
+      "recommendedScope": "candidate_disease_specific",
+      "recommendationReason": "Exact disease-label mapping exists, but manual approval is still required before ingestion.",
+      "policy": {
+        "ingestionDecision": "",
+        "chapterScope": "",
+        "targetingMode": "",
+        "diseaseTargets": [],
+        "notes": ""
+      }
+    },
+    {
+      "chapterKey": "wt1_disorder",
+      "nbkId": "",
+      "chapterTitle": "WT1 Disorder",
+      "chapterPath": "/sites/books/n/gene/wt1-dis/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/wt1-dis/",
+      "rosterMappingStatus": "unresolved",
+      "rosterMappedDiseaseCurie": "",
+      "rosterMappedDiseaseLabel": "",
+      "recommendedDecision": "review_required",
+      "recommendedScope": "mapping_unresolved",
+      "recommendationReason": "Chapter title does not map cleanly to a disease in the current graph.",
+      "policy": {
+        "ingestionDecision": "",
+        "chapterScope": "",
+        "targetingMode": "",
+        "diseaseTargets": [],
+        "notes": ""
+      }
+    },
+    {
+      "chapterKey": "xeroderma_pigmentosum",
+      "nbkId": "",
+      "chapterTitle": "Xeroderma Pigmentosum",
+      "chapterPath": "/sites/books/n/gene/xp/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/xp/",
+      "rosterMappingStatus": "exact_label_or_alias",
+      "rosterMappedDiseaseCurie": "MONDO:0019600",
+      "rosterMappedDiseaseLabel": "xeroderma pigmentosum",
+      "recommendedDecision": "candidate_auto_accept",
+      "recommendedScope": "candidate_disease_specific",
+      "recommendationReason": "Exact disease-label mapping exists, but manual approval is still required before ingestion.",
+      "policy": {
+        "ingestionDecision": "",
+        "chapterScope": "",
+        "targetingMode": "",
+        "diseaseTargets": [],
+        "notes": ""
+      }
+    },
+    {
+      "chapterKey": "xia_gibbs_syndrome",
+      "nbkId": "",
+      "chapterTitle": "Xia-Gibbs Syndrome",
+      "chapterPath": "/sites/books/n/gene/xia-gibbs/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/xia-gibbs/",
+      "rosterMappingStatus": "exact_label_or_alias",
+      "rosterMappedDiseaseCurie": "MONDO:0014358",
+      "rosterMappedDiseaseLabel": "AHDC1-related intellectual disability - obstructive sleep apnea - mild dysmorphism syndrome",
+      "recommendedDecision": "candidate_auto_accept",
+      "recommendedScope": "candidate_disease_specific",
+      "recommendationReason": "Exact disease-label mapping exists, but manual approval is still required before ingestion.",
+      "policy": {
+        "ingestionDecision": "",
+        "chapterScope": "",
+        "targetingMode": "",
+        "diseaseTargets": [],
+        "notes": ""
+      }
+    },
+    {
+      "chapterKey": "x_linked_acrogigantism",
+      "nbkId": "",
+      "chapterTitle": "X-Linked Acrogigantism",
+      "chapterPath": "/sites/books/n/gene/x-ag/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/x-ag/",
+      "rosterMappingStatus": "exact_label_or_alias",
+      "rosterMappedDiseaseCurie": "MONDO:0010491",
+      "rosterMappedDiseaseLabel": "X-linked acrogigantism",
+      "recommendedDecision": "candidate_auto_accept",
+      "recommendedScope": "candidate_disease_specific",
+      "recommendationReason": "Exact disease-label mapping exists, but manual approval is still required before ingestion.",
+      "policy": {
+        "ingestionDecision": "",
+        "chapterScope": "",
+        "targetingMode": "",
+        "diseaseTargets": [],
+        "notes": ""
+      }
+    },
+    {
+      "chapterKey": "x_linked_adrenoleukodystrophy",
+      "nbkId": "",
+      "chapterTitle": "X-Linked Adrenoleukodystrophy",
+      "chapterPath": "/sites/books/n/gene/x-ald/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/x-ald/",
+      "rosterMappingStatus": "exact_label_or_alias",
+      "rosterMappedDiseaseCurie": "MONDO:0018544",
+      "rosterMappedDiseaseLabel": "X-linked adrenoleukodystrophy",
+      "recommendedDecision": "candidate_auto_accept",
+      "recommendedScope": "candidate_disease_specific",
+      "recommendationReason": "Exact disease-label mapping exists, but manual approval is still required before ingestion.",
+      "policy": {
+        "ingestionDecision": "",
+        "chapterScope": "",
+        "targetingMode": "",
+        "diseaseTargets": [],
+        "notes": ""
+      }
+    },
+    {
+      "chapterKey": "x_linked_agammaglobulinemia",
+      "nbkId": "",
+      "chapterTitle": "X-Linked Agammaglobulinemia",
+      "chapterPath": "/sites/books/n/gene/xla/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/xla/",
+      "rosterMappingStatus": "exact_label_or_alias",
+      "rosterMappedDiseaseCurie": "MONDO:0010421",
+      "rosterMappedDiseaseLabel": "X-linked agammaglobulinemia",
+      "recommendedDecision": "candidate_auto_accept",
+      "recommendedScope": "candidate_disease_specific",
+      "recommendationReason": "Exact disease-label mapping exists, but manual approval is still required before ingestion.",
+      "policy": {
+        "ingestionDecision": "",
+        "chapterScope": "",
+        "targetingMode": "",
+        "diseaseTargets": [],
+        "notes": ""
+      }
+    },
+    {
+      "chapterKey": "x_linked_congenital_retinoschisis",
+      "nbkId": "",
+      "chapterTitle": "X-Linked Congenital Retinoschisis",
+      "chapterPath": "/sites/books/n/gene/retinoschisis/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/retinoschisis/",
+      "rosterMappingStatus": "unresolved",
+      "rosterMappedDiseaseCurie": "",
+      "rosterMappedDiseaseLabel": "",
+      "recommendedDecision": "review_required",
+      "recommendedScope": "mapping_unresolved",
+      "recommendationReason": "Chapter title does not map cleanly to a disease in the current graph.",
+      "policy": {
+        "ingestionDecision": "",
+        "chapterScope": "",
+        "targetingMode": "",
+        "diseaseTargets": [],
+        "notes": ""
+      }
+    },
+    {
+      "chapterKey": "x_linked_congenital_stationary_night_blindness",
+      "nbkId": "",
+      "chapterTitle": "X-Linked Congenital Stationary Night Blindness",
+      "chapterPath": "/sites/books/n/gene/csnb/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/csnb/",
+      "rosterMappingStatus": "exact_label_or_alias",
+      "rosterMappedDiseaseCurie": "MONDO:0044749",
+      "rosterMappedDiseaseLabel": "X-linked congenital stationary night blindness",
+      "recommendedDecision": "candidate_auto_accept",
+      "recommendedScope": "candidate_disease_specific",
+      "recommendationReason": "Exact disease-label mapping exists, but manual approval is still required before ingestion.",
+      "policy": {
+        "ingestionDecision": "",
+        "chapterScope": "",
+        "targetingMode": "",
+        "diseaseTargets": [],
+        "notes": ""
+      }
+    },
+    {
+      "chapterKey": "x_linked_dystonia_parkinsonism",
+      "nbkId": "",
+      "chapterTitle": "X-Linked Dystonia-Parkinsonism",
+      "chapterPath": "/sites/books/n/gene/xdp/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/xdp/",
+      "rosterMappingStatus": "exact_label_or_alias",
+      "rosterMappedDiseaseCurie": "MONDO:0010747",
+      "rosterMappedDiseaseLabel": "X-linked dystonia-parkinsonism",
+      "recommendedDecision": "candidate_auto_accept",
+      "recommendedScope": "candidate_disease_specific",
+      "recommendationReason": "Exact disease-label mapping exists, but manual approval is still required before ingestion.",
+      "policy": {
+        "ingestionDecision": "",
+        "chapterScope": "",
+        "targetingMode": "",
+        "diseaseTargets": [],
+        "notes": ""
+      }
+    },
+    {
+      "chapterKey": "x_linked_hypophosphatemia",
+      "nbkId": "",
+      "chapterTitle": "X-Linked Hypophosphatemia",
+      "chapterPath": "/sites/books/n/gene/rickets-xlh/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/rickets-xlh/",
+      "rosterMappingStatus": "exact_label_or_alias",
+      "rosterMappedDiseaseCurie": "MONDO:0010619",
+      "rosterMappedDiseaseLabel": "X-linked hypophosphatemia",
+      "recommendedDecision": "candidate_auto_accept",
+      "recommendedScope": "candidate_disease_specific",
+      "recommendationReason": "Exact disease-label mapping exists, but manual approval is still required before ingestion.",
+      "policy": {
+        "ingestionDecision": "",
+        "chapterScope": "",
+        "targetingMode": "",
+        "diseaseTargets": [],
+        "notes": ""
+      }
+    },
+    {
+      "chapterKey": "x_linked_lymphoproliferative_disease",
+      "nbkId": "",
+      "chapterTitle": "X-Linked Lymphoproliferative Disease",
+      "chapterPath": "/sites/books/n/gene/x-lpd/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/x-lpd/",
+      "rosterMappingStatus": "exact_label_or_alias",
+      "rosterMappedDiseaseCurie": "MONDO:0010627",
+      "rosterMappedDiseaseLabel": "X-linked lymphoproliferative disease",
+      "recommendedDecision": "candidate_auto_accept",
+      "recommendedScope": "candidate_disease_specific",
+      "recommendationReason": "Exact disease-label mapping exists, but manual approval is still required before ingestion.",
+      "policy": {
+        "ingestionDecision": "",
+        "chapterScope": "",
+        "targetingMode": "",
+        "diseaseTargets": [],
+        "notes": ""
+      }
+    },
+    {
+      "chapterKey": "x_linked_myotubular_myopathy",
+      "nbkId": "",
+      "chapterTitle": "X-Linked Myotubular Myopathy",
+      "chapterPath": "/sites/books/n/gene/mtm/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/mtm/",
+      "rosterMappingStatus": "exact_label_or_alias",
+      "rosterMappedDiseaseCurie": "MONDO:0010683",
+      "rosterMappedDiseaseLabel": "X-linked myotubular myopathy",
+      "recommendedDecision": "candidate_auto_accept",
+      "recommendedScope": "candidate_disease_specific",
+      "recommendationReason": "Exact disease-label mapping exists, but manual approval is still required before ingestion.",
+      "policy": {
+        "ingestionDecision": "",
+        "chapterScope": "",
+        "targetingMode": "",
+        "diseaseTargets": [],
+        "notes": ""
+      }
+    },
+    {
+      "chapterKey": "x_linked_protoporphyria",
+      "nbkId": "",
+      "chapterTitle": "X-Linked Protoporphyria",
+      "chapterPath": "/sites/books/n/gene/epp-xl/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/epp-xl/",
+      "rosterMappingStatus": "unresolved",
+      "rosterMappedDiseaseCurie": "",
+      "rosterMappedDiseaseLabel": "",
+      "recommendedDecision": "review_required",
+      "recommendedScope": "mapping_unresolved",
+      "recommendationReason": "Chapter title does not map cleanly to a disease in the current graph.",
+      "policy": {
+        "ingestionDecision": "",
+        "chapterScope": "",
+        "targetingMode": "",
+        "diseaseTargets": [],
+        "notes": ""
+      }
+    },
+    {
+      "chapterKey": "x_linked_severe_combined_immunodeficiency",
+      "nbkId": "",
+      "chapterTitle": "X-Linked Severe Combined Immunodeficiency",
+      "chapterPath": "/sites/books/n/gene/x-scid/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/x-scid/",
+      "rosterMappingStatus": "exact_label_or_alias",
+      "rosterMappedDiseaseCurie": "MONDO:0010315",
+      "rosterMappedDiseaseLabel": "T-B+ severe combined immunodeficiency due to gamma chain deficiency",
+      "recommendedDecision": "candidate_auto_accept",
+      "recommendedScope": "candidate_disease_specific",
+      "recommendationReason": "Exact disease-label mapping exists, but manual approval is still required before ingestion.",
+      "policy": {
+        "ingestionDecision": "",
+        "chapterScope": "",
+        "targetingMode": "",
+        "diseaseTargets": [],
+        "notes": ""
+      }
+    },
+    {
+      "chapterKey": "x_linked_spondyloepiphyseal_dysplasia_tarda",
+      "nbkId": "",
+      "chapterTitle": "X-Linked Spondyloepiphyseal Dysplasia Tarda",
+      "chapterPath": "/sites/books/n/gene/sedt/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/sedt/",
+      "rosterMappingStatus": "unresolved",
+      "rosterMappedDiseaseCurie": "",
+      "rosterMappedDiseaseLabel": "",
+      "recommendedDecision": "review_required",
+      "recommendedScope": "mapping_unresolved",
+      "recommendationReason": "Chapter title does not map cleanly to a disease in the current graph.",
+      "policy": {
+        "ingestionDecision": "",
+        "chapterScope": "",
+        "targetingMode": "",
+        "diseaseTargets": [],
+        "notes": ""
+      }
+    },
+    {
+      "chapterKey": "xq28_duplication_syndrome_int22h1_int22h2_mediated",
+      "nbkId": "",
+      "chapterTitle": "Xq28 Duplication Syndrome, Int22h1/Int22h2 Mediated",
+      "chapterPath": "/sites/books/n/gene/xq28-dup/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/xq28-dup/",
+      "rosterMappingStatus": "unresolved",
+      "rosterMappedDiseaseCurie": "",
+      "rosterMappedDiseaseLabel": "",
+      "recommendedDecision": "review_required",
+      "recommendedScope": "mapping_unresolved",
+      "recommendationReason": "Chapter title does not map cleanly to a disease in the current graph.",
+      "policy": {
+        "ingestionDecision": "",
+        "chapterScope": "",
+        "targetingMode": "",
+        "diseaseTargets": [],
+        "notes": ""
+      }
+    },
+    {
+      "chapterKey": "yars1_deficiency",
+      "nbkId": "",
+      "chapterTitle": "YARS1 Deficiency",
+      "chapterPath": "/sites/books/n/gene/yars1-def/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/yars1-def/",
+      "rosterMappingStatus": "unresolved",
+      "rosterMappedDiseaseCurie": "",
+      "rosterMappedDiseaseLabel": "",
+      "recommendedDecision": "review_required",
+      "recommendedScope": "mapping_unresolved",
+      "recommendationReason": "Chapter title does not map cleanly to a disease in the current graph.",
+      "policy": {
+        "ingestionDecision": "",
+        "chapterScope": "",
+        "targetingMode": "",
+        "diseaseTargets": [],
+        "notes": ""
+      }
+    },
+    {
+      "chapterKey": "y_chromosome_infertility",
+      "nbkId": "",
+      "chapterTitle": "Y Chromosome Infertility",
+      "chapterPath": "/sites/books/n/gene/yci/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/yci/",
+      "rosterMappingStatus": "exact_label_or_alias",
+      "rosterMappedDiseaseCurie": "MONDO:0042605",
+      "rosterMappedDiseaseLabel": "Y chromosome infertility due to DAZ1 deletion",
+      "recommendedDecision": "candidate_auto_accept",
+      "recommendedScope": "candidate_disease_specific",
+      "recommendationReason": "Exact disease-label mapping exists, but manual approval is still required before ingestion.",
+      "policy": {
+        "ingestionDecision": "",
+        "chapterScope": "",
+        "targetingMode": "",
+        "diseaseTargets": [],
+        "notes": ""
+      }
+    },
+    {
+      "chapterKey": "yif1b_related_neurodevelopmental_disorder",
+      "nbkId": "",
+      "chapterTitle": "YIF1B -Related Neurodevelopmental Disorder",
+      "chapterPath": "/sites/books/n/gene/yif1b-ndd/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/yif1b-ndd/",
+      "rosterMappingStatus": "unresolved",
+      "rosterMappedDiseaseCurie": "",
+      "rosterMappedDiseaseLabel": "",
+      "recommendedDecision": "review_required",
+      "recommendedScope": "mapping_unresolved",
+      "recommendationReason": "Chapter title does not map cleanly to a disease in the current graph.",
+      "policy": {
+        "ingestionDecision": "",
+        "chapterScope": "",
+        "targetingMode": "",
+        "diseaseTargets": [],
+        "notes": ""
+      }
+    },
+    {
+      "chapterKey": "zap70_related_combined_immunodeficiency",
+      "nbkId": "",
+      "chapterTitle": "ZAP70 -Related Combined Immunodeficiency",
+      "chapterPath": "/sites/books/n/gene/zap70-scid/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/zap70-scid/",
+      "rosterMappingStatus": "unresolved",
+      "rosterMappedDiseaseCurie": "",
+      "rosterMappedDiseaseLabel": "",
+      "recommendedDecision": "review_required",
+      "recommendedScope": "mapping_unresolved",
+      "recommendationReason": "Chapter title does not map cleanly to a disease in the current graph.",
+      "policy": {
+        "ingestionDecision": "",
+        "chapterScope": "",
+        "targetingMode": "",
+        "diseaseTargets": [],
+        "notes": ""
+      }
+    },
+    {
+      "chapterKey": "zellweger_spectrum_disorder",
+      "nbkId": "",
+      "chapterTitle": "Zellweger Spectrum Disorder",
+      "chapterPath": "/sites/books/n/gene/pbd/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/pbd/",
+      "rosterMappingStatus": "exact_label_or_alias",
+      "rosterMappedDiseaseCurie": "MONDO:0019234",
+      "rosterMappedDiseaseLabel": "peroxisome biogenesis disorder",
+      "recommendedDecision": "candidate_auto_accept",
+      "recommendedScope": "candidate_disease_specific",
+      "recommendationReason": "Exact disease-label mapping exists, but manual approval is still required before ingestion.",
+      "policy": {
+        "ingestionDecision": "",
+        "chapterScope": "",
+        "targetingMode": "",
+        "diseaseTargets": [],
+        "notes": ""
+      }
+    },
+    {
+      "chapterKey": "zhu_tokita_takenouchi_kim_syndrome",
+      "nbkId": "",
+      "chapterTitle": "Zhu-Tokita-Takenouchi-Kim Syndrome",
+      "chapterPath": "/sites/books/n/gene/zttk/",
+      "chapterUrl": "https://www.ncbi.nlm.nih.gov/sites/books/n/gene/zttk/",
+      "rosterMappingStatus": "exact_label_or_alias",
+      "rosterMappedDiseaseCurie": "MONDO:0014936",
+      "rosterMappedDiseaseLabel": "ZTTK syndrome",
+      "recommendedDecision": "candidate_auto_accept",
+      "recommendedScope": "candidate_disease_specific",
+      "recommendationReason": "Exact disease-label mapping exists, but manual approval is still required before ingestion.",
+      "policy": {
+        "ingestionDecision": "",
+        "chapterScope": "",
+        "targetingMode": "",
+        "diseaseTargets": [],
+        "notes": ""
+      }
+    }
+  ],
+  "derivedFrom": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/data/source-enrichment/genereviews-chapter-policy-template-20260329.json",
+  "derivedMode": "tail",
+  "derivedLimit": 50
+}

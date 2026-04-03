@@ -6,8 +6,7 @@ import {
   callOpenAiCompatJson,
   createStageTracker,
   ensureDir,
-  locateCandidateContext,
-  matchesExistingAnchor,
+  finalizePhenotypeCandidates,
   parseArgs,
   writeJson
 } from '../lib/genereviewsPipeline.js';
@@ -129,33 +128,12 @@ async function main() {
 
       const rawCandidates = Array.isArray(parsed?.features) ? parsed.features : [];
       const anchors = anchorPayload.anchors || [];
-      const candidates = [];
-      for (const candidate of rawCandidates) {
-        const label = String(candidate?.label || '').trim();
-        const status = String(candidate?.status || 'present').trim().toLowerCase() === 'excluded' ? 'excluded' : 'present';
-        if (!label) continue;
-        if (matchesExistingAnchor(label, anchors)) continue;
-        const context = locateCandidateContext(clinicalStructure, label);
-        candidates.push({
-          label,
-          status,
-          source: `${providerName}_candidate`,
-          source_sentence: context.source_sentence,
-          paragraph: context.paragraph,
-          section_id: context.section_id,
-          section_heading: context.section_heading,
-          paragraph_id: context.paragraph_id,
-          paragraph_index: context.paragraph_index,
-          paragraph_char_start: context.paragraph_char_start,
-          paragraph_char_end: context.paragraph_char_end,
-          sentence_id: context.sentence_id,
-          sentence_index: context.sentence_index,
-          sentence_char_start: context.sentence_char_start,
-          sentence_char_end: context.sentence_char_end,
-          match_char_start: context.match_char_start,
-          match_char_end: context.match_char_end
-        });
-      }
+      const { candidates, rejectedCandidates } = finalizePhenotypeCandidates(
+        rawCandidates,
+        anchors,
+        clinicalStructure,
+        `${providerName}_candidate`
+      );
 
       await writeJson(outputPath, {
         created_at: new Date().toISOString(),
@@ -167,7 +145,10 @@ async function main() {
         chapter_title: resolvedChapterTitle,
         usage,
         raw_output: rawOutput,
+        raw_candidate_count: rawCandidates.length,
         candidate_count: candidates.length,
+        rejected_candidate_count: rejectedCandidates.length,
+        rejected_candidates: rejectedCandidates,
         candidates
       });
 

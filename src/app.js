@@ -62,6 +62,9 @@ export function createApp(runtimeStatus, options = {}) {
   app.get('/audit/genereviews', (_req, res) => {
     res.sendFile(path.join(publicDir, 'geneReviewsAudit.html'));
   });
+  app.get('/audit/genereviews/run-status', (_req, res) => {
+    res.sendFile(path.join(publicDir, 'geneReviewsRunStatus.html'));
+  });
   app.use(express.static(publicDir));
 
   app.use((error, _req, res, _next) => {

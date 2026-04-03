@@ -164,6 +164,9 @@ function finalizeCandidate(candidate) {
     sentence_char_end: candidate.sentence_char_end ?? null,
     match_char_start: candidate.match_char_start ?? null,
     match_char_end: candidate.match_char_end ?? null,
+    assertion_status_origin: candidate.assertion_status_origin || null,
+    assertion_reason: candidate.assertion_reason || null,
+    assertion_evidence: candidate.assertion_evidence || '',
     top_matches: candidate.top_matches,
     mapped_hpo_id: trust === 'reject' ? null : best.hpo_id,
     mapped_hpo_label: trust === 'reject' ? null : best.hpo_label,
@@ -254,7 +257,12 @@ async function main() {
 
   console.log('[mapCandidatesToHPO] loading phenotype rows');
   const phenotypeRows = phenotypesJson
-    ? (JSON.parse(await fsp.readFile(phenotypesJson, 'utf8')).phenotype_rows || [])
+    ? (() => {
+        const parsed = JSON.parse(fs.readFileSync(phenotypesJson, 'utf8'));
+        if (Array.isArray(parsed)) return parsed;
+        if (Array.isArray(parsed?.phenotype_rows)) return parsed.phenotype_rows;
+        return [];
+      })()
     : await withClient((client) => loadPhenotypeBaseRows(client));
   console.log(`[mapCandidatesToHPO] loaded ${phenotypeRows.length} phenotype rows`);
   const { chapters } = await loadPolicyFile(policyJson);
@@ -324,6 +332,9 @@ async function main() {
           sentence_char_end: candidate.sentence_char_end ?? null,
           match_char_start: candidate.match_char_start ?? null,
           match_char_end: candidate.match_char_end ?? null,
+          assertion_status_origin: candidate.assertion_status_origin || null,
+          assertion_reason: candidate.assertion_reason || null,
+          assertion_evidence: candidate.assertion_evidence || '',
           embedding: [],
           top_matches: []
         });

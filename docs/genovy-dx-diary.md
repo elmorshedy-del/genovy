@@ -4100,3 +4100,1594 @@ Status:
   - current API/export coverage
   - real resolved vs unresolved signals
   - exact consultant questions
+## 2026-03-31 - Prepared dedicated 50-chapter review-first run profile
+
+- Added new GeneReviews profile `review-first-50-20260331` on the settled architecture.
+- Bound it to the tail 50 chapters from `genereviews-chapter-policy-template-20260329.json`.
+- Stages are: fetch -> phenotagger-local -> anchors -> candidates-gemini-flash -> map -> metadata-medgemma -> verify-medgemma -> manifest-medgemma.
+- Uses local Stage 6 snapshot inputs and deterministic verify before manifest/export.
+- Wrote execution/runbook doc: `docs/genereviews-review-first-50-run-plan-20260331.md`.
+- Dry run passed end-to-end through stage resolution.
+- Updated `gr:check` so MedGemma readiness reflects the active default endpoint URL rather than requiring an explicit exported base URL.
+- Did not start the run.
+
+## 2026-04-01 - Hardened Stage 5 after live USP7 failure probe
+
+- Implemented deterministic metadata hardening in:
+  - `src/lib/genereviewsPipeline.js`
+  - `src/scripts/extractPhenotypeMetadata.js`
+  - `src/scripts/extractPhenotypeAnchors.js`
+  - `src/lib/genereviewsVerification.js`
+  - `src/lib/genereviewsApiExports.js`
+- Fixed deterministic frequency range parsing:
+  - `53%-65%` is now preserved as a range
+  - added `frequency_value_min`, `frequency_value_max`, and `frequency_value_type`
+- Tightened Stage 5 evidence use:
+  - MedGemma extra context sentences now must still contain the phenotype phrase
+  - onset now requires phenotype-local evidence and same-clause attachment
+  - progression / treatment_response now require phenotype-local evidence instead of paragraph borrowing
+  - MedGemma evidence-backed frequency now trusts deterministic sentence parsing over raw LLM scalar collapse
+- Added provenance completeness gating:
+  - rows missing paragraph/sentence ids or match offsets no longer get metadata populated
+  - `provenance_complete` is now carried on enriched rows
+- Fixed upstream supplement-anchor hydration:
+  - PhenoTagger supplement occurrences that lacked sentence/paragraph ids are now hydrated from the cached clinical structure before merge
+- Verified cheap regressions:
+  - `extractScopedFrequency('...53%-65%...', 'vision issues')` now returns the full range plus min/max
+  - rebuilt USP7 Stage 2 anchors into `output/genereviews-pipeline-review-first-50-20260331/stage2_anchors_patchcheck`
+  - `Abnormality of the eye` / `Abnormality of vision` now have `paragraph_id`, `sentence_id`, and exact match offsets
+- Ran a narrow MedGemma proof on only the five real USP7 failure rows:
+  - inputs under `output/genereviews-pipeline-review-first-50-20260331/usp7_failure_probe`
+  - output:
+    - `output/genereviews-pipeline-review-first-50-20260331/usp7_failure_probe/metadata/USP7_Related_Hao_Fountain_Syndrome_enriched.json`
+- Proof result on the exact prior failures:
+  - `Abnormality of the eye` and `Abnormality of vision` now keep `53%-65%`
+  - `Hyperbilirubinemia` no longer inherits `neonatal`
+  - `Scoliosis` and `Kyphosis` no longer inherit `slight progression`
+- MedGemma endpoint `medgemma-27b-text-it-hgw` was resumed only for the narrow proof and then paused again.
+- Next move:
+  - rerun USP7 or a 3-5 chapter micro-batch on the patched path before restarting any larger review-first batch
+
+## 2026-04-01 - Patched Stage 1 truncation and Stage 3 candidate pollution
+
+- Audited the stopped `review-first-50` emitted outputs and confirmed two upstream problems:
+  - `WFS1 Spectrum Disorder` Stage 1 was truncated to just `Clinical Characteristics`
+  - Stage 3 was emitting table chrome / headings / disease-course statements as phenotype candidates
+- Root cause for WFS1 truncation:
+  - `extractClinicalSectionsAndTables(...)` was stopping section extraction at the first nested subsection `<div>`
+  - this cut `wfs.Clinical_Characteristics` off before the actual clinical description block
+- Fixed Stage 1 parsing in `src/lib/genereviewsPipeline.js`:
+  - section extraction now closes on balanced `<div> ... </div>` depth rather than the next uppercase-id block
+  - section markers now match nested ids like `Clinical_Description__...` and `Suggestive_Findings__...`
+  - table-only prose units are now skipped from `clinical_text`; tables remain preserved in `tables.json`
+- Narrow Stage 1 proof:
+  - rebuilt WFS1 from cached raw HTML only into:
+    - `output/genereviews-pipeline-review-first-50-20260331/stage1_fetch_patchcheck2`
+  - WFS1 now has:
+    - `paragraph_count = 32`
+    - `sentence_count = 57`
+    - meaningful headings including:
+      - `Suggestive Findings – Classic WFS1 Spectrum Disorder`
+      - `Clinical Description – Classic WFS1 Spectrum Disorder`
+      - `Clinical Description – Nonclassic WFS1 Spectrum Disorder`
+      - `Genotype-Phenotype Correlations`
+      - `Prevalence`
+  - `View in own window` is no longer present in the rebuilt WFS1 `clinical_text`
+- Added deterministic Stage 3 candidate filtering in:
+  - `src/scripts/extractCandidatePhenotypes.js`
+  - `src/scripts/extractCandidatePhenotypesOpenAiCompat.js`
+  - shared evaluation helper in `src/lib/genereviewsPipeline.js`
+- New Stage 3 filter behavior:
+  - rejects headings/chrome like `clinical characteristics` and `View in own window`
+  - rejects treatment-response statements as phenotype candidates
+  - rejects disease-course / outcome statements like:
+    - `asymptomatic at diagnosis`
+    - `normal cognitive outcome`
+  - rejects table-context candidates when the located evidence is still chrome
+  - candidate output now keeps an audit trail:
+    - `raw_candidate_count`
+    - `rejected_candidate_count`
+    - `rejected_candidates[]` with reasons
+- Narrow no-LLM replay proof from the real saved Stage 3 raw outputs:
+  - output dir:
+    - `output/genereviews-pipeline-review-first-50-20260331/stage3_candidates_patchcheck2`
+  - `WFS1`:
+    - raw `1`
+    - kept `0`
+    - rejected `clinical characteristics`
+  - `VEXAS`:
+    - raw `10`
+    - kept `6`
+    - rejected `4`
+    - correctly rejected:
+      - `onset in late adulthood`
+      - `failure to respond to classic immunosuppressive treatments`
+      - `vacuoles in myeloid precursor cells`
+      - `vacuoles in erythroid precursor cells`
+  - `Very Long-Chain Acyl-Coenzyme A Dehydrogenase Deficiency`:
+    - raw `7`
+    - kept `3`
+    - rejected `4`
+    - correctly rejected:
+      - `asymptomatic at diagnosis`
+      - `normal cognitive outcome`
+      - `cardiac dysfunction reversible with treatment`
+      - `hypoglycemia not present at symptom onset in myopathic form`
+- Current practical state after this pass:
+  - Stage 1 truncation class is fixed on the proven WFS1 case
+  - Stage 3 now has a deterministic reject layer with an auditable trail instead of silently passing obvious junk
+  - next safe validation step remains a `3-5` chapter micro-batch, not another `50`
+
+## 2026-04-01 - Cached latest5 upstream rerun without MedGemma
+
+- Ran the patched upstream path on the cached settled `latest5` slice only, stopping before MedGemma:
+  - Stage 1: `stage1_fetch_patchcheck_20260401`
+  - Stage 2b: `stage2b_phenotagger_local_patchcheck_20260401`
+  - Stage 2: `stage2_anchors_patchcheck_20260401`
+  - Stage 3: `stage3_candidates_patchcheck_20260401`
+  - Stage 4: `stage4_mapped_candidates_patchcheck_20260401`
+- No network fetches were needed for Stage 1:
+  - seeded the rerun from the existing cached `*_raw.html` files
+- Stage results:
+  - Stage 1 fetch: `5/5`, `0` errors
+  - Stage 2b local PhenoTagger: `5/5`, `0` errors
+  - Stage 2 anchors: `5/5`, `0` errors
+  - Stage 3 Gemini candidates: `5/5`, `0` errors
+  - Stage 4 BioLORD mapping: `5/5`, `0` errors
+- Useful proof from the cached latest5 rerun:
+  - Stage 1 rebuilt all five chapters with full prose and stable `nbk_id` values
+  - Stage 1 table-only prose is excluded from `clinical_text`
+  - Stage 4 completed quickly once the settled `biolord_cache_py310_np` cache was reused
+- Stage 3 chapter-level counts compared to the earlier settled run:
+  - `Y Chromosome Infertility`: `1 -> 5`
+  - `YIF1B`: `6 -> 10`
+  - `ZAP70`: `57 -> 54` with `4` explicit rejections
+  - `Zellweger`: `9 -> 12`
+  - `ZTTK`: `19 -> 5`
+- Stage 4 accepted mapped rows compared to the earlier settled run:
+  - `Y Chromosome Infertility`: `0 -> 0`
+  - `YIF1B`: `2 -> 3`
+  - `ZAP70`: `5 -> 5`
+  - `Zellweger`: `1 -> 1`
+  - `ZTTK`: `15 -> 3`
+- Honest interpretation:
+  - the deterministic structural fixes held:
+    - no truncation
+    - no table chrome leakage
+    - no MedGemma needed to validate that upstream change
+  - but the latest5 rerun also exposed residual Stage 3 semantic issues:
+    - `Y Chromosome Infertility` still keeps low-value normal/no-symptom statements
+    - `ZTTK` still shows context resolution drift (e.g. `IgA deficiency` anchored to the wrong sentence)
+    - `ZAP70` still contains many immunologic/lab-style rows that may be clinically useful but need tighter definition of what belongs in phenotype discovery
+- Conclusion after this cached latest5 upstream pass:
+  - the structural patches survived
+  - Stage 3 still needs another tightening round on:
+    - normal / no-symptom statements
+    - sentence selection / context anchoring
+    - phenotype-vs-lab/immunology candidate boundaries
+
+2026-04-01 18:45 EDT
+- Tightened Stage 3 again in shared pipeline code instead of prompt-only changes:
+  - added deterministic normal/no-symptom rejection
+  - added prognosis / phenotype-summary rejection
+  - added context-match scoring with weak-match rejection
+  - improved candidate sentence selection so token-overlap matches prefer the real descriptive sentence instead of the first heading-like sentence
+  - added a narrow implied-function exception so rows like `inability to walk independently` survive when the source sentence explicitly encodes limited capacity / milestone acquisition
+- Materialized a strict deterministic replay of cached latest5 Stage 3 outputs into:
+  - `output/genereviews-pipeline-latest5-settled-20260330/stage3_candidates_patchcheck_20260401_strict`
+- Remapped the strict candidate set into:
+  - `output/genereviews-pipeline-latest5-settled-20260330/stage4_mapped_candidates_patchcheck_20260401_strict`
+- Evidence from the strict replay:
+  - `Y Chromosome Infertility`: reduced from `5` candidates to `1` kept + `4` rejected, with the normal/no-symptom rows now correctly filtered
+  - `ZTTK`: `IgA deficiency` now rejected as `weak_context_match`; `atrophy of white matter` and `smooth cerebral cortex` now anchor to the actual MRI sentence instead of the generic `Brain MRI findings.` heading sentence
+  - `ZAP70`: candidate count reduced from `54` to `38`; prognosis / normal-state / response-style rows are filtered while clinically specific infection / immunology findings remain
+  - `YIF1B`: the first strict pass over-rejected implied milestone loss rows; added a narrow implied-function rescue rule and restored those rows without reopening the earlier junk classes
+- Current honest state after the strict cached latest5 replay:
+  - Stage 3 is materially better and much more auditable
+  - the known latest5 junk classes are now deterministically blocked
+  - remaining uncertainty is no longer “is Stage 3 filtering real?” but “is the current phenotype-vs-lab boundary aggressive enough or still too permissive for chapters like ZAP70?”
+
+2026-04-01 19:10 EDT
+- Ran the cheap `scispaCy` viability probe without turning MedGemma back on.
+- Installed an isolated biomedical parser surface only for probing:
+  - packages targeted into `.deps/scispacy_probe`
+  - used the existing Python 3.10 runtime from the local PhenoTagger environment
+  - did not modify the main project runtime or Stage 5 code path yet
+- Probe inputs were saved Stage 5 sentences / evidence examples, not a new run:
+  - USP7 progression paragraph
+  - USP7 hyperbilirubinemia / neonatal jaundice pair
+  - ZAP70 treatment-response examples
+  - ZTTK onset/progression sentence
+- Main conclusion:
+  - `scispaCy` is useful as a same-sentence attachment helper
+  - it clearly attaches:
+    - `treatment-refractory` -> `thrombocytopenia`
+    - `resistant` -> `dermatitis`
+    - `childhood` -> `onset`
+  - it does not add much for already-obvious cross-sentence cases like:
+    - `neonatal jaundice` vs later `hyperbilirubinemia`
+    - paragraph-level progression leakage after the phenotype sentence
+- Decision from the cheap probe:
+  - `scispaCy` is worth integrating only as a narrow Stage 5 attachment validator for onset / progression / treatment-response in same-sentence hard cases
+  - it should not replace the existing deterministic sentence / clause guards
+
+2026-04-01 19:32 EDT
+- Integrated the narrow `scispaCy` validator into Stage 5 without starting a new extraction run.
+- New code added:
+  - `src/lib/scispacyAttachmentValidator.js`
+  - `src/scripts/validateMetadataAttachmentSciSpacy.py`
+- Stage 5 wiring in `src/scripts/extractPhenotypeMetadata.js` now:
+  - keeps deterministic sentence / clause guards as primary
+  - runs `scispaCy` only for same-sentence:
+    - `onset_raw`
+    - `progression_raw`
+    - `treatment_response_raw`
+  - clears the field only on parser-backed `fail`
+  - keeps `pass` / `unknown` as recorded attachment-validation metadata
+- Cheap saved-case proof after integration:
+  - `treatment-refractory` -> `thrombocytopenia`: `pass`
+  - `resistant to therapy` -> `dermatitis`: `pass`
+  - ZTTK `childhood onset`: `unknown` because the onset modifier resolves to generic `adult`, so the validator stays conservative
+  - ZTTK `worsened over time`: `unknown`, which is acceptable because deterministic locality still does the primary gating
+- Syntax checks passed:
+  - `node --check src/lib/scispacyAttachmentValidator.js`
+  - `node --check src/scripts/extractPhenotypeMetadata.js`
+  - `python -m py_compile src/scripts/validateMetadataAttachmentSciSpacy.py`
+
+2026-04-01 20:12 EDT
+- Built a new static HTML explainer for the current GeneReviews pipeline in:
+  - `/Users/ahmedelmorshedy/Documents/All HTMLs/2026-04-01/genereviews-pipeline-status.html`
+- Purpose:
+  - give a non-specialist, example-heavy explanation of the pipeline without relying on internal jargon
+  - show intended pipeline behavior and real build status together instead of splitting them across separate documents
+- Structure:
+  - overview and simple definitions
+  - parallel intended-vs-real pipeline map
+  - one section per stage explaining:
+    - what it does
+    - why the pipeline needs it
+    - what output it should produce
+    - how bad output damages the next stage
+    - what broke, what was fixed, and what is still under proof
+  - final outputs section summarizing human review, conservative ingestion, and API/export goals
+
+2026-04-01 20:32 EDT
+- Built a second GeneReviews explainer HTML in the more glanceable vertical-map style:
+  - `/Users/ahmedelmorshedy/Documents/All HTMLs/2026-04-01/genereviews-pipeline-map-v2.html`
+- This version is optimized for fast comparison on one page rather than document-style reading.
+- Added:
+  - side-by-side “should do” vs “real status” cards for each stage
+  - example drawers inside stage cards
+  - confidence bars on the real-status side
+  - flip cards that explain:
+  - how the stage works in the pipeline
+  - what the model/rule technically is
+  - how deterministic it is
+  - what downstream corruption happens if that stage is weak
+
+2026-04-01 22:10 EDT
+- Question:
+  - Can Stage 3 get an explicit lightweight negation/assertion layer now, without changing the broader architecture?
+- Evidence surface:
+  - shared candidate-finalization path in `src/lib/genereviewsPipeline.js`
+  - latest5 cached Stage 1 / Stage 2 rerun surfaces:
+    - `output/genereviews-pipeline-latest5-settled-20260330/stage1_fetch_patchcheck_20260401`
+    - `output/genereviews-pipeline-latest5-settled-20260330/stage2_anchors_patchcheck_20260401`
+  - fresh latest5 Stage 3 rerun:
+    - `output/genereviews-pipeline-latest5-settled-20260330/stage3_candidates_negation_patchcheck_20260401`
+  - cheap synthetic proof cases run through `finalizePhenotypeCandidates(...)`
+- Intentionally not inspected:
+  - no broad 50-chapter rerun
+  - no Stage 5 rerun
+  - no OpenBioNER / GLiNER bakeoff yet
+- What changed:
+  - added a sentence-local assertion layer in `src/lib/genereviewsPipeline.js`
+  - behavior:
+    - explicit local negation flips `present -> excluded`
+    - preserved / normal statements get rejected
+    - clear conditional / risk statements get rejected
+  - preserved new audit fields:
+    - `assertion_status_origin`
+    - `assertion_reason`
+    - `assertion_evidence`
+  - propagated those fields through:
+    - `src/scripts/mapCandidatesToHPO.js`
+    - `src/scripts/extractPhenotypeMetadata.js`
+- Real proof:
+  - synthetic:
+    - `Seizures are not typically present...` now becomes `excluded`
+    - `Cognitive function is usually preserved.` now rejects `Cognitive function`
+    - `Absence of speech...` stays positive as a real abnormal phenotype phrase
+  - latest5 rerun:
+    - clean execution: `5/5`, `0` errors
+    - summary:
+      - `Y Chromosome Infertility`: `4`
+      - `YIF1B`: `9`
+      - `ZAP70`: `35`
+      - `Zellweger`: `8`
+      - `ZTTK`: `5`
+    - real newly-caught assertion-style junk on latest5:
+      - `potentially decreased expression of CTLA4 in regulatory T cells`
+      - `potentially decreased expression of TGFB in regulatory T cells`
+      rejected as `conditional_or_risk_context`
+    - nuance:
+      - the explicit `sentence_negation_inferred` path did not fire often on this latest5 slice
+      - the strongest proof for true negation flipping came from focused sentence probes rather than from many natural latest5 examples
+- Extra bug found while validating:
+  - `mapCandidatesToHPO.js` only accepted `--phenotypesJson` when the JSON had a `phenotype_rows` wrapper
+  - cached BioLORD phenotype files on disk are plain arrays
+  - patched the mapper to accept both shapes
+- Result:
+  - explicit Stage 3 negation/assertion handling is now real
+  - it behaves correctly on the targeted failure classes
+  - latest5 did not contain many dramatic negation examples, so the biggest proof came from focused assertion probes plus a clean rerun
+- Status:
+  - kept
+- Next move:
+  - run the Stage 3 bakeoff on the same frozen slice:
+    - current Gemini + filters
+    - GLiNER-BioMed
+    - later OpenBioNER-v2 if setup is clean
+
+2026-04-01 22:32 EDT
+- Question:
+  - Can we turn the new Stage 3 assertion logic into a durable regression surface with many confusing synthetic lines instead of a few spot probes?
+- Evidence surface:
+  - new synthetic fixture:
+    - `test/fixtures/genereviewsCandidateAssertionSynthetic.js`
+  - new node test:
+    - `test/genereviewsCandidateAssertionSynthetic.test.js`
+  - direct execution:
+    - `node --test test/genereviewsCandidateAssertionSynthetic.test.js`
+- Intentionally not inspected:
+  - no new model bakeoff yet
+  - no Stage 5 rerun
+  - no broad chapter rerun beyond the earlier latest5 patchcheck
+- What was added:
+  - `100` synthetic Stage 3 assertion cases across:
+    - local negation -> `excluded`
+    - normal / preserved -> reject
+    - conditional / risk -> reject
+    - true abnormal “absence/loss/lack” phenotypes -> keep present
+    - standard positive findings -> keep present
+    - model-excluded negatives -> remain excluded
+- What the suite found:
+  - one real logic gap:
+    - `has not been reported` was not being caught as a negative pattern
+  - the rest of the first red run was expectation-shape mismatch in the test, not pipeline failure
+- Patch made:
+  - expanded the negative suffix regex in `src/lib/genereviewsPipeline.js` to catch:
+    - `has not been reported`
+    - `have not been observed`
+    - similar auxiliary-chain negatives
+- Final result:
+  - full suite passes:
+    - `102/102` tests green
+  - command:
+    - `node --test test/genereviewsCandidateAssertionSynthetic.test.js`
+- Status:
+  - kept
+- Why this matters:
+  - the Stage 3 assertion layer now has a real reusable regression surface
+  - future changes to candidate filtering can be checked quickly without rerunning a batch
+
+## 2026-04-01 23:16 EDT — Gemini Flash assertion probe on external Stage 3 regression file
+
+- Question:
+  - If we run a semantic model on the harder external Stage 3 regression file, does Gemini Flash materially outperform the current deterministic assertion layer?
+- Evidence surface:
+  - external file:
+    - `/Users/ahmedelmorshedy/Downloads/stage3_regression_cases.js`
+  - new reusable runner:
+    - `src/scripts/evaluateStage3AssertionWithGemini.js`
+  - output report:
+    - `output/stage3_assertion_gemini_probe_20260401/stage3_regression_cases_gemini_flash_report.json`
+  - output summary:
+    - `output/stage3_assertion_gemini_probe_20260401/stage3_regression_cases_gemini_flash_summary.json`
+- Intentionally not inspected:
+  - no new chapter rerun
+  - no Stage 4 or Stage 5 work
+  - no OpenBioNER / GLiNER bakeoff yet
+- What was done:
+  - batched the `62` external regression cases through `gemini-2.5-flash`
+  - asked for Stage 3-style final outcome:
+    - `present`
+    - `excluded`
+    - `rejected`
+  - also collected predicted origin/reason fields for exact-match comparison
+- Result:
+  - outcome-only accuracy:
+    - `62/62`
+  - exact match:
+    - `58/62`
+  - the only exact-match misses were already-excluded rows where Gemini kept:
+    - `origin = model_excluded`
+    - `reason = null`
+    - instead of copying a local negative reason string
+- Why this matters:
+  - this is strong evidence that a semantic model can outperform the current regex-heavy assertion layer on harder negation / preserved / conditional wording
+  - the remaining disagreement is mostly metadata semantics, not outcome semantics
+- Status:
+  - kept
+
+## 2026-04-01 23:25 EDT — Gemini Flash probe on 100-case tricky Stage 3 fixture
+
+- Question:
+  - Does Gemini Flash stay strong on a larger, deliberately tricky `100`-case external assertion fixture?
+- Evidence surface:
+  - external file:
+    - `/Users/ahmedelmorshedy/Downloads/stage3_tricky_cases.js`
+  - reusable runner:
+    - `src/scripts/evaluateStage3AssertionWithGemini.js`
+  - output report:
+    - `output/stage3_assertion_gemini_tricky_probe_20260401/stage3_regression_cases_gemini_flash_report.json`
+  - output summary:
+    - `output/stage3_assertion_gemini_tricky_probe_20260401/stage3_regression_cases_gemini_flash_summary.json`
+- Intentionally not inspected:
+  - no chapter rerun
+  - no GLiNER/OpenBioNER bakeoff yet
+  - no Stage 5 work
+- Result:
+  - exact match:
+    - `100/100`
+  - outcome-only accuracy:
+    - `100/100`
+  - all categories were fully correct:
+    - negation -> excluded
+    - abnormal absence stays present
+    - normal/preserved -> rejected
+    - conditional/risk -> rejected
+    - standard positives stay present
+    - model-excluded rows remain excluded
+- Why this matters:
+  - on the current external synthetic evidence, Gemini Flash is clearly better than the current deterministic assertion layer
+  - assertion handling is now a serious candidate for semantic-model assistance instead of further regex growth
+
+## 2026-04-01 23:48 EDT — Gemini Flash probe on real-format Stage 3 rows
+
+- Question:
+  - Does Gemini Flash stay strong when the input looks like actual Stage 3 candidate rows instead of simplified sentence fixtures?
+- Evidence surface:
+  - external file:
+    - `/Users/ahmedelmorshedy/Downloads/stage3_realformat_cases.js`
+  - runner:
+    - `src/scripts/evaluateStage3AssertionWithGemini.js`
+  - output report:
+    - `output/stage3_assertion_gemini_realformat_probe_20260401/stage3_regression_cases_gemini_flash_report.json`
+  - output summary:
+    - `output/stage3_assertion_gemini_realformat_probe_20260401/stage3_regression_cases_gemini_flash_summary.json`
+- Intentionally not inspected:
+  - no live chapter rerun
+  - no deterministic-vs-Gemini blended design yet
+- Result:
+  - total cases:
+    - `50`
+  - exact match:
+    - `49/50`
+  - outcome-only accuracy:
+    - `49/50`
+- Single miss:
+  - `p24_s1`
+  - label:
+    - `cataracts`
+  - sentence:
+    - `Slit-lamp examination is unremarkable and cataracts have not been described.`
+  - expected:
+    - `excluded`
+  - Gemini predicted:
+    - `present`
+- Why this matters:
+  - Gemini still looks strong on inputs closer to the real pipeline row shape
+  - but it is not perfect, and this miss is exactly the sort of local negation phrasing we would need to guard if assertion handling becomes model-assisted
+
+## 2026-04-02 00:18 EDT — Early Stage 3 contender gate on tricky assertion surface
+
+- Question:
+  - Before building a full bakeoff, which Stage 3 contenders are practical enough to deserve deeper work?
+- Evidence surface:
+  - tricky fixture:
+    - `/Users/ahmedelmorshedy/Downloads/stage3_tricky_cases.js`
+  - local HF / Python probing:
+    - `GLiNER`
+    - `OpenBioNER-v2`
+    - `VANER2` repo metadata and README
+- Intentionally not inspected:
+  - no live chapter rerun
+  - no full Stage 3 extraction benchmark yet
+  - no Stage 4 or Stage 5 work
+- What happened:
+  - `GLiNER`:
+    - quick full-file mention-detection gate on the `100` tricky cases
+    - best label set was the original baseline:
+      - `['phenotype', 'symptom', 'clinical finding', 'sign']`
+    - result:
+      - `57/100` detected
+    - alternate label sets were worse, not better
+  - `OpenBioNER-v2`:
+    - standard `transformers` token-classification load path is not trustworthy here
+    - the checkpoint reports missing classifier weights and unexpected parameters
+    - naive overlap looked artificially high because it chunked large spans and alternating labels, not because it gave clean phenotype extraction
+  - `VANER2`:
+    - not a quick drop-in contender
+    - README requires:
+      - the project code
+      - Llama 3.1 8B base model
+      - about `20GB` GPU memory
+- Current read:
+  - `GLiNER`: practical to test, but early gate is weaker than hoped
+  - `OpenBioNER-v2`: promising on paper, but needs an official/adapter-aware inference path, not naive `transformers` use
+  - `VANER2`: blocked for quick local bakeoff; treat as separate engineering effort, not a same-day contender
+
+## 2026-04-02 01:03 EDT — Proper OpenBioNER-v2 runner verified and benchmarked
+
+- Question:
+  - If we run OpenBioNER-v2 through its actual supported path, does it become a serious Stage 3 contender?
+- Evidence surface:
+  - official usage pattern from the Hugging Face article:
+    - `zshot + spaCy + LinkerSMXM`
+  - benchmark fixtures:
+    - `/Users/ahmedelmorshedy/Downloads/stage3_tricky_cases.js`
+    - `/Users/ahmedelmorshedy/Downloads/stage3_regression_cases.js`
+    - `/Users/ahmedelmorshedy/Downloads/stage3_realformat_cases.js`
+  - saved reports:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/stage3_extractor_contender_probe_20260401/openbioner_tricky_gate_summary.json`
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/stage3_extractor_contender_probe_20260401/openbioner_tricky_gate_multidesc_summary.json`
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/stage3_extractor_contender_probe_20260401/openbioner_regression_gate_summary.json`
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/stage3_extractor_contender_probe_20260401/openbioner_realformat_gate_summary.json`
+- Intentionally not inspected:
+  - no live chapter rerun
+  - no Stage 4 remap
+  - no Stage 5 work
+- What happened:
+  - built an isolated probe env:
+    - `.deps/openbioner_probe/.venv`
+  - the official OpenBioNER path initially failed because the runner expected an older `transformers` API
+  - pinning the env to:
+    - `transformers==4.51.3`
+    fixed the compatibility issue and made the official sample work
+  - results:
+    - tricky 100, single broad phenotype description:
+      - `54/100`
+    - tricky 100, tuned multi-description configuration:
+      - `68/100`
+    - regression 62, tuned multi-description:
+      - `41/62`
+    - real-format 50, tuned multi-description:
+      - `30/50`
+- Current read:
+  - OpenBioNER-v2 is no longer “unresolved”
+  - it was given a fair enough run
+  - it still does not beat the current semantic Stage 3 path on our current evaluation surfaces
+  - useful conclusion:
+    - proper integration matters
+    - but even after proper integration, this is not the current winner for our Stage 3 need
+
+## 2026-04-02 01:11 EDT — Important benchmark framing correction
+
+- Mistake:
+  - the GLiNER / OpenBioNER / VANER2 checks were treated too much like final Stage 3 contender verdicts
+- Correction:
+  - those models are discovery contenders
+  - the `100`, `62`, and `50` files were assertion-style or mention-detection proxy surfaces
+  - so those results are not enough to reject a discovery model outright
+- What the proxy tests are still good for:
+  - technical feasibility
+  - rough mention-detection sanity
+  - catching broken integrations
+- What they are not good for:
+  - final Stage 3 discovery ranking
+  - chapter-level junk-vs-recall evaluation
+  - downstream mapping usefulness
+- Correct next step:
+  - build a real frozen chapter-level discovery benchmark and rerun the contenders there
+
+## 2026-04-02 14:34 EDT — Stage 2 anchor benchmark harness built and baseline run completed
+
+- Question:
+  - Can the externally generated `anchor_benchmark (1).js` file be used as a real Stage 2 benchmark?
+- Evidence surface:
+  - benchmark file:
+    - `/Users/ahmedelmorshedy/Downloads/anchor_benchmark (1).js`
+  - new harness:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/benchmarkStage2Anchors.js`
+  - phenotype snapshot:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/genereviews-pipeline-latest5-settled-20260330/stage2_anchors_patchcheck_20260401/phenotype_rows_snapshot.json`
+  - outputs:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/stage2_anchor_benchmark_20260402/stage2_anchor_benchmark_summary.json`
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/stage2_anchor_benchmark_20260402/stage2_anchor_benchmark_report.json`
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/stage2_anchor_benchmark_20260402/stage2_anchor_benchmark_failures.json`
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/stage2_anchor_benchmark_20260402/stage2_anchor_benchmark_cases.json`
+- Intentionally not inspected:
+  - no live chapter rerun
+  - no Stage 3 discovery model work in this step
+  - no Stage 5 work
+- What changed:
+  - added a real Stage 2 benchmark harness that:
+    - reads the external JS fixture safely
+    - runs the actual `extractAnchorOccurrences(...)` logic
+    - treats `expectedRejected` as `must not anchor` rather than pretending Stage 2 emits formal rejected rows
+    - freezes a normalized copy of the benchmark into the output folder
+- Baseline result for current Stage 2 anchor path:
+  - exact case match:
+    - `27/100`
+  - expected anchor recall:
+    - `64/107` = `0.5981`
+  - must-not-anchor pass rate:
+    - `16/32` violations => `0.5` pass rate
+- Strong categories:
+  - `multi_anchor_sentence` recall:
+    - `0.9032`
+  - `parent_child_ambiguity` recall:
+    - `0.875`
+  - `exact_label_present` recall:
+    - `0.875`
+- Weak categories:
+  - `negated_anchor` recall:
+    - `0`
+  - `misspelling_present` recall:
+    - `0.2`
+  - `disease_name_not_phenotype` must-not-anchor pass rate:
+    - `0.1`
+- Current read:
+  - the benchmark file is usable for Stage 2
+  - it was worth only a light interpretation tweak, not a rewrite
+  - it exposes real current anchor weaknesses clearly enough to be a useful anchor-side benchmark
+- Important side finding:
+  - `PhenoBCBERT` itself does not appear to be publicly released as a runnable checkpoint because the published paper says the in-house model trained on CHOP data could not be shared for privacy reasons
+
+## 2026-04-02 14:46 EDT — Quick Gemini Flash Stage 2 anchor probe on balanced 50-case slice
+
+- Question:
+  - If we treat anchoring as a sentence-level extraction task, is Gemini Flash competitive enough to be interesting as an anchor-style extractor?
+- Evidence surface:
+  - benchmark:
+    - `/Users/ahmedelmorshedy/Downloads/anchor_benchmark (1).js`
+  - runner:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/evaluateStage2AnchorsWithGemini.js`
+  - outputs:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/stage2_anchor_gemini_probe_20260402/stage2_anchor_gemini_summary.json`
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/stage2_anchor_gemini_probe_20260402/stage2_anchor_gemini_report.json`
+- Intentionally not inspected:
+  - no full 100-case run yet
+  - no chapter-level cost/latency analysis yet
+  - no Stage 3 discovery work in this step
+- What happened:
+  - ran a balanced 50-case subset across all benchmark categories
+  - prompt asked Gemini only for anchor extraction from one sentence:
+    - `hpo_label`
+    - `status`
+    - `match_text`
+- Result:
+  - total:
+    - `50`
+  - exact match:
+    - `47/50`
+  - expected anchor recall:
+    - `48/48` = `1.0`
+  - must-not-anchor pass rate:
+    - `13/13` = `1.0`
+- Current read:
+  - on this synthetic Stage 2 benchmark slice, Gemini Flash is dramatically stronger than the current deterministic anchor baseline
+  - this does not yet prove it should replace Stage 2 operationally
+  - but it is strong enough to justify a fuller benchmark pass and a cost/latency comparison
+
+## 2026-04-02 15:04 EDT — Full 100-case Gemini Stage 2 anchor comparison: Flash vs Pro
+
+- Question:
+  - How does `Gemini 2.5 Pro` compare to `Gemini 2.5 Flash` on the full Stage 2 anchor benchmark?
+- Evidence surface:
+  - same benchmark:
+    - `/Users/ahmedelmorshedy/Downloads/anchor_benchmark (1).js`
+  - same runner:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/evaluateStage2AnchorsWithGemini.js`
+  - full Flash output:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/stage2_anchor_gemini_probe_full_20260402/stage2_anchor_gemini_summary.json`
+  - full Pro output:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/stage2_anchor_gemini_pro_probe_full_20260402/stage2_anchor_gemini_summary.json`
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/stage2_anchor_gemini_pro_probe_full_20260402/stage2_anchor_gemini_report.json`
+- What happened:
+  - first Pro attempt failed because `gemini-2.5-pro` requires thinking mode
+  - reran with:
+    - `--thinkingBudget 1024`
+- Result:
+  - Flash:
+    - exact match:
+      - `85/100`
+    - anchor recall:
+      - `106/107` = `0.9907`
+    - must-not-anchor pass rate:
+      - `0.8438`
+  - Pro:
+    - exact match:
+      - `90/100`
+    - anchor recall:
+      - `107/107` = `1.0`
+    - must-not-anchor pass rate:
+      - `0.9063`
+- Remaining Pro miss pattern:
+  - still mostly:
+    - extra-anchor overgeneration
+    - disease-label anchoring
+  - examples:
+    - extra `Falls`
+    - extra `Bulbar dysfunction`
+    - disease-label style anchors in:
+      - `Spinocerebellar ataxia type 3`
+      - `Early-onset cerebellar ataxia with retained reflexes`
+      - `autosomal recessive nonsyndromic hearing loss`
+- Current read:
+  - Pro is genuinely better than Flash on this benchmark
+  - but the gain is modest compared with the cost/runtime increase
+  - both still need a light post-filter layer if used for Stage 2 operationally
+
+## 2026-04-02 - Flash post-filter probe and residual taxonomy
+
+- Context:
+  - user pushed on whether a disease-name blocker was redundant and whether exact string HPO gating should be tested first
+  - user also asked whether Flash performs better when anchor finding and negation are separated
+- What was tested:
+  - offline only, on saved Flash full-100 Stage 2 anchor output:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/stage2_anchor_gemini_probe_full_20260402/stage2_anchor_gemini_report.json`
+  - first probe:
+    - exact string-only HPO gate on top of raw Flash output
+  - second probe:
+    - narrow disease-name blocker only, without exact string gating
+- Results:
+  - exact string-only HPO gate was too strict:
+    - baseline Flash:
+      - exact:
+        - `85/100`
+      - recall:
+        - `106/107`
+      - must-not-anchor pass:
+        - `27/32`
+    - exact string gate:
+      - exact:
+        - `61/100`
+      - recall:
+        - `66/107`
+      - must-not-anchor pass:
+        - `31/32`
+    - conclusion:
+      - exact HPO string matching kills too much useful recall and should not be the main filter
+  - disease-name blocker only worked much better:
+    - exact:
+      - `88/100`
+    - recall:
+      - `106/107`
+    - must-not-anchor pass:
+      - `30/32`
+    - fixed these 3 disease-name-style false positives:
+      - `anc-061`
+      - `anc-095`
+      - `anc-099`
+- Remaining Flash-after-blocker failures:
+  - `12` cases remain
+  - main pattern is not “missed anchors”
+  - main pattern is:
+    - extra-anchor overgeneration / decomposition
+    - conditional-context leakage
+    - one status miss
+  - rough taxonomy:
+    - over-anchoring / decomposition:
+      - `anc-039`
+      - `anc-037`
+      - `anc-013`
+      - `anc-067`
+      - `anc-068`
+      - `anc-084`
+      - `anc-096`
+      - `anc-098`
+    - context / conditional leakage:
+      - `anc-089`
+      - `anc-060`
+      - `anc-063`
+    - status miss:
+      - `anc-079`
+- Read:
+  - this weakens the “PhenoRerank will probably fix most of the gap” theory
+  - most remaining errors are not pure HPO rerank errors
+  - stronger conclusion:
+    - Flash is good at finding anchors
+    - Flash is stronger when anchor extraction and assertion are separated
+    - next best stack is:
+      - Flash anchor extraction
+      - narrow disease-name blocker
+      - separate assertion pass
+
+## 2026-04-02 - Full stacked Flash Stage 2 probe
+
+- What was added:
+  - new evaluator:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/evaluateStage2FlashStack.js`
+- Stack evaluated:
+  - saved raw Flash Stage 2 anchor output
+  - narrow disease-name blocker
+  - separate Gemini Flash assertion pass on each kept anchor
+- Inputs:
+  - benchmark:
+    - `/Users/ahmedelmorshedy/Downloads/anchor_benchmark (1).js`
+  - raw Flash Stage 2 output:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/stage2_anchor_gemini_probe_full_20260402/stage2_anchor_gemini_report.json`
+- Outputs:
+  - summary:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/stage2_flash_stack_probe_20260402/stage2_flash_stack_summary.json`
+  - full report:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/stage2_flash_stack_probe_20260402/stage2_flash_stack_report.json`
+- Result:
+  - exact:
+    - `91/100`
+  - recall:
+    - `106/107` = `0.9907`
+  - must-not-anchor pass:
+    - `32/32` = `1.0`
+- Comparison:
+  - raw Flash:
+    - `85/100`
+    - `106/107`
+    - `27/32`
+  - Flash + blocker:
+    - `88/100`
+    - `106/107`
+    - `30/32`
+  - Flash + blocker + assertion:
+    - `91/100`
+    - `106/107`
+    - `32/32`
+- Focus cases:
+  - `anc-060`:
+    - assertion correctly removed risk-only `glaucoma`
+  - `anc-063`:
+    - assertion correctly removed disease-context `end-stage renal disease`
+  - `anc-089`:
+    - assertion correctly removed conditional `renal failure`
+  - `anc-079`:
+    - assertion still kept `Peripheral neuropathy` as `present`; this remains the main real uncaught status error
+  - `anc-098`:
+    - assertion kept `Behavioral difficulties` and `Impulsivity`; this is not a negation failure, more a benchmark-policy / over-extraction issue
+- Read:
+  - the stacked Flash path now beats raw Pro on strict exact:
+    - Flash stack:
+      - `91/100`
+    - Pro raw:
+      - `90/100`
+  - and it does so with:
+    - same recall minus one anchor
+    - better must-not-anchor control
+- current best interpretation:
+  - Flash extraction + narrow blocker + separate assertion is the leading low-cost Stage 2/3 path
+
+## 2026-04-02 - Flash vs Pro on remaining hard assertion cases
+
+- Why:
+  - user asked why assertion should not just use `gemini-2.5-pro`
+  - needed a targeted comparison on the remaining hard assertion cases instead of a full rerun
+- What was added:
+  - fixture:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/test/fixtures/stage2_flash_assertion_focus_cases.js`
+- What was run:
+  - existing assertion evaluator:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/evaluateStage3AssertionWithGemini.js`
+  - focus outputs:
+    - Flash:
+      - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/stage2_flash_assertion_focus_flash_20260402/stage3_regression_cases_gemini_flash_report.json`
+    - Pro:
+      - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/stage2_flash_assertion_focus_pro_20260402/stage3_regression_cases_gemini_flash_report.json`
+- Focus cases:
+  - `anc-060__glaucoma`
+  - `anc-063__esrd`
+  - `anc-079__neuropathy`
+  - `anc-089__renal_failure`
+  - `anc-098__behavioral_difficulties`
+  - `anc-098__impulsivity`
+- Result:
+  - Flash:
+    - `5/6` exact
+    - `5/6` outcome
+  - Pro:
+    - `5/6` exact
+    - `6/6` outcome
+- Important detail:
+  - both Flash and Pro correctly handled the previously most important uncaught status miss:
+    - `anc-079__neuropathy`
+  - the only remaining outcome difference was:
+    - `anc-063__esrd`
+      - Flash:
+        - incorrectly kept as `present`
+      - Pro:
+        - correctly rejected
+        - but with a different reason code than the benchmark expected
+- Read:
+  - Pro is slightly better on the remaining hard assertion slice
+  - but the margin is very small
+  - the case for replacing Flash with Pro on assertion is still not strong enough operationally without more real chapter evidence
+
+## 2026-04-02 - GLiNER Stage 3 discovery gate on synthetic benchmark
+
+- Why:
+  - user wanted to avoid burning Gemini quota if the strongest non-Gemini discovery contender already looked weak
+  - user provided a discovery benchmark:
+    - `/Users/ahmedelmorshedy/Downloads/discovery_benchmark.js`
+- What was added:
+  - benchmark runner:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/benchmarkStage3DiscoveryGLiNER.py`
+- What it uses:
+  - existing local GLiNER model path in repo:
+    - `Ihor/gliner-biomed-small-v1.0`
+- Outputs:
+  - smoke:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/stage3_discovery_gliner_benchmark_20260402_smoke`
+  - full:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/stage3_discovery_gliner_benchmark_20260402/stage3_discovery_gliner_summary.json`
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/stage3_discovery_gliner_benchmark_20260402/stage3_discovery_gliner_report.json`
+- Full result on 100 synthetic discovery cases:
+  - strict exact:
+    - `6/100`
+  - acceptable exact:
+    - `8/100`
+  - expected candidate recall:
+    - `544/819` = `0.6642`
+  - must-not-propose pass:
+    - `489/550` = `0.8891`
+- Main miss patterns:
+  - missed present findings are still the biggest problem:
+    - `257`
+  - missed excluded findings:
+    - `18`
+  - must-not-propose leakage:
+    - `61`
+  - most common violation reasons:
+    - `normal_or_preserved`
+    - `not_a_phenotype`
+    - `already_in_anchors`
+    - `conditional_or_risk_only`
+- Representative examples:
+  - `disc-001`:
+    - leaked normal `cognitive function`
+    - also produced broad `Neurologic complications`
+  - `disc-100`:
+    - missed many key regression-style findings and leaked normal `Hearing` / `Vision`
+- Read:
+  - GLiNER is not strong enough on this synthetic Stage 3 discovery benchmark to stop here
+  - it was worth running first to save Gemini quota
+  - but the result supports moving on to Gemini for the real comparison
+
+## 2026-04-02 - GLiNER hard-20 config sweep
+
+- Ran a clean label/threshold/model sweep on the hard-20 Stage 3 discovery slice.
+- Script:
+  - one-off local sweep using `gliner` over:
+    - `Ihor/gliner-biomed-small-v1.0`
+    - `Ihor/gliner-biomed-large-v1.0`
+- Input:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/stage3_discovery_medgemma_smoke_20260402_hard20_cases.js`
+- Output:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/stage3_discovery_gliner_config_sweep_fullhard20_20260402/gliner_config_sweep_hard20.json`
+- Best recall config:
+  - `large_two_0p4`
+  - labels:
+    - `["clinical abnormality", "clinical finding"]`
+  - recall:
+    - `182/204` = `0.8922`
+  - must-not-propose pass:
+    - `140/168` = `0.8333`
+- Best clean-ish config:
+  - `small_old_0p6`
+  - recall:
+    - `133/204` = `0.652`
+  - must-not-propose pass:
+    - `154/168` = `0.9167`
+- Best single-label compromise:
+  - `small_one_0p4`
+  - recall:
+    - `167/204` = `0.8186`
+  - must-not-propose pass:
+    - `136/168` = `0.8095`
+- Read:
+  - collapsing the label set helps recall a lot versus the original 7-label setup
+  - adding a second broad label helps recall further, but junk rises quickly
+  - the large model is not uniformly better; it only clearly helps in the aggressive two-label recall mode
+  - GLiNER still looks more suitable as an explicit-span helper than as a standalone discovery engine
+- Next move:
+  - if we use GLiNER at all, prefer a helper role before Gemini rather than replacing Gemini discovery outright
+
+## 2026-04-02 - GLiNER clean-pass plus Gemini Pro residual discovery
+
+- Added a new grounded residual benchmark runner:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/benchmarkStage3DiscoveryResidualGemini.js`
+- Updated synthetic discovery benchmark file in Downloads to add derived per-case `clinical_structure` with:
+  - `paragraphs`
+  - `sentences`
+  - `sentence_id`
+  - `char_start`
+  - `char_end`
+- Residual experiment design:
+  - first pass:
+    - original clean GLiNER report
+    - `small_old_0p6`
+  - second pass:
+    - `gemini-2.5-pro`
+    - asked only for findings missed by the first pass
+    - required grounded `sentence_id`
+    - required exact `evidence_text`
+- Output:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/stage3_discovery_gliner_smallold_gemini25pro_residual_20260402/stage3_discovery_residual_summary.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/stage3_discovery_gliner_smallold_gemini25pro_residual_20260402/stage3_discovery_residual_report.json`
+- Result:
+  - first-pass GLiNER:
+    - recall:
+      - `544/819` = `0.6642`
+    - must-not-propose pass:
+      - `489/550` = `0.8891`
+  - Gemini residual:
+    - residual recall on GLiNER misses:
+      - `202/275` = `0.7345`
+    - residual must-not-propose pass:
+      - `481/489` = `0.9836`
+    - grounding:
+      - sentence id valid:
+        - `320/320`
+      - exact evidence text valid:
+        - `320/320`
+  - combined:
+    - recall:
+      - `746/819` = `0.9109`
+    - must-not-propose pass:
+      - `481/550` = `0.8745`
+    - strict exact:
+      - `12/100`
+    - acceptable exact:
+      - `41/100`
+- Read:
+  - the grounded residual format works operationally
+  - `sentence_id + exact evidence_text` is reliable in this benchmark
+  - but the GLiNER clean-pass plus Gemini residual stack still underperforms direct tuned Gemini discovery on overall quality
+  - the residual step adds real recall, but combined junk control is still weaker than pure tuned Gemini
+
+- Follow-up strict residual-only rerun:
+  - used a stricter second-pass prompt that explicitly told Gemini to ignore all GLiNER hits and only return genuinely new findings
+  - evaluated Gemini only on the residual slice, not on blended final must-not metrics
+- Strict residual-only result:
+  - first-pass GLiNER:
+    - recall:
+      - `544/819` = `0.6642`
+    - must-not-propose pass:
+      - `489/550` = `0.8891`
+  - Gemini residual only:
+    - recall on misses:
+      - `188/275` = `0.6836`
+    - must-not-propose pass on residual scope:
+      - `483/489` = `0.9877`
+    - grounding:
+      - sentence id valid:
+        - `286/286`
+      - evidence text valid:
+        - `286/286`
+  - net recall after fill:
+    - `732/819` = `0.8938`
+- Read:
+  - stricter residual prompting made Gemini cleaner on its own residual slice
+  - but it also recovered fewer misses than the earlier residual prompt
+  - the core bottleneck remains the weak GLiNER seed recall, not Gemini residual precision
+
+## 2026-04-02 - Balanced cleanup plus add on high-recall GLiNER seed
+
+- Reran GLiNER on the hard-20 slice with the high-recall config to get a real first-pass report:
+  - model:
+    - `Ihor/gliner-biomed-large-v1.0`
+  - labels:
+    - `["clinical abnormality", "clinical finding"]`
+  - threshold:
+    - `0.4`
+  - output:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/stage3_discovery_gliner_large_two_0p4_hard20_20260402/stage3_discovery_gliner_report.json`
+- First-pass result on hard-20:
+  - recall:
+    - `185/204` = `0.9069`
+  - must-not-propose pass:
+    - `130/168` = `0.7738`
+- Then ran `gemini-2.5-pro` as a balanced second pass:
+  - review first-pass candidates
+  - reject junk
+  - add a few missed findings
+- Balanced result:
+  - final recall:
+    - `184/204` = `0.902`
+  - final must-not-propose pass:
+    - `164/168` = `0.9762`
+  - strict exact:
+    - `1/20`
+  - acceptable exact:
+    - `4/20`
+  - kept first-pass candidates:
+    - `236`
+  - added candidates:
+    - `9`
+- Read:
+  - this balanced prompt is excellent for cleanup
+  - it removed almost all GLiNER junk
+  - but it over-cleaned slightly and lost one expected finding overall
+  - the pattern is promising if we want Gemini primarily as a reviewer/cleaner rather than a broad residual finder
+
+## 2026-04-02 - Frozen stage-3 discovery evaluation surfaces
+
+- Question:
+  - how do we stop prompt work from overfitting to the hard-20 slice and make future discovery experiments prove they generalize?
+
+- Evidence surface:
+  - synthetic benchmark source:
+    - `/Users/ahmedelmorshedy/Downloads/discovery_benchmark.js`
+  - existing hard-20 dev slice source:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/stage3_discovery_medgemma_smoke_20260402_hard20_cases.js`
+  - real latest5 parsed chapter structures:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/preservation/bucket-critical/20260331-genereviews-latest5-readiness/stage1_fetch/*_clinical_structure.json`
+
+- Intentionally not inspected:
+  - no raw mounted dump crawl
+  - no new hand-labeling of real holdout outcomes yet
+  - no new model reruns; this step only froze the evaluation surfaces
+
+- Action:
+  - added freezer script:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/freezeStage3DiscoveryEvalSets.js`
+  - generated repo-owned fixtures:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/test/fixtures/stage3DiscoveryBenchmarkFull.js`
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/test/fixtures/stage3DiscoveryBenchmarkDevHard20.js`
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/test/fixtures/stage3DiscoveryBenchmarkHoldout80.js`
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/test/fixtures/stage3DiscoveryEvalManifest.json`
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/test/fixtures/stage3DiscoveryRealHoldoutManifest.json`
+  - switched benchmark script defaults off the mutable `Downloads` file and onto the repo-owned frozen fixture for:
+    - `benchmarkStage3DiscoveryGemini.js`
+    - `benchmarkStage3DiscoveryGLiNER.py`
+    - `benchmarkStage3DiscoveryGeminiStack.js`
+    - `benchmarkStage3DiscoveryResidualGemini.js`
+    - `benchmarkStage3DiscoveryMedGemmaSmoke.py`
+
+- Important numbers:
+  - full synthetic benchmark:
+    - `100`
+  - dev hard-20:
+    - `20`
+  - untouched synthetic holdout:
+    - `80`
+  - real holdout chapters:
+    - `5`
+
+- Result:
+  - the benchmark is now frozen into repo-owned files
+  - prompt work can use `hard20` as dev, `holdout80` as untouched synthetic holdout, and `latest5` as the real holdout manifest
+  - future evaluation no longer depends on a mutable file in `Downloads`
+
+- Decision:
+  - keep this split policy
+  - future prompt changes should only count if they help on dev and survive both holdouts
+
+- Status:
+  - kept
+
+## 2026-04-02 - Grounded holdout80 bakeoff
+
+- Question:
+  - on the untouched synthetic holdout, is direct grounded `gemini-2.5-pro` better than `GLiNER large_two_0p4 -> gemini-2.5-pro cleanup+add`?
+
+- Evidence surface:
+  - frozen synthetic holdout:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/test/fixtures/stage3DiscoveryBenchmarkHoldout80.js`
+  - grounded scorer helper:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/lib/stage3DiscoveryGroundedEval.js`
+  - direct grounded runner:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/benchmarkStage3DiscoveryGroundedGemini.js`
+  - stacked grounded runner:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/benchmarkStage3DiscoveryGroundedGeminiStack.js`
+  - GLiNER first-pass runner updated to accept label configs directly:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/benchmarkStage3DiscoveryGLiNER.py`
+
+- Intentionally not inspected:
+  - no real-chapter manual judging yet
+  - no stage-4 mapping run yet
+  - no new prompt tuning during this bakeoff
+
+- Important scorer limitation:
+  - this grounded scorer validates `sentence_id` and exact `evidence_text`
+  - but expected recall is still matched against the existing canonical-label benchmark using fuzzy matching against `label` or `evidence_text`
+  - so it is better than the old canonical-only scorer for grounded outputs, but still not a true gold span scorer
+
+- First-pass GLiNER on holdout80:
+  - config:
+    - `Ihor/gliner-biomed-large-v1.0`
+    - labels:
+      - `["clinical abnormality", "clinical finding"]`
+    - threshold:
+      - `0.4`
+  - output:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/stage3_discovery_gliner_large_two_0p4_holdout80_20260402/stage3_discovery_gliner_summary.json`
+  - result:
+    - recall:
+      - `523/615` = `0.8504`
+    - must-not-propose pass:
+      - `282/382` = `0.7382`
+
+- Direct grounded `gemini-2.5-pro`:
+  - output:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/stage3_discovery_grounded_gemini_25_pro_holdout80_20260402/stage3_discovery_grounded_gemini_summary.json`
+  - result:
+    - strict exact:
+      - `16/80`
+    - acceptable exact:
+      - `41/80`
+    - recall:
+      - `559/615` = `0.9089`
+    - must-not-propose pass:
+      - `361/382` = `0.9450`
+    - valid sentence id:
+      - `809/809`
+    - valid evidence text:
+      - `808/809`
+
+- Grounded stacked `GLiNER -> gemini-2.5-pro cleanup+add`:
+  - output:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/stage3_discovery_grounded_gliner_gemini25pro_holdout80_20260402/stage3_discovery_grounded_stack_summary.json`
+  - result:
+    - strict exact:
+      - `20/80`
+    - acceptable exact:
+      - `39/80`
+    - recall:
+      - `554/615` = `0.9008`
+    - must-not-propose pass:
+      - `365/382` = `0.9555`
+    - valid sentence id:
+      - `794/794`
+    - valid evidence text:
+      - `791/794`
+
+- Read:
+  - direct grounded `2.5 Pro` wins on recall:
+    - `0.9089` vs `0.9008`
+  - the GLiNER stack wins slightly on junk control:
+    - `0.9555` vs `0.9450`
+  - the stack also edges strict exact:
+    - `20/80` vs `16/80`
+  - but the differences are small enough that the extra stack complexity is not obviously justified yet
+  - both grounded paths are operationally strong enough to move to a real-holdout check next
+
+- Decision:
+  - keep both grounded paths as valid candidates
+  - direct grounded `2.5 Pro` is currently the simpler leading option
+  - next proof step should be the `latest5` real holdout, not another synthetic-only prompt tweak
+
+- Status:
+  - kept
+
+## 2026-04-02 - Real latest5 audit of direct grounded discovery
+
+- Question:
+  - were the strong synthetic discovery scores actually measuring useful new findings, or were they mixed with anchor duplicates and borderline junk?
+
+- Evidence surface:
+  - real holdout manifest:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/test/fixtures/stage3DiscoveryRealHoldoutManifest.json`
+  - settled latest5 stage2 anchors:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/genereviews-pipeline-latest5-settled-20260330/stage2_anchors/*_anchors.json`
+  - preserved stage7 verification files:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/preservation/bucket-critical/20260331-genereviews-latest5-readiness/stage7_verify_medgemma/*_verification.json`
+  - audit runner:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/auditStage3DiscoveryLatest5.js`
+  - audit outputs:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/stage3_discovery_latest5_grounded_audit_20260402/latest5_direct_grounded_audit_summary.json`
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/stage3_discovery_latest5_grounded_audit_20260402/latest5_direct_grounded_audit_report.json`
+
+- Intentionally not inspected:
+  - no GLiNER stack rerun on latest5 yet
+  - no new manual gold creation
+  - no stage4 remapping rerun; this audit was about discovery usefulness, not final HPO quality
+
+- Direct audit result:
+  - predictions:
+    - `48`
+  - valid grounding:
+    - `45/48`
+  - duplicate anchor leaks:
+    - `21`
+  - overlaps previously `FAILED` stage7 items:
+    - `6`
+  - overlaps previously `FLAGGED` stage7 items:
+    - `10`
+  - unmatched to prior verified/failed/flagged stage7 items:
+    - `23`
+  - verified non-anchor discovery targets in the preserved latest5 bundle:
+    - `1`
+  - matched verified non-anchor discovery targets:
+    - `0`
+  - missed verified non-anchor discovery target:
+    - `1`
+      - `death in childhood`
+
+- Important read:
+  - latest5 is heavily anchor-dominated in the preserved review bundle
+  - that means the real question was not “did discovery recover many known non-anchor positives?” because there was only one preserved target of that kind
+  - the real audit signal came from the makeup of the `48` predictions
+
+- Manual approximation after reviewing the chapter-level outputs:
+  - clearly not-useful as discovery:
+    - about `21/48`
+    - these are the anchor duplicates
+  - likely questionable / broad / non-ideal extras:
+    - roughly `8-10/48`
+    - examples:
+      - `Neurobehavioral/psychiatric manifestations`
+      - `Ophthalmologic involvement`
+      - `ventilation dependency`
+      - `autoantibodies to factor VIII`
+      - `conductive`
+  - plausible useful new extras:
+    - roughly `14-18/48`
+    - examples:
+      - `neuronal migration defects`
+      - `widely split sutures`
+      - `bony stippling`
+      - `chondrodysplasia punctata`
+      - `lymphoproliferation`
+      - `disseminated mycobacterial disease`
+      - `bullous pemphigoid`
+      - `parenchymal volume loss`
+      - `dystonic posturing of limbs`
+      - `Weight below the third centile`
+
+- What this means:
+  - the synthetic recall numbers were directionally useful, but they overstated “useful new discovery” because real outputs contained many anchor duplicates
+  - the synthetic junk numbers were also incomplete, because some items that look suspicious by benchmark logic are actually plausible useful extras on real chapters
+  - the real problem on latest5 is not raw hallucination; it is a mixture of:
+    - duplicate anchor restatement
+    - broad category phrases
+    - some genuinely useful residual findings
+
+- Specific failure modes seen in real chapters:
+  - anchor duplicate leakage:
+    - `severe... oligozoospermia`
+    - `regression`
+    - `malrotation of the gut`
+  - broad category leakage:
+    - `Neurobehavioral/psychiatric manifestations`
+    - `Ophthalmologic involvement`
+    - `motor abnormalities`
+  - fragment / bad-span leakage:
+    - `conductive`
+    - ellipsis-truncated phrases like:
+      - `severe... oligozoospermia`
+      - `white matter ... abnormalities`
+  - plausible true residual discoveries:
+    - `chondrodysplasia punctata`
+    - `dystonic posturing of limbs`
+    - `IgA deficiency`
+
+- Decision:
+  - do not trust synthetic recall as “all useful”
+  - do not trust synthetic must-not/junk as “all truly junk”
+  - use real audits to estimate:
+    - useful new discovery rate
+    - duplicate-anchor leakage rate
+    - broad-category leakage rate
+  - the next best refinement is not more synthetic-only tuning; it is:
+    - stronger duplicate-anchor blocking
+    - broader-category suppression
+    - one more real-holdout audit after that
+
+- Status:
+  - kept
+
+## 2026-04-02 - Reusable real-audit cache manifest
+
+- Question:
+  - how do we stop rebuilding the latest5 real-audit surface from memory every time, and prepare cleanly for a `+5` expansion?
+
+- Evidence surface:
+  - real holdout manifest:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/test/fixtures/stage3DiscoveryRealHoldoutManifest.json`
+  - settled latest5 anchors dir:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/genereviews-pipeline-latest5-settled-20260330/stage2_anchors`
+  - preserved latest5 verification dir:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/preservation/bucket-critical/20260331-genereviews-latest5-readiness/stage7_verify_medgemma`
+  - direct audit outputs:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/stage3_discovery_latest5_grounded_audit_20260402`
+
+- Action:
+  - added cache builder:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/buildStage3DiscoveryRealAuditCache.js`
+  - generated cache manifest:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/test/fixtures/stage3DiscoveryRealAuditCacheLatest5.json`
+
+- Result:
+  - all `5` latest5 chapters now resolve to:
+    - structure path
+    - settled stage2 anchors path
+    - preserved stage7 verification path
+  - the current direct latest5 audit summary/report are embedded as cached outputs
+  - a frozen `next5_selection_template` with `5` slots is included:
+    - `anchor_heavy`
+    - `narrative_implied`
+    - `lab_management_junk`
+    - `exclusion_normal`
+    - `morphology_dense`
+
+- Important numbers:
+  - chapters cached:
+    - `5/5`
+  - anchors cached:
+    - `5/5`
+  - verification cached:
+    - `5/5`
+  - direct audit cached:
+    - available
+
+- Decision:
+  - reuse this cache manifest as the single source of truth for the real audit surface
+  - when adding the next `5`, extend this cache pattern instead of reconstructing file families manually
+
+- Status:
+  - kept
+## 2026-04-02 - Stage 3 real audit expansion to latest10
+
+- Built reusable real-audit expansion script at `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/buildStage3DiscoveryRealAuditLatest10.js`.
+- Froze `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/test/fixtures/stage3DiscoveryRealHoldoutNext5Manifest.json` with five rubric-selected chapters from the review-first-50 batch:
+  - `Williams Syndrome` as `anchor_heavy`
+  - `USP7-Related Hao-Fountain Syndrome` as `narrative_implied`
+  - `VEXAS Syndrome` as `lab_management_junk`
+  - `Very Long-Chain Acyl-Coenzyme A Dehydrogenase Deficiency` as `exclusion_normal`
+  - `Weiss-Kruszka Syndrome` as `morphology_dense`
+- Froze `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/test/fixtures/stage3DiscoveryRealHoldoutLatest10Manifest.json` combining the preserved latest5 and the selected next5.
+- Froze `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/test/fixtures/stage3DiscoveryRealAuditCacheLatest10.json` as the reusable cache surface for the real latest10 audit.
+- Built raw grounded discovery runner at `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/runStage3DiscoveryRealGroundedRaw.js` to cache discovery outputs even when prior stage7 verification is unavailable.
+- Ran direct grounded `gemini-2.5-pro` on the added next5 real chapters and cached results in `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/stage3_discovery_real_next5_grounded_raw_20260402`.
+- Raw next5 summary:
+  - `70` total predictions
+  - `15` duplicate-anchor leaks
+  - `55` non-duplicate predictions requiring manual adjudication
+  - grounding valid `69/70`
+- Per-chapter raw counts:
+  - `Williams`: `34` predictions, `7` duplicate-anchor leaks, `27` non-duplicates
+  - `USP7`: `21` predictions, `2` duplicate-anchor leaks, `19` non-duplicates
+  - `VEXAS`: `9` predictions, `5` duplicate-anchor leaks, `4` non-duplicates
+  - `VLCAD deficiency`: `3` predictions, `0` duplicate-anchor leaks, `3` non-duplicates
+  - `Weiss-Kruszka`: `3` predictions, `1` duplicate-anchor leak, `2` non-duplicates
+- Examples of new next5 non-duplicate outputs worth later adjudication:
+  - `born post-term`, `textural aversion`, `Prolonged colic` in Williams
+  - `Compulsivity`, `Stubbornness`, `Temper tantrums` in USP7
+  - `Unprovoked thrombosis`, `Clonal hematopoiesis`, `Monoclonal gammopathy of unknown significance` in VEXAS
+  - `multiorgan failure`, `cardiac dysfunction`, `motor delays` in VLCAD deficiency
+  - `bulbous tip`, `horizontal crux helix` in Weiss-Kruszka
+- Next intended move: manually adjudicate the latest10 raw outputs into explicit buckets (`useful new`, `anchor duplicate`, `broad/questionable`, `junk`, `missed useful`) so the real benchmark becomes a frozen truth surface instead of a synthetic proxy.
+
+### 2026-04-02 - Stage 3 real audit latest10 manual truth counts
+
+- Added frozen manual adjudication file at `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/test/fixtures/stage3DiscoveryRealLatest10ManualAudit.json`.
+- Added summarizer at `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/summarizeStage3DiscoveryRealLatest10ManualAudit.js`.
+- Wrote summary outputs to `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/stage3_discovery_real_latest10_manual_audit_20260402`.
+- Frozen latest10 truth summary:
+  - raw predictions: `118`
+  - exact duplicate-anchor leaks: `36`
+  - manually audited non-duplicates: `82`
+  - true useful new residual findings: `43`
+  - semantic anchor-covered non-duplicates: `12`
+  - total anchor-covered outputs (exact + semantic): `48`
+  - broad/redundant outputs: `14`
+  - junk/context-only outputs: `13`
+- Rate interpretation:
+  - useful new over raw outputs: `0.3644`
+  - useful new over non-duplicate outputs: `0.5244`
+  - total anchor-covered over raw outputs: `0.4068`
+  - broad/redundant over raw outputs: `0.1186`
+  - junk/context-only over raw outputs: `0.1102`
+- Updated honest read:
+  - direct grounded `2.5 Pro` is stronger than the earlier synthetic-only impression, but the major failure mode is still residual-awareness, not inability to find phenotype-like content.
+  - On real latest10, only about `36%` of raw discovery outputs are true useful new residual findings; after removing exact duplicate-anchor leaks, the useful rate rises to about `52%`.
+
+### 2026-04-02 - Gemini 2.5 Pro HPO-like prompt probe constraint
+
+- Attempted a direct API probe on the hardest junk-heavy chapter (`VEXAS Syndrome`) using the tightened HPO-like residual-discovery prompt with:
+  - model `gemini-2.5-pro`
+  - `temperature: 0`
+  - `thinkingBudget: 0`
+- The call failed at the API layer with:
+  - `400 INVALID_ARGUMENT`
+  - `Budget 0 is invalid. This model only works in thinking mode.`
+- Artifact directory prepared at:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/stage3_prompt_probe_gemini25pro_vexas_20260402`
+- Practical takeaway:
+  - `gemini-2.5-pro` cannot be used in a true no-thinking configuration through the current Gemini API path, so the next viable comparison is either:
+    - smallest allowed nonzero thinking budget on `2.5 Pro`, or
+    - `2.5 Flash` with `thinkingBudget: 0`.
+
+### 2026-04-02 - Gemini 2.5 Pro minimal-thinking VEXAS probe
+
+- Ran the same tightened HPO-like residual-discovery prompt on `VEXAS Syndrome` with:
+  - model `gemini-2.5-pro`
+  - `temperature: 0`
+  - minimal valid `thinkingBudget: 128`
+- Probe artifact:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/stage3_prompt_probe_gemini25pro_vexas_20260402/gemini_25_pro_vexas_hpo_prompt_probe_min_thinking.json`
+- API constraint confirmed:
+  - budgets `1, 2, 4, 8, 16, 32, 64` all rejected with `400 INVALID_ARGUMENT`
+  - Gemini states the valid range is `128` to `32768`
+- Returned candidates at budget `128`:
+  - `Unprovoked thrombosis`
+  - `Failure to respond to classic immunosuppressive treatments`
+  - `Elevated C-reactive protein`
+  - `Macrocytic anemia`
+  - `Vacuoles in myeloid and erythroid precursor cells`
+- Honest read:
+  - this is not a clean residual-discovery answer under the current policy
+  - it still leaks an anchor-covered thrombotic finding, a treatment-response statement, a biomarker-only finding, and a pathology-style descriptor
+  - only `Macrocytic anemia` is clearly strong under the current prompt rules
+
+### 2026-04-02 - Gemini 2.5 Pro default-thinking VEXAS probe
+
+- Ran the same tightened HPO-like residual-discovery prompt on `VEXAS Syndrome` with:
+  - model `gemini-2.5-pro`
+  - `temperature: 0`
+  - default thinking mode (no explicit `thinkingBudget`)
+- Probe artifact:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/stage3_prompt_probe_gemini25pro_vexas_20260402/gemini_25_pro_vexas_hpo_prompt_probe_temp0_default_thinking.json`
+- Returned candidates:
+  - `Unprovoked thrombosis`
+  - `Clonal hematopoiesis`
+  - `Monoclonal gammopathy of unknown significance`
+  - `Multiple myeloma`
+  - `Macrocytic anemia`
+  - `Myelodysplastic syndrome`
+  - `Vacuoles in myeloid and erythroid precursor cells`
+- Honest read:
+  - default thinking made the result broader and worse on this hardest junk-heavy chapter
+  - compared with minimal valid thinking (`128`), it added more diagnosis/context leakage rather than less
+  - under the current policy, only `Macrocytic anemia` is clearly strong; the rest are anchor-covered, diagnosis-like, biomarker/pathology-like, or otherwise non-row-worthy
+
+### 2026-04-03 - Gemini 3.1 Pro Preview VEXAS prompt probes
+
+- Confirmed current live model id via model listing:
+  - `models/gemini-3.1-pro-preview`
+- Ran the tightened HPO-like residual-discovery prompt on `VEXAS Syndrome` with:
+  - `temperature: 0`
+  - default thinking mode
+- Probe artifact:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/stage3_prompt_probe_gemini31propreview_vexas_20260402/gemini_31_pro_preview_vexas_hpo_prompt_probe_temp0.json`
+- Returned:
+  - `Unprovoked thrombosis`
+  - `Macrocytic anemia`
+- Then reran with normal/default parameters (no explicit temperature, no explicit thinking config):
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/stage3_prompt_probe_gemini31propreview_vexas_20260402/gemini_31_pro_preview_vexas_hpo_prompt_probe_default_params.json`
+- Result under normal/default parameters was materially the same:
+  - `Unprovoked thrombosis`
+  - `Macrocytic anemia`
+- Honest read:
+  - `3.1 Pro Preview` is cleaner than `2.5 Pro` on this hardest junk-heavy chapter
+  - but it still leaks one anchor-covered thrombotic finding
+  - on this probe, changing from `temperature: 0` to default parameters did not materially change behavior
+
+### 2026-04-03 - Gemma 4 31B VEXAS residual-coverage probe
+
+- Re-ran `google/gemma-4-31B-it` on the same hard `VEXAS Syndrome` slice via the HF router, but changed the prompt from generic HPO-like extraction to explicit residual-aware coverage handling.
+- Added semantic coverage context for already-covered concepts:
+  - anemia, including macrocytic anemia
+  - thrombocytopenia
+  - venous thrombosis, including unprovoked thrombosis
+  - myelodysplasia / myelodysplastic syndrome
+  - multiple myeloma
+- Kept generic drop classes for:
+  - diagnosis/disorder labels
+  - treatment-response and management statements
+  - biomarker-only findings
+  - pathology-only cell-level observations
+  - fragments / non-row-worthy phrases
+- Explicitly allowed the model to return `[]` if no additional phenotype rows survived.
+- Ran both:
+  - `temperature: 0`
+  - default parameters
+- Both runs returned:
+  - `[]`
+- Saved outputs:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/stage3_prompt_probe_gemma4_vexas_20260403/gemma_4_31b_it_vexas_residual_probe_temp0.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/stage3_prompt_probe_gemma4_vexas_20260403/gemma_4_31b_it_vexas_residual_probe_default.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/stage3_prompt_probe_gemma4_vexas_20260403/gemma_4_31b_it_vexas_residual_probe_summary.json`
+- Honest read:
+  - on this hard slice, stronger residual-awareness and explicit coverage context mattered more than adding more blacklist detail
+  - unlike earlier Gemma probes, this version stopped leaking anchor-covered and pathology-style candidates on VEXAS

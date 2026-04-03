@@ -1,0 +1,72 @@
+[
+  {
+    "nbk_id": "NBK1339",
+    "chapter_title": "Y Chromosome Infertility",
+    "source_url": "https://www.ncbi.nlm.nih.gov/books/NBK1339/",
+    "total_assertions": 5,
+    "summary_stats": {
+      "present_count": 5,
+      "excluded_count": 0,
+      "with_frequency": 2,
+      "with_onset": 0,
+      "high_trust": 5,
+      "medium_trust": 0
+    }
+  },
+  {
+    "nbk_id": "NBK606999",
+    "chapter_title": "YIF1B-Related Neurodevelopmental Disorder",
+    "source_url": "https://www.ncbi.nlm.nih.gov/books/NBK606999/",
+    "total_assertions": 31,
+    "summary_stats": {
+      "present_count": 31,
+      "excluded_count": 0,
+      "with_frequency": 0,
+      "with_onset": 1,
+      "high_trust": 31,
+      "medium_trust": 0
+    }
+  },
+  {
+    "nbk_id": "NBK20221",
+    "chapter_title": "ZAP70-Related Combined Immunodeficiency",
+    "source_url": "https://www.ncbi.nlm.nih.gov/books/NBK20221/",
+    "total_assertions": 26,
+    "summary_stats": {
+      "present_count": 26,
+      "excluded_count": 0,
+      "with_frequency": 0,
+      "with_onset": 4,
+      "high_trust": 26,
+      "medium_trust": 0
+    }
+  },
+  {
+    "nbk_id": "NBK1448",
+    "chapter_title": "Zellweger Spectrum Disorder",
+    "source_url": "https://www.ncbi.nlm.nih.gov/books/NBK1448/",
+    "total_assertions": 21,
+    "summary_stats": {
+      "present_count": 21,
+      "excluded_count": 0,
+      "with_frequency": 1,
+      "with_onset": 4,
+      "high_trust": 21,
+      "medium_trust": 0
+    }
+  },
+  {
+    "nbk_id": "NBK618356",
+    "chapter_title": "Zhu-Tokita-Takenouchi-Kim Syndrome",
+    "source_url": "https://www.ncbi.nlm.nih.gov/books/NBK618356/",
+    "total_assertions": 97,
+    "summary_stats": {
+      "present_count": 97,
+      "excluded_count": 0,
+      "with_frequency": 24,
+      "with_onset": 6,
+      "high_trust": 97,
+      "medium_trust": 0
+    }
+  }
+]

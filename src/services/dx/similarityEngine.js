@@ -982,16 +982,27 @@ export function benchmarkDxSimilarityIndex(index, options = {}) {
   };
 }
 
-let cachedDxIndex = null;
-let cachedAt = 0;
+const dxIndexCache = new Map();
 
-export async function loadDxSimilarityIndex(client, { forceRefresh = false } = {}) {
-  if (!forceRefresh && cachedDxIndex && Date.now() - cachedAt < DX_QUERY_DEFAULTS.cacheTtlMs) {
-    return cachedDxIndex;
+function normalizeSourceKeyFilter(values = []) {
+  return [...new Set((values || []).map((value) => String(value || '').trim()).filter(Boolean))].sort();
+}
+
+export async function loadDxSimilarityIndex(
+  client,
+  { forceRefresh = false, disabledDiseaseSourceKeys = [] } = {}
+) {
+  const normalizedDisabledDiseaseSourceKeys = normalizeSourceKeyFilter(disabledDiseaseSourceKeys);
+  const cacheKey = normalizedDisabledDiseaseSourceKeys.join('|') || '__default__';
+  const cachedEntry = dxIndexCache.get(cacheKey);
+  if (!forceRefresh && cachedEntry && Date.now() - cachedEntry.cachedAt < DX_QUERY_DEFAULTS.cacheTtlMs) {
+    return cachedEntry.index;
   }
 
   const ontologyRows = await loadDxPhenotypeOntologyRows(client);
-  const diseasePhenotypeResult = await loadDxDiseasePhenotypeRows(client);
+  const diseasePhenotypeResult = await loadDxDiseasePhenotypeRows(client, {
+    disabledSourceKeys: normalizedDisabledDiseaseSourceKeys
+  });
   const genePhenotypeResult = await loadDxGenePhenotypeRows(client);
   const geneDiseaseSupportRows = await loadDxGeneDiseaseSupportRows(client);
 
@@ -1005,8 +1016,11 @@ export async function loadDxSimilarityIndex(client, { forceRefresh = false } = {
     disease: diseasePhenotypeResult.sourceMode,
     gene: genePhenotypeResult.sourceMode
   };
+  index.disabledDiseaseSourceKeys = normalizedDisabledDiseaseSourceKeys;
 
-  cachedDxIndex = index;
-  cachedAt = Date.now();
+  dxIndexCache.set(cacheKey, {
+    index,
+    cachedAt: Date.now()
+  });
   return index;
 }

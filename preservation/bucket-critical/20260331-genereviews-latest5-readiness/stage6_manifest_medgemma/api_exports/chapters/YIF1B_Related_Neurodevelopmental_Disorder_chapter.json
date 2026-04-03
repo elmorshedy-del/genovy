@@ -1,0 +1,2534 @@
+{
+  "chapter_key": "yif1b_related_neurodevelopmental_disorder",
+  "nbk_id": "NBK606999",
+  "chapter_title": "YIF1B-Related Neurodevelopmental Disorder",
+  "source_url": "https://www.ncbi.nlm.nih.gov/books/NBK606999/",
+  "diseases": [],
+  "genes": [
+    "YIF1B"
+  ],
+  "chapter_domains": [
+    {
+      "key": "neurologic",
+      "label": "Neurologic",
+      "evidence_headings": [],
+      "evidence_snippets": [
+        "al findings Severe-to-profound developmental delay; most individuals do not obtain any devel"
+      ]
+    },
+    {
+      "key": "gastrointestinal",
+      "label": "Gastrointestinal",
+      "evidence_headings": [],
+      "evidence_snippets": [
+        "t peripheral hypertonia Infant feeding difficulties Movement disorders, including dys"
+      ]
+    }
+  ],
+  "heading_inventory": [
+    {
+      "tag": "h3",
+      "heading": "Suggestive Findings"
+    },
+    {
+      "tag": "h2",
+      "heading": "Clinical Characteristics"
+    },
+    {
+      "tag": "h3",
+      "heading": "Clinical Description"
+    },
+    {
+      "tag": "h3",
+      "heading": "Table 2."
+    }
+  ],
+  "extraction_date": "2026-04-01",
+  "pipeline_version": "genereviews-api-export-v1-20260331",
+  "total_assertions": 31,
+  "assertions": [
+    {
+      "assertion_id": "GR-NBK606999-unmapped-HP:0012447-present",
+      "disease_curie": null,
+      "disease_label": null,
+      "gene_symbols": [
+        "YIF1B"
+      ],
+      "local_clinical_domains": [],
+      "phenotype_curie": "HP:0012447",
+      "phenotype_label": "Abnormal myelination",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK606999",
+        "chapter_title": "YIF1B-Related Neurodevelopmental Disorder",
+        "section_id": null,
+        "section_heading": null,
+        "source_sentence": "Nonspecific findings include white matter and myelination abnormalities, corpus callosum hypoplasia, cerebellar atrophy and parenchymal volume loss, cerebellar hypoplasia, and pons and brain stem atrophy (see Figure 1 ).",
+        "paragraph_id": null,
+        "sentence_id": null,
+        "paragraph_char_start": null,
+        "paragraph_char_end": null,
+        "sentence_char_start": null,
+        "sentence_char_end": null,
+        "match_char_start": null,
+        "match_char_end": null,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK606999/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_alias_anchor",
+        "hpo_mapping_method": "graph_alias_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "VERIFIED",
+        "auto_accept_eligible": false,
+        "auto_accept_reasons": [
+          "source_span:skip"
+        ],
+        "alias_shadow": false,
+        "section_branch_consistent": null,
+        "table_concordance": "skip",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK606999-unmapped-HP:0001344-present",
+      "disease_curie": null,
+      "disease_label": null,
+      "gene_symbols": [
+        "YIF1B"
+      ],
+      "local_clinical_domains": [],
+      "phenotype_curie": "HP:0001344",
+      "phenotype_label": "Absent speech",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK606999",
+        "chapter_title": "YIF1B-Related Neurodevelopmental Disorder",
+        "section_id": "section_Suggestive_Findings",
+        "section_heading": "Suggestive Findings",
+        "source_sentence": "Severe-to-profound intellectual disability, with no speech development or limited speech with subsequent regression",
+        "paragraph_id": "p4",
+        "sentence_id": "p4_s1",
+        "paragraph_char_start": 279,
+        "paragraph_char_end": 394,
+        "sentence_char_start": 279,
+        "sentence_char_end": 394,
+        "match_char_start": 328,
+        "match_char_end": 349,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK606999/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_alias_anchor",
+        "hpo_mapping_method": "graph_alias_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "VERIFIED",
+        "auto_accept_eligible": true,
+        "auto_accept_reasons": [],
+        "alias_shadow": false,
+        "section_branch_consistent": null,
+        "table_concordance": "skip",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK606999-unmapped-HP:0000739-present",
+      "disease_curie": null,
+      "disease_label": null,
+      "gene_symbols": [
+        "YIF1B"
+      ],
+      "local_clinical_domains": [],
+      "phenotype_curie": "HP:0000739",
+      "phenotype_label": "Anxiety",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK606999",
+        "chapter_title": "YIF1B-Related Neurodevelopmental Disorder",
+        "section_id": "section_Suggestive_Findings",
+        "section_heading": "Suggestive Findings",
+        "source_sentence": "Neurobehavioral/psychiatric manifestations including autism spectrum disorder and anxiety",
+        "paragraph_id": "p9",
+        "sentence_id": "p9_s1",
+        "paragraph_char_start": 669,
+        "paragraph_char_end": 758,
+        "sentence_char_start": 669,
+        "sentence_char_end": 758,
+        "match_char_start": 751,
+        "match_char_end": 758,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK606999/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_alias_anchor",
+        "hpo_mapping_method": "graph_alias_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "VERIFIED",
+        "auto_accept_eligible": true,
+        "auto_accept_reasons": [],
+        "alias_shadow": false,
+        "section_branch_consistent": null,
+        "table_concordance": "skip",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK606999-unmapped-HP:0007366-present",
+      "disease_curie": null,
+      "disease_label": null,
+      "gene_symbols": [
+        "YIF1B"
+      ],
+      "local_clinical_domains": [],
+      "phenotype_curie": "HP:0007366",
+      "phenotype_label": "Atrophy/Degeneration affecting the brainstem",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK606999",
+        "chapter_title": "YIF1B-Related Neurodevelopmental Disorder",
+        "section_id": null,
+        "section_heading": null,
+        "source_sentence": "Hypoventilation and ventilation dependency in the presence of brain stem atrophy",
+        "paragraph_id": null,
+        "sentence_id": null,
+        "paragraph_char_start": null,
+        "paragraph_char_end": null,
+        "sentence_char_start": null,
+        "sentence_char_end": null,
+        "match_char_start": null,
+        "match_char_end": null,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK606999/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_alias_anchor",
+        "hpo_mapping_method": "graph_alias_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "VERIFIED",
+        "auto_accept_eligible": false,
+        "auto_accept_reasons": [
+          "source_span:skip"
+        ],
+        "alias_shadow": false,
+        "section_branch_consistent": null,
+        "table_concordance": "skip",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK606999-unmapped-HP:0000717-present",
+      "disease_curie": null,
+      "disease_label": null,
+      "gene_symbols": [
+        "YIF1B"
+      ],
+      "local_clinical_domains": [],
+      "phenotype_curie": "HP:0000717",
+      "phenotype_label": "Autism",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK606999",
+        "chapter_title": "YIF1B-Related Neurodevelopmental Disorder",
+        "section_id": "section_Suggestive_Findings",
+        "section_heading": "Suggestive Findings",
+        "source_sentence": "Neurobehavioral/psychiatric manifestations including autism spectrum disorder and anxiety",
+        "paragraph_id": "p9",
+        "sentence_id": "p9_s1",
+        "paragraph_char_start": 669,
+        "paragraph_char_end": 758,
+        "sentence_char_start": 669,
+        "sentence_char_end": 758,
+        "match_char_start": 722,
+        "match_char_end": 728,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK606999/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_alias_anchor",
+        "hpo_mapping_method": "graph_alias_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "FLAGGED",
+        "auto_accept_eligible": false,
+        "auto_accept_reasons": [
+          "alias_shadow:flag"
+        ],
+        "alias_shadow": true,
+        "section_branch_consistent": null,
+        "table_concordance": "skip",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK606999-unmapped-HP:0008936-present",
+      "disease_curie": null,
+      "disease_label": null,
+      "gene_symbols": [
+        "YIF1B"
+      ],
+      "local_clinical_domains": [],
+      "phenotype_curie": "HP:0008936",
+      "phenotype_label": "Axial hypotonia",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": "HP:0003593",
+        "label": "Infantile onset",
+        "raw": "infancy",
+        "trust": "high",
+        "evidence_text": "Generalized axial hypotonia of infancy and concurrent peripheral hypertonia"
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK606999",
+        "chapter_title": "YIF1B-Related Neurodevelopmental Disorder",
+        "section_id": "section_Suggestive_Findings",
+        "section_heading": "Suggestive Findings",
+        "source_sentence": "Generalized axial hypotonia of infancy and concurrent peripheral hypertonia",
+        "paragraph_id": "p5",
+        "sentence_id": "p5_s1",
+        "paragraph_char_start": 396,
+        "paragraph_char_end": 471,
+        "sentence_char_start": 396,
+        "sentence_char_end": 471,
+        "match_char_start": 408,
+        "match_char_end": 423,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK606999/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_exact_anchor",
+        "hpo_mapping_method": "graph_exact_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "FLAGGED",
+        "auto_accept_eligible": false,
+        "auto_accept_reasons": [
+          "alias_shadow:flag"
+        ],
+        "alias_shadow": true,
+        "section_branch_consistent": null,
+        "table_concordance": "skip",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK606999-unmapped-HP:0000618-present",
+      "disease_curie": null,
+      "disease_label": null,
+      "gene_symbols": [
+        "YIF1B"
+      ],
+      "local_clinical_domains": [],
+      "phenotype_curie": "HP:0000618",
+      "phenotype_label": "Blindness",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK606999",
+        "chapter_title": "YIF1B-Related Neurodevelopmental Disorder",
+        "section_id": "section_Suggestive_Findings",
+        "section_heading": "Suggestive Findings",
+        "source_sentence": "Ophthalmologic involvement, including strabismus, nystagmus, optic atrophy, and cortical blindness",
+        "paragraph_id": "p11",
+        "sentence_id": "p11_s1",
+        "paragraph_char_start": 784,
+        "paragraph_char_end": 882,
+        "sentence_char_start": 784,
+        "sentence_char_end": 882,
+        "match_char_start": 873,
+        "match_char_end": 882,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK606999/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_alias_anchor",
+        "hpo_mapping_method": "graph_alias_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "FLAGGED",
+        "auto_accept_eligible": false,
+        "auto_accept_reasons": [
+          "alias_shadow:flag"
+        ],
+        "alias_shadow": true,
+        "section_branch_consistent": null,
+        "table_concordance": "skip",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK606999-unmapped-HP:0410263-present",
+      "disease_curie": null,
+      "disease_label": null,
+      "gene_symbols": [
+        "YIF1B"
+      ],
+      "local_clinical_domains": [],
+      "phenotype_curie": "HP:0410263",
+      "phenotype_label": "Brain imaging abnormality",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK606999",
+        "chapter_title": "YIF1B-Related Neurodevelopmental Disorder",
+        "section_id": null,
+        "section_heading": null,
+        "source_sentence": "YIF1B -related neurodevelopmental disorder ( YIF1B -NDD) is characterized by severe-to-profound developmental delay / intellectual disability with variable motor abnormalities including axial hypotonia, peripheral hypertonia, dystonia, and dyskinesia; absence of speech in most individuals or very limited speech subject to regression; feeding difficulties; seizures; postnatal microcephaly with nonspecific brain MRI abnormalities; and ophthalmologic involvement (strabismus, nystagmus, optic atrophy, and cortical blindness).",
+        "paragraph_id": null,
+        "sentence_id": null,
+        "paragraph_char_start": null,
+        "paragraph_char_end": null,
+        "sentence_char_start": null,
+        "sentence_char_end": null,
+        "match_char_start": null,
+        "match_char_end": null,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK606999/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_alias_anchor",
+        "hpo_mapping_method": "graph_alias_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "FLAGGED",
+        "auto_accept_eligible": false,
+        "auto_accept_reasons": [
+          "source_span:skip",
+          "alias_shadow:flag"
+        ],
+        "alias_shadow": true,
+        "section_branch_consistent": null,
+        "table_concordance": "skip",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK606999-unmapped-HP:0001272-present",
+      "disease_curie": null,
+      "disease_label": null,
+      "gene_symbols": [
+        "YIF1B"
+      ],
+      "local_clinical_domains": [
+        {
+          "key": "neurologic",
+          "label": "Neurologic",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "Imaging findings on brain MRI. Nonspecific findings include white matter"
+          ]
+        }
+      ],
+      "phenotype_curie": "HP:0001272",
+      "phenotype_label": "Cerebellar atrophy",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK606999",
+        "chapter_title": "YIF1B-Related Neurodevelopmental Disorder",
+        "section_id": "section_Suggestive_Findings",
+        "section_heading": "Suggestive Findings",
+        "source_sentence": "Nonspecific findings include white matter and myelination abnormalities, corpus callosum hypoplasia, cerebellar atrophy and parenchymal volume loss, cerebellar hypoplasia, and pons and brain stem atrophy (see Figure 1 ).",
+        "paragraph_id": "p13",
+        "sentence_id": "p13_s2",
+        "paragraph_char_start": 966,
+        "paragraph_char_end": 1217,
+        "sentence_char_start": 997,
+        "sentence_char_end": 1217,
+        "match_char_start": 1098,
+        "match_char_end": 1116,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK606999/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_exact_anchor",
+        "hpo_mapping_method": "graph_exact_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "VERIFIED",
+        "auto_accept_eligible": true,
+        "auto_accept_reasons": [],
+        "alias_shadow": false,
+        "section_branch_consistent": null,
+        "table_concordance": "skip",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK606999-unmapped-HP:0001321-present",
+      "disease_curie": null,
+      "disease_label": null,
+      "gene_symbols": [
+        "YIF1B"
+      ],
+      "local_clinical_domains": [
+        {
+          "key": "neurologic",
+          "label": "Neurologic",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "Imaging findings on brain MRI. Nonspecific findings include white matter"
+          ]
+        }
+      ],
+      "phenotype_curie": "HP:0001321",
+      "phenotype_label": "Cerebellar hypoplasia",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK606999",
+        "chapter_title": "YIF1B-Related Neurodevelopmental Disorder",
+        "section_id": "section_Suggestive_Findings",
+        "section_heading": "Suggestive Findings",
+        "source_sentence": "Nonspecific findings include white matter and myelination abnormalities, corpus callosum hypoplasia, cerebellar atrophy and parenchymal volume loss, cerebellar hypoplasia, and pons and brain stem atrophy (see Figure 1 ).",
+        "paragraph_id": "p13",
+        "sentence_id": "p13_s2",
+        "paragraph_char_start": 966,
+        "paragraph_char_end": 1217,
+        "sentence_char_start": 997,
+        "sentence_char_end": 1217,
+        "match_char_start": 1146,
+        "match_char_end": 1167,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK606999/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_exact_anchor",
+        "hpo_mapping_method": "graph_exact_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "VERIFIED",
+        "auto_accept_eligible": true,
+        "auto_accept_reasons": [],
+        "alias_shadow": false,
+        "section_branch_consistent": null,
+        "table_concordance": "skip",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK606999-unmapped-HP:0100704-present",
+      "disease_curie": null,
+      "disease_label": null,
+      "gene_symbols": [
+        "YIF1B"
+      ],
+      "local_clinical_domains": [],
+      "phenotype_curie": "HP:0100704",
+      "phenotype_label": "Cerebral visual impairment",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK606999",
+        "chapter_title": "YIF1B-Related Neurodevelopmental Disorder",
+        "section_id": "section_Suggestive_Findings",
+        "section_heading": "Suggestive Findings",
+        "source_sentence": "Ophthalmologic involvement, including strabismus, nystagmus, optic atrophy, and cortical blindness",
+        "paragraph_id": "p11",
+        "sentence_id": "p11_s1",
+        "paragraph_char_start": 784,
+        "paragraph_char_end": 882,
+        "sentence_char_start": 784,
+        "sentence_char_end": 882,
+        "match_char_start": 864,
+        "match_char_end": 882,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK606999/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_alias_anchor",
+        "hpo_mapping_method": "graph_alias_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "VERIFIED",
+        "auto_accept_eligible": true,
+        "auto_accept_reasons": [],
+        "alias_shadow": false,
+        "section_branch_consistent": null,
+        "table_concordance": "skip",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK606999-unmapped-HP:0100660-present",
+      "disease_curie": null,
+      "disease_label": null,
+      "gene_symbols": [
+        "YIF1B"
+      ],
+      "local_clinical_domains": [
+        {
+          "key": "neurologic",
+          "label": "Neurologic",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "Movement disorders, including dystonia and dyskinesia or"
+          ]
+        }
+      ],
+      "phenotype_curie": "HP:0100660",
+      "phenotype_label": "Dyskinesia",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK606999",
+        "chapter_title": "YIF1B-Related Neurodevelopmental Disorder",
+        "section_id": "section_Suggestive_Findings",
+        "section_heading": "Suggestive Findings",
+        "source_sentence": "Movement disorders, including dystonia and dyskinesia or tremors",
+        "paragraph_id": "p7",
+        "sentence_id": "p7_s1",
+        "paragraph_char_start": 502,
+        "paragraph_char_end": 566,
+        "sentence_char_start": 502,
+        "sentence_char_end": 566,
+        "match_char_start": 545,
+        "match_char_end": 555,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK606999/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_exact_anchor",
+        "hpo_mapping_method": "graph_exact_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "VERIFIED",
+        "auto_accept_eligible": true,
+        "auto_accept_reasons": [],
+        "alias_shadow": false,
+        "section_branch_consistent": null,
+        "table_concordance": "pass",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK606999-unmapped-HP:0001332-present",
+      "disease_curie": null,
+      "disease_label": null,
+      "gene_symbols": [
+        "YIF1B"
+      ],
+      "local_clinical_domains": [
+        {
+          "key": "neurologic",
+          "label": "Neurologic",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "Movement disorders, including dystonia and dyskinesia or"
+          ]
+        }
+      ],
+      "phenotype_curie": "HP:0001332",
+      "phenotype_label": "Dystonia",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK606999",
+        "chapter_title": "YIF1B-Related Neurodevelopmental Disorder",
+        "section_id": "section_Suggestive_Findings",
+        "section_heading": "Suggestive Findings",
+        "source_sentence": "Movement disorders, including dystonia and dyskinesia or tremors",
+        "paragraph_id": "p7",
+        "sentence_id": "p7_s1",
+        "paragraph_char_start": 502,
+        "paragraph_char_end": 566,
+        "sentence_char_start": 502,
+        "sentence_char_end": 566,
+        "match_char_start": 532,
+        "match_char_end": 540,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK606999/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_exact_anchor",
+        "hpo_mapping_method": "graph_exact_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "FLAGGED",
+        "auto_accept_eligible": false,
+        "auto_accept_reasons": [
+          "alias_shadow:flag"
+        ],
+        "alias_shadow": true,
+        "section_branch_consistent": null,
+        "table_concordance": "pass",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK606999-unmapped-HP:0011968-present",
+      "disease_curie": null,
+      "disease_label": null,
+      "gene_symbols": [
+        "YIF1B"
+      ],
+      "local_clinical_domains": [
+        {
+          "key": "gastrointestinal",
+          "label": "Gastrointestinal",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "Infant feeding difficulties"
+          ]
+        }
+      ],
+      "phenotype_curie": "HP:0011968",
+      "phenotype_label": "Feeding difficulties",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK606999",
+        "chapter_title": "YIF1B-Related Neurodevelopmental Disorder",
+        "section_id": "section_Suggestive_Findings",
+        "section_heading": "Suggestive Findings",
+        "source_sentence": "Infant feeding difficulties",
+        "paragraph_id": "p6",
+        "sentence_id": "p6_s1",
+        "paragraph_char_start": 473,
+        "paragraph_char_end": 500,
+        "sentence_char_start": 473,
+        "sentence_char_end": 500,
+        "match_char_start": 480,
+        "match_char_end": 500,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK606999/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_alias_anchor",
+        "hpo_mapping_method": "graph_alias_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "VERIFIED",
+        "auto_accept_eligible": true,
+        "auto_accept_reasons": [],
+        "alias_shadow": false,
+        "section_branch_consistent": null,
+        "table_concordance": "pass",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK606999-unmapped-HP:0040279-present",
+      "disease_curie": null,
+      "disease_label": null,
+      "gene_symbols": [
+        "YIF1B"
+      ],
+      "local_clinical_domains": [],
+      "phenotype_curie": "HP:0040279",
+      "phenotype_label": "Frequency",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK606999",
+        "chapter_title": "YIF1B-Related Neurodevelopmental Disorder",
+        "section_id": "section_Table_2",
+        "section_heading": "Table 2.",
+        "source_sentence": "YIF1B -Related Neurodevelopmental Disorder: Frequency of Select Features",
+        "paragraph_id": "p16",
+        "sentence_id": "p16_s1",
+        "paragraph_char_start": 2267,
+        "paragraph_char_end": 2339,
+        "sentence_char_start": 2267,
+        "sentence_char_end": 2339,
+        "match_char_start": 2311,
+        "match_char_end": 2320,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK606999/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_exact_anchor",
+        "hpo_mapping_method": "graph_exact_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "VERIFIED",
+        "auto_accept_eligible": true,
+        "auto_accept_reasons": [],
+        "alias_shadow": false,
+        "section_branch_consistent": null,
+        "table_concordance": "skip",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK606999-unmapped-HP:0032795-present",
+      "disease_curie": null,
+      "disease_label": null,
+      "gene_symbols": [
+        "YIF1B"
+      ],
+      "local_clinical_domains": [],
+      "phenotype_curie": "HP:0032795",
+      "phenotype_label": "Generalized myoclonic-tonic-clonic seizure",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK606999",
+        "chapter_title": "YIF1B-Related Neurodevelopmental Disorder",
+        "section_id": null,
+        "section_heading": null,
+        "source_sentence": "Epilepsy, varying from myoclonic seizures to generalized tonic-clonic seizures and infantile spasms",
+        "paragraph_id": null,
+        "sentence_id": null,
+        "paragraph_char_start": null,
+        "paragraph_char_end": null,
+        "sentence_char_start": null,
+        "sentence_char_end": null,
+        "match_char_start": null,
+        "match_char_end": null,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK606999/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_alias_anchor",
+        "hpo_mapping_method": "graph_alias_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "VERIFIED",
+        "auto_accept_eligible": false,
+        "auto_accept_reasons": [
+          "source_span:skip"
+        ],
+        "alias_shadow": false,
+        "section_branch_consistent": null,
+        "table_concordance": "skip",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK606999-unmapped-HP:0002079-present",
+      "disease_curie": null,
+      "disease_label": null,
+      "gene_symbols": [
+        "YIF1B"
+      ],
+      "local_clinical_domains": [
+        {
+          "key": "neurologic",
+          "label": "Neurologic",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "Imaging findings on brain MRI. Nonspecific findings include white matter"
+          ]
+        }
+      ],
+      "phenotype_curie": "HP:0002079",
+      "phenotype_label": "Hypoplasia of the corpus callosum",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK606999",
+        "chapter_title": "YIF1B-Related Neurodevelopmental Disorder",
+        "section_id": "section_Suggestive_Findings",
+        "section_heading": "Suggestive Findings",
+        "source_sentence": "Nonspecific findings include white matter and myelination abnormalities, corpus callosum hypoplasia, cerebellar atrophy and parenchymal volume loss, cerebellar hypoplasia, and pons and brain stem atrophy (see Figure 1 ).",
+        "paragraph_id": "p13",
+        "sentence_id": "p13_s2",
+        "paragraph_char_start": 966,
+        "paragraph_char_end": 1217,
+        "sentence_char_start": 997,
+        "sentence_char_end": 1217,
+        "match_char_start": 1070,
+        "match_char_end": 1096,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK606999/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_alias_anchor",
+        "hpo_mapping_method": "graph_alias_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "VERIFIED",
+        "auto_accept_eligible": true,
+        "auto_accept_reasons": [],
+        "alias_shadow": false,
+        "section_branch_consistent": null,
+        "table_concordance": "skip",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK606999-unmapped-HP:0002791-present",
+      "disease_curie": null,
+      "disease_label": null,
+      "gene_symbols": [
+        "YIF1B"
+      ],
+      "local_clinical_domains": [
+        {
+          "key": "neurologic",
+          "label": "Neurologic",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "n dependency in the presence of brain stem atrophy"
+          ]
+        }
+      ],
+      "phenotype_curie": "HP:0002791",
+      "phenotype_label": "Hypoventilation",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK606999",
+        "chapter_title": "YIF1B-Related Neurodevelopmental Disorder",
+        "section_id": "section_Suggestive_Findings",
+        "section_heading": "Suggestive Findings",
+        "source_sentence": "Hypoventilation and ventilation dependency in the presence of brain stem atrophy",
+        "paragraph_id": "p12",
+        "sentence_id": "p12_s1",
+        "paragraph_char_start": 884,
+        "paragraph_char_end": 964,
+        "sentence_char_start": 884,
+        "sentence_char_end": 964,
+        "match_char_start": 884,
+        "match_char_end": 899,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK606999/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_exact_anchor",
+        "hpo_mapping_method": "graph_exact_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "VERIFIED",
+        "auto_accept_eligible": true,
+        "auto_accept_reasons": [],
+        "alias_shadow": false,
+        "section_branch_consistent": null,
+        "table_concordance": "pass",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK606999-unmapped-HP:0012469-present",
+      "disease_curie": null,
+      "disease_label": null,
+      "gene_symbols": [
+        "YIF1B"
+      ],
+      "local_clinical_domains": [],
+      "phenotype_curie": "HP:0012469",
+      "phenotype_label": "Infantile spasms",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK606999",
+        "chapter_title": "YIF1B-Related Neurodevelopmental Disorder",
+        "section_id": "section_Suggestive_Findings",
+        "section_heading": "Suggestive Findings",
+        "source_sentence": "Epilepsy, varying from myoclonic seizures to generalized tonic-clonic seizures and infantile spasms",
+        "paragraph_id": "p8",
+        "sentence_id": "p8_s1",
+        "paragraph_char_start": 568,
+        "paragraph_char_end": 667,
+        "sentence_char_start": 568,
+        "sentence_char_end": 667,
+        "match_char_start": 651,
+        "match_char_end": 667,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK606999/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_exact_anchor",
+        "hpo_mapping_method": "graph_exact_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "VERIFIED",
+        "auto_accept_eligible": true,
+        "auto_accept_reasons": [],
+        "alias_shadow": false,
+        "section_branch_consistent": null,
+        "table_concordance": "skip",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK606999-unmapped-HP:0001276-present",
+      "disease_curie": null,
+      "disease_label": null,
+      "gene_symbols": [
+        "YIF1B"
+      ],
+      "local_clinical_domains": [],
+      "phenotype_curie": "HP:0001276",
+      "phenotype_label": "Hypertonia",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK606999",
+        "chapter_title": "YIF1B-Related Neurodevelopmental Disorder",
+        "section_id": "section_Suggestive_Findings",
+        "section_heading": "Suggestive Findings",
+        "source_sentence": "Generalized axial hypotonia of infancy and concurrent peripheral hypertonia",
+        "paragraph_id": "p5",
+        "sentence_id": "p5_s1",
+        "paragraph_char_start": 396,
+        "paragraph_char_end": 471,
+        "sentence_char_start": 396,
+        "sentence_char_end": 471,
+        "match_char_start": 461,
+        "match_char_end": 471,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK606999/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_exact_anchor",
+        "hpo_mapping_method": "graph_exact_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "FLAGGED",
+        "auto_accept_eligible": false,
+        "auto_accept_reasons": [
+          "alias_shadow:flag"
+        ],
+        "alias_shadow": true,
+        "section_branch_consistent": null,
+        "table_concordance": "skip",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK606999-unmapped-HP:0000639-present",
+      "disease_curie": null,
+      "disease_label": null,
+      "gene_symbols": [
+        "YIF1B"
+      ],
+      "local_clinical_domains": [],
+      "phenotype_curie": "HP:0000639",
+      "phenotype_label": "Nystagmus",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK606999",
+        "chapter_title": "YIF1B-Related Neurodevelopmental Disorder",
+        "section_id": "section_Suggestive_Findings",
+        "section_heading": "Suggestive Findings",
+        "source_sentence": "Ophthalmologic involvement, including strabismus, nystagmus, optic atrophy, and cortical blindness",
+        "paragraph_id": "p11",
+        "sentence_id": "p11_s1",
+        "paragraph_char_start": 784,
+        "paragraph_char_end": 882,
+        "sentence_char_start": 784,
+        "sentence_char_end": 882,
+        "match_char_start": 834,
+        "match_char_end": 843,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK606999/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_exact_anchor",
+        "hpo_mapping_method": "graph_exact_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "VERIFIED",
+        "auto_accept_eligible": true,
+        "auto_accept_reasons": [],
+        "alias_shadow": false,
+        "section_branch_consistent": null,
+        "table_concordance": "pass",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK606999-unmapped-HP:0000648-present",
+      "disease_curie": null,
+      "disease_label": null,
+      "gene_symbols": [
+        "YIF1B"
+      ],
+      "local_clinical_domains": [],
+      "phenotype_curie": "HP:0000648",
+      "phenotype_label": "Optic atrophy",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK606999",
+        "chapter_title": "YIF1B-Related Neurodevelopmental Disorder",
+        "section_id": "section_Suggestive_Findings",
+        "section_heading": "Suggestive Findings",
+        "source_sentence": "Ophthalmologic involvement, including strabismus, nystagmus, optic atrophy, and cortical blindness",
+        "paragraph_id": "p11",
+        "sentence_id": "p11_s1",
+        "paragraph_char_start": 784,
+        "paragraph_char_end": 882,
+        "sentence_char_start": 784,
+        "sentence_char_end": 882,
+        "match_char_start": 845,
+        "match_char_end": 858,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK606999/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_exact_anchor",
+        "hpo_mapping_method": "graph_exact_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "VERIFIED",
+        "auto_accept_eligible": true,
+        "auto_accept_reasons": [],
+        "alias_shadow": false,
+        "section_branch_consistent": null,
+        "table_concordance": "pass",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK606999-unmapped-HP:0012736-present",
+      "disease_curie": null,
+      "disease_label": null,
+      "gene_symbols": [
+        "YIF1B"
+      ],
+      "local_clinical_domains": [],
+      "phenotype_curie": "HP:0012736",
+      "phenotype_label": "Profound global developmental delay",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": null,
+        "evidence_text": "Severe-to-profound developmental delay; most individuals do not obtain any developmental milestones."
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK606999",
+        "chapter_title": "YIF1B-Related Neurodevelopmental Disorder",
+        "section_id": null,
+        "section_heading": null,
+        "source_sentence": "Severe-to-profound developmental delay; most individuals do not obtain any developmental milestones.",
+        "paragraph_id": null,
+        "sentence_id": null,
+        "paragraph_char_start": null,
+        "paragraph_char_end": null,
+        "sentence_char_start": null,
+        "sentence_char_end": null,
+        "match_char_start": null,
+        "match_char_end": null,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK606999/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_alias_anchor",
+        "hpo_mapping_method": "graph_alias_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "FAILED",
+        "auto_accept_eligible": false,
+        "auto_accept_reasons": [
+          "source_span:skip",
+          "table_conflict:flag",
+          "frequency_support:fail",
+          "contains_failed_check"
+        ],
+        "alias_shadow": false,
+        "section_branch_consistent": null,
+        "table_concordance": "flag",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK606999-unmapped-HP:0002187-present",
+      "disease_curie": null,
+      "disease_label": null,
+      "gene_symbols": [
+        "YIF1B"
+      ],
+      "local_clinical_domains": [],
+      "phenotype_curie": "HP:0002187",
+      "phenotype_label": "Profound intellectual disability",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK606999",
+        "chapter_title": "YIF1B-Related Neurodevelopmental Disorder",
+        "section_id": "section_Suggestive_Findings",
+        "section_heading": "Suggestive Findings",
+        "source_sentence": "Severe-to-profound intellectual disability, with no speech development or limited speech with subsequent regression",
+        "paragraph_id": "p4",
+        "sentence_id": "p4_s1",
+        "paragraph_char_start": 279,
+        "paragraph_char_end": 394,
+        "sentence_char_start": 279,
+        "sentence_char_end": 394,
+        "match_char_start": 289,
+        "match_char_end": 321,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK606999/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_exact_anchor",
+        "hpo_mapping_method": "graph_exact_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "VERIFIED",
+        "auto_accept_eligible": true,
+        "auto_accept_reasons": [],
+        "alias_shadow": false,
+        "section_branch_consistent": null,
+        "table_concordance": "pass",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK606999-unmapped-HP:0000252-present",
+      "disease_curie": null,
+      "disease_label": null,
+      "gene_symbols": [
+        "YIF1B"
+      ],
+      "local_clinical_domains": [],
+      "phenotype_curie": "HP:0000252",
+      "phenotype_label": "Microcephaly",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK606999",
+        "chapter_title": "YIF1B-Related Neurodevelopmental Disorder",
+        "section_id": "section_Suggestive_Findings",
+        "section_heading": "Suggestive Findings",
+        "source_sentence": "Postnatal microcephaly",
+        "paragraph_id": "p10",
+        "sentence_id": "p10_s1",
+        "paragraph_char_start": 760,
+        "paragraph_char_end": 782,
+        "sentence_char_start": 760,
+        "sentence_char_end": 782,
+        "match_char_start": 770,
+        "match_char_end": 782,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK606999/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_exact_anchor",
+        "hpo_mapping_method": "graph_exact_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "FLAGGED",
+        "auto_accept_eligible": false,
+        "auto_accept_reasons": [
+          "alias_shadow:flag"
+        ],
+        "alias_shadow": true,
+        "section_branch_consistent": null,
+        "table_concordance": "pass",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK606999-unmapped-HP:0010864-present",
+      "disease_curie": null,
+      "disease_label": null,
+      "gene_symbols": [
+        "YIF1B"
+      ],
+      "local_clinical_domains": [],
+      "phenotype_curie": "HP:0010864",
+      "phenotype_label": "Severe intellectual disability",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK606999",
+        "chapter_title": "YIF1B-Related Neurodevelopmental Disorder",
+        "section_id": null,
+        "section_heading": null,
+        "source_sentence": "Severe-to-profound intellectual disability, with no speech development or limited speech with subsequent regression",
+        "paragraph_id": null,
+        "sentence_id": null,
+        "paragraph_char_start": null,
+        "paragraph_char_end": null,
+        "sentence_char_start": null,
+        "sentence_char_end": null,
+        "match_char_start": null,
+        "match_char_end": null,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK606999/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_alias_anchor",
+        "hpo_mapping_method": "graph_alias_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "VERIFIED",
+        "auto_accept_eligible": false,
+        "auto_accept_reasons": [
+          "source_span:skip"
+        ],
+        "alias_shadow": false,
+        "section_branch_consistent": null,
+        "table_concordance": "pass",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK606999-unmapped-HP:0000486-present",
+      "disease_curie": null,
+      "disease_label": null,
+      "gene_symbols": [
+        "YIF1B"
+      ],
+      "local_clinical_domains": [],
+      "phenotype_curie": "HP:0000486",
+      "phenotype_label": "Strabismus",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK606999",
+        "chapter_title": "YIF1B-Related Neurodevelopmental Disorder",
+        "section_id": "section_Suggestive_Findings",
+        "section_heading": "Suggestive Findings",
+        "source_sentence": "Ophthalmologic involvement, including strabismus, nystagmus, optic atrophy, and cortical blindness",
+        "paragraph_id": "p11",
+        "sentence_id": "p11_s1",
+        "paragraph_char_start": 784,
+        "paragraph_char_end": 882,
+        "sentence_char_start": 784,
+        "sentence_char_end": 882,
+        "match_char_start": 822,
+        "match_char_end": 832,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK606999/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_exact_anchor",
+        "hpo_mapping_method": "graph_exact_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "FLAGGED",
+        "auto_accept_eligible": false,
+        "auto_accept_reasons": [
+          "alias_shadow:flag"
+        ],
+        "alias_shadow": true,
+        "section_branch_consistent": null,
+        "table_concordance": "pass",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK606999-unmapped-HP:0001337-present",
+      "disease_curie": null,
+      "disease_label": null,
+      "gene_symbols": [
+        "YIF1B"
+      ],
+      "local_clinical_domains": [
+        {
+          "key": "neurologic",
+          "label": "Neurologic",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "Movement disorders, including dystonia and dyskinesia or"
+          ]
+        }
+      ],
+      "phenotype_curie": "HP:0001337",
+      "phenotype_label": "Tremor",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK606999",
+        "chapter_title": "YIF1B-Related Neurodevelopmental Disorder",
+        "section_id": "section_Suggestive_Findings",
+        "section_heading": "Suggestive Findings",
+        "source_sentence": "Movement disorders, including dystonia and dyskinesia or tremors",
+        "paragraph_id": "p7",
+        "sentence_id": "p7_s1",
+        "paragraph_char_start": 502,
+        "paragraph_char_end": 566,
+        "sentence_char_start": 502,
+        "sentence_char_end": 566,
+        "match_char_start": 559,
+        "match_char_end": 566,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK606999/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_alias_anchor",
+        "hpo_mapping_method": "graph_alias_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "VERIFIED",
+        "auto_accept_eligible": true,
+        "auto_accept_reasons": [],
+        "alias_shadow": false,
+        "section_branch_consistent": null,
+        "table_concordance": "pass",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK606999-unmapped-HP:0000750-present",
+      "disease_curie": null,
+      "disease_label": null,
+      "gene_symbols": [
+        "YIF1B"
+      ],
+      "local_clinical_domains": [],
+      "phenotype_curie": "HP:0000750",
+      "phenotype_label": "Delayed speech and language development",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK606999",
+        "chapter_title": "YIF1B-Related Neurodevelopmental Disorder",
+        "section_id": null,
+        "section_heading": null,
+        "source_sentence": "Severe-to-profound intellectual disability, with no speech development or limited speech with subsequent regression",
+        "paragraph_id": null,
+        "sentence_id": null,
+        "paragraph_char_start": null,
+        "paragraph_char_end": null,
+        "sentence_char_start": null,
+        "sentence_char_end": null,
+        "match_char_start": null,
+        "match_char_end": null,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK606999/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_alias_anchor",
+        "hpo_mapping_method": "graph_alias_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "FLAGGED",
+        "auto_accept_eligible": false,
+        "auto_accept_reasons": [
+          "source_span:skip",
+          "alias_shadow:flag"
+        ],
+        "alias_shadow": true,
+        "section_branch_consistent": null,
+        "table_concordance": "skip",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK606999-unmapped-HP:0001263-present",
+      "disease_curie": null,
+      "disease_label": null,
+      "gene_symbols": [
+        "YIF1B"
+      ],
+      "local_clinical_domains": [
+        {
+          "key": "neurologic",
+          "label": "Neurologic",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "Severe-to-profound developmental delay; most individuals do not obtain any devel"
+          ]
+        }
+      ],
+      "phenotype_curie": "HP:0001263",
+      "phenotype_label": "Global developmental delay",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": null,
+        "evidence_text": "Severe-to-profound developmental delay; most individuals do not obtain any developmental milestones."
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK606999",
+        "chapter_title": "YIF1B-Related Neurodevelopmental Disorder",
+        "section_id": "section_Suggestive_Findings",
+        "section_heading": "Suggestive Findings",
+        "source_sentence": "Severe-to-profound developmental delay; most individuals do not obtain any developmental milestones.",
+        "paragraph_id": "p3",
+        "sentence_id": "p3_s1",
+        "paragraph_char_start": 177,
+        "paragraph_char_end": 277,
+        "sentence_char_start": 177,
+        "sentence_char_end": 277,
+        "match_char_start": 196,
+        "match_char_end": 215,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK606999/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_alias_anchor",
+        "hpo_mapping_method": "graph_alias_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "FLAGGED",
+        "auto_accept_eligible": false,
+        "auto_accept_reasons": [
+          "alias_shadow:flag",
+          "table_conflict:flag"
+        ],
+        "alias_shadow": true,
+        "section_branch_consistent": null,
+        "table_concordance": "flag",
+        "cross_source_concordance": []
+      }
+    },
+    {
+      "assertion_id": "GR-NBK606999-unmapped-HP:0001249-present",
+      "disease_curie": null,
+      "disease_label": null,
+      "gene_symbols": [
+        "YIF1B"
+      ],
+      "local_clinical_domains": [],
+      "phenotype_curie": "HP:0001249",
+      "phenotype_label": "Intellectual disability",
+      "status": "present",
+      "frequency": {
+        "value": null,
+        "value_min": null,
+        "value_max": null,
+        "normalization_method": null,
+        "raw": null,
+        "hpo_category": null,
+        "hpo_category_label": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "onset": {
+        "hpo_id": null,
+        "label": null,
+        "raw": null,
+        "trust": "not_extracted_deterministic",
+        "evidence_text": null
+      },
+      "severity": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "progression": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "treatment_response": {
+        "raw": null,
+        "trust": null,
+        "evidence_text": null
+      },
+      "provenance": {
+        "source_key": "genereviews_nlp",
+        "nbk_id": "NBK606999",
+        "chapter_title": "YIF1B-Related Neurodevelopmental Disorder",
+        "section_id": "section_Suggestive_Findings",
+        "section_heading": "Suggestive Findings",
+        "source_sentence": "Severe-to-profound intellectual disability, with no speech development or limited speech with subsequent regression",
+        "paragraph_id": "p4",
+        "sentence_id": "p4_s1",
+        "paragraph_char_start": 279,
+        "paragraph_char_end": 394,
+        "sentence_char_start": 279,
+        "sentence_char_end": 394,
+        "match_char_start": 298,
+        "match_char_end": 321,
+        "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK606999/",
+        "extraction_date": "2026-04-01",
+        "pipeline_version": "genereviews-api-export-v1-20260331"
+      },
+      "validation": {
+        "anchor_source": "graph_alias_anchor",
+        "hpo_mapping_method": "graph_alias_anchor",
+        "hpo_mapping_trust": "high",
+        "verification_verdict": "FLAGGED",
+        "auto_accept_eligible": false,
+        "auto_accept_reasons": [
+          "alias_shadow:flag"
+        ],
+        "alias_shadow": true,
+        "section_branch_consistent": null,
+        "table_concordance": "pass",
+        "cross_source_concordance": []
+      }
+    }
+  ],
+  "summary_stats": {
+    "present_count": 31,
+    "excluded_count": 0,
+    "with_frequency": 0,
+    "with_onset": 1,
+    "high_trust": 31,
+    "medium_trust": 0
+  }
+}
