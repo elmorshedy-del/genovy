@@ -1,0 +1,89 @@
+{
+  "created_at": "2026-04-04T00:00:00.000Z",
+  "scope": "stage3_first2_manual_audit_v1",
+  "notes": [
+    "Independent first-pass audit over the first two chapters in the latest10 manifest: Y Chromosome Infertility and Zellweger Spectrum Disorder.",
+    "This mini-audit is chapter-first rather than model-first. It includes the useful residual targets plus key anchor-covered or redundant rows needed to interpret model behavior on these two chapters.",
+    "Exact-anchor duplicates that were not relevant to the observed model behavior were not exhaustively enumerated."
+  ],
+  "bucket_definitions": {
+    "useful_new": "Valid residual phenotype discovery that is useful for downstream verification and HPO mapping.",
+    "anchor_covered_semantic": "Real phenotype mention, but semantically already covered by stage2 anchors and therefore not truly novel discovery.",
+    "broad_or_redundant": "Real-ish or clinically adjacent, but too broad, redundant, over-granular, or weakly specified for clean residual discovery.",
+    "junk_or_context_only": "Not a valid residual phenotype output for this stage, including lab-only, support/management, risk-only, fragmentary, or context-only output."
+  },
+  "chapters": [
+    {
+      "chapter_key": "y_chromosome_infertility",
+      "chapter_title": "Y Chromosome Infertility - GeneReviews® - NCBI Bookshelf",
+      "entries": [
+        {
+          "sentence_id": "p11_s1",
+          "evidence_text": "severe oligozoospermia",
+          "bucket": "anchor_covered_semantic",
+          "notes": "Severity variant is still semantically covered by the anchored oligozoospermia rows."
+        },
+        {
+          "sentence_id": "p11_s1",
+          "evidence_text": "moderate oligozoospermia",
+          "bucket": "anchor_covered_semantic",
+          "notes": "Severity variant is still semantically covered by the anchored oligozoospermia rows."
+        }
+      ]
+    },
+    {
+      "chapter_key": "zellweger_spectrum_disorder",
+      "chapter_title": "Zellweger Spectrum Disorder - GeneReviews® - NCBI Bookshelf",
+      "entries": [
+        {
+          "sentence_id": "p3_s3",
+          "evidence_text": "death in childhood",
+          "bucket": "junk_or_context_only",
+          "notes": "Outcome/course statement rather than a clean phenotype row under the current rules."
+        },
+        {
+          "sentence_id": "p5_s2",
+          "evidence_text": "neuronal migration defects",
+          "bucket": "useful_new",
+          "notes": "Specific residual neurologic finding not already carried by the anchor surface."
+        },
+        {
+          "sentence_id": "p5_s4",
+          "evidence_text": "widely split sutures",
+          "bucket": "useful_new",
+          "notes": "Specific craniofacial residual finding beyond the existing broad craniofacial anchors."
+        },
+        {
+          "sentence_id": "p5_s5",
+          "evidence_text": "bony stippling",
+          "bucket": "useful_new",
+          "notes": "Specific skeletal residual finding."
+        },
+        {
+          "sentence_id": "p5_s5",
+          "evidence_text": "chondrodysplasia punctata",
+          "bucket": "broad_or_redundant",
+          "notes": "Parenthetical synonym/alternate wording for the same stippling finding."
+        },
+        {
+          "sentence_id": "p6_s4",
+          "evidence_text": "leopard spot pigmentary retinopathy",
+          "bucket": "anchor_covered_semantic",
+          "notes": "Already semantically covered by the existing pigmentary retinopathy / retinopathy anchor surface."
+        },
+        {
+          "sentence_id": "p6_s5",
+          "evidence_text": "severe bleeding episodes",
+          "bucket": "useful_new",
+          "notes": "Concrete bleeding manifestation beyond the anchored coagulopathy row."
+        },
+        {
+          "sentence_id": "p6_s5",
+          "evidence_text": "vitamin K-responsive coagulopathy",
+          "bucket": "anchor_covered_semantic",
+          "notes": "Semantically covered by the existing coagulation abnormality / coagulopathy anchors."
+        }
+      ]
+    }
+  ]
+}

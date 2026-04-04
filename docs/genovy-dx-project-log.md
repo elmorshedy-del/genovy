@@ -3888,3 +3888,122 @@ These were disease/diagnosis-style contexts, not generic HPO-string errors.
 - Interpretation:
   - on this slice, Gemma only became clean after the prompt explicitly framed covered concepts as semantic coverage rather than leaving it as a raw anchor list
   - this suggests the main lever for Gemma is stronger residual-awareness / coverage framing, not simply adding more medical-role wording
+
+## 2026-04-03 - Gemma 4 31B bigger-slice few-shot attempt blocked
+
+- Prepared a larger `VEXAS Syndrome` slice (`p8`-`p29`) and a cross-chapter few-shot prompt for `google/gemma-4-31B-it`:
+  - used `Williams Syndrome` examples of good residual rows
+  - used `Williams Syndrome` examples of bad fragments / risk-only / anchor-covered outputs
+  - explicitly avoided using examples from the target chapter
+- Attempted both:
+  - `temperature: 0`
+  - default parameters
+- Both failed at the HF router layer with:
+  - `The requested model 'google/gemma-4-31B-it' is not supported by any provider you have enabled.`
+- Sanity check on a trivial one-line prompt produced the same error, so the block is provider/model availability rather than prompt content.
+- Logged files:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/stage3_prompt_probe_gemma4_vexas_biggerslice_20260403/gemma_4_31b_it_vexas_biggerslice_fewshot_temp0.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/stage3_prompt_probe_gemma4_vexas_biggerslice_20260403/gemma_4_31b_it_vexas_biggerslice_fewshot_default.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/stage3_prompt_probe_gemma4_vexas_biggerslice_20260403/gemma_4_31b_it_vexas_biggerslice_fewshot_summary.json`
+
+## 2026-04-03 - Hugging Face router health check
+
+- Verified account/token health:
+  - `GET https://huggingface.co/api/whoami-v2` returned `200`
+  - account `elmorshedyahmed`
+  - token is valid and includes inference permissions
+- Verified general HF site health:
+  - `GET https://huggingface.co` returned `200`
+- Re-tested `google/gemma-4-31B-it` with a trivial prompt:
+  - still returned `400 model_not_supported`
+- Added router control calls:
+  - `meta-llama/Llama-3.1-8B-Instruct` -> `200`
+  - `Qwen/Qwen2.5-7B-Instruct` -> `200`
+- Interpretation:
+  - the HF router is healthy
+  - the token/account is healthy
+  - the current issue is specific to `google/gemma-4-31B-it` provider availability on this router path
+
+## 2026-04-03 - Dedicated Hugging Face endpoint health check
+
+- Used dedicated endpoint provided by user:
+  - `https://o47u6io8f0bmw21b.eu-west-1.aws.endpoints.huggingface.cloud`
+- Health/path checks:
+  - `GET /` -> `200 Ok`
+  - `GET /health` -> `200 Ok`
+  - `GET /docs` -> `404`
+  - `POST /v1/chat/completions` -> `404`
+  - `POST /generate` -> `404`
+  - `POST /` with text-generation payload -> `200`
+- Small Gemma-style prompt using chat-template text on `POST /` worked and returned clean `[]` when `return_full_text: false` was set.
+- Larger cross-chapter few-shot `VEXAS` prompt was accepted by the endpoint but did not complete within the interactive waiting window of this session, so the endpoint appears healthy but comparatively slow for long prompts.
+- Practical use note:
+  - this endpoint should be treated as a direct text-generation endpoint on `POST /`, not as an OpenAI-compatible chat endpoint
+
+## 2026-04-03 - GPU endpoint Williams rerun and omission audit
+
+- Used GPU endpoint provided by user:
+  - `https://t3oxlar69noyd3mk.us-east-1.aws.endpoints.huggingface.cloud`
+- Re-ran `google/gemma-4-31B-it` on the Williams Syndrome `p15-p37` residual-discovery slice with:
+  - residual-only prompt
+  - semantic anchor coverage list
+  - `temperature: 0`
+  - plain `POST /` text-generation call
+- The rerun returned a broader set than the first saved Williams probe, including:
+  - `Post-term birth`
+  - `Poor weight gain`
+  - `Prolonged colic`
+  - `Hypotonia`
+  - `Hyperextensible joints`
+  - `Delayed motor milestones`
+  - `Delayed speech development`
+  - `Fine motor difficulties`
+  - plus additional broader/covered outputs
+- Sent a follow-up omission-audit prompt asking specifically why Gemma did not emit:
+  - `Bladder capacity is reduced`
+  - `detrusor overactivity`
+- Gemma's structured omission audit said:
+  - both candidates `should_have_emitted: true`
+  - both were classified as `anchor_covered`
+  - cited sentence:
+    - `p37_s4`
+  - anchor basis used by the model:
+    - `Urinary frequency`
+- Interpretation:
+  - the model is semantically collapsing the more specific urinary findings under the broader anchored urinary concept
+  - this is direct evidence that coverage-policy / residual-awareness is the limiting factor in these probes
+
+## 2026-04-04 - Strict enrichment reviewer schema and Zellweger pilot
+
+- Added strict enrichment reviewer schema helper:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/lib/enrichmentReviewer.js`
+- The schema now explicitly defines and allows:
+  - `pathophysiology`
+  - `etiology`
+  - `clinical_course`
+- Added canonical alias normalization so off-schema outputs can still be repaired into the enum:
+  - `severity -> severity_domain`
+  - `pathology -> pathophysiology`
+  - `progression -> clinical_course`
+- Added guarded chapter-review script:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/runChapterEnrichmentReviewerTrial.js`
+- Added package command:
+  - `npm run gr:chapter-enrichment-review`
+- Added schema-normalizer unit test:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/test/enrichmentReviewer.test.js`
+- Ran strict-schema Zellweger chapter review using cached grounded candidates plus source sentences and settled stage2 anchors.
+- Output written to:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/chapter_trial_zellweger_enrichment_20260404/chapter_enrichment_trial_outputs.json`
+- Result:
+  - both `gemini-2.5-pro` and `gemini-3-pro-preview` stayed inside the strict detail-type schema without needing the repair fallback
+  - both models kept:
+    - `neuronal migration defects`
+    - `widely split sutures`
+    - `bony stippling`
+    - `severe bleeding episodes`
+  - both did not retain `chondrodysplasia punctata` as separate enrichment
+  - both changed `leopard spot pigmentary retinopathy` from the prior `anchor_covered_semantic` audit bucket to `keep_enrichment`
+- Practical takeaway:
+  - the schema guard prevents ad hoc detail-type invention
+  - the enrichment-first policy materially changes at least one clinically important Zellweger decision
+  - `gemini-3-pro-preview` still gives the cleaner structured reviewer output shape, but `gemini-2.5-pro` also behaved once the schema and definitions were explicit

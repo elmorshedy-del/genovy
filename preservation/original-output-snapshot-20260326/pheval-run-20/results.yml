@@ -1,8 +1,0 @@
-tool: Genovy DX
-tool_version: 0.1.0
-config: /pheval_genovy
-run_timestamp: 1773607718.063922
-corpus: output/pheval-testdata-20
-mondo_download_date: '2025-06-09T18:46:34.249845Z'
-hgnc_download_date: '2025-06-09T18:46:49.610643Z'
-tool_specific_configuration_options: null

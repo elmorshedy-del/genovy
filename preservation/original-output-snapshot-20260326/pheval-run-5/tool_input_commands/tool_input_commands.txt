@@ -1,5 +1,0 @@
-curl -X POST https://genovy-production.up.railway.app/api/dx/rank -H 'content-type: application/json' --data @<001_NIPBL_PMID_31337854_Patient_4.json>
-curl -X POST https://genovy-production.up.railway.app/api/dx/rank -H 'content-type: application/json' --data @<002_KDM6B_PMID_37196654_Individual_59_DDD_306396.json>
-curl -X POST https://genovy-production.up.railway.app/api/dx/rank -H 'content-type: application/json' --data @<003_EHMT1_PMID_39013458_individual_Diagnostic110006.json>
-curl -X POST https://genovy-production.up.railway.app/api/dx/rank -H 'content-type: application/json' --data @<004_NF1_PMID_29290338_Family_CAR_R8012M6_individual_NS.json>
-curl -X POST https://genovy-production.up.railway.app/api/dx/rank -H 'content-type: application/json' --data @<005_CTCF_PMID_31239556_individual_28.json>

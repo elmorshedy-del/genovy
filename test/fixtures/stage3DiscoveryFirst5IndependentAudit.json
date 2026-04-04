@@ -1,0 +1,272 @@
+{
+  "created_at": "2026-04-04T00:00:00.000Z",
+  "scope": "stage3_first5_independent_audit_v1",
+  "notes": [
+    "Independent source-first audit over the first five chapters in the latest5 readiness set: Y Chromosome Infertility, Zellweger Spectrum Disorder, ZAP70-Related Combined Immunodeficiency, YIF1B-Related Neurodevelopmental Disorder, and Zhu-Tokita-Takenouchi-Kim Syndrome.",
+    "Each entry was checked against the preserved stage1 clinical_structure sentence text and then bucketed with reference to the settled stage2 anchor surface for that chapter.",
+    "This fixture is intended to break the circularity of the earlier latest10 manual denominator, which was derived from the same Gemini output pool later used for scoring.",
+    "The fixture is selective rather than exhaustive: it includes all currently audited useful residual targets for these five chapters plus the key anchor-covered, broad, or junk rows needed to interpret model behavior."
+  ],
+  "bucket_definitions": {
+    "useful_new": "Valid residual phenotype discovery that is useful for downstream verification and HPO mapping.",
+    "anchor_covered_semantic": "Real phenotype mention, but semantically already covered by stage2 anchors and therefore not truly novel discovery.",
+    "broad_or_redundant": "Real-ish or clinically adjacent, but too broad, redundant, over-granular, or weakly specified for clean residual discovery.",
+    "junk_or_context_only": "Not a valid residual phenotype output for this stage, including lab-only, support/management, risk-only, fragmentary, or context-only output."
+  },
+  "chapters": [
+    {
+      "chapter_key": "y_chromosome_infertility",
+      "chapter_title": "Y Chromosome Infertility - GeneReviews® - NCBI Bookshelf",
+      "entries": [
+        {
+          "sentence_id": "p11_s1",
+          "evidence_text": "severe oligozoospermia",
+          "source_sentence": "Males with Y chromosome infertility have azoospermia or severe, moderate, or mild oligozoospermia depending on the location and size of the Y chromosome deletion (see Genotype-Phenotype Correlations ).",
+          "bucket": "anchor_covered_semantic",
+          "notes": "Severity variant is still semantically covered by the settled oligozoospermia anchor surface."
+        },
+        {
+          "sentence_id": "p11_s1",
+          "evidence_text": "moderate oligozoospermia",
+          "source_sentence": "Males with Y chromosome infertility have azoospermia or severe, moderate, or mild oligozoospermia depending on the location and size of the Y chromosome deletion (see Genotype-Phenotype Correlations ).",
+          "bucket": "anchor_covered_semantic",
+          "notes": "Severity variant is still semantically covered by the settled oligozoospermia anchor surface."
+        }
+      ]
+    },
+    {
+      "chapter_key": "zellweger_spectrum_disorder",
+      "chapter_title": "Zellweger Spectrum Disorder - GeneReviews® - NCBI Bookshelf",
+      "entries": [
+        {
+          "sentence_id": "p3_s3",
+          "evidence_text": "death in childhood",
+          "source_sentence": "Nonetheless, all of the peroxisome assembly disorders cause significant morbidity, frequently resulting in death in childhood.",
+          "bucket": "junk_or_context_only",
+          "notes": "Outcome/course statement rather than a clean phenotype row under the current rules."
+        },
+        {
+          "sentence_id": "p5_s2",
+          "evidence_text": "neuronal migration defects",
+          "source_sentence": "Neonatal seizures are frequent and caused by underlying neuronal migration defects.",
+          "bucket": "useful_new",
+          "notes": "Specific residual neurologic finding not already carried by the settled anchor surface."
+        },
+        {
+          "sentence_id": "p5_s4",
+          "evidence_text": "widely split sutures",
+          "source_sentence": "Distinctive craniofacial features include flat face, broad nasal bridge, large anterior fontanelle, and widely split sutures.",
+          "bucket": "useful_new",
+          "notes": "Specific craniofacial residual finding beyond the broad craniofacial anchors."
+        },
+        {
+          "sentence_id": "p5_s5",
+          "evidence_text": "bony stippling",
+          "source_sentence": "In severely affected children, bony stippling (chondrodysplasia punctata) at the patella(e) and the long bones may be noted, as well as renal cysts.",
+          "bucket": "useful_new",
+          "notes": "Specific skeletal residual finding."
+        },
+        {
+          "sentence_id": "p5_s5",
+          "evidence_text": "chondrodysplasia punctata",
+          "source_sentence": "In severely affected children, bony stippling (chondrodysplasia punctata) at the patella(e) and the long bones may be noted, as well as renal cysts.",
+          "bucket": "broad_or_redundant",
+          "notes": "Parenthetical alternate wording for the same stippling finding, not a separate residual discovery."
+        },
+        {
+          "sentence_id": "p6_s4",
+          "evidence_text": "leopard spot pigmentary retinopathy",
+          "source_sentence": "A few children with a clinical diagnosis of neonatal adrenoleukodystrophy had transient leopard spot pigmentary retinopathy [ Lyons et al 2004 ].",
+          "bucket": "anchor_covered_semantic",
+          "notes": "Already semantically covered by the settled pigmentary retinopathy / retinopathy anchor surface."
+        },
+        {
+          "sentence_id": "p6_s5",
+          "evidence_text": "severe bleeding episodes",
+          "source_sentence": "Liver dysfunction may be first identified in children with severe bleeding episodes caused by a vitamin K-responsive coagulopathy.",
+          "bucket": "useful_new",
+          "notes": "Concrete bleeding manifestation beyond the anchored coagulopathy row."
+        },
+        {
+          "sentence_id": "p6_s5",
+          "evidence_text": "vitamin K-responsive coagulopathy",
+          "source_sentence": "Liver dysfunction may be first identified in children with severe bleeding episodes caused by a vitamin K-responsive coagulopathy.",
+          "bucket": "anchor_covered_semantic",
+          "notes": "Semantically covered by the existing coagulation abnormality / coagulopathy anchors."
+        }
+      ]
+    },
+    {
+      "chapter_key": "zap70_related_combined_immunodeficiency",
+      "chapter_title": "ZAP70-Related Combined Immunodeficiency - GeneReviews® - NCBI Bookshelf",
+      "entries": [
+        {
+          "sentence_id": "p5_s1",
+          "evidence_text": "lymphoproliferation",
+          "source_sentence": "Lymphoproliferative disease in some individuals",
+          "bucket": "anchor_covered_semantic",
+          "notes": "Semantically covered by anchored lymphoproliferative disorder."
+        },
+        {
+          "sentence_id": "p25_s2",
+          "evidence_text": "viral infections",
+          "source_sentence": "Severe lower-respiratory infections are seen, most notably Pneumocystis jiroveci infections and viral infections.",
+          "bucket": "anchor_covered_semantic",
+          "notes": "Generic infection category already semantically covered by anchored recurrent or opportunistic infection findings."
+        },
+        {
+          "sentence_id": "p27_s1",
+          "evidence_text": "recurrent lower-respiratory disease",
+          "source_sentence": "Reports of milder phenotypes in sibs of children who had died from ZAP70 -related CID include a child age five months with recurrent lower-respiratory disease but no severe infections [ Turul et al 2009 ] and a child with persistent dermatitis resistant to therapy [ Katamura et al 1999 ].",
+          "bucket": "anchor_covered_semantic",
+          "notes": "Semantically covered by anchored recurrent respiratory or infectious findings."
+        },
+        {
+          "sentence_id": "p30_s1",
+          "evidence_text": "disseminated mycobacterial disease",
+          "source_sentence": "BCG-related complications including axillary lymphadenitis or disseminated mycobacterial disease following BCG vaccination may be presenting features [ Santos et al 2010 , Esenboga et al 2016 ].",
+          "bucket": "useful_new",
+          "notes": "Specific opportunistic infectious manifestation."
+        },
+        {
+          "sentence_id": "p33_s1",
+          "evidence_text": "refractory autoimmune features",
+          "source_sentence": "Two sibs had refractory autoimmune features including nephrotic syndrome/proteinuria, bullous pemphigoid, and colitis; one also developed autoantibodies to factor VIII caused by a hypomorphic and weakly activating ZAP70 pathogenic variant [ Chan et al 2016 ].",
+          "bucket": "broad_or_redundant",
+          "notes": "Umbrella phrase; the sentence immediately gives the cleaner specific child findings."
+        },
+        {
+          "sentence_id": "p33_s1",
+          "evidence_text": "bullous pemphigoid",
+          "source_sentence": "Two sibs had refractory autoimmune features including nephrotic syndrome/proteinuria, bullous pemphigoid, and colitis; one also developed autoantibodies to factor VIII caused by a hypomorphic and weakly activating ZAP70 pathogenic variant [ Chan et al 2016 ].",
+          "bucket": "useful_new",
+          "notes": "Specific autoimmune dermatologic phenotype."
+        },
+        {
+          "sentence_id": "p33_s1",
+          "evidence_text": "autoantibodies to factor VIII",
+          "source_sentence": "Two sibs had refractory autoimmune features including nephrotic syndrome/proteinuria, bullous pemphigoid, and colitis; one also developed autoantibodies to factor VIII caused by a hypomorphic and weakly activating ZAP70 pathogenic variant [ Chan et al 2016 ].",
+          "bucket": "junk_or_context_only",
+          "notes": "Serologic or lab-style output, not a phenotype row."
+        },
+        {
+          "sentence_id": "p34_s1",
+          "evidence_text": "VZV infection",
+          "source_sentence": "An adult with a history of infantile-onset colitis, recurrent respiratory-tract infections, mucocutaneous candidiasis, HSV stomatitis, VZV infection, EBV lymphoproliferative disorder, recurrent CMV viremia, polyomaviremia, and epidermodysplasia verruciformis-like lesions due to HHV-23 was recently reported.",
+          "bucket": "useful_new",
+          "notes": "Concrete infectious complication or history item."
+        },
+        {
+          "sentence_id": "p34_s1",
+          "evidence_text": "epidermodysplasia verruciformis-like lesions",
+          "source_sentence": "An adult with a history of infantile-onset colitis, recurrent respiratory-tract infections, mucocutaneous candidiasis, HSV stomatitis, VZV infection, EBV lymphoproliferative disorder, recurrent CMV viremia, polyomaviremia, and epidermodysplasia verruciformis-like lesions due to HHV-23 was recently reported.",
+          "bucket": "useful_new",
+          "notes": "Specific lesion phenotype."
+        }
+      ]
+    },
+    {
+      "chapter_key": "yif1b_related_neurodevelopmental_disorder",
+      "chapter_title": "YIF1B-Related Neurodevelopmental Disorder - GeneReviews® - NCBI Bookshelf",
+      "entries": [
+        {
+          "sentence_id": "p3_s1",
+          "evidence_text": "do not obtain any developmental milestones",
+          "source_sentence": "Severe-to-profound developmental delay; most individuals do not obtain any developmental milestones.",
+          "bucket": "anchor_covered_semantic",
+          "notes": "Semantically covered by anchored profound developmental delay."
+        },
+        {
+          "sentence_id": "p9_s1",
+          "evidence_text": "Neurobehavioral/psychiatric manifestations",
+          "source_sentence": "Neurobehavioral/psychiatric manifestations including autism spectrum disorder and anxiety",
+          "bucket": "broad_or_redundant",
+          "notes": "Broad category heading, not a clean residual finding."
+        },
+        {
+          "sentence_id": "p11_s1",
+          "evidence_text": "Ophthalmologic involvement",
+          "source_sentence": "Ophthalmologic involvement, including strabismus, nystagmus, optic atrophy, and cortical blindness",
+          "bucket": "broad_or_redundant",
+          "notes": "Broad category heading, not a specific phenotype."
+        },
+        {
+          "sentence_id": "p12_s1",
+          "evidence_text": "ventilation dependency",
+          "source_sentence": "Hypoventilation and ventilation dependency in the presence of brain stem atrophy",
+          "bucket": "junk_or_context_only",
+          "notes": "Support or dependency status rather than a clean phenotype row for this stage."
+        },
+        {
+          "sentence_id": "p13_s2",
+          "evidence_text": "parenchymal volume loss",
+          "source_sentence": "Nonspecific findings include white matter and myelination abnormalities, corpus callosum hypoplasia, cerebellar atrophy and parenchymal volume loss, cerebellar hypoplasia, and pons and brain stem atrophy (see Figure 1 ).",
+          "bucket": "useful_new",
+          "notes": "Specific imaging or morphologic residual finding."
+        },
+        {
+          "sentence_id": "p13_s2",
+          "evidence_text": "white matter ... abnormalities",
+          "source_sentence": "Nonspecific findings include white matter and myelination abnormalities, corpus callosum hypoplasia, cerebellar atrophy and parenchymal volume loss, cerebellar hypoplasia, and pons and brain stem atrophy (see Figure 1 ).",
+          "bucket": "broad_or_redundant",
+          "notes": "Fragmentary broad imaging phrase rather than a clean residual phenotype."
+        },
+        {
+          "sentence_id": "p15_s1",
+          "evidence_text": "motor abnormalities",
+          "source_sentence": "YIF1B -related neurodevelopmental disorder ( YIF1B -NDD) is characterized by severe-to-profound developmental delay / intellectual disability with variable motor abnormalities including axial hypotonia, peripheral hypertonia, dystonia, and dyskinesia; absence of speech in most individuals or very limited speech subject to regression; feeding difficulties; seizures; postnatal microcephaly with nonspecific brain MRI abnormalities; and ophthalmologic involvement (strabismus, nystagmus, optic atrophy, and cortical blindness).",
+          "bucket": "broad_or_redundant",
+          "notes": "Too broad; the sentence immediately lists the cleaner specific motor findings."
+        }
+      ]
+    },
+    {
+      "chapter_key": "zhu_tokita_takenouchi_kim_syndrome",
+      "chapter_title": "Zhu-Tokita-Takenouchi-Kim Syndrome - GeneReviews® - NCBI Bookshelf",
+      "entries": [
+        {
+          "sentence_id": "p16_s1",
+          "evidence_text": "Immunoglobulin (Ig) A deficiency",
+          "source_sentence": "Immunodeficiency: Immunoglobulin (Ig) A deficiency, IgG deficiency, and recurrent infection",
+          "bucket": "useful_new",
+          "notes": "Specific immunodeficiency subtype beyond generic immunodeficiency anchors."
+        },
+        {
+          "sentence_id": "p31_s3",
+          "evidence_text": "dystonic posturing of limbs",
+          "source_sentence": "Cervical dystonia and dystonic posturing of limbs have been reported in one adult with childhood onset; this worsened over time, contributing to functional impairment.",
+          "bucket": "useful_new",
+          "notes": "Specific motor manifestation beyond generic dystonia wording."
+        },
+        {
+          "sentence_id": "p34_s4",
+          "evidence_text": "elbow joints",
+          "source_sentence": "Hyperextensibility of the interphalangeal joints of the hand and elbow joints has been described [ Kushary et al 2021 ].",
+          "bucket": "junk_or_context_only",
+          "notes": "Bare fragment, not a usable phenotype row."
+        },
+        {
+          "sentence_id": "p36_s5",
+          "evidence_text": "Weight below the third centile",
+          "source_sentence": "Weight below the third centile was reported in 14/25 individuals.",
+          "bucket": "useful_new",
+          "notes": "Specific growth failure or underweight residual finding."
+        },
+        {
+          "sentence_id": "p41_s1",
+          "evidence_text": "micro- and macronodularity",
+          "source_sentence": "Gastrointestinal manifestations include malrotation of the gut, gastroesophageal reflux disease, diarrhea, constipation, and gallbladder agenesis; chronic liver cirrhosis with micro- and macronodularity and spongiosis hepatitis have been reported [ Pietrobattista et al 2023 ].",
+          "bucket": "broad_or_redundant",
+          "notes": "Fragmentary liver-pathology phrase; not clean enough as a standalone residual output."
+        },
+        {
+          "sentence_id": "p42_s2",
+          "evidence_text": "conductive",
+          "source_sentence": "Hearing loss was reported in 3/7 individuals in one report [ Halliday et al 2022 ]; hearing impairment was described as conductive in one individual.",
+          "bucket": "junk_or_context_only",
+          "notes": "Bare fragment from conductive hearing impairment wording."
+        }
+      ]
+    }
+  ]
+}
