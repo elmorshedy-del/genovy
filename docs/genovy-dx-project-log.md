@@ -4007,3 +4007,487 @@ These were disease/diagnosis-style contexts, not generic HPO-string errors.
   - the schema guard prevents ad hoc detail-type invention
   - the enrichment-first policy materially changes at least one clinically important Zellweger decision
   - `gemini-3-pro-preview` still gives the cleaner structured reviewer output shape, but `gemini-2.5-pro` also behaved once the schema and definitions were explicit
+
+## 2026-04-04 - Ancillary clinical evidence retention layer
+
+- Extended the enrichment reviewer schema to preserve clinically useful non-phenotype evidence in a separate retention layer instead of discarding it.
+- Updated:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/lib/enrichmentReviewer.js`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/runChapterEnrichmentReviewerTrial.js`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/test/enrichmentReviewer.test.js`
+- Added:
+  - new bucket: `retain_as_ancillary`
+  - retention layers:
+    - `phenotype_enrichment`
+    - `ancillary_clinical_evidence`
+    - `discarded`
+  - ancillary evidence types:
+    - `laboratory`
+    - `imaging`
+    - `pathology`
+    - `electrophysiology`
+    - `treatment_response`
+    - `clinical_test`
+    - `management_context`
+    - `other`
+- Added alias normalization and validation so off-schema ancillary labels repair into the allowed enum.
+- Verified unit tests:
+  - `node --test test/enrichmentReviewer.test.js`
+- Ran an artifact-only ZAP70 chapter review using cached grounded candidates, saved clinical structure, and settled stage2 anchors. No fresh extraction rerun was performed.
+- Evidence surfaces inspected:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/stage3_discovery_first5_gemini_independent_eval_20260404/grounded_raw_manual_eval_report.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/preservation/bucket-critical/20260331-genereviews-latest5-readiness/stage1_fetch/NBK20221_clinical_structure.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/genereviews-pipeline-latest5-settled-20260330/stage2_anchors/ZAP70_Related_Combined_Immunodeficiency_anchors.json`
+- Output overwritten at:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/chapter_trial_zap70_enrichment_20260404/chapter_enrichment_trial_outputs.json`
+- Key result:
+  - `autoantibodies to factor VIII` now lands in `retain_as_ancillary` with `ancillary_evidence_types=["laboratory"]` rather than being discarded as junk
+  - after adding a deterministic post-router, `polyomaviremia` also gets rerouted from phenotype enrichment to ancillary `laboratory`
+- Deterministic routing rule added:
+  - high-confidence ancillary-only labels are rerouted after Gemini output normalization instead of being prompt-tuned away
+  - current router is intentionally conservative and leaves mixed phenotype-plus-treatment rows such as `persistent dermatitis resistant to therapy` in phenotype enrichment for now
+- Remaining issue:
+  - several infection-heavy or treatment-tinged rows are still being kept as phenotype enrichment, so the next improvement should target deterministic post-collapse or tighter phenotype-vs-ancillary policy, not schema repair
+
+## 2026-04-04 - Deterministic mixed-row treatment-response splitter
+
+- Extended the enrichment router to split mixed phenotype + treatment-response rows instead of forcing them into a single placement.
+- Updated:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/lib/enrichmentReviewer.js`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/runChapterEnrichmentReviewerTrial.js`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/test/enrichmentReviewer.test.js`
+- Added deterministic handling for:
+  - post-nominal treatment-response qualifiers like `resistant to therapy`
+  - prenominal treatment-response qualifiers like `treatment-refractory`
+- The router now emits:
+  - `resolved_candidate_label`
+  - `derived_ancillary_evidence`
+- Verified unit tests:
+  - `node --test test/enrichmentReviewer.test.js`
+- Reran only the artifact-based ZAP70 chapter review on the same cached report, structure, and anchors as above.
+- Key result on real cached rows:
+  - `persistent dermatitis resistant to therapy`
+    - resolves to phenotype label `persistent dermatitis`
+    - derives ancillary evidence `treatment_response: resistant to therapy`
+  - `isolated treatment-refractory immune thrombocytopenia (ITP)`
+    - resolves to phenotype label `isolated immune thrombocytopenia (ITP)`
+    - derives ancillary evidence `treatment_response: treatment-refractory`
+  - `autoantibodies to factor VIII`
+    - still routes to ancillary `laboratory`
+  - `polyomaviremia`
+    - still routes to ancillary `laboratory`
+- Scope intentionally kept narrow:
+  - this splitter only covers treatment-response phrasing for now
+  - it does not yet split trigger / etiology / consequence mixed rows
+
+## 2026-04-04 - External chapter freeze normalizer for Opus/ChatGPT outputs
+
+- Built a strict finalization layer for external chapter JSON so externally prompted chapter outputs can be frozen into the canonical discovery schema before grounding.
+- Updated:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/lib/externalPhenotypeExtraction.js`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/groundExternalPhenotypeExtraction.js`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/freezeExternalPhenotypeExtraction.js`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/test/externalPhenotypeExtraction.test.js`
+- The new freeze layer now does all of the following deterministically:
+  - parses raw model dumps even when the model added prose before or after the JSON
+  - strips unsupported per-row fields from phenotype rows and freezes them to `{ "label": "..." }`
+  - preserves the locked top-level schema:
+    - `chapter`
+    - `phenotypes`
+    - `ancillary_clinical_evidence`
+    - `context_metadata`
+    - `context_notes`
+  - reroutes ancillary-like phenotype rows into the correct ancillary bucket
+    - e.g. `recurrent CMV viremia`
+    - `polyomaviremia`
+    - `autoantibodies to factor VIII`
+  - removes non-phenotype lab-style rows from `phenotypes.excluded`
+  - normalizes treatment-response rows so only qualifier strings remain when a clean qualifier is extractable
+  - reroutes trigger/exposure strings out of `treatment_response`
+  - flattens nested `context_metadata` objects into string-only key/value pairs
+  - removes exact duplicate concepts across phenotype and ancillary layers
+- Important architectural decision:
+  - frozen final chapter JSON does **not** carry `sentence_id`
+  - sentence grounding and verification remain a separate sidecar step using the saved clinical structure
+- Updated grounding behavior:
+  - `groundExternalPhenotypeExtraction.js` now accepts raw model output files with trailing prose by using the same permissive JSON-object extraction as the freeze step
+- Added test coverage for:
+  - grouped bucket normalization
+  - flat payload normalization
+  - ancillary rerouting from phenotype buckets
+  - treatment-response qualifier cleanup
+  - raw JSON extraction from prose-wrapped model outputs
+- Verified:
+  - `node --test test/externalPhenotypeExtraction.test.js test/enrichmentReviewer.test.js`
+- This gives a clean external workflow:
+  - raw model chapter output -> `freezeExternalPhenotypeExtraction.js` -> canonical final chapter JSON
+  - canonical final chapter JSON -> `groundExternalPhenotypeExtraction.js` -> grounded verification sidecar with sentence ids
+
+## 2026-04-04 - Froze external next5 chapter batch from Documents/genovymorsh
+
+- Located the five external chapter files in:
+  - `/Users/ahmedelmorshedy/Documents/genovymorsh`
+- Ran the freeze script over the batch and wrote canonical `_frozen.json` outputs alongside the raw files:
+  - `/Users/ahmedelmorshedy/Documents/genovymorsh/ chapter 1-Williams Syndrome_frozen.json`
+  - `/Users/ahmedelmorshedy/Documents/genovymorsh/ chapter 2-USP7-Related Hao-Fountain Syndrome _frozen.json`
+  - `/Users/ahmedelmorshedy/Documents/genovymorsh/ chapter 3-VEXAS_frozen.json`
+  - `/Users/ahmedelmorshedy/Documents/genovymorsh/Chapter 4- VLCAD Deficiency_frozen.json`
+  - `/Users/ahmedelmorshedy/Documents/genovymorsh/Chapter 5- Weiss-Kruszka Syndrome_frozen.json`
+- Four chapter files froze directly.
+- The raw VEXAS file was malformed on disk:
+  - `/Users/ahmedelmorshedy/Documents/genovymorsh/ chapter 3-VEXAS.json`
+  - it contained three unquoted explanation lines embedded inside `context_notes`
+  - I did **not** edit the raw file
+  - instead I generated the frozen output from a sanitized temporary copy with those prose lines removed
+- Batch freeze outcome:
+  - the five raw external chapter outputs now have pipeline-safe frozen counterparts
+  - sentence grounding / verification has not yet been run on this Documents batch
+- Next step, if needed:
+  - run `groundExternalPhenotypeExtraction.js` per frozen chapter using the saved clinical structure and anchors for sentence-level verification sidecars
+
+## 2026-04-04 - Created bundled reference folder for external freeze workflow
+
+- Added a single reference folder for the three external-finalization files plus workflow documentation:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/external-phenotype-freeze-bundle`
+- Bundle contents:
+  - `externalPhenotypeExtraction.js`
+  - `freezeExternalPhenotypeExtraction.js`
+  - `groundExternalPhenotypeExtraction.js`
+  - `README.md`
+- Purpose of the bundle:
+  - make it easier to turn the current split freeze/ground workflow into one standalone program later
+  - keep the role of each file explicit without hunting through the repo
+- The README documents:
+  - what each file does
+  - the raw -> frozen -> grounded data flow
+  - the boundary between canonical frozen chapter JSON and grounded verification sidecar
+  - a suggested future unified CLI shape (`freeze`, `ground`, `freeze-and-ground`)
+- Important note:
+  - the bundle contains copies for reference/consolidation work
+  - the canonical implementation files remain in `src/lib` and `src/scripts`
+
+## 2026-04-04 - Added unified external phenotype pipeline CLI
+
+- Added:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/externalPhenotypePipeline.js`
+- Purpose:
+  - provide one command surface for the external chapter workflow instead of manually calling separate freeze and grounding scripts
+- Supported modes:
+  - `freeze`
+  - `ground`
+  - `freeze-and-ground`
+- Behavior:
+  - `freeze`
+    - raw model output -> frozen canonical chapter JSON
+  - `ground`
+    - frozen chapter JSON -> grounded verification sidecar
+  - `freeze-and-ground`
+    - raw model output -> frozen chapter JSON -> grounded verification sidecar
+- The CLI reuses the same library logic rather than duplicating normalization rules.
+- Verified with a synthetic end-to-end smoke run:
+  - raw prose-wrapped JSON input
+  - synthetic clinical text input
+  - `freeze-and-ground` produced both:
+    - frozen canonical chapter JSON
+    - grounded sidecar with `sentence_id`
+- Added the unified CLI copy to the external workflow bundle and updated the bundle README:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/external-phenotype-freeze-bundle`
+
+## 2026-04-04 - Added MCP server for external phenotype pipeline
+
+- Added:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/externalPhenotypePipelineMcp.js`
+- Package script added:
+  - `npm run gr:external-pipeline:mcp`
+- MCP tools exposed:
+  - `freeze_external_phenotype_extraction`
+  - `ground_external_phenotype_extraction`
+  - `freeze_and_ground_external_phenotype_extraction`
+- Purpose:
+  - expose the same raw -> frozen -> grounded workflow through MCP stdio instead of only through terminal CLI commands
+  - keep the workflow on one shared implementation path by reusing `src/lib/externalPhenotypePipeline.js`
+- Verified with a real SDK-based stdio smoke test:
+  - listed tools successfully
+  - called `freeze_external_phenotype_extraction`
+  - confirmed frozen output summary counts matched expected rerouting behavior
+- Updated the external workflow bundle README to document the MCP entry point and tool surface.
+
+## 2026-04-04 - Tightened external freeze normalizer for Gemini end-to-end outputs
+
+- Updated:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/lib/externalPhenotypeExtraction.js`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/test/externalPhenotypeExtraction.test.js`
+- Added deterministic freeze rules for:
+  - splitting bundled phenotype rows such as `craniosynostosis involving the metopic or lambdoid suture`
+  - normalizing weak phenotype wording such as `global delay` -> `developmental delay`
+  - promoting structural malformation findings out of `ancillary_clinical_evidence.imaging` into phenotype rows when they are true disease manifestations
+  - rerouting recommendation-style `clinical_test` entries into `management_context`
+  - pruning broad overlap when specific corpus callosum malformation rows are present
+- Verified with:
+  - `node --test test/externalPhenotypeExtraction.test.js test/enrichmentReviewer.test.js`
+
+## 2026-04-04 - Added HTTP MCP endpoint for external phenotype pipeline
+
+- Added:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/externalPhenotypePipelineHttpMcp.js`
+- Package script added:
+  - `npm run gr:external-pipeline:mcp:http`
+- Purpose:
+  - expose the external phenotype MCP tools through a real local HTTP endpoint instead of only stdio transport
+- Default URL surface:
+  - `http://127.0.0.1:8787/mcp`
+  - health check at `http://127.0.0.1:8787/health`
+- Implementation note:
+  - the HTTP wrapper reuses the exact same MCP tool registration by importing `createServer()` from `externalPhenotypePipelineMcp.js`
+  - this keeps stdio MCP and HTTP MCP on one shared tool-definition path
+- Verified with:
+  - `npm run gr:external-pipeline:mcp:http -- --help`
+  - real local streamable HTTP smoke against `http://127.0.0.1:8787/mcp`
+  - successful `tools/list`
+  - successful `freeze_external_phenotype_extraction` call over HTTP transport
+
+## 2026-04-05 - Finalized grounded sidecars for the Documents/genovymorsh Opus batch
+
+- Re-ran external freeze plus grounding on the five Opus chapter files in:
+  - `/Users/ahmedelmorshedy/Documents/genovymorsh`
+- Grounding used the real GeneReviews clinical structures and anchor files from:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/genereviews-pipeline-review-first-50-20260331/stage1_fetch`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/genereviews-pipeline-review-first-50-20260331/stage2_anchors`
+- Final grounded outputs written:
+  - `/Users/ahmedelmorshedy/Documents/genovymorsh/ chapter 1-Williams Syndrome_frozen_grounded.json`
+  - `/Users/ahmedelmorshedy/Documents/genovymorsh/ chapter 2-USP7-Related Hao-Fountain Syndrome _frozen_grounded.json`
+  - `/Users/ahmedelmorshedy/Documents/genovymorsh/ chapter 3-VEXAS_frozen_grounded.json`
+  - `/Users/ahmedelmorshedy/Documents/genovymorsh/Chapter 4- VLCAD Deficiency_frozen_grounded.json`
+  - `/Users/ahmedelmorshedy/Documents/genovymorsh/Chapter 5- Weiss-Kruszka Syndrome_frozen_grounded.json`
+- Freeze rerun status:
+  - Williams, USP7, VLCAD, and Weiss were re-frozen successfully from the raw Opus files
+  - VEXAS raw remained malformed on disk, so grounding used the already-valid frozen artifact:
+    - `/Users/ahmedelmorshedy/Documents/genovymorsh/ chapter 3-VEXAS_frozen.json`
+- Grounding counts from this run:
+  - Williams: `9` grounded, `15` rejected
+  - USP7: `0` grounded, `8` rejected
+  - VEXAS: `2` grounded, `24` rejected
+  - VLCAD: `3` grounded, `3` rejected
+  - Weiss-Kruszka: `3` grounded, `0` rejected
+- Operational note:
+  - the sidecar pipeline executed successfully, but grounding coverage is still sparse on several chapters, so this batch is finalized as artifacts-on-disk rather than as a quality-approved benchmark set
+
+## 2026-04-05 - Fixed external sidecar grounding to preserve frozen rows instead of discovery-skipping them
+
+- Root cause confirmed in code:
+  - the external sidecar path was reusing `finalizePhenotypeCandidates()` in discovery mode
+  - discovery mode skips anchor-matching labels via `matchesExistingAnchor(...)`
+  - this is correct for new candidate discovery but wrong for frozen-row provenance attachment
+- Additional bug fixed:
+  - uncertain external rows were still carrying `status: present`, which caused status/bucket drift during sidecar enrichment
+- Code changes:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/lib/externalPhenotypeExtraction.js`
+    - normalized phenotype status from bucket consistently, including `uncertain`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/lib/genereviewsPipeline.js`
+    - added grounding-status normalization
+    - allowed `finalizePhenotypeCandidates()` to run with:
+      - `allowExistingAnchors: true`
+      - `preserveInputStatus: true`
+    - preserved `extraction_bucket` on both grounded and rejected rows
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/lib/externalPhenotypePipeline.js`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/groundExternalPhenotypeExtraction.js`
+    - switched external sidecar grounding to the preserved-status / allow-anchor path
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/test/externalPhenotypeExtraction.test.js`
+    - added regression coverage for anchor-preserving sidecar grounding and uncertain-row status preservation
+- Verified with:
+  - `node --test test/externalPhenotypeExtraction.test.js`
+  - `node --test test/externalPhenotypeExtraction.test.js test/enrichmentReviewer.test.js`
+- Re-ran the five Documents/genovymorsh grounded sidecars after the fix.
+- Coverage improved materially versus the pre-fix run:
+  - Williams: `38` grounded, `52` rejected
+  - USP7: `13` grounded, `36` rejected
+  - VEXAS: `14` grounded, `25` rejected
+  - VLCAD: `15` grounded, `5` rejected
+  - Weiss-Kruszka: `31` grounded, `0` rejected
+- Most important outcome:
+  - Weiss now preserves excluded and uncertain rows in the sidecar (`29` present, `1` excluded, `1` uncertain)
+  - the catastrophic low-coverage behavior was a real bug in the external sidecar path and is now corrected
+
+## 2026-04-05 - Hardened external post-processing and finalized the next five Opus chapters
+
+- Tightened external freeze normalization so diagnosis-like phenotype rows are not over-rerouted into ancillary buckets:
+  - immunoglobulin deficiency rows now remain in phenotypes
+  - organ dysplasia rows such as `kidney dysplasia` now remain in phenotypes
+- Tightened grounding sentence selection in `genereviewsPipeline.js`:
+  - sentence selection now prefers the best exact/descriptive support rather than the first exact support encountered
+  - heading-only, table-like, and management-style anchors are penalized during tie-breaking
+  - grounding now records `context_quality_score` and `grounding_confidence`
+- Added external post-processing robustness features:
+  - grounded outputs now expose both `grounded_candidates` and `candidates`
+  - a reconciliation pass now guarantees every frozen row is either grounded or explicitly rejected
+- Regression coverage added for:
+  - keeping `IgA deficiency`, `IgG deficiency`, and `kidney dysplasia` in the phenotype layer
+  - preferring descriptive clinical sentences over management sentences
+  - avoiding heading-only anchors
+  - explicit rejection of any unaccounted frozen rows
+- Verified with:
+  - `node --test test/externalPhenotypeExtraction.test.js test/enrichmentReviewer.test.js`
+  - `node --test test/externalPhenotypeExtraction.test.js test/genereviewsCandidateAssertionSynthetic.test.js`
+- Re-ran the five next-batch Opus chapters in:
+  - `/Users/ahmedelmorshedy/Documents/genovymorsh-next-batch`
+- Finalized outputs written:
+  - `/Users/ahmedelmorshedy/Documents/genovymorsh-next-batch/chapter 6-Y Chromosome Infertility_frozen.json`
+  - `/Users/ahmedelmorshedy/Documents/genovymorsh-next-batch/chapter 6-Y Chromosome Infertility_frozen_grounded.json`
+  - `/Users/ahmedelmorshedy/Documents/genovymorsh-next-batch/chapter 7-Zellweger Spectrum Disorder_frozen.json`
+  - `/Users/ahmedelmorshedy/Documents/genovymorsh-next-batch/chapter 7-Zellweger Spectrum Disorder_frozen_grounded.json`
+  - `/Users/ahmedelmorshedy/Documents/genovymorsh-next-batch/chapter 8-ZAP70-Related Combined Immunodeficiency_frozen.json`
+  - `/Users/ahmedelmorshedy/Documents/genovymorsh-next-batch/chapter 8-ZAP70-Related Combined Immunodeficiency_frozen_grounded.json`
+  - `/Users/ahmedelmorshedy/Documents/genovymorsh-next-batch/chapter 9-YIF1B-Related Neurodevelopmental Disorder_frozen.json`
+  - `/Users/ahmedelmorshedy/Documents/genovymorsh-next-batch/chapter 9-YIF1B-Related Neurodevelopmental Disorder_frozen_grounded.json`
+  - `/Users/ahmedelmorshedy/Documents/genovymorsh-next-batch/chapter 10-Zhu-Tokita-Takenouchi-Kim Syndrome_frozen.json`
+  - `/Users/ahmedelmorshedy/Documents/genovymorsh-next-batch/chapter 10-Zhu-Tokita-Takenouchi-Kim Syndrome_frozen_grounded.json`
+- Grounding counts from the finalized rerun:
+  - chapter 6 Y Chromosome Infertility: `6` grounded, `2` rejected
+  - chapter 7 Zellweger Spectrum Disorder: `26` grounded, `8` rejected
+  - chapter 8 ZAP70-Related Combined Immunodeficiency: `26` grounded, `6` rejected
+  - chapter 9 YIF1B-Related Neurodevelopmental Disorder: `20` grounded, `8` rejected
+  - chapter 10 Zhu-Tokita-Takenouchi-Kim Syndrome: `58` grounded, `14` rejected
+- Spot-check outcome:
+  - ZTTK now preserves `IgA deficiency`, `IgG deficiency`, and `kidney dysplasia` in the frozen phenotype layer
+  - ZTTK grounding now links `IgA deficiency` to the descriptive immunodeficiency sentence instead of rejecting it
+
+## 2026-04-05 - Evaluated Gemini embedding-based sidecar design
+
+- Reviewed the user's description of a Gemini sidecar that uses sentence-level and label-level embeddings, cosine similarity retrieval, and rule-based reranking with section penalties and a hard acceptance threshold.
+- Assessment:
+  - this is directionally stronger than pure lexical matching because it improves semantic recall for paraphrased phenotype labels
+  - it should still be treated as a retrieval layer rather than the final truth layer, with deterministic guardrails preserved on top
+  - the weights and threshold should remain named config rather than hidden constants
+- Recommended guardrails to preserve:
+  - frozen label and status immutability
+  - no heading-only anchors
+  - prefer descriptive clinical sections over management when both support a row
+  - every frozen row must end grounded or explicitly rejected
+- Next likely move if adopted in code:
+  - add embedding retrieval as an optional candidate-generation layer ahead of the existing rule-based context scorer, then compare chapter-level grounding quality against the current hardened lexical pipeline
+
+## 2026-04-05 - Implemented quote-first grounding with deterministic localization
+
+- Shifted the external phenotype grounding path toward citation-first evidence preservation instead of post-hoc recovery only.
+- `source_quote` is now preserved through normalization, candidate enrichment, and coverage reconciliation in `src/lib/externalPhenotypeExtraction.js`.
+- Frozen external chapter outputs can now carry additive `grounding_hints.phenotypes` rows so quote evidence survives freeze/thaw without changing the primary phenotype row shape.
+- `src/lib/genereviewsPipeline.js` now:
+  - prefers deterministic `source_quote` localization before lexical fallback
+  - supports exact, loose, and paragraph-level quote localization
+  - preserves `source_quote` and `quote_match_type` in grounded outputs
+  - validates excluded-bucket polarity in strict external-grounding mode without breaking existing synthetic assertion behavior
+- Updated extraction prompts in:
+  - `src/scripts/extractCandidatePhenotypes.js`
+  - `src/scripts/extractCandidatePhenotypesOpenAiCompat.js`
+  to require verbatim `source_quote` emission per row.
+- Verification passed:
+  - `node --test test/externalPhenotypeExtraction.test.js`
+  - `node --test test/genereviewsCandidateAssertionSynthetic.test.js`
+  - `node --test test/externalPhenotypeExtraction.test.js test/enrichmentReviewer.test.js`
+- Net result:
+  - quote-first grounding is now the primary path when `source_quote` exists
+  - lexical matching remains available as the fallback path for legacy outputs or quote localization misses
+
+## 2026-04-05 - Locked external sidecar verification and review artifacts
+
+- Extended the shared external pipeline so grounded chapter outputs now generate review-ready artifacts automatically:
+  - `review_pages/*_review.html`
+  - `review_data/*_review.json`
+  - per-row verifier contract fields on grounded and rejected rows
+- Added `src/lib/externalPhenotypeVerification.js` to deterministically grade external grounded rows on:
+  - sentence-span resolution
+  - quote support
+  - quote strength
+  - status support
+  - evidence-surface risk
+  - grounding-resolution outcome for rejected rows
+- Updated `src/scripts/groundExternalPhenotypeExtraction.js` and the newer external pipeline helpers so the same verification/review behavior applies across the old script, the wrapper pipeline, and the MCP server.
+- Fixed a real excluded-bucket bug in `src/lib/genereviewsPipeline.js`:
+  - negative statements like "`phenotype` has not been described" now count as valid exclusion evidence
+- Improved audit readability:
+  - both `public/geneReviewsAudit.js` and the generated standalone review page now render full verifier check details instead of names only
+- Targeted verification passed:
+  - `node --test test/externalPhenotypeExtraction.test.js`
+  - `node --test test/enrichmentReviewer.test.js`
+
+## 2026-04-06 - Located the real Opus raw 1-10 chapter batch and exported JSON/JSONL handoff artifacts
+
+- Verified that the actual raw Opus 1-10 batch is not the repo-side combined `medgemma_real_latest10_raw_results.json` import artifact.
+- Confirmed the real source set lives in the user Documents folders as chapter-named raw files:
+  - `/Users/ahmedelmorshedy/Documents/genovymorsh`
+  - `/Users/ahmedelmorshedy/Documents/genovymorsh-next-batch`
+- Source files resolved:
+  - `/Users/ahmedelmorshedy/Documents/genovymorsh/ chapter 1-Williams Syndrome.json`
+  - `/Users/ahmedelmorshedy/Documents/genovymorsh/ chapter 2-USP7-Related Hao-Fountain Syndrome .json`
+  - `/Users/ahmedelmorshedy/Documents/genovymorsh/ chapter 3-VEXAS.json`
+  - `/Users/ahmedelmorshedy/Documents/genovymorsh/Chapter 4- VLCAD Deficiency.json`
+  - `/Users/ahmedelmorshedy/Documents/genovymorsh/Chapter 5- Weiss-Kruszka Syndrome.json`
+  - `/Users/ahmedelmorshedy/Documents/genovymorsh-next-batch/chapter 6-Y Chromosome Infertility.json`
+  - `/Users/ahmedelmorshedy/Documents/genovymorsh-next-batch/chapter 7-Zellweger Spectrum Disorder.json`
+  - `/Users/ahmedelmorshedy/Documents/genovymorsh-next-batch/chapter 8-ZAP70-Related Combined Immunodeficiency.json`
+  - `/Users/ahmedelmorshedy/Documents/genovymorsh-next-batch/chapter 9-YIF1B-Related Neurodevelopmental Disorder.json`
+  - `/Users/ahmedelmorshedy/Documents/genovymorsh-next-batch/chapter 10-Zhu-Tokita-Takenouchi-Kim Syndrome.json`
+- Exported a clean handoff bundle to:
+  - `/Users/ahmedelmorshedy/Downloads/genovy-opus-raw-1-10-json-jsonl-20260405`
+- Bundle contents:
+  - copied original raw files in `raw-json/`
+  - one JSONL per chapter in `jsonl/`
+  - combined JSONL at `/Users/ahmedelmorshedy/Downloads/genovy-opus-raw-1-10-json-jsonl-20260405/chapters_1_10_raw_combined.jsonl`
+  - source/output mapping in `/Users/ahmedelmorshedy/Downloads/genovy-opus-raw-1-10-json-jsonl-20260405/export_manifest.json`
+- Validation outcome:
+  - 9/10 raw chapter files parsed as strict JSON without changes
+  - `chapter 3-VEXAS.json` failed JSON parsing because three unquoted `context_notes` lines were appended after the final quoted note
+  - generated `chapter 3-VEXAS.jsonl` using a narrow `context_notes` repair pass only; the copied raw JSON in `raw-json/` remains byte-for-byte untouched
+- Cleanup:
+  - removed the earlier incorrect Downloads export that had been built from the wrong repo-side combined artifact so there is only one current handoff bundle
+- Next intended move:
+  - use the Documents raw batch and this Downloads bundle as the authoritative source set for any future batch import, audit comparison, or sidecar verification replay
+
+## 2026-04-06 - Logged the missing planning decisions for unified verification and HPO-collapse enrichment routing
+
+- Captured the planning decision that enrichment must be defined as:
+  - verified grounded phenotype claim
+  - minus what is already captured by the retained HPO anchor
+  - equals the clinically meaningful residual detail that survives collapse
+- Frozen routing categories for future implementation and import:
+  - `phenotype_enrichment`
+  - `hpo_duplicate`
+  - `ancillary`
+  - `drop`
+- Frozen collapse rule:
+  - same finding as HPO anchor plus no residual detail -> `hpo_duplicate`
+  - same finding as HPO anchor plus retained residual detail -> `phenotype_enrichment`
+  - non-phenotype evidence -> `ancillary`
+  - unsupported/context-only row -> `drop`
+- Residual detail types explicitly approved to justify retained enrichment:
+  - subtype
+  - modality
+  - anatomical specificity
+  - morphology/pattern
+  - laterality/distribution
+  - onset timing
+  - clinical course
+  - severity
+  - trigger
+  - quantitative threshold
+  - meaningful mechanism/etiology
+- Also captured the practical programmed runtime for the unified sidecar:
+  - raw Opus output
+  - freeze into canonical raw claims
+  - deterministic grounding
+  - deterministic quote/status verification
+  - HPO mapping
+  - same-finding test
+  - residual-detail extraction
+  - final routing/store
+- Unified verifier contract logged for future code/database work:
+  - quote found
+  - quote localized
+  - quote strength
+  - status support
+  - evidence surface quality
+  - verdict
+- Rationale:
+  - these decisions materially affect downstream database integration and 900-chapter scaling, so they need to be preserved in continuity files rather than left only in conversation state
+- Next intended move:
+  - implement the unified claim-ledger/routing path in the sidecar so future batch imports can distinguish HPO duplicates from true retained enrichment deterministically

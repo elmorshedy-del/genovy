@@ -124,43 +124,6 @@ const TREATMENT_RESPONSE_QUALIFIER_PATTERNS = Object.freeze([
   /\bsteroid[- ]responsive\b/i
 ]);
 
-const PHENOTYPE_LABEL_NORMALIZATION_MAP = Object.freeze(
-  new Map([
-    ['global delay', 'developmental delay'],
-    ['metopic synostosis', 'metopic craniosynostosis']
-  ])
-);
-
-const RECOMMENDATION_STYLE_CLINICAL_TEST_PATTERNS = Object.freeze([
-  /\bif clinical signs?\b/i,
-  /\bif clinical symptoms?\b/i,
-  /\bfor those with\b/i,
-  /\bmay be helpful\b/i,
-  /\breferral\b/i,
-  /\bstudy if\b/i
-]);
-
-const STRUCTURAL_IMAGING_TO_PHENOTYPE_PATTERNS = Object.freeze([
-  {
-    pattern: /\bagenesis of the corpus callosum\b/i,
-    label: 'agenesis of the corpus callosum'
-  },
-  {
-    pattern: /\bcorpus callosum dysgenesis\b/i,
-    label: 'corpus callosum dysgenesis'
-  },
-  {
-    pattern: /\babnormalities of the corpus callosum\b/i,
-    label: 'corpus callosum abnormalities'
-  }
-]);
-
-function phenotypeStatusForBucket(bucket) {
-  if (bucket === 'excluded') return 'excluded';
-  if (bucket === 'uncertain') return 'uncertain';
-  return 'present';
-}
-
 function coerceArray(value) {
   return Array.isArray(value) ? value : [];
 }
@@ -222,9 +185,8 @@ function normalizePhenotypeEntry(entry, bucket, inputIndex) {
       label,
       category: null,
       details: null,
-      source_quote: null,
       extraction_bucket: bucket,
-      status: phenotypeStatusForBucket(bucket),
+      status: bucket === 'excluded' ? 'excluded' : 'present',
       input_index: inputIndex
     };
   }
@@ -238,16 +200,8 @@ function normalizePhenotypeEntry(entry, bucket, inputIndex) {
     label,
     category: coerceString(entry.category),
     details: coerceString(entry.details || entry.modifier || entry.context),
-    source_quote: coerceString(
-      entry.source_quote ||
-        entry.sourceQuote ||
-        entry.evidence_text ||
-        entry.evidenceText ||
-        entry.supporting_quote ||
-        entry.supportingQuote
-    ),
     extraction_bucket: bucket,
-    status: phenotypeStatusForBucket(bucket),
+    status: bucket === 'excluded' ? 'excluded' : 'present',
     input_index: inputIndex
   };
 }
@@ -267,75 +221,9 @@ function mergeRowsByKey(rows) {
     }
     if (!existing.category && row.category) existing.category = row.category;
     if (!existing.details && row.details) existing.details = row.details;
-    if (!existing.source_quote && row.source_quote) existing.source_quote = row.source_quote;
   }
 
   return ordered;
-}
-
-function normalizeGroundingHintEntry(entry) {
-  if (!entry || typeof entry !== 'object' || Array.isArray(entry)) return null;
-  const label = coerceString(entry.label || entry.term || entry.finding || entry.name);
-  const sourceQuote = coerceString(
-    entry.source_quote ||
-      entry.sourceQuote ||
-      entry.evidence_text ||
-      entry.evidenceText ||
-      entry.supporting_quote ||
-      entry.supportingQuote
-  );
-  if (!label || !sourceQuote) return null;
-
-  const extractionBucket =
-    coerceString(entry.extraction_bucket || entry.bucket) ||
-    (String(entry.status || '').trim().toLowerCase() === 'excluded'
-      ? 'excluded'
-      : String(entry.status || '').trim().toLowerCase() === 'uncertain'
-        ? 'uncertain'
-        : 'present');
-
-  return {
-    label,
-    source_quote: sourceQuote,
-    extraction_bucket: extractionBucket,
-    status: phenotypeStatusForBucket(extractionBucket)
-  };
-}
-
-function buildGroundingHintKey(entry) {
-  return `${normalizeText(entry?.label)}::${String(
-    entry?.status || phenotypeStatusForBucket(entry?.extraction_bucket)
-  ).toLowerCase()}::${normalizeText(entry?.source_quote)}`;
-}
-
-function dedupeGroundingHintObjects(entries) {
-  return dedupeByKey(entries, buildGroundingHintKey);
-}
-
-function normalizeGroundingHints(payload, normalizedPhenotypes) {
-  const hintEntries = [];
-  const payloadHints = payload?.grounding_hints?.phenotypes;
-
-  for (const bucket of PHENOTYPE_BUCKETS) {
-    for (const row of coerceArray(normalizedPhenotypes?.[bucket])) {
-      if (!row?.source_quote) continue;
-      hintEntries.push({
-        label: row.label,
-        source_quote: row.source_quote,
-        extraction_bucket: row.extraction_bucket || bucket,
-        status: row.status || phenotypeStatusForBucket(row.extraction_bucket || bucket)
-      });
-    }
-  }
-
-  for (const entry of coerceArray(payloadHints)) {
-    const normalizedEntry = normalizeGroundingHintEntry(entry);
-    if (normalizedEntry) hintEntries.push(normalizedEntry);
-  }
-
-  return {
-    phenotypes: dedupeGroundingHintObjects(hintEntries)
-  };
 }
 
 function normalizeGroupedPhenotypes(phenotypes) {
@@ -489,20 +377,6 @@ function dedupeStrings(values) {
   return deduped;
 }
 
-function dedupeByKey(values, keyFn) {
-  const seen = new Set();
-  const deduped = [];
-
-  for (const value of values || []) {
-    const key = keyFn(value);
-    if (!key || seen.has(key)) continue;
-    seen.add(key);
-    deduped.push(value);
-  }
-
-  return deduped;
-}
-
 function matchesAnyPattern(text, patterns) {
   return patterns.some((pattern) => pattern.test(text));
 }
@@ -518,128 +392,12 @@ function inferAncillaryBucket(text) {
   return null;
 }
 
-function shouldKeepPhenotypeLabelInPhenotypeLayer(text, ancillaryBucket) {
-  const source = coerceString(text);
-  if (!source || !ancillaryBucket) return false;
-
-  if (ancillaryBucket === 'laboratory' && /\bdeficiency\b/i.test(source)) {
-    return true;
-  }
-
-  if (ancillaryBucket === 'pathology' && /\bdysplasia\b/i.test(source)) {
-    return true;
-  }
-
-  return false;
-}
-
 function extractTreatmentResponseQualifier(text) {
   for (const pattern of TREATMENT_RESPONSE_QUALIFIER_PATTERNS) {
     const match = String(text || '').match(pattern);
     if (match?.[0]) return coerceString(match[0]);
   }
   return null;
-}
-
-function normalizePhenotypeLabel(label) {
-  const text = coerceString(label);
-  if (!text) return null;
-  return PHENOTYPE_LABEL_NORMALIZATION_MAP.get(normalizeText(text)) || text;
-}
-
-function splitPhenotypeLabel(label) {
-  const text = coerceString(label);
-  if (!text) return [];
-
-  const craniosynostosisMatch = text.match(
-    /^craniosynostosis involving the ([a-z-]+) or ([a-z-]+) sutures?$/i
-  );
-  if (craniosynostosisMatch) {
-    return [craniosynostosisMatch[1], craniosynostosisMatch[2]].map(
-      (segment) => `${String(segment).toLowerCase()} craniosynostosis`
-    );
-  }
-
-  const singleCraniosynostosisMatch = text.match(/^craniosynostosis involving the ([a-z-]+) sutures?$/i);
-  if (singleCraniosynostosisMatch) {
-    return [`${String(singleCraniosynostosisMatch[1]).toLowerCase()} craniosynostosis`];
-  }
-
-  return [text];
-}
-
-function extractStructuralPhenotypeFromImagingEntry(text) {
-  const source = coerceString(text);
-  if (!source) return null;
-
-  for (const matcher of STRUCTURAL_IMAGING_TO_PHENOTYPE_PATTERNS) {
-    if (matcher.pattern.test(source)) {
-      return matcher.label;
-    }
-  }
-
-  return null;
-}
-
-function isRecommendationStyleClinicalTest(text) {
-  const source = coerceString(text);
-  return Boolean(source && matchesAnyPattern(source, RECOMMENDATION_STYLE_CLINICAL_TEST_PATTERNS));
-}
-
-function normalizeAncillaryBucketsForFinal(ancillaryEvidence, finalPhenotypes, contextNotes, groundingHints) {
-  const reroutedPhenotypeLabels = [];
-  const movedClinicalTestRecommendations = [];
-
-  ancillaryEvidence.imaging = dedupeStrings(ancillaryEvidence.imaging).filter((entry) => {
-    const phenotypeLabel = extractStructuralPhenotypeFromImagingEntry(entry);
-    if (!phenotypeLabel) return true;
-    finalPhenotypes.present.push({ label: phenotypeLabel });
-    if (coerceString(entry)) {
-      groundingHints.push({
-        label: phenotypeLabel,
-        source_quote: entry,
-        extraction_bucket: 'present',
-        status: 'present'
-      });
-    }
-    reroutedPhenotypeLabels.push(phenotypeLabel);
-    return false;
-  });
-
-  ancillaryEvidence.clinical_test = dedupeStrings(ancillaryEvidence.clinical_test).filter((entry) => {
-    if (!isRecommendationStyleClinicalTest(entry)) return true;
-    ancillaryEvidence.management_context.push(entry);
-    movedClinicalTestRecommendations.push(entry);
-    return false;
-  });
-
-  for (const bucket of ANCILLARY_BUCKETS) {
-    ancillaryEvidence[bucket] = dedupeStrings(ancillaryEvidence[bucket]);
-  }
-
-  finalPhenotypes.present = dedupePhenotypeLabelObjects(finalPhenotypes.present);
-  removeOverlappingPhenotypeEntries(finalPhenotypes);
-
-  if (reroutedPhenotypeLabels.length > 0) {
-    contextNotes.push(
-      `Structural imaging findings were promoted to phenotype rows during finalization: ${dedupeStrings(reroutedPhenotypeLabels).join('; ')}.`
-    );
-  }
-
-  if (movedClinicalTestRecommendations.length > 0) {
-    contextNotes.push(
-      `Recommendation-style clinical test entries were rerouted to management_context during finalization (${movedClinicalTestRecommendations.length} row${movedClinicalTestRecommendations.length === 1 ? '' : 's'}).`
-    );
-  }
-}
-
-function removeOverlappingAncillaryEntries(ancillaryEvidence) {
-  ancillaryEvidence.imaging = dedupeByKey(ancillaryEvidence.imaging, (entry) => {
-    const text = normalizeText(entry);
-    if (!text) return null;
-    if (text.includes('corpus callosum')) return 'corpus_callosum_structural';
-    return text;
-  });
 }
 
 function normalizeTreatmentResponseEntries(entries, ancillaryEvidence, contextNotes) {
@@ -677,43 +435,28 @@ function normalizePhenotypeBucketsForFinal(phenotypes, ancillaryEvidence, contex
     excluded: [],
     uncertain: []
   };
-  const groundingHints = [];
 
   const movedRows = [];
   const omittedExcludedRows = [];
 
   for (const bucket of PHENOTYPE_BUCKETS) {
     for (const row of coerceArray(phenotypes?.[bucket])) {
-      const rawLabel = coerceString(row?.label);
-      if (!rawLabel) continue;
+      const label = coerceString(row?.label);
+      if (!label) continue;
 
-      const splitLabels = splitPhenotypeLabel(rawLabel)
-        .map(normalizePhenotypeLabel)
-        .filter(Boolean);
-
-      for (const label of splitLabels) {
-        if (bucket === 'excluded' && matchesAnyPattern(label, NON_PHENOTYPE_EXCLUDED_PATTERNS)) {
-          omittedExcludedRows.push(label);
-          continue;
-        }
-
-        const ancillaryBucket = inferAncillaryBucket(label);
-        if (ancillaryBucket && !shouldKeepPhenotypeLabelInPhenotypeLayer(label, ancillaryBucket)) {
-          ancillaryEvidence[ancillaryBucket].push(label);
-          movedRows.push({ label, from: bucket, to: ancillaryBucket });
-          continue;
-        }
-
-        finalPhenotypes[bucket].push({ label });
-        if (row?.source_quote) {
-          groundingHints.push({
-            label,
-            source_quote: row.source_quote,
-            extraction_bucket: bucket,
-            status: phenotypeStatusForBucket(bucket)
-          });
-        }
+      if (bucket === 'excluded' && matchesAnyPattern(label, NON_PHENOTYPE_EXCLUDED_PATTERNS)) {
+        omittedExcludedRows.push(label);
+        continue;
       }
+
+      const ancillaryBucket = inferAncillaryBucket(label);
+      if (ancillaryBucket) {
+        ancillaryEvidence[ancillaryBucket].push(label);
+        movedRows.push({ label, from: bucket, to: ancillaryBucket });
+        continue;
+      }
+
+      finalPhenotypes[bucket].push({ label });
     }
   }
 
@@ -733,10 +476,7 @@ function normalizePhenotypeBucketsForFinal(phenotypes, ancillaryEvidence, contex
     );
   }
 
-  return {
-    phenotypes: finalPhenotypes,
-    grounding_hints: dedupeGroundingHintObjects(groundingHints)
-  };
+  return finalPhenotypes;
 }
 
 function dedupePhenotypeLabelObjects(rows) {
@@ -755,37 +495,14 @@ function dedupePhenotypeLabelObjects(rows) {
   return deduped;
 }
 
-function removeOverlappingPhenotypeEntries(finalPhenotypes) {
-  const presentKeys = new Set(finalPhenotypes.present.map((row) => normalizeText(row.label)));
-  const hasSpecificCorpusCallosumFinding =
-    presentKeys.has(normalizeText('corpus callosum dysgenesis')) ||
-    presentKeys.has(normalizeText('agenesis of the corpus callosum'));
-
-  if (hasSpecificCorpusCallosumFinding) {
-    finalPhenotypes.present = finalPhenotypes.present.filter(
-      (row) => normalizeText(row.label) !== normalizeText('corpus callosum abnormalities')
-    );
-  }
-}
-
 function removeCrossLayerDuplicates(finalPhenotypes, ancillaryEvidence) {
   const phenotypeKeys = new Set(
     PHENOTYPE_BUCKETS.flatMap((bucket) => finalPhenotypes[bucket].map((row) => normalizeText(row.label)))
   );
-  const hasSpecificCorpusCallosumPhenotype =
-    phenotypeKeys.has(normalizeText('corpus callosum dysgenesis')) ||
-    phenotypeKeys.has(normalizeText('agenesis of the corpus callosum'));
 
   for (const bucket of ANCILLARY_BUCKETS) {
     ancillaryEvidence[bucket] = dedupeStrings(ancillaryEvidence[bucket]).filter(
-      (entry) => {
-        const normalizedEntry = normalizeText(entry);
-        if (phenotypeKeys.has(normalizedEntry)) return false;
-        if (bucket === 'imaging' && hasSpecificCorpusCallosumPhenotype && normalizedEntry.includes('corpus callosum')) {
-          return false;
-        }
-        return true;
-      }
+      (entry) => !phenotypeKeys.has(normalizeText(entry))
     );
   }
 }
@@ -875,7 +592,6 @@ export function normalizeExternalPhenotypeExtraction(payload) {
   return {
     chapter: normalizeChapter(parsedPayload?.chapter, parsedPayload || {}),
     phenotypes: normalizedPhenotypes,
-    grounding_hints: normalizeGroundingHints(parsedPayload, normalizedPhenotypes),
     ancillary_clinical_evidence: normalizeAncillaryEvidence(parsedPayload),
     context_metadata: normalizeContextMetadata(parsedPayload),
     context_notes: dedupeStrings(coerceArray(parsedPayload?.context_notes).map(normalizeNoteEntry).filter(Boolean)),
@@ -893,35 +609,18 @@ export function freezeExternalPhenotypeExtraction(payload) {
   };
   const contextNotes = [...normalized.context_notes];
 
-  const phenotypeFinalization = normalizePhenotypeBucketsForFinal(
-    normalized.phenotypes,
-    ancillaryEvidence,
-    contextNotes
-  );
-  const phenotypes = phenotypeFinalization.phenotypes;
-  const groundingHints = [...phenotypeFinalization.grounding_hints];
-  normalizeAncillaryBucketsForFinal(ancillaryEvidence, phenotypes, contextNotes, groundingHints);
+  const phenotypes = normalizePhenotypeBucketsForFinal(normalized.phenotypes, ancillaryEvidence, contextNotes);
   normalizeTreatmentResponseEntries(ancillaryEvidence.treatment_response, ancillaryEvidence, contextNotes);
   removeCrossLayerDuplicates(phenotypes, ancillaryEvidence);
-  removeOverlappingAncillaryEntries(ancillaryEvidence);
   sortAncillaryBuckets(ancillaryEvidence);
 
-  const frozen = {
+  return {
     chapter: buildFrozenChapter(normalized.chapter),
     phenotypes,
     ancillary_clinical_evidence: ancillaryEvidence,
     context_metadata: normalized.context_metadata,
     context_notes: dedupeStrings(contextNotes)
   };
-
-  const dedupedGroundingHints = dedupeGroundingHintObjects(groundingHints);
-  if (dedupedGroundingHints.length > 0) {
-    frozen.grounding_hints = {
-      phenotypes: dedupedGroundingHints
-    };
-  }
-
-  return frozen;
 }
 
 export function toFinalizeCandidateRows(normalizedPayload, options = {}) {
@@ -931,32 +630,14 @@ export function toFinalizeCandidateRows(normalizedPayload, options = {}) {
     ...coerceArray(normalizedPayload?.phenotypes?.excluded),
     ...(includeUncertain ? coerceArray(normalizedPayload?.phenotypes?.uncertain) : [])
   ];
-  const hintQueues = new Map();
 
-  for (const hint of coerceArray(normalizedPayload?.grounding_hints?.phenotypes)) {
-    const key = `${normalizeText(hint?.label)}::${String(
-      hint?.status || phenotypeStatusForBucket(hint?.extraction_bucket)
-    ).toLowerCase()}`;
-    const queue = hintQueues.get(key) || [];
-    queue.push(hint);
-    hintQueues.set(key, queue);
-  }
-
-  return rows.map((row) => {
-    const status = coerceString(row.status) || phenotypeStatusForBucket(row.extraction_bucket);
-    const key = `${normalizeText(row.label)}::${String(status).toLowerCase()}`;
-    const hintQueue = hintQueues.get(key) || [];
-    const hint = hintQueue.length > 0 ? hintQueue.shift() : null;
-
-    return {
-      label: row.label,
-      status,
-      category: row.category,
-      details: row.details,
-      source_quote: row.source_quote || hint?.source_quote || null,
-      extraction_bucket: row.extraction_bucket
-    };
-  });
+  return rows.map((row) => ({
+    label: row.label,
+    status: row.status,
+    category: row.category,
+    details: row.details,
+    extraction_bucket: row.extraction_bucket
+  }));
 }
 
 export function enrichFinalizedCandidates(finalizedRows, inputRows) {
@@ -978,63 +659,7 @@ export function enrichFinalizedCandidates(finalizedRows, inputRows) {
       ...row,
       category: sourceRow.category || null,
       details: sourceRow.details || null,
-      source_quote: sourceRow.source_quote || null,
       extraction_bucket: sourceRow.extraction_bucket || null
     };
   });
-}
-
-function buildGroundingCoverageKey(row) {
-  return `${normalizeText(row?.label)}::${String(row?.status || phenotypeStatusForBucket(row?.extraction_bucket)).toLowerCase()}`;
-}
-
-export function reconcileGroundingCoverage(inputRows, groundedRows, rejectedRows) {
-  const groundedQueues = new Map();
-  const rejectedQueues = new Map();
-
-  for (const row of groundedRows || []) {
-    const key = buildGroundingCoverageKey(row);
-    const queue = groundedQueues.get(key) || [];
-    queue.push(row);
-    groundedQueues.set(key, queue);
-  }
-
-  for (const row of rejectedRows || []) {
-    const key = buildGroundingCoverageKey(row);
-    const queue = rejectedQueues.get(key) || [];
-    queue.push(row);
-    rejectedQueues.set(key, queue);
-  }
-
-  const finalRejectedRows = [...(rejectedRows || [])];
-
-  for (const inputRow of inputRows || []) {
-    const key = buildGroundingCoverageKey(inputRow);
-    const groundedQueue = groundedQueues.get(key) || [];
-    if (groundedQueue.length > 0) {
-      groundedQueue.shift();
-      continue;
-    }
-
-    const rejectedQueue = rejectedQueues.get(key) || [];
-    if (rejectedQueue.length > 0) {
-      rejectedQueue.shift();
-      continue;
-    }
-
-    finalRejectedRows.push({
-      label: inputRow.label,
-      status: inputRow.status || phenotypeStatusForBucket(inputRow.extraction_bucket),
-      extraction_bucket: inputRow.extraction_bucket || null,
-      category: inputRow.category || null,
-      details: inputRow.details || null,
-      source_quote: inputRow.source_quote || null,
-      reason: 'no_supporting_sentence_found'
-    });
-  }
-
-  return {
-    candidates: groundedRows || [],
-    rejectedCandidates: finalRejectedRows
-  };
 }

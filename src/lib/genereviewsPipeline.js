@@ -146,6 +146,53 @@ const CANDIDATE_ASSERTION_CONDITIONAL_PATTERNS = Object.freeze([
   /\brisk (?:for|of)\b/i,
   /\bpredisposition to\b/i
 ]);
+const CANDIDATE_CONTEXT_QUALITY_MANAGEMENT_PENALTY = 5;
+const CANDIDATE_CONTEXT_QUALITY_HEADING_PENALTY = 6;
+const CANDIDATE_CONTEXT_QUALITY_TABLE_PENALTY = 3;
+const CANDIDATE_CONTEXT_QUALITY_PARAGRAPH_FALLBACK_PENALTY = 1;
+const CANDIDATE_CONTEXT_QUALITY_DESCRIPTIVE_BONUS = 2;
+const CANDIDATE_CONTEXT_QUALITY_CLINICAL_SECTION_BONUS = 1;
+const CANDIDATE_CONTEXT_MANAGEMENT_PATTERNS = Object.freeze([
+  /\bsupportive measures include\b/i,
+  /\bstandard treatment\b/i,
+  /\btreatment of\b/i,
+  /\bmanagement of\b/i,
+  /\bmanagement\b/i,
+  /\bsurveillance\b/i,
+  /\breferral\b/i,
+  /\bmay be helpful\b/i,
+  /\bmay be required\b/i,
+  /\bper (?:orthopedist|orthopedic surgeon|ophthalmologist|endocrinologist|hematologist|nephrologist|urologist|gastroenterologist|craniofacial team|neurosurgeon)\b/i,
+  /\bhearing aids may be helpful\b/i,
+  /\btreat infections aggressively\b/i
+]);
+const CANDIDATE_CONTEXT_DESCRIPTIVE_PATTERNS = Object.freeze([
+  /\bhas been reported\b/i,
+  /\bhave been reported\b/i,
+  /\bwas reported\b/i,
+  /\bwere reported\b/i,
+  /\breported in\b/i,
+  /\bdescribed include\b/i,
+  /\bpresented with\b/i,
+  /\bis common\b/i,
+  /\bare common\b/i,
+  /\bhas been described\b/i,
+  /\bhave been described\b/i
+]);
+const CANDIDATE_CONTEXT_TABLE_PATTERNS = Object.freeze([
+  /\t/,
+  /\bfeature\s*% of persons\b/i,
+  /\bview in own window\b/i
+]);
+const CANDIDATE_CONTEXT_HEADING_ONLY_PATTERNS = Object.freeze([
+  /^[A-Z][A-Za-z/ -]*(?:features|findings|manifestations|involvement|impairment|abnormalities|abnormality)\.?$/,
+  /^[A-Z][A-Za-z/ -]*\.$/
+]);
+const CANDIDATE_CONTEXT_CLINICAL_SECTION_PATTERNS = Object.freeze([
+  /\bsummary\b/i,
+  /\bclinical (?:description|characteristics|findings)\b/i,
+  /\bfrequency of select features\b/i
+]);
 
 export function parseArgs(argv) {
   const flags = {};
@@ -171,6 +218,7 @@ export function sleep(ms) {
 export function normalizeText(value) {
   return String(value || '')
     .toLowerCase()
+    .replace(/\b(ig)([adegmn])\b/g, '$1 $2')
     .replace(/['’]/g, '')
     .replace(/[^a-z0-9]+/g, ' ')
     .replace(/\s+/g, ' ')
@@ -882,6 +930,133 @@ function findExactPhraseSpan(text, phrase, baseOffset = 0) {
   };
 }
 
+function findLoosePhraseSpan(text, phrase, baseOffset = 0) {
+  const source = String(text || '');
+  const rawPhrase = String(phrase || '').trim();
+  if (!source || !rawPhrase) return null;
+
+  const normalizedPhrase = normalizeText(rawPhrase);
+  const phrasePattern = buildLoosePhrasePattern(normalizedPhrase);
+  if (!phrasePattern) return null;
+
+  const match = source.match(new RegExp(`\\b${phrasePattern}\\b`, 'i'));
+  if (!match || match.index == null) return null;
+
+  return {
+    char_start: baseOffset + match.index,
+    char_end: baseOffset + match.index + match[0].length
+  };
+}
+
+function findSentenceEntryContainingSpan(paragraphEntry, span) {
+  if (!paragraphEntry || !span) return null;
+  return (
+    (paragraphEntry.sentences || []).find(
+      (sentenceEntry) => span.char_start >= sentenceEntry.char_start && span.char_end <= sentenceEntry.char_end
+    ) || null
+  );
+}
+
+function scoreSourceQuoteMatchType(matchType) {
+  if (matchType === 'source_quote_exact') return 1;
+  if (matchType === 'source_quote_loose') return 0.98;
+  if (matchType === 'source_quote_paragraph') return 0.96;
+  return 0;
+}
+
+function buildSourceQuoteContextOption(paragraphEntry, candidateLabel, sentenceEntry, sourceQuote, matchType, matchSpan) {
+  return buildCandidateContextOption(
+    paragraphEntry,
+    candidateLabel,
+    {
+      score: scoreSourceQuoteMatchType(matchType),
+      matchType,
+      matchedTokenCount: buildCandidateSignalTokens(sourceQuote || candidateLabel).length,
+      candidateTokenCount: buildCandidateSignalTokens(sourceQuote || candidateLabel).length
+    },
+    sentenceEntry?.text || paragraphEntry.text,
+    sentenceEntry,
+    {
+      matchSpan,
+      matchText: sourceQuote,
+      sourceQuote,
+      quoteMatchType: matchType,
+      isParagraphFallback: matchType === 'source_quote_paragraph'
+    }
+  );
+}
+
+function locateCandidateContextFromSourceQuote(structure, candidateLabel, sourceQuote) {
+  const quote = String(sourceQuote || '').trim();
+  if (!quote) return null;
+
+  for (const paragraphEntry of structure.paragraphs || []) {
+    for (const sentenceEntry of paragraphEntry.sentences || []) {
+      const exactSpan = findExactPhraseSpan(sentenceEntry.text, quote, sentenceEntry.char_start);
+      if (exactSpan) {
+        return buildSourceQuoteContextOption(
+          paragraphEntry,
+          candidateLabel,
+          sentenceEntry,
+          quote,
+          'source_quote_exact',
+          exactSpan
+        );
+      }
+
+      const looseSpan = findLoosePhraseSpan(sentenceEntry.text, quote, sentenceEntry.char_start);
+      if (looseSpan) {
+        return buildSourceQuoteContextOption(
+          paragraphEntry,
+          candidateLabel,
+          sentenceEntry,
+          quote,
+          'source_quote_loose',
+          looseSpan
+        );
+      }
+    }
+  }
+
+  for (const paragraphEntry of structure.paragraphs || []) {
+    const exactSpan = findExactPhraseSpan(paragraphEntry.text, quote, paragraphEntry.char_start);
+    if (exactSpan) {
+      const sentenceEntry =
+        findSentenceEntryContainingSpan(paragraphEntry, exactSpan) ||
+        findBestSentenceEntryForPhrase(paragraphEntry, quote) ||
+        paragraphEntry.sentences?.[0] ||
+        null;
+      return buildSourceQuoteContextOption(
+        paragraphEntry,
+        candidateLabel,
+        sentenceEntry,
+        quote,
+        'source_quote_paragraph',
+        exactSpan
+      );
+    }
+
+    const looseSpan = findLoosePhraseSpan(paragraphEntry.text, quote, paragraphEntry.char_start);
+    if (looseSpan) {
+      const sentenceEntry =
+        findSentenceEntryContainingSpan(paragraphEntry, looseSpan) ||
+        findBestSentenceEntryForPhrase(paragraphEntry, quote) ||
+        paragraphEntry.sentences?.[0] ||
+        null;
+      return buildSourceQuoteContextOption(
+        paragraphEntry,
+        candidateLabel,
+        sentenceEntry,
+        quote,
+        'source_quote_paragraph',
+        looseSpan
+      );
+    }
+  }
+
+  return null;
+}
+
 function tokenizeCandidateContext(value) {
   return normalizeText(value).split(' ').filter(Boolean);
 }
@@ -925,6 +1100,167 @@ function scoreCandidateContextText(text, candidateLabel) {
   };
 }
 
+function countCandidateContextLineBreaks(value) {
+  return (String(value || '').match(/\n/g) || []).length;
+}
+
+function isHeadingOnlyCandidateContextSentence(sentenceText) {
+  const sentence = String(sentenceText || '').trim();
+  if (!sentence) return false;
+  const normalized = normalizeText(sentence);
+  if (!normalized) return false;
+  const tokenCount = tokenizeCandidateContext(sentence).length;
+  return tokenCount <= 4 && CANDIDATE_CONTEXT_HEADING_ONLY_PATTERNS.some((pattern) => pattern.test(sentence));
+}
+
+function isManagementLikeCandidateContextSentence(sentenceText, sectionHeading = '') {
+  const sentence = String(sentenceText || '').trim();
+  const section = String(sectionHeading || '').trim();
+  return (
+    CANDIDATE_CONTEXT_MANAGEMENT_PATTERNS.some((pattern) => pattern.test(sentence)) ||
+    /\bmanagement\b/i.test(section)
+  );
+}
+
+function isTableLikeCandidateContextSentence(sentenceText, sectionHeading = '') {
+  const sentence = String(sentenceText || '').trim();
+  const section = String(sectionHeading || '').trim();
+  return (
+    CANDIDATE_CONTEXT_TABLE_PATTERNS.some((pattern) => pattern.test(sentence)) ||
+    /^table\s+/i.test(section) ||
+    countCandidateContextLineBreaks(sentence) >= 3
+  );
+}
+
+function scoreCandidateContextEvidence(sentenceText, sectionHeading, candidateLabel, options = {}) {
+  const sentence = String(sentenceText || '').trim();
+  if (!sentence) return Number.NEGATIVE_INFINITY;
+
+  let qualityScore = 0;
+  if (options.isParagraphFallback) {
+    qualityScore -= CANDIDATE_CONTEXT_QUALITY_PARAGRAPH_FALLBACK_PENALTY;
+  }
+
+  if (hasCandidateChrome(sentence) || isHeadingOnlyCandidateContextSentence(sentence)) {
+    qualityScore -= CANDIDATE_CONTEXT_QUALITY_HEADING_PENALTY;
+  }
+
+  if (isManagementLikeCandidateContextSentence(sentence, sectionHeading)) {
+    qualityScore -= CANDIDATE_CONTEXT_QUALITY_MANAGEMENT_PENALTY;
+  }
+
+  if (isTableLikeCandidateContextSentence(sentence, sectionHeading)) {
+    qualityScore -= CANDIDATE_CONTEXT_QUALITY_TABLE_PENALTY;
+  }
+
+  if (CANDIDATE_CONTEXT_DESCRIPTIVE_PATTERNS.some((pattern) => pattern.test(sentence))) {
+    qualityScore += CANDIDATE_CONTEXT_QUALITY_DESCRIPTIVE_BONUS;
+  }
+
+  if (CANDIDATE_CONTEXT_CLINICAL_SECTION_PATTERNS.some((pattern) => pattern.test(String(sectionHeading || '')))) {
+    qualityScore += CANDIDATE_CONTEXT_QUALITY_CLINICAL_SECTION_BONUS;
+  }
+
+  const sentenceTokens = new Set(tokenizeCandidateContext(sentence));
+  const candidateSignalTokens = buildCandidateSignalTokens(candidateLabel);
+  const matchedSignalTokenCount = candidateSignalTokens.filter((token) => sentenceTokens.has(token)).length;
+  if (matchedSignalTokenCount === 0) {
+    qualityScore -= CANDIDATE_CONTEXT_QUALITY_HEADING_PENALTY;
+  }
+
+  return qualityScore;
+}
+
+function buildCandidateContextOption(paragraphEntry, candidateLabel, match, sentenceText, sentenceEntry, options = {}) {
+  const resolvedSentenceText = String(sentenceText || '').trim();
+  const resolvedSentenceEntry = sentenceEntry || null;
+  const matchText = String(options.matchText || candidateLabel || '').trim();
+  const matchSpan =
+    options.matchSpan ||
+    findExactPhraseSpan(resolvedSentenceText, matchText, resolvedSentenceEntry?.char_start || 0) ||
+    findExactPhraseSpan(paragraphEntry.text, matchText, paragraphEntry.char_start);
+
+  return {
+    score: match.score || 0,
+    match_type: match.matchType || 'none',
+    matched_token_count: match.matchedTokenCount || 0,
+    candidate_token_count: match.candidateTokenCount || 0,
+    supporting_quote: options.sourceQuote || null,
+    quote_match_type: options.quoteMatchType || null,
+    quality_score: scoreCandidateContextEvidence(
+      resolvedSentenceText,
+      paragraphEntry.section_heading,
+      candidateLabel,
+      options
+    ),
+    sentence: resolvedSentenceText,
+    paragraph: paragraphEntry.text,
+    local_clinical_domains: paragraphEntry.local_clinical_domains || [],
+    section_id: paragraphEntry.section_id || null,
+    section_heading: paragraphEntry.section_heading || null,
+    paragraph_id: paragraphEntry.paragraph_id,
+    paragraph_index: paragraphEntry.paragraph_index,
+    paragraph_char_start: paragraphEntry.char_start,
+    paragraph_char_end: paragraphEntry.char_end,
+    sentence_id: resolvedSentenceEntry?.sentence_id || null,
+    sentence_index: resolvedSentenceEntry?.sentence_index ?? null,
+    sentence_char_start: resolvedSentenceEntry?.char_start ?? null,
+    sentence_char_end: resolvedSentenceEntry?.char_end ?? null,
+    match_char_start: matchSpan?.char_start ?? null,
+    match_char_end: matchSpan?.char_end ?? null
+  };
+}
+
+function isSourceQuoteContextMatchType(matchType) {
+  return /^source_quote_/.test(String(matchType || ''));
+}
+
+function pickBetterCandidateContextOption(current, next) {
+  if (!current) return Boolean(next);
+  if (!next) return false;
+
+  const currentScore = current.score || 0;
+  const nextScore = next.score || 0;
+  if (nextScore !== currentScore) {
+    return nextScore > currentScore;
+  }
+
+  const currentMatchType = current.match_type || 'none';
+  const nextMatchType = next.match_type || 'none';
+  if (isSourceQuoteContextMatchType(nextMatchType) && !isSourceQuoteContextMatchType(currentMatchType)) {
+    return true;
+  }
+  if (isSourceQuoteContextMatchType(currentMatchType) && !isSourceQuoteContextMatchType(nextMatchType)) {
+    return false;
+  }
+  if (nextMatchType === 'exact_phrase' && currentMatchType !== 'exact_phrase') {
+    return true;
+  }
+  if (currentMatchType === 'exact_phrase' && nextMatchType !== 'exact_phrase') {
+    return false;
+  }
+
+  const currentQualityScore = current.quality_score || 0;
+  const nextQualityScore = next.quality_score || 0;
+  if (nextQualityScore !== currentQualityScore) {
+    return nextQualityScore > currentQualityScore;
+  }
+
+  const currentMatchedTokenCount = current.matched_token_count || 0;
+  const nextMatchedTokenCount = next.matched_token_count || 0;
+  if (nextMatchedTokenCount !== currentMatchedTokenCount) {
+    return nextMatchedTokenCount > currentMatchedTokenCount;
+  }
+
+  const currentLineBreaks = countCandidateContextLineBreaks(current.sentence);
+  const nextLineBreaks = countCandidateContextLineBreaks(next.sentence);
+  if (nextLineBreaks !== currentLineBreaks) {
+    return nextLineBreaks < currentLineBreaks;
+  }
+
+  return String(next.sentence || '').length < String(current.sentence || '').length;
+}
+
 function pickBetterCandidateContextMatch(current, next) {
   const currentScore = current.score || 0;
   const nextScore = next.score || 0;
@@ -935,6 +1271,12 @@ function pickBetterCandidateContextMatch(current, next) {
 
   if (nextScore !== currentScore) {
     return nextScore > currentScore;
+  }
+  if (isSourceQuoteContextMatchType(nextMatchType) && !isSourceQuoteContextMatchType(currentMatchType)) {
+    return true;
+  }
+  if (isSourceQuoteContextMatchType(currentMatchType) && !isSourceQuoteContextMatchType(nextMatchType)) {
+    return false;
   }
   if (nextMatchType === 'exact_phrase' && currentMatchType !== 'exact_phrase') {
     return true;
@@ -1217,85 +1559,88 @@ export function matchesExistingAnchor(candidateLabel, anchors) {
   return false;
 }
 
-export function locateCandidateContext(clinicalText, candidateLabel) {
+export function locateCandidateContext(clinicalText, candidateLabel, options = {}) {
   const structure =
     clinicalText && typeof clinicalText === 'object' && Array.isArray(clinicalText.paragraphs)
       ? clinicalText
       : buildClinicalTextStructure(clinicalText);
-  let best = {
-    score: 0,
-    match_type: 'none',
-    matched_token_count: 0,
-    candidate_token_count: 0,
-    sentence: '',
-    paragraph: '',
-    section_id: null,
-    section_heading: null,
-    paragraph_id: null,
-    paragraph_index: null,
-    paragraph_char_start: null,
-    paragraph_char_end: null,
-    sentence_id: null,
-    sentence_index: null,
-    sentence_char_start: null,
-    sentence_char_end: null,
-    match_char_start: null,
-    match_char_end: null
-  };
+  const sourceQuote = String(options.sourceQuote || '').trim();
+  const sourceQuoteOption = sourceQuote
+    ? locateCandidateContextFromSourceQuote(structure, candidateLabel, sourceQuote)
+    : null;
+  let best = sourceQuoteOption;
+
   for (const paragraphEntry of structure.paragraphs || []) {
-    let bestSentenceEntry = null;
-    let bestSentenceMatch = {
-      score: 0,
-      matchType: 'none',
-      matchedTokenCount: 0,
-      candidateTokenCount: 0
-    };
+    let paragraphBestOption = null;
 
     for (const sentenceEntry of paragraphEntry.sentences || []) {
       const sentenceMatch = scoreCandidateContextText(sentenceEntry.text, candidateLabel);
-      if (!bestSentenceEntry || pickBetterCandidateContextMatch(bestSentenceMatch, sentenceMatch)) {
-        bestSentenceEntry = sentenceEntry;
-        bestSentenceMatch = sentenceMatch;
+      if ((sentenceMatch.score || 0) <= 0) continue;
+
+      const sentenceOption = buildCandidateContextOption(
+        paragraphEntry,
+        candidateLabel,
+        sentenceMatch,
+        sentenceEntry.text,
+        sentenceEntry
+      );
+      if (pickBetterCandidateContextOption(paragraphBestOption, sentenceOption)) {
+        paragraphBestOption = sentenceOption;
       }
     }
 
     const paragraphMatch = scoreCandidateContextText(paragraphEntry.text, candidateLabel);
-    const preferredSentenceEntry = bestSentenceEntry || findBestSentenceEntryForPhrase(paragraphEntry, candidateLabel);
-    const preferredSentenceMatch = bestSentenceEntry ? bestSentenceMatch : scoreCandidateContextText(preferredSentenceEntry?.text || '', candidateLabel);
-    const selectedMatch = pickBetterCandidateContextMatch(paragraphMatch, preferredSentenceMatch) ? paragraphMatch : preferredSentenceMatch;
-    const selectedSentenceEntry = preferredSentenceEntry && selectedMatch !== paragraphMatch ? preferredSentenceEntry : preferredSentenceEntry;
-    const selectedSentenceText =
-      preferredSentenceEntry && selectedMatch !== paragraphMatch
-        ? preferredSentenceEntry.text
-        : preferredSentenceEntry?.text || findBestSentenceForPhrase(paragraphEntry.text, candidateLabel);
-    const matchSpan =
-      findExactPhraseSpan(selectedSentenceText || '', candidateLabel, preferredSentenceEntry?.char_start || 0) ||
-      findExactPhraseSpan(paragraphEntry.text, candidateLabel, paragraphEntry.char_start);
+    if ((paragraphMatch.score || 0) > 0) {
+      const fallbackSentenceEntry =
+        findBestSentenceEntryForPhrase(paragraphEntry, candidateLabel) ||
+        paragraphEntry.sentences?.find((sentenceEntry) => scoreCandidateContextText(sentenceEntry.text, candidateLabel).score > 0) ||
+        paragraphEntry.sentences?.[0] ||
+        null;
+      const fallbackSentenceText =
+        fallbackSentenceEntry?.text || findBestSentenceForPhrase(paragraphEntry.text, candidateLabel) || paragraphEntry.text;
+      const paragraphOption = buildCandidateContextOption(
+        paragraphEntry,
+        candidateLabel,
+        paragraphMatch,
+        fallbackSentenceText,
+        fallbackSentenceEntry,
+        { isParagraphFallback: true }
+      );
+      if (pickBetterCandidateContextOption(paragraphBestOption, paragraphOption)) {
+        paragraphBestOption = paragraphOption;
+      }
+    }
 
-    if (pickBetterCandidateContextMatch(best, selectedMatch)) {
-      best = {
-        score: selectedMatch.score || 0,
-        match_type: selectedMatch.matchType || 'none',
-        matched_token_count: selectedMatch.matchedTokenCount || 0,
-        candidate_token_count: selectedMatch.candidateTokenCount || 0,
-        sentence: selectedSentenceText || '',
-        paragraph: paragraphEntry.text,
-        local_clinical_domains: paragraphEntry.local_clinical_domains || [],
-        section_id: paragraphEntry.section_id || null,
-        section_heading: paragraphEntry.section_heading || null,
-        paragraph_id: paragraphEntry.paragraph_id,
-        paragraph_index: paragraphEntry.paragraph_index,
-        paragraph_char_start: paragraphEntry.char_start,
-        paragraph_char_end: paragraphEntry.char_end,
-        sentence_id: preferredSentenceEntry?.sentence_id || null,
-        sentence_index: preferredSentenceEntry?.sentence_index ?? null,
-        sentence_char_start: preferredSentenceEntry?.char_start ?? null,
-        sentence_char_end: preferredSentenceEntry?.char_end ?? null,
-        match_char_start: matchSpan?.char_start ?? null,
-        match_char_end: matchSpan?.char_end ?? null
-      };
+    if (pickBetterCandidateContextOption(best, paragraphBestOption)) {
+      best = paragraphBestOption;
     }
   }
+
+  if (!best) {
+    best = {
+      score: 0,
+      match_type: 'none',
+      matched_token_count: 0,
+      candidate_token_count: 0,
+      quality_score: 0,
+      sentence: '',
+      paragraph: '',
+      local_clinical_domains: [],
+      section_id: null,
+      section_heading: null,
+      paragraph_id: null,
+      paragraph_index: null,
+      paragraph_char_start: null,
+      paragraph_char_end: null,
+      sentence_id: null,
+      sentence_index: null,
+      sentence_char_start: null,
+      sentence_char_end: null,
+      match_char_start: null,
+      match_char_end: null
+    };
+  }
+
   return {
     source_sentence: best.sentence || '',
     paragraph: best.paragraph || '',
@@ -1315,7 +1660,10 @@ export function locateCandidateContext(clinicalText, candidateLabel) {
     context_match_score: best.score || 0,
     context_match_type: best.match_type || 'none',
     context_matched_token_count: best.matched_token_count || 0,
-    context_candidate_token_count: best.candidate_token_count || 0
+    context_candidate_token_count: best.candidate_token_count || 0,
+    context_quality_score: best.quality_score || 0,
+    source_quote: best.supporting_quote || sourceQuote || '',
+    quote_match_type: best.quote_match_type || null
   };
 }
 
@@ -1373,7 +1721,12 @@ function resolveCandidateSentenceMatchSpan(candidateLabel, context = {}) {
     }
   }
 
-  return findExactPhraseSpan(sentence, candidateLabel, 0);
+  return (
+    findExactPhraseSpan(sentence, context.source_quote || '', 0) ||
+    findLoosePhraseSpan(sentence, context.source_quote || '', 0) ||
+    findExactPhraseSpan(sentence, candidateLabel, 0) ||
+    findLoosePhraseSpan(sentence, candidateLabel, 0)
+  );
 }
 
 function buildCandidateAssertionWindow(candidateLabel, context = {}) {
@@ -1414,14 +1767,28 @@ function buildCandidateAssertionWindow(candidateLabel, context = {}) {
   };
 }
 
-function inferCandidateAssertion(candidateLabel, candidateStatus, context = {}) {
-  const status = String(candidateStatus || 'present').trim().toLowerCase() === 'excluded' ? 'excluded' : 'present';
+function normalizePhenotypeGroundingStatus(candidateStatus, extractionBucket = '') {
+  const normalizedStatus = String(candidateStatus || '').trim().toLowerCase();
+  if (normalizedStatus === 'excluded') return 'excluded';
+  if (normalizedStatus === 'uncertain') return 'uncertain';
+
+  const normalizedBucket = String(extractionBucket || '').trim().toLowerCase();
+  if (normalizedBucket === 'excluded') return 'excluded';
+  if (normalizedBucket === 'uncertain') return 'uncertain';
+  return 'present';
+}
+
+function inferCandidateAssertion(candidateLabel, candidateStatus, context = {}, options = {}) {
+  const preserveInputStatus = Boolean(options.preserveInputStatus);
+  const status = normalizePhenotypeGroundingStatus(candidateStatus, options.extractionBucket);
   const sentence = String(context.source_sentence || '').trim();
+  const evidenceText = String(context.source_quote || candidateLabel || '').trim();
   if (!sentence) {
     return {
       keep: true,
       status,
-      assertion_status_origin: status === 'excluded' ? 'model_excluded' : 'default_present',
+      assertion_status_origin:
+        status === 'excluded' ? 'model_excluded' : status === 'uncertain' ? 'model_uncertain' : 'default_present',
       assertion_reason: null,
       assertion_evidence: ''
     };
@@ -1433,7 +1800,8 @@ function inferCandidateAssertion(candidateLabel, candidateStatus, context = {}) 
     return {
       keep: true,
       status,
-      assertion_status_origin: status === 'excluded' ? 'model_excluded' : 'default_present',
+      assertion_status_origin:
+        status === 'excluded' ? 'model_excluded' : status === 'uncertain' ? 'model_uncertain' : 'default_present',
       assertion_reason: null,
       assertion_evidence: sentence
     };
@@ -1444,26 +1812,49 @@ function inferCandidateAssertion(candidateLabel, candidateStatus, context = {}) 
   const after = String(window.after || '');
   const around = String(window.around || sentence);
   const labelPattern = new RegExp(`\\b${escapeRegex(normalizedLabel)}\\b`, 'i');
-
-  if (CANDIDATE_ASSERTION_CONDITIONAL_PATTERNS.some((pattern) => pattern.test(around))) {
-    return {
-      keep: false,
-      status,
-      assertion_status_origin: status === 'excluded' ? 'model_excluded' : 'default_present',
-      assertion_reason: 'conditional_or_risk_context',
-      assertion_evidence: around
-    };
-  }
-
-  if (
+  const evidencePolarity = inferEvidencePolarity(sentence, evidenceText);
+  const hasExplicitNegativeContext =
+    evidencePolarity === 'excluded' ||
     CANDIDATE_ASSERTION_NEGATIVE_PREFIX_PATTERNS.some((pattern) => pattern.test(before)) ||
-    CANDIDATE_ASSERTION_NEGATIVE_SUFFIX_PATTERNS.some((pattern) => pattern.test(after))
-  ) {
+    CANDIDATE_ASSERTION_NEGATIVE_SUFFIX_PATTERNS.some((pattern) => pattern.test(after));
+
+  if (hasExplicitNegativeContext) {
+    if (preserveInputStatus && status !== 'excluded') {
+      return {
+        keep: false,
+        status,
+        assertion_status_origin: status === 'uncertain' ? 'model_uncertain' : 'default_present',
+        assertion_reason: 'explicit_negative_local_context',
+        assertion_evidence: around
+      };
+    }
+
     return {
       keep: true,
       status: 'excluded',
       assertion_status_origin: status === 'excluded' ? 'model_excluded' : 'sentence_negation_inferred',
       assertion_reason: 'explicit_negative_local_context',
+      assertion_evidence: around
+    };
+  }
+
+  if (preserveInputStatus && status === 'excluded') {
+    return {
+      keep: false,
+      status,
+      assertion_status_origin: 'model_excluded',
+      assertion_reason: 'excluded_bucket_without_negative_evidence',
+      assertion_evidence: around
+    };
+  }
+
+  if (CANDIDATE_ASSERTION_CONDITIONAL_PATTERNS.some((pattern) => pattern.test(around))) {
+    return {
+      keep: false,
+      status,
+      assertion_status_origin:
+        status === 'excluded' ? 'model_excluded' : status === 'uncertain' ? 'model_uncertain' : 'default_present',
+      assertion_reason: 'conditional_or_risk_context',
       assertion_evidence: around
     };
   }
@@ -1475,7 +1866,8 @@ function inferCandidateAssertion(candidateLabel, candidateStatus, context = {}) 
     return {
       keep: false,
       status,
-      assertion_status_origin: status === 'excluded' ? 'model_excluded' : 'default_present',
+      assertion_status_origin:
+        status === 'excluded' ? 'model_excluded' : status === 'uncertain' ? 'model_uncertain' : 'default_present',
       assertion_reason: 'normal_or_preserved_context',
       assertion_evidence: around
     };
@@ -1484,10 +1876,53 @@ function inferCandidateAssertion(candidateLabel, candidateStatus, context = {}) 
   return {
     keep: true,
     status,
-    assertion_status_origin: status === 'excluded' ? 'model_excluded' : 'default_present',
+    assertion_status_origin:
+      status === 'excluded' ? 'model_excluded' : status === 'uncertain' ? 'model_uncertain' : 'default_present',
     assertion_reason: null,
     assertion_evidence: around
   };
+}
+
+function inferGroundingConfidence(context = {}) {
+  const matchType = String(context.context_match_type || 'none');
+  const matchScore = Number(context.context_match_score || 0);
+  const qualityScore = Number(context.context_quality_score || 0);
+  const sourceSentence = String(context.source_sentence || '').trim();
+  const sectionHeading = String(context.section_heading || '').trim();
+  const hasSourceQuote = Boolean(String(context.source_quote || '').trim());
+
+  if (!sourceSentence) return 'low';
+
+  if (matchType === 'source_quote_exact') {
+    if (isHeadingOnlyCandidateContextSentence(sourceSentence) || isTableLikeCandidateContextSentence(sourceSentence, sectionHeading)) {
+      return 'low';
+    }
+    return isManagementLikeCandidateContextSentence(sourceSentence, sectionHeading) ? 'medium' : 'high';
+  }
+
+  if (matchType === 'source_quote_loose' || matchType === 'source_quote_paragraph') {
+    if (isHeadingOnlyCandidateContextSentence(sourceSentence) || isTableLikeCandidateContextSentence(sourceSentence, sectionHeading)) {
+      return 'low';
+    }
+    return hasSourceQuote ? 'medium' : 'low';
+  }
+
+  if (
+    matchType === 'exact_phrase' &&
+    matchScore >= 1 &&
+    qualityScore >= 0 &&
+    !isManagementLikeCandidateContextSentence(sourceSentence, sectionHeading) &&
+    !isTableLikeCandidateContextSentence(sourceSentence, sectionHeading) &&
+    !isHeadingOnlyCandidateContextSentence(sourceSentence)
+  ) {
+    return 'high';
+  }
+
+  if (matchScore >= CANDIDATE_CONTEXT_MIN_FUZZY_SCORE && qualityScore > -CANDIDATE_CONTEXT_QUALITY_MANAGEMENT_PENALTY) {
+    return 'medium';
+  }
+
+  return 'low';
 }
 
 function supportsImpliedFunctionalCandidate(candidateLabel, context = {}) {
@@ -1600,25 +2035,35 @@ export function evaluatePhenotypeCandidate(candidateLabel, context = {}) {
   };
 }
 
-export function finalizePhenotypeCandidates(rawCandidates, anchors, clinicalStructure, sourceTag = 'llm_candidate') {
+export function finalizePhenotypeCandidates(rawCandidates, anchors, clinicalStructure, sourceTag = 'llm_candidate', options = {}) {
   const candidates = [];
   const rejectedCandidates = [];
+  const preserveInputStatus = Boolean(options.preserveInputStatus);
+  const allowExistingAnchors = Boolean(options.allowExistingAnchors);
 
   for (const candidate of rawCandidates || []) {
     const label = String(candidate?.label || '').trim();
-    const status = String(candidate?.status || 'present').trim().toLowerCase() === 'excluded' ? 'excluded' : 'present';
+    const status = normalizePhenotypeGroundingStatus(candidate?.status, candidate?.extraction_bucket);
+    const sourceQuote = String(candidate?.source_quote || candidate?.evidence_text || '').trim();
     if (!label) continue;
-    if (matchesExistingAnchor(label, anchors || [])) continue;
-    const context = locateCandidateContext(clinicalStructure, label);
+    if (!allowExistingAnchors && matchesExistingAnchor(label, anchors || [])) continue;
+    const context = locateCandidateContext(clinicalStructure, label, { sourceQuote });
     const evaluation = evaluatePhenotypeCandidate(label, context);
-    const assertion = inferCandidateAssertion(label, status, context);
+    const assertion = inferCandidateAssertion(label, status, context, {
+      preserveInputStatus,
+      extractionBucket: candidate?.extraction_bucket
+    });
     const auditFields = {
       source_sentence: context.source_sentence,
       section_heading: context.section_heading,
       context_match_score: context.context_match_score,
       context_match_type: context.context_match_type,
+      context_quality_score: context.context_quality_score,
       context_matched_token_count: context.context_matched_token_count,
       context_candidate_token_count: context.context_candidate_token_count,
+      source_quote: context.source_quote || sourceQuote || '',
+      quote_match_type: context.quote_match_type || null,
+      grounding_confidence: inferGroundingConfidence(context),
       assertion_status_origin: assertion.assertion_status_origin,
       assertion_reason: assertion.assertion_reason,
       assertion_evidence: assertion.assertion_evidence
@@ -1628,6 +2073,7 @@ export function finalizePhenotypeCandidates(rawCandidates, anchors, clinicalStru
       rejectedCandidates.push({
         label,
         status,
+        extraction_bucket: candidate?.extraction_bucket || null,
         reason: evaluation.reason,
         ...auditFields
       });
@@ -1638,6 +2084,7 @@ export function finalizePhenotypeCandidates(rawCandidates, anchors, clinicalStru
       rejectedCandidates.push({
         label,
         status,
+        extraction_bucket: candidate?.extraction_bucket || null,
         reason: assertion.assertion_reason,
         ...auditFields
       });
@@ -1647,7 +2094,10 @@ export function finalizePhenotypeCandidates(rawCandidates, anchors, clinicalStru
     candidates.push({
       label,
       status: assertion.status,
+      extraction_bucket: candidate?.extraction_bucket || null,
       source: sourceTag,
+      source_quote: context.source_quote || sourceQuote || '',
+      quote_match_type: context.quote_match_type || null,
       source_sentence: context.source_sentence,
       paragraph: context.paragraph,
       local_clinical_domains: context.local_clinical_domains || [],
@@ -1665,8 +2115,10 @@ export function finalizePhenotypeCandidates(rawCandidates, anchors, clinicalStru
       match_char_end: context.match_char_end,
       context_match_score: context.context_match_score,
       context_match_type: context.context_match_type,
+      context_quality_score: context.context_quality_score,
       context_matched_token_count: context.context_matched_token_count,
       context_candidate_token_count: context.context_candidate_token_count,
+      grounding_confidence: inferGroundingConfidence(context),
       assertion_status_origin: assertion.assertion_status_origin,
       assertion_reason: assertion.assertion_reason,
       assertion_evidence: assertion.assertion_evidence
@@ -1893,6 +2345,22 @@ function phraseCarriesNegativeMeaning(phrase) {
   return /^(?:absence of|absent|lack of|lacking|without|no)\b/.test(normalized);
 }
 
+function inferEvidencePolarity(sentence, evidenceText) {
+  const normalizedEvidence = normalizeText(evidenceText);
+  if (!normalizedEvidence) return 'present';
+  if (phraseCarriesNegativeMeaning(normalizedEvidence)) {
+    return 'present';
+  }
+  if (
+    /\b(?:not reported|not described|not observed|not present|not been reported|not been described|not been observed|without|never)\b/i.test(
+      normalizedEvidence
+    )
+  ) {
+    return 'excluded';
+  }
+  return detectExplicitPhenotypeStatus(sentence, evidenceText);
+}
+
 function detectExplicitPhenotypeStatus(sentence, matchText) {
   const normalizedSentence = normalizeText(sentence);
   const normalizedPhrase = normalizeText(matchText);
@@ -1910,7 +2378,11 @@ function detectExplicitPhenotypeStatus(sentence, matchText) {
     new RegExp(`\\bnever\\s+had\\s+${phrasePattern}\\b`, 'i'),
     new RegExp(`\\bdid\\s+not\\s+have\\s+${phrasePattern}\\b`, 'i'),
     new RegExp(`\\bdoes\\s+not\\s+have\\s+${phrasePattern}\\b`, 'i'),
-    new RegExp(`\\b${phrasePattern}\\s+(?:is|was|were|are)\\s+(?:absent|not\\s+present)\\b`, 'i')
+    new RegExp(`\\b${phrasePattern}\\s+(?:is|was|were|are)\\s+(?:absent|not\\s+present)\\b`, 'i'),
+    new RegExp(`\\b${phrasePattern}\\s+has\\s+not\\s+been\\s+(?:described|reported|observed|seen|identified)\\b`, 'i'),
+    new RegExp(`\\b${phrasePattern}\\s+have\\s+not\\s+been\\s+(?:described|reported|observed|seen|identified)\\b`, 'i'),
+    new RegExp(`\\b${phrasePattern}\\s+was\\s+not\\s+(?:described|reported|observed|seen|identified|present)\\b`, 'i'),
+    new RegExp(`\\b${phrasePattern}\\s+were\\s+not\\s+(?:described|reported|observed|seen|identified|present)\\b`, 'i')
   ];
 
   return patterns.some((pattern) => pattern.test(normalizedSentence)) ? 'excluded' : 'present';

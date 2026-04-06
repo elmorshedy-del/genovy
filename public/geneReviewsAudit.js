@@ -227,6 +227,14 @@ function renderDetail(item) {
         )
         .join('')
     : '<li>None</li>';
+  const checkDetailsHtml = (item.checks || []).length
+    ? item.checks
+        .map(
+          (check) =>
+            `<li><strong>${escapeHtml(check.name)}</strong> [${escapeHtml(check.status)}]: ${escapeHtml(check.detail || '')}</li>`
+        )
+        .join('')
+    : '<li>None</li>';
 
   detailPanelEl.innerHTML = `
     <h3>${escapeHtml(item.hpo_label || item.hpo_id)}</h3>
@@ -255,6 +263,10 @@ function renderDetail(item) {
     <div class="gr-detail-block">
       <h4>Flagged checks</h4>
       <ul class="gr-detail-list">${(item.flagged_checks || []).length ? item.flagged_checks.map((check) => `<li>${escapeHtml(check)}</li>`).join('') : '<li>None</li>'}</ul>
+    </div>
+    <div class="gr-detail-block">
+      <h4>Verifier check details</h4>
+      <ul class="gr-detail-list">${checkDetailsHtml}</ul>
     </div>
     <div class="gr-detail-block">
       <h4>Auto-accept reasons</h4>

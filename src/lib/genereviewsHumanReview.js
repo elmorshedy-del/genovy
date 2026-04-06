@@ -47,7 +47,7 @@ function buildSpanRecord(key, label, start, end, chapterText) {
 
 function buildHumanReviewRecord({ chapter, feature, verification, chapterText, reviewPagePath, index }) {
   const reviewId = buildReviewId(feature, index);
-  const reviewHref = `${reviewPagePath}#${reviewId}`;
+  const reviewHref = reviewPagePath ? `${reviewPagePath}#${reviewId}` : `#${reviewId}`;
   const hostedReviewHref = `/audit/genereviews?chapter=${encodeURIComponent(chapter.chapterKey || chapter.nbkId || '')}#${reviewId}`;
   const checks = verification?.checks || [];
   const sourceSpan = checks.find((check) => check.name === 'source_span');
@@ -495,6 +495,11 @@ function buildChapterReviewHtml(payload) {
       ].join(' ');
       const failed = item.failed_checks.length ? '<li>' + item.failed_checks.map(escapeHtmlJs).join('</li><li>') + '</li>' : '<li>None</li>';
       const flagged = item.flagged_checks.length ? '<li>' + item.flagged_checks.map(escapeHtmlJs).join('</li><li>') + '</li>' : '<li>None</li>';
+      const checkDetails = item.checks.length
+        ? item.checks.map((check) =>
+            '<li><strong>' + escapeHtmlJs(check.name) + '</strong> [' + escapeHtmlJs(check.status) + ']: ' + escapeHtmlJs(check.detail || '') + '</li>'
+          ).join('')
+        : '<li>None</li>';
       const spans = item.spans.map((span) =>
         '<li><strong>' + escapeHtmlJs(span.label) + ':</strong> ' + escapeHtmlJs(span.text || 'No stored span text') + '</li>'
       ).join('');
@@ -506,6 +511,7 @@ function buildChapterReviewHtml(payload) {
         '<div class="detail-block"><h3>Span texts</h3><ul class="detail-list">' + (spans || '<li>None</li>') + '</ul></div>' +
         '<div class="detail-block"><h3>Failed checks</h3><ul class="detail-list">' + failed + '</ul></div>' +
         '<div class="detail-block"><h3>Flagged checks</h3><ul class="detail-list">' + flagged + '</ul></div>' +
+        '<div class="detail-block"><h3>Verifier check details</h3><ul class="detail-list">' + checkDetails + '</ul></div>' +
         '<div class="detail-block"><h3>Auto-accept reasons</h3><pre>' + escapeHtmlJs((item.auto_accept_reasons || []).join('\\n') || 'None') + '</pre></div>' +
         '<div class="detail-block"><h3>Open source</h3><p><a class="detail-link" href="' + escapeHtmlJs(item.source_url || '#') + '" target="_blank" rel="noreferrer">NCBI chapter</a></p></div>';
     }

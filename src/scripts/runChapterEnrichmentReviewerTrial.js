@@ -7,8 +7,10 @@ import {
   writeJson
 } from '../lib/genereviewsPipeline.js';
 import {
+  buildAncillaryEvidenceTypeSchemaText,
   buildEnrichmentDetailTypeSchemaText,
   buildSchemaRepairPrompt,
+  deterministicallyRouteEnrichmentReviewResults,
   normalizeEnrichmentReviewPayload
 } from '../lib/enrichmentReviewer.js';
 
@@ -129,19 +131,30 @@ Each result must contain:
 - candidate_label
 - sentence_id
 - bucket
+- retention_layer
 - adds_detail_beyond_anchor
 - detail_types
+- ancillary_evidence_types
 - same_finding_as_anchor_labels
 - reason
 
 Allowed buckets:
 - keep_enrichment
+- retain_as_ancillary
 - collapse_to_anchor
 - broad_or_redundant
 - junk_or_context_only
 
+Allowed retention_layer values:
+- phenotype_enrichment
+- ancillary_clinical_evidence
+- discarded
+
 Allowed detail_types:
 ${buildEnrichmentDetailTypeSchemaText()}
+
+Allowed ancillary_evidence_types:
+${buildAncillaryEvidenceTypeSchemaText()}
 
 Policy:
 - Preserve clinically meaningful source detail beyond flattened HPO anchors.
@@ -152,13 +165,22 @@ Policy:
 - Do not collapse a candidate just because a broader anchor exists.
 - Collapse only if the candidate is effectively the same anchored finding and adds no clinically meaningful specificity.
 - Broad umbrella phrases go to broad_or_redundant.
-- Lab-only, support-only, context-only, or pathology-only outputs go to junk_or_context_only unless they are clearly patient-facing phenotype enrichment.
+- If a row is clinically useful but not phenotype enrichment because it is lab-only, imaging-only, pathology-only, electrophysiology-only, treatment-response, management, or clinical-test evidence, use retain_as_ancillary with retention_layer=ancillary_clinical_evidence and the best ancillary_evidence_types values.
+- Use junk_or_context_only only for rows that should be discarded entirely, not for clinically useful ancillary evidence.
 - If a candidate adds source-faithful differentiating detail that could matter later for mapping or disease differentiation, prefer keep_enrichment.
 
+Retention-layer rules:
+- keep_enrichment -> phenotype_enrichment
+- retain_as_ancillary -> ancillary_clinical_evidence
+- collapse_to_anchor, broad_or_redundant, junk_or_context_only -> discarded
+
 Before you finalize the answer, do a schema pass:
+- verify every retention_layer matches the bucket rules above
 - verify every detail_types item is exactly one of the allowed values above
-- if not, rewrite it to the closest allowed value or remove it
+- verify every ancillary_evidence_types item is exactly one of the allowed values above
+- if a detail_types or ancillary_evidence_types item is close but not exact, rewrite it to the closest allowed value or remove it
 - do not invent any other detail_types labels
+- do not invent any other ancillary_evidence_types labels
 
 Output JSON only.`;
 }
@@ -221,7 +243,11 @@ function compareAgainstPriorAudit(cases, results) {
       sentence_id: inputCase.candidate.sentence_id,
       prior_audit_bucket: inputCase.prior_audit_bucket,
       reviewer_bucket: row?.bucket || null,
+      retention_layer: row?.retention_layer || null,
+      resolved_candidate_label: row?.resolved_candidate_label || inputCase.candidate.label,
       detail_types: row?.detail_types || [],
+      ancillary_evidence_types: row?.ancillary_evidence_types || [],
+      derived_ancillary_evidence: row?.derived_ancillary_evidence || [],
       changed_vs_prior_audit:
         inputCase.prior_audit_bucket !== null && inputCase.prior_audit_bucket !== row?.bucket
     });
@@ -278,7 +304,8 @@ async function main() {
       cases
     });
 
-    const comparison = compareAgainstPriorAudit(cases, reviewed.normalized.results);
+    const routed = deterministicallyRouteEnrichmentReviewResults(cases, reviewed.normalized.results);
+    const comparison = compareAgainstPriorAudit(cases, routed.results);
     modelOutputs.push({
       model,
       primary_usage: reviewed.primary.usage || null,
@@ -286,6 +313,8 @@ async function main() {
       validation_issues: reviewed.normalized.issues,
       repaired_output_used: Boolean(reviewed.repaired),
       normalized_results: reviewed.normalized.results,
+      routed_results: routed.results,
+      routing_adjustments: routed.adjustments,
       comparison
     });
   }
@@ -299,9 +328,10 @@ async function main() {
   for (const output of modelOutputs) {
     console.log(`MODEL ${output.model}`);
     console.log(`repair_used=${output.repaired_output_used}`);
+    console.log(`routing_adjustments=${output.routing_adjustments.length}`);
     for (const row of output.comparison) {
       console.log(
-        `${row.sentence_id}\t${row.candidate_label}\tprior=${row.prior_audit_bucket}\tnow=${row.reviewer_bucket}\tdetail=${row.detail_types.join('|')}`
+        `${row.sentence_id}\t${row.candidate_label}\tresolved=${row.resolved_candidate_label}\tprior=${row.prior_audit_bucket}\tnow=${row.reviewer_bucket}\tlayer=${row.retention_layer}\tdetail=${row.detail_types.join('|')}\tancillary=${row.ancillary_evidence_types.join('|')}\tderived=${row.derived_ancillary_evidence.map((item) => `${item.ancillary_evidence_type}:${item.value_text}`).join('|')}`
       );
     }
     console.log('---');

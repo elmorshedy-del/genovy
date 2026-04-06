@@ -43,11 +43,14 @@ RULES:
 5. If a feature appears multiple times in the text, output it only once
 6. Be specific: "infantile muscular hypotonia" not "hypotonia"
 
+7. For every returned row, include source_quote as a verbatim supporting quote copied from the chapter text
+8. source_quote must be copied exactly from the chapter; do not paraphrase it
+
 OUTPUT FORMAT (JSON object, no other text, no markdown fences):
 {
   "features": [
-    { "label": "short phrase", "status": "present" },
-    { "label": "other phrase", "status": "excluded" }
+    { "label": "short phrase", "status": "present", "source_quote": "exact supporting quote" },
+    { "label": "other phrase", "status": "excluded", "source_quote": "exact supporting quote" }
   ]
 }`;
 

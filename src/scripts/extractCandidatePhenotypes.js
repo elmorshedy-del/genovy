@@ -68,10 +68,13 @@ RULES:
 8. Be specific, but prefer concise canonical phenotype phrases over long descriptive clauses
 9. When uncertain whether something is a phenotype versus a lab/test/management/risk statement, omit it
 
+10. For every returned row, include source_quote as a verbatim supporting quote copied from the chapter text
+11. source_quote must be copied exactly from the chapter; do not paraphrase it
+
 OUTPUT FORMAT (JSON array, no other text, no markdown fences):
 [
-  { "label": "short phrase", "status": "present" },
-  { "label": "other phrase", "status": "excluded" }
+  { "label": "short phrase", "status": "present", "source_quote": "exact supporting quote" },
+  { "label": "other phrase", "status": "excluded", "source_quote": "exact supporting quote" }
 ]`;
 
 async function main() {
