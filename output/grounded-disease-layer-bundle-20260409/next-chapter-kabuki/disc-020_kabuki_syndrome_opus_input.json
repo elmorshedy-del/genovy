@@ -1,0 +1,93 @@
+{
+  "chapter": {
+    "nbk_id": null,
+    "title": "Kabuki Syndrome",
+    "mode": "discovery",
+    "source": "stage3DiscoveryBenchmarkDevHard20 fixture",
+    "source_url": null,
+    "source_date": null
+  },
+  "sentence_index": [
+    {
+      "sentence_id": "p1_s1",
+      "section": "Clinical Text",
+      "text": "Postnatal growth deficiency leading to short stature is observed in the majority.",
+      "section_id": "clinical_text",
+      "paragraph_id": "p1",
+      "char_start": 0,
+      "char_end": 81
+    },
+    {
+      "sentence_id": "p1_s2",
+      "section": "Clinical Text",
+      "text": "Skeletal anomalies include persistent fetal fingertip pads, brachydactyly, clinodactyly, and vertebral abnormalities.",
+      "section_id": "clinical_text",
+      "paragraph_id": "p1",
+      "char_start": 82,
+      "char_end": 199
+    },
+    {
+      "sentence_id": "p1_s3",
+      "section": "Clinical Text",
+      "text": "Congenital heart defects, most commonly coarctation of the aorta and septal defects, occur in approximately 40% of patients.",
+      "section_id": "clinical_text",
+      "paragraph_id": "p1",
+      "char_start": 200,
+      "char_end": 324
+    },
+    {
+      "sentence_id": "p1_s4",
+      "section": "Clinical Text",
+      "text": "Hearing loss, usually conductive, is present in about 25%.",
+      "section_id": "clinical_text",
+      "paragraph_id": "p1",
+      "char_start": 325,
+      "char_end": 383
+    },
+    {
+      "sentence_id": "p1_s5",
+      "section": "Clinical Text",
+      "text": "Cleft palate or submucous cleft palate is a recognized feature.",
+      "section_id": "clinical_text",
+      "paragraph_id": "p1",
+      "char_start": 384,
+      "char_end": 447
+    },
+    {
+      "sentence_id": "p1_s6",
+      "section": "Clinical Text",
+      "text": "Renal malformations including horseshoe kidney and hydronephrosis have been described.",
+      "section_id": "clinical_text",
+      "paragraph_id": "p1",
+      "char_start": 448,
+      "char_end": 534
+    },
+    {
+      "sentence_id": "p1_s7",
+      "section": "Clinical Text",
+      "text": "Premature thelarche occurs in females.",
+      "section_id": "clinical_text",
+      "paragraph_id": "p1",
+      "char_start": 535,
+      "char_end": 573
+    },
+    {
+      "sentence_id": "p1_s8",
+      "section": "Clinical Text",
+      "text": "Susceptibility to recurrent infections due to hypogammaglobulinemia is noted.",
+      "section_id": "clinical_text",
+      "paragraph_id": "p1",
+      "char_start": 574,
+      "char_end": 651
+    },
+    {
+      "sentence_id": "p1_s9",
+      "section": "Clinical Text",
+      "text": "KMT2D and KDM6A are the two known causative genes.",
+      "section_id": "clinical_text",
+      "paragraph_id": "p1",
+      "char_start": 652,
+      "char_end": 702
+    }
+  ]
+}

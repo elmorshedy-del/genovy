@@ -1,0 +1,154 @@
+{
+  "chapter_title": "Kabuki Syndrome",
+  "clinical_text": "Postnatal growth deficiency leading to short stature is observed in the majority. Skeletal anomalies include persistent fetal fingertip pads, brachydactyly, clinodactyly, and vertebral abnormalities. Congenital heart defects, most commonly coarctation of the aorta and septal defects, occur in approximately 40% of patients. Hearing loss, usually conductive, is present in about 25%. Cleft palate or submucous cleft palate is a recognized feature. Renal malformations including horseshoe kidney and hydronephrosis have been described. Premature thelarche occurs in females. Susceptibility to recurrent infections due to hypogammaglobulinemia is noted. KMT2D and KDM6A are the two known causative genes.",
+  "paragraph_count": 1,
+  "sentence_count": 9,
+  "paragraphs": [
+    {
+      "paragraph_id": "p1",
+      "paragraph_index": 1,
+      "text": "Postnatal growth deficiency leading to short stature is observed in the majority. Skeletal anomalies include persistent fetal fingertip pads, brachydactyly, clinodactyly, and vertebral abnormalities. Congenital heart defects, most commonly coarctation of the aorta and septal defects, occur in approximately 40% of patients. Hearing loss, usually conductive, is present in about 25%. Cleft palate or submucous cleft palate is a recognized feature. Renal malformations including horseshoe kidney and hydronephrosis have been described. Premature thelarche occurs in females. Susceptibility to recurrent infections due to hypogammaglobulinemia is noted. KMT2D and KDM6A are the two known causative genes.",
+      "char_start": 0,
+      "char_end": 702,
+      "sentences": [
+        {
+          "sentence_id": "p1_s1",
+          "sentence_index": 1,
+          "text": "Postnatal growth deficiency leading to short stature is observed in the majority.",
+          "char_start": 0,
+          "char_end": 81
+        },
+        {
+          "sentence_id": "p1_s2",
+          "sentence_index": 2,
+          "text": "Skeletal anomalies include persistent fetal fingertip pads, brachydactyly, clinodactyly, and vertebral abnormalities.",
+          "char_start": 82,
+          "char_end": 199
+        },
+        {
+          "sentence_id": "p1_s3",
+          "sentence_index": 3,
+          "text": "Congenital heart defects, most commonly coarctation of the aorta and septal defects, occur in approximately 40% of patients.",
+          "char_start": 200,
+          "char_end": 324
+        },
+        {
+          "sentence_id": "p1_s4",
+          "sentence_index": 4,
+          "text": "Hearing loss, usually conductive, is present in about 25%.",
+          "char_start": 325,
+          "char_end": 383
+        },
+        {
+          "sentence_id": "p1_s5",
+          "sentence_index": 5,
+          "text": "Cleft palate or submucous cleft palate is a recognized feature.",
+          "char_start": 384,
+          "char_end": 447
+        },
+        {
+          "sentence_id": "p1_s6",
+          "sentence_index": 6,
+          "text": "Renal malformations including horseshoe kidney and hydronephrosis have been described.",
+          "char_start": 448,
+          "char_end": 534
+        },
+        {
+          "sentence_id": "p1_s7",
+          "sentence_index": 7,
+          "text": "Premature thelarche occurs in females.",
+          "char_start": 535,
+          "char_end": 573
+        },
+        {
+          "sentence_id": "p1_s8",
+          "sentence_index": 8,
+          "text": "Susceptibility to recurrent infections due to hypogammaglobulinemia is noted.",
+          "char_start": 574,
+          "char_end": 651
+        },
+        {
+          "sentence_id": "p1_s9",
+          "sentence_index": 9,
+          "text": "KMT2D and KDM6A are the two known causative genes.",
+          "char_start": 652,
+          "char_end": 702
+        }
+      ]
+    }
+  ],
+  "sentences": [
+    {
+      "paragraph_id": "p1",
+      "sentence_id": "p1_s1",
+      "sentence_index": 1,
+      "text": "Postnatal growth deficiency leading to short stature is observed in the majority.",
+      "char_start": 0,
+      "char_end": 81
+    },
+    {
+      "paragraph_id": "p1",
+      "sentence_id": "p1_s2",
+      "sentence_index": 2,
+      "text": "Skeletal anomalies include persistent fetal fingertip pads, brachydactyly, clinodactyly, and vertebral abnormalities.",
+      "char_start": 82,
+      "char_end": 199
+    },
+    {
+      "paragraph_id": "p1",
+      "sentence_id": "p1_s3",
+      "sentence_index": 3,
+      "text": "Congenital heart defects, most commonly coarctation of the aorta and septal defects, occur in approximately 40% of patients.",
+      "char_start": 200,
+      "char_end": 324
+    },
+    {
+      "paragraph_id": "p1",
+      "sentence_id": "p1_s4",
+      "sentence_index": 4,
+      "text": "Hearing loss, usually conductive, is present in about 25%.",
+      "char_start": 325,
+      "char_end": 383
+    },
+    {
+      "paragraph_id": "p1",
+      "sentence_id": "p1_s5",
+      "sentence_index": 5,
+      "text": "Cleft palate or submucous cleft palate is a recognized feature.",
+      "char_start": 384,
+      "char_end": 447
+    },
+    {
+      "paragraph_id": "p1",
+      "sentence_id": "p1_s6",
+      "sentence_index": 6,
+      "text": "Renal malformations including horseshoe kidney and hydronephrosis have been described.",
+      "char_start": 448,
+      "char_end": 534
+    },
+    {
+      "paragraph_id": "p1",
+      "sentence_id": "p1_s7",
+      "sentence_index": 7,
+      "text": "Premature thelarche occurs in females.",
+      "char_start": 535,
+      "char_end": 573
+    },
+    {
+      "paragraph_id": "p1",
+      "sentence_id": "p1_s8",
+      "sentence_index": 8,
+      "text": "Susceptibility to recurrent infections due to hypogammaglobulinemia is noted.",
+      "char_start": 574,
+      "char_end": 651
+    },
+    {
+      "paragraph_id": "p1",
+      "sentence_id": "p1_s9",
+      "sentence_index": 9,
+      "text": "KMT2D and KDM6A are the two known causative genes.",
+      "char_start": 652,
+      "char_end": 702
+    }
+  ]
+}

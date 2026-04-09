@@ -1,0 +1,100 @@
+{
+  "schema_version": "grounded_disease_layer_v1",
+  "extraction_policy_version": "strict_grounded_v1",
+  "source_document": {
+    "document_local_id": "",
+    "disease_local_id": "",
+    "nbk_id": "",
+    "title": "",
+    "mode": "discovery",
+    "source": "GeneReviews",
+    "source_url": null,
+    "source_date": null,
+    "sentence_index": [
+      {
+        "sentence_id": "",
+        "section": "",
+        "section_id": "",
+        "paragraph_id": "",
+        "text": ""
+      }
+    ]
+  },
+  "phenotype_assertions": [
+    {
+      "assertion_local_id": "ph_001",
+      "label_raw": "",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        ""
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    }
+  ],
+  "ancillary_assertions": [
+    {
+      "ancillary_local_id": "anc_001",
+      "domain": "laboratory",
+      "finding_raw": "",
+      "status": "present",
+      "evidence_sentence_ids": [
+        ""
+      ],
+      "related_phenotype_assertion_ids": [],
+      "qualifiers": {
+        "timing": null,
+        "frequency": null,
+        "severity": null,
+        "method": null,
+        "specimen": null,
+        "subtype_context": null
+      }
+    }
+  ],
+  "context_assertions": [
+    {
+      "context_local_id": "ctx_001",
+      "field_name": "onset",
+      "value": "",
+      "evidence_sentence_ids": [
+        ""
+      ]
+    }
+  ],
+  "trajectory_assertions": [
+    {
+      "trajectory_local_id": "traj_001",
+      "stage_order": 1,
+      "age_window": "",
+      "summary": "",
+      "manifestation_labels": [],
+      "evidence_sentence_ids": [
+        ""
+      ]
+    }
+  ],
+  "extraction_notes": [
+    {
+      "note_local_id": "note_001",
+      "decision": "",
+      "rationale": "",
+      "evidence_sentence_ids": [
+        ""
+      ]
+    }
+  ]
+}

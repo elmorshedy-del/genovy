@@ -6236,3 +6236,1470 @@ Status:
 - Decision:
   - keep the canonical chapter JSON compact
   - use the sidecar as the auditable claim ledger that carries verification and enrichment-routing decisions
+
+### Entry 103: Decided to parallelize raw extraction progress and post-extraction robustness work
+
+- Agreed that the extractor track should continue moving in parallel with post-extraction hardening rather than waiting for one perfect end-to-end system first.
+- Working split:
+  - keep using strong raw extractors such as Opus and improved Gemini outputs for chapter generation
+  - in parallel, harden the next layers where robustness matters most: deterministic verification, HPO collapse, and residual enrichment routing
+  - evaluate helper models only inside narrow post-extraction subproblems rather than turning the full sidecar into a model-heavy pipeline
+- Boundary decision:
+  - verifier remains primarily direct deterministic code
+  - collapse/residual is the main candidate for selective model assistance if naive code proves too brittle
+- Candidate helper-model direction recorded for later benchmarking:
+  - BioLORD / SapBERT / PubMedBERT-family similarity for same-finding and anchor alignment
+  - regex and light negation logic for verifier-side deterministic checks
+- Next intended move:
+  - keep prompt iteration on the raw extractor going while designing a bounded benchmark surface for collapse-versus-residual helper methods
+
+## 2026-04-06 Variety Of Consultant Opinions
+
+- Recorded a standalone consultant-style tooling map so the advice is preserved without being mistaken for the currently frozen pipeline.
+- This note is intentionally separate from the settled extraction / verification / enrichment architecture. It is a reference bank of recommended tools by subproblem.
+- Recommended extractor-layer pattern:
+  - use a strong LLM extractor for raw phenotype claim generation and quote capture
+  - keep prompt discipline focused on claim quality, source-quote sufficiency, and bucket judgment
+- Recommended sidecar verification tools:
+  - regex for surface-form checks and qualifier patterns
+  - medspaCy / NegEx for negation filtering
+  - DEEPEN only if sentence complexity makes simple negation handling too brittle
+  - deterministic text matching and clause-level validation before escalating to any model
+- Recommended HPO collapse / enrichment tools:
+  - Levenshtein or similar lexical prefilter for fast duplicate and near-duplicate screening
+  - PubMedBERT embeddings for biomedical paraphrase and same-finding similarity
+  - SapBERT-from-PubMedBERT for HPO span detection and linking
+  - regex for temporal, trigger, laterality, and simple qualifier extraction
+  - Stanza biomedical for modifier-to-detail attachment if simpler rules prove insufficient
+  - lightweight local coreference rules first, with SpanBERT only if true coreference becomes a bottleneck
+- Recommended DX / PGV layer tools:
+  - HPO DAG semantic similarity
+  - Exomiser
+  - ClinVar
+  - ClinGen
+  - gnomAD
+  - ACMG-support logic
+  - SpliceAI
+  - CADD
+- Recommended general strategy from the consultant advice:
+  - use simple surface methods first
+  - use biomedical embeddings second
+  - use dependency parsing third
+  - use LLM reasoning last rather than making it the first or only layer for structured clinical decisions
+- Next intended move:
+  - keep this section as a detached consultant-reference note and continue using the settled Genovy system plan for active implementation choices
+
+## 2026-04-07 Saved 92 Benchmark Made Atlas-Discoverable
+
+- Purpose:
+  - stop losing the saved March 29 `92 found` benchmark in thread memory
+  - make it show up with the rest of the benchmark surfaces instead of only inside the reconciliation note
+- Added:
+  - [20260329-official-v1-enrich-structured-plus-manual-curated summary](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/atlas/experiments/20260329-official-v1-enrich-structured-plus-manual-curated/summary.md)
+- Updated:
+  - [experiment-manifest.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/atlas/experiment-manifest.md)
+  - [phase-index.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/atlas/phase-index.md)
+  - [artifact-index.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/atlas/experiments/20260329-official-v1-enrich-structured-plus-manual-curated/artifact-index.md)
+  - [artifacts.json](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/atlas/experiments/20260329-official-v1-enrich-structured-plus-manual-curated/artifacts.json)
+- Result:
+  - the saved stronger branch is now easy to find beside the current `87 found` baseline
+  - the local atlas summary preserves the exact saved topline:
+    - `92 / 42 / 53 / 57 / 65 / 0.503832`
+  - the summary explicitly records that this branch came from:
+    - structured global enrichment
+    - plus the saved `26`-entry manual curated overlay
+  - the local artifact index now preserves the exact historical artifact family and overlay input list that produced the saved branch
+  - the local JSON mirror now makes the saved branch script-discoverable without parsing markdown
+- Important evidence surface:
+  - the underlying benchmark JSON is still only referenced from cold storage:
+    - `gs://ahmed-cold-storage-20260326/genovy-artifacts-march-2026/output/official-v1-enrich-structured-plus-manual-curated-20260329.json`
+  - no local copy of that historical JSON was found in the repo working tree
+- Next intended move:
+  - if needed later, recover a local metadata mirror of the saved March 29 artifact family without pretending the full historical JSON already exists in-tree
+
+## 2026-04-07 Opus 11-20 Handoff Saved
+
+- Purpose:
+  - stop carrying the Opus `11-20` handoff in thread memory only
+  - preserve the exact `hard20` entries `11-20` and the currently intended Opus extraction contract
+- Added:
+  - [opus-11-20-handoff-20260407.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/opus-11-20-handoff-20260407.md)
+- Result:
+  - exact `hard20` entries `11-20` are now listed in one place
+  - the handoff explicitly distinguishes:
+    - real disease chapters `11-15`
+    - synthetic benchmark stress cases `16-20`
+  - the Opus contract is pinned to the sentence-pointer architecture:
+    - `evidence_refs`
+    - `clinical_role`
+    - free-text `qualifiers`
+    - grounded `ancillary_evidence`
+    - grounded `disease_context`
+- Next intended move:
+  - use this handoff doc as the input contract if Opus is asked to do the real-source continuation
+
+## 2026-04-08 Corrected Opus Handoff To Match The Real Trained 1-10 Schema
+
+- Purpose:
+  - fix the handoff so it reflects the actual trained `1-10` Opus batch rather than the later quote-first Dravet-style experiments
+- Verified from source-of-truth raw files:
+  - `/Users/ahmedelmorshedy/Documents/genovymorsh/ chapter 1-Williams Syndrome.json`
+  - `/Users/ahmedelmorshedy/Documents/genovymorsh/ chapter 3-VEXAS.json`
+  - `/Users/ahmedelmorshedy/Documents/genovymorsh-next-batch/chapter 10-Zhu-Tokita-Takenouchi-Kim Syndrome.json`
+- What the real trained batch actually uses:
+  - `chapter`
+  - `phenotypes.present / excluded / uncertain`
+  - plain `label` rows
+  - `ancillary_clinical_evidence`
+  - `context_metadata`
+  - `context_notes`
+- Correction applied:
+  - rewrote the handoff doc so the recommended Opus `11-20` schema is a minimal delta on top of that actual trained shape
+  - kept:
+    - phenotype buckets
+    - `label`
+    - `ancillary_clinical_evidence`
+    - `context_metadata`
+  - added:
+    - `evidence_refs`
+    - `clinical_role`
+    - `qualifiers`
+    - `context_evidence_refs`
+- Result:
+  - the handoff no longer asks Opus to jump directly into the fully flattened future schema
+  - it now asks for the smallest realistic evolution of the trained batch
+
+## 2026-04-08 Added Gemini Parallel Handoff With Stronger Prompt Rules
+
+- Purpose:
+  - create a Gemini-specific handoff for the same `11-20` continuation path so Gemini can be trained in parallel without drifting away from the Opus-compatible schema
+- Added file:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/gemini-11-20-handoff-20260408.md`
+- Contract preserved:
+  - same outer shape as the corrected Opus-compatible handoff:
+    - `chapter`
+    - `phenotypes.present / excluded / uncertain`
+    - `ancillary_clinical_evidence`
+    - `context_metadata`
+    - `context_notes`
+  - same minimal-delta additions:
+    - `clinical_role`
+    - `evidence_refs`
+    - `qualifiers`
+    - `context_evidence_refs`
+- Gemini-specific tightening added:
+  - JSON-only output
+  - no invented sentence IDs
+  - no quote/location fields
+  - one `evidence_refs` by default
+  - explicit anti-merging guidance for multi-sentence and multi-phase qualifiers
+  - explicit instructions not to misuse `severity` for mortality/outcome framing
+  - explicit `primary / complication / descriptor` role rules
+- Next intended move:
+  - use this Gemini handoff for the second-account training path while keeping outputs compatible with the Opus `11-20` schema
+
+## 2026-04-08 Patched Sentence Splitter To Repair Abbreviation Boundary Errors
+
+- Purpose:
+  - fix deterministic sentence indexing before running `11-20` so abbreviations like `U.S.` do not create broken sentence IDs
+- Updated:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/lib/genereviewsPipeline.js`
+- Added focused test:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/test/genereviewsPipelineSentenceSplit.test.js`
+- What changed:
+  - `splitSentences` now delegates to `splitSentenceEntries` so both use the same repaired boundary logic
+  - `splitSentenceEntries` still uses the simple regex boundary pass, but now performs a deterministic merge repair for short fragments ending in non-terminal abbreviations
+  - verified repair cases:
+    - `U.S.` continuation no longer splits `Food and Drug Administration ...` into a fake second sentence
+    - title abbreviations like `Dr.` no longer split from the following name
+- Verification:
+  - `node --test test/genereviewsPipelineSentenceSplit.test.js`
+- Result:
+  - the canonical section-aware preprocessing surface is now safer for model-facing `evidence_refs`
+
+## 2026-04-08 Added Canonical Splitter Contract To Gemini Handoff
+
+- Purpose:
+  - make sure Gemini can be handed the exact same preprocessing logic if it is asked to generate or follow the sentence-indexing code
+- Updated:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/gemini-11-20-handoff-20260408.md`
+- Added:
+  - canonical splitter file reference
+  - exact boundary regex
+  - abbreviation merge repair rules
+  - paragraph-aware sentence ID format
+  - short copy-paste splitter delta for Gemini
+- Result:
+  - Gemini can now be instructed to follow the same sentence-indexing policy as the canonical preprocessing code instead of inventing its own split behavior
+
+## 2026-04-08 Added Standalone Gemini Splitter Patch File
+
+- Purpose:
+  - provide one exact file that can be handed to Gemini Studio so it can edit the canonical splitter code without reconstructing the logic from prose
+- Added file:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/gemini-canonical-splitter-patch-20260408.js`
+- Contents:
+  - exact splitter block from `genereviewsPipeline.js`
+  - replacement target comments
+  - explicit note to replace the block from `splitSentences` through `splitSentenceEntries`
+- Result:
+  - Gemini can now be given one exact patch file plus the destination path instead of a verbal instruction
+
+## 2026-04-08 Accepted Chapter 12 Raw And Set Next Move
+
+- Chapter:
+  - `NBK20221` / `ZAP70-Related Combined Immunodeficiency`
+- Decision:
+  - accept the latest Opus/Claude raw as the chapter 12 baseline and do not rerun it again
+- Why accepted:
+  - canonical `p{n}_s{m}` sentence IDs are present
+  - no extra schema drift keys remain
+  - lab/test findings are routed to ancillary evidence instead of `phenotypes`
+  - case-report findings are mostly downgraded into `uncertain`
+  - prognosis is kept in `context_metadata` rather than phenotype rows
+- Deterministic cleanup to apply later:
+  - dedupe ancillary laboratory rows for B-cell/NK-cell normality and reduced CD8-positive T cells
+  - drop the broad method-level `clinical_test` row about characteristic testing panels
+  - keep the immunoglobulin summary in one place rather than duplicating it across ancillary buckets
+  - restore `congenital nephrotic syndrome` as the source-faithful label
+  - optionally simplify `severe lower-respiratory infections` by removing morphology filler if stricter qualifier discipline is needed
+- Next move:
+  - move on to chapter 13 instead of repeating chapter 12
+
+## 2026-04-08 Prepared Chapter 13 Opus Wrapper
+
+- Assumption:
+  - the next chapter after accepted chapter 12 in the current handoff flow is `NBK606999` / `YIF1B-Related Neurodevelopmental Disorder`
+- Source structure:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/preservation/bucket-critical/20260331-genereviews-latest5-readiness/stage1_fetch/NBK606999_clinical_structure.json`
+- Added Opus-ready wrapper:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/opus-11-20-inputs/NBK606999_yif1b_related_neurodevelopmental_disorder_opus_input.json`
+- Shape:
+  - `chapter`
+  - flattened `sentence_index`
+  - canonical `p{n}_s{m}` sentence IDs with section, paragraph, and char offsets
+- Result:
+  - chapter 13 is ready to hand to Opus using the same preprocessed input contract as chapter 12
+
+## 2026-04-08 Ran Gemini 3.1 Preview On Chapter 13 And Complemented Manual Raw
+
+- Chapter:
+  - `NBK606999` / `YIF1B-Related Neurodevelopmental Disorder`
+- Model:
+  - `gemini-3.1-pro-preview`
+- API behavior:
+  - model rejected `thinkingBudget: 0` with `Budget 0 is invalid. This model only works in thinking mode.`
+  - quick probe exposed accepted range:
+    - `thinking_budget must be in the range [-1, 65535]`
+  - confirmed highest fixed budget works:
+    - `thinkingBudget: 65535`
+- Saved Gemini raw:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/manual-11-20-raws/NBK606999_yif1b_related_neurodevelopmental_disorder_gemini31_raw.json`
+- Saved Gemini raw text:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/manual-11-20-raws/NBK606999_yif1b_related_neurodevelopmental_disorder_gemini31_raw_text.json`
+- Saved Gemini meta:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/manual-11-20-raws/NBK606999_yif1b_related_neurodevelopmental_disorder_gemini31_meta.json`
+- Gemini usage summary:
+  - prompt tokens: `3813`
+  - candidate tokens: `3733`
+  - thoughts tokens: `6611`
+- Comparison result:
+  - Gemini raw parsed cleanly but remained noisier than the manual raw
+  - main Gemini failures:
+    - promoted enumeration-only subtype rows and psychiatric rows into `phenotypes.present`
+    - emitted invalid ancillary imaging shape as strings instead of `{finding, assertion, evidence_refs}` objects
+    - added weak `prevalence` from case count (`25 individuals`)
+  - valid Gemini contributions were limited to cleaner direct evidence refs for some already-kept phenotype rows
+- Complement applied:
+  - kept the manual raw as the base
+  - adopted only these direct sentence-ref improvements:
+    - `speech impairment` -> `p4_s1`
+    - `dystonia` -> `p7_s1`
+    - `dyskinesia` -> `p7_s1`
+    - `strabismus` -> `p11_s1`
+    - `nystagmus` -> `p11_s1`
+    - `optic atrophy` -> `p11_s1`
+    - `cortical blindness` -> `p11_s1`
+- Saved complemented raw:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/manual-11-20-raws/NBK606999_yif1b_related_neurodevelopmental_disorder_complemented_raw.json`
+- Result:
+  - use the complemented manual raw as the preferred chapter 13 raw
+
+## 2026-04-08 Prepared Chapter 14 Wrapper And Finished Manual Plus Gemini Complement
+
+- Chapter:
+  - `NBK618356` / `Zhu-Tokita-Takenouchi-Kim Syndrome`
+- Added Opus-ready wrapper:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/opus-11-20-inputs/NBK618356_zhu_tokita_takenouchi_kim_syndrome_opus_input.json`
+- Source structure:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/preservation/bucket-critical/20260331-genereviews-latest5-readiness/stage1_fetch/NBK618356_clinical_structure.json`
+- Gemini run:
+  - model: `gemini-3.1-pro-preview`
+  - thinking budget: `65535`
+  - saved raw:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/manual-11-20-raws/NBK618356_zhu_tokita_takenouchi_kim_syndrome_gemini31_raw.json`
+  - saved raw text:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/manual-11-20-raws/NBK618356_zhu_tokita_takenouchi_kim_syndrome_gemini31_raw_text.json`
+  - saved meta:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/manual-11-20-raws/NBK618356_zhu_tokita_takenouchi_kim_syndrome_gemini31_meta.json`
+  - usage summary:
+    - prompt tokens: `12194`
+    - candidate tokens: `4598`
+    - thoughts tokens: `7257`
+- Gemini comparison result:
+  - Gemini used the canonical `p{n}_s{m}` sentence IDs correctly
+  - Gemini still remained too permissive:
+    - promoted large dysmorphology enumerations into `phenotypes.present`
+    - emitted invalid ancillary imaging shape as plain strings instead of structured objects
+    - mixed laboratory-style deficiencies into phenotype rows
+  - Gemini was useful as a secondary comparison surface, not as the base raw
+- Saved manual raw:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/manual-11-20-raws/NBK618356_zhu_tokita_takenouchi_kim_syndrome_manual_raw.json`
+- Saved preferred complemented raw:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/manual-11-20-raws/NBK618356_zhu_tokita_takenouchi_kim_syndrome_complemented_raw.json`
+- Manual extraction policy used:
+  - kept core syndrome findings in `phenotypes.present`
+  - routed immunoglobulin deficiencies and thrombocytopenia to ancillary `laboratory`
+  - routed MRI and radiographic findings to ancillary `imaging`
+  - downranked granular craniofacial, skeletal, genitourinary, and thinly documented movement findings into `uncertain`
+- Valid Gemini complement retained:
+  - added `intrauterine growth restriction` from `p36_s2` to the preferred complemented raw
+- Result:
+  - use the complemented chapter 14 raw as the preferred file for the next stage
+
+## 2026-04-08 Tested Gemini 3.1 Multi-Pass Raw Extraction On Chapter 14
+
+- Goal:
+  - test the hypothesis that Gemini becomes a more useful complementary extractor if the task is split into several narrower prompts instead of one large raw-extraction prompt
+- Chapter:
+  - `NBK618356` / `Zhu-Tokita-Takenouchi-Kim Syndrome`
+- Added reusable experiment runner:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/runGeminiMultipassChapterRawExperiment.js`
+- Experiment setup:
+  - model: `gemini-3.1-pro-preview`
+  - thinking budget: `65535`
+  - input wrapper:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/opus-11-20-inputs/NBK618356_zhu_tokita_takenouchi_kim_syndrome_opus_input.json`
+  - four passes:
+    - `present`
+    - `uncertain`
+    - `ancillary`
+    - `context`
+  - merge performed deterministically in code, not by Gemini
+- Saved multi-pass outputs:
+  - merged:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/manual-11-20-raws/NBK618356_zhu_tokita_takenouchi_kim_syndrome_genereviews_ncbi_bookshelf_gemini31_multipass_merged.json`
+  - comparison summary:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/manual-11-20-raws/NBK618356_zhu_tokita_takenouchi_kim_syndrome_genereviews_ncbi_bookshelf_gemini31_multipass_comparison.json`
+  - per-pass partials and meta:
+    - `..._present.json`
+    - `..._uncertain.json`
+    - `..._ancillary.json`
+    - `..._context.json`
+- Multi-pass usage by pass:
+  - `present`: prompt `11406`, candidate `6500`, thoughts `3640`
+  - `uncertain`: prompt `11385`, candidate `2798`, thoughts `6537`
+  - `ancillary`: prompt `11295`, candidate `986`, thoughts `1547`
+  - `context`: prompt `11388`, candidate `478`, thoughts `1086`
+- Comparison against the preferred chapter 14 raw:
+  - one-shot Gemini `present` precision/recall vs preferred `present`:
+    - precision `0.3529`
+    - recall `0.8571`
+  - multi-pass Gemini `present` precision/recall vs preferred `present`:
+    - precision `0.65`
+    - recall `0.9286`
+  - one-shot Gemini leaked preferred ancillary laboratory items into `present`:
+    - `immunoglobulin a deficiency`
+    - `immunoglobulin g deficiency`
+    - `thrombocytopenia`
+  - multi-pass Gemini removed those `present` lab leaks
+  - one-shot Gemini had invalid ancillary shape:
+    - plain-string `imaging`
+  - multi-pass Gemini fixed ancillary shape and emitted structured objects
+- Remaining multi-pass problems:
+  - `uncertain` pass over-aggregated many findings into giant bundle labels instead of clean phenotype rows
+  - some borderline findings still leaked into `present`, including:
+    - `status epilepticus`
+    - `dystonia`
+    - `tremors`
+    - `hearing loss`
+    - `chronic liver cirrhosis`
+    - `inguinal hernia`
+    - `undescended testes`
+  - `recurrent infection` remained singular rather than source-clean `recurrent infections`
+  - `developmental regression` became `neurodevelopmental regression`
+- Decision:
+  - split prompts do materially improve Gemini for `present` selection and ancillary routing
+  - current multi-pass prompt still does not produce a clean enough full raw to replace the manual/Opus-first path
+  - best next refinement is to narrow the `uncertain` pass further and forbid bundle/umbrella labels
+
+## 2026-04-08 Switched Complementary Gemini Default Back To 2.5 Pro
+
+- Decision:
+  - stop using `gemini-3.1-pro-preview` as the default complementary chapter model
+  - use `gemini-2.5-pro` for future complementary Gemini runs unless there is a specific experiment reason to test `3.1`
+- Why:
+  - `gemini-3.1-pro-preview` consumed much higher thinking budgets and latency
+  - despite some structural improvement, it did not contribute enough accepted complements to justify staying as the default parallel model
+  - the accepted complements so far remain sparse relative to the extra prompt and evaluation overhead
+- Operational rule going forward:
+  - primary extraction path remains manual / Opus-style judgment
+  - parallel Gemini comparison path defaults to `gemini-2.5-pro`
+
+## 2026-04-08 Processed NBK1339 Y Chromosome Infertility With Gemini 2.5 Pro Complement
+
+- Chapter:
+  - `NBK1339` / `Y Chromosome Infertility`
+- Added Opus-ready wrapper:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/opus-11-20-inputs/NBK1339_y_chromosome_infertility_opus_input.json`
+- Source structure:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/preservation/bucket-critical/20260331-genereviews-latest5-readiness/stage1_fetch/NBK1339_clinical_structure.json`
+- Surface note:
+  - this split is thin and only covers suggestive findings plus clinical description
+  - inheritance, gene, prevalence, and broader natural-history text are not present in the provided structure
+- Saved manual raw:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/manual-11-20-raws/NBK1339_y_chromosome_infertility_manual_raw.json`
+- Manual extraction policy:
+  - kept `infertility`, `azoospermia`, and `oligozoospermia` in `phenotypes.present`
+  - kept `small testes` in `phenotypes.uncertain` because it is subgroup-specific to Sertoli cell-only syndrome
+  - left ancillary buckets empty because the surface contains test-method descriptions but no additional ancillary findings worth retaining
+  - limited context to supported chapter-surface statements only
+- Ran complementary Gemini model:
+  - model: `gemini-2.5-pro`
+  - saved raw:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/manual-11-20-raws/NBK1339_y_chromosome_infertility_gemini25pro_raw.json`
+  - saved raw text:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/manual-11-20-raws/NBK1339_y_chromosome_infertility_gemini25pro_raw_text.json`
+  - saved meta:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/manual-11-20-raws/NBK1339_y_chromosome_infertility_gemini25pro_meta.json`
+  - usage summary:
+    - prompt tokens: `2823`
+    - candidate tokens: `1104`
+    - thoughts tokens: `772`
+- Gemini comparison result:
+  - Gemini stayed reasonably disciplined on this simpler chapter
+  - Gemini over-promoted `small testes` into `present`, so the manual bucket decision was kept
+  - one valid complement was retained:
+    - add `p12_s1` as an additional evidence ref for `oligozoospermia`
+- Saved preferred complemented raw:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/manual-11-20-raws/NBK1339_y_chromosome_infertility_complemented_raw.json`
+- Result:
+  - use the complemented NBK1339 raw as the preferred file for this chapter
+
+## 2026-04-08 Processed NBK1448 Zellweger Spectrum Disorder With Gemini 2.5 Pro Complement
+
+- Chapter:
+  - `NBK1448` / `Zellweger Spectrum Disorder`
+- Added Opus-ready wrapper:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/opus-11-20-inputs/NBK1448_zellweger_spectrum_disorder_opus_input.json`
+- Source structure:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/preservation/bucket-critical/20260331-genereviews-latest5-readiness/stage1_fetch/NBK1448_clinical_structure.json`
+- Surface note:
+  - this split includes only `Suggestive Findings` and `Clinical Description`
+  - inheritance, gene, prevalence, and management sections are not present in the provided structure
+- Saved manual raw:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/manual-11-20-raws/NBK1448_zellweger_spectrum_disorder_manual_raw.json`
+- Manual extraction policy:
+  - kept neonatal and childhood core manifestations in `phenotypes.present`, including:
+    - `hypotonia`
+    - `poor feeding`
+    - `seizures`
+    - `liver dysfunction`
+    - `retinal dystrophy`
+    - `sensorineural hearing loss`
+    - `developmental delay`
+  - kept clearly severe-subgroup or hedged findings in `phenotypes.uncertain`, including:
+    - `chondrodysplasia punctata`
+    - `renal cysts`
+    - `pigmentary retinopathy`
+    - `coagulopathy`
+    - `adrenal insufficiency`
+    - `osteopenia`
+  - routed `elevation in liver function tests` to ancillary laboratory and `failed hearing screen` to ancillary clinical_test
+  - kept context limited to supported onset, prognosis, and natural-history statements only
+- Ran complementary Gemini model:
+  - model: `gemini-2.5-pro`
+  - saved raw:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/manual-11-20-raws/NBK1448_zellweger_spectrum_disorder_gemini25pro_raw.json`
+  - saved raw text:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/manual-11-20-raws/NBK1448_zellweger_spectrum_disorder_gemini25pro_raw_text.json`
+  - saved meta:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/manual-11-20-raws/NBK1448_zellweger_spectrum_disorder_gemini25pro_meta.json`
+  - usage summary:
+    - prompt tokens: `3340`
+    - candidate tokens: `3687`
+    - thoughts tokens: `1899`
+- Gemini comparison result:
+  - Gemini was too conservative on this chapter and incorrectly left `phenotypes.present` empty
+  - Gemini did contribute two valid complements:
+    - add `p6_s5` as an additional evidence ref for `liver dysfunction`
+    - retain explicit ancillary laboratory finding `vitamin K-responsive coagulopathy`
+  - no Gemini row-selection overrides were accepted for the core phenotype backbone
+- Saved preferred complemented raw:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/manual-11-20-raws/NBK1448_zellweger_spectrum_disorder_complemented_raw.json`
+- Result:
+  - use the complemented NBK1448 raw as the preferred file for this chapter
+
+## 2026-04-08 Compared Old Opus Chapter 6 Against New Manual NBK1339 Raw
+
+- Comparison target:
+  - old Opus source-of-truth file:
+    - `/Users/ahmedelmorshedy/Documents/genovymorsh-next-batch/chapter 6-Y Chromosome Infertility.json`
+  - new manual preferred file:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/manual-11-20-raws/NBK1339_y_chromosome_infertility_complemented_raw.json`
+- High-level result:
+  - old Opus has broader recall and richer ancillary/context coverage because it used a fuller chapter surface
+  - new manual is cleaner for the current strict grounded pipeline because it keeps a flatter present set and avoids overpromotion
+- Old Opus phenotype behavior:
+  - `present`:
+    - `azoospermia`
+    - `severe oligozoospermia`
+    - `moderate oligozoospermia`
+    - `mild oligozoospermia`
+    - `small testes`
+    - `male infertility`
+  - `uncertain`:
+    - `short stature`
+  - issue:
+    - oversplits `oligozoospermia` into three rows instead of one phenotype with severity detail
+    - promotes `small testes` to `present` despite subgroup limitation
+- New manual phenotype behavior:
+  - `present`:
+    - `infertility`
+    - `azoospermia`
+    - `oligozoospermia`
+  - `uncertain`:
+    - `small testes`
+  - strength:
+    - flatter core phenotype backbone
+    - more conservative bucketing aligned with the current review standard
+- Interpretation:
+  - for strict current repo-side grounded extraction, the new manual file is better
+  - for broader enrichment recall across the full chapter, the old Opus file is richer but looser
+
+## 2026-04-08 Resumed Post-Dravet Opus Continuation With Benchmark Wrappers
+
+- Correction:
+  - `Dravet Syndrome` was the real new chapter in the `hard20` continuation
+  - the accidental reruns came from switching to the overlapping repo-side `latest5` slice instead of continuing the benchmark sequence
+  - after reconciling titles against the old Documents `1-10`, the genuinely new continuation titles are:
+    - `PTEN Hamartoma Tumor Syndrome`
+    - `Coffin-Siris Syndrome`
+    - `Congenital Disorder of Glycosylation Type Ia`
+- Source used:
+  - benchmark fixture object `DISCOVERY_BENCHMARK` in:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/test/fixtures/stage3DiscoveryBenchmarkFull.js`
+- Important note:
+  - there was no saved fetched GeneReviews `clinical_structure.json` for these three titles in the repo
+  - so I extracted the benchmark `clinical_structure` objects directly from the fixture and converted them into the same Opus-ready wrapper shape used elsewhere
+- Added PTEN files:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/opus-11-20-inputs/disc-069_pten_hamartoma_tumor_syndrome_clinical_structure.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/opus-11-20-inputs/disc-069_pten_hamartoma_tumor_syndrome_opus_input.json`
+- Added Coffin-Siris files:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/opus-11-20-inputs/disc-070_coffin_siris_syndrome_clinical_structure.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/opus-11-20-inputs/disc-070_coffin_siris_syndrome_opus_input.json`
+- Added CDG-Ia files:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/opus-11-20-inputs/disc-077_congenital_disorder_of_glycosylation_type_ia_clinical_structure.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/opus-11-20-inputs/disc-077_congenital_disorder_of_glycosylation_type_ia_opus_input.json`
+- Wrapper shape:
+  - `chapter`
+  - flattened `sentence_index`
+  - canonical `p{n}_s{m}` sentence IDs
+  - one synthetic section label:
+    - `Clinical Text`
+  - benchmark provenance recorded in `chapter.source` as:
+    - `stage3DiscoveryBenchmarkFull fixture`
+- Result:
+  - the next three genuinely new post-Dravet benchmark chapters are now prepared as Opus-ready inputs without reusing the overlapping old `1-10` titles
+
+## 2026-04-08 Evaluated CDG-Ia Opus Raw From Benchmark Wrapper
+
+- Chapter:
+  - `NBK1110` / `Congenital Disorder of Glycosylation Type Ia`
+- Decision:
+  - keep the pasted Opus raw as a strong baseline for this benchmark chapter
+- Why it is good enough to keep:
+  - core present findings align well with the benchmark surface:
+    - `inverted nipples`
+    - `abnormal subcutaneous fat distribution`
+    - `cerebellar hypoplasia`
+    - `strabismus`
+    - `abnormal eye movements`
+    - `hepatomegaly`
+    - `protein-losing enteropathy`
+    - `coagulopathy`
+    - `seizures`
+    - `peripheral neuropathy`
+    - `absent reflexes`
+    - `pericardial effusion`
+  - lab/test material is mostly routed correctly:
+    - `elevated transaminases` in `laboratory`
+    - transferrin type 1 pattern in `clinical_test`
+  - context is not overfilled when unsupported by the benchmark surface
+- Deterministic cleanup to apply later if needed:
+  - decide whether `stroke-like episodes` should stay `uncertain` or be promoted to `present` for a richer Opus-style recall standard
+  - decide whether `pericardial effusion` should remain `present` or move to `uncertain` under stricter hedging rules because the source says it "has been described"
+  - avoid double-counting `cerebellar hypoplasia` across `phenotypes.present` and `ancillary_clinical_evidence.imaging` if a later normalization pass wants a single primary placement plus evidence support
+  - keep `biomarker` use of the transferrin type 1 pattern only if the downstream context policy explicitly allows test-pattern biomarkers; otherwise leave it in `clinical_test` only
+- Chapter-specific adjudication decisions user confirmed:
+  - `p1_s1` splits into:
+    - `inverted nipples`
+    - `abnormal subcutaneous fat distribution`
+    - both keep onset `infancy` and progression `neither persists reliably into adulthood`
+  - `p1_s3` splits into:
+    - `strabismus`
+    - `abnormal eye movements`
+  - `p1_s4` splits into:
+    - `hepatomegaly`
+    - `protein-losing enteropathy`
+    - `elevated transaminases` stays ancillary laboratory only
+  - `p1_s6`:
+    - `coagulopathy` stays phenotype
+    - `both pro- and anticoagulant factor deficiencies` is acceptable as source-grounded pathophysiology
+  - `p1_s7`:
+    - `stroke-like episodes` stays `uncertain` because the sentence is hedged with `may occur`
+  - `p1_s9`:
+    - `peripheral neuropathy` plus descriptor `absent reflexes`
+  - `p1_s10`:
+    - keep in `ancillary_clinical_evidence.clinical_test` only
+    - do not promote it to phenotype
+  - context fields should remain empty unless the benchmark text explicitly supports them
+
+## 2026-04-08 Evaluated PTEN Benchmark Raw And Marked Opus-Style Corrections
+
+- Chapter:
+  - `NBK1488` / `PTEN Hamartoma Tumor Syndrome`
+- Strong decisions to keep:
+  - `p1_s2` split into four source-faithful mucocutaneous findings:
+    - `trichilemmomas`
+    - `acral keratoses`
+    - `oral papillomas`
+    - `penile freckling`
+  - `p1_s3` split into three thyroid findings with `common` carried onto each:
+    - `multinodular goiter`
+    - `follicular adenoma`
+    - `thyroid carcinoma`
+  - `p1_s4` split into:
+    - `breast cancer`
+    - `endometrial cancer`
+    - `colorectal cancer`
+    - all with exact lifetime-risk percentages and `clinical_role: complication`
+  - `p1_s8` kept in `management_context` only as surveillance guidance
+- Corrections needed to stay aligned with the richer Opus-style benchmark target:
+  - drop `macrocephaly` from the output because it is an existing anchor in the benchmark input rather than a new candidate for this chapter run
+  - promote `lipomas` from `uncertain` to `present`
+  - promote `vascular malformations` from `uncertain` to `present`
+  - promote `cerebellar dysplastic gangliocytoma` from `uncertain` to `present` if following the benchmark-friendly richer recall standard
+- Reason for the three promotions:
+  - the benchmark sentence uses hedged language (`may be present`, `may develop`), but the expected/acceptable benchmark candidate set still treats these findings as valid chapter-level candidates for discovery-style extraction
+- Optional later normalization:
+  - if a stricter post-raw adjudication pass is run later, these hedge-driven rows can be reconsidered for downgrade without changing the broader Opus-style raw capture policy
+
+## 2026-04-08 Saved Organized Benchmark Real-Chapter Raw Outputs
+
+- Created dedicated output folder for the genuinely new benchmark-backed real-chapter raws:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/benchmark-hard20-real-raws-20260408`
+- Saved final CDG-Ia raw:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/benchmark-hard20-real-raws-20260408/NBK1110_congenital_disorder_of_glycosylation_type_ia_raw.json`
+- Saved final PTEN raw:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/benchmark-hard20-real-raws-20260408/NBK1488_pten_hamartoma_tumor_syndrome_raw.json`
+- Existing Dravet output remains in its standalone folder:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/external-dravet-ch11-20260407`
+- Current organized split:
+  - `external-dravet-ch11-20260407`:
+    - Dravet raw / frozen / grounded / mapping / review artifacts
+  - `benchmark-hard20-real-raws-20260408`:
+    - PTEN final raw
+    - CDG-Ia final raw
+
+## 2026-04-08 Verified Downloaded Dravet V2 Extraction File
+
+- Checked:
+  - `/Users/ahmedelmorshedy/Downloads/dravet_v2_extraction.json`
+- Result:
+  - this is a Dravet extraction for the same PMC article as the saved Dravet chapter work:
+    - title `Dravet Syndrome: An Overview`
+    - source URL `https://pmc.ncbi.nlm.nih.gov/articles/PMC6713249/`
+  - but it is not the same file as the saved repo-side Dravet raw/manual artifacts
+- Distinction:
+  - downloaded `dravet_v2_extraction.json`:
+    - `25` present
+    - `14` uncertain
+    - `2` excluded
+    - stricter newer schema variant with evidence refs
+  - saved repo-side Dravet raw:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/external-dravet-ch11-20260407/Dravet_Syndrome_PMC6713249_raw_manual.json`
+    - `22` present
+    - `0` uncertain
+    - `0` excluded
+
+## 2026-04-08 Canonical Dravet V2 Raw Saved In Organized Benchmark Folder
+
+- Verified that the organized benchmark copy already exists and is byte-identical to the downloaded later Opus file:
+  - source:
+    - `/Users/ahmedelmorshedy/Downloads/dravet_v2_extraction.json`
+  - canonical organized copy:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/benchmark-hard20-real-raws-20260408/PMC6713249_dravet_syndrome_an_overview_raw_v2.json`
+- Interpretation going forward:
+  - treat the organized `PMC6713249_dravet_syndrome_an_overview_raw_v2.json` file as the canonical final Dravet Opus raw for the benchmark-backed continuation
+  - older April 7 repo-side Dravet raw/manual artifacts remain useful historical predecessors but not the latest approved raw baseline
+
+## 2026-04-08 PMM2-CDG Consensus vs Saved NBK1110 Raw
+
+- Compared the later PMM2-CDG consensus-style JSON against the saved benchmark raw:
+  - saved raw:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/benchmark-hard20-real-raws-20260408/NBK1110_congenital_disorder_of_glycosylation_type_ia_raw.json`
+- Conclusion:
+  - the consensus JSON contains substantial new chapter-level information beyond the saved raw, not just relabeling
+  - the saved raw was based on a thin clinical-description slice and therefore missed multiple later neurologic, ophthalmologic, endocrine, and context signals
+- New phenotype-level signal present in the consensus version but absent from the saved raw includes:
+  - axial hypotonia
+  - developmental delay
+  - ataxia
+  - retinitis pigmentosa
+  - kyphoscoliosis
+  - esotropia
+  - hypergonadotropic hypogonadism
+  - decreased testicular volume
+- New ancillary/context signal present in the consensus version but absent from the saved raw includes:
+  - low PMM2 enzyme activity
+  - inheritance `autosomal recessive`
+  - gene `PMM2`
+  - infantile onset summary
+  - severe-course first-year mortality statement
+  - natural-history summary
+  - family-risk statement
+- Some differences are routing/normalization rather than genuinely new facts:
+  - serum transferrin type I pattern appears in both
+  - cerebellar hypoplasia appears in both
+  - peripheral neuropathy appears in both
+  - stroke-like episodes are present in both, but bucketed differently
+
+## 2026-04-08 PTEN Consensus vs Saved NBK1488 Raw
+
+- Compared the PTEN consensus-style JSON against the saved benchmark raw:
+  - saved raw:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/benchmark-hard20-real-raws-20260408/NBK1488_pten_hamartoma_tumor_syndrome_raw.json`
+- Conclusion:
+  - this consensus file contains some valid additive signal, but less net-new value than the PMM2-CDG consensus file
+  - several consensus rows are broader umbrella remaps or narrower subtype-specific variants of concepts already captured in the saved Opus raw
+- Likely additive new signal:
+  - macrocephaly
+  - melanoma
+  - renal cell carcinoma
+  - inheritance `autosomal dominant`
+  - gene `PTEN`
+  - family-risk summary
+  - high-level onset / natural-history / prognosis context
+  - annual thyroid ultrasound / annual dermatologic exam management items
+- Mostly overlap / weaker normalization rather than clearly new:
+  - intestinal polyposis vs existing hamartomatous gastrointestinal polyps
+  - thyroid cancer vs existing thyroid carcinoma
+  - pigmented macules of glans penis vs existing penile freckling
+  - papillomatous papule vs existing oral papillomas
+  - multiple hamartomas as an umbrella over already-split hamartoma-related manifestations
+- Also note routing issues in the consensus file:
+  - renal cell carcinoma appears under imaging even though it is a complication finding
+  - pathogenic variant in PTEN is ancillary genetic evidence, not a disease phenotype
+- Follow-up correction:
+  - `thyroid carcinoma` should not be treated as unsupported over-normalization if the cancer-risk text names carcinoma explicitly
+  - in that case, the saved Opus `thyroid carcinoma` row remains source-faithful and does not need to be downgraded to `thyroid cancer`
+
+## 2026-04-08 Capture Policy for Penetrance / Age-Dependent Expression
+
+- Disease-level penetrance statements should be captured when directly source-supported.
+- Current best routing:
+  - prefer `context_metadata.natural_history` and/or `context_metadata.onset` with sentence refs when the statement describes age-dependent emergence across the disorder
+  - do not automatically distribute a disease-level penetrance percentage across each split phenotype row unless the sentence explicitly attributes that percentage to the individual finding
+- Example pattern:
+  - `>90% have some manifestation by the late 20s`
+  - `99% develop mucocutaneous stigmata by the fourth decade`
+  - these are disease-level / cluster-level penetrance statements, not per-lesion frequencies for each split mucocutaneous feature
+- If schema expands later, a dedicated `penetrance` context field would be cleaner than overloading phenotype frequency qualifiers
+
+## 2026-04-08 Capture Policy for Differential Diagnosis (DDx)
+
+- Differential-diagnosis content is valuable, but it should not be merged into the main phenotype raw as if it were part of the disease manifestation set.
+- Best current policy:
+  - capture DDx in a separate chapter-level layer or sidecar artifact with sentence refs
+  - do not convert compared disorders, exclusion logic, or distinguishing features into phenotype rows unless the source explicitly states they occur in the target disorder
+- Why DDx is still useful:
+  - improves later adjudication and HPO disambiguation
+  - helps identify which findings are distinctive versus nonspecific
+  - preserves syndrome-comparison knowledge for downstream review
+- Preferred future structure if schema expands:
+  - `differential_diagnosis`: compared disorder, distinguishing features, overlap features, exclusion notes, evidence refs
+
+## 2026-04-08 PTEN End-to-End External Pipeline Smoke Test
+
+- Ran a real chapter through the repo's external pipeline chain using the new PTEN raw:
+  - raw input:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/benchmark-hard20-real-raws-20260408/NBK1488_pten_hamartoma_tumor_syndrome_raw.json`
+  - clinical structure:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/opus-11-20-inputs/disc-069_pten_hamartoma_tumor_syndrome_clinical_structure.json`
+  - smoke output dir:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/chapter-pipeline-smoke-20260408/pten`
+- Full executed chain:
+  - `freeze`
+  - `ground`
+  - `mapping-input`
+  - `map-hpo` using `exact`
+  - `review-cases`
+  - `review-enrichment` using `gemini-2.5-pro`
+- Because no chapter-specific anchor file existed for the new PTEN wrapper, the smoke test used:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/chapter-pipeline-smoke-20260408/pten/empty_anchors.json`
+- Outputs produced successfully:
+  - `NBK1488_pten_frozen.json`
+  - `NBK1488_pten_grounded.json`
+  - `NBK1488_pten_mapping_input.json`
+  - `NBK1488_pten_mapped.json`
+  - `NBK1488_pten_enrichment_cases.json`
+  - `NBK1488_pten_enrichment_review.json`
+- Smoke-test summary:
+  - grounded candidates: `14`
+  - rejected candidates: `2`
+  - mapped trust split: `6 high`, `8 reject`
+  - review case count: `14`
+  - `gemini-2.5-pro` review completed with no schema-repair fallback and no validation issues
+- Clarification:
+  - `rejected candidates` and `reject` HPO mappings are different things
+  - `2 rejected candidates` = grounding/finalization did not retain those rows as accepted grounded candidates
+  - `8 reject` in the mapping step = the exact lexical HPO mapper found no exact phenotype-label match in the snapshot, so those rows were retained as candidates but left unmapped
+- Important limitation:
+  - this proves the external pipeline path is executable on the new saved raws
+  - but the review stage had no anchor context and the HPO mapping used exact string matching rather than BioLORD or official-HPO adjudicated flattening
+
+## 2026-04-08 Saved Coffin-Siris Benchmark Raw
+
+- Saved the Coffin-Siris chapter raw in the organized benchmark folder:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/benchmark-hard20-real-raws-20260408/NBK131811_coffin_siris_syndrome_raw.json`
+- This keeps the benchmark-backed continuation folder aligned as:
+  - Dravet canonical Opus v2
+  - PTEN raw
+  - Coffin-Siris raw
+  - PMM2-CDG raw
+
+## 2026-04-08 Enrichment Weighting Direction: Information-Density / Specificity Score
+
+- Good near-term addition:
+  - add a cheap post-extraction specificity score per phenotype assertion using document-frequency / IDF logic
+- Recommended corpus:
+  - prefer disease-level HPO / disease-phenotype annotation profiles and/or the internal extracted GeneReviews chapter corpus
+  - do not start from a generic medical literature corpus because lexical rarity there is noisier and less aligned with diagnostic specificity
+- Recommended unit of document frequency:
+  - disease profile count, not raw sentence count and not raw mention count
+  - a term should count once per disease profile when computing DF
+- Recommended use:
+  - store as a separate enrichment-side feature such as `information_density_score` / `specificity_score`
+  - combine later with frequency/commonness rather than replacing the existing frequency-derived phenotype weighting
+- Recommended backoff:
+  - use mapped HPO labels/IDs when available
+  - fall back to normalized source labels for currently unmapped rows
+- Why useful:
+  - generic findings like seizures / developmental delay / hypotonia get lower specificity
+  - syndrome-defining or rarer findings get higher specificity
+  - gives the later ranker an enrichment-side signal even before a more mature full weighting model is implemented
+
+## 2026-04-08 Intended Enrichment Weighting Model (Distinct From HPO Frequency Weight)
+
+- The intended enrichment-side weight is not the scorer's existing HPO frequency weight.
+- Intended components for a disease-phenotype enrichment assertion:
+  - base importance:
+    - `primary > descriptor > complication`
+    - `present > uncertain`
+  - support quality:
+    - sentence-grounded explicit support > weak chapter summary > label-only support
+  - specificity / information density:
+    - rarer / more discriminative findings score higher than generic neurologic or developmental noise
+  - enrichment delta:
+    - extra retained detail such as subtype, anatomical subsite, temporal qualifier, distribution, or pathophysiology increases the assertion value
+  - subgroup / hedge penalty:
+    - subgroup-specific or hedged findings get penalized versus generalized disease manifestations
+- Compact conceptual formula:
+  - `assertion_weight = base_importance * support_quality * specificity_score * enrichment_multiplier * uncertainty_penalty`
+- Important distinction:
+  - `hpo_mapping_trust` answers whether the term was mapped safely
+  - enrichment weight answers how valuable the retained disease-phenotype assertion is
+
+## 2026-04-08 Next-Step Sequence Reconfirmed
+
+- Re-read the official continuation handoff in:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/opus-11-20-handoff-20260407.md`
+- Reconfirmed exact `hard20` entries `11-20`:
+  - `disc-067` Dravet Syndrome
+  - `disc-068` ZAP70-Related Combined Immunodeficiency
+  - `disc-069` PTEN Hamartoma Tumor Syndrome
+  - `disc-070` Coffin-Siris Syndrome
+  - `disc-077` Congenital Disorder of Glycosylation Type Ia
+  - `disc-080` Dense Lab and Treatment Paragraph
+  - `disc-081` Neonatal Presentation Edge Case
+  - `disc-082` Minimal New Findings Edge Case
+  - `disc-084` Heavy Gene and Variant Paragraph
+  - `disc-100` Kitchen Sink Stress Test
+- Reconfirmed the organized real-raw output folder currently contains:
+  - Dravet
+  - PTEN
+  - Coffin-Siris
+  - PMM2-CDG
+- Conclusion:
+  - the corrected real-disease continuation set is complete
+  - the next official items are the synthetic stress cases `16-20`
+  - the next exact item, if continuing the benchmark in order, is `disc-080` `Dense Lab and Treatment Paragraph`
+
+## 2026-04-08 Chosen Next Real Chapter Beyond Corrected Set
+
+- User asked to choose another real chapter instead of moving to the synthetic stress cases.
+- Picked `Wolfram Syndrome` as the next real target.
+- Reason:
+  - appears in the full discovery benchmark fixture
+  - is not part of the old Opus `1-10`
+  - is not part of the already organized real-raw continuation set (`Dravet`, `PTEN`, `Coffin-Siris`, `PMM2-CDG`)
+  - gives a clean, obviously real disease surface without re-entering the overlap set
+
+## 2026-04-08 Correction: Wolfram Is Not Prepped
+
+- Checked the repo for any ready standalone handoff/wrapper JSON for `Wolfram Syndrome`.
+- Result:
+  - no `Wolfram` / `wolfram` / `disc-001` / `NBK4144` prepared handoff file was found
+  - the choice was valid as a future real disease target, but not valid as an already prepped next chapter
+- Operational correction:
+  - treat `Wolfram Syndrome` as an unprepared future target
+  - if the user wants another real chapter immediately, either generate a new wrapper first or select only from chapters that already have prepared standalone JSON surfaces
+
+## 2026-04-08 Ready vs Can-Make Split
+
+- Ready now as already prepared `opus_input` / `clinical_structure` files:
+  - `NBK20221` `ZAP70-Related Combined Immunodeficiency`
+  - `disc-069` `PTEN Hamartoma Tumor Syndrome`
+  - `disc-070` `Coffin-Siris Syndrome`
+  - `disc-077` `Congenital Disorder of Glycosylation Type Ia`
+  - older overlap-ready wrappers also exist for:
+    - `Y Chromosome Infertility`
+    - `Zellweger Spectrum Disorder`
+    - `YIF1B-Related Neurodevelopmental Disorder`
+    - `Zhu-Tokita-Takenouchi-Kim Syndrome`
+- Already saved canonical real raws in the organized folder:
+  - `Dravet`
+  - `PTEN`
+  - `Coffin-Siris`
+  - `PMM2-CDG`
+- Can make quickly from existing JSON-backed benchmark fixtures without needing a fetched external chapter first:
+  - `Prader-Willi Syndrome`
+  - `Kabuki Syndrome`
+  - `Loeys-Dietz Syndrome`
+  - `Fanconi Anemia`
+  - `Hereditary Spastic Paraplegia Type 4`
+  - `Mucopolysaccharidosis Type I (Hurler Syndrome)`
+  - `Spinocerebellar Ataxia Type 3 (Machado-Joseph Disease)`
+  - `SATB2-Associated Syndrome`
+- Practical recommendation if the user wants a truly new real chapter next:
+  - `Prader-Willi Syndrome`
+
+## 2026-04-08 Prader-Willi Prepared As Next Real Target
+
+- Created a separate prep folder so the new real target does not get mixed into the `11-20` continuation bucket:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/benchmark-extra-real-inputs-20260408`
+- Added:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/benchmark-extra-real-inputs-20260408/disc-018_prader_willi_syndrome_clinical_structure.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/benchmark-extra-real-inputs-20260408/disc-018_prader_willi_syndrome_opus_input.json`
+- Source surface:
+  - `stage3DiscoveryBenchmarkDevHard20.json` entry `disc-018`
+- Validation:
+  - both files pass `jq empty`
+- This is a prepared wrapper/input target only; no raw extraction has been saved for it yet.
+
+## 2026-04-08 Prader-Willi Raw Saved
+
+- Saved the user-provided raw extraction for `Prader-Willi Syndrome` at:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/benchmark-extra-real-raws-20260408/NBK1330_prader_willi_syndrome_raw.json`
+- Validation:
+  - file passes `jq empty`
+- Organization:
+  - kept in `benchmark-extra-real-raws-20260408` so it stays separate from the corrected `11-15` real-disease continuation folder
+
+## 2026-04-08 Kabuki Prepared As Next Extra-Real Target
+
+- Continued the extra-real sequence after `Prader-Willi Syndrome`.
+- Prepared `Kabuki Syndrome` from `stage3DiscoveryBenchmarkDevHard20.json` entry `disc-020`.
+- Added:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/benchmark-extra-real-inputs-20260408/disc-020_kabuki_syndrome_clinical_structure.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/benchmark-extra-real-inputs-20260408/disc-020_kabuki_syndrome_opus_input.json`
+- Validation:
+  - both files pass `jq empty`
+- Status:
+  - prepared wrapper/input only
+  - waiting on raw extraction
+
+## 2026-04-08 General Grounded-Extraction Prompt Added
+
+- Wrote a reusable prompt contract for grounded chapter extraction.
+- Core policy in that prompt:
+  - `sentence_index` is the only source of truth
+  - every phenotype, qualifier, ancillary item, and context field must be justified by cited sentence IDs
+  - no disease-memory completion inside the grounded raw
+  - prefer literal source labels and blank qualifiers over inferred detail
+  - keep inferred / pharma-style enrichment for a separate later layer
+
+## 2026-04-08 Fixed Prompt Requested
+
+- User asked for a tightened reusable prompt rather than more prompt-design discussion.
+- Deliverable focus:
+  - strict grounding
+  - minimal inference
+  - preserve valid enrichment only when directly supported by cited sentences
+
+## 2026-04-08 Microsoft Ideas File Themes
+
+- Reviewed:
+  - `/Users/ahmedelmorshedy/Desktop/Microsoft genovy ideas.sty`
+- File appears to be a long exported transcript rather than a clean standalone memo.
+- Strong recurring idea clusters in it:
+  - grounded sentence-indexed phenotype extraction from GeneReviews
+  - enrichment beyond flat HPO lists via qualifiers, cross-domain evidence, and provenance
+  - ontology mapping (`HPO`, `MONDO`, related codes)
+  - graph/knowledge-module representation linking gene, phenotype, labs, imaging, pathology, therapy
+  - scoring/benchmarking against phenotype-ranking tools like `Exomiser`
+  - downstream biopharma layer with drug ontology, response patterns, biomarkers, and trial/stratification use cases
+- Main caution repeated by current project work:
+  - the ideas are strong, but the transcript repeatedly drifts from grounded extraction into disease-memory completion
+  - the right architecture is still layered:
+    - grounded raw extraction
+    - validated enrichment layer
+    - ontology / scoring layer
+    - biopharma view
+
+## 2026-04-08 Prader-Willi Candidate vs Saved Opus-Style Raw
+
+- Compared the later user-pasted Prader-Willi candidate against the saved extra-real raw:
+  - saved raw:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/benchmark-extra-real-raws-20260408/NBK1330_prader_willi_syndrome_raw.json`
+- High-level result:
+  - the newer candidate looks richer on paper because it adds ancillary/context and denser qualifiers
+  - but much of that added richness is not grounded in the six-sentence `sentence_index` it carries
+- Main problems in the later candidate:
+  - injects unsupported ancillary/context:
+    - methylation biomarker
+    - inheritance/gene/family-risk text
+    - treatment-response claims
+    - prognosis / therapeutic-landscape summaries
+  - injects unsupported qualifier detail:
+    - pathophysiology
+    - anatomical site
+    - distribution
+    - progression
+    - treatment response
+    - frequency claims such as `nearly universal`
+  - collapses or over-normalizes explicit source findings:
+    - turns delayed motor milestones + delayed language into `Global developmental delay`
+    - turns specific behavior list into a broad behavioral phenotype
+    - turns facial-features sentence into a morphology list not present in that sentence
+  - misses some literal source content while adding unsupported detail:
+    - e.g. `poor appetite`, `genital hypoplasia`, `infertility`, `stubbornness`, `manipulative behaviors`
+- Practical verdict:
+  - for a grounded extraction pipeline, the saved Opus-style raw is better
+  - the newer candidate is only useful as a reminder that the underlying chapter may support more content, but it is not safe to accept as-is
+
+## 2026-04-08 Full Read of Microsoft Ideas Transcript
+
+- Completed a full end-to-end read of:
+  - `/Users/ahmedelmorshedy/Desktop/Microsoft genovy ideas.sty`
+- The file is not a compact ideas memo; it is a long exported assistant transcript with UI noise, repeated generations, and architecture brainstorming layered on top of a VEXAS/GeneReviews extraction conversation.
+- Strongest recurring value:
+  - grounded sentence-indexed extraction
+  - enrichment beyond flat HPO
+  - graph / ontology / benchmark / biopharma productization thinking
+- Clear weakness in the transcript's displayed reasoning style:
+  - it repeatedly escalates from grounded extraction into inferred enrichment and then speaks as if the later layers already exist or are already validated
+  - it is expansive, commercially oriented, and good for roadmap ideation, but weak on provenance discipline
+- Practical interpretation going forward:
+  - use the file as an idea mine and architecture prompt source
+  - do not treat its generated JSON, graph, or scoring claims as trustworthy implementation artifacts unless each claim is re-grounded independently
+- Strong graph-model takeaway worth keeping:
+  - the transcript's use of arrows, typed nodes, and domains is one of its best ideas because it forces relationship structure instead of flattening everything into a bag of HPO terms
+  - the safe version is a typed multi-domain graph with explicit provenance classes, for example:
+    - disease / phenotype assertion / phenotype term
+    - lab / imaging / pathology / clinical test
+    - gene / mechanism / pathway
+    - intervention / treatment response / biomarker
+    - sentence / paragraph / source document
+    - ontology nodes such as HPO and MONDO
+  - each edge should be provenance-aware and ideally typed as:
+    - explicit source-backed
+    - normalized/derived
+    - inferred
+    - external-knowledge
+  - domains are useful as organizational partitions, but they should not be treated as validated ontology claims unless each node/edge is independently grounded
+
+## 2026-04-08 Biopharma Discussion Framing
+
+- Deep-discussion framing for the transcript's biopharma ideas:
+  - the real value is not generic "knowledge graph" positioning
+  - the valuable output is a queryable disease-architecture layer that can support:
+    - biomarker strategy
+    - endpoint strategy
+    - patient stratification
+    - indication adjacency / expansion
+    - therapy-response reasoning
+- Best canonical substrate for that future product:
+  - disease-phenotype assertion edges with provenance, qualifiers, and weights
+  - ancillary domains:
+    - laboratory
+    - imaging
+    - pathology
+    - clinical tests
+    - treatment response
+  - context:
+    - onset
+    - natural history
+    - penetrance
+    - prevalence
+    - family risk / inheritance when explicitly supported
+- Recommended product layering:
+  1. grounded canonical extraction
+  2. materialized enriched assertion layer
+  3. ontology/scoring layer
+  4. biopharma-facing derived applications
+- Main commercial caution:
+  - if inferred disease knowledge is mixed into the canonical layer, the product loses trust with scientific and clinical users
+
+## 2026-04-08 Build-All-Valid-Parts Decision
+
+- User direction:
+  - wants to build all valid parts from the Microsoft ideas transcript, not just discuss them
+- Consolidated interpretation:
+  - this is feasible only as a phased build, not as one undifferentiated graph project
+- Recommended build order:
+  1. canonical grounded extraction + sentence provenance
+  2. materialized enriched disease-phenotype assertion layer
+  3. ontology / normalization / weighting layer
+  4. cross-domain evidence linking
+  5. biopharma-facing derived views and query surfaces
+- Invalid parts to exclude from the core build:
+  - unsupported disease-memory completions in canonical extraction
+  - untyped graph edges without provenance
+  - buyer-facing pharma claims before the assertion layer is stable
+
+## 2026-04-08 800-Chapter Schema Lock Principle
+
+- For the full 800-chapter pass, consistency matters more than maximal richness.
+- Recommended approach:
+  - lock a stable v1 canonical extraction schema now
+  - constrain the amount of detail per field aggressively
+  - defer richer graph / biopharma / inferred layers until after the 800-chapter ingestion pass
+- Canonical v1 should preserve:
+  - source-specific raw extraction
+  - sentence provenance
+  - phenotype rows
+  - ancillary rows
+  - context assertions
+- Canonical v1 should avoid:
+  - broad inferred qualifiers
+  - latent disease-memory completion
+  - heavy graph structure in the raw itself
+- Detail budget principle for v1:
+  - keep only detail that is reliably extractable and repeatable across hundreds of chapters
+  - prefer null/blank over low-confidence enrichment
+  - preserve evidence refs even when qualifiers are sparse
+
+## 2026-04-08 Tool Clarification from Ideas Transcript
+
+- Clarified that several named tools in the transcript are implementation options, not product requirements:
+  - `Node.js`:
+    - JavaScript runtime for building APIs/CLIs
+    - unrelated to graph "nodes"
+  - `Node2Vec` / `GraphSAGE`:
+    - graph-embedding methods for learning vector representations of nodes
+    - optional later-stage analytics, not needed for the first product build
+  - `Neo4j`:
+    - graph database option
+  - `NetworkX`:
+    - Python graph library for local experimentation
+  - `RDF` / `Turtle` / `JSON-LD`:
+    - semantic-web serialization formats
+    - optional interoperability layer, not required for first internal system
+  - `DrugBank` / `ChEMBL`:
+    - external drug ontologies / databases that could be linked later for biopharma use cases
+- Practical conclusion:
+  - these are mostly backend implementation choices or optional later extensions
+  - the core requirement remains the canonical assertion model plus typed, provenance-aware cross-domain links
+
+## 2026-04-08 Trajectory Modeling Note
+
+- Important idea from the transcript worth preserving:
+  - disease course / trajectory should not always be compressed into a single-word qualifier such as `progression`
+- Better representation when explicitly supported by source text:
+  - separate trajectory or natural-history assertions with ordered temporal stages
+  - example pattern:
+    - infancy -> phenotype cluster A
+    - childhood -> phenotype cluster B
+    - later life -> phenotype cluster C
+- Practical schema implication:
+  - keep simple `progression` qualifier for local row-level statements
+  - add a separate disease-level trajectory structure later for explicit multi-stage transitions
+  - do not force complex temporal course into a single phenotype qualifier when the source clearly describes a sequence
+
+## 2026-04-08 Disease Layer vs Biopharma Layer
+
+- Important architecture boundary:
+  - the disease layer is canonical truth
+  - the biopharma layer is a derived decision-support layer built from canonical truth plus optional external data
+- Disease layer should contain:
+  - disease identity and source metadata
+  - phenotype assertions
+  - ancillary assertions
+  - context assertions
+  - trajectory / natural-history assertions when explicitly supported
+  - provenance and weights
+- Biopharma layer should contain:
+  - biomarker candidates
+  - endpoint candidates
+  - stratification factors
+  - treatment-response summaries
+  - indication-adjacency hypotheses
+  - all marked as grounded, derived, or inferred
+- Key dependency:
+  - trajectory is primarily a disease-layer object
+  - pharma uses trajectory to decide stage-specific biomarkers, endpoints, and intervention windows
+
+## 2026-04-08 Opus Contract for Disease + Biopharma Stack
+
+- Clarified what Opus should be responsible for in a one-pass 800-chapter workflow:
+  - Opus should produce the canonical disease-layer inputs only
+  - Opus should not be asked to do ontology weighting, graph reasoning, or biopharma interpretation directly
+- Minimum required Opus outputs:
+  - full sentence index
+  - phenotype assertions with conservative qualifiers
+  - ancillary assertions across lab / imaging / pathology / clinical test / treatment response / management
+  - context assertions for onset / inheritance / gene / prevalence / prognosis / natural history / family risk / biomarker / therapeutic landscape / penetrance when explicit
+  - trajectory / stage-sequence assertions when explicitly described
+  - extraction notes for routing or ambiguity decisions
+- Explicit non-goals for Opus:
+  - no HPO / MONDO IDs
+  - no assertion weights
+  - no graph node/edge generation
+  - no inferred drug or biomarker strategy
+  - no disease-memory completion beyond cited text
+
+## 2026-04-08 Grounded Disease Layer v1 Locked
+
+- Wrote the new one-pass schema and Opus extraction contract for the 800-chapter regime:
+  - schema spec:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/genereviews-grounded-disease-layer-schema-v1-20260408.md`
+  - machine-readable template:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/genereviews-grounded-disease-layer-template-v1-20260408.json`
+  - Opus contract:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/genereviews-opus-grounded-disease-layer-contract-v1-20260408.md`
+- Key regime change recorded:
+  - primary output target is no longer the old chapter-raw bucketed schema
+  - primary output target is the grounded disease layer with:
+    - `source_document`
+    - `phenotype_assertions[]`
+    - `ancillary_assertions[]`
+    - `context_assertions[]`
+    - `trajectory_assertions[]`
+    - `extraction_notes[]`
+- Validation:
+  - template JSON validated with `jq empty`
+
+## 2026-04-09 Grounded Disease Layer Bundle + Next Chapter
+
+- Packaged the new regime artifacts into one folder:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409`
+- Bundle contents:
+  - `genereviews-grounded-disease-layer-schema-v1-20260408.md`
+  - `genereviews-grounded-disease-layer-template-v1-20260408.json`
+  - `genereviews-opus-grounded-disease-layer-contract-v1-20260408.md`
+  - `README.md`
+- Prepared next chapter under the same bundle:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-kabuki`
+- Next-chapter files:
+  - `disc-020_kabuki_syndrome_clinical_structure.json`
+  - `disc-020_kabuki_syndrome_opus_input.json`
+  - `README.md`
+- Practical intent:
+  - make the locked schema, contract, and the next extraction chapter usable from a single handoff location
+
+## 2026-04-09 Kabuki Input Scope Check
+
+- Inspected:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-kabuki/disc-020_kabuki_syndrome_clinical_structure.json`
+- Confirmed:
+  - it is not a full chapter parse
+  - it contains one paragraph and 9 sentences only
+  - it is a benchmark-style clinical summary slice, not the full GeneReviews chapter surface
+- Implication:
+  - if the new grounded disease layer regime is meant to operate on whole chapters, Kabuki should be re-prepared from a fuller chapter fetch rather than using this summary-only fixture
+
+## 2026-04-09 Kabuki Full-Chapter Draft Assessment
+
+- User correctly called out that the prior Kabuki bundle was summary-only because only the benchmark slice had been prepared.
+- Correct course correction:
+  - fetch the fuller GeneReviews chapter first
+  - then extract against `grounded_disease_layer_v1`
+- High-level assessment of the fuller draft:
+  - much closer to the new regime than the 9-sentence summary slice
+  - good:
+    - full sentence-indexed chapter surface
+    - assertion-first structure
+    - trajectory assertions
+    - stronger ancillary/context capture
+  - still not fully strict-grounded
+- Main unsupported or overreaching areas in the draft:
+  - ancillary claims not present in cited sentences, e.g.:
+    - echocardiogram testing claim linked to `s_cv_01`
+    - disorder-specific methylation signature claim linked to `s_sum_01`
+    - IVIG management claim linked to `s_imm_04`
+    - anesthesia positioning / cervical-spine management claim linked to `s_resp_02`
+    - trampoline/joint-damage advice linked to `s_ms_01`
+  - context claims not supported by cited sentences, e.g.:
+    - inheritance / gene distribution percentages linked to `s_sum_01`
+    - family-risk details linked without matching counseling sentences
+    - therapeutic landscape HDACi / ketogenic-diet discussion linked to `s_sum_01`
+  - phenotype qualifier inflation in some rows, e.g.:
+    - row-specific details such as eyebrow notching not present in cited sentence
+    - numeric short-stature severity values not present in cited evidence
+  - one extraction note references `pleasant and outgoing` behavior while citing `s_beh_01`, which does not support that note
+- Practical conclusion:
+  - the fuller chapter-backed approach is correct
+  - but the draft still needs a strict grounding cleanup pass before it should be treated as canonical
+
+## 2026-04-09 Redo Rule for Prior Chapters Under New Regime
+
+- Decision rule for whether prior chapters need to be redone under `grounded_disease_layer_v1`:
+  - redo chapters that were extracted from benchmark summary slices or thin `clinical_structure` fixtures
+  - keep chapters that already came from full chapter fetches with broad section/paragraph coverage
+- Practical detection rule:
+  - likely summary-slice / redo:
+    - one paragraph or very low paragraph count
+    - sentence counts in the single digits or low teens
+    - no real section inventory
+    - source looks like benchmark fixture rather than full GeneReviews/PMC provenance
+  - likely full-chapter / keep:
+    - many paragraphs and sections
+    - tens to hundreds of sentences
+    - real `provenance_url` to the source chapter
+    - heading inventory / chapter domains from the fetch pipeline
+- Conclusion for current work:
+  - do not blindly redo all prior chapters
+  - selectively redo only the ones whose prep surface was summary-only or benchmark-derived
+
+## 2026-04-09 New-Regime Sequence Marked + Faster Next Chapter Prep
+
+- Marked `Kabuki Syndrome` as chapter 1 of the new regime in:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/new-regime-manifest-20260409.json`
+- Kept the marking honest:
+  - Kabuki is designated as chapter 1
+  - but the bundled repo-side prep remains the old summary-slice fixture
+- Prepared chapter 2 as a real full-chapter fetch:
+  - `Loeys-Dietz Syndrome`
+  - fetched from GeneReviews via the repo fetch path
+  - resolved `NBK1133`
+  - `114` sentences, `79` paragraphs, `14` sections
+- Added ready-to-use files under:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-loeys-dietz`
+- Added:
+  - `NBK1133_opus_input.json`
+  - stricter prompt addendum:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/genereviews-opus-grounded-disease-layer-addendum-v1-kabuki-lessons-20260409.md`
+- Purpose of the addendum:
+  - fail closed on unsupported ancillary/context claims
+  - stop summary-only evidence from being stretched into tests/management/therapy
+  - reduce qualifier inflation
+
+## 2026-04-09 - Loeys-Dietz next-batch artifact normalized
+- Action: Opened `/Users/ahmedelmorshedy/Documents/genovymorsh-next-batch/Loeys-Dietz Syndrome.json` after the user pointed to it.
+- Finding: The file was not valid JSON; it was a chat-style wrapper containing prose plus a fenced JSON block. The payload itself already matched the new grounded disease-layer schema shape, but `source_document.sentence_index` was a placeholder string rather than the actual sentence array.
+- Fix: Extracted the fenced JSON payload, validated that all evidence sentence IDs exist in the prepared 114-sentence Loeys-Dietz chapter input, injected the real `sentence_index` from `NBK1133_opus_input.json`, and overwrote the `.json` with the normalized artifact.
+- Preservation: Saved the original wrapped response as `/Users/ahmedelmorshedy/Documents/genovymorsh-next-batch/Loeys-Dietz Syndrome.wrapped.txt`.
+- Result: `/Users/ahmedelmorshedy/Documents/genovymorsh-next-batch/Loeys-Dietz Syndrome.json` is now valid JSON with the expected top-level schema and a real sentence index.
+- Next move: If needed, do the same normalization pass for other next-batch chapter files that were saved as transcript wrappers instead of raw JSON artifacts.
+
+## 2026-04-09 - Chapter 3 switched to Williams and strict prompt handoff created
+- Action: Dropped PWS as the next handoff because the user wanted a genuinely new chapter and the first PWS attempt exposed another parser edge case.
+- Action: Prepared `Williams Syndrome` as chapter 3 under `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-williams-syndrome`.
+- Result: `NBK1249_opus_input.json` now contains a real flattened `sentence_index` with 38 sentences and a clean chapter block.
+- Action: Added a single strict handoff prompt file at `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/genereviews-opus-grounded-disease-layer-strict-prompt-v1-20260409.md` so future runs do not require manually combining the older contract and Kabuki addendum.
+- Action: Added `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/manual-cleanup-targets-kabuki-loeys-20260409.md` to keep chapters 1 and 2 on a concrete manual-fix path.
+- Result: Manifest now records chapter 3 as `Williams Syndrome`; Loeys is explicitly marked `manual_cleanup_pending`.
+- Next move: Use the Williams `opus_input.json` plus the new strict prompt for the next extraction while manually cleaning Kabuki and Loeys.
+
+## 2026-04-09 - Kabuki and Loeys promoted to repo-side regime-ready outputs
+- Action: Loaded the fuller Kabuki draft from `/Users/ahmedelmorshedy/Documents/genovymorsh-next-batch/NBK62111_kabuki_syndrome.json` and the normalized Loeys draft from `/Users/ahmedelmorshedy/Documents/genovymorsh-next-batch/Loeys-Dietz Syndrome.json`.
+- Action: Manually pruned unsupported ancillary/context claims and tightened selected qualifiers/trajectory text so the repo-side copies are more conservative and aligned to the strict grounded regime.
+- Result: Wrote official repo-side chapter outputs:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-kabuki/NBK62111_kabuki_syndrome_regime_ready.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-loeys-dietz/NBK1133_loeys_dietz_syndrome_regime_ready.json`
+- Validation: Both repo-side files are valid JSON, retain their full sentence indexes, and have zero missing evidence sentence references.
+- Action: Updated bundle docs/readmes/manifest to mark Kabuki and Loeys as `regime_ready` and added `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/regime-ready-chapters-20260409.md` as the official index.
+- Next move: Use Williams as chapter 3 for the next strict-prompt extraction while treating the new Kabuki/Loeys repo copies as the official new-regime artifacts.
+
+## 2026-04-09 - Gemini code audit for new regime
+- Action: Searched the Genovy repo for Gemini execution code versus new-regime grounded disease-layer wiring.
+- Finding: The repo already has shared Gemini API plumbing in `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/lib/genereviewsPipeline.js` via `callGeminiJson(...)`.
+- Finding: There are older Gemini experiment/benchmark runners, especially `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/runGeminiMultipassChapterRawExperiment.js` and `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/benchmarkStage3DiscoveryGroundedGemini.js`, but they target older raw/discovery schemas rather than the final `grounded_disease_layer_v1` regime.
+- Finding: The new regime itself is currently represented in docs/prompt/schema artifacts, not in a dedicated Gemini execution script.
+- Useful assets already present:
+  - strict prompt: `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/genereviews-opus-grounded-disease-layer-strict-prompt-v1-20260409.md`
+  - schema template: `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/genereviews-grounded-disease-layer-template-v1-20260408.json`
+  - canonical splitter patch/reference: `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/gemini-canonical-splitter-patch-20260408.js`
+- Conclusion: We have the Gemini plumbing and prompt assets, but not yet the exact runner that feeds a chapter input plus the new strict prompt and writes a regime-ready chapter JSON.
+- Next move: If needed, implement a dedicated Gemini new-regime runner rather than trying to force-fit the older experiment scripts.
+
+## 2026-04-09 - Gemini grounded disease-layer runner added
+- Action: Added `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/runGroundedDiseaseLayerGemini.js` and wired it into `package.json` as `gr:grounded-disease-layer:gemini`.
+- Behavior: The runner reads a chapter wrapper like `NBK1249_opus_input.json`, loads the strict grounded prompt plus the JSON schema template, calls `callGeminiJson(...)`, writes raw/model metadata artifacts, and normalizes the model output into `grounded_disease_layer_v1`.
+- Hardening added:
+  - deterministic `source_document` fill from the chapter wrapper instead of relying on the model to restate metadata
+  - strict evidence sentence reconciliation against the provided `sentence_index`
+  - fixed qualifier-key normalization for phenotype and ancillary rows
+  - tolerant handling of omitted empty arrays while still failing on wrong schema version or bad sentence references
+  - saved composed system prompt snapshot alongside the run outputs for auditability
+- Validation: `node --check /Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/runGroundedDiseaseLayerGemini.js` passed after the changes.
+- Next move: Run the new script against Williams (chapter 3) once Gemini is the active model path and inspect the first output for grounding leakage before scaling further.
+
+## 2026-04-09 - Gemini runner switched to task-scoped multipass
+- Action: Reworked `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/runGroundedDiseaseLayerGemini.js` from one-shot extraction into a task-scoped multipass runner using `gemini-2.5-pro`.
+- Pass layout:
+  - phenotype assertions
+  - ancillary assertions
+  - context assertions
+  - trajectory assertions
+  - extraction notes
+- Behavior: Each pass gets its own scoped prompt and partial JSON template, writes its own raw text / prompt snapshot / meta / partial JSON artifact, and the script merges those pass outputs into one final normalized `grounded_disease_layer_v1` file.
+- Reasoning: This matches the user's request to make Gemini behave more like multiple focused agents while keeping the existing parser/validator path and one canonical final output.
+- Validation: `node --check /Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/runGroundedDiseaseLayerGemini.js` passed after the multipass rewrite.
+- Next move: Run the Williams chapter through the task-scoped runner and review whether the narrower passes reduce context leakage compared with the one-shot regime.
+
+## 2026-04-09 - Williams run completed through Gemini task-scoped multipass
+- Action: Ran `npm run gr:grounded-disease-layer:gemini -- --input /Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-williams-syndrome/NBK1249_opus_input.json`.
+- Result: The task-scoped `gemini-2.5-pro` pipeline completed successfully and wrote:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-gemini-runs/NBK1249_williams_syndrome/NBK1249_williams_syndrome_grounded_disease_layer.json`
+  - plus per-pass prompt/raw/meta/partial JSON artifacts in the same folder
+- Counts:
+  - phenotype assertions: 56
+  - ancillary assertions: 2
+  - context assertions: 9
+  - trajectory assertions: 5
+  - extraction notes: 4
+- Parser hardening during run: Gemini emitted unsupported context fields like `disease_name` / `disease_acronym` / `disease_synonym`; the validator was patched to drop unsupported `context_assertion.field_name` values instead of failing the entire run.
+- Quality read:
+  - better structural discipline than the earlier one-shot path
+  - still not fully regime-ready
+  - likely cleanup targets remain in `context_assertions` (multiple gene rows that behave more like genotype notes) and `trajectory_assertions` (age-group feature descriptions that may be too eager for trajectory)
+- Next move: treat this as the first Gemini Williams draft, not a final regime-ready chapter, and manually prune the remaining overreach before promoting it.
+
+## 2026-04-09 - Williams manually cleaned and promoted to chapter 3 regime-ready
+- Action: Copied the Gemini task-scoped draft into `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-williams-syndrome/NBK1249_williams_syndrome_regime_ready.json` and manually cleaned it.
+- Manual cleanup applied:
+  - downgraded positive cognitive/personality profile rows (`strengths...`, `overfriendliness`, `empathy`) from `primary` to `descriptor`
+  - removed weak/redundant qualifier stuffing (`distribution: Any artery`, connective-tissue umbrella `pathophysiology`, and tautological site/morphology fields for those connective-tissue rows)
+  - linked ancillary lab rows back to their matching phenotype assertions (`hypercalcemia`, `hypercalciuria`)
+  - replaced multiple subgroup-specific `gene` context rows with one disease-level region statement grounded to `p12_s1`
+  - removed the age-dependent facial-feature trajectory rows and kept that distinction as an extraction note instead
+  - rewrote notes so they are routing/ambiguity decisions rather than historical commentary and removed the unsupported historical-names note
+- Validation:
+  - cleaned file is valid JSON
+  - zero missing evidence sentence references
+  - final counts: 56 phenotype assertions, 2 ancillary assertions, 5 context assertions, 3 trajectory assertions, 3 extraction notes
+- Promotion: Updated the bundle manifest, Williams chapter README, bundle README, and regime-ready index so chapter 3 is now explicitly marked `regime_ready`.
+- Next move: Use the same task-scoped Gemini path for the next chapter, then continue the same manual conservative-promotion workflow.

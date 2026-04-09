@@ -1,0 +1,65 @@
+{
+  "manifest_version": "new_regime_sequence_v1",
+  "created_at": "2026-04-09",
+  "schema_version": "grounded_disease_layer_v1",
+  "bundle_root": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409",
+  "chapters": [
+    {
+      "sequence_number": 1,
+      "chapter_title": "Kabuki Syndrome",
+      "status": "regime_ready",
+      "notes": [
+        "Kabuki Syndrome is chapter 1 of the new regime.",
+        "The older bundled summary-slice prep is retained for history only.",
+        "The official repo-side regime-ready output was manually cleaned from the fuller chapter-backed draft in Documents."
+      ],
+      "paths": {
+        "bundled_folder": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-kabuki",
+        "bundled_clinical_structure": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-kabuki/disc-020_kabuki_syndrome_clinical_structure.json",
+        "bundled_opus_input": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-kabuki/disc-020_kabuki_syndrome_opus_input.json",
+        "working_draft": "/Users/ahmedelmorshedy/Documents/genovymorsh-next-batch/NBK62111_kabuki_syndrome.json",
+        "regime_ready_json": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-kabuki/NBK62111_kabuki_syndrome_regime_ready.json"
+      }
+    },
+    {
+      "sequence_number": 2,
+      "chapter_title": "Loeys-Dietz Syndrome",
+      "status": "regime_ready",
+      "notes": [
+        "Loeys-Dietz Syndrome is the next prepared full-chapter fetch under the new regime.",
+        "This prep was fetched directly from GeneReviews and contains broad paragraph/section coverage.",
+        "The official repo-side regime-ready output was manually cleaned from the normalized draft in Documents."
+      ],
+      "paths": {
+        "bundled_folder": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-loeys-dietz",
+        "clinical_structure": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-loeys-dietz/NBK1133_clinical_structure.json",
+        "clinical_text": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-loeys-dietz/NBK1133_clinical_text.txt",
+        "fetch_meta": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-loeys-dietz/NBK1133_fetch_meta.json",
+        "raw_html": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-loeys-dietz/NBK1133_raw.html",
+        "normalized_draft": "/Users/ahmedelmorshedy/Documents/genovymorsh-next-batch/Loeys-Dietz Syndrome.json",
+        "regime_ready_json": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-loeys-dietz/NBK1133_loeys_dietz_syndrome_regime_ready.json"
+      }
+    },
+    {
+      "sequence_number": 3,
+      "chapter_title": "Williams Syndrome",
+      "status": "regime_ready",
+      "notes": [
+        "Williams Syndrome is chapter 3 of the new regime.",
+        "The first Gemini task-scoped multipass draft was manually cleaned to remove context/trajectory overreach and tighten routing decisions.",
+        "The sentence index was derived directly from the fetched clinical text surface to avoid section-parser truncation."
+      ],
+      "paths": {
+        "bundled_folder": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-williams-syndrome",
+        "clinical_structure": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-williams-syndrome/NBK1249_clinical_structure.json",
+        "clinical_text": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-williams-syndrome/NBK1249_clinical_text.txt",
+        "fetch_meta": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-williams-syndrome/NBK1249_fetch_meta.json",
+        "raw_html": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-williams-syndrome/NBK1249_raw.html",
+        "opus_input": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-williams-syndrome/NBK1249_opus_input.json",
+        "strict_prompt": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/genereviews-opus-grounded-disease-layer-strict-prompt-v1-20260409.md",
+        "gemini_task_scoped_draft": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-gemini-runs/NBK1249_williams_syndrome/NBK1249_williams_syndrome_grounded_disease_layer.json",
+        "regime_ready_json": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-williams-syndrome/NBK1249_williams_syndrome_regime_ready.json"
+      }
+    }
+  ]
+}

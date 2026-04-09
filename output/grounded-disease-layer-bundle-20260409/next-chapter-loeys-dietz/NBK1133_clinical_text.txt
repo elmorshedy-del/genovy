@@ -1,0 +1,157 @@
+LDS should be suspected in individuals with the following vascular, skeletal, craniofacial, cutaneous, allergic/inflammatory, ocular, and family history findings [ Loeys et al 2005 ].
+
+Vascular
+
+Dilatation or dissection of the aorta and other arteries. Aortic root dilatation is seen in more than 95% of probands; the aortic root is the most common site for a dissection to occur. In rare circumstances, aneurysms or dissections can be seen in other arteries in the head, chest, abdomen, or extremities in the absence of aortic involvement.
+
+Other arterial aneurysms and tortuosity Evaluation is best done with magnetic resonance angiography (MRA) or CT angiogram (CTA) with 3D reconstruction from head to pelvis to identify arterial aneurysms or dissections and arterial tortuosity throughout the arterial tree.
+
+Tortuosity is often most prominent in head and neck vessels.
+
+Approximately 50% of individuals with LDS studied had an aneurysm distant from the aortic root that would not have been detected by echocardiography.
+
+Skeletal
+
+Pectus excavatum or pectus carinatum
+
+Scoliosis
+
+Joint laxity or contracture (typically involving the fingers)
+
+Arachnodactyly
+
+Talipes equinovarus
+
+Cervical spine malformation and/or instability
+
+Osteoarthritis
+
+Craniofacial
+
+Hypertelorism
+
+Bifid uvula / cleft palate
+
+Craniosynostosis, in which any sutures can be involved
+
+Cutaneous
+
+Soft and velvety skin
+
+Translucent skin with easily visible underlying veins
+
+Easy bruising
+
+Dystrophic scars
+
+Milia, predominantly on the face
+
+Allergic/inflammatory disease
+
+Food allergies
+
+Seasonal allergies
+
+Asthma / chronic sinusitis
+
+Eczema
+
+Eosinophilic esophagitis/gastritis
+
+Inflammatory bowel disease
+
+Ocular. Blue or dusky sclerae
+
+Family history is most often consistent with autosomal dominant inheritance (e.g., affected males and females in multiple generations), except in those with IPO8 -related LDS (LDS7), which is inherited in an autosomal recessive manner. Absence of a known family history does not preclude the diagnosis.
+
+Loeys-Dietz syndrome (LDS) represents a wide phenotypic spectrum in which affected individuals may have various combinations of clinical features ranging from a severe syndromic presentation with significant extravascular systemic findings in young children to predominantly thoracic aortic aneurysm/dissection occurring in adults. Clinical variability is also observed among individuals in the same family who have the same pathogenic variant. The most common findings involve the vascular, skeletal, craniofacial, cutaneous, allergic/inflammatory, and ocular systems [ Loeys et al 2005 , Loeys et al 2006 ].
+
+The major sources of morbidity and early mortality in LDS are dilatation of the aorta at the level of the sinuses of Valsalva, a predisposition for aortic dissection and rupture, mitral valve prolapse (MVP) with or without regurgitation, and enlargement of the proximal pulmonary artery.
+
+Individuals with LDS have more severe vascular disease (with frequent involvement of vascular segments distant from the aortic root) than that observed in Marfan syndrome . Attias et al [2009] reported that the proportion of individuals with aortic dilatation, the age at dissection, and the need for surgery were similar in those with a heterozygous TGFBR2 pathogenic variant and those with a heterozygous FBN1 pathogenic variant causative of Marfan syndrome; however, the rate of dissection leading to death was greater in affected individuals with a heterozygous TGFBR2 pathogenic variant. In a systematic review of 3,896 individuals with LDS, the range of rate of aortic dissections were reported as follows: TGFBR1 -related LDS, 17%-25%; TGFBR2 -related LDS, 16%-35%; SMAD3 -related LDS, 0%-33%; TGFB2 -related LDS, 9%-11%; TGFB3-related LDS, 23% [ Gouda et al 2022 ].
+
+Arterial aneurysms have been observed in almost all side branches of the aorta including (but not limited to) the subclavian, renal, superior mesenteric, hepatic, and coronary arteries.
+
+Aortic dissection has been observed in early childhood (age ≥6 months) and/or at aortic dimensions that do not confer risk of dissection in other connective tissue disorders such as Marfan syndrome.
+
+Arterial tortuosity can be generalized but most commonly involves the head and neck vessels.
+
+The arterial involvement is widespread, and arterial tortuosity is present in a majority of affected individuals.
+
+Most affected individuals have multiple arterial anomalies.
+
+Vertebral and carotid artery dissection and cerebral bleeding have been described; rarely, isolated carotid artery dissection in the absence of aortic root involvement has been observed [ Huguenard et al 2022 ].
+
+MVP with mitral regurgitation has been observed in individuals with LDS, although less frequently than in Marfan syndrome.
+
+Other recurrent cardiovascular findings include patent ductus arteriosus, atrial septal defects, and bicuspid aortic valve. Although all these findings are common in individuals who do not have LDS, the incidence in LDS exceeds by at least five times that seen in the general population.
+
+Aortic histopathology. Histologic examination of aortic tissue reveals fragmentation of elastic fibers, loss of elastin content, and accumulation of amorphous matrix components in the aortic media. Structural analysis shows loss of the intimate spatial association between elastin deposits and vascular smooth muscle cells and a marked excess of aortic wall collagen. These characteristics are observed in young children and in the absence of inflammation, suggesting a severe defect in elastogenesis rather than secondary elastic fiber destruction.
+
+Aortic samples from individuals with LDS had significantly more diffuse medial degeneration than did samples from individuals with Marfan syndrome or control individuals. The changes are not entirely specific for LDS, but in the appropriate clinicopathologic setting help differentiate it from other vascular diseases [ Maleszewski et al 2009 ].
+
+The skeletal findings are characterized by Marfan syndrome-like skeletal features and joint laxity or contractures [ Erkula et al 2010 ].
+
+Skeletal overgrowth in LDS is less pronounced than in Marfan syndrome and usually affects the digits (arachnodactyly) more prominently than the long bones.
+
+Combined thumb and wrist signs were present in one third of individuals with LDS. Note: (1) The Walker-Murdoch wrist sign is the overlapping of the complete distal phalanx of the thumb and fifth finger when wrapped around the opposite wrist. (2) The "thumb sign" (Steinberg) is an extension of the entire distal phalanx of the thumb beyond the ulnar border of the hand when apposed across the palm.
+
+Dolichostenomelia (leading to an increase in the arm span-to-height ratio and a decrease in the upper-to-lower segment ratio) is less common in LDS than in Marfan syndrome.
+
+Overgrowth of the ribs can push the sternum in (pectus excavatum) or out (pectus carinatum).
+
+Joint hypermobility is common and can include congenital hip dislocation and recurrent joint subluxations. Paradoxically, some individuals can show reduced joint mobility, especially of the hands (camptodactyly) and feet (clubfeet).
+
+Spine anomalies, including congenital malformations of the cervical vertebrae and cervical spine instability, are common, especially in individuals with more severe craniofacial features.
+
+Preliminary data suggest that approximately 15% (or more) of affected individuals have structural cervical spine anomalies and at least 25% have cervical spine instability.
+
+Other skeletal findings
+
+Spondylolisthesis and scoliosis can be mild or severe and progressive.
+
+Acetabular protrusion, present in one third of individuals, is usually mild but can be associated with pain or functional limitations.
+
+Pes planus, often associated with inward rotation at the ankle, contributes to difficulty with ambulation, leg fatigue, and muscle cramps.
+
+Preliminary evidence suggests that individuals with LDS have an increased incidence of osteoporosis with increased fracture incidence and delayed bone healing [ Kirmani et al 2010 ].
+
+Note: Musculoskeletal findings, including hypotonia, have been observed in neonates with LDS [ Yetman et al 2007 ].
+
+In their most severe presentation, craniofacial anomalies in individuals with LDS are characterized by hypertelorism and craniosynostosis. Craniosynostosis most commonly involves premature fusion of the sagittal suture (resulting in dolichocephaly). Coronal suture synostosis (resulting in brachycephaly) and metopic suture synostosis (resulting in trigonocephaly) have also been described.
+
+Bifid uvula is considered the mildest expression of a cleft palate. Sometimes the uvula has an unusual broad appearance with or without a midline raphe.
+
+Other craniofacial characteristics include malar flattening and retrognathia.
+
+The skin findings, similar to those seen in vascular Ehlers-Danlos syndrome (see Differential Diagnosis ), include velvety, thin, translucent skin with visible veins on the chest wall, easy bruising (occurring in locations more than just the lower legs), slower scar formation, and dystrophic scarring. Inguinal, umbilical, and surgical hernias are common in individuals with LDS, although precise incidence estimates have not been determined.
+
+Individuals with LDS are predisposed to developing allergic disease including asthma, food allergy, eczema, allergic rhinitis, and eosinophilic gastrointestinal disease. Some affected individuals have exhibited elevated immunoglobulin E levels, eosinophil counts, and T helper 2 (TH2) cytokines in plasma [ Frischmeyer-Guerrerio et al 2013 , Felgentreff et al 2014 ].
+
+Myopia is less frequent and less severe than that seen in Marfan syndrome. Significant refractive errors can lead to amblyopia. Other common ocular features include strabismus and blue sclerae. Retinal detachment has been reported rarely. Ectopia lentis is not observed except in exceedingly rare case reports of unclear significance.
+
+As in other connective tissue disorders, pneumothorax occurs at increased frequency. Precise incidence estimates have not been determined.
+
+Life-threatening manifestations include spontaneous rupture of the spleen and bowel, and uterine rupture during pregnancy.
+
+The two most common neuroradiologic findings are dural ectasia (the precise incidence of which is unknown, as only a minority of affected individuals have undergone appropriate examination) and Arnold-Chiari type I malformation, which may be relatively rare.
+
+A minority of affected individuals have developmental delay . When present, developmental delay is most often associated with craniosynostosis and/or hydrocephalus, suggesting that developmental delay and/or learning disability is an extremely rare primary manifestation of LDS. Motor developmental delay is related to muscle hypotonia.
+
+Less common associated findings requiring further exploration include submandibular branchial cysts and defective tooth enamel.
+
+Pregnancy. Pregnancy can be dangerous for women with LDS due to increased risk of aortic dissection/rupture and uterine rupture; see Pregnancy Management .
+
+Genes are listed in Table 2 in order of phenotypic severity (from those genes associated with the most severe phenotype to the least severe phenotype).
+
+While the implicated gene can correlate broadly with disease severity (see Phenotype Correlations by Gene ), there are few specific genotype-phenotype correlations in LDS. Wide intrafamilial and interfamilial phenotypic variability has been reported. The identical pathogenic variant has also been described in unrelated affected individuals with phenotypes ranging from predominantly thoracic aortic disease to classic and severe LDS.
+
+Rare examples of non-penetrance in LDS have been documented. In some instances, non-penetrance is explained by mosaicism [ Baban et al 2018 ].
+
+While various clinical presentations have in the past been labeled as LDS type I (craniofacial features present), LDS type II (minimal to absent craniofacial features), and LDS type III (presence of osteoarthritis), it is now recognized that LDS caused by a heterozygous pathogenic variant in any of the seven known genes (see Table 1 ) is a continuum in which affected individuals may have various combinations of clinical features.
+
+Marfan syndrome type 2 was a designation initially applied by Mizuguchi et al [2004] to describe individuals with "classic" Marfan syndrome caused by a heterozygous pathogenic variant in TGFBR2 . At the time of the report other discriminating features of LDS had not yet been described. There has not been documentation of individuals with a heterozygous pathogenic variant in TGFBR1 or TGFBR2 that satisfied diagnostic criteria for Marfan syndrome, including the stipulation requiring absence of discriminating features of LDS [ Loeys et al 2006 , Van Hemelrijk et al 2010 ]. The term "Marfan syndrome type 2" should not be used to refer to LDS.
+
+TGFB3 -related LDS may also be referred to as Rienhoff syndrome.
+
+The exact prevalence of LDS is unknown but estimated to be 1:50,000. More than 1,000 families with LDS have been described in the literature.

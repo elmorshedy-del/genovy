@@ -1,0 +1,49 @@
+Williams syndrome (WS) should be suspected in individuals with the following findings:
+
+Intellectual disability affects most individuals and is typically mild.
+
+Specific cognitive profile includes strengths in verbal short-term memory and language and extreme weakness in visuospatial construction.
+
+Unique personality includes overfriendliness, empathy, generalized anxiety, specific phobias, and attention-deficit/hyperactivity disorder.
+
+Cardiovascular disease (elastin arteriopathy). Supravalvar aortic stenosis is the most common. Peripheral pulmonic stenosis is common in infancy. Any artery may be narrowed.
+
+Distinctive facies. Broad forehead, bitemporal narrowing, periorbital fullness, a stellate/lacy iris pattern (see Figure 1 ), strabismus, short nose, broad nasal tip, malar flattening, long philtrum, thick vermilion of the upper and lower lips, wide mouth, malocclusion, small jaw, and large ear lobes are observed at all ages (see Figure 2 ). Young children have epicanthal folds, full cheeks, and small, widely spaced teeth (see Figure 3 ); adults have a long face and neck and sloping shoulders (see Figure 4 ).
+
+Connective tissue abnormalities include hoarse voice, inguinal/umbilical hernia, bowel/bladder diverticulae, rectal prolapse, joint limitation or laxity, and soft, lax skin.
+
+Growth abnormalities include prenatal growth deficiency, postnatal poor weight gain, and decreased linear growth.
+
+Endocrine abnormalities include early puberty, hypercalcemia, hypercalciuria, hypothyroidism, and diabetes mellitus.
+
+Note: See the National Human Genome Research Institute (NHGRI) Atlas of Human Malformation Syndromes (scroll to ATLAS IMAGES ) for photographs of individuals with WS from diverse ethnic backgrounds.
+
+Williams syndrome (WS) is a multisystem disorder characterized by cardiovascular disease (elastin arteriopathy, most often manifesting as supravalvar aortic stenosis), developmental delay, usually mild intellectual disability, a specific cognitive profile, unique personality characteristics, connective tissue abnormalities, growth abnormalities, other endocrine manifestations, and distinctive facies. Additional manifestations can include sleep problems, ocular issues, hearing loss, dental problems, gastrointestinal difficulties, urinary tract abnormalities, and musculoskeletal issues.
+
+The 7q11.23 recurrent deletions of the Williams-Beuren syndrome critical region (WBSCR) comprise either 1.55 Mb (90%-95% of individuals with WS) or 1.84 Mb (5%-10% of individuals with WS) [ Palacios-Verdú et al 2015 ].
+
+ELN deletion results in elastin arteriopathy.
+
+Hypertension is less prevalent in individuals with WS whose deletion includes NCF1 , located in one of the blocks of low copy repeats that flank the WBSCR [ Del Campo et al 2006 ].
+
+A more severe phenotype with lower cognitive ability is observed in individuals with very large deletions (>2-4 Mb) that include the WBSCR than in individuals with a typical 1.5- to 1.8-Mb WBSCR deletion [ Stock et al 2003 , Marshall et al 2008 , Ramocki et al 2010 , Lugo et al 2020 ].
+
+Deletions within the WBSCR smaller than the recurrent deletions associated with WS are rare and are associated with a variable phenotype. Genotype-phenotype correlations are limited for genes other than ELN [ Kozel et al 2021 , Serrano-Juárez et al 2022 ].
+
+Individuals with partial WBSCR deletions that include the usual telomeric breakpoint (including GTF2I ) have classic manifestations of WS, including intellectual disability [ Botta et al 1999 , Heller et al 2003 ]. Individuals with deletions of the WBSCR that include distal genes in the region (especially GTF2IRD1 and GTF2I ) are more likely to have intellectual disability and facial features characteristic of WS [ Alesi et al 2021 ]. One individual with a partial deletion of the WBSCR that included GTF2I had borderline adaptive and language development [ Zhou et al 2022 ].
+
+Individuals with partial deletions that include ELN have SVAS.
+
+Individuals with partial WBSCR deletions that include ELN but do not include deletion of GTF2I do not have intellectual disability but often demonstrate the WS cognitive profile [ Morris et al 2003 ]. In two families, deletion of ELN and LIMK1 was associated with the WS cognitive profile but not with intellectual disability or other characteristics of WS [ Frangiskakis et al 1996 ]. Another family with a similar deletion did not have the WS cognitive profile [ Tassabehji et al 2005 ].
+
+Deletions within the WBSCR may be of maternal or paternal origin [ Ewart et al 1993 , Urbán et al 1996 ]. No phenotypic differences have been related to the parent of origin in some series [ Wu et al 1998 ], while microcephaly has been correlated with maternal origin of the WBSCR deletion in others [ Del Campo et al 2006 ].
+
+Penetrance is 100%.
+
+The first descriptions of WS were incomplete in that they reflected the chief complaint of the individual or the medical specialty of the observer. Thus, nephrologists and endocrinologists described "idiopathic infantile hypercalcemia" and cardiologists reported "supravalvular aortic stenosis syndrome."
+
+Early reports also noted dysmorphic facial features that were thought to resemble elves of legend: for a time, the term "Williams elfin facies syndrome" was used.
+
+After the reports of Williams et al [1961] and Beuren et al [1962] , the condition was called Williams syndrome in the US and Williams-Beuren syndrome in Europe.
+
+A study of WS in Norway reported a prevalence of 1:7,500 [ Strømme et al 2002 ].

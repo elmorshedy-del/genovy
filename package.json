@@ -38,6 +38,7 @@
     "gr:external-pipeline:mcp:http": "node src/scripts/externalPhenotypePipelineHttpMcp.js",
     "gr:ground-external": "node src/scripts/groundExternalPhenotypeExtraction.js",
     "gr:ground-raw-results": "node src/scripts/importStage3DiscoveryRawResults.js",
+    "gr:grounded-disease-layer:gemini": "node src/scripts/runGroundedDiseaseLayerGemini.js",
     "gr:pipeline": "node src/scripts/runGeneReviewsPipeline.js",
     "gr:verify": "node src/scripts/verifyGeneReviewsEnrichment.js",
     "ml:export-gene-disease": "node src/scripts/exportGeneDiseaseLinkDataset.js",

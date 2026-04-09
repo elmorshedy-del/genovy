@@ -1,0 +1,3208 @@
+{
+  "schema_version": "grounded_disease_layer_v1",
+  "extraction_policy_version": "strict_grounded_v1",
+  "source_document": {
+    "document_local_id": "NBK62111_kabuki_syndrome",
+    "disease_local_id": "NBK62111_kabuki_syndrome",
+    "nbk_id": "NBK62111",
+    "title": "Kabuki Syndrome",
+    "mode": "discovery",
+    "source": "GeneReviews",
+    "source_url": "https://www.ncbi.nlm.nih.gov/books/NBK62111/",
+    "source_date": "2025-08-14",
+    "sentence_index": [
+      {
+        "sentence_id": "s_sum_01",
+        "section": "Summary",
+        "section_id": "summary",
+        "paragraph_id": "p_sum_1",
+        "text": "Kabuki syndrome (KS) is characterized by typical facial features (long palpebral fissures with eversion of the lateral third of the lower eyelid; arched and broad eyebrows; short columella with depressed nasal tip; large, prominent, or cupped ears), minor skeletal anomalies, persistence of fetal fingertip pads, mild-to-moderate intellectual disability, and postnatal growth deficiency."
+      },
+      {
+        "sentence_id": "s_sum_02",
+        "section": "Summary",
+        "section_id": "summary",
+        "paragraph_id": "p_sum_1",
+        "text": "Other findings may include: congenital heart defects, genitourinary anomalies, cleft lip and/or palate, gastrointestinal anomalies including anal atresia, ptosis and strabismus, and widely spaced teeth and hypodontia."
+      },
+      {
+        "sentence_id": "s_sum_03",
+        "section": "Summary",
+        "section_id": "summary",
+        "paragraph_id": "p_sum_1",
+        "text": "Functional differences can include: increased susceptibility to infections and autoimmune disorders, seizures, endocrinologic abnormalities (including isolated premature thelarche in females), feeding problems, and hearing loss."
+      },
+      {
+        "sentence_id": "s_sug_01",
+        "section": "Suggestive Findings",
+        "section_id": "suggestive_findings",
+        "paragraph_id": "p_sug_1",
+        "text": "Spine abnormalities including sagittal clefts, hemivertebrae, butterfly vertebrae, narrow intervertebral disc space, and/or scoliosis"
+      },
+      {
+        "sentence_id": "s_sug_02",
+        "section": "Suggestive Findings",
+        "section_id": "suggestive_findings",
+        "paragraph_id": "p_sug_1",
+        "text": "Brachydactyly V"
+      },
+      {
+        "sentence_id": "s_sug_03",
+        "section": "Suggestive Findings",
+        "section_id": "suggestive_findings",
+        "paragraph_id": "p_sug_1",
+        "text": "Brachymesophalangy"
+      },
+      {
+        "sentence_id": "s_sug_04",
+        "section": "Suggestive Findings",
+        "section_id": "suggestive_findings",
+        "paragraph_id": "p_sug_1",
+        "text": "Clinodactyly of fifth digits"
+      },
+      {
+        "sentence_id": "s_sug_05",
+        "section": "Suggestive Findings",
+        "section_id": "suggestive_findings",
+        "paragraph_id": "p_sug_2",
+        "text": "persistence of fetal fingertip pads"
+      },
+      {
+        "sentence_id": "s_sug_06",
+        "section": "Suggestive Findings",
+        "section_id": "suggestive_findings",
+        "paragraph_id": "p_sug_3",
+        "text": "Ear pits (a potentially helpful diagnostic clue when seen with other typical findings)"
+      },
+      {
+        "sentence_id": "s_sug_07",
+        "section": "Suggestive Findings",
+        "section_id": "suggestive_findings",
+        "paragraph_id": "p_sug_3",
+        "text": "Genitourinary anomalies including cryptorchidism in males"
+      },
+      {
+        "sentence_id": "s_sug_08",
+        "section": "Suggestive Findings",
+        "section_id": "suggestive_findings",
+        "paragraph_id": "p_sug_4",
+        "text": "Endocrinologic abnormalities including hyperinsulinism and/or isolated premature thelarche in females"
+      },
+      {
+        "sentence_id": "s_grow_01",
+        "section": "Clinical Description - Growth",
+        "section_id": "growth",
+        "paragraph_id": "p_grow_1",
+        "text": "Individuals with KS typically exhibit normal growth parameters at birth."
+      },
+      {
+        "sentence_id": "s_grow_02",
+        "section": "Clinical Description - Growth",
+        "section_id": "growth",
+        "paragraph_id": "p_grow_2",
+        "text": "Infants with KS frequently exhibit failure to thrive for a variety of reasons."
+      },
+      {
+        "sentence_id": "s_grow_03",
+        "section": "Clinical Description - Growth",
+        "section_id": "growth",
+        "paragraph_id": "p_grow_3",
+        "text": "In adolescence and adulthood, more than half of individuals with KS develop obesity, which can exacerbate other health issues, such as recurrent patellar dislocation."
+      },
+      {
+        "sentence_id": "s_grow_04",
+        "section": "Clinical Description - Growth",
+        "section_id": "growth",
+        "paragraph_id": "p_grow_4",
+        "text": "Without treatment, postnatal growth deficiency is evident by age 12 months."
+      },
+      {
+        "sentence_id": "s_grow_05",
+        "section": "Clinical Description - Growth",
+        "section_id": "growth",
+        "paragraph_id": "p_grow_4",
+        "text": "Lack of a typical growth spurt during puberty exacerbates short stature."
+      },
+      {
+        "sentence_id": "s_grow_06",
+        "section": "Clinical Description - Growth",
+        "section_id": "growth",
+        "paragraph_id": "p_grow_4",
+        "text": "Microcephaly may or may not accompany short stature."
+      },
+      {
+        "sentence_id": "s_eye_01",
+        "section": "Clinical Description - Ophthalmologic",
+        "section_id": "ophthalmologic",
+        "paragraph_id": "p_eye_1",
+        "text": "Ocular findings occur in more than one third of individuals with Kabuki syndrome and include blue sclerae, strabismus, ptosis, coloboma, Marcus Gunn phenomenon (also referred to as jaw winking), and corneal abnormalities such as Peters anomaly."
+      },
+      {
+        "sentence_id": "s_eye_02",
+        "section": "Clinical Description - Ophthalmologic",
+        "section_id": "ophthalmologic",
+        "paragraph_id": "p_eye_2",
+        "text": "Rarely, more severe eye anomalies may occur, such as optic nerve hypoplasia, colobomatous microphthalmia, and anophthalmia."
+      },
+      {
+        "sentence_id": "s_eye_03",
+        "section": "Clinical Description - Ophthalmologic",
+        "section_id": "ophthalmologic",
+        "paragraph_id": "p_eye_3",
+        "text": "Functional visual problems may include difficulties with motor coordination, visuoperception, and visuomotor integration."
+      },
+      {
+        "sentence_id": "s_eye_04",
+        "section": "Clinical Description - Ophthalmologic",
+        "section_id": "ophthalmologic",
+        "paragraph_id": "p_eye_4",
+        "text": "As a result of the everted lower eyelid, children with KS can demonstrate excessive tearing, which is not usually a significant problem."
+      },
+      {
+        "sentence_id": "s_eye_05",
+        "section": "Clinical Description - Ophthalmologic",
+        "section_id": "ophthalmologic",
+        "paragraph_id": "p_eye_4",
+        "text": "However, nocturnal lagophthalmos, which occurs in many children with KS, can predispose to corneal abrasion and scarring."
+      },
+      {
+        "sentence_id": "s_ear_01",
+        "section": "Clinical Description - Ears and Hearing",
+        "section_id": "ears_hearing",
+        "paragraph_id": "p_ear_1",
+        "text": "Most individuals with KS have prominent and cup-shaped ears."
+      },
+      {
+        "sentence_id": "s_ear_02",
+        "section": "Clinical Description - Ears and Hearing",
+        "section_id": "ears_hearing",
+        "paragraph_id": "p_ear_1",
+        "text": "Ear pits are also relatively common."
+      },
+      {
+        "sentence_id": "s_ear_03",
+        "section": "Clinical Description - Ears and Hearing",
+        "section_id": "ears_hearing",
+        "paragraph_id": "p_ear_2",
+        "text": "From a medical standpoint, chronic otitis media is a major cause of morbidity, including conductive hearing loss."
+      },
+      {
+        "sentence_id": "s_ear_04",
+        "section": "Clinical Description - Ears and Hearing",
+        "section_id": "ears_hearing",
+        "paragraph_id": "p_ear_3",
+        "text": "Up to 50% of individuals with KS have hearing loss."
+      },
+      {
+        "sentence_id": "s_ear_05",
+        "section": "Clinical Description - Ears and Hearing",
+        "section_id": "ears_hearing",
+        "paragraph_id": "p_ear_3",
+        "text": "Although chronic otitis media is the most common cause, sensorineural hearing loss can rarely occur and some individuals have progressive hearing loss."
+      },
+      {
+        "sentence_id": "s_ear_06",
+        "section": "Clinical Description - Ears and Hearing",
+        "section_id": "ears_hearing",
+        "paragraph_id": "p_ear_3",
+        "text": "Inner-ear malformations including Mondini dysplasia, vestibular enlargement, aplastic cochlea and semicircular canals, and aqueductal enlargement have been reported."
+      },
+      {
+        "sentence_id": "s_cf_01",
+        "section": "Clinical Description - Craniofacial",
+        "section_id": "craniofacial",
+        "paragraph_id": "p_cf_1",
+        "text": "Cleft lip and/or palate affects approximately one third of individuals with KS."
+      },
+      {
+        "sentence_id": "s_cf_02",
+        "section": "Clinical Description - Craniofacial",
+        "section_id": "craniofacial",
+        "paragraph_id": "p_cf_1",
+        "text": "Submucous cleft palate may be underascertained."
+      },
+      {
+        "sentence_id": "s_cf_03",
+        "section": "Clinical Description - Craniofacial",
+        "section_id": "craniofacial",
+        "paragraph_id": "p_cf_1",
+        "text": "Almost three quarters of affected individuals have a high-arched palate."
+      },
+      {
+        "sentence_id": "s_cf_04",
+        "section": "Clinical Description - Craniofacial",
+        "section_id": "craniofacial",
+        "paragraph_id": "p_cf_2",
+        "text": "A number of individuals have lower lip pits."
+      },
+      {
+        "sentence_id": "s_dent_01",
+        "section": "Clinical Description - Dental",
+        "section_id": "dental",
+        "paragraph_id": "p_dent_1",
+        "text": "Hypodontia is most common, with absent lateral upper incisors, absent lower incisors, ectopic upper six-year molars, and missing second premolars also being described."
+      },
+      {
+        "sentence_id": "s_dent_02",
+        "section": "Clinical Description - Dental",
+        "section_id": "dental",
+        "paragraph_id": "p_dent_1",
+        "text": "Abnormally shaped teeth (e.g., flathead-screwdriver-shaped appearance of the upper incisors), small teeth, widely spaced teeth, and malocclusion may also be seen."
+      },
+      {
+        "sentence_id": "s_cv_01",
+        "section": "Clinical Description - Cardiovascular",
+        "section_id": "cardiovascular",
+        "paragraph_id": "p_cv_1",
+        "text": "Approximately 70% of individuals with KS have a congenital heart defect."
+      },
+      {
+        "sentence_id": "s_cv_02",
+        "section": "Clinical Description - Cardiovascular",
+        "section_id": "cardiovascular",
+        "paragraph_id": "p_cv_1",
+        "text": "Many heart defects have been described in association with KS, but left-sided obstructive lesions, especially coarctation of the aorta, are the most common."
+      },
+      {
+        "sentence_id": "s_cv_03",
+        "section": "Clinical Description - Cardiovascular",
+        "section_id": "cardiovascular",
+        "paragraph_id": "p_cv_1",
+        "text": "Other defects may include (alone or in combination): septal defects, bicuspid aortic valve, mitral valve anomalies, conotruncal heart defects, and hypoplastic left heart syndrome."
+      },
+      {
+        "sentence_id": "s_cv_04",
+        "section": "Clinical Description - Cardiovascular",
+        "section_id": "cardiovascular",
+        "paragraph_id": "p_cv_1",
+        "text": "Hypertrophic cardiomyopathy and aortic root dilatation have been occasionally reported."
+      },
+      {
+        "sentence_id": "s_resp_01",
+        "section": "Clinical Description - Respiratory",
+        "section_id": "respiratory",
+        "paragraph_id": "p_resp_1",
+        "text": "Eventration of the diaphragm has been rarely reported."
+      },
+      {
+        "sentence_id": "s_resp_02",
+        "section": "Clinical Description - Respiratory",
+        "section_id": "respiratory",
+        "paragraph_id": "p_resp_2",
+        "text": "Laryngeal abnormalities may pose problems with anesthesia."
+      },
+      {
+        "sentence_id": "s_gi_01",
+        "section": "Clinical Description - Gastrointestinal",
+        "section_id": "gastrointestinal",
+        "paragraph_id": "p_gi_1",
+        "text": "Feeding difficulties are quite common (~70%) and may be related to hypotonia, poor oromotor coordination, and swallowing difficulties that may require nasogastric or gastrostomy tube placement."
+      },
+      {
+        "sentence_id": "s_gi_02",
+        "section": "Clinical Description - Gastrointestinal",
+        "section_id": "gastrointestinal",
+        "paragraph_id": "p_gi_1",
+        "text": "Many individuals with KS have gastroesophageal reflux."
+      },
+      {
+        "sentence_id": "s_gi_03",
+        "section": "Clinical Description - Gastrointestinal",
+        "section_id": "gastrointestinal",
+        "paragraph_id": "p_gi_2",
+        "text": "Anorectal anomalies including imperforate anus, anovestibular fistula, and anteriorly placed anus"
+      },
+      {
+        "sentence_id": "s_gi_04",
+        "section": "Clinical Description - Gastrointestinal",
+        "section_id": "gastrointestinal",
+        "paragraph_id": "p_gi_2",
+        "text": "Congenital diaphragmatic hernia and eventration of the diaphragm"
+      },
+      {
+        "sentence_id": "s_gi_05",
+        "section": "Clinical Description - Gastrointestinal",
+        "section_id": "gastrointestinal",
+        "paragraph_id": "p_gi_2",
+        "text": "Cholestasis from a variety of causes"
+      },
+      {
+        "sentence_id": "s_gi_06",
+        "section": "Clinical Description - Gastrointestinal",
+        "section_id": "gastrointestinal",
+        "paragraph_id": "p_gi_2",
+        "text": "Chronic diarrhea from malabsorption and/or celiac disease"
+      },
+      {
+        "sentence_id": "s_gu_01",
+        "section": "Clinical Description - Genitourinary",
+        "section_id": "genitourinary",
+        "paragraph_id": "p_gu_1",
+        "text": "Kidney and urinary tract anomalies are seen in more than 25% of affected individuals."
+      },
+      {
+        "sentence_id": "s_gu_02",
+        "section": "Clinical Description - Genitourinary",
+        "section_id": "genitourinary",
+        "paragraph_id": "p_gu_1",
+        "text": "Common kidney findings include anomalies of kidney position and ascent (single fused kidneys, crossed fused renal ectopia) and renal dysplasia; hydronephrosis is the most common urinary tract finding."
+      },
+      {
+        "sentence_id": "s_gu_03",
+        "section": "Clinical Description - Genitourinary",
+        "section_id": "genitourinary",
+        "paragraph_id": "p_gu_1",
+        "text": "Other anomalies may include ureteropelvic junction obstruction and duplication of the collecting system."
+      },
+      {
+        "sentence_id": "s_gu_04",
+        "section": "Clinical Description - Genitourinary",
+        "section_id": "genitourinary",
+        "paragraph_id": "p_gu_1",
+        "text": "Hypospadias and cryptorchidism can occur in males."
+      },
+      {
+        "sentence_id": "s_ms_01",
+        "section": "Clinical Description - Musculoskeletal",
+        "section_id": "musculoskeletal",
+        "paragraph_id": "p_ms_1",
+        "text": "Joint hypermobility is seen in 50%-75% of individuals with KS."
+      },
+      {
+        "sentence_id": "s_ms_02",
+        "section": "Clinical Description - Musculoskeletal",
+        "section_id": "musculoskeletal",
+        "paragraph_id": "p_ms_1",
+        "text": "Joint dislocations, especially involving the hips, patellae, and shoulders, are not uncommon."
+      },
+      {
+        "sentence_id": "s_ms_03",
+        "section": "Clinical Description - Musculoskeletal",
+        "section_id": "musculoskeletal",
+        "paragraph_id": "p_ms_1",
+        "text": "As in most conditions with joint laxity, this finding improves with age."
+      },
+      {
+        "sentence_id": "s_ms_04",
+        "section": "Clinical Description - Musculoskeletal",
+        "section_id": "musculoskeletal",
+        "paragraph_id": "p_ms_2",
+        "text": "Variable degrees of scoliosis and kyphosis are seen and may be associated with vertebral anomalies (hemivertebrae, butterfly vertebrae, sagittal clefts)."
+      },
+      {
+        "sentence_id": "s_ms_05",
+        "section": "Clinical Description - Musculoskeletal",
+        "section_id": "musculoskeletal",
+        "paragraph_id": "p_ms_3",
+        "text": "Persistent fetal fingertip pads are considered one of the five cardinal manifestations of KS and are therefore found in a large proportion of affected individuals."
+      },
+      {
+        "sentence_id": "s_endo_01",
+        "section": "Clinical Description - Endocrine",
+        "section_id": "endocrine",
+        "paragraph_id": "p_endo_1",
+        "text": "Premature thelarche in girls is the most common endocrine abnormality described (16%-41%)."
+      },
+      {
+        "sentence_id": "s_endo_02",
+        "section": "Clinical Description - Endocrine",
+        "section_id": "endocrine",
+        "paragraph_id": "p_endo_1",
+        "text": "This finding does not represent premature puberty and is likely to resolve with time."
+      },
+      {
+        "sentence_id": "s_endo_03",
+        "section": "Clinical Description - Endocrine",
+        "section_id": "endocrine",
+        "paragraph_id": "p_endo_2",
+        "text": "Short stature, even absent growth hormone deficiency, has responded to growth hormone therapy without exacerbating disproportion."
+      },
+      {
+        "sentence_id": "s_endo_04",
+        "section": "Clinical Description - Endocrine",
+        "section_id": "endocrine",
+        "paragraph_id": "p_endo_2",
+        "text": "After one year of growth hormone treatment, the average height improved from 2.40 to 1.69 SD below the mean."
+      },
+      {
+        "sentence_id": "s_endo_05",
+        "section": "Clinical Description - Endocrine",
+        "section_id": "endocrine",
+        "paragraph_id": "p_endo_3",
+        "text": "Hyperinsulinism (HI) is likely underascertained in affected individuals and may be a presenting sign in neonates, although HI can also develop in older affected individuals."
+      },
+      {
+        "sentence_id": "s_endo_06",
+        "section": "Clinical Description - Endocrine",
+        "section_id": "endocrine",
+        "paragraph_id": "p_endo_3",
+        "text": "Failure to recognize and treat HI in a timely fashion can lead to irreversible neurologic damage and exacerbate developmental issues."
+      },
+      {
+        "sentence_id": "s_endo_07",
+        "section": "Clinical Description - Endocrine",
+        "section_id": "endocrine",
+        "paragraph_id": "p_endo_3",
+        "text": "Diazoxide therapy was trialed in 25/33 of the individuals with HI, with a response rate of 92%."
+      },
+      {
+        "sentence_id": "s_endo_08",
+        "section": "Clinical Description - Endocrine",
+        "section_id": "endocrine",
+        "paragraph_id": "p_endo_3",
+        "text": "Treatment for HI was able to be discontinued in 15 individuals at a median age of 2.8 years."
+      },
+      {
+        "sentence_id": "s_endo_09",
+        "section": "Clinical Description - Endocrine",
+        "section_id": "endocrine",
+        "paragraph_id": "p_endo_4",
+        "text": "Adrenal insufficiency"
+      },
+      {
+        "sentence_id": "s_endo_10",
+        "section": "Clinical Description - Endocrine",
+        "section_id": "endocrine",
+        "paragraph_id": "p_endo_4",
+        "text": "Combined pituitary hormone deficiency"
+      },
+      {
+        "sentence_id": "s_endo_11",
+        "section": "Clinical Description - Endocrine",
+        "section_id": "endocrine",
+        "paragraph_id": "p_endo_4",
+        "text": "Diabetes insipidus"
+      },
+      {
+        "sentence_id": "s_endo_12",
+        "section": "Clinical Description - Endocrine",
+        "section_id": "endocrine",
+        "paragraph_id": "p_endo_4",
+        "text": "Frank growth hormone deficiency"
+      },
+      {
+        "sentence_id": "s_endo_13",
+        "section": "Clinical Description - Endocrine",
+        "section_id": "endocrine",
+        "paragraph_id": "p_endo_4",
+        "text": "Hypothyroidism"
+      },
+      {
+        "sentence_id": "s_endo_14",
+        "section": "Clinical Description - Endocrine",
+        "section_id": "endocrine",
+        "paragraph_id": "p_endo_4",
+        "text": "Primary ovarian dysfunction"
+      },
+      {
+        "sentence_id": "s_endo_15",
+        "section": "Clinical Description - Endocrine",
+        "section_id": "endocrine",
+        "paragraph_id": "p_endo_4",
+        "text": "True precocious puberty"
+      },
+      {
+        "sentence_id": "s_imm_01",
+        "section": "Clinical Description - Immunologic",
+        "section_id": "immunologic",
+        "paragraph_id": "p_imm_1",
+        "text": "Immune dysfunction including both humoral immune deficiency and autoimmune disease has been described."
+      },
+      {
+        "sentence_id": "s_imm_02",
+        "section": "Clinical Description - Immunologic",
+        "section_id": "immunologic",
+        "paragraph_id": "p_imm_1",
+        "text": "Clinical findings in affected individuals may mimic those seen in individuals with common variable immune deficiency."
+      },
+      {
+        "sentence_id": "s_imm_03",
+        "section": "Clinical Description - Immunologic",
+        "section_id": "immunologic",
+        "paragraph_id": "p_imm_2",
+        "text": "Frequent and recurrent infections, such as frequent sinopulmonary infections and recurrent otitis media, are found in a majority of affected individuals."
+      },
+      {
+        "sentence_id": "s_imm_04",
+        "section": "Clinical Description - Immunologic",
+        "section_id": "immunologic",
+        "paragraph_id": "p_imm_2",
+        "text": "Hypogammaglobulinemia and IgA deficiency are common."
+      },
+      {
+        "sentence_id": "s_imm_05",
+        "section": "Clinical Description - Immunologic",
+        "section_id": "immunologic",
+        "paragraph_id": "p_imm_2",
+        "text": "Diminished B-cell populations have also been reported."
+      },
+      {
+        "sentence_id": "s_imm_06",
+        "section": "Clinical Description - Immunologic",
+        "section_id": "immunologic",
+        "paragraph_id": "p_imm_3",
+        "text": "Autoimmune conditions such as vitiligo, immune thrombocytopenia (ITP), hemolytic anemia, and even diabetes mellitus have also been described in affected individuals, most commonly in childhood or adolescence."
+      },
+      {
+        "sentence_id": "s_neuro_01",
+        "section": "Clinical Description - Neurologic",
+        "section_id": "neurologic",
+        "paragraph_id": "p_neuro_1",
+        "text": "Most children with KS are hypotonic and joint laxity may be a contributing factor."
+      },
+      {
+        "sentence_id": "s_neuro_02",
+        "section": "Clinical Description - Neurologic",
+        "section_id": "neurologic",
+        "paragraph_id": "p_neuro_2",
+        "text": "Hypotonia may contribute to significant feeding problems in infancy."
+      },
+      {
+        "sentence_id": "s_neuro_03",
+        "section": "Clinical Description - Neurologic",
+        "section_id": "neurologic",
+        "paragraph_id": "p_neuro_2",
+        "text": "As with other conditions in which hypotonia is a feature, this finding tends to improve with age."
+      },
+      {
+        "sentence_id": "s_neuro_04",
+        "section": "Clinical Description - Neurologic",
+        "section_id": "neurologic",
+        "paragraph_id": "p_neuro_3",
+        "text": "Seizures are seen more frequently in KS (10%-39%) than in the general population and represent a spectrum of findings including infantile spasms."
+      },
+      {
+        "sentence_id": "s_neuro_05",
+        "section": "Clinical Description - Neurologic",
+        "section_id": "neurologic",
+        "paragraph_id": "p_neuro_3",
+        "text": "Good seizure control is generally achieved with standard anti-seizure medications."
+      },
+      {
+        "sentence_id": "s_ni_01",
+        "section": "Clinical Description - Neuroimaging",
+        "section_id": "neuroimaging",
+        "paragraph_id": "p_ni_1",
+        "text": "Although most people with Kabuki syndrome undergo brain imaging at some point for indications such as seizures and/or developmental delay, major structural brain anomalies are rare."
+      },
+      {
+        "sentence_id": "s_ni_02",
+        "section": "Clinical Description - Neuroimaging",
+        "section_id": "neuroimaging",
+        "paragraph_id": "p_ni_1",
+        "text": "Reported findings have included cerebellar and brain stem atrophy, Dandy-Walker malformation, delayed myelination, mild ventriculomegaly."
+      },
+      {
+        "sentence_id": "s_ni_03",
+        "section": "Clinical Description - Neuroimaging",
+        "section_id": "neuroimaging",
+        "paragraph_id": "p_ni_2",
+        "text": "Prior to the identification of the genetic causes of KS, symptomatic Chiari I malformation was reported in multiple affected individuals."
+      },
+      {
+        "sentence_id": "s_dev_01",
+        "section": "Clinical Description - Development",
+        "section_id": "development",
+        "paragraph_id": "p_dev_1",
+        "text": "Intellectual disability, usually in the mild to moderate range, has been reported in a majority of individuals; however, reports of rare individuals with pathogenic variants in either KMT2D or KDM6A who have IQ levels above 70 have been published."
+      },
+      {
+        "sentence_id": "s_dev_02",
+        "section": "Clinical Description - Development",
+        "section_id": "development",
+        "paragraph_id": "p_dev_1",
+        "text": "Most individuals with KS are able to speak and to ambulate."
+      },
+      {
+        "sentence_id": "s_dev_03",
+        "section": "Clinical Description - Development",
+        "section_id": "development",
+        "paragraph_id": "p_dev_2",
+        "text": "Average IQ scores in individuals with KMT2D pathogenic variants range from the high 50s to high 60s."
+      },
+      {
+        "sentence_id": "s_dev_04",
+        "section": "Clinical Description - Development",
+        "section_id": "development",
+        "paragraph_id": "p_dev_2",
+        "text": "Neuropsychiatric testing has identified deficits in both comprehension and production of verbal language, but this may be related, in part, to hearing, neurologic, orofacial, and cognitive deficits."
+      },
+      {
+        "sentence_id": "s_dev_05",
+        "section": "Clinical Description - Development",
+        "section_id": "development",
+        "paragraph_id": "p_dev_2",
+        "text": "Dysarthria (reduced rate and stress, distorted pitch, harsh vocal quality, hypernasality, and imprecise consonants) has also been described."
+      },
+      {
+        "sentence_id": "s_dev_06",
+        "section": "Clinical Description - Development",
+        "section_id": "development",
+        "paragraph_id": "p_dev_2",
+        "text": "On formal neuropsychiatric testing, individuals with KS tend to score better in the areas of vocabulary comprehension and working memory and score lower in the areas of nonverbal reasoning and processing speed."
+      },
+      {
+        "sentence_id": "s_dev_07",
+        "section": "Clinical Description - Development",
+        "section_id": "development",
+        "paragraph_id": "p_dev_3",
+        "text": "In terms of adaptive skills, individuals with KS have more difficulties with daily living than with communication."
+      },
+      {
+        "sentence_id": "s_beh_01",
+        "section": "Clinical Description - Behavior",
+        "section_id": "behavior",
+        "paragraph_id": "p_beh_1",
+        "text": "Attention-deficit disorder and/or hyperactivity are present in a subset of affected individuals."
+      },
+      {
+        "sentence_id": "s_beh_02",
+        "section": "Clinical Description - Behavior",
+        "section_id": "behavior",
+        "paragraph_id": "p_beh_1",
+        "text": "Other behavioral findings including anxiety disorder, self-harm, and sleep disturbance have been rarely reported."
+      },
+      {
+        "sentence_id": "s_beh_03",
+        "section": "Clinical Description - Behavior",
+        "section_id": "behavior",
+        "paragraph_id": "p_beh_2",
+        "text": "Autism continues to be a rare but described finding in affected individuals."
+      },
+      {
+        "sentence_id": "s_beh_04",
+        "section": "Clinical Description - Behavior",
+        "section_id": "behavior",
+        "paragraph_id": "p_beh_2",
+        "text": "Whether this is truly part of the spectrum of KS or is a coincidental secondary diagnosis as a result of the frequency of autism spectrum disorders in the general population remains to be seen."
+      },
+      {
+        "sentence_id": "s_tum_01",
+        "section": "Clinical Description - Benign Tumors",
+        "section_id": "benign_tumors",
+        "paragraph_id": "p_tum_1",
+        "text": "Pilomatricomas, benign tumors of the hair shaft that commonly occur on the head and neck, have been described rarely in those with Kabuki syndrome."
+      },
+      {
+        "sentence_id": "s_mal_01",
+        "section": "Clinical Description - Malignancies",
+        "section_id": "malignancies",
+        "paragraph_id": "p_mal_1",
+        "text": "There is no clear evidence of a significant predisposition to the development of cancer in individuals with KS."
+      },
+      {
+        "sentence_id": "s_gp_01",
+        "section": "Phenotype Correlations by Gene",
+        "section_id": "phenotype_correlations",
+        "paragraph_id": "p_gp_1",
+        "text": "Those with a KMT2D pathogenic variant are more likely to have the distinctive Kabuki facial phenotype."
+      },
+      {
+        "sentence_id": "s_gp_02",
+        "section": "Phenotype Correlations by Gene",
+        "section_id": "phenotype_correlations",
+        "paragraph_id": "p_gp_1",
+        "text": "In general, those with a KMT2D pathogenic variant are also more likely to have renal anomalies, feeding problems, premature thelarche in females, joint dislocations, and palatal anomalies."
+      },
+      {
+        "sentence_id": "s_gp_03",
+        "section": "Phenotype Correlations by Gene",
+        "section_id": "phenotype_correlations",
+        "paragraph_id": "p_gp_2",
+        "text": "Hypoglycemia as a result of hyperinsulinism is proportionally more common in individuals with a pathogenic variant in KDM6A."
+      },
+      {
+        "sentence_id": "s_gp_04",
+        "section": "Phenotype Correlations by Gene",
+        "section_id": "phenotype_correlations",
+        "paragraph_id": "p_gp_2",
+        "text": "Affected males are more likely to have moderate-to-severe developmental delay / cognitive impairment than are females, who may have mild-to-moderate intellectual disability."
+      },
+      {
+        "sentence_id": "s_gp_05",
+        "section": "Genotype-Phenotype Correlations",
+        "section_id": "genotype_phenotype",
+        "paragraph_id": "p_gp_3",
+        "text": "Individuals with KS caused by a heterozygous pathogenic missense variants in the terminal regions of KMT2D may have an increased risk for autoimmune disease."
+      },
+      {
+        "sentence_id": "s_gp_06",
+        "section": "Genotype-Phenotype Correlations",
+        "section_id": "genotype_phenotype",
+        "paragraph_id": "p_gp_3",
+        "text": "Individuals with KS caused by a whole-gene deletion of KMT2D or pathogenic truncating variants that occur in the first half of the gene may have more severe intellectual disability."
+      },
+      {
+        "sentence_id": "s_prev_01",
+        "section": "Prevalence",
+        "section_id": "prevalence",
+        "paragraph_id": "p_prev_1",
+        "text": "The prevalence of KS in Japan is estimated at 1:32,000 live births."
+      },
+      {
+        "sentence_id": "s_prev_02",
+        "section": "Prevalence",
+        "section_id": "prevalence",
+        "paragraph_id": "p_prev_2",
+        "text": "White et al calculated a minimum birth incidence of 1:86,000 in Australia and New Zealand."
+      },
+      {
+        "sentence_id": "s_pen_01",
+        "section": "Penetrance",
+        "section_id": "penetrance",
+        "paragraph_id": "p_pen_1",
+        "text": "Penetrance for pathogenic variants in KMT2D appears to be complete; not enough information is available to make any conclusions regarding penetrance for those with pathogenic variants in KDM6A."
+      }
+    ]
+  },
+  "phenotype_assertions": [
+    {
+      "assertion_local_id": "ph_001",
+      "label_raw": "long palpebral fissures with eversion of the lateral third of the lower eyelid",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "s_sum_01"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_002",
+      "label_raw": "arched and broad eyebrows",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "s_sum_01"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_003",
+      "label_raw": "short columella with depressed nasal tip",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "s_sum_01"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_004",
+      "label_raw": "large, prominent, or cupped ears",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "s_sum_01",
+        "s_ear_01"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_005",
+      "label_raw": "persistent fetal fingertip pads",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "s_sum_01",
+        "s_sug_05",
+        "s_ms_05"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": "cardinal manifestation"
+      }
+    },
+    {
+      "assertion_local_id": "ph_006",
+      "label_raw": "mild-to-moderate intellectual disability",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "s_sum_01",
+        "s_dev_01"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": "majority",
+        "severity": "mild to moderate",
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_007",
+      "label_raw": "postnatal growth deficiency",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "s_sum_01",
+        "s_grow_04"
+      ],
+      "qualifiers": {
+        "onset": "evident by age 12 months",
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_008",
+      "label_raw": "short stature",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "s_grow_05",
+        "s_endo_03"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": "responded to growth hormone therapy",
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_009",
+      "label_raw": "failure to thrive",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "s_grow_02"
+      ],
+      "qualifiers": {
+        "onset": "infancy",
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_010",
+      "label_raw": "obesity",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "s_grow_03"
+      ],
+      "qualifiers": {
+        "onset": "adolescence and adulthood",
+        "frequency": "more than half",
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_011",
+      "label_raw": "microcephaly",
+      "status": "uncertain",
+      "clinical_role": "descriptor",
+      "evidence_sentence_ids": [
+        "s_grow_06"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_012",
+      "label_raw": "hypotonia",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "s_neuro_01",
+        "s_neuro_02",
+        "s_neuro_03"
+      ],
+      "qualifiers": {
+        "onset": "infancy",
+        "frequency": null,
+        "severity": null,
+        "progression": "improves",
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_013",
+      "label_raw": "strabismus",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "s_eye_01"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_014",
+      "label_raw": "ptosis",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "s_eye_01"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_015",
+      "label_raw": "blue sclerae",
+      "status": "present",
+      "clinical_role": "descriptor",
+      "evidence_sentence_ids": [
+        "s_eye_01"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_016",
+      "label_raw": "coloboma",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "s_eye_01"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_017",
+      "label_raw": "Marcus Gunn phenomenon",
+      "status": "present",
+      "clinical_role": "descriptor",
+      "evidence_sentence_ids": [
+        "s_eye_01"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_018",
+      "label_raw": "Peters anomaly",
+      "status": "present",
+      "clinical_role": "descriptor",
+      "evidence_sentence_ids": [
+        "s_eye_01"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_019",
+      "label_raw": "nocturnal lagophthalmos",
+      "status": "present",
+      "clinical_role": "descriptor",
+      "evidence_sentence_ids": [
+        "s_eye_05"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": "many children",
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_020",
+      "label_raw": "optic nerve hypoplasia",
+      "status": "uncertain",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "s_eye_02"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_021",
+      "label_raw": "colobomatous microphthalmia",
+      "status": "uncertain",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "s_eye_02"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_022",
+      "label_raw": "anophthalmia",
+      "status": "uncertain",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "s_eye_02"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_023",
+      "label_raw": "ear pits",
+      "status": "present",
+      "clinical_role": "descriptor",
+      "evidence_sentence_ids": [
+        "s_ear_02",
+        "s_sug_06"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_024",
+      "label_raw": "chronic otitis media",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "s_ear_03"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": "major cause of morbidity",
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_025",
+      "label_raw": "hearing loss",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "s_ear_04",
+        "s_ear_05"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": "up to 50%",
+        "severity": null,
+        "progression": "some individuals have progressive hearing loss",
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": "mostly conductive from chronic otitis media; sensorineural can rarely occur"
+      }
+    },
+    {
+      "assertion_local_id": "ph_026",
+      "label_raw": "cleft lip and/or palate",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "s_cf_01"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": "approximately one third",
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_027",
+      "label_raw": "submucous cleft palate",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "s_cf_02"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": "may be underascertained",
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_028",
+      "label_raw": "high-arched palate",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "s_cf_03"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": "almost three quarters",
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_029",
+      "label_raw": "lower lip pits",
+      "status": "present",
+      "clinical_role": "descriptor",
+      "evidence_sentence_ids": [
+        "s_cf_04"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_030",
+      "label_raw": "hypodontia",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "s_dent_01"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": "absent lateral upper incisors, absent lower incisors, missing second premolars"
+      }
+    },
+    {
+      "assertion_local_id": "ph_031",
+      "label_raw": "widely spaced teeth",
+      "status": "present",
+      "clinical_role": "descriptor",
+      "evidence_sentence_ids": [
+        "s_dent_02"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_032",
+      "label_raw": "abnormally shaped teeth",
+      "status": "present",
+      "clinical_role": "descriptor",
+      "evidence_sentence_ids": [
+        "s_dent_02"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": "flathead-screwdriver-shaped upper incisors",
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_033",
+      "label_raw": "malocclusion",
+      "status": "present",
+      "clinical_role": "descriptor",
+      "evidence_sentence_ids": [
+        "s_dent_02"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_034",
+      "label_raw": "coarctation of the aorta",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "s_cv_02"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": "most common cardiac defect",
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_035",
+      "label_raw": "septal defects",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "s_cv_03"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_036",
+      "label_raw": "bicuspid aortic valve",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "s_cv_03"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_037",
+      "label_raw": "mitral valve anomalies",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "s_cv_03"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_038",
+      "label_raw": "conotruncal heart defects",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "s_cv_03"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_039",
+      "label_raw": "hypoplastic left heart syndrome",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "s_cv_03"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_040",
+      "label_raw": "hypertrophic cardiomyopathy",
+      "status": "uncertain",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "s_cv_04"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_041",
+      "label_raw": "aortic root dilatation",
+      "status": "uncertain",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "s_cv_04"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_042",
+      "label_raw": "feeding difficulties",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "s_gi_01"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": "~70%",
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": "related to hypotonia, poor oromotor coordination, and swallowing difficulties",
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_043",
+      "label_raw": "gastroesophageal reflux",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "s_gi_02"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_044",
+      "label_raw": "imperforate anus",
+      "status": "uncertain",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "s_gi_03"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_045",
+      "label_raw": "congenital diaphragmatic hernia",
+      "status": "uncertain",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "s_gi_04"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_046",
+      "label_raw": "cholestasis",
+      "status": "uncertain",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "s_gi_05"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_047",
+      "label_raw": "chronic diarrhea",
+      "status": "uncertain",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "s_gi_06"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": "from malabsorption and/or celiac disease",
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_048",
+      "label_raw": "hydronephrosis",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "s_gu_02"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": "most common urinary tract finding",
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_049",
+      "label_raw": "renal dysplasia",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "s_gu_02"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_050",
+      "label_raw": "anomalies of kidney position and ascent",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "s_gu_02"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": "single fused kidneys, crossed fused renal ectopia"
+      }
+    },
+    {
+      "assertion_local_id": "ph_051",
+      "label_raw": "hypospadias",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "s_gu_04"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": "males"
+      }
+    },
+    {
+      "assertion_local_id": "ph_052",
+      "label_raw": "cryptorchidism",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "s_gu_04",
+        "s_sug_07"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": "males"
+      }
+    },
+    {
+      "assertion_local_id": "ph_053",
+      "label_raw": "joint hypermobility",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "s_ms_01",
+        "s_ms_03"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": "50%-75%",
+        "severity": null,
+        "progression": "improves",
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_054",
+      "label_raw": "joint dislocations",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "s_ms_02"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": "hips, patellae, and shoulders",
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_055",
+      "label_raw": "scoliosis",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "s_ms_04",
+        "s_sug_01"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": "variable degrees",
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_056",
+      "label_raw": "kyphosis",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "s_ms_04"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_057",
+      "label_raw": "vertebral anomalies",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "s_sug_01",
+        "s_ms_04"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": "hemivertebrae, butterfly vertebrae, sagittal clefts"
+      }
+    },
+    {
+      "assertion_local_id": "ph_058",
+      "label_raw": "brachydactyly V",
+      "status": "present",
+      "clinical_role": "descriptor",
+      "evidence_sentence_ids": [
+        "s_sug_02"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_059",
+      "label_raw": "brachymesophalangy",
+      "status": "present",
+      "clinical_role": "descriptor",
+      "evidence_sentence_ids": [
+        "s_sug_03"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_060",
+      "label_raw": "clinodactyly of fifth digits",
+      "status": "present",
+      "clinical_role": "descriptor",
+      "evidence_sentence_ids": [
+        "s_sug_04"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_061",
+      "label_raw": "premature thelarche",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "s_endo_01",
+        "s_endo_02"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": "16%-41%",
+        "severity": null,
+        "progression": "likely resolves with time",
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": "females only; does not represent premature puberty"
+      }
+    },
+    {
+      "assertion_local_id": "ph_062",
+      "label_raw": "hyperinsulinism",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "s_endo_05",
+        "s_endo_06",
+        "s_endo_07"
+      ],
+      "qualifiers": {
+        "onset": "may present in neonates; can also develop in older individuals",
+        "frequency": "likely underascertained",
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": "diazoxide response rate 92%; treatment discontinued in 15 individuals at median age 2.8 years",
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_063",
+      "label_raw": "seizures",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "s_neuro_04",
+        "s_neuro_05"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": "10%-39%",
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": "good seizure control generally achieved with standard anti-seizure medications",
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": "spectrum including infantile spasms"
+      }
+    },
+    {
+      "assertion_local_id": "ph_064",
+      "label_raw": "recurrent infections",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "s_imm_03"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": "majority",
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": "sinopulmonary infections and recurrent otitis media"
+      }
+    },
+    {
+      "assertion_local_id": "ph_065",
+      "label_raw": "hypogammaglobulinemia",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "s_imm_04"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_066",
+      "label_raw": "IgA deficiency",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "s_imm_04"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_067",
+      "label_raw": "vitiligo",
+      "status": "present",
+      "clinical_role": "complication",
+      "evidence_sentence_ids": [
+        "s_imm_06"
+      ],
+      "qualifiers": {
+        "onset": "childhood or adolescence",
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": "autoimmune",
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_068",
+      "label_raw": "immune thrombocytopenia",
+      "status": "present",
+      "clinical_role": "complication",
+      "evidence_sentence_ids": [
+        "s_imm_06"
+      ],
+      "qualifiers": {
+        "onset": "childhood or adolescence",
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": "autoimmune",
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_069",
+      "label_raw": "hemolytic anemia",
+      "status": "present",
+      "clinical_role": "complication",
+      "evidence_sentence_ids": [
+        "s_imm_06"
+      ],
+      "qualifiers": {
+        "onset": "childhood or adolescence",
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": "autoimmune",
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_070",
+      "label_raw": "dysarthria",
+      "status": "present",
+      "clinical_role": "descriptor",
+      "evidence_sentence_ids": [
+        "s_dev_05"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_071",
+      "label_raw": "attention-deficit disorder and/or hyperactivity",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "s_beh_01"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": "subset",
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_072",
+      "label_raw": "pilomatricomas",
+      "status": "uncertain",
+      "clinical_role": "descriptor",
+      "evidence_sentence_ids": [
+        "s_tum_01"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": "head and neck",
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_073",
+      "label_raw": "eventration of the diaphragm",
+      "status": "uncertain",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "s_resp_01"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_074",
+      "label_raw": "laryngeal abnormalities",
+      "status": "present",
+      "clinical_role": "descriptor",
+      "evidence_sentence_ids": [
+        "s_resp_02"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_075",
+      "label_raw": "adrenal insufficiency",
+      "status": "uncertain",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "s_endo_09"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_076",
+      "label_raw": "combined pituitary hormone deficiency",
+      "status": "uncertain",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "s_endo_10"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_077",
+      "label_raw": "diabetes insipidus",
+      "status": "uncertain",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "s_endo_11"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_078",
+      "label_raw": "growth hormone deficiency",
+      "status": "uncertain",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "s_endo_12"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_079",
+      "label_raw": "hypothyroidism",
+      "status": "uncertain",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "s_endo_13"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_080",
+      "label_raw": "primary ovarian dysfunction",
+      "status": "uncertain",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "s_endo_14"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_081",
+      "label_raw": "true precocious puberty",
+      "status": "uncertain",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "s_endo_15"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_082",
+      "label_raw": "autism spectrum disorder",
+      "status": "uncertain",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "s_beh_03",
+        "s_beh_04"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_083",
+      "label_raw": "anxiety disorder",
+      "status": "uncertain",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "s_beh_02"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_084",
+      "label_raw": "sleep disturbance",
+      "status": "uncertain",
+      "clinical_role": "descriptor",
+      "evidence_sentence_ids": [
+        "s_beh_02"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    }
+  ],
+  "ancillary_assertions": [
+    {
+      "ancillary_local_id": "anc_001",
+      "domain": "laboratory",
+      "finding_raw": "hypogammaglobulinemia and IgA deficiency are common",
+      "status": "present",
+      "evidence_sentence_ids": [
+        "s_imm_04"
+      ],
+      "related_phenotype_assertion_ids": [
+        "ph_065",
+        "ph_066"
+      ],
+      "qualifiers": {
+        "timing": null,
+        "frequency": null,
+        "severity": null,
+        "method": null,
+        "specimen": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "ancillary_local_id": "anc_002",
+      "domain": "laboratory",
+      "finding_raw": "diminished B-cell populations",
+      "status": "present",
+      "evidence_sentence_ids": [
+        "s_imm_05"
+      ],
+      "related_phenotype_assertion_ids": [
+        "ph_064"
+      ],
+      "qualifiers": {
+        "timing": null,
+        "frequency": null,
+        "severity": null,
+        "method": null,
+        "specimen": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "ancillary_local_id": "anc_003",
+      "domain": "imaging",
+      "finding_raw": "cerebellar and brain stem atrophy",
+      "status": "uncertain",
+      "evidence_sentence_ids": [
+        "s_ni_02"
+      ],
+      "related_phenotype_assertion_ids": [],
+      "qualifiers": {
+        "timing": null,
+        "frequency": null,
+        "severity": null,
+        "method": "brain MRI",
+        "specimen": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "ancillary_local_id": "anc_004",
+      "domain": "imaging",
+      "finding_raw": "Dandy-Walker malformation",
+      "status": "uncertain",
+      "evidence_sentence_ids": [
+        "s_ni_02"
+      ],
+      "related_phenotype_assertion_ids": [],
+      "qualifiers": {
+        "timing": null,
+        "frequency": null,
+        "severity": null,
+        "method": "brain MRI",
+        "specimen": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "ancillary_local_id": "anc_005",
+      "domain": "imaging",
+      "finding_raw": "delayed myelination",
+      "status": "uncertain",
+      "evidence_sentence_ids": [
+        "s_ni_02"
+      ],
+      "related_phenotype_assertion_ids": [],
+      "qualifiers": {
+        "timing": null,
+        "frequency": null,
+        "severity": null,
+        "method": "brain MRI",
+        "specimen": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "ancillary_local_id": "anc_006",
+      "domain": "imaging",
+      "finding_raw": "mild ventriculomegaly",
+      "status": "uncertain",
+      "evidence_sentence_ids": [
+        "s_ni_02"
+      ],
+      "related_phenotype_assertion_ids": [],
+      "qualifiers": {
+        "timing": null,
+        "frequency": null,
+        "severity": "mild",
+        "method": "brain MRI",
+        "specimen": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "ancillary_local_id": "anc_007",
+      "domain": "imaging",
+      "finding_raw": "inner-ear malformations including Mondini dysplasia, vestibular enlargement, aplastic cochlea and semicircular canals, and aqueductal enlargement",
+      "status": "uncertain",
+      "evidence_sentence_ids": [
+        "s_ear_06"
+      ],
+      "related_phenotype_assertion_ids": [
+        "ph_025"
+      ],
+      "qualifiers": {
+        "timing": null,
+        "frequency": null,
+        "severity": null,
+        "method": null,
+        "specimen": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "ancillary_local_id": "anc_010",
+      "domain": "treatment_response",
+      "finding_raw": "diazoxide therapy response rate 92% for hyperinsulinism",
+      "status": "present",
+      "evidence_sentence_ids": [
+        "s_endo_07"
+      ],
+      "related_phenotype_assertion_ids": [
+        "ph_062"
+      ],
+      "qualifiers": {
+        "timing": null,
+        "frequency": "92%",
+        "severity": null,
+        "method": null,
+        "specimen": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "ancillary_local_id": "anc_011",
+      "domain": "treatment_response",
+      "finding_raw": "short stature responded to growth hormone therapy; average height improved from 2.40 to 1.69 SD below mean after one year",
+      "status": "present",
+      "evidence_sentence_ids": [
+        "s_endo_03",
+        "s_endo_04"
+      ],
+      "related_phenotype_assertion_ids": [
+        "ph_008"
+      ],
+      "qualifiers": {
+        "timing": "after one year",
+        "frequency": null,
+        "severity": null,
+        "method": null,
+        "specimen": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "ancillary_local_id": "anc_012",
+      "domain": "treatment_response",
+      "finding_raw": "good seizure control generally achieved with standard anti-seizure medications",
+      "status": "present",
+      "evidence_sentence_ids": [
+        "s_neuro_05"
+      ],
+      "related_phenotype_assertion_ids": [
+        "ph_063"
+      ],
+      "qualifiers": {
+        "timing": null,
+        "frequency": null,
+        "severity": null,
+        "method": null,
+        "specimen": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "ancillary_local_id": "anc_013",
+      "domain": "management_context",
+      "finding_raw": "nasogastric or gastrostomy tube placement may be required for feeding difficulties",
+      "status": "present",
+      "evidence_sentence_ids": [
+        "s_gi_01"
+      ],
+      "related_phenotype_assertion_ids": [
+        "ph_042"
+      ],
+      "qualifiers": {
+        "timing": null,
+        "frequency": null,
+        "severity": null,
+        "method": null,
+        "specimen": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "ancillary_local_id": "anc_015",
+      "domain": "management_context",
+      "finding_raw": "laryngeal abnormalities may pose problems with anesthesia",
+      "status": "present",
+      "evidence_sentence_ids": [
+        "s_resp_02"
+      ],
+      "related_phenotype_assertion_ids": [
+        "ph_074"
+      ],
+      "qualifiers": {
+        "timing": null,
+        "frequency": null,
+        "severity": null,
+        "method": null,
+        "specimen": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "ancillary_local_id": "anc_017",
+      "domain": "other",
+      "finding_raw": "clinical findings may mimic those seen in individuals with common variable immune deficiency",
+      "status": "present",
+      "evidence_sentence_ids": [
+        "s_imm_02"
+      ],
+      "related_phenotype_assertion_ids": [
+        "ph_064",
+        "ph_065"
+      ],
+      "qualifiers": {
+        "timing": null,
+        "frequency": null,
+        "severity": null,
+        "method": null,
+        "specimen": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "ancillary_local_id": "anc_018",
+      "domain": "other",
+      "finding_raw": "no clear evidence of a significant predisposition to the development of cancer",
+      "status": "excluded",
+      "evidence_sentence_ids": [
+        "s_mal_01"
+      ],
+      "related_phenotype_assertion_ids": [],
+      "qualifiers": {
+        "timing": null,
+        "frequency": null,
+        "severity": null,
+        "method": null,
+        "specimen": null,
+        "subtype_context": null
+      }
+    }
+  ],
+  "context_assertions": [
+    {
+      "context_local_id": "ctx_001",
+      "field_name": "onset",
+      "value": "Normal growth parameters at birth; postnatal growth deficiency evident by age 12 months; feeding difficulties present in infancy.",
+      "evidence_sentence_ids": [
+        "s_grow_01",
+        "s_grow_04",
+        "s_gi_01"
+      ]
+    },
+    {
+      "context_local_id": "ctx_004",
+      "field_name": "prevalence",
+      "value": "Estimated at 1:32,000 live births in Japan. Minimum birth incidence of 1:86,000 in Australia and New Zealand.",
+      "evidence_sentence_ids": [
+        "s_prev_01",
+        "s_prev_02"
+      ]
+    },
+    {
+      "context_local_id": "ctx_005",
+      "field_name": "natural_history",
+      "value": "Failure to thrive in infancy evolving to obesity in more than half by adolescence/adulthood. Hypotonia tends to improve with age. Joint hypermobility improves with age. Lack of pubertal growth spurt exacerbates short stature. Premature thelarche likely resolves with time.",
+      "evidence_sentence_ids": [
+        "s_grow_02",
+        "s_grow_03",
+        "s_neuro_03",
+        "s_ms_03",
+        "s_grow_05",
+        "s_endo_02"
+      ]
+    },
+    {
+      "context_local_id": "ctx_007",
+      "field_name": "penetrance",
+      "value": "Penetrance for KMT2D pathogenic variants appears complete. Insufficient information for KDM6A.",
+      "evidence_sentence_ids": [
+        "s_pen_01"
+      ]
+    }
+  ],
+  "trajectory_assertions": [
+    {
+      "trajectory_local_id": "traj_001",
+      "stage_order": 1,
+      "age_window": "infancy",
+      "summary": "failure to thrive, feeding difficulties, hypotonia, and hyperinsulinism may present neonatally",
+      "manifestation_labels": [
+        "failure to thrive",
+        "feeding difficulties",
+        "hypotonia",
+        "hyperinsulinism"
+      ],
+      "evidence_sentence_ids": [
+        "s_grow_02",
+        "s_gi_01",
+        "s_neuro_01",
+        "s_endo_05"
+      ]
+    },
+    {
+      "trajectory_local_id": "traj_002",
+      "stage_order": 2,
+      "age_window": "childhood",
+      "summary": "postnatal growth deficiency, recurrent infections, hearing loss, seizures, and premature thelarche in females",
+      "manifestation_labels": [
+        "postnatal growth deficiency",
+        "recurrent infections",
+        "hearing loss",
+        "seizures",
+        "premature thelarche"
+      ],
+      "evidence_sentence_ids": [
+        "s_grow_04",
+        "s_imm_03",
+        "s_ear_04",
+        "s_neuro_04",
+        "s_endo_01"
+      ]
+    },
+    {
+      "trajectory_local_id": "traj_003",
+      "stage_order": 3,
+      "age_window": "adolescence and adulthood",
+      "summary": "obesity develops in more than half by adolescence/adulthood; hypotonia and joint hypermobility improve with age; lack of pubertal growth spurt exacerbates short stature",
+      "manifestation_labels": [
+        "obesity",
+        "short stature",
+        "autoimmune conditions"
+      ],
+      "evidence_sentence_ids": [
+        "s_grow_03",
+        "s_neuro_03",
+        "s_ms_03",
+        "s_grow_05"
+      ]
+    }
+  ],
+  "extraction_notes": [
+    {
+      "note_local_id": "note_001",
+      "decision": "Autism spectrum disorder placed as uncertain",
+      "rationale": "The chapter explicitly questions whether ASD is truly part of the KS spectrum or a coincidental secondary diagnosis given the frequency of ASD in the general population.",
+      "evidence_sentence_ids": [
+        "s_beh_03",
+        "s_beh_04"
+      ]
+    },
+    {
+      "note_local_id": "note_002",
+      "decision": "Microcephaly placed as uncertain",
+      "rationale": "The chapter states 'microcephaly may or may not accompany short stature' — hedging language without a specific frequency.",
+      "evidence_sentence_ids": [
+        "s_grow_06"
+      ]
+    },
+    {
+      "note_local_id": "note_003",
+      "decision": "Endocrine findings (adrenal insufficiency, combined pituitary hormone deficiency, diabetes insipidus, growth hormone deficiency, hypothyroidism, primary ovarian dysfunction, true precocious puberty) placed as uncertain",
+      "rationale": "The chapter describes these as findings 'in a small subset of individuals' without specific frequencies.",
+      "evidence_sentence_ids": [
+        "s_endo_09",
+        "s_endo_10",
+        "s_endo_11",
+        "s_endo_12",
+        "s_endo_13",
+        "s_endo_14",
+        "s_endo_15"
+      ]
+    },
+    {
+      "note_local_id": "note_004",
+      "decision": "Hypertrophic cardiomyopathy and aortic root dilatation placed as uncertain",
+      "rationale": "The chapter states these have been 'occasionally reported'.",
+      "evidence_sentence_ids": [
+        "s_cv_04"
+      ]
+    },
+    {
+      "note_local_id": "note_005",
+      "decision": "GI anomalies (imperforate anus, congenital diaphragmatic hernia, cholestasis, chronic diarrhea) placed as uncertain",
+      "rationale": "The chapter introduces these as findings 'not common in KS' that 'may be seen rarely'.",
+      "evidence_sentence_ids": [
+        "s_gi_03",
+        "s_gi_04",
+        "s_gi_05",
+        "s_gi_06"
+      ]
+    },
+    {
+      "note_local_id": "note_006",
+      "decision": "Cancer predisposition placed as excluded ancillary",
+      "rationale": "The chapter explicitly states 'there is no clear evidence of a significant predisposition to the development of cancer in individuals with KS.'",
+      "evidence_sentence_ids": [
+        "s_mal_01"
+      ]
+    },
+    {
+      "note_local_id": "note_007",
+      "decision": "Neuroimaging findings placed as uncertain ancillary",
+      "rationale": "The chapter states 'major structural brain anomalies are rare' and lists reported findings without frequencies.",
+      "evidence_sentence_ids": [
+        "s_ni_01",
+        "s_ni_02"
+      ]
+    },
+    {
+      "note_local_id": "note_009",
+      "decision": "Genotype-phenotype: KMT2D variant holders more likely to have distinctive facial phenotype, renal anomalies, feeding problems, premature thelarche, joint dislocations, and palatal anomalies",
+      "rationale": "Source explicitly states this correlation.",
+      "evidence_sentence_ids": [
+        "s_gp_01",
+        "s_gp_02"
+      ]
+    },
+    {
+      "note_local_id": "note_010",
+      "decision": "Genotype-phenotype: KDM6A hyperinsulinism proportionally more common; affected males more severe than females despite X-inactivation escape",
+      "rationale": "Source explicitly states this correlation.",
+      "evidence_sentence_ids": [
+        "s_gp_03",
+        "s_gp_04"
+      ]
+    },
+    {
+      "note_local_id": "note_011",
+      "decision": "Genotype-phenotype: KMT2D missense variants in terminal regions may increase autoimmune risk; whole-gene deletion or early truncating variants may cause more severe intellectual disability",
+      "rationale": "Source explicitly states these correlations.",
+      "evidence_sentence_ids": [
+        "s_gp_05",
+        "s_gp_06"
+      ]
+    },
+    {
+      "note_local_id": "note_012",
+      "decision": "Cognitive profile captured in notes rather than phenotype rows",
+      "rationale": "Strengths in vocabulary comprehension and working memory; weaknesses in nonverbal reasoning and processing speed. Deficits in verbal language comprehension and production. These are neuropsychiatric testing results, not standalone phenotypes.",
+      "evidence_sentence_ids": [
+        "s_dev_04",
+        "s_dev_06"
+      ]
+    },
+    {
+      "note_local_id": "note_013",
+      "decision": "Chiari I malformation not emitted as phenotype",
+      "rationale": "Reported prior to molecular confirmation of KS; has not been highlighted in recent publications on molecularly confirmed individuals. Chapter does not preclude it but evidence is weak.",
+      "evidence_sentence_ids": [
+        "s_ni_03"
+      ]
+    },
+    {
+      "note_local_id": "note_014",
+      "decision": "Congenital heart defects umbrella not emitted; individual defect types listed separately",
+      "rationale": "The chapter names specific defects (coarctation, septal defects, bicuspid aortic valve, mitral valve anomalies, conotruncal heart defects, HLHS). The umbrella frequency is ~70% but individual types are what matters clinically.",
+      "evidence_sentence_ids": [
+        "s_cv_01",
+        "s_cv_02",
+        "s_cv_03"
+      ]
+    }
+  ]
+}

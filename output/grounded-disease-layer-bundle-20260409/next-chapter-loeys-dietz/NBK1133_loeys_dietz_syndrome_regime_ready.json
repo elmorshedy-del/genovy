@@ -1,0 +1,2694 @@
+{
+  "schema_version": "grounded_disease_layer_v1",
+  "extraction_policy_version": "strict_grounded_v1",
+  "source_document": {
+    "document_local_id": "NBK1133_loeys_dietz_syndrome",
+    "disease_local_id": "NBK1133_loeys_dietz_syndrome",
+    "nbk_id": "NBK1133",
+    "title": "Loeys-Dietz Syndrome",
+    "mode": "discovery",
+    "source": "GeneReviews",
+    "source_url": "https://www.ncbi.nlm.nih.gov/books/NBK1133/",
+    "source_date": "2025-08-14",
+    "sentence_index": [
+      {
+        "sentence_id": "p1_s1",
+        "section": "Suggestive Findings",
+        "text": "LDS should be suspected in individuals with the following vascular, skeletal, craniofacial, cutaneous, allergic/inflammatory, ocular, and family history findings [ Loeys et al 2005 ].",
+        "section_id": "section_Suggestive_Findings",
+        "paragraph_id": "p1",
+        "char_start": 0,
+        "char_end": 183
+      },
+      {
+        "sentence_id": "p2_s1",
+        "section": "Suggestive Findings",
+        "text": "Vascular",
+        "section_id": "section_Suggestive_Findings",
+        "paragraph_id": "p2",
+        "char_start": 185,
+        "char_end": 193
+      },
+      {
+        "sentence_id": "p3_s1",
+        "section": "Suggestive Findings",
+        "text": "Dilatation or dissection of the aorta and other arteries.",
+        "section_id": "section_Suggestive_Findings",
+        "paragraph_id": "p3",
+        "char_start": 195,
+        "char_end": 252
+      },
+      {
+        "sentence_id": "p3_s2",
+        "section": "Suggestive Findings",
+        "text": "Aortic root dilatation is seen in more than 95% of probands; the aortic root is the most common site for a dissection to occur.",
+        "section_id": "section_Suggestive_Findings",
+        "paragraph_id": "p3",
+        "char_start": 253,
+        "char_end": 380
+      },
+      {
+        "sentence_id": "p3_s3",
+        "section": "Suggestive Findings",
+        "text": "In rare circumstances, aneurysms or dissections can be seen in other arteries in the head, chest, abdomen, or extremities in the absence of aortic involvement.",
+        "section_id": "section_Suggestive_Findings",
+        "paragraph_id": "p3",
+        "char_start": 381,
+        "char_end": 540
+      },
+      {
+        "sentence_id": "p4_s1",
+        "section": "Suggestive Findings",
+        "text": "Other arterial aneurysms and tortuosity Evaluation is best done with magnetic resonance angiography (MRA) or CT angiogram (CTA) with 3D reconstruction from head to pelvis to identify arterial aneurysms or dissections and arterial tortuosity throughout the arterial tree.",
+        "section_id": "section_Suggestive_Findings",
+        "paragraph_id": "p4",
+        "char_start": 542,
+        "char_end": 812
+      },
+      {
+        "sentence_id": "p5_s1",
+        "section": "Suggestive Findings",
+        "text": "Tortuosity is often most prominent in head and neck vessels.",
+        "section_id": "section_Suggestive_Findings",
+        "paragraph_id": "p5",
+        "char_start": 814,
+        "char_end": 874
+      },
+      {
+        "sentence_id": "p6_s1",
+        "section": "Suggestive Findings",
+        "text": "Approximately 50% of individuals with LDS studied had an aneurysm distant from the aortic root that would not have been detected by echocardiography.",
+        "section_id": "section_Suggestive_Findings",
+        "paragraph_id": "p6",
+        "char_start": 876,
+        "char_end": 1025
+      },
+      {
+        "sentence_id": "p7_s1",
+        "section": "Suggestive Findings",
+        "text": "Skeletal",
+        "section_id": "section_Suggestive_Findings",
+        "paragraph_id": "p7",
+        "char_start": 1027,
+        "char_end": 1035
+      },
+      {
+        "sentence_id": "p8_s1",
+        "section": "Suggestive Findings",
+        "text": "Pectus excavatum or pectus carinatum",
+        "section_id": "section_Suggestive_Findings",
+        "paragraph_id": "p8",
+        "char_start": 1037,
+        "char_end": 1073
+      },
+      {
+        "sentence_id": "p9_s1",
+        "section": "Suggestive Findings",
+        "text": "Scoliosis",
+        "section_id": "section_Suggestive_Findings",
+        "paragraph_id": "p9",
+        "char_start": 1075,
+        "char_end": 1084
+      },
+      {
+        "sentence_id": "p10_s1",
+        "section": "Suggestive Findings",
+        "text": "Joint laxity or contracture (typically involving the fingers)",
+        "section_id": "section_Suggestive_Findings",
+        "paragraph_id": "p10",
+        "char_start": 1086,
+        "char_end": 1147
+      },
+      {
+        "sentence_id": "p11_s1",
+        "section": "Suggestive Findings",
+        "text": "Arachnodactyly",
+        "section_id": "section_Suggestive_Findings",
+        "paragraph_id": "p11",
+        "char_start": 1149,
+        "char_end": 1163
+      },
+      {
+        "sentence_id": "p12_s1",
+        "section": "Suggestive Findings",
+        "text": "Talipes equinovarus",
+        "section_id": "section_Suggestive_Findings",
+        "paragraph_id": "p12",
+        "char_start": 1165,
+        "char_end": 1184
+      },
+      {
+        "sentence_id": "p13_s1",
+        "section": "Suggestive Findings",
+        "text": "Cervical spine malformation and/or instability",
+        "section_id": "section_Suggestive_Findings",
+        "paragraph_id": "p13",
+        "char_start": 1186,
+        "char_end": 1232
+      },
+      {
+        "sentence_id": "p14_s1",
+        "section": "Suggestive Findings",
+        "text": "Osteoarthritis",
+        "section_id": "section_Suggestive_Findings",
+        "paragraph_id": "p14",
+        "char_start": 1234,
+        "char_end": 1248
+      },
+      {
+        "sentence_id": "p15_s1",
+        "section": "Suggestive Findings",
+        "text": "Craniofacial",
+        "section_id": "section_Suggestive_Findings",
+        "paragraph_id": "p15",
+        "char_start": 1250,
+        "char_end": 1262
+      },
+      {
+        "sentence_id": "p16_s1",
+        "section": "Suggestive Findings",
+        "text": "Hypertelorism",
+        "section_id": "section_Suggestive_Findings",
+        "paragraph_id": "p16",
+        "char_start": 1264,
+        "char_end": 1277
+      },
+      {
+        "sentence_id": "p17_s1",
+        "section": "Suggestive Findings",
+        "text": "Bifid uvula / cleft palate",
+        "section_id": "section_Suggestive_Findings",
+        "paragraph_id": "p17",
+        "char_start": 1279,
+        "char_end": 1305
+      },
+      {
+        "sentence_id": "p18_s1",
+        "section": "Suggestive Findings",
+        "text": "Craniosynostosis, in which any sutures can be involved",
+        "section_id": "section_Suggestive_Findings",
+        "paragraph_id": "p18",
+        "char_start": 1307,
+        "char_end": 1361
+      },
+      {
+        "sentence_id": "p19_s1",
+        "section": "Suggestive Findings",
+        "text": "Cutaneous",
+        "section_id": "section_Suggestive_Findings",
+        "paragraph_id": "p19",
+        "char_start": 1363,
+        "char_end": 1372
+      },
+      {
+        "sentence_id": "p20_s1",
+        "section": "Suggestive Findings",
+        "text": "Soft and velvety skin",
+        "section_id": "section_Suggestive_Findings",
+        "paragraph_id": "p20",
+        "char_start": 1374,
+        "char_end": 1395
+      },
+      {
+        "sentence_id": "p21_s1",
+        "section": "Suggestive Findings",
+        "text": "Translucent skin with easily visible underlying veins",
+        "section_id": "section_Suggestive_Findings",
+        "paragraph_id": "p21",
+        "char_start": 1397,
+        "char_end": 1450
+      },
+      {
+        "sentence_id": "p22_s1",
+        "section": "Suggestive Findings",
+        "text": "Easy bruising",
+        "section_id": "section_Suggestive_Findings",
+        "paragraph_id": "p22",
+        "char_start": 1452,
+        "char_end": 1465
+      },
+      {
+        "sentence_id": "p23_s1",
+        "section": "Suggestive Findings",
+        "text": "Dystrophic scars",
+        "section_id": "section_Suggestive_Findings",
+        "paragraph_id": "p23",
+        "char_start": 1467,
+        "char_end": 1483
+      },
+      {
+        "sentence_id": "p24_s1",
+        "section": "Suggestive Findings",
+        "text": "Milia, predominantly on the face",
+        "section_id": "section_Suggestive_Findings",
+        "paragraph_id": "p24",
+        "char_start": 1485,
+        "char_end": 1517
+      },
+      {
+        "sentence_id": "p25_s1",
+        "section": "Suggestive Findings",
+        "text": "Allergic/inflammatory disease",
+        "section_id": "section_Suggestive_Findings",
+        "paragraph_id": "p25",
+        "char_start": 1519,
+        "char_end": 1548
+      },
+      {
+        "sentence_id": "p26_s1",
+        "section": "Suggestive Findings",
+        "text": "Food allergies",
+        "section_id": "section_Suggestive_Findings",
+        "paragraph_id": "p26",
+        "char_start": 1550,
+        "char_end": 1564
+      },
+      {
+        "sentence_id": "p27_s1",
+        "section": "Suggestive Findings",
+        "text": "Seasonal allergies",
+        "section_id": "section_Suggestive_Findings",
+        "paragraph_id": "p27",
+        "char_start": 1566,
+        "char_end": 1584
+      },
+      {
+        "sentence_id": "p28_s1",
+        "section": "Suggestive Findings",
+        "text": "Asthma / chronic sinusitis",
+        "section_id": "section_Suggestive_Findings",
+        "paragraph_id": "p28",
+        "char_start": 1586,
+        "char_end": 1612
+      },
+      {
+        "sentence_id": "p29_s1",
+        "section": "Suggestive Findings",
+        "text": "Eczema",
+        "section_id": "section_Suggestive_Findings",
+        "paragraph_id": "p29",
+        "char_start": 1614,
+        "char_end": 1620
+      },
+      {
+        "sentence_id": "p30_s1",
+        "section": "Suggestive Findings",
+        "text": "Eosinophilic esophagitis/gastritis",
+        "section_id": "section_Suggestive_Findings",
+        "paragraph_id": "p30",
+        "char_start": 1622,
+        "char_end": 1656
+      },
+      {
+        "sentence_id": "p31_s1",
+        "section": "Suggestive Findings",
+        "text": "Inflammatory bowel disease",
+        "section_id": "section_Suggestive_Findings",
+        "paragraph_id": "p31",
+        "char_start": 1658,
+        "char_end": 1684
+      },
+      {
+        "sentence_id": "p32_s1",
+        "section": "Suggestive Findings",
+        "text": "Ocular.",
+        "section_id": "section_Suggestive_Findings",
+        "paragraph_id": "p32",
+        "char_start": 1686,
+        "char_end": 1693
+      },
+      {
+        "sentence_id": "p32_s2",
+        "section": "Suggestive Findings",
+        "text": "Blue or dusky sclerae",
+        "section_id": "section_Suggestive_Findings",
+        "paragraph_id": "p32",
+        "char_start": 1694,
+        "char_end": 1715
+      },
+      {
+        "sentence_id": "p33_s1",
+        "section": "Suggestive Findings",
+        "text": "Family history is most often consistent with autosomal dominant inheritance (e.g., affected males and females in multiple generations), except in those with IPO8 -related LDS (LDS7), which is inherited in an autosomal recessive manner.",
+        "section_id": "section_Suggestive_Findings",
+        "paragraph_id": "p33",
+        "char_start": 1717,
+        "char_end": 1952
+      },
+      {
+        "sentence_id": "p33_s2",
+        "section": "Suggestive Findings",
+        "text": "Absence of a known family history does not preclude the diagnosis.",
+        "section_id": "section_Suggestive_Findings",
+        "paragraph_id": "p33",
+        "char_start": 1953,
+        "char_end": 2019
+      },
+      {
+        "sentence_id": "p34_s1",
+        "section": "Clinical Description",
+        "text": "Loeys-Dietz syndrome (LDS) represents a wide phenotypic spectrum in which affected individuals may have various combinations of clinical features ranging from a severe syndromic presentation with significant extravascular systemic findings in young children to predominantly thoracic aortic aneurysm/dissection occurring in adults.",
+        "section_id": "section_Clinical_Description",
+        "paragraph_id": "p34",
+        "char_start": 2021,
+        "char_end": 2352
+      },
+      {
+        "sentence_id": "p34_s2",
+        "section": "Clinical Description",
+        "text": "Clinical variability is also observed among individuals in the same family who have the same pathogenic variant.",
+        "section_id": "section_Clinical_Description",
+        "paragraph_id": "p34",
+        "char_start": 2353,
+        "char_end": 2465
+      },
+      {
+        "sentence_id": "p34_s3",
+        "section": "Clinical Description",
+        "text": "The most common findings involve the vascular, skeletal, craniofacial, cutaneous, allergic/inflammatory, and ocular systems [ Loeys et al 2005 , Loeys et al 2006 ].",
+        "section_id": "section_Clinical_Description",
+        "paragraph_id": "p34",
+        "char_start": 2466,
+        "char_end": 2630
+      },
+      {
+        "sentence_id": "p35_s1",
+        "section": "Cardiovascular",
+        "text": "The major sources of morbidity and early mortality in LDS are dilatation of the aorta at the level of the sinuses of Valsalva, a predisposition for aortic dissection and rupture, mitral valve prolapse (MVP) with or without regurgitation, and enlargement of the proximal pulmonary artery.",
+        "section_id": "section_Cardiovascular",
+        "paragraph_id": "p35",
+        "char_start": 2632,
+        "char_end": 2919
+      },
+      {
+        "sentence_id": "p36_s1",
+        "section": "Cardiovascular",
+        "text": "Individuals with LDS have more severe vascular disease (with frequent involvement of vascular segments distant from the aortic root) than that observed in Marfan syndrome .",
+        "section_id": "section_Cardiovascular",
+        "paragraph_id": "p36",
+        "char_start": 2921,
+        "char_end": 3093
+      },
+      {
+        "sentence_id": "p36_s2",
+        "section": "Cardiovascular",
+        "text": "Attias et al [2009] reported that the proportion of individuals with aortic dilatation, the age at dissection, and the need for surgery were similar in those with a heterozygous TGFBR2 pathogenic variant and those with a heterozygous FBN1 pathogenic variant causative of Marfan syndrome; however, the rate of dissection leading to death was greater in affected individuals with a heterozygous TGFBR2 pathogenic variant.",
+        "section_id": "section_Cardiovascular",
+        "paragraph_id": "p36",
+        "char_start": 3094,
+        "char_end": 3513
+      },
+      {
+        "sentence_id": "p36_s3",
+        "section": "Cardiovascular",
+        "text": "In a systematic review of 3,896 individuals with LDS, the range of rate of aortic dissections were reported as follows: TGFBR1 -related LDS, 17%-25%; TGFBR2 -related LDS, 16%-35%; SMAD3 -related LDS, 0%-33%; TGFB2 -related LDS, 9%-11%; TGFB3-related LDS, 23% [ Gouda et al 2022 ].",
+        "section_id": "section_Cardiovascular",
+        "paragraph_id": "p36",
+        "char_start": 3514,
+        "char_end": 3794
+      },
+      {
+        "sentence_id": "p37_s1",
+        "section": "Cardiovascular",
+        "text": "Arterial aneurysms have been observed in almost all side branches of the aorta including (but not limited to) the subclavian, renal, superior mesenteric, hepatic, and coronary arteries.",
+        "section_id": "section_Cardiovascular",
+        "paragraph_id": "p37",
+        "char_start": 3796,
+        "char_end": 3981
+      },
+      {
+        "sentence_id": "p38_s1",
+        "section": "Cardiovascular",
+        "text": "Aortic dissection has been observed in early childhood (age ≥6 months) and/or at aortic dimensions that do not confer risk of dissection in other connective tissue disorders such as Marfan syndrome.",
+        "section_id": "section_Cardiovascular",
+        "paragraph_id": "p38",
+        "char_start": 3983,
+        "char_end": 4181
+      },
+      {
+        "sentence_id": "p39_s1",
+        "section": "Cardiovascular",
+        "text": "Arterial tortuosity can be generalized but most commonly involves the head and neck vessels.",
+        "section_id": "section_Cardiovascular",
+        "paragraph_id": "p39",
+        "char_start": 4183,
+        "char_end": 4275
+      },
+      {
+        "sentence_id": "p40_s1",
+        "section": "Cardiovascular",
+        "text": "The arterial involvement is widespread, and arterial tortuosity is present in a majority of affected individuals.",
+        "section_id": "section_Cardiovascular",
+        "paragraph_id": "p40",
+        "char_start": 4277,
+        "char_end": 4390
+      },
+      {
+        "sentence_id": "p41_s1",
+        "section": "Cardiovascular",
+        "text": "Most affected individuals have multiple arterial anomalies.",
+        "section_id": "section_Cardiovascular",
+        "paragraph_id": "p41",
+        "char_start": 4392,
+        "char_end": 4451
+      },
+      {
+        "sentence_id": "p42_s1",
+        "section": "Cardiovascular",
+        "text": "Vertebral and carotid artery dissection and cerebral bleeding have been described; rarely, isolated carotid artery dissection in the absence of aortic root involvement has been observed [ Huguenard et al 2022 ].",
+        "section_id": "section_Cardiovascular",
+        "paragraph_id": "p42",
+        "char_start": 4453,
+        "char_end": 4664
+      },
+      {
+        "sentence_id": "p43_s1",
+        "section": "Cardiovascular",
+        "text": "MVP with mitral regurgitation has been observed in individuals with LDS, although less frequently than in Marfan syndrome.",
+        "section_id": "section_Cardiovascular",
+        "paragraph_id": "p43",
+        "char_start": 4666,
+        "char_end": 4788
+      },
+      {
+        "sentence_id": "p44_s1",
+        "section": "Cardiovascular",
+        "text": "Other recurrent cardiovascular findings include patent ductus arteriosus, atrial septal defects, and bicuspid aortic valve.",
+        "section_id": "section_Cardiovascular",
+        "paragraph_id": "p44",
+        "char_start": 4790,
+        "char_end": 4913
+      },
+      {
+        "sentence_id": "p44_s2",
+        "section": "Cardiovascular",
+        "text": "Although all these findings are common in individuals who do not have LDS, the incidence in LDS exceeds by at least five times that seen in the general population.",
+        "section_id": "section_Cardiovascular",
+        "paragraph_id": "p44",
+        "char_start": 4914,
+        "char_end": 5077
+      },
+      {
+        "sentence_id": "p45_s1",
+        "section": "Cardiovascular",
+        "text": "Aortic histopathology.",
+        "section_id": "section_Cardiovascular",
+        "paragraph_id": "p45",
+        "char_start": 5079,
+        "char_end": 5101
+      },
+      {
+        "sentence_id": "p45_s2",
+        "section": "Cardiovascular",
+        "text": "Histologic examination of aortic tissue reveals fragmentation of elastic fibers, loss of elastin content, and accumulation of amorphous matrix components in the aortic media.",
+        "section_id": "section_Cardiovascular",
+        "paragraph_id": "p45",
+        "char_start": 5102,
+        "char_end": 5276
+      },
+      {
+        "sentence_id": "p45_s3",
+        "section": "Cardiovascular",
+        "text": "Structural analysis shows loss of the intimate spatial association between elastin deposits and vascular smooth muscle cells and a marked excess of aortic wall collagen.",
+        "section_id": "section_Cardiovascular",
+        "paragraph_id": "p45",
+        "char_start": 5277,
+        "char_end": 5446
+      },
+      {
+        "sentence_id": "p45_s4",
+        "section": "Cardiovascular",
+        "text": "These characteristics are observed in young children and in the absence of inflammation, suggesting a severe defect in elastogenesis rather than secondary elastic fiber destruction.",
+        "section_id": "section_Cardiovascular",
+        "paragraph_id": "p45",
+        "char_start": 5447,
+        "char_end": 5628
+      },
+      {
+        "sentence_id": "p46_s1",
+        "section": "Cardiovascular",
+        "text": "Aortic samples from individuals with LDS had significantly more diffuse medial degeneration than did samples from individuals with Marfan syndrome or control individuals.",
+        "section_id": "section_Cardiovascular",
+        "paragraph_id": "p46",
+        "char_start": 5630,
+        "char_end": 5800
+      },
+      {
+        "sentence_id": "p46_s2",
+        "section": "Cardiovascular",
+        "text": "The changes are not entirely specific for LDS, but in the appropriate clinicopathologic setting help differentiate it from other vascular diseases [ Maleszewski et al 2009 ].",
+        "section_id": "section_Cardiovascular",
+        "paragraph_id": "p46",
+        "char_start": 5801,
+        "char_end": 5975
+      },
+      {
+        "sentence_id": "p47_s1",
+        "section": "Skeletal",
+        "text": "The skeletal findings are characterized by Marfan syndrome-like skeletal features and joint laxity or contractures [ Erkula et al 2010 ].",
+        "section_id": "section_Skeletal",
+        "paragraph_id": "p47",
+        "char_start": 5977,
+        "char_end": 6114
+      },
+      {
+        "sentence_id": "p48_s1",
+        "section": "Skeletal",
+        "text": "Skeletal overgrowth in LDS is less pronounced than in Marfan syndrome and usually affects the digits (arachnodactyly) more prominently than the long bones.",
+        "section_id": "section_Skeletal",
+        "paragraph_id": "p48",
+        "char_start": 6116,
+        "char_end": 6271
+      },
+      {
+        "sentence_id": "p49_s1",
+        "section": "Skeletal",
+        "text": "Combined thumb and wrist signs were present in one third of individuals with LDS.",
+        "section_id": "section_Skeletal",
+        "paragraph_id": "p49",
+        "char_start": 6273,
+        "char_end": 6354
+      },
+      {
+        "sentence_id": "p49_s2",
+        "section": "Skeletal",
+        "text": "Note: (1) The Walker-Murdoch wrist sign is the overlapping of the complete distal phalanx of the thumb and fifth finger when wrapped around the opposite wrist. (2) The \"thumb sign\" (Steinberg) is an extension of the entire distal phalanx of the thumb beyond the ulnar border of the hand when apposed across the palm.",
+        "section_id": "section_Skeletal",
+        "paragraph_id": "p49",
+        "char_start": 6355,
+        "char_end": 6671
+      },
+      {
+        "sentence_id": "p50_s1",
+        "section": "Skeletal",
+        "text": "Dolichostenomelia (leading to an increase in the arm span-to-height ratio and a decrease in the upper-to-lower segment ratio) is less common in LDS than in Marfan syndrome.",
+        "section_id": "section_Skeletal",
+        "paragraph_id": "p50",
+        "char_start": 6673,
+        "char_end": 6845
+      },
+      {
+        "sentence_id": "p51_s1",
+        "section": "Skeletal",
+        "text": "Overgrowth of the ribs can push the sternum in (pectus excavatum) or out (pectus carinatum).",
+        "section_id": "section_Skeletal",
+        "paragraph_id": "p51",
+        "char_start": 6847,
+        "char_end": 6939
+      },
+      {
+        "sentence_id": "p52_s1",
+        "section": "Skeletal",
+        "text": "Joint hypermobility is common and can include congenital hip dislocation and recurrent joint subluxations.",
+        "section_id": "section_Skeletal",
+        "paragraph_id": "p52",
+        "char_start": 6941,
+        "char_end": 7047
+      },
+      {
+        "sentence_id": "p52_s2",
+        "section": "Skeletal",
+        "text": "Paradoxically, some individuals can show reduced joint mobility, especially of the hands (camptodactyly) and feet (clubfeet).",
+        "section_id": "section_Skeletal",
+        "paragraph_id": "p52",
+        "char_start": 7048,
+        "char_end": 7173
+      },
+      {
+        "sentence_id": "p53_s1",
+        "section": "Skeletal",
+        "text": "Spine anomalies, including congenital malformations of the cervical vertebrae and cervical spine instability, are common, especially in individuals with more severe craniofacial features.",
+        "section_id": "section_Skeletal",
+        "paragraph_id": "p53",
+        "char_start": 7175,
+        "char_end": 7362
+      },
+      {
+        "sentence_id": "p54_s1",
+        "section": "Skeletal",
+        "text": "Preliminary data suggest that approximately 15% (or more) of affected individuals have structural cervical spine anomalies and at least 25% have cervical spine instability.",
+        "section_id": "section_Skeletal",
+        "paragraph_id": "p54",
+        "char_start": 7364,
+        "char_end": 7536
+      },
+      {
+        "sentence_id": "p55_s1",
+        "section": "Skeletal",
+        "text": "Other skeletal findings",
+        "section_id": "section_Skeletal",
+        "paragraph_id": "p55",
+        "char_start": 7538,
+        "char_end": 7561
+      },
+      {
+        "sentence_id": "p56_s1",
+        "section": "Skeletal",
+        "text": "Spondylolisthesis and scoliosis can be mild or severe and progressive.",
+        "section_id": "section_Skeletal",
+        "paragraph_id": "p56",
+        "char_start": 7563,
+        "char_end": 7633
+      },
+      {
+        "sentence_id": "p57_s1",
+        "section": "Skeletal",
+        "text": "Acetabular protrusion, present in one third of individuals, is usually mild but can be associated with pain or functional limitations.",
+        "section_id": "section_Skeletal",
+        "paragraph_id": "p57",
+        "char_start": 7635,
+        "char_end": 7769
+      },
+      {
+        "sentence_id": "p58_s1",
+        "section": "Skeletal",
+        "text": "Pes planus, often associated with inward rotation at the ankle, contributes to difficulty with ambulation, leg fatigue, and muscle cramps.",
+        "section_id": "section_Skeletal",
+        "paragraph_id": "p58",
+        "char_start": 7771,
+        "char_end": 7909
+      },
+      {
+        "sentence_id": "p59_s1",
+        "section": "Skeletal",
+        "text": "Preliminary evidence suggests that individuals with LDS have an increased incidence of osteoporosis with increased fracture incidence and delayed bone healing [ Kirmani et al 2010 ].",
+        "section_id": "section_Skeletal",
+        "paragraph_id": "p59",
+        "char_start": 7911,
+        "char_end": 8093
+      },
+      {
+        "sentence_id": "p60_s1",
+        "section": "Skeletal",
+        "text": "Note: Musculoskeletal findings, including hypotonia, have been observed in neonates with LDS [ Yetman et al 2007 ].",
+        "section_id": "section_Skeletal",
+        "paragraph_id": "p60",
+        "char_start": 8095,
+        "char_end": 8210
+      },
+      {
+        "sentence_id": "p61_s1",
+        "section": "Craniofacial",
+        "text": "In their most severe presentation, craniofacial anomalies in individuals with LDS are characterized by hypertelorism and craniosynostosis.",
+        "section_id": "section_Craniofacial",
+        "paragraph_id": "p61",
+        "char_start": 8212,
+        "char_end": 8350
+      },
+      {
+        "sentence_id": "p61_s2",
+        "section": "Craniofacial",
+        "text": "Craniosynostosis most commonly involves premature fusion of the sagittal suture (resulting in dolichocephaly).",
+        "section_id": "section_Craniofacial",
+        "paragraph_id": "p61",
+        "char_start": 8351,
+        "char_end": 8461
+      },
+      {
+        "sentence_id": "p61_s3",
+        "section": "Craniofacial",
+        "text": "Coronal suture synostosis (resulting in brachycephaly) and metopic suture synostosis (resulting in trigonocephaly) have also been described.",
+        "section_id": "section_Craniofacial",
+        "paragraph_id": "p61",
+        "char_start": 8462,
+        "char_end": 8602
+      },
+      {
+        "sentence_id": "p62_s1",
+        "section": "Craniofacial",
+        "text": "Bifid uvula is considered the mildest expression of a cleft palate.",
+        "section_id": "section_Craniofacial",
+        "paragraph_id": "p62",
+        "char_start": 8604,
+        "char_end": 8671
+      },
+      {
+        "sentence_id": "p62_s2",
+        "section": "Craniofacial",
+        "text": "Sometimes the uvula has an unusual broad appearance with or without a midline raphe.",
+        "section_id": "section_Craniofacial",
+        "paragraph_id": "p62",
+        "char_start": 8672,
+        "char_end": 8756
+      },
+      {
+        "sentence_id": "p63_s1",
+        "section": "Craniofacial",
+        "text": "Other craniofacial characteristics include malar flattening and retrognathia.",
+        "section_id": "section_Craniofacial",
+        "paragraph_id": "p63",
+        "char_start": 8758,
+        "char_end": 8835
+      },
+      {
+        "sentence_id": "p64_s1",
+        "section": "Cutaneous",
+        "text": "The skin findings, similar to those seen in vascular Ehlers-Danlos syndrome (see Differential Diagnosis ), include velvety, thin, translucent skin with visible veins on the chest wall, easy bruising (occurring in locations more than just the lower legs), slower scar formation, and dystrophic scarring.",
+        "section_id": "section_Cutaneous",
+        "paragraph_id": "p64",
+        "char_start": 8837,
+        "char_end": 9139
+      },
+      {
+        "sentence_id": "p64_s2",
+        "section": "Cutaneous",
+        "text": "Inguinal, umbilical, and surgical hernias are common in individuals with LDS, although precise incidence estimates have not been determined.",
+        "section_id": "section_Cutaneous",
+        "paragraph_id": "p64",
+        "char_start": 9140,
+        "char_end": 9280
+      },
+      {
+        "sentence_id": "p65_s1",
+        "section": "Allergy and Gastrointestinal Disease",
+        "text": "Individuals with LDS are predisposed to developing allergic disease including asthma, food allergy, eczema, allergic rhinitis, and eosinophilic gastrointestinal disease.",
+        "section_id": "section_Allergy_and_Gastrointestinal_Disease",
+        "paragraph_id": "p65",
+        "char_start": 9282,
+        "char_end": 9451
+      },
+      {
+        "sentence_id": "p65_s2",
+        "section": "Allergy and Gastrointestinal Disease",
+        "text": "Some affected individuals have exhibited elevated immunoglobulin E levels, eosinophil counts, and T helper 2 (TH2) cytokines in plasma [ Frischmeyer-Guerrerio et al 2013 , Felgentreff et al 2014 ].",
+        "section_id": "section_Allergy_and_Gastrointestinal_Disease",
+        "paragraph_id": "p65",
+        "char_start": 9452,
+        "char_end": 9649
+      },
+      {
+        "sentence_id": "p66_s1",
+        "section": "Ocular",
+        "text": "Myopia is less frequent and less severe than that seen in Marfan syndrome.",
+        "section_id": "section_Ocular",
+        "paragraph_id": "p66",
+        "char_start": 9651,
+        "char_end": 9725
+      },
+      {
+        "sentence_id": "p66_s2",
+        "section": "Ocular",
+        "text": "Significant refractive errors can lead to amblyopia.",
+        "section_id": "section_Ocular",
+        "paragraph_id": "p66",
+        "char_start": 9726,
+        "char_end": 9778
+      },
+      {
+        "sentence_id": "p66_s3",
+        "section": "Ocular",
+        "text": "Other common ocular features include strabismus and blue sclerae.",
+        "section_id": "section_Ocular",
+        "paragraph_id": "p66",
+        "char_start": 9779,
+        "char_end": 9844
+      },
+      {
+        "sentence_id": "p66_s4",
+        "section": "Ocular",
+        "text": "Retinal detachment has been reported rarely.",
+        "section_id": "section_Ocular",
+        "paragraph_id": "p66",
+        "char_start": 9845,
+        "char_end": 9889
+      },
+      {
+        "sentence_id": "p66_s5",
+        "section": "Ocular",
+        "text": "Ectopia lentis is not observed except in exceedingly rare case reports of unclear significance.",
+        "section_id": "section_Ocular",
+        "paragraph_id": "p66",
+        "char_start": 9890,
+        "char_end": 9985
+      },
+      {
+        "sentence_id": "p67_s1",
+        "section": "Other",
+        "text": "As in other connective tissue disorders, pneumothorax occurs at increased frequency.",
+        "section_id": "section_Other",
+        "paragraph_id": "p67",
+        "char_start": 9987,
+        "char_end": 10071
+      },
+      {
+        "sentence_id": "p67_s2",
+        "section": "Other",
+        "text": "Precise incidence estimates have not been determined.",
+        "section_id": "section_Other",
+        "paragraph_id": "p67",
+        "char_start": 10072,
+        "char_end": 10125
+      },
+      {
+        "sentence_id": "p68_s1",
+        "section": "Other",
+        "text": "Life-threatening manifestations include spontaneous rupture of the spleen and bowel, and uterine rupture during pregnancy.",
+        "section_id": "section_Other",
+        "paragraph_id": "p68",
+        "char_start": 10127,
+        "char_end": 10249
+      },
+      {
+        "sentence_id": "p69_s1",
+        "section": "Other",
+        "text": "The two most common neuroradiologic findings are dural ectasia (the precise incidence of which is unknown, as only a minority of affected individuals have undergone appropriate examination) and Arnold-Chiari type I malformation, which may be relatively rare.",
+        "section_id": "section_Other",
+        "paragraph_id": "p69",
+        "char_start": 10251,
+        "char_end": 10509
+      },
+      {
+        "sentence_id": "p70_s1",
+        "section": "Other",
+        "text": "A minority of affected individuals have developmental delay .",
+        "section_id": "section_Other",
+        "paragraph_id": "p70",
+        "char_start": 10511,
+        "char_end": 10572
+      },
+      {
+        "sentence_id": "p70_s2",
+        "section": "Other",
+        "text": "When present, developmental delay is most often associated with craniosynostosis and/or hydrocephalus, suggesting that developmental delay and/or learning disability is an extremely rare primary manifestation of LDS.",
+        "section_id": "section_Other",
+        "paragraph_id": "p70",
+        "char_start": 10573,
+        "char_end": 10789
+      },
+      {
+        "sentence_id": "p70_s3",
+        "section": "Other",
+        "text": "Motor developmental delay is related to muscle hypotonia.",
+        "section_id": "section_Other",
+        "paragraph_id": "p70",
+        "char_start": 10790,
+        "char_end": 10847
+      },
+      {
+        "sentence_id": "p71_s1",
+        "section": "Other",
+        "text": "Less common associated findings requiring further exploration include submandibular branchial cysts and defective tooth enamel.",
+        "section_id": "section_Other",
+        "paragraph_id": "p71",
+        "char_start": 10849,
+        "char_end": 10976
+      },
+      {
+        "sentence_id": "p72_s1",
+        "section": "Other",
+        "text": "Pregnancy.",
+        "section_id": "section_Other",
+        "paragraph_id": "p72",
+        "char_start": 10978,
+        "char_end": 10988
+      },
+      {
+        "sentence_id": "p72_s2",
+        "section": "Other",
+        "text": "Pregnancy can be dangerous for women with LDS due to increased risk of aortic dissection/rupture and uterine rupture; see Pregnancy Management .",
+        "section_id": "section_Other",
+        "paragraph_id": "p72",
+        "char_start": 10989,
+        "char_end": 11133
+      },
+      {
+        "sentence_id": "p73_s1",
+        "section": "Phenotype Correlations by Gene",
+        "text": "Genes are listed in Table 2 in order of phenotypic severity (from those genes associated with the most severe phenotype to the least severe phenotype).",
+        "section_id": "section_Phenotype_Correlations_by_Gene",
+        "paragraph_id": "p73",
+        "char_start": 11135,
+        "char_end": 11286
+      },
+      {
+        "sentence_id": "p74_s1",
+        "section": "Genotype-Phenotype Correlations",
+        "text": "While the implicated gene can correlate broadly with disease severity (see Phenotype Correlations by Gene ), there are few specific genotype-phenotype correlations in LDS.",
+        "section_id": "section_Genotype_Phenotype_Correlations",
+        "paragraph_id": "p74",
+        "char_start": 11288,
+        "char_end": 11459
+      },
+      {
+        "sentence_id": "p74_s2",
+        "section": "Genotype-Phenotype Correlations",
+        "text": "Wide intrafamilial and interfamilial phenotypic variability has been reported.",
+        "section_id": "section_Genotype_Phenotype_Correlations",
+        "paragraph_id": "p74",
+        "char_start": 11460,
+        "char_end": 11538
+      },
+      {
+        "sentence_id": "p74_s3",
+        "section": "Genotype-Phenotype Correlations",
+        "text": "The identical pathogenic variant has also been described in unrelated affected individuals with phenotypes ranging from predominantly thoracic aortic disease to classic and severe LDS.",
+        "section_id": "section_Genotype_Phenotype_Correlations",
+        "paragraph_id": "p74",
+        "char_start": 11539,
+        "char_end": 11723
+      },
+      {
+        "sentence_id": "p75_s1",
+        "section": "Penetrance",
+        "text": "Rare examples of non-penetrance in LDS have been documented.",
+        "section_id": "section_Penetrance",
+        "paragraph_id": "p75",
+        "char_start": 11725,
+        "char_end": 11785
+      },
+      {
+        "sentence_id": "p75_s2",
+        "section": "Penetrance",
+        "text": "In some instances, non-penetrance is explained by mosaicism [ Baban et al 2018 ].",
+        "section_id": "section_Penetrance",
+        "paragraph_id": "p75",
+        "char_start": 11786,
+        "char_end": 11867
+      },
+      {
+        "sentence_id": "p76_s1",
+        "section": "Nomenclature",
+        "text": "While various clinical presentations have in the past been labeled as LDS type I (craniofacial features present), LDS type II (minimal to absent craniofacial features), and LDS type III (presence of osteoarthritis), it is now recognized that LDS caused by a heterozygous pathogenic variant in any of the seven known genes (see Table 1 ) is a continuum in which affected individuals may have various combinations of clinical features.",
+        "section_id": "section_Nomenclature",
+        "paragraph_id": "p76",
+        "char_start": 11869,
+        "char_end": 12302
+      },
+      {
+        "sentence_id": "p77_s1",
+        "section": "Nomenclature",
+        "text": "Marfan syndrome type 2 was a designation initially applied by Mizuguchi et al [2004] to describe individuals with \"classic\" Marfan syndrome caused by a heterozygous pathogenic variant in TGFBR2 .",
+        "section_id": "section_Nomenclature",
+        "paragraph_id": "p77",
+        "char_start": 12304,
+        "char_end": 12499
+      },
+      {
+        "sentence_id": "p77_s2",
+        "section": "Nomenclature",
+        "text": "At the time of the report other discriminating features of LDS had not yet been described.",
+        "section_id": "section_Nomenclature",
+        "paragraph_id": "p77",
+        "char_start": 12500,
+        "char_end": 12590
+      },
+      {
+        "sentence_id": "p77_s3",
+        "section": "Nomenclature",
+        "text": "There has not been documentation of individuals with a heterozygous pathogenic variant in TGFBR1 or TGFBR2 that satisfied diagnostic criteria for Marfan syndrome, including the stipulation requiring absence of discriminating features of LDS [ Loeys et al 2006 , Van Hemelrijk et al 2010 ].",
+        "section_id": "section_Nomenclature",
+        "paragraph_id": "p77",
+        "char_start": 12591,
+        "char_end": 12880
+      },
+      {
+        "sentence_id": "p77_s4",
+        "section": "Nomenclature",
+        "text": "The term \"Marfan syndrome type 2\" should not be used to refer to LDS.",
+        "section_id": "section_Nomenclature",
+        "paragraph_id": "p77",
+        "char_start": 12881,
+        "char_end": 12950
+      },
+      {
+        "sentence_id": "p78_s1",
+        "section": "Nomenclature",
+        "text": "TGFB3 -related LDS may also be referred to as Rienhoff syndrome.",
+        "section_id": "section_Nomenclature",
+        "paragraph_id": "p78",
+        "char_start": 12952,
+        "char_end": 13016
+      },
+      {
+        "sentence_id": "p79_s1",
+        "section": "Prevalence",
+        "text": "The exact prevalence of LDS is unknown but estimated to be 1:50,000.",
+        "section_id": "section_Prevalence",
+        "paragraph_id": "p79",
+        "char_start": 13018,
+        "char_end": 13086
+      },
+      {
+        "sentence_id": "p79_s2",
+        "section": "Prevalence",
+        "text": "More than 1,000 families with LDS have been described in the literature.",
+        "section_id": "section_Prevalence",
+        "paragraph_id": "p79",
+        "char_start": 13087,
+        "char_end": 13159
+      }
+    ]
+  },
+  "phenotype_assertions": [
+    {
+      "assertion_local_id": "ph_001",
+      "label_raw": "aortic root dilatation",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p3_s2"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": "more than 95% of probands",
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_002",
+      "label_raw": "aortic dissection",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p35_s1",
+        "p38_s1"
+      ],
+      "qualifiers": {
+        "onset": "observed in early childhood (age ≥6 months)",
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": "at aortic dimensions that do not confer risk in other connective tissue disorders"
+      }
+    },
+    {
+      "assertion_local_id": "ph_003",
+      "label_raw": "arterial aneurysms",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p37_s1",
+        "p6_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": "subclavian, renal, superior mesenteric, hepatic, and coronary arteries",
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_004",
+      "label_raw": "arterial tortuosity",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p39_s1",
+        "p40_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": "majority of affected individuals",
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": "most commonly head and neck vessels",
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_005",
+      "label_raw": "vertebral and carotid artery dissection",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p42_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_006",
+      "label_raw": "cerebral bleeding",
+      "status": "present",
+      "clinical_role": "complication",
+      "evidence_sentence_ids": [
+        "p42_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_007",
+      "label_raw": "mitral valve prolapse with mitral regurgitation",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p43_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": "less frequently than in Marfan syndrome",
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_008",
+      "label_raw": "patent ductus arteriosus",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p44_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": "incidence exceeds general population by at least five times",
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_009",
+      "label_raw": "atrial septal defects",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p44_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": "incidence exceeds general population by at least five times",
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_010",
+      "label_raw": "bicuspid aortic valve",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p44_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": "incidence exceeds general population by at least five times",
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_011",
+      "label_raw": "enlargement of the proximal pulmonary artery",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p35_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_012",
+      "label_raw": "pectus excavatum",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p8_s1",
+        "p51_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_013",
+      "label_raw": "pectus carinatum",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p8_s1",
+        "p51_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_014",
+      "label_raw": "scoliosis",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p9_s1",
+        "p56_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": "mild or severe",
+        "progression": "progressive",
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_015",
+      "label_raw": "joint laxity",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p10_s1",
+        "p52_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": "typically involving the fingers",
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": "can include congenital hip dislocation and recurrent joint subluxations"
+      }
+    },
+    {
+      "assertion_local_id": "ph_016",
+      "label_raw": "joint contractures",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p10_s1",
+        "p52_s2"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": "especially hands (camptodactyly) and feet (clubfeet)",
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_017",
+      "label_raw": "arachnodactyly",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p11_s1",
+        "p48_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": "skeletal overgrowth affects digits more than long bones"
+      }
+    },
+    {
+      "assertion_local_id": "ph_018",
+      "label_raw": "talipes equinovarus",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p12_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_019",
+      "label_raw": "cervical spine malformation and/or instability",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p13_s1",
+        "p53_s1",
+        "p54_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": "approximately 15% structural anomalies; at least 25% instability",
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": "especially in individuals with more severe craniofacial features"
+      }
+    },
+    {
+      "assertion_local_id": "ph_020",
+      "label_raw": "osteoarthritis",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p14_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_021",
+      "label_raw": "spondylolisthesis",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p56_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_022",
+      "label_raw": "acetabular protrusion",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p57_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": "one third",
+        "severity": "usually mild",
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": "can be associated with pain or functional limitations"
+      }
+    },
+    {
+      "assertion_local_id": "ph_023",
+      "label_raw": "pes planus",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p58_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": "often associated with inward rotation at ankle; contributes to difficulty with ambulation, leg fatigue, muscle cramps"
+      }
+    },
+    {
+      "assertion_local_id": "ph_024",
+      "label_raw": "hypotonia",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p60_s1"
+      ],
+      "qualifiers": {
+        "onset": "neonates",
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_025",
+      "label_raw": "hypertelorism",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p16_s1",
+        "p61_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_026",
+      "label_raw": "craniosynostosis",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p18_s1",
+        "p61_s1",
+        "p61_s2",
+        "p61_s3"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": "most commonly sagittal suture (dolichocephaly); also coronal (brachycephaly) and metopic (trigonocephaly)"
+      }
+    },
+    {
+      "assertion_local_id": "ph_027",
+      "label_raw": "bifid uvula",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p17_s1",
+        "p62_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": "mildest expression of a cleft palate"
+      }
+    },
+    {
+      "assertion_local_id": "ph_028",
+      "label_raw": "cleft palate",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p17_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_029",
+      "label_raw": "malar flattening",
+      "status": "present",
+      "clinical_role": "descriptor",
+      "evidence_sentence_ids": [
+        "p63_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_030",
+      "label_raw": "retrognathia",
+      "status": "present",
+      "clinical_role": "descriptor",
+      "evidence_sentence_ids": [
+        "p63_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_031",
+      "label_raw": "soft and velvety skin",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p20_s1",
+        "p64_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_032",
+      "label_raw": "translucent skin with easily visible underlying veins",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p21_s1",
+        "p64_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_033",
+      "label_raw": "easy bruising",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p22_s1",
+        "p64_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": "more than just the lower legs",
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_034",
+      "label_raw": "dystrophic scars",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p23_s1",
+        "p64_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_035",
+      "label_raw": "milia",
+      "status": "present",
+      "clinical_role": "descriptor",
+      "evidence_sentence_ids": [
+        "p24_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": "predominantly on the face",
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_036",
+      "label_raw": "inguinal hernia",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p64_s2"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_037",
+      "label_raw": "umbilical hernia",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p64_s2"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_038",
+      "label_raw": "food allergies",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p26_s1",
+        "p65_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_039",
+      "label_raw": "asthma",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p28_s1",
+        "p65_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_040",
+      "label_raw": "eczema",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p29_s1",
+        "p65_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_041",
+      "label_raw": "allergic rhinitis",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p27_s1",
+        "p65_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_042",
+      "label_raw": "eosinophilic esophagitis/gastritis",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p30_s1",
+        "p65_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_043",
+      "label_raw": "inflammatory bowel disease",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p31_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_044",
+      "label_raw": "myopia",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p66_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": "less frequent than Marfan syndrome",
+        "severity": "less severe than Marfan syndrome",
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_045",
+      "label_raw": "strabismus",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p66_s3"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_046",
+      "label_raw": "blue sclerae",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p32_s2",
+        "p66_s3"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_047",
+      "label_raw": "pneumothorax",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p67_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": "increased frequency",
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_048",
+      "label_raw": "spontaneous rupture of the spleen",
+      "status": "present",
+      "clinical_role": "complication",
+      "evidence_sentence_ids": [
+        "p68_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": "life-threatening",
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_049",
+      "label_raw": "spontaneous rupture of the bowel",
+      "status": "present",
+      "clinical_role": "complication",
+      "evidence_sentence_ids": [
+        "p68_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": "life-threatening",
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_050",
+      "label_raw": "uterine rupture during pregnancy",
+      "status": "present",
+      "clinical_role": "complication",
+      "evidence_sentence_ids": [
+        "p68_s1",
+        "p72_s2"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": "life-threatening",
+        "progression": null,
+        "trigger": "pregnancy",
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_051",
+      "label_raw": "developmental delay",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p70_s1",
+        "p70_s2",
+        "p70_s3"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": "minority",
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": "most often associated with craniosynostosis and/or hydrocephalus; motor delay related to muscle hypotonia",
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": "extremely rare as primary manifestation"
+      }
+    },
+    {
+      "assertion_local_id": "ph_052",
+      "label_raw": "osteoporosis",
+      "status": "uncertain",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p59_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": "with increased fracture incidence and delayed bone healing"
+      }
+    },
+    {
+      "assertion_local_id": "ph_053",
+      "label_raw": "retinal detachment",
+      "status": "uncertain",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p66_s4"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_054",
+      "label_raw": "dural ectasia",
+      "status": "uncertain",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p69_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": "precise incidence unknown",
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_055",
+      "label_raw": "Arnold-Chiari type I malformation",
+      "status": "uncertain",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p69_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": "may be relatively rare",
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_056",
+      "label_raw": "submandibular branchial cysts",
+      "status": "uncertain",
+      "clinical_role": "descriptor",
+      "evidence_sentence_ids": [
+        "p71_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_057",
+      "label_raw": "defective tooth enamel",
+      "status": "uncertain",
+      "clinical_role": "descriptor",
+      "evidence_sentence_ids": [
+        "p71_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_058",
+      "label_raw": "ectopia lentis",
+      "status": "excluded",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p66_s5"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    }
+  ],
+  "ancillary_assertions": [
+    {
+      "ancillary_local_id": "anc_001",
+      "domain": "pathology",
+      "finding_raw": "fragmentation of elastic fibers, loss of elastin content, and accumulation of amorphous matrix components in the aortic media",
+      "status": "present",
+      "evidence_sentence_ids": [
+        "p45_s2"
+      ],
+      "related_phenotype_assertion_ids": [
+        "ph_001",
+        "ph_002"
+      ],
+      "qualifiers": {
+        "timing": null,
+        "frequency": null,
+        "severity": null,
+        "method": "histologic examination of aortic tissue",
+        "specimen": "aortic tissue",
+        "subtype_context": null
+      }
+    },
+    {
+      "ancillary_local_id": "anc_002",
+      "domain": "pathology",
+      "finding_raw": "loss of intimate spatial association between elastin deposits and vascular smooth muscle cells and a marked excess of aortic wall collagen",
+      "status": "present",
+      "evidence_sentence_ids": [
+        "p45_s3"
+      ],
+      "related_phenotype_assertion_ids": [
+        "ph_001",
+        "ph_002"
+      ],
+      "qualifiers": {
+        "timing": null,
+        "frequency": null,
+        "severity": null,
+        "method": "structural analysis",
+        "specimen": "aortic tissue",
+        "subtype_context": null
+      }
+    },
+    {
+      "ancillary_local_id": "anc_003",
+      "domain": "pathology",
+      "finding_raw": "severe defect in elastogenesis rather than secondary elastic fiber destruction; observed in young children in the absence of inflammation",
+      "status": "present",
+      "evidence_sentence_ids": [
+        "p45_s4"
+      ],
+      "related_phenotype_assertion_ids": [
+        "ph_001"
+      ],
+      "qualifiers": {
+        "timing": "young children",
+        "frequency": null,
+        "severity": null,
+        "method": null,
+        "specimen": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "ancillary_local_id": "anc_004",
+      "domain": "pathology",
+      "finding_raw": "significantly more diffuse medial degeneration than samples from individuals with Marfan syndrome or controls",
+      "status": "present",
+      "evidence_sentence_ids": [
+        "p46_s1"
+      ],
+      "related_phenotype_assertion_ids": [
+        "ph_001"
+      ],
+      "qualifiers": {
+        "timing": null,
+        "frequency": null,
+        "severity": null,
+        "method": null,
+        "specimen": "aortic samples",
+        "subtype_context": null
+      }
+    },
+    {
+      "ancillary_local_id": "anc_005",
+      "domain": "laboratory",
+      "finding_raw": "elevated immunoglobulin E levels, eosinophil counts, and T helper 2 (TH2) cytokines in plasma",
+      "status": "present",
+      "evidence_sentence_ids": [
+        "p65_s2"
+      ],
+      "related_phenotype_assertion_ids": [
+        "ph_038",
+        "ph_039",
+        "ph_040"
+      ],
+      "qualifiers": {
+        "timing": null,
+        "frequency": "some affected individuals",
+        "severity": null,
+        "method": null,
+        "specimen": "plasma",
+        "subtype_context": null
+      }
+    }
+  ],
+  "context_assertions": [
+    {
+      "context_local_id": "ctx_001",
+      "field_name": "inheritance",
+      "value": "Most often autosomal dominant, except IPO8-related LDS (LDS7) which is autosomal recessive.",
+      "evidence_sentence_ids": [
+        "p33_s1"
+      ]
+    },
+    {
+      "context_local_id": "ctx_003",
+      "field_name": "prevalence",
+      "value": "Exact prevalence unknown but estimated to be 1:50,000. More than 1,000 families described in the literature.",
+      "evidence_sentence_ids": [
+        "p79_s1",
+        "p79_s2"
+      ]
+    },
+    {
+      "context_local_id": "ctx_004",
+      "field_name": "natural_history",
+      "value": "Wide phenotypic spectrum ranging from severe syndromic presentation with significant extravascular systemic findings in young children to predominantly thoracic aortic aneurysm/dissection in adults. Aortic dissection observed as early as age 6 months.",
+      "evidence_sentence_ids": [
+        "p34_s1",
+        "p38_s1"
+      ]
+    },
+    {
+      "context_local_id": "ctx_005",
+      "field_name": "penetrance",
+      "value": "Rare examples of non-penetrance documented. In some instances, non-penetrance is explained by mosaicism.",
+      "evidence_sentence_ids": [
+        "p75_s1",
+        "p75_s2"
+      ]
+    }
+  ],
+  "trajectory_assertions": [
+    {
+      "trajectory_local_id": "traj_001",
+      "stage_order": 1,
+      "age_window": "neonatal/infancy",
+      "summary": "hypotonia and talipes equinovarus may be present in infancy; aortic dissection observed as early as age 6 months",
+      "manifestation_labels": [
+        "hypotonia",
+        "talipes equinovarus",
+        "aortic dissection"
+      ],
+      "evidence_sentence_ids": [
+        "p60_s1",
+        "p12_s1",
+        "p38_s1"
+      ]
+    },
+    {
+      "trajectory_local_id": "traj_002",
+      "stage_order": 2,
+      "age_window": "childhood through adulthood",
+      "summary": "progressive scoliosis, arterial aneurysms across side branches of the aorta, predisposition to allergic disease, and preliminary evidence of osteoporosis with increased fracture incidence",
+      "manifestation_labels": [
+        "scoliosis",
+        "arterial aneurysms",
+        "allergic disease",
+        "osteoporosis"
+      ],
+      "evidence_sentence_ids": [
+        "p56_s1",
+        "p37_s1",
+        "p65_s1",
+        "p59_s1"
+      ]
+    },
+    {
+      "trajectory_local_id": "traj_003",
+      "stage_order": 3,
+      "age_window": "pregnancy (women)",
+      "summary": "increased risk of aortic dissection/rupture and uterine rupture during pregnancy",
+      "manifestation_labels": [
+        "aortic dissection",
+        "uterine rupture"
+      ],
+      "evidence_sentence_ids": [
+        "p72_s2"
+      ]
+    }
+  ],
+  "extraction_notes": [
+    {
+      "note_local_id": "note_001",
+      "decision": "Ectopia lentis placed as excluded",
+      "rationale": "The chapter states 'Ectopia lentis is not observed except in exceedingly rare case reports of unclear significance.'",
+      "evidence_sentence_ids": [
+        "p66_s5"
+      ]
+    },
+    {
+      "note_local_id": "note_002",
+      "decision": "Osteoporosis placed as uncertain",
+      "rationale": "The chapter states 'preliminary evidence suggests' increased incidence — hedging language.",
+      "evidence_sentence_ids": [
+        "p59_s1"
+      ]
+    },
+    {
+      "note_local_id": "note_003",
+      "decision": "Dural ectasia and Arnold-Chiari I placed as uncertain",
+      "rationale": "The chapter describes dural ectasia as having 'precise incidence unknown' with 'only a minority of affected individuals have undergone appropriate examination.' Chiari I described as 'may be relatively rare.'",
+      "evidence_sentence_ids": [
+        "p69_s1"
+      ]
+    },
+    {
+      "note_local_id": "note_004",
+      "decision": "Retinal detachment placed as uncertain",
+      "rationale": "The chapter states 'reported rarely.'",
+      "evidence_sentence_ids": [
+        "p66_s4"
+      ]
+    },
+    {
+      "note_local_id": "note_005",
+      "decision": "Submandibular branchial cysts and defective tooth enamel placed as uncertain",
+      "rationale": "The chapter describes these as 'less common associated findings requiring further exploration.'",
+      "evidence_sentence_ids": [
+        "p71_s1"
+      ]
+    },
+    {
+      "note_local_id": "note_006",
+      "decision": "Developmental delay placed as present with clinical_role primary despite minority frequency",
+      "rationale": "The chapter states 'a minority of affected individuals have developmental delay' with a clear statement. However, it is qualified as 'most often associated with craniosynostosis and/or hydrocephalus' and 'extremely rare primary manifestation of LDS,' captured in pathophysiology qualifier.",
+      "evidence_sentence_ids": [
+        "p70_s1",
+        "p70_s2",
+        "p70_s3"
+      ]
+    },
+    {
+      "note_local_id": "note_007",
+      "decision": "Genotype-phenotype: few specific correlations exist; wide intrafamilial and interfamilial variability",
+      "rationale": "The chapter explicitly states this. The identical pathogenic variant has been seen in individuals ranging from predominantly thoracic aortic disease to classic severe LDS.",
+      "evidence_sentence_ids": [
+        "p74_s1",
+        "p74_s2",
+        "p74_s3"
+      ]
+    },
+    {
+      "note_local_id": "note_008",
+      "decision": "Genotype-phenotype: dissection rates vary by gene",
+      "rationale": "TGFBR1 17%-25%, TGFBR2 16%-35%, SMAD3 0%-33%, TGFB2 9%-11%, TGFB3 23%. Rate of dissection leading to death greater for TGFBR2 than for FBN1/Marfan.",
+      "evidence_sentence_ids": [
+        "p36_s2",
+        "p36_s3"
+      ]
+    },
+    {
+      "note_local_id": "note_009",
+      "decision": "Dolichostenomelia not emitted as phenotype row",
+      "rationale": "The chapter states it is 'less common in LDS than in Marfan syndrome' — present in LDS but a distinguishing negative vs Marfan. Not excluded, but framed comparatively. Captured in context of arachnodactyly qualifier (digits more than long bones).",
+      "evidence_sentence_ids": [
+        "p50_s1"
+      ]
+    },
+    {
+      "note_local_id": "note_010",
+      "decision": "Amblyopia not emitted as standalone phenotype",
+      "rationale": "The chapter describes amblyopia as a consequence of significant refractive errors ('can lead to'), not as a primary disease finding. This is a mechanism chain.",
+      "evidence_sentence_ids": [
+        "p66_s2"
+      ]
+    },
+    {
+      "note_local_id": "note_011",
+      "decision": "Former classification (LDS types I, II, III) not used",
+      "rationale": "The chapter states LDS is now recognized as a continuum. The former type designations are obsolete.",
+      "evidence_sentence_ids": [
+        "p76_s1"
+      ]
+    }
+  ]
+}

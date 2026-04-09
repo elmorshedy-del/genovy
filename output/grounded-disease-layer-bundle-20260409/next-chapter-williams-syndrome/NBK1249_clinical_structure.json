@@ -1,0 +1,1094 @@
+{
+  "created_at": "2026-04-09T05:18:33.729Z",
+  "nbk_id": "NBK1249",
+  "chapter_title": "Williams Syndrome",
+  "chapter_key": "williams_syndrome",
+  "provenance_url": "https://www.ncbi.nlm.nih.gov/books/NBK1249/",
+  "heading_inventory": [
+    {
+      "tag": "h3",
+      "heading": "Suggestive Findings"
+    },
+    {
+      "tag": "h2",
+      "heading": "Clinical Characteristics"
+    },
+    {
+      "tag": "h3",
+      "heading": "Clinical Description"
+    },
+    {
+      "tag": "h3",
+      "heading": "Table 2."
+    },
+    {
+      "tag": "h3",
+      "heading": "Genotype-Phenotype Correlations"
+    },
+    {
+      "tag": "h3",
+      "heading": "Penetrance"
+    },
+    {
+      "tag": "h3",
+      "heading": "Nomenclature"
+    },
+    {
+      "tag": "h3",
+      "heading": "Prevalence"
+    }
+  ],
+  "chapter_domains": [
+    {
+      "key": "neurologic",
+      "label": "Neurologic",
+      "evidence_headings": [],
+      "evidence_snippets": [
+        "nd is typically mild. Specific cognitive profile includes strengths in verbal short-term"
+      ]
+    },
+    {
+      "key": "ophthalmologic",
+      "label": "Ophthalmologic",
+      "evidence_headings": [],
+      "evidence_snippets": [
+        "ons can include sleep problems, ocular issues, hearing loss, dental problems, gastroin"
+      ]
+    },
+    {
+      "key": "auditory",
+      "label": "Auditory",
+      "evidence_headings": [],
+      "evidence_snippets": [
+        "occlusion, small jaw, and large ear lobes are observed at all ages (see Figure 2 )."
+      ]
+    },
+    {
+      "key": "gastrointestinal",
+      "label": "Gastrointestinal",
+      "evidence_headings": [],
+      "evidence_snippets": [
+        "ice, inguinal/umbilical hernia, bowel/bladder diverticulae, rectal prolapse, joint li"
+      ]
+    },
+    {
+      "key": "musculoskeletal",
+      "label": "Musculoskeletal",
+      "evidence_headings": [],
+      "evidence_snippets": [
+        "diverticulae, rectal prolapse, joint limitation or laxity, and soft, lax skin. Grow"
+      ]
+    },
+    {
+      "key": "dermatologic",
+      "label": "Dermatologic",
+      "evidence_headings": [],
+      "evidence_snippets": [
+        "tation or laxity, and soft, lax skin. Growth abnormalities include prenatal growth"
+      ]
+    },
+    {
+      "key": "craniofacial",
+      "label": "Craniofacial",
+      "evidence_headings": [],
+      "evidence_snippets": [
+        "Figure 3 ); adults have a long face and neck and sloping shoulders (see Figure 4 )."
+      ]
+    }
+  ],
+  "clinical_text": "Williams syndrome (WS) should be suspected in individuals with the following findings:\n\nIntellectual disability affects most individuals and is typically mild.\n\nSpecific cognitive profile includes strengths in verbal short-term memory and language and extreme weakness in visuospatial construction.\n\nUnique personality includes overfriendliness, empathy, generalized anxiety, specific phobias, and attention-deficit/hyperactivity disorder.\n\nCardiovascular disease (elastin arteriopathy). Supravalvar aortic stenosis is the most common. Peripheral pulmonic stenosis is common in infancy. Any artery may be narrowed.\n\nDistinctive facies. Broad forehead, bitemporal narrowing, periorbital fullness, a stellate/lacy iris pattern (see Figure 1 ), strabismus, short nose, broad nasal tip, malar flattening, long philtrum, thick vermilion of the upper and lower lips, wide mouth, malocclusion, small jaw, and large ear lobes are observed at all ages (see Figure 2 ). Young children have epicanthal folds, full cheeks, and small, widely spaced teeth (see Figure 3 ); adults have a long face and neck and sloping shoulders (see Figure 4 ).\n\nConnective tissue abnormalities include hoarse voice, inguinal/umbilical hernia, bowel/bladder diverticulae, rectal prolapse, joint limitation or laxity, and soft, lax skin.\n\nGrowth abnormalities include prenatal growth deficiency, postnatal poor weight gain, and decreased linear growth.\n\nEndocrine abnormalities include early puberty, hypercalcemia, hypercalciuria, hypothyroidism, and diabetes mellitus.\n\nNote: See the National Human Genome Research Institute (NHGRI) Atlas of Human Malformation Syndromes (scroll to ATLAS IMAGES ) for photographs of individuals with WS from diverse ethnic backgrounds.\n\nWilliams syndrome (WS) is a multisystem disorder characterized by cardiovascular disease (elastin arteriopathy, most often manifesting as supravalvar aortic stenosis), developmental delay, usually mild intellectual disability, a specific cognitive profile, unique personality characteristics, connective tissue abnormalities, growth abnormalities, other endocrine manifestations, and distinctive facies. Additional manifestations can include sleep problems, ocular issues, hearing loss, dental problems, gastrointestinal difficulties, urinary tract abnormalities, and musculoskeletal issues.\n\nThe 7q11.23 recurrent deletions of the Williams-Beuren syndrome critical region (WBSCR) comprise either 1.55 Mb (90%-95% of individuals with WS) or 1.84 Mb (5%-10% of individuals with WS) [ Palacios-Verdú et al 2015 ].\n\nELN deletion results in elastin arteriopathy.\n\nHypertension is less prevalent in individuals with WS whose deletion includes NCF1 , located in one of the blocks of low copy repeats that flank the WBSCR [ Del Campo et al 2006 ].\n\nA more severe phenotype with lower cognitive ability is observed in individuals with very large deletions (>2-4 Mb) that include the WBSCR than in individuals with a typical 1.5- to 1.8-Mb WBSCR deletion [ Stock et al 2003 , Marshall et al 2008 , Ramocki et al 2010 , Lugo et al 2020 ].\n\nDeletions within the WBSCR smaller than the recurrent deletions associated with WS are rare and are associated with a variable phenotype. Genotype-phenotype correlations are limited for genes other than ELN [ Kozel et al 2021 , Serrano-Juárez et al 2022 ].\n\nIndividuals with partial WBSCR deletions that include the usual telomeric breakpoint (including GTF2I ) have classic manifestations of WS, including intellectual disability [ Botta et al 1999 , Heller et al 2003 ]. Individuals with deletions of the WBSCR that include distal genes in the region (especially GTF2IRD1 and GTF2I ) are more likely to have intellectual disability and facial features characteristic of WS [ Alesi et al 2021 ]. One individual with a partial deletion of the WBSCR that included GTF2I had borderline adaptive and language development [ Zhou et al 2022 ].\n\nIndividuals with partial deletions that include ELN have SVAS.\n\nIndividuals with partial WBSCR deletions that include ELN but do not include deletion of GTF2I do not have intellectual disability but often demonstrate the WS cognitive profile [ Morris et al 2003 ]. In two families, deletion of ELN and LIMK1 was associated with the WS cognitive profile but not with intellectual disability or other characteristics of WS [ Frangiskakis et al 1996 ]. Another family with a similar deletion did not have the WS cognitive profile [ Tassabehji et al 2005 ].\n\nDeletions within the WBSCR may be of maternal or paternal origin [ Ewart et al 1993 , Urbán et al 1996 ]. No phenotypic differences have been related to the parent of origin in some series [ Wu et al 1998 ], while microcephaly has been correlated with maternal origin of the WBSCR deletion in others [ Del Campo et al 2006 ].\n\nPenetrance is 100%.\n\nThe first descriptions of WS were incomplete in that they reflected the chief complaint of the individual or the medical specialty of the observer. Thus, nephrologists and endocrinologists described \"idiopathic infantile hypercalcemia\" and cardiologists reported \"supravalvular aortic stenosis syndrome.\"\n\nEarly reports also noted dysmorphic facial features that were thought to resemble elves of legend: for a time, the term \"Williams elfin facies syndrome\" was used.\n\nAfter the reports of Williams et al [1961] and Beuren et al [1962] , the condition was called Williams syndrome in the US and Williams-Beuren syndrome in Europe.\n\nA study of WS in Norway reported a prevalence of 1:7,500 [ Strømme et al 2002 ].",
+  "text_sha256": "205ac0eaaed77226fad2e0d078a7afc91004160e1361390083ac455305ddba7d",
+  "paragraph_count": 25,
+  "sentence_count": 38,
+  "paragraphs": [
+    {
+      "paragraph_id": "p1",
+      "paragraph_index": 1,
+      "text": "Williams syndrome (WS) should be suspected in individuals with the following findings:",
+      "char_start": 0,
+      "char_end": 86,
+      "sentences": [
+        {
+          "sentence_id": "p1_s1",
+          "sentence_index": 1,
+          "text": "Williams syndrome (WS) should be suspected in individuals with the following findings:",
+          "char_start": 0,
+          "char_end": 86
+        }
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "paragraph_id": "p2",
+      "paragraph_index": 2,
+      "text": "Intellectual disability affects most individuals and is typically mild.",
+      "char_start": 88,
+      "char_end": 159,
+      "sentences": [
+        {
+          "sentence_id": "p2_s1",
+          "sentence_index": 1,
+          "text": "Intellectual disability affects most individuals and is typically mild.",
+          "char_start": 88,
+          "char_end": 159
+        }
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "paragraph_id": "p3",
+      "paragraph_index": 3,
+      "text": "Specific cognitive profile includes strengths in verbal short-term memory and language and extreme weakness in visuospatial construction.",
+      "char_start": 161,
+      "char_end": 298,
+      "sentences": [
+        {
+          "sentence_id": "p3_s1",
+          "sentence_index": 1,
+          "text": "Specific cognitive profile includes strengths in verbal short-term memory and language and extreme weakness in visuospatial construction.",
+          "char_start": 161,
+          "char_end": 298
+        }
+      ],
+      "local_clinical_domains": [
+        {
+          "key": "neurologic",
+          "label": "Neurologic",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "Specific cognitive profile includes strengths in verbal short-term"
+          ]
+        }
+      ]
+    },
+    {
+      "paragraph_id": "p4",
+      "paragraph_index": 4,
+      "text": "Unique personality includes overfriendliness, empathy, generalized anxiety, specific phobias, and attention-deficit/hyperactivity disorder.",
+      "char_start": 300,
+      "char_end": 439,
+      "sentences": [
+        {
+          "sentence_id": "p4_s1",
+          "sentence_index": 1,
+          "text": "Unique personality includes overfriendliness, empathy, generalized anxiety, specific phobias, and attention-deficit/hyperactivity disorder.",
+          "char_start": 300,
+          "char_end": 439
+        }
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "paragraph_id": "p5",
+      "paragraph_index": 5,
+      "text": "Cardiovascular disease (elastin arteriopathy). Supravalvar aortic stenosis is the most common. Peripheral pulmonic stenosis is common in infancy. Any artery may be narrowed.",
+      "char_start": 441,
+      "char_end": 614,
+      "sentences": [
+        {
+          "sentence_id": "p5_s1",
+          "sentence_index": 1,
+          "text": "Cardiovascular disease (elastin arteriopathy).",
+          "char_start": 441,
+          "char_end": 487
+        },
+        {
+          "sentence_id": "p5_s2",
+          "sentence_index": 2,
+          "text": "Supravalvar aortic stenosis is the most common.",
+          "char_start": 488,
+          "char_end": 535
+        },
+        {
+          "sentence_id": "p5_s3",
+          "sentence_index": 3,
+          "text": "Peripheral pulmonic stenosis is common in infancy.",
+          "char_start": 536,
+          "char_end": 586
+        },
+        {
+          "sentence_id": "p5_s4",
+          "sentence_index": 4,
+          "text": "Any artery may be narrowed.",
+          "char_start": 587,
+          "char_end": 614
+        }
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "paragraph_id": "p6",
+      "paragraph_index": 6,
+      "text": "Distinctive facies. Broad forehead, bitemporal narrowing, periorbital fullness, a stellate/lacy iris pattern (see Figure 1 ), strabismus, short nose, broad nasal tip, malar flattening, long philtrum, thick vermilion of the upper and lower lips, wide mouth, malocclusion, small jaw, and large ear lobes are observed at all ages (see Figure 2 ). Young children have epicanthal folds, full cheeks, and small, widely spaced teeth (see Figure 3 ); adults have a long face and neck and sloping shoulders (see Figure 4 ).",
+      "char_start": 616,
+      "char_end": 1130,
+      "sentences": [
+        {
+          "sentence_id": "p6_s1",
+          "sentence_index": 1,
+          "text": "Distinctive facies.",
+          "char_start": 616,
+          "char_end": 635
+        },
+        {
+          "sentence_id": "p6_s2",
+          "sentence_index": 2,
+          "text": "Broad forehead, bitemporal narrowing, periorbital fullness, a stellate/lacy iris pattern (see Figure 1 ), strabismus, short nose, broad nasal tip, malar flattening, long philtrum, thick vermilion of the upper and lower lips, wide mouth, malocclusion, small jaw, and large ear lobes are observed at all ages (see Figure 2 ).",
+          "char_start": 636,
+          "char_end": 959
+        },
+        {
+          "sentence_id": "p6_s3",
+          "sentence_index": 3,
+          "text": "Young children have epicanthal folds, full cheeks, and small, widely spaced teeth (see Figure 3 ); adults have a long face and neck and sloping shoulders (see Figure 4 ).",
+          "char_start": 960,
+          "char_end": 1130
+        }
+      ],
+      "local_clinical_domains": [
+        {
+          "key": "auditory",
+          "label": "Auditory",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "occlusion, small jaw, and large ear lobes are observed at all ages (see Figure 2 )."
+          ]
+        },
+        {
+          "key": "craniofacial",
+          "label": "Craniofacial",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "Figure 3 ); adults have a long face and neck and sloping shoulders (see Figure 4 )."
+          ]
+        }
+      ]
+    },
+    {
+      "paragraph_id": "p7",
+      "paragraph_index": 7,
+      "text": "Connective tissue abnormalities include hoarse voice, inguinal/umbilical hernia, bowel/bladder diverticulae, rectal prolapse, joint limitation or laxity, and soft, lax skin.",
+      "char_start": 1132,
+      "char_end": 1305,
+      "sentences": [
+        {
+          "sentence_id": "p7_s1",
+          "sentence_index": 1,
+          "text": "Connective tissue abnormalities include hoarse voice, inguinal/umbilical hernia, bowel/bladder diverticulae, rectal prolapse, joint limitation or laxity, and soft, lax skin.",
+          "char_start": 1132,
+          "char_end": 1305
+        }
+      ],
+      "local_clinical_domains": [
+        {
+          "key": "gastrointestinal",
+          "label": "Gastrointestinal",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "ice, inguinal/umbilical hernia, bowel/bladder diverticulae, rectal prolapse, joint li"
+          ]
+        },
+        {
+          "key": "musculoskeletal",
+          "label": "Musculoskeletal",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "diverticulae, rectal prolapse, joint limitation or laxity, and soft, lax skin."
+          ]
+        },
+        {
+          "key": "dermatologic",
+          "label": "Dermatologic",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "tation or laxity, and soft, lax skin."
+          ]
+        }
+      ]
+    },
+    {
+      "paragraph_id": "p8",
+      "paragraph_index": 8,
+      "text": "Growth abnormalities include prenatal growth deficiency, postnatal poor weight gain, and decreased linear growth.",
+      "char_start": 1307,
+      "char_end": 1420,
+      "sentences": [
+        {
+          "sentence_id": "p8_s1",
+          "sentence_index": 1,
+          "text": "Growth abnormalities include prenatal growth deficiency, postnatal poor weight gain, and decreased linear growth.",
+          "char_start": 1307,
+          "char_end": 1420
+        }
+      ],
+      "local_clinical_domains": [
+        {
+          "key": "musculoskeletal",
+          "label": "Musculoskeletal",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "Growth abnormalities include prenatal growth deficienc"
+          ]
+        }
+      ]
+    },
+    {
+      "paragraph_id": "p9",
+      "paragraph_index": 9,
+      "text": "Endocrine abnormalities include early puberty, hypercalcemia, hypercalciuria, hypothyroidism, and diabetes mellitus.",
+      "char_start": 1422,
+      "char_end": 1538,
+      "sentences": [
+        {
+          "sentence_id": "p9_s1",
+          "sentence_index": 1,
+          "text": "Endocrine abnormalities include early puberty, hypercalcemia, hypercalciuria, hypothyroidism, and diabetes mellitus.",
+          "char_start": 1422,
+          "char_end": 1538
+        }
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "paragraph_id": "p10",
+      "paragraph_index": 10,
+      "text": "Note: See the National Human Genome Research Institute (NHGRI) Atlas of Human Malformation Syndromes (scroll to ATLAS IMAGES ) for photographs of individuals with WS from diverse ethnic backgrounds.",
+      "char_start": 1540,
+      "char_end": 1738,
+      "sentences": [
+        {
+          "sentence_id": "p10_s1",
+          "sentence_index": 1,
+          "text": "Note: See the National Human Genome Research Institute (NHGRI) Atlas of Human Malformation Syndromes (scroll to ATLAS IMAGES ) for photographs of individuals with WS from diverse ethnic backgrounds.",
+          "char_start": 1540,
+          "char_end": 1738
+        }
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "paragraph_id": "p11",
+      "paragraph_index": 11,
+      "text": "Williams syndrome (WS) is a multisystem disorder characterized by cardiovascular disease (elastin arteriopathy, most often manifesting as supravalvar aortic stenosis), developmental delay, usually mild intellectual disability, a specific cognitive profile, unique personality characteristics, connective tissue abnormalities, growth abnormalities, other endocrine manifestations, and distinctive facies. Additional manifestations can include sleep problems, ocular issues, hearing loss, dental problems, gastrointestinal difficulties, urinary tract abnormalities, and musculoskeletal issues.",
+      "char_start": 1740,
+      "char_end": 2331,
+      "sentences": [
+        {
+          "sentence_id": "p11_s1",
+          "sentence_index": 1,
+          "text": "Williams syndrome (WS) is a multisystem disorder characterized by cardiovascular disease (elastin arteriopathy, most often manifesting as supravalvar aortic stenosis), developmental delay, usually mild intellectual disability, a specific cognitive profile, unique personality characteristics, connective tissue abnormalities, growth abnormalities, other endocrine manifestations, and distinctive facies.",
+          "char_start": 1740,
+          "char_end": 2143
+        },
+        {
+          "sentence_id": "p11_s2",
+          "sentence_index": 2,
+          "text": "Additional manifestations can include sleep problems, ocular issues, hearing loss, dental problems, gastrointestinal difficulties, urinary tract abnormalities, and musculoskeletal issues.",
+          "char_start": 2144,
+          "char_end": 2331
+        }
+      ],
+      "local_clinical_domains": [
+        {
+          "key": "neurologic",
+          "label": "Neurologic",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "s supravalvar aortic stenosis), developmental delay, usually mild intellectual disability, a"
+          ]
+        },
+        {
+          "key": "ophthalmologic",
+          "label": "Ophthalmologic",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "ons can include sleep problems, ocular issues, hearing loss, dental problems, gastroin"
+          ]
+        },
+        {
+          "key": "auditory",
+          "label": "Auditory",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "sleep problems, ocular issues, hearing loss, dental problems, gastrointestinal difficu"
+          ]
+        },
+        {
+          "key": "musculoskeletal",
+          "label": "Musculoskeletal",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "onnective tissue abnormalities, growth abnormalities, other endocrine manifestations,"
+          ]
+        }
+      ]
+    },
+    {
+      "paragraph_id": "p12",
+      "paragraph_index": 12,
+      "text": "The 7q11.23 recurrent deletions of the Williams-Beuren syndrome critical region (WBSCR) comprise either 1.55 Mb (90%-95% of individuals with WS) or 1.84 Mb (5%-10% of individuals with WS) [ Palacios-Verdú et al 2015 ].",
+      "char_start": 2333,
+      "char_end": 2551,
+      "sentences": [
+        {
+          "sentence_id": "p12_s1",
+          "sentence_index": 1,
+          "text": "The 7q11.23 recurrent deletions of the Williams-Beuren syndrome critical region (WBSCR) comprise either 1.55 Mb (90%-95% of individuals with WS) or 1.84 Mb (5%-10% of individuals with WS) [ Palacios-Verdú et al 2015 ].",
+          "char_start": 2333,
+          "char_end": 2551
+        }
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "paragraph_id": "p13",
+      "paragraph_index": 13,
+      "text": "ELN deletion results in elastin arteriopathy.",
+      "char_start": 2553,
+      "char_end": 2598,
+      "sentences": [
+        {
+          "sentence_id": "p13_s1",
+          "sentence_index": 1,
+          "text": "ELN deletion results in elastin arteriopathy.",
+          "char_start": 2553,
+          "char_end": 2598
+        }
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "paragraph_id": "p14",
+      "paragraph_index": 14,
+      "text": "Hypertension is less prevalent in individuals with WS whose deletion includes NCF1 , located in one of the blocks of low copy repeats that flank the WBSCR [ Del Campo et al 2006 ].",
+      "char_start": 2600,
+      "char_end": 2780,
+      "sentences": [
+        {
+          "sentence_id": "p14_s1",
+          "sentence_index": 1,
+          "text": "Hypertension is less prevalent in individuals with WS whose deletion includes NCF1 , located in one of the blocks of low copy repeats that flank the WBSCR [ Del Campo et al 2006 ].",
+          "char_start": 2600,
+          "char_end": 2780
+        }
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "paragraph_id": "p15",
+      "paragraph_index": 15,
+      "text": "A more severe phenotype with lower cognitive ability is observed in individuals with very large deletions (>2-4 Mb) that include the WBSCR than in individuals with a typical 1.5- to 1.8-Mb WBSCR deletion [ Stock et al 2003 , Marshall et al 2008 , Ramocki et al 2010 , Lugo et al 2020 ].",
+      "char_start": 2782,
+      "char_end": 3068,
+      "sentences": [
+        {
+          "sentence_id": "p15_s1",
+          "sentence_index": 1,
+          "text": "A more severe phenotype with lower cognitive ability is observed in individuals with very large deletions (>2-4 Mb) that include the WBSCR than in individuals with a typical 1.5- to 1.8-Mb WBSCR deletion [ Stock et al 2003 , Marshall et al 2008 , Ramocki et al 2010 , Lugo et al 2020 ].",
+          "char_start": 2782,
+          "char_end": 3068
+        }
+      ],
+      "local_clinical_domains": [
+        {
+          "key": "neurologic",
+          "label": "Neurologic",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "ore severe phenotype with lower cognitive ability is observed in individuals with very la"
+          ]
+        }
+      ]
+    },
+    {
+      "paragraph_id": "p16",
+      "paragraph_index": 16,
+      "text": "Deletions within the WBSCR smaller than the recurrent deletions associated with WS are rare and are associated with a variable phenotype. Genotype-phenotype correlations are limited for genes other than ELN [ Kozel et al 2021 , Serrano-Juárez et al 2022 ].",
+      "char_start": 3070,
+      "char_end": 3326,
+      "sentences": [
+        {
+          "sentence_id": "p16_s1",
+          "sentence_index": 1,
+          "text": "Deletions within the WBSCR smaller than the recurrent deletions associated with WS are rare and are associated with a variable phenotype.",
+          "char_start": 3070,
+          "char_end": 3207
+        },
+        {
+          "sentence_id": "p16_s2",
+          "sentence_index": 2,
+          "text": "Genotype-phenotype correlations are limited for genes other than ELN [ Kozel et al 2021 , Serrano-Juárez et al 2022 ].",
+          "char_start": 3208,
+          "char_end": 3326
+        }
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "paragraph_id": "p17",
+      "paragraph_index": 17,
+      "text": "Individuals with partial WBSCR deletions that include the usual telomeric breakpoint (including GTF2I ) have classic manifestations of WS, including intellectual disability [ Botta et al 1999 , Heller et al 2003 ]. Individuals with deletions of the WBSCR that include distal genes in the region (especially GTF2IRD1 and GTF2I ) are more likely to have intellectual disability and facial features characteristic of WS [ Alesi et al 2021 ]. One individual with a partial deletion of the WBSCR that included GTF2I had borderline adaptive and language development [ Zhou et al 2022 ].",
+      "char_start": 3328,
+      "char_end": 3908,
+      "sentences": [
+        {
+          "sentence_id": "p17_s1",
+          "sentence_index": 1,
+          "text": "Individuals with partial WBSCR deletions that include the usual telomeric breakpoint (including GTF2I ) have classic manifestations of WS, including intellectual disability [ Botta et al 1999 , Heller et al 2003 ].",
+          "char_start": 3328,
+          "char_end": 3542
+        },
+        {
+          "sentence_id": "p17_s2",
+          "sentence_index": 2,
+          "text": "Individuals with deletions of the WBSCR that include distal genes in the region (especially GTF2IRD1 and GTF2I ) are more likely to have intellectual disability and facial features characteristic of WS [ Alesi et al 2021 ].",
+          "char_start": 3543,
+          "char_end": 3766
+        },
+        {
+          "sentence_id": "p17_s3",
+          "sentence_index": 3,
+          "text": "One individual with a partial deletion of the WBSCR that included GTF2I had borderline adaptive and language development [ Zhou et al 2022 ].",
+          "char_start": 3767,
+          "char_end": 3908
+        }
+      ],
+      "local_clinical_domains": [
+        {
+          "key": "craniofacial",
+          "label": "Craniofacial",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "ave intellectual disability and facial features characteristic of WS [ Alesi et al 202"
+          ]
+        }
+      ]
+    },
+    {
+      "paragraph_id": "p18",
+      "paragraph_index": 18,
+      "text": "Individuals with partial deletions that include ELN have SVAS.",
+      "char_start": 3910,
+      "char_end": 3972,
+      "sentences": [
+        {
+          "sentence_id": "p18_s1",
+          "sentence_index": 1,
+          "text": "Individuals with partial deletions that include ELN have SVAS.",
+          "char_start": 3910,
+          "char_end": 3972
+        }
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "paragraph_id": "p19",
+      "paragraph_index": 19,
+      "text": "Individuals with partial WBSCR deletions that include ELN but do not include deletion of GTF2I do not have intellectual disability but often demonstrate the WS cognitive profile [ Morris et al 2003 ]. In two families, deletion of ELN and LIMK1 was associated with the WS cognitive profile but not with intellectual disability or other characteristics of WS [ Frangiskakis et al 1996 ]. Another family with a similar deletion did not have the WS cognitive profile [ Tassabehji et al 2005 ].",
+      "char_start": 3974,
+      "char_end": 4463,
+      "sentences": [
+        {
+          "sentence_id": "p19_s1",
+          "sentence_index": 1,
+          "text": "Individuals with partial WBSCR deletions that include ELN but do not include deletion of GTF2I do not have intellectual disability but often demonstrate the WS cognitive profile [ Morris et al 2003 ].",
+          "char_start": 3974,
+          "char_end": 4174
+        },
+        {
+          "sentence_id": "p19_s2",
+          "sentence_index": 2,
+          "text": "In two families, deletion of ELN and LIMK1 was associated with the WS cognitive profile but not with intellectual disability or other characteristics of WS [ Frangiskakis et al 1996 ].",
+          "char_start": 4175,
+          "char_end": 4359
+        },
+        {
+          "sentence_id": "p19_s3",
+          "sentence_index": 3,
+          "text": "Another family with a similar deletion did not have the WS cognitive profile [ Tassabehji et al 2005 ].",
+          "char_start": 4360,
+          "char_end": 4463
+        }
+      ],
+      "local_clinical_domains": [
+        {
+          "key": "neurologic",
+          "label": "Neurologic",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "ty but often demonstrate the WS cognitive profile [ Morris et al 2003 ]. In two families,"
+          ]
+        }
+      ]
+    },
+    {
+      "paragraph_id": "p20",
+      "paragraph_index": 20,
+      "text": "Deletions within the WBSCR may be of maternal or paternal origin [ Ewart et al 1993 , Urbán et al 1996 ]. No phenotypic differences have been related to the parent of origin in some series [ Wu et al 1998 ], while microcephaly has been correlated with maternal origin of the WBSCR deletion in others [ Del Campo et al 2006 ].",
+      "char_start": 4465,
+      "char_end": 4790,
+      "sentences": [
+        {
+          "sentence_id": "p20_s1",
+          "sentence_index": 1,
+          "text": "Deletions within the WBSCR may be of maternal or paternal origin [ Ewart et al 1993 , Urbán et al 1996 ].",
+          "char_start": 4465,
+          "char_end": 4570
+        },
+        {
+          "sentence_id": "p20_s2",
+          "sentence_index": 2,
+          "text": "No phenotypic differences have been related to the parent of origin in some series [ Wu et al 1998 ], while microcephaly has been correlated with maternal origin of the WBSCR deletion in others [ Del Campo et al 2006 ].",
+          "char_start": 4571,
+          "char_end": 4790
+        }
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "paragraph_id": "p21",
+      "paragraph_index": 21,
+      "text": "Penetrance is 100%.",
+      "char_start": 4792,
+      "char_end": 4811,
+      "sentences": [
+        {
+          "sentence_id": "p21_s1",
+          "sentence_index": 1,
+          "text": "Penetrance is 100%.",
+          "char_start": 4792,
+          "char_end": 4811
+        }
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "paragraph_id": "p22",
+      "paragraph_index": 22,
+      "text": "The first descriptions of WS were incomplete in that they reflected the chief complaint of the individual or the medical specialty of the observer. Thus, nephrologists and endocrinologists described \"idiopathic infantile hypercalcemia\" and cardiologists reported \"supravalvular aortic stenosis syndrome.\"",
+      "char_start": 4813,
+      "char_end": 5117,
+      "sentences": [
+        {
+          "sentence_id": "p22_s1",
+          "sentence_index": 1,
+          "text": "The first descriptions of WS were incomplete in that they reflected the chief complaint of the individual or the medical specialty of the observer.",
+          "char_start": 4813,
+          "char_end": 4960
+        },
+        {
+          "sentence_id": "p22_s2",
+          "sentence_index": 2,
+          "text": "Thus, nephrologists and endocrinologists described \"idiopathic infantile hypercalcemia\" and cardiologists reported \"supravalvular aortic stenosis syndrome.\"",
+          "char_start": 4961,
+          "char_end": 5117
+        }
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "paragraph_id": "p23",
+      "paragraph_index": 23,
+      "text": "Early reports also noted dysmorphic facial features that were thought to resemble elves of legend: for a time, the term \"Williams elfin facies syndrome\" was used.",
+      "char_start": 5119,
+      "char_end": 5281,
+      "sentences": [
+        {
+          "sentence_id": "p23_s1",
+          "sentence_index": 1,
+          "text": "Early reports also noted dysmorphic facial features that were thought to resemble elves of legend: for a time, the term \"Williams elfin facies syndrome\" was used.",
+          "char_start": 5119,
+          "char_end": 5281
+        }
+      ],
+      "local_clinical_domains": [
+        {
+          "key": "craniofacial",
+          "label": "Craniofacial",
+          "evidence_headings": [],
+          "evidence_snippets": [
+            "y reports also noted dysmorphic facial features that were thought to resemble elves of"
+          ]
+        }
+      ]
+    },
+    {
+      "paragraph_id": "p24",
+      "paragraph_index": 24,
+      "text": "After the reports of Williams et al [1961] and Beuren et al [1962] , the condition was called Williams syndrome in the US and Williams-Beuren syndrome in Europe.",
+      "char_start": 5283,
+      "char_end": 5444,
+      "sentences": [
+        {
+          "sentence_id": "p24_s1",
+          "sentence_index": 1,
+          "text": "After the reports of Williams et al [1961] and Beuren et al [1962] , the condition was called Williams syndrome in the US and Williams-Beuren syndrome in Europe.",
+          "char_start": 5283,
+          "char_end": 5444
+        }
+      ],
+      "local_clinical_domains": []
+    },
+    {
+      "paragraph_id": "p25",
+      "paragraph_index": 25,
+      "text": "A study of WS in Norway reported a prevalence of 1:7,500 [ Strømme et al 2002 ].",
+      "char_start": 5446,
+      "char_end": 5526,
+      "sentences": [
+        {
+          "sentence_id": "p25_s1",
+          "sentence_index": 1,
+          "text": "A study of WS in Norway reported a prevalence of 1:7,500 [ Strømme et al 2002 ].",
+          "char_start": 5446,
+          "char_end": 5526
+        }
+      ],
+      "local_clinical_domains": []
+    }
+  ],
+  "sentence_index": [
+    {
+      "sentence_id": "p1_s1",
+      "section": null,
+      "text": "Williams syndrome (WS) should be suspected in individuals with the following findings:",
+      "section_id": null,
+      "paragraph_id": "p1",
+      "char_start": 0,
+      "char_end": 86
+    },
+    {
+      "sentence_id": "p2_s1",
+      "section": null,
+      "text": "Intellectual disability affects most individuals and is typically mild.",
+      "section_id": null,
+      "paragraph_id": "p2",
+      "char_start": 88,
+      "char_end": 159
+    },
+    {
+      "sentence_id": "p3_s1",
+      "section": null,
+      "text": "Specific cognitive profile includes strengths in verbal short-term memory and language and extreme weakness in visuospatial construction.",
+      "section_id": null,
+      "paragraph_id": "p3",
+      "char_start": 161,
+      "char_end": 298
+    },
+    {
+      "sentence_id": "p4_s1",
+      "section": null,
+      "text": "Unique personality includes overfriendliness, empathy, generalized anxiety, specific phobias, and attention-deficit/hyperactivity disorder.",
+      "section_id": null,
+      "paragraph_id": "p4",
+      "char_start": 300,
+      "char_end": 439
+    },
+    {
+      "sentence_id": "p5_s1",
+      "section": null,
+      "text": "Cardiovascular disease (elastin arteriopathy).",
+      "section_id": null,
+      "paragraph_id": "p5",
+      "char_start": 441,
+      "char_end": 487
+    },
+    {
+      "sentence_id": "p5_s2",
+      "section": null,
+      "text": "Supravalvar aortic stenosis is the most common.",
+      "section_id": null,
+      "paragraph_id": "p5",
+      "char_start": 488,
+      "char_end": 535
+    },
+    {
+      "sentence_id": "p5_s3",
+      "section": null,
+      "text": "Peripheral pulmonic stenosis is common in infancy.",
+      "section_id": null,
+      "paragraph_id": "p5",
+      "char_start": 536,
+      "char_end": 586
+    },
+    {
+      "sentence_id": "p5_s4",
+      "section": null,
+      "text": "Any artery may be narrowed.",
+      "section_id": null,
+      "paragraph_id": "p5",
+      "char_start": 587,
+      "char_end": 614
+    },
+    {
+      "sentence_id": "p6_s1",
+      "section": null,
+      "text": "Distinctive facies.",
+      "section_id": null,
+      "paragraph_id": "p6",
+      "char_start": 616,
+      "char_end": 635
+    },
+    {
+      "sentence_id": "p6_s2",
+      "section": null,
+      "text": "Broad forehead, bitemporal narrowing, periorbital fullness, a stellate/lacy iris pattern (see Figure 1 ), strabismus, short nose, broad nasal tip, malar flattening, long philtrum, thick vermilion of the upper and lower lips, wide mouth, malocclusion, small jaw, and large ear lobes are observed at all ages (see Figure 2 ).",
+      "section_id": null,
+      "paragraph_id": "p6",
+      "char_start": 636,
+      "char_end": 959
+    },
+    {
+      "sentence_id": "p6_s3",
+      "section": null,
+      "text": "Young children have epicanthal folds, full cheeks, and small, widely spaced teeth (see Figure 3 ); adults have a long face and neck and sloping shoulders (see Figure 4 ).",
+      "section_id": null,
+      "paragraph_id": "p6",
+      "char_start": 960,
+      "char_end": 1130
+    },
+    {
+      "sentence_id": "p7_s1",
+      "section": null,
+      "text": "Connective tissue abnormalities include hoarse voice, inguinal/umbilical hernia, bowel/bladder diverticulae, rectal prolapse, joint limitation or laxity, and soft, lax skin.",
+      "section_id": null,
+      "paragraph_id": "p7",
+      "char_start": 1132,
+      "char_end": 1305
+    },
+    {
+      "sentence_id": "p8_s1",
+      "section": null,
+      "text": "Growth abnormalities include prenatal growth deficiency, postnatal poor weight gain, and decreased linear growth.",
+      "section_id": null,
+      "paragraph_id": "p8",
+      "char_start": 1307,
+      "char_end": 1420
+    },
+    {
+      "sentence_id": "p9_s1",
+      "section": null,
+      "text": "Endocrine abnormalities include early puberty, hypercalcemia, hypercalciuria, hypothyroidism, and diabetes mellitus.",
+      "section_id": null,
+      "paragraph_id": "p9",
+      "char_start": 1422,
+      "char_end": 1538
+    },
+    {
+      "sentence_id": "p10_s1",
+      "section": null,
+      "text": "Note: See the National Human Genome Research Institute (NHGRI) Atlas of Human Malformation Syndromes (scroll to ATLAS IMAGES ) for photographs of individuals with WS from diverse ethnic backgrounds.",
+      "section_id": null,
+      "paragraph_id": "p10",
+      "char_start": 1540,
+      "char_end": 1738
+    },
+    {
+      "sentence_id": "p11_s1",
+      "section": null,
+      "text": "Williams syndrome (WS) is a multisystem disorder characterized by cardiovascular disease (elastin arteriopathy, most often manifesting as supravalvar aortic stenosis), developmental delay, usually mild intellectual disability, a specific cognitive profile, unique personality characteristics, connective tissue abnormalities, growth abnormalities, other endocrine manifestations, and distinctive facies.",
+      "section_id": null,
+      "paragraph_id": "p11",
+      "char_start": 1740,
+      "char_end": 2143
+    },
+    {
+      "sentence_id": "p11_s2",
+      "section": null,
+      "text": "Additional manifestations can include sleep problems, ocular issues, hearing loss, dental problems, gastrointestinal difficulties, urinary tract abnormalities, and musculoskeletal issues.",
+      "section_id": null,
+      "paragraph_id": "p11",
+      "char_start": 2144,
+      "char_end": 2331
+    },
+    {
+      "sentence_id": "p12_s1",
+      "section": null,
+      "text": "The 7q11.23 recurrent deletions of the Williams-Beuren syndrome critical region (WBSCR) comprise either 1.55 Mb (90%-95% of individuals with WS) or 1.84 Mb (5%-10% of individuals with WS) [ Palacios-Verdú et al 2015 ].",
+      "section_id": null,
+      "paragraph_id": "p12",
+      "char_start": 2333,
+      "char_end": 2551
+    },
+    {
+      "sentence_id": "p13_s1",
+      "section": null,
+      "text": "ELN deletion results in elastin arteriopathy.",
+      "section_id": null,
+      "paragraph_id": "p13",
+      "char_start": 2553,
+      "char_end": 2598
+    },
+    {
+      "sentence_id": "p14_s1",
+      "section": null,
+      "text": "Hypertension is less prevalent in individuals with WS whose deletion includes NCF1 , located in one of the blocks of low copy repeats that flank the WBSCR [ Del Campo et al 2006 ].",
+      "section_id": null,
+      "paragraph_id": "p14",
+      "char_start": 2600,
+      "char_end": 2780
+    },
+    {
+      "sentence_id": "p15_s1",
+      "section": null,
+      "text": "A more severe phenotype with lower cognitive ability is observed in individuals with very large deletions (>2-4 Mb) that include the WBSCR than in individuals with a typical 1.5- to 1.8-Mb WBSCR deletion [ Stock et al 2003 , Marshall et al 2008 , Ramocki et al 2010 , Lugo et al 2020 ].",
+      "section_id": null,
+      "paragraph_id": "p15",
+      "char_start": 2782,
+      "char_end": 3068
+    },
+    {
+      "sentence_id": "p16_s1",
+      "section": null,
+      "text": "Deletions within the WBSCR smaller than the recurrent deletions associated with WS are rare and are associated with a variable phenotype.",
+      "section_id": null,
+      "paragraph_id": "p16",
+      "char_start": 3070,
+      "char_end": 3207
+    },
+    {
+      "sentence_id": "p16_s2",
+      "section": null,
+      "text": "Genotype-phenotype correlations are limited for genes other than ELN [ Kozel et al 2021 , Serrano-Juárez et al 2022 ].",
+      "section_id": null,
+      "paragraph_id": "p16",
+      "char_start": 3208,
+      "char_end": 3326
+    },
+    {
+      "sentence_id": "p17_s1",
+      "section": null,
+      "text": "Individuals with partial WBSCR deletions that include the usual telomeric breakpoint (including GTF2I ) have classic manifestations of WS, including intellectual disability [ Botta et al 1999 , Heller et al 2003 ].",
+      "section_id": null,
+      "paragraph_id": "p17",
+      "char_start": 3328,
+      "char_end": 3542
+    },
+    {
+      "sentence_id": "p17_s2",
+      "section": null,
+      "text": "Individuals with deletions of the WBSCR that include distal genes in the region (especially GTF2IRD1 and GTF2I ) are more likely to have intellectual disability and facial features characteristic of WS [ Alesi et al 2021 ].",
+      "section_id": null,
+      "paragraph_id": "p17",
+      "char_start": 3543,
+      "char_end": 3766
+    },
+    {
+      "sentence_id": "p17_s3",
+      "section": null,
+      "text": "One individual with a partial deletion of the WBSCR that included GTF2I had borderline adaptive and language development [ Zhou et al 2022 ].",
+      "section_id": null,
+      "paragraph_id": "p17",
+      "char_start": 3767,
+      "char_end": 3908
+    },
+    {
+      "sentence_id": "p18_s1",
+      "section": null,
+      "text": "Individuals with partial deletions that include ELN have SVAS.",
+      "section_id": null,
+      "paragraph_id": "p18",
+      "char_start": 3910,
+      "char_end": 3972
+    },
+    {
+      "sentence_id": "p19_s1",
+      "section": null,
+      "text": "Individuals with partial WBSCR deletions that include ELN but do not include deletion of GTF2I do not have intellectual disability but often demonstrate the WS cognitive profile [ Morris et al 2003 ].",
+      "section_id": null,
+      "paragraph_id": "p19",
+      "char_start": 3974,
+      "char_end": 4174
+    },
+    {
+      "sentence_id": "p19_s2",
+      "section": null,
+      "text": "In two families, deletion of ELN and LIMK1 was associated with the WS cognitive profile but not with intellectual disability or other characteristics of WS [ Frangiskakis et al 1996 ].",
+      "section_id": null,
+      "paragraph_id": "p19",
+      "char_start": 4175,
+      "char_end": 4359
+    },
+    {
+      "sentence_id": "p19_s3",
+      "section": null,
+      "text": "Another family with a similar deletion did not have the WS cognitive profile [ Tassabehji et al 2005 ].",
+      "section_id": null,
+      "paragraph_id": "p19",
+      "char_start": 4360,
+      "char_end": 4463
+    },
+    {
+      "sentence_id": "p20_s1",
+      "section": null,
+      "text": "Deletions within the WBSCR may be of maternal or paternal origin [ Ewart et al 1993 , Urbán et al 1996 ].",
+      "section_id": null,
+      "paragraph_id": "p20",
+      "char_start": 4465,
+      "char_end": 4570
+    },
+    {
+      "sentence_id": "p20_s2",
+      "section": null,
+      "text": "No phenotypic differences have been related to the parent of origin in some series [ Wu et al 1998 ], while microcephaly has been correlated with maternal origin of the WBSCR deletion in others [ Del Campo et al 2006 ].",
+      "section_id": null,
+      "paragraph_id": "p20",
+      "char_start": 4571,
+      "char_end": 4790
+    },
+    {
+      "sentence_id": "p21_s1",
+      "section": null,
+      "text": "Penetrance is 100%.",
+      "section_id": null,
+      "paragraph_id": "p21",
+      "char_start": 4792,
+      "char_end": 4811
+    },
+    {
+      "sentence_id": "p22_s1",
+      "section": null,
+      "text": "The first descriptions of WS were incomplete in that they reflected the chief complaint of the individual or the medical specialty of the observer.",
+      "section_id": null,
+      "paragraph_id": "p22",
+      "char_start": 4813,
+      "char_end": 4960
+    },
+    {
+      "sentence_id": "p22_s2",
+      "section": null,
+      "text": "Thus, nephrologists and endocrinologists described \"idiopathic infantile hypercalcemia\" and cardiologists reported \"supravalvular aortic stenosis syndrome.\"",
+      "section_id": null,
+      "paragraph_id": "p22",
+      "char_start": 4961,
+      "char_end": 5117
+    },
+    {
+      "sentence_id": "p23_s1",
+      "section": null,
+      "text": "Early reports also noted dysmorphic facial features that were thought to resemble elves of legend: for a time, the term \"Williams elfin facies syndrome\" was used.",
+      "section_id": null,
+      "paragraph_id": "p23",
+      "char_start": 5119,
+      "char_end": 5281
+    },
+    {
+      "sentence_id": "p24_s1",
+      "section": null,
+      "text": "After the reports of Williams et al [1961] and Beuren et al [1962] , the condition was called Williams syndrome in the US and Williams-Beuren syndrome in Europe.",
+      "section_id": null,
+      "paragraph_id": "p24",
+      "char_start": 5283,
+      "char_end": 5444
+    },
+    {
+      "sentence_id": "p25_s1",
+      "section": null,
+      "text": "A study of WS in Norway reported a prevalence of 1:7,500 [ Strømme et al 2002 ].",
+      "section_id": null,
+      "paragraph_id": "p25",
+      "char_start": 5446,
+      "char_end": 5526
+    }
+  ]
+}
