@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Genovy Paper</title>
+    <meta
+      name="description"
+      content="A working paper on Genovy, a rare-disease case-intelligence platform that connects fragmented patient records to a source-auditable rare-disease knowledge backbone."
+    />
+    <meta name="theme-color" content="#f6f3ee" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class="paper-page">
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="/" aria-label="Genovy home">
+          <span class="brand-mark">G</span>
+          <span class="brand-word">Genovy</span>
+        </a>
+        <nav class="site-nav" aria-label="Primary">
+          <a href="/">Home</a>
+          <a href="/platform">Platform</a>
+          <a href="https://github.com/elmorshedy-del/genovy" target="_blank" rel="noreferrer">GitHub</a>
+        </nav>
+        <a class="button button-ghost" href="mailto:founders@genovy.com?subject=Genovy%20paper">
+          Discuss the paper
+        </a>
+      </header>
+
+      <main class="paper-shell">
+        <section class="paper-hero-card reveal">
+          <p class="eyebrow">Working paper</p>
+          <h1>Genovy: a case-intelligence platform for rare-disease workups</h1>
+          <p class="paper-subtitle">
+            Genovy is being built as a patient-to-clinician rare-disease case layer. The platform
+            combines a source-auditable knowledge backbone with a structured case-intelligence
+            direction designed to turn fragmented records into a coherent workup, a clinician-ready
+            brief, and a clearer next-step view.
+          </p>
+          <div class="paper-meta">
+            <span>Author: Ahmed Elmorshedy</span>
+            <span>Status: active working paper</span>
+            <span>Scope: product, data architecture, and clinical workflow direction</span>
+          </div>
+        </section>
+
+        <section class="paper-section-card reveal" data-delay="60">
+          <h2>Abstract</h2>
+          <p>
+            Rare-disease care is slowed less by a lack of raw data than by a lack of case structure.
+            Patients arrive with years of reports, imaging, labs, genetics, pathology, and specialist
+            notes spread across disconnected systems and file formats. Clinicians inherit a workup
+            burden before they can even reason about the disease. Genovy is designed to address that
+            failure mode. It combines a normalized rare-disease knowledge network with a case layer
+            intended to reconcile fragmented records into an auditable clinical narrative. The live
+            platform already exposes the knowledge backbone: diseases, phenotypes, genes, variants,
+            trials, canonical concepts, evidence relationships, and source refresh state. The next
+            product layer is focused on case ingestion, longitudinal timelines, clinician briefs, and
+            guided next-step workup support. This paper describes the current system, the architectural
+            rationale behind it, and the workflow direction it is being built to support.
+          </p>
+        </section>
+
+        <section class="paper-section-card reveal" data-delay="100">
+          <h2>1. Problem</h2>
+          <p>
+            Rare-disease patients often spend years between specialists while the underlying case
+            remains operationally illegible. Existing tools tend to cover only one fragment of that
+            journey: document storage, phenotype search, variant interpretation, or trial discovery.
+            Very few systems serve the handoff between the patient record and the clinical workup
+            itself. That gap creates repeated history taking, repeated interpretation, and avoidable
+            diagnostic delay.
+          </p>
+          <div class="paper-note">
+            Genovy is aimed at the workup bottleneck: the point where fragmented evidence has to be
+            turned into a clinically usable case view.
+          </div>
+        </section>
+
+        <section class="paper-section-card reveal" data-delay="140">
+          <h2>2. System overview</h2>
+          <div class="paper-columns">
+            <div>
+              <h3>Knowledge layer</h3>
+              <p>
+                The live backbone stores diseases, phenotypes, genes, variants, trials, evidence,
+                source metadata, canonical concepts, aliases, memberships, and typed relationships in
+                a Postgres-backed graph-oriented schema.
+              </p>
+            </div>
+            <div>
+              <h3>Case layer</h3>
+              <p>
+                The planned case layer turns uploaded records into a structured patient timeline,
+                normalized findings, unresolved workup questions, and a clinician-ready brief with
+                traceability back to source documents.
+              </p>
+            </div>
+          </div>
+          <div class="paper-columns">
+            <div>
+              <h3>Product layer</h3>
+              <p>
+                The output surface is intended to be readable and operational: case summaries,
+                referral guidance, workup recommendations, future trial matching, and clinic-facing
+                workflows.
+              </p>
+            </div>
+            <div>
+              <h3>Public API layer</h3>
+              <p>
+                The platform already exposes a versioned read-only API and public platform overview so
+                the backbone can be inspected without exposing admin controls or write paths.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="paper-section-card reveal" data-delay="180">
+          <h2>3. Data architecture</h2>
+          <p>
+            Genovy separates entities, relationships, and evidence instead of flattening everything
+            into a single undifferentiated store. That distinction matters in rare disease because the
+            same disease-gene link can have different evidentiary strength than a variant-disease link,
+            and clinical findings may be supporting, excluding, age-dependent, or uncertain.
+          </p>
+          <ul class="bullet-list">
+            <li>Entity families include diseases, phenotypes, genes, variants, trials, and source records.</li>
+            <li>Canonical resolution sits above raw source entities so noisy source vocabularies can be reconciled without losing provenance.</li>
+            <li>Structured clinical evidence keeps phenotype support, exclusions, natural history, and validity assertions typed instead of implicit.</li>
+            <li>Source sync state is preserved so refreshes, backfills, and auditability remain first-class.</li>
+          </ul>
+        </section>
+
+        <section class="paper-section-card reveal" data-delay="220">
+          <h2>4. Source integration and provenance</h2>
+          <p>
+            The current platform integrates a set of refreshable rare-disease and clinical sources,
+            including MONDO, HPO, Orphadata, ClinGen, ClinVar, and ClinicalTrials.gov. These sources
+            are not treated as static imports. Each connector has sync state, lineage, and a path into
+            canonical concepts and downstream evidence layers. This design keeps the graph inspectable
+            and makes future reprocessing possible without losing the original record of what was
+            ingested and when.
+          </p>
+        </section>
+
+        <section class="paper-section-card reveal" data-delay="260">
+          <h2>5. Current live capabilities</h2>
+          <p>
+            The live platform already provides a public website, a platform explorer, a read-only API,
+            a source catalog, canonical concept summaries, knowledge search, typed clinical evidence,
+            and a first phenotype-only diagnostic ranking layer. In parallel, the repository includes
+            ML export paths for gene-disease link discovery and read-only novelty analysis workflows.
+          </p>
+          <div class="paper-note">
+            The important boundary is that the knowledge backbone is live now, while the patient case
+            ingestion and clinician brief layer is the next product stage rather than something already
+            finished.
+          </div>
+        </section>
+
+        <section class="paper-section-card reveal" data-delay="300">
+          <h2>6. Product direction</h2>
+          <p>
+            The intended operating model is patient-to-clinician, not patient-only and not researcher-only.
+            Patients should be able to bring years of records into one place. Clinicians should inherit a
+            workup surface that is already structured, source-linked, and legible. Downstream modules such as
+            trial matching, eligibility workflows, therapy guidance, and clinic copilots depend on that case
+            layer being correct first.
+          </p>
+        </section>
+
+        <section class="paper-section-card reveal" data-delay="340">
+          <h2>7. Conclusion</h2>
+          <p>
+            Genovy is being built to solve a specific rare-disease infrastructure problem: the lack of a
+            durable case layer between scattered patient records and meaningful clinical action. The live
+            system already establishes the knowledge backbone and provenance model needed for that goal. The
+            next stage is to turn that backbone into a practical case-intelligence workflow that reduces
+            diagnostic friction and makes hard rare-disease cases easier to reason about, communicate, and
+            move forward.
+          </p>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div>
+          <p>Genovy</p>
+          <p>Case intelligence for rare-disease patients and clinicians.</p>
+        </div>
+        <div class="footer-links">
+          <a href="/">Home</a>
+          <a href="/platform">Platform</a>
+          <a href="https://github.com/elmorshedy-del/genovy" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </footer>
+    </div>
+
+    <script src="/site.js" defer></script>
+  </body>
+</html>

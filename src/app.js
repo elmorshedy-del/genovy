@@ -57,6 +57,9 @@ export function createApp(runtimeStatus, options = {}) {
   app.get('/platform', (_req, res) => {
     res.sendFile(path.join(publicDir, 'platform.html'));
   });
+  app.get('/paper', (_req, res) => {
+    res.sendFile(path.join(publicDir, 'paper.html'));
+  });
   app.use(express.static(publicDir));
 
   app.use((error, _req, res, _next) => {
