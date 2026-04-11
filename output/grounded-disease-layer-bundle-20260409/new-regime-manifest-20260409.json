@@ -1,6 +1,6 @@
 {
   "manifest_version": "new_regime_sequence_v1",
-  "created_at": "2026-04-09",
+  "created_at": "2026-04-11T07:18:05.581Z",
   "schema_version": "grounded_disease_layer_v1",
   "bundle_root": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409",
   "chapters": [
@@ -46,8 +46,9 @@
       "status": "regime_ready",
       "notes": [
         "Williams Syndrome is chapter 3 of the new regime.",
-        "The first Gemini task-scoped multipass draft was manually cleaned to remove context/trajectory overreach and tighten routing decisions.",
-        "The sentence index was derived directly from the fetched clinical text surface to avoid section-parser truncation."
+        "The official file was manually rebuilt and cleaned from the fuller archived Williams source surface rather than from the thin bundle clinical_structure prep.",
+        "The chapter-backed cleanup used the archived NBK1249 clinical structure plus targeted raw-HTML context lines for inheritance, prevalence, and penetrance.",
+        "Treat the current file as the official regime-ready Williams output for chapter 3."
       ],
       "paths": {
         "bundled_folder": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-williams-syndrome",
@@ -59,6 +60,320 @@
         "strict_prompt": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/genereviews-opus-grounded-disease-layer-strict-prompt-v1-20260409.md",
         "gemini_task_scoped_draft": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-gemini-runs/NBK1249_williams_syndrome/NBK1249_williams_syndrome_grounded_disease_layer.json",
         "regime_ready_json": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-williams-syndrome/NBK1249_williams_syndrome_regime_ready.json"
+      }
+    },
+    {
+      "sequence_number": 4,
+      "chapter_title": "Variegate Porphyria",
+      "status": "regime_ready",
+      "notes": [
+        "Variegate Porphyria is chapter 4 of the new regime.",
+        "The chapter was selected using chapter-selection-methodology-20260410.md after VEXAS failed the immediate source-surface promotion gate.",
+        "The reusable review-first-50 source surface passed audit: 80 sentences, 32 paragraphs, 2 sections, likely_truncated false.",
+        "The chapter was manually cleaned from the audited sentence index and task-scoped Gemini scratch outputs.",
+        "The official chapter file validates with 80 sentence-index rows, 37 phenotype assertions, 7 ancillary assertions, 5 context assertions, 2 trajectory assertions, 6 causal chains, and 5 extraction notes."
+      ],
+      "paths": {
+        "bundled_folder": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-variegate-porphyria",
+        "clinical_structure": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-variegate-porphyria/NBK121283_clinical_structure.json",
+        "clinical_text": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-variegate-porphyria/NBK121283_clinical_text.txt",
+        "raw_html": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-variegate-porphyria/NBK121283_raw.html",
+        "tables": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-variegate-porphyria/NBK121283_tables.json",
+        "source_surface_audit": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-variegate-porphyria/source_surface_audit_20260410.json",
+        "opus_input": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-variegate-porphyria/NBK121283_opus_input.json",
+        "strict_prompt": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/genereviews-gemini-grounded-disease-layer-strict-prompt-v1-20260409.md",
+        "gemini_task_scoped_run_folder": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-gemini-runs/NBK121283_variegate_porphyria",
+        "regime_ready_json": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-variegate-porphyria/NBK121283_variegate_porphyria_regime_ready.json"
+      }
+    },
+    {
+      "sequence_number": 5,
+      "chapter_title": "Waardenburg Syndrome Type I",
+      "status": "regime_ready",
+      "notes": [
+        "Waardenburg Syndrome Type I is chapter 5 of the new regime.",
+        "The reusable review-first-50 source surface passed audit: 60 sentences, 36 paragraphs, 3 sections, likely_truncated false.",
+        "The task-scoped Gemini extraction completed all passes but initially failed normalization because one evidence ref used p26_2 instead of canonical p26_s2.",
+        "The runner was patched to canonicalize trivial sentence-id variants before validation, and the official chapter file was manually cleaned from the pass artifacts.",
+        "The official chapter file validates with 60 sentence-index rows, 25 phenotype assertions, 7 ancillary assertions, 1 context assertion, 2 trajectory assertions, 1 causal chain, and 5 extraction notes."
+      ],
+      "paths": {
+        "bundled_folder": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-waardenburg-syndrome-type-i",
+        "clinical_structure": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-waardenburg-syndrome-type-i/NBK1531_clinical_structure.json",
+        "clinical_text": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-waardenburg-syndrome-type-i/NBK1531_clinical_text.txt",
+        "raw_html": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-waardenburg-syndrome-type-i/NBK1531_raw.html",
+        "tables": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-waardenburg-syndrome-type-i/NBK1531_tables.json",
+        "source_surface_audit": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-waardenburg-syndrome-type-i/source_surface_audit_20260410.json",
+        "opus_input": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-waardenburg-syndrome-type-i/NBK1531_opus_input.json",
+        "strict_prompt": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/genereviews-gemini-grounded-disease-layer-strict-prompt-v1-20260409.md",
+        "gemini_task_scoped_run_folder": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-gemini-runs/NBK1531_waardenburg_syndrome_type_i",
+        "regime_ready_json": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-waardenburg-syndrome-type-i/NBK1531_waardenburg_syndrome_type_i_regime_ready.json"
+      }
+    },
+    {
+      "sequence_number": 6,
+      "chapter_title": "Von Hippel-Lindau Syndrome",
+      "status": "regime_ready_gpt-5.4-manual-opus4.6-reviewed",
+      "notes": [
+        "Von Hippel-Lindau Syndrome is the next queued chapter after chapter 5.",
+        "The reusable review-first-50 source surface was copied into the bundle folder and initially wrapped as NBK1463_opus_input.json, but that thin slice was later superseded.",
+        "The saved NBK1463 raw HTML was re-parsed with an expanded section profile to recover a fuller chapter-backed surface with 348 sentences, 144 paragraphs, 24 sections, and likely_truncated false.",
+        "NBK1463_recovered_opus_input.json was used as the canonical extraction input for the regime-ready GPT-5.4 manual pass.",
+        "The Opus-reviewed artifact retains 71 phenotype assertions, 31 ancillary assertions, 10 context assertions, 3 trajectory assertions, 15 causal chains, 8 extraction notes, and 4 trigger factors.",
+        "The earlier NBK1463_von_hippel_lindau_syndrome_manual_truncated_source_draft.json is retained only as a historical thin-surface draft and should not be treated as the current working chapter.",
+        "The official chapter artifact is the GPT-5.4 manual plus Opus 4.6 reviewed file."
+      ],
+      "paths": {
+        "bundled_folder": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-von-hippel-lindau-syndrome",
+        "clinical_structure": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-von-hippel-lindau-syndrome/NBK1463_recovered_clinical_structure.json",
+        "clinical_text": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-von-hippel-lindau-syndrome/NBK1463_recovered_clinical_text.txt",
+        "raw_html": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-von-hippel-lindau-syndrome/NBK1463_raw.html",
+        "tables": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-von-hippel-lindau-syndrome/NBK1463_recovered_tables.json",
+        "fetch_meta": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-von-hippel-lindau-syndrome/NBK1463_recovered_fetch_meta.json",
+        "source_surface_audit": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-von-hippel-lindau-syndrome/recovered_source_surface_audit_20260410.json",
+        "opus_input": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-von-hippel-lindau-syndrome/NBK1463_recovered_opus_input.json",
+        "legacy_thin_clinical_structure": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-von-hippel-lindau-syndrome/NBK1463_clinical_structure.json",
+        "legacy_thin_clinical_text": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-von-hippel-lindau-syndrome/NBK1463_clinical_text.txt",
+        "legacy_thin_tables": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-von-hippel-lindau-syndrome/NBK1463_tables.json",
+        "legacy_thin_source_surface_audit": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-von-hippel-lindau-syndrome/source_surface_audit_20260410.json",
+        "legacy_thin_opus_input": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-von-hippel-lindau-syndrome/NBK1463_opus_input.json",
+        "stale_manual_truncated_draft_json": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-von-hippel-lindau-syndrome/NBK1463_von_hippel_lindau_syndrome_manual_truncated_source_draft.json",
+        "manual_regime_ready_json": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-von-hippel-lindau-syndrome/NBK1463_von_hippel_lindau_syndrome_regime_ready_gpt-5.4-manual.json",
+        "regime_ready_json": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-von-hippel-lindau-syndrome/NBK1463_von_hippel_lindau_syndrome_regime_ready_gpt-5.4-manual-opus4.6-reviewed.json"
+      }
+    },
+    {
+      "sequence_number": 7,
+      "chapter_title": "Prader-Willi Syndrome",
+      "status": "regime_ready_gpt-5.4-manual-opus4.6-reviewed",
+      "notes": [
+        "Prader-Willi Syndrome is chapter 7 of the new regime.",
+        "The existing bundled NBK1330 source surface was audited as truncated: 33 sentences, 26 paragraphs, 8 sections, likely_truncated true.",
+        "The saved NBK1330 raw HTML was rebuilt with the expanded GeneReviews section profile into a recovered full chapter-backed surface with 170 sentences, 92 paragraphs, 22 sections, and likely_truncated false.",
+        "NBK1330_recovered_opus_input.json was used as the canonical extraction input for the regime-ready GPT-5.4 manual pass.",
+        "The Opus-reviewed artifact has 45 phenotype assertions, 27 ancillary assertions, 12 context assertions, 5 trajectory assertions, 10 causal chains, 2 episode classes, 3 trigger factors, 9 mechanism sentence ids, and 7 extraction notes.",
+        "The official chapter artifact is the GPT-5.4 manual plus Opus 4.6 reviewed file."
+      ],
+      "paths": {
+        "bundled_folder": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-prader-willi",
+        "clinical_structure": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-prader-willi/NBK1330_recovered_clinical_structure.json",
+        "clinical_text": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-prader-willi/NBK1330_recovered_clinical_text.txt",
+        "raw_html": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-prader-willi/NBK1330_raw.html",
+        "tables": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-prader-willi/NBK1330_recovered_tables.json",
+        "fetch_meta": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-prader-willi/NBK1330_recovered_fetch_meta.json",
+        "source_surface_audit": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-prader-willi/recovered_source_surface_audit_20260410.json",
+        "opus_input": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-prader-willi/NBK1330_recovered_opus_input.json",
+        "legacy_thin_clinical_structure": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-prader-willi/NBK1330_clinical_structure.json",
+        "legacy_thin_clinical_text": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-prader-willi/NBK1330_clinical_text.txt",
+        "legacy_thin_fetch_meta": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-prader-willi/NBK1330_fetch_meta.json",
+        "legacy_thin_opus_input": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-prader-willi/NBK1330_opus_input.json",
+        "manual_regime_ready_json": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-prader-willi/NBK1330_prader_willi_syndrome_regime_ready_gpt-5.4-manual.json",
+        "regime_ready_json": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-prader-willi/NBK1330_prader_willi_syndrome_regime_ready_gpt-5.4-manual-opus4.6-reviewed.json"
+      }
+    },
+    {
+      "sequence_number": 8,
+      "chapter_title": "Von Willebrand Disease",
+      "status": "regime_ready_gpt-5.4-manual-opus4.6-reviewed",
+      "notes": [
+        "Von Willebrand Disease is chapter 8 of the new regime.",
+        "The copied NBK7014 stage1 source surface was audited as truncated: 47 sentences, 25 paragraphs, 2 sections, likely_truncated true.",
+        "The saved NBK7014 raw HTML was rebuilt with the expanded GeneReviews section profile into a recovered full chapter-backed surface with 228 sentences, 113 paragraphs, 19 sections, and likely_truncated false.",
+        "NBK7014_recovered_opus_input.json was used as the canonical extraction input for the regime-ready GPT-5.4 manual pass.",
+        "The reviewed artifact has 46 phenotype assertions, 36 ancillary assertions, 10 context assertions, 1 trajectory assertion, 16 causal chains, 14 mechanism sentence ids, 7 episode classes, 2 trigger factors, and 13 extraction notes.",
+        "The review promoted the seven major VWD subtype families into explicit episode classes, added type 1C mucocutaneous bleeding plus iron-deficiency anemia and rare anaphylactic-reaction complications, and formalized the pregnancy-to-postpartum trajectory.",
+        "The chapter now makes type 2B thrombocytopenia architecture explicit through upgraded thrombocytopenia grounding, desmopressin-worsening treatment-response evidence, and concrete subtype trigger factors while preserving laboratory and management boundaries.",
+        "The official chapter artifact is the GPT-5.4 manual plus Opus 4.6 reviewed file."
+      ],
+      "paths": {
+        "bundled_folder": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-von-willebrand-disease",
+        "clinical_structure": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-von-willebrand-disease/NBK7014_recovered_clinical_structure.json",
+        "clinical_text": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-von-willebrand-disease/NBK7014_recovered_clinical_text.txt",
+        "raw_html": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-von-willebrand-disease/NBK7014_raw.html",
+        "tables": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-von-willebrand-disease/NBK7014_recovered_tables.json",
+        "fetch_meta": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-von-willebrand-disease/NBK7014_recovered_fetch_meta.json",
+        "source_surface_audit": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-von-willebrand-disease/recovered_source_surface_audit_20260410.json",
+        "opus_input": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-von-willebrand-disease/NBK7014_recovered_opus_input.json",
+        "legacy_thin_clinical_structure": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-von-willebrand-disease/NBK7014_clinical_structure.json",
+        "legacy_thin_clinical_text": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-von-willebrand-disease/NBK7014_clinical_text.txt",
+        "legacy_thin_tables": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-von-willebrand-disease/NBK7014_tables.json",
+        "legacy_thin_source_surface_audit": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-von-willebrand-disease/source_surface_audit_20260410.json",
+        "manual_regime_ready_json": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-von-willebrand-disease/NBK7014_von_willebrand_disease_regime_ready_gpt-5.4-manual.json",
+        "regime_ready_json": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-von-willebrand-disease/NBK7014_von_willebrand_disease_regime_ready_gpt-5.4-manual-opus4.6-reviewed.json"
+      }
+    },
+    {
+      "sequence_number": 9,
+      "chapter_title": "Very Long-Chain Acyl-Coenzyme A Dehydrogenase Deficiency",
+      "status": "regime_ready_gpt-5.4-manual-opus4.6-reviewed",
+      "notes": [
+        "Very Long-Chain Acyl-Coenzyme A Dehydrogenase Deficiency is chapter 9 of the new regime.",
+        "The saved NBK6816 raw HTML was rebuilt with the expanded GeneReviews section profile into a recovered full chapter-backed surface with 178 sentences, 115 paragraphs, 22 sections, and likely_truncated false.",
+        "NBK6816_recovered_opus_input.json was used as the canonical extraction input for the regime-ready GPT-5.4 manual pass.",
+        "The corrected manual artifact has 35 phenotype assertions, 42 ancillary assertions, 8 context assertions, 3 trajectory assertions, 11 causal chains, 8 mechanism sentence ids, 0 episode classes, 8 trigger factors, and 8 extraction notes.",
+        "The chapter preserves metabolic triggers and care-dependent avoidance language without using a thin stage1 slice for promotion.",
+        "A contaminated external audit section tied to nonexistent p15 sentences was rejected after verification against the recovered source surface and live chapter page; only the grounded VLCADD fixes were merged.",
+        "The official chapter artifact is the GPT-5.4 manual plus Opus 4.6 reviewed file."
+      ],
+      "paths": {
+        "bundled_folder": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-very-long-chain-acyl-coenzyme-a-dehydrogenase-deficiency",
+        "clinical_structure": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-very-long-chain-acyl-coenzyme-a-dehydrogenase-deficiency/NBK6816_recovered_clinical_structure.json",
+        "clinical_text": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-very-long-chain-acyl-coenzyme-a-dehydrogenase-deficiency/NBK6816_recovered_clinical_text.txt",
+        "raw_html": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/genereviews-pipeline-review-first-50-20260331/stage1_fetch/NBK6816_raw.html",
+        "tables": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-very-long-chain-acyl-coenzyme-a-dehydrogenase-deficiency/NBK6816_recovered_tables.json",
+        "fetch_meta": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-very-long-chain-acyl-coenzyme-a-dehydrogenase-deficiency/NBK6816_recovered_fetch_meta.json",
+        "source_surface_audit": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-very-long-chain-acyl-coenzyme-a-dehydrogenase-deficiency/recovered_source_surface_audit_20260410.json",
+        "opus_input": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-very-long-chain-acyl-coenzyme-a-dehydrogenase-deficiency/NBK6816_recovered_opus_input.json",
+        "manual_regime_ready_json": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-very-long-chain-acyl-coenzyme-a-dehydrogenase-deficiency/NBK6816_very_long_chain_acyl_coenzyme_a_dehydrogenase_deficiency_regime_ready_gpt-5.4-manual.json",
+        "regime_ready_json": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-very-long-chain-acyl-coenzyme-a-dehydrogenase-deficiency/NBK6816_very_long_chain_acyl_coenzyme_a_dehydrogenase_deficiency_regime_ready_gpt-5.4-manual-opus4.6-reviewed.json"
+      }
+    },
+    {
+      "sequence_number": 10,
+      "chapter_title": "Vascular Ehlers-Danlos Syndrome",
+      "status": "regime_ready_gpt-5.4-manual-opus4.6-reviewed",
+      "notes": [
+        "Vascular Ehlers-Danlos Syndrome is chapter 10 of the new regime.",
+        "The saved NBK1494 raw HTML was rebuilt with the expanded GeneReviews section profile into a recovered full chapter-backed surface with 245 sentences, 131 paragraphs, 24 sections, and likely_truncated false.",
+        "NBK1494_recovered_opus_input.json was used as the canonical extraction input for the regime-ready GPT-5.4 manual pass.",
+        "The reviewed artifact has 60 phenotype assertions, 21 ancillary assertions, 8 context assertions, 3 trajectory assertions, 14 causal chains, 6 mechanism sentence ids, 1 episode class, 5 trigger factors, and 10 extraction notes.",
+        "The review demoted facial gestalt rows to descriptor status, cleaned easy-bruising trigger leakage, enriched early mortality trajectory detail, added pregnancy-complication rows and a pregnancy-mortality ancillary, and preserved colonoscopy and surgery decision pressure in trigger-factor and note space.",
+        "The official chapter artifact is the GPT-5.4 manual plus Opus 4.6 reviewed file."
+      ],
+      "paths": {
+        "bundled_folder": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-vascular-ehlers-danlos-syndrome",
+        "clinical_structure": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-vascular-ehlers-danlos-syndrome/NBK1494_recovered_clinical_structure.json",
+        "clinical_text": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-vascular-ehlers-danlos-syndrome/NBK1494_recovered_clinical_text.txt",
+        "raw_html": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/genereviews-pipeline-review-first-50-20260331/stage1_fetch/NBK1494_raw.html",
+        "tables": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-vascular-ehlers-danlos-syndrome/NBK1494_recovered_tables.json",
+        "fetch_meta": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-vascular-ehlers-danlos-syndrome/NBK1494_recovered_fetch_meta.json",
+        "source_surface_audit": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-vascular-ehlers-danlos-syndrome/recovered_source_surface_audit_20260410.json",
+        "opus_input": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-vascular-ehlers-danlos-syndrome/NBK1494_recovered_opus_input.json",
+        "manual_regime_ready_json": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-vascular-ehlers-danlos-syndrome/NBK1494_vascular_ehlers_danlos_syndrome_regime_ready_gpt-5.4-manual.json",
+        "regime_ready_json": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-vascular-ehlers-danlos-syndrome/NBK1494_vascular_ehlers_danlos_syndrome_regime_ready_gpt-5.4-manual-opus4.6-reviewed.json"
+      }
+    },
+    {
+      "sequence_number": 11,
+      "chapter_title": "WAGR Spectrum Disorder",
+      "status": "regime_ready_gpt-5.4-manual-opus4.6-reviewed",
+      "notes": [
+        "WAGR Spectrum Disorder is chapter 11 of the new regime.",
+        "The copied NBK621298 stage1 source surface was audited as truncated: 5 sentences, 3 paragraphs, 2 sections, likely_truncated true.",
+        "The saved NBK621298 raw HTML was rebuilt with the expanded GeneReviews section profile into a recovered full chapter-backed surface with 194 sentences, 115 paragraphs, 21 sections, and likely_truncated false.",
+        "NBK621298_recovered_opus_input.json was used as the canonical extraction input for the regime-ready GPT-5.4 manual pass.",
+        "The reviewed artifact has 100 phenotype assertions, 5 ancillary assertions, 7 context assertions, 0 trajectory assertions, 12 causal chains, 14 mechanism sentence ids, 0 episode classes, 0 trigger factors, and 12 extraction notes.",
+        "The review merged grounded behavioral, ocular, genitourinary, renal, and subgroup-specific olfactory findings; rerouted proteinuria to ancillary laboratory; and preserved pineal and renal-risk subgroup details in notes rather than off-contract context fields.",
+        "The chapter keeps chapter.mondo_id null because the current local policy surface still marks the WAGR mapping unresolved.",
+        "The official chapter artifact is the GPT-5.4 manual plus Opus 4.6 reviewed file."
+      ],
+      "paths": {
+        "bundled_folder": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-wagr-spectrum-disorder",
+        "clinical_structure": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-wagr-spectrum-disorder/NBK621298_recovered_clinical_structure.json",
+        "clinical_text": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-wagr-spectrum-disorder/NBK621298_recovered_clinical_text.txt",
+        "raw_html": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-wagr-spectrum-disorder/NBK621298_raw.html",
+        "tables": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-wagr-spectrum-disorder/NBK621298_recovered_tables.json",
+        "fetch_meta": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-wagr-spectrum-disorder/NBK621298_recovered_fetch_meta.json",
+        "source_surface_audit": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-wagr-spectrum-disorder/recovered_source_surface_audit_20260410.json",
+        "opus_input": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-wagr-spectrum-disorder/NBK621298_recovered_opus_input.json",
+        "legacy_thin_clinical_structure": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-wagr-spectrum-disorder/NBK621298_clinical_structure.json",
+        "legacy_thin_clinical_text": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-wagr-spectrum-disorder/NBK621298_clinical_text.txt",
+        "legacy_thin_tables": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-wagr-spectrum-disorder/NBK621298_tables.json",
+        "legacy_thin_source_surface_audit": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-wagr-spectrum-disorder/source_surface_audit_20260410.json",
+        "manual_regime_ready_json": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-wagr-spectrum-disorder/NBK621298_wagr_spectrum_disorder_regime_ready_gpt-5.4-manual.json",
+        "regime_ready_json": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-wagr-spectrum-disorder/NBK621298_wagr_spectrum_disorder_regime_ready_gpt-5.4-manual-opus4.6-reviewed.json"
+      }
+    },
+    {
+      "sequence_number": 12,
+      "chapter_title": "WARS2 Deficiency",
+      "status": "regime_ready_gpt-5.4-manual-opus4.6-reviewed",
+      "notes": [
+        "WARS2 Deficiency is chapter 12 of the new regime.",
+        "The copied NBK595820 stage1 source surface was audited as truncated: 6 sentences, 3 paragraphs, 2 sections, likely_truncated true.",
+        "The saved NBK595820 raw HTML was rebuilt with the expanded GeneReviews section profile into a recovered full chapter-backed surface with 202 sentences, 127 paragraphs, 23 sections, and likely_truncated false.",
+        "NBK595820_recovered_opus_input.json was used as the canonical extraction input for the regime-ready GPT-5.4 manual pass.",
+        "The reviewed artifact has 88 phenotype assertions, 15 ancillary assertions, 11 context assertions, 4 trajectory assertions, 8 causal chains, 9 mechanism sentence ids, 3 episode classes, 1 trigger factor, and 12 extraction notes.",
+        "The review promoted the epilepsy-spectrum and movement-disorder-spectrum architecture into explicit episode classes, added brisk reflexes and upgoing toes plus unsociable-character coverage, added levodopa-response and seizure-refractoriness ancillary rows, and corrected dysmorphic-feature routing and frequency gaps.",
+        "The chapter keeps valproic-acid-associated deterioration as an episode plus trigger-factor pattern, retains hedged imaging findings as uncertain ancillary evidence, and preserves laboratory caveats such as normal lactate not excluding the disorder.",
+        "The official chapter artifact is the GPT-5.4 manual plus Opus 4.6 reviewed file."
+      ],
+      "paths": {
+        "bundled_folder": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-wars2-deficiency",
+        "clinical_structure": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-wars2-deficiency/NBK595820_recovered_clinical_structure.json",
+        "clinical_text": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-wars2-deficiency/NBK595820_recovered_clinical_text.txt",
+        "raw_html": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-wars2-deficiency/NBK595820_raw.html",
+        "tables": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-wars2-deficiency/NBK595820_recovered_tables.json",
+        "fetch_meta": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-wars2-deficiency/NBK595820_recovered_fetch_meta.json",
+        "source_surface_audit": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-wars2-deficiency/recovered_source_surface_audit_20260410.json",
+        "opus_input": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-wars2-deficiency/NBK595820_recovered_opus_input.json",
+        "legacy_thin_clinical_structure": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-wars2-deficiency/NBK595820_clinical_structure.json",
+        "legacy_thin_clinical_text": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-wars2-deficiency/NBK595820_clinical_text.txt",
+        "legacy_thin_tables": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-wars2-deficiency/NBK595820_tables.json",
+        "legacy_thin_source_surface_audit": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-wars2-deficiency/source_surface_audit_20260410.json",
+        "manual_regime_ready_json": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-wars2-deficiency/NBK595820_wars2_deficiency_regime_ready_gpt-5.4-manual.json",
+        "regime_ready_json": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-wars2-deficiency/NBK595820_wars2_deficiency_regime_ready_gpt-5.4-manual-opus4.6-reviewed.json"
+      }
+    },
+    {
+      "sequence_number": 13,
+      "chapter_title": "VEXAS Syndrome",
+      "status": "regime_ready_gpt-5.4-manual-opus4.6-reviewed",
+      "notes": [
+        "VEXAS Syndrome is chapter 13 of the new regime.",
+        "The copied NBK614471 stage1 source surface was audited as truncated: 40 sentences, 32 paragraphs, 3 sections, likely_truncated true.",
+        "The saved NBK614471 raw HTML was rebuilt with the expanded GeneReviews section profile into a recovered full chapter-backed surface with 202 sentences, 122 paragraphs, 22 sections, and likely_truncated false.",
+        "NBK614471_recovered_opus_input.json was used as the canonical extraction input for the regime-ready GPT-5.4 manual pass.",
+        "The reviewed artifact has 75 phenotype assertions, 15 ancillary assertions, 10 context assertions, 0 trajectory assertions, 18 causal chains, 15 mechanism sentence ids, 2 episode classes, 0 trigger factors, and 11 extraction notes.",
+        "The review merged grounded rare-feature status fixes, added transfusion dependence and excluded relapsing-polychondritis / pulmonary-fibrosis rows, enriched thrombosis, MDS, and clonal-hematopoiesis qualifiers, and added inflammatory-versus-hematologic episode classes.",
+        "The chapter keeps laboratory, pathology, imaging, genotype-correlation, and molecular-pathogenesis content in their grounded layers rather than promoting unsupported pathology or risk-factor rows into phenotype space.",
+        "The official chapter artifact is the GPT-5.4 manual plus Opus 4.6 reviewed file."
+      ],
+      "paths": {
+        "bundled_folder": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-vexas-syndrome",
+        "clinical_structure": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-vexas-syndrome/NBK614471_recovered_clinical_structure.json",
+        "clinical_text": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-vexas-syndrome/NBK614471_recovered_clinical_text.txt",
+        "raw_html": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-vexas-syndrome/NBK614471_raw.html",
+        "tables": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-vexas-syndrome/NBK614471_recovered_tables.json",
+        "fetch_meta": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-vexas-syndrome/NBK614471_recovered_fetch_meta.json",
+        "source_surface_audit": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-vexas-syndrome/recovered_source_surface_audit_20260411.json",
+        "opus_input": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-vexas-syndrome/NBK614471_recovered_opus_input.json",
+        "legacy_thin_clinical_structure": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-vexas-syndrome/NBK614471_clinical_structure.json",
+        "legacy_thin_clinical_text": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-vexas-syndrome/NBK614471_clinical_text.txt",
+        "legacy_thin_tables": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-vexas-syndrome/NBK614471_tables.json",
+        "legacy_thin_source_surface_audit": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-vexas-syndrome/source_surface_audit_20260411.json",
+        "manual_regime_ready_json": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-vexas-syndrome/NBK614471_vexas_syndrome_regime_ready_gpt-5.4-manual.json",
+        "regime_ready_json": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-vexas-syndrome/NBK614471_vexas_syndrome_regime_ready_gpt-5.4-manual-opus4.6-reviewed.json"
+      }
+    },
+    {
+      "sequence_number": 14,
+      "chapter_title": "USP7-Related Hao-Fountain Syndrome",
+      "status": "regime_ready_gpt-5.4-manual-opus4.6-reviewed",
+      "notes": [
+        "USP7-Related Hao-Fountain Syndrome is chapter 14 of the new regime.",
+        "The parser regression that dropped post-Table-2 clinical prose was fixed, and NBK619577_recovered_clinical_structure.json now reflects a regenerated raw-html surface with 192 sentences, 108 paragraphs, 17 sections, and likely_truncated false.",
+        "The final USP7 artifacts use a full chapter-backed hybrid surface: the archived fuller fetch for table-bearing clinical detail, the regenerated recovered wrapper for later sections, and explicit surveillance-table supplementation for management-context rows.",
+        "The corrected manual artifact has 27 phenotype assertions, 17 ancillary assertions, 10 context assertions, 2 trajectory assertions, 3 causal chains, 3 mechanism sentence ids, and 6 extraction notes.",
+        "The official reviewed artifact has 45 phenotype assertions, 19 ancillary assertions, 14 context assertions, 3 trajectory assertions, 6 causal chains, 3 mechanism sentence ids, and 13 extraction notes.",
+        "A residual surgical USP7 audit was merged using only the reviewed file's own source_document surface, adding endocrine findings, genotype and mosaicism counseling context, a neonatal trajectory, gait and aspiration chains, and several evidence-anchor fixes while leaving unsupported live-chapter-only items out.",
+        "The official chapter artifact is the GPT-5.4 manual + Opus 4.6 reviewed file."
+      ],
+      "paths": {
+        "bundled_folder": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-usp7-related-hao-fountain-syndrome",
+        "clinical_structure": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-usp7-related-hao-fountain-syndrome/NBK619577_recovered_clinical_structure.json",
+        "clinical_text": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-usp7-related-hao-fountain-syndrome/NBK619577_recovered_clinical_text.txt",
+        "raw_html": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-usp7-related-hao-fountain-syndrome/NBK619577_raw.html",
+        "tables": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-usp7-related-hao-fountain-syndrome/NBK619577_recovered_tables.json",
+        "fetch_meta": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-usp7-related-hao-fountain-syndrome/NBK619577_recovered_fetch_meta.json",
+        "source_surface_audit": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-usp7-related-hao-fountain-syndrome/recovered_source_surface_audit_20260411.json",
+        "opus_input": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-usp7-related-hao-fountain-syndrome/NBK619577_recovered_opus_input.json",
+        "legacy_thin_clinical_structure": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-usp7-related-hao-fountain-syndrome/NBK619577_clinical_structure.json",
+        "legacy_thin_clinical_text": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-usp7-related-hao-fountain-syndrome/NBK619577_clinical_text.txt",
+        "legacy_thin_tables": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-usp7-related-hao-fountain-syndrome/NBK619577_tables.json",
+        "legacy_thin_source_surface_audit": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-usp7-related-hao-fountain-syndrome/source_surface_audit_20260411.json",
+        "manual_regime_ready_json": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-usp7-related-hao-fountain-syndrome/NBK619577_usp7_related_hao_fountain_syndrome_regime_ready_gpt-5.4-manual.json",
+        "regime_ready_json": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-usp7-related-hao-fountain-syndrome/NBK619577_usp7_related_hao_fountain_syndrome_regime_ready_gpt-5.4-manual-opus4.6-reviewed.json"
       }
     }
   ]

@@ -191,7 +191,12 @@ function normalizeChapter(chapterValue, payload = {}) {
       chapter_key: chapterKey,
       nbk_id: nbkId,
       title,
-      mode
+      mode,
+      source: coerceString(chapterValue.source || payload.source),
+      source_url: coerceString(chapterValue.source_url || chapterValue.sourceUrl || payload.source_url || payload.sourceUrl),
+      last_updated: coerceString(
+        chapterValue.last_updated || chapterValue.lastUpdated || payload.last_updated || payload.lastUpdated
+      )
     };
   }
 
@@ -201,7 +206,10 @@ function normalizeChapter(chapterValue, payload = {}) {
       chapter_key: coerceString(deriveChapterKey(title)),
       nbk_id: coerceString(extractNbkId(title || '')),
       title,
-      mode: coerceString(payload.mode || 'discovery')
+      mode: coerceString(payload.mode || 'discovery'),
+      source: coerceString(payload.source),
+      source_url: coerceString(payload.source_url || payload.sourceUrl),
+      last_updated: coerceString(payload.last_updated || payload.lastUpdated)
     };
   }
 
@@ -210,7 +218,10 @@ function normalizeChapter(chapterValue, payload = {}) {
     chapter_key: coerceString(payload.chapter_key || payload.chapterKey || deriveChapterKey(fallbackTitle)),
     nbk_id: coerceString(payload.nbk_id || payload.nbkId || extractNbkId(fallbackTitle || '')),
     title: fallbackTitle,
-    mode: coerceString(payload.mode || 'discovery')
+    mode: coerceString(payload.mode || 'discovery'),
+    source: coerceString(payload.source),
+    source_url: coerceString(payload.source_url || payload.sourceUrl),
+    last_updated: coerceString(payload.last_updated || payload.lastUpdated)
   };
 }
 
@@ -246,6 +257,52 @@ function normalizePhenotypeEntry(entry, bucket, inputIndex) {
         entry.supporting_quote ||
         entry.supportingQuote
     ),
+    source_section: coerceString(
+      entry.source_section ||
+        entry.sourceSection ||
+        entry.source_location?.section_heading ||
+        entry.source_location?.sectionHeading ||
+        entry.section_heading ||
+        entry.sectionHeading ||
+        entry.section
+    ),
+    evidence_scope: coerceString(entry.evidence_scope || entry.evidenceScope),
+    source_location:
+      entry.source_location && typeof entry.source_location === 'object' && !Array.isArray(entry.source_location)
+        ? {
+            section_id: coerceString(entry.source_location.section_id || entry.source_location.sectionId),
+            section_heading: coerceString(
+              entry.source_location.section_heading || entry.source_location.sectionHeading
+            ),
+            paragraph_id: coerceString(entry.source_location.paragraph_id || entry.source_location.paragraphId),
+            paragraph_index:
+              Number.isFinite(Number(entry.source_location.paragraph_index || entry.source_location.paragraphIndex))
+                ? Number(entry.source_location.paragraph_index || entry.source_location.paragraphIndex)
+                : null,
+            sentence_id: coerceString(entry.source_location.sentence_id || entry.source_location.sentenceId)
+          }
+        : null,
+    detail_types: Array.isArray(entry.detail_types || entry.detailTypes)
+      ? [...new Set((entry.detail_types || entry.detailTypes).map((value) => String(value || '').trim()).filter(Boolean))]
+      : [],
+    ancillary_evidence_types: Array.isArray(entry.ancillary_evidence_types || entry.ancillaryEvidenceTypes)
+      ? [
+          ...new Set(
+            (entry.ancillary_evidence_types || entry.ancillaryEvidenceTypes)
+              .map((value) => String(value || '').trim())
+              .filter(Boolean)
+          )
+        ]
+      : [],
+    reason: coerceString(entry.reason),
+    trajectory:
+      entry.trajectory && typeof entry.trajectory === 'object' && !Array.isArray(entry.trajectory)
+        ? {
+            direction: coerceString(entry.trajectory.direction),
+            timing: coerceString(entry.trajectory.timing),
+            note: coerceString(entry.trajectory.note)
+          }
+        : null,
     extraction_bucket: bucket,
     status: phenotypeStatusForBucket(bucket),
     input_index: inputIndex
@@ -257,7 +314,12 @@ function mergeRowsByKey(rows) {
   const rowByKey = new Map();
 
   for (const row of rows) {
-    const key = `${normalizeText(row.label)}::${row.extraction_bucket}`;
+    const key = [
+      normalizeText(row.label),
+      row.extraction_bucket,
+      normalizeText(row.details),
+      normalizeText(row.source_quote)
+    ].join('::');
     const existing = rowByKey.get(key);
     if (!existing) {
       const next = { ...row };
@@ -268,6 +330,20 @@ function mergeRowsByKey(rows) {
     if (!existing.category && row.category) existing.category = row.category;
     if (!existing.details && row.details) existing.details = row.details;
     if (!existing.source_quote && row.source_quote) existing.source_quote = row.source_quote;
+    if (!existing.source_section && row.source_section) existing.source_section = row.source_section;
+    if (!existing.evidence_scope && row.evidence_scope) existing.evidence_scope = row.evidence_scope;
+    if (!existing.source_location && row.source_location) existing.source_location = row.source_location;
+    if ((!existing.detail_types || existing.detail_types.length === 0) && row.detail_types?.length) {
+      existing.detail_types = [...row.detail_types];
+    }
+    if (
+      (!existing.ancillary_evidence_types || existing.ancillary_evidence_types.length === 0) &&
+      row.ancillary_evidence_types?.length
+    ) {
+      existing.ancillary_evidence_types = [...row.ancillary_evidence_types];
+    }
+    if (!existing.reason && row.reason) existing.reason = row.reason;
+    if (!existing.trajectory && row.trajectory) existing.trajectory = row.trajectory;
   }
 
   return ordered;
@@ -704,7 +780,10 @@ function normalizePhenotypeBucketsForFinal(phenotypes, ancillaryEvidence, contex
           continue;
         }
 
-        finalPhenotypes[bucket].push({ label });
+        finalPhenotypes[bucket].push({
+          ...row,
+          label
+        });
         if (row?.source_quote) {
           groundingHints.push({
             label,
@@ -746,10 +825,13 @@ function dedupePhenotypeLabelObjects(rows) {
   for (const row of rows || []) {
     const label = coerceString(row?.label);
     if (!label) continue;
-    const key = normalizeText(label);
+    const key = [normalizeText(label), normalizeText(row?.details), normalizeText(row?.source_quote)].join('::');
     if (!key || seen.has(key)) continue;
     seen.add(key);
-    deduped.push({ label });
+    deduped.push({
+      ...row,
+      label
+    });
   }
 
   return deduped;
@@ -800,7 +882,10 @@ function buildFrozenChapter(chapter) {
   return {
     nbk_id: chapter.nbk_id || '',
     title: chapter.title || '',
-    mode: chapter.mode || 'discovery'
+    mode: chapter.mode || 'discovery',
+    source: chapter.source || '',
+    source_url: chapter.source_url || '',
+    last_updated: chapter.last_updated || ''
   };
 }
 
@@ -954,6 +1039,15 @@ export function toFinalizeCandidateRows(normalizedPayload, options = {}) {
       category: row.category,
       details: row.details,
       source_quote: row.source_quote || hint?.source_quote || null,
+      source_section: row.source_section || row.source_location?.section_heading || null,
+      evidence_scope: row.evidence_scope || null,
+      source_location: row.source_location || null,
+      detail_types: Array.isArray(row.detail_types) ? [...row.detail_types] : [],
+      ancillary_evidence_types: Array.isArray(row.ancillary_evidence_types)
+        ? [...row.ancillary_evidence_types]
+        : [],
+      reason: row.reason || null,
+      trajectory: row.trajectory || null,
       extraction_bucket: row.extraction_bucket
     };
   });
@@ -979,6 +1073,15 @@ export function enrichFinalizedCandidates(finalizedRows, inputRows) {
       category: sourceRow.category || null,
       details: sourceRow.details || null,
       source_quote: sourceRow.source_quote || null,
+      source_section: sourceRow.source_section || sourceRow.source_location?.section_heading || null,
+      evidence_scope: sourceRow.evidence_scope || null,
+      source_location: sourceRow.source_location || null,
+      detail_types: Array.isArray(sourceRow.detail_types) ? [...sourceRow.detail_types] : [],
+      ancillary_evidence_types: Array.isArray(sourceRow.ancillary_evidence_types)
+        ? [...sourceRow.ancillary_evidence_types]
+        : [],
+      reason: sourceRow.reason || null,
+      trajectory: sourceRow.trajectory || null,
       extraction_bucket: sourceRow.extraction_bucket || null
     };
   });
@@ -1029,6 +1132,14 @@ export function reconcileGroundingCoverage(inputRows, groundedRows, rejectedRows
       category: inputRow.category || null,
       details: inputRow.details || null,
       source_quote: inputRow.source_quote || null,
+      source_section: inputRow.source_section || inputRow.source_location?.section_heading || null,
+      evidence_scope: inputRow.evidence_scope || null,
+      source_location: inputRow.source_location || null,
+      detail_types: Array.isArray(inputRow.detail_types) ? [...inputRow.detail_types] : [],
+      ancillary_evidence_types: Array.isArray(inputRow.ancillary_evidence_types)
+        ? [...inputRow.ancillary_evidence_types]
+        : [],
+      trajectory: inputRow.trajectory || null,
       reason: 'no_supporting_sentence_found'
     });
   }

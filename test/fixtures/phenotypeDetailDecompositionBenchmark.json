@@ -1,0 +1,139 @@
+{
+  "cases": [
+    {
+      "candidate_label": "severe distal muscle weakness",
+      "section_id": "clinical_description",
+      "section_heading": "Clinical Description",
+      "paragraph_id": "bench_p1",
+      "paragraph_index": 1,
+      "sentence_id": "bench_1",
+      "source_sentence": "The patient has severe distal muscle weakness.",
+      "accepted_core_problem_options": ["muscle weakness", "weakness"],
+      "expected_modifier_details": [
+        {
+          "detail_type": "severity_domain",
+          "accepted_value_options": ["severe"]
+        },
+        {
+          "detail_type": "distribution",
+          "accepted_value_options": ["distal"]
+        }
+      ]
+    },
+    {
+      "candidate_label": "progressive sensorineural hearing loss",
+      "section_id": "clinical_description",
+      "section_heading": "Clinical Description",
+      "paragraph_id": "bench_p2",
+      "paragraph_index": 2,
+      "sentence_id": "bench_2",
+      "source_sentence": "The patient has progressive sensorineural hearing loss.",
+      "accepted_core_problem_options": ["sensorineural hearing loss", "hearing loss"],
+      "expected_modifier_details": [
+        {
+          "detail_type": "clinical_course",
+          "accepted_value_options": ["progressive"]
+        },
+        {
+          "detail_type": "modality",
+          "accepted_value_options": ["sensorineural"]
+        }
+      ]
+    },
+    {
+      "candidate_label": "childhood-onset bilateral sensorineural hearing loss",
+      "section_id": "clinical_description",
+      "section_heading": "Clinical Description",
+      "paragraph_id": "bench_p3",
+      "paragraph_index": 3,
+      "sentence_id": "bench_3",
+      "source_sentence": "The patient has childhood-onset bilateral sensorineural hearing loss.",
+      "accepted_core_problem_options": ["sensorineural hearing loss", "hearing loss"],
+      "expected_modifier_details": [
+        {
+          "detail_type": "temporal_qualifier",
+          "accepted_value_options": ["childhood-onset", "childhood onset"]
+        },
+        {
+          "detail_type": "laterality",
+          "accepted_value_options": ["bilateral"]
+        },
+        {
+          "detail_type": "modality",
+          "accepted_value_options": ["sensorineural"]
+        }
+      ]
+    },
+    {
+      "candidate_label": "recurrent seizures triggered by fever",
+      "section_id": "clinical_description",
+      "section_heading": "Clinical Description",
+      "paragraph_id": "bench_p4",
+      "paragraph_index": 4,
+      "sentence_id": "bench_4",
+      "source_sentence": "The patient has recurrent seizures triggered by fever.",
+      "accepted_core_problem_options": ["seizures", "seizure"],
+      "expected_modifier_details": [
+        {
+          "detail_type": "clinical_course",
+          "accepted_value_options": ["recurrent"]
+        },
+        {
+          "detail_type": "trigger",
+          "accepted_value_options": ["fever", "triggered by fever", "febrile"]
+        }
+      ]
+    },
+    {
+      "candidate_label": "exercise-induced muscle weakness",
+      "section_id": "clinical_description",
+      "section_heading": "Clinical Description",
+      "paragraph_id": "bench_p5",
+      "paragraph_index": 5,
+      "sentence_id": "bench_5",
+      "source_sentence": "The patient has exercise-induced muscle weakness.",
+      "accepted_core_problem_options": ["muscle weakness", "weakness"],
+      "expected_modifier_details": [
+        {
+          "detail_type": "trigger",
+          "accepted_value_options": ["exercise", "exercise-induced"]
+        }
+      ]
+    },
+    {
+      "candidate_label": "marked distal lower-limb weakness",
+      "section_id": "clinical_description",
+      "section_heading": "Clinical Description",
+      "paragraph_id": "bench_p6",
+      "paragraph_index": 6,
+      "sentence_id": "bench_6",
+      "source_sentence": "The patient has marked distal lower-limb weakness.",
+      "accepted_core_problem_options": ["weakness", "lower-limb weakness"],
+      "expected_modifier_details": [
+        {
+          "detail_type": "severity_domain",
+          "accepted_value_options": ["marked", "severe"]
+        },
+        {
+          "detail_type": "distribution",
+          "accepted_value_options": ["distal"]
+        },
+        {
+          "detail_type": "anatomical_subsite",
+          "accepted_value_options": ["lower-limb", "lower limb", "lower extremity"]
+        }
+      ]
+    },
+    {
+      "candidate_label": "sensory defensiveness",
+      "section_id": "clinical_description",
+      "section_heading": "Clinical Description",
+      "paragraph_id": "bench_p7",
+      "paragraph_index": 7,
+      "sentence_id": "bench_7",
+      "source_sentence": "The patient has sensory defensiveness.",
+      "accepted_core_problem_options": ["sensory defensiveness"],
+      "expected_modifier_details": []
+    }
+  ]
+}

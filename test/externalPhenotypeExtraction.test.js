@@ -110,7 +110,10 @@ test('normalizeExternalPhenotypeExtraction normalizes grouped bucket payloads', 
   const normalized = normalizeExternalPhenotypeExtraction(payload);
   assert.deepEqual(normalized.chapter, {
     chapter_key: 'USP7_Related_Hao_Fountain_Syndrome',
-    ...payload.chapter
+    ...payload.chapter,
+    source: null,
+    source_url: null,
+    last_updated: null
   });
   assert.equal(normalized.phenotypes.present.length, 2);
   assert.equal(normalized.phenotypes.excluded.length, 1);
@@ -249,6 +252,64 @@ test('quote-first grounding localizes source_quote before lexical fallback', () 
   assert.equal(result.candidates[0].source_sentence, 'Affected individuals often have global delay.');
 });
 
+test('freeze and grounding preserve enum-rich phenotype metadata', async () => {
+  const payload = {
+    chapter: {
+      title: 'Dravet Syndrome',
+      mode: 'discovery',
+      source: 'PMC',
+      source_url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC6713249/',
+      last_updated: '2019-06-26'
+    },
+    phenotypes: {
+      present: [
+        {
+          label: 'hemiclonic seizures',
+          source_quote: 'Patients with DS usually begin experiencing seizures during the first year of life.',
+          evidence_scope: 'sentence',
+          source_location: {
+            section_id: 'clinical_presentation',
+            section_heading: 'Clinical Presentation',
+            paragraph_id: 'p1',
+            paragraph_index: 1,
+            sentence_id: 'p1_s1'
+          },
+          detail_types: ['temporal_qualifier', 'trigger'],
+          ancillary_evidence_types: ['other'],
+          trajectory: {
+            direction: 'age_dependent_onset',
+            timing: 'first year of life',
+            note: null
+          }
+        }
+      ]
+    }
+  };
+
+  const frozen = freezeExternalPhenotypeExtraction(payload);
+  assert.equal(frozen.chapter.source, 'PMC');
+  assert.equal(frozen.chapter.source_url, 'https://pmc.ncbi.nlm.nih.gov/articles/PMC6713249/');
+  assert.equal(frozen.chapter.last_updated, '2019-06-26');
+  assert.equal(frozen.phenotypes.present[0].evidence_scope, 'sentence');
+  assert.equal(frozen.phenotypes.present[0].source_location.section_id, 'clinical_presentation');
+  assert.deepEqual(frozen.phenotypes.present[0].detail_types, ['temporal_qualifier', 'trigger']);
+  assert.deepEqual(frozen.phenotypes.present[0].ancillary_evidence_types, ['other']);
+  assert.equal(frozen.phenotypes.present[0].trajectory.direction, 'age_dependent_onset');
+
+  const grounded = await groundExternalExtractionFromValue(frozen, {
+    clinicalStructure: buildClinicalStructure([
+      'Patients with DS usually begin experiencing seizures during the first year of life.'
+    ])
+  });
+
+  assert.equal(grounded.grounded_candidates.length, 1);
+  assert.equal(grounded.grounded_candidates[0].evidence_scope, 'sentence');
+  assert.equal(grounded.grounded_candidates[0].source_location.section_id, 'clinical_presentation');
+  assert.deepEqual(grounded.grounded_candidates[0].detail_types, ['temporal_qualifier', 'trigger']);
+  assert.deepEqual(grounded.grounded_candidates[0].ancillary_evidence_types, ['other']);
+  assert.equal(grounded.grounded_candidates[0].trajectory.direction, 'age_dependent_onset');
+});
+
 test('external sidecar grounding preserves frozen statuses and does not skip anchor-matching rows', () => {
   const payload = {
     chapter: {
@@ -363,11 +424,14 @@ test('freezeExternalPhenotypeExtraction reroutes ancillary-like phenotype rows a
   assert.deepEqual(frozen.chapter, {
     nbk_id: 'NBK614471',
     title: 'VEXAS Syndrome',
-    mode: 'discovery'
+    mode: 'discovery',
+    source: '',
+    source_url: '',
+    last_updated: ''
   });
-  assert.deepEqual(frozen.phenotypes.present, [{ label: 'recurrent fever' }]);
-  assert.deepEqual(frozen.phenotypes.excluded, []);
-  assert.deepEqual(frozen.phenotypes.uncertain, [{ label: 'immune dysregulation' }]);
+  assert.deepEqual(frozen.phenotypes.present.map((row) => row.label), ['recurrent fever']);
+  assert.deepEqual(frozen.phenotypes.excluded.map((row) => row.label), []);
+  assert.deepEqual(frozen.phenotypes.uncertain.map((row) => row.label), ['immune dysregulation']);
   assert.deepEqual(frozen.ancillary_clinical_evidence.laboratory, [
     'polyomaviremia',
     'recurrent CMV viremia',
@@ -506,15 +570,15 @@ test('reconcileGroundingCoverage adds an explicit rejection for unaccounted froz
 
   assert.equal(reconciled.candidates.length, 1);
   assert.equal(reconciled.rejectedCandidates.length, 1);
-  assert.deepEqual(reconciled.rejectedCandidates[0], {
-    label: 'hearing loss',
-    status: 'uncertain',
-    extraction_bucket: 'uncertain',
-    category: null,
-    details: null,
-    source_quote: null,
-    reason: 'no_supporting_sentence_found'
-  });
+  assert.equal(reconciled.rejectedCandidates[0].label, 'hearing loss');
+  assert.equal(reconciled.rejectedCandidates[0].status, 'uncertain');
+  assert.equal(reconciled.rejectedCandidates[0].extraction_bucket, 'uncertain');
+  assert.equal(reconciled.rejectedCandidates[0].category, null);
+  assert.equal(reconciled.rejectedCandidates[0].details, null);
+  assert.equal(reconciled.rejectedCandidates[0].source_quote, null);
+  assert.equal(reconciled.rejectedCandidates[0].reason, 'no_supporting_sentence_found');
+  assert.deepEqual(reconciled.rejectedCandidates[0].detail_types, []);
+  assert.deepEqual(reconciled.rejectedCandidates[0].ancillary_evidence_types, []);
 });
 
 test('freezeExternalPhenotypeExtraction normalizes treatment-response qualifiers and reroutes non-qualifiers', () => {
@@ -579,13 +643,16 @@ test('freezeExternalPhenotypeExtraction splits bundled rows, promotes structural
 
   const frozen = freezeExternalPhenotypeExtraction(payload);
 
-  assert.deepEqual(frozen.phenotypes.present, [
-    { label: 'developmental delay' },
-    { label: 'metopic craniosynostosis' },
-    { label: 'lambdoid craniosynostosis' },
-    { label: 'corpus callosum dysgenesis' },
-    { label: 'agenesis of the corpus callosum' }
-  ]);
+  assert.deepEqual(
+    frozen.phenotypes.present.map((row) => row.label),
+    [
+      'developmental delay',
+      'metopic craniosynostosis',
+      'lambdoid craniosynostosis',
+      'corpus callosum dysgenesis',
+      'agenesis of the corpus callosum'
+    ]
+  );
   assert.deepEqual(frozen.ancillary_clinical_evidence.imaging, []);
   assert.deepEqual(frozen.ancillary_clinical_evidence.clinical_test, []);
   assert.ok(

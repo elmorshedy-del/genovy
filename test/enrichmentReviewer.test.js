@@ -2,17 +2,30 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 
 import {
+  buildEnrichmentReviewPrompt,
   canonicalizeAncillaryEvidenceType,
   canonicalizeDetailType,
   deterministicallyRouteEnrichmentReviewResults,
   normalizeEnrichmentReviewPayload
 } from '../src/lib/enrichmentReviewer.js';
 
+test('buildEnrichmentReviewPrompt includes the strict bucket and schema contract', () => {
+  const prompt = buildEnrichmentReviewPrompt();
+  assert.match(prompt, /keep_enrichment/);
+  assert.match(prompt, /retain_as_ancillary/);
+  assert.match(prompt, /clinical_course/);
+  assert.match(prompt, /management_context/);
+  assert.match(prompt, /source_section/);
+  assert.match(prompt, /Output JSON only\./);
+});
+
 test('canonicalizeDetailType maps close synonyms into the strict schema', () => {
   assert.equal(canonicalizeDetailType('severity'), 'severity_domain');
   assert.equal(canonicalizeDetailType('pathology'), 'pathophysiology');
   assert.equal(canonicalizeDetailType('progression'), 'clinical_course');
+  assert.equal(canonicalizeDetailType('frequency'), 'clinical_course');
   assert.equal(canonicalizeDetailType('anatomic subsite'), 'anatomical_subsite');
+  assert.equal(canonicalizeDetailType('body site'), 'anatomical_subsite');
   assert.equal(canonicalizeDetailType('made_up_label'), null);
 });
 
@@ -29,7 +42,7 @@ test('normalizeEnrichmentReviewPayload repairs aliases and reports invalid detai
     results: [
       {
         candidate_label: 'leopard spot pigmentary retinopathy',
-        sentence_id: 'p6_s4',
+        source_section: 'Ophthalmology',
         bucket: 'keep_enrichment',
         retention_layer: 'phenotype_enrichment',
         adds_detail_beyond_anchor: true,
@@ -43,6 +56,7 @@ test('normalizeEnrichmentReviewPayload repairs aliases and reports invalid detai
 
   const normalized = normalizeEnrichmentReviewPayload(payload, 1);
   assert.equal(normalized.valid, false);
+  assert.equal(normalized.results[0].source_section, 'Ophthalmology');
   assert.deepEqual(normalized.results[0].detail_types, ['pattern', 'pathophysiology']);
   assert.deepEqual(normalized.results[0].ancillary_evidence_types, []);
   assert.deepEqual(normalized.issues, [
@@ -59,7 +73,7 @@ test('normalizeEnrichmentReviewPayload canonicalizes ancillary rows and preserve
     results: [
       {
         candidate_label: 'autoantibodies to factor VIII',
-        sentence_id: 'p3_s8',
+        source_section: 'Hematology',
         bucket: 'retain_as_ancillary',
         retention_layer: 'ancillary_clinical_evidence',
         adds_detail_beyond_anchor: false,
@@ -73,6 +87,7 @@ test('normalizeEnrichmentReviewPayload canonicalizes ancillary rows and preserve
 
   const normalized = normalizeEnrichmentReviewPayload(payload, 1);
   assert.equal(normalized.valid, false);
+  assert.equal(normalized.results[0].source_section, 'Hematology');
   assert.deepEqual(normalized.results[0].detail_types, []);
   assert.deepEqual(normalized.results[0].ancillary_evidence_types, ['laboratory', 'pathology']);
   assert.deepEqual(normalized.issues, [
@@ -122,6 +137,11 @@ test('deterministicallyRouteEnrichmentReviewResults reroutes pure ancillary-only
       candidate: {
         label: 'autoantibodies to factor VIII',
         sentence_id: 'p33_s1',
+        paragraph_id: 'p33',
+        paragraph_index: 33,
+        section_id: 'hematology',
+        section_heading: 'Hematology',
+        evidence_scope: 'sentence',
         source_sentence: 'Some individuals developed autoantibodies to factor VIII.'
       }
     },
@@ -129,6 +149,11 @@ test('deterministicallyRouteEnrichmentReviewResults reroutes pure ancillary-only
       candidate: {
         label: 'polyomaviremia',
         sentence_id: 'p34_s1',
+        paragraph_id: 'p34',
+        paragraph_index: 34,
+        section_id: 'infectious_disease',
+        section_heading: 'Infectious Disease',
+        evidence_scope: 'sentence',
         source_sentence: 'Polyomaviremia was detected during follow-up.'
       }
     }
@@ -165,20 +190,23 @@ test('deterministicallyRouteEnrichmentReviewResults reroutes pure ancillary-only
       bucket: row.bucket,
       retention_layer: row.retention_layer,
       ancillary_evidence_types: row.ancillary_evidence_types,
-      detail_types: row.detail_types
+      detail_types: row.detail_types,
+      source_section: row.source_section
     })),
     [
       {
         bucket: 'retain_as_ancillary',
         retention_layer: 'ancillary_clinical_evidence',
         ancillary_evidence_types: ['laboratory'],
-        detail_types: []
+        detail_types: [],
+        source_section: 'Hematology'
       },
       {
         bucket: 'retain_as_ancillary',
         retention_layer: 'ancillary_clinical_evidence',
         ancillary_evidence_types: ['laboratory'],
-        detail_types: []
+        detail_types: [],
+        source_section: 'Infectious Disease'
       }
     ]
   );

@@ -7703,3 +7703,2041 @@ Status:
   - final counts: 56 phenotype assertions, 2 ancillary assertions, 5 context assertions, 3 trajectory assertions, 3 extraction notes
 - Promotion: Updated the bundle manifest, Williams chapter README, bundle README, and regime-ready index so chapter 3 is now explicitly marked `regime_ready`.
 - Next move: Use the same task-scoped Gemini path for the next chapter, then continue the same manual conservative-promotion workflow.
+
+## 2026-04-09 - Williams status corrected after review of source completeness
+- Action: Re-checked the actual Williams input surface at `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-williams-syndrome/NBK1249_clinical_text.txt`.
+- Finding: The available Williams source surface is truncated to a short suggestive-findings/genotype-correlation style slice (`48` lines, `38` sentences) and does not include the full Clinical Description richness expected from the complete chapter.
+- Consequence: The cleaned Williams extraction is disciplined for the provided text, but it should not be represented as a full-chapter-complete regime-ready chapter.
+- Fixes applied:
+  - corrected duplicate trajectory IDs in the cleaned Williams JSON
+  - changed Williams manifest status from `regime_ready` to `cleaned_truncated_input_draft`
+  - updated the Williams README and the regime-ready index to explicitly warn that the current file is a cleaned partial-source draft
+- Next move: Replace Williams with a full chapter fetch before treating it as truly chapter-complete under the new regime.
+
+## 2026-04-09 - Added reusable Codex skill for the grounded disease-layer workflow
+- Action: Created the global skill `/Users/ahmedelmorshedy/.codex/skills/genereviews-grounded-disease-layer` so the Genovy new-regime workflow no longer depends on chat memory.
+- Skill contents:
+  - `SKILL.md` with the canonical workflow for resolving a chapter, auditing source completeness, using the strict prompt and Gemini runner, applying manual cleanup, and updating manifest/readme/diary bookkeeping
+  - `references/repo-map.md` with the canonical repo paths, bundle paths, runner command, and current archived Williams recovery surface
+  - `references/cleanup-and-promotion.md` with the cleanup/promotion rubric
+  - `scripts/resolve_chapter.py` for manifest-backed chapter/path lookup
+  - `scripts/audit_surface.py` for clinical-surface truncation checks and archived-fetch comparison
+- Validation:
+  - quick_validate passed for the skill folder
+  - `resolve_chapter.py --query Williams` returned the expected live manifest entry
+  - `audit_surface.py` correctly flagged the current Williams bundle surface as truncated and surfaced the fuller archived `NBK1249` stage1 fetch (`142` sentences / `45` paragraphs / `3` sections)
+- Next move: Use the new skill as the default entry point for future new-regime chapter work, and rebuild Williams from the archived fuller surface instead of the truncated bundle prep.
+
+## 2026-04-09 - Added transparency guardrails after source-surface confusion
+- Action: Updated `/Users/ahmedelmorshedy/Virona-ShawQ-Dashboard/AGENTS.md`, `/Users/ahmedelmorshedy/Virona-ShawQ-Dashboard/skill.md`, and the Genovy workflow skill `/Users/ahmedelmorshedy/.codex/skills/genereviews-grounded-disease-layer/SKILL.md`.
+- New guardrails:
+  - explicitly state whether a prepared chapter surface is full chapter-backed, partial, summary-like, or truncated before calling any output complete
+  - never imply chapter-complete or regime-ready status without verified source breadth
+  - answer recent process/history questions from working memory when confidence is high, and only reopen files when exact verification materially changes the answer
+- Outcome: future Genovy workflow turns should surface source-completeness status earlier and should avoid unnecessary verification churn during process discussions.
+- Next move: keep using the audit-first chapter workflow and apply these transparency rules before any future readiness claims.
+
+## 2026-04-09 - Added explicit path-alignment guardrail
+- Action: Extended the same instruction surfaces to require explicit path-status reporting during work.
+- New guardrail:
+  - explicitly say whether the current work is on the intended path, drifting into a usable-but-partial draft path, or off-path / blocked
+  - if the current path is not leading to the intended end state, say so before continuing
+- Outcome: future chapter-work updates should expose not just source completeness, but also whether the workflow is actually moving toward the intended final product.
+- Next move: apply this path-status callout in future Genovy workflow updates whenever there is meaningful risk of wasted effort or model spend.
+
+## 2026-04-09 - Added and validated reusable HF-router chat runner
+- Action: Added `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/runHfRouterChat.js` and exposed it via `npm run gr:hf-router-chat`.
+- Purpose: provide a reusable way to call Hugging Face router chat models, save raw request/response artifacts, support JSON-mode parsing, and retry cleanly on rate-limit or transient provider errors.
+- Validation:
+  - syntax check passed for the new script
+  - text-mode sanity check succeeded against `zai-org/GLM-5.1:novita`
+  - JSON-mode sanity check also succeeded against `zai-org/GLM-5.1:novita`
+  - saved runs:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/hf-router-chat-runs/glm51_novita_text_sanity_threadenv`
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/hf-router-chat-runs/glm51_novita_json_sanity_threadenv`
+- Important auth note:
+  - sourcing `/Users/ahmedelmorshedy/.codex/skills/hugging-model/.env.huggingmodel` caused HF router calls to fail with provider-permission errors
+  - the working path was to use the thread's existing `HF_TOKEN` directly without sourcing that Fireworks-oriented env file
+- Outcome: HF router access for `zai-org/GLM-5.1:novita` is confirmed working for reusable text and JSON smoke tests.
+- Next move: use this runner for future GLM smoke tests and async extraction comparisons, while treating latency/rate limits as the main operational risk for larger prompts.
+
+## 2026-04-09 - Microsoft Azure AI Project agent smoke test blocked on local authentication
+- Action: Tried the provided Azure AI Projects sample against endpoint `https://genovy2-resource.services.ai.azure.com/api/projects/genovy2` with agent reference `2genovy:1`.
+- Execution details:
+  - local machine did not have `az` installed
+  - created a temporary virtualenv at `/tmp/azure-agent-test`
+  - installed `azure-ai-projects>=2.0.0`
+  - ran the sample using `DefaultAzureCredential`
+- Result: the SDK path itself is viable, but the call failed before agent execution because `DefaultAzureCredential` could not obtain a token from any configured credential source.
+- Specific blockers reported:
+  - environment credentials not configured
+  - no managed identity available
+  - no shared token cache account
+  - Azure CLI not installed
+  - Azure Developer CLI not installed/logged in
+  - brokered / VS Code credential path unavailable
+- Outcome: this is an auth/configuration block, not evidence that the agent endpoint or sample code is wrong.
+- Next move: authenticate locally with Azure CLI / Azure Developer CLI or provide service-principal environment credentials, then rerun the same sample.
+
+## 2026-04-09 - Microsoft Azure AI Project agent smoke test succeeded after Azure Developer CLI login
+- Action: Installed `azure-dev` (`azd`) via Homebrew, completed device-code login, and reran the provided sample against project endpoint `https://genovy2-resource.services.ai.azure.com/api/projects/genovy2` with agent reference `2genovy:1`.
+- Result: the call completed successfully using `DefaultAzureCredential` via Azure Developer CLI auth, and the agent returned a normal capability summary response.
+- Outcome: the Microsoft agent path is confirmed working locally; the earlier failure was purely missing authentication setup.
+- Reusable auth note:
+  - `azd auth login --use-device-code` is sufficient for this local `DefaultAzureCredential` path
+  - no full Azure CLI install was required for the smoke test
+- Next move: use the same authenticated path for stronger grounded-extraction smoke tests or structured JSON runs against the `2genovy:1` agent.
+
+## 2026-04-09 - Strong summary-slice smoke test against `2genovy:1` did not return in an interactive window
+- Action: Sent a strong Prader-Willi summary-slice grounded-extraction prompt to the authenticated Azure agent `2genovy:1`, then tried a shorter fallback strict prompt against the same path.
+- Result:
+  - the endpoint stayed alive and authenticated
+  - neither the strong prompt nor the shorter fallback produced a completed JSON response within a reasonable interactive window
+  - this contrasts with the simple capability prompt, which completed normally
+- Outcome: the Microsoft agent path is working as an endpoint, but is currently not a good interactive smoke-test path for stricter grounded-extraction prompts.
+- Path status: usable endpoint, but off the intended path for fast iterative extraction testing because latency/orchestration is too high.
+- Next move: either use a lighter/faster path for iterative extraction smoke tests, or treat the Azure agent as an async/background evaluation path rather than an interactive one.
+
+## 2026-04-09 - Added 3-stage Azure agent runner for grounded disease-layer extraction
+- Action: Added `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/runGroundedDiseaseLayerAzureAgent.py` and exposed it as `npm run gr:grounded-disease-layer:azure-agent`.
+- Bootstrap:
+  - added `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/scripts/run-grounded-disease-layer-azure-agent.sh`
+  - the package command now bootstraps/reuses `~/.cache/genovy-azure-agent-venv` automatically instead of depending on an ad hoc temp virtualenv
+- Strategy:
+  - stage 1: `phenotype_assertions`
+  - stage 2: `ancillary_assertions` + `context_assertions`
+  - stage 3: `trajectory_assertions` + `extraction_notes`
+  - `source_document` is composed locally from the wrapper after stage outputs are merged and normalized
+- Validation:
+  - Python syntax check passed
+  - package entrypoint dry-run passed
+  - direct tiny Azure agent call with `input=[{role:'user', content: ...}]` returned `{\"ok\":true}`
+- Important API note:
+  - Azure agent requests rejected the `instructions` parameter when `agent_reference` was present
+  - the working shape is to place the stage prompt and input wrapper in the user message content instead
+- Outcome: the Azure path now has a real task-scoped 3-stage runner instead of relying on one-shot prompts.
+- Next move: use this runner for async/background Azure extraction attempts where the agent path is acceptable, and keep faster providers for tight interactive smoke tests.
+
+## 2026-04-09 - Engineered around Azure agent latency with smaller staged inputs and resume controls
+- Action: tightened the Azure runner to reduce orchestration cost and make slow runs recoverable.
+- Changes:
+  - stage payloads now send compact chapter metadata plus `sentence_id: text` lines instead of the full indented wrapper JSON
+  - stage templates are embedded in compact JSON form to reduce prompt size
+  - added `--stage`, `--start-stage`, and `--stop-stage` controls for targeted reruns
+  - added `--resume` so completed stage payloads can be reused after a partial run instead of forcing all 3 stages to rerun
+  - saved per-stage compact input text files alongside prompts, raw outputs, parsed partial JSON, and response bodies
+- Validation:
+  - Python syntax check still passed
+  - dry-run for `--stage phenotype` passed
+  - dry-run for `--start-stage support --stop-stage course` passed
+- Outcome: the Azure path is still not a fast interactive smoke-test model, but it is now engineered for smaller stage payloads, restartability, and practical background use.
+- Next move: use phenotype-only or resumed stage runs first for debugging, then full 3-stage runs once a chapter path looks stable.
+
+## 2026-04-09 - Azure 3-stage runner completed Williams phenotype-only stage
+- Action: Ran `npm run gr:grounded-disease-layer:azure-agent -- --stage phenotype --input /Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-williams-syndrome/NBK1249_opus_input.json`.
+- Result:
+  - stage completed successfully through Azure agent `2genovy:1`
+  - phenotype count: `56`
+  - ancillary/context/trajectory/notes remained empty because only phenotype stage was run
+  - runtime remained slow enough to confirm this path should be treated as background/asynchronous, not chat-speed interactive
+- Key artifacts:
+  - final merged placeholder output: `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-azure-agent-runs/NBK1249_williams_syndrome/NBK1249_williams_syndrome_grounded_disease_layer.json`
+  - phenotype partial: `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-azure-agent-runs/NBK1249_williams_syndrome/NBK1249_williams_syndrome_phenotypes.json`
+  - phenotype raw text: `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-azure-agent-runs/NBK1249_williams_syndrome/NBK1249_williams_syndrome_phenotypes_raw_text.txt`
+- Next move: inspect phenotype quality, then run `--start-stage support --stop-stage course --resume` only if the phenotype pass is worth keeping.
+
+## 2026-04-09 - GLM-5.1 HF-router retry reached the model but exhausted output budget in reasoning
+- Action: Retried the strict Prader-Willi summary-slice smoke test against `zai-org/GLM-5.1:novita` using the Hugging Face router runner and the thread's `HF_TOKEN`.
+- Result:
+  - request completed successfully with no transport/rate-limit failure
+  - provider returned `reasoning_content` only and no assistant `content`
+  - no `response_parsed.json` was produced because there was no parseable JSON output
+  - usage showed `completion_tokens = 2200` and `reasoning_tokens = 2200`, indicating the model consumed the full budget internally without emitting the final JSON
+- Key artifacts:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/hf-router-chat-runs/pws_summary_slice_smoke_glm51_retry/meta.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/hf-router-chat-runs/pws_summary_slice_smoke_glm51_retry/response_body.json`
+- Outcome: credit/auth is no longer the blocker for GLM on HF router; the current blocker is provider behavior on this prompt shape, where the model spends its budget on exposed reasoning instead of the requested JSON output.
+- Next move: if GLM is still worth pursuing, test a much shorter phenotype-only prompt and/or a higher output budget to see whether it can be forced to emit final content instead of only reasoning traces.
+
+## 2026-04-09 - Fireworks provider variant improved basic GLM reachability but still failed phenotype-only JSON extraction
+- Action:
+  - ran the user's direct curl example against `zai-org/GLM-5.1:fireworks-ai`
+  - then ran a shorter phenotype-only Prader-Willi summary-slice JSON prompt through the HF-router runner with the same provider variant
+- Result:
+  - the direct curl test succeeded and returned normal assistant content (`The capital of France is Paris.`) plus provider reasoning text
+  - the phenotype-only extraction run completed, but instead of returning valid JSON it emitted a long freeform reasoning/planning text block
+  - no `response_parsed.json` was created for the phenotype-only run because the assistant content was not valid JSON
+- Key artifacts:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/hf-router-chat-runs/pws_phenotype_only_fireworks_glm51/meta.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/hf-router-chat-runs/pws_phenotype_only_fireworks_glm51/response_body.json`
+- Outcome: `fireworks-ai` is a better provider path than `novita` for basic chat completion, but it is still off the intended path for strict structured extraction because it ignores the JSON-only contract on the phenotype smoke test.
+- Next move: if GLM remains worth pursuing, either force a much narrower schema/output target or add a post-processor that extracts JSON from mixed assistant text, while accepting that this path is weaker than the current Gemini/Azure task-scoped routes for disciplined structured output.
+
+## 2026-04-09 - `zai-org` provider variant returned clean basic assistant content
+- Action: Ran the user's exact Node `fetch` sample against `zai-org/GLM-5.1:zai-org` on the Hugging Face router for the simple capital-of-France sanity check.
+- Result:
+  - provider returned normal assistant content: `The capital of France is Paris.`
+  - response also included `reasoning_content`, but unlike the weaker routes, it did emit a usable final answer in `message.content`
+- Outcome: `zai-org` is a viable basic-chat provider path for GLM-5.1. It still needs a structured-extraction smoke test before it can be trusted for JSON disease-layer work.
+- Next move: if structured output from GLM is still worth pursuing, run the shorter phenotype-only JSON smoke test against `zai-org/GLM-5.1:zai-org` next and compare it to `fireworks-ai`.
+
+## 2026-04-09 - `zai-org` provider variant also failed the phenotype-only structured extraction test
+- Action: Ran the same shorter phenotype-only Prader-Willi summary-slice JSON smoke test against `zai-org/GLM-5.1:zai-org`.
+- Result:
+  - request completed successfully
+  - no parseable JSON was returned
+  - `response_content.txt` was empty
+  - `response_body.json` showed `finish_reason: "length"` with the entire `completion_tokens` budget consumed as `reasoning_tokens`
+- Key artifacts:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/hf-router-chat-runs/pws_phenotype_only_zaiorg_glm51/meta.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/hf-router-chat-runs/pws_phenotype_only_zaiorg_glm51/response_body.json`
+- Outcome: `zai-org` is fine for basic chat, but like the other GLM provider variants it is off the intended path for direct structured disease-layer extraction under the current prompt shape.
+- Next move: only keep GLM in the stack if we are willing to use it for draft reasoning plus downstream repair/post-processing, rather than trusting it as the final JSON emitter.
+
+## 2026-04-09 - Sonnet 4.6 first-try Williams draft is clinically strong but still not regime-ready
+- Action: Reviewed the user's pasted Sonnet 4.6 Williams syndrome grounded-disease-layer draft against the archived fuller Williams clinical surface and the strict grounded-disease-layer workflow.
+- Source-surface status:
+  - on the intended path for Williams clinical extraction
+  - based on the fuller archived `NBK1249` clinical slice (`45` paragraphs, `142` sentences)
+  - still a partial clinical slice rather than a whole-chapter disease layer, because the source surface does not include the full inheritance / prevalence / genetic-counseling coverage
+- Result:
+  - first Sonnet draft so far that has strong coverage and avoids the obvious truncation-path failure
+  - materially better than the earlier partial/truncated Williams drafts
+  - still not regime-ready because it does not follow the target grounded-disease-layer schema
+- Main blocking issues:
+  - schema drift:
+    - rows use ad hoc fields like `assertion_id`, `label`, `qualifier`, `system`, `row_type`
+    - `extraction_notes` is a string array instead of structured note objects
+  - some rows are too strong or misclassified:
+    - procedural/anesthesia risk emitted as a phenotype row
+    - some `has been reported` findings were not kept conservative enough
+    - some combined-frequency rows were split into separate manifestations while copying the shared frequency to each child
+  - still missing or misrouted a few expected clinically useful rows, such as reduced bladder capacity as a direct phenotype row
+- Outcome:
+  - Sonnet 4.6 is now producing usable on-path Williams drafts from the fuller archived clinical slice
+  - the remaining work is cleanup / schema normalization / conservative grounding, not basic source recovery
+- Next move:
+  - use this Sonnet draft as a high-quality clinical base
+  - repair it into the exact `grounded_disease_layer_v1` schema
+  - keep the chapter labeled as a cleaned fuller-clinical-slice draft unless and until full-chapter context coverage is restored
+
+## 2026-04-09 - Gemini Williams draft remains a partial clinical draft and is still behind Sonnet
+- Action: Reviewed the user's pasted Gemini Williams syndrome grounded-disease-layer draft against the same archived Williams clinical expectations.
+- Source-surface status:
+  - producing a usable but partial draft
+  - not on the intended full Williams path
+  - reconstructed sentence index is still a selective slice rather than the fuller archived `45` paragraph / `142` sentence surface
+- Result:
+  - schema shape is closer than some earlier Gemini drafts
+  - clinical extraction quality still regresses in multiple places compared with the Sonnet 4.6 draft
+- Main problems:
+  - partial surface / coverage gaps:
+    - missing many clinically useful explicit rows or qualifiers from the fuller source
+    - frequencies are commonly dropped even when directly stated
+  - over-extraction / weak labels:
+    - vague or poor labels like `narrowed artery`
+    - non-phenotype or downstream consequence rows promoted into phenotype space
+  - wrong strength / certainty handling:
+    - several `has been reported` findings kept too strong
+    - some findings that should stay descriptor or ancillary were emitted as primary phenotypes
+  - facial rows are still too aggressively typed as `primary` instead of descriptor-style children
+- Outcome:
+  - Gemini is still behind for Williams chapter work
+  - Sonnet 4.6 is the first model currently producing an on-path clinical base worth repairing
+- Next move:
+  - do not use the Gemini draft as the primary Williams base
+  - keep Gemini as a secondary comparison surface only unless its prompt/runner changes materially improve source reconstruction and grounding discipline
+
+## 2026-04-09 - Old Vertex AI extraction prompt mapped to the new grounded-disease-layer regime
+- Action: Rewrote the older two-stage Vertex AI chapter extraction prompt so it targets the current `grounded_disease_layer_v1` / `strict_grounded_v1` schema instead of the older `chapter / phenotypes / ancillary_clinical_evidence / context_metadata` shape.
+- Result:
+  - preserved deterministic canonical sentence splitting
+  - updated output contract to:
+    - `source_document`
+    - `phenotype_assertions`
+    - `ancillary_assertions`
+    - `context_assertions`
+    - `trajectory_assertions`
+    - `extraction_notes`
+  - aligned status / qualifier / routing rules with the 2026-04-09 strict prompt
+- Outcome:
+  - older Vertex prompt can now be reused as a new-regime model handoff prompt instead of forcing downstream schema translation
+- Next move:
+  - if Vertex is still being used, compare one run from this rewritten prompt against the current Sonnet base to see whether the model path improves once schema drift is removed
+
+## 2026-04-09 - Vertex AI runs after prompt rewrite are still off-path
+- Action: Reviewed two Vertex AI Williams outputs generated after adapting the older prompt to the new regime.
+- Result:
+  - first Vertex output was clearly off-source and effectively generic syndrome-memory output:
+    - invented sectioning
+    - tiny sentence index
+    - non-source-faithful labels
+    - personality descriptors leaked into phenotypes
+    - unsupported `gene` context claim
+  - second Vertex output was structurally closer but still only a summary-level partial slice:
+    - only four sentences retained
+    - large coverage collapse
+    - `gene` context still overclaimed from a deletion-region sentence
+    - diagnosis sentence misrouted into ancillary/context instead of being treated as diagnosis-only evidence
+- Path status:
+  - Vertex AI is still off the intended Williams path even with the rewritten prompt
+  - prompt/schema alignment alone did not solve source reconstruction or grounding discipline
+- Outcome:
+  - Sonnet remains the best current Williams base
+  - Vertex should not be trusted as a primary grounded disease-layer emitter on the current setup
+- Next move:
+  - if Vertex is kept in the workflow, constrain it to narrow summary-slice or sentence-normalization duties only, or add a strong downstream repair layer rather than trusting first-pass extraction output
+
+## 2026-04-09 - New Gemini Williams draft is the strongest Gemini attempt so far, but still behind Sonnet
+- Action: Reviewed the user's newer Gemini Williams draft after the planned next-step refinement path.
+- Source-surface status:
+  - closer to the intended Williams clinical path than earlier Gemini runs
+  - still a partial reconstructed clinical slice rather than a clean full archived chapter surface
+- Result:
+  - materially better than prior Gemini drafts:
+    - stronger coverage
+    - better recovery of urinary, auditory, growth, and context rows
+    - inheritance and penetrance were restored
+  - still not regime-ready and still below the Sonnet 4.6 draft
+- Main blockers:
+  - schema validity issue:
+    - invalid sentence id `p22_s0`
+  - still too many descriptor/facial rows typed as `primary`
+  - still includes weak or poor-label phenotype rows such as `narrowed artery`
+  - at least one row appears mis-grounded:
+    - `soft, lax skin` cites `p24_s1`, which is a hoarse-voice / vocal-cord sentence
+  - some reported/hedged findings are still too strong or routed poorly
+  - imaging-derived findings are still split awkwardly between phenotype and ancillary space
+- Outcome:
+  - Gemini is improving and is no longer obviously off-path in the same way as Vertex
+  - Sonnet remains the best current Williams base
+- Next move:
+  - use Gemini Flash as a repair / normalization / sentence-reconstruction helper if desired
+  - do not replace the Sonnet base with Gemini yet unless a cleaner full-surface run closes the remaining grounding and schema issues
+
+## 2026-04-09 17:12 EDT
+
+- Added separate model-specific strict prompt variants to the 2026-04-09 grounded-disease-layer bundle:
+  - `genereviews-gemini-grounded-disease-layer-strict-prompt-v1-20260409.md`
+  - `genereviews-vertex-grounded-disease-layer-strict-prompt-v1-20260409.md`
+- Intent:
+  - Gemini variant is optimized first for coverage preservation, grounding discipline, routing discipline, and common Gemini extraction regressions
+  - Vertex variant is optimized first for deterministic sentence-id rebuild, `s0` / invalid-id prevention, evidence-ref remapping, and anti-hallucination constraints on short or partial source slices
+- Outcome:
+  - the bundle now has a default general strict prompt plus model-specific Gemini and Vertex variants instead of forcing one generic prompt onto both runtimes
+
+## 2026-04-09 17:50 EDT
+
+- Action: Manually rebuilt the official Williams grounded-disease-layer file from the fuller archived Williams surface rather than continuing to clean the thin bundle prep slice.
+  - replaced `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-williams-syndrome/NBK1249_williams_syndrome_regime_ready.json`
+  - chapter-backed evidence surfaces used:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/genereviews-pipeline-review-first-50-20260331/stage1_fetch/NBK1249_clinical_structure.json`
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/genereviews-pipeline-review-first-50-20260331/stage1_fetch/NBK1249_raw.html`
+- Path status:
+  - on the intended path now
+  - no longer just a cleaned truncated-source draft from the 38-sentence bundle surface
+- Result:
+  - the replacement Williams file now uses a fuller curated sentence index, conservative routing, descriptor-vs-primary cleanup for facial findings, cause-list suppression, and sentence-grounded context for inheritance / prevalence / penetrance
+  - chapter bookkeeping was updated to match the new state:
+    - bundle chapter README
+    - bundle manifest
+    - regime-ready chapter index
+    - bundle root README
+- Outcome:
+  - Williams is now recorded as chapter 3 `regime_ready` in the bundle bookkeeping
+- Next move:
+  - keep this Williams file as the current repo-side official base unless a later chapter-backed run clearly exceeds it without reintroducing schema or grounding drift
+
+## 2026-04-09 18:10 EDT
+
+- Action: Applied a narrow strict-rules cleanup pass to the rebuilt Williams official JSON instead of doing another full rewrite.
+  - updated `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-williams-syndrome/NBK1249_williams_syndrome_regime_ready.json`
+- Rule-driven changes:
+  - cleared ungrounded metadata by setting `source_document.source_date` to `null`
+  - removed weak hypercalcemia symptom rows `irritability` and `muscle cramps` rather than keeping them as disease-layer phenotype assertions
+  - removed the process-like phenotype row `tightening of the heel cords and hamstrings` because that progression is already represented in the trajectory layer
+  - corrected the non-source-faithful label `bowel diverticulae` to the literal source phrase `bowel/bladder diverticulae`
+- Validation:
+  - JSON parses cleanly
+  - all evidence sentence ids still resolve
+  - current Williams counts are:
+    - `145` sentence-index rows
+    - `132` phenotype assertions
+    - `11` ancillary assertions
+    - `4` context assertions
+    - `3` trajectory assertions
+    - `5` extraction notes
+- Outcome:
+  - the Williams official file is still on the intended chapter-backed path, but is now slightly tighter against the strict new-regime cleanup rubric
+- Next move:
+  - use this stricter Williams file as the comparison target for any future Gemini Flash refinement rather than the earlier broader draft
+
+## 2026-04-09 - Packaged Williams Meta-ready artifact pair
+
+- Action:
+  - created a Meta-ready Williams handoff folder at `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-williams-syndrome/meta-ready-20260409`
+  - copied the official cleaned Williams disease-layer JSON into:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-williams-syndrome/meta-ready-20260409/NBK1249_williams_syndrome_clinical.json`
+  - copied the fuller archived chapter-backed raw HTML into:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-williams-syndrome/meta-ready-20260409/NBK1249_williams_syndrome_full_chapter_raw.html`
+  - added a local provenance note:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-williams-syndrome/meta-ready-20260409/README.md`
+- Outcome:
+  - Williams now has a single handoff folder for Meta model testing that pairs the final cleaned clinical JSON with the fuller chapter-backed HTML source instead of the thinner bundle audit copy
+- Next move:
+  - use this Meta-ready pair for direct model comparison runs before creating any new Williams chapter variants
+
+## 2026-04-09 - Quick review of Meta Williams JSON (`Metawilliams.json`)
+
+- Action:
+  - reviewed `/Users/ahmedelmorshedy/Downloads/Metawilliams.json` against the strict grounded disease-layer expectations and the current Williams regime-ready file
+- Findings:
+  - the file only contains `schema_version`, `extraction_policy_version`, and `source_document`; there are no `phenotype_assertions`, `ancillary_assertions`, `context_assertions`, `trajectory_assertions`, or `extraction_notes`
+  - the source surface is large (`1008` sentence rows) but structurally invalid for grounded extraction because sentence ids are heavily duplicated:
+    - `1008` sentence rows
+    - only `505` unique `sentence_id` values
+  - the indexed source includes substantial page chrome and non-clinical material such as `Document`, `Literature Cited`, `Table 2.`, `Table 6.`, figure captions, and copyright text
+- Outcome:
+  - this Meta output is promising only as a fast first-pass HTML-to-sentence indexing attempt
+  - it is not promising as a same-regime Williams clinical JSON yet, because it did not perform stage-2 extraction and the canonical evidence-id layer is not globally valid
+- Next move:
+  - if Meta is worth pursuing, constrain it to either:
+    - a strict stage-1-only fetch/index role with globally unique ids and clinical-surface filtering, or
+    - a full strict-schema run that must emit all top-level arrays and grounded assertions
+
+## 2026-04-09 - Added strict prompt and schema to Williams Meta-ready folder
+
+- Action:
+  - copied the canonical strict prompt into the Williams Meta-ready folder as:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-williams-syndrome/meta-ready-20260409/NBK1249_meta_strict_prompt.md`
+  - copied the canonical grounded disease-layer schema template into the same folder as:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-williams-syndrome/meta-ready-20260409/grounded_disease_layer_schema_template.json`
+  - updated the local README so the Meta handoff is self-contained
+- Outcome:
+  - the Williams Meta-ready folder now contains source HTML, target JSON, strict prompt, and schema template in one place for direct Meta model runs
+- Next move:
+  - use the strict prompt plus schema first; only add target-example conditioning if the Meta model still fails to emit stage-2 clinical assertions
+
+## 2026-04-09 - Review of Meta2 Williams output
+
+- Action:
+  - reviewed `/Users/ahmedelmorshedy/Downloads/Meta2.json` against the official Williams regime-ready file
+- Findings:
+  - the file has the full expected grounded disease-layer shape:
+    - `145` sentence rows
+    - `132` phenotype assertions
+    - `11` ancillary assertions
+    - `4` context assertions
+    - `3` trajectory assertions
+    - `5` extraction notes
+  - all `145` sentence ids are unique in this file
+  - semantic comparison against `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-williams-syndrome/NBK1249_williams_syndrome_regime_ready.json` returned `equal True`
+  - the byte-level hashes differ, so the file serialization/formatting differs, but the JSON content is semantically identical
+- Outcome:
+  - `Meta2.json` is on-path as a Williams grounded disease-layer output, but it is not evidence of independent extraction quality if the model saw the existing Williams final or a close target example
+- Next move:
+  - to test Meta fairly, run it on a chapter that does not already have a provided target JSON in context, or provide only raw HTML + strict prompt + schema and compare the output blind against a held-out official cleanup target
+
+## 2026-04-09 - Review of Meta3 Williams output
+
+- Action:
+  - reviewed `/Users/ahmedelmorshedy/Downloads/Meta3.json` against the strict grounded disease-layer rules
+- Findings:
+  - the file is not a copy of the official Williams final
+  - it has a partial source surface only:
+    - `22` sentence rows
+    - drawn from summary, figure captions, diagnosis, management, and surveillance
+  - sentence ids are unique but not canonical:
+    - uses `s001` ... `s022` instead of required `p{n}_s{m}`
+  - it over-extracts umbrella and excluded-style rows as primary phenotypes, including:
+    - `specific cognitive profile`
+    - `unique personality characteristics`
+    - `cardiovascular disease`
+    - `connective tissue abnormalities`
+    - `endocrine abnormalities`
+    - `distinctive facies`
+  - it introduces a non-schema context field:
+    - `genetic_basis`
+- Outcome:
+  - this is a usable sign that Meta can produce a structured partial draft from a thin slice, but it is not on the intended strict-regime path as a final chapter extraction
+- Next move:
+  - if using Meta seriously, force canonical ids, allowed context fields only, and source-surface filtering before stage-2 extraction
+
+## 2026-04-09 - Review of Meta4 Williams output
+
+- Action:
+  - reviewed `/Users/ahmedelmorshedy/Downloads/Meta4.json` against the Williams strict-regime rules
+- Findings:
+  - this appears to be a fuller parse attempt than `Meta3`:
+    - `495` sentence rows
+    - `76` phenotype assertions
+    - `1` ancillary assertion
+    - `6` context assertions
+    - `0` trajectory assertions
+    - `3` extraction notes
+  - sentence ids are unique but still not canonical:
+    - uses `s001` ... `s495` instead of required `p{n}_s{m}`
+  - it still violates the allowed context-field set:
+    - uses `recurrence_risk` instead of the schema field `family_risk`
+  - context local ids are duplicated and repeated from two places in the source:
+    - `ctx_001`, `ctx_002`, `ctx_003` are each emitted twice
+  - phenotype duplication remains substantial:
+    - multiple phenotype labels are emitted twice or more, including `intellectual disability`, `supravalvar aortic stenosis`, many facial features, and `mitral valve prolapse`
+  - ancillary routing is still severely underused relative to the source surface:
+    - only `1` ancillary assertion despite many management/test/surveillance sentences being present in the indexed source
+  - some certainty discipline is still too weak:
+    - `mitral valve prolapse`, `aortic insufficiency`, and `prolonged QTc` are retained as `present` rather than being handled more conservatively
+  - one umbrella row still leaked through:
+    - `growth deficiency`
+- Outcome:
+  - `Meta4` is more promising than `Meta3` as a fuller independent parse, but it is still off-path as a final grounded disease-layer output
+- Next move:
+  - if pursuing Meta, the next required constraints are:
+    - canonical `p{n}_s{m}` ids
+    - unique local ids
+    - allowed context fields only
+    - deduplication across repeated source sections/tables
+    - stronger routing of management/test/surveillance sentences into ancillary instead of dropping them
+
+## 2026-04-09 - Review of Meta5 Williams output
+
+- Action:
+  - reviewed `/Users/ahmedelmorshedy/Downloads/Meta5.json` against the Williams strict-regime rules
+- Findings:
+  - `Meta5` improves on `Meta4` by using mostly canonical-looking sentence ids in the `p{n}_s{m}` format and a somewhat tighter source surface (`375` sentence rows instead of `495`)
+  - however, the file is internally inconsistent and still not valid:
+    - stale non-canonical refs remain in assertions and notes:
+      - `ph_076 -> s356`
+      - `ctx_001 -> s370`
+      - extraction notes reference `s001` and `s495`
+    - only `1` ancillary assertion is emitted despite many management/test/surveillance sentences in the indexed source
+    - no trajectory assertions are emitted
+    - duplicate phenotype labels remain widespread
+    - duplicate context ids remain
+    - invalid context field `recurrence_risk` still appears instead of schema field `family_risk`
+    - one umbrella phenotype still leaks through:
+      - `growth deficiency`
+    - certainty is still too strong for rows such as:
+      - `mitral valve prolapse`
+      - `aortic insufficiency`
+      - `prolonged QTc`
+- Outcome:
+  - `Meta5` is directionally better than `Meta4` on sentence-id format, but the repair is incomplete and the output is still off-path as a strict final Williams extraction
+- Next move:
+  - if using Meta further, require a full post-rebuild remap pass so no stale `s###` ids survive, plus ancillary routing, deduplication, and context-field enforcement
+
+## 2026-04-10 - Williams benchmark-oriented per-sentence normalization
+
+- Action:
+  - updated `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-williams-syndrome/NBK1249_williams_syndrome_regime_ready.json` to align better with the locked-rule audit preference for per-sentence auditability
+  - created a local backup of the pre-normalized aggregate-rich file:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-williams-syndrome/NBK1249_williams_syndrome_regime_ready.pre_benchmark92_backup.json`
+- Rule-driven changes:
+  - split all multi-reference phenotype assertions into one phenotype assertion per evidence sentence
+  - retained only qualifiers whose literal value was supported by that specific evidence sentence
+  - re-sequenced phenotype ids after the split
+  - split the one multi-reference ancillary assertion into single-reference ancillary assertions and re-sequenced ancillary ids
+  - left extraction-note multi-reference examples intact because they document routing/exclusion decisions rather than phenotype facts
+- Validation:
+  - JSON parses cleanly
+  - sentence ids are canonical and unique
+  - all evidence refs resolve
+  - phenotype rows with multiple evidence ids: `0`
+  - ancillary rows with multiple evidence ids: `0`
+  - context rows with multiple evidence ids: `0`
+  - trajectory rows with multiple evidence ids: `0`
+  - current Williams counts are:
+    - `145` sentence-index rows
+    - `205` phenotype assertions
+    - `13` ancillary assertions
+    - `4` context assertions
+    - `3` trajectory assertions
+    - `5` extraction notes
+- Outcome:
+  - Williams now favors per-sentence auditability over aggregate-rich phenotype rows, matching the Opus audit recommendation for the benchmark path
+- Next move:
+  - rerun the external benchmark audit and only do further manual corrections for true grounding failures rather than percentage-pattern false positives
+
+## 2026-04-10 - Correction: Williams normalization reverted
+
+- Action:
+  - restored `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-williams-syndrome/NBK1249_williams_syndrome_regime_ready.json` from the pre-normalization backup after the user clarified that the `92%` benchmark correction target is the Genovy website paper, not the Williams extraction file
+  - removed the Williams README note that described the official file as the `205`-phenotype per-sentence variant
+- Outcome:
+  - the official Williams JSON is back on the prior aggregate-rich final path
+- Next move:
+  - patch the Genovy website paper content for the benchmark correction instead
+
+## 2026-04-10 - Grounded disease-layer chapter selection methodology added
+
+- Action:
+  - added `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/chapter-selection-methodology-20260410.md`
+  - updated the grounded disease-layer bundle README to require consulting the methodology before choosing additional chapters
+- Evidence inspected:
+  - `new-regime-manifest-20260409.json`
+  - `data/source-enrichment/genereviews-chapter-policy-template-20260329.json`
+  - `data/source-enrichment/genereviews-chapter-policy-review-first-50-20260331.generated.json`
+  - reusable stage1 fetch summaries under `output/genereviews-pipeline-review-first-50-20260331/stage1_fetch/`
+- Selection policy:
+  - source readiness first
+  - disease identity / MONDO mapping clarity second
+  - domain diversity and schema stress value next
+  - reuse already fetched full source surfaces where possible
+  - audit the source surface before any extraction is promoted as chapter-complete
+- Immediate ranking:
+  - initial rank 1 was `VEXAS Syndrome` because it has exact MONDO mapping (`MONDO:0026777`) and stress-tests immune/hematologic phenotypes, laboratory/pathology routing, treatment leakage, adult onset, and mechanism extraction
+  - VEXAS failed the immediate promotion gate on source-surface audit because the reusable local surface has only `40` sentences and was flagged `likely_truncated`
+  - chapter 4 was therefore switched to `Variegate Porphyria`, which has exact MONDO mapping (`MONDO:0008297`) and passed the source audit with `80` sentences, `32` paragraphs, `2` sections, and `likely_truncated: false`
+- Next move:
+  - build the Variegate Porphyria chapter 4 `opus_input.json` from the audited local source surface and run the grounded disease-layer extraction
+
+## 2026-04-10 - Variegate Porphyria prepared as chapter 4 input
+
+- Action:
+  - created `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-variegate-porphyria`
+  - copied the reusable `NBK121283` stage1 fetch source files into that folder
+  - generated `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-variegate-porphyria/NBK121283_opus_input.json`
+  - wrote `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-variegate-porphyria/source_surface_audit_20260410.json`
+- Audit result:
+  - source status is `chapter_backed_audit_pass`
+  - `80` sentences
+  - `32` paragraphs
+  - `2` sections
+  - `likely_truncated: false`
+- Schema update included in prep:
+  - `chapter.mondo_id` is set to `MONDO:0008297` in the input wrapper
+  - the grounded disease-layer template and prompts now include `causal_chains` and deterministic `mechanism_sentence_ids`
+  - the Gemini runner now has a task-scoped `causal_chains` pass and derives `mechanism_sentence_ids` from molecular-mechanism chain evidence
+- Manifest:
+  - added `Variegate Porphyria` as chapter 4 with status `prepared_input`
+- Next move:
+  - run `npm run gr:grounded-disease-layer:gemini -- --input /Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-variegate-porphyria/NBK121283_opus_input.json`
+
+## 2026-04-10 - Variegate Porphyria manually cleaned and promoted
+
+- Action:
+  - used the audited chapter-backed `NBK121283_opus_input.json` surface plus the task-scoped Gemini scratch outputs under `output/grounded-disease-layer-gemini-runs/NBK121283_variegate_porphyria/` as a cleanup aid
+  - wrote `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-variegate-porphyria/NBK121283_variegate_porphyria_regime_ready_gpt-5.4-manual-opus4.6-reviewed.json`
+  - updated the chapter README, regime-ready index, and manifest to mark chapter 4 as `regime_ready`
+- Path status:
+  - `on the intended path`
+  - source surface remains `chapter_backed_audit_pass`, not truncated
+- Validation:
+  - JSON parses cleanly
+  - all `evidence_sentence_ids` resolve against the 80-sentence canonical index
+  - no duplicate phenotype, ancillary, context, trajectory, causal-chain, or extraction-note ids
+  - final counts are:
+    - `80` sentence-index rows
+    - `37` phenotype assertions
+    - `7` ancillary assertions
+    - `5` context assertions
+    - `2` trajectory assertions
+    - `6` causal chains
+    - `5` extraction notes
+- Outcome:
+  - chapter 4 now has an official repo-side new-regime output with explicit ancillary routing, conservative complication status, and chapter-level causal chains
+- Next move:
+  - continue the ranked chapter queue using the same source-surface audit gate before spending more model runs
+
+## 2026-04-10 - Waardenburg Syndrome Type I manually cleaned and promoted
+
+- Action:
+  - created `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-waardenburg-syndrome-type-i`
+  - copied the reusable `review-first-50` stage1 fetch surface for `NBK1531`
+  - generated `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-waardenburg-syndrome-type-i/NBK1531_opus_input.json`
+  - wrote `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-waardenburg-syndrome-type-i/source_surface_audit_20260410.json`
+  - ran `npm run gr:grounded-disease-layer:gemini -- --input /Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-waardenburg-syndrome-type-i/NBK1531_opus_input.json`
+  - the Gemini run completed all six task-scoped passes but failed final normalization because one phenotype row referenced `p26_2` instead of canonical `p26_s2`
+  - patched both `src/scripts/runGroundedDiseaseLayerGemini.js` and `src/scripts/runGroundedDiseaseLayerAzureAgent.py` so trivial sentence-id variants are canonicalized before evidence-ref validation
+  - manually cleaned the saved pass artifacts under `output/grounded-disease-layer-gemini-runs/NBK1531_waardenburg_syndrome_type_i/`
+  - wrote `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-waardenburg-syndrome-type-i/NBK1531_waardenburg_syndrome_type_i_regime_ready_gpt-5.4-manual-opus4.6-reviewed.json`
+  - updated the chapter README, bundle README, regime-ready index, and manifest to mark chapter 5 as `regime_ready`
+- Path status:
+  - `on the intended path`
+  - source surface remains `chapter_backed_audit_pass`, not truncated
+- Validation:
+  - JSON parses cleanly
+  - all `evidence_sentence_ids` resolve against the 60-sentence canonical index
+  - no duplicate phenotype, ancillary, context, trajectory, causal-chain, or extraction-note ids
+  - final counts are:
+    - `60` sentence-index rows
+    - `25` phenotype assertions
+    - `7` ancillary assertions
+    - `1` context assertion
+    - `2` trajectory assertions
+    - `1` causal chain
+    - `5` extraction notes
+    - `1` mechanism sentence id
+- Outcome:
+  - chapter 5 now has an official repo-side new-regime output
+  - the grounded disease-layer runners now tolerate the recurring `p26_2`-style sentence-id formatting error without relaxing sentence-id validation
+- Next move:
+  - continue chapter selection with the same audit gate and let the patched runner absorb trivial evidence-id variants on future Gemini or Azure pass outputs
+
+## 2026-04-10 - Variegate Porphyria and Waardenburg schema-strengthening pass after Opus critique
+
+- Action:
+  - reviewed `/Users/ahmedelmorshedy/Downloads/NBK121283_critique_and_merge.json` against the official chapter-backed `NBK121283` regime-ready file and kept only chapter-grounded, schema-safe additions
+  - reviewed `/Users/ahmedelmorshedy/Downloads/NBK1531_critique_and_merge.json` against the official chapter-backed `NBK1531` regime-ready file and separated valid cleanup from over-interpreted causal-chain suggestions
+  - strengthened `NBK121283_variegate_porphyria_regime_ready_gpt-5.4-manual-opus4.6-reviewed.json` with corrected qualifier grounding, explicit descriptor parent links, added `depression`, `respiratory compromise`, `chronic neurovisceral symptoms`, a sun-exposed-lesion descriptor row, merged prognosis context, explicit `onset` and `gene` context, and a new `episode_classes` + `trigger_factors` layer for acute neurovisceral attacks
+  - strengthened `NBK1531_waardenburg_syndrome_type_i_regime_ready_gpt-5.4-manual-opus4.6-reviewed.json` with excluded-row polarity repair, header-ref cleanup, parent linking for descriptor rows, added `early graying of scalp hair`, `red forelock`, `black forelock`, `myelomeningocele`, new `gene` and `family_risk` context, and ancillary capture of the Japanese cohort diagnostic-yield and neurocristopathy framing
+  - extended the grounded disease-layer schema/template and strict prompt/contract surfaces to recognize optional `episode_classes` and `trigger_factors`, the retention-over-rejection rule for ambiguous content, descriptor-parent requirements, excluded-row label polarity, and the ban on using list headers as evidence refs
+  - patched `src/scripts/runGroundedDiseaseLayerGemini.js` so `mechanism_sentence_ids` are derived from all grounded causal-chain evidence and so future Gemini runs have merge slots for `episode_classes` and `trigger_factors`
+- Path status:
+  - `on the intended path`
+  - both chapters remain `chapter_backed_audit_pass` surfaces, not summary-only or truncated rescues
+- Validation:
+  - both staged chapter JSONs parse cleanly
+  - all evidence refs, mechanism refs, episode refs, and trigger refs resolve against the canonical sentence index
+  - the rule review passed for descriptor-parent links, excluded-row polarity, header-ref contamination, duplicate context-field cleanup, and broad-trigger self-sufficiency
+  - final staged counts are:
+    - `NBK121283`: `41` phenotype assertions, `7` ancillary assertions, `5` context assertions, `1` episode class, `7` trigger factors, `2` trajectory assertions, `6` causal chains, `6` mechanism sentence ids, `6` extraction notes
+    - `NBK1531`: `29` phenotype assertions, `9` ancillary assertions, `3` context assertions, `0` episode classes, `0` trigger factors, `2` trajectory assertions, `2` causal chains, `1` mechanism sentence id, `7` extraction notes
+- Outcome:
+  - the two chapters are now Opus-audited, manually reviewed, schema-aligned passes rather than first-pass regime-ready drafts
+  - the schema now has an explicit place for broad disease-state triggers without duplicating them across phenotype rows
+- Next move:
+  - sync the staged chapter, schema, prompt, contract, runner, and diary updates back into the Genovy repo and keep the same review standard for the next ranked chapter
+
+## 2026-04-10 - Next chapter selection after chapter 5
+
+- Action:
+  - re-read the ranked-queue methodology and current regime-ready chapter list before selecting the next chapter
+  - verified that `VEXAS Syndrome` remains a poor immediate promotable choice because the local audited surface is already documented as likely truncated
+  - verified that `Vascular Ehlers-Danlos Syndrome` does have a local stage1 fetch surface at `NBK1494`, but the available slice is thin at `22` sentences and `20` paragraphs, which makes it better as a later refetch-or-repair candidate than the next clean production chapter
+  - verified that `Von Hippel-Lindau Syndrome` has a reusable local stage1 fetch surface at `NBK1463` with `78` sentences and `27` paragraphs, and that the policy template marks it as an exact-label roster mapping to `MONDO:0008667`
+- Path status:
+  - `on the intended path`
+  - the queue is still being chosen by source readiness plus schema stress value, not by alphabetical order
+- Outcome:
+  - selected `Von Hippel-Lindau Syndrome` as the next chapter to do
+  - deferred `Vascular Ehlers-Danlos Syndrome` until either a fuller source surface is fetched or the thin `NBK1494` slice is deliberately treated as a non-promotable draft
+- Next move:
+  - prepare a new-regime chapter folder for `NBK1463`, audit the fetched surface formally, and use it as the next extraction and manual review target
+
+## 2026-04-10 - Von Hippel-Lindau manual truncated-source draft
+
+- Action:
+  - created `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-von-hippel-lindau-syndrome`
+  - copied the reusable `NBK1463` stage1 fetch source files into that folder
+  - generated `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-von-hippel-lindau-syndrome/NBK1463_opus_input.json`
+  - wrote `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-von-hippel-lindau-syndrome/source_surface_audit_20260410.json`
+  - confirmed that the formal audit marks the local source as `likely_truncated: true` because it has `78` sentences, `27` paragraphs, `2` sections, and `low_paragraph_count`
+  - briefly started a Gemini multipass run, then stopped using that path when the instruction was clarified to make the chapter manually; deleted the `NBK1463_von_hippel_lindau_syndrome` Gemini scratch folder so the chapter state is manual-only
+  - manually authored `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-von-hippel-lindau-syndrome/NBK1463_von_hippel_lindau_syndrome_manual_truncated_source_draft.json` from the audited sentence index without using Gemini outputs
+  - patched `src/scripts/runGroundedDiseaseLayerGemini.js` and `src/scripts/runGroundedDiseaseLayerAzureAgent.py` so malformed optional trajectory rows are pruned instead of aborting an otherwise valid chapter run
+- Path status:
+  - `producing a usable but partial draft`
+  - the chapter is on the intended queue path, but the current local evidence surface is not broad enough for `regime_ready` promotion
+- Validation:
+  - the manual draft JSON parses cleanly
+  - all evidence refs resolve against the canonical `NBK1463` sentence index
+  - descriptor rows have subtype context
+  - no duplicate local ids or duplicate context fields remain
+  - final manual draft counts are:
+    - `30` phenotype assertions
+    - `2` ancillary assertions
+    - `2` context assertions
+    - `0` trajectory assertions
+    - `7` causal chains
+    - `6` extraction notes
+    - `0` episode classes
+    - `0` trigger factors
+- Outcome:
+  - chapter 6 now exists as a validated manual truncated-source draft in the bundle with matching README and manifest bookkeeping
+  - the chapter was intentionally kept out of the regime-ready index because the source audit still fails the promotion gate
+- Next move:
+  - either recover a fuller `NBK1463` chapter surface and rebuild the draft from that broader evidence base, or put this manual truncated-source draft through an Opus audit pass if it remains the best local surface
+
+## 2026-04-10 - Von Hippel-Lindau raw-html source recovery
+
+- Action:
+  - inspected the saved `NBK1463_raw.html` and confirmed the raw page already contained later chapter sections including `Supportive Care`, `Surveillance`, `Genetic Counseling`, `Molecular Genetics`, and `Molecular Pathogenesis`
+  - identified the root cause as a fetch/parser surface restriction that only kept `Clinical_Characteristics`, `Clinical_Description`, and `Suggestive_Findings`
+  - patched `src/lib/genereviewsPipeline.js` to support a reusable `expanded` GeneReviews section profile while keeping the prior focused profile as the default behavior
+  - added `src/scripts/rebuildGeneReviewsSurfaceFromRaw.js` plus the `gr:recover-surface-from-raw` package script so a saved GeneReviews raw HTML file can be re-parsed into recovered `clinical_text`, `clinical_structure`, `tables`, `fetch_meta`, and `opus_input` artifacts
+  - rebuilt the VHL chapter surface into `NBK1463_recovered_*` files from the saved raw HTML with `sectionProfile=expanded`
+  - wrote `recovered_source_surface_audit_20260410.json` and updated the VHL README plus manifest entry so the recovered wrapper is now the canonical next extraction input
+- Path status:
+  - `on the intended path`
+  - the earlier thin manual draft is now explicitly historical/stale rather than the active working surface
+- Validation:
+  - `node --check src/lib/genereviewsPipeline.js`
+  - `node --check src/scripts/rebuildGeneReviewsSurfaceFromRaw.js`
+  - `npm run gr:recover-surface-from-raw -- --rawHtml .../NBK1463_raw.html --outdir .../next-chapter-von-hippel-lindau-syndrome --outputStem NBK1463_recovered --mondoId MONDO:0008667 --sectionProfile expanded`
+  - recovered audit result:
+    - `348` sentences
+    - `144` paragraphs
+    - `24` sections
+    - `47,132` prose characters
+    - `211,272` raw HTML characters
+    - `likely_truncated: false`
+- Outcome:
+  - the local VHL chapter is no longer blocked by a thin source surface
+  - `NBK1463_recovered_opus_input.json` is ready for the next manual or reviewer-model extraction pass
+- Next move:
+  - rebuild the VHL grounded disease-layer chapter from `NBK1463_recovered_opus_input.json` instead of the older thin draft
+
+## 2026-04-10 - Von Hippel-Lindau regime-ready GPT-5.4 manual pass
+
+- Action:
+  - manually rebuilt the VHL grounded disease-layer chapter from `NBK1463_recovered_opus_input.json`
+  - wrote `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-von-hippel-lindau-syndrome/NBK1463_von_hippel_lindau_syndrome_regime_ready_gpt-5.4-manual.json`
+  - kept the output aligned to the current `source_document` new-regime schema, including causal chains, mechanism sentence ids, episode classes, and trigger factors
+  - routed genetic testing, imaging, treatment responses, surveillance, and avoidance guidance into ancillary/context/trigger layers instead of phenotype rows
+  - made generic symptom labels self-contained so slot exports preserve context, for example spinal hemangioblastoma-associated pain and hearing loss from endolymphatic sac tumor
+  - moved zebrafish-model-only HIF2α inhibitor findings to ancillary `other` instead of human phenotype rows
+  - promoted the chapter in the manifest and regime-ready chapter index as `regime_ready_gpt-5.4-manual`
+- Path status:
+  - `on the intended path`
+  - full chapter-backed recovered surface, not the older thin source draft
+  - not yet `Opus4.6 reviewed`
+- Validation:
+  - JSON parses cleanly
+  - all evidence refs resolve against the recovered 348-row sentence index
+  - no phenotype assertion has more than one evidence ref
+  - descriptor rows have subtype context
+  - ancillary related phenotype ids resolve
+  - causal-chain evidence refs and `mechanism_sentence_ids` are aligned
+  - final counts are:
+    - `71` phenotype assertions
+    - `31` ancillary assertions
+    - `10` context assertions
+    - `3` trajectory assertions
+    - `15` causal chains
+    - `15` mechanism sentence ids
+    - `7` extraction notes
+    - `0` episode classes
+    - `4` trigger factors
+- Outcome:
+  - chapter 6 now has an official repo-side GPT-5.4 manual regime-ready output
+- Next move:
+  - optionally send the regime-ready file to Opus 4.6 for external audit and create a separate reviewed artifact if valid corrections are returned
+
+## 2026-04-10 - Prader-Willi regime-ready GPT-5.4 manual pass
+
+- Action:
+  - abandoned the in-progress GLM-5.1 Space audit on VHL after user interruption and confirmed no local GLM audit process remained active
+  - selected `Prader-Willi Syndrome` from the prepared bundle folders because chapters 1-6 were already represented as regime-ready in the manifest
+  - audited the existing `NBK1330_*` surface and found it was a thin slice: `33` sentences, `26` paragraphs, `8` sections, and `likely_truncated: true`
+  - rebuilt the saved `NBK1330_raw.html` with the expanded GeneReviews section profile into recovered `NBK1330_recovered_*` files
+  - manually built `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-prader-willi/NBK1330_prader_willi_syndrome_regime_ready_gpt-5.4-manual.json` from `NBK1330_recovered_opus_input.json`
+  - routed DNA methylation, OSA, MS-MLPA, FISH, management, sedative-response, and therapy-trial statements outside phenotype rows
+  - retained age-staged PWS manifestations as trajectory assertions and resolved trigger factors to explicit phenotype, episode, or ancillary targets
+  - promoted the chapter in the manifest and regime-ready index as `regime_ready_gpt-5.4-manual`
+- Path status:
+  - `on the intended path`
+  - full chapter-backed recovered surface, not the older thin source draft
+  - not yet `Opus4.6 reviewed`
+- Validation:
+  - recovered source surface:
+    - `170` sentences
+    - `92` paragraphs
+    - `22` sections
+    - `likely_truncated: false`
+  - JSON parses cleanly
+  - all evidence refs resolve against the recovered 170-row sentence index
+  - no phenotype assertion has more than one evidence ref
+  - no duplicate local ids
+  - ancillary related phenotype ids resolve
+  - trigger episode ids resolve
+  - causal-chain evidence refs are covered by `mechanism_sentence_ids`
+  - final counts are:
+    - `41` phenotype assertions
+    - `27` ancillary assertions
+    - `12` context assertions
+    - `5` trajectory assertions
+    - `10` causal chains
+    - `11` mechanism sentence ids
+    - `6` extraction notes
+    - `2` episode classes
+    - `5` trigger factors
+- Outcome:
+  - chapter 7 now has an official repo-side GPT-5.4 manual regime-ready output
+- Next move:
+  - optionally send the Prader-Willi regime-ready file to Opus 4.6 for external audit and create a separate reviewed artifact if valid corrections are returned
+
+## 2026-04-10 - Prader-Willi critique triage against current manual file
+
+- Action:
+  - reviewed `/Users/ahmedelmorshedy/Downloads/NBK1330_critique_and_merge.json` against the current Prader-Willi regime-ready output and the recovered full chapter-backed surface
+  - verified that the critique's largest claimed defect, empty causal-chain evidence refs, is stale and does not apply to the current file
+  - confirmed that `characteristic facial appearance` is likely mis-typed as a `descriptor` instead of a `primary` phenotype in the current output
+  - confirmed that management-conditioned statements are currently overloading the `trigger` qualifier on `hyperphagia`, `central obesity`, and `short stature`
+  - confirmed that `high pain threshold` is incorrectly scoped with a pregnancy-specific `subtype_context`
+  - confirmed that `temper outbursts` is named in the recovered source surface (`p52_s1`) and is a defensible low-confidence/uncertain add if completeness across sections is maintained
+  - kept the exclusion of `higher verbal IQ` as an intentional policy choice under the current rule that cognitive-strength statements are not promoted to phenotype rows
+- Path status:
+  - `on the intended path`
+  - critique useful for cleanup, but not a replacement for manual review because it mixed valid issues with stale claims
+- Validation:
+  - current file already contains populated evidence refs for all `10` causal chains
+  - critique-proposed replacement refs for chain 005, 006, and 010 were weaker than the current refs because the current file already points to the directly supporting mechanism sentences
+- Outcome:
+  - current Prader-Willi review queue is narrowed to a small manual patch set rather than a broad rewrite
+- Next move:
+  - if requested, patch the current file with the validated cleanup items only: phenotype role fix, qualifier cleanup, optional `temper outbursts`, and optional reproductive-context note
+
+## 2026-04-10 - VHL and Prader-Willi promoted to GPT-5.4 manual plus Opus 4.6 reviewed artifacts
+
+- Action:
+  - re-reviewed `/Users/ahmedelmorshedy/Downloads/NBK1463_critique_and_merge.json` against the current VHL regime-ready file and kept only the critique points that were genuinely source-compatible under the locked schema
+  - confirmed the VHL critique's largest claimed defect, empty causal-chain evidence refs, was stale for the current file and should not drive chapter rewrites
+  - kept the VHL manual cleanup to the validated items already patched into the reviewed artifact: redundant anatomical-site qualifiers removed and non-row-fit distribution / nomenclature / comparator facts preserved in extraction notes
+  - re-reviewed `/Users/ahmedelmorshedy/Downloads/NBK1330_critique_and_merge.json` against the recovered Prader-Willi source surface and accepted the substantive additions and corrections rather than over-dismissing them
+  - updated the Prader-Willi reviewed artifact so `ph_033` is `present`, `excessive eating`, `behavioral findings`, `higher verbal IQ`, and `temper outbursts` are preserved, `high pain threshold` is no longer pregnancy-scoped, care-dependent statements use `management_condition`, and the retained `UPD 15` facial modifier remains explicitly unresolved at the feature level pending enrichment
+  - normalized the Prader-Willi sedative trigger row back to `target_resolution_status = "resolved"` with an explanatory note instead of using the non-schema hybrid value `resolved_to_ancillary_assertion`
+  - promoted the reviewed JSON files as the official chapter artifacts:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-von-hippel-lindau-syndrome/NBK1463_von_hippel_lindau_syndrome_regime_ready_gpt-5.4-manual-opus4.6-reviewed.json`
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-prader-willi/NBK1330_prader_willi_syndrome_regime_ready_gpt-5.4-manual-opus4.6-reviewed.json`
+  - hardened the canonical schema/contract/prompt surfaces so the ambiguity-retention, `management_condition`, `resolved/unresolved/needs_enrichment`, and single-evidence phenotype-row rules are no longer implicit diary knowledge
+  - patched `src/scripts/runGroundedDiseaseLayerGemini.js` so the active runner now accepts `unresolved`, includes `management_condition`, and rejects phenotype rows that aggregate multiple evidence sentences or omit `subtype_context` on descriptor rows
+  - updated the chapter READMEs, regime-ready index, and manifest so the reviewed chapter files are now the official bundle outputs for chapters 6 and 7
+- Path status:
+  - `on the intended path`
+  - both chapters are now locked to the reviewed artifacts rather than the earlier manual-only JSONs
+- Validation:
+  - both reviewed JSON files parse cleanly
+  - all evidence refs resolve against their recovered sentence indices
+  - VHL reviewed counts:
+    - `71` phenotype assertions
+    - `31` ancillary assertions
+    - `10` context assertions
+    - `3` trajectory assertions
+    - `15` causal chains
+    - `15` mechanism sentence ids
+    - `8` extraction notes
+    - `0` episode classes
+    - `4` trigger factors
+  - Prader-Willi reviewed counts:
+    - `45` phenotype assertions
+    - `27` ancillary assertions
+    - `12` context assertions
+    - `5` trajectory assertions
+    - `10` causal chains
+    - `9` mechanism sentence ids
+    - `7` extraction notes
+    - `2` episode classes
+    - `3` trigger factors
+- Intentionally not inspected:
+  - no new broad raw-data crawl
+  - no new external model run
+  - no new whole-chapter rewrite beyond the reviewed patch set
+- Outcome:
+  - the reviewed files are now the official chapter 6 and chapter 7 bundle artifacts
+  - the schema semantics that were previously living partly in diary discussion are now baked into the canonical docs, prompts, and active Gemini runner
+- Next move:
+  - use the hardened contract to produce the next manual chapter without re-litigating episode ambiguity, care-dependent conditions, or phenotype-row aggregation
+
+## 2026-04-10 - Froze the next five chapter queue after chapter 7
+
+- Question:
+  - Which chapters should be done next so selection does not get re-litigated before every new chapter?
+- Evidence surface:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/chapter-selection-methodology-20260410.md`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/new-regime-manifest-20260409.json`
+  - local review-first-50 stage1 fetch surfaces and saved raw HTML for:
+    - `VEXAS Syndrome`
+    - `Von Willebrand Disease`
+    - `Very Long-Chain Acyl-Coenzyme A Dehydrogenase Deficiency`
+    - `Vascular Ehlers-Danlos Syndrome`
+    - `USP7-Related Hao-Fountain Syndrome`
+- Intentionally not inspected:
+  - no broad new roster crawl
+  - no live refetch
+  - no raw chapter reconstruction yet
+- Result:
+  - froze this next-five sequence:
+    1. `VEXAS Syndrome`
+    2. `Von Willebrand Disease`
+    3. `Very Long-Chain Acyl-Coenzyme A Dehydrogenase Deficiency`
+    4. `Vascular Ehlers-Danlos Syndrome`
+    5. `USP7-Related Hao-Fountain Syndrome`
+  - all five have saved raw HTML locally, so the standard next-step is raw-html recovery with the expanded profile before any promotable extraction
+  - `WAGR Spectrum Disorder` and `WARS2 Deficiency` were explicitly left behind this frozen queue because their current visible stage1 surfaces are extremely thin
+- Decision:
+  - kept
+- Outcome:
+  - selection is now frozen in the methodology doc instead of being re-decided chapter by chapter
+
+## 2026-04-10 - Completed chapter 8 manual pass for Von Willebrand Disease
+
+- Question:
+  - What is the next chapter after Prader-Willi if the user explicitly wants `Von Willebrand Disease` next, and can it be completed manually from a recovered full source surface instead of a thin stage1 slice?
+- Evidence surface:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-von-willebrand-disease/NBK7014_recovered_opus_input.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-von-willebrand-disease/recovered_source_surface_audit_20260410.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-von-willebrand-disease/NBK7014_von_willebrand_disease_regime_ready_gpt-5.4-manual.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/chapter-selection-methodology-20260410.md`
+- Intentionally not inspected:
+  - no new external model run
+  - no broad new fetch beyond the saved NBK7014 raw HTML recovery
+  - no secondary-source augmentation outside the GeneReviews chapter surface
+- Action:
+  - copied the saved NBK7014 stage1 files into a dedicated bundle folder for `Von Willebrand Disease`
+  - audited the copied thin source surface and confirmed it was not suitable for promotion:
+    - `47` sentences
+    - `25` paragraphs
+    - `2` sections
+    - `likely_truncated: true`
+  - rebuilt the chapter from the saved `NBK7014_raw.html` with the expanded section profile
+  - recovered a full chapter-backed surface with:
+    - `228` sentences
+    - `113` paragraphs
+    - `19` sections
+    - `likely_truncated: false`
+  - manually authored the new-regime grounded disease-layer file from the recovered surface rather than from a model draft
+  - kept the output sentence-local with no multi-ref phenotype rows
+  - captured the chapter's bleeding phenotypes, diagnostic assays, pregnancy-management context, inheritance, prevalence, penetrance, biomarker context, and explicit molecular pathogenesis chains
+  - updated the chapter README, regime-ready index, manifest, and selection methodology so `Von Willebrand Disease` is now chapter 8 and the earlier provisional VEXAS-first queue no longer conflicts with the actual sequence
+- Path status:
+  - `on the intended path`
+  - the chapter is now based on a recovered full source surface, not a thin or summary-like slice
+- Validation:
+  - the chapter JSON parses cleanly
+  - all evidence refs resolve against the recovered sentence index
+  - ancillary related phenotype ids resolve
+  - no phenotype row has multiple evidence refs
+  - chapter 8 counts:
+    - `43` phenotype assertions
+    - `35` ancillary assertions
+    - `9` context assertions
+    - `0` trajectory assertions
+    - `16` causal chains
+    - `14` mechanism sentence ids
+    - `8` extraction notes
+    - `0` episode classes
+    - `0` trigger factors
+- Outcome:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-von-willebrand-disease/NBK7014_von_willebrand_disease_regime_ready_gpt-5.4-manual.json` is now the official chapter 8 manual artifact
+  - the bundle bookkeeping now points to the VWD manual file consistently
+- Next move:
+  - run an external review pass on the VWD manual artifact or move to `VEXAS Syndrome` as the next recovered-raw manual chapter
+
+## 2026-04-10 - Completed chapters 9 and 10 manual passes for VLCADD and vEDS
+
+- Question:
+  - Can the next two user-selected chapters be completed end to end from recovered raw HTML surfaces without wasting effort on thin stage1 slices?
+- Evidence surface:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-very-long-chain-acyl-coenzyme-a-dehydrogenase-deficiency/NBK6816_recovered_opus_input.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-very-long-chain-acyl-coenzyme-a-dehydrogenase-deficiency/recovered_source_surface_audit_20260410.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-very-long-chain-acyl-coenzyme-a-dehydrogenase-deficiency/NBK6816_very_long_chain_acyl_coenzyme_a_dehydrogenase_deficiency_regime_ready_gpt-5.4-manual.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-vascular-ehlers-danlos-syndrome/NBK1494_recovered_opus_input.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-vascular-ehlers-danlos-syndrome/recovered_source_surface_audit_20260410.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-vascular-ehlers-danlos-syndrome/NBK1494_vascular_ehlers_danlos_syndrome_regime_ready_gpt-5.4-manual.json`
+- Intentionally not inspected:
+  - no new external model runs
+  - no live refetch beyond the saved NBK6816 and NBK1494 raw HTML recoveries
+  - no thin-surface extraction pass used for the promotable chapter artifacts
+- Action:
+  - recovered `Very Long-Chain Acyl-Coenzyme A Dehydrogenase Deficiency` from saved raw HTML into a full chapter-backed surface with:
+    - `178` sentences
+    - `115` paragraphs
+    - `22` sections
+    - `likely_truncated: false`
+  - manually authored the VLCADD grounded disease-layer artifact with:
+    - `35` phenotype assertions
+    - `39` ancillary assertions
+    - `8` context assertions
+    - `3` trajectory assertions
+    - `9` causal chains
+    - `6` mechanism sentence ids
+    - `4` trigger factors
+  - recovered `Vascular Ehlers-Danlos Syndrome` from saved raw HTML into a full chapter-backed surface with:
+    - `245` sentences
+    - `131` paragraphs
+    - `24` sections
+    - `likely_truncated: false`
+  - manually authored the vEDS grounded disease-layer artifact with:
+    - `57` phenotype assertions
+    - `20` ancillary assertions
+    - `8` context assertions
+    - `3` trajectory assertions
+    - `14` causal chains
+    - `6` mechanism sentence ids
+    - `1` episode class
+    - `5` trigger factors
+  - updated both chapter READMEs, the new-regime manifest, the regime-ready chapter index, and the chapter-selection methodology so the documentation now matches the actual chapter sequence through chapter 10
+- Path status:
+  - `on the intended path`
+  - both chapters are now based on recovered full-source surfaces rather than summary-like or truncated slices
+- Validation:
+  - both chapter JSON files parse cleanly
+  - all evidence refs resolve against the recovered sentence indices
+  - no phenotype row in either file has multiple evidence refs
+  - descriptor rows carry grounded `subtype_context`
+  - both artifacts retain the current trigger / episode / causal-chain schema additions cleanly
+- Outcome:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-very-long-chain-acyl-coenzyme-a-dehydrogenase-deficiency/NBK6816_very_long_chain_acyl_coenzyme_a_dehydrogenase_deficiency_regime_ready_gpt-5.4-manual.json` is now the official chapter 9 manual artifact
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-vascular-ehlers-danlos-syndrome/NBK1494_vascular_ehlers_danlos_syndrome_regime_ready_gpt-5.4-manual.json` is now the official chapter 10 manual artifact
+  - the bundle bookkeeping now records the actual queue progression through chapter 10
+- Next move:
+  - run an external review on chapter 9 and/or chapter 10, or move to `VEXAS Syndrome` as chapter 11 using the same recovered-raw manual path
+
+## 2026-04-10 - Secondary Opus reviewer handoff policy
+
+- Action:
+  - decided to keep an older Opus account in the review loop for new chapters, but only as an audit layer with an explicit delta-brief of post-baseline rule changes
+- Key rule for handoff:
+  - do not let the older Opus reviewer critique chapter outputs against stale pre-update assumptions on triggers, ambiguity preservation, multi-ref phenotype policy, or management-conditioned statements
+- Required delta-brief topics for that reviewer:
+  - phenotype rows remain single-sentence and single-evidence by default
+  - source-mentioned ambiguous concepts should be preserved, not dropped
+  - use `episode_classes` and `trigger_factors` for broader disease-state or episode-level triggers
+  - phenotype-level `trigger` is only for a clear single-target precipitant
+  - use `management_condition` for care-dependent or treatment-dependent expression
+  - keep `resolved` / `unresolved` / `needs_enrichment` logic for ambiguous targets
+- Next move:
+  - send the older Opus reviewer a compact current-rules preface before asking it to audit chapters 9 and 10
+
+## 2026-04-10 - VLCADD external audit triage
+
+- Action:
+  - reviewed `/Users/ahmedelmorshedy/Downloads/NBK6816_VLCAD_audit_and_complement.json` against the current official VLCADD manual artifact and the recovered full-source clinical structure
+- Findings:
+  - the audit contains several valid critiques:
+    - `p33_s1`, `p34_s1`, and `p35_s1` are real uncovered laboratory findings and should be considered for ancillary laboratory additions rather than phenotype additions
+    - the `p30_s1` trigger list on `ph_011` is better represented as standalone `trigger_factors` than as a phenotype-level trigger qualifier
+    - genotype-phenotype details from `p59_s2` and `p61_s2` are real enrichment opportunities
+    - `anc_025` wording can be improved to make the treatment-failure / breakthrough character explicit
+  - the audit is partly contaminated or misaligned:
+    - proposed additions grounded to `p15_s2`, `p15_s3`, and `p15_s4` do not resolve in the recovered VLCADD source surface and should not be merged
+    - suggestions to add `small for gestational age`, `feeding difficulties`, `prolonged colic`, or `post-term birth` are not valid for the current VLCADD chapter artifact
+    - the `penetrance` suggestion based on asymptomatic NBS-ascertained individuals is not a valid penetrance assertion under current policy
+  - several remaining critiques are policy-dependent rather than clear bugs:
+    - sentence-local duplication between suggestive-finding rows and subtype-scoped clinical-description rows is noisy but currently consistent with the single-sentence grounding policy
+    - the empty `episode_classes` array is not necessarily an error because the named VLCADD subgroups are disease forms, not clearly episode classes
+- Next move:
+  - if the chapter is promoted to an Opus-reviewed version, merge only the validated additions and wording fixes, not the contaminated complements
+
+## 2026-04-10 - VLCADD finalized after audit merge
+
+- Action:
+  - merged the validated external-audit fixes into the official VLCADD manual artifact and promoted a reviewed copy
+- Applied changes:
+  - removed the broad `p30_s1` precipitant list from `ph_011` and promoted `strenuous exercise`, `fasting`, `cold exposure`, and `fever` into standalone `trigger_factors`
+  - added ancillary laboratory rows for `p33_s1`, `p34_s1`, and `p35_s1`
+  - tightened `anc_025` wording to make the treatment-breakthrough character explicit
+  - added genotype-phenotype causal chains for `p59_s2` and `p61_s2`
+  - strengthened `natural_history` with the `p63_s1` asymptomatic NBS-ascertained observation without mislabeling it as penetrance
+- Rejected audit content:
+  - did not merge the contaminated `p15_s2` / `p15_s3` / `p15_s4` suggestions because they are not present in the recovered VLCADD source surface or the live chapter page
+  - did not convert the three disease forms into `episode_classes`
+- Validation:
+  - corrected manual file parses cleanly
+  - all evidence refs resolve
+  - phenotype rows remain single-evidence
+  - corrected counts are `35` phenotype, `42` ancillary, `8` context, `11` causal chains, `8` mechanism sentence ids, `8` extraction notes, and `8` trigger factors
+- Outcome:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-very-long-chain-acyl-coenzyme-a-dehydrogenase-deficiency/NBK6816_very_long_chain_acyl_coenzyme_a_dehydrogenase_deficiency_regime_ready_gpt-5.4-manual-opus4.6-reviewed.json` is now the official reviewed chapter 9 artifact
+  - the chapter README, bundle manifest, and regime-ready chapter index were updated to point to the reviewed file
+
+## 2026-04-10 - Cross-chapter reflection from Opus review patterns
+
+- Action:
+  - summarized the recurring error pattern across recent Opus-reviewed chapters to improve future manual passes before external review
+- Main recurring miss classes:
+  - ancillary laboratory findings are easy to miss when they appear under suggestive-finding or preliminary-laboratory lists rather than in dedicated laboratory prose
+  - broad trigger lists are easy to leave attached to phenotype qualifiers instead of promoting them into standalone `trigger_factors`
+  - genotype-phenotype correlations are often captured too coarsely unless each explicit correlation sentence is checked as a possible causal chain
+  - natural-history statements about screened or subtype-ascertained populations are easy to under-capture because they are not classic phenotype rows but still matter
+  - external audits can contain stale-policy critiques or contaminated complements, so they must be triaged against the recovered source surface before merge
+- Root causes:
+  - sentence-local extraction discipline is strong, but list- and section-level sweep coverage is still uneven
+  - manual passes bias toward obvious phenotypes and management language before doing a final dedicated pass over laboratory, trigger, and genotype-correlation sentences
+  - review feedback can be over-accepted if not separated into grounded fixes versus policy differences versus contaminated content
+- Process improvements going forward:
+  - add a final pre-promotion sweep over: preliminary laboratory findings, trigger phrases, genotype-phenotype correlation sentences, and asymptomatic/NBS ascertainment statements
+  - require external audit triage into three buckets: valid grounded fix, policy-dependent comment, contaminated / reject
+  - when a sentence contains multiple explicit precipitants for one event, default to `trigger_factors` review before leaving anything in phenotype qualifiers
+  - when a chapter has explicit genotype-correlation prose, require a dedicated causal-chain check instead of relying on summary capture
+- Next move:
+  - use this reflection as the standing review checklist for the next chapters before requesting any external audit
+
+## 2026-04-10 - What prior reviews actually taught
+
+- Action:
+  - distilled the main lessons from the earlier chapter reviews beyond VLCADD
+- Lessons from prior reviewed chapters:
+  - `Williams Syndrome` reinforced that umbrella findings must be split into clinically meaningful grounded manifestations where the source supports them, and that age-specific facial findings should remain grounded rows rather than being turned into unsupported trajectory structure
+  - `Variegate Porphyria` established the key ambiguity rule: attack-related content should not be dropped when target resolution is incomplete; instead it should be preserved with explicit `resolved` / `unresolved` / `needs_enrichment` handling
+  - `Waardenburg Syndrome Type I` reinforced that broad syndrome labels are less useful than source-faithful feature rows and that feature-level completeness matters more than compactness
+  - `Von Hippel-Lindau Syndrome` showed that highly repetitive tumor/location text needs restraint: preserve real distribution and subtype facts, but do not bloat rows with redundant anatomical qualifiers when the label already carries that meaning
+  - `Prader-Willi Syndrome` forced the distinction between phenotype, trigger, management-conditioned expression, and subgroup-scoped modifier; this is where `management_condition` and unresolved modifier handling became clearly necessary
+- Main cross-review conclusion:
+  - the architecture improved most when review feedback was used to sharpen boundaries between layers rather than to increase raw row count
+- Next move:
+  - carry these chapter-specific lessons into the standing pre-review checklist and future prompt/schema tightening
+
+## 2026-04-10 - Audit-level lessons on misses and rerouting
+
+- Action:
+  - summarized what the full external audits have repeatedly surfaced about missing content and wrong-layer routing
+- Recurring miss patterns:
+  - short list-style findings are missed more often than narrative findings, especially under `suggestive findings`, `preliminary laboratory findings`, and dense syndrome-feature lists
+  - subgroup-specific findings inside one summary sentence are sometimes partially captured, leaving out one or two explicit sibling findings
+  - genotype-phenotype correlation sentences are often under-extracted unless reviewed separately after the main phenotype pass
+  - natural-history statements about screened, asymptomatic, adult-ascertained, or subgroup-biased populations are often under-captured because they sit between phenotype and context
+- Recurring rerouting patterns suggested by audits:
+  - preliminary or explicit lab findings should often move from phenotype to `ancillary_assertions.laboratory`
+  - broad or multi-target precipitant statements should move from phenotype qualifier `trigger` to `trigger_factors`
+  - care-dependent or treatment-conditioned expressions should move from `trigger` or `treatment_response` into `management_condition`
+  - subtype-scoped or comparator-scoped findings should often stay in phenotype rows but as `descriptor` with `subtype_context`
+  - population-level, screening-level, or ascertainment-level observations should usually move to `context_assertions` or `extraction_notes`, not phenotype rows
+  - explicit mechanism or genotype-correlation prose is usually better preserved as `causal_chains` than as loose notes
+- Most important practical lesson:
+  - the value of full audit is not only finding omitted rows; it is showing when the row exists but sits in the wrong layer, which is often the more important architectural correction
+- Next move:
+  - make the next manual-pass checklist explicitly include a rerouting review after completeness review
+
+## 2026-04-10 - Hardened pre-promotion review checklist
+
+- Action:
+  - updated `/Users/ahmedelmorshedy/.codex/skills/genereviews-grounded-disease-layer/references/cleanup-and-promotion.md` so future chapter work must include a specific pre-promotion review sweep rather than relying on conversational memory
+- Added mandatory review steps:
+  - completeness sweep for list-style findings, preliminary laboratory findings, genotype-correlation sentences, and ascertainment/natural-history statements
+  - rerouting sweep for phenotype vs ancillary laboratory vs trigger_factors vs management_condition vs context vs causal_chains
+  - trigger-specific review for every non-null phenotype trigger
+  - external-audit triage into valid grounded fix vs policy-dependent vs contaminated/reject
+  - final promotion gate confirming sentence-grounding and metadata alignment
+- Next move:
+  - apply this checklist before the next chapter is promoted, even before asking for external review
+
+## 2026-04-10 - Chapters 11 and 12 completed from raw-source rebuilds
+
+- Action:
+  - completed `WAGR Spectrum Disorder` and `WARS2 Deficiency` end to end using the raw-HTML rebuild path instead of the extremely thin stage1 clinical slices
+- Source-surface outcome:
+  - `WAGR Spectrum Disorder` raw HTML was rebuilt into a recovered full chapter-backed surface with `194` sentences, `115` paragraphs, `21` sections, and `likely_truncated: false`
+  - `WARS2 Deficiency` raw HTML was rebuilt into a recovered full chapter-backed surface with `202` sentences, `127` paragraphs, `23` sections, and `likely_truncated: false`
+  - the copied legacy stage1 slices remained extremely thin and were retained only for audit provenance
+- Extraction outcome:
+  - wrote `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-wagr-spectrum-disorder/NBK621298_wagr_spectrum_disorder_regime_ready_gpt-5.4-manual.json`
+  - wrote `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-wars2-deficiency/NBK595820_wars2_deficiency_regime_ready_gpt-5.4-manual.json`
+  - `WAGR` kept `chapter.mondo_id = null` because the local policy surface still marks the mapping unresolved
+  - `WARS2` used `MONDO:0060578`
+- Review and routing outcome:
+  - `WAGR` preserved larger contiguous-deletion effects as subtype-scoped descriptor rows or causal chains rather than promoting them as disease-wide primary findings
+  - `WARS2` preserved the epilepsy-spectrum and movement-disorder-spectrum architecture explicitly, routed lactate and imaging findings to ancillary evidence, and represented valproic-acid-associated deterioration as an episode plus trigger factor
+- Validation outcome:
+  - both chapter JSON files parse cleanly
+  - all sentence refs resolve against the recovered source surfaces
+  - no phenotype rows have multiple evidence refs
+  - descriptor rows carry subtype context
+- Next move:
+  - update the manifest and continue with the next queued chapter after chapter 12, which is now `VEXAS Syndrome` unless the user explicitly reorders again
+
+## 2026-04-10 - Added Anthropic managed-audit handoff tooling
+
+- Action:
+  - added `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/anthropic-opus-audit-brief-v1-20260410.md` as the single current-rules handoff file for first-pass external Opus audits
+  - added `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/runAnthropicManagedAudit.js` to upload the candidate chapter JSON, recovered full-source clinical surface, audit brief, and optional README into an Anthropic managed-agent session and send a structured audit request
+  - added `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/anthropic-opus-audit-targets-20260410.json` with the exact first-pass audit file sets for `WAGR Spectrum Disorder` and `WARS2 Deficiency`
+  - registered the helper under `npm run gr:anthropic-managed-audit`
+- Why:
+  - the user wanted an Opus audit path that does not depend on older Genovy policy memory and does not require manually assembling the audit file set every time
+- Operational expectation:
+  - use a fresh `ANTHROPIC_API_KEY` environment variable, not a pasted inline secret
+  - managed-agent runs still require a real `agent_id` and `environment_id`
+  - the script is for direct Anthropic managed agents, not Vertex AI
+- Next move:
+  - use the new helper to mount `WAGR` or `WARS2` into the user's existing Anthropic managed-agent environment and collect the first external audit
+
+## 2026-04-11 - WAGR merged with Opus critique and promoted to reviewed artifact
+
+- Action:
+  - reviewed `/Users/ahmedelmorshedy/Downloads/NBK621298_critique_and_merge.json` against the current WAGR manual chapter and the recovered full-source surface
+  - wrote `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-wagr-spectrum-disorder/NBK621298_wagr_spectrum_disorder_regime_ready_gpt-5.4-manual-opus4.6-reviewed.json`
+- Valid critique merges:
+  - added grounded missing findings `depression`, `conduct disorder`, `sensory integration disorder`, `lens subluxation`, `polycystic ovarian syndrome`, and `hyposmia`
+  - added `congenital anomalies of kidney/urinary tract` as a quantified umbrella row from the cohort-frequency sentence
+  - rerouted `proteinuria` from phenotype to ancillary laboratory
+  - added ancillary imaging for `reduced, hypoplastic pineal gland` and `decreased olfactory bulb size`
+  - changed `end-stage kidney disease` and `gonadoblastoma` to `clinical_role = complication`
+- Extra manual sweep beyond critique:
+  - added `optic nerve coloboma` from the PAX6 pan-ocular summary sentence
+  - added sentence-local frequency rows for `obsessive-compulsive disorder` and `attention-deficit/hyperactivity disorder` from `p46_s2`
+  - removed off-contract context fields `diagnosis` and `prenatal_history` from `context_assertions` and preserved the relevant diagnostic/prenatal content in extraction notes instead
+- Rejected critique content:
+  - the claimed systematic WAGR causal-chain empty-ref bug was false for the current file; all 12 causal chains were already grounded
+  - late-Wilms and CKD-risk sentences were preserved as notes rather than forced into duplicate phenotype or non-standard context rows
+- Outcome:
+  - reviewed WAGR counts are now `100` phenotype, `5` ancillary, `7` context, `12` causal chains, and `12` extraction notes
+  - validation passed with no bad refs, no duplicate ids, no multi-ref phenotype rows, and only standard context fields remaining
+- Next move:
+  - wait for the user's WARS2 critique or move to the next chapter after WARS2 review triage
+
+## 2026-04-11 - Hardened first-pass and review-pass sibling-finding rules
+
+- Trigger:
+  - the WAGR audit merge exposed two repeat failure modes:
+    - dense sibling omissions such as `optic nerve coloboma` hiding inside an earlier ocular sweep sentence
+    - parallel-frequency partial capture where one sentence quantified several sibling findings but only one was enriched
+- Action:
+  - updated `/Users/ahmedelmorshedy/.codex/skills/genereviews-grounded-disease-layer/references/cleanup-and-promotion.md` so first pass now explicitly requires:
+    - re-scanning dense summary / anatomic / ocular / neurologic / multisystem sweep sentences
+    - checking any sentence that already yielded one row for additional sibling findings
+    - splitting parallel percentage / frequency / modifier sentences across every supported sibling finding
+  - updated `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/genereviews-opus-grounded-disease-layer-contract-v1-20260408.md` so the canonical extraction contract now requires dense-sibling rescans and parallel-modifier splitting
+  - updated the active strict prompt assets:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/genereviews-opus-grounded-disease-layer-strict-prompt-v1-20260409.md`
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/genereviews-gemini-grounded-disease-layer-strict-prompt-v1-20260409.md`
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/genereviews-vertex-grounded-disease-layer-strict-prompt-v1-20260409.md`
+- Why:
+  - these misses are not random; they come from compressed coordinated prose and later enrichment sentences that quantify multiple sibling findings at once
+  - if the workflow and prompt do not name those sentence patterns explicitly, they stay “known” only in diary memory and keep resurfacing in audits
+- Next move:
+  - treat dense sibling sweeps and parallel-modifier sweeps as required on every first pass and every pre-promotion review, even before external critique
+
+## 2026-04-11 - Ran Claude auditor handoff on WARS2 manual chapter
+
+- Action:
+  - created `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-wars2-deficiency/CLAUDE_AUDITOR_HANDOFF_20260411.md` as a self-contained unfamiliar-reviewer handoff with current rules, expected buckets, and the real NCBI chapter URL
+  - sent the WARS2 manual candidate, recovered clinical surface, recovered opus input, current audit brief, and chapter README through the local Claude auditor MCP
+  - saved the returned report to `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-wars2-deficiency/NBK595820_wars2_deficiency_claude_auditor_review_20260411.md`
+- Result:
+  - the external review reported no contamination and judged the chapter mostly sound
+  - the main grounded gaps it surfaced were missing `brisk reflexes`, `upgoing toes`, `limb spasticity` with the clinical-description context, `motor hyperactivity`, epilepsy-spectrum-scoped `dysarthria`, and `unsociable character`
+  - it also flagged missing levodopa `treatment_response`, the duplicated valproic-acid trigger on acute hepatopathy, missing epilepsy-spectrum `subtype_context` on hypoglycemia, and missing `7/13` frequency on axial hypotonia
+  - the saved markdown appears to end with a clipped final-verdict line, but the substantive audit sections are intact
+- Next move:
+  - triage the grounded Claude findings against the current WARS2 manual file and decide which fixes to merge into a reviewed artifact
+
+## 2026-04-11 - Re-ran WARS2 Claude auditor as an unrestricted full audit
+
+- Action:
+  - re-ran the same WARS2 Claude auditor handoff without any compactness request and saved:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-wars2-deficiency/NBK595820_wars2_deficiency_claude_auditor_review_full_20260411.md`
+  - after the saved file again stopped mid-report, re-ran once more with only a completeness guard and saved:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-wars2-deficiency/NBK595820_wars2_deficiency_claude_auditor_review_full_v2_20260411.md`
+- Result:
+  - the second-pass Claude content is richer than the first pass and clearly re-surfaces the valid WARS2 issues:
+    - missing `brisk reflexes`
+    - missing `upgoing toes`
+    - missing `unsociable character`
+    - missing movement-disorder-spectrum seizure detail from `p77_s1`
+    - missing levodopa `treatment_response` handling on tremor
+    - duplicated valproic-acid trigger on `acute hepatopathy`
+    - missing epilepsy-spectrum subtype context on hypoglycemia
+    - missing `7/13` frequency on axial hypotonia
+  - both full-audit saved markdown files still truncate around the beginning of `complementary_findings`, indicating a real Claude-auditor artifact/output persistence limit rather than a one-off prompt problem
+- Next move:
+  - treat the Claude full-audit run as useful but mechanically truncated, and triage the high-confidence grounded findings directly against the current WARS2 manual file
+
+## 2026-04-11 - Third WARS2 Claude full-audit rerun still truncates on save
+
+- Action:
+  - ran a third WARS2 Claude auditor pass and explicitly required the saved markdown to continue through `final_verdict` and end with the line `END OF FULL AUDIT`
+  - saved to `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-wars2-deficiency/NBK595820_wars2_deficiency_claude_auditor_review_full_v3_20260411.md`
+  - verified the saved file directly for the presence of:
+    - `## 4. complementary_findings`
+    - `## 5. policy_dependent_calls`
+    - `## 6. reject_or_ignore`
+    - `## 7. final_verdict`
+    - `END OF FULL AUDIT`
+- Result:
+  - none of those markers were present in the saved file
+  - the v3 artifact truncates around section `3.2` and is therefore mechanically incomplete despite the explicit completeness instruction
+  - this strongly suggests a Claude-auditor artifact persistence/output ceiling rather than a prompt framing issue
+- Next move:
+  - stop spending cycles trying to force a complete saved artifact through the current Claude auditor path and either:
+    - use the valid grounded findings already surfaced, or
+    - switch to a different audit execution path if a truly complete external report is required
+
+## 2026-04-11 - Saved one-file WARS2 Claude audit hold summary
+
+- Action:
+  - created `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-wars2-deficiency/NBK595820_wars2_deficiency_claude_auditor_hold_summary_20260411.md`
+- Result:
+  - consolidated the useful local Claude-auditor signal from the short review plus the three full-review attempts into one retained file
+  - separated repeated high-confidence grounded findings from policy-dependent items and lower-priority complementary items
+  - explicitly documented that the local Claude auditor runs should not count as the final external review because the saved markdown artifacts repeatedly truncated
+- Next move:
+  - later run the same WARS2 bundle through the user's real Claude environment and compare the resulting full external audit against this hold summary
+
+## 2026-04-11 - Started VEXAS Syndrome chapter prep from recovered raw HTML
+
+- Action:
+  - verified from `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/chapter-selection-methodology-20260410.md` that the next promotable chapter after chapter 12 is `VEXAS Syndrome`
+  - confirmed the saved raw package exists locally in `stage1_fetch` even though the visible thin clinical surface is incomplete:
+    - `VEXAS_Syndrome_clinical_structure.json`
+    - `VEXAS_Syndrome_clinical_text.txt`
+    - `VEXAS_Syndrome_raw.html`
+    - `VEXAS_Syndrome_tables.json`
+  - created `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-vexas-syndrome`
+  - copied the saved thin stage1 files into the standard NBK-based bundle layout as:
+    - `NBK614471_clinical_structure.json`
+    - `NBK614471_clinical_text.txt`
+    - `NBK614471_raw.html`
+    - `NBK614471_tables.json`
+  - ran the raw-html recovery path with the expanded GeneReviews section profile:
+    - `npm run gr:recover-surface-from-raw -- --rawHtml /Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/genereviews-pipeline-review-first-50-20260331/stage1_fetch/VEXAS_Syndrome_raw.html --outdir /Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-vexas-syndrome --outputStem NBK614471_recovered --mondoId MONDO:0026777 --sectionProfile expanded`
+  - wrote both audit artifacts:
+    - `source_surface_audit_20260411.json`
+    - `recovered_source_surface_audit_20260411.json`
+  - added a chapter README documenting the thin-vs-recovered source status and the recovered wrapper as the next extraction input
+- Result:
+  - the copied thin surface remains unsuitable for promotion:
+    - `40` sentences
+    - `32` paragraphs
+    - `3` sections
+    - `likely_truncated: true`
+  - the recovered raw-html surface is full chapter-backed and suitable for the next extraction pass:
+    - `202` sentences
+    - `122` paragraphs
+    - `22` sections
+    - `likely_truncated: false`
+  - `NBK614471_recovered_opus_input.json` is now ready as the canonical next extraction input for `VEXAS Syndrome`
+- Path status:
+  - `on the intended path`
+  - the chapter is now set up on the recovered-raw workflow rather than the previously thin visible slice
+- Next move:
+  - extract the grounded disease-layer chapter from `NBK614471_recovered_opus_input.json`
+
+## 2026-04-11 - Completed VEXAS Syndrome as chapter 13 from the recovered raw surface
+
+- Action:
+  - manually built `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-vexas-syndrome/NBK614471_vexas_syndrome_regime_ready_gpt-5.4-manual.json` from `NBK614471_recovered_opus_input.json`
+  - explicitly followed the hardened first-pass and pre-promotion checklist:
+    - dense sibling rescans over the skin, ocular, neurologic, thrombotic, and infection sections
+    - rerouting sweep for laboratory, pathology, imaging, and genotype-correlation content
+    - manual pre-promotion review for genotype-phenotype, prognosis, and management-boundary sentences
+  - captured the chapter's inflammatory, hematologic, ocular, thrombotic, renal, infectious, and rare systemic features while keeping laboratory, pathology, imaging, and molecular-pathogenesis content in their grounded non-phenotype layers
+  - updated the VEXAS README, manifest, regime-ready chapter index, and current queue notes so the repo now treats VEXAS as completed chapter 13
+- Result:
+  - VEXAS is now represented by a recovered full chapter-backed manual artifact rather than only a prep surface
+  - validation passed with:
+    - `202` sentence-index rows
+    - `70` phenotype assertions
+    - `14` ancillary assertions
+    - `9` context assertions
+    - `0` trajectory assertions
+    - `18` causal chains
+    - `15` mechanism sentence ids
+    - `5` extraction notes
+    - `0` episode classes
+    - `0` trigger factors
+    - no bad refs
+    - no duplicate ids
+    - no multi-ref phenotype rows
+    - descriptor rows carrying subtype context
+- Path status:
+  - `on the intended path`
+  - the chapter is now complete end to end on the recovered-raw manual workflow
+- Next move:
+  - if desired, run an external review on the VEXAS manual artifact and then move to `USP7-Related Hao-Fountain Syndrome` as the next recovered-raw manual chapter
+
+## 2026-04-11 - Read the real Opus WARS2 audit-and-complement file
+
+- Action:
+  - read `/Users/ahmedelmorshedy/Downloads/NBK595820_WARS2_audit_and_complement.json` as the current real external audit surface for the WARS2 manual chapter
+- Result:
+  - confirmed the audit is structured as:
+    - `_audit_summary`
+    - complement rows for episode classes, trigger factors, phenotype assertions, ancillary assertions, context assertions, and extraction notes
+    - explicit `_corrections_to_existing_rows`
+    - `_gap_analysis`
+  - the strongest high-signal issues it raises are:
+    - missing formal episode-class representation for the epilepsy spectrum and movement disorder spectrum
+    - missing `brisk reflexes` and `upgoing toes`
+    - missing levodopa-response ancillary for tremor
+    - missing seizure treatment-resistance ancillary
+    - uncertain-status corrections for hedged imaging rows
+    - descriptor-role corrections for dysmorphic features
+    - frequency additions for aggressive behavior and sleep disorders
+  - also noted one clearly non-mergeable item as written:
+    - `note_012` has an empty evidence list and therefore cannot be merged directly under the strict grounded contract
+- Path status:
+  - `on the intended path`
+  - this is a stronger and more complete external review surface than the earlier local Claude auditor outputs and is suitable for a proper merge / maybe / reject triage next
+- Next move:
+  - triage the real Opus audit item by item against the live WARS2 manual artifact and recovered source surface before editing the chapter
+
+## 2026-04-11 - Compared the real Opus WARS2 audit against the WAGR critique-and-merge file
+
+- Action:
+  - compared `/Users/ahmedelmorshedy/Downloads/NBK595820_WARS2_audit_and_complement.json` against `/Users/ahmedelmorshedy/Downloads/NBK621298_critique_and_merge.json` to judge audit strength and merge-readiness
+- Result:
+  - `NBK621298_critique_and_merge.json` is the stronger audit artifact overall
+  - reasons:
+    - it combines critique, complements, explicit fixes, projected post-merge counts, and cross-chapter schema conclusions in one tighter package
+    - it is more surgical as a merge playbook:
+      - `5` present phenotypes to add
+      - `2` uncertain phenotypes to add
+      - `3` phenotype fixes
+      - `2` imaging ancillary additions
+      - `1` laboratory ancillary addition
+      - `12` causal-chain ref fixes
+      - `4` context-note additions
+    - it also provides explicit `before -> after` counts and a cross-extraction quality ranking, which makes promotion planning easier
+  - `NBK595820_WARS2_audit_and_complement.json` is still strong and more complete than the local Claude auditor runs, but is slightly less merge-ready:
+    - excellent on architectural issues, missing clinical facts, and gap analysis
+    - especially strong on the two-spectrum episode-class recommendation, levodopa-response gap, seizure treatment-resistance gap, and hedged ancillary corrections
+    - but it includes at least one directly non-mergeable item as written:
+      - `note_012` has empty `evidence_sentence_ids`
+    - it also includes more policy-dependent suggestions that still need triage rather than direct application
+- Path status:
+  - `on the intended path`
+  - the comparison clarified that the WAGR critique is the better benchmark for what a fully actionable external audit should look like
+- Next move:
+  - when applying external audits, treat the WAGR critique file as the stronger template for `merge / maybe / reject` execution quality, and use the WARS2 audit as a strong but slightly less surgical review surface
+
+## 2026-04-11 - Judged the VEXAS external audit artifact against the WAGR benchmark
+
+- Action:
+  - reviewed `/Users/ahmedelmorshedy/Downloads/NBK614471_VEXAS_audit_and_complement.json` and compared its structure and merge-readiness against `/Users/ahmedelmorshedy/Downloads/NBK621298_critique_and_merge.json`
+- Result:
+  - the VEXAS audit is genuinely stronger than the earlier WARS2 audit and is at least on the WAGR benchmark level, with better operational packaging
+  - strengths:
+    - explicit `_merge_playbook`
+    - explicit `_before_after_counts`
+    - cross-extraction ranking and pattern tracker
+    - no empty-evidence complement rows detected
+    - sharper structural diagnosis of missing episode classes and treatment-response anchors
+  - concrete VEXAS playbook surface:
+    - `4` present phenotype additions
+    - `1` uncertain phenotype addition
+    - `3` excluded phenotype additions
+    - `3` phenotype status fixes
+    - `3` qualifier enrichments
+    - `3` ancillary additions
+    - `1` context addition
+    - `2` episode-class additions
+    - `6` extraction-note additions
+  - main cautions:
+    - `_gap_analysis` and `_corrections_to_existing_rows` are null because the audit has folded that logic into the playbook sections instead
+    - at least two recommendations remain policy-sensitive and should be triaged rather than merged blindly:
+      - adding bone marrow vacuoles as both ancillary pathology and a phenotype row
+      - adding atrial fibrillation as a disease phenotype rather than a co-occurring arterial-risk-factor context
+- Path status:
+  - `on the intended path`
+  - the stronger prompt/model setup appears to have improved the audit materially rather than only changing the wrapper
+- Next move:
+  - if desired, use the VEXAS artifact as the new benchmark for future external audit prompt tuning, while still triaging borderline merge items before editing the live chapter
+
+## 2026-04-11 - Triaged WARS2 hold-summary signal against the stronger external audit JSON
+
+- Action:
+  - compared the retained local-Claude/Opus hold summary for WARS2 against the stronger external audit JSON and the live `NBK595820_wars2_deficiency_regime_ready_gpt-5.4-manual.json`
+- Result:
+  - the stronger external audit JSON remains the primary review surface for WARS2 finalization
+  - the hold summary still adds real value on a smaller set of grounded items not fully covered by the stronger audit
+  - `edit now` set from the stronger audit:
+    - add episode classes for `epilepsy spectrum` and `movement disorder spectrum`
+    - add `brisk reflexes`
+    - add `upgoing toes`
+    - add ancillary treatment-response for levodopa-responsive tremor
+    - add ancillary treatment-response for seizure difficulty/control resistance
+    - downgrade ancillary imaging rows `anc_002` through `anc_012` to `uncertain`
+    - change dysmorphic rows `ph_031` through `ph_038` from `primary` to `descriptor`
+    - add `4/13` frequency to `ph_024` and `ph_025`
+    - enrich `anc_001` with the grounded lactate-normality caveat from `p11_s3`
+    - remove the phenotype-level valproic-acid trigger from `ph_028`
+  - `hold-summary adds value` set:
+    - add `subtype_context = "epilepsy spectrum"` to `ph_030` hypoglycemia
+    - add `frequency = "7/13"` to `ph_005` hypotonia
+    - rename `ph_036` to `narrow and high-arched palate`
+    - add `unsociable character` from `p75_s1`
+    - likely add cautious movement-disorder-spectrum seizure row for the second `p77_s1` individual
+  - `do not merge blindly` set:
+    - do not add umbrella `dysmorphic features`
+    - do not add triple-routed valproic-acid management ancillary
+    - do not automatically add a separate `limb spasticity` row unless duplication policy is revisited, because `ph_006` already carries `peripheral spasticity`
+    - keep `ph_056` and `ph_061` trigger/exacerbation handling as policy-sensitive rather than settled
+- Path status:
+  - `on the intended path`
+  - the WARS2 final-edit set is now clear enough to apply without relying on the truncated local-Claude artifacts as the primary authority
+- Next move:
+  - if desired, apply the WARS2 reviewed-edit set to the GPT-5.4 manual artifact and emit a dated reviewed successor rather than overwriting the current canonical manual file
+
+## 2026-04-11 - Staged VEXAS review merge plan without emitting a reviewed successor yet
+
+- Action:
+  - created a frozen VEXAS merge-plan file and a residual-audit handoff file instead of writing a final reviewed JSON immediately
+- Files:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-vexas-syndrome/NBK614471_vexas_syndrome_review_merge_plan_20260411.md`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-vexas-syndrome/NBK614471_vexas_syndrome_residual_audit_handoff_20260411.md`
+- Result:
+  - the planned reviewed merge is now frozen without mutating the canonical `GPT-5.4 manual` artifact
+  - the strongest current merge set is recorded as:
+    - episode classes for inflammatory vs hematologic architecture
+    - status fixes for rare GI rows
+    - thrombotic / MDS / clonal hematopoiesis qualifier enrichments
+    - treatment-response and management-context ancillary additions
+    - natural-history context addition
+    - six extraction-note additions
+  - policy-sensitive items are explicitly separated for later triage:
+    - duplicate phenotype vs pathology routing for vacuoles
+    - atrial fibrillation as phenotype vs risk-context
+- Path status:
+  - `on the intended path`
+  - VEXAS is now staged for a later reviewed successor instead of being prematurely finalized
+- Next move:
+  - use one more external audit shot if desired, then return and emit the dated reviewed VEXAS successor
+
+## 2026-04-11 - Prepared USP7 chapter folder from saved raw HTML
+
+- Action:
+  - created a new bundle prep folder for `USP7-Related Hao-Fountain Syndrome`
+  - copied the thin stage1 reference files into the bundle folder
+  - rebuilt the recovered source surface from `NBK619577_raw.html` using the expanded section profile
+  - saved both thin-surface and recovered-surface audit JSON files
+  - wrote a folder README capturing the current prep state
+- Files:
+  - folder:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-usp7-related-hao-fountain-syndrome`
+  - recovered wrapper:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-usp7-related-hao-fountain-syndrome/NBK619577_recovered_opus_input.json`
+  - audits:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-usp7-related-hao-fountain-syndrome/source_surface_audit_20260411.json`
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-usp7-related-hao-fountain-syndrome/recovered_source_surface_audit_20260411.json`
+  - README:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-usp7-related-hao-fountain-syndrome/README.md`
+- Result:
+  - `NBK619577` is now staged as the next manual chapter after VEXAS
+  - recovered raw-html audit reports:
+    - `87` sentences
+    - `51` paragraphs
+    - `17` sections
+    - `likely_truncated: false`
+  - the earlier stage1 surface for the same chapter reports:
+    - `111` sentences
+    - `66` paragraphs
+    - `3` sections
+  - this mismatch appears to be a segmentation/profile difference rather than an obvious truncation, but it is documented for caution before extraction
+- Path status:
+  - `on the intended path`
+  - USP7 is prepared but not yet extracted
+- Next move:
+  - after the VEXAS reviewed work is resumed, the next chapter can start immediately from `NBK619577_recovered_opus_input.json`
+
+## 2026-04-11 - Promoted VEXAS to GPT-5.4 manual plus Opus 4.6 reviewed artifact
+
+- Scope:
+  - finalized the VEXAS external-review merge on the recovered full chapter-backed surface instead of leaving the chapter staged
+- Files written:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-vexas-syndrome/NBK614471_vexas_syndrome_regime_ready_gpt-5.4-manual-opus4.6-reviewed.json`
+- Repo bookkeeping updated:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-vexas-syndrome/README.md`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/new-regime-manifest-20260409.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/regime-ready-chapters-20260409.md`
+- Merge contents kept:
+  - demoted `abdominal pain`, `chronic diarrhea`, `myalgias`, and `hearing loss` to `uncertain` because `p56_s1` explicitly frames them as `rarely observed`
+  - enriched `thrombotic events`, `myelodysplastic syndrome`, and `clonal hematopoiesis` with grounded subtype-context detail from `p50_s2`, `p58_s2`, and `p61_s1-p61_s2`
+  - added `transfusion dependence`, `plasma cell myeloma` as a very rare uncertain complication, and excluded subgroup rows for `airway chondritis`, `costochondritis`, and `pulmonary fibrosis`
+  - added `episode_classes` for `inflammatory syndrome` and `hematologic involvement`
+  - added one grounded ancillary `management_context` row for `avoid smoking, which may exacerbate peripheral arterial disease`
+  - added one additional `natural_history` context row for the pre-2020 diagnostic-history / prior-diagnosis pattern
+  - revised the rare-feature extraction note and added note coverage for RP comparator context, female monosomy-X caution, low-level mosaic VAF detection, tissue-selection guidance, and the French three-cluster cohort architecture
+- Audit items intentionally not merged:
+  - did not add a separate phenotype row for marrow vacuoles because the pathology signal is already preserved in ancillary space and the reviewed chapter keeps pathology/laboratory/imaging routing disciplined
+  - did not add `atrial fibrillation` as a disease phenotype because `p51_s1` presents it as an arterial-thrombosis risk-factor context rather than a chapter-level disease manifestation
+  - did not add the proposed HSCT `only curative treatment / morbidity / mortality` ancillary because the cited source sentence `p104_s1` in the recovered surface only supports the ongoing Phase II study statement
+- Validation:
+  - reviewed artifact counts:
+    - `75` phenotype assertions
+    - `15` ancillary assertions
+    - `10` context assertions
+    - `0` trajectory assertions
+    - `18` causal chains
+    - `15` mechanism sentence ids
+    - `11` extraction notes
+    - `2` episode classes
+    - `0` trigger factors
+  - phenotype status distribution:
+    - `67` present
+    - `5` uncertain
+    - `3` excluded
+  - all evidence refs resolve against the recovered sentence index
+  - no phenotype row has multiple evidence refs
+- Path status:
+  - `on the intended path`
+  - VEXAS is no longer just staged for review; the reviewed artifact is now the official chapter 13 file
+- Next move:
+  - continue from the prepared USP7 recovered wrapper when chapter 14 work resumes
+
+## 2026-04-11 - Wrote one-file Gemini Enterprise agent-builder spec with exact parser code
+
+- Scope:
+  - created a single reusable handoff file for configuring a Gemini Enterprise agent for the grounded disease-layer workflow instead of relying on several older prompt-only files
+- File written:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/gemini-enterprise-agent-builder-spec-v1-20260411.md`
+- Inputs folded into the spec:
+  - schema / contract logic from the locked grounded disease-layer bundle
+  - Gemini and Vertex prompt constraints already used in the repo
+  - exact repo-side parsing and validation logic from:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/lib/genereviewsPipeline.js`
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/runGroundedDiseaseLayerGemini.js`
+- Contents:
+  - end-to-end agent workflow
+  - field-by-field extraction rules for every grounded disease-layer section
+  - a ready-to-paste Gemini Enterprise system instruction block
+  - exact code snippets for sentence splitting, paragraph rebuild, evidence id canonicalization, row normalization, mechanism derivation, and validation
+- Repo bookkeeping updated:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/README.md`
+- Result:
+  - there is now one concrete builder file to hand to Gemini Enterprise that explains both the extraction contract and how repo-side parsing of model output actually works
+- Path status:
+  - `on the intended path`
+- Next move:
+  - reuse this file when setting up the Gemini Enterprise agent, and treat the older Gemini / Vertex files as supporting references rather than the main handoff
+
+## 2026-04-11 - Completed USP7 manual grounded disease-layer artifact
+
+- Scope:
+  - completed the next queued chapter, `USP7-Related Hao-Fountain Syndrome`, as a `GPT-5.4 manual` grounded disease-layer artifact
+- Official file written:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-usp7-related-hao-fountain-syndrome/NBK619577_usp7_related_hao_fountain_syndrome_regime_ready_gpt-5.4-manual.json`
+- Evidence surface used:
+  - base recovered wrapper:
+    - `87` prose sentence rows
+    - `51` paragraphs
+    - `17` sections
+    - `likely_truncated: false`
+  - manual source-surface extension:
+    - integrated `38` chapter-table rows from the clinical-features and surveillance tables into `source_document.sentence_index`
+  - final artifact sentence surface:
+    - `125` sentence-local evidence rows
+- Output counts:
+  - `27` phenotype assertions
+  - `17` ancillary assertions
+  - `10` context assertions
+  - `2` trajectory assertions
+  - `3` causal chains
+  - `3` mechanism sentence ids
+  - `6` extraction notes
+  - `0` episode classes
+  - `0` trigger factors
+- Extraction shape:
+  - kept modality-specific MRI findings in ancillary imaging space
+  - used table-backed feature frequencies for developmental delay, intellectual disability, hypotonia, autism spectrum disorder, gait, sleep disturbance, GERD, hearing loss, and other chapter features
+  - preserved surveillance detail as `management_context` ancillary rows instead of leaking monitoring language into phenotype space
+  - captured the hypotonia-to-high-muscle-tone course as trajectory
+  - kept the catalytic-domain genotype-phenotype severity statement as a note rather than duplicating it as universal phenotype content
+- Validation:
+  - JSON parses cleanly
+  - all evidence refs resolve against the final sentence index
+  - no duplicate row ids were detected
+  - no phenotype row has multiple evidence refs
+- Repo bookkeeping updated:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-usp7-related-hao-fountain-syndrome/README.md`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/regime-ready-chapters-20260409.md`
+- Path status:
+  - `on the intended path`
+- Next move:
+  - either obtain an external audit for USP7 or continue the next chapter on the recovered-raw manual path
+
+## 2026-04-11 - Corrected USP7 after audit regression and promoted reviewed successor
+
+- Scope:
+  - fixed the USP7 source-surface regression, rebuilt the chapter on a transparent chapter-backed surface, and merged the real external audit into a reviewed successor
+- Parser / source-surface repair:
+  - patched `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/lib/genereviewsPipeline.js` so `Table 2.` headings no longer clobber the active clinical section and discard the rich prose that follows
+  - regenerated `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-usp7-related-hao-fountain-syndrome/NBK619577_recovered_clinical_structure.json`
+  - regenerated `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-usp7-related-hao-fountain-syndrome/NBK619577_recovered_opus_input.json`
+  - new recovered wrapper counts:
+    - `192` sentences
+    - `108` paragraphs
+    - `17` sections
+- Final evidence surface used for the corrected artifacts:
+  - archived fuller clinical fetch for table-bearing clinical detail
+  - regenerated recovered wrapper for later sections, family-risk, and molecular-pathogenesis carry-through
+  - explicit surveillance-table supplementation for management-context ancillary rows
+  - final artifact `source_document.sentence_index`:
+    - `169` sentence rows
+- Files written:
+  - corrected manual:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-usp7-related-hao-fountain-syndrome/NBK619577_usp7_related_hao_fountain_syndrome_regime_ready_gpt-5.4-manual.json`
+  - official reviewed successor:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-usp7-related-hao-fountain-syndrome/NBK619577_usp7_related_hao_fountain_syndrome_regime_ready_gpt-5.4-manual-opus4.6-reviewed.json`
+  - deterministic rebuild script:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/rebuildUsp7ReviewedFromAudit.js`
+- Reviewed output counts:
+  - `41` phenotype assertions
+  - `20` ancillary assertions
+  - `12` context assertions
+  - `2` trajectory assertions
+  - `4` causal chains
+  - `13` extraction notes
+- Key corrections merged:
+  - removed the orphan evidence problem by rebuilding the chapter on the repaired source surface
+  - added prognosis, fatigue/daytime-rest, scoliosis/kyphosis, short stature, constipation, diarrhea, dysphagia, obesity, dysmorphic facial features, osteopenia, osteoporosis, delayed bone age, small hands/feet, and prolonged neonatal jaundice
+  - added milestone-age and IQ ancillary rows
+  - corrected ophthalmologic rows from `primary` to `descriptor`
+  - strengthened the later-life trajectory row
+- Repo bookkeeping updated:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-usp7-related-hao-fountain-syndrome/README.md`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/new-regime-manifest-20260409.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/regime-ready-chapters-20260409.md`
+- Path status:
+  - `on the intended path`
+- Next move:
+  - move on to the next chapter instead of reopening USP7
+
+## 2026-04-11 - Lightweight Life Science plugin demo on VEXAS
+
+- Scope:
+  - tested the `Life Science: Research` plugin as a low-cost post-chapter enrichment layer using the reviewed VEXAS chapter
+- Base chapter:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-vexas-syndrome/NBK614471_vexas_syndrome_regime_ready_gpt-5.4-manual-opus4.6-reviewed.json`
+- Plugin calls used:
+  - `Open Targets` search for `VEXAS syndrome`
+  - `Open Targets` disease heatmap for `UBA1`
+  - `ClinicalTrials.gov` search for `VEXAS syndrome`
+- Saved outputs:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-vexas-syndrome/NBK614471_vexas_syndrome_opentargets_search_20260411.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-vexas-syndrome/NBK614471_vexas_syndrome_opentargets_heatmap_20260411.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-vexas-syndrome/NBK614471_vexas_syndrome_clinicaltrials_20260411.json`
+  - companion memo:
+    - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-vexas-syndrome/NBK614471_vexas_syndrome_life_science_demo_20260411.md`
+- Main result:
+  - the plugin normalized the disease/target pair to `MONDO_0026777` and `ENSG00000130985`
+  - the Open Targets heatmap showed multi-source support for `UBA1 -> VEXAS syndrome`, led by somatic ClinVar and curated variant/literature sources
+  - the ClinicalTrials snapshot returned five VEXAS-linked studies spanning HSCT, momelotinib, registry, natural-history, and marrow-failure research
+- Interpretation:
+  - this plugin is a good low-cost post-chapter enrichment layer for translational context
+  - it adds external identifiers, evidence-source breadth, and live trial visibility without replacing the grounded disease-layer workflow
+- Path status:
+  - `on the intended path`
+- Next move:
+  - reuse this pattern as an optional companion layer for selected high-value chapters rather than for every chapter by default
+
+## 2026-04-11 - USP7 residual surgical audit merged into reviewed artifact
+
+- Scope:
+  - compared the reviewed USP7 chapter against `/Users/ahmedelmorshedy/Documents/Cline/NBK619577_USP7_audit.md`
+  - treated the reviewed file's own `source_document.sentence_index` as the strict evidence surface for mergeability
+- Evidence surface:
+  - `full chapter-backed hybrid surface` already embedded in the reviewed USP7 artifact
+- Path status:
+  - `on the intended path`
+- Files updated:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-usp7-related-hao-fountain-syndrome/NBK619577_usp7_related_hao_fountain_syndrome_regime_ready_gpt-5.4-manual-opus4.6-reviewed.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-usp7-related-hao-fountain-syndrome/README.md`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/new-regime-manifest-20260409.json`
+- Reviewed artifact changes merged:
+  - fixed row-level evidence and qualifier issues for hypotonia, contractures, gait, microcephaly, autism spectrum disorder, attention-deficit/hyperactivity disorder, fractures, and gene context
+  - added phenotype rows for hypothyroidism, adrenal insufficiency, growth hormone deficiency, and delayed puberty
+  - added genotype-phenotype-correlation and somatic-mosaicism-risk context rows
+  - added a neonatal trajectory row
+  - added causal chains for gait secondary to hypotonia/balance/contractures and aspiration risk secondary to dysphagia
+  - merged redundant corpus-callosum ancillary rows and rewired management-context related phenotype ids
+- Items intentionally left out:
+  - epigenetic signature, clubfoot, specific learning disabilities, and quantitative mosaic details because the current reviewed file's own `source_document.sentence_index` does not carry the required supporting sentences
+  - exact developmental-delay / intellectual-disability frequency upgrades from the surgical audit because the reviewed source surface did not preserve the claimed numeric rows cleanly enough for a strict merge
+- Updated reviewed counts:
+  - `45` phenotype assertions
+  - `19` ancillary assertions
+  - `14` context assertions
+  - `3` trajectory assertions
+  - `6` causal chains
+  - `13` extraction notes
+- Validation:
+  - JSON parses cleanly
+  - no unresolved evidence ids
+  - no duplicate local ids
+  - no dangling ancillary `related_phenotype_assertion_ids`
+  - no multi-ref phenotype rows
+- Next move:
+  - keep this reviewed USP7 file as the official artifact unless the source surface is expanded again to support the remaining live-chapter-only audit ideas
+
+## 2026-04-11 - WARS2 external review merged into official reviewed artifact
+
+- Scope:
+  - merged the real external audit from `/Users/ahmedelmorshedy/Downloads/NBK595820_WARS2_audit_and_complement.json`
+  - harvested a small set of high-confidence additive leftovers from `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-wars2-deficiency/NBK595820_wars2_deficiency_claude_auditor_hold_summary_20260411.md`
+- Evidence surface:
+  - `full chapter-backed recovered from saved raw HTML`
+- Path status:
+  - `on the intended path`
+- Files updated:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-wars2-deficiency/NBK595820_wars2_deficiency_regime_ready_gpt-5.4-manual-opus4.6-reviewed.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-wars2-deficiency/README.md`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/new-regime-manifest-20260409.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/regime-ready-chapters-20260409.md`
+- Reviewed artifact changes merged:
+  - promoted the epilepsy-spectrum and movement-disorder-spectrum architecture into explicit episode classes
+  - added `brisk reflexes`, `upgoing toes`, and `unsociable character`
+  - added ancillary treatment-response rows for levodopa-responsive tremor and seizure refractoriness
+  - corrected dysmorphic and musculoskeletal feature rows from `primary` to `descriptor`
+  - added missing frequencies for hypotonia (`7/13`) and epilepsy-spectrum aggressive behavior and sleep disorders (`4/13`)
+  - removed the redundant phenotype-local valproic-acid trigger from acute hepatopathy
+  - added epilepsy-spectrum subtype context to hypoglycemia
+  - downgraded hedged MRI rows from `present` to `uncertain`
+  - refined `high-arched palate` to `narrow and high-arched palate`
+  - added grounded review notes for spectrum severity differences, parkinsonism absence in the myoclonus-ataxia subgroup, rare cardiac involvement, imaging hedging, and the normal-lactate caveat
+- Items intentionally left out:
+  - `limb spasticity` as a separate new row because `peripheral spasticity` was already represented and the clinical description phrasing would have increased duplication risk
+  - seizure-semiology residue from single-individual descriptions and movement-disorder seizure-detail leftovers because they were clinically interesting but not required to promote the chapter cleanly
+  - phenotype-trigger rewrites for action tremor and myoclonus because those remain policy-sensitive exacerbation-pattern calls rather than hard defects
+- Updated reviewed counts:
+  - `88` phenotype assertions
+  - `15` ancillary assertions
+  - `11` context assertions
+  - `4` trajectory assertions
+  - `8` causal chains
+  - `12` extraction notes
+  - `3` episode classes
+  - `1` trigger factor
+- Validation:
+  - JSON parses cleanly
+  - no unresolved evidence ids
+  - no duplicate local ids
+  - no dangling ancillary `related_phenotype_assertion_ids`
+  - no multi-ref phenotype rows
+  - descriptor rows retain subtype context
+- Next move:
+  - move to the remaining manual-only backlog, led by `Von Willebrand Disease` and `Vascular Ehlers-Danlos Syndrome`
+
+## 2026-04-11 - Verified that Von Willebrand Disease does not yet have a retained Opus review artifact
+
+- Scope:
+  - verified whether chapter 8 `Von Willebrand Disease` / `NBK7014` already has a retained external Opus review
+- Evidence surface for the status check:
+  - manifest entry
+  - chapter folder contents
+  - Genovy diary references
+  - usual retained audit-drop locations in `/Users/ahmedelmorshedy/Downloads` and `/Users/ahmedelmorshedy/Documents/Cline`
+- Result:
+  - the manifest still marks chapter 8 as `regime_ready_gpt-5.4-manual`
+  - the chapter folder contains only the recovered source files, audits of the source surface, and the manual artifact
+  - no retained `audit_and_complement`, `critique_and_merge`, or reviewed chapter JSON for `NBK7014` was found in the checked locations
+- Path status:
+  - `on the intended path`
+- Next move:
+  - treat `Von Willebrand Disease` as manual-only until a real external review file is created or surfaced
+
+## 2026-04-11 - Read and triaged the real external audit for Von Willebrand Disease
+
+- Scope:
+  - reviewed `/Users/ahmedelmorshedy/Downloads/NBK7014_VWD_audit_and_complement.json` against the live manual artifact `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-von-willebrand-disease/NBK7014_von_willebrand_disease_regime_ready_gpt-5.4-manual.json`
+- Evidence surface:
+  - `full chapter-backed recovered from saved raw HTML`
+- Path status:
+  - `on the intended path`
+- Audit quality read:
+  - real merge-grade audit with explicit before/after counts, targeted row fixes, complement rows, episode-class architecture, trigger-factor proposals, and extraction-note additions
+  - overall score reported as `80/100`
+- Most useful grounded additions/fixes:
+  - promote the seven VWD subtype families into formal episode classes
+  - add desmopressin-worsened thrombocytopenia as treatment-response ancillary for type 2B
+  - add the expanded natural-history context with variable penetrance and expressivity
+  - add type 1C-specific mucocutaneous-bleeding row with accelerated-clearance pathophysiology
+  - add iron-deficiency-anemia complication from chronic GI bleeding
+  - upgrade thrombocytopenia in type 2B with `up to 50%` frequency support from molecular-pathogenesis text
+  - remove phenotype-local trigger burden from worsening thrombocytopenia and push that logic into trigger factors
+- Caution items:
+  - `life-threatening gastrointestinal bleeding` as `present` instead of `uncertain` is arguable and should stay conservative unless explicitly promoted
+  - `anaphylactic reaction to VWF replacement` as a separate phenotype row may be clinically useful, but it is also already represented in ancillary treatment-response space and could be left as duplication-sensitive
+- Next move:
+  - treat this VWD audit as strong and likely mergeable with a short human-triage pass rather than needing another full external review
+
+## 2026-04-11 - Von Willebrand Disease external review merged into official reviewed artifact
+
+- Scope:
+  - merged `/Users/ahmedelmorshedy/Downloads/NBK7014_VWD_audit_and_complement.json` into the live manual artifact for chapter 8
+- Evidence surface:
+  - `full chapter-backed recovered from saved raw HTML`
+- Path status:
+  - `on the intended path`
+- Files updated:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-von-willebrand-disease/NBK7014_von_willebrand_disease_regime_ready_gpt-5.4-manual-opus4.6-reviewed.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-von-willebrand-disease/README.md`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/new-regime-manifest-20260409.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/regime-ready-chapters-20260409.md`
+- Reviewed artifact changes merged:
+  - promoted the seven main VWD subtype families into explicit episode classes
+  - upgraded type 2B thrombocytopenia to a present row with `up to 50%` frequency support and removed the phenotype-local trigger burden from worsening thrombocytopenia
+  - added type 1C mucocutaneous bleeding, iron-deficiency anemia from chronic GI bleeding, and rare anaphylactic reaction to VWF replacement
+  - added desmopressin-worsened thrombocytopenia as standalone treatment-response ancillary evidence
+  - added pregnancy-to-postpartum trajectory modeling with delayed secondary postpartum bleeding risk
+  - expanded context with variable penetrance and expressivity
+  - enriched the note layer with type 2B contraindication, type 2N hemophilia mimicry, GI angiodysplasia subtype ranking, large-deletion antibody risk, and pregnancy disease-modification framing
+- Items intentionally left out:
+  - the disease-level `hemostatic challenge` trigger factor, because it read more like broad natural-history context than a clean formal trigger row
+  - the audit's `note_009`, because once the subtype episode classes are actually present the note becomes structurally redundant
+- Updated reviewed counts:
+  - `46` phenotype assertions
+  - `36` ancillary assertions
+  - `10` context assertions
+  - `1` trajectory assertion
+  - `16` causal chains
+  - `13` extraction notes
+  - `7` episode classes
+  - `2` trigger factors
+- Validation:
+  - JSON parses cleanly
+  - no unresolved evidence ids
+  - no duplicate local ids
+  - no dangling ancillary `related_phenotype_assertion_ids`
+  - no multi-ref phenotype rows
+- Next move:
+  - move to the remaining manual-only backlog, led by `Vascular Ehlers-Danlos Syndrome`
+
+## 2026-04-11 - Vascular Ehlers-Danlos Syndrome external review merged into official reviewed artifact
+
+- Scope:
+  - merged `/Users/ahmedelmorshedy/Downloads/NBK1494_vEDS_audit_and_complement.json` into the live manual artifact for chapter 10
+- Evidence surface:
+  - `full chapter-backed recovered from saved raw HTML`
+- Path status:
+  - `on the intended path`
+- Files updated:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-vascular-ehlers-danlos-syndrome/NBK1494_vascular_ehlers_danlos_syndrome_regime_ready_gpt-5.4-manual-opus4.6-reviewed.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-vascular-ehlers-danlos-syndrome/README.md`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/new-regime-manifest-20260409.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/regime-ready-chapters-20260409.md`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/genovy-dx-diary.md`
+- Reviewed artifact changes merged:
+  - demoted thin vermilion of lips, micrognathia, narrow nose, and protuberant eyes from primary rows to descriptor rows
+  - removed trigger leakage from easy bruising and normalized the broad avoidance trigger wording
+  - enriched early mortality trajectory language with spontaneous artery rupture/dissection, aortic burden, male excess mortality, and major-complication-by-age-20 prevalence
+  - added cervical tears during delivery, vaginal tears during delivery, and prematurity as pregnancy-complication phenotype rows
+  - added pregnancy mortality ancillary at approximately `5%` per pregnancy tied to the pregnancy-complication surface
+  - expanded the note layer with pregnancy risk, null-variant natural-history contrast, early male excess mortality, colonoscopy-trigger modeling, and surgery-versus-conservative-management framing
+- Updated reviewed counts:
+  - `60` phenotype assertions
+  - `21` ancillary assertions
+  - `8` context assertions
+  - `3` trajectory assertions
+  - `14` causal chains
+  - `6` mechanism sentence ids
+  - `10` extraction notes
+  - `1` episode class
+  - `5` trigger factors
+- Validation:
+  - JSON parses cleanly
+  - no unresolved evidence ids
+  - no duplicate local ids
+  - no dangling ancillary `related_phenotype_assertion_ids`
+  - no multi-ref phenotype rows
+- Next move:
+  - with WARS2, Von Willebrand disease, and vEDS all promoted to reviewed artifacts, the manual-only backlog from this run is cleared
+
+## 2026-04-11 - Applied residual HPO-guided qualifier polish to the reviewed vEDS artifact
+
+- Scope:
+  - used the `_hpo_enrichment_collapse_table` from `/Users/ahmedelmorshedy/Downloads/NBK1494_vEDS_audit_and_complement.json` as a residue pass on the reviewed vEDS chapter
+- Evidence surface:
+  - `full chapter-backed recovered from saved raw HTML`
+- Path status:
+  - `on the intended path`
+- Files updated:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-vascular-ehlers-danlos-syndrome/NBK1494_vascular_ehlers_danlos_syndrome_regime_ready_gpt-5.4-manual-opus4.6-reviewed.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-vascular-ehlers-danlos-syndrome/README.md`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/genovy-dx-diary.md`
+- Residual qualifier polish merged:
+  - `ph_007 easy bruising` now carries the low-threshold bruising detail as `severity = "spontaneous or with minimal trauma"` instead of using trigger semantics
+  - `ph_009 carotid-cavernous sinus fistula` now carries `frequency = 10%` and `subtype_context = female preponderance` using the dedicated prevalence sentence
+  - `ph_028 coronary artery dissection` now captures the clinical presentation pattern that 80% presented with chest pain or heart-attack symptoms
+  - `ph_049 gingival thinness and translucency` now carries `distribution = generalized`
+- Items intentionally still left out:
+  - no separate `venous varicosities` confirmation row was added in this pass
+  - no standalone phenotype row was created for iatrogenic colonoscopy perforation
+- Validation:
+  - JSON parses cleanly
+  - no unresolved evidence ids
+  - no duplicate local ids
+  - counts unchanged
+- Next move:
+  - vEDS is now not just reviewed but lightly residue-polished; future chapter passes can reuse the same HPO-enrichment residue check after the main audit merge

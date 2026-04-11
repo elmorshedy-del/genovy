@@ -6,6 +6,7 @@
     "disease_local_id": "",
     "nbk_id": "",
     "title": "",
+    "mondo_id": null,
     "mode": "discovery",
     "source": "GeneReviews",
     "source_url": null,
@@ -36,6 +37,7 @@
         "progression": null,
         "trigger": null,
         "treatment_response": null,
+        "management_condition": null,
         "pathophysiology": null,
         "laterality": null,
         "distribution": null,
@@ -87,11 +89,51 @@
       ]
     }
   ],
+  "causal_chains": [
+    {
+      "causal_chain_local_id": "chain_001",
+      "chain_type": "molecular_mechanism",
+      "cause": "",
+      "effect": "",
+      "evidence_sentence_ids": [
+        ""
+      ]
+    }
+  ],
+  "mechanism_sentence_ids": [],
   "extraction_notes": [
     {
       "note_local_id": "note_001",
       "decision": "",
       "rationale": "",
+      "evidence_sentence_ids": [
+        ""
+      ]
+    }
+  ],
+  "episode_classes": [
+    {
+      "episode_local_id": "ep_001",
+      "label_raw": "",
+      "label_normalized": "",
+      "evidence_sentence_ids": [
+        ""
+      ],
+      "linked_manifestation_labels": [],
+      "resolution_status": "resolved",
+      "resolution_note": null
+    }
+  ],
+  "trigger_factors": [
+    {
+      "trigger_local_id": "trig_001",
+      "trigger": "",
+      "target_type": "episode_class",
+      "target_label": "",
+      "target_raw": "",
+      "target_episode_id": "ep_001",
+      "target_resolution_status": "resolved",
+      "target_resolution_note": null,
       "evidence_sentence_ids": [
         ""
       ]

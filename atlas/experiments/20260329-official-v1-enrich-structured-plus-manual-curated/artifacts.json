@@ -1,0 +1,70 @@
+{
+  "bundle_id": "20260329-official-v1-enrich-structured-plus-manual-curated",
+  "title": "Official v1 Enrich Structured Plus Manual Curated",
+  "date": "2026-03-29",
+  "lineage": "saved March 29 historical enrichment branch",
+  "status": "saved stronger historical branch",
+  "storage": {
+    "mode": "bucket_index_only",
+    "note": "Historical benchmark and manifest artifacts are preserved here as metadata references to cold-storage objects, not as local JSON copies in the repo working tree."
+  },
+  "saved_benchmark": {
+    "role": "final saved stronger historical benchmark branch",
+    "path": "gs://ahmed-cold-storage-20260326/genovy-artifacts-march-2026/output/official-v1-enrich-structured-plus-manual-curated-20260329.json",
+    "metrics": {
+      "case_count": 100,
+      "found_count": 92,
+      "top1_count": 42,
+      "top3_count": 53,
+      "top5_count": 57,
+      "top10_count": 65,
+      "median_rank": 2,
+      "mrr": 0.503832,
+      "miss_count": 8,
+      "over_100_but_found_count": 0
+    }
+  },
+  "precursors": [
+    {
+      "role": "benchmark precursor before the manual curated overlay",
+      "path": "gs://ahmed-cold-storage-20260326/genovy-artifacts-march-2026/output/official-v1-enrich-structured-global-20260329.json",
+      "metrics": {
+        "found_count": 86,
+        "top1_count": 43,
+        "top3_count": 51,
+        "top5_count": 55,
+        "top10_count": 63,
+        "mrr": 0.499033
+      }
+    },
+    {
+      "role": "provenance-carrying manifest for the structured global layer",
+      "path": "gs://ahmed-cold-storage-20260326/genovy-artifacts-march-2026/output/source-enrichment-manifest-structured-global-20260329.json"
+    },
+    {
+      "role": "provenance-carrying overlay manifest that closed the gap from 86 to 92",
+      "path": "gs://ahmed-cold-storage-20260326/genovy-artifacts-march-2026/output/manual-curated-source-shadow-manifest-20260329.json",
+      "manifest_facts": {
+        "entryCount": 26,
+        "skippedCount": 7,
+        "sourceKey": "manual_curated_source_shadow",
+        "strategy": "manual_curated_source_shadow_overlay"
+      }
+    }
+  ],
+  "manual_curated_overlay_inputs": [
+    "shadow-setd2-symmetric-source-terms-20260326.json",
+    "shadow-socs1-symmetric-source-terms-20260326.json",
+    "shadow-u2af2-symmetric-source-terms-20260327.json",
+    "shadow-ppp2r1a-truth-source-terms-20260327.json",
+    "shadow-rere-symmetric-case-series-terms-20260326.json",
+    "shadow-rere-symmetric-omim-terms-20260326.json"
+  ],
+  "local_anchors": {
+    "summary": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/atlas/experiments/20260329-official-v1-enrich-structured-plus-manual-curated/summary.md",
+    "artifact_index": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/atlas/experiments/20260329-official-v1-enrich-structured-plus-manual-curated/artifact-index.md",
+    "reconciliation_doc": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/benchmark-lineage-reconciliation-87-vs-92-20260330.md",
+    "bucket_path_slice": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/full-audit-20260330/gcs-march29-30-path-slice.txt",
+    "bucket_understanding_report": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/full-audit-20260330/march29-30-bucket-understanding-report-20260330.md"
+  }
+}

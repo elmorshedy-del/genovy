@@ -28,13 +28,18 @@ New shape:
 - `phenotype_assertions[]`
 - `ancillary_assertions[]`
 - `context_assertions[]`
+- `episode_classes[]`
+- `trigger_factors[]`
 - `trajectory_assertions[]`
+- `causal_chains[]`
+- `mechanism_sentence_ids[]`
 - `extraction_notes[]`
 
 Main design change:
 - status becomes a field on each assertion, not a bucket
 - domain becomes a field on each ancillary row, not a bucket
 - context becomes assertion rows, not one flat object
+- broad disease-state triggers can be isolated without duplicating them across phenotype rows
 - disease course can be represented as explicit staged trajectory rows
 
 ## Top-level object
@@ -47,7 +52,11 @@ Main design change:
   "phenotype_assertions": [],
   "ancillary_assertions": [],
   "context_assertions": [],
+  "episode_classes": [],
+  "trigger_factors": [],
   "trajectory_assertions": [],
+  "causal_chains": [],
+  "mechanism_sentence_ids": [],
   "extraction_notes": []
 }
 ```
@@ -59,6 +68,7 @@ Required fields:
 - `disease_local_id`
 - `nbk_id`
 - `title`
+- `mondo_id`
 - `mode`
 - `source`
 - `source_url`
@@ -84,6 +94,7 @@ Recommended ID convention:
 Rules:
 - full sentence index is mandatory
 - every later evidence reference must point to a valid `sentence_id` in this array
+- `mondo_id` is a nullable placeholder for downstream disease-ontology mapping; extraction should leave it `null` unless the input wrapper already supplies an explicit value
 
 ## 2. `phenotype_assertions[]`
 
@@ -123,6 +134,7 @@ Phenotype assertion shape:
     "progression": null,
     "trigger": null,
     "treatment_response": null,
+    "management_condition": null,
     "pathophysiology": null,
     "laterality": null,
     "distribution": null,
@@ -135,10 +147,14 @@ Phenotype assertion shape:
 
 Rules:
 - one concept per row
+- phenotype rows must remain sentence-local and should carry exactly one `evidence_sentence_ids` value
 - split coordinated findings when explicit
 - keep umbrella rows only when the umbrella itself is clinically meaningful in the source
 - use `null` when the qualifier slot exists but no grounded value is supported
 - do not infer canonical labels from disease memory
+- if `status = "excluded"`, the label must name the abnormality being ruled out, not the normal attribute that remains
+- if `clinical_role = "descriptor"`, `subtype_context` must be non-null and should name the grounded parent finding
+- use `management_condition` when the source makes a finding contingent on treatment, supervision, restriction, or other care context rather than on an acute precipitating exposure
 
 Detail budget:
 - commonly filled:
@@ -150,6 +166,7 @@ Detail budget:
   - `progression`
   - `trigger`
   - `treatment_response`
+  - `management_condition`
 - rarely filled:
   - `pathophysiology`
   - `laterality`
@@ -249,8 +266,87 @@ Rules:
 - only emit a context assertion when the field is explicitly supported
 - do not create empty context rows
 - prefer source-faithful wording over polished summary wording
+- when multiple grounded statements populate the same `field_name`, prefer one coherent row with multiple evidence refs instead of fragmented duplicates
 
-## 5. `trajectory_assertions[]`
+## 5. `episode_classes[]`
+
+Optional extension for disease-level episode or attack states that would otherwise become too vague after slot export.
+
+Fields:
+- `episode_local_id`
+- `label_raw`
+- `label_normalized`
+- `evidence_sentence_ids`
+- `linked_manifestation_labels`
+- `resolution_status`
+- `resolution_note`
+
+Episode-class shape:
+
+```json
+{
+  "episode_local_id": "ep_001",
+  "label_raw": "acute attacks of neurovisceral manifestations",
+  "label_normalized": "acute neurovisceral attack",
+  "evidence_sentence_ids": ["p15_s2"],
+  "linked_manifestation_labels": [
+    "abdominal pain",
+    "tachycardia"
+  ],
+  "resolution_status": "resolved",
+  "resolution_note": null
+}
+```
+
+Rules:
+- use this only when the source describes a broader disease state, attack class, or episode class
+- keep `label_raw` source-faithful
+- use `label_normalized` only to make the state self-sufficient outside chapter context
+- use `resolution_status = "resolved"` when the episode label is slot-safe on its own
+- use `resolution_status = "unresolved"` when the chapter mentions a broader state but does not resolve it to a slot-safe target
+- use `resolution_status = "needs_enrichment"` when the target is partly grounded but lacks the detail needed for safe downstream export
+
+## 6. `trigger_factors[]`
+
+Optional extension for disease-level triggers that target a broader episode class or disease state rather than one phenotype row.
+
+Fields:
+- `trigger_local_id`
+- `trigger`
+- `target_type`
+- `target_label`
+- `target_raw`
+- `target_episode_id`
+- `target_resolution_status`
+- `target_resolution_note`
+- `evidence_sentence_ids`
+
+Trigger-factor shape:
+
+```json
+{
+  "trigger_local_id": "trig_001",
+  "trigger": "alcohol",
+  "target_type": "episode_class",
+  "target_label": "acute neurovisceral attack",
+  "target_raw": "acute attacks of neurovisceral manifestations",
+  "target_episode_id": "ep_001",
+  "target_resolution_status": "resolved",
+  "target_resolution_note": null,
+  "evidence_sentence_ids": ["p28_s1"]
+}
+```
+
+Rules:
+- keep `trigger` on a phenotype row only when the sentence clearly targets that one phenotype or symptom
+- use `trigger_factors[]` when the trigger targets a broader attack state, disease course state, or syndrome-level flare
+- use `target_resolution_status = "unresolved"` when the trigger target does not resolve to one specific phenotype, episode, or disease-state target
+- use `target_resolution_status = "needs_enrichment"` when the target is partly grounded but still lacks enough specificity for safe downstream export
+- do not discard vague targets; retain them with an explicit resolution status and a short `target_resolution_note`
+- if a trigger points to an `episode_class`, populate `target_episode_id` when possible
+- if the sentence states a care-dependent condition such as `if untreated`, `if not limited`, or `if uncontrolled externally`, do not force it into `trigger_factors`; prefer `management_condition` on the affected phenotype row
+
+## 7. `trajectory_assertions[]`
 
 Use this only when the source explicitly describes a time-ordered disease course.
 
@@ -284,7 +380,50 @@ Rules:
 - use them only when the chapter explicitly provides staged sequence or transition
 - row-level `progression` qualifier still exists for local statements; `trajectory_assertions` are for disease-course sequence
 
-## 6. `extraction_notes[]`
+## 8. `causal_chains[]`
+
+Use this only for explicitly stated cause-effect links.
+
+Fields:
+- `causal_chain_local_id`
+- `chain_type`
+- `cause`
+- `effect`
+- `evidence_sentence_ids`
+
+Allowed `chain_type` values:
+- `molecular_mechanism`
+- `clinical_consequence`
+
+Causal chain shape:
+
+```json
+{
+  "causal_chain_local_id": "chain_001",
+  "chain_type": "molecular_mechanism",
+  "cause": "somatic UBA1 pathogenic variants in hematopoietic stem cells",
+  "effect": "autoinflammatory syndrome",
+  "evidence_sentence_ids": ["p12_s1"]
+}
+```
+
+Rules:
+- prefer `molecular_mechanism` for gene, protein, pathway, cellular, or tissue-dysfunction mechanisms
+- use `clinical_consequence` only for clearly stated, sentence-local clinical cause-effect links that are clinically useful
+- do not emit weak `may contribute to` chains unless the causal relationship is central enough to the source sentence to preserve
+- do not turn every complication or risk sentence into a causal chain
+- keep one cause-effect link per row
+- each chain must keep at least one grounded `evidence_sentence_ids` value
+
+## 9. `mechanism_sentence_ids[]`
+
+This is deterministic metadata derived from `causal_chains`.
+
+Rule:
+- compute as the unique union of `evidence_sentence_ids` from all grounded causal chains
+- do not ask the model to fill it independently
+
+## 10. `extraction_notes[]`
 
 Structured decisions for ambiguous routing or decomposition.
 
@@ -314,10 +453,15 @@ Rules:
 1. Every populated field must be justified by cited sentence IDs.
 2. If a field is unsupported, leave it `null`, omit the row, or omit the context assertion.
 3. Do not use outside disease knowledge.
-4. Do not perform HPO or MONDO mapping in this layer.
+4. Do not perform HPO mapping or generate new MONDO mappings in this layer; only preserve an explicitly supplied `mondo_id` placeholder.
 5. Do not assign weights in this layer.
 6. Do not create graph edges in this layer.
 7. Do not emit biopharma interpretations in this layer.
+8. Do not emit causal chains unless the cause-effect link is explicit in the cited sentence.
+9. Do not use navigational list-header sentences such as `Major criteria`, `Minor criteria`, or `Occasional findings...` as evidence references.
+10. Do not drop source-mentioned ambiguous content; retain it in the nearest grounded home and mark unresolved episode or trigger targets with an enrichment note when needed.
+11. Every retained slot should survive decontextualization on its own or carry an explicit parent or target link that restores the missing context.
+12. Do not aggregate phenotype qualifiers across multiple evidence sentences; split them into sentence-local rows instead.
 
 ## Why this schema exists
 

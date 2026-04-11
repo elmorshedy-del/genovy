@@ -1,17 +1,13 @@
 import path from 'node:path';
 import {
-  callGeminiJson,
   ensureDir,
   parseArgs,
   readJson,
   writeJson
 } from '../lib/genereviewsPipeline.js';
 import {
-  buildAncillaryEvidenceTypeSchemaText,
-  buildEnrichmentDetailTypeSchemaText,
-  buildSchemaRepairPrompt,
   deterministicallyRouteEnrichmentReviewResults,
-  normalizeEnrichmentReviewPayload
+  runSchemaGuardedEnrichmentReview
 } from '../lib/enrichmentReviewer.js';
 
 const DEFAULTS = Object.freeze({
@@ -123,116 +119,6 @@ function buildCases({ chapterReport, auditChapter, sentenceMap, anchorsPayload }
   });
 }
 
-function buildReviewPrompt() {
-  return `You are reviewing grounded GeneReviews candidates under an enrichment-first policy.
-
-Return JSON with a top-level key "results" containing one item per case in the same order.
-Each result must contain:
-- candidate_label
-- sentence_id
-- bucket
-- retention_layer
-- adds_detail_beyond_anchor
-- detail_types
-- ancillary_evidence_types
-- same_finding_as_anchor_labels
-- reason
-
-Allowed buckets:
-- keep_enrichment
-- retain_as_ancillary
-- collapse_to_anchor
-- broad_or_redundant
-- junk_or_context_only
-
-Allowed retention_layer values:
-- phenotype_enrichment
-- ancillary_clinical_evidence
-- discarded
-
-Allowed detail_types:
-${buildEnrichmentDetailTypeSchemaText()}
-
-Allowed ancillary_evidence_types:
-${buildAncillaryEvidenceTypeSchemaText()}
-
-Policy:
-- Preserve clinically meaningful source detail beyond flattened HPO anchors.
-- Keep subtype, pattern, morphology, distribution, laterality, modality, temporal qualifier, anatomical subsite, trigger, quantitative, pathophysiology, etiology, and clinical course detail when the source supports it.
-- pathophysiology means an underlying biological, developmental, or physiologic abnormality within the patient that directly explains the retained finding and is itself clinically meaningful disease detail.
-- etiology means an explicitly stated causal basis for the retained finding when that cause adds clinically meaningful specificity beyond the anchor and is not merely a gene, variant, inheritance pattern, or broad diagnosis label.
-- clinical_course means the behavior of the finding over time after onset, such as recurrent, relapsing, transient, persistent, progressive, regressive, or episodic. It is not the same as age of onset.
-- Do not collapse a candidate just because a broader anchor exists.
-- Collapse only if the candidate is effectively the same anchored finding and adds no clinically meaningful specificity.
-- Broad umbrella phrases go to broad_or_redundant.
-- If a row is clinically useful but not phenotype enrichment because it is lab-only, imaging-only, pathology-only, electrophysiology-only, treatment-response, management, or clinical-test evidence, use retain_as_ancillary with retention_layer=ancillary_clinical_evidence and the best ancillary_evidence_types values.
-- Use junk_or_context_only only for rows that should be discarded entirely, not for clinically useful ancillary evidence.
-- If a candidate adds source-faithful differentiating detail that could matter later for mapping or disease differentiation, prefer keep_enrichment.
-
-Retention-layer rules:
-- keep_enrichment -> phenotype_enrichment
-- retain_as_ancillary -> ancillary_clinical_evidence
-- collapse_to_anchor, broad_or_redundant, junk_or_context_only -> discarded
-
-Before you finalize the answer, do a schema pass:
-- verify every retention_layer matches the bucket rules above
-- verify every detail_types item is exactly one of the allowed values above
-- verify every ancillary_evidence_types item is exactly one of the allowed values above
-- if a detail_types or ancillary_evidence_types item is close but not exact, rewrite it to the closest allowed value or remove it
-- do not invent any other detail_types labels
-- do not invent any other ancillary_evidence_types labels
-
-Output JSON only.`;
-}
-
-async function runSchemaGuardedReview({
-  apiKey,
-  model,
-  thinkingBudget,
-  temperature,
-  chapterKey,
-  cases
-}) {
-  const primary = await callGeminiJson({
-    apiKey,
-    model,
-    systemPrompt: buildReviewPrompt(),
-    userPayload: {
-      chapter_key: chapterKey,
-      cases
-    },
-    temperature,
-    thinkingBudget
-  });
-
-  let normalized = normalizeEnrichmentReviewPayload(primary.parsed, cases.length);
-  let repaired = null;
-
-  if (!normalized.valid) {
-    repaired = await callGeminiJson({
-      apiKey,
-      model,
-      systemPrompt: buildSchemaRepairPrompt(),
-      userPayload: {
-        chapter_key: chapterKey,
-        cases,
-        prior_output: primary.rawOutput,
-        validation_issues: normalized.issues
-      },
-      temperature,
-      thinkingBudget
-    });
-    normalized = normalizeEnrichmentReviewPayload(repaired.parsed, cases.length);
-  }
-
-  return {
-    model,
-    primary,
-    repaired,
-    normalized
-  };
-}
-
 function compareAgainstPriorAudit(cases, results) {
   const output = [];
   for (let index = 0; index < cases.length; index += 1) {
@@ -295,7 +181,7 @@ async function main() {
 
   const modelOutputs = [];
   for (const model of modelNames) {
-    const reviewed = await runSchemaGuardedReview({
+    const reviewed = await runSchemaGuardedEnrichmentReview({
       apiKey,
       model,
       thinkingBudget,

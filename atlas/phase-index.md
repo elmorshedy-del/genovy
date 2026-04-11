@@ -55,10 +55,14 @@ Bundles:
   - [/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/atlas/experiments/20260325-generic-handoff-floor-w1-shadow/summary.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/atlas/experiments/20260325-generic-handoff-floor-w1-shadow/summary.md)
 - official real-`v1` benchmark:
   - [/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/atlas/experiments/20260326-official-real-v1-handoff-floor-1.0/summary.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/atlas/experiments/20260326-official-real-v1-handoff-floor-1.0/summary.md)
+- saved March 29 enrichment benchmark:
+  - [/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/atlas/experiments/20260329-official-v1-enrich-structured-plus-manual-curated/summary.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/atlas/experiments/20260329-official-v1-enrich-structured-plus-manual-curated/summary.md)
 
 Read:
 - this is the current strongest rule-based scorer lineage
 - this is also where Genovy clearly beats Exomiser on ranking metrics
+- the March 29 saved branch is the strongest preserved enrichment-era benchmark
+- do not mentally collapse the current safe `87 found` floor with the saved `92 found` branch
 
 ## 5. Integrity recovery and lineage correction
 

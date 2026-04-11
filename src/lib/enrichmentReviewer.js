@@ -1,3 +1,5 @@
+import { callGeminiJson } from './genereviewsPipeline.js';
+
 export const ENRICHMENT_REVIEW_BUCKETS = Object.freeze([
   'keep_enrichment',
   'retain_as_ancillary',
@@ -10,6 +12,14 @@ export const ENRICHMENT_RETENTION_LAYERS = Object.freeze([
   'phenotype_enrichment',
   'ancillary_clinical_evidence',
   'discarded'
+]);
+
+export const ENRICHMENT_EVIDENCE_SCOPES = Object.freeze([
+  'sentence',
+  'paragraph',
+  'section',
+  'chapter',
+  'label_only'
 ]);
 
 export const ENRICHMENT_DETAIL_TYPE_DEFINITIONS = Object.freeze({
@@ -80,6 +90,7 @@ export const ENRICHMENT_DETAIL_TYPE_ALIASES = Object.freeze({
   temporal_onset: 'temporal_qualifier',
   temporal_course: 'clinical_course',
   course: 'clinical_course',
+  frequency: 'clinical_course',
   trajectory: 'clinical_course',
   clinical_trajectory: 'clinical_course',
   progression: 'clinical_course',
@@ -89,6 +100,7 @@ export const ENRICHMENT_DETAIL_TYPE_ALIASES = Object.freeze({
   mechanism: 'pathophysiology',
   physiologic_mechanism: 'pathophysiology',
   anatomic_subsite: 'anatomical_subsite',
+  body_site: 'anatomical_subsite',
   location: 'anatomical_subsite',
   anatomical_location: 'anatomical_subsite',
   quantity: 'quantitative'
@@ -206,6 +218,54 @@ const PRENOMINAL_TREATMENT_RESPONSE_PATTERN = new RegExp(
 
 const CLINICAL_COURSE_SIGNAL_PATTERN =
   /\b(persistent|recurrent|progressive|relapsing|episodic|transient|stable|regressive|chronic)\b/i;
+
+function canonicalizeEvidenceScope(value) {
+  const normalized = normalizeText(value).replace(/\s+/g, '_');
+  if (!normalized) return null;
+  if (ENRICHMENT_EVIDENCE_SCOPES.includes(normalized)) return normalized;
+  if (normalized === 'quote_only') return 'label_only';
+  if (normalized === 'sentence_only') return 'sentence';
+  return null;
+}
+
+function inferEvidenceScope(row) {
+  const explicit = canonicalizeEvidenceScope(row?.evidence_scope);
+  if (explicit) return explicit;
+  if (String(row?.sentence_id || '').trim()) return 'sentence';
+  if (String(row?.paragraph_id || row?.source_location?.paragraph_id || '').trim()) return 'paragraph';
+  if (String(row?.section_id || row?.source_location?.section_id || '').trim()) return 'section';
+  return 'label_only';
+}
+
+function buildSourceLocation(row) {
+  const source = row?.source_location || row || {};
+  return {
+    section_id: String(source.section_id || row?.section_id || '').trim() || null,
+    section_heading: String(source.section_heading || row?.section_heading || '').trim() || null,
+    paragraph_id: String(source.paragraph_id || row?.paragraph_id || '').trim() || null,
+    paragraph_index: source.paragraph_index ?? row?.paragraph_index ?? null,
+    sentence_id: String(source.sentence_id || row?.sentence_id || '').trim() || null
+  };
+}
+
+function mergeSourceLocationWithCandidate(row, candidate) {
+  return buildSourceLocation({
+    section_id: row?.source_location?.section_id ?? row?.section_id ?? candidate?.section_id ?? null,
+    section_heading: row?.source_location?.section_heading ?? row?.section_heading ?? candidate?.section_heading ?? null,
+    paragraph_id: row?.source_location?.paragraph_id ?? row?.paragraph_id ?? candidate?.paragraph_id ?? null,
+    paragraph_index: row?.source_location?.paragraph_index ?? row?.paragraph_index ?? candidate?.paragraph_index ?? null,
+    sentence_id: row?.source_location?.sentence_id ?? row?.sentence_id ?? candidate?.sentence_id ?? null
+  });
+}
+
+function buildSourceSection(row, candidate = null) {
+  return (
+    String(row?.source_section || candidate?.source_section || '').trim() ||
+    String(row?.source_location?.section_heading || row?.section_heading || candidate?.section_heading || '').trim() ||
+    String(row?.source_location?.section_id || row?.section_id || candidate?.section_id || '').trim() ||
+    null
+  );
+}
 
 export function normalizeText(value) {
   return String(value || '')
@@ -328,6 +388,7 @@ export function deterministicallyRouteEnrichmentReviewResults(cases, results) {
     ];
     const routedRow = {
       ...row,
+      source_section: buildSourceSection(row, candidate),
       resolved_candidate_label: candidate.label || row.candidate_label || '',
       derived_ancillary_evidence: [],
       detail_types: Array.isArray(row.detail_types) ? [...row.detail_types] : [],
@@ -335,6 +396,13 @@ export function deterministicallyRouteEnrichmentReviewResults(cases, results) {
         ? [...row.ancillary_evidence_types]
         : []
     };
+    delete routedRow.evidence_scope;
+    delete routedRow.source_location;
+    delete routedRow.section_id;
+    delete routedRow.section_heading;
+    delete routedRow.paragraph_id;
+    delete routedRow.paragraph_index;
+    delete routedRow.sentence_id;
     const splitTreatmentResponse =
       row.bucket === 'keep_enrichment' ? extractMixedTreatmentResponseSplit(candidate.label) : null;
 
@@ -353,6 +421,7 @@ export function deterministicallyRouteEnrichmentReviewResults(cases, results) {
         index,
         candidate_label: candidate.label || row.candidate_label || '',
         sentence_id: row.sentence_id || candidate.sentence_id || '',
+        source_location: mergeSourceLocationWithCandidate(row, candidate),
         original_bucket: row.bucket || null,
         original_retention_layer: row.retention_layer || null,
         routed_bucket: routedRow.bucket,
@@ -378,6 +447,7 @@ export function deterministicallyRouteEnrichmentReviewResults(cases, results) {
         index,
         candidate_label: candidate.label || row.candidate_label || '',
         sentence_id: row.sentence_id || candidate.sentence_id || '',
+        source_location: mergeSourceLocationWithCandidate(row, candidate),
         original_bucket: row.bucket || null,
         original_retention_layer: row.retention_layer || null,
         routed_bucket: routedRow.bucket,
@@ -502,7 +572,7 @@ export function normalizeEnrichmentReviewPayload(payload, expectedCount = null) 
 
     results.push({
       candidate_label: String(row.candidate_label || ''),
-      sentence_id: String(row.sentence_id || ''),
+      source_section: buildSourceSection(row),
       bucket,
       retention_layer: retentionLayer,
       adds_detail_beyond_anchor: Boolean(row.adds_detail_beyond_anchor),
@@ -533,7 +603,6 @@ export function normalizeEnrichmentReviewPayload(payload, expectedCount = null) 
         row.bucket &&
         row.retention_layer &&
         row.candidate_label &&
-        row.sentence_id &&
         row.reason
     );
 
@@ -544,12 +613,124 @@ export function normalizeEnrichmentReviewPayload(payload, expectedCount = null) 
   };
 }
 
+export function buildEnrichmentReviewPrompt() {
+  return `You are reviewing grounded GeneReviews candidates under an enrichment-first policy.
+
+Return JSON with a top-level key "results" containing one item per case in the same order.
+Each result must contain:
+- candidate_label
+- source_section
+- bucket
+- retention_layer
+- adds_detail_beyond_anchor
+- detail_types
+- ancillary_evidence_types
+- same_finding_as_anchor_labels
+- reason
+
+Allowed buckets:
+- keep_enrichment
+- retain_as_ancillary
+- collapse_to_anchor
+- broad_or_redundant
+- junk_or_context_only
+
+Allowed retention_layer values:
+- phenotype_enrichment
+- ancillary_clinical_evidence
+- discarded
+
+Allowed detail_types:
+${buildEnrichmentDetailTypeSchemaText()}
+
+Allowed ancillary_evidence_types:
+${buildAncillaryEvidenceTypeSchemaText()}
+
+Policy:
+- Preserve clinically meaningful source detail beyond flattened HPO anchors.
+- Keep subtype, pattern, morphology, distribution, laterality, modality, temporal qualifier, anatomical subsite, trigger, quantitative, pathophysiology, etiology, and clinical course detail when the source supports it.
+- pathophysiology means an underlying biological, developmental, or physiologic abnormality within the patient that directly explains the retained finding and is itself clinically meaningful disease detail.
+- etiology means an explicitly stated causal basis for the retained finding when that cause adds clinically meaningful specificity beyond the anchor and is not merely a gene, variant, inheritance pattern, or broad diagnosis label.
+- clinical_course means the behavior of the finding over time after onset, such as recurrent, relapsing, transient, persistent, progressive, regressive, or episodic. It is not the same as age of onset.
+- Do not collapse a candidate just because a broader anchor exists.
+- Collapse only if the candidate is effectively the same anchored finding and adds no clinically meaningful specificity.
+- Broad umbrella phrases go to broad_or_redundant.
+- If a row is clinically useful but not phenotype enrichment because it is lab-only, imaging-only, pathology-only, electrophysiology-only, treatment-response, management, or clinical-test evidence, use retain_as_ancillary with retention_layer=ancillary_clinical_evidence and the best ancillary_evidence_types values.
+- Use junk_or_context_only only for rows that should be discarded entirely, not for clinically useful ancillary evidence.
+- If a candidate adds source-faithful differentiating detail that could matter later for mapping or disease differentiation, prefer keep_enrichment.
+- Preserve the provided source_section field from the input case when it is available.
+
+Retention-layer rules:
+- keep_enrichment -> phenotype_enrichment
+- retain_as_ancillary -> ancillary_clinical_evidence
+- collapse_to_anchor, broad_or_redundant, junk_or_context_only -> discarded
+
+Before you finalize the answer, do a schema pass:
+- verify every retention_layer matches the bucket rules above
+- verify every detail_types item is exactly one of the allowed values above
+- verify every ancillary_evidence_types item is exactly one of the allowed values above
+- if a detail_types or ancillary_evidence_types item is close but not exact, rewrite it to the closest allowed value or remove it
+- do not invent any other detail_types labels
+- do not invent any other ancillary_evidence_types labels
+
+Output JSON only.`;
+}
+
+export async function runSchemaGuardedEnrichmentReview({
+  apiKey,
+  model,
+  thinkingBudget,
+  temperature,
+  chapterKey,
+  cases
+}) {
+  const primary = await callGeminiJson({
+    apiKey,
+    model,
+    systemPrompt: buildEnrichmentReviewPrompt(),
+    userPayload: {
+      chapter_key: chapterKey,
+      cases
+    },
+    temperature,
+    thinkingBudget
+  });
+
+  let normalized = normalizeEnrichmentReviewPayload(primary.parsed, cases.length);
+  let repaired = null;
+
+  if (!normalized.valid) {
+    repaired = await callGeminiJson({
+      apiKey,
+      model,
+      systemPrompt: buildSchemaRepairPrompt(),
+      userPayload: {
+        chapter_key: chapterKey,
+        cases,
+        prior_output: primary.rawOutput,
+        validation_issues: normalized.issues
+      },
+      temperature,
+      thinkingBudget
+    });
+    normalized = normalizeEnrichmentReviewPayload(repaired.parsed, cases.length);
+  }
+
+  return {
+    model,
+    primary,
+    repaired,
+    normalized
+  };
+}
+
 export function buildSchemaRepairPrompt() {
   return `You are repairing a prior GeneReviews enrichment review output to satisfy a strict schema.
 
 Return JSON with a top-level key "results" containing one item per case in the same order.
 Do not drop or reorder cases.
-Do not invent candidate labels or sentence IDs.
+Do not invent candidate labels.
+Preserve source_section when present.
 
 Allowed buckets:
 - keep_enrichment

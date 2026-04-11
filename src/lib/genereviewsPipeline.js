@@ -452,6 +452,12 @@ function normalizeSectionHeading(text) {
     .trim();
 }
 
+function cleanGeneReviewsChapterTitle(text) {
+  return String(text || '')
+    .replace(/\s*-\s*GeneReviews®?\s*-\s*NCBI Bookshelf\s*$/i, '')
+    .trim();
+}
+
 const CHAPTER_DOMAIN_RULES = Object.freeze([
   { key: 'neurologic', label: 'Neurologic', pattern: /\b(?:neuro|neurolog|brain|cognitive|developmental|behavior|behaviour|psychiatr|seizure|movement)\b/i },
   { key: 'ophthalmologic', label: 'Ophthalmologic', pattern: /\b(?:ophthalm|ocular|vision|visual|retin|eye)\b/i },
@@ -548,8 +554,73 @@ function buildSectionKey(sectionHeading, fallbackIndex) {
   return headingSlug ? `section_${headingSlug}` : `section_${fallbackIndex}`;
 }
 
+const GENEREVIEWS_SECTION_PROFILE_SUFFIXES = Object.freeze({
+  focused: Object.freeze([
+    'Clinical_Characteristics',
+    'Clinical_Description',
+    'Suggestive_Findings'
+  ]),
+  expanded: Object.freeze([
+    'Summary',
+    'Diagnosis',
+    'Establishing_the_Diagnosis',
+    'Suggestive_Findings',
+    'Clinical_Characteristics',
+    'Clinical_Description',
+    'GenotypePhenotype_Correlations',
+    'Prevalence',
+    'Penetrance',
+    'Targeted_Therapies',
+    'Supportive_Care',
+    'Surveillance',
+    'AgentsCircumstances_to_Avoid',
+    'Evaluation_of_Relatives_at_Risk',
+    'Pregnancy_Management',
+    'Therapies_Under_Investigation',
+    'Genetic_Counseling',
+    'Related_Genetic_Counseling_Issues',
+    'Molecular_Genetics',
+    'Molecular_Pathogenesis'
+  ])
+});
+
+function resolveGeneReviewsSectionProfile(sectionProfile) {
+  const profileKey = String(sectionProfile || 'focused').trim().toLowerCase();
+  return GENEREVIEWS_SECTION_PROFILE_SUFFIXES[profileKey] || GENEREVIEWS_SECTION_PROFILE_SUFFIXES.focused;
+}
+
+function extractSectionBlocksBySuffixes(html, suffixes) {
+  const allowedSuffixes = new Set((suffixes || []).map((value) => String(value || '').trim()).filter(Boolean));
+  if (!allowedSuffixes.size) return [];
+
+  const blockSources = [];
+  const seenIds = new Set();
+  for (const match of String(html || '').matchAll(/<div id="([^"]+)"/gi)) {
+    const rawId = String(match[1] || '').trim();
+    if (!rawId || seenIds.has(rawId)) continue;
+    const suffix = rawId.split('.').pop() || '';
+    if (!allowedSuffixes.has(suffix)) continue;
+    const block = extractSectionBlockWithIndex(html, new RegExp(`<div id="${escapeRegex(rawId)}">`, 'i'));
+    if (!block) continue;
+    seenIds.add(rawId);
+    blockSources.push(block);
+  }
+
+  return blockSources.sort((left, right) => left.start - right.start);
+}
+
 function isTableSectionHeading(value) {
   return /^\s*table\s+[a-z0-9.]+/i.test(String(value || '').trim());
+}
+
+function isTableCarryoverNoise(value) {
+  const text = String(value || '').trim();
+  if (!text) return true;
+  if (/^select features of\b/i.test(text)) return true;
+  if (/^view in own window$/i.test(text)) return true;
+  if (/^based on\b/i.test(text)) return true;
+  if (/^(?:[A-Z0-9-]+\s*=\s*[^;]+)(?:;\s*[A-Z0-9-]+\s*=\s*[^;]+)+$/u.test(text)) return true;
+  return false;
 }
 
 function extractSectionAwareProseUnits(sectionHtml, fallbackIndex = 1) {
@@ -566,13 +637,17 @@ function extractSectionAwareProseUnits(sectionHtml, fallbackIndex = 1) {
     if (!text) continue;
 
     if (tag.startsWith('h')) {
+      const normalizedHeading = normalizeSectionHeading(text);
+      if (isTableSectionHeading(normalizedHeading)) {
+        continue;
+      }
       localHeadingCount += 1;
-      currentHeading = normalizeSectionHeading(text);
+      currentHeading = normalizedHeading;
       currentSectionId = buildSectionKey(currentHeading, `${fallbackIndex}_${localHeadingCount}`);
       continue;
     }
 
-    if (isTableSectionHeading(currentHeading)) {
+    if (/large-table-link/i.test(match[0]) || isTableCarryoverNoise(text)) {
       continue;
     }
 
@@ -599,14 +674,11 @@ function parseHtmlTable(tableHtml, index) {
   };
 }
 
-export function extractClinicalSectionsAndTables(html) {
-  const blockSources = [
-    extractSectionBlockWithIndex(html, /<div id="[^"]+\.Clinical_Characteristics[^"]*">/i),
-    extractSectionBlockWithIndex(html, /<div id="[^"]+\.Clinical_Description[^"]*">/i),
-    extractSectionBlockWithIndex(html, /<div id="[^"]+\.Suggestive_Findings[^"]*">/i)
-  ]
-    .filter(Boolean)
-    .sort((left, right) => left.start - right.start);
+export function extractClinicalSectionsAndTables(html, options = {}) {
+  const blockSources = extractSectionBlocksBySuffixes(
+    html,
+    resolveGeneReviewsSectionProfile(options.sectionProfile)
+  );
 
   const sourceBlocks = blockSources.length
     ? blockSources.map((entry) => entry.html)
@@ -626,6 +698,7 @@ export function extractClinicalSectionsAndTables(html) {
       const tag = String(match[1] || '').toLowerCase();
       const heading = stripHtml(match[2]);
       const normalizedHeading = normalizeSectionHeading(heading);
+      if (isTableSectionHeading(normalizedHeading)) continue;
       const dedupeKey = `${tag}::${normalizeText(normalizedHeading)}`;
       if (!normalizedHeading || seenHeadings.has(dedupeKey)) continue;
       seenHeadings.add(dedupeKey);
@@ -674,19 +747,24 @@ export function extractClinicalSectionsAndTables(html) {
   };
 }
 
-export function parseGeneReviewsChapterHtml(entry, rawHtml) {
-  const { proseText, proseSections, tables, headingInventory, chapterDomains } = extractClinicalSectionsAndTables(rawHtml);
+export function parseGeneReviewsChapterHtml(entry, rawHtml, options = {}) {
+  const { proseText, proseSections, tables, headingInventory, chapterDomains } = extractClinicalSectionsAndTables(
+    rawHtml,
+    options
+  );
   const resolvedNbkId =
     rawHtml.match(/meta name="ncbi_acc" content="(NBK\d+)"/i)?.[1] ||
     rawHtml.match(/\/books\/(NBK\d+)\//i)?.[1] ||
     String(entry?.nbkId || entry?.nbk_id || '').trim();
   const chapterTitle =
-    decodeHtmlEntities(
+    cleanGeneReviewsChapterTitle(
+      decodeHtmlEntities(
       rawHtml.match(/<title>(.*?)<\/title>/i)?.[1] ||
         rawHtml.match(/<h1[^>]*>\s*<span[^>]*>(.*?)<\/span>/i)?.[1] ||
         entry?.chapterTitle ||
         entry?.chapter_title ||
         resolvedNbkId
+      )
     ) ||
     entry?.chapterTitle ||
     entry?.chapter_title ||
@@ -728,10 +806,7 @@ export async function fetchGeneReviewsChapter(entry, delayMs = 400) {
 }
 
 export function splitSentences(text) {
-  return String(text || '')
-    .split(/(?<=[.!?])\s+(?=[A-Z0-9])/)
-    .map((sentence) => sentence.trim())
-    .filter(Boolean);
+  return splitSentenceEntries(text).map((entry) => entry.text);
 }
 
 export function splitParagraphs(text) {
@@ -742,11 +817,53 @@ export function splitParagraphs(text) {
     .filter(Boolean);
 }
 
+const SENTENCE_BOUNDARY_PATTERN = /(?<=[.!?])\s+(?=[A-Z0-9])/g;
+const NON_TERMINAL_ABBREVIATION_PATTERN =
+  /(?:\b(?:Mr|Mrs|Ms|Dr|Prof|Sr|Jr|vs|No|Fig|Eq|Ref)\.|(?:[A-Z]\.){2,})$/;
+const NON_TERMINAL_ABBREVIATION_MAX_WORDS = 4;
+
+function shouldMergeWithNextSentence(text) {
+  const trimmed = String(text || '').trim();
+  if (!trimmed) return false;
+  if (!NON_TERMINAL_ABBREVIATION_PATTERN.test(trimmed)) return false;
+  const wordCount = trimmed.split(/\s+/).filter(Boolean).length;
+  return wordCount <= NON_TERMINAL_ABBREVIATION_MAX_WORDS;
+}
+
+function mergeAbbreviationSplitEntries(source, rawEntries, baseOffset) {
+  const mergedEntries = [];
+
+  for (let index = 0; index < rawEntries.length; index += 1) {
+    let start = rawEntries[index].char_start - baseOffset;
+    let end = rawEntries[index].char_end - baseOffset;
+    let text = rawEntries[index].text;
+
+    while (index < rawEntries.length - 1 && shouldMergeWithNextSentence(text)) {
+      const nextEntry = rawEntries[index + 1];
+      end = nextEntry.char_end - baseOffset;
+      text = source.slice(start, end).trim();
+      index += 1;
+    }
+
+    mergedEntries.push({
+      text,
+      char_start: baseOffset + start,
+      char_end: baseOffset + end
+    });
+  }
+
+  return mergedEntries.map((entry, mergeIndex) => ({
+    sentence_id: `s${mergeIndex + 1}`,
+    sentence_index: mergeIndex + 1,
+    text: entry.text,
+    char_start: entry.char_start,
+    char_end: entry.char_end
+  }));
+}
+
 export function splitSentenceEntries(text, baseOffset = 0) {
   const source = String(text || '');
-  const boundaryPattern = /(?<=[.!?])\s+(?=[A-Z0-9])/g;
-  const entries = [];
-  let sentenceIndex = 0;
+  const rawEntries = [];
   let sliceStart = 0;
 
   function pushSlice(sliceEnd) {
@@ -757,23 +874,20 @@ export function splitSentenceEntries(text, baseOffset = 0) {
     const trimmedStart = sliceStart + leadingWhitespace;
     const trimmedEnd = sliceEnd - trailingWhitespace;
     if (trimmedEnd <= trimmedStart) return;
-    sentenceIndex += 1;
-    entries.push({
-      sentence_id: `s${sentenceIndex}`,
-      sentence_index: sentenceIndex,
+    rawEntries.push({
       text: source.slice(trimmedStart, trimmedEnd),
       char_start: baseOffset + trimmedStart,
       char_end: baseOffset + trimmedEnd
     });
   }
 
-  for (const match of source.matchAll(boundaryPattern)) {
+  for (const match of source.matchAll(SENTENCE_BOUNDARY_PATTERN)) {
     pushSlice(match.index);
     sliceStart = match.index + match[0].length;
   }
   pushSlice(source.length);
 
-  return entries;
+  return mergeAbbreviationSplitEntries(source, rawEntries, baseOffset);
 }
 
 export function splitParagraphEntries(text) {

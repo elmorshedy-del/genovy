@@ -1,9 +1,6 @@
-# Next Chapter: Williams Syndrome
+# Chapter 3: Williams Syndrome
 
-This folder contains a full GeneReviews fetch prepared for the grounded disease layer v1 regime.
-
-Official repo-side regime-ready output:
-- `NBK1249_williams_syndrome_regime_ready.json`
+This folder contains the bundle-side Williams prep files plus the official repo-side regime-ready Williams output.
 
 Files:
 - `NBK1249_clinical_structure.json`
@@ -13,18 +10,14 @@ Files:
 - `NBK1249_raw.html`
 - `NBK1249_williams_syndrome_regime_ready.json`
 
-Fetch summary:
-- `NBK1249`
-- `38` sentences
-- `25` paragraphs
-- sentence index derived directly from the clinical text surface
+Important:
+- the `NBK1249_*` fetch files in this folder are the thinner bundle prep surface retained for audit history
+- the official file in this folder is:
+  - `NBK1249_williams_syndrome_regime_ready.json`
+- that official file was manually rebuilt and cleaned from the fuller archived Williams source surface at:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/genereviews-pipeline-review-first-50-20260331/stage1_fetch/NBK1249_clinical_structure.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/genereviews-pipeline-review-first-50-20260331/stage1_fetch/NBK1249_raw.html`
 
-Use these parent-folder files for the extraction handoff:
+Use the parent-folder files as the schema and strict prompt:
 - `../genereviews-grounded-disease-layer-template-v1-20260408.json`
 - `../genereviews-opus-grounded-disease-layer-strict-prompt-v1-20260409.md`
-
-The strict prompt file intentionally replaces the need to manually combine the older contract and Kabuki addendum.
-
-Promotion note:
-- the first Gemini task-scoped multipass draft was reviewed and manually cleaned
-- the official chapter 3 file is now `NBK1249_williams_syndrome_regime_ready.json`

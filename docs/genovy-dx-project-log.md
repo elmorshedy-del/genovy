@@ -1,12 +1,28 @@
 # Genovy DX Project Log
 
-Last updated: 2026-03-26
+Last updated: 2026-04-09
 
 ## Purpose
 This file is the running memory for Genovy DX. It records concrete changes, benchmark results, hypotheses, failed ideas, and next-step logic so progress is not lost between sessions.
 
 Canonical detailed diary:
 - [genovy-dx-diary.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/genovy-dx-diary.md)
+
+## 2026-04-09 Benchmark Source Of Truth Lock
+- Added benchmark truth-order note:
+  - [benchmark-source-of-truth-20260409.md](/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/benchmark-source-of-truth-20260409.md)
+- Default benchmark reference is now the saved March 29 stronger branch, not the later safe baseline:
+  - `92 / 42 / 53 / 57 / 65 / 0.503832`
+- Required trace order for benchmark questions:
+  - reconciliation anchor
+  - March 29 target branch summary
+  - March 29 `artifacts.json`
+  - experiment manifest
+- Alternate states remain valid but should only be used when explicitly requested:
+  - current safe baseline: `87 / 42 / 51 / 53 / 62 / 0.4887`
+  - handoff-floor scorer slice: `84 / 42 / 52 / 53 / 60 / 0.485974`
+- Reason for the lock:
+  - repeated regressions were coming from defaulting to the safest-sounding benchmark instead of the intended headline benchmark lineage
 
 ## Benchmark Snapshots
 Official 100-case phenotype-only gene benchmark vs Exomiser.

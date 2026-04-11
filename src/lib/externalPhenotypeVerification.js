@@ -55,6 +55,92 @@ function extractSpanText(chapterText, start, end) {
   return source.slice(startIndex, endIndex);
 }
 
+function createAhoNode() {
+  return {
+    next: new Map(),
+    fail: null,
+    outputs: []
+  };
+}
+
+function buildAhoCorasickMatcher(patterns) {
+  const root = createAhoNode();
+  const uniquePatterns = [...new Set((patterns || []).map((value) => String(value || '')).filter(Boolean))];
+
+  for (const pattern of uniquePatterns) {
+    let node = root;
+    for (const char of pattern) {
+      if (!node.next.has(char)) node.next.set(char, createAhoNode());
+      node = node.next.get(char);
+    }
+    node.outputs.push(pattern);
+  }
+
+  const queue = [];
+  for (const child of root.next.values()) {
+    child.fail = root;
+    queue.push(child);
+  }
+  root.fail = root;
+
+  while (queue.length > 0) {
+    const node = queue.shift();
+    for (const [char, child] of node.next.entries()) {
+      let failure = node.fail;
+      while (failure !== root && !failure.next.has(char)) {
+        failure = failure.fail;
+      }
+      if (failure.next.has(char) && failure.next.get(char) !== child) {
+        child.fail = failure.next.get(char);
+      } else {
+        child.fail = root;
+      }
+      child.outputs = child.outputs.concat(child.fail.outputs || []);
+      queue.push(child);
+    }
+  }
+
+  return {
+    root,
+    patterns: uniquePatterns
+  };
+}
+
+function searchAhoCorasick(text, matcher) {
+  const source = String(text || '');
+  const root = matcher?.root;
+  const matches = new Map((matcher?.patterns || []).map((pattern) => [pattern, []]));
+  if (!root) return matches;
+
+  let node = root;
+  for (let index = 0; index < source.length; index += 1) {
+    const char = source[index];
+    while (node !== root && !node.next.has(char)) {
+      node = node.fail;
+    }
+    if (node.next.has(char)) {
+      node = node.next.get(char);
+    } else {
+      node = root;
+    }
+    for (const pattern of node.outputs) {
+      const start = index - pattern.length + 1;
+      matches.get(pattern)?.push({
+        char_start: start,
+        char_end: index + 1
+      });
+    }
+  }
+
+  return matches;
+}
+
+function buildExactSourceQuoteMatchIndex(chapterText, rows) {
+  const patterns = (rows || []).map((row) => String(row?.source_quote || '').trim()).filter(Boolean);
+  const matcher = buildAhoCorasickMatcher(patterns);
+  return searchAhoCorasick(chapterText, matcher);
+}
+
 function matchesAnyPattern(text, patterns) {
   const source = String(text || '');
   return patterns.some((pattern) => pattern.test(source));
@@ -167,6 +253,84 @@ function verifyQuoteSupport(row, chapterText) {
     matched_phrase: sourceQuote,
     match_span_text: matchSpanText || null
   });
+}
+
+function verifyQuoteVerbatimInChapter(row, chapterText, exactQuoteMatches) {
+  const sourceQuote = String(row.source_quote || '').trim();
+  if (!sourceQuote) {
+    return buildCheck('source_quote_verbatim_chapter', 'fail', 'Candidate does not carry a source_quote.');
+  }
+
+  let matches = exactQuoteMatches?.get(sourceQuote) || [];
+  if (matches.length === 0) {
+    const firstIndex = String(chapterText || '').indexOf(sourceQuote);
+    if (firstIndex >= 0) {
+      matches = [
+        {
+          char_start: firstIndex,
+          char_end: firstIndex + sourceQuote.length
+        }
+      ];
+    }
+  }
+  if (matches.length === 0) {
+    return buildCheck(
+      'source_quote_verbatim_chapter',
+      'fail',
+      'Source quote does not appear verbatim in the reconstructed chapter text.'
+    );
+  }
+  return buildCheck(
+    'source_quote_verbatim_chapter',
+    'pass',
+    'Source quote appears verbatim in the reconstructed chapter text.',
+    {
+      occurrence_count: matches.length,
+      first_match_start: matches[0]?.char_start ?? null,
+      first_match_end: matches[0]?.char_end ?? null
+    }
+  );
+}
+
+function attemptQuoteRepair(row, chapterText, exactQuoteMatches) {
+  const originalQuote = String(row.source_quote || '').trim();
+  const currentVerbatimCheck = verifyQuoteVerbatimInChapter(row, chapterText, exactQuoteMatches);
+  if (currentVerbatimCheck.status === 'pass') {
+    return {
+      repairedRow: row,
+      check: buildCheck('source_quote_repair', 'pass', 'No quote repair needed.')
+    };
+  }
+
+  const repairedQuote = extractSpanText(chapterText, row.match_char_start, row.match_char_end).trim();
+  if (repairedQuote) {
+    return {
+      repairedRow: {
+        ...row,
+        source_quote: repairedQuote,
+        source_quote_original: originalQuote || null,
+        source_quote_repaired: true,
+        source_quote_repair_strategy: 'match_span'
+      },
+      check: buildCheck('source_quote_repair', 'pass', 'Recovered a verbatim source quote from the grounded match span.', {
+        original_quote: originalQuote || null,
+        repaired_quote: repairedQuote,
+        strategy: 'match_span'
+      })
+    };
+  }
+
+  return {
+    repairedRow: row,
+    check: buildCheck(
+      'source_quote_repair',
+      'flag',
+      'Source quote is not verbatim and no deterministic quote repair was available.',
+      {
+        original_quote: originalQuote || null
+      }
+    )
+  };
 }
 
 function verifyQuoteStrength(row) {
@@ -298,23 +462,28 @@ function buildVerificationVerdict(checks) {
 }
 
 function verifyExternalRow(row, chapterText, options = {}) {
+  const quoteRepair = attemptQuoteRepair(row, chapterText, options.exactQuoteMatches);
+  const effectiveRow = quoteRepair.repairedRow || row;
   const checks = [
     verifyGroundingResolution(row, options),
-    verifySourceSpan(row, chapterText),
-    verifyQuoteSupport(row, chapterText),
-    verifyQuoteStrength(row),
-    verifyStatusSupport(row, chapterText, options),
-    verifyEvidenceSurface(row)
+    verifySourceSpan(effectiveRow, chapterText),
+    quoteRepair.check,
+    verifyQuoteVerbatimInChapter(effectiveRow, chapterText, options.exactQuoteMatches),
+    verifyQuoteSupport(effectiveRow, chapterText),
+    verifyQuoteStrength(effectiveRow),
+    verifyStatusSupport(effectiveRow, chapterText, options),
+    verifyEvidenceSurface(effectiveRow)
   ];
 
-  const autoAccept = determineAutoAcceptEligibility(checks, row, options);
+  const autoAccept = determineAutoAcceptEligibility(checks, effectiveRow, options);
 
   return {
     hpo_id: buildExternalAssertionId(row.label, row.status || row.extraction_bucket || 'present', options.isRejected ? 'rejected' : 'candidate'),
     hpo_label: row.label,
     status: row.status || 'present',
-    source_sentence: row.source_sentence || '',
-    match_text: row.source_quote || row.label,
+    source_sentence: effectiveRow.source_sentence || '',
+    match_text: effectiveRow.source_quote || row.label,
+    repaired_row: effectiveRow,
     verdict: options.isRejected ? 'FAILED' : buildVerificationVerdict(checks),
     auto_accept_eligible: autoAccept.eligible,
     auto_accept_reasons: autoAccept.reasons,
@@ -323,30 +492,41 @@ function verifyExternalRow(row, chapterText, options = {}) {
 }
 
 function attachReviewContract(rows, verifications, reviewItems) {
-  return (rows || []).map((row, index) => ({
-    ...row,
-    verification_verdict: verifications[index]?.verdict || null,
-    auto_accept_eligible: verifications[index]?.auto_accept_eligible ?? false,
-    auto_accept_reasons: verifications[index]?.auto_accept_reasons || [],
-    review_href: reviewItems[index]?.review_href || null,
-    hosted_review_href: reviewItems[index]?.hosted_review_href || null,
-    review_id: reviewItems[index]?.review_id || null
-  }));
+  return (rows || []).map((row, index) => {
+    const verification = verifications[index] || {};
+    const repairedRow = verification.repaired_row || row;
+    return {
+      ...repairedRow,
+      verification_verdict: verification?.verdict || null,
+      auto_accept_eligible: verification?.auto_accept_eligible ?? false,
+      auto_accept_reasons: verification?.auto_accept_reasons || [],
+      review_href: reviewItems[index]?.review_href || null,
+      hosted_review_href: reviewItems[index]?.hosted_review_href || null,
+      review_id: reviewItems[index]?.review_id || null
+    };
+  });
 }
 
 export function buildExternalGroundingReviewArtifacts(groundedPayload, clinicalStructure, options = {}) {
   const chapterText = reconstructChapterTextFromStructure(clinicalStructure);
   const groundedCandidates = Array.isArray(groundedPayload?.grounded_candidates) ? groundedPayload.grounded_candidates : [];
   const rejectedCandidates = Array.isArray(groundedPayload?.rejected_candidates) ? groundedPayload.rejected_candidates : [];
+  const exactQuoteMatches = buildExactSourceQuoteMatchIndex(chapterText, [...groundedCandidates, ...rejectedCandidates]);
 
-  const candidateVerifications = groundedCandidates.map((row) => verifyExternalRow(row, chapterText));
-  const rejectedVerifications = rejectedCandidates.map((row) => verifyExternalRow(row, chapterText, { isRejected: true }));
+  const candidateVerifications = groundedCandidates.map((row) =>
+    verifyExternalRow(row, chapterText, { exactQuoteMatches })
+  );
+  const rejectedVerifications = rejectedCandidates.map((row) =>
+    verifyExternalRow(row, chapterText, { isRejected: true, exactQuoteMatches })
+  );
 
-  const features = [
-    ...groundedCandidates.map((row) => buildExternalFeature(row, 'candidate')),
-    ...rejectedCandidates.map((row) => buildExternalFeature(row, 'rejected'))
-  ];
   const verifications = [...candidateVerifications, ...rejectedVerifications];
+  const repairedGroundedCandidates = groundedCandidates.map((row, index) => candidateVerifications[index]?.repaired_row || row);
+  const repairedRejectedCandidates = rejectedCandidates.map((row, index) => rejectedVerifications[index]?.repaired_row || row);
+  const features = [
+    ...repairedGroundedCandidates.map((row) => buildExternalFeature(row, 'candidate')),
+    ...repairedRejectedCandidates.map((row) => buildExternalFeature(row, 'rejected'))
+  ];
   const chapter = {
     chapterKey: groundedPayload?.chapter?.chapter_key || groundedPayload?.chapter?.nbk_id || groundedPayload?.chapter?.title || '',
     nbkId: groundedPayload?.chapter?.nbk_id || '',
@@ -377,7 +557,7 @@ export function buildExternalGroundingReviewArtifacts(groundedPayload, clinicalS
       rejected_candidates: summarizeFeatureVerifications(rejectedVerifications),
       overall: summarizeFeatureVerifications(verifications)
     },
-    groundedCandidatesWithReview: attachReviewContract(groundedCandidates, candidateVerifications, candidateReviewItems),
-    rejectedCandidatesWithReview: attachReviewContract(rejectedCandidates, rejectedVerifications, rejectedReviewItems)
+    groundedCandidatesWithReview: attachReviewContract(repairedGroundedCandidates, candidateVerifications, candidateReviewItems),
+    rejectedCandidatesWithReview: attachReviewContract(repairedRejectedCandidates, rejectedVerifications, rejectedReviewItems)
   };
 }

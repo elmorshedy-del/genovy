@@ -9,365 +9,1038 @@
     "mode": "discovery",
     "source": "GeneReviews",
     "source_url": "https://www.ncbi.nlm.nih.gov/books/NBK1249/",
-    "source_date": "2026-04-09",
+    "source_date": null,
     "sentence_index": [
       {
         "sentence_id": "p1_s1",
-        "section": null,
-        "text": "Williams syndrome (WS) should be suspected in individuals with the following findings:",
-        "section_id": null,
+        "section": "Summary",
+        "section_id": "summary",
         "paragraph_id": "p1",
-        "char_start": 0,
-        "char_end": 86
+        "text": "Williams syndrome (WS) is characterized by developmental delay, intellectual disability (usually mild), a specific cognitive profile, unique personality characteristics, cardiovascular disease (supravalvar aortic stenosis, peripheral pulmonary stenosis, hypertension), connective tissue abnormalities, growth deficiency, endocrine abnormalities (early puberty, hypercalcemia, hypercalciuria, hypothyroidism), and distinctive facies."
+      },
+      {
+        "sentence_id": "p1_s2",
+        "section": "Summary",
+        "section_id": "summary",
+        "paragraph_id": "p1",
+        "text": "Hypotonia and hyperextensible joints can result in delayed attainment of motor milestones."
+      },
+      {
+        "sentence_id": "p1_s3",
+        "section": "Summary",
+        "section_id": "summary",
+        "paragraph_id": "p1",
+        "text": "Feeding difficulties often lead to poor weight gain in infancy."
       },
       {
         "sentence_id": "p2_s1",
-        "section": null,
-        "text": "Intellectual disability affects most individuals and is typically mild.",
-        "section_id": null,
+        "section": "Summary",
+        "section_id": "summary",
         "paragraph_id": "p2",
-        "char_start": 88,
-        "char_end": 159
+        "text": "The diagnosis of WS is established by identification of a heterozygous 1.5- to 1.8-Mb deletion of the Williams-Beuren syndrome critical region (WBSCR) on chromosome 7q11.23."
       },
       {
         "sentence_id": "p3_s1",
-        "section": null,
-        "text": "Specific cognitive profile includes strengths in verbal short-term memory and language and extreme weakness in visuospatial construction.",
-        "section_id": null,
+        "section": "Suggestive Findings",
+        "section_id": "suggestive_findings",
         "paragraph_id": "p3",
-        "char_start": 161,
-        "char_end": 298
+        "text": "Williams syndrome (WS) should be suspected in individuals with the following findings:"
       },
       {
         "sentence_id": "p4_s1",
-        "section": null,
-        "text": "Unique personality includes overfriendliness, empathy, generalized anxiety, specific phobias, and attention-deficit/hyperactivity disorder.",
-        "section_id": null,
+        "section": "Suggestive Findings",
+        "section_id": "suggestive_findings",
         "paragraph_id": "p4",
-        "char_start": 300,
-        "char_end": 439
+        "text": "Intellectual disability affects most individuals and is typically mild."
       },
       {
         "sentence_id": "p5_s1",
-        "section": null,
-        "text": "Cardiovascular disease (elastin arteriopathy).",
-        "section_id": null,
+        "section": "Suggestive Findings",
+        "section_id": "suggestive_findings",
         "paragraph_id": "p5",
-        "char_start": 441,
-        "char_end": 487
-      },
-      {
-        "sentence_id": "p5_s2",
-        "section": null,
-        "text": "Supravalvar aortic stenosis is the most common.",
-        "section_id": null,
-        "paragraph_id": "p5",
-        "char_start": 488,
-        "char_end": 535
-      },
-      {
-        "sentence_id": "p5_s3",
-        "section": null,
-        "text": "Peripheral pulmonic stenosis is common in infancy.",
-        "section_id": null,
-        "paragraph_id": "p5",
-        "char_start": 536,
-        "char_end": 586
-      },
-      {
-        "sentence_id": "p5_s4",
-        "section": null,
-        "text": "Any artery may be narrowed.",
-        "section_id": null,
-        "paragraph_id": "p5",
-        "char_start": 587,
-        "char_end": 614
+        "text": "Specific cognitive profile includes strengths in verbal short-term memory and language and extreme weakness in visuospatial construction."
       },
       {
         "sentence_id": "p6_s1",
-        "section": null,
-        "text": "Distinctive facies.",
-        "section_id": null,
+        "section": "Suggestive Findings",
+        "section_id": "suggestive_findings",
         "paragraph_id": "p6",
-        "char_start": 616,
-        "char_end": 635
-      },
-      {
-        "sentence_id": "p6_s2",
-        "section": null,
-        "text": "Broad forehead, bitemporal narrowing, periorbital fullness, a stellate/lacy iris pattern (see Figure 1 ), strabismus, short nose, broad nasal tip, malar flattening, long philtrum, thick vermilion of the upper and lower lips, wide mouth, malocclusion, small jaw, and large ear lobes are observed at all ages (see Figure 2 ).",
-        "section_id": null,
-        "paragraph_id": "p6",
-        "char_start": 636,
-        "char_end": 959
-      },
-      {
-        "sentence_id": "p6_s3",
-        "section": null,
-        "text": "Young children have epicanthal folds, full cheeks, and small, widely spaced teeth (see Figure 3 ); adults have a long face and neck and sloping shoulders (see Figure 4 ).",
-        "section_id": null,
-        "paragraph_id": "p6",
-        "char_start": 960,
-        "char_end": 1130
+        "text": "Unique personality includes overfriendliness, empathy, generalized anxiety, specific phobias, and attention-deficit/hyperactivity disorder."
       },
       {
         "sentence_id": "p7_s1",
-        "section": null,
-        "text": "Connective tissue abnormalities include hoarse voice, inguinal/umbilical hernia, bowel/bladder diverticulae, rectal prolapse, joint limitation or laxity, and soft, lax skin.",
-        "section_id": null,
+        "section": "Suggestive Findings",
+        "section_id": "suggestive_findings",
         "paragraph_id": "p7",
-        "char_start": 1132,
-        "char_end": 1305
+        "text": "Cardiovascular disease (elastin arteriopathy)."
+      },
+      {
+        "sentence_id": "p7_s2",
+        "section": "Suggestive Findings",
+        "section_id": "suggestive_findings",
+        "paragraph_id": "p7",
+        "text": "Supravalvar aortic stenosis is the most common."
+      },
+      {
+        "sentence_id": "p7_s3",
+        "section": "Suggestive Findings",
+        "section_id": "suggestive_findings",
+        "paragraph_id": "p7",
+        "text": "Peripheral pulmonic stenosis is common in infancy."
+      },
+      {
+        "sentence_id": "p7_s4",
+        "section": "Suggestive Findings",
+        "section_id": "suggestive_findings",
+        "paragraph_id": "p7",
+        "text": "Any artery may be narrowed."
       },
       {
         "sentence_id": "p8_s1",
-        "section": null,
-        "text": "Growth abnormalities include prenatal growth deficiency, postnatal poor weight gain, and decreased linear growth.",
-        "section_id": null,
+        "section": "Suggestive Findings",
+        "section_id": "suggestive_findings",
         "paragraph_id": "p8",
-        "char_start": 1307,
-        "char_end": 1420
+        "text": "Distinctive facies."
+      },
+      {
+        "sentence_id": "p8_s2",
+        "section": "Suggestive Findings",
+        "section_id": "suggestive_findings",
+        "paragraph_id": "p8",
+        "text": "Broad forehead, bitemporal narrowing, periorbital fullness, a stellate/lacy iris pattern (see Figure 1 ), strabismus, short nose, broad nasal tip, malar flattening, long philtrum, thick vermilion of the upper and lower lips, wide mouth, malocclusion, small jaw, and large ear lobes are observed at all ages (see Figure 2 )."
+      },
+      {
+        "sentence_id": "p8_s3",
+        "section": "Suggestive Findings",
+        "section_id": "suggestive_findings",
+        "paragraph_id": "p8",
+        "text": "Young children have epicanthal folds, full cheeks, and small, widely spaced teeth (see Figure 3 ); adults have a long face and neck and sloping shoulders (see Figure 4 )."
       },
       {
         "sentence_id": "p9_s1",
-        "section": null,
-        "text": "Endocrine abnormalities include early puberty, hypercalcemia, hypercalciuria, hypothyroidism, and diabetes mellitus.",
-        "section_id": null,
+        "section": "Suggestive Findings",
+        "section_id": "suggestive_findings",
         "paragraph_id": "p9",
-        "char_start": 1422,
-        "char_end": 1538
+        "text": "Connective tissue abnormalities include hoarse voice, inguinal/umbilical hernia, bowel/bladder diverticulae, rectal prolapse, joint limitation or laxity, and soft, lax skin."
       },
       {
         "sentence_id": "p10_s1",
-        "section": null,
-        "text": "Note: See the National Human Genome Research Institute (NHGRI) Atlas of Human Malformation Syndromes (scroll to ATLAS IMAGES ) for photographs of individuals with WS from diverse ethnic backgrounds.",
-        "section_id": null,
+        "section": "Suggestive Findings",
+        "section_id": "suggestive_findings",
         "paragraph_id": "p10",
-        "char_start": 1540,
-        "char_end": 1738
+        "text": "Growth abnormalities include prenatal growth deficiency, postnatal poor weight gain, and decreased linear growth."
       },
       {
         "sentence_id": "p11_s1",
-        "section": null,
-        "text": "Williams syndrome (WS) is a multisystem disorder characterized by cardiovascular disease (elastin arteriopathy, most often manifesting as supravalvar aortic stenosis), developmental delay, usually mild intellectual disability, a specific cognitive profile, unique personality characteristics, connective tissue abnormalities, growth abnormalities, other endocrine manifestations, and distinctive facies.",
-        "section_id": null,
+        "section": "Suggestive Findings",
+        "section_id": "suggestive_findings",
         "paragraph_id": "p11",
-        "char_start": 1740,
-        "char_end": 2143
-      },
-      {
-        "sentence_id": "p11_s2",
-        "section": null,
-        "text": "Additional manifestations can include sleep problems, ocular issues, hearing loss, dental problems, gastrointestinal difficulties, urinary tract abnormalities, and musculoskeletal issues.",
-        "section_id": null,
-        "paragraph_id": "p11",
-        "char_start": 2144,
-        "char_end": 2331
+        "text": "Endocrine abnormalities include early puberty, hypercalcemia, hypercalciuria, hypothyroidism, and diabetes mellitus."
       },
       {
         "sentence_id": "p12_s1",
-        "section": null,
-        "text": "The 7q11.23 recurrent deletions of the Williams-Beuren syndrome critical region (WBSCR) comprise either 1.55 Mb (90%-95% of individuals with WS) or 1.84 Mb (5%-10% of individuals with WS) [ Palacios-Verdú et al 2015 ].",
-        "section_id": null,
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
         "paragraph_id": "p12",
-        "char_start": 2333,
-        "char_end": 2551
+        "text": "Infancy."
+      },
+      {
+        "sentence_id": "p12_s2",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p12",
+        "text": "Infants with WS are often born post-term, and 50% of infants are small for gestational age [ Li et al 2022 ]."
+      },
+      {
+        "sentence_id": "p12_s3",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p12",
+        "text": "Feeding difficulties leading to poor weight gain are common, including gastroesophageal reflux, disordered suck and swallow, textural aversion, and vomiting."
+      },
+      {
+        "sentence_id": "p12_s4",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p12",
+        "text": "Prolonged colic (lasting longer than four months) may be related to gastroesophageal reflux, chronic constipation, and/or idiopathic hypercalcemia."
       },
       {
         "sentence_id": "p13_s1",
-        "section": null,
-        "text": "ELN deletion results in elastin arteriopathy.",
-        "section_id": null,
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
         "paragraph_id": "p13",
-        "char_start": 2553,
-        "char_end": 2598
+        "text": "Developmental delay."
+      },
+      {
+        "sentence_id": "p13_s2",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p13",
+        "text": "Infants with WS are hypotonic and typically have hyperextensible joints, resulting in delayed attainment of motor milestones [ Morris & Mervis 2021 ]."
+      },
+      {
+        "sentence_id": "p13_s3",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p13",
+        "text": "Walking usually occurs by age 24 months."
+      },
+      {
+        "sentence_id": "p13_s4",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p13",
+        "text": "Speech is also delayed but later becomes a relative strength [ Kozel et al 2021 ]."
+      },
+      {
+        "sentence_id": "p13_s5",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p13",
+        "text": "Fine motor difficulties are present at all ages."
       },
       {
         "sentence_id": "p14_s1",
-        "section": null,
-        "text": "Hypertension is less prevalent in individuals with WS whose deletion includes NCF1 , located in one of the blocks of low copy repeats that flank the WBSCR [ Del Campo et al 2006 ].",
-        "section_id": null,
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
         "paragraph_id": "p14",
-        "char_start": 2600,
-        "char_end": 2780
+        "text": "Cognitive abilities."
+      },
+      {
+        "sentence_id": "p14_s2",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p14",
+        "text": "Intellectual disability, usually mild, occurs in 75% of individuals with WS."
+      },
+      {
+        "sentence_id": "p14_s3",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p14",
+        "text": "The cognitive profile is distinctive, consisting of strengths in verbal short-term memory and language but extreme weakness in visuospatial constructive cognition."
+      },
+      {
+        "sentence_id": "p14_s4",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p14",
+        "text": "As a result, children with WS usually score higher on verbal subtests than on tests measuring visuospatial construction [ Mervis & Greiner de Magalhães 2022 ]."
+      },
+      {
+        "sentence_id": "p14_s5",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p14",
+        "text": "No difference in IQ between males and females is reported, and IQ is stable throughout childhood [ Mervis et al 2012 ]."
       },
       {
         "sentence_id": "p15_s1",
-        "section": null,
-        "text": "A more severe phenotype with lower cognitive ability is observed in individuals with very large deletions (>2-4 Mb) that include the WBSCR than in individuals with a typical 1.5- to 1.8-Mb WBSCR deletion [ Stock et al 2003 , Marshall et al 2008 , Ramocki et al 2010 , Lugo et al 2020 ].",
-        "section_id": null,
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
         "paragraph_id": "p15",
-        "char_start": 2782,
-        "char_end": 3068
+        "text": "Academically, individuals with WS perform relatively well in reading, and adults may read at a high school level, though the range of achievement is wide."
+      },
+      {
+        "sentence_id": "p15_s2",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p15",
+        "text": "Reading skills correlate with method of reading instruction rather than IQ, with the highest reading skills following systemic phonics instruction [ Mervis & Greiner de Magalhães 2022 ]."
+      },
+      {
+        "sentence_id": "p15_s3",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p15",
+        "text": "Difficulty with writing, drawing, and mathematics is significant, although many adults with WS are able to perform simple addition."
       },
       {
         "sentence_id": "p16_s1",
-        "section": null,
-        "text": "Deletions within the WBSCR smaller than the recurrent deletions associated with WS are rare and are associated with a variable phenotype.",
-        "section_id": null,
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
         "paragraph_id": "p16",
-        "char_start": 3070,
-        "char_end": 3207
+        "text": "Unique personality/behavior."
       },
       {
         "sentence_id": "p16_s2",
-        "section": null,
-        "text": "Genotype-phenotype correlations are limited for genes other than ELN [ Kozel et al 2021 , Serrano-Juárez et al 2022 ].",
-        "section_id": null,
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
         "paragraph_id": "p16",
-        "char_start": 3208,
-        "char_end": 3326
+        "text": "The characteristic personality profile of WS includes overfriendliness, social disinhibition, excessive empathy, attention problems, and non-social anxiety."
+      },
+      {
+        "sentence_id": "p16_s3",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p16",
+        "text": "Other common behavior problems include difficulty with sensory modulation/processing, emotional regulation, and perseveration."
+      },
+      {
+        "sentence_id": "p16_s4",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p16",
+        "text": "Some individuals have overlapping symptoms with autism spectrum disorder, such as restricted interests and repetitive behavior."
+      },
+      {
+        "sentence_id": "p16_s5",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p16",
+        "text": "Children with WS who meet diagnostic criteria for autism spectrum disorder (ASD; 10%-20%) fit in the active-but-odd subtype rather than the aloof subtype of ASD [ Klein-Tasman et al 2018 ]."
+      },
+      {
+        "sentence_id": "p16_s6",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p16",
+        "text": "In children, attention-deficit/hyperactivity disorder occurs in 65% of individuals and anxiety disorder in 57% (usually specific phobias) [ Leyfer et al 2006 ]."
+      },
+      {
+        "sentence_id": "p16_s7",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p16",
+        "text": "Anxiety is common across the life span; longitudinal studies of anxiety indicate a prevalence of 80% [ Woodruff-Borden et al 2010 ]."
+      },
+      {
+        "sentence_id": "p16_s8",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p16",
+        "text": "Pharmacotherapy for psychiatric disorders in WS should take into account the medical comorbidities associated with WS [ Thom et al 2021 ]."
+      },
+      {
+        "sentence_id": "p16_s9",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p16",
+        "text": "For instance, use of stimulants (which can increase blood pressure and heart rate) to treat ADHD should be discussed with the individual's cardiologist; atomoxetine is a non-stimulant alternative [ Thom et al 2021 ]."
       },
       {
         "sentence_id": "p17_s1",
-        "section": null,
-        "text": "Individuals with partial WBSCR deletions that include the usual telomeric breakpoint (including GTF2I ) have classic manifestations of WS, including intellectual disability [ Botta et al 1999 , Heller et al 2003 ].",
-        "section_id": null,
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
         "paragraph_id": "p17",
-        "char_start": 3328,
-        "char_end": 3542
+        "text": "Adaptive behavior is less than expected for IQ in both children and adults [ Howlin & Udwin 2006 , Mervis & Pitts 2015 ], and adversely affects the ability of adults with WS to function independently (less than 10% live independently)."
       },
       {
         "sentence_id": "p17_s2",
-        "section": null,
-        "text": "Individuals with deletions of the WBSCR that include distal genes in the region (especially GTF2IRD1 and GTF2I ) are more likely to have intellectual disability and facial features characteristic of WS [ Alesi et al 2021 ].",
-        "section_id": null,
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
         "paragraph_id": "p17",
-        "char_start": 3543,
-        "char_end": 3766
+        "text": "There is typically a relative strength in socialization and communication skills, with significant weakness in motor skills and daily living skills."
       },
       {
         "sentence_id": "p17_s3",
-        "section": null,
-        "text": "One individual with a partial deletion of the WBSCR that included GTF2I had borderline adaptive and language development [ Zhou et al 2022 ].",
-        "section_id": null,
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
         "paragraph_id": "p17",
-        "char_start": 3767,
-        "char_end": 3908
+        "text": "Executive function deficits occur in 70% of children and adolescents with WS."
+      },
+      {
+        "sentence_id": "p17_s4",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p17",
+        "text": "Difficulties with behavioral and emotional regulation are associated with behavior issues and poor adaptive behavior; difficulty with inhibition is associated with attention problems; and difficulty with flexibility in shifting focus is associated with anxiety [ Greiner de Magalhães et al 2022 ]."
       },
       {
         "sentence_id": "p18_s1",
-        "section": null,
-        "text": "Individuals with partial deletions that include ELN have SVAS.",
-        "section_id": null,
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
         "paragraph_id": "p18",
-        "char_start": 3910,
-        "char_end": 3972
+        "text": "Sleep disorders occur in 65% of affected individuals and include increased sleep latency and decreased sleep efficiency [ Goldman et al 2009 , Mason et al 2011 ]."
+      },
+      {
+        "sentence_id": "p18_s2",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p18",
+        "text": "Abnormal or absent nocturnal melatonin peak has been documented [ Sniecinska-Cooper et al 2015 , Santoro et al 2016 ]; melatonin treatment may be helpful [ Martens et al 2017 , Morris & Mervis 2021 ]."
+      },
+      {
+        "sentence_id": "p18_s3",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p18",
+        "text": "Sleep-related breathing disorder (reported in 15%) and excessive daytime sleepiness (reported in 30%) were associated with more externalizing behavior problems in toddlers with WS at age two years [ Greiner de Magalhães et al 2020 ]."
       },
       {
         "sentence_id": "p19_s1",
-        "section": null,
-        "text": "Individuals with partial WBSCR deletions that include ELN but do not include deletion of GTF2I do not have intellectual disability but often demonstrate the WS cognitive profile [ Morris et al 2003 ].",
-        "section_id": null,
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
         "paragraph_id": "p19",
-        "char_start": 3974,
-        "char_end": 4174
+        "text": "Cardiovascular disease occurs in 80% of individuals with WS [ Collins 2018 , Honjo et al 2022 ]."
       },
       {
         "sentence_id": "p19_s2",
-        "section": null,
-        "text": "In two families, deletion of ELN and LIMK1 was associated with the WS cognitive profile but not with intellectual disability or other characteristics of WS [ Frangiskakis et al 1996 ].",
-        "section_id": null,
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
         "paragraph_id": "p19",
-        "char_start": 4175,
-        "char_end": 4359
+        "text": "Elastin arteriopathy is the major cause of morbidity and mortality."
       },
       {
         "sentence_id": "p19_s3",
-        "section": null,
-        "text": "Another family with a similar deletion did not have the WS cognitive profile [ Tassabehji et al 2005 ].",
-        "section_id": null,
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
         "paragraph_id": "p19",
-        "char_start": 4360,
-        "char_end": 4463
+        "text": "Any artery may be narrowed, but supravalvar aortic stenosis (SVAS) is most common and may worsen over time, especially in the first five years of life [ Collins et al 2010b ]."
+      },
+      {
+        "sentence_id": "p19_s4",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p19",
+        "text": "SVAS can be either a discrete hourglass stenosis or diffuse aortic stenosis."
+      },
+      {
+        "sentence_id": "p19_s5",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p19",
+        "text": "If untreated, the resultant increase in arterial resistance leads to elevated left heart pressure, cardiac hypertrophy, and cardiac failure."
+      },
+      {
+        "sentence_id": "p19_s6",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p19",
+        "text": "Progression is more likely if the stenosis is moderate or severe and presents in infancy or early childhood."
+      },
+      {
+        "sentence_id": "p19_s7",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p19",
+        "text": "Mild SVAS is less likely to progress."
+      },
+      {
+        "sentence_id": "p19_s8",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p19",
+        "text": "Approximately one third of children with SVAS will require surgical correction."
       },
       {
         "sentence_id": "p20_s1",
-        "section": null,
-        "text": "Deletions within the WBSCR may be of maternal or paternal origin [ Ewart et al 1993 , Urbán et al 1996 ].",
-        "section_id": null,
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
         "paragraph_id": "p20",
-        "char_start": 4465,
-        "char_end": 4570
+        "text": "Peripheral pulmonic stenosis (PPS) is common in infancy but usually improves over time without intervention."
       },
       {
         "sentence_id": "p20_s2",
-        "section": null,
-        "text": "No phenotypic differences have been related to the parent of origin in some series [ Wu et al 1998 ], while microcephaly has been correlated with maternal origin of the WBSCR deletion in others [ Del Campo et al 2006 ].",
-        "section_id": null,
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
         "paragraph_id": "p20",
-        "char_start": 4571,
-        "char_end": 4790
+        "text": "However, individuals with combined SVAS and PPS (biventricular outflow tract obstruction) may develop biventricular hypertrophy and hypertension, increasing the risk for myocardial ischemia, dysrhythmias, and sudden death [ Pham et al 2009 ]."
+      },
+      {
+        "sentence_id": "p20_s3",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p20",
+        "text": "The overall 30-year survival rate for children undergoing interventions for obstructive lesions is 90% in North America [ Zinyandu et al 2023 ]."
+      },
+      {
+        "sentence_id": "p20_s4",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p20",
+        "text": "Individuals with either isolated left heart obstructive lesions or isolated right heart obstructive lesions have better survival rates than those with combined disease (96% vs 83%)."
+      },
+      {
+        "sentence_id": "p20_s5",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p20",
+        "text": "In-hospital mortality was 2.5%, and 9% required reoperation (mostly for recurrent SVAS) [ Zinyandu et al 2023 ]."
       },
       {
         "sentence_id": "p21_s1",
-        "section": null,
-        "text": "Penetrance is 100%.",
-        "section_id": null,
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
         "paragraph_id": "p21",
-        "char_start": 4792,
-        "char_end": 4811
+        "text": "Coronary artery stenosis has been implicated as a cause of sudden death in individuals with WS [ Bird et al 1996 ]."
+      },
+      {
+        "sentence_id": "p21_s2",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p21",
+        "text": "Coronary artery stenosis or dilatation are found in 10%-30% of individuals with WS, and coronary blood flow may be restricted at the sinuses of Valsalva in the setting of narrowed sinotubular junction [ Brown et al 2018 ]."
+      },
+      {
+        "sentence_id": "p21_s3",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p21",
+        "text": "The incidence of sudden death in one cohort of 293 individuals with WS was one in 1,000 patient years, which is 25 to 100 times higher than the age-matched population [ Wessel et al 2004 ]."
       },
       {
         "sentence_id": "p22_s1",
-        "section": null,
-        "text": "The first descriptions of WS were incomplete in that they reflected the chief complaint of the individual or the medical specialty of the observer.",
-        "section_id": null,
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
         "paragraph_id": "p22",
-        "char_start": 4813,
-        "char_end": 4960
+        "text": "The prevalence of hypertension in individuals with WS is 40%-50%."
       },
       {
         "sentence_id": "p22_s2",
-        "section": null,
-        "text": "Thus, nephrologists and endocrinologists described \"idiopathic infantile hypercalcemia\" and cardiologists reported \"supravalvular aortic stenosis syndrome.\"",
-        "section_id": null,
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
         "paragraph_id": "p22",
-        "char_start": 4961,
-        "char_end": 5117
+        "text": "Hypertension may present at any age [ Bouchireb et al 2010 ] and may be secondary to renal artery stenosis in some instances [ Honjo et al 2022 ]."
+      },
+      {
+        "sentence_id": "p22_s3",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p22",
+        "text": "Increased vascular stiffness has been documented in individuals with WS and responds to antihypertensive medication [ Kozel et al 2014 ]."
       },
       {
         "sentence_id": "p23_s1",
-        "section": null,
-        "text": "Early reports also noted dysmorphic facial features that were thought to resemble elves of legend: for a time, the term \"Williams elfin facies syndrome\" was used.",
-        "section_id": null,
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
         "paragraph_id": "p23",
-        "char_start": 5119,
-        "char_end": 5281
+        "text": "Mitral valve prolapse and aortic insufficiency have been reported in adults [ Morris et al 1990 , Collins et al 2010a ]."
       },
       {
         "sentence_id": "p24_s1",
-        "section": null,
-        "text": "After the reports of Williams et al [1961] and Beuren et al [1962] , the condition was called Williams syndrome in the US and Williams-Beuren syndrome in Europe.",
-        "section_id": null,
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
         "paragraph_id": "p24",
-        "char_start": 5283,
-        "char_end": 5444
+        "text": "Prolonged QTc has been reported in 13.6% of individuals with WS; screening for repolarization abnormalities is recommended [ Collins et al 2010a , Brink et al 2022 ]."
       },
       {
         "sentence_id": "p25_s1",
-        "section": null,
-        "text": "A study of WS in Norway reported a prevalence of 1:7,500 [ Strømme et al 2002 ].",
-        "section_id": null,
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
         "paragraph_id": "p25",
-        "char_start": 5446,
-        "char_end": 5526
+        "text": "Anesthesia and sedation are associated with an increased risk for adverse events, including cardiac arrest, in individuals with WS [ Olsen et al 2014 ]."
+      },
+      {
+        "sentence_id": "p25_s2",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p25",
+        "text": "Sedation and anesthesia risk assessment and management guidelines have been developed [ Schmidt et al 2021 , Staudt & Eagle 2021 ] with the goal of maintaining intravascular volume and a stable blood pressure to optimize coronary perfusion [ Schmidt et al 2021 ]."
+      },
+      {
+        "sentence_id": "p25_s3",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p25",
+        "text": "In centers using these strategies specifically for individuals with WS, morbidity and mortality is decreased."
+      },
+      {
+        "sentence_id": "p25_s4",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p25",
+        "text": "Brown et al [2018] reported no adverse events in 90% of individuals undergoing cardiac procedures, and no adverse events in 95% of individuals undergoing noncardiac procedures."
+      },
+      {
+        "sentence_id": "p25_s5",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p25",
+        "text": "Schmidt et al [2021] compared a historical group with an intervention group after new anesthesia guidelines were adopted for WS and found that incidence of adverse cardiac events in the intervention group was 2% compared to 6% in the historical group."
+      },
+      {
+        "sentence_id": "p26_s1",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p26",
+        "text": "Stenosis of additional arteries has been reported."
+      },
+      {
+        "sentence_id": "p26_s2",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p26",
+        "text": "Neurovascular abnormalities are rarely reported but may result in stroke [ Cherniske et al 2004 ]."
+      },
+      {
+        "sentence_id": "p26_s3",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p26",
+        "text": "Stenosis of the mesenteric arteries may contribute to abdominal pain."
+      },
+      {
+        "sentence_id": "p27_s1",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p27",
+        "text": "Ocular manifestations."
+      },
+      {
+        "sentence_id": "p27_s2",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p27",
+        "text": "Lacrimal duct obstruction, hyperopia (67%), and esotropia (50%) are common in individuals with WS [ Weber et al 2014 ]."
+      },
+      {
+        "sentence_id": "p27_s3",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p27",
+        "text": "Cataracts have been reported in adults [ Cherniske et al 2004 ]."
+      },
+      {
+        "sentence_id": "p28_s1",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p28",
+        "text": "Ears and hearing."
+      },
+      {
+        "sentence_id": "p28_s2",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p28",
+        "text": "Chronic otitis media is seen in 50% of affected individuals."
+      },
+      {
+        "sentence_id": "p28_s3",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p28",
+        "text": "Increased sensitivity to sound is common (90%), and individuals with WS report discomfort at 20 decibels lower than controls [ Gothelf et al 2006 ]."
+      },
+      {
+        "sentence_id": "p28_s4",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p28",
+        "text": "Many affected individuals report specific phobias for certain sounds [ Levitin et al 2005 ]."
+      },
+      {
+        "sentence_id": "p28_s5",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p28",
+        "text": "Hyperacusis occurs in 35% and is associated with absence of contralateral acoustic reflexes [ Silva et al 2021 ]."
+      },
+      {
+        "sentence_id": "p29_s1",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p29",
+        "text": "Progressive sensorineural hearing loss has been observed; mild-to-moderate hearing loss is detected in 63% of children and 92% of adults [ Gothelf et al 2006 , Marler et al 2010 ]."
+      },
+      {
+        "sentence_id": "p29_s2",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p29",
+        "text": "Mild-to-moderate high-frequency sensorineural hearing loss is common in adults, as is excessive buildup of ear wax [ Cherniske et al 2004 ]."
+      },
+      {
+        "sentence_id": "p30_s1",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p30",
+        "text": "Dental findings include generalized diastemas (70%), hypodontia (50%), microdontia, enamel hypoplasia, and malocclusion (angle class II and III) [ Castro et al 2019 ]."
+      },
+      {
+        "sentence_id": "p31_s1",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p31",
+        "text": "Gastrointestinal manifestations."
+      },
+      {
+        "sentence_id": "p31_s2",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p31",
+        "text": "Individuals with WS have sensory defensiveness; difficulty with food textures leads to problems in transitioning from breast milk or formula to solid foods in infancy."
+      },
+      {
+        "sentence_id": "p32_s1",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p32",
+        "text": "Chronic abdominal pain is common in children and adults with WS; possible causes include gastroesophageal reflux, hiatal hernia, peptic ulcer disease, cholelithiasis, diverticulitis, ischemic bowel disease, chronic constipation, and somatization of anxiety."
+      },
+      {
+        "sentence_id": "p32_s2",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p32",
+        "text": "The prevalence of diverticulitis is increased in adolescents [ Stagi et al 2010 ] and adults with WS [ Partsch et al 2005 ]."
+      },
+      {
+        "sentence_id": "p32_s3",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p32",
+        "text": "Complications of constipation may include rectal prolapse, hemorrhoids, or intestinal perforation."
+      },
+      {
+        "sentence_id": "p33_s1",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p33",
+        "text": "Hypercalcemia may contribute to irritability, vomiting, constipation, and muscle cramps."
+      },
+      {
+        "sentence_id": "p33_s2",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p33",
+        "text": "Hypercalcemia is more common in infancy but may recur in adults [ Morris et al 1990 , Pober et al 1993 ]."
+      },
+      {
+        "sentence_id": "p34_s1",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p34",
+        "text": "Urinary tract abnormalities."
+      },
+      {
+        "sentence_id": "p34_s2",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p34",
+        "text": "Urinary frequency and enuresis are common in children with WS."
+      },
+      {
+        "sentence_id": "p34_s3",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p34",
+        "text": "Renal artery stenosis is found in 50% of individuals with WS, structural abnormalities of the urinary tract in 10%, bladder diverticulae in 50%, and nephrocalcinosis in fewer than 5% [ Pober et al 1993 , Pankau et al 1996 , Sforzini et al 2002 , Sammour et al 2006 , Sammour et al 2014 ]."
+      },
+      {
+        "sentence_id": "p34_s4",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p34",
+        "text": "Bladder capacity is reduced, and detrusor overactivity is observed in 60% of affected individuals [ Sammour et al 2006 ]."
+      },
+      {
+        "sentence_id": "p34_s5",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p34",
+        "text": "Average age of daytime urinary continence is four years; nocturnal continence occurs in 50% by age ten years."
+      },
+      {
+        "sentence_id": "p34_s6",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p34",
+        "text": "Nocturnal enuresis occurs in an estimated 3% of adults [ von Gontard et al 2016 ]."
+      },
+      {
+        "sentence_id": "p35_s1",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p35",
+        "text": "Musculoskeletal and additional neurologic manifestations."
+      },
+      {
+        "sentence_id": "p35_s2",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p35",
+        "text": "The hypotonia and lax joints of the young child lead to abnormal compensatory postures to achieve stability."
+      },
+      {
+        "sentence_id": "p35_s3",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p35",
+        "text": "Older children and adults with WS typically have hypertonia and hyperactive deep-tendon reflexes."
+      },
+      {
+        "sentence_id": "p35_s4",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p35",
+        "text": "Gradual tightening of the heel cords and hamstrings occurs, resulting in a stiff and awkward gait, kyphosis, and lordosis by adolescence [ Morris et al 1988 , Kaplan et al 1989 , Copes et al 2016 ]."
+      },
+      {
+        "sentence_id": "p35_s5",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p35",
+        "text": "Scoliosis is common [ Damasceno et al 2014 ]."
+      },
+      {
+        "sentence_id": "p35_s6",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p35",
+        "text": "Ten percent of individuals with WS have radioulnar synostosis [ Morris & Carey 1990 ]."
+      },
+      {
+        "sentence_id": "p35_s7",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p35",
+        "text": "Fine motor function is impaired, leading to difficulty with tool use and handwriting at all ages."
+      },
+      {
+        "sentence_id": "p35_s8",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p35",
+        "text": "Cerebellar signs in adults include ataxia, dysmetria, and tremor [ Pober & Morris 2007 ]."
+      },
+      {
+        "sentence_id": "p36_s1",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p36",
+        "text": "Neuroimaging."
+      },
+      {
+        "sentence_id": "p36_s2",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p36",
+        "text": "Reduced brain size, reduced gray matter volume (especially in the parietal and occipital regions), and increased gyral complexity are seen on brain MRI [ Jackowski et al 2009 , Eisenberg et al 2010 ]."
+      },
+      {
+        "sentence_id": "p36_s3",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p36",
+        "text": "Reduced posterior fossa size coupled with preserved cerebellar size may contribute to Chiari I malformation found in some affected individuals [ Pober & Filiano 1995 , Mercuri et al 1997 ]."
+      },
+      {
+        "sentence_id": "p37_s1",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p37",
+        "text": "Integument and additional connective tissue manifestations."
+      },
+      {
+        "sentence_id": "p37_s2",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p37",
+        "text": "Most individuals have a hoarse or low-pitched voice; vocal cord abnormalities secondary to elastin deficiency are likely causative [ Vaux et al 2003 ]."
+      },
+      {
+        "sentence_id": "p37_s3",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p37",
+        "text": "Soft, lax skin is typical."
+      },
+      {
+        "sentence_id": "p37_s4",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p37",
+        "text": "The hair grays prematurely [ Morris et al 1988 ]."
+      },
+      {
+        "sentence_id": "p38_s1",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p38",
+        "text": "Growth deficiency."
+      },
+      {
+        "sentence_id": "p38_s2",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p38",
+        "text": "Poor weight gain is observed in 70% of infants."
+      },
+      {
+        "sentence_id": "p38_s3",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p38",
+        "text": "The growth pattern is characterized by prenatal growth deficiency, poor weight gain, and poor linear growth in the first four years, a rate of linear growth that is 75% of normal in childhood, and a brief pubertal growth spurt."
+      },
+      {
+        "sentence_id": "p38_s4",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p38",
+        "text": "Individuals with WS are shorter than predicted by midparental height [ Levy-Shraga et al 2018 ]."
+      },
+      {
+        "sentence_id": "p38_s5",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p38",
+        "text": "The mean adult height is below the third centile."
+      },
+      {
+        "sentence_id": "p38_s6",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p38",
+        "text": "Specific growth curves for WS are available [ Saul et al 1988 , Martin et al 2007 , Morris et al 2020 ]."
+      },
+      {
+        "sentence_id": "p38_s7",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p38",
+        "text": "For a systematic review of growth studies in WS cohorts, see de Sousa Lima Strafacci et al [2020] ."
+      },
+      {
+        "sentence_id": "p38_s8",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p38",
+        "text": "Obesity or overweight is seen in 50% of older children and adults [ Cherniske et al 2004 , Stanley et al 2021 ]."
+      },
+      {
+        "sentence_id": "p38_s9",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p38",
+        "text": "A lipedema phenotype of the lower extremities in seen in 25% of adults [ Shaikh et al 2018 ]."
+      },
+      {
+        "sentence_id": "p39_s1",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p39",
+        "text": "Puberty may occur early, and central precocious puberty is present in 18% of individuals with WS [ Partsch et al 2002 , Kim et al 2016 ]."
+      },
+      {
+        "sentence_id": "p39_s2",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p39",
+        "text": "Hormonal suppression with gonadotropin-releasing hormone agonist is well tolerated by girls with either early or precocious puberty, and treated girls are taller than WS controls [ Spielmann et al 2015 ]."
+      },
+      {
+        "sentence_id": "p40_s1",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p40",
+        "text": "Hypercalcemia is most often symptomatic (irritability, vomiting, constipation) in the first two years of life [ Martin et al 1984 , Morris et al 1988 , Kim et al 2016 ]."
+      },
+      {
+        "sentence_id": "p40_s2",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p40",
+        "text": "Hypercalcemia is associated with dehydration, hypercalciuria, and nephrocalcinosis."
+      },
+      {
+        "sentence_id": "p40_s3",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p40",
+        "text": "Compared to controls, higher median serum calcium levels are found in all age groups [ Sindhar et al 2016 ]."
+      },
+      {
+        "sentence_id": "p40_s4",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p40",
+        "text": "The etiology of hypercalcemia in WS is unknown [ Stagi et al 2016 ]."
+      },
+      {
+        "sentence_id": "p41_s1",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p41",
+        "text": "Additional endocrine problems."
+      },
+      {
+        "sentence_id": "p41_s2",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p41",
+        "text": "Endocrine abnormalities include hypothyroidism, including subclinical hypothyroidism (thyroid-stimulating hormone elevation with normal T3/T4 levels) [ Palacios-Verdú et al 2015 ]."
+      },
+      {
+        "sentence_id": "p41_s3",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p41",
+        "text": "Prevalence of impaired glucose tolerance is 42%, and incidence of diabetes mellitus is increased in adolescents and adults with WS [ Stanley et al 2021 ]."
+      },
+      {
+        "sentence_id": "p41_s4",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p41",
+        "text": "Low bone mineral density has been reported in 50% of adults with WS [ Cherniske et al 2004 ] and is associated with low serum phosphate [ Palmieri et al 2019 ]."
+      },
+      {
+        "sentence_id": "p42_s1",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p42",
+        "text": "Distinctive facial features including broad forehead, bitemporal narrowing, periorbital fullness, a stellate/lacy iris pattern (see Figure 1 ), strabismus, short nose, broad nasal tip, malar flattening, long philtrum, thick vermilion of the upper and lower lips, wide mouth, malocclusion, small jaw, and large ear lobes are observed at all ages (see Figure 2 )."
+      },
+      {
+        "sentence_id": "p42_s2",
+        "section": "Clinical Description",
+        "section_id": "clinical_description",
+        "paragraph_id": "p42",
+        "text": "Young children have epicanthal folds, full cheeks, and small, widely spaced teeth (see Figure 3 ), while adults typically have a long face and neck, accentuated by sloping shoulders (see Figure 4 )."
+      },
+      {
+        "sentence_id": "p43_s1",
+        "section": "Penetrance",
+        "section_id": "penetrance",
+        "paragraph_id": "p43",
+        "text": "Penetrance is 100%."
+      },
+      {
+        "sentence_id": "p44_s1",
+        "section": "Prevalence",
+        "section_id": "prevalence",
+        "paragraph_id": "p44",
+        "text": "A study of WS in Norway reported a prevalence of 1:7,500 [ Strømme et al 2002 ]."
+      },
+      {
+        "sentence_id": "p45_s1",
+        "section": "Genetic Counseling",
+        "section_id": "genetic_counseling",
+        "paragraph_id": "p45",
+        "text": "WS is an autosomal dominant disorder."
+      },
+      {
+        "sentence_id": "p45_s2",
+        "section": "Genetic Counseling",
+        "section_id": "genetic_counseling",
+        "paragraph_id": "p45",
+        "text": "Most individuals diagnosed with WS have the disorder as the result of a de novo 1.5- to 1.8-Mb 7q11.23 deletion; rarely, an individual with WS has an affected parent."
+      },
+      {
+        "sentence_id": "p45_s3",
+        "section": "Genetic Counseling",
+        "section_id": "genetic_counseling",
+        "paragraph_id": "p45",
+        "text": "Each child of an individual with WS has a 50% chance of inheriting the 7q11.23 deletion and being affected."
       }
     ]
   },
   "phenotype_assertions": [
     {
       "assertion_local_id": "ph_001",
-      "label_raw": "Intellectual disability",
+      "label_raw": "developmental delay",
       "status": "present",
       "clinical_role": "primary",
       "evidence_sentence_ids": [
-        "p2_s1"
+        "p1_s1"
       ],
       "qualifiers": {
         "onset": null,
-        "frequency": "most individuals",
-        "severity": "mild",
+        "frequency": null,
+        "severity": null,
         "progression": null,
         "trigger": null,
         "treatment_response": null,
@@ -381,16 +1054,18 @@
     },
     {
       "assertion_local_id": "ph_002",
-      "label_raw": "strengths in verbal short-term memory",
+      "label_raw": "intellectual disability",
       "status": "present",
-      "clinical_role": "descriptor",
+      "clinical_role": "primary",
       "evidence_sentence_ids": [
-        "p3_s1"
+        "p1_s1",
+        "p4_s1",
+        "p14_s2"
       ],
       "qualifiers": {
         "onset": null,
-        "frequency": null,
-        "severity": null,
+        "frequency": "75%",
+        "severity": "usually mild",
         "progression": null,
         "trigger": null,
         "treatment_response": null,
@@ -404,260 +1079,7 @@
     },
     {
       "assertion_local_id": "ph_003",
-      "label_raw": "strengths in language",
-      "status": "present",
-      "clinical_role": "descriptor",
-      "evidence_sentence_ids": [
-        "p3_s1"
-      ],
-      "qualifiers": {
-        "onset": null,
-        "frequency": null,
-        "severity": null,
-        "progression": null,
-        "trigger": null,
-        "treatment_response": null,
-        "pathophysiology": null,
-        "laterality": null,
-        "distribution": null,
-        "anatomical_site": null,
-        "morphology": null,
-        "subtype_context": null
-      }
-    },
-    {
-      "assertion_local_id": "ph_004",
-      "label_raw": "extreme weakness in visuospatial construction",
-      "status": "present",
-      "clinical_role": "descriptor",
-      "evidence_sentence_ids": [
-        "p3_s1"
-      ],
-      "qualifiers": {
-        "onset": null,
-        "frequency": null,
-        "severity": "extreme",
-        "progression": null,
-        "trigger": null,
-        "treatment_response": null,
-        "pathophysiology": null,
-        "laterality": null,
-        "distribution": null,
-        "anatomical_site": null,
-        "morphology": null,
-        "subtype_context": null
-      }
-    },
-    {
-      "assertion_local_id": "ph_005",
-      "label_raw": "overfriendliness",
-      "status": "present",
-      "clinical_role": "descriptor",
-      "evidence_sentence_ids": [
-        "p4_s1"
-      ],
-      "qualifiers": {
-        "onset": null,
-        "frequency": null,
-        "severity": null,
-        "progression": null,
-        "trigger": null,
-        "treatment_response": null,
-        "pathophysiology": null,
-        "laterality": null,
-        "distribution": null,
-        "anatomical_site": null,
-        "morphology": null,
-        "subtype_context": null
-      }
-    },
-    {
-      "assertion_local_id": "ph_006",
-      "label_raw": "empathy",
-      "status": "present",
-      "clinical_role": "descriptor",
-      "evidence_sentence_ids": [
-        "p4_s1"
-      ],
-      "qualifiers": {
-        "onset": null,
-        "frequency": null,
-        "severity": null,
-        "progression": null,
-        "trigger": null,
-        "treatment_response": null,
-        "pathophysiology": null,
-        "laterality": null,
-        "distribution": null,
-        "anatomical_site": null,
-        "morphology": null,
-        "subtype_context": null
-      }
-    },
-    {
-      "assertion_local_id": "ph_007",
       "label_raw": "generalized anxiety",
-      "status": "present",
-      "clinical_role": "primary",
-      "evidence_sentence_ids": [
-        "p4_s1"
-      ],
-      "qualifiers": {
-        "onset": null,
-        "frequency": null,
-        "severity": null,
-        "progression": null,
-        "trigger": null,
-        "treatment_response": null,
-        "pathophysiology": null,
-        "laterality": null,
-        "distribution": null,
-        "anatomical_site": null,
-        "morphology": null,
-        "subtype_context": null
-      }
-    },
-    {
-      "assertion_local_id": "ph_008",
-      "label_raw": "specific phobias",
-      "status": "present",
-      "clinical_role": "primary",
-      "evidence_sentence_ids": [
-        "p4_s1"
-      ],
-      "qualifiers": {
-        "onset": null,
-        "frequency": null,
-        "severity": null,
-        "progression": null,
-        "trigger": null,
-        "treatment_response": null,
-        "pathophysiology": null,
-        "laterality": null,
-        "distribution": null,
-        "anatomical_site": null,
-        "morphology": null,
-        "subtype_context": null
-      }
-    },
-    {
-      "assertion_local_id": "ph_009",
-      "label_raw": "attention-deficit/hyperactivity disorder",
-      "status": "present",
-      "clinical_role": "primary",
-      "evidence_sentence_ids": [
-        "p4_s1"
-      ],
-      "qualifiers": {
-        "onset": null,
-        "frequency": null,
-        "severity": null,
-        "progression": null,
-        "trigger": null,
-        "treatment_response": null,
-        "pathophysiology": null,
-        "laterality": null,
-        "distribution": null,
-        "anatomical_site": null,
-        "morphology": null,
-        "subtype_context": null
-      }
-    },
-    {
-      "assertion_local_id": "ph_010",
-      "label_raw": "Cardiovascular disease",
-      "status": "present",
-      "clinical_role": "primary",
-      "evidence_sentence_ids": [
-        "p5_s1"
-      ],
-      "qualifiers": {
-        "onset": null,
-        "frequency": null,
-        "severity": null,
-        "progression": null,
-        "trigger": null,
-        "treatment_response": null,
-        "pathophysiology": "elastin arteriopathy",
-        "laterality": null,
-        "distribution": null,
-        "anatomical_site": null,
-        "morphology": null,
-        "subtype_context": null
-      }
-    },
-    {
-      "assertion_local_id": "ph_011",
-      "label_raw": "Supravalvar aortic stenosis",
-      "status": "present",
-      "clinical_role": "primary",
-      "evidence_sentence_ids": [
-        "p5_s2"
-      ],
-      "qualifiers": {
-        "onset": null,
-        "frequency": "most common",
-        "severity": null,
-        "progression": null,
-        "trigger": null,
-        "treatment_response": null,
-        "pathophysiology": null,
-        "laterality": null,
-        "distribution": null,
-        "anatomical_site": null,
-        "morphology": null,
-        "subtype_context": null
-      }
-    },
-    {
-      "assertion_local_id": "ph_012",
-      "label_raw": "Peripheral pulmonic stenosis",
-      "status": "present",
-      "clinical_role": "primary",
-      "evidence_sentence_ids": [
-        "p5_s3"
-      ],
-      "qualifiers": {
-        "onset": "in infancy",
-        "frequency": "common",
-        "severity": null,
-        "progression": null,
-        "trigger": null,
-        "treatment_response": null,
-        "pathophysiology": null,
-        "laterality": null,
-        "distribution": null,
-        "anatomical_site": null,
-        "morphology": null,
-        "subtype_context": null
-      }
-    },
-    {
-      "assertion_local_id": "ph_013",
-      "label_raw": "artery may be narrowed",
-      "status": "uncertain",
-      "clinical_role": "primary",
-      "evidence_sentence_ids": [
-        "p5_s4"
-      ],
-      "qualifiers": {
-        "onset": null,
-        "frequency": null,
-        "severity": null,
-        "progression": null,
-        "trigger": null,
-        "treatment_response": null,
-        "pathophysiology": null,
-        "laterality": null,
-        "distribution": null,
-        "anatomical_site": null,
-        "morphology": null,
-        "subtype_context": null
-      }
-    },
-    {
-      "assertion_local_id": "ph_014",
-      "label_raw": "Distinctive facies",
       "status": "present",
       "clinical_role": "primary",
       "evidence_sentence_ids": [
@@ -679,472 +1101,139 @@
       }
     },
     {
-      "assertion_local_id": "ph_015",
-      "label_raw": "Broad forehead",
-      "status": "present",
-      "clinical_role": "descriptor",
-      "evidence_sentence_ids": [
-        "p6_s2"
-      ],
-      "qualifiers": {
-        "onset": "all ages",
-        "frequency": null,
-        "severity": null,
-        "progression": null,
-        "trigger": null,
-        "treatment_response": null,
-        "pathophysiology": null,
-        "laterality": null,
-        "distribution": null,
-        "anatomical_site": "forehead",
-        "morphology": "Broad",
-        "subtype_context": null
-      }
-    },
-    {
-      "assertion_local_id": "ph_016",
-      "label_raw": "bitemporal narrowing",
-      "status": "present",
-      "clinical_role": "descriptor",
-      "evidence_sentence_ids": [
-        "p6_s2"
-      ],
-      "qualifiers": {
-        "onset": "all ages",
-        "frequency": null,
-        "severity": null,
-        "progression": null,
-        "trigger": null,
-        "treatment_response": null,
-        "pathophysiology": null,
-        "laterality": "bitemporal",
-        "distribution": null,
-        "anatomical_site": null,
-        "morphology": "narrowing",
-        "subtype_context": null
-      }
-    },
-    {
-      "assertion_local_id": "ph_017",
-      "label_raw": "periorbital fullness",
-      "status": "present",
-      "clinical_role": "descriptor",
-      "evidence_sentence_ids": [
-        "p6_s2"
-      ],
-      "qualifiers": {
-        "onset": "all ages",
-        "frequency": null,
-        "severity": null,
-        "progression": null,
-        "trigger": null,
-        "treatment_response": null,
-        "pathophysiology": null,
-        "laterality": null,
-        "distribution": "periorbital",
-        "anatomical_site": null,
-        "morphology": "fullness",
-        "subtype_context": null
-      }
-    },
-    {
-      "assertion_local_id": "ph_018",
-      "label_raw": "stellate/lacy iris pattern",
-      "status": "present",
-      "clinical_role": "descriptor",
-      "evidence_sentence_ids": [
-        "p6_s2"
-      ],
-      "qualifiers": {
-        "onset": "all ages",
-        "frequency": null,
-        "severity": null,
-        "progression": null,
-        "trigger": null,
-        "treatment_response": null,
-        "pathophysiology": null,
-        "laterality": null,
-        "distribution": null,
-        "anatomical_site": "iris",
-        "morphology": "stellate/lacy pattern",
-        "subtype_context": null
-      }
-    },
-    {
-      "assertion_local_id": "ph_019",
-      "label_raw": "strabismus",
-      "status": "present",
-      "clinical_role": "descriptor",
-      "evidence_sentence_ids": [
-        "p6_s2"
-      ],
-      "qualifiers": {
-        "onset": "all ages",
-        "frequency": null,
-        "severity": null,
-        "progression": null,
-        "trigger": null,
-        "treatment_response": null,
-        "pathophysiology": null,
-        "laterality": null,
-        "distribution": null,
-        "anatomical_site": null,
-        "morphology": null,
-        "subtype_context": null
-      }
-    },
-    {
-      "assertion_local_id": "ph_020",
-      "label_raw": "short nose",
-      "status": "present",
-      "clinical_role": "descriptor",
-      "evidence_sentence_ids": [
-        "p6_s2"
-      ],
-      "qualifiers": {
-        "onset": "all ages",
-        "frequency": null,
-        "severity": null,
-        "progression": null,
-        "trigger": null,
-        "treatment_response": null,
-        "pathophysiology": null,
-        "laterality": null,
-        "distribution": null,
-        "anatomical_site": "nose",
-        "morphology": "short",
-        "subtype_context": null
-      }
-    },
-    {
-      "assertion_local_id": "ph_021",
-      "label_raw": "broad nasal tip",
-      "status": "present",
-      "clinical_role": "descriptor",
-      "evidence_sentence_ids": [
-        "p6_s2"
-      ],
-      "qualifiers": {
-        "onset": "all ages",
-        "frequency": null,
-        "severity": null,
-        "progression": null,
-        "trigger": null,
-        "treatment_response": null,
-        "pathophysiology": null,
-        "laterality": null,
-        "distribution": null,
-        "anatomical_site": "nasal tip",
-        "morphology": "broad",
-        "subtype_context": null
-      }
-    },
-    {
-      "assertion_local_id": "ph_022",
-      "label_raw": "malar flattening",
-      "status": "present",
-      "clinical_role": "descriptor",
-      "evidence_sentence_ids": [
-        "p6_s2"
-      ],
-      "qualifiers": {
-        "onset": "all ages",
-        "frequency": null,
-        "severity": null,
-        "progression": null,
-        "trigger": null,
-        "treatment_response": null,
-        "pathophysiology": null,
-        "laterality": null,
-        "distribution": null,
-        "anatomical_site": "malar",
-        "morphology": "flattening",
-        "subtype_context": null
-      }
-    },
-    {
-      "assertion_local_id": "ph_023",
-      "label_raw": "long philtrum",
-      "status": "present",
-      "clinical_role": "descriptor",
-      "evidence_sentence_ids": [
-        "p6_s2"
-      ],
-      "qualifiers": {
-        "onset": "all ages",
-        "frequency": null,
-        "severity": null,
-        "progression": null,
-        "trigger": null,
-        "treatment_response": null,
-        "pathophysiology": null,
-        "laterality": null,
-        "distribution": null,
-        "anatomical_site": "philtrum",
-        "morphology": "long",
-        "subtype_context": null
-      }
-    },
-    {
-      "assertion_local_id": "ph_024",
-      "label_raw": "thick vermilion of the upper and lower lips",
-      "status": "present",
-      "clinical_role": "descriptor",
-      "evidence_sentence_ids": [
-        "p6_s2"
-      ],
-      "qualifiers": {
-        "onset": "all ages",
-        "frequency": null,
-        "severity": null,
-        "progression": null,
-        "trigger": null,
-        "treatment_response": null,
-        "pathophysiology": null,
-        "laterality": null,
-        "distribution": null,
-        "anatomical_site": "vermilion of the upper and lower lips",
-        "morphology": "thick",
-        "subtype_context": null
-      }
-    },
-    {
-      "assertion_local_id": "ph_025",
-      "label_raw": "wide mouth",
-      "status": "present",
-      "clinical_role": "descriptor",
-      "evidence_sentence_ids": [
-        "p6_s2"
-      ],
-      "qualifiers": {
-        "onset": "all ages",
-        "frequency": null,
-        "severity": null,
-        "progression": null,
-        "trigger": null,
-        "treatment_response": null,
-        "pathophysiology": null,
-        "laterality": null,
-        "distribution": null,
-        "anatomical_site": "mouth",
-        "morphology": "wide",
-        "subtype_context": null
-      }
-    },
-    {
-      "assertion_local_id": "ph_026",
-      "label_raw": "malocclusion",
-      "status": "present",
-      "clinical_role": "descriptor",
-      "evidence_sentence_ids": [
-        "p6_s2"
-      ],
-      "qualifiers": {
-        "onset": "all ages",
-        "frequency": null,
-        "severity": null,
-        "progression": null,
-        "trigger": null,
-        "treatment_response": null,
-        "pathophysiology": null,
-        "laterality": null,
-        "distribution": null,
-        "anatomical_site": null,
-        "morphology": null,
-        "subtype_context": null
-      }
-    },
-    {
-      "assertion_local_id": "ph_027",
-      "label_raw": "small jaw",
-      "status": "present",
-      "clinical_role": "descriptor",
-      "evidence_sentence_ids": [
-        "p6_s2"
-      ],
-      "qualifiers": {
-        "onset": "all ages",
-        "frequency": null,
-        "severity": null,
-        "progression": null,
-        "trigger": null,
-        "treatment_response": null,
-        "pathophysiology": null,
-        "laterality": null,
-        "distribution": null,
-        "anatomical_site": "jaw",
-        "morphology": "small",
-        "subtype_context": null
-      }
-    },
-    {
-      "assertion_local_id": "ph_028",
-      "label_raw": "large ear lobes",
-      "status": "present",
-      "clinical_role": "descriptor",
-      "evidence_sentence_ids": [
-        "p6_s2"
-      ],
-      "qualifiers": {
-        "onset": "all ages",
-        "frequency": null,
-        "severity": null,
-        "progression": null,
-        "trigger": null,
-        "treatment_response": null,
-        "pathophysiology": null,
-        "laterality": null,
-        "distribution": null,
-        "anatomical_site": "ear lobes",
-        "morphology": "large",
-        "subtype_context": null
-      }
-    },
-    {
-      "assertion_local_id": "ph_029",
-      "label_raw": "epicanthal folds",
-      "status": "present",
-      "clinical_role": "descriptor",
-      "evidence_sentence_ids": [
-        "p6_s3"
-      ],
-      "qualifiers": {
-        "onset": "Young children",
-        "frequency": null,
-        "severity": null,
-        "progression": null,
-        "trigger": null,
-        "treatment_response": null,
-        "pathophysiology": null,
-        "laterality": null,
-        "distribution": null,
-        "anatomical_site": null,
-        "morphology": null,
-        "subtype_context": null
-      }
-    },
-    {
-      "assertion_local_id": "ph_030",
-      "label_raw": "full cheeks",
-      "status": "present",
-      "clinical_role": "descriptor",
-      "evidence_sentence_ids": [
-        "p6_s3"
-      ],
-      "qualifiers": {
-        "onset": "Young children",
-        "frequency": null,
-        "severity": null,
-        "progression": null,
-        "trigger": null,
-        "treatment_response": null,
-        "pathophysiology": null,
-        "laterality": null,
-        "distribution": null,
-        "anatomical_site": "cheeks",
-        "morphology": "full",
-        "subtype_context": null
-      }
-    },
-    {
-      "assertion_local_id": "ph_031",
-      "label_raw": "small, widely spaced teeth",
-      "status": "present",
-      "clinical_role": "descriptor",
-      "evidence_sentence_ids": [
-        "p6_s3"
-      ],
-      "qualifiers": {
-        "onset": "Young children",
-        "frequency": null,
-        "severity": null,
-        "progression": null,
-        "trigger": null,
-        "treatment_response": null,
-        "pathophysiology": null,
-        "laterality": null,
-        "distribution": null,
-        "anatomical_site": "teeth",
-        "morphology": "small, widely spaced",
-        "subtype_context": null
-      }
-    },
-    {
-      "assertion_local_id": "ph_032",
-      "label_raw": "long face",
-      "status": "present",
-      "clinical_role": "descriptor",
-      "evidence_sentence_ids": [
-        "p6_s3"
-      ],
-      "qualifiers": {
-        "onset": "adults",
-        "frequency": null,
-        "severity": null,
-        "progression": null,
-        "trigger": null,
-        "treatment_response": null,
-        "pathophysiology": null,
-        "laterality": null,
-        "distribution": null,
-        "anatomical_site": "face",
-        "morphology": "long",
-        "subtype_context": null
-      }
-    },
-    {
-      "assertion_local_id": "ph_033",
-      "label_raw": "long neck",
-      "status": "present",
-      "clinical_role": "descriptor",
-      "evidence_sentence_ids": [
-        "p6_s3"
-      ],
-      "qualifiers": {
-        "onset": "adults",
-        "frequency": null,
-        "severity": null,
-        "progression": null,
-        "trigger": null,
-        "treatment_response": null,
-        "pathophysiology": null,
-        "laterality": null,
-        "distribution": null,
-        "anatomical_site": "neck",
-        "morphology": "long",
-        "subtype_context": null
-      }
-    },
-    {
-      "assertion_local_id": "ph_034",
-      "label_raw": "sloping shoulders",
-      "status": "present",
-      "clinical_role": "descriptor",
-      "evidence_sentence_ids": [
-        "p6_s3"
-      ],
-      "qualifiers": {
-        "onset": "adults",
-        "frequency": null,
-        "severity": null,
-        "progression": null,
-        "trigger": null,
-        "treatment_response": null,
-        "pathophysiology": null,
-        "laterality": null,
-        "distribution": null,
-        "anatomical_site": "shoulders",
-        "morphology": "sloping",
-        "subtype_context": null
-      }
-    },
-    {
-      "assertion_local_id": "ph_035",
-      "label_raw": "hoarse voice",
+      "assertion_local_id": "ph_004",
+      "label_raw": "specific phobias",
       "status": "present",
       "clinical_role": "primary",
       "evidence_sentence_ids": [
-        "p7_s1"
+        "p6_s1",
+        "p16_s6",
+        "p28_s4"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": "certain sounds"
+      }
+    },
+    {
+      "assertion_local_id": "ph_005",
+      "label_raw": "attention-deficit/hyperactivity disorder",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p6_s1",
+        "p16_s6"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": "65% in children",
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_006",
+      "label_raw": "supravalvar aortic stenosis",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p1_s1",
+        "p7_s2",
+        "p19_s3",
+        "p19_s4"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": "most common",
+        "severity": null,
+        "progression": "may worsen over time",
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": "discrete hourglass stenosis or diffuse aortic stenosis",
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_007",
+      "label_raw": "peripheral pulmonic stenosis",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p1_s1",
+        "p7_s3",
+        "p20_s1"
+      ],
+      "qualifiers": {
+        "onset": "infancy",
+        "frequency": "common",
+        "severity": null,
+        "progression": "usually improves over time without intervention",
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_008",
+      "label_raw": "hypertension",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p1_s1",
+        "p22_s1",
+        "p22_s2"
+      ],
+      "qualifiers": {
+        "onset": "any age",
+        "frequency": "40%-50%",
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_009",
+      "label_raw": "early puberty",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p1_s1",
+        "p11_s1",
+        "p39_s1"
       ],
       "qualifiers": {
         "onset": null,
@@ -1162,12 +1251,635 @@
       }
     },
     {
-      "assertion_local_id": "ph_036",
-      "label_raw": "inguinal/umbilical hernia",
+      "assertion_local_id": "ph_010",
+      "label_raw": "hypercalcemia",
       "status": "present",
       "clinical_role": "primary",
       "evidence_sentence_ids": [
-        "p7_s1"
+        "p1_s1",
+        "p11_s1",
+        "p33_s1",
+        "p33_s2",
+        "p40_s1",
+        "p40_s2"
+      ],
+      "qualifiers": {
+        "onset": "first two years of life",
+        "frequency": null,
+        "severity": null,
+        "progression": "may recur in adults",
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_011",
+      "label_raw": "hypercalciuria",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p1_s1",
+        "p11_s1",
+        "p40_s2"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_012",
+      "label_raw": "hypothyroidism",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p1_s1",
+        "p11_s1",
+        "p41_s2"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_013",
+      "label_raw": "hypotonia",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p1_s2",
+        "p13_s2",
+        "p35_s2"
+      ],
+      "qualifiers": {
+        "onset": "infancy",
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_014",
+      "label_raw": "hyperextensible joints",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p1_s2",
+        "p13_s2"
+      ],
+      "qualifiers": {
+        "onset": "infancy",
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_015",
+      "label_raw": "delayed attainment of motor milestones",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p1_s2",
+        "p13_s2"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_016",
+      "label_raw": "feeding difficulties",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p1_s3",
+        "p12_s3"
+      ],
+      "qualifiers": {
+        "onset": "infancy",
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_017",
+      "label_raw": "poor weight gain",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p1_s3",
+        "p12_s3",
+        "p38_s2",
+        "p38_s3"
+      ],
+      "qualifiers": {
+        "onset": "infancy",
+        "frequency": "70% of infants",
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_018",
+      "label_raw": "post-term birth",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p12_s2"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": "often",
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_019",
+      "label_raw": "small for gestational age",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p12_s2"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": "50% of infants",
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_020",
+      "label_raw": "gastroesophageal reflux",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p12_s3",
+        "p12_s4",
+        "p32_s1"
+      ],
+      "qualifiers": {
+        "onset": "infancy",
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_021",
+      "label_raw": "disordered suck and swallow",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p12_s3"
+      ],
+      "qualifiers": {
+        "onset": "infancy",
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_022",
+      "label_raw": "textural aversion",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p12_s3"
+      ],
+      "qualifiers": {
+        "onset": "infancy",
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_023",
+      "label_raw": "vomiting",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p12_s3",
+        "p40_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_024",
+      "label_raw": "prolonged colic",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p12_s4"
+      ],
+      "qualifiers": {
+        "onset": "infancy",
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_025",
+      "label_raw": "chronic constipation",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p12_s4",
+        "p32_s1",
+        "p32_s3",
+        "p33_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_026",
+      "label_raw": "speech delay",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p13_s4"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_027",
+      "label_raw": "fine motor difficulties",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p13_s5",
+        "p35_s7"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_028",
+      "label_raw": "executive function deficits",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p17_s3"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": "70% of children and adolescents",
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_029",
+      "label_raw": "difficulty with sensory modulation/processing",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p16_s3"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_030",
+      "label_raw": "difficulty with emotional regulation",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p16_s3",
+        "p17_s4"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_031",
+      "label_raw": "perseveration",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p16_s3"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_032",
+      "label_raw": "restricted interests",
+      "status": "uncertain",
+      "clinical_role": "descriptor",
+      "evidence_sentence_ids": [
+        "p16_s4"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_033",
+      "label_raw": "repetitive behavior",
+      "status": "uncertain",
+      "clinical_role": "descriptor",
+      "evidence_sentence_ids": [
+        "p16_s4"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_034",
+      "label_raw": "adaptive behavior is less than expected for IQ",
+      "status": "present",
+      "clinical_role": "descriptor",
+      "evidence_sentence_ids": [
+        "p17_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_035",
+      "label_raw": "sleep disorders",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p18_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": "65%",
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_036",
+      "label_raw": "increased sleep latency",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p18_s1"
       ],
       "qualifiers": {
         "onset": null,
@@ -1186,11 +1898,11 @@
     },
     {
       "assertion_local_id": "ph_037",
-      "label_raw": "bowel/bladder diverticulae",
+      "label_raw": "decreased sleep efficiency",
       "status": "present",
       "clinical_role": "primary",
       "evidence_sentence_ids": [
-        "p7_s1"
+        "p18_s1"
       ],
       "qualifiers": {
         "onset": null,
@@ -1209,15 +1921,15 @@
     },
     {
       "assertion_local_id": "ph_038",
-      "label_raw": "rectal prolapse",
-      "status": "present",
+      "label_raw": "sleep-related breathing disorder",
+      "status": "uncertain",
       "clinical_role": "primary",
       "evidence_sentence_ids": [
-        "p7_s1"
+        "p18_s3"
       ],
       "qualifiers": {
         "onset": null,
-        "frequency": null,
+        "frequency": "15%",
         "severity": null,
         "progression": null,
         "trigger": null,
@@ -1232,15 +1944,15 @@
     },
     {
       "assertion_local_id": "ph_039",
-      "label_raw": "joint limitation or laxity",
-      "status": "present",
+      "label_raw": "excessive daytime sleepiness",
+      "status": "uncertain",
       "clinical_role": "primary",
       "evidence_sentence_ids": [
-        "p7_s1"
+        "p18_s3"
       ],
       "qualifiers": {
         "onset": null,
-        "frequency": null,
+        "frequency": "30%",
         "severity": null,
         "progression": null,
         "trigger": null,
@@ -1255,11 +1967,12 @@
     },
     {
       "assertion_local_id": "ph_040",
-      "label_raw": "soft, lax skin",
+      "label_raw": "elastin arteriopathy",
       "status": "present",
-      "clinical_role": "primary",
+      "clinical_role": "descriptor",
       "evidence_sentence_ids": [
-        "p7_s1"
+        "p7_s1",
+        "p19_s2"
       ],
       "qualifiers": {
         "onset": null,
@@ -1278,14 +1991,14 @@
     },
     {
       "assertion_local_id": "ph_041",
-      "label_raw": "prenatal growth deficiency",
-      "status": "present",
-      "clinical_role": "primary",
+      "label_raw": "elevated left heart pressure",
+      "status": "uncertain",
+      "clinical_role": "complication",
       "evidence_sentence_ids": [
-        "p8_s1"
+        "p19_s5"
       ],
       "qualifiers": {
-        "onset": "prenatal",
+        "onset": null,
         "frequency": null,
         "severity": null,
         "progression": null,
@@ -1301,14 +2014,14 @@
     },
     {
       "assertion_local_id": "ph_042",
-      "label_raw": "postnatal poor weight gain",
-      "status": "present",
-      "clinical_role": "primary",
+      "label_raw": "cardiac hypertrophy",
+      "status": "uncertain",
+      "clinical_role": "complication",
       "evidence_sentence_ids": [
-        "p8_s1"
+        "p19_s5"
       ],
       "qualifiers": {
-        "onset": "postnatal",
+        "onset": null,
         "frequency": null,
         "severity": null,
         "progression": null,
@@ -1324,11 +2037,11 @@
     },
     {
       "assertion_local_id": "ph_043",
-      "label_raw": "decreased linear growth",
-      "status": "present",
-      "clinical_role": "primary",
+      "label_raw": "cardiac failure",
+      "status": "uncertain",
+      "clinical_role": "complication",
       "evidence_sentence_ids": [
-        "p8_s1"
+        "p19_s5"
       ],
       "qualifiers": {
         "onset": null,
@@ -1347,11 +2060,11 @@
     },
     {
       "assertion_local_id": "ph_044",
-      "label_raw": "early puberty",
-      "status": "present",
-      "clinical_role": "primary",
+      "label_raw": "biventricular hypertrophy",
+      "status": "uncertain",
+      "clinical_role": "complication",
       "evidence_sentence_ids": [
-        "p9_s1"
+        "p20_s2"
       ],
       "qualifiers": {
         "onset": null,
@@ -1370,11 +2083,11 @@
     },
     {
       "assertion_local_id": "ph_045",
-      "label_raw": "hypercalcemia",
-      "status": "present",
-      "clinical_role": "primary",
+      "label_raw": "myocardial ischemia",
+      "status": "uncertain",
+      "clinical_role": "complication",
       "evidence_sentence_ids": [
-        "p9_s1"
+        "p20_s2"
       ],
       "qualifiers": {
         "onset": null,
@@ -1393,11 +2106,11 @@
     },
     {
       "assertion_local_id": "ph_046",
-      "label_raw": "hypercalciuria",
-      "status": "present",
-      "clinical_role": "primary",
+      "label_raw": "dysrhythmias",
+      "status": "uncertain",
+      "clinical_role": "complication",
       "evidence_sentence_ids": [
-        "p9_s1"
+        "p20_s2"
       ],
       "qualifiers": {
         "onset": null,
@@ -1416,11 +2129,13 @@
     },
     {
       "assertion_local_id": "ph_047",
-      "label_raw": "hypothyroidism",
-      "status": "present",
-      "clinical_role": "primary",
+      "label_raw": "sudden death",
+      "status": "uncertain",
+      "clinical_role": "complication",
       "evidence_sentence_ids": [
-        "p9_s1"
+        "p20_s2",
+        "p21_s1",
+        "p21_s3"
       ],
       "qualifiers": {
         "onset": null,
@@ -1439,11 +2154,12 @@
     },
     {
       "assertion_local_id": "ph_048",
-      "label_raw": "diabetes mellitus",
+      "label_raw": "coronary artery stenosis",
       "status": "present",
       "clinical_role": "primary",
       "evidence_sentence_ids": [
-        "p9_s1"
+        "p21_s1",
+        "p21_s2"
       ],
       "qualifiers": {
         "onset": null,
@@ -1462,15 +2178,15 @@
     },
     {
       "assertion_local_id": "ph_049",
-      "label_raw": "developmental delay",
+      "label_raw": "coronary artery dilatation",
       "status": "present",
       "clinical_role": "primary",
       "evidence_sentence_ids": [
-        "p11_s1"
+        "p21_s2"
       ],
       "qualifiers": {
         "onset": null,
-        "frequency": null,
+        "frequency": "10%-30%",
         "severity": null,
         "progression": null,
         "trigger": null,
@@ -1485,11 +2201,11 @@
     },
     {
       "assertion_local_id": "ph_050",
-      "label_raw": "sleep problems",
-      "status": "uncertain",
+      "label_raw": "increased vascular stiffness",
+      "status": "present",
       "clinical_role": "primary",
       "evidence_sentence_ids": [
-        "p11_s2"
+        "p22_s3"
       ],
       "qualifiers": {
         "onset": null,
@@ -1497,7 +2213,7 @@
         "severity": null,
         "progression": null,
         "trigger": null,
-        "treatment_response": null,
+        "treatment_response": "responds to antihypertensive medication",
         "pathophysiology": null,
         "laterality": null,
         "distribution": null,
@@ -1508,14 +2224,14 @@
     },
     {
       "assertion_local_id": "ph_051",
-      "label_raw": "ocular issues",
+      "label_raw": "mitral valve prolapse",
       "status": "uncertain",
       "clinical_role": "primary",
       "evidence_sentence_ids": [
-        "p11_s2"
+        "p23_s1"
       ],
       "qualifiers": {
-        "onset": null,
+        "onset": "adults",
         "frequency": null,
         "severity": null,
         "progression": null,
@@ -1531,14 +2247,14 @@
     },
     {
       "assertion_local_id": "ph_052",
-      "label_raw": "hearing loss",
+      "label_raw": "aortic insufficiency",
       "status": "uncertain",
       "clinical_role": "primary",
       "evidence_sentence_ids": [
-        "p11_s2"
+        "p23_s1"
       ],
       "qualifiers": {
-        "onset": null,
+        "onset": "adults",
         "frequency": null,
         "severity": null,
         "progression": null,
@@ -1554,15 +2270,15 @@
     },
     {
       "assertion_local_id": "ph_053",
-      "label_raw": "dental problems",
+      "label_raw": "prolonged QTc",
       "status": "uncertain",
       "clinical_role": "primary",
       "evidence_sentence_ids": [
-        "p11_s2"
+        "p24_s1"
       ],
       "qualifiers": {
         "onset": null,
-        "frequency": null,
+        "frequency": "13.6%",
         "severity": null,
         "progression": null,
         "trigger": null,
@@ -1577,11 +2293,11 @@
     },
     {
       "assertion_local_id": "ph_054",
-      "label_raw": "gastrointestinal difficulties",
+      "label_raw": "neurovascular abnormalities",
       "status": "uncertain",
       "clinical_role": "primary",
       "evidence_sentence_ids": [
-        "p11_s2"
+        "p26_s2"
       ],
       "qualifiers": {
         "onset": null,
@@ -1600,11 +2316,11 @@
     },
     {
       "assertion_local_id": "ph_055",
-      "label_raw": "urinary tract abnormalities",
+      "label_raw": "stroke",
       "status": "uncertain",
-      "clinical_role": "primary",
+      "clinical_role": "complication",
       "evidence_sentence_ids": [
-        "p11_s2"
+        "p26_s2"
       ],
       "qualifiers": {
         "onset": null,
@@ -1623,14 +2339,1792 @@
     },
     {
       "assertion_local_id": "ph_056",
-      "label_raw": "musculoskeletal issues",
+      "label_raw": "stenosis of the mesenteric arteries",
       "status": "uncertain",
       "clinical_role": "primary",
       "evidence_sentence_ids": [
-        "p11_s2"
+        "p26_s3"
       ],
       "qualifiers": {
         "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_057",
+      "label_raw": "lacrimal duct obstruction",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p27_s2"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_058",
+      "label_raw": "hyperopia",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p27_s2"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": "67%",
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_059",
+      "label_raw": "esotropia",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p27_s2"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": "50%",
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_060",
+      "label_raw": "cataracts",
+      "status": "uncertain",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p27_s3"
+      ],
+      "qualifiers": {
+        "onset": "adults",
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_061",
+      "label_raw": "chronic otitis media",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p28_s2"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": "50%",
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_062",
+      "label_raw": "increased sensitivity to sound",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p28_s3"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": "90%",
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_063",
+      "label_raw": "hyperacusis",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p28_s5"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": "35%",
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_064",
+      "label_raw": "absence of contralateral acoustic reflexes",
+      "status": "present",
+      "clinical_role": "descriptor",
+      "evidence_sentence_ids": [
+        "p28_s5"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_065",
+      "label_raw": "progressive sensorineural hearing loss",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p29_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": "63% of children and 92% of adults",
+        "severity": null,
+        "progression": "progressive",
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_066",
+      "label_raw": "high-frequency sensorineural hearing loss",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p29_s2"
+      ],
+      "qualifiers": {
+        "onset": "adults",
+        "frequency": null,
+        "severity": "mild-to-moderate",
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_067",
+      "label_raw": "excessive buildup of ear wax",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p29_s2"
+      ],
+      "qualifiers": {
+        "onset": "adults",
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_068",
+      "label_raw": "generalized diastemas",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p30_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": "70%",
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_069",
+      "label_raw": "hypodontia",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p30_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": "50%",
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_070",
+      "label_raw": "microdontia",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p30_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_071",
+      "label_raw": "enamel hypoplasia",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p30_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_072",
+      "label_raw": "malocclusion",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p8_s2",
+        "p30_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_073",
+      "label_raw": "sensory defensiveness",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p31_s2"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_074",
+      "label_raw": "chronic abdominal pain",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p32_s1",
+        "p26_s3"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_075",
+      "label_raw": "diverticulitis",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p32_s2"
+      ],
+      "qualifiers": {
+        "onset": "adolescents and adults",
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_076",
+      "label_raw": "rectal prolapse",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p9_s1",
+        "p32_s3"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_077",
+      "label_raw": "hemorrhoids",
+      "status": "uncertain",
+      "clinical_role": "complication",
+      "evidence_sentence_ids": [
+        "p32_s3"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_078",
+      "label_raw": "intestinal perforation",
+      "status": "uncertain",
+      "clinical_role": "complication",
+      "evidence_sentence_ids": [
+        "p32_s3"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_081",
+      "label_raw": "urinary frequency",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p34_s2"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_082",
+      "label_raw": "enuresis",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p34_s2",
+        "p34_s6"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_083",
+      "label_raw": "renal artery stenosis",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p34_s3"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": "50%",
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_084",
+      "label_raw": "structural abnormalities of the urinary tract",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p34_s3"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": "10%",
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_085",
+      "label_raw": "bladder diverticulae",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p34_s3"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": "50%",
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_086",
+      "label_raw": "nephrocalcinosis",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p34_s3",
+        "p40_s2"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": "fewer than 5%",
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_087",
+      "label_raw": "reduced bladder capacity",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p34_s4"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_088",
+      "label_raw": "detrusor overactivity",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p34_s4"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": "60%",
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_089",
+      "label_raw": "hypertonia",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p35_s3"
+      ],
+      "qualifiers": {
+        "onset": "older children and adults",
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_090",
+      "label_raw": "hyperactive deep-tendon reflexes",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p35_s3"
+      ],
+      "qualifiers": {
+        "onset": "older children and adults",
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_092",
+      "label_raw": "stiff and awkward gait",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p35_s4"
+      ],
+      "qualifiers": {
+        "onset": "adolescence",
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_093",
+      "label_raw": "kyphosis",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p35_s4"
+      ],
+      "qualifiers": {
+        "onset": "adolescence",
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_094",
+      "label_raw": "lordosis",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p35_s4"
+      ],
+      "qualifiers": {
+        "onset": "adolescence",
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_095",
+      "label_raw": "scoliosis",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p35_s5"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_096",
+      "label_raw": "radioulnar synostosis",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p35_s6"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": "10%",
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_097",
+      "label_raw": "ataxia",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p35_s8"
+      ],
+      "qualifiers": {
+        "onset": "adults",
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_098",
+      "label_raw": "dysmetria",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p35_s8"
+      ],
+      "qualifiers": {
+        "onset": "adults",
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_099",
+      "label_raw": "tremor",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p35_s8"
+      ],
+      "qualifiers": {
+        "onset": "adults",
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_100",
+      "label_raw": "Chiari I malformation",
+      "status": "uncertain",
+      "clinical_role": "complication",
+      "evidence_sentence_ids": [
+        "p36_s3"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_101",
+      "label_raw": "hoarse or low-pitched voice",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p9_s1",
+        "p37_s2"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_102",
+      "label_raw": "inguinal/umbilical hernia",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p9_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_103",
+      "label_raw": "bowel/bladder diverticulae",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p9_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_104",
+      "label_raw": "joint limitation or laxity",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p9_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_105",
+      "label_raw": "soft, lax skin",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p9_s1",
+        "p37_s3"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_106",
+      "label_raw": "prematurely gray hair",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p37_s4"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_107",
+      "label_raw": "prenatal growth deficiency",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p10_s1",
+        "p38_s3"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_108",
+      "label_raw": "poor linear growth",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p10_s1",
+        "p38_s3"
+      ],
+      "qualifiers": {
+        "onset": "first four years of life",
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_109",
+      "label_raw": "short stature",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p38_s4",
+        "p38_s5"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_110",
+      "label_raw": "obesity or overweight",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p38_s8"
+      ],
+      "qualifiers": {
+        "onset": "older children and adults",
+        "frequency": "50%",
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_111",
+      "label_raw": "lipedema phenotype",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p38_s9"
+      ],
+      "qualifiers": {
+        "onset": "adults",
+        "frequency": "25%",
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": "lower extremities",
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_112",
+      "label_raw": "central precocious puberty",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p39_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": "18%",
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_113",
+      "label_raw": "subclinical hypothyroidism",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p41_s2"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_114",
+      "label_raw": "diabetes mellitus",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p11_s1",
+        "p41_s3"
+      ],
+      "qualifiers": {
+        "onset": "adolescents and adults",
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_115",
+      "label_raw": "impaired glucose tolerance",
+      "status": "present",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p41_s3"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": "42%",
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_116",
+      "label_raw": "low bone mineral density",
+      "status": "uncertain",
+      "clinical_role": "primary",
+      "evidence_sentence_ids": [
+        "p41_s4"
+      ],
+      "qualifiers": {
+        "onset": "adults",
+        "frequency": "50%",
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_117",
+      "label_raw": "broad forehead",
+      "status": "present",
+      "clinical_role": "descriptor",
+      "evidence_sentence_ids": [
+        "p8_s2",
+        "p42_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_118",
+      "label_raw": "bitemporal narrowing",
+      "status": "present",
+      "clinical_role": "descriptor",
+      "evidence_sentence_ids": [
+        "p8_s2",
+        "p42_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_119",
+      "label_raw": "periorbital fullness",
+      "status": "present",
+      "clinical_role": "descriptor",
+      "evidence_sentence_ids": [
+        "p8_s2",
+        "p42_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_120",
+      "label_raw": "stellate/lacy iris pattern",
+      "status": "present",
+      "clinical_role": "descriptor",
+      "evidence_sentence_ids": [
+        "p8_s2",
+        "p42_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_121",
+      "label_raw": "strabismus",
+      "status": "present",
+      "clinical_role": "descriptor",
+      "evidence_sentence_ids": [
+        "p8_s2",
+        "p42_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_122",
+      "label_raw": "short nose",
+      "status": "present",
+      "clinical_role": "descriptor",
+      "evidence_sentence_ids": [
+        "p8_s2",
+        "p42_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_123",
+      "label_raw": "broad nasal tip",
+      "status": "present",
+      "clinical_role": "descriptor",
+      "evidence_sentence_ids": [
+        "p8_s2",
+        "p42_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_124",
+      "label_raw": "malar flattening",
+      "status": "present",
+      "clinical_role": "descriptor",
+      "evidence_sentence_ids": [
+        "p8_s2",
+        "p42_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_125",
+      "label_raw": "long philtrum",
+      "status": "present",
+      "clinical_role": "descriptor",
+      "evidence_sentence_ids": [
+        "p8_s2",
+        "p42_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_126",
+      "label_raw": "thick vermilion of the upper and lower lips",
+      "status": "present",
+      "clinical_role": "descriptor",
+      "evidence_sentence_ids": [
+        "p8_s2",
+        "p42_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_127",
+      "label_raw": "wide mouth",
+      "status": "present",
+      "clinical_role": "descriptor",
+      "evidence_sentence_ids": [
+        "p8_s2",
+        "p42_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_128",
+      "label_raw": "small jaw",
+      "status": "present",
+      "clinical_role": "descriptor",
+      "evidence_sentence_ids": [
+        "p8_s2",
+        "p42_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_129",
+      "label_raw": "large ear lobes",
+      "status": "present",
+      "clinical_role": "descriptor",
+      "evidence_sentence_ids": [
+        "p8_s2",
+        "p42_s1"
+      ],
+      "qualifiers": {
+        "onset": null,
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_130",
+      "label_raw": "epicanthal folds",
+      "status": "present",
+      "clinical_role": "descriptor",
+      "evidence_sentence_ids": [
+        "p8_s3",
+        "p42_s2"
+      ],
+      "qualifiers": {
+        "onset": "young children",
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_131",
+      "label_raw": "full cheeks",
+      "status": "present",
+      "clinical_role": "descriptor",
+      "evidence_sentence_ids": [
+        "p8_s3",
+        "p42_s2"
+      ],
+      "qualifiers": {
+        "onset": "young children",
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_132",
+      "label_raw": "small, widely spaced teeth",
+      "status": "present",
+      "clinical_role": "descriptor",
+      "evidence_sentence_ids": [
+        "p8_s3",
+        "p42_s2"
+      ],
+      "qualifiers": {
+        "onset": "young children",
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_133",
+      "label_raw": "long face",
+      "status": "present",
+      "clinical_role": "descriptor",
+      "evidence_sentence_ids": [
+        "p8_s3",
+        "p42_s2"
+      ],
+      "qualifiers": {
+        "onset": "adults",
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_134",
+      "label_raw": "long neck",
+      "status": "present",
+      "clinical_role": "descriptor",
+      "evidence_sentence_ids": [
+        "p8_s3",
+        "p42_s2"
+      ],
+      "qualifiers": {
+        "onset": "adults",
+        "frequency": null,
+        "severity": null,
+        "progression": null,
+        "trigger": null,
+        "treatment_response": null,
+        "pathophysiology": null,
+        "laterality": null,
+        "distribution": null,
+        "anatomical_site": null,
+        "morphology": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "assertion_local_id": "ph_135",
+      "label_raw": "sloping shoulders",
+      "status": "present",
+      "clinical_role": "descriptor",
+      "evidence_sentence_ids": [
+        "p8_s3",
+        "p42_s2"
+      ],
+      "qualifiers": {
+        "onset": "adults",
         "frequency": null,
         "severity": null,
         "progression": null,
@@ -1648,15 +4142,13 @@
   "ancillary_assertions": [
     {
       "ancillary_local_id": "anc_001",
-      "domain": "laboratory",
-      "finding_raw": "hypercalcemia",
+      "domain": "clinical_test",
+      "finding_raw": "heterozygous 1.5- to 1.8-Mb deletion of the Williams-Beuren syndrome critical region (WBSCR) on chromosome 7q11.23",
       "status": "present",
       "evidence_sentence_ids": [
-        "p9_s1"
+        "p2_s1"
       ],
-      "related_phenotype_assertion_ids": [
-        "ph_045"
-      ],
+      "related_phenotype_assertion_ids": [],
       "qualifiers": {
         "timing": null,
         "frequency": null,
@@ -1668,14 +4160,180 @@
     },
     {
       "ancillary_local_id": "anc_002",
-      "domain": "laboratory",
-      "finding_raw": "hypercalciuria",
+      "domain": "other",
+      "finding_raw": "abnormal or absent nocturnal melatonin peak",
       "status": "present",
       "evidence_sentence_ids": [
-        "p9_s1"
+        "p18_s2"
+      ],
+      "related_phenotype_assertion_ids": [],
+      "qualifiers": {
+        "timing": null,
+        "frequency": null,
+        "severity": null,
+        "method": null,
+        "specimen": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "ancillary_local_id": "anc_003",
+      "domain": "treatment_response",
+      "finding_raw": "melatonin treatment may be helpful",
+      "status": "uncertain",
+      "evidence_sentence_ids": [
+        "p18_s2"
+      ],
+      "related_phenotype_assertion_ids": [],
+      "qualifiers": {
+        "timing": null,
+        "frequency": null,
+        "severity": null,
+        "method": null,
+        "specimen": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "ancillary_local_id": "anc_004",
+      "domain": "management_context",
+      "finding_raw": "screening for repolarization abnormalities is recommended",
+      "status": "present",
+      "evidence_sentence_ids": [
+        "p24_s1"
+      ],
+      "related_phenotype_assertion_ids": [],
+      "qualifiers": {
+        "timing": null,
+        "frequency": null,
+        "severity": null,
+        "method": null,
+        "specimen": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "ancillary_local_id": "anc_005",
+      "domain": "management_context",
+      "finding_raw": "Approximately one third of children with SVAS will require surgical correction.",
+      "status": "present",
+      "evidence_sentence_ids": [
+        "p19_s8"
+      ],
+      "related_phenotype_assertion_ids": [],
+      "qualifiers": {
+        "timing": null,
+        "frequency": null,
+        "severity": null,
+        "method": null,
+        "specimen": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "ancillary_local_id": "anc_006",
+      "domain": "management_context",
+      "finding_raw": "Anesthesia and sedation are associated with an increased risk for adverse events, including cardiac arrest, in individuals with WS.",
+      "status": "present",
+      "evidence_sentence_ids": [
+        "p25_s1"
+      ],
+      "related_phenotype_assertion_ids": [],
+      "qualifiers": {
+        "timing": null,
+        "frequency": null,
+        "severity": null,
+        "method": null,
+        "specimen": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "ancillary_local_id": "anc_007",
+      "domain": "management_context",
+      "finding_raw": "Sedation and anesthesia risk assessment and management guidelines have been developed with the goal of maintaining intravascular volume and a stable blood pressure to optimize coronary perfusion.",
+      "status": "present",
+      "evidence_sentence_ids": [
+        "p25_s2"
+      ],
+      "related_phenotype_assertion_ids": [],
+      "qualifiers": {
+        "timing": null,
+        "frequency": null,
+        "severity": null,
+        "method": null,
+        "specimen": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "ancillary_local_id": "anc_008",
+      "domain": "management_context",
+      "finding_raw": "In centers using these strategies specifically for individuals with WS, morbidity and mortality is decreased.",
+      "status": "present",
+      "evidence_sentence_ids": [
+        "p25_s3",
+        "p25_s4",
+        "p25_s5"
+      ],
+      "related_phenotype_assertion_ids": [],
+      "qualifiers": {
+        "timing": null,
+        "frequency": null,
+        "severity": null,
+        "method": null,
+        "specimen": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "ancillary_local_id": "anc_009",
+      "domain": "imaging",
+      "finding_raw": "Reduced brain size, reduced gray matter volume (especially in the parietal and occipital regions), and increased gyral complexity",
+      "status": "present",
+      "evidence_sentence_ids": [
+        "p36_s2"
+      ],
+      "related_phenotype_assertion_ids": [],
+      "qualifiers": {
+        "timing": null,
+        "frequency": null,
+        "severity": null,
+        "method": "brain MRI",
+        "specimen": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "ancillary_local_id": "anc_010",
+      "domain": "imaging",
+      "finding_raw": "Reduced posterior fossa size coupled with preserved cerebellar size",
+      "status": "present",
+      "evidence_sentence_ids": [
+        "p36_s3"
       ],
       "related_phenotype_assertion_ids": [
-        "ph_046"
+        "ph_100"
+      ],
+      "qualifiers": {
+        "timing": null,
+        "frequency": null,
+        "severity": null,
+        "method": null,
+        "specimen": null,
+        "subtype_context": null
+      }
+    },
+    {
+      "ancillary_local_id": "anc_011",
+      "domain": "laboratory",
+      "finding_raw": "low serum phosphate",
+      "status": "present",
+      "evidence_sentence_ids": [
+        "p41_s4"
+      ],
+      "related_phenotype_assertion_ids": [
+        "ph_116"
       ],
       "qualifiers": {
         "timing": null,
@@ -1689,43 +4347,35 @@
   ],
   "context_assertions": [
     {
-      "context_local_id": "ctx_003",
-      "field_name": "onset",
-      "value": "prenatal",
+      "context_local_id": "ctx_001",
+      "field_name": "penetrance",
+      "value": "100%",
       "evidence_sentence_ids": [
-        "p8_s1"
+        "p43_s1"
+      ]
+    },
+    {
+      "context_local_id": "ctx_002",
+      "field_name": "prevalence",
+      "value": "1:7,500",
+      "evidence_sentence_ids": [
+        "p44_s1"
+      ]
+    },
+    {
+      "context_local_id": "ctx_003",
+      "field_name": "inheritance",
+      "value": "autosomal dominant",
+      "evidence_sentence_ids": [
+        "p45_s1"
       ]
     },
     {
       "context_local_id": "ctx_004",
-      "field_name": "onset",
-      "value": "infancy",
+      "field_name": "family_risk",
+      "value": "Each child of an individual with WS has a 50% chance of inheriting the 7q11.23 deletion and being affected.",
       "evidence_sentence_ids": [
-        "p5_s3"
-      ]
-    },
-    {
-      "context_local_id": "ctx_005",
-      "field_name": "gene",
-      "value": "7q11.23 recurrent deletions of the Williams-Beuren syndrome critical region (WBSCR)",
-      "evidence_sentence_ids": [
-        "p12_s1"
-      ]
-    },
-    {
-      "context_local_id": "ctx_010",
-      "field_name": "penetrance",
-      "value": "100%",
-      "evidence_sentence_ids": [
-        "p21_s1"
-      ]
-    },
-    {
-      "context_local_id": "ctx_015",
-      "field_name": "prevalence",
-      "value": "1:7,500",
-      "evidence_sentence_ids": [
-        "p25_s1"
+        "p45_s3"
       ]
     }
   ],
@@ -1733,69 +4383,104 @@
     {
       "trajectory_local_id": "traj_001",
       "stage_order": 1,
-      "age_window": "Infancy",
-      "summary": "Peripheral pulmonic stenosis is common in infancy.",
+      "age_window": "young child",
+      "summary": "Hypotonia and lax joints lead to abnormal compensatory postures to achieve stability.",
       "manifestation_labels": [
-        "Peripheral pulmonic stenosis"
+        "hypotonia",
+        "lax joints",
+        "abnormal compensatory postures"
       ],
       "evidence_sentence_ids": [
-        "p5_s3"
+        "p35_s2"
       ]
     },
     {
-      "trajectory_local_id": "traj_003",
-      "stage_order": 1,
-      "age_window": "Prenatal",
-      "summary": "Growth abnormalities include prenatal growth deficiency.",
-      "manifestation_labels": [
-        "prenatal growth deficiency"
-      ],
-      "evidence_sentence_ids": [
-        "p8_s1"
-      ]
-    },
-    {
-      "trajectory_local_id": "traj_003",
+      "trajectory_local_id": "traj_002",
       "stage_order": 2,
-      "age_window": "Postnatal",
-      "summary": "Postnatal growth abnormalities include poor weight gain and decreased linear growth.",
+      "age_window": "older children and adults",
+      "summary": "Hypertonia and hyperactive deep-tendon reflexes predominate in later childhood and adulthood.",
       "manifestation_labels": [
-        "postnatal poor weight gain",
-        "decreased linear growth"
+        "hypertonia",
+        "hyperactive deep-tendon reflexes"
       ],
       "evidence_sentence_ids": [
-        "p8_s1"
+        "p35_s3"
+      ]
+    },
+    {
+      "trajectory_local_id": "traj_003",
+      "stage_order": 3,
+      "age_window": "adolescence",
+      "summary": "Gradual tightening of the heel cords and hamstrings results in a stiff and awkward gait with kyphosis and lordosis by adolescence.",
+      "manifestation_labels": [
+        "tightening of the heel cords and hamstrings",
+        "stiff and awkward gait",
+        "kyphosis",
+        "lordosis"
+      ],
+      "evidence_sentence_ids": [
+        "p35_s4"
       ]
     }
   ],
   "extraction_notes": [
     {
       "note_local_id": "note_001",
-      "decision": "Age-dependent facial findings were kept as phenotype rows with onset qualifiers rather than trajectory assertions.",
-      "rationale": "The source distinguishes findings seen in young children from those seen in adults, but these are age-specific descriptors rather than a staged disease-course sequence.",
+      "decision": "Excluded cognitive profile strengths, academic strengths, and personality-style descriptors",
+      "rationale": "Cognitive strengths and weaknesses (verbal short-term memory, language strengths, visuospatial weakness), academic-reading strengths, and personality-style descriptors such as overfriendliness, empathy, social disinhibition, and excessive empathy were not emitted as phenotype rows; psychiatric diagnoses and clinically framed behavior problems were retained.",
       "evidence_sentence_ids": [
-        "p6_s3"
+        "p5_s1",
+        "p6_s1",
+        "p14_s3",
+        "p15_s1",
+        "p16_s2"
       ]
     },
     {
       "note_local_id": "note_002",
-      "decision": "Subgroup genotype-phenotype correlations were kept in notes rather than expanded into additional context assertions.",
-      "rationale": "The cited sentences describe partial-deletion and gene-content subgroup effects rather than disease-level context facts for Williams syndrome as a whole.",
+      "decision": "Split umbrella findings into specific manifestations and suppressed redundant umbrellas",
+      "rationale": "Umbrella findings such as cardiovascular disease, connective tissue abnormalities, growth abnormalities, endocrine abnormalities, and distinctive facies were decomposed into specific clinically meaningful child manifestations rather than repeated as broad phenotype rows.",
       "evidence_sentence_ids": [
-        "p13_s1",
-        "p15_s1",
-        "p17_s1",
-        "p17_s2",
-        "p18_s1",
-        "p19_s1"
+        "p7_s1",
+        "p8_s1",
+        "p9_s1",
+        "p10_s1",
+        "p11_s1"
       ]
     },
     {
       "note_local_id": "note_003",
-      "decision": "Parent-of-origin correlation was kept as a note only.",
-      "rationale": "The source presents conflicting evidence rather than a stable disease-level conclusion.",
+      "decision": "Did not explode possible-cause lists into present phenotypes without independent support",
+      "rationale": "The chronic abdominal pain sentence lists several possible causes; only manifestations independently supported elsewhere in the source were retained as present rows. Other listed causes such as hiatal hernia, peptic ulcer disease, cholelithiasis, ischemic bowel disease, and somatization of anxiety were omitted to avoid overstatement.",
       "evidence_sentence_ids": [
-        "p20_s2"
+        "p32_s1",
+        "p32_s2"
+      ]
+    },
+    {
+      "note_local_id": "note_004",
+      "decision": "Kept age-specific facial findings as descriptor rows rather than trajectory rows",
+      "rationale": "Facial appearance findings, including age-specific differences between young children and adults, were retained as descriptor rows with age qualifiers instead of being converted into disease-course trajectory assertions.",
+      "evidence_sentence_ids": [
+        "p8_s2",
+        "p8_s3",
+        "p42_s1",
+        "p42_s2"
+      ]
+    },
+    {
+      "note_local_id": "note_005",
+      "decision": "Downgraded reported or hedged manifestations and risks to uncertain",
+      "rationale": "Findings introduced with wording such as reported, may, or may contribute to were retained only as uncertain manifestations or complications, including mitral valve prolapse, aortic insufficiency, prolonged QTc, neurovascular abnormalities, stroke risk, mesenteric artery stenosis, cataracts, Chiari I malformation, and conditional cardiovascular complications.",
+      "evidence_sentence_ids": [
+        "p19_s5",
+        "p20_s2",
+        "p23_s1",
+        "p24_s1",
+        "p26_s2",
+        "p26_s3",
+        "p27_s3",
+        "p36_s3"
       ]
     }
   ]
