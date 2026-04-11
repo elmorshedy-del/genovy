@@ -9741,3 +9741,72 @@ Status:
   - counts unchanged
 - Next move:
   - vEDS is now not just reviewed but lightly residue-polished; future chapter passes can reuse the same HPO-enrichment residue check after the main audit merge
+
+## 2026-04-11 - Zhu-Tokita-Takenouchi-Kim Syndrome manual truncated-source draft
+
+- Scope:
+  - created chapter 15 bundle artifacts for `Zhu-Tokita-Takenouchi-Kim Syndrome` from the preserved `NBK618356` stage1 clinical slice
+- Evidence surface:
+  - `partial clinical slice`
+- Path status:
+  - `producing a usable but partial draft`
+- Files updated:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-zhu-tokita-takenouchi-kim-syndrome/NBK618356_clinical_structure.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-zhu-tokita-takenouchi-kim-syndrome/NBK618356_clinical_text.txt`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-zhu-tokita-takenouchi-kim-syndrome/NBK618356_opus_input.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-zhu-tokita-takenouchi-kim-syndrome/source_surface_audit_20260411.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-zhu-tokita-takenouchi-kim-syndrome/NBK618356_zhu_tokita_takenouchi_kim_syndrome_manual_truncated_source_draft.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-zhu-tokita-takenouchi-kim-syndrome/README.md`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/new-regime-manifest-20260409.json`
+- Draft construction notes:
+  - converted the older complemented manual raw into the current grounded disease-layer schema
+  - kept trajectory support conservative with infancy hypotonia/feeding-difficulty framing and later-course variability/regression uncertainty
+  - routed immunoglobulin deficiencies, thrombocytopenia, MRI findings, and radiographic abnormalities to ancillary evidence
+  - preserved source-limit notes so the chapter is not overstated as full-source complete
+- Draft counts:
+  - `44` phenotype assertions
+  - `14` ancillary assertions
+  - `7` context assertions
+  - `2` trajectory assertions
+  - `0` causal chains
+  - `5` extraction notes
+- Validation:
+  - all phenotype evidence refs resolve against the local sentence index
+  - no phenotype row has multiple evidence refs
+  - ancillary and context evidence refs resolve against the local sentence index
+- Next move:
+  - recover a broader `NBK618356` source surface or externally review this truncated-source draft before any regime-ready promotion
+
+## 2026-04-11 - YIF1B-Related Neurodevelopmental Disorder manual truncated-source draft
+
+- Scope:
+  - created chapter 16 bundle artifacts for `YIF1B-Related Neurodevelopmental Disorder` from the preserved `NBK606999` stage1 clinical slice
+- Evidence surface:
+  - `summary-like partial clinical slice`
+- Path status:
+  - `producing a usable but partial draft`
+- Files updated:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-yif1b-related-neurodevelopmental-disorder/NBK606999_clinical_structure.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-yif1b-related-neurodevelopmental-disorder/NBK606999_clinical_text.txt`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-yif1b-related-neurodevelopmental-disorder/NBK606999_opus_input.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-yif1b-related-neurodevelopmental-disorder/source_surface_audit_20260411.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-yif1b-related-neurodevelopmental-disorder/NBK606999_yif1b_related_neurodevelopmental_disorder_manual_truncated_source_draft.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-yif1b-related-neurodevelopmental-disorder/README.md`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/new-regime-manifest-20260409.json`
+- Draft construction notes:
+  - converted the older complemented manual raw into the current grounded disease-layer schema
+  - kept seizure subtypes and neurobehavioral items conservative because the preserved slice does not independently develop them beyond suggestive-findings lines
+  - routed MRI abnormalities to ancillary imaging and explicitly recorded that no Table 2 frequencies were available in the retained source
+- Draft counts:
+  - `22` phenotype assertions
+  - `5` ancillary assertions
+  - `5` context assertions
+  - `2` trajectory assertions
+  - `0` causal chains
+  - `4` extraction notes
+- Validation:
+  - all phenotype evidence refs resolve against the local sentence index
+  - no phenotype row has multiple evidence refs
+  - ancillary and context evidence refs resolve against the local sentence index
+- Next move:
+  - recover a broader `NBK606999` source surface or externally review this truncated-source draft before any regime-ready promotion
