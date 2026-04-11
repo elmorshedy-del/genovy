@@ -9810,3 +9810,68 @@ Status:
   - ancillary and context evidence refs resolve against the local sentence index
 - Next move:
   - recover a broader `NBK606999` source surface or externally review this truncated-source draft before any regime-ready promotion
+
+## 2026-04-11 - Added a hard full-extract gate before any GPT-5.4 manual chapter
+
+- Scope:
+  - tightened the promotion workflow after the USP7 drift so a chapter cannot jump directly from recovered files to a `gpt-5.4-manual` disease-layer JSON
+- Evidence surface:
+  - `workflow rule, applied to both full chapter-backed and partial surfaces`
+- Path status:
+  - `on the intended path`
+- Files updated:
+  - `/Users/ahmedelmorshedy/.codex/skills/genereviews-grounded-disease-layer/scripts/audit_surface.py`
+  - `/Users/ahmedelmorshedy/.codex/skills/genereviews-grounded-disease-layer/references/cleanup-and-promotion.md`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/README.md`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/scripts/buildFullGeneReviewExtract.js`
+- Hard rule:
+  - every chapter must first produce a single `NBKxxxx_full_chapter_extract.json` artifact that combines the recovered sentence index, headings, tables, fetch metadata, and source-surface audit
+  - a `regime_ready_gpt-5.4-manual` file can only be formed from that full extract when the audit reports `manual_5_4_ready: true` and `surface_label: full chapter-backed`
+- Applied gate checks:
+  - `NBK618356 / Zhu-Tokita-Takenouchi-Kim Syndrome` now explicitly records `manual_5_4_ready: false` with blockers on sentence count, paragraph count, section count, and downstream section breadth
+  - `NBK606999 / YIF1B-Related Neurodevelopmental Disorder` now explicitly records `manual_5_4_ready: false` with the same gate blockers plus `likely_truncated`
+- Next move:
+  - only chapters that clear the full-extract gate move into a GPT-5.4 manual pass
+
+## 2026-04-11 - Y Chromosome Infertility full-extract-backed GPT-5.4 manual chapter
+
+- Scope:
+  - promoted `NBK1339 / Y Chromosome Infertility` using the new full-extract-first workflow
+- Evidence surface:
+  - `full chapter-backed`
+- Path status:
+  - `on the intended path`
+- Files updated:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-y-chromosome-infertility/NBK1339_recovered_clinical_structure.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-y-chromosome-infertility/NBK1339_recovered_clinical_text.txt`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-y-chromosome-infertility/NBK1339_recovered_tables.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-y-chromosome-infertility/NBK1339_recovered_fetch_meta.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-y-chromosome-infertility/NBK1339_recovered_opus_input.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-y-chromosome-infertility/recovered_source_surface_audit_20260411.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-y-chromosome-infertility/NBK1339_full_chapter_extract.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-y-chromosome-infertility/NBK1339_y_chromosome_infertility_regime_ready_gpt-5.4-manual.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-y-chromosome-infertility/README.md`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/new-regime-manifest-20260409.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/regime-ready-chapters-20260409.md`
+- Recovery and gate results:
+  - rebuilt the saved raw HTML with the expanded section profile into a recovered surface with `167` sentences, `101` paragraphs, `18` sections, and `8` tables
+  - the recovered surface passed the hard gate as `manual_5_4_ready: true` and `surface_label: full chapter-backed`
+  - the chapter-local `NBK1339_full_chapter_extract.json` is now the canonical source artifact for downstream manual or reviewer passes
+- Manual chapter contents:
+  - `8` phenotype assertions
+  - `5` ancillary assertions
+  - `8` context assertions
+  - `0` trajectory assertions
+  - `6` causal chains
+  - `12` mechanism sentence ids
+  - `6` extraction notes
+  - `0` episode classes
+  - `1` trigger factor
+- Validation:
+  - JSON parses cleanly
+  - no unresolved evidence ids
+  - no duplicate local ids
+  - no dangling ancillary `related_phenotype_assertion_ids`
+  - no multi-ref phenotype rows
+- Next move:
+  - the next chapters should follow the same order: recover full surface, audit gate, build full extract artifact, then form the GPT-5.4 manual JSON

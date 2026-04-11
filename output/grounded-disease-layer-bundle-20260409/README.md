@@ -68,3 +68,20 @@ Prepared folders:
 8. Use a chapter-local `NBKxxxx_opus_input.json` from one of the `next-chapter-*` folders when preparing the next extraction run.
 9. Use `regime-ready-chapters-20260409.md` to find the official repo-side cleaned outputs for chapters 1 through 5.
 10. The current sequence is now stable through chapter 5, with chapter 4 and chapter 5 both promoted.
+
+## Hard promotion gate
+
+Before forming any `regime_ready_gpt-5.4-manual` chapter, the source surface must pass the repo completeness gate:
+
+- a chapter-local `NBKxxxx_full_chapter_extract.json` must exist as the main source artifact
+- the manual disease-layer JSON must be derived from that full extract, not directly from scattered recovered files
+
+- `manual_5_4_ready: true`
+- `surface_label: "full chapter-backed"`
+- `sentence_count >= 120`
+- `paragraph_count >= 60`
+- `section_count >= 8`
+- `prose_chars >= 20000` when fetch metadata exists
+- at least `3` downstream breadth headings such as diagnosis, surveillance, genetic counseling, molecular genetics, molecular pathogenesis, pregnancy management, or genotype-phenotype correlations
+
+If the gate fails, the chapter stays a truncated-source draft even if the current slice is extractable.
