@@ -600,7 +600,10 @@ function extractSectionBlocksBySuffixes(html, suffixes) {
     if (!rawId || seenIds.has(rawId)) continue;
     const suffix = rawId.split('.').pop() || '';
     if (!allowedSuffixes.has(suffix)) continue;
-    const block = extractSectionBlockWithIndex(html, new RegExp(`<div id="${escapeRegex(rawId)}">`, 'i'));
+    const block = extractSectionBlockWithIndex(
+      html,
+      new RegExp(`<div\\b[^>]*id="${escapeRegex(rawId)}"[^>]*>`, 'i')
+    );
     if (!block) continue;
     seenIds.add(rawId);
     blockSources.push(block);

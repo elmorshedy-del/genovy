@@ -419,13 +419,13 @@
     {
       "sequence_number": 17,
       "chapter_title": "Y Chromosome Infertility",
-      "status": "regime_ready_gpt-5.4-manual",
+      "status": "regime_ready_gpt-5.4-manual-opus4.6-reviewed",
       "notes": [
         "Y Chromosome Infertility is chapter 17 of the new regime.",
-        "The preserved NBK1339 stage1 slice failed the manual gate, so the saved raw HTML was rebuilt with the expanded GeneReviews section profile into a recovered full chapter-backed surface with 167 sentences, 101 paragraphs, 18 sections, eight tables, and manual_5_4_ready true.",
-        "NBK1339_full_chapter_extract.json is the main chapter artifact and combines the recovered sentence index, tables, fetch metadata, and source-surface audit; the GPT-5.4 manual disease-layer file was built from that full extract rather than from scattered recovered files.",
-        "The manual artifact has 8 phenotype assertions, 5 ancillary assertions, 8 context assertions, 0 trajectory assertions, 6 causal chains, 12 mechanism sentence ids, 6 extraction notes, 0 episode classes, and 1 trigger factor.",
-        "The official local artifact is the full-extract-backed GPT-5.4 manual file."
+        "The preserved NBK1339 stage1 slice failed the manual gate, and the first recovered rebuild also under-counted the chapter because Summary blocks were being dropped by a section-div parser bug. After fixing src/lib/genereviewsPipeline.js to retain Summary sections with extra attributes, the saved raw HTML rebuilt into a corrected full chapter-backed surface with 180 sentences, 106 paragraphs, 22 sections, eight tables, and manual_5_4_ready true.",
+        "NBK1339_full_chapter_extract.json is the canonical main chapter artifact and combines the corrected recovered sentence index, tables, fetch metadata, and source-surface audit; both the GPT-5.4 manual disease-layer file and the Opus-reviewed successor were built from that full extract rather than from scattered recovered files.",
+        "The reviewed artifact has 11 phenotype assertions, 7 ancillary assertions, 9 context assertions, 0 trajectory assertions, 7 causal chains, 11 mechanism sentence ids, 11 extraction notes, 4 episode classes, and 1 trigger factor.",
+        "The official local artifact is the full-extract-backed GPT-5.4 manual + Opus 4.6 reviewed file."
       ],
       "paths": {
         "bundled_folder": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-y-chromosome-infertility",
@@ -437,7 +437,8 @@
         "source_surface_audit": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-y-chromosome-infertility/recovered_source_surface_audit_20260411.json",
         "opus_input": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-y-chromosome-infertility/NBK1339_recovered_opus_input.json",
         "full_chapter_extract": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-y-chromosome-infertility/NBK1339_full_chapter_extract.json",
-        "manual_regime_ready_json": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-y-chromosome-infertility/NBK1339_y_chromosome_infertility_regime_ready_gpt-5.4-manual.json"
+        "manual_regime_ready_json": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-y-chromosome-infertility/NBK1339_y_chromosome_infertility_regime_ready_gpt-5.4-manual.json",
+        "regime_ready_json": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-y-chromosome-infertility/NBK1339_y_chromosome_infertility_regime_ready_gpt-5.4-manual-opus4.6-reviewed.json"
       }
     }
   ]

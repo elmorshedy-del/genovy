@@ -9875,3 +9875,41 @@ Status:
   - no multi-ref phenotype rows
 - Next move:
   - the next chapters should follow the same order: recover full surface, audit gate, build full extract artifact, then form the GPT-5.4 manual JSON
+
+## 2026-04-11 - Y Chromosome Infertility parser correction and Opus-reviewed promotion
+
+- Scope:
+  - corrected the `NBK1339 / Y Chromosome Infertility` recovery pipeline after an audit surfaced summary-backed misses, then rebuilt and promoted the reviewed chapter
+- Evidence surface:
+  - `full chapter-backed`
+- Path status:
+  - `on the intended path`
+- Files updated:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/src/lib/genereviewsPipeline.js`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-y-chromosome-infertility/NBK1339_recovered_clinical_structure.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-y-chromosome-infertility/NBK1339_recovered_clinical_text.txt`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-y-chromosome-infertility/NBK1339_recovered_tables.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-y-chromosome-infertility/NBK1339_recovered_fetch_meta.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-y-chromosome-infertility/NBK1339_recovered_opus_input.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-y-chromosome-infertility/recovered_source_surface_audit_20260411.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-y-chromosome-infertility/NBK1339_full_chapter_extract.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-y-chromosome-infertility/NBK1339_y_chromosome_infertility_regime_ready_gpt-5.4-manual.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-y-chromosome-infertility/NBK1339_y_chromosome_infertility_regime_ready_gpt-5.4-manual-opus4.6-reviewed.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/new-regime-manifest-20260409.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/regime-ready-chapters-20260409.md`
+- What changed:
+  - fixed a real parser bug in `src/lib/genereviewsPipeline.js`: section-block extraction only matched `<div id=\"...\">`, which dropped Summary sections when the same div also carried extra attributes like `itemprop=\"description\"`
+  - rebuilt the saved raw HTML after that fix, which expanded the recovered source surface from the earlier under-counted rebuild to `180` sentences, `106` paragraphs, `22` sections, and `8` tables
+  - kept `NBK1339_full_chapter_extract.json` as the canonical chapter artifact and rebuilt the GPT-5.4 manual file from that corrected full extract
+  - merged the external review surface from `/Users/ahmedelmorshedy/Downloads/NBK1339_YChrom_audit_and_complement.json` into an Opus-reviewed successor on the corrected evidence surface
+  - promoted formal AZF episode classes, restored summary-backed findings like the normal physical-exam descriptor and ART counseling rows, and kept the reviewed chapter aligned to the corrected full extract instead of the earlier underbuilt surface
+- Validation:
+  - corrected recovered surface audited as `full chapter-backed` and `manual_5_4_ready: true`
+  - reviewed artifact counts are `11` phenotype assertions, `7` ancillary assertions, `9` context assertions, `0` trajectory assertions, `7` causal chains, `11` mechanism sentence ids, `11` extraction notes, `4` episode classes, and `1` trigger factor
+  - JSON parses cleanly
+  - no unresolved evidence ids
+  - no duplicate local ids
+  - no dangling ancillary `related_phenotype_assertion_ids`
+  - no multi-ref phenotype rows
+- Next move:
+  - keep the same hard rule for future chapters: first build the corrected full chapter extract, then form the GPT-5.4 manual file, then merge the external audit
