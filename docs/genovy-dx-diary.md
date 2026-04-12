@@ -9913,3 +9913,40 @@ Status:
   - no multi-ref phenotype rows
 - Next move:
   - keep the same hard rule for future chapters: first build the corrected full chapter extract, then form the GPT-5.4 manual file, then merge the external audit
+
+## 2026-04-11 - ZTTK full-extract-backed GPT-5.4 manual chapter
+
+- Scope:
+  - replaced the chapter 15 truncated draft path for `NBK618356 / Zhu-Tokita-Takenouchi-Kim Syndrome` with a full-extract-backed GPT-5.4 manual chapter
+- Evidence surface:
+  - `full chapter-backed`
+- Path status:
+  - `on the intended path`
+- Files updated:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-zhu-tokita-takenouchi-kim-syndrome/NBK618356_raw.html`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-zhu-tokita-takenouchi-kim-syndrome/NBK618356_recovered_clinical_structure.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-zhu-tokita-takenouchi-kim-syndrome/NBK618356_recovered_clinical_text.txt`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-zhu-tokita-takenouchi-kim-syndrome/NBK618356_recovered_tables.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-zhu-tokita-takenouchi-kim-syndrome/NBK618356_recovered_fetch_meta.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-zhu-tokita-takenouchi-kim-syndrome/NBK618356_recovered_opus_input.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-zhu-tokita-takenouchi-kim-syndrome/recovered_source_surface_audit_20260411.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-zhu-tokita-takenouchi-kim-syndrome/NBK618356_full_chapter_extract.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-zhu-tokita-takenouchi-kim-syndrome/NBK618356_zhu_tokita_takenouchi_kim_syndrome_regime_ready_gpt-5.4-manual.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-zhu-tokita-takenouchi-kim-syndrome/README.md`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/new-regime-manifest-20260409.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/regime-ready-chapters-20260409.md`
+- What changed:
+  - fetched the live printable GeneReviews HTML for `NBK618356` because the older preserved stage1 source was only a summary-like clinical slice
+  - rebuilt the chapter surface with the expanded parser profile and verified the boundary check explicitly: the recovered extract begins at `Summary` and ends in `Molecular Pathogenesis`
+  - audited the recovered surface directly against the recovered structure and fetch metadata so the chapter-local full extract records the real completeness verdict rather than the older truncated slice
+  - built `NBK618356_full_chapter_extract.json` as the canonical source artifact, then remapped the richer older draft onto the new full sentence index and added full-surface context and molecular-pathogenesis chains
+  - left `episode_classes` empty on purpose because the chapter explicitly states that no clinically relevant genotype-phenotype correlations have been identified
+- Validation:
+  - recovered surface metrics are `189` sentences, `95` paragraphs, `20` sections, `9` tables, `surface_label: full chapter-backed`, and `manual_5_4_ready: true`
+  - manual artifact counts are `44` phenotype assertions, `14` ancillary assertions, `10` context assertions, `2` trajectory assertions, `4` causal chains, `7` mechanism sentence ids, `7` extraction notes, `0` episode classes, and `0` trigger factors
+  - JSON parses cleanly
+  - no unresolved evidence ids
+  - no duplicate local ids
+  - no multi-ref phenotype rows
+- Next move:
+  - if we want to promote chapter 15 beyond the manual stage, the next step is an external audit of the full-extract-backed manual file rather than more work on the old truncated draft

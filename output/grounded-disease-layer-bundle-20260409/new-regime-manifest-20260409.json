@@ -379,20 +379,26 @@
     {
       "sequence_number": 15,
       "chapter_title": "Zhu-Tokita-Takenouchi-Kim Syndrome",
-      "status": "cleaned_truncated_input_draft",
+      "status": "regime_ready_gpt-5.4-manual",
       "notes": [
         "Zhu-Tokita-Takenouchi-Kim Syndrome is chapter 15 of the new regime.",
-        "The current local source is a preserved stage1 clinical slice with 96 sentences, 44 paragraphs, 3 sections, and likely_truncated true.",
-        "NBK618356_opus_input.json was used as the canonical manual-cleanup input for this partial slice.",
-        "The manual truncated-source draft has 44 phenotype assertions, 14 ancillary assertions, 7 context assertions, 2 trajectory assertions, 0 causal chains, 0 mechanism sentence ids, and 5 extraction notes.",
-        "The official local artifact is a manual truncated-source draft and should not be treated as regime-ready until a broader source surface is recovered."
+        "The older preserved stage1 slice was only a summary-like partial clinical surface with 96 sentences, 44 paragraphs, and 3 sections, so it was not promotable. The chapter was rebuilt from the live printable GeneReviews HTML into a recovered full chapter-backed surface with 189 sentences, 95 paragraphs, 20 sections, 9 tables, and manual_5_4_ready true.",
+        "NBK618356_full_chapter_extract.json is the canonical main chapter artifact and combines the recovered sentence index, tables, fetch metadata, and source-surface audit. The official GPT-5.4 manual disease-layer file was built from that full extract rather than from the earlier truncated slice.",
+        "Boundary checks were explicit: the recovered extract begins with Summary and ends with Molecular Pathogenesis, preventing the earlier USP7-style mistake of treating a middle slice as the full chapter.",
+        "The manual artifact has 44 phenotype assertions, 14 ancillary assertions, 10 context assertions, 2 trajectory assertions, 4 causal chains, 7 mechanism sentence ids, 7 extraction notes, 0 episode classes, and 0 trigger factors.",
+        "Episode classes were intentionally left empty because the chapter explicitly states that no clinically relevant genotype-phenotype correlations have been identified."
       ],
       "paths": {
         "bundled_folder": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-zhu-tokita-takenouchi-kim-syndrome",
-        "clinical_structure": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-zhu-tokita-takenouchi-kim-syndrome/NBK618356_clinical_structure.json",
-        "clinical_text": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-zhu-tokita-takenouchi-kim-syndrome/NBK618356_clinical_text.txt",
-        "source_surface_audit": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-zhu-tokita-takenouchi-kim-syndrome/source_surface_audit_20260411.json",
-        "opus_input": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-zhu-tokita-takenouchi-kim-syndrome/NBK618356_opus_input.json",
+        "clinical_structure": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-zhu-tokita-takenouchi-kim-syndrome/NBK618356_recovered_clinical_structure.json",
+        "clinical_text": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-zhu-tokita-takenouchi-kim-syndrome/NBK618356_recovered_clinical_text.txt",
+        "raw_html": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-zhu-tokita-takenouchi-kim-syndrome/NBK618356_raw.html",
+        "tables": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-zhu-tokita-takenouchi-kim-syndrome/NBK618356_recovered_tables.json",
+        "fetch_meta": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-zhu-tokita-takenouchi-kim-syndrome/NBK618356_recovered_fetch_meta.json",
+        "source_surface_audit": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-zhu-tokita-takenouchi-kim-syndrome/recovered_source_surface_audit_20260411.json",
+        "opus_input": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-zhu-tokita-takenouchi-kim-syndrome/NBK618356_recovered_opus_input.json",
+        "full_chapter_extract": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-zhu-tokita-takenouchi-kim-syndrome/NBK618356_full_chapter_extract.json",
+        "manual_regime_ready_json": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-zhu-tokita-takenouchi-kim-syndrome/NBK618356_zhu_tokita_takenouchi_kim_syndrome_regime_ready_gpt-5.4-manual.json",
         "manual_truncated_source_draft_json": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-zhu-tokita-takenouchi-kim-syndrome/NBK618356_zhu_tokita_takenouchi_kim_syndrome_manual_truncated_source_draft.json"
       }
     },

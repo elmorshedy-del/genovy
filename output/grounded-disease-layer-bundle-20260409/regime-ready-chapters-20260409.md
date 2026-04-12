@@ -160,6 +160,19 @@ These are the official repo-side grounded disease layer outputs currently consid
 - review status:
   - `GPT-5.4 manual + Opus 4.6 reviewed`
 
+## Chapter 15
+
+- `Zhu-Tokita-Takenouchi-Kim Syndrome`
+- official file:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-zhu-tokita-takenouchi-kim-syndrome/NBK618356_zhu_tokita_takenouchi_kim_syndrome_regime_ready_gpt-5.4-manual.json`
+- source working surfaces used for cleanup:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-zhu-tokita-takenouchi-kim-syndrome/NBK618356_recovered_clinical_structure.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-zhu-tokita-takenouchi-kim-syndrome/NBK618356_raw.html`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-zhu-tokita-takenouchi-kim-syndrome/NBK618356_recovered_opus_input.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-zhu-tokita-takenouchi-kim-syndrome/NBK618356_full_chapter_extract.json`
+- review status:
+  - `GPT-5.4 manual`
+
 ## Chapter 17
 
 - `Y Chromosome Infertility`
