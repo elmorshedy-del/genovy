@@ -405,14 +405,14 @@
     {
       "sequence_number": 16,
       "chapter_title": "YIF1B-Related Neurodevelopmental Disorder",
-      "status": "regime_ready_gpt-5.4-manual",
+      "status": "regime_ready_gpt-5.4-manual-opus4.6-reviewed",
       "notes": [
         "YIF1B-Related Neurodevelopmental Disorder is chapter 16 of the new regime.",
         "The older preserved stage1 slice was only a summary-like partial clinical surface with 23 sentences, 18 paragraphs, and 3 sections, so it was not promotable. The chapter was rebuilt from the live printable GeneReviews HTML into a recovered full chapter-backed surface with 148 sentences, 82 paragraphs, 21 sections, 9 tables, and manual_5_4_ready true.",
-        "NBK606999_full_chapter_extract.json is the canonical main chapter artifact and combines the recovered sentence index, tables, fetch metadata, and source-surface audit. The official GPT-5.4 manual disease-layer file was built from that full extract rather than from the earlier truncated slice.",
+        "NBK606999_full_chapter_extract.json is the canonical main chapter artifact and combines the recovered sentence index, tables, fetch metadata, and source-surface audit. Both the GPT-5.4 manual disease-layer file and the Opus-reviewed successor were built from that full extract rather than from the earlier truncated slice.",
         "Boundary checks were explicit: the full extract heading inventory begins with Summary and ends with Molecular Pathogenesis, preventing the earlier USP7-style mistake of treating a middle slice as the full chapter.",
-        "The manual artifact has 22 phenotype assertions, 7 ancillary assertions, 11 context assertions, 2 trajectory assertions, 5 causal chains, 7 mechanism sentence ids, 7 extraction notes, 2 episode classes, and 0 trigger factors.",
-        "Episode classes were intentionally populated because the chapter explicitly supports a genotype-defined severity split between biallelic protein-truncating and biallelic missense YIF1B variants."
+        "The reviewed artifact has 26 phenotype assertions, 9 ancillary assertions, 12 context assertions, 2 trajectory assertions, 7 causal chains, 8 mechanism sentence ids, 13 extraction notes, 2 episode classes, and 0 trigger factors.",
+        "Episode classes were intentionally populated because the chapter explicitly supports a genotype-defined severity split between biallelic protein-truncating and biallelic missense YIF1B variants. The audit merge added quantitative cohort frequencies, excluded ophthalmologic findings, richer mechanism chains, and founder-variant context while keeping all grounding clean."
       ],
       "paths": {
         "bundled_folder": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-yif1b-related-neurodevelopmental-disorder",
@@ -425,6 +425,7 @@
         "opus_input": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-yif1b-related-neurodevelopmental-disorder/NBK606999_recovered_opus_input.json",
         "full_chapter_extract": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-yif1b-related-neurodevelopmental-disorder/NBK606999_full_chapter_extract.json",
         "manual_regime_ready_json": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-yif1b-related-neurodevelopmental-disorder/NBK606999_yif1b_related_neurodevelopmental_disorder_regime_ready_gpt-5.4-manual.json",
+        "regime_ready_json": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-yif1b-related-neurodevelopmental-disorder/NBK606999_yif1b_related_neurodevelopmental_disorder_regime_ready_gpt-5.4-manual-opus4.6-reviewed.json",
         "manual_truncated_source_draft_json": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-yif1b-related-neurodevelopmental-disorder/NBK606999_yif1b_related_neurodevelopmental_disorder_manual_truncated_source_draft.json"
       }
     },

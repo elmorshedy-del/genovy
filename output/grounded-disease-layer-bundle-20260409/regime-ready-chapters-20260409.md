@@ -177,14 +177,14 @@ These are the official repo-side grounded disease layer outputs currently consid
 
 - `YIF1B-Related Neurodevelopmental Disorder`
 - official file:
-  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-yif1b-related-neurodevelopmental-disorder/NBK606999_yif1b_related_neurodevelopmental_disorder_regime_ready_gpt-5.4-manual.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-yif1b-related-neurodevelopmental-disorder/NBK606999_yif1b_related_neurodevelopmental_disorder_regime_ready_gpt-5.4-manual-opus4.6-reviewed.json`
 - source working surfaces used for cleanup:
   - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-yif1b-related-neurodevelopmental-disorder/NBK606999_recovered_clinical_structure.json`
   - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-yif1b-related-neurodevelopmental-disorder/NBK606999_raw.html`
   - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-yif1b-related-neurodevelopmental-disorder/NBK606999_recovered_opus_input.json`
   - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-yif1b-related-neurodevelopmental-disorder/NBK606999_full_chapter_extract.json`
 - review status:
-  - `GPT-5.4 manual`
+  - `GPT-5.4 manual + Opus 4.6 reviewed`
 
 ## Chapter 17
 

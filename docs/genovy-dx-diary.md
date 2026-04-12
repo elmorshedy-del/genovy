@@ -9987,3 +9987,33 @@ Status:
   - no multi-ref phenotype rows
 - Next move:
   - if we want to promote chapter 16 beyond the manual stage, the next step is an external audit of the full-extract-backed manual file rather than more work on the old truncated draft
+
+## 2026-04-11 - YIF1B Opus-reviewed promotion
+
+- Scope:
+  - merged the external audit surface for `NBK606999 / YIF1B-Related Neurodevelopmental Disorder` into an Opus-reviewed successor built on the same full chapter-backed extract
+- Evidence surface:
+  - `full chapter-backed`
+- Path status:
+  - `on the intended path`
+- Files updated:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-yif1b-related-neurodevelopmental-disorder/NBK606999_yif1b_related_neurodevelopmental_disorder_regime_ready_gpt-5.4-manual-opus4.6-reviewed.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-yif1b-related-neurodevelopmental-disorder/README.md`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/new-regime-manifest-20260409.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/regime-ready-chapters-20260409.md`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/docs/genovy-dx-diary.md`
+- What changed:
+  - merged the clean audit surface from `/Users/ahmedelmorshedy/Downloads/NBK606999_YIF1B_audit_and_complement.json` into a reviewed successor while preserving the full-extract source contract
+  - added quantitative cohort frequencies for feeding difficulties, seizures, postnatal microcephaly, hypoventilation, and autism spectrum disorder
+  - demoted the ophthalmologic findings to `descriptor`, added the missing peripheral hyperreflexia/spasticity and poor-weight-gain rows, and added excluded cataract and retinal-involvement rows
+  - split the seizure treatment-response modeling into responsive and refractory ancillary rows, added an EEG biomarker ancillary, added founder-variant context, and expanded the mechanism layer with the ER-to-Golgi-to-cilium cascade
+  - added the richer extraction-note layer on milestone stratification, explicit negative facial gestalt, hypoventilation correlation, movement-disorder timing, consanguinity prominence, and HTR1A-related therapeutic interest
+  - corrected one audit wording drift before merge: the founder-variant context was grounded to the recovered chapter sentence as `Arabic descent`, not `Turkish descent`
+- Validation:
+  - reviewed artifact counts are `26` phenotype assertions, `9` ancillary assertions, `12` context assertions, `2` trajectory assertions, `7` causal chains, `8` mechanism sentence ids, `13` extraction notes, `2` episode classes, and `0` trigger factors
+  - JSON parses cleanly
+  - no unresolved evidence ids
+  - no duplicate local ids
+  - no multi-ref phenotype rows
+- Next move:
+  - chapter 16 is complete on the current path; move straight to the next full-extract-backed chapter rather than reopening YIF1B again unless a materially stronger external audit appears
