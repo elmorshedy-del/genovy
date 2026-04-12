@@ -9950,3 +9950,40 @@ Status:
   - no multi-ref phenotype rows
 - Next move:
   - if we want to promote chapter 15 beyond the manual stage, the next step is an external audit of the full-extract-backed manual file rather than more work on the old truncated draft
+
+## 2026-04-11 - YIF1B full-extract-backed GPT-5.4 manual chapter
+
+- Scope:
+  - replaced the chapter 16 truncated draft path for `NBK606999 / YIF1B-Related Neurodevelopmental Disorder` with a full-extract-backed GPT-5.4 manual chapter
+- Evidence surface:
+  - `full chapter-backed`
+- Path status:
+  - `on the intended path`
+- Files updated:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-yif1b-related-neurodevelopmental-disorder/NBK606999_raw.html`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-yif1b-related-neurodevelopmental-disorder/NBK606999_recovered_clinical_structure.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-yif1b-related-neurodevelopmental-disorder/NBK606999_recovered_clinical_text.txt`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-yif1b-related-neurodevelopmental-disorder/NBK606999_recovered_tables.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-yif1b-related-neurodevelopmental-disorder/NBK606999_recovered_fetch_meta.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-yif1b-related-neurodevelopmental-disorder/NBK606999_recovered_opus_input.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-yif1b-related-neurodevelopmental-disorder/recovered_source_surface_audit_20260411.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-yif1b-related-neurodevelopmental-disorder/NBK606999_full_chapter_extract.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-yif1b-related-neurodevelopmental-disorder/NBK606999_yif1b_related_neurodevelopmental_disorder_regime_ready_gpt-5.4-manual.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-yif1b-related-neurodevelopmental-disorder/README.md`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/new-regime-manifest-20260409.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/regime-ready-chapters-20260409.md`
+- What changed:
+  - fetched the live printable GeneReviews HTML for `NBK606999` because the older preserved stage1 source was only a summary-like partial clinical slice
+  - rebuilt the chapter surface with the current expanded parser profile and verified the boundary check explicitly from the full extract heading inventory: it begins with `Summary` and ends with `Molecular Pathogenesis`
+  - audited the recovered surface directly against the recovered structure and fetch metadata so the chapter-local full extract records the real completeness verdict rather than the older truncated slice
+  - built `NBK606999_full_chapter_extract.json` as the canonical source artifact, then remapped the older draft onto the recovered full sentence index and added the missing full-surface context, treatment-response rows, causal chains, and molecular-pathogenesis grounding
+  - promoted two genotype-defined `episode_classes` because the chapter explicitly supports a severity split between biallelic protein-truncating and biallelic missense YIF1B variants
+- Validation:
+  - recovered surface metrics are `148` sentences, `82` paragraphs, `21` sections, `9` tables, `surface_label: full chapter-backed`, and `manual_5_4_ready: true`
+  - manual artifact counts are `22` phenotype assertions, `7` ancillary assertions, `11` context assertions, `2` trajectory assertions, `5` causal chains, `7` mechanism sentence ids, `7` extraction notes, `2` episode classes, and `0` trigger factors
+  - JSON parses cleanly
+  - no unresolved evidence ids
+  - no duplicate local ids
+  - no multi-ref phenotype rows
+- Next move:
+  - if we want to promote chapter 16 beyond the manual stage, the next step is an external audit of the full-extract-backed manual file rather than more work on the old truncated draft

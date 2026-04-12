@@ -405,20 +405,26 @@
     {
       "sequence_number": 16,
       "chapter_title": "YIF1B-Related Neurodevelopmental Disorder",
-      "status": "cleaned_truncated_input_draft",
+      "status": "regime_ready_gpt-5.4-manual",
       "notes": [
         "YIF1B-Related Neurodevelopmental Disorder is chapter 16 of the new regime.",
-        "The current local source is a summary-like preserved stage1 slice with 23 sentences, 18 paragraphs, 3 sections, and likely_truncated true.",
-        "NBK606999_opus_input.json was used as the canonical manual-cleanup input for this thin slice.",
-        "The manual truncated-source draft has 22 phenotype assertions, 5 ancillary assertions, 5 context assertions, 2 trajectory assertions, 0 causal chains, 0 mechanism sentence ids, and 4 extraction notes.",
-        "The official local artifact is a manual truncated-source draft and should not be treated as regime-ready until a broader source surface is recovered."
+        "The older preserved stage1 slice was only a summary-like partial clinical surface with 23 sentences, 18 paragraphs, and 3 sections, so it was not promotable. The chapter was rebuilt from the live printable GeneReviews HTML into a recovered full chapter-backed surface with 148 sentences, 82 paragraphs, 21 sections, 9 tables, and manual_5_4_ready true.",
+        "NBK606999_full_chapter_extract.json is the canonical main chapter artifact and combines the recovered sentence index, tables, fetch metadata, and source-surface audit. The official GPT-5.4 manual disease-layer file was built from that full extract rather than from the earlier truncated slice.",
+        "Boundary checks were explicit: the full extract heading inventory begins with Summary and ends with Molecular Pathogenesis, preventing the earlier USP7-style mistake of treating a middle slice as the full chapter.",
+        "The manual artifact has 22 phenotype assertions, 7 ancillary assertions, 11 context assertions, 2 trajectory assertions, 5 causal chains, 7 mechanism sentence ids, 7 extraction notes, 2 episode classes, and 0 trigger factors.",
+        "Episode classes were intentionally populated because the chapter explicitly supports a genotype-defined severity split between biallelic protein-truncating and biallelic missense YIF1B variants."
       ],
       "paths": {
         "bundled_folder": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-yif1b-related-neurodevelopmental-disorder",
-        "clinical_structure": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-yif1b-related-neurodevelopmental-disorder/NBK606999_clinical_structure.json",
-        "clinical_text": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-yif1b-related-neurodevelopmental-disorder/NBK606999_clinical_text.txt",
-        "source_surface_audit": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-yif1b-related-neurodevelopmental-disorder/source_surface_audit_20260411.json",
-        "opus_input": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-yif1b-related-neurodevelopmental-disorder/NBK606999_opus_input.json",
+        "clinical_structure": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-yif1b-related-neurodevelopmental-disorder/NBK606999_recovered_clinical_structure.json",
+        "clinical_text": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-yif1b-related-neurodevelopmental-disorder/NBK606999_recovered_clinical_text.txt",
+        "raw_html": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-yif1b-related-neurodevelopmental-disorder/NBK606999_raw.html",
+        "tables": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-yif1b-related-neurodevelopmental-disorder/NBK606999_recovered_tables.json",
+        "fetch_meta": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-yif1b-related-neurodevelopmental-disorder/NBK606999_recovered_fetch_meta.json",
+        "source_surface_audit": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-yif1b-related-neurodevelopmental-disorder/recovered_source_surface_audit_20260411.json",
+        "opus_input": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-yif1b-related-neurodevelopmental-disorder/NBK606999_recovered_opus_input.json",
+        "full_chapter_extract": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-yif1b-related-neurodevelopmental-disorder/NBK606999_full_chapter_extract.json",
+        "manual_regime_ready_json": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-yif1b-related-neurodevelopmental-disorder/NBK606999_yif1b_related_neurodevelopmental_disorder_regime_ready_gpt-5.4-manual.json",
         "manual_truncated_source_draft_json": "/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-yif1b-related-neurodevelopmental-disorder/NBK606999_yif1b_related_neurodevelopmental_disorder_manual_truncated_source_draft.json"
       }
     },
