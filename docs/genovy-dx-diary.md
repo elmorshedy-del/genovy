@@ -10017,3 +10017,30 @@ Status:
   - no multi-ref phenotype rows
 - Next move:
   - chapter 16 is complete on the current path; move straight to the next full-extract-backed chapter rather than reopening YIF1B again unless a materially stronger external audit appears
+
+## 2026-04-11 - YIF1B Life Science plugin enrichment experiment
+
+- Scope:
+  - ran a lightweight external enrichment experiment on `NBK606999 / YIF1B-Related Neurodevelopmental Disorder` using the Life Science plugin skill scripts
+- Evidence surface:
+  - `full chapter-backed` for the disease layer itself
+  - external plugin lookups for target normalization, protein function, network context, and trial/disease-surface checks
+- Path status:
+  - `on the intended path`
+- Files updated:
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-yif1b-related-neurodevelopmental-disorder/NBK606999_yif1b_life_science_experiment_20260411.md`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-yif1b-related-neurodevelopmental-disorder/NBK606999_yif1b_opentargets_search_20260411.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-yif1b-related-neurodevelopmental-disorder/NBK606999_yif1b_disease_search_20260411.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-yif1b-related-neurodevelopmental-disorder/NBK606999_yif1b_uniprot_20260411.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-yif1b-related-neurodevelopmental-disorder/NBK606999_yif1b_clinicaltrials_20260411.json`
+  - `/Users/ahmedelmorshedy/Genovy-phenotype-enrichment-20260316-0914/output/grounded-disease-layer-bundle-20260409/next-chapter-yif1b-related-neurodevelopmental-disorder/NBK606999_yif1b_string_20260411.json`
+- What changed:
+  - `Open Targets` cleanly normalized `YIF1B` to `ENSG00000167645`, but did not recognize the exact disease label and did not provide a disease heatmap row for `yif1b`
+  - `ClinicalTrials.gov` returned zero disease-specific studies, which is useful as a live translational-surface check
+  - `UniProt` added real value with a compact reviewed summary of ER-to-Golgi transport, dendritic receptor targeting including `HTR1A`, and cilium / flagellum assembly context
+  - `STRING` added a trafficking-heavy neighborhood around `YIPF5`, `YIPF7`, `RABAC1`, `RAB1A`, and `RAB1B`, which fits the chapter’s membrane-trafficking biology
+- Validation:
+  - the experiment showed that the plugin is useful here for target normalization and mechanism/network enrichment
+  - it is not currently useful here for disease-level trial landscape or packaged target-disease evidence breadth
+- Next move:
+  - reserve this plugin for translationally richer chapters by default, and use it on rare chapters mainly for identifier/function/network checks rather than for expecting a deep disease ecosystem
