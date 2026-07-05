@@ -22,6 +22,28 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Set Cloudflare credentials
+        env:
+          SECRET_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          SECRET_TOKEN5: ${{ secrets.CLOUDFLARE_TOKEN5 }}
+          SECRET_ACCOUNT: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          set -euo pipefail
+          if [ -n "${SECRET_TOKEN:-}" ]; then
+            TOKEN="$SECRET_TOKEN"
+            echo "Using CLOUDFLARE_API_TOKEN"
+          elif [ -n "${SECRET_TOKEN5:-}" ]; then
+            TOKEN="$SECRET_TOKEN5"
+            echo "Using CLOUDFLARE_TOKEN5"
+          else
+            echo "::error::No Cloudflare token. Copy CLOUDFLARE_API_TOKEN or CLOUDFLARE_TOKEN5 from the MorshLive repo secrets into this repo."
+            exit 1
+          fi
+          ACCOUNT="${SECRET_ACCOUNT:-f06dda0c02d25976dcda319e942e432c}"
+          echo "::add-mask::${TOKEN}"
+          echo "CLOUDFLARE_API_TOKEN=${TOKEN}" >> "$GITHUB_ENV"
+          echo "CLOUDFLARE_ACCOUNT_ID=${ACCOUNT}" >> "$GITHUB_ENV"
+
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
         with:
