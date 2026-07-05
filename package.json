@@ -30,11 +30,15 @@
     "dx:audit:ranking-problems": "bash ./scripts/run-audit-ranking-problem-cases.sh",
     "ml:export-gene-disease": "node src/scripts/exportGeneDiseaseLinkDataset.js",
     "ml:analyze-gene-disease-novelty": "node src/scripts/analyzeGeneDiseaseNovelty.js",
-    "test": "node --test"
+    "test": "node --test",
+    "pages:deploy": "wrangler pages deploy public --project-name=genovy"
   },
   "dependencies": {
     "express": "^4.21.2",
     "fast-xml-parser": "^5.5.5",
     "pg": "^8.16.3"
+  },
+  "devDependencies": {
+    "wrangler": "^4.14.0"
   }
 }
