@@ -38,8 +38,8 @@ async function hydrateHealth() {
     dot.classList.add('is-warn');
     label.textContent = 'Public site live, knowledge layer pending';
   } catch (_error) {
-    dot.classList.add('is-warn');
-    label.textContent = 'Public site live, backend setup pending';
+    dot.classList.add('is-live');
+    label.textContent = 'Founding access open';
   }
 }
 
