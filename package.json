@@ -31,7 +31,8 @@
     "ml:export-gene-disease": "node src/scripts/exportGeneDiseaseLinkDataset.js",
     "ml:analyze-gene-disease-novelty": "node src/scripts/analyzeGeneDiseaseNovelty.js",
     "test": "node --test",
-    "pages:deploy": "wrangler pages deploy public --project-name=genovy"
+    "pages:deploy": "wrangler pages deploy public --project-name=genovy",
+    "pages:setup": "bash scripts/deploy-cloudflare-front-page.sh"
   },
   "dependencies": {
     "express": "^4.21.2",

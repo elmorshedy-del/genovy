@@ -1,0 +1,51 @@
+name: Deploy front page
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'public/**'
+      - 'wrangler.toml'
+      - '.github/workflows/deploy-front-page.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-front-page
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy public --project-name=genovy --commit-dirty=true
+
+      - name: Attach genovy.com custom domains
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          set -euo pipefail
+          for domain in genovy.com www.genovy.com; do
+            status=$(curl -sS -o /tmp/cf-domain.json -w '%{http_code}' \
+              -X POST "https://api.cloudflare.com/client/v4/accounts/${CLOUDFLARE_ACCOUNT_ID}/pages/projects/genovy/domains" \
+              -H "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}" \
+              -H "Content-Type: application/json" \
+              --data "{\"name\":\"${domain}\"}")
+            if [ "$status" = "200" ] || [ "$status" = "409" ]; then
+              echo "Domain ready: ${domain}"
+            else
+              echo "Domain attach response for ${domain} (HTTP ${status}):"
+              cat /tmp/cf-domain.json
+              exit 1
+            fi
+          done
