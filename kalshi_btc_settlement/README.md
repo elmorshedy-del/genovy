@@ -14,6 +14,7 @@ average to flip the outcome, in dollars and in standard deviations.
 | `engine.py` | Pure settlement math (`SettlementWindow`): running sum, required average for the remaining seconds, P(yes) and locked/open status. No I/O. |
 | `live.py` | Kalshi websocket client for the `cfbenchmarks_value` BRTI feed. It drives the engine tick by tick and cross-checks against Kalshi's own `last_60s_windowed_average_15min`. Needs a Kalshi API key. |
 | `backtest.py` | Replays settled `KXBTC15M` markets and scores the engine against official settlement values and real final-minute trades. |
+| `study.py` | Who wins the final minute: fillable edge vs engine latency, taker P&L, market flips, engine-vs-market convergence. |
 | `data.py` | Cached fetchers: Kalshi public REST and Binance 1-second klines. |
 | `test_engine.py` | Unit tests: window bounds, required average, rounding and strike type, variance formula, and calibration on simulated walks. |
 
@@ -21,6 +22,7 @@ average to flip the outcome, in dollars and in standard deviations.
 pip install requests websockets cryptography
 python -m unittest kalshi_btc_settlement.test_engine
 python -m kalshi_btc_settlement.backtest --days 7 [--end-days-ago 7]
+python -m kalshi_btc_settlement.study --weeks 3
 KALSHI_API_KEY_ID=... KALSHI_PRIVATE_KEY_PATH=key.pem python -m kalshi_btc_settlement.live
 ```
 
@@ -86,3 +88,46 @@ that size was left for us. Latency is ignored, the data covers only two
 weeks, and the proxy is not BRTI. The next step is to run `live.py` on the
 real feed alongside the order book (`orderbook_delta`) for a few days and
 log what the engine would have paid.
+
+## Study 2: who wins the final minute (`study.py`, 3 weeks, 1,995 windows)
+
+Kalshi's trade tape has no account IDs, so individual profitable traders
+can't be followed. Every print does record the taker side, which shows
+which resting liquidity existed at that price. CIs below are bootstrap 95%
+intervals, with each market counted once.
+
+| | Sep 25–Oct 2 | Sep 18–25 | Sep 11–18 |
+| --- | --- | --- | --- |
+| **Fillable engine edge** (only prints where a taker bought the engine's side), 0 s latency | +0.9¢ [−0.9, +2.8] | +3.2¢ [+1.5, +4.9] | +0.6¢ [−1.6, +2.8] |
+| same, 5 s latency | +0.3¢ [−1.4, +2.1] | +1.9¢ [+0.5, +3.4] | −0.6¢ [−2.4, +1.2] |
+| **All final-minute takers**, P&L per contract | −0.25¢ [−0.31, −0.19] | −0.27¢ [−0.34, −0.21] | −0.35¢ [−0.44, −0.26] |
+| Takers the engine **disagreed** with | −1.8¢ [−3.6, +0.1] | −3.9¢ [−5.3, −2.5] | −1.8¢ [−3.5, −0.1] |
+| Takers the engine agreed with | +0.8¢ [−1.0, +2.6] | +2.9¢ [+1.2, +4.6] | +0.5¢ [−1.6, +2.6] |
+| Market favourite (≥80¢) that lost | 17 windows | 14 | 30 |
+| …of which the engine already favoured the winner | 4 | 6 | 0 |
+| Engine favourite (≥80%) that lost | 20 | 15 | 46 |
+| Engine reaches 97% before market (median lead) | +1 s | +1 s | +5 s |
+| Market reached 97%, engine never did | 55 | 43 | 67 |
+
+Findings:
+
+1. **Takers lose in every 10-second bucket of every week, so the money in
+   the final minute goes to makers.** The consistently profitable "trader"
+   is whoever provides liquidity.
+2. **Sniping with the engine (as a taker) is not consistently profitable.**
+   It worked in one week out of three. Stale data costs about 0.1¢ per
+   second.
+3. **The engine is good at spotting losing taker flow.** Takers it disagreed
+   with lost money in all three weeks. That is the signal a market maker
+   needs: quote tighter or larger where the engine says incoming takers are
+   wrong, and pull or skew quotes where it says they are right.
+4. **On flips, the market beats the proxy-driven engine.** It reaches 97%
+   first about 40% of the time and is fooled less often. Flips happen right
+   at the strike, where the proxy's ~$5 error is decisive. Market
+   participants are watching the real BRTI, so they know more than this
+   engine does.
+
+**Next test.** Record the real BRTI (5 Hz), `orderbook_delta` and trades
+through `live.py` for a week, then rerun these studies on real BRTI. Then
+simulate an engine-skewed maker strategy with queue position from the
+order book. That needs a Kalshi API key.
