@@ -131,3 +131,46 @@ Findings:
 through `live.py` for a week, then rerun these studies on real BRTI. Then
 simulate an engine-skewed maker strategy with queue position from the
 order book. That needs a Kalshi API key.
+
+## Study 3: Polymarket wallets (`polymarket.py`, `analysis/`)
+
+Polymarket's BTC 15-minute up/down markets have settled on a 60-second
+Chainlink BTC/USD TWAP at both ends since 7 Aug 2026, so the engine applies
+unchanged. Its public trade tape names the wallet on both sides of every
+fill. Data: 1,343 markets (Sep 18 – Oct 2), about 3.4M fills and about 6,400
+wallets. Checks:
+
+- Gross P&L sums to ~$0 per market.
+- The final price of one market equals the next market's price to beat exactly.
+- The TWAP window is the 60 s before each boundary: the proxy reproduces the published TWAP change to a $2.5 median.
+- Market prices move about 2 s after Binance.
+
+Findings:
+
+1. **Fees take the pot.** Takers win before fees but pay about $213k a
+   week. Makers lose before fees in aggregate, even counting their 20% fee
+   rebate.
+2. **One week's top wallets mostly don't repeat.** The biggest directional
+   winners (Sardonic-Mink, Pricey-Standard, Acrobatic-Lifetime) called
+   direction 61–80% of the time in their selection week. In the prior,
+   unseen week it was 49–62%, with small or negative P&L. Most of that was
+   luck.
+3. **Top wallets as a group do persist.** Of the top 50 picked on one week,
+   38/47 and 40/46 were profitable in the other week, against 40–52% of
+   comparable wallets. Together they made $65k–$116k in the week they
+   weren't picked on. Three types:
+   - market makers that hedge (net/gross position about 0.5) and earn 4–5% on volume;
+   - "lock" buyers taking 0.99 in the last few minutes, who win every time for about 1% a week;
+   - mid-window directional takers with 13–38% ROI, profitable in both weeks.
+4. **The directional takers buy after the price has moved against their side.**
+   Their side's engine probability had dropped 9–27 points over the previous
+   5 minutes. Across the whole market, the side that just fell wins 2–5 points
+   more often than the random-walk engine predicts, in both weeks.
+5. **Simply fading moves loses money.** After a ≥10–25 point move, buying
+   the fallen side at the market price lost 3–8¢ per contract in both weeks.
+   The market already prices in more than the reversion. Whatever the
+   persistent takers do, it is more selective than that.
+6. **Data caveat.** Spot BTC is thin in this period (about 1 BTC/min on
+   Binance and Coinbase), and venues disagree by $20–40. A five-venue
+   median (`prices.py`) tracks Chainlink only slightly better than Binance
+   alone ($2.2 vs $2.5 median).
