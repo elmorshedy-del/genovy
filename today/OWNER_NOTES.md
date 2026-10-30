@@ -2,6 +2,11 @@
 
 *Started 2026-10-29. Add to it; don't rewrite it.*
 
+## How to treat the owner's words (owner, 2026-10-30)
+* The owner is an observer using loose terms ("forced", "genuine", "vacuum", "house of cards"). **Never adopt the words as definitions.**
+* Derive the construct from mechanics and the literature, measure the outcome directly, and test several footprints against it. Say which definition was used and why.
+* The 2026-10-29 house-of-cards study took "forced = price up with implied vol up" as given; the owner flagged that. The redo is [permanence](2026-10-30-permanence/).
+
 ## The goal
 * **Better exits on short-term calls.** The same position kept most of its profit or gave back half or more, depending on a day (or an hour) of exit timing. Sept 2, 2020: exiting at the open vs at the close was the difference.
 * **Rules, not hand-drawn lines.**
@@ -27,3 +32,9 @@
   * Forced index rallies give back half more often (Nasdaq-100 56% vs 29%) but are rare.
   * **Exit tilt:** after a forced run, sell into the open; after a genuine run (vol falling), holding is favoured. Forward-check before sizing.
 * **[calendar-mechanics](2026-10-29-calendar-mechanics/), 2026-10-29:** earnings-morning gap-ups are violent fades about 1 in 4 times vs about 1 in 7 (confirmed out of sample, Holm 0.031). Exit or protect calls at the open on earnings mornings.
+* **[permanence](2026-10-30-permanence/), 2026-10-30 (the rigorous redo):**
+  * "Forced vs genuine" was re-defined as transitory vs permanent price impact and measured as the share of a run kept 20 sessions later.
+  * Daily footprints (volume, liquidity, overnight share, dealer gamma, breadth) do not predict it across 5,853 runs.
+  * Only call-skew richening (traders paying up for upside calls) points the right way (ρ −0.20, p 0.05).
+  * Low-volume runs are the fragile ones (cliff 35% vs 28%).
+  * The earlier house-of-cards tilt came from a crude measure; treat it as unconfirmed.
