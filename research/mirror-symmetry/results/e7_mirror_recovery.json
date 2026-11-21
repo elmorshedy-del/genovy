@@ -1,0 +1,92 @@
+{
+ "SPY": {
+  "band_log_width": 0.0931055639966674,
+  "band_width_in_daily_sigma": 9.663369338894872,
+  "n_pairs": 104,
+  "n_down_without_recovery_in_sample": 1,
+  "n_down": 105,
+  "ratio_cal_quantiles_10_25_50_75_90": [
+   0.67,
+   1.19,
+   2.12,
+   4.54,
+   8.46
+  ],
+  "ratio_var_quantiles_10_25_50_75_90": [
+   0.34,
+   0.47,
+   0.75,
+   1.34,
+   1.97
+  ],
+  "p_ratio_cal_gt_1": 0.7980769230769231,
+  "p_ratio_cal_gt_3": 0.3942307692307692,
+  "p_ratio_var_gt_1": 0.38461538461538464,
+  "trading_days_from_low_to_full_recovery_quantiles_10_25_50_75_90": [
+   5.0,
+   21.0,
+   54.0,
+   240.0,
+   749.0
+  ],
+  "p_recovered_within_20d": 0.25,
+  "p_recovered_within_60d": 0.5384615384615384,
+  "p_recovered_within_250d": 0.75
+ },
+ "^GSPC": {
+  "band_log_width": 0.0931055639966674,
+  "band_width_in_daily_sigma": 10.609141698754115,
+  "n_pairs": 429,
+  "n_down_without_recovery_in_sample": 1,
+  "n_down": 430,
+  "ratio_cal_quantiles_10_25_50_75_90": [
+   0.41,
+   0.83,
+   1.82,
+   4.05,
+   11.43
+  ],
+  "ratio_var_quantiles_10_25_50_75_90": [
+   0.29,
+   0.48,
+   0.84,
+   1.32,
+   2.17
+  ],
+  "p_ratio_cal_gt_1": 0.6806526806526807,
+  "p_ratio_cal_gt_3": 0.32167832167832167,
+  "p_ratio_var_gt_1": 0.40326340326340326,
+  "trading_days_from_low_to_full_recovery_quantiles_10_25_50_75_90": [
+   8.0,
+   28.0,
+   95.0,
+   322.0,
+   1270.0
+  ],
+  "p_recovered_within_20d": 0.1888111888111888,
+  "p_recovered_within_60d": 0.3916083916083916,
+  "p_recovered_within_250d": 0.703962703962704
+ },
+ "conditional_on_fast_decline_le8d": {
+  "SPY": {
+   "n_fast": 46,
+   "median_recovery_days_fast": 23.908684342520374,
+   "p20_fast": 0.43478260869565216,
+   "p60_fast": 0.7391304347826086,
+   "median_recovery_days_slow": 101.46970714369559,
+   "p20_slow": 0.10344827586206896,
+   "p60_slow": 0.3793103448275862,
+   "median_ratio_cal_fast": 3.3032724520758316
+  },
+  "^GSPC": {
+   "n_fast": 193,
+   "median_recovery_days_fast": 62.402042718462056,
+   "p20_fast": 0.3005181347150259,
+   "p60_fast": 0.49222797927461137,
+   "median_recovery_days_slow": 124.472209195286,
+   "p20_slow": 0.09745762711864407,
+   "p60_slow": 0.3093220338983051,
+   "median_ratio_cal_fast": 2.829620660539164
+  }
+ }
+}

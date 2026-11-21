@@ -1,0 +1,802 @@
+<title>Mirror Mechanics</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one reading column (~68ch) with full-width figure rows; research-note treatment, tape-and-order-book vernacular. */
+:root {
+  --bg: #f5f6f7; --surface: #fcfcfb; --fg: #0d0f12; --fg2: #4d5157; --muted: #83878d;
+  --grid: #e3e4e6; --axis: #c3c5c9; --border: rgba(13,15,18,0.10); --accent: #2a78d6;
+  --s1: #2a78d6; --s2: #eb6834; --s3: #1baf7a; --neutral-mark: #9a9ea5;
+  --band: rgba(42,120,214,0.10); --band2: rgba(235,104,52,0.10);
+  --good: #006300; --bad: #b42323; --chip: #eceef1;
+  --f-display: "Space Grotesk", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-body: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0f1012; --surface: #1a1a19; --fg: #f0efec; --fg2: #c3c2b7; --muted: #8e8f93;
+  --grid: #2c2c2a; --axis: #3a3a37; --border: rgba(255,255,255,0.10); --accent: #3987e5;
+  --s1: #3987e5; --s2: #d95926; --s3: #199e70; --neutral-mark: #75787d;
+  --band: rgba(57,135,229,0.16); --band2: rgba(217,89,38,0.16);
+  --good: #3fbf3f; --bad: #ec6b6b; --chip: #24262a; color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --bg: #0f1012; --surface: #1a1a19; --fg: #f0efec; --fg2: #c3c2b7; --muted: #8e8f93;
+  --grid: #2c2c2a; --axis: #3a3a37; --border: rgba(255,255,255,0.10); --accent: #3987e5;
+  --s1: #3987e5; --s2: #d95926; --s3: #199e70; --neutral-mark: #75787d;
+  --band: rgba(57,135,229,0.16); --band2: rgba(217,89,38,0.16);
+  --good: #3fbf3f; --bad: #ec6b6b; --chip: #24262a; color-scheme: dark; }
+body { background: var(--bg); color: var(--fg); font-family: var(--f-body); font-size: 16px; line-height: 1.6;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+main { max-width: 1040px; margin: 0 auto; padding-block: 40px 80px; display: flex; flex-direction: column; gap: 56px; }
+section { display: flex; flex-direction: column; gap: 18px; min-width: 0; }
+.prose { max-width: 68ch; min-width: 0; }
+.prose > * + * { margin-top: 0.9em; }
+h1, h2, h3 { font-family: var(--f-display); text-wrap: balance; margin: 0; letter-spacing: -0.01em; }
+h1 { font-size: clamp(2.1rem, 5vw, 3.1rem); line-height: 1.05; }
+h2 { font-size: 1.6rem; line-height: 1.2; }
+h3 { font-size: 1.12rem; line-height: 1.3; }
+p, ul, ol { margin: 0; }
+li + li { margin-top: 0.35em; }
+.eyebrow { font-family: var(--f-mono); font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.lede { font-size: 1.15rem; color: var(--fg2); max-width: 62ch; }
+.meta { font-family: var(--f-mono); font-size: 0.8rem; color: var(--muted); display: flex; flex-wrap: wrap; gap: 6px 18px; }
+a { color: var(--accent); }
+code, .mono { font-family: var(--f-mono); font-size: 0.88em; }
+.findings { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding-block: 18px; display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px 32px; }
+.finding { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.finding .k { font-family: var(--f-mono); font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.finding .v { font-family: var(--f-display); font-size: 1.05rem; font-weight: 600; line-height: 1.3; }
+.finding .d { font-size: 0.92rem; color: var(--fg2); }
+figure { margin: 0; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 18px 18px 12px; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+figcaption { font-size: 0.9rem; color: var(--fg2); max-width: 80ch; }
+figcaption b { color: var(--fg); font-weight: 600; }
+.fig-title { font-family: var(--f-display); font-weight: 600; font-size: 1rem; }
+.chart { position: relative; width: 100%; min-width: 0; }
+.chart svg { display: block; width: 100%; height: auto; overflow: visible; }
+.row2 { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 1.15fr); gap: 12px; }
+.row-half { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 12px; }
+@media (max-width: 720px) { .row2 { grid-template-columns: minmax(0, 1fr); } }
+svg text { font-family: var(--f-body); }
+.tick { font-size: 11px; fill: var(--muted); font-variant-numeric: tabular-nums; }
+.axlabel { font-size: 11.5px; fill: var(--fg2); }
+.grid { stroke: var(--grid); stroke-width: 1; }
+.axis { stroke: var(--axis); stroke-width: 1; }
+.line { fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+.dlabel { font-size: 11.5px; fill: var(--fg2); }
+.dlabel-strong { font-size: 12px; fill: var(--fg); font-weight: 600; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 0.82rem; color: var(--fg2); }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.key-dot { width: 9px; height: 9px; border-radius: 50%; display: inline-block; }
+.key-line { width: 16px; height: 2px; border-radius: 1px; display: inline-block; }
+.key-rect { width: 12px; height: 9px; border-radius: 2px; display: inline-block; }
+.tip { position: absolute; pointer-events: none; background: var(--surface); border: 1px solid var(--border); border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12); padding: 8px 10px; font-size: 12px; line-height: 1.35; min-width: 120px; z-index: 5; color: var(--fg); }
+.tip .tv { font-weight: 600; font-variant-numeric: tabular-nums; }
+.tip .tl { color: var(--fg2); }
+.tip .tr { display: flex; align-items: center; gap: 6px; }
+.tip .th { color: var(--muted); font-size: 11px; margin-bottom: 3px; }
+details { font-size: 0.85rem; }
+details summary { cursor: pointer; color: var(--fg2); width: fit-content; }
+details summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 3px; }
+.tablewrap { overflow-x: auto; min-width: 0; }
+table { border-collapse: collapse; font-size: 0.86rem; width: 100%; }
+th, td { text-align: left; padding: 6px 10px 6px 0; border-bottom: 1px solid var(--grid); vertical-align: top; }
+th { font-weight: 600; color: var(--fg2); font-size: 0.78rem; letter-spacing: 0.02em; }
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; font-family: var(--f-mono); font-size: 0.82rem; }
+.pill { display: inline-block; font-family: var(--f-mono); font-size: 0.72rem; padding: 1px 7px; border-radius: 999px; background: var(--chip); color: var(--fg2); white-space: nowrap; }
+.pill.yes { color: var(--good); } .pill.no { color: var(--bad); } .pill.mixed { color: var(--fg2); }
+.eq { overflow-x: auto; padding: 4px 0; min-width: 0; }
+.callout { border-left: 2px solid var(--accent); padding: 2px 0 2px 16px; color: var(--fg2); max-width: 68ch; }
+.theorem { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 14px 18px; display: flex; flex-direction: column; gap: 8px; max-width: 80ch; min-width: 0; }
+.theorem .tname { font-family: var(--f-mono); font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); }
+hr { border: 0; border-top: 1px solid var(--border); margin: 0; }
+.note { font-size: 0.85rem; color: var(--muted); }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+</style>
+
+<main>
+<header class="prose" style="max-width: 76ch; display:flex; flex-direction:column; gap:16px;">
+  <div class="eyebrow">Research note · market microstructure · 21 Nov 2026</div>
+  <h1>Mirror Mechanics</h1>
+  <p class="lede">Why price action so often retraces its own path, why the retrace is usually faster than the move it undoes, and which parts of “levels” survive contact with data. A theory built from the ideal double top, tested on Nasdaq order-level data and 57 assets, then applied to SPY in May and November 2026.</p>
+  <div class="meta"><span>SPY · Nov 20 close 689.81</span><span>Nasdaq TotalView-ITCH 5.0 · 15 &amp; 18 May 2026</span><span>Daily data 1928–2026</span></div>
+</header>
+
+<section aria-labelledby="h-summary">
+  <h2 id="h-summary" class="eyebrow" style="font-family:var(--f-mono);font-size:0.75rem;font-weight:400;">What the evidence says</h2>
+  <div class="findings" id="findings"></div>
+</section>
+
+<section aria-labelledby="h-obs">
+  <div class="prose">
+    <h2 id="h-obs">The observation</h2>
+    <p>In May 2026 SPY climbed from <span class="mono">718.66</span> to <span class="mono">756.48</span> (raw closes, Apr 30 to May 29). From June to October it ranged above that band. Between 12 and 19 November it fell back through the whole band, and on 20 November it broke below it to <span class="mono">689.81</span>. Played backwards, November looks like May. It also took a quarter of the time.</p>
+  </div>
+  <figure>
+    <div class="fig-title">SPY daily close and the liquidity it left behind</div>
+    <div class="legend" id="leg-path"></div>
+    <div class="row2">
+      <div class="chart" id="c-path"></div>
+      <div class="chart" id="c-land"></div>
+    </div>
+    <figcaption><b>Price chart:</b> raw daily closes since Sep 2025; the shaded band is the May rally’s range. <b>Volume panel:</b> shares traded at each $5 price band (hourly bars, Dec 2023 to 20 Nov 2026), on the same price axis. The November decline paused where the map thickens (727–740), fell through the thinnest zone on the map (700–730) in a day and a half, and closed on top of the heaviest node (680–690).</figcaption>
+    <details><summary>Table view</summary><div class="tablewrap" id="t-land"></div></details>
+  </figure>
+</section>
+
+<section aria-labelledby="h-dt">
+  <div class="prose">
+    <h2 id="h-dt">Starting from the ideal double top</h2>
+    <p>The ideal double top makes three separate symmetry claims, and each one maps to a different mechanism.</p>
+    <ol>
+      <li><b>Level symmetry.</b> The second peak T₂ stops at the first peak T₁. Liquidity story: buyers trapped at T₁ sell at breakeven (overhead supply), and resting offers sit there.</li>
+      <li><b>Leg symmetry.</b> Each leg retraces the previous one through the same prices. Liquidity story: positions opened on the way up are closed on the way down, roughly last-in, first-out, because the latest buyers have the thinnest cushion.</li>
+      <li><b>Measured move.</b> After the neckline N breaks, the fall equals the pattern height. Liquidity story: stops cluster under the neckline, and below it lies whatever the earlier rally left behind, thick or thin.</li>
+    </ol>
+    <p>To turn this into science, each claim has to become a property of a model, and the model has to say when the symmetry should fail.</p>
+  </div>
+  <figure>
+    <div class="fig-title">The ideal double top as a path through a liquidity landscape</div>
+    <div class="chart" id="c-dt"></div>
+    <figcaption>Schematic. The path writes liquidity where it lingers (the volume profile on the right): the top zone T₁/T₂ is thick, the fast first rally is thin. Breakeven supply from T₁ buyers caps T₂; stops beneath N fuel the break; the fall runs fastest through the thin zone and slows where liquidity was written earlier.</figcaption>
+  </figure>
+</section>
+
+<section aria-labelledby="h-theory">
+  <div class="prose">
+    <h2 id="h-theory">The theory</h2>
+    <p>Treat log price as a particle moving through a landscape that depends on the price level, plus forces that depend on the path. Price levels enter through the drift <i>b</i> (barriers, overhead supply, dip demand) and through the local speed <i>σ</i>, which is inverse to liquidity: the Kyle relation Δp = λ·(net flow), with λ ∝ 1/depth.</p>
+  </div>
+  <div class="eq">$$dp_t \;=\; \underbrace{b(p_t)\,dt + \sigma(p_t)\,dW_t}_{\text{landscape: level-dependent}} \;+\; \underbrace{\mu_t\,dt + (\sigma_t - 1)\,\sigma(p_t)\,dW_t}_{\text{path-dependent: leverage, stops, news}}$$</div>
+  <div class="theorem">
+    <div class="tname">Theorem 1 · Reversibility (the mirror is generic)</div>
+    <p>For any one-dimensional diffusion whose drift and volatility depend only on the price level, the transition density is symmetric with respect to the speed measure <i>m</i>:</p>
+    <div class="eq">$$m(x)\,p_t(x,y) \;=\; m(y)\,p_t(y,x), \qquad m(x)=\frac{2}{\sigma^2(x)}\exp\!\Big(\int^x \frac{2\,b(u)}{\sigma^2(u)}\,du\Big).$$</div>
+    <p>Consequences: (a) the path from <i>a</i> to <i>b</i>, reversed in time, has the same law as a path from <i>b</i> to <i>a</i>, so the return leg is statistically the mirror of the outgoing leg; (b) up-crossings and down-crossings of a band have the same duration distribution; (c) a constant drift does not break this, because drifts +μ and −μ are Doob h-transforms of each other and give identical bridges. The landscape can be as rich as you like and the mirror still comes out.</p>
+  </div>
+  <div class="theorem">
+    <div class="tname">Theorem 2 · The speed profile belongs to the level</div>
+    <p>The expected time a crossing of [<i>a</i>, <i>b</i>] spends near level <i>y</i> is the Green function of the conditioned process times the speed density. Without drift (natural scale):</p>
+    <div class="eq">$$\mathbb{E}\big[\text{time near } y\big] \;\propto\; \frac{(y-a)(b-y)}{b-a}\cdot\frac{1}{\sigma^2(y)} \quad\text{for both directions.}$$</div>
+    <p>So where a static landscape is slow (deep liquidity), both legs linger; where it is thin, both legs rush. This is the precise version of “the space where price action mirrors in reverse.”</p>
+  </div>
+  <div class="theorem">
+    <div class="tname">Theorem 3 · The variance clock (Dambis–Dubins–Schwarz)</div>
+    <p>Any continuous martingale run on its own quadratic-variation clock is a Brownian motion: p<sub>t</sub> − p<sub>0</sub> = W<sub>⟨p⟩<sub>t</sub></sub>. Measured in realized variance, crossings are symmetric whatever the volatility does. So:</p>
+    <ul>
+      <li>asymmetry that disappears in variance time comes from <b>path-dependent volatility</b> (leverage effect, stop cascades, dealer hedging);</li>
+      <li>asymmetry that survives in variance time comes from <b>path-dependent drift</b> (momentum, regime-dependent mean reversion);</li>
+      <li>asymmetry cannot come from levels alone (Theorem 1).</li>
+    </ul>
+  </div>
+  <div class="prose">
+    <h3>Barriers, ranges and breakouts</h3>
+    <p>A level that repels price is a hump in the potential <i>U</i> with b = −U′. Escape over a hump of height ΔU follows Kramers’ law: mean time to break ∝ exp(2ΔU/σ²). Thick levels make long ranges and repeated tests; higher volatility breaks them sooner. If each test consumes the breakeven supply, ΔU falls with every touch (depletion); if trading at the level writes more liquidity, ΔU rises (reinforcement). The data have to decide which.</p>
+    <h3>Microstructure foundation</h3>
+    <p>At the order-book level, the landscape is real resting and latent liquidity. Price moves until net aggressive flow is absorbed: Δp ≈ λ·OFI, with λ ∝ 1/depth (Kyle 1985; Cont, Kukanov &amp; Stoikov 2014). No-dynamic-arbitrage forces the uninformed part of impact to be reversible (Huberman &amp; Stanzl 2004; Gatheral 2010), otherwise a round-trip trade would manipulate price for profit. Reversible impact makes price behave like a state function of net inventory: when the flow that built a move unwinds, the move unwinds through the same prices. That is the mirror. The irreversible part is information, and it is what makes some moves permanent.</p>
+    <h3>Non-horizontal levels</h3>
+    <p>The landscape is written by the path and decays: its ridges are the cost bases of cohorts. A cohort that keeps adding as price trends has a cost basis that moves with it, the anchored VWAP or a turnover-weighted reference price (Grinblatt &amp; Han 2005). So the same theory produces horizontal levels (a cohort that traded in a range) and sloping ones (a cohort that accumulated along a trend). Both are ridges of one evolving field.</p>
+  </div>
+  <div class="prose">
+    <h3>Predictions</h3>
+    <p>The theory makes the falsifiable predictions below. The last column is the verdict from the experiments that follow.</p>
+  </div>
+  <div class="tablewrap"><table id="t-pred"></table></div>
+</section>
+
+<section aria-labelledby="h-e1">
+  <div class="prose">
+    <h2 id="h-e1">Experiment 1 · Is the mirror distorted, and by what?</h2>
+    <p>For each asset, I tiled the log-price range with bands 12 typical daily moves wide and timed every crossing, counting only time spent inside the band. Δ is the mean log duration of down-crossings minus up-crossings: −1 means declines through the same prices take e<sup>−1</sup> ≈ 37% as long as rallies. The null keeps each asset’s exact volatility path and randomizes the signs of returns (200 surrogates).</p>
+  </div>
+  <figure>
+    <div class="fig-title">Calendar-time asymmetry tracks the leverage effect</div>
+    <div class="legend" id="leg-lev"></div>
+    <div class="chart" id="c-lev"></div>
+    <figcaption><b>x:</b> leverage statistic Σ<sub>k≤20</sub>[corr(r<sub>t</sub>, r²<sub>t+k</sub>) − corr(r²<sub>t</sub>, r<sub>t+k</sub>)], negative when volatility rises after falls. <b>y:</b> Δ in calendar time. Equity indices sit at −0.8 to −1.5 (declines 2–4.5× faster). Treasuries and EUR/USD sit at zero: symmetric mirrors. VIX is reversed.</figcaption>
+    <details><summary>Table view</summary><div class="tablewrap" id="t-lev"></div></details>
+  </figure>
+  <figure>
+    <div class="fig-title">The same asymmetry on three clocks</div>
+    <div class="legend" id="leg-clk"></div>
+    <div class="chart" id="c-clk"></div>
+    <figcaption>Group means of Δ. On the volume clock the gap halves. On the variance clock it nearly closes and flips sign in equities: per unit of volatility, declines are slower and choppier. The leverage-only model leaves +0.14 on the variance clock; equity indices show +0.3 to +0.4, the part that path-dependent drift must explain.</figcaption>
+    <details><summary>Table view</summary><div class="tablewrap" id="t-clk"></div></details>
+  </figure>
+</section>
+
+<section aria-labelledby="h-e2">
+  <div class="prose">
+    <h2 id="h-e2">Experiment 2 · Do levels exist, and are double tops special?</h2>
+    <p><b>Barrier test.</b> After every swing high (4 daily σ zigzag), I took the first return to within 0.5σ of it and raced ±2σ from there: reject or break. Placebo levels at random offsets below the pivot went through the same procedure. A real double-top effect would push swing highs above placebo.</p>
+  </div>
+  <figure>
+    <div class="fig-title">Rejection rate at a retest: swing extremes vs placebo levels vs null</div>
+    <div class="legend" id="leg-bar"></div>
+    <div class="chart" id="c-bar"></div>
+    <figcaption>Means across assets in each group (tops and bottoms). Swing extremes reject about as often as random levels. Both reject less than the null at tops because equity rallies persist. At the daily scale the second peak of a double top is not a special event.</figcaption>
+    <details><summary>Table view</summary><div class="tablewrap" id="t-bar"></div></details>
+  </figure>
+  <div class="prose">
+    <p><b>Landscape test.</b> A causal regression of each day’s volatility-normalized range on the share of past volume traded at that price, with drawdown and leverage controls. Volume at a price slows later traversal across asset classes. Built only from volume at least 250 days old, SPY gives β = −0.021 (z = −4.7 against random signs). A calibrated model with all the path dependence and <i>no</i> levels fakes about half of that (−0.0095 ± 0.004). The excess, about −0.01, is the part attributable to genuine levels: suggestive, not conclusive, and small (roughly 5% slower through the heaviest nodes).</p>
+  </div>
+  <figure>
+    <div class="fig-title">Old volume nodes still slow price down</div>
+    <div class="legend" id="leg-lag"></div>
+    <div class="chart" id="c-lag"></div>
+    <figcaption>z-score of the volume-at-price coefficient against sign-randomized surrogates, by how old the volume has to be (5, 60 or 250 trading days). Negative means slower traversal through high-volume prices. Each dot is one asset.</figcaption>
+    <details><summary>Table view</summary><div class="tablewrap" id="t-lag"></div></details>
+  </figure>
+</section>
+
+<section aria-labelledby="h-e3">
+  <div class="prose">
+    <h2 id="h-e3">Experiment 3 · The order book on 15 and 18 May 2026</h2>
+    <p>From Nasdaq’s TotalView-ITCH 5.0 files for 15 and 18 May 2026 (two days inside the May rally), I replayed every add, execute, cancel, replace and hidden execution: six symbols on 15 May and three on 18 May, 12.4 and 16.2 million messages for SPY alone. The rebuilt books match the sessions. 15 May: open 741.85, high 743.46, low 737.965, close 739.09 against the official 741.79 / 743.46 / 737.96 / 739.17. 18 May: 739.72 / 741.405 / 733.445 / 738.555 against 739.83 / 741.42 / 733.39 / 738.65.</p>
+  </div>
+  <figure>
+    <div class="fig-title">Price moves toward the thinner side of the book</div>
+    <div class="legend" id="leg-qi"></div>
+    <div class="chart" id="c-qi"></div>
+    <figcaption>15 May 2026. Probability that the next mid-price change is up, by queue imbalance (bid size − ask size)/(bid size + ask size) at the inside, sampled each second, 09:30–16:00. Thick liquidity repels price and thin liquidity gives way: the barrier mechanism, at its smallest scale.</figcaption>
+    <details><summary>Table view</summary><div class="tablewrap" id="t-qi"></div></details>
+  </figure>
+  <div class="tablewrap"><table id="t-micro"></table></div>
+  <p class="note">Round-number depth: displayed depth at whole-dollar prices vs other prices at the same distance from the mid, as a multiple (exp of the log coefficient). Crossing clocks: Δ for 20¢ intraday bands, down minus up. Hysteresis: mean |Δmid| over 5 minutes when Nasdaq net flow returned to its start (lowest quintile) vs when it did not (highest quintile).</p>
+  <div class="callout">Three results held in all nine symbol-days: price moves toward the thinner queue, whole-dollar prices carry far more resting depth, and price moves less when net flow returns. Business-time symmetry did not hold everywhere. On 15 May the clock asymmetry vanished in volume time; on 18 May, a day with a sharp intraday selloff, SPY and QQQ declines were faster in volume and trade time too, which matches the daily-scale finding that declines need less volume per cent. Nasdaq-only flow explains between 0% and 27% of 5-minute price changes, so the state-function reading of impact is only partly visible from one venue.</div>
+</section>
+
+<section aria-labelledby="h-model">
+  <div class="prose">
+    <h2 id="h-model">Model check · which ingredient makes which fact</h2>
+    <p>The landscape diffusion was simulated with ingredients switched on one at a time (12 paths × 9,000 days each) and measured with exactly the statistics used on real data. Read across a row to see what an ingredient produces. The bottom row is SPY.</p>
+  </div>
+  <div class="tablewrap"><table id="t-model"></table></div>
+  <p class="note">The variance clock in this table weights the partial first and last step of a crossing by time. The stricter distance-weighted clock gives SPY +0.40 against +0.14 for the leverage-only model; the conclusion is the same.</p>
+  <div class="callout">A static landscape produces a perfect mirror: symmetric durations and mirrored speed profiles (row A), as Theorem 1 says. Leverage alone produces most of the distortion seen in real equities (row F). Dense barriers would raise rejection rates above the null everywhere (rows B–C), and real data do the opposite. Only path dependence plus a landscape matches SPY on all four measures. One caution came out of this table: path dependence alone can produce a positive speed-profile mirror (row G), so that statistic alone is weak evidence for levels.</div>
+</section>
+
+<section aria-labelledby="h-spy">
+  <div class="prose">
+    <h2 id="h-spy">SPY, May vs November 2026</h2>
+    <p>The band is [718.66, 756.48]: the raw closes that start and end the May rally. May crossed it upward from 4 May 15:30 to 29 May 09:30. November crossed it downward from 12 Nov 15:30 to 19 Nov 14:30 (hourly bars, raw prices, in-band time only).</p>
+  </div>
+  <figure>
+    <div class="fig-title">November replayed backwards, on two clocks</div>
+    <div class="legend" id="leg-clock2"></div>
+    <div class="row-half">
+      <div class="chart" id="c-clock-cal"></div>
+      <div class="chart" id="c-clock-var"></div>
+    </div>
+    <figcaption><b>First chart:</b> price against trading hours spent crossing the band. November is shown time-reversed so both legs run from 718 to 756. <b>Second chart:</b> the same legs against cumulative realized variance. On the variance clock November’s leg is 68% as long as May’s, against 28% on the hour clock. The chart includes the boundary hours, so its totals run slightly above the in-band figures in the table.</figcaption>
+    <details><summary>Table view</summary><div class="tablewrap" id="t-clock2"></div></details>
+  </figure>
+  <div class="tablewrap"><table id="t-spy"></table></div>
+  <figure>
+    <div class="fig-title">Where each leg spent its time inside the band</div>
+    <div class="legend" id="leg-hist"></div>
+    <div class="chart" id="c-hist"></div>
+    <figcaption>Trading hours spent at each $1 price level during the May up-leg and the November down-leg (hourly bars, time spread across each bar’s range). The speed profiles do not mirror at this resolution (correlation 0.13). November stalled at 727–733, the floor of May’s consolidation where May’s swing lows sat (729.75, 731.53, 731.83), then fell through May’s gap at 725–728 in one session.</figcaption>
+    <details><summary>Table view</summary><div class="tablewrap" id="t-hist"></div></details>
+  </figure>
+  <div class="prose">
+    <p><b>Verdict on the example.</b> Three things held: the same prices were retraced; the 3.6× time compression is in line with SPY’s historical average (Δ = −1.39, about 4×); and most of it is the volatility clock (0.28 on hours, 0.68 on variance). One thing did not: the detailed speed profile inside the band was not mirrored, and an individual pair cannot show that anyway (a single pair’s mirror correlation has a null standard deviation of 0.43). The pause at May’s swing lows is suggestive but anecdotal: across 57 assets, swing levels hold no better than random ones.</p>
+  </div>
+</section>
+
+<section aria-labelledby="h-pred">
+  <div class="prose">
+    <h2 id="h-pred">Pre-registered predictions for SPY</h2>
+    <p>Stated on Saturday 21 Nov 2026 after the 689.81 close, before any of it can be checked. Base rates come from every down-crossing of a 9.3% band (the width of the 757.12 → 689.81 decline) in SPY since 1993 and the S&amp;P 500 since 1928, conditioned on fast declines (8 trading days or fewer through the band; November took 6).</p>
+  </div>
+  <div class="tablewrap"><table id="t-spypred"></table></div>
+  <div class="tablewrap"><table id="t-base"></table></div>
+</section>
+
+<section aria-labelledby="h-trade">
+  <div class="prose">
+    <h2 id="h-trade">What is tradable</h2>
+    <ul>
+      <li><b>The mirror shape is not an edge.</b> Theorem 1 says any level-dependent random process produces mirrors, and two random paths through the same band look alike by construction. Pattern-matching shapes buys nothing on its own.</li>
+      <li><b>Time is the edge.</b> In equities the distortion is large and stable: rallies are undone 2–4× faster than they were built, and recoveries from fast drops take about 3× the drop. Size time stops and option tenors to that: retracement risk on a rally is front-loaded; a recovery bet after a crash needs time.</li>
+      <li><b>Use the variance clock to project a mirror.</b> Expected time to retrace ≈ variance the original move used × (0.75 for an up-mirror after a decline, about 1.3–1.5 for a down-mirror of a rally) ÷ forecast daily variance.</li>
+      <li><b>Levels:</b> prior swing highs and lows are not better barriers than random prices at the daily scale. Old high-volume zones slow price modestly. Round numbers concentrate resting liquidity and new orders, which matters for where to rest limit orders and where stops get run.</li>
+      <li><b>Book imbalance</b> predicts the next tick, but that edge lives at high-frequency latencies and costs.</li>
+      <li><b>Where mirrors are symmetric</b> (Treasuries, EUR/USD), time-symmetric mean-reversion rules are internally consistent. In equities they are not.</li>
+    </ul>
+    <p class="note">Research, not investment advice. Base rates are historical frequencies, not guarantees.</p>
+  </div>
+</section>
+
+<section aria-labelledby="h-methods">
+  <div class="prose">
+    <h2 id="h-methods">Data, methods, limits</h2>
+    <ul>
+      <li><b>Data.</b> Yahoo Finance daily OHLCV for 57 assets (indices from 1928, ETFs, 20 stocks, bonds, commodities, FX, crypto, VIX), dividend-unadjusted for level work. SPY hourly bars (Dec 2023–Nov 2026) and 1-minute bars (Oct 23–Nov 20 2026); Yahoo’s 1-minute volume does not reconcile with daily volume, so only shares within a day were used. Nasdaq TotalView-ITCH 5.0 for 15 May 2026 (SPY, QQQ, IWM, AAPL, NVDA, TSLA) and 18 May 2026 (SPY, QQQ, NVDA), Nasdaq venue only.</li>
+      <li><b>Nulls.</b> Sign-randomized returns keep the exact volatility path, so volatility clustering cannot fake a result; they also remove leverage, which is why the calibrated no-landscape model was added as a second, stronger null.</li>
+      <li><b>Limits.</b> Two ITCH days; Nasdaq is a minority of SPY volume, so flow-to-price R² is a lower bound. No option open-interest data, so dealer-gamma levels are untested. Cross-asset tests overlap (SPY, DIA, S&amp;P 500), so pooled significance is overstated. The no-landscape null was calibrated by hand to SPY’s calendar asymmetry.</li>
+      <li><b>Code.</b> Everything is in <span class="mono">research/mirror-symmetry/</span> on branch <span class="mono">claude/loving-shannon-bpfmvq</span>: the ITCH filter (C), book rebuild (numba), experiments E1–E7, the model and this page’s data.</li>
+    </ul>
+    <p class="note">References: Kyle (1985); Lo, Mamaysky &amp; Wang (2000); Osler (2000, 2003); Bouchaud, Gefen, Potters &amp; Wyart (2004); Huberman &amp; Stanzl (2004); Grinblatt &amp; Han (2005); Gatheral (2010); Cont, Kukanov &amp; Stoikov (2014); Donier, Bonart, Mastromatteo &amp; Bouchaud (2015); Gould &amp; Bonart (2016); Dambis (1965), Dubins &amp; Schwarz (1965); Kramers (1940).</p>
+  </div>
+</section>
+</main>
+
+<script type="application/json" id="report-data">/*__DATA__*/</script>
+<script>
+window.MathJax = { tex: { inlineMath: [] }, svg: { fontCache: 'global' }, options: { enableMenu: false } };
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-svg.js" async></script>
+<script>
+(function () {
+const D = JSON.parse(document.getElementById('report-data').textContent);
+const NS = 'http://www.w3.org/2000/svg';
+const redraws = [];
+function el(tag, attrs, parent, text) {
+  const e = document.createElementNS(NS, tag);
+  if (attrs) for (const k in attrs) e.setAttribute(k, attrs[k]);
+  if (text !== undefined && text !== null) e.textContent = text;
+  if (parent) parent.appendChild(e);
+  return e;
+}
+function h(tag, attrs, parent, text) {
+  const e = document.createElement(tag);
+  if (attrs) for (const k in attrs) { if (k === 'class') e.className = attrs[k]; else e.setAttribute(k, attrs[k]); }
+  if (text !== undefined && text !== null) e.textContent = text;
+  if (parent) parent.appendChild(e);
+  return e;
+}
+function sc(d0, d1, r0, r1) { const f = v => r0 + (v - d0) / (d1 - d0) * (r1 - r0); f.inv = p => d0 + (p - r0) / (r1 - r0) * (d1 - d0); return f; }
+function ticks(min, max, n) {
+  const span = max - min, step0 = span / (n || 5), mag = Math.pow(10, Math.floor(Math.log10(step0))), err = step0 / mag;
+  const step = err >= 7.5 ? 10 * mag : err >= 3.5 ? 5 * mag : err >= 1.5 ? 2 * mag : mag;
+  const t = []; for (let v = Math.ceil(min / step - 1e-9) * step; v <= max + 1e-9; v += step) t.push(+v.toFixed(10)); return t;
+}
+const fmt = (v, d) => (v === null || v === undefined || Number.isNaN(v)) ? '–' : Number(v).toFixed(d === undefined ? 2 : d);
+const sgn = (v, d) => (v === null || v === undefined) ? '–' : (v > 0 ? '+' : '') + Number(v).toFixed(d === undefined ? 2 : d);
+function cssv(name) { return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); }
+function legend(id, items) {
+  const L = document.getElementById(id); if (!L) return; L.textContent = '';
+  for (const it of items) {
+    const s = h('span', null, L);
+    const k = h('i', { class: it.kind === 'line' ? 'key-line' : it.kind === 'rect' ? 'key-rect' : 'key-dot' }, s);
+    k.style.background = `var(${it.color})`;
+    h('span', null, s, it.name);
+  }
+}
+function table(id, head, rows, numCols) {
+  const host = document.getElementById(id); if (!host) return;
+  host.textContent = '';
+  const t = host.tagName === 'TABLE' ? host : h('table', null, host);
+  const thead = h('thead', null, t), tr = h('tr', null, thead);
+  head.forEach((c, i) => h('th', { class: (numCols || []).includes(i) ? 'num' : '' }, tr, c));
+  const tb = h('tbody', null, t);
+  rows.forEach(r => { const row = h('tr', null, tb); r.forEach((c, i) => {
+    const td = h('td', { class: (numCols || []).includes(i) ? 'num' : '' }, row);
+    if (c && typeof c === 'object' && c.pill) { const p = h('span', { class: 'pill ' + c.cls }, td, c.pill); }
+    else td.textContent = c;
+  }); });
+}
+function tipper(container) {
+  let tip = container.querySelector('.tip');
+  if (!tip) { tip = h('div', { class: 'tip', role: 'status' }, container); tip.hidden = true; }
+  return {
+    show(x, y, head, rows) {
+      tip.textContent = '';
+      if (head) h('div', { class: 'th' }, tip, head);
+      for (const r of rows) {
+        const line = h('div', { class: 'tr' }, tip);
+        if (r.color) { const k = h('i', { class: 'key-line' }, line); k.style.background = `var(${r.color})`; }
+        h('span', { class: 'tv' }, line, r.value);
+        if (r.label) h('span', { class: 'tl' }, line, r.label);
+      }
+      tip.hidden = false;
+      const cw = container.clientWidth, tw = tip.offsetWidth, th = tip.offsetHeight;
+      let left = x + 14; if (left + tw > cw) left = x - tw - 14; if (left < 0) left = 0;
+      let top = y - th - 10; if (top < 0) top = y + 14;
+      tip.style.left = left + 'px'; tip.style.top = top + 'px';
+    },
+    hide() { tip.hidden = true; }
+  };
+}
+function frame(container, o) {
+  container.querySelectorAll('svg').forEach(s => s.remove());
+  const W = Math.max(280, container.clientWidth), H = o.height;
+  const m = Object.assign({ t: 14, r: 16, b: 40, l: 52 }, o.m || {});
+  const svg = el('svg', { viewBox: `0 0 ${W} ${H}`, width: W, height: H, role: 'img', 'aria-label': o.aria || '' });
+  container.insertBefore(svg, container.firstChild);
+  const x = o.xLog ? null : sc(o.x[0], o.x[1], m.l, W - m.r);
+  const y = sc(o.y[0], o.y[1], H - m.b, m.t);
+  if (!o.noYGrid) for (const t of (o.yt || ticks(o.y[0], o.y[1], 5))) {
+    el('line', { x1: m.l, x2: W - m.r, y1: y(t), y2: y(t), class: 'grid' }, svg);
+    el('text', { x: m.l - 8, y: y(t) + 4, class: 'tick', 'text-anchor': 'end' }, svg, (o.yf || String)(t));
+  }
+  if (x && !o.noXTicks) for (const t of (o.xt || ticks(o.x[0], o.x[1], Math.max(3, Math.floor(W / 110))))) {
+    el('text', { x: x(t), y: H - m.b + 17, class: 'tick', 'text-anchor': 'middle' }, svg, (o.xf || String)(t));
+  }
+  el('line', { x1: m.l, x2: W - m.r, y1: H - m.b, y2: H - m.b, class: 'axis' }, svg);
+  if (o.xl) el('text', { x: (m.l + W - m.r) / 2, y: H - 6, class: 'axlabel', 'text-anchor': 'middle' }, svg, o.xl);
+  if (o.yl) el('text', { x: -((m.t + H - m.b) / 2), y: 13, transform: 'rotate(-90)', class: 'axlabel', 'text-anchor': 'middle' }, svg, o.yl);
+  return { svg, x, y, W, H, m };
+}
+function onResize(fn) { redraws.push(fn); fn(); }
+let rt; window.addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(() => redraws.forEach(f => f()), 120); });
+
+/* ---------------- findings ---------------- */
+(function () {
+  const F = document.getElementById('findings');
+  const items = [
+    ['Mirrors are generic', 'Any level-driven random process retraces itself', 'Theorem 1: drift and volatility that depend only on price make the return leg the statistical mirror of the outgoing leg.'],
+    ['The distortion is volatility', 'Declines through the same prices are 2–4× faster', 'Equity indices Δ = −0.8 to −1.5 (9 of 11 with z below −2). Treasuries and EUR/USD are symmetric. On the variance clock most of the gap closes.'],
+    ['Book liquidity steers ticks', 'Price moves toward the thin side', 'Nasdaq ITCH, 15 and 18 May 2026: P(next move up) rises from 0.39 to 0.59 with bid-heavy queues (SPY, 15 May); same sign in all 9 symbol-days.'],
+    ['Double tops are not special', 'Swing highs reject no more than random levels', 'Daily data, 57 assets: 44.6% at swing highs vs 45.5% at placebo levels vs 48.0% null.'],
+    ['Levels exist, weakly', 'Old volume slows price ~5%', 'Volume ≥250 days old predicts slower traversal (SPY z = −4.7), about half of it reproducible without levels.'],
+    ['May → November', '3.6× faster on the hour clock, 1.5× on the variance clock', 'Same band, [718.66, 756.48]. Speed profiles inside the band did not mirror.']
+  ];
+  for (const [k, v, d] of items) { const f = h('div', { class: 'finding' }, F); h('div', { class: 'k' }, f, k); h('div', { class: 'v' }, f, v); h('div', { class: 'd' }, f, d); }
+})();
+
+/* ---------------- predictions table (theory) ---------------- */
+table('t-pred', ['#', 'Prediction', 'Test', 'Verdict'], [
+  ['P1', 'Mirror durations are symmetric where volatility has no leverage feedback', 'TLT Δ = −0.08, EUR/USD −0.08 (n.s.)', { pill: 'supported', cls: 'yes' }],
+  ['P2', 'Calendar asymmetry scales with the leverage effect; reversed for VIX', '57 assets, Fig. E1 (VIX +1.79, z = +8.4)', { pill: 'supported', cls: 'yes' }],
+  ['P3', 'On the variance clock the asymmetry mostly vanishes', 'SPY −1.39 → +0.40; residual ≈ +0.3 beyond leverage', { pill: 'mostly', cls: 'mixed' }],
+  ['P4', 'Intraday crossings are symmetric in volume/trade time', '15 May: volume Δ ≈ 0 in 6 of 6; 18 May: SPY and QQQ still −0.1 to −0.2', { pill: 'mixed', cls: 'mixed' }],
+  ['P5', 'Price moves toward the thinner side of the book', 'Queue imbalance, 9 of 9 symbol-days', { pill: 'supported', cls: 'yes' }],
+  ['P6', 'Levels are written by volume and slow later passes', 'Lag-250 regression; half reproducible without levels', { pill: 'weak', cls: 'mixed' }],
+  ['P7', 'Prior swing extremes are special barriers (double tops)', 'Swing highs ≈ placebo levels at daily scale', { pill: 'rejected', cls: 'no' }],
+  ['P8', 'Round numbers hold resting liquidity', '2–17× depth at whole dollars, 9 of 9 symbol-days', { pill: 'supported', cls: 'yes' }],
+  ['P9', 'Retests deplete a level (each touch weaker)', 'Test 1/2/3 rejection 45.4% / 44.9% / 43.9%', { pill: 'not detected', cls: 'mixed' }]
+], []);
+
+/* ---------------- Fig: SPY path + landscape ---------------- */
+const dp = D.daily_path;
+const pathX = dp.date.map(s => new Date(s + 'T00:00:00').getTime());
+const YR = [600, 790];
+legend('leg-path', [{ name: 'SPY close (raw)', color: '--s1', kind: 'line' }, { name: 'May band 718.66–756.48', color: '--band', kind: 'rect' }]);
+onResize(() => {
+  const c = document.getElementById('c-path');
+  const H = 340;
+  const f = frame(c, { height: H, x: [pathX[0], pathX[pathX.length - 1]], y: YR, yt: [600, 640, 680, 720, 760], yf: v => v,
+    xt: (() => { const step = c.clientWidth < 560 ? 4 : 2; const out = []; const d0 = new Date(pathX[0]); for (let y = d0.getFullYear(), m = d0.getMonth() + 1; ; m += step) { const d = new Date(y, m, 1).getTime(); if (d > pathX[pathX.length - 1]) break; out.push(d); } return out; })(),
+    xf: v => new Date(v).toLocaleDateString('en-US', { month: 'short', year: '2-digit' }), aria: 'SPY daily close, Sep 2025 to Nov 2026' });
+  el('rect', { x: f.m.l, width: f.W - f.m.l - f.m.r, y: f.y(756.48), height: f.y(718.66) - f.y(756.48), fill: 'var(--band)' }, f.svg);
+  const d = dp.close.map((v, i) => (i ? 'L' : 'M') + f.x(pathX[i]).toFixed(1) + ',' + f.y(v).toFixed(1)).join('');
+  el('path', { d, class: 'line', style: 'stroke:var(--s1)' }, f.svg);
+  const last = dp.close.length - 1;
+  el('circle', { cx: f.x(pathX[last]), cy: f.y(dp.close[last]), r: 4.5, fill: 'var(--s1)', stroke: 'var(--surface)', 'stroke-width': 2 }, f.svg);
+  el('text', { x: f.x(pathX[last]) - 8, y: f.y(dp.close[last]) + 18, class: 'dlabel-strong', 'text-anchor': 'end' }, f.svg, '689.81');
+  const T = tipper(c);
+  const ov = el('rect', { x: f.m.l, y: f.m.t, width: f.W - f.m.l - f.m.r, height: f.H - f.m.t - f.m.b, fill: 'transparent' }, f.svg);
+  const cross = el('line', { y1: f.m.t, y2: f.H - f.m.b, class: 'axis', visibility: 'hidden' }, f.svg);
+  const dot = el('circle', { r: 4.5, fill: 'var(--s1)', stroke: 'var(--surface)', 'stroke-width': 2, visibility: 'hidden' }, f.svg);
+  ov.addEventListener('pointermove', ev => {
+    const r = f.svg.getBoundingClientRect(); const px = (ev.clientX - r.left) * (f.W / r.width);
+    const xv = f.x.inv(px); let best = 0, bd = Infinity; for (let i = 0; i < pathX.length; i++) { const dd = Math.abs(pathX[i] - xv); if (dd < bd) { bd = dd; best = i; } }
+    const cx = f.x(pathX[best]), cy = f.y(dp.close[best]);
+    cross.setAttribute('x1', cx); cross.setAttribute('x2', cx); cross.setAttribute('visibility', 'visible');
+    dot.setAttribute('cx', cx); dot.setAttribute('cy', cy); dot.setAttribute('visibility', 'visible');
+    T.show(cx * r.width / f.W, cy * r.width / f.W, dp.date[best], [{ value: fmt(dp.close[best]), label: 'close', color: '--s1' }, { value: fmt(dp.low[best]) + '–' + fmt(dp.high[best]), label: 'range' }]);
+  });
+  ov.addEventListener('pointerleave', () => { T.hide(); cross.setAttribute('visibility', 'hidden'); dot.setAttribute('visibility', 'hidden'); });
+});
+onResize(() => {
+  const c = document.getElementById('c-land');
+  const L = D.landscape; const H = 340;
+  const vmax = Math.max(...L.all_1h);
+  const f = frame(c, { height: H, x: [0, vmax * 1.05], y: YR, yt: [600, 640, 680, 720, 760], yf: v => v, xt: [0, 1000, 2000], xf: v => v ? (v / 1000) + 'B' : '0', xl: 'shares per $5', m: { l: 40, r: 10 }, aria: 'Volume at price by $5 band' });
+  el('rect', { x: f.m.l, width: f.W - f.m.l - f.m.r, y: f.y(756.48), height: f.y(718.66) - f.y(756.48), fill: 'var(--band)' }, f.svg);
+  const T = tipper(c);
+  L.band_lo.forEach((lo, i) => {
+    const v = L.all_1h[i]; const y0 = f.y(lo + 5) + 1, y1 = f.y(lo) - 1; const hgt = Math.max(1, y1 - y0);
+    const w = Math.max(0.5, f.x(v) - f.x(0));
+    const r = Math.min(4, w / 2, hgt / 2);
+    const x0 = f.x(0);
+    const p = `M${x0},${y0} H${x0 + w - r} Q${x0 + w},${y0} ${x0 + w},${y0 + r} V${y1 - r} Q${x0 + w},${y1} ${x0 + w - r},${y1} H${x0} Z`;
+    const bar = el('path', { d: p, fill: 'var(--s1)', 'fill-opacity': lo >= 680 && lo < 690 ? 1 : 0.55, tabindex: 0, 'aria-label': `${lo}–${lo + 5}: ${v} million shares` }, f.svg);
+    const show = () => { const rr = f.svg.getBoundingClientRect(); T.show((x0 + w) * rr.width / f.W, y0 * rr.width / f.W, `$${lo}–${lo + 5}`, [{ value: Math.round(v).toLocaleString() + 'M', label: 'shares since Dec 2023' }, { value: Math.round(L.dec25_feb26[i]).toLocaleString() + 'M', label: 'Dec 2025–Feb 2026' }]); };
+    bar.addEventListener('pointerenter', show); bar.addEventListener('focus', show);
+    bar.addEventListener('pointerleave', () => T.hide()); bar.addEventListener('blur', () => T.hide());
+  });
+  el('line', { x1: f.m.l, x2: f.W - f.m.r, y1: f.y(689.81), y2: f.y(689.81), stroke: 'var(--fg)', 'stroke-width': 1 }, f.svg);
+  el('text', { x: f.W - f.m.r, y: f.y(689.81) - 5, class: 'dlabel-strong', 'text-anchor': 'end' }, f.svg, 'now 689.81');
+  el('text', { x: f.W - f.m.r, y: f.y(712), class: 'dlabel', 'text-anchor': 'end' }, f.svg, 'thin');
+});
+table('t-land', ['$5 band', 'Shares since Dec 2023 (M)', 'Dec 2025–Feb 2026 (M)', 'May 2026 (M)', 'Jun–Oct 2026 (M)'],
+  D.landscape.band_lo.map((lo, i) => [`${lo}–${lo + 5}`, Math.round(D.landscape.all_1h[i]), Math.round(D.landscape.dec25_feb26[i]), Math.round(D.landscape.may26[i]), Math.round(D.landscape.jun_oct26[i])]).reverse(), [1, 2, 3, 4]);
+
+/* ---------------- Fig: ideal double top schematic ---------------- */
+onResize(() => {
+  const c = document.getElementById('c-dt'); c.querySelectorAll('svg').forEach(s => s.remove());
+  const W = Math.max(300, c.clientWidth), H = 300;
+  const svg = el('svg', { viewBox: `0 0 ${W} ${H}`, width: W, height: H, role: 'img', 'aria-label': 'Schematic of an ideal double top' });
+  c.appendChild(svg);
+  const plotR = W * 0.78;
+  const X = t => 30 + t * (plotR - 40), Y = v => 20 + (1 - v) * (H - 50);
+  const pts = [[0, 0.12], [0.18, 0.78], [0.33, 0.52], [0.5, 0.80], [0.66, 0.52], [0.74, 0.40], [0.86, 0.06], [1.0, 0.10]];
+  el('line', { x1: X(0.28), x2: X(0.95), y1: Y(0.52), y2: Y(0.52), class: 'grid' }, svg);
+  el('line', { x1: X(0.12), x2: X(0.6), y1: Y(0.79), y2: Y(0.79), class: 'grid' }, svg);
+  el('path', { d: pts.map((p, i) => (i ? 'L' : 'M') + X(p[0]) + ',' + Y(p[1])).join(''), class: 'line', style: 'stroke:var(--s1)' }, svg);
+  const labs = [[0.18, 0.78, 'T₁', -10], [0.5, 0.80, 'T₂', -10], [0.33, 0.52, 'N', 16], [0.66, 0.52, 'break', 16], [0.86, 0.06, 'target?', 16]];
+  for (const [t, v, s, dy] of labs) { el('circle', { cx: X(t), cy: Y(v), r: 4, fill: 'var(--s1)', stroke: 'var(--surface)', 'stroke-width': 2 }, svg); el('text', { x: X(t), y: Y(v) + dy, class: 'dlabel-strong', 'text-anchor': 'middle' }, svg, s); }
+  el('text', { x: X(0.34), y: Y(0.86), class: 'dlabel', 'text-anchor': 'middle' }, svg, 'breakeven supply from T₁ buyers');
+  el('text', { x: X(0.5), y: Y(0.44), class: 'dlabel', 'text-anchor': 'middle' }, svg, 'stops under N');
+  el('text', { x: X(0.97), y: Y(0.30), class: 'dlabel', 'text-anchor': 'end' }, svg, 'fast through thin zone');
+  // landscape (volume profile) strip
+  const prof = [[0.05, 0.25], [0.15, 0.15], [0.25, 0.12], [0.35, 0.18], [0.45, 0.35], [0.52, 0.55], [0.62, 0.45], [0.72, 0.62], [0.80, 0.95], [0.88, 0.40]];
+  const x0 = plotR + 14, wmax = W - x0 - 10;
+  el('text', { x: x0, y: 14, class: 'tick' }, svg, 'liquidity written');
+  for (const [v, w] of prof) { const y0 = Y(v + 0.045), y1 = Y(v - 0.045); el('rect', { x: x0, y: y0 + 1, width: Math.max(2, w * wmax), height: Math.max(2, y1 - y0 - 2), rx: 2, fill: 'var(--s1)', 'fill-opacity': 0.55 }, svg); }
+});
+
+/* ---------------- Fig E1: leverage scatter ---------------- */
+const GROUPS = [
+  { name: 'Equities & credit', color: '--s1', cls: ['us_equity_index', 'intl_equity_index', 'us_sector', 'single_stock'], extra: ['HYG'] },
+  { name: 'Rates & FX', color: '--s3', cls: ['fx'], extra: ['TLT', 'IEF'] },
+  { name: 'Commodities & crypto', color: '--s2', cls: ['commodity', 'crypto'], extra: [] }
+];
+function groupOf(r) { if (r.t === '^VIX') return null; for (const g of GROUPS) { if (g.extra.includes(r.t)) return g; } for (const g of GROUPS) { if (g.cls.includes(r.cls) && !(r.t === 'HYG' || r.t === 'TLT' || r.t === 'IEF')) return g; } return GROUPS[0]; }
+legend('leg-lev', GROUPS.map(g => ({ name: g.name, color: g.color })).concat([{ name: 'VIX', color: '--neutral-mark' }]));
+const NAMES = { '^GSPC': 'S&P 500', '^VIX': 'VIX', 'EURUSD=X': 'EUR/USD', 'AUDJPY=X': 'AUD/JPY', 'JPY=X': 'USD/JPY', 'BTC-USD': 'BTC', '^N225': 'Nikkei', '^FTSE': 'FTSE', '^GDAXI': 'DAX', '^HSI': 'Hang Seng', 'GBPUSD=X': 'GBP/USD', 'AUDUSD=X': 'AUD/USD', 'GC=F': 'Gold fut', 'CL=F': 'Crude fut', 'HG=F': 'Copper fut', 'ETH-USD': 'ETH' };
+const nm = t => NAMES[t] || t;
+onResize(() => {
+  const c = document.getElementById('c-lev'); const rows = D.e1;
+  const f = frame(c, { height: 360, x: [-1.7, 1.2], y: [-1.75, 2.0], yt: [-1.5, -1, -0.5, 0, 0.5, 1, 1.5, 2], yf: v => sgn(v, 1).replace('+0.0', '0'), xt: [-1.5, -1, -0.5, 0, 0.5, 1], xf: v => sgn(v, 1).replace('+0.0', '0'), xl: 'leverage statistic (negative = volatility rises after falls)', yl: 'Δ calendar time (log down/up)', aria: 'Calendar asymmetry vs leverage across assets' });
+  el('line', { x1: f.m.l, x2: f.W - f.m.r, y1: f.y(0), y2: f.y(0), class: 'axis' }, f.svg);
+  const T = tipper(c);
+  const label = { 'SPY': [-8, 16, 'end'], 'TLT': [8, -8, 'start'], 'EURUSD=X': [8, 4, 'start'], '^VIX': [8, 4, 'start'], 'AUDJPY=X': [8, 14, 'start'], 'BTC-USD': [8, -6, 'start'] };
+  for (const r of rows) {
+    const g = groupOf(r); const col = g ? g.color : '--neutral-mark';
+    const cx = f.x(r.lev), cy = f.y(r.dcal);
+    el('circle', { cx, cy, r: 4.5, fill: `var(${col})`, stroke: 'var(--surface)', 'stroke-width': 2 }, f.svg);
+    if (label[r.t]) { const [dx, dy, an] = label[r.t]; el('text', { x: cx + dx, y: cy + dy, class: 'dlabel', 'text-anchor': an }, f.svg, nm(r.t)); }
+    const hit = el('circle', { cx, cy, r: 12, fill: 'transparent', tabindex: 0, 'aria-label': `${nm(r.t)}: leverage ${r.lev}, delta ${r.dcal}` }, f.svg);
+    const show = () => { const rr = f.svg.getBoundingClientRect(); T.show(cx * rr.width / f.W, cy * rr.width / f.W, nm(r.t), [{ value: sgn(r.dcal), label: `Δ calendar (z ${sgn(r.zcal, 1)})`, color: col }, { value: sgn(r.dvar), label: 'Δ variance clock' }, { value: sgn(r.lev), label: 'leverage statistic' }]); };
+    hit.addEventListener('pointerenter', show); hit.addEventListener('focus', show); hit.addEventListener('pointerleave', () => T.hide()); hit.addEventListener('blur', () => T.hide());
+  }
+});
+table('t-lev', ['Asset', 'Class', 'Leverage', 'Δ calendar', 'z', 'Δ variance', 'Δ volume', 'Crossings'],
+  D.e1.slice().sort((a, b) => a.dcal - b.dcal).map(r => [nm(r.t), r.cls.replace(/_/g, ' '), sgn(r.lev), sgn(r.dcal), sgn(r.zcal, 1), sgn(r.dvar), r.dvol === null ? '–' : sgn(r.dvol), r.n]), [2, 3, 4, 5, 6, 7]);
+
+/* ---------------- Fig E1b: three clocks by group ---------------- */
+const CLK_GROUPS = [
+  ['Equity indices', r => ['us_equity_index', 'intl_equity_index'].includes(r.cls)],
+  ['US sectors', r => r.cls === 'us_sector'],
+  ['Single stocks', r => r.cls === 'single_stock'],
+  ['Commodities', r => r.cls === 'commodity'],
+  ['Treasuries', r => ['TLT', 'IEF'].includes(r.t)],
+  ['FX', r => r.cls === 'fx'],
+  ['Crypto', r => r.cls === 'crypto']
+];
+const mean = a => { const b = a.filter(v => v !== null && v !== undefined && !Number.isNaN(v)); return b.length ? b.reduce((s, v) => s + v, 0) / b.length : null; };
+const clk = CLK_GROUPS.map(([name, fn]) => { const rs = D.e1.filter(fn); return { name, n: rs.length, cal: mean(rs.map(r => r.dcal)), vol: mean(rs.map(r => r.dvol)), vr: mean(rs.map(r => r.dvar)) }; });
+legend('leg-clk', [{ name: 'Calendar time', color: '--s1' }, { name: 'Volume time', color: '--s3' }, { name: 'Variance time', color: '--s2' }]);
+function dotRows(id, rows, series, xr, xl, xfmt, aria, refs) {
+  onResize(() => {
+    const c = document.getElementById(id);
+    const rowH = 34, H = 30 + rows.length * rowH + 40;
+    const lw = Math.min(130, Math.max(96, c.clientWidth * 0.2));
+    const f = frame(c, { height: H, x: xr, y: [0, rows.length], noYGrid: true, xl, xf: xfmt, m: { l: lw, t: 10, b: 40 }, aria });
+    for (const t of ticks(xr[0], xr[1], Math.max(3, Math.floor(f.W / 120)))) el('line', { x1: f.x(t), x2: f.x(t), y1: f.m.t, y2: f.H - f.m.b, class: 'grid' }, f.svg);
+    for (const rv of (refs || [])) el('line', { x1: f.x(rv), x2: f.x(rv), y1: f.m.t, y2: f.H - f.m.b, class: 'axis' }, f.svg);
+    const T = tipper(c);
+    rows.forEach((r, i) => {
+      const rowCy = f.m.t + (i + 0.5) * rowH; const cy = rowCy;
+      el('text', { x: f.m.l - 10, y: cy + 4, class: 'dlabel', 'text-anchor': 'end' }, f.svg, r.name);
+      const vals = series.map(s => r[s.key]).filter(v => v !== null && v !== undefined);
+      if (vals.length > 1) el('line', { x1: f.x(Math.min(...vals)), x2: f.x(Math.max(...vals)), y1: cy, y2: cy, class: 'grid', 'stroke-width': 2 }, f.svg);
+      series.forEach((s, si) => {
+        const v = r[s.key]; if (v === null || v === undefined) return;
+        const cx = f.x(v); const cy = rowCy + (si - (series.length - 1) / 2) * 6;
+        el('circle', { cx, cy, r: 5, fill: `var(${s.color})`, stroke: 'var(--surface)', 'stroke-width': 2 }, f.svg);
+        const hit = el('circle', { cx, cy, r: 12, fill: 'transparent', tabindex: 0, 'aria-label': `${r.name}, ${s.name}: ${xfmt(v)}` }, f.svg);
+        const show = () => { const rr = f.svg.getBoundingClientRect(); T.show(cx * rr.width / f.W, cy * rr.width / f.W, r.name + (r.n ? ` (${r.n})` : ''), series.map(ss => ({ value: r[ss.key] === null || r[ss.key] === undefined ? '–' : xfmt(r[ss.key]), label: ss.name, color: ss.color }))); };
+        hit.addEventListener('pointerenter', show); hit.addEventListener('focus', show); hit.addEventListener('pointerleave', () => T.hide()); hit.addEventListener('blur', () => T.hide());
+      });
+    });
+  });
+}
+dotRows('c-clk', clk, [{ key: 'cal', name: 'Calendar', color: '--s1' }, { key: 'vol', name: 'Volume', color: '--s3' }, { key: 'vr', name: 'Variance', color: '--s2' }], [-1.4, 0.7], 'Δ = mean log duration, down minus up', v => sgn(v, 1).replace('+0.0', '0'), 'Asymmetry by clock and asset group', [0]);
+table('t-clk', ['Group', 'Assets', 'Δ calendar', 'Δ volume', 'Δ variance'], clk.map(r => [r.name, r.n, sgn(r.cal), r.vol === null ? '–' : sgn(r.vol), sgn(r.vr)]), [1, 2, 3, 4]);
+
+/* ---------------- Fig E2: barrier dot plot ---------------- */
+const BAR_GROUPS = [
+  ['Equity indices', r => ['us_equity_index', 'intl_equity_index'].includes(r.cls)],
+  ['Sectors', r => r.cls === 'us_sector'],
+  ['Single stocks', r => r.cls === 'single_stock'],
+  ['Bonds', r => r.cls === 'bond'],
+  ['Commodities', r => r.cls === 'commodity'],
+  ['FX', r => r.cls === 'fx'],
+  ['Crypto', r => r.cls === 'crypto']
+];
+const pct = v => v === null ? '–' : (100 * v).toFixed(1) + '%';
+const barRows = [];
+for (const [side, label] of [['tops', 'tops'], ['bot', 'bottoms']]) {
+  for (const [name, fn] of BAR_GROUPS) {
+    const rs = D.e3.filter(fn);
+    barRows.push({ name: `${name} · ${label}`, n: rs.length, real: mean(rs.map(r => r[side + '_real'])), plac: mean(rs.map(r => r[side + '_plac'])), nul: mean(rs.map(r => r[side + '_null'])) });
+  }
+}
+legend('leg-bar', [{ name: 'Swing extreme', color: '--s1' }, { name: 'Placebo level', color: '--s3' }, { name: 'Null (random signs)', color: '--s2' }]);
+dotRows('c-bar', barRows, [{ key: 'real', name: 'Swing extreme', color: '--s1' }, { key: 'plac', name: 'Placebo level', color: '--s3' }, { key: 'nul', name: 'Null', color: '--s2' }], [0.3, 0.65], 'share of retests rejected before breaking (±2σ race)', v => (100 * v).toFixed(0) + '%', 'Rejection rates at retests', [0.5]);
+table('t-bar', ['Group', 'Assets', 'Swing extreme', 'Placebo', 'Null'], barRows.map(r => [r.name, r.n, pct(r.real), pct(r.plac), pct(r.nul)]), [1, 2, 3, 4]);
+
+/* ---------------- Fig E2b: lag strip ---------------- */
+legend('leg-lag', GROUPS.map(g => ({ name: g.name, color: g.color })));
+onResize(() => {
+  const c = document.getElementById('c-lag'); const rows = D.e2b_lag;
+  const lags = [['z5', '≥ 5 days'], ['z60', '≥ 60 days'], ['z250', '≥ 250 days']];
+  const H = 300;
+  const f = frame(c, { height: H, x: [0, 3], y: [-8, 5], yt: [-8, -6, -4, -2, 0, 2, 4], yf: v => v, noXTicks: true, yl: 'z vs random-sign null', aria: 'Volume-at-price effect z-scores by lag' });
+  el('line', { x1: f.m.l, x2: f.W - f.m.r, y1: f.y(0), y2: f.y(0), class: 'axis' }, f.svg);
+  el('line', { x1: f.m.l, x2: f.W - f.m.r, y1: f.y(-2), y2: f.y(-2), class: 'grid', 'stroke-width': 1.5 }, f.svg);
+  el('text', { x: f.m.l + 4, y: f.y(-2) + 13, class: 'tick', 'text-anchor': 'start' }, f.svg, 'z = −2');
+  const T = tipper(c);
+  lags.forEach(([key, lab], j) => {
+    el('text', { x: f.x(j + 0.5), y: H - f.m.b + 17, class: 'tick', 'text-anchor': 'middle' }, f.svg, lab);
+    const zs = rows.map(r => r[key]); const mz = mean(zs);
+    el('line', { x1: f.x(j + 0.18), x2: f.x(j + 0.82), y1: f.y(mz), y2: f.y(mz), stroke: 'var(--fg)', 'stroke-width': 2 }, f.svg);
+    el('text', { x: f.x(j + 0.84), y: f.y(mz) + 4, class: 'dlabel-strong' }, f.svg, 'mean ' + sgn(mz, 1));
+    rows.forEach((r, i) => {
+      const g = groupOf({ t: r.t, cls: r.cls }) || GROUPS[0];
+      const jitter = ((i * 37) % 23) / 23 - 0.5;
+      const cx = f.x(j + 0.5 + jitter * 0.5), cy = f.y(Math.max(-8, Math.min(5, r[key])));
+      el('circle', { cx, cy, r: 4, fill: `var(${g.color})`, stroke: 'var(--surface)', 'stroke-width': 1.5 }, f.svg);
+      const hit = el('circle', { cx, cy, r: 10, fill: 'transparent', tabindex: 0, 'aria-label': `${nm(r.t)} ${lab}: z ${r[key]}` }, f.svg);
+      const show = () => { const rr = f.svg.getBoundingClientRect(); T.show(cx * rr.width / f.W, cy * rr.width / f.W, nm(r.t) + ' · volume ' + lab + ' old', [{ value: sgn(r[key], 1), label: 'z', color: g.color }]); };
+      hit.addEventListener('pointerenter', show); hit.addEventListener('focus', show); hit.addEventListener('pointerleave', () => T.hide()); hit.addEventListener('blur', () => T.hide());
+    });
+  });
+});
+table('t-lag', ['Asset', 'z (≥5d)', 'z (≥60d)', 'z (≥250d)'], D.e2b_lag.map(r => [nm(r.t), sgn(r.z5, 1), sgn(r.z60, 1), sgn(r.z250, 1)]), [1, 2, 3]);
+
+/* ---------------- Fig E3: queue imbalance ---------------- */
+const QI_SYMS = [['SPY', '--s1'], ['QQQ', '--s3'], ['NVDA', '--s2']];
+legend('leg-qi', QI_SYMS.map(([s, col]) => ({ name: s, color: col, kind: 'line' })));
+function qiSeries(sym) {
+  const key = Object.keys(D.micro).find(k => D.micro[k].symbol === sym && k.startsWith('2026-05-15'));
+  if (!key) return null; const b = D.micro[key].queue_imbalance.bins;
+  const xs = [], ys = [], ns = [];
+  for (const k of Object.keys(b)) { const [a, c] = k.split('..').map(Number); xs.push((a + c) / 2); ys.push(b[k].p_up); ns.push(b[k].n); }
+  return { xs, ys, ns };
+}
+onResize(() => {
+  const c = document.getElementById('c-qi');
+  const f = frame(c, { height: 300, x: [-1, 1], y: [0.3, 0.7], yt: [0.3, 0.4, 0.5, 0.6, 0.7], yf: v => (v * 100).toFixed(0) + '%', xt: [-1, -0.5, 0, 0.5, 1], xf: v => sgn(v, 1).replace('+0.0', '0'), xl: 'queue imbalance (−1 ask-heavy … +1 bid-heavy)', yl: 'P(next mid move is up)', aria: 'Queue imbalance vs next move' });
+  el('line', { x1: f.m.l, x2: f.W - f.m.r, y1: f.y(0.5), y2: f.y(0.5), class: 'axis' }, f.svg);
+  const all = [];
+  for (const [sym, col] of QI_SYMS) {
+    const s = qiSeries(sym); if (!s) continue; all.push([sym, col, s]);
+    el('path', { d: s.xs.map((x, i) => (i ? 'L' : 'M') + f.x(x) + ',' + f.y(s.ys[i])).join(''), class: 'line', style: `stroke:var(${col})` }, f.svg);
+    const li = s.xs.length - 1;
+    el('circle', { cx: f.x(s.xs[li]), cy: f.y(s.ys[li]), r: 4, fill: `var(${col})`, stroke: 'var(--surface)', 'stroke-width': 2 }, f.svg);
+  }
+  const T = tipper(c);
+  const ov = el('rect', { x: f.m.l, y: f.m.t, width: f.W - f.m.l - f.m.r, height: f.H - f.m.t - f.m.b, fill: 'transparent' }, f.svg);
+  const cross = el('line', { y1: f.m.t, y2: f.H - f.m.b, class: 'axis', visibility: 'hidden' }, f.svg);
+  ov.addEventListener('pointermove', ev => {
+    const r = f.svg.getBoundingClientRect(); const px = (ev.clientX - r.left) * (f.W / r.width); const xv = f.x.inv(px);
+    if (!all.length) return; const xs = all[0][2].xs; let bi = 0, bd = 9; xs.forEach((x, i) => { if (Math.abs(x - xv) < bd) { bd = Math.abs(x - xv); bi = i; } });
+    const cx = f.x(xs[bi]); cross.setAttribute('x1', cx); cross.setAttribute('x2', cx); cross.setAttribute('visibility', 'visible');
+    T.show(cx * r.width / f.W, (f.m.t + 20) * r.width / f.W, `imbalance ${sgn(xs[bi] - 0.1, 1)} to ${sgn(xs[bi] + 0.1, 1)}`, all.map(([sym, col, s]) => ({ value: (100 * s.ys[bi]).toFixed(1) + '%', label: `${sym} (n ${s.ns[bi].toLocaleString()} s)`, color: col })));
+  });
+  ov.addEventListener('pointerleave', () => { T.hide(); cross.setAttribute('visibility', 'hidden'); });
+});
+(function () {
+  const rows = []; for (const [sym] of QI_SYMS) { const s = qiSeries(sym); if (!s) continue; s.xs.forEach((x, i) => rows.push([sym, `${sgn(x - 0.1, 1)} … ${sgn(x + 0.1, 1)}`, (100 * s.ys[i]).toFixed(1) + '%', s.ns[i]])); }
+  table('t-qi', ['Symbol', 'Imbalance bin', 'P(up)', 'Seconds'], rows, [2, 3]);
+})();
+(function () {
+  const order = ['SPY', 'QQQ', 'IWM', 'AAPL', 'NVDA', 'TSLA'];
+  const keys = Object.keys(D.micro).sort((a, b) => (D.micro[a].date < D.micro[b].date ? -1 : D.micro[a].date > D.micro[b].date ? 1 : 0) || (order.indexOf(D.micro[a].symbol) - order.indexOf(D.micro[b].symbol)));
+  table('t-micro', ['Day · symbol', 'Messages', 'Nasdaq volume', 'Queue imbalance corr', 'Round-$ depth ×', 'Crossing Δ clock', 'Δ volume', 'Δ trades', 'Flow→price R² (5 min)', 'Hysteresis ¢ (returned / not)'],
+    keys.map(k => { const m = D.micro[k]; const c20 = m.intraday_crossings['20c'] || {}; const hy = m.hysteresis['300s'];
+      return [m.date.slice(5).replace('-', '/') + ' · ' + m.symbol, (m.n_msgs / 1e6).toFixed(1) + 'M', (m.volume_regular / 1e6).toFixed(1) + 'M', fmt(m.queue_imbalance.corr_I_up, 3), Math.exp(m.depth_memory.beta_round_dollar).toFixed(1) + '×',
+        sgn(c20.delta_log_clock), sgn(c20.delta_log_volume), sgn(c20.delta_log_trades), fmt(m.flow_price['300s'] ? m.flow_price['300s'].r2 : null), `${hy.mean_abs_dmid_cents_flow_returned.toFixed(0)} / ${hy.mean_abs_dmid_cents_flow_unreturned.toFixed(0)}`]; }),
+    [1, 2, 3, 4, 5, 6, 7, 8, 9]);
+})();
+
+/* ---------------- model table ---------------- */
+(function () {
+  const M = D.model;
+  const rows = [
+    ['0', 'Random walk with drift', '0_null_bm'], ['A', 'Static speed landscape', 'A_static_landscape'], ['B', 'A + level barriers', 'B_landscape_barriers'],
+    ['C', 'B + leverage', 'C_B_plus_leverage'], ['F', 'Leverage only', 'F_lev_only'], ['G', 'Leverage + dip buying, no levels', 'G_lev_dip_no_land'],
+    ['E', 'Self-written landscape + leverage + dip buying', 'E_selfwritten_lev_dip']
+  ].filter(r => M[r[2]]).map(([id, name, k]) => [id, name, sgn(M[k].delta_cal), sgn(M[k].delta_var), fmt(M[k].mirror_rho), pct(M[k].p_reject_swing_high), pct(M[k].p_reject_placebo)]);
+  const spy = D.e1.find(r => r.t === 'SPY'); const spyA = D.e2a.find(r => r.t === 'SPY'); const spyB = D.e3.find(r => r.t === 'SPY');
+  rows.push(['SPY', 'Real data, 1993–2026', sgn(spy.dcal), sgn(spy.dvar), fmt(spyA.rho), pct(spyB.tops_real), pct(spyB.tops_plac)]);
+  table('t-model', ['', 'Ingredients', 'Δ calendar', 'Δ variance', 'Speed-profile mirror ρ', 'Reject at swing high', 'Reject at placebo'], rows, [2, 3, 4, 5, 6]);
+})();
+
+/* ---------------- SPY two clocks ---------------- */
+const CM = D.clock_may, CN = D.clock_nov;
+legend('leg-clock2', [{ name: 'May 2026, forward', color: '--s1', kind: 'line' }, { name: 'Nov 2026, time-reversed', color: '--s2', kind: 'line' }]);
+function clockChart(id, key, xl, xf, aria) {
+  onResize(() => {
+    const c = document.getElementById(id);
+    const may = { x: key === 'h' ? CM.hours : CM.cumvar, y: CM.close };
+    const nx = key === 'h' ? CN.hours : CN.cumvar; const tot = nx[nx.length - 1];
+    const nov = { x: nx.map(v => tot - v).reverse(), y: CN.close.slice().reverse() };
+    const xmax = Math.max(may.x[may.x.length - 1], nov.x[nov.x.length - 1]);
+    const f = frame(c, { height: 280, x: [0, xmax * 1.02], y: [712, 762], yt: [720, 730, 740, 750, 760], yf: v => v, xl, xf, aria });
+    el('rect', { x: f.m.l, width: f.W - f.m.l - f.m.r, y: f.y(756.48), height: f.y(718.66) - f.y(756.48), fill: 'var(--band)' }, f.svg);
+    const ser = [['May', '--s1', may], ['Nov (reversed)', '--s2', nov]];
+    for (const [n, col, s] of ser) {
+      el('path', { d: s.x.map((x, i) => (i ? 'L' : 'M') + f.x(x).toFixed(1) + ',' + f.y(s.y[i]).toFixed(1)).join(''), class: 'line', style: `stroke:var(${col})` }, f.svg);
+      const li = s.x.length - 1; el('circle', { cx: f.x(s.x[li]), cy: f.y(s.y[li]), r: 4, fill: `var(${col})`, stroke: 'var(--surface)', 'stroke-width': 2 }, f.svg);
+      el('text', { x: f.x(s.x[li]) - 6, y: f.y(s.y[li]) - 9, class: 'dlabel', 'text-anchor': 'end' }, f.svg, `${n}: ${xf(s.x[li])}`);
+    }
+    const T = tipper(c);
+    const ov = el('rect', { x: f.m.l, y: f.m.t, width: f.W - f.m.l - f.m.r, height: f.H - f.m.t - f.m.b, fill: 'transparent' }, f.svg);
+    const cross = el('line', { y1: f.m.t, y2: f.H - f.m.b, class: 'axis', visibility: 'hidden' }, f.svg);
+    ov.addEventListener('pointermove', ev => {
+      const r = f.svg.getBoundingClientRect(); const px = (ev.clientX - r.left) * (f.W / r.width); const xv = f.x.inv(px);
+      cross.setAttribute('x1', px); cross.setAttribute('x2', px); cross.setAttribute('visibility', 'visible');
+      const near = s => { let bi = 0, bd = Infinity; s.x.forEach((x, i) => { if (Math.abs(x - xv) < bd) { bd = Math.abs(x - xv); bi = i; } }); return s.x[bi] > xv + (xmax * 0.03) || s.x[bi] < xv - (xmax * 0.03) ? null : s.y[bi]; };
+      T.show(px * r.width / f.W, (f.m.t + 20) * r.width / f.W, xf(xv), ser.map(([n, col, s]) => ({ value: near(s) === null ? '–' : near(s).toFixed(2), label: n, color: col })));
+    });
+    ov.addEventListener('pointerleave', () => { T.hide(); cross.setAttribute('visibility', 'hidden'); });
+  });
+}
+clockChart('c-clock-cal', 'h', 'trading hours in the band', v => Math.round(v) + 'h', 'Price vs trading hours');
+clockChart('c-clock-var', 'v', 'cumulative realized variance (×10⁻⁴)', v => (+v).toFixed(1), 'Price vs realized variance');
+table('t-clock2', ['Leg', 'Hour', 'Bar time', 'Close', 'Cum. variance ×10⁻⁴'],
+  CM.close.map((v, i) => ['May', i, CM.t[i], v.toFixed(2), CM.cumvar[i].toFixed(2)]).concat(CN.close.map((v, i) => ['Nov', i, CN.t[i], v.toFixed(2), CN.cumvar[i].toFixed(2)])), [1, 3, 4]);
+(function () {
+  const E = D.e6, a = E.may_up, b = E.nov_down;
+  table('t-spy', ['Measure', 'May up-leg', 'Nov down-leg', 'Nov ÷ May'], [
+    ['Trading hours in band', a.hours_inband.toFixed(0), b.hours_inband.toFixed(0), E.ratio_nov_over_may_hours_inband.toFixed(2)],
+    ['Realized variance in band (×10⁻⁴)', (a.realized_var_inband * 1e4).toFixed(2), (b.realized_var_inband * 1e4).toFixed(2), E.ratio_nov_over_may_realized_var_inband.toFixed(2)],
+    ['Shares traded in band (hourly bars)', (a.volume_inband_shares / 1e6).toFixed(0) + 'M', (b.volume_inband_shares / 1e6).toFixed(0) + 'M', E.ratio_nov_over_may_volume_inband_shares.toFixed(2)],
+    ['Realized volatility (annualized)', (100 * a.realized_vol_ann).toFixed(1) + '%', (100 * b.realized_vol_ann).toFixed(1) + '%', (b.realized_vol_ann / a.realized_vol_ann).toFixed(2)],
+    ['Speed-profile mirror ρ (8 sub-bands)', '', '', fmt(E.mirror_rho_may_nov)]
+  ], [1, 2, 3]);
+})();
+
+/* ---------------- SPY dwell histogram ---------------- */
+legend('leg-hist', [{ name: 'May up-leg', color: '--s1', kind: 'rect' }, { name: 'Nov down-leg', color: '--s2', kind: 'rect' }]);
+onResize(() => {
+  const c = document.getElementById('c-hist'); const E = D.e6;
+  const bins = E.hist_bins, A = E.hist_may_hours, B = E.hist_nov_hours;
+  const vmax = Math.max(...A, ...B);
+  const f = frame(c, { height: 300, x: [bins[0], bins[bins.length - 1]], y: [0, vmax * 1.1], yt: ticks(0, vmax * 1.1, 4), yf: v => v + 'h', xt: [715, 720, 725, 730, 735, 740, 745, 750, 755, 760], xf: v => v, xl: 'price (raw, $1 bins)', yl: 'trading hours at price', aria: 'Time at price, May vs November' });
+  const T = tipper(c);
+  const bw = f.x(bins[1]) - f.x(bins[0]); const barW = Math.min(12, Math.max(2, (bw - 4) / 2));
+  for (let i = 0; i < A.length; i++) {
+    const xc = f.x((bins[i] + bins[i + 1]) / 2);
+    [[A[i], '--s1', -1], [B[i], '--s2', 1]].forEach(([v, col, side]) => {
+      if (v <= 0) return; const x0 = side < 0 ? xc - barW - 1 : xc + 1; const y0 = f.y(v), y1 = f.y(0); const r = Math.min(3, barW / 2, (y1 - y0) / 2);
+      el('path', { d: `M${x0},${y1} V${y0 + r} Q${x0},${y0} ${x0 + r},${y0} H${x0 + barW - r} Q${x0 + barW},${y0} ${x0 + barW},${y0 + r} V${y1} Z`, fill: `var(${col})` }, f.svg);
+    });
+    const hit = el('rect', { x: xc - bw / 2, y: f.m.t, width: bw, height: f.H - f.m.t - f.m.b, fill: 'transparent', tabindex: 0, 'aria-label': `$${bins[i]}: May ${A[i]} h, Nov ${B[i]} h` }, f.svg);
+    const show = () => { const rr = f.svg.getBoundingClientRect(); T.show(xc * rr.width / f.W, f.y(Math.max(A[i], B[i])) * rr.width / f.W, `$${bins[i]}–${bins[i + 1]}`, [{ value: A[i].toFixed(1) + 'h', label: 'May', color: '--s1' }, { value: B[i].toFixed(1) + 'h', label: 'November', color: '--s2' }]); };
+    hit.addEventListener('pointerenter', show); hit.addEventListener('focus', show); hit.addEventListener('pointerleave', () => T.hide()); hit.addEventListener('blur', () => T.hide());
+  }
+});
+table('t-hist', ['Price', 'May hours', 'Nov hours'], D.e6.hist_may_hours.map((v, i) => [`${D.e6.hist_bins[i]}–${D.e6.hist_bins[i + 1]}`, v.toFixed(1), D.e6.hist_nov_hours[i].toFixed(1)]).reverse(), [1, 2]);
+
+/* ---------------- SPY predictions and base rates ---------------- */
+(function () {
+  const C = D.e7.conditional_on_fast_decline_le8d, S = D.e7.SPY, G = D.e7['^GSPC'];
+  table('t-spypred', ['#', 'Prediction (from 21 Nov 2026)', 'Measured how', 'Falsified if'], [
+    ['S1', 'If SPY regains 757.12, the up-leg through 689.81–757.12 takes at least 2× the decline’s 6 trading days (median expectation ≈ 3×)', 'Trading days in the band, in-band time only', 'The up-leg completes in fewer than 6 trading days'],
+    ['S2', `Probability SPY closes ≥ 757.12 within 20 trading days: ${Math.round(100 * C['^GSPC'].p20_fast)}–${Math.round(100 * C.SPY.p20_fast)}%; within 60 trading days: ${Math.round(100 * C['^GSPC'].p60_fast)}–${Math.round(100 * C.SPY.p60_fast)}%`, 'Daily closes after 20 Nov 2026', 'A probability, scored with the Brier score; one outcome cannot falsify it alone'],
+    ['S3', 'If the up-leg completes, it uses no more realized variance than the decline did', 'Sum of squared returns inside the band', 'Up-leg variance exceeds the decline’s'],
+    ['S4', 'While SPY trades in 676–697 (the heaviest node on the map), its volatility-normalized daily range runs about 5% below what the same volatility regime would give elsewhere', 'Range ÷ EWMA range, compared with 697–730', 'Normalized range is higher inside the node (low power: effect is small)'],
+    ['S5', 'Prior swing levels (727–733, 757–760, 767–779) hold no better than arbitrary prices', 'Retest rejection vs placebo levels, same ±2σ race', 'Swing levels reject materially more often than placebo prices']
+  ], []);
+  table('t-base', ['Base rate (9.3% band, fast declines)', 'SPY 1993–2026', 'S&P 500 1928–2026'], [
+    ['Down-crossings in sample (fast / all)', `${C.SPY.n_fast} / ${S.n_down}`, `${C['^GSPC'].n_fast} / ${G.n_down}`],
+    ['Median up-leg ÷ down-leg (calendar)', C.SPY.median_ratio_cal_fast.toFixed(1) + '×', C['^GSPC'].median_ratio_cal_fast.toFixed(1) + '×'],
+    ['Median up-leg ÷ down-leg (variance, all declines)', S.ratio_var_quantiles_10_25_50_75_90[2].toFixed(2) + '×', G.ratio_var_quantiles_10_25_50_75_90[2].toFixed(2) + '×'],
+    ['Median trading days to full recovery', C.SPY.median_recovery_days_fast.toFixed(0), C['^GSPC'].median_recovery_days_fast.toFixed(0)],
+    ['Recovered within 20 trading days', pct(C.SPY.p20_fast), pct(C['^GSPC'].p20_fast)],
+    ['Recovered within 60 trading days', pct(C.SPY.p60_fast), pct(C['^GSPC'].p60_fast)],
+    ['Slow declines: recovered within 60 days (contrast)', pct(C.SPY.p60_slow), pct(C['^GSPC'].p60_slow)]
+  ], [1, 2]);
+})();
+})();
+</script>

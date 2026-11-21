@@ -1,0 +1,98 @@
+SPY       tops: real=0.412 (n=391) plac=0.400 sur=0.470 | bottoms: real=0.508 (n=333) plac=0.551 sur=0.547
+QQQ       tops: real=0.424 (n=347) plac=0.407 sur=0.475 | bottoms: real=0.518 (n=332) plac=0.506 sur=0.528
+IWM       tops: real=0.452 (n=314) plac=0.507 sur=0.489 | bottoms: real=0.532 (n=267) plac=0.565 sur=0.530
+DIA       tops: real=0.445 (n=317) plac=0.440 sur=0.474 | bottoms: real=0.567 (n=247) plac=0.572 sur=0.529
+/home/user/genovy/research/mirror-symmetry/scripts/e3_barriers.py:125: RuntimeWarning: Mean of empty slice
+  hv = e[:, 3] >= np.median(e[:, 3]); d["p_highvol_pivot"] = float(e[hv, 1].mean()); d["p_lowvol_pivot"] = float(e[~hv, 1].mean())
+/usr/local/lib/python3.13/site-packages/numpy/_core/_methods.py:142: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+^GSPC     tops: real=0.402 (n=1082) plac=0.397 sur=0.479 | bottoms: real=0.504 (n=953) plac=0.541 sur=0.546
+EFA       tops: real=0.494 (n=267) plac=0.429 sur=0.499 | bottoms: real=0.588 (n=228) plac=0.585 sur=0.514
+EEM       tops: real=0.435 (n=260) plac=0.448 sur=0.468 | bottoms: real=0.611 (n=257) plac=0.611 sur=0.530
+/home/user/genovy/research/mirror-symmetry/scripts/e3_barriers.py:125: RuntimeWarning: Mean of empty slice
+  hv = e[:, 3] >= np.median(e[:, 3]); d["p_highvol_pivot"] = float(e[hv, 1].mean()); d["p_lowvol_pivot"] = float(e[~hv, 1].mean())
+/usr/local/lib/python3.13/site-packages/numpy/_core/_methods.py:142: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+^N225     tops: real=0.379 (n=485) plac=0.392 sur=0.484 | bottoms: real=0.558 (n=464) plac=0.585 sur=0.525
+/home/user/genovy/research/mirror-symmetry/scripts/e3_barriers.py:125: RuntimeWarning: Mean of empty slice
+  hv = e[:, 3] >= np.median(e[:, 3]); d["p_highvol_pivot"] = float(e[hv, 1].mean()); d["p_lowvol_pivot"] = float(e[~hv, 1].mean())
+/usr/local/lib/python3.13/site-packages/numpy/_core/_methods.py:142: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+^FTSE     tops: real=0.437 (n=584) plac=0.448 sur=0.477 | bottoms: real=0.556 (n=493) plac=0.599 sur=0.529
+/home/user/genovy/research/mirror-symmetry/scripts/e3_barriers.py:125: RuntimeWarning: Mean of empty slice
+  hv = e[:, 3] >= np.median(e[:, 3]); d["p_highvol_pivot"] = float(e[hv, 1].mean()); d["p_lowvol_pivot"] = float(e[~hv, 1].mean())
+/usr/local/lib/python3.13/site-packages/numpy/_core/_methods.py:142: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+^GDAXI    tops: real=0.425 (n=473) plac=0.434 sur=0.477 | bottoms: real=0.500 (n=386) plac=0.501 sur=0.542
+/home/user/genovy/research/mirror-symmetry/scripts/e3_barriers.py:125: RuntimeWarning: Mean of empty slice
+  hv = e[:, 3] >= np.median(e[:, 3]); d["p_highvol_pivot"] = float(e[hv, 1].mean()); d["p_lowvol_pivot"] = float(e[~hv, 1].mean())
+/usr/local/lib/python3.13/site-packages/numpy/_core/_methods.py:142: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+^HSI      tops: real=0.389 (n=357) plac=0.395 sur=0.481 | bottoms: real=0.432 (n=324) plac=0.445 sur=0.525
+XLK       tops: real=0.425 (n=318) plac=0.474 sur=0.477 | bottoms: real=0.515 (n=305) plac=0.516 sur=0.531
+XLF       tops: real=0.500 (n=370) plac=0.475 sur=0.488 | bottoms: real=0.551 (n=341) plac=0.534 sur=0.530
+XLE       tops: real=0.508 (n=333) plac=0.471 sur=0.485 | bottoms: real=0.598 (n=291) plac=0.557 sur=0.529
+XLV       tops: real=0.461 (n=395) plac=0.485 sur=0.458 | bottoms: real=0.560 (n=327) plac=0.592 sur=0.547
+XLY       tops: real=0.487 (n=337) plac=0.485 sur=0.471 | bottoms: real=0.460 (n=252) plac=0.516 sur=0.531
+XLP       tops: real=0.488 (n=375) plac=0.487 sur=0.467 | bottoms: real=0.577 (n=310) plac=0.604 sur=0.538
+XLI       tops: real=0.478 (n=347) plac=0.476 sur=0.482 | bottoms: real=0.493 (n=284) plac=0.558 sur=0.537
+XLU       tops: real=0.464 (n=345) plac=0.479 sur=0.475 | bottoms: real=0.552 (n=299) plac=0.543 sur=0.546
+XLB       tops: real=0.508 (n=372) plac=0.481 sur=0.476 | bottoms: real=0.521 (n=303) plac=0.529 sur=0.530
+AAPL      tops: real=0.404 (n=453) plac=0.440 sur=0.478 | bottoms: real=0.477 (n=411) plac=0.489 sur=0.540
+MSFT      tops: real=0.431 (n=452) plac=0.468 sur=0.457 | bottoms: real=0.550 (n=347) plac=0.582 sur=0.560
+AMZN      tops: real=0.426 (n=392) plac=0.423 sur=0.469 | bottoms: real=0.543 (n=348) plac=0.544 sur=0.540
+JPM       tops: real=0.496 (n=633) plac=0.462 sur=0.482 | bottoms: real=0.543 (n=567) plac=0.529 sur=0.530
+XOM       tops: real=0.526 (n=943) plac=0.522 sur=0.466 | bottoms: real=0.569 (n=743) plac=0.586 sur=0.555
+JNJ       tops: real=0.453 (n=748) plac=0.452 sur=0.453 | bottoms: real=0.550 (n=605) plac=0.565 sur=0.557
+PG        tops: real=0.468 (n=788) plac=0.467 sur=0.463 | bottoms: real=0.552 (n=694) plac=0.544 sur=0.541
+KO        tops: real=0.474 (n=825) plac=0.487 sur=0.466 | bottoms: real=0.546 (n=689) plac=0.556 sur=0.547
+WMT       tops: real=0.442 (n=566) plac=0.490 sur=0.459 | bottoms: real=0.551 (n=421) plac=0.596 sur=0.551
+GE        tops: real=0.455 (n=928) plac=0.481 sur=0.488 | bottoms: real=0.567 (n=804) plac=0.567 sur=0.524
+IBM       tops: real=0.463 (n=721) plac=0.439 sur=0.485 | bottoms: real=0.455 (n=638) plac=0.515 sur=0.535
+INTC      tops: real=0.468 (n=464) plac=0.507 sur=0.479 | bottoms: real=0.548 (n=423) plac=0.532 sur=0.531
+NVDA      tops: real=0.404 (n=307) plac=0.407 sur=0.467 | bottoms: real=0.474 (n=272) plac=0.469 sur=0.539
+CSCO      tops: real=0.443 (n=454) plac=0.452 sur=0.478 | bottoms: real=0.543 (n=394) plac=0.568 sur=0.550
+BA        tops: real=0.438 (n=665) plac=0.504 sur=0.478 | bottoms: real=0.513 (n=631) plac=0.532 sur=0.532
+CAT       tops: real=0.437 (n=711) plac=0.441 sur=0.484 | bottoms: real=0.503 (n=632) plac=0.535 sur=0.541
+MRK       tops: real=0.469 (n=776) plac=0.464 sur=0.471 | bottoms: real=0.501 (n=615) plac=0.500 sur=0.549
+PFE       tops: real=0.500 (n=590) plac=0.482 sur=0.478 | bottoms: real=0.557 (n=530) plac=0.570 sur=0.545
+HD        tops: real=0.431 (n=557) plac=0.450 sur=0.453 | bottoms: real=0.622 (n=471) plac=0.596 sur=0.555
+DIS       tops: real=0.448 (n=747) plac=0.451 sur=0.478 | bottoms: real=0.532 (n=671) plac=0.547 sur=0.535
+TLT       tops: real=0.443 (n=212) plac=0.555 sur=0.495 | bottoms: real=0.522 (n=251) plac=0.517 sur=0.513
+IEF       tops: real=0.513 (n=238) plac=0.427 sur=0.458 | bottoms: real=0.450 (n=220) plac=0.484 sur=0.548
+HYG       tops: real=0.488 (n=242) plac=0.400 sur=0.463 | bottoms: real=0.470 (n=236) plac=0.496 sur=0.529
+GLD       tops: real=0.415 (n=205) plac=0.449 sur=0.458 | bottoms: real=0.459 (n=172) plac=0.512 sur=0.527
+SLV       tops: real=0.403 (n=176) plac=0.463 sur=0.488 | bottoms: real=0.556 (n=196) plac=0.527 sur=0.527
+USO       tops: real=0.500 (n=232) plac=0.486 sur=0.515 | bottoms: real=0.494 (n=231) plac=0.470 sur=0.485
+DBC       tops: real=0.412 (n=187) plac=0.446 sur=0.501 | bottoms: real=0.527 (n=188) plac=0.501 sur=0.506
+GC=F      tops: real=0.434 (n=242) plac=0.460 sur=0.467 | bottoms: real=0.498 (n=203) plac=0.535 sur=0.557
+CL=F      tops: real=0.459 (n=318) plac=0.508 sur=0.506 | bottoms: real=0.486 (n=290) plac=0.557 sur=0.523
+HG=F      tops: real=0.515 (n=266) plac=0.509 sur=0.489 | bottoms: real=0.497 (n=195) plac=0.538 sur=0.533
+/home/user/genovy/research/mirror-symmetry/scripts/e3_barriers.py:125: RuntimeWarning: Mean of empty slice
+  hv = e[:, 3] >= np.median(e[:, 3]); d["p_highvol_pivot"] = float(e[hv, 1].mean()); d["p_lowvol_pivot"] = float(e[~hv, 1].mean())
+/usr/local/lib/python3.13/site-packages/numpy/_core/_methods.py:142: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+EURUSD=X  tops: real=0.392 (n=237) plac=0.438 sur=0.500 | bottoms: real=0.394 (n=259) plac=0.420 sur=0.497
+/home/user/genovy/research/mirror-symmetry/scripts/e3_barriers.py:125: RuntimeWarning: Mean of empty slice
+  hv = e[:, 3] >= np.median(e[:, 3]); d["p_highvol_pivot"] = float(e[hv, 1].mean()); d["p_lowvol_pivot"] = float(e[~hv, 1].mean())
+/usr/local/lib/python3.13/site-packages/numpy/_core/_methods.py:142: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+JPY=X     tops: real=0.429 (n=317) plac=0.495 sur=0.506 | bottoms: real=0.463 (n=298) plac=0.443 sur=0.510
+/home/user/genovy/research/mirror-symmetry/scripts/e3_barriers.py:125: RuntimeWarning: Mean of empty slice
+  hv = e[:, 3] >= np.median(e[:, 3]); d["p_highvol_pivot"] = float(e[hv, 1].mean()); d["p_lowvol_pivot"] = float(e[~hv, 1].mean())
+/usr/local/lib/python3.13/site-packages/numpy/_core/_methods.py:142: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+GBPUSD=X  tops: real=0.351 (n=225) plac=0.389 sur=0.521 | bottoms: real=0.389 (n=252) plac=0.424 sur=0.490
+/home/user/genovy/research/mirror-symmetry/scripts/e3_barriers.py:125: RuntimeWarning: Mean of empty slice
+  hv = e[:, 3] >= np.median(e[:, 3]); d["p_highvol_pivot"] = float(e[hv, 1].mean()); d["p_lowvol_pivot"] = float(e[~hv, 1].mean())
+/usr/local/lib/python3.13/site-packages/numpy/_core/_methods.py:142: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+AUDUSD=X  tops: real=0.410 (n=239) plac=0.356 sur=0.513 | bottoms: real=0.386 (n=233) plac=0.373 sur=0.503
+/home/user/genovy/research/mirror-symmetry/scripts/e3_barriers.py:125: RuntimeWarning: Mean of empty slice
+  hv = e[:, 3] >= np.median(e[:, 3]); d["p_highvol_pivot"] = float(e[hv, 1].mean()); d["p_lowvol_pivot"] = float(e[~hv, 1].mean())
+/usr/local/lib/python3.13/site-packages/numpy/_core/_methods.py:142: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+AUDJPY=X  tops: real=0.333 (n=279) plac=0.358 sur=0.507 | bottoms: real=0.463 (n=259) plac=0.469 sur=0.515
+BTC-USD   tops: real=0.437 (n=158) plac=0.477 sur=0.463 | bottoms: real=0.587 (n=138) plac=0.570 sur=0.562
+ETH-USD   tops: real=0.396 (n=106) plac=0.426 sur=0.502 | bottoms: real=0.509 (n=108) plac=0.502 sur=0.531
+saved

@@ -1,0 +1,102 @@
+SPY       us_equity_index   A12: pairs=  46 rho=+0.203 null=+0.053 z=+2.01 | B: speed=-0.056 (z=-1.3) vap=-0.013 (z=-3.6)
+QQQ       us_equity_index   A12: pairs=  51 rho=+0.087 null=+0.063 z=+0.29 | B: speed=-0.089 (z=-1.2) vap=-0.005 (z=-1.6)
+IWM       us_equity_index   A12: pairs=  46 rho=+0.047 null=+0.054 z=-0.09 | B: speed=-0.071 (z=-1.9) vap=-0.003 (z=-1.2)
+DIA       us_equity_index   A12: pairs=  44 rho=+0.161 null=+0.051 z=+1.56 | B: speed=-0.045 (z=-1.5) vap=-0.009 (z=-3.3)
+^GSPC     us_equity_index   A12: pairs= 190 rho=+0.089 null=+0.050 z=+1.05 | B: speed=+nan (z=+nan) vap=+nan (z=+nan)
+EFA       intl_equity_index A12: pairs=  55 rho=+0.230 null=+0.044 z=+2.18 | B: speed=-0.079 (z=-0.9) vap=-0.014 (z=-2.6)
+/home/user/genovy/research/mirror-symmetry/scripts/e2_speed_memory.py:116: RuntimeWarning: divide by zero encountered in log
+  y = np.log(u)
+EEM       intl_equity_index A12: pairs=  53 rho=+0.150 null=+0.041 z=+1.48 | B: speed=-0.071 (z=-1.3) vap=-0.018 (z=-2.6)
+^N225     intl_equity_index A12: pairs= 139 rho=+0.083 null=+0.056 z=+0.57 | B: speed=+nan (z=+nan) vap=+nan (z=+nan)
+^FTSE     intl_equity_index A12: pairs=  76 rho=+0.131 null=+0.044 z=+1.63 | B: speed=+nan (z=+nan) vap=+nan (z=+nan)
+^GDAXI    intl_equity_index A12: pairs=  76 rho=+0.124 null=+0.054 z=+1.03 | B: speed=+nan (z=+nan) vap=+nan (z=+nan)
+^HSI      intl_equity_index A12: pairs=  96 rho=+0.164 null=+0.043 z=+1.99 | B: speed=+nan (z=+nan) vap=+nan (z=+nan)
+XLK       us_sector         A12: pairs=  56 rho=+0.141 null=+0.069 z=+0.99 | B: speed=-0.119 (z=-1.3) vap=-0.002 (z=-0.1)
+XLF       us_sector         A12: pairs=  48 rho=+0.193 null=+0.041 z=+2.35 | B: speed=-0.011 (z=+0.2) vap=-0.012 (z=-2.8)
+XLE       us_sector         A12: pairs=  46 rho=-0.021 null=+0.044 z=-0.99 | B: speed=-0.030 (z=-0.6) vap=-0.018 (z=-3.5)
+XLV       us_sector         A12: pairs=  39 rho=+0.161 null=+0.042 z=+1.60 | B: speed=-0.200 (z=-4.4) vap=-0.028 (z=-4.3)
+XLY       us_sector         A12: pairs=  43 rho=+0.163 null=+0.051 z=+1.27 | B: speed=-0.091 (z=-1.5) vap=-0.016 (z=-3.4)
+XLP       us_sector         A12: pairs=  41 rho=+0.118 null=+0.049 z=+0.80 | B: speed=-0.103 (z=-1.5) vap=-0.014 (z=-2.3)
+/home/user/genovy/research/mirror-symmetry/scripts/e2_speed_memory.py:116: RuntimeWarning: divide by zero encountered in log
+  y = np.log(u)
+XLI       us_sector         A12: pairs=  49 rho=+0.030 null=+0.057 z=-0.41 | B: speed=+0.011 (z=+0.4) vap=-0.015 (z=-2.3)
+XLU       us_sector         A12: pairs=  40 rho=+0.008 null=+0.042 z=-0.43 | B: speed=-0.074 (z=-0.7) vap=-0.021 (z=-2.3)
+/home/user/genovy/research/mirror-symmetry/scripts/e2_speed_memory.py:116: RuntimeWarning: divide by zero encountered in log
+  y = np.log(u)
+XLB       us_sector         A12: pairs=  50 rho=+0.157 null=+0.049 z=+1.49 | B: speed=-0.137 (z=-2.5) vap=-0.014 (z=-2.8)
+/home/user/genovy/research/mirror-symmetry/scripts/e2_speed_memory.py:116: RuntimeWarning: divide by zero encountered in log
+  y = np.log(u)
+AAPL      single_stock      A12: pairs= 106 rho=+0.032 null=+0.043 z=-0.22 | B: speed=-0.102 (z=-2.1) vap=-0.019 (z=-3.6)
+MSFT      single_stock      A12: pairs=  52 rho=+0.214 null=+0.040 z=+2.78 | B: speed=-0.063 (z=-1.5) vap=-0.025 (z=-5.3)
+AMZN      single_stock      A12: pairs=  45 rho=-0.001 null=+0.041 z=-0.59 | B: speed=-0.054 (z=-0.6) vap=-0.026 (z=-3.1)
+JPM       single_stock      A12: pairs=  98 rho=+0.068 null=+0.040 z=+0.48 | B: speed=-0.129 (z=-2.5) vap=-0.022 (z=-2.9)
+/home/user/genovy/research/mirror-symmetry/scripts/e2_speed_memory.py:116: RuntimeWarning: divide by zero encountered in log
+  y = np.log(u)
+XOM       single_stock      A12: pairs= 105 rho=+0.053 null=+0.047 z=+0.11 | B: speed=-0.087 (z=-1.0) vap=-0.018 (z=-2.7)
+/home/user/genovy/research/mirror-symmetry/scripts/e2_speed_memory.py:116: RuntimeWarning: divide by zero encountered in log
+  y = np.log(u)
+JNJ       single_stock      A12: pairs= 101 rho=-0.029 null=+0.046 z=-1.57 | B: speed=-0.063 (z=+0.7) vap=-0.026 (z=-1.8)
+/home/user/genovy/research/mirror-symmetry/scripts/e2_speed_memory.py:116: RuntimeWarning: divide by zero encountered in log
+  y = np.log(u)
+PG        single_stock      A12: pairs= 101 rho=+0.026 null=+0.034 z=-0.18 | B: speed=-0.127 (z=-2.5) vap=-0.018 (z=-3.7)
+/home/user/genovy/research/mirror-symmetry/scripts/e2_speed_memory.py:116: RuntimeWarning: divide by zero encountered in log
+  y = np.log(u)
+KO        single_stock      A12: pairs= 106 rho=+0.128 null=+0.037 z=+2.13 | B: speed=-0.134 (z=-2.3) vap=-0.027 (z=-3.3)
+/home/user/genovy/research/mirror-symmetry/scripts/e2_speed_memory.py:116: RuntimeWarning: divide by zero encountered in log
+  y = np.log(u)
+WMT       single_stock      A12: pairs=  64 rho=+0.078 null=+0.055 z=+0.44 | B: speed=-0.095 (z=-3.4) vap=-0.017 (z=-1.8)
+/home/user/genovy/research/mirror-symmetry/scripts/e2_speed_memory.py:116: RuntimeWarning: divide by zero encountered in log
+  y = np.log(u)
+GE        single_stock      A12: pairs= 149 rho=+0.059 null=+0.038 z=+0.54 | B: speed=-0.108 (z=-2.1) vap=-0.010 (z=-1.2)
+/home/user/genovy/research/mirror-symmetry/scripts/e2_speed_memory.py:116: RuntimeWarning: divide by zero encountered in log
+  y = np.log(u)
+IBM       single_stock      A12: pairs= 154 rho=-0.009 null=+0.033 z=-0.84 | B: speed=-0.032 (z=-0.2) vap=-0.015 (z=-2.7)
+/home/user/genovy/research/mirror-symmetry/scripts/e2_speed_memory.py:116: RuntimeWarning: divide by zero encountered in log
+  y = np.log(u)
+INTC      single_stock      A12: pairs=  87 rho=+0.002 null=+0.040 z=-0.71 | B: speed=-0.060 (z=-1.7) vap=-0.009 (z=-0.7)
+NVDA      single_stock      A12: pairs=  61 rho=+0.128 null=+0.055 z=+0.89 | B: speed=-0.056 (z=-0.3) vap=-0.019 (z=-2.7)
+CSCO      single_stock      A12: pairs=  64 rho=+0.009 null=+0.033 z=-0.40 | B: speed=+0.017 (z=+1.7) vap=-0.009 (z=-2.0)
+/home/user/genovy/research/mirror-symmetry/scripts/e2_speed_memory.py:116: RuntimeWarning: divide by zero encountered in log
+  y = np.log(u)
+BA        single_stock      A12: pairs= 155 rho=-0.047 null=+0.041 z=-2.01 | B: speed=-0.107 (z=-1.2) vap=-0.017 (z=-2.1)
+CAT       single_stock      A12: pairs= 134 rho=+0.003 null=+0.044 z=-0.81 | B: speed=-0.143 (z=-2.3) vap=-0.017 (z=-2.4)
+/home/user/genovy/research/mirror-symmetry/scripts/e2_speed_memory.py:116: RuntimeWarning: divide by zero encountered in log
+  y = np.log(u)
+MRK       single_stock      A12: pairs= 127 rho=+0.021 null=+0.041 z=-0.55 | B: speed=-0.063 (z=-0.4) vap=-0.023 (z=-3.9)
+/home/user/genovy/research/mirror-symmetry/scripts/e2_speed_memory.py:116: RuntimeWarning: divide by zero encountered in log
+  y = np.log(u)
+PFE       single_stock      A12: pairs= 106 rho=+0.106 null=+0.040 z=+1.43 | B: speed=-0.076 (z=-1.4) vap=-0.012 (z=-3.0)
+/home/user/genovy/research/mirror-symmetry/scripts/e2_speed_memory.py:116: RuntimeWarning: divide by zero encountered in log
+  y = np.log(u)
+HD        single_stock      A12: pairs=  63 rho=-0.009 null=+0.044 z=-0.92 | B: speed=+0.119 (z=-0.6) vap=-0.011 (z=-1.4)
+/home/user/genovy/research/mirror-symmetry/scripts/e2_speed_memory.py:116: RuntimeWarning: divide by zero encountered in log
+  y = np.log(u)
+DIS       single_stock      A12: pairs= 147 rho=+0.003 null=+0.042 z=-1.02 | B: speed=-0.138 (z=-1.7) vap=-0.028 (z=-2.3)
+TLT       bond              A12: pairs=  55 rho=-0.049 null=+0.055 z=-1.15 | B: speed=-0.051 (z=-0.2) vap=-0.017 (z=-1.9)
+IEF       bond              A12: pairs=  58 rho=+0.026 null=+0.072 z=-0.70 | B: speed=+0.044 (z=+1.7) vap=-0.005 (z=-0.0)
+HYG       bond              A12: pairs=  35 rho=+0.463 null=+0.052 z=+3.86 | B: speed=-0.143 (z=-3.1) vap=-0.009 (z=-0.6)
+GLD       commodity         A12: pairs=  36 rho=-0.002 null=+0.038 z=-0.48 | B: speed=-0.090 (z=-1.4) vap=-0.017 (z=-3.6)
+SLV       commodity         A12: pairs=  41 rho=-0.025 null=+0.063 z=-1.15 | B: speed=-0.128 (z=-1.5) vap=-0.034 (z=-3.0)
+USO       commodity         A12: pairs=  44 rho=+0.028 null=+0.034 z=-0.06 | B: speed=-0.031 (z=+0.2) vap=-0.014 (z=-0.8)
+DBC       commodity         A12: pairs=  47 rho=+0.033 null=+0.046 z=-0.15 | B: speed=-0.089 (z=-0.2) vap=-0.007 (z=-0.9)
+GC=F      commodity         A12: pairs=  42 rho=-0.148 null=+0.051 z=-2.41 | B: speed=+nan (z=+nan) vap=+nan (z=+nan)
+/home/user/genovy/research/mirror-symmetry/scripts/e2_speed_memory.py:92: RuntimeWarning: invalid value encountered in log
+  lr = np.log(high[1:] / low[1:])                    # intrabar log range at bar t (t=1..)
+/home/user/genovy/research/mirror-symmetry/scripts/e2_speed_memory.py:97: RuntimeWarning: invalid value encountered in log
+  hi_ = xc + np.log(high[1:] / close_raw[1:]); lo_ = xc + np.log(low[1:] / close_raw[1:])
+/home/user/genovy/research/mirror-symmetry/scripts/e2_speed_memory.py:106: RuntimeWarning: invalid value encountered in cast
+  binlo = np.floor((lo_ - base) / w).astype(np.int64)
+/home/user/genovy/research/mirror-symmetry/scripts/e2_speed_memory.py:107: RuntimeWarning: invalid value encountered in cast
+  binhi = np.floor((hi_ - base) / w).astype(np.int64)
+CL=F ERR ValueError('negative dimensions not allowed')
+/home/user/genovy/research/mirror-symmetry/scripts/e2_speed_memory.py:116: RuntimeWarning: divide by zero encountered in log
+  y = np.log(u)
+HG=F      commodity         A12: pairs=  52 rho=+0.035 null=+0.030 z=+0.07 | B: speed=-0.048 (z=-0.6) vap=-0.022 (z=-3.1)
+EURUSD=X  fx                A12: pairs=  57 rho=+0.035 null=+0.029 z=+0.07 | B: speed=+nan (z=+nan) vap=+nan (z=+nan)
+JPY=X     fx                A12: pairs=  72 rho=+0.047 null=+0.053 z=-0.11 | B: speed=+nan (z=+nan) vap=+nan (z=+nan)
+GBPUSD=X  fx                A12: pairs=  52 rho=+0.074 null=+0.042 z=+0.44 | B: speed=+nan (z=+nan) vap=+nan (z=+nan)
+AUDUSD=X  fx                A12: pairs=  44 rho=+0.111 null=+0.039 z=+1.12 | B: speed=+nan (z=+nan) vap=+nan (z=+nan)
+AUDJPY=X  fx                A12: pairs=  53 rho=-0.043 null=+0.031 z=-0.97 | B: speed=+nan (z=+nan) vap=+nan (z=+nan)
+BTC-USD   crypto            A12: pairs=  27 rho=-0.016 null=+0.036 z=-0.61 | B: speed=-0.110 (z=-1.7) vap=-0.120 (z=-5.7)
+ETH-USD   crypto            A12: pairs=  34 rho=-0.107 null=+0.029 z=-1.27 | B: speed=-0.049 (z=-0.2) vap=-0.084 (z=-3.4)
+saved
