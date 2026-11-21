@@ -31,7 +31,11 @@ and any that survives comes from path-dependent drift. Levels alone can never cr
 | E3 double tops / bottoms | Retests of swing highs reject 44.6% vs 45.5% at placebo levels vs 48.0% null (mean across assets): swing extremes are not special barriers at daily scale. No depletion across 1st/2nd/3rd tests. |
 | E5 ITCH, 15 May (6 symbols) + 18 May 2026 (3 symbols) | In 9/9 symbol-days: queue imbalance predicts the next mid move (SPY 15 May P(up) 0.39 -> 0.59); whole-dollar prices carry 2-17x the resting depth; price moves less when net flow returns. Business-time symmetry is day-dependent: volume-time asymmetry ~0 on 15 May, but -0.1 to -0.2 for SPY/QQQ on 18 May (a selloff day). Nasdaq-only flow explains 0-27% of 5-min moves. |
 | Model check (`scripts/model_lld.py`) | Static landscape -> perfect mirror (symmetric durations, rho 0.20). Leverage -> calendar asymmetry. Barriers -> rejection above null (real data are below). Only path dependence + landscape matches SPY on all four measures. |
-| E6 SPY May vs Nov 2026, band [718.66, 756.48] raw | Nov took 0.28x May's trading hours, 0.68x its realized variance, 0.35x its volume. Speed profiles inside the band did not mirror (rho -0.05). |
+| E8 2026 structure (SPY, QQQ) | One M from the 30 Mar low: tops Jun 2/3 and Oct 6; neckline QQQ 661.14 (Jul 29), SPY 716.58 (Jun 26). QQQ's Oct 6 - Nov 20 decline covers the Mar 30 - Jun 2 rally's prices in 0.84x its time (0.92x upper half, 0.77x lower); 0.69 vs 0.67 %/day. Decline volatility 2.1x, efficiency 0.55x. SPY: 1.09x through 725-760, 0.12x through 688-725. |
+| E9 double tops (3,385 patterns) | Neckline breaks before a new high 61.3% vs 56.8% null (z ~ 5). Measured move 47.4% vs 52% random-walk geometry; full mirror 64.7% vs 63%. Right-leg / left-leg band speed median 1.00x. |
+| E10 tilt | SPY = 0.59 x QQQ + residual (R2 0.87). 74% of SPY's tilt between the tops is the residual (rotation); SPY ex-rotation tops 750.9 vs 756.1. Oct 6 - Nov 20: QQQ -19.9%, XLK -26.2%, RSP -2.3%, XLP +10.6%. |
+| E10b current-state analogs | QQQ to 578.40 before 762.86: 86% (geometry 82%); to 555.60: 69% (71%). SPY to 666.06: 81% (78%); to 629.28: 51% (58%). |
+| E6 (superseded pairing) SPY May vs Nov 2026 | May alone is the wrong comparison leg (slow, low-vol); kept for the record: Nov took 0.28x May's hours, 0.68x its realized variance. |
 | E7 recovery base rates (9.3% band, fast declines) | SPY: median full recovery 24 trading days; 43% within 20 days, 74% within 60; up-leg takes 3.3x the decline. S&P 500 since 1928: 62 days; 30% / 49%; 2.8x. |
 
 ## Layout
@@ -55,6 +59,10 @@ scripts/
   e5_itch_micro.py DATE SYM  order-level tests on one ITCH day
   e6_spy_2026.py             SPY May vs November 2026
   e7_mirror_recovery.py      recovery-time base rates
+  e8_structure_2026.py       2026 swing structure, leg statistics, level-crossing maps (SPY, QQQ)
+  e9_double_top.py           double-top completion / measured move / mirror test vs null and geometry
+  e10_tilt_and_state.py      SPY tilt = beta x QQQ + rotation residual; current pattern state
+  e10b_conditional.py        analog base rates for the current QQQ / SPY state
   model_lld.py               factorial liquidity-landscape diffusion simulation
   checks_falsification.py    stricter variance clock; long-lag effect vs no-landscape model
   build_report_data.py, build_report.py

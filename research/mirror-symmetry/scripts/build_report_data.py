@@ -52,11 +52,7 @@ for f in sorted(glob.glob(os.path.join(RES, "e5_itch_*.json"))):
 rep["micro"] = micro
 # E6, E7
 e6 = J("e6_spy_2026.json")
-rep["e6"] = {k: e6[k] for k in ("band_raw", "may_up", "nov_down", "ratio_nov_over_may_hours_inband", "ratio_nov_over_may_realized_var_inband",
-                                 "ratio_nov_over_may_volume_inband_shares", "mirror_rho_may_nov", "hist_corr", "subband_edges",
-                                 "dwell_may_hours", "dwell_nov_hours", "hist_bins", "hist_may_hours", "hist_nov_hours",
-                                 "hourly_all_pairs_mirror_rho_mean", "surrogate_mirror_rho_mean", "surrogate_mirror_rho_sd",
-                                 "may_nov_rho_percentile_vs_surrogate_pairs")}
+rep["e6"] = {k: e6[k] for k in ("band_raw", "may_up", "nov_down", "ratio_nov_over_may_hours_inband", "ratio_nov_over_may_realized_var_inband")}
 edges = np.array(e6["vap_edges"]); cen = (edges[:-1] + edges[1:]) / 2
 def bands(v, lo=600, hi=780, step=5):
     v = np.array(v); out = []
@@ -66,7 +62,7 @@ def bands(v, lo=600, hi=780, step=5):
 rep["landscape"] = {"band_lo": list(range(600, 780, 5)), "all_1h": bands(e6["vap_all_to_nov20"]), "daily_2021": bands(e6["vap_daily_2021_on"]),
                     "dec25_feb26": bands(e6["vap_dec25_feb26"]), "jun_oct26": bands(e6["vap_jun_oct"]), "may26": bands(e6["vap_may"]),
                     "nov26": bands(e6["vap_nov"])}
-rep["daily_path"] = e6["daily_path"]
+# daily_path superseded by paths26
 rep["e7"] = J("e7_mirror_recovery.json")
 # the two clocks: May forward vs Nov reversed (hourly closes inside the band, raw)
 h = pd.read_pickle(os.path.join(ROOT, "data", "SPY_1h_raw.pkl")); h.index = h.index.tz_convert("America/New_York").tz_localize(None)
@@ -75,7 +71,49 @@ def seg(start, end):
     c = s["Close"].values; r = np.diff(np.log(c), prepend=np.log(c[0]))
     return {"t": [str(i) for i in s.index], "close": [round(float(x), 2) for x in c],
             "hours": list(range(len(c))), "cumvar": np.round(np.cumsum(r ** 2) * 1e4, 3).tolist()}
-rep["clock_may"] = seg("2026-05-04 15:30", "2026-05-29 09:30")
-rep["clock_nov"] = seg("2026-11-12 15:30", "2026-11-19 14:30")
+# (May-vs-November hourly clocks were superseded by the corrected leg pairing; not exported)
 json.dump(rep, open(os.path.join(OUT, "report_data.json"), "w"), separators=(",", ":"))
 print("bytes", os.path.getsize(os.path.join(OUT, "report_data.json")))
+
+# ---------------- corrected structure (E8-E10b) ----------------
+rep["e8"] = {t: {"legs": v["legs"], "maps": {k: {kk: m[kk] for kk in ("slope", "r2", "speed_profile_spearman", "overlap_band")} for k, m in v["maps"].items()}}
+             for t, v in J("e8_structure_2026.json").items()}
+e9 = J("e9_double_top.json"); rep["e9"] = {"real": e9["real"], "surrogate": e9["surrogate"], "equity_indices": e9["equity_indices"]}
+e10 = J("e10_tilt_and_state.json")
+rep["e10"] = {k: e10[k] for k in ("beta_spy_on_qqq_2026", "r2", "cum_residual_at", "tilt_accounting_logs", "rotation_removed_spy", "state_QQQ", "state_SPY", "returns_pct")}
+rr = e10["rotation_removed_spy_series"]
+base = {k: rr[k][0] for k in ("spy", "spy_ex_rotation", "qqq")}
+rep["tilt_series"] = {"date": rr["date"], **{k: [round(100 * v / base[k], 2) for v in rr[k]] for k in base}}
+rep["e10b"] = J("e10b_conditional.json")
+# daily paths with pivots for both instruments
+paths = {}
+for t in ("SPY", "QQQ"):
+    df = data.load_raw(t).loc["2026-01-02":]
+    paths[t] = {"date": [str(i.date()) for i in df.index], "close": df["Close"].round(2).tolist()}
+rep["paths26"] = paths
+# November played backwards: left leg (Mar 30 -> Jun 2) forward vs current leg (Oct 6 -> Nov 20) reversed,
+# shifted so that both cross the current price at the same moment
+overlay = {}
+for t in ("QQQ", "SPY"):
+    hh = pd.read_pickle(os.path.join(ROOT, "data", f"{t}_1h_raw.pkl")); hh.index = hh.index.tz_convert("America/New_York").tz_localize(None)
+    L = hh.loc["2026-03-30":"2026-06-02 23:59"]["Close"].values; R = hh.loc["2026-10-06":"2026-11-20 23:59"]["Close"].values
+    now = R[-1]; tstar = int(np.argmax(L >= now)) if np.any(L >= now) else 0
+    rev = R[::-1]
+    overlay[t] = {"left": [round(float(v), 2) for v in L], "right_rev": [round(float(v), 2) for v in rev], "shift": tstar, "now": round(float(now), 2)}
+rep["overlay"] = overlay
+json.dump(rep, open(os.path.join(OUT, "report_data.json"), "w"), separators=(",", ":"))
+print("bytes (with structure)", os.path.getsize(os.path.join(OUT, "report_data.json")))
+
+# ---------------- slim to what the page uses ----------------
+slim_micro = {}
+for k, m in rep["micro"].items():
+    slim_micro[k] = {"date": m["date"], "symbol": m["symbol"], "n_msgs": m["n_msgs"], "volume_regular": m["volume_regular"],
+                     "queue_imbalance": m["queue_imbalance"], "depth_memory": {"beta_round_dollar": m["depth_memory"]["beta_round_dollar"]},
+                     "intraday_crossings": {"20c": m["intraday_crossings"].get("20c", {})},
+                     "flow_price": {"300s": {"r2": m["flow_price"].get("300s", {}).get("r2")}},
+                     "hysteresis": {"300s": m["hysteresis"]["300s"]}}
+rep["micro"] = slim_micro
+rep["e1"] = [{k: r[k] for k in ("t", "cls", "lev", "dcal", "zcal", "dvar", "dvol", "n")} for r in rep["e1"]]
+rep.pop("e1_f2", None)
+json.dump(rep, open(os.path.join(OUT, "report_data.json"), "w"), separators=(",", ":"))
+print("bytes (slim)", os.path.getsize(os.path.join(OUT, "report_data.json")))
